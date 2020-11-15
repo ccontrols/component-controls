@@ -67,8 +67,9 @@ export const extractAttributes = (
   node: any,
 ): Record<string, unknown> | any | undefined => {
   if (node) {
-    if (node.properties) {
-      const attributes: Record<string, unknown> = node.properties.reduce(
+    const properties = node.properties || node.expression?.properties;
+    if (properties) {
+      const attributes: Record<string, unknown> = properties.reduce(
         (acc: Record<string, unknown>, propNode: any) => {
           const attribute = nodeToAttribute(propNode);
           if (attribute) {

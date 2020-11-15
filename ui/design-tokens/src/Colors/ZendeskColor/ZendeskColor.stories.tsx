@@ -1,12 +1,12 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes, Document } from '@component-controls/core';
 import { ZendeskColor, ZendeskColorPalette } from './ZendeskColor';
 import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/ZendeskColor',
   component: ZendeskColor,
-};
+} as Document;
 
 export const overview: Example<ColorProps> = ({ name, color }) => (
   <ZendeskColor name={name} color={color} />

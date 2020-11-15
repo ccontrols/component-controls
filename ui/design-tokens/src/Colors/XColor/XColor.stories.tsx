@@ -1,12 +1,12 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes, Document } from '@component-controls/core';
 import { XColor, XColorPalette } from './XColor';
 import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/XColor',
   component: XColor,
-};
+} as Document;
 
 export const overview: Example<ColorProps> = ({ name, color }) => (
   <XColor name={name} color={color} />

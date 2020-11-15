@@ -276,8 +276,8 @@ export interface ComponentControlArray
   inline?: boolean;
 }
 
-export interface ComponentControlObject
-  extends ComponentControlBase<ComponentControls> {
+export interface ComponentControlObject<P = ComponentControls>
+  extends ComponentControlBase<P> {
   type: ControlTypes.OBJECT;
   /**
    * the label for the editor button
@@ -375,12 +375,12 @@ export interface ComponentControlNumber extends ComponentControlBase<number> {
  * },
  */
 
-export type ComponentControl =
+export type ComponentControl<P = any> =
   | ComponentControlText
   | ComponentControlBoolean
   | ComponentControlColor
   | ComponentControlDate
-  | ComponentControlObject
+  | ComponentControlObject<P>
   | ComponentControlButton
   | ComponentControlOptions
   | ComponentControlNumber
@@ -392,6 +392,6 @@ export type ComponentControl =
  * the name of the property is the key
  * and the value is the ComponentControl
  */
-export interface ComponentControls {
-  [name: string]: ComponentControl;
+export interface ComponentControls<P = ComponentControl> {
+  [name: string]: ComponentControl<P>;
 }

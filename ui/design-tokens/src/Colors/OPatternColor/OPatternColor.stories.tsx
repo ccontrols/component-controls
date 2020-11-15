@@ -1,12 +1,12 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes, Document } from '@component-controls/core';
 import { OPatternColor, OPatternColorPalette } from './OPatternColor';
 import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/OPatternColor',
   component: OPatternColor,
-};
+} as Document;
 
 export const overview: Example<ColorProps> = ({ name, color }) => (
   <OPatternColor name={name} color={color} />

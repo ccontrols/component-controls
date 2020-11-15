@@ -47,7 +47,7 @@ export const Search: FC<Omit<
               author: page.author,
               stories: page.stories?.map(story => story.split('-').join(' ')),
               tags: page.tags,
-              component: Object.keys(page.componentsLookup),
+              component: Object.keys(page.componentsLookup || {}),
             };
             return item;
           }),

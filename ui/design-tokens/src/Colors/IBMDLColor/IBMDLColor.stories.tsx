@@ -1,5 +1,5 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes, Document } from '@component-controls/core';
 import {
   IBMDLColor,
   IBMDLColorPalette,
@@ -10,7 +10,7 @@ import {
 export default {
   title: 'Design Tokens/Colors/IBMDLColor',
   component: IBMDLColor,
-};
+} as Document;
 
 export const overview: Example<IBMDLColorProps> = ({
   name,

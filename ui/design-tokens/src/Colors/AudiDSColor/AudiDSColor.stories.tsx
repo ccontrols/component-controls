@@ -1,12 +1,12 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes, Document } from '@component-controls/core';
 import { AudiDSColor, AudiDSColorPalette } from './AudiDSColor';
 import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/AudiDSColor',
   component: AudiDSColor,
-};
+} as Document;
 
 export const overview: Example<ColorProps> = ({ name, color }) => (
   <AudiDSColor name={name} color={color} />

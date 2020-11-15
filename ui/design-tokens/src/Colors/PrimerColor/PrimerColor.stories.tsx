@@ -1,12 +1,12 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes, Document } from '@component-controls/core';
 import { PrimerColor, PrimerColorPalette } from './PrimerColor';
 import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/PrimerColor',
   component: PrimerColor,
-};
+} as Document;
 
 export const overview: Example<ColorProps> = ({ name, color }) => (
   <PrimerColor name={name} color={color} />

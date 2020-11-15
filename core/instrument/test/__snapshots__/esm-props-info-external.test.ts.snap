@@ -2449,7 +2449,7 @@ Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.39.1",
+        "@component-controls/core": "^1.39.3",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -2485,7 +2485,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.39.2",
+      "version": "1.39.3",
     },
     "8f6835169f285fcd3ad5425d9268a8f1": Object {
       "dependencies": Object {

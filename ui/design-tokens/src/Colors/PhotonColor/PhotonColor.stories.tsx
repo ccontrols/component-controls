@@ -1,12 +1,12 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes, Document } from '@component-controls/core';
 import { PhotonColor, PhotonColorPalette } from './PhotonColor';
 import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/PhotonColor',
   component: PhotonColor,
-};
+} as Document;
 
 export const overview: Example<ColorProps> = ({ name, color }) => (
   <PhotonColor name={name} color={color} />

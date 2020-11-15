@@ -1,12 +1,12 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes, Document } from '@component-controls/core';
 import { SeedsColor, SeedsColorPalette } from './SeedsColor';
 import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/SeedsColor',
   component: SeedsColor,
-};
+} as Document;
 
 export const overview: Example<ColorProps> = ({ name, color }) => (
   <SeedsColor name={name} color={color} />

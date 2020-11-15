@@ -1,12 +1,12 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes, Document } from '@component-controls/core';
 import { AtlassianColor, AtlassianColorPalette } from './AtlassianColor';
 import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/AtlassianColor',
   component: AtlassianColor,
-};
+} as Document;
 
 export const overview: Example<ColorProps> = ({ name, color }) => (
   <AtlassianColor name={name} color={color} />

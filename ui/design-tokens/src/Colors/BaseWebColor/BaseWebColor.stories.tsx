@@ -1,12 +1,12 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes, Document } from '@component-controls/core';
 import { BaseWebColor, BaseWebColorPalette } from './BaseWebColor';
 import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/BaseWebColor',
   component: BaseWebColor,
-};
+} as Document;
 
 export const overview: Example<ColorProps> = ({ name, color }) => (
   <BaseWebColor name={name} color={color} />

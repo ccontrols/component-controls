@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/ban-types */
-import { PropsWithChildren, ReactElement } from 'react';
+import { ComponentType, PropsWithChildren, ReactElement } from 'react';
 import { CodeLocation, PackageInfo, StoryRenderFn } from './utility';
 import { Component } from './components';
-import { ComponentControls } from './controls';
+import { ComponentControls, ComponentControl } from './controls';
 import { RunConfiguration, DocType, PageLayoutProps } from './configuration';
 /**
  * an identifier/variable.argument in the source code
@@ -81,11 +81,11 @@ export interface SmartControls {
  * story prooperties that can be inherited from the document, or each story can have its properties
  */
 
-export interface StoryProps {
+export interface StoryProps<Props = unknown> {
   /**
    * id for component associated with the story
    */
-  component?: string | Record<string, unknown>;
+  component?: string | Record<string, unknown> | ComponentType<Props>;
 
   /**
    * multiple components option
@@ -112,7 +112,7 @@ export interface StoryProps {
 /**
  * Story interface - usually extracted by the AST instrumenting loader
  */
-export type Story = {
+export type Story<Props = unknown> = {
   /**
    * name of the Story.
    */
@@ -166,22 +166,31 @@ export type Story = {
    * it is set internally and will be used to create a story URL
    */
   dynamicId?: string;
-} & StoryProps;
+} & StoryProps<Props>;
 
 export type DynamicExamples = Story[];
+
+export type ExampleControls = {
+  [name: string]:
+    | ComponentControl<ExampleControls>
+    | string
+    | string[]
+    | boolean
+    | number;
+};
+
 /**
  * es named export function, excapsulates a contained example code.
  */
-export type Example<P = {}> =
-  | ({
-      (props: PropsWithChildren<P>, context?: any): ReactElement<
-        any,
-        any
-      > | null;
-    } & Omit<Story, 'controls'> & {
-        controls?: Story['controls'] | string | string[] | boolean | number;
-      })
-  | DynamicExamples;
+export type Example<Props = unknown> = {
+  (props: PropsWithChildren<Props>, context?: any): ReactElement<
+    any,
+    any
+  > | null;
+  bind: (props: any) => Example<Props>;
+} & Omit<Story<Props>, 'controls'> & {
+    controls?: ExampleControls;
+  };
 
 /**
  * dynamic story creator function type.
@@ -195,7 +204,7 @@ export const defDocType: DocType = 'story';
  * For MDX files, fromtmatter is used to declare the document properties.
  * For ESM (ES Modules) documentation files, the default export is used.
  */
-export type Document = {
+export type Document<Props = unknown> = {
   /**
    * title of the document. If no 'route' parameter is specifified, the title is used to generate the document url.
    * This is the only required field, to show the document in the menu structures.
@@ -289,7 +298,7 @@ export type Document = {
    * since multiple components of the same name can be used
    * example: ['Button']: 'c:/myapp/Button.tsx'
    */
-  componentsLookup: {
+  componentsLookup?: {
     [name: string]: string;
   };
 
@@ -302,7 +311,7 @@ export type Document = {
    * custom prop set by mdxjs
    */
   isMDXComponent?: boolean;
-} & StoryProps &
+} & StoryProps<Props> &
   PageLayoutProps;
 export const dateToLocalString = (date?: Date): string =>
   date

@@ -87,13 +87,16 @@ export const transformControls = (
   let componentName = getComponentName(storyComponent);
   if (
     !componentName ||
-    (!components[doc.componentsLookup[componentName]] &&
+    ((!doc.componentsLookup ||
+      !components[doc.componentsLookup[componentName]]) &&
       typeof doc.component === 'string')
   ) {
     componentName = doc.component as string;
   }
   if (componentName) {
-    const component = components[doc.componentsLookup[componentName]];
+    const component = doc.componentsLookup
+      ? components[doc.componentsLookup[componentName]]
+      : undefined;
 
     if (component?.info) {
       const newControls = controlsFromProps(component.info.props);

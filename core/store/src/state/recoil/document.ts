@@ -307,8 +307,9 @@ export const useDocDescription = (doc?: Document): string | undefined => {
   }
   const componentName = getComponentName(doc.component);
   if (componentName) {
-    const componnetHash = doc.componentsLookup[componentName];
-    const component = store.components[componnetHash];
+    const component = doc.componentsLookup
+      ? store.components[doc.componentsLookup[componentName]]
+      : undefined;
     if (component?.info?.description) {
       return component.info.description;
     }

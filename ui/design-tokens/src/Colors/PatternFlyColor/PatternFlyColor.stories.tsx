@@ -1,12 +1,12 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes, Document } from '@component-controls/core';
 import { PatternFlyColor, PatternFlyColorPalette } from './PatternFlyColor';
 import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/PatternFlyColor',
   component: PatternFlyColor,
-};
+} as Document;
 
 export const overview: Example<ColorProps> = ({ name, color }) => (
   <PatternFlyColor name={name} color={color} />

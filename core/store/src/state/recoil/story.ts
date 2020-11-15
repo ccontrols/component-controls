@@ -114,9 +114,10 @@ export const useStoryComponent = (
   const componentName = getComponentName(storyComponent);
   const doc = story && story.doc ? store.docs[story.doc] : undefined;
   const component =
-    componentName && doc && doc.componentsLookup[componentName]
+    componentName && doc?.componentsLookup?.[componentName]
       ? store.components[doc.componentsLookup[componentName]]
       : undefined;
+
   return component;
 };
 
