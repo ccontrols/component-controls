@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.40.0](https://github.com/ccontrols/component-controls/compare/v1.39.4...v1.40.0) (2020-11-15)
+
+
+### Features
+
+* bind templates to stories ([a4dfb9f](https://github.com/ccontrols/component-controls/commit/a4dfb9ff61330620614c2faa0b6547a38f386368))
+
+
+
+
+
 ## [1.39.4](https://github.com/ccontrols/component-controls/compare/v1.39.3...v1.39.4) (2020-11-15)
 
 
