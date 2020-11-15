@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.4](https://github.com/ccontrols/component-controls/compare/v1.39.3...v1.39.4) (2020-11-15)
+
+
+### Bug Fixes
+
+* document and example ts types update ([c54b319](https://github.com/ccontrols/component-controls/commit/c54b319767f1621e826a6de9803243e8e3b5a6b4))
+
+
+
+
+
 ## [1.39.3](https://github.com/ccontrols/component-controls/compare/v1.39.2...v1.39.3) (2020-11-15)
 
 **Note:** Version bump only for package @component-controls/blocks
