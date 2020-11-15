@@ -5,6 +5,7 @@ import { useAsync } from '@component-controls/core';
 export default {
   title: 'Introduction/Async stories',
   author: 'atanasster',
+  order: 8,
 };
 
 const fetchData = async () => {

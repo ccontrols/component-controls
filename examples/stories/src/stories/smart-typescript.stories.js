@@ -5,6 +5,7 @@ export default {
   title: 'Introduction/Smart Typescript',
   author: 'atanasster',
   component: Button,
+  order: 4,
 };
 
 export const allProps = props => <Button {...props} />;

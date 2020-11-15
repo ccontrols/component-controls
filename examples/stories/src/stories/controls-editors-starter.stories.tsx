@@ -4,6 +4,7 @@ import { ControlTypes } from '@component-controls/core';
 export default {
   title: 'Introduction/Starter',
   author: 'atanasster',
+  order: 0,
 };
 
 interface DocsControlsTable {

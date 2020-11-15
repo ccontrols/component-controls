@@ -5,6 +5,7 @@ import { ControlTypes } from '@component-controls/core';
 export default {
   title: 'Introduction/Controls',
   author: 'atanasster',
+  order: 2,
 };
 
 export const textDefaultProp = ({ text }) => text;

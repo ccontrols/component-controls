@@ -5,6 +5,7 @@ export default {
   title: 'Introduction/Smart PropTypes',
   author: 'atanasster',
   component: Button,
+  order: 3,
 };
 
 export const allProps = props => <Button {...props} />;

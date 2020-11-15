@@ -7,6 +7,7 @@ import { theme } from '@component-controls/components';
 export default {
   title: 'Introduction/Dynamic stories',
   author: 'atanasster',
+  order: 9,
   description:
     "You can create 'dynamic' stories - below are created separate stories for each theme color.",
 };

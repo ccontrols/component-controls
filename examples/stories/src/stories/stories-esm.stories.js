@@ -6,6 +6,7 @@ import { customStory as customStoryDeconstructedProps } from './external/externa
 export default {
   title: 'Introduction/ESM',
   author: 'atanasster',
+  order: 5,
 };
 
 export const simple = () => <div>test</div>;
