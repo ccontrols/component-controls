@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.3](https://github.com/ccontrols/component-controls/compare/v1.39.2...v1.39.3) (2020-11-15)
+
+
+### Bug Fixes
+
+* link heading position for ie11 ([8e7a950](https://github.com/ccontrols/component-controls/commit/8e7a950516125eca797caa986ddc933169452d06))
+* serch input alignment ie11 ([5ddcb45](https://github.com/ccontrols/component-controls/commit/5ddcb45a25450458bb4c0dcf7514000a1e310313))
+
+
+
+
+
 ## [1.39.2](https://github.com/ccontrols/component-controls/compare/v1.39.1...v1.39.2) (2020-11-14)
 
 **Note:** Version bump only for package @component-controls/components

@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/react-docgen-info",
-  "version": "1.39.1",
+  "version": "1.39.3",
   "description": "Component controls react-docgen props info loader",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,7 +30,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/core": "^1.39.1",
+    "@component-controls/core": "^1.39.3",
     "react-docgen": "^5.3.0"
   },
   "devDependencies": {
