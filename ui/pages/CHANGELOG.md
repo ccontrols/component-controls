@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.40.3](https://github.com/ccontrols/component-controls/compare/v1.40.2...v1.40.3) (2020-11-16)
+
+
+### Bug Fixes
+
+* merge controls, hide props table on empty ([ee4b11a](https://github.com/ccontrols/component-controls/commit/ee4b11a8ac017d9238efbfce363e2b6df2e6635a))
+
+
+
+
+
 ## [1.40.2](https://github.com/ccontrols/component-controls/compare/v1.40.1...v1.40.2) (2020-11-16)
 
 **Note:** Version bump only for package @component-controls/pages

@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/react-docgen-typescript-info",
-  "version": "1.40.2",
+  "version": "1.40.3",
   "description": "Component controls react-docgen-typescript props info loader",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
