@@ -37,6 +37,7 @@
     "@component-controls/store": "^1.40.3",
     "babel-loader": "^8.0.6",
     "babel-preset-react-app": "^9.0.0",
+    "core-js": "^3.7.0",
     "css-loader": "^5.0.0",
     "extract-css-chunks-webpack-plugin": "^4.7.5",
     "file-loader": "^6.0.0",
