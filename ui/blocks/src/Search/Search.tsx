@@ -15,7 +15,7 @@ interface SearchObject {
   id: string;
   title: string;
   type: string;
-  description?: string | JSX.Element;
+  description?: string;
   body?: string;
   author?: string;
   stories?: string[];
@@ -42,7 +42,10 @@ export const Search: FC<Omit<
               id: page.title,
               title: page.title.replace('/', ' '),
               type: page.type || defDocType,
-              description: page.description,
+              description:
+                typeof page.description === 'string'
+                  ? page.description
+                  : undefined,
               body: page.source,
               author: page.author,
               stories: page.stories?.map(story => story.split('-').join(' ')),
