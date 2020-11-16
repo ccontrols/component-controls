@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`extends button.tsx 1`] = `
+Object {
+  "description": "",
+  "displayName": "Button",
+  "methods": Array [],
+  "props": Object {
+    "fullWidth": Object {
+      "parentName": "ButtonProps",
+      "type": Object {
+        "name": "boolean",
+        "raw": "boolean",
+      },
+    },
+    "size": Object {
+      "defaultValue": "medium",
+      "parentName": "ButtonProps",
+      "type": Object {
+        "name": "enum",
+        "raw": "\\"small\\" | \\"medium\\"",
+        "value": Array [
+          Object {
+            "name": "string",
+            "value": "small",
+          },
+          Object {
+            "name": "string",
+            "value": "medium",
+          },
+        ],
+      },
+    },
+    "variant": Object {
+      "defaultValue": "primary",
+      "parentName": "ButtonProps",
+      "type": Object {
+        "name": "enum",
+        "raw": "\\"primary\\" | \\"success\\" | \\"warn\\" | \\"danger\\"",
+        "value": Array [
+          Object {
+            "name": "string",
+            "value": "primary",
+          },
+          Object {
+            "name": "string",
+            "value": "success",
+          },
+          Object {
+            "name": "string",
+            "value": "warn",
+          },
+          Object {
+            "name": "string",
+            "value": "danger",
+          },
+        ],
+      },
+    },
+  },
+}
+`;
