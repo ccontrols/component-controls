@@ -43,7 +43,11 @@ export const SEO: FC<SEOProps> = ({ Helmet, doc, config }) => {
     isLocalImage && pageImage
       ? ensureTrailingSlash(siteUrl) + removeStartingSlash(pageImage)
       : pageImage;
-  const pageDescription = story?.description || docDescription || description;
+  const pageDescription = ((typeof story?.description === 'string'
+    ? story.description
+    : undefined) ||
+    docDescription ||
+    description) as string | undefined;
   const url =
     typeof window === 'undefined'
       ? getStoryPath(story?.id, doc, store, tab)
