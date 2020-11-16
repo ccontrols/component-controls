@@ -73,6 +73,7 @@ Array [
   "/Users/atanasster/component-controls/examples/stories/src/stories/stories-async.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/stories-esm.stories.js",
   "/Users/atanasster/component-controls/examples/stories/src/stories/template-bind.stories.tsx",
+  "/Users/atanasster/component-controls/examples/stories/src/stories/template-doc.stories.tsx",
 ]
 `;
 
@@ -149,5 +150,6 @@ Array [
   "/Users/atanasster/component-controls/examples/stories/src/stories/stories-async.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/stories-esm.stories.js",
   "/Users/atanasster/component-controls/examples/stories/src/stories/template-bind.stories.tsx",
+  "/Users/atanasster/component-controls/examples/stories/src/stories/template-doc.stories.tsx",
 ]
 `;

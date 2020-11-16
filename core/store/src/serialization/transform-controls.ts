@@ -90,11 +90,6 @@ export const getControls = (
   }
   const smartControls: SmartControls = story.smartControls || {};
 
-  const { smart = true } = smartControls;
-  if (!story.component || !smart || story.smartControls === false) {
-    return transformControls(storyControls);
-  }
-
   let componentName = getComponentName(story.component);
   if (
     !componentName ||
@@ -132,6 +127,10 @@ export const getControls = (
         })
         .reduce((acc, key) => ({ ...acc, [key]: newControls[key] }), {});
       const transformed = transformControls(storyControls, filteredControls);
+      const { smart = true } = smartControls;
+      if (!story.component || !smart || story.smartControls === false) {
+        return transformControls(storyControls, filteredControls);
+      }
       return transformed
         ? deepMergeReplaceArrays(filteredControls, transformed)
         : filteredControls;

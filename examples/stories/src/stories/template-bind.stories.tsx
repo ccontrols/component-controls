@@ -8,8 +8,9 @@ export default {
   title: 'Introduction/Template bind',
   author: 'atanasster',
   component: Button,
-  order: 8,
-  description: ((
+  order: 9,
+  smartControls: false,
+  description: (
     <p
       style={{
         display: 'flex',
@@ -25,7 +26,7 @@ export default {
       </div>
       button above to see how the templates are linked to the stories.
     </p>
-  ) as unknown) as string,
+  ),
 } as Document;
 
 const Template: Example<ButtonProps> = props => <Button {...props} />;

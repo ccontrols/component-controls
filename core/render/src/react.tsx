@@ -38,7 +38,7 @@ export const render: FrameworkRenderFn = (story, doc, options: any = {}) => {
         renderFn: nextRenderFn,
       });
   }
-  let node: any = null;
-  node = () => (renderFn as StoryRenderFn)(values, context);
-  return createElement(node);
+  return typeof renderFn === 'function'
+    ? createElement(() => (renderFn as StoryRenderFn)(values, context))
+    : createElement('div', 'invalid render function');
 };

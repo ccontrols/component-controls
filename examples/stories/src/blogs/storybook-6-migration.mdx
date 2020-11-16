@@ -1,0 +1,150 @@
+---
+title: Migration from Storybook 6
+type: blog
+date: 2020-11-17
+author: atanasster
+route: /blogs/storybook-6-migration
+draft: true
+description: A step-by-step guide on migrating a documentation site from Storybook 6 to component-controls.
+tags:
+  - storybook
+  - gatsby
+---
+import { Playground, Props, Story } from '@component-controls/blocks';
+import { Button } from '../components/Button'
+
+
+# Migration from Storybook 6
+
+[Storybook](https://storybook.js.org) is an open source tool for developing UI components in isolation for React, Vue, Angular, and more. It makes building stunning UIs organized and efficient.
+
+component-controls provides migration compatibility for many of the story(examples) and documentation features in `Storybook`. And component-controls can also use [gatsby](/tutorial/getting-started/gatsby) or [nextjs](/tutorial/getting-started/nextjs) as a static site generator to provide huge performance improvements.
+
+A migration example can be found here: 
+
+[source code](https://github.com/ccontrols/component-controls/tree/master/examples/docz-migration)
+
+[live site](https://docz-migration.netlify.app)
+
+The sample project was bootstraped from [tw-sb-rtl-starter](https://github.com/ssengalanto/tw-sb-rtl-starter)
+
+## Add gatsby theme
+
+we will add gatsby and the component-controls gatsby theme to the project
+
+```bash
+yarn add gatsby @component-controls/gatsby-theme-stories
+```
+
+## Configuration file path
+
+ By default, the docz configuration file is kept in the project main folder, while component-controls uses a `.config` sub-folder. We will configure the gatsby stories theme in `gatsby-config.js`.
+
+```js:title=gatsby-config.js
+module.exports = {
+  plugins: [
+    {
+      resolve: '@component-controls/gatsby-theme-stories',
+      options: {
+        //doczrc.js file located in project main folder
+        configPath: '.',
+      },
+    },
+  ],
+};
+```
+
+## Launch scripts
+
+Next, you should add the gatsby develop and gatsby build scripts to the project's `package.json`
+
+```json:title=package.json
+  "scripts": {
+    //component-controls scripts
+    "build-docs": "gatsby clean && gatsby build",
+    "start": "gatsby develop -p 9022",
+    //docz original scripts
+    "develop": "docz dev",
+    "build": "docz build --dest public",
+    "serve": "docz serve"
+  },
+```
+
+## Configuration fields
+
+component-controls can read directly the docz configuration file, the following is an example `doczrc.js`:
+
+> the component-controls build-time and run-time configurations are merged, and we can use a single [configuration](/configuration/overview) file (`doczrc.js`) for both build-time and run-time configurations.
+
+```json:title=doczrc.js
+export default {
+  files: 'docs/**/*.mdx',
+  title: 'Docz & Netlify CMS',
+  menu: [
+    {
+      name: 'Quick Start',
+      menu: [''],
+    },
+    {
+      name: 'Getting Started',
+      menu: ['Manual Installation'],
+    },
+    {
+      name: 'Configuration',
+    },
+  ],
+};
+```
+
+* [**files**](https://www.docz.site/docs/project-configuration) field is mapped to the **stories** configuration field.
+
+* [**menu**](https://www.docz.site/docs/project-configuration) field is used in component-controls in a similar way to docz. You will need to fill the menu field in a document to attach it to a menu item.
+
+## Components
+
+### Playground
+
+component-controls provides a similar component to docz's [Playground](https://www.docz.site/docs/built-in-components#playground-component). The [Playground](/api/blocks-playground--overview) component can be imported from `@component-controls/blocks`.
+
+```js:title=playground.mdx
+---
+name: Playground
+menu: Components
+---
+
+import { Playground } from '@component-controls/blocks';
+import { Button } from '../src/components/Button'
+
+# Button
+
+<Playground>
+  <Button kind="secondary">Click me</Button>
+</Playground>
+```
+live example:
+
+<Playground>
+  <Button>Click me</Button>
+</Playground>
+
+
+### Props
+
+component-controls provides a similar component to docz's [Props](https://www.docz.site/docs/built-in-components#component-props). The [Props/PropsTable](/api/blocks-propstable--overview) component can be imported from `@component-controls/blocks`.
+
+```js:title=props.mdx
+---
+name: Props
+menu: Components
+---
+
+import { Props } from '@component-controls/blocks';
+import { Button } from '../src/components/Button'
+
+# Button
+
+<Props of={Button} />
+```
+live example:
+
+<Props of={Button} />

@@ -20,12 +20,15 @@ export const extractCSFStories = (
   const globals: Stories = {};
   const localFunctions: Stories = {};
 
-  const extractFunction = (path: any, declaration: any): Story | undefined => {
+  const extractFunction = (
+    path: any,
+    declaration: any,
+    name: string,
+  ): Story | undefined => {
     if (declaration.init) {
       switch (declaration.init.type) {
         case 'ArrowFunctionExpression': {
           const el = declaration.init.body;
-          const name = declaration.id.name;
           const story: Story = {
             loc: sourceLocation(el.loc),
             name,
@@ -36,13 +39,26 @@ export const extractCSFStories = (
         }
         case 'Identifier': {
           return followStoryImport(
-            declaration.id.name,
+            name,
             declaration.init.name,
             filePath,
             source,
             _options,
             ast,
           );
+        }
+        case 'ObjectExpression': {
+          if (store.doc?.template) {
+            const template = store.doc.template;
+            const story: Story = {
+              name,
+              id: name,
+              loc: template.loc,
+              arguments: template.arguments,
+            };
+            return story;
+          }
+          break;
         }
         case 'CallExpression': {
           //template.bind
@@ -51,7 +67,6 @@ export const extractCSFStories = (
             if (callee?.name) {
               const template = localFunctions[callee.name];
               if (template) {
-                const name = declaration.id.name;
                 const story: Story = {
                   loc: template.loc,
                   name,
@@ -65,7 +80,6 @@ export const extractCSFStories = (
         }
       }
     } else if (declaration.type === 'FunctionDeclaration') {
-      const name = declaration.id.name;
       const story: Story = {
         loc: sourceLocation(declaration.body.loc),
         name,
@@ -87,8 +101,16 @@ export const extractCSFStories = (
     ExportDefaultDeclaration: (path: any) => {
       const { declaration } = path.node;
       const attributes = extractAttributes(declaration);
-
+      const template = declaration?.expression?.properties.find(
+        (prop: any) =>
+          prop.key?.name === 'template' &&
+          prop.value?.type === 'ArrowFunctionExpression',
+      );
       const { title: docTitle, name } = attributes || {};
+      if (template) {
+        delete attributes.template;
+      }
+
       const title = docTitle || name;
       if (typeof title === 'string') {
         const attrComponents = componentsFromParams(attributes);
@@ -104,7 +126,13 @@ export const extractCSFStories = (
         if (attrComponents.length > 0) {
           doc.component = attrComponents[0];
         }
-
+        if (template) {
+          doc.template = extractFunction(
+            path,
+            { init: template.value },
+            template.key.name,
+          ) as Document['template'];
+        }
         store.doc = doc;
       }
     },
@@ -151,7 +179,7 @@ export const extractCSFStories = (
           const name = declaration.id.name;
           //check if it was a named export
           if (!store.stories[name]) {
-            const story = extractFunction(path, declaration);
+            const story = extractFunction(path, declaration, name);
             if (story && story.name) {
               localFunctions[story.name] = story;
             }
@@ -181,7 +209,11 @@ export const extractCSFStories = (
         const { declarations } = declaration;
         if (declarations) {
           if (Array.isArray(declarations) && declarations.length > 0) {
-            const story = extractFunction(path, declarations[0]);
+            const story = extractFunction(
+              path,
+              declarations[0],
+              declarations[0].id.name,
+            );
             if (story) {
               const name = story.name;
               store.stories[name] = {
@@ -192,7 +224,11 @@ export const extractCSFStories = (
           }
         } else {
           if (declaration.type === 'FunctionDeclaration') {
-            const story = extractFunction(path, declaration);
+            const story = extractFunction(
+              path,
+              declaration,
+              declaration.id.name,
+            );
             if (story) {
               const name = story.name;
               store.stories[name] = {
