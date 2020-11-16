@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.40.2](https://github.com/ccontrols/component-controls/compare/v1.40.1...v1.40.2) (2020-11-16)
+
+
+### Bug Fixes
+
+* update type private ([96303ae](https://github.com/ccontrols/component-controls/commit/96303ae0047e42b921e3bc70457faa225fe0cac1))
+
+
+
+
+
 # [1.40.0](https://github.com/ccontrols/component-controls/compare/v1.39.4...v1.40.0) (2020-11-15)
 
 

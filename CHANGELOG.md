@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.40.2](https://github.com/ccontrols/component-controls/compare/v1.40.1...v1.40.2) (2020-11-16)
+
+
+### Bug Fixes
+
+* css loader postcss config ([284a552](https://github.com/ccontrols/component-controls/commit/284a552afc1b1e81cdacbdc642b76f1a25096bb6))
+* search in JSX doc.description ([e142ad3](https://github.com/ccontrols/component-controls/commit/e142ad385d35975822df51ca6a488a657c58d35d))
+* update type private ([96303ae](https://github.com/ccontrols/component-controls/commit/96303ae0047e42b921e3bc70457faa225fe0cac1))
+
+
+
+
+
 ## [1.40.1](https://github.com/ccontrols/component-controls/compare/v1.40.0...v1.40.1) (2020-11-16)
 
 
