@@ -297,7 +297,9 @@ export const useGetDocumentPath = (): UseGetDocumentPath => {
 /**
  * Returns the descript for a document page. It uses the doc.description property if available, or if there is a component assigned to the document will return the component's name.
  */
-export const useDocDescription = (doc?: Document): string | undefined => {
+export const useDocDescription = (
+  doc?: Document,
+): string | JSX.Element | undefined => {
   const store = useStore();
   if (!doc) {
     return undefined;
