@@ -15,13 +15,15 @@ export const react: PresetType = (options: BuildProps) => {
   const isProd = process.env.NODE_ENV === 'production';
   const cssLoaders: RuleSetLoader[] = [];
   const postcssOptions = customLoaderOptions(options, 'postcss-loader', {});
-  const hasPostCss =
-    Object.keys(postcssOptions).length ||
-    findUpFile(process.cwd(), 'postcss.config.js');
+  const postCssOptionsFile = findUpFile(process.cwd(), 'postcss.config.js');
+  const hasPostCss = Object.keys(postcssOptions).length || postCssOptionsFile;
   if (hasPostCss) {
     cssLoaders.push({
       loader: 'postcss-loader',
-      options: {},
+      options:
+        typeof postCssOptionsFile === 'string'
+          ? require(postCssOptionsFile)
+          : {},
     });
   }
   const result: PresetType = {
@@ -124,7 +126,7 @@ export const react: PresetType = (options: BuildProps) => {
           ],
         },
         {
-          test: /\.(css|sass|scss|less|styl)$/i,
+          test: /\.(css|sass|scss|less)$/i,
           use: [
             // Creates `style` nodes from JS strings
             // will export to a consolidated css file
@@ -144,11 +146,6 @@ export const react: PresetType = (options: BuildProps) => {
               // Compiles less to CSS
               loader: 'less-loader',
               options: customLoaderOptions(options, 'less-loader', {}),
-            },
-            {
-              // Compiles stylus to CSS
-              loader: 'stylus-loader',
-              options: customLoaderOptions(options, 'stylus-loader', {}),
             },
           ],
         },
