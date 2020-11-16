@@ -170,7 +170,7 @@ export type Story<Props = unknown> = {
 
 export type DynamicExamples = Story[];
 
-export type ExampleControls = {
+type ExampleControls = {
   [name: string]:
     | ComponentControl<ExampleControls>
     | string
