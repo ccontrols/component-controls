@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.40.5](https://github.com/ccontrols/component-controls/compare/v1.40.4...v1.40.5) (2020-11-16)
+
+
+### Bug Fixes
+
+* revert "useBuiltIns": "entry", ([5f1fb65](https://github.com/ccontrols/component-controls/commit/5f1fb657b2b0ca12aea5ce8090e1d1f03e6d69c2))
+
+
+
+
+
 ## [1.40.4](https://github.com/ccontrols/component-controls/compare/v1.40.3...v1.40.4) (2020-11-16)
 
 
