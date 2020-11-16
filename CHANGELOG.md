@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.40.4](https://github.com/ccontrols/component-controls/compare/v1.40.3...v1.40.4) (2020-11-16)
+
+
+### Bug Fixes
+
+* remove useBuiltIns for nextjs ([7e9aeb9](https://github.com/ccontrols/component-controls/commit/7e9aeb991d5938bf40031c043abcdb7a648faef9))
+
+
+
+
+
 ## [1.40.3](https://github.com/ccontrols/component-controls/compare/v1.40.2...v1.40.3) (2020-11-16)
 
 
