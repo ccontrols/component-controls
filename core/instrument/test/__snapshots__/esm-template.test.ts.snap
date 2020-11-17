@@ -52,7 +52,51 @@ export const Button: FC<ButtonProps> = props => (
     "dateModified": 2020-11-16T21:16:17.737Z,
     "package": "f4ca1c7bc1501c3fcaf51e85d24145e2",
     "smartControls": false,
-    "template": undefined,
+    "template": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 5,
+              "line": 0,
+            },
+            "start": Object {
+              "column": 0,
+              "line": 0,
+            },
+          },
+          "name": "props",
+          "usage": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 26,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 21,
+                  "line": 0,
+                },
+              },
+              "shorthand": undefined,
+            },
+          ],
+          "value": "props",
+        },
+      ],
+      "id": "template",
+      "loc": Object {
+        "end": Object {
+          "column": 42,
+          "line": 10,
+        },
+        "start": Object {
+          "column": 12,
+          "line": 10,
+        },
+      },
+      "name": "template",
+    },
     "title": "Introduction/Template doc",
   },
   "packages": Object {
@@ -143,7 +187,54 @@ export const Button: FC<ButtonProps> = props => (
       "version": "1.40.5",
     },
   },
-  "stories": Object {},
+  "stories": Object {
+    "John": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 5,
+              "line": 0,
+            },
+            "start": Object {
+              "column": 0,
+              "line": 0,
+            },
+          },
+          "name": "props",
+          "usage": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 26,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 21,
+                  "line": 0,
+                },
+              },
+              "shorthand": undefined,
+            },
+          ],
+          "value": "props",
+        },
+      ],
+      "id": "John",
+      "loc": Object {
+        "end": Object {
+          "column": 42,
+          "line": 10,
+        },
+        "start": Object {
+          "column": 12,
+          "line": 10,
+        },
+      },
+      "name": "John",
+      "source": "props => <Button {...props} />",
+    },
+  },
   "transformed": "import React from 'react';
 import { Document } from '@component-controls/core';
 import { ButtonProps, Button } from '../../components/button-props';

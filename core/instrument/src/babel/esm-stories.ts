@@ -70,7 +70,7 @@ export const extractCSFStories = (
         if (template) {
           doc.template = extractFunction(
             path as NodePath,
-            { init: template.value },
+            { type: 'VariableDeclarator', init: template.value },
             template.key.name,
           ) as Document['template'];
         }
