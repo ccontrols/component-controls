@@ -1,6 +1,17 @@
-import traverse, { TraverseOptions } from '@babel/traverse';
+import traverse, { TraverseOptions, NodePath } from '@babel/traverse';
+import {
+  ArrowFunctionExpression,
+  CallExpression,
+  JSXElement,
+  FunctionDeclaration,
+} from '@babel/types';
 import generate from '@babel/generator';
-import { Story, CodeLocation, StoryArguments } from '@component-controls/core';
+import {
+  Story,
+  CodeLocation,
+  StoryArguments,
+  Stories,
+} from '@component-controls/core';
 import { adjustSourceLocation } from '../misc/source-location';
 import {
   extractArgumentsUsage,
@@ -106,18 +117,41 @@ const extractPatameters = (
 export const extractFunctionParameters = (
   story: Story,
   exports?: MDXExportType,
+  locals?: Stories,
 ): TraverseOptions => ({
-  ArrowFunctionExpression: (path: any) => {
+  CallExpression: (path: NodePath<CallExpression>) => {
+    const methodName = (path.node.callee as { property: { name: string } })
+      .property.name;
+    if (methodName === 'bind' && locals) {
+      const name = (path.node.callee as { object: { name: string } }).object
+        .name;
+      if (locals[name]) {
+        const local = locals[name];
+        story.loc = local.loc;
+        story.arguments = local.arguments;
+        const { code } = generate(path.node, {
+          retainFunctionParens: true,
+          retainLines: true,
+        });
+        if (exports) {
+          exports.render = code.trim();
+        }
+      }
+    }
+    path.skip();
+  },
+  ArrowFunctionExpression: (path: NodePath<ArrowFunctionExpression>) => {
     extractPatameters(path, story, exports);
     path.skip();
   },
-  FunctionDeclaration: (path: any) => {
+  FunctionDeclaration: (path: NodePath<FunctionDeclaration>) => {
     extractPatameters(path, story, exports);
     path.skip();
   },
-  JSXElement: (path: any) => {
-    if (exports && path.parent.children) {
-      const children = path.parent.children
+  JSXElement: (path: NodePath<JSXElement>) => {
+    const children = (path.parent as { children: any }).children;
+    if (exports && children) {
+      const childStr = children
         .map((child: any) => {
           const { code } = generate(child, {
             retainFunctionParens: true,
@@ -126,7 +160,7 @@ export const extractFunctionParameters = (
           return code.trim();
         })
         .join('\n');
-      exports.render = `() => (<>\n${children}\n</>)`;
+      exports.render = `() => (<>\n${childStr}\n</>)`;
     }
     path.skip();
   },

@@ -1,5 +1,6 @@
 import {
   Story,
+  Stories,
   Document,
   CodeLocation,
   getASTSource,
@@ -14,7 +15,7 @@ import { sourceLocation } from '../misc/source-location';
 import { ParseStorieReturnType, InstrumentOptions } from '../types';
 import { extractSource } from '../misc/source-extract';
 import { componentsFromParams } from '../misc/component-attributes';
-
+import { extractVarFunction } from './extract-function';
 type PartialStore = Required<
   Pick<
     ParseStorieReturnType,
@@ -38,6 +39,7 @@ export const extractMDXStories: (
   { source, filePath }: SourceFile,
 ): PartialStore | undefined => {
   let components: { [key: string]: string | undefined } = {};
+  const locals: Stories = {};
   const collectComponent = (attributes: any) => {
     const attrComponents = componentsFromParams(attributes);
     components = attrComponents.reduce((acc, componentName) => {
@@ -117,7 +119,8 @@ export const extractMDXStories: (
               };
               if (
                 expression &&
-                (expression.expression.type === 'CallExpression' ||
+                ((expression.expression.type === 'CallExpression' &&
+                  expression.expression.callee.name) ||
                   (expression.expression.type === 'ArrowFunctionExpression' &&
                     expression.expression.body &&
                     expression.expression.body.callee))
@@ -151,15 +154,15 @@ export const extractMDXStories: (
                 if (component !== undefined) {
                   story.component = component;
                 }
+                story.loc = sourceLocation(loc);
                 traverse(
                   expression || path.node,
-                  extractFunctionParameters(story, exports),
+                  extractFunctionParameters(story, exports, locals),
                   path.scope,
                   path,
                 );
                 // adjust for source code wraping issues
-                const storySource = getASTSource(source, loc);
-                story.loc = sourceLocation(loc);
+                const storySource = getASTSource(source, story.loc);
                 story.source = extractSource(storySource, story);
               }
 
@@ -197,6 +200,19 @@ export const extractMDXStories: (
             collectComponent(attributes);
             break;
         }
+      }
+    },
+    VariableDeclaration: (path: any) => {
+      const story = extractVarFunction(
+        ast,
+        _options,
+        { source, filePath },
+        path,
+        store.doc?.template,
+        locals,
+      );
+      if (story && story.name) {
+        locals[story.name] = story;
       }
     },
   });

@@ -45,6 +45,9 @@ export const followImports = (
 ): FollowImportType | undefined => {
   const { parser: parserOptions, resolver: resolveOptions, components } =
     options || {};
+  if (!importName) {
+    return undefined;
+  }
   const fileName =
     components && components.resolveFile
       ? components.resolveFile(importName, filePath)
