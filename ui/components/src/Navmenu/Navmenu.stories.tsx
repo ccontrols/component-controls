@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Badge, Input } from 'theme-ui';
 import { Example } from '@component-controls/core';
 import {
@@ -130,7 +130,7 @@ export const items: Example = () => (
 );
 
 export const search: Example = () => {
-  const [search, setSearch] = React.useState<string | undefined>(undefined);
+  const [search, setSearch] = useState<string | undefined>(undefined);
 
   return (
     <Box css={{ width: 250 }}>

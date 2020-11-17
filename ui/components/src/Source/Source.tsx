@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /* eslint react/jsx-key: 0 */
 import { jsx } from 'theme-ui';
-import React, { FC, MouseEvent } from 'react';
+import { FC, MouseEvent, useState } from 'react';
 import copy from 'copy-to-clipboard';
 import {
   SyntaxHighlighter,
@@ -20,7 +20,7 @@ export const Source: FC<SourceProps> = ({
   as = 'div',
   ...props
 }) => {
-  const [copied, setCopied] = React.useState(false);
+  const [copied, setCopied] = useState(false);
   const onCopy = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 

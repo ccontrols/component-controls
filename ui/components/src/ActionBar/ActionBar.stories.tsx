@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Box } from 'theme-ui';
 import { Example, ControlTypes } from '@component-controls/core';
 import { ActionBar, ActionBarProps } from './ActionBar';
@@ -10,7 +10,7 @@ export default {
   component: ActionBar,
 };
 
-const Container: React.FC = ({ children }) => (
+const Container: FC = ({ children }) => (
   <ThemeProvider>
     <Box
       style={{

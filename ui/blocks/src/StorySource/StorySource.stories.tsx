@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Example } from '@component-controls/core';
 import { ActionItem, ActionContainer } from '@component-controls/components';
 import { PrismTheme } from 'prism-react-renderer';
@@ -45,7 +45,7 @@ const themes: {
   shadesOfPurple,
 };
 export const themeSelector: Example = () => {
-  const [theme, setTheme] = React.useState('dracula');
+  const [theme, setTheme] = useState('dracula');
   const themeAction: ActionItem = {
     node: theme,
     onClick: () => {

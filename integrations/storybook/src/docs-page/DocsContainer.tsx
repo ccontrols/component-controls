@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useMemo } from 'react';
 import {
   PageContainer as BlockPageContainer,
   BlockContextProvider,
@@ -10,7 +10,7 @@ import {
 import { store } from '@component-controls/store/live_store';
 
 export const PageContextContainer: FC = ({ children }) => {
-  const options = React.useMemo(() => getGlobalOptions(), []);
+  const options = useMemo(() => getGlobalOptions(), []);
   const { storyId, docId } = useCurrentData();
   return (
     <BlockContextProvider

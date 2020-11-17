@@ -66,7 +66,7 @@ _AppContext [source code](https://github.com/ccontrols/component-controls/tree/m
 | `docId`      | _string_                          |             |
 | `storyId`    | _string_                          |             |
 | `store*`     | _Store_                           |             |
-| `linkClass*` | _any_                             |             |
+| `linkClass*` | _FC&lt;LinkProps>_                |             |
 | `Helmet`     | _FC&lt;{ children: ReactNode; }>_ |             |
 | `activeTab`  | _string_                          |             |
 

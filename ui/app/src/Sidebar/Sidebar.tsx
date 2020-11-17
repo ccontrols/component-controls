@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FC, useState, useMemo, useContext } from 'react';
+import { FC, ReactNode, useState, useMemo, useContext } from 'react';
 import { jsx, Input, Box, Heading } from 'theme-ui';
 import { NoteIcon, BookIcon } from '@primer/octicons-react';
 import {
@@ -37,7 +37,7 @@ export interface SidebarProps {
   /**
    * title element
    */
-  title?: React.ReactNode;
+  title?: ReactNode;
 
   /**
    * document type

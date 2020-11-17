@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FC, forwardRef, useEffect } from 'react';
+import { FC, forwardRef, Ref, useEffect } from 'react';
 import { jsx, CSSProperties } from 'theme-ui';
 import { useStory, StoryInputProps } from '@component-controls/store';
 import {
@@ -15,7 +15,7 @@ export interface StoryOwnProps {
   /**
    * ref can be used by blocks embedding Story - ie ally plugin
    */
-  ref?: React.Ref<HTMLDivElement>;
+  ref?: Ref<HTMLDivElement>;
   /**
    * used by other blocks
    * ie ally plugin uses it launch a new ally test on re-render
@@ -38,7 +38,7 @@ export type StoryProps = StoryOwnProps &
  * block component to render story function with decorators
  */
 export const Story: FC<StoryProps> = forwardRef(
-  (fullProps: StoryProps, ref: React.Ref<HTMLDivElement>) => {
+  (fullProps: StoryProps, ref: Ref<HTMLDivElement>) => {
     const custom = useCustomProps<StoryProps>(NAME, fullProps);
     const { wrapper, onRender, iframeStyle, ...props } = custom;
     useEffect(() => onRender && onRender());

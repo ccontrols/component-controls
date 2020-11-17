@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import addons, { Channel } from '@storybook/addons';
 import { ConfigApi } from '@storybook/client-api';
 import { UPDATE_STORY_CONTEXT } from './types';
@@ -42,9 +42,9 @@ const getGlobalStoryId = (): string => {
  * @returns a story id as a React hook, when the the current story changes, will call back
  */
 export const useStoryId = (): string => {
-  const [storyId, setStoryId] = React.useState<string>(getGlobalStoryId());
-  const channel = React.useMemo(() => addons.getChannel(), []);
-  React.useEffect(() => {
+  const [storyId, setStoryId] = useState<string>(getGlobalStoryId());
+  const channel = useMemo(() => addons.getChannel(), []);
+  useEffect(() => {
     const onStoryChange = ({ storyId: id }: { storyId: string }) => {
       if (id !== globalStoryId) {
         globalStoryId = id;

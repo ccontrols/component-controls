@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { FC, useContext, ReactText } from 'react';
+import { FC, ReactNode, useContext, ReactText } from 'react';
 import { jsx, Box, BoxProps, Heading } from 'theme-ui';
 import { get } from '@theme-ui/css';
 import { useTheme } from '../ThemeContext';
@@ -10,7 +10,7 @@ export interface SidebarProps {
   /**
    * Title string or any react node
    */
-  title?: React.ReactNode;
+  title?: ReactNode;
 
   /**
    * Whether the sidebar can be collapsed
@@ -20,7 +20,7 @@ export interface SidebarProps {
   /**
    children content elements to be displayed in Sidebar
    */
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 /**

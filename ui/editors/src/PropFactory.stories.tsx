@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent, useState, SetStateAction } from 'react';
 import {
   ControlTypes,
   ComponentControlBoolean,
@@ -30,11 +30,11 @@ const CheckboxEditor: PropertyEditor = ({ name }) => {
 
 addPropertyEditor(ControlTypes.BOOLEAN, CheckboxEditor);
 export const overview: Example = () => {
-  const [state, setState] = React.useState(false);
+  const [state, setState] = useState(false);
   const Component = getPropertyEditor(ControlTypes.BOOLEAN);
   return (
     <ControlsStateProvider
-      onChange={(name: any, newVal: React.SetStateAction<boolean>) =>
+      onChange={(name: any, newVal: SetStateAction<boolean>) =>
         setState(newVal)
       }
       controls={{

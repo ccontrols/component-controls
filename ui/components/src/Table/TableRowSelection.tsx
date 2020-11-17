@@ -2,7 +2,7 @@
 /** @jsx jsx */
 /* eslint react/jsx-key: 0 */
 import { jsx, Checkbox, Label } from 'theme-ui';
-import React from 'react';
+import { FC, forwardRef, Ref } from 'react';
 import {
   UseTableHooks,
   UseRowSelectInstanceProps,
@@ -10,8 +10,8 @@ import {
   UseRowSelectRowProps,
 } from 'react-table';
 
-const IndeterminateCheckbox: React.FC<TableToggleAllRowsSelectedProps> = React.forwardRef(
-  ({ onChange, checked }, ref: React.Ref<HTMLInputElement>) => {
+const IndeterminateCheckbox: FC<TableToggleAllRowsSelectedProps> = forwardRef(
+  ({ onChange, checked }, ref: Ref<HTMLInputElement>) => {
     return (
       <Label>
         <Checkbox ref={ref} onChange={onChange} checked={checked} />

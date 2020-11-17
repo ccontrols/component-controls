@@ -41,7 +41,7 @@ export type PageContainerProps = PageContainerOwnProps &
 export const PageContainer: FC<PageContainerProps> = forwardRef(
   (
     { children, variant, wrapper: Wrapper = Container, ...rest },
-    ref: React.Ref<HTMLDivElement>,
+    ref: Ref<HTMLDivElement>,
   ) => {
     useEffect(() => {
       const parseURLHash = () => {

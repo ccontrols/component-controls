@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /* eslint react/jsx-key: 0 */
 import { jsx, Heading } from 'theme-ui';
-import { FC, Fragment } from 'react';
+import { FC, Fragment, CSSProperties, ElementType } from 'react';
 import { Styled, Box, useColorMode } from 'theme-ui';
 import Highlight, {
   defaultProps,
@@ -69,12 +69,12 @@ export interface SyntaxHighlighterProps {
   /**
    * css styles for the container.
    */
-  style?: React.CSSProperties;
+  style?: CSSProperties;
 
   /**
    * syntax container as element. Can be used as `div` or `span`.
    */
-  as?: React.ElementType;
+  as?: ElementType;
 
   /**
    * code configuration string passed from MDX

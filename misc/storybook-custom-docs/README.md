@@ -274,14 +274,14 @@ _defined in [@component-controls/storybook-custom-docs/src/types.ts](https://git
 
 _defined in [@component-controls/storybook-custom-docs/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/types.ts#L25)_
 
-**function** (`params`\*: [CustomPageRenderFnParams](#custompagerenderfnparams)): [React.ReactNode](#react.reactnode);
+**function** (`params`\*: [CustomPageRenderFnParams](#custompagerenderfnparams)): [ReactNode](#reactnode);
 
 ### parameters
 
 | Name      | Type                                                  | Description |
 | --------- | ----------------------------------------------------- | ----------- |
 | `params*` | [CustomPageRenderFnParams](#custompagerenderfnparams) |             |
-| `returns` | [React.ReactNode](#react.reactnode)                   |             |
+| `returns` | [ReactNode](#reactnode)                               |             |
 
 ## UPDATE_STORY_CONTEXT
 

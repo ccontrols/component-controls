@@ -1,4 +1,4 @@
-import React, { MouseEvent } from 'react';
+import { MouseEvent, ReactNode } from 'react';
 
 /**
  * an item in the ActionBar component
@@ -11,7 +11,7 @@ export interface ActionItem {
   /**
    * title - if a string, will use the built-in components, else can prvide custom React component
    */
-  node: React.ReactNode;
+  node: ReactNode;
 
   /**
    * if the title is a string and href is set will use a default `<Link />` component
@@ -46,7 +46,7 @@ export interface ActionItem {
    * panel for Tab-enabled UI, where an action item can open up a panel with tabs
    * in this case, the onClick function can return true/false whether to open up the panel
    */
-  panel?: React.ReactNode;
+  panel?: ReactNode;
 }
 
 export type ActionItems = ActionItem[];

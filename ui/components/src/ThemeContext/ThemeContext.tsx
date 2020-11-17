@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, createContext, useMemo } from 'react';
 import { merge } from 'theme-ui';
 import { ThemeProvider as ThemeUIProvider, Theme } from 'theme-ui';
 
@@ -8,7 +8,7 @@ import { theme as defaultTheme } from './theme';
 export interface ThemeContextProps {
   theme?: Theme;
 }
-export const ThemeContext = React.createContext<ThemeContextProps>({});
+export const ThemeContext = createContext<ThemeContextProps>({});
 
 export interface ThemeProviderProps {
   /**
@@ -23,7 +23,7 @@ export const ThemeProvider: FC<ThemeProviderProps> = ({
   children,
   components = {},
 }) => {
-  const theme = React.useMemo(() => {
+  const theme = useMemo(() => {
     return customTheme ? merge(defaultTheme, customTheme) : defaultTheme;
   }, [customTheme]);
   return (

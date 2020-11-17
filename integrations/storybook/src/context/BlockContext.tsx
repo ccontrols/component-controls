@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { BlockContextProvider as BlocksContextProvider } from '@component-controls/blocks';
 import { store } from '@component-controls/store/live_store';
 import { useCurrentData } from '@component-controls/storybook-custom-docs';
@@ -6,7 +6,7 @@ import { useCurrentData } from '@component-controls/storybook-custom-docs';
 export interface BlockContextProviderProps {
   id?: string;
 }
-export const BlockContextProvider: React.FC<BlockContextProviderProps> = ({
+export const BlockContextProvider: FC<BlockContextProviderProps> = ({
   children,
   id,
 }) => {

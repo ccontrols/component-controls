@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   ControlTypes,
   ComponentControls,
@@ -13,7 +13,7 @@ export default {
 };
 
 export const overview: Example = () => {
-  const [state, setState] = React.useState<ComponentControls>({
+  const [state, setState] = useState<ComponentControls>({
     border: { type: ControlTypes.TEXT, value: '2px dashed silver' },
     borderRadius: { type: ControlTypes.NUMBER, value: 10 },
     padding: { type: ControlTypes.NUMBER, value: 10 },
@@ -32,7 +32,7 @@ export const overview: Example = () => {
 };
 
 export const editLabel: Example = () => {
-  const [state, setState] = React.useState<ComponentControls>({
+  const [state, setState] = useState<ComponentControls>({
     border: { type: ControlTypes.TEXT, value: '2px dashed silver' },
     borderRadius: { type: ControlTypes.NUMBER, value: 10 },
     padding: { type: ControlTypes.NUMBER, value: 10 },
@@ -51,7 +51,7 @@ export const editLabel: Example = () => {
 };
 
 export const inline: Example = () => {
-  const [state, setState] = React.useState<ComponentControls>({
+  const [state, setState] = useState<ComponentControls>({
     border: { type: ControlTypes.TEXT, value: '2px dashed silver' },
     borderRadius: { type: ControlTypes.NUMBER, value: 10 },
     padding: { type: ControlTypes.NUMBER, value: 10 },

@@ -1,4 +1,4 @@
-import React, { FC, forwardRef } from 'react';
+import React, { FC, forwardRef, Ref } from 'react';
 import { DocType } from '@component-controls/core';
 import { useConfig } from '@component-controls/store';
 import {
@@ -19,7 +19,7 @@ export type PageContainerProps = {
  * page container to enhance the inner page wrapper
  */
 export const PageContainer: FC<PageContainerProps> = forwardRef(
-  ({ type, ...props }, ref: React.Ref<HTMLDivElement>) => {
+  ({ type, ...props }, ref: Ref<HTMLDivElement>) => {
     const config = useConfig();
     const { pages } = config || {};
     const page = pages ? pages[type] : undefined;

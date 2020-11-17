@@ -3,6 +3,7 @@
 -   [Overview](#overview)
 -   [List of components](#list-of-components)
     -   [<ins>ComponentsBlockContainer</ins>](#inscomponentsblockcontainerins)
+    -   [<ins>ComponentsContainer</ins>](#inscomponentscontainerins)
     -   [<ins>StoryBlockContainer</ins>](#insstoryblockcontainerins)
     -   [<ins>ComponentDeps</ins>](#inscomponentdepsins)
     -   [<ins>Dependencies</ins>](#insdependenciesins)
@@ -31,8 +32,10 @@
     -   [<ins>TagsList</ins>](#instagslistins)
     -   [<ins>ThemeProvider</ins>](#insthemeproviderins)
     -   [<ins>Title</ins>](#institleins)
+    -   [<ins>BlockContextProvider</ins>](#insblockcontextproviderins)
     -   [<ins>InvalidType</ins>](#insinvalidtypeins)
     -   [<ins>MDXContent</ins>](#insmdxcontentins)
+    -   [<ins>MockContext</ins>](#insmockcontextins)
     -   [<ins>getStoryBlockTitle</ins>](#insgetstoryblocktitleins)
 
 # Overview
@@ -70,6 +73,17 @@ _ComponentsBlockContainer [source code](https://github.com/ccontrols/component-c
 | `collapsible` | _boolean_                                                 | if false, will nothave a collapsible frame.                                                                                                                                                                                                                                                        |
 | `sxStyle`     | _ThemeUIStyleObject_                                      | theme-ui styling object for Block Box                                                                                                                                                                                                                                                              |
 | `data-testid` | _string_                                                  | testing id                                                                                                                                                                                                                                                                                         |
+
+## <ins>ComponentsContainer</ins>
+
+_ComponentsContainer [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/BlockContainer/components/ComponentsContainer.tsx)_
+
+### properties
+
+| Name          | Type                                                      | Description                                                                                                   |
+| ------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `components*` | _Record&lt;string, Component>_                            |                                                                                                               |
+| `onSelect`    | _(name: string, component: Component) => boolean \| void_ | callback to be called when the tab changes if the function returns false, it can stop chabging to the new tab |
 
 ## <ins>StoryBlockContainer</ins>
 
@@ -277,7 +291,7 @@ _BasePlayground [source code](https://github.com/ccontrols/component-controls/tr
 | `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                     |
 | `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                           |
 | `data-testid` | _string_             | testing id                                                                                                      |
-| `openTab`     | _any_                | by default, which tab to have open.                                                                             |
+| `openTab`     | _ReactNode_          | by default, which tab to have open.                                                                             |
 | `visibleTabs` | _boolean_            | if true, the tabs on the panels will be visible                                                                 |
 | `background`  | _BackgroundType_     | background pattern type                                                                                         |
 | `direction`   | _DirectionType_      | direction type                                                                                                  |
@@ -306,7 +320,7 @@ _Playground [source code](https://github.com/ccontrols/component-controls/tree/m
 | `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                     |
 | `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                           |
 | `data-testid` | _string_             | testing id                                                                                                      |
-| `openTab`     | _any_                | by default, which tab to have open.                                                                             |
+| `openTab`     | _ReactNode_          | by default, which tab to have open.                                                                             |
 | `visibleTabs` | _boolean_            | if true, the tabs on the panels will be visible                                                                 |
 | `background`  | _BackgroundType_     | background pattern type                                                                                         |
 | `direction`   | _DirectionType_      | direction type                                                                                                  |
@@ -331,7 +345,7 @@ _StoryPlayground [source code](https://github.com/ccontrols/component-controls/t
 | `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                     |
 | `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                           |
 | `data-testid` | _string_             | testing id                                                                                                      |
-| `openTab`     | _any_                | by default, which tab to have open.                                                                             |
+| `openTab`     | _ReactNode_          | by default, which tab to have open.                                                                             |
 | `visibleTabs` | _boolean_            | if true, the tabs on the panels will be visible                                                                 |
 | `background`  | _BackgroundType_     | background pattern type                                                                                         |
 | `direction`   | _DirectionType_      | direction type                                                                                                  |
@@ -419,7 +433,7 @@ _Stories [source code](https://github.com/ccontrols/component-controls/tree/mast
 | `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                                |
 | `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                                      |
 | `data-testid` | _string_             | testing id                                                                                                                 |
-| `openTab`     | _any_                | by default, which tab to have open.                                                                                        |
+| `openTab`     | _ReactNode_          | by default, which tab to have open.                                                                                        |
 | `visibleTabs` | _boolean_            | if true, the tabs on the panels will be visible                                                                            |
 | `background`  | _BackgroundType_     | background pattern type                                                                                                    |
 | `direction`   | _DirectionType_      | direction type                                                                                                             |
@@ -556,6 +570,22 @@ _Title [source code](https://github.com/ccontrols/component-controls/tree/master
 | `children` | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | text to be displayed in the component. |
 | `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_                                                                                                                                                                                                       |                                        |
 
+## <ins>BlockContextProvider</ins>
+
+_BlockContextProvider [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/context/BlockContext.tsx)_
+
+### properties
+
+| Name         | Type                    | Description                                                                            |
+| ------------ | ----------------------- | -------------------------------------------------------------------------------------- |
+| `storyId`    | _string_                | current story id                                                                       |
+| `docId`      | _string_                | current documentation page, if no story is selected                                    |
+| `store*`     | _Store_                 | store object                                                                           |
+| `activeTab`  | _string_                | active page tab                                                                        |
+| `values`     | _any_                   | initial control values. usually passed from the url                                    |
+| `options`    | _object_                | global options passed from container those are global parameters as well as decorators |
+| `components` | _MarkdownComponentType_ | components to customize the markdown display.                                          |
+
 ## <ins>InvalidType</ins>
 
 error message when the control type is not found.
@@ -571,6 +601,17 @@ _MDXContent [source code](https://github.com/ccontrols/component-controls/tree/m
 | Name          | Type  | Description |
 | ------------- | ----- | ----------- |
 | `components*` | _any_ |             |
+
+## <ins>MockContext</ins>
+
+_MockContext [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/test/MockContext.tsx)_
+
+### properties
+
+| Name        | Type                   | Description |
+| ----------- | ---------------------- | ----------- |
+| `storyId`   | _string_               |             |
+| `component` | _ComponentType&lt;{}>_ |             |
 
 ## <ins>getStoryBlockTitle</ins>
 

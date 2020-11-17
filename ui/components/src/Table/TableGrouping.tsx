@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 /* eslint-disable react/jsx-key */
-import React from 'react';
+import React, { useMemo } from 'react';
 import {
   TableState,
   UseGroupByState,
@@ -14,7 +14,7 @@ import { ChevronRightIcon, ChevronDownIcon } from '@primer/octicons-react';
 type GroupByState = TableState &
   Partial<UseGroupByState<Record<string, unknown>>>;
 const useControlledState = (state: GroupByState) => {
-  return React.useMemo(() => {
+  return useMemo(() => {
     if (state?.groupBy?.length) {
       return {
         ...state,

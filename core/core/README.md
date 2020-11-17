@@ -179,7 +179,7 @@ $ npm install @component-controls/core --save-dev
 
 ## DefaultStore
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L390)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L398)_
 
 
 
@@ -243,7 +243,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 store of stories information in memory after the loader is applied
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L351)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L359)_
 
 
 
@@ -300,7 +300,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of components used in stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L326)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L334)_
 
 Record&lt;string, 
 
@@ -314,7 +314,7 @@ A documentation file's metadata.
 For MDX files, fromtmatter is used to declare the document properties.
 For ESM (ES Modules) documentation files, the default export is used.
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L207)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L211)_
 
 ### properties
 
@@ -338,6 +338,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `source`           | string                              | source code of the entire file of stories                                                                                                                                                    |
 | `stories`          | string\[]                           | list of story ids contained in the document.                                                                                                                                                 |
 | `tags`             | string\[]                           |  comma-separated list of document tags, used for search and for SOE keywords unless keyswords are specified.                                                                                 |
+| `template`         | Example&lt;>                        | template component to be linked to document stories                                                                                                                                          |
 | `title*`           | string                              | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
 | `type`             | [DocType](#doctype)                 | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
 | `StoryProps`       | StoryProps&lt;>                     |                                                                                                                                                                                              |
@@ -347,7 +348,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of story files, or groups
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L331)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L339)_
 
 Record&lt;string, 
 
@@ -357,7 +358,7 @@ Record&lt;string,
 
 ## DynamicExamples
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L171)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L175)_
 
 [Story](#story)\[]
 
@@ -365,7 +366,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 es named export function, excapsulates a contained example code.
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L185)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L189)_
 
 ### properties
 
@@ -377,7 +378,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## ExampleControls
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L173)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L177)_
 
 \[name: string]: 
 
@@ -387,7 +388,7 @@ ComponentControl&lt;[ExampleControls](#examplecontrols)> | string | string\[] | 
 
 list of repositories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L343)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L351)_
 
 Record&lt;string, 
 
@@ -397,13 +398,13 @@ Record&lt;string,
 
 ## Pages
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L333)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L341)_
 
 [Document](#document)\[]
 
 ## StoreObserver
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L345)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L353)_
 
 **function** (`story`: [Story](#story)): void;
 
@@ -418,7 +419,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L338)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L346)_
 
 Record&lt;string, 
 
@@ -446,6 +447,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `name*`       | string                            | name of the Story.                                                                                                                                |
 | `renderFn`    | [StoryRenderFn](#storyrenderfn)   | render function for the story                                                                                                                     |
 | `source`      | string                            | the source code of the story, extracted by the AST instrumenting loaders                                                                          |
+| `storyName`   | string                            | alternative name prop                                                                                                                             |
 | `subtitle`    | string                            | optional story subtitle property                                                                                                                  |
 | `StoryProps`  | StoryProps&lt;>                   |                                                                                                                                                   |
 
@@ -463,7 +465,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 dynamic story creator function type.
 returns an array of dynamically loaded stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L199)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L203)_
 
 **function** (`doc`\*: [Document](#document)): ### properties| Name        | Type               | Description |
 | ----------- | ------------------ | ----------- |
@@ -479,19 +481,19 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## CURRENT_STORY
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L347)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L355)_
 
 
 
 ## defDocType
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L201)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L205)_
 
 
 
 ## dateToLocalString
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L316)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L324)_
 
 **function** dateToLocalString(`date`: [Date](#date)): string;
 
@@ -504,7 +506,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## getDefaultStore
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L416)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L424)_
 
 **function** getDefaultStore(): [Store](#store);
 
@@ -983,10 +985,10 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 | `hidden`     | boolean                                                                                        | hide an action item                                                                                                                                                |
 | `href`       | string                                                                                         | if the title is a string and href is set will use a default \`&lt;Link />\` component                                                                              |
 | `id`         | string                                                                                         | optional id, used if title is not set                                                                                                                              |
-| `node*`      | [React.ReactNode](#react.reactnode)                                                            | title - if a string, will use the built-in components, else can prvide custom React component                                                                      |
+| `node*`      | [ReactNode](#reactnode)                                                                        | title - if a string, will use the built-in components, else can prvide custom React component                                                                      |
 | `onClick`    | **function** (`e`\*: MouseEvent&lt;[HTMLButtonElement](#htmlbuttonelement)>): void \| boolean; | if the title is a string and href is not set, onClick will be used on a \`&lt;Button />\` component                                                                |
 | `order`      | number                                                                                         | optional order, if not provided will use the natural order of items from right to left                                                                             |
-| `panel`      | [React.ReactNode](#react.reactnode)                                                            | panel for Tab-enabled UI, where an action item can open up a panel with tabs in this case, the onClick function can return true/false whether to open up the panel |
+| `panel`      | [ReactNode](#reactnode)                                                                        | panel for Tab-enabled UI, where an action item can open up a panel with tabs in this case, the onClick function can return true/false whether to open up the panel |
 
 ## CodeLocation
 
@@ -1648,7 +1650,7 @@ _defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols
 
 ## StoreObserver
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L345)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L353)_
 
 **function** (`story`: [Story](#story)): void;
 
@@ -1679,6 +1681,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `name*`       | string                            | name of the Story.                                                                                                                                |
 | `renderFn`    | [StoryRenderFn](#storyrenderfn)   | render function for the story                                                                                                                     |
 | `source`      | string                            | the source code of the story, extracted by the AST instrumenting loaders                                                                          |
+| `storyName`   | string                            | alternative name prop                                                                                                                             |
 | `subtitle`    | string                            | optional story subtitle property                                                                                                                  |
 | `StoryProps`  | StoryProps&lt;>                   |                                                                                                                                                   |
 
@@ -1686,7 +1689,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of components used in stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L326)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L334)_
 
 Record&lt;string, 
 
@@ -1709,7 +1712,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 list of story files, or groups
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L331)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L339)_
 
 Record&lt;string, 
 
@@ -1721,7 +1724,7 @@ Record&lt;string,
 
 list of repositories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L343)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L351)_
 
 Record&lt;string, 
 
@@ -1733,7 +1736,7 @@ Record&lt;string,
 
 list of stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L338)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L346)_
 
 Record&lt;string, 
 
@@ -1778,7 +1781,7 @@ A documentation file's metadata.
 For MDX files, fromtmatter is used to declare the document properties.
 For ESM (ES Modules) documentation files, the default export is used.
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L207)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L211)_
 
 ### properties
 
@@ -1802,6 +1805,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `source`           | string                              | source code of the entire file of stories                                                                                                                                                    |
 | `stories`          | string\[]                           | list of story ids contained in the document.                                                                                                                                                 |
 | `tags`             | string\[]                           |  comma-separated list of document tags, used for search and for SOE keywords unless keyswords are specified.                                                                                 |
+| `template`         | Example&lt;>                        | template component to be linked to document stories                                                                                                                                          |
 | `title*`           | string                              | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
 | `type`             | [DocType](#doctype)                 | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
 | `StoryProps`       | StoryProps&lt;>                     |                                                                                                                                                                                              |
@@ -1809,7 +1813,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## ExampleControls
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L173)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L177)_
 
 \[name: string]: 
 
@@ -2031,6 +2035,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `name*`       | string                            | name of the Story.                                                                                                                                |
 | `renderFn`    | [StoryRenderFn](#storyrenderfn)   | render function for the story                                                                                                                     |
 | `source`      | string                            | the source code of the story, extracted by the AST instrumenting loaders                                                                          |
+| `storyName`   | string                            | alternative name prop                                                                                                                             |
 | `subtitle`    | string                            | optional story subtitle property                                                                                                                  |
 | `StoryProps`  | StoryProps&lt;>                   |                                                                                                                                                   |
 
@@ -2046,7 +2051,7 @@ A documentation file's metadata.
 For MDX files, fromtmatter is used to declare the document properties.
 For ESM (ES Modules) documentation files, the default export is used.
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L207)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L211)_
 
 ### properties
 
@@ -2070,6 +2075,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `source`           | string                              | source code of the entire file of stories                                                                                                                                                    |
 | `stories`          | string\[]                           | list of story ids contained in the document.                                                                                                                                                 |
 | `tags`             | string\[]                           |  comma-separated list of document tags, used for search and for SOE keywords unless keyswords are specified.                                                                                 |
+| `template`         | Example&lt;>                        | template component to be linked to document stories                                                                                                                                          |
 | `title*`           | string                              | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
 | `type`             | [DocType](#doctype)                 | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
 | `StoryProps`       | StoryProps&lt;>                     |                                                                                                                                                                                              |

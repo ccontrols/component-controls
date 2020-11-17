@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { FC, ComponentType } from 'react';
 import { BlockContextProvider } from '../context';
 import { store } from './storyStore';
 
 export interface MockContexProps {
   storyId?: string;
-  component?: React.ComponentType;
+  component?: ComponentType;
   [key: string]: any;
 }
 
-export const MockContext: React.FC<MockContexProps> = ({
+export const MockContext: FC<MockContexProps> = ({
   children,
   storyId = 'id-of-story',
 }) => {

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FC, useState, Fragment, forwardRef } from 'react';
+import { FC, forwardRef, Ref, useState, Fragment } from 'react';
 import { jsx, CSSProperties, Box } from 'theme-ui';
 
 import Iframe from 'react-frame-component';
@@ -75,13 +75,10 @@ export const NAME = 'story';
 
 export interface StoryRenderProps {
   story: Story;
-  ref?: React.Ref<HTMLDivElement>;
+  ref?: Ref<HTMLDivElement>;
 }
 export const StoryRender: FC<StoryRenderProps & StoryWrapperProps> = forwardRef(
-  (
-    { story, wrapper, iframeStyle, ...rest },
-    ref: React.Ref<HTMLDivElement>,
-  ) => {
+  ({ story, wrapper, iframeStyle, ...rest }, ref: Ref<HTMLDivElement>) => {
     const store = useStore();
     const options = useExternalOptions();
     const rendered = store.config.renderFn

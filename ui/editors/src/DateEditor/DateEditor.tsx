@@ -1,4 +1,10 @@
-import React, { ChangeEvent, RefObject } from 'react';
+import React, {
+  ChangeEvent,
+  RefObject,
+  useState,
+  useRef,
+  useEffect,
+} from 'react';
 import { Input, Box } from 'theme-ui';
 import { ComponentControlDate, ControlTypes } from '@component-controls/core';
 import { useControl } from '@component-controls/store';
@@ -34,10 +40,10 @@ const formatTime = (date: Date | undefined) => {
  */
 export const DateEditor: PropertyEditor = ({ name }) => {
   const [control, onChange] = useControl<ComponentControlDate>(name);
-  const [valid, setValid] = React.useState(true);
-  const dateInputRef = React.useRef<HTMLInputElement>();
-  const timeInputRef = React.useRef<HTMLInputElement>();
-  React.useEffect(() => {
+  const [valid, setValid] = useState(true);
+  const dateInputRef = useRef<HTMLInputElement>();
+  const timeInputRef = useRef<HTMLInputElement>();
+  useEffect(() => {
     if (valid !== false) {
       if (dateInputRef && dateInputRef.current) {
         dateInputRef.current.value = formatDate(toDate(control.value));

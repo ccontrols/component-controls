@@ -21,8 +21,15 @@
     -   [<ins>StorySource</ins>](#insstorysourceins)
     -   [<ins>Subtitle</ins>](#inssubtitleins)
     -   [<ins>Title</ins>](#institleins)
+    -   [<ins>BlockContextProvider</ins>](#insblockcontextproviderins)
+    -   [<ins>ControlsProvider</ins>](#inscontrolsproviderins)
+    -   [<ins>ThemeProvider</ins>](#insthemeproviderins)
     -   [<ins>PageContextContainer</ins>](#inspagecontextcontainerins)
     -   [<ins>DocsContainer</ins>](#insdocscontainerins)
+    -   [<ins>AddonPanel</ins>](#insaddonpanelins)
+    -   [<ins>PropsTablePanel</ins>](#inspropstablepanelins)
+    -   [<ins>StoryConfigPanel</ins>](#insstoryconfigpanelins)
+    -   [<ins>StorySourcePanel</ins>](#insstorysourcepanelins)
 
 # Shocase sites
 
@@ -221,7 +228,7 @@ _Playground [source code](https://github.com/ccontrols/component-controls/tree/m
 | `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                     |
 | `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                           |
 | `data-testid` | _string_             | testing id                                                                                                      |
-| `openTab`     | _any_                | by default, which tab to have open.                                                                             |
+| `openTab`     | _ReactNode_          | by default, which tab to have open.                                                                             |
 | `visibleTabs` | _boolean_            | if true, the tabs on the panels will be visible                                                                 |
 | `background`  | _BackgroundType_     | background pattern type                                                                                         |
 | `direction`   | _DirectionType_      | direction type                                                                                                  |
@@ -281,7 +288,7 @@ _Stories [source code](https://github.com/ccontrols/component-controls/tree/mast
 | `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                                |
 | `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                                      |
 | `data-testid` | _string_             | testing id                                                                                                                 |
-| `openTab`     | _any_                | by default, which tab to have open.                                                                                        |
+| `openTab`     | _ReactNode_          | by default, which tab to have open.                                                                                        |
 | `visibleTabs` | _boolean_            | if true, the tabs on the panels will be visible                                                                            |
 | `background`  | _BackgroundType_     | background pattern type                                                                                                    |
 | `direction`   | _DirectionType_      | direction type                                                                                                             |
@@ -370,6 +377,24 @@ _Title [source code](https://github.com/ccontrols/component-controls/tree/master
 | `children` | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | text to be displayed in the component. |
 | `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_                                                                                                                                                                                                       |                                        |
 
+## <ins>BlockContextProvider</ins>
+
+_BlockContextProvider [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/context/BlockContext.tsx)_
+
+### properties
+
+| Name | Type     | Description |
+| ---- | -------- | ----------- |
+| `id` | _string_ |             |
+
+## <ins>ControlsProvider</ins>
+
+_ControlsProvider [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/context/ControlsProvider.tsx)_
+
+## <ins>ThemeProvider</ins>
+
+_ThemeProvider [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/context/ThemeProvider.tsx)_
+
 ## <ins>PageContextContainer</ins>
 
 _PageContextContainer [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/docs-page/DocsContainer.tsx)_
@@ -383,5 +408,49 @@ _DocsContainer [source code](https://github.com/ccontrols/component-controls/tre
 | Name     | Type      | Description |
 | -------- | --------- | ----------- |
 | `active` | _boolean_ |             |
+
+## <ins>AddonPanel</ins>
+
+_AddonPanel [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/panel/AddonPanel.tsx)_
+
+### properties
+
+| Name     | Type      | Description |
+| -------- | --------- | ----------- |
+| `active` | _boolean_ |             |
+| `api*`   | _API_     |             |
+
+## <ins>PropsTablePanel</ins>
+
+_PropsTablePanel [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/panel/PropsTablePanel.tsx)_
+
+### properties
+
+| Name     | Type      | Description |
+| -------- | --------- | ----------- |
+| `active` | _boolean_ |             |
+| `api*`   | _API_     |             |
+
+## <ins>StoryConfigPanel</ins>
+
+_StoryConfigPanel [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/panel/StoryConfigPanel.tsx)_
+
+### properties
+
+| Name     | Type      | Description |
+| -------- | --------- | ----------- |
+| `active` | _boolean_ |             |
+| `api*`   | _API_     |             |
+
+## <ins>StorySourcePanel</ins>
+
+_StorySourcePanel [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/panel/StorySourcePanel.tsx)_
+
+### properties
+
+| Name     | Type      | Description |
+| -------- | --------- | ----------- |
+| `active` | _boolean_ |             |
+| `api*`   | _API_     |             |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

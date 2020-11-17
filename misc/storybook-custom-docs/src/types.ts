@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { ReactNode } from 'react';
 
 /**
  * 
@@ -24,7 +24,7 @@ export interface CustomPageRenderFnParams {
 
 export type CustomPageRenderFn = (
   params: CustomPageRenderFnParams,
-) => React.ReactNode;
+) => ReactNode;
 
 export interface CustomPageDef {
   /**

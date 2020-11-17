@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import React from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { Example, faker } from '@component-controls/core';
 import { Table } from './Table';
 import { ThemeProvider } from '../ThemeContext';
@@ -49,7 +49,7 @@ const mockData = () => {
 };
 
 export const overview: Example = () => {
-  const data = React.useMemo(mockData, []);
+  const data = useMemo(mockData, []);
   return (
     <ThemeProvider>
       <Table hiddenColumns={['age']} columns={columns} data={data} />
@@ -58,7 +58,7 @@ export const overview: Example = () => {
 };
 
 export const noHeader: Example = () => {
-  const data = React.useMemo(mockData, []);
+  const data = useMemo(mockData, []);
   return (
     <ThemeProvider>
       <Table
@@ -71,7 +71,7 @@ export const noHeader: Example = () => {
   );
 };
 export const sortable: Example = () => {
-  const data = React.useMemo(mockData, []);
+  const data = useMemo(mockData, []);
   return (
     <ThemeProvider>
       <Table sorting={true} columns={columns} data={data} />
@@ -80,7 +80,7 @@ export const sortable: Example = () => {
 };
 
 export const filterable: Example = () => {
-  const data = React.useMemo(mockData, []);
+  const data = useMemo(mockData, []);
   return (
     <ThemeProvider>
       <Table filtering={true} columns={columns} data={data} />
@@ -89,7 +89,7 @@ export const filterable: Example = () => {
 };
 
 export const grouping: Example = () => {
-  const data = React.useMemo(mockData, []);
+  const data = useMemo(mockData, []);
   return (
     <ThemeProvider>
       <Table
@@ -103,12 +103,12 @@ export const grouping: Example = () => {
 };
 
 export const editing: Example = () => {
-  const [data, setData] = React.useState([{ value: 'example' }]);
-  const [skipPageReset, setSkipPageReset] = React.useState(false);
-  React.useEffect(() => {
+  const [data, setData] = useState([{ value: 'example' }]);
+  const [skipPageReset, setSkipPageReset] = useState(false);
+  useEffect(() => {
     setSkipPageReset(false);
   }, [data]);
-  const columns = React.useMemo(
+  const columns = useMemo(
     () => [
       {
         Header: 'Value',
@@ -137,7 +137,7 @@ export const editing: Example = () => {
 };
 
 export const rowSelect: Example = () => {
-  const data = React.useMemo(mockData, []);
+  const data = useMemo(mockData, []);
   return (
     <ThemeProvider>
       <Table rowSelect={true} columns={columns} data={data} />

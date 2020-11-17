@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { FC, useEffect, useState } from 'react';
+import { FC, ReactNode, useEffect, useState } from 'react';
 import { jsx, Box, Flex, Text, Button, ButtonProps } from 'theme-ui';
 import { ChevronDownIcon, ChevronRightIcon } from '@primer/octicons-react';
 import {
@@ -15,13 +15,13 @@ export interface MenuItem {
   /** Unique id */
   id?: string;
   /** Label of the item */
-  label?: React.ReactNode;
+  label?: ReactNode;
   /** Initial expanded state */
   expanded?: boolean;
   /** Icon in front of the label */
-  icon?: React.ReactNode;
+  icon?: ReactNode;
   /** Widget or icon to place at the end of the item */
-  widget?: React.ReactNode;
+  widget?: ReactNode;
   /** Array of child/sub-menu items */
   items?: MenuItems;
   /** href parameter for anchor type child elements */

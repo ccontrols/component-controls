@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC, useState, useMemo, useEffect } from 'react';
 import { store } from '@component-controls/store/static_store';
 import { BlockContextProvider } from '@component-controls/blocks';
 import { API } from '@storybook/api';
@@ -8,15 +8,11 @@ export interface AddonPanelProps {
   active?: boolean;
   api: API;
 }
-export const AddonPanel: React.FC<AddonPanelProps> = ({
-  active,
-  api,
-  children,
-}) => {
-  const [storyId, setStoryId] = React.useState<string | undefined>();
+export const AddonPanel: FC<AddonPanelProps> = ({ active, api, children }) => {
+  const [storyId, setStoryId] = useState<string | undefined>();
 
-  const channel = React.useMemo(() => api.getChannel(), [api]);
-  React.useEffect(() => {
+  const channel = useMemo(() => api.getChannel(), [api]);
+  useEffect(() => {
     const onChangeStory = (props: any) => {
       setStoryId(props.storyId);
     };

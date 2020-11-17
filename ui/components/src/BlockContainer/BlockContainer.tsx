@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { FC } from 'react';
+import { FC, useState } from 'react';
 import { jsx, Flex, Link, Divider, Box, SxStyleProp, Text } from 'theme-ui';
 import { ChevronRightIcon, ChevronDownIcon } from '@primer/octicons-react';
 import { Collapsible } from '../Collapsible';
@@ -53,7 +53,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
   sxStyle,
   ...rest
 }) => {
-  const [isOpen, setIsOpen] = React.useState(true);
+  const [isOpen, setIsOpen] = useState(true);
   const blockId = id !== '.' ? id : undefined || title;
 
   return (

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React from 'react';
+import { useState } from 'react';
 import {
   HexColorPicker,
   HslaStringColorPicker,
@@ -115,7 +115,7 @@ const sxProps: SxStyleProp = {
 
 export const ColorEditor: PropertyEditor = ({ name }) => {
   const [control, onChange] = useControl<ComponentControlColor>(name);
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const { kind } = control;
   const handleChange = (color: string) => {
     onChange(color);

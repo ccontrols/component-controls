@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from 'theme-ui';
 import { Example } from '@component-controls/core';
 import { Multiselect, MultiselectItem } from './Multiselect';
@@ -9,7 +9,7 @@ export default {
 };
 
 export const overview: Example = () => {
-  const [state, setState] = React.useState<MultiselectItem[]>([
+  const [state, setState] = useState<MultiselectItem[]>([
     {
       label: 'option-1',
       selected: true,

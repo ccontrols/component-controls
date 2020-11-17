@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Example } from '@component-controls/core';
 import { Zoom } from './Zoom';
 import { Donut } from 'theme-ui';
@@ -10,7 +10,7 @@ export default {
 };
 
 export const overview: Example = () => {
-  const [scale, setScale] = React.useState(1);
+  const [scale, setScale] = useState(1);
   return (
     <ActionContainer
       actions={[

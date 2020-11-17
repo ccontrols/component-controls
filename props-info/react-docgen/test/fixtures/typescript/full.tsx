@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { ReactNode, ReactElement, Component } from 'react';
 
 class Message {}
 interface MyComponentProps {
@@ -19,12 +19,12 @@ interface MyComponentProps {
    * (or fragment) containing these types.
    */
 
-  optionalNode?: React.ReactNode;
+  optionalNode?: ReactNode;
 
   /**
    * A React element (ie. <MyComponent />).
    */
-  optionalElement?: React.ReactElement;
+  optionalElement?: ReactElement;
 
   /**
    *  A React element type (ie. MyComponent).
@@ -98,7 +98,3 @@ export default class MyComponent extends Component<
     return null;
   }
 }
-
-MyComponent.defaultProps = {
-  optionalNumber: 21,
-};

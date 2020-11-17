@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { FC, useMemo } from 'react';
 import queryString from 'query-string';
 import { deepMerge } from '@component-controls/core';
 import { StateRoot, StateRootProps, useStore } from '@component-controls/store';
@@ -6,7 +6,7 @@ import { ErrorBoundary } from './ErrorBoundary';
 import { ThemeProvider, ThemeProviderProps } from '../ThemeProvider';
 import { getURL } from '../utils/url';
 
-export const BlockContextProvider: React.FC<StateRootProps &
+export const BlockContextProvider: FC<StateRootProps &
   Pick<ThemeProviderProps, 'components'>> = ({
   children,
   components,

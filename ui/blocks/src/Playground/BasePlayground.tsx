@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState, useEffect, useMemo } from 'react';
 import { PlusIcon, DashIcon, SyncIcon } from '@primer/octicons-react';
 import { Box } from 'theme-ui';
 import { Story } from '@component-controls/core';
@@ -64,12 +64,12 @@ export const BasePlayground: FC<BasePlaygroundProps> = ({
     openTab,
     visibleTabs = false,
   } = custom;
-  const [scale, setScale] = React.useState(userScale);
-  const [background, setBackground] = React.useState<BackgroundType>('light');
-  const [direction, setDirection] = React.useState<DirectionType>('ltr');
+  const [scale, setScale] = useState(userScale);
+  const [background, setBackground] = useState<BackgroundType>('light');
+  const [direction, setDirection] = useState<DirectionType>('ltr');
   let tab = openTab;
-  React.useEffect(() => setScale(userScale), [userScale]);
-  const zoomActions: ActionItems = React.useMemo(
+  useEffect(() => setScale(userScale), [userScale]);
+  const zoomActions: ActionItems = useMemo(
     () => [
       {
         node: (

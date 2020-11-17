@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Button, Donut } from 'theme-ui';
 import { Example, ControlTypes } from '@component-controls/core';
 import { Popover, PopoverProps } from './Popover';
@@ -8,8 +8,8 @@ export default {
   component: Popover,
 };
 
-export const overview: Example = ({ placement, trigger }: PopoverProps) => {
-  const [isOpen, setIsOpen] = React.useState(false);
+export const overview: Example<PopoverProps> = ({ placement, trigger }) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <Popover
       trigger={trigger}

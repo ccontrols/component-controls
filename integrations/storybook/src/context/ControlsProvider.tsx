@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { BlockContextProvider } from './BlockContext';
 
-export const ControlsProvider: React.FC = ({ children }) => {
+export const ControlsProvider: FC = ({ children }) => {
   return <BlockContextProvider>{children}</BlockContextProvider>;
 };

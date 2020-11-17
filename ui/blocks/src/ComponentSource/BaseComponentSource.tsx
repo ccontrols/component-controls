@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { Component } from '@component-controls/core';
 import { usePackage } from '@component-controls/store';
 import {
@@ -18,7 +18,7 @@ export type BaseComponentSourceProps = BaseComponentSourceOwnProps &
   SourceProps;
 
 export const BaseComponentSource: FC<BaseComponentSourceProps> = props => {
-  const [showFileSource, setShowFileSource] = React.useState<boolean>(false);
+  const [showFileSource, setShowFileSource] = useState<boolean>(false);
   const custom = useCustomProps<BaseComponentSourceProps>(NAME, props);
   const { component, actions, ...rest } = custom;
   let source;

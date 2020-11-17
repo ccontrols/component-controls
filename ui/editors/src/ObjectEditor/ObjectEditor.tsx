@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { Box } from 'theme-ui';
 import {
   ControlTypes,
@@ -42,7 +42,7 @@ export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
   const [control, onChange] = useControl<ComponentControlObject>(name);
 
   const { editLabel: controlEditLabel, inline } = control;
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const handleChange = (childName: string | undefined, value: any) => {
     onChange(mergeControlValues(control.value as any, childName, value));
   };
