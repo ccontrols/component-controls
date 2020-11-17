@@ -5,7 +5,7 @@ import { EditPage } from '@component-controls/blocks';
 import { ButtonProps, Button } from '../components/Button';
 
 export default {
-  title: 'Introduction/Template doc',
+  title: 'ESM/Template doc',
   author: 'atanasster',
   component: Button,
   order: 8,

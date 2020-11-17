@@ -119,6 +119,10 @@ export type Story<Props = unknown> = {
   name: string;
 
   /**
+   * alternative name prop
+   */
+  storyName?: string;
+  /**
    * id of the story
    */
   id?: string;

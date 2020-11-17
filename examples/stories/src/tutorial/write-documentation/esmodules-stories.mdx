@@ -104,7 +104,7 @@ export const John = {
   },
 };
 ```
-[live example](/api/introduction-template-doc--john)
+[live example](/api/esm-template-doc--john)
 
   2. Bind stories to a template
 
@@ -130,7 +130,7 @@ John.controls = {
 
 ```
 
-[live example](/api/introduction-template-bind--john)
+[live example](/api/esm-template-bind--john)
 
 
 ### Dynamic stories
@@ -163,7 +163,7 @@ export const buttonColors = () => {
 
 buttonColors.dynamic = true;
 ```
-[live example](/api/introduction-dynamic-stories--button-colors/?story=Background)
+[live example](/api/esm-dynamic-stories--button-colors/?story=Background)
 
 > dynamic stories are created at run-time (when the site loads in the browser), while in the case of [gatsby](/tutorial/getting-started/gatsby), the static page routes are created under a `nodejs` process. This makes it so all the newly created dynamic stories for `gatsby` will reside under the URL of the dynamic parent story, with a `story` parameter: `https://xxx/api/components-button--button-colors/?story=Background`
 
@@ -187,6 +187,6 @@ export const asyncFetch = () => {
   }.`}</h2>;
 };
 ```
-[live example](/api/introduction-async-stories--async-story)
+[live example](/api/esm-async-stories--async-story)
 
 > Note that you can also fetch data using react's useEffect hooks, without using `useAsync`.

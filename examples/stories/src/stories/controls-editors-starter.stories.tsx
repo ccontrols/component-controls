@@ -1,18 +1,18 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { Document, Example, ControlTypes } from '@component-controls/core';
 
 export default {
-  title: 'Introduction/Starter',
+  title: 'ESM/Starter',
   author: 'atanasster',
   order: 0,
-};
+} as Document;
 
 interface DocsControlsTable {
   name: string;
   age: number;
 }
 
-export const overview = ({ name, age }: DocsControlsTable) => (
+export const overview: Example<DocsControlsTable> = ({ name, age }) => (
   <h2>{`Hello, my name is ${name}, and I am ${age} years old.`}</h2>
 );
 

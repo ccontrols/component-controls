@@ -1,11 +1,11 @@
 import React from 'react';
-import { Button } from '../components/Button';
+import { Button } from '../components/PropTypesButton';
 
 export default {
-  title: 'Introduction/Smart Typescript',
+  title: 'ESM/Smart PropTypes',
   author: 'atanasster',
   component: Button,
-  order: 4,
+  order: 3,
 };
 
 export const allProps = props => <Button {...props} />;

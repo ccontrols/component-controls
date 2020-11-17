@@ -5,7 +5,7 @@ import { DynamicExamples } from '@component-controls/core';
 import { theme } from '@component-controls/components';
 
 export default {
-  title: 'Introduction/Dynamic stories',
+  title: 'ESM/Dynamic stories',
   author: 'atanasster',
   order: 11,
   description:

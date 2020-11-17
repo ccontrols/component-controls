@@ -1,14 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { ControlTypes } from '@component-controls/core';
+import { Document, Example, ControlTypes } from '@component-controls/core';
 
 export default {
-  title: 'Introduction/Controls',
+  title: 'ESM/Controls',
   author: 'atanasster',
   order: 2,
-};
+} as Document;
 
-export const textDefaultProp = ({ text }) => text;
+export const textDefaultProp: Example<{ text: string }> = ({ text }) => (
+  <div>{text}</div>
+);
 textDefaultProp.description =
   'A simple story that just returns the text parameter';
 
@@ -16,7 +17,7 @@ textDefaultProp.controls = {
   text: { type: ControlTypes.TEXT, value: 'Hello' },
 };
 
-export const kitchenSink = ({
+export const kitchenSink: Example<any> = ({
   userName,
   age,
   fruit,
@@ -64,26 +65,6 @@ export const kitchenSink = ({
   );
 };
 
-kitchenSink.propTypes = {
-  userName: PropTypes.string.isRequired,
-  age: PropTypes.number.isRequired,
-  fruit: PropTypes.string.isRequired,
-  otherFruit: PropTypes.string.isRequired,
-  dollars: PropTypes.number.isRequired,
-  years: PropTypes.number.isRequired,
-  backgroundColor: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
-  items: PropTypes.arrayOf(PropTypes.string).isRequired,
-  otherStyles: PropTypes.arrayOf(PropTypes.string).isRequired,
-  nice: PropTypes.bool.isRequired,
-  images: PropTypes.arrayOf(PropTypes.string).isRequired,
-  dog: PropTypes.shape({
-    label: PropTypes.string,
-    dogParent: PropTypes.string,
-    location: PropTypes.string,
-  }).isRequired,
-  birthday: PropTypes.string.isRequired,
-};
 const arrayOfObjects = [
   {
     label: 'Sparky',
@@ -204,9 +185,13 @@ kitchenSink.controls = {
     label: 'Styles',
     value: {
       // do not randomize the border style
-      border: { type: 'text', value: '2px dashed silver', data: null },
-      borderRadius: { type: 'number', value: 10 },
-      padding: { type: 'number', value: 10 },
+      border: {
+        type: ControlTypes.TEXT,
+        value: '2px dashed silver',
+        data: null,
+      },
+      borderRadius: { type: ControlTypes.NUMBER, value: 10 },
+      padding: { type: ControlTypes.NUMBER, value: 10 },
     },
     groupId: GROUP_IDS.DISPLAY,
   },
@@ -223,7 +208,7 @@ kitchenSink.controls = {
   hidden: { type: ControlTypes.TEXT, hidden: true },
 };
 
-export const XssSafety = ({ content }) => (
+export const XssSafety: Example<{ content: string }> = ({ content }) => (
   <div
     // eslint-disable-next-line react/no-danger
     dangerouslySetInnerHTML={{
@@ -231,10 +216,6 @@ export const XssSafety = ({ content }) => (
     }}
   />
 );
-
-XssSafety.propTypes = {
-  content: PropTypes.string.isRequired,
-};
 
 XssSafety.storyName = 'XSS safety';
 
@@ -247,7 +228,9 @@ XssSafety.controls = {
   },
 };
 
-export const generateRandomData = ({ street }) => street;
+export const generateRandomData: Example<{ street: string }> = ({ street }) => (
+  <div>{street}</div>
+);
 
 generateRandomData.description =
   'Story using the `data` field of `controls` to generate **streetAddress** random data.';
@@ -262,7 +245,9 @@ generateRandomData.controls = {
   },
 };
 
-export const randomNumber = ({ number }) => number;
+export const randomNumber: Example<{ number: number }> = ({ number }) => (
+  <div>{number}</div>
+);
 
 randomNumber.description =
   'Story using the `data` field of `controls` to generate random **number** with **min/max** parameters.';
@@ -277,7 +262,11 @@ randomNumber.controls = {
   },
 };
 
-export const groupedControls = ({ age, name, message }) => {
+export const groupedControls: Example<{
+  age: number;
+  name: string;
+  message: string;
+}> = ({ age, name, message }) => {
   const content = `
     I am ${name} and I'm ${age} years old.
     ${message}
@@ -311,13 +300,11 @@ groupedControls.controls = {
   },
 };
 
-groupedControls.propTypes = {
-  name: PropTypes.string.isRequired,
-  age: PropTypes.number.isRequired,
-  message: PropTypes.string.isRequired,
-};
-
-export const orderControls = ({ age, name, message }) => {
+export const orderControls: Example<{
+  age: number;
+  name: string;
+  message: string;
+}> = ({ age, name, message }) => {
   const content = `
     I am ${name} and I'm ${age} years old.
     ${message}
@@ -346,10 +333,4 @@ orderControls.controls = {
     value: 'Hello!',
     order: 0,
   },
-};
-
-groupedControls.propTypes = {
-  name: PropTypes.string.isRequired,
-  age: PropTypes.number.isRequired,
-  message: PropTypes.string.isRequired,
 };
