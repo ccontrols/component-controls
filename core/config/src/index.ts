@@ -59,8 +59,9 @@ export const loadConfiguration = (
   baseFolder: string,
   configFolder?: string,
   args?: string[],
+  defaultConfigPath?: string,
 ): ConfigurationResult | undefined => {
-  const folder = configFolder ?? getConfigurationArg(args);
+  const folder = configFolder ?? getConfigurationArg(args) ?? defaultConfigPath;
   const configPath = folder ? path.resolve(baseFolder, folder) : baseFolder;
   const hasConfigFolder = fs.existsSync(configPath);
   if (!hasConfigFolder) {

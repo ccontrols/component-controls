@@ -20,17 +20,61 @@ import { Button } from '../components/Button'
 
 component-controls provides migration compatibility for many of the story(examples) and documentation features in `Storybook`. And component-controls can also use [gatsby](/tutorial/getting-started/gatsby) or [nextjs](/tutorial/getting-started/nextjs) as a static site generator to provide huge performance improvements.
 
-A migration example can be found here: 
+-- starybook as the static site generator
 
 [source code](https://github.com/ccontrols/component-controls/tree/master/examples/docz-migration)
 
-[live site](https://docz-migration.netlify.app)
+[live site](https://storybook-6-migration.netlify.app)
 
-The sample project was bootstraped from [tw-sb-rtl-starter](https://github.com/ssengalanto/tw-sb-rtl-starter)
+-- convert the site generator to gatsby
 
-## Add gatsby theme
+> The sample project was bootstraped from [tw-sb-rtl-starter](https://github.com/ssengalanto/tw-sb-rtl-starter)
 
-we will add gatsby and the component-controls gatsby theme to the project
+# Use storybook as the static site generator
+
+## Add component-controls/storybook to your storybook project
+
+```sh
+yarn add @component-controls/storybook
+```
+
+## Update configuration files
+
+component-controls has two configuration files - one is used during build-time in a nodejs environment, the other is used during run-time in a browser environment. 
+
+### build-time configuration
+
+storybook `main.js` - corresponds to the 
+
+```js:title=.storybook/main.js
+module.exports = {
+  stories: ...,
+  addons: [{
+    name: '@component-controls/storybook',
+    options: {
+      webpack: ['instrument', 'react-docgen-typescript'],
+    }
+  }]
+}
+```
+
+### run-time configuration
+
+storybook `preview.tsx`
+
+## Update story files
+
+# Use storybook
+
+Using this approach, you will allow storybook to generate the static documentation pages. 
+
+> Using storybook as the static site generator is not recommended, since it creates underperforing web sites.
+
+## install storybook-plugin
+
+# Use gatsby
+
+## install gatsby packages
 
 ```bash
 yarn add gatsby @component-controls/gatsby-theme-stories
@@ -38,7 +82,7 @@ yarn add gatsby @component-controls/gatsby-theme-stories
 
 ## Configuration file path
 
- By default, the docz configuration file is kept in the project main folder, while component-controls uses a `.config` sub-folder. We will configure the gatsby stories theme in `gatsby-config.js`.
+ By default, the storybook configuration files are kept in a `.storybook` subfolder, while component-controls uses a `.config` sub-folder.
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -47,7 +91,7 @@ module.exports = {
       resolve: '@component-controls/gatsby-theme-stories',
       options: {
         //doczrc.js file located in project main folder
-        configPath: '.',
+        configPath: '.storybook',
       },
     },
   ],
@@ -70,81 +114,3 @@ Next, you should add the gatsby develop and gatsby build scripts to the project'
   },
 ```
 
-## Configuration fields
-
-component-controls can read directly the docz configuration file, the following is an example `doczrc.js`:
-
-> the component-controls build-time and run-time configurations are merged, and we can use a single [configuration](/configuration/overview) file (`doczrc.js`) for both build-time and run-time configurations.
-
-```json:title=doczrc.js
-export default {
-  files: 'docs/**/*.mdx',
-  title: 'Docz & Netlify CMS',
-  menu: [
-    {
-      name: 'Quick Start',
-      menu: [''],
-    },
-    {
-      name: 'Getting Started',
-      menu: ['Manual Installation'],
-    },
-    {
-      name: 'Configuration',
-    },
-  ],
-};
-```
-
-* [**files**](https://www.docz.site/docs/project-configuration) field is mapped to the **stories** configuration field.
-
-* [**menu**](https://www.docz.site/docs/project-configuration) field is used in component-controls in a similar way to docz. You will need to fill the menu field in a document to attach it to a menu item.
-
-## Components
-
-### Playground
-
-component-controls provides a similar component to docz's [Playground](https://www.docz.site/docs/built-in-components#playground-component). The [Playground](/api/blocks-playground--overview) component can be imported from `@component-controls/blocks`.
-
-```js:title=playground.mdx
----
-name: Playground
-menu: Components
----
-
-import { Playground } from '@component-controls/blocks';
-import { Button } from '../src/components/Button'
-
-# Button
-
-<Playground>
-  <Button kind="secondary">Click me</Button>
-</Playground>
-```
-live example:
-
-<Playground>
-  <Button>Click me</Button>
-</Playground>
-
-
-### Props
-
-component-controls provides a similar component to docz's [Props](https://www.docz.site/docs/built-in-components#component-props). The [Props/PropsTable](/api/blocks-propstable--overview) component can be imported from `@component-controls/blocks`.
-
-```js:title=props.mdx
----
-name: Props
-menu: Components
----
-
-import { Props } from '@component-controls/blocks';
-import { Button } from '../src/components/Button'
-
-# Button
-
-<Props of={Button} />
-```
-live example:
-
-<Props of={Button} />

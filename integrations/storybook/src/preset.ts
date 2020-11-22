@@ -50,7 +50,10 @@ module.exports = {
     );
     return {
       ...mergedConfig,
-      plugins: [...mergedConfig.plugins, new LoaderPlugin()],
+      plugins: [
+        ...mergedConfig.plugins,
+        new LoaderPlugin({ defaultConfigPath: '.storybook' }),
+      ],
     };
   },
 };

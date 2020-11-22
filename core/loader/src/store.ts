@@ -128,8 +128,14 @@ export let config: ConfigurationResult | undefined;
 export const initializeBuildOptions = (
   rootPath: string,
   configPath?: string,
+  defaultConfigPath?: string,
 ): void => {
-  config = loadConfiguration(rootPath, configPath);
+  config = loadConfiguration(
+    rootPath,
+    configPath,
+    undefined,
+    defaultConfigPath,
+  );
   if (config && config.config) {
     config.config = deepMergeArrays(defaultBuildConfig, config.config);
   }

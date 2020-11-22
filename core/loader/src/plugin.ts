@@ -8,6 +8,7 @@ import { getSerializedStore, initializeBuildOptions } from './store';
 export interface LoaderPluginOptions {
   config?: string;
   escapeOutput?: boolean;
+  defaultConfigPath?: string;
 }
 export class LoaderPlugin {
   public static pluginName = 'component-controls-loader-plugin';
@@ -25,7 +26,11 @@ export class LoaderPlugin {
   }
 
   apply(compiler: webpack.Compiler): void {
-    initializeBuildOptions(compiler.context, this.options.config);
+    initializeBuildOptions(
+      compiler.context,
+      this.options.config,
+      this.options.defaultConfigPath,
+    );
     this.replaceRuntimeModule(compiler);
     compiler.hooks.compilation.tap(LoaderPlugin.pluginName, compilation => {
       compilation.hooks.optimizeChunkAssets.tapPromise(

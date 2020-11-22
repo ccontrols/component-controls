@@ -50,7 +50,7 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 
 from the glob list of documents, extract require.context array of props
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L129)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L130)_
 
 
 
@@ -78,7 +78,7 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 
 convert glob patters from config file into require.context objects
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L137)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L138)_
 
 **function** configRequireContext(`__namedParameters`\*: **config**: ### properties| Name         | Type                                | Description                                                                                                                                    |
 | ------------ | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -105,7 +105,7 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 find the story files out of a configuration file
 using glob for the regex file search
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L103)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L104)_
 
 **function** extractDocuments(`__namedParameters`\*: **config**: ### properties| Name         | Type                                | Description                                                                                                                                    |
 | ------------ | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -129,7 +129,7 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 
 ## fixGlob
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L97)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L98)_
 
 **function** fixGlob(`golbExpr`\*: string): string;
 
@@ -163,22 +163,23 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 
 _defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L58)_
 
-**function** loadConfiguration(`baseFolder`\*: string, `configFolder`: string, `args`: string\[]): [ConfigurationResult](#configurationresult) | undefined;
+**function** loadConfiguration(`baseFolder`\*: string, `configFolder`: string, `args`: string\[], `defaultConfigPath`: string): [ConfigurationResult](#configurationresult) | undefined;
 
 ### parameters
 
-| Name           | Type                                                     | Description                                    |
-| -------------- | -------------------------------------------------------- | ---------------------------------------------- |
-| `baseFolder*`  | string                                                   | project folder to start the search with        |
-| `configFolder` | string                                                   | folder where the configuration file is located |
-| `args`         | string\[]                                                | optional arguments                             |
-| `returns`      | [ConfigurationResult](#configurationresult) \| undefined |                                                |
+| Name                | Type                                                     | Description                                    |
+| ------------------- | -------------------------------------------------------- | ---------------------------------------------- |
+| `baseFolder*`       | string                                                   | project folder to start the search with        |
+| `configFolder`      | string                                                   | folder where the configuration file is located |
+| `args`              | string\[]                                                | optional arguments                             |
+| `defaultConfigPath` | string                                                   |                                                |
+| `returns`           | [ConfigurationResult](#configurationresult) \| undefined |                                                |
 
 ## mergeBuildConfiguration
 
 merge a configuration passed through cli or tools, with the build configration from the config path
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L168)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L169)_
 
 **function** mergeBuildConfiguration(`config`\*: [BuildConfiguration](#buildconfiguration)): [BuildConfiguration](#buildconfiguration);
 

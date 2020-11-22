@@ -57,6 +57,8 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
           const docGlobalProps = {
             decorators: globalStore.config.decorators,
           };
+          //storybook compat
+          storeDoc.controls = storeDoc.controls || (storeDoc as any).args;
           const doc: Document = deepMerge<Document>(
             pageLayout,
             deepMerge(docGlobalProps, storeDoc),
@@ -79,6 +81,8 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
             );
             stories.forEach(story => {
               story.id = story.id || story.name;
+              //storybook compat
+              story.controls = story.controls || (story as any).args;
               Object.assign(story, deepMerge(docStoryProps, story));
               story.controls = getControls(story, doc, loadedComponents);
               if (doc.title && story.id) {
