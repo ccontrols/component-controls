@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.41.0](https://github.com/ccontrols/component-controls/compare/v1.40.5...v1.41.0) (2020-11-23)
+
+
+### Features
+
+* mdx story templates ([d5a1ccd](https://github.com/ccontrols/component-controls/commit/d5a1ccdd00dd84e5cd988952fbc9f66cd6219bd2))
+
+
+
+
+
 ## [1.40.5](https://github.com/ccontrols/component-controls/compare/v1.40.4...v1.40.5) (2020-11-16)
 
 **Note:** Version bump only for package @component-controls/blocks

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.41.0](https://github.com/ccontrols/component-controls/compare/v1.40.5...v1.41.0) (2020-11-23)
+
+
+### Bug Fixes
+
+* stprybook defaults for params and configpath ([b649fa2](https://github.com/ccontrols/component-controls/commit/b649fa2e9d272d13a2ebc363274d403dbe9a3979))
+
+
+### Features
+
+* doc template ([5bc41c3](https://github.com/ccontrols/component-controls/commit/5bc41c371a1ed440971892ad22324e871f30f89d))
+
+
+
+
+
 ## [1.40.2](https://github.com/ccontrols/component-controls/compare/v1.40.1...v1.40.2) (2020-11-16)
 
 **Note:** Version bump only for package @component-controls/config
