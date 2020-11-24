@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-const { mergeWebpackConfig } = require('@component-controls/webpack-configs');
+import { RuleSetRule } from 'webpack';
+import { mergeWebpackConfig } from '@component-controls/webpack-configs';
 const LoaderPlugin = require('@component-controls/loader/plugin');
 import { PresetOptions, defaultRules } from './types';
 
@@ -47,11 +48,45 @@ module.exports = {
     const mergedConfig = mergeWebpackConfig(
       config,
       options?.webpack || defaultRules,
+      {},
     );
     return {
       ...mergedConfig,
+      module: {
+        ...mergedConfig.module,
+        rules: mergedConfig.module?.rules.map(r => {
+          return Array.isArray(r.use)
+            ? {
+                ...r,
+                use: r.use.map(use =>
+                  (use as RuleSetRule).options && (use as RuleSetRule).options
+                    ? {
+                        ...(use as RuleSetRule),
+                        options: {
+                          ...(use as any).options,
+                          presets: Array.isArray((use as any).options?.presets)
+                            ? (use as any).options.presets.map(
+                                (preset: any) => {
+                                  return Array.isArray(preset)
+                                    ? preset.map(p =>
+                                        p.runtime
+                                          ? { ...p, runtime: 'classic' }
+                                          : p,
+                                      )
+                                    : preset;
+                                },
+                              )
+                            : undefined,
+                        },
+                      }
+                    : use,
+                ),
+              }
+            : r;
+        }),
+      },
       plugins: [
-        ...mergedConfig.plugins,
+        ...(mergedConfig.plugins as any),
         new LoaderPlugin({ defaultConfigPath: '.storybook' }),
       ],
     };

@@ -53,9 +53,9 @@
   },
   "devDependencies": {
     "@component-controls/ts-markdown-docs": "^1.37.0",
-    "@storybook/addons": "next",
-    "@storybook/api": "next",
-    "@storybook/client-api": "next",
+    "@storybook/addons": "^6.1.3",
+    "@storybook/api": "^6.1.3",
+    "@storybook/client-api": "^6.1.3",
     "@types/node": "^13.7.0",
     "@types/react": "^16.9.34",
     "polished": "^3.4.4",

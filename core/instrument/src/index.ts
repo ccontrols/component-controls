@@ -184,21 +184,18 @@ export const parseStories = async (
         transformed: code,
       };
     }
-    const { stories, doc, components, exports, packages } = store || {};
-    const exportsSource = extractStoryExports(storybookExports, exports);
-    let transformed = `
-    
-    ${content}
-`;
+    debugger;
+    let transformed;
     if (transformMDX) {
+      const { exports } = store || {};
+      const exportsSource = extractStoryExports(storybookExports, exports);
       transformed = `${renderer}\n${code}\n${exportsSource}`;
+    } else {
+      transformed = source;
     }
     return {
       transformed,
-      stories,
-      doc,
-      components,
-      packages,
+      ...store,
     };
   } else {
     const store = await parseSource(
