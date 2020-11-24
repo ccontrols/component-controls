@@ -127,7 +127,7 @@ export const getControls = (
         })
         .reduce((acc, key) => ({ ...acc, [key]: newControls[key] }), {});
       const transformed = transformControls(storyControls, filteredControls);
-      const { smart = true } = smartControls;
+      const { smart = storyControls === undefined } = smartControls;
       if (!story.component || !smart || story.smartControls === false) {
         return transformControls(storyControls, filteredControls);
       }
