@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.41.1](https://github.com/atanasster/gatsby-controls-starter/compare/v1.41.0...v1.41.1) (2020-11-24)
+
+**Note:** Version bump only for package component-controls-starter
+
+
+
+
+
 # [1.41.0](https://github.com/atanasster/gatsby-controls-starter/compare/v1.40.5...v1.41.0) (2020-11-23)
 
 **Note:** Version bump only for package component-controls-starter
