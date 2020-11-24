@@ -17,7 +17,7 @@ export const PageContextContainer: FC = ({ children }) => {
         (d: { name: string }) => !d.name || !d.name.startsWith('with'),
       );
     }
-    return o;
+    return o || {};
   }, []);
   const { storyId, docId, parameters } = useCurrentData();
 
