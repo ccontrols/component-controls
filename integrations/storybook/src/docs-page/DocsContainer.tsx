@@ -28,7 +28,9 @@ export const PageContextContainer: FC = ({ children }) => {
       docId={docId}
       options={{
         ...globOptions,
-        parameters: { ...globOptions.parameters, ...parameters },
+        parameters: globOptions.parameters
+          ? { ...globOptions.parameters, ...parameters }
+          : parameters,
       }}
     >
       <BlockPageContainer variant="pagecontainer.storybook">
