@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.42.2](https://github.com/ccontrols/component-controls/compare/v1.42.1...v1.42.2) (2020-11-24)
+
+
+### Bug Fixes
+
+* globOptions empty object default ([b2343cf](https://github.com/ccontrols/component-controls/commit/b2343cf8962564e0ae51e52e8e9922d8486d1ae2))
+
+
+
+
+
 ## [1.42.1](https://github.com/ccontrols/component-controls/compare/v1.42.0...v1.42.1) (2020-11-24)
 
 
