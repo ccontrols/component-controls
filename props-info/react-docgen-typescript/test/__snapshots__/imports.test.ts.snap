@@ -60,24 +60,32 @@ from the title.",
 ie ally plugin uses it launch a new ally test on re-render",
       "parentName": "StoryOwnProps",
       "type": Object {
-        "name": "() => void",
-        "raw": "() => void",
+        "name": "function",
+        "raw": "(() => void)",
       },
     },
     "ref": Object {
       "description": "ref can be used by blocks embedding Story - ie ally plugin",
       "parentName": "StoryOwnProps",
       "type": Object {
-        "name": "Ref<HTMLDivElement>",
-        "raw": "Ref<HTMLDivElement>",
+        "name": "function",
+        "raw": "((instance: HTMLDivElement | null) => void) | RefObject<HTMLDivElement> | null",
       },
     },
     "sxStyle": Object {
       "description": "theme-ui styling object for Block Box",
       "parentName": "BlockContainerProps",
       "type": Object {
-        "name": "ThemeUIStyleObject",
-        "raw": "ThemeUIStyleObject",
+        "name": "union",
+        "raw": "ThemeUICSSObject | ThemeDerivedStyles",
+        "value": Array [
+          Object {
+            "name": "ThemeUICSSObject",
+          },
+          Object {
+            "name": "ThemeDerivedStyles",
+          },
+        ],
       },
     },
     "title": Object {
@@ -92,16 +100,14 @@ ie ally plugin uses it launch a new ally test on re-render",
       "description": "wrapper type - can be an iframe or just regular react",
       "parentName": "StoryOwnProps",
       "type": Object {
-        "name": "enum",
-        "raw": "StoryWrapperType",
+        "name": "union",
+        "raw": "\\"wrapper\\" | \\"iframe\\"",
         "value": Array [
           Object {
-            "name": "string",
-            "value": "wrapper",
+            "name": "wrapper",
           },
           Object {
-            "name": "string",
-            "value": "iframe",
+            "name": "iframe",
           },
         ],
       },

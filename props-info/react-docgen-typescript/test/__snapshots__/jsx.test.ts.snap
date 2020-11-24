@@ -34,8 +34,19 @@ Object {
       "description": "Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "Booleanish",
-        "raw": "Booleanish",
+        "name": "union",
+        "raw": "boolean | \\"true\\" | \\"false\\"",
+        "value": Array [
+          Object {
+            "name": "boolean",
+          },
+          Object {
+            "name": "true",
+          },
+          Object {
+            "name": "false",
+          },
+        ],
       },
     },
     "aria-autocomplete": Object {
@@ -43,24 +54,20 @@ Object {
 presented if they are made.",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "enum",
+        "name": "union",
         "raw": "\\"none\\" | \\"inline\\" | \\"list\\" | \\"both\\"",
         "value": Array [
           Object {
-            "name": "string",
-            "value": "none",
+            "name": "none",
           },
           Object {
-            "name": "string",
-            "value": "inline",
+            "name": "inline",
           },
           Object {
-            "name": "string",
-            "value": "list",
+            "name": "list",
           },
           Object {
-            "name": "string",
-            "value": "both",
+            "name": "both",
           },
         ],
       },
@@ -69,8 +76,19 @@ presented if they are made.",
       "description": "Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "Booleanish",
-        "raw": "Booleanish",
+        "name": "union",
+        "raw": "boolean | \\"true\\" | \\"false\\"",
+        "value": Array [
+          Object {
+            "name": "boolean",
+          },
+          Object {
+            "name": "true",
+          },
+          Object {
+            "name": "false",
+          },
+        ],
       },
     },
     "aria-checked": Object {
@@ -193,8 +211,19 @@ presented if they are made.",
 @see aria-readonly.",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "Booleanish",
-        "raw": "Booleanish",
+        "name": "union",
+        "raw": "boolean | \\"true\\" | \\"false\\"",
+        "value": Array [
+          Object {
+            "name": "boolean",
+          },
+          Object {
+            "name": "true",
+          },
+          Object {
+            "name": "false",
+          },
+        ],
       },
     },
     "aria-dropeffect": Object {
@@ -202,32 +231,26 @@ presented if they are made.",
 @deprecated in ARIA 1.1",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "enum",
+        "name": "union",
         "raw": "\\"none\\" | \\"copy\\" | \\"execute\\" | \\"link\\" | \\"move\\" | \\"popup\\"",
         "value": Array [
           Object {
-            "name": "string",
-            "value": "none",
+            "name": "none",
           },
           Object {
-            "name": "string",
-            "value": "copy",
+            "name": "copy",
           },
           Object {
-            "name": "string",
-            "value": "execute",
+            "name": "execute",
           },
           Object {
-            "name": "string",
-            "value": "link",
+            "name": "link",
           },
           Object {
-            "name": "string",
-            "value": "move",
+            "name": "move",
           },
           Object {
-            "name": "string",
-            "value": "popup",
+            "name": "popup",
           },
         ],
       },
@@ -246,8 +269,19 @@ presented if they are made.",
       "description": "Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "Booleanish",
-        "raw": "Booleanish",
+        "name": "union",
+        "raw": "boolean | \\"true\\" | \\"false\\"",
+        "value": Array [
+          Object {
+            "name": "boolean",
+          },
+          Object {
+            "name": "true",
+          },
+          Object {
+            "name": "false",
+          },
+        ],
       },
     },
     "aria-flowto": Object {
@@ -264,8 +298,19 @@ allows assistive technology to override the general default of reading in docume
 @deprecated in ARIA 1.1",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "Booleanish",
-        "raw": "Booleanish",
+        "name": "union",
+        "raw": "boolean | \\"true\\" | \\"false\\"",
+        "value": Array [
+          Object {
+            "name": "boolean",
+          },
+          Object {
+            "name": "true",
+          },
+          Object {
+            "name": "false",
+          },
+        ],
       },
     },
     "aria-haspopup": Object {
@@ -307,8 +352,19 @@ allows assistive technology to override the general default of reading in docume
 @see aria-disabled.",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "Booleanish",
-        "raw": "Booleanish",
+        "name": "union",
+        "raw": "boolean | \\"true\\" | \\"false\\"",
+        "value": Array [
+          Object {
+            "name": "boolean",
+          },
+          Object {
+            "name": "true",
+          },
+          Object {
+            "name": "false",
+          },
+        ],
       },
     },
     "aria-invalid": Object {
@@ -375,20 +431,17 @@ allows assistive technology to override the general default of reading in docume
       "description": "Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "enum",
+        "name": "union",
         "raw": "\\"off\\" | \\"assertive\\" | \\"polite\\"",
         "value": Array [
           Object {
-            "name": "string",
-            "value": "off",
+            "name": "off",
           },
           Object {
-            "name": "string",
-            "value": "assertive",
+            "name": "assertive",
           },
           Object {
-            "name": "string",
-            "value": "polite",
+            "name": "polite",
           },
         ],
       },
@@ -397,40 +450,71 @@ allows assistive technology to override the general default of reading in docume
       "description": "Indicates whether an element is modal when displayed.",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "Booleanish",
-        "raw": "Booleanish",
+        "name": "union",
+        "raw": "boolean | \\"true\\" | \\"false\\"",
+        "value": Array [
+          Object {
+            "name": "boolean",
+          },
+          Object {
+            "name": "true",
+          },
+          Object {
+            "name": "false",
+          },
+        ],
       },
     },
     "aria-multiline": Object {
       "description": "Indicates whether a text box accepts multiple lines of input or only a single line.",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "Booleanish",
-        "raw": "Booleanish",
+        "name": "union",
+        "raw": "boolean | \\"true\\" | \\"false\\"",
+        "value": Array [
+          Object {
+            "name": "boolean",
+          },
+          Object {
+            "name": "true",
+          },
+          Object {
+            "name": "false",
+          },
+        ],
       },
     },
     "aria-multiselectable": Object {
       "description": "Indicates that the user may select more than one item from the current selectable descendants.",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "Booleanish",
-        "raw": "Booleanish",
+        "name": "union",
+        "raw": "boolean | \\"true\\" | \\"false\\"",
+        "value": Array [
+          Object {
+            "name": "boolean",
+          },
+          Object {
+            "name": "true",
+          },
+          Object {
+            "name": "false",
+          },
+        ],
       },
     },
     "aria-orientation": Object {
       "description": "Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "enum",
+        "name": "union",
         "raw": "\\"horizontal\\" | \\"vertical\\"",
         "value": Array [
           Object {
-            "name": "string",
-            "value": "horizontal",
+            "name": "horizontal",
           },
           Object {
-            "name": "string",
-            "value": "vertical",
+            "name": "vertical",
           },
         ],
       },
@@ -492,8 +576,19 @@ A hint could be a sample value or a brief description of the expected format.",
 @see aria-disabled.",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "Booleanish",
-        "raw": "Booleanish",
+        "name": "union",
+        "raw": "boolean | \\"true\\" | \\"false\\"",
+        "value": Array [
+          Object {
+            "name": "boolean",
+          },
+          Object {
+            "name": "true",
+          },
+          Object {
+            "name": "false",
+          },
+        ],
       },
     },
     "aria-relevant": Object {
@@ -501,48 +596,38 @@ A hint could be a sample value or a brief description of the expected format.",
 @see aria-atomic.",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "enum",
+        "name": "union",
         "raw": "\\"text\\" | \\"additions\\" | \\"additions removals\\" | \\"additions text\\" | \\"all\\" | \\"removals\\" | \\"removals additions\\" | \\"removals text\\" | \\"text additions\\" | \\"text removals\\"",
         "value": Array [
           Object {
-            "name": "string",
-            "value": "text",
+            "name": "text",
           },
           Object {
-            "name": "string",
-            "value": "additions",
+            "name": "additions",
           },
           Object {
-            "name": "string",
-            "value": "additions removals",
+            "name": "additions removals",
           },
           Object {
-            "name": "string",
-            "value": "additions text",
+            "name": "additions text",
           },
           Object {
-            "name": "string",
-            "value": "all",
+            "name": "all",
           },
           Object {
-            "name": "string",
-            "value": "removals",
+            "name": "removals",
           },
           Object {
-            "name": "string",
-            "value": "removals additions",
+            "name": "removals additions",
           },
           Object {
-            "name": "string",
-            "value": "removals text",
+            "name": "removals text",
           },
           Object {
-            "name": "string",
-            "value": "text additions",
+            "name": "text additions",
           },
           Object {
-            "name": "string",
-            "value": "text removals",
+            "name": "text removals",
           },
         ],
       },
@@ -551,8 +636,19 @@ A hint could be a sample value or a brief description of the expected format.",
       "description": "Indicates that user input is required on the element before a form may be submitted.",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "Booleanish",
-        "raw": "Booleanish",
+        "name": "union",
+        "raw": "boolean | \\"true\\" | \\"false\\"",
+        "value": Array [
+          Object {
+            "name": "boolean",
+          },
+          Object {
+            "name": "true",
+          },
+          Object {
+            "name": "false",
+          },
+        ],
       },
     },
     "aria-roledescription": Object {
@@ -598,8 +694,19 @@ A hint could be a sample value or a brief description of the expected format.",
 @see aria-pressed.",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "Booleanish",
-        "raw": "Booleanish",
+        "name": "union",
+        "raw": "boolean | \\"true\\" | \\"false\\"",
+        "value": Array [
+          Object {
+            "name": "boolean",
+          },
+          Object {
+            "name": "true",
+          },
+          Object {
+            "name": "false",
+          },
+        ],
       },
     },
     "aria-setsize": Object {
@@ -615,24 +722,20 @@ A hint could be a sample value or a brief description of the expected format.",
       "description": "Indicates if items in a table or grid are sorted in ascending or descending order.",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "enum",
+        "name": "union",
         "raw": "\\"none\\" | \\"ascending\\" | \\"descending\\" | \\"other\\"",
         "value": Array [
           Object {
-            "name": "string",
-            "value": "none",
+            "name": "none",
           },
           Object {
-            "name": "string",
-            "value": "ascending",
+            "name": "ascending",
           },
           Object {
-            "name": "string",
-            "value": "descending",
+            "name": "descending",
           },
           Object {
-            "name": "string",
-            "value": "other",
+            "name": "other",
           },
         ],
       },
@@ -790,8 +893,19 @@ A hint could be a sample value or a brief description of the expected format.",
     "draggable": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
-        "name": "Booleanish",
-        "raw": "Booleanish",
+        "name": "union",
+        "raw": "boolean | \\"true\\" | \\"false\\"",
+        "value": Array [
+          Object {
+            "name": "boolean",
+          },
+          Object {
+            "name": "true",
+          },
+          Object {
+            "name": "false",
+          },
+        ],
       },
     },
     "form": Object {
@@ -862,40 +976,32 @@ A hint could be a sample value or a brief description of the expected format.",
 @see https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute",
       "parentName": "HTMLAttributes",
       "type": Object {
-        "name": "enum",
+        "name": "union",
         "raw": "\\"none\\" | \\"text\\" | \\"tel\\" | \\"url\\" | \\"email\\" | \\"numeric\\" | \\"decimal\\" | \\"search\\"",
         "value": Array [
           Object {
-            "name": "string",
-            "value": "none",
+            "name": "none",
           },
           Object {
-            "name": "string",
-            "value": "text",
+            "name": "text",
           },
           Object {
-            "name": "string",
-            "value": "tel",
+            "name": "tel",
           },
           Object {
-            "name": "string",
-            "value": "url",
+            "name": "url",
           },
           Object {
-            "name": "string",
-            "value": "email",
+            "name": "email",
           },
           Object {
-            "name": "string",
-            "value": "numeric",
+            "name": "numeric",
           },
           Object {
-            "name": "string",
-            "value": "decimal",
+            "name": "decimal",
           },
           Object {
-            "name": "string",
-            "value": "search",
+            "name": "search",
           },
         ],
       },
@@ -947,8 +1053,19 @@ A hint could be a sample value or a brief description of the expected format.",
     "key": Object {
       "parentName": "Attributes",
       "type": Object {
-        "name": "ReactText",
-        "raw": "ReactText",
+        "name": "union",
+        "raw": "string | number | null",
+        "value": Array [
+          Object {
+            "name": "string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "null",
+          },
+        ],
       },
     },
     "lang": Object {
@@ -969,1120 +1086,1120 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onAbortCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onAnimationEnd": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: AnimationEvent<HTMLButtonElement>) => void",
+        "raw": "((event: AnimationEvent<HTMLButtonElement>) => void)",
       },
     },
     "onAnimationEndCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: AnimationEvent<HTMLButtonElement>) => void",
+        "raw": "((event: AnimationEvent<HTMLButtonElement>) => void)",
       },
     },
     "onAnimationIteration": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: AnimationEvent<HTMLButtonElement>) => void",
+        "raw": "((event: AnimationEvent<HTMLButtonElement>) => void)",
       },
     },
     "onAnimationIterationCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: AnimationEvent<HTMLButtonElement>) => void",
+        "raw": "((event: AnimationEvent<HTMLButtonElement>) => void)",
       },
     },
     "onAnimationStart": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: AnimationEvent<HTMLButtonElement>) => void",
+        "raw": "((event: AnimationEvent<HTMLButtonElement>) => void)",
       },
     },
     "onAnimationStartCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: AnimationEvent<HTMLButtonElement>) => void",
+        "raw": "((event: AnimationEvent<HTMLButtonElement>) => void)",
       },
     },
     "onAuxClick": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
       },
     },
     "onAuxClickCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
       },
     },
     "onBeforeInput": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
       },
     },
     "onBeforeInputCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
       },
     },
     "onBlur": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: FocusEvent<HTMLButtonElement>) => void",
+        "raw": "((event: FocusEvent<HTMLButtonElement>) => void)",
       },
     },
     "onBlurCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: FocusEvent<HTMLButtonElement>) => void",
+        "raw": "((event: FocusEvent<HTMLButtonElement>) => void)",
       },
     },
     "onCanPlay": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onCanPlayCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onCanPlayThrough": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onCanPlayThroughCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onChange": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
       },
     },
     "onChangeCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
       },
     },
     "onClick": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
       },
     },
     "onClickCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
       },
     },
     "onCompositionEnd": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: CompositionEvent<HTMLButtonElement>) => void",
+        "raw": "((event: CompositionEvent<HTMLButtonElement>) => void)",
       },
     },
     "onCompositionEndCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: CompositionEvent<HTMLButtonElement>) => void",
+        "raw": "((event: CompositionEvent<HTMLButtonElement>) => void)",
       },
     },
     "onCompositionStart": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: CompositionEvent<HTMLButtonElement>) => void",
+        "raw": "((event: CompositionEvent<HTMLButtonElement>) => void)",
       },
     },
     "onCompositionStartCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: CompositionEvent<HTMLButtonElement>) => void",
+        "raw": "((event: CompositionEvent<HTMLButtonElement>) => void)",
       },
     },
     "onCompositionUpdate": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: CompositionEvent<HTMLButtonElement>) => void",
+        "raw": "((event: CompositionEvent<HTMLButtonElement>) => void)",
       },
     },
     "onCompositionUpdateCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: CompositionEvent<HTMLButtonElement>) => void",
+        "raw": "((event: CompositionEvent<HTMLButtonElement>) => void)",
       },
     },
     "onContextMenu": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
       },
     },
     "onContextMenuCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
       },
     },
     "onCopy": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: ClipboardEvent<HTMLButtonElement>) => void",
+        "raw": "((event: ClipboardEvent<HTMLButtonElement>) => void)",
       },
     },
     "onCopyCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: ClipboardEvent<HTMLButtonElement>) => void",
+        "raw": "((event: ClipboardEvent<HTMLButtonElement>) => void)",
       },
     },
     "onCut": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: ClipboardEvent<HTMLButtonElement>) => void",
+        "raw": "((event: ClipboardEvent<HTMLButtonElement>) => void)",
       },
     },
     "onCutCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: ClipboardEvent<HTMLButtonElement>) => void",
+        "raw": "((event: ClipboardEvent<HTMLButtonElement>) => void)",
       },
     },
     "onDoubleClick": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
       },
     },
     "onDoubleClickCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
       },
     },
     "onDrag": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
       },
     },
     "onDragCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
       },
     },
     "onDragEnd": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
       },
     },
     "onDragEndCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
       },
     },
     "onDragEnter": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
       },
     },
     "onDragEnterCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
       },
     },
     "onDragExit": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
       },
     },
     "onDragExitCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
       },
     },
     "onDragLeave": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
       },
     },
     "onDragLeaveCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
       },
     },
     "onDragOver": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
       },
     },
     "onDragOverCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
       },
     },
     "onDragStart": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
       },
     },
     "onDragStartCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
       },
     },
     "onDrop": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
       },
     },
     "onDropCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
       },
     },
     "onDurationChange": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onDurationChangeCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onEmptied": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onEmptiedCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onEncrypted": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onEncryptedCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onEnded": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onEndedCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onError": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onErrorCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onFocus": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: FocusEvent<HTMLButtonElement>) => void",
+        "raw": "((event: FocusEvent<HTMLButtonElement>) => void)",
       },
     },
     "onFocusCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: FocusEvent<HTMLButtonElement>) => void",
+        "raw": "((event: FocusEvent<HTMLButtonElement>) => void)",
       },
     },
     "onGotPointerCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
       },
     },
     "onGotPointerCaptureCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
       },
     },
     "onInput": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
       },
     },
     "onInputCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
       },
     },
     "onInvalid": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
       },
     },
     "onInvalidCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
       },
     },
     "onKeyDown": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: KeyboardEvent<HTMLButtonElement>) => void",
+        "raw": "((event: KeyboardEvent<HTMLButtonElement>) => void)",
       },
     },
     "onKeyDownCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: KeyboardEvent<HTMLButtonElement>) => void",
+        "raw": "((event: KeyboardEvent<HTMLButtonElement>) => void)",
       },
     },
     "onKeyPress": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: KeyboardEvent<HTMLButtonElement>) => void",
+        "raw": "((event: KeyboardEvent<HTMLButtonElement>) => void)",
       },
     },
     "onKeyPressCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: KeyboardEvent<HTMLButtonElement>) => void",
+        "raw": "((event: KeyboardEvent<HTMLButtonElement>) => void)",
       },
     },
     "onKeyUp": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: KeyboardEvent<HTMLButtonElement>) => void",
+        "raw": "((event: KeyboardEvent<HTMLButtonElement>) => void)",
       },
     },
     "onKeyUpCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: KeyboardEvent<HTMLButtonElement>) => void",
+        "raw": "((event: KeyboardEvent<HTMLButtonElement>) => void)",
       },
     },
     "onLoad": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onLoadCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onLoadStart": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onLoadStartCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onLoadedData": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onLoadedDataCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onLoadedMetadata": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onLoadedMetadataCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onLostPointerCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
       },
     },
     "onLostPointerCaptureCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
       },
     },
     "onMouseDown": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
       },
     },
     "onMouseDownCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
       },
     },
     "onMouseEnter": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
       },
     },
     "onMouseLeave": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
       },
     },
     "onMouseMove": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
       },
     },
     "onMouseMoveCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
       },
     },
     "onMouseOut": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
       },
     },
     "onMouseOutCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
       },
     },
     "onMouseOver": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
       },
     },
     "onMouseOverCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
       },
     },
     "onMouseUp": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
       },
     },
     "onMouseUpCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
       },
     },
     "onPaste": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: ClipboardEvent<HTMLButtonElement>) => void",
+        "raw": "((event: ClipboardEvent<HTMLButtonElement>) => void)",
       },
     },
     "onPasteCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: ClipboardEvent<HTMLButtonElement>) => void",
+        "raw": "((event: ClipboardEvent<HTMLButtonElement>) => void)",
       },
     },
     "onPause": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onPauseCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onPlay": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onPlayCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onPlaying": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onPlayingCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onPointerCancel": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
       },
     },
     "onPointerCancelCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
       },
     },
     "onPointerDown": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
       },
     },
     "onPointerDownCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
       },
     },
     "onPointerEnter": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
       },
     },
     "onPointerEnterCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
       },
     },
     "onPointerLeave": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
       },
     },
     "onPointerLeaveCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
       },
     },
     "onPointerMove": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
       },
     },
     "onPointerMoveCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
       },
     },
     "onPointerOut": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
       },
     },
     "onPointerOutCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
       },
     },
     "onPointerOver": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
       },
     },
     "onPointerOverCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
       },
     },
     "onPointerUp": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
       },
     },
     "onPointerUpCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
       },
     },
     "onProgress": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onProgressCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onRateChange": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onRateChangeCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onReset": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
       },
     },
     "onResetCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
       },
     },
     "onScroll": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: UIEvent<HTMLButtonElement, UIEvent>) => void",
+        "raw": "((event: UIEvent<HTMLButtonElement, UIEvent>) => void)",
       },
     },
     "onScrollCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: UIEvent<HTMLButtonElement, UIEvent>) => void",
+        "raw": "((event: UIEvent<HTMLButtonElement, UIEvent>) => void)",
       },
     },
     "onSeeked": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onSeekedCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onSeeking": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onSeekingCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onSelect": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onSelectCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onStalled": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onStalledCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onSubmit": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
       },
     },
     "onSubmitCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
       },
     },
     "onSuspend": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onSuspendCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onTimeUpdate": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onTimeUpdateCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onTouchCancel": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: TouchEvent<HTMLButtonElement>) => void",
+        "raw": "((event: TouchEvent<HTMLButtonElement>) => void)",
       },
     },
     "onTouchCancelCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: TouchEvent<HTMLButtonElement>) => void",
+        "raw": "((event: TouchEvent<HTMLButtonElement>) => void)",
       },
     },
     "onTouchEnd": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: TouchEvent<HTMLButtonElement>) => void",
+        "raw": "((event: TouchEvent<HTMLButtonElement>) => void)",
       },
     },
     "onTouchEndCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: TouchEvent<HTMLButtonElement>) => void",
+        "raw": "((event: TouchEvent<HTMLButtonElement>) => void)",
       },
     },
     "onTouchMove": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: TouchEvent<HTMLButtonElement>) => void",
+        "raw": "((event: TouchEvent<HTMLButtonElement>) => void)",
       },
     },
     "onTouchMoveCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: TouchEvent<HTMLButtonElement>) => void",
+        "raw": "((event: TouchEvent<HTMLButtonElement>) => void)",
       },
     },
     "onTouchStart": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: TouchEvent<HTMLButtonElement>) => void",
+        "raw": "((event: TouchEvent<HTMLButtonElement>) => void)",
       },
     },
     "onTouchStartCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: TouchEvent<HTMLButtonElement>) => void",
+        "raw": "((event: TouchEvent<HTMLButtonElement>) => void)",
       },
     },
     "onTransitionEnd": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: TransitionEvent<HTMLButtonElement>) => void",
+        "raw": "((event: TransitionEvent<HTMLButtonElement>) => void)",
       },
     },
     "onTransitionEndCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: TransitionEvent<HTMLButtonElement>) => void",
+        "raw": "((event: TransitionEvent<HTMLButtonElement>) => void)",
       },
     },
     "onVolumeChange": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onVolumeChangeCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onWaiting": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onWaitingCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
       },
     },
     "onWheel": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: WheelEvent<HTMLButtonElement>) => void",
+        "raw": "((event: WheelEvent<HTMLButtonElement>) => void)",
       },
     },
     "onWheelCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: WheelEvent<HTMLButtonElement>) => void",
+        "raw": "((event: WheelEvent<HTMLButtonElement>) => void)",
       },
     },
     "placeholder": Object {
@@ -2116,8 +2233,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "ref": Object {
       "parentName": "ClassAttributes",
       "type": Object {
-        "name": "LegacyRef<HTMLButtonElement>",
-        "raw": "LegacyRef<HTMLButtonElement>",
+        "name": "function",
+        "raw": "string | ((instance: HTMLButtonElement | null) => void) | RefObject<HTMLButtonElement> | null",
       },
     },
     "resource": Object {
@@ -2158,8 +2275,19 @@ A hint could be a sample value or a brief description of the expected format.",
     "spellCheck": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
-        "name": "Booleanish",
-        "raw": "Booleanish",
+        "name": "union",
+        "raw": "boolean | \\"true\\" | \\"false\\"",
+        "value": Array [
+          Object {
+            "name": "boolean",
+          },
+          Object {
+            "name": "true",
+          },
+          Object {
+            "name": "false",
+          },
+        ],
       },
     },
     "style": Object {
@@ -2200,16 +2328,14 @@ A hint could be a sample value or a brief description of the expected format.",
     "translate": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
-        "name": "enum",
+        "name": "union",
         "raw": "\\"yes\\" | \\"no\\"",
         "value": Array [
           Object {
-            "name": "string",
-            "value": "yes",
+            "name": "yes",
           },
           Object {
-            "name": "string",
-            "value": "no",
+            "name": "no",
           },
         ],
       },
@@ -2217,20 +2343,17 @@ A hint could be a sample value or a brief description of the expected format.",
     "type": Object {
       "parentName": "ButtonHTMLAttributes",
       "type": Object {
-        "name": "enum",
+        "name": "union",
         "raw": "\\"button\\" | \\"submit\\" | \\"reset\\"",
         "value": Array [
           Object {
-            "name": "string",
-            "value": "button",
+            "name": "button",
           },
           Object {
-            "name": "string",
-            "value": "submit",
+            "name": "submit",
           },
           Object {
-            "name": "string",
-            "value": "reset",
+            "name": "reset",
           },
         ],
       },
@@ -2245,16 +2368,14 @@ A hint could be a sample value or a brief description of the expected format.",
     "unselectable": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
-        "name": "enum",
+        "name": "union",
         "raw": "\\"on\\" | \\"off\\"",
         "value": Array [
           Object {
-            "name": "string",
-            "value": "on",
+            "name": "on",
           },
           Object {
-            "name": "string",
-            "value": "off",
+            "name": "off",
           },
         ],
       },
