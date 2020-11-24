@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.42.0](https://github.com/ccontrols/component-controls/compare/v1.41.1...v1.42.0) (2020-11-24)
+
+
+### Bug Fixes
+
+* sb5 empty decorators ([21795ff](https://github.com/ccontrols/component-controls/commit/21795ff6a71bce8a6c53618f5ee2c74c837519ec))
+
+
+
+
+
 ## [1.41.1](https://github.com/ccontrols/component-controls/compare/v1.41.0...v1.41.1) (2020-11-24)
 
 **Note:** Version bump only for package @component-controls/storybook

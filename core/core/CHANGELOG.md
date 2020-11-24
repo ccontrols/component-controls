@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.42.0](https://github.com/ccontrols/component-controls/compare/v1.41.1...v1.42.0) (2020-11-24)
+
+
+### Features
+
+* findUpFile to node utils ([bfcde64](https://github.com/ccontrols/component-controls/commit/bfcde64df07c04e814735e18b5ca8acb32406ece))
+* support for union type ([67ef09f](https://github.com/ccontrols/component-controls/commit/67ef09f7628ab083b7fbce924d5b8be396cd64bb))
+
+
+
+
+
 # [1.41.0](https://github.com/ccontrols/component-controls/compare/v1.40.5...v1.41.0) (2020-11-23)
 
 

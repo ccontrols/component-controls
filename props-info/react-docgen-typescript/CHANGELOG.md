@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.42.0](https://github.com/ccontrols/component-controls/compare/v1.41.1...v1.42.0) (2020-11-24)
+
+
+### Features
+
+* typescript props read compiler options ([6ce277a](https://github.com/ccontrols/component-controls/commit/6ce277adcb7e578f88c60f40b9379d4816b72137))
+
+
+
+
+
 # [1.41.0](https://github.com/ccontrols/component-controls/compare/v1.40.5...v1.41.0) (2020-11-23)
 
 **Note:** Version bump only for package @component-controls/react-docgen-typescript-info
