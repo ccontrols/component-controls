@@ -38,7 +38,6 @@ import {
 
 export * from './types';
 export { getComponentProps } from './misc/props-info';
-export { findUpFile } from './misc/package-info';
 
 type TraverseFn = (
   ast: File,

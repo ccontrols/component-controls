@@ -9,7 +9,7 @@ import {
   defCssFileName,
   customLoaderOptions,
 } from '@component-controls/core';
-import { findUpFile } from '@component-controls/instrument';
+import { findUpFile } from '@component-controls/core/node-utils';
 
 export const react: PresetType = (options: BuildProps) => {
   const isProd = process.env.NODE_ENV === 'production';
