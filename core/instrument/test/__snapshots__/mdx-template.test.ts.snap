@@ -10,6 +10,31 @@ Object {
     "package": "b5d157962341328fdbed2962a4272111",
     "title": "MDX",
   },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "title": "MDX",
+      },
+    },
+    "john": Object {
+      "render": "Template.bind()",
+      "story": Object {
+        "controls": Object {
+          "name": "john",
+        },
+        "name": "john",
+      },
+    },
+    "mary": Object {
+      "render": "Template.bind()",
+      "story": Object {
+        "controls": Object {
+          "name": "mary",
+        },
+        "name": "mary",
+      },
+    },
+  },
   "packages": Object {
     "b5d157962341328fdbed2962a4272111": Object {
       "dependencies": Object {

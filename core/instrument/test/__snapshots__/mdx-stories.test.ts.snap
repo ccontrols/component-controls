@@ -20,6 +20,13 @@ Object {
     "package": "3ae9354c82688a27372041e032d9a3d2",
     "title": "MDX",
   },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "title": undefined,
+      },
+    },
+  },
   "packages": Object {
     "3ae9354c82688a27372041e032d9a3d2": Object {
       "dependencies": Object {
@@ -66,9 +73,7 @@ Object {
     },
   },
   "stories": Object {},
-  "transformed": "
-    
-    import { Story, Meta } from '@component-controls/blocks';
+  "transformed": "import { Story, Meta } from '@component-controls/blocks';
 import Button from '../components/BaseButton';
 
 
@@ -76,8 +81,7 @@ import Button from '../components/BaseButton';
 
 <Story>
   <Button />
-</Story>
-",
+</Story>",
 }
 `;
 
@@ -100,6 +104,13 @@ Object {
     "mdxType": "Meta",
     "package": "2a402139de103fe4f924b61618619173",
     "title": "MDX",
+  },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "title": undefined,
+      },
+    },
   },
   "packages": Object {
     "2a402139de103fe4f924b61618619173": Object {
@@ -180,9 +191,7 @@ Object {
       "source": "props => <Button />",
     },
   },
-  "transformed": "
-    
-    import { Story, Meta } from '@component-controls/blocks';
+  "transformed": "import { Story, Meta } from '@component-controls/blocks';
 import Button from '../components/BaseButton';
 
 
@@ -191,7 +200,6 @@ import Button from '../components/BaseButton';
 <Story name=\\"story-with-props\\">
   {props => <Button />}
 </Story>
-
 ",
 }
 `;
@@ -241,6 +249,13 @@ export default Button;
     "mdxType": "Meta",
     "package": "a588f2668941163f0163aabd28f5304e",
     "title": "MDX",
+  },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "title": undefined,
+      },
+    },
   },
   "packages": Object {
     "a588f2668941163f0163aabd28f5304e": Object {
@@ -348,9 +363,7 @@ export default Button;
       "source": "<Button />",
     },
   },
-  "transformed": "
-    
-    import { Story, Meta } from '@component-controls/blocks';
+  "transformed": "import { Story, Meta } from '@component-controls/blocks';
 import Button from '../../components/button-default-arrow-func';
 
 
@@ -359,7 +372,6 @@ import Button from '../../components/button-default-arrow-func';
 <Story name=\\"smart story\\">
   <Button />
 </Story>
-
 ",
 }
 `;
@@ -383,6 +395,13 @@ Object {
     "mdxType": "Meta",
     "package": "92ff07f5e66bce7d793d8a6b561a1e0d",
     "title": "MDX",
+  },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "title": undefined,
+      },
+    },
   },
   "packages": Object {
     "92ff07f5e66bce7d793d8a6b561a1e0d": Object {
@@ -521,9 +540,7 @@ Object {
       "source": "({ name: { first, last }, age }) => <Button />",
     },
   },
-  "transformed": "
-    
-    import { Story, Meta } from '@component-controls/blocks';
+  "transformed": "import { Story, Meta } from '@component-controls/blocks';
 import Button from '../components/BaseButton';
 
 
@@ -532,7 +549,6 @@ import Button from '../components/BaseButton';
 <Story name=\\"story-with-props\\">
   {({ name: { first, last }, age }) => <Button />}
 </Story>
-
 ",
 }
 `;
@@ -556,6 +572,13 @@ Object {
     "mdxType": "Meta",
     "package": "6e59e023145bf99af36eacdfc87d4c4e",
     "title": "MDX",
+  },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "title": undefined,
+      },
+    },
   },
   "packages": Object {
     "6e59e023145bf99af36eacdfc87d4c4e": Object {
@@ -665,9 +688,7 @@ Object {
       "source": "({ name, age }) => <Button />",
     },
   },
-  "transformed": "
-    
-    import { Story, Meta } from '@component-controls/blocks';
+  "transformed": "import { Story, Meta } from '@component-controls/blocks';
 import Button from '../components/BaseButton';
 
 
@@ -675,8 +696,7 @@ import Button from '../components/BaseButton';
 
 <Story name=\\"story-with-props\\">
   {({ name, age }) => <Button />}
-</Story>
-",
+</Story>",
 }
 `;
 
@@ -699,6 +719,13 @@ Object {
     "mdxType": "Meta",
     "package": "a1ab80046bc96afbd8544a77ddf630e5",
     "title": "MDX",
+  },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "title": undefined,
+      },
+    },
   },
   "packages": Object {
     "a1ab80046bc96afbd8544a77ddf630e5": Object {
@@ -793,9 +820,7 @@ Object {
       "source": "(props, context) => <Button />",
     },
   },
-  "transformed": "
-    
-    import { Story, Meta } from '@component-controls/blocks';
+  "transformed": "import { Story, Meta } from '@component-controls/blocks';
 import Button from '../components/BaseButton';
 
 
@@ -803,8 +828,7 @@ import Button from '../components/BaseButton';
 
 <Story name=\\"story-with-props\\">
   {(props, context) => <Button />}
-</Story>
-",
+</Story>",
 }
 `;
 
@@ -827,6 +851,13 @@ Object {
     "mdxType": "Meta",
     "package": "195529eaaf75e7a96c882e2a716448ae",
     "title": "MDX",
+  },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "title": undefined,
+      },
+    },
   },
   "packages": Object {
     "195529eaaf75e7a96c882e2a716448ae": Object {
@@ -936,9 +967,7 @@ Object {
       "source": "({ name: MyName, age }) => <Button />",
     },
   },
-  "transformed": "
-    
-    import { Story, Meta } from '@component-controls/blocks';
+  "transformed": "import { Story, Meta } from '@component-controls/blocks';
 import Button from '../components/BaseButton';
 
 
@@ -946,7 +975,6 @@ import Button from '../components/BaseButton';
 
 <Story name=\\"story-with-props\\">
   {({ name: MyName, age }) => <Button />}
-</Story>
-",
+</Story>",
 }
 `;

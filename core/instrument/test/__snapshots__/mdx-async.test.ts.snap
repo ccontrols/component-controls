@@ -20,6 +20,13 @@ Object {
     "package": "fdb6fae63b892ee658c132e3eeaa8860",
     "title": "MDX",
   },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "title": undefined,
+      },
+    },
+  },
   "packages": Object {
     "fdb6fae63b892ee658c132e3eeaa8860": Object {
       "dependencies": Object {
@@ -99,9 +106,7 @@ Object {
       "source": "async props => <Button />",
     },
   },
-  "transformed": "
-    
-    import { Story, Meta } from '@component-controls/blocks';
+  "transformed": "import { Story, Meta } from '@component-controls/blocks';
 import Button from '../components/BaseButton';
 
 
@@ -110,7 +115,6 @@ import Button from '../components/BaseButton';
 <Story name=\\"story-with-props\\">
   {async (props) => <Button />}
 </Story>
-
 ",
 }
 `;

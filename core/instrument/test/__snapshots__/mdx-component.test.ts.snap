@@ -28,15 +28,19 @@ Object {
     "mdxType": "Meta",
     "title": "MDX",
   },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "title": undefined,
+      },
+    },
+  },
   "packages": Object {},
   "stories": Object {},
-  "transformed": "
-    
-    import { Meta } from '@component-controls/blocks';
+  "transformed": "import { Meta } from '@component-controls/blocks';
 import { Button } from '../../components/button-named-arrow-func';
 
 <Meta title=\\"MDX\\" component={Button} />
-
 ",
 }
 `;
@@ -59,14 +63,18 @@ Object {
     "dateModified": 2020-11-12T23:53:30.143Z,
     "title": "MDX",
   },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "title": undefined,
+      },
+    },
+  },
   "packages": Object {},
   "stories": Object {},
-  "transformed": "
-    
-    import { Meta } from '@component-controls/blocks';
+  "transformed": "import { Meta } from '@component-controls/blocks';
 import { Btn as Button } from '../../components/button-named-class';
-<Meta title=\\"MDX\\" component={Button} />
-",
+<Meta title=\\"MDX\\" component={Button} />",
 }
 `;
 
@@ -97,17 +105,21 @@ Object {
     "mdxType": "Meta",
     "title": "Story",
   },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "title": undefined,
+      },
+    },
+  },
   "packages": Object {},
   "stories": Object {},
-  "transformed": "
-    
-    import { Meta, PropsTable } from '@component-controls/blocks';
+  "transformed": "import { Meta, PropsTable } from '@component-controls/blocks';
 import ArrowButton from '../../components/button-default-arrow-func';
 
 <Meta title=\\"Story\\" />
 
 <PropsTable of={ArrowButton} />
-
 ",
 }
 `;
@@ -137,6 +149,13 @@ Object {
     "mdxType": "Meta",
     "title": "MDX",
   },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "title": undefined,
+      },
+    },
+  },
   "packages": Object {},
   "stories": Object {
     "myStory": Object {
@@ -157,16 +176,13 @@ Object {
       "source": "<Story name=\\"my-story\\" component={Toggle} />",
     },
   },
-  "transformed": "
-    
-    import { Meta, Story } from '@component-controls/blocks';
+  "transformed": "import { Meta, Story } from '@component-controls/blocks';
 import { Btn as Button } from './Button';
 import { Toggle } from './Toggle';
 
 <Meta title=\\"MDX\\" component={Button} />
 
-<Story name=\\"my-story\\" component={Toggle} />
-",
+<Story name=\\"my-story\\" component={Toggle} />",
 }
 `;
 
@@ -212,6 +228,13 @@ Object {
     "mdxType": "Meta",
     "title": "Story",
   },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "title": undefined,
+      },
+    },
+  },
   "packages": Object {},
   "stories": Object {
     "story": Object {
@@ -241,16 +264,13 @@ subcomponents={{
       },
     },
   },
-  "transformed": "
-    
-    import { Meta, Story } from '@component-controls/blocks';
+  "transformed": "import { Meta, Story } from '@component-controls/blocks';
 import ArrowButton from '../../components/button-default-arrow-func';
 import { Button } from '../../components/button-named-arrow-func';
 
 <Meta title=\\"Story\\" />
 
 <Story name=\\"story\\" component={ArrowButton} subcomponents={{ 'My Button Tab': Button }} />
-
 ",
 }
 `;
@@ -301,16 +321,20 @@ Object {
     },
     "title": "Story",
   },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "title": undefined,
+      },
+    },
+  },
   "packages": Object {},
   "stories": Object {},
-  "transformed": "
-    
-    import { Meta, Story } from '@component-controls/blocks';
+  "transformed": "import { Meta, Story } from '@component-controls/blocks';
 import ArrowButton from '../../components/button-default-arrow-func';
 import { Button } from '../../components/button-named-arrow-func';
 
 <Meta title=\\"Story\\" component={ArrowButton} subcomponents={{ Button }} />
-
 ",
 }
 `;

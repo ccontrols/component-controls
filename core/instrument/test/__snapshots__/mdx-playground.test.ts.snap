@@ -9,6 +9,16 @@ Object {
     "dateModified": 2020-11-13T15:50:05.556Z,
     "title": "MDX",
   },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "componentsLookup": Object {},
+        "date": 2020-11-12T13:44:39.824Z,
+        "dateModified": 2020-11-13T15:50:05.556Z,
+        "title": "MDX",
+      },
+    },
+  },
   "packages": Object {},
   "stories": Object {},
   "transformed": "
@@ -89,6 +99,16 @@ Object {
     "date": 2020-11-12T13:03:59.618Z,
     "dateModified": 2020-11-12T13:42:48.374Z,
     "title": "MDX",
+  },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "componentsLookup": Object {},
+        "date": 2020-11-12T13:03:59.618Z,
+        "dateModified": 2020-11-12T13:42:48.374Z,
+        "title": "MDX",
+      },
+    },
   },
   "packages": Object {},
   "stories": Object {},

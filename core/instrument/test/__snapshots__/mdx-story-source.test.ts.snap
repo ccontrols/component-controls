@@ -9,6 +9,19 @@ Object {
     "dateModified": 2020-10-21T01:23:26.442Z,
     "title": "MDX",
   },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "title": "MDX",
+      },
+    },
+    "mdxStory": Object {
+      "render": "() => <div>test</div>",
+      "story": Object {
+        "name": "mdx-story",
+      },
+    },
+  },
   "packages": Object {},
   "stories": Object {
     "mdxStory": Object {
@@ -82,6 +95,19 @@ Object {
     "date": 2020-10-21T01:23:26.442Z,
     "dateModified": 2020-10-21T01:23:26.442Z,
     "title": "MDX",
+  },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "title": "MDX",
+      },
+    },
+    "mdxStory": Object {
+      "render": "({ text }) => <div>{text}</div>",
+      "story": Object {
+        "name": "mdx-story",
+      },
+    },
   },
   "packages": Object {},
   "stories": Object {
@@ -209,6 +235,19 @@ Object {
     "dateModified": 2020-10-21T01:23:26.442Z,
     "title": "MDX",
   },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "title": "MDX",
+      },
+    },
+    "mdxStory": Object {
+      "render": "props => <div>{props.text}</div>",
+      "story": Object {
+        "name": "mdx-story",
+      },
+    },
+  },
   "packages": Object {},
   "stories": Object {
     "mdxStory": Object {
@@ -320,6 +359,23 @@ Object {
     "dateModified": 2020-10-21T01:23:26.442Z,
     "title": "MDX",
   },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "title": "MDX",
+      },
+    },
+    "mdxStory": Object {
+      "render": "() => (<>
+
+<div>test 1</div>
+
+</>)",
+      "story": Object {
+        "name": "mdx-story",
+      },
+    },
+  },
   "packages": Object {},
   "stories": Object {
     "mdxStory": Object {
@@ -395,6 +451,19 @@ Object {
     "date": 2020-10-21T01:23:26.442Z,
     "dateModified": 2020-10-21T01:23:26.442Z,
     "title": "MDX",
+  },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "title": "MDX",
+      },
+    },
+    "mdxStory": Object {
+      "render": "props => <div>{props.text}</div>",
+      "story": Object {
+        "name": "mdx-story",
+      },
+    },
   },
   "packages": Object {},
   "stories": Object {
