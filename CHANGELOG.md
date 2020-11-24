@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.42.1](https://github.com/ccontrols/component-controls/compare/v1.42.0...v1.42.1) (2020-11-24)
+
+
+### Bug Fixes
+
+* sb5 glob options compatibility ([5d0ed71](https://github.com/ccontrols/component-controls/commit/5d0ed71e1c01b2c829a183a9ee0b33aba16ce5c6))
+
+
+
+
+
 # [1.42.0](https://github.com/ccontrols/component-controls/compare/v1.41.1...v1.42.0) (2020-11-24)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/store",
-  "version": "1.42.0",
+  "version": "1.42.1",
   "description": "Component controls shared store",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -39,7 +39,7 @@
   "dependencies": {
     "@analytics/google-analytics": "^0.4.0",
     "@component-controls/core": "^1.42.0",
-    "@component-controls/loader": "^1.42.0",
+    "@component-controls/loader": "^1.42.1",
     "@component-controls/render": "^1.42.0",
     "analytics": "^0.5.2",
     "broadcast-channel": "^3.1.0",
