@@ -12,11 +12,11 @@ import { store } from '@component-controls/store/live_store';
 export const PageContextContainer: FC = ({ children }) => {
   const globOptions = useMemo(() => {
     const o = getGlobalOptions();
-    o.decorators = o.decorators
-      ? o.decorators.filter(
-          (d: { name: string }) => !d.name || !d.name.startsWith('with'),
-        )
-      : o.decorators;
+    if (o && Array.isArray(o.decorators)) {
+      o.decorators = o.decorators.filter(
+        (d: { name: string }) => !d.name || !d.name.startsWith('with'),
+      );
+    }
     return o;
   }, []);
   const { storyId, docId, parameters } = useCurrentData();
