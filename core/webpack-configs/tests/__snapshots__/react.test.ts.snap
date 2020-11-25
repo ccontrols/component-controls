@@ -115,15 +115,21 @@ Object {
           "/Users/atanasster/component-controls/node_modules/extract-css-chunks-webpack-plugin/dist/loader.js",
           Object {
             "loader": "css-loader",
-            "options": Object {},
+            "options": Object {
+              "sourceMap": true,
+            },
           },
           Object {
             "loader": "sass-loader",
-            "options": Object {},
+            "options": Object {
+              "sourceMap": true,
+            },
           },
           Object {
             "loader": "less-loader",
-            "options": Object {},
+            "options": Object {
+              "sourceMap": true,
+            },
           },
         ],
       },
