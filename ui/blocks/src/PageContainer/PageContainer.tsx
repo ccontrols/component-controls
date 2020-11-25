@@ -77,8 +77,14 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
     }, []);
     const theme = useTheme();
     const doc = useCurrentDocument();
-    const { MDXPage } = doc || {};
-    const node = MDXPage ? <MDXPage /> : children;
+    const { MDXPage, parameters } = doc || {};
+    const node = MDXPage ? (
+      <MDXPage />
+    ) : parameters?.docs?.page ? (
+      parameters.docs.page()
+    ) : (
+      children
+    );
     return (
       <Box
         variant="pagecontainer"

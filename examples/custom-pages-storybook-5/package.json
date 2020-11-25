@@ -5,7 +5,6 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "debug": "NODE_OPTIONS=--inspect-brk start-storybook -p 9018 -c .storybook",
     "start": "webpack-dev-server --open --mode development",
     "storybook": "start-storybook -p 9018 -c .storybook",
     "build-sample": "build-storybook -c .storybook -o ./public"

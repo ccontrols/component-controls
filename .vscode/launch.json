@@ -10,6 +10,7 @@
       "name": "storybook-6",
       "runtimeExecutable": "npm",
       "cwd": "${workspaceFolder}/examples/storybook-6",
+      "stopOnEntry": true,
       "runtimeArgs": [
         "run-script",
         "debug"
@@ -25,9 +26,10 @@
       "name": "storybook-6-build",
       "runtimeExecutable": "npm",
       "cwd": "${workspaceFolder}/examples/storybook-6",
+      "stopOnEntry": true,
       "runtimeArgs": [
         "run-script",
-        "debug-build"
+        "build-sample"
       ],
       "port": 9229,
       "skipFiles": [
@@ -40,9 +42,10 @@
       "name": "storybook-6-no-docs",
       "runtimeExecutable": "npm",
       "cwd": "${workspaceFolder}/examples/storybook-6-no-docs",
+      "stopOnEntry": true,
       "runtimeArgs": [
         "run-script",
-        "debug"
+        "start"
       ],
       "port": 9229,
       "skipFiles": [
@@ -55,9 +58,10 @@
       "name": "custom-pages-storybook-5",
       "runtimeExecutable": "npm",
       "cwd": "${workspaceFolder}/examples/custom-pages-storybook-5",
+      "stopOnEntry": true,
       "runtimeArgs": [
         "run-script",
-        "debug"
+        "start"
       ],
       "port": 9229,
       "skipFiles": [
@@ -70,9 +74,10 @@
       "name": "custom-pages-storybook-6",
       "runtimeExecutable": "npm",
       "cwd": "${workspaceFolder}/examples/custom-pages-storybook-6",
+      "stopOnEntry": true,
       "runtimeArgs": [
         "run-script",
-        "debug"
+        "start"
       ],
       "port": 9229,
       "skipFiles": [

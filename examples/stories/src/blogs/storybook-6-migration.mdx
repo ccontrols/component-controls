@@ -13,6 +13,7 @@ tags:
 import { Playground, Props, Story } from '@component-controls/blocks';
 import { Button } from '../components/Button'
 import docsAndPageImg from './media/docs-and-page.jpg';
+import testingPageImg from './media/testing-page.jpg';
 
 # Migration from Storybook 6
 
@@ -20,17 +21,17 @@ import docsAndPageImg from './media/docs-and-page.jpg';
 
 component-controls provides migration compatibility for many of the story(examples) and documentation features in `Storybook`. And component-controls can also use [gatsby](/tutorial/getting-started/gatsby) or [nextjs](/tutorial/getting-started/nextjs) as a static site generator to provide huge performance improvements.
 
--- Storybook as the static site generator
+-- [Storybook](#storybook-ssg) as the static site generator (SSG)
 
 [source code](https://github.com/ccontrols/component-controls/tree/master/examples/docz-migration)
 
 [live site](https://storybook-6-migration.netlify.app)
 
--- convert the site generator to gatsby
+-- [Gatsby](#gatsby-ssg) as the static site generator (SSG)
 
 > The sample project was bootstrapped from [tw-sb-rtl-starter](https://github.com/ssengalanto/tw-sb-rtl-starter)
 
-# Use Storybook as the static site generator
+# Storybook SSG
 
 ## Insall `@component-controls/storybook`
 
@@ -142,7 +143,7 @@ module.exports = {
       name: '@component-controls/storybook',
       options: {
         pages: [
-          require.resolve('@component-controls/storybook/full-page'), // this is the default documentation oage
+          require.resolve('@component-controls/storybook/full-page'), // this is the default documentation page
           require.resolve('./testing-page'),
         ],
       }
@@ -150,6 +151,11 @@ module.exports = {
   ],
 };
 ```
+
+The new Testing Page should now be visible
+
+<img alt="testing page" title="testing page" src={testingPageImg} />
+
 
 ## Add jest snapshot tests
 
@@ -163,6 +169,7 @@ yarn add @component-controls/jest-snapshots -D
 
 ### Configure test script
 
+We will launch the `cc-jest` command-line with the -c parameter pointing to the folder storing your configuration files. You can also add other parameters such as `--coverage`.
 
 ```js:title=package.json {7}
 {
@@ -177,4 +184,75 @@ yarn add @component-controls/jest-snapshots -D
   },
   ...
 }  
+```
+
+### Run the tests
+
+```sh
+yarn test
+```
+
+Running the `jest-snapshots` test will execute any existing tests (ie `src/lib/components/button/button.spec.tsx`) as well as snapshot tests automatically created for all your stories.
+
+After running the tests, you should have a file `tests/__snapshots__/stories.test.js.snap`, with snapshots like this one:
+
+```js:title=tests/__snapshots__/stories.test.js.snap
+exports[`Components/Button Primary 1`] = `
+<DocumentFragment>
+  <button
+    class="rounded-md focus:outline-none focus:shadow-outline bg-primary-500 text-white hover:bg-primary-600 py-4 px-8"
+    type="button"
+  >
+    Button Label
+  </button>
+</DocumentFragment>
+`;
+```
+
+## Remove Storybook
+
+At this point, you are ready to remove the Storybook docs page, and as a second step relegate all the instrumenting to component-controls
+
+### Remove storybook-docs
+
+We can safely remove `@storybook/addon-essentials` from the `main.js` configuration file - this will take out the `Docs` tab from the user interface
+
+```js:title=.storybook/main.js
+module.exports = {
+  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  addons: [
+    '@storybook/preset-create-react-app',
+    {
+      name: '@component-controls/storybook',
+      options: {
+        pages: [
+          require.resolve('@component-controls/storybook/full-page'), // this is the default documentation oage
+          require.resolve('./testing-page'),
+        ],
+      }
+    }
+  ],
+};
+```
+
+### Add MDX instrumenting
+
+In this step we will add the `react` webpack configration preset to component-controls
+
+```js:title=.storybook/main.js
+module.exports = {
+  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  addons: [
+    {
+      name: '@component-controls/storybook',
+      options: {
+        pages: [
+          require.resolve('@component-controls/storybook/full-page'), // this is the default documentation oage
+          require.resolve('./testing-page'),
+        ],
+        webpack: ['instrument', 'react-docgen-typescript'],
+      }  
+    }
+  ],
+};
 ```

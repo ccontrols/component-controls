@@ -179,7 +179,7 @@ $ npm install @component-controls/core --save-dev
 
 ## DefaultStore
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L398)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L401)_
 
 
 
@@ -243,7 +243,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 store of stories information in memory after the loader is applied
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L359)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L362)_
 
 
 
@@ -300,7 +300,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of components used in stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L334)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L337)_
 
 Record&lt;string, 
 
@@ -334,6 +334,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `menu`             | string                              | to which static menu to attach the document compatibility with docz                                                                                                                          |
 | `order`            | number                              | document order, used to sort documents within the same parent                                                                                                                                |
 | `package`          | string                              | lookup into the global store of PackageInfo package.json                                                                                                                                     |
+| `parameters`       | any                                 | storybook compatibility field                                                                                                                                                                |
 | `route`            | string                              | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
 | `source`           | string                              | source code of the entire file of stories                                                                                                                                                    |
 | `stories`          | string\[]                           | list of story ids contained in the document.                                                                                                                                                 |
@@ -348,7 +349,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of story files, or groups
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L339)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L342)_
 
 Record&lt;string, 
 
@@ -388,7 +389,7 @@ ComponentControl&lt;[ExampleControls](#examplecontrols)> | string | string\[] | 
 
 list of repositories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L351)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L354)_
 
 Record&lt;string, 
 
@@ -398,13 +399,13 @@ Record&lt;string,
 
 ## Pages
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L341)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L344)_
 
 [Document](#document)\[]
 
 ## StoreObserver
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L353)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L356)_
 
 **function** (`story`: [Story](#story)): void;
 
@@ -419,7 +420,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L346)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L349)_
 
 Record&lt;string, 
 
@@ -481,7 +482,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## CURRENT_STORY
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L355)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L358)_
 
 
 
@@ -493,7 +494,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## dateToLocalString
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L324)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L327)_
 
 **function** dateToLocalString(`date`: [Date](#date)): string;
 
@@ -506,7 +507,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## getDefaultStore
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L424)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L427)_
 
 **function** getDefaultStore(): [Store](#store);
 
@@ -1650,7 +1651,7 @@ _defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols
 
 ## StoreObserver
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L353)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L356)_
 
 **function** (`story`: [Story](#story)): void;
 
@@ -1689,7 +1690,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of components used in stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L334)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L337)_
 
 Record&lt;string, 
 
@@ -1712,7 +1713,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 list of story files, or groups
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L339)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L342)_
 
 Record&lt;string, 
 
@@ -1724,7 +1725,7 @@ Record&lt;string,
 
 list of repositories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L351)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L354)_
 
 Record&lt;string, 
 
@@ -1736,7 +1737,7 @@ Record&lt;string,
 
 list of stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L346)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L349)_
 
 Record&lt;string, 
 
@@ -1801,6 +1802,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `menu`             | string                              | to which static menu to attach the document compatibility with docz                                                                                                                          |
 | `order`            | number                              | document order, used to sort documents within the same parent                                                                                                                                |
 | `package`          | string                              | lookup into the global store of PackageInfo package.json                                                                                                                                     |
+| `parameters`       | any                                 | storybook compatibility field                                                                                                                                                                |
 | `route`            | string                              | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
 | `source`           | string                              | source code of the entire file of stories                                                                                                                                                    |
 | `stories`          | string\[]                           | list of story ids contained in the document.                                                                                                                                                 |
@@ -2071,6 +2073,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `menu`             | string                              | to which static menu to attach the document compatibility with docz                                                                                                                          |
 | `order`            | number                              | document order, used to sort documents within the same parent                                                                                                                                |
 | `package`          | string                              | lookup into the global store of PackageInfo package.json                                                                                                                                     |
+| `parameters`       | any                                 | storybook compatibility field                                                                                                                                                                |
 | `route`            | string                              | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
 | `source`           | string                              | source code of the entire file of stories                                                                                                                                                    |
 | `stories`          | string\[]                           | list of story ids contained in the document.                                                                                                                                                 |

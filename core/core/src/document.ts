@@ -314,7 +314,10 @@ export type Document<Props = unknown> = {
    * for MDX documents, this is an MDXContent function, to be rendered inside a MDXProvider
    */
   MDXPage?: any;
-
+  /**
+   * storybook compatibility field
+   */
+  parameters?: any;
   /**
    * custom prop set by mdxjs
    */

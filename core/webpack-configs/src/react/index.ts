@@ -23,7 +23,7 @@ export const react: PresetType = (options: BuildProps) => {
       options:
         typeof postCssOptionsFile === 'string'
           ? require(postCssOptionsFile)
-          : {},
+          : { sourceMap: true },
     });
   }
   const result: PresetType = {
@@ -134,18 +134,24 @@ export const react: PresetType = (options: BuildProps) => {
             {
               // Translates CSS into CommonJS
               loader: 'css-loader',
-              options: customLoaderOptions(options, 'css-loader', {}),
+              options: customLoaderOptions(options, 'css-loader', {
+                sourceMap: true,
+              }),
             },
             ...cssLoaders,
             {
               // Compiles Sass to CSS
               loader: 'sass-loader',
-              options: customLoaderOptions(options, 'sass-loader', {}),
+              options: customLoaderOptions(options, 'sass-loader', {
+                sourceMap: true,
+              }),
             },
             {
               // Compiles less to CSS
               loader: 'less-loader',
-              options: customLoaderOptions(options, 'less-loader', {}),
+              options: customLoaderOptions(options, 'less-loader', {
+                sourceMap: true,
+              }),
             },
           ],
         },
