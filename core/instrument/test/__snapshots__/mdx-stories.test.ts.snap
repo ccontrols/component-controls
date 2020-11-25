@@ -69,7 +69,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.42.5",
+      "version": "1.42.6",
     },
   },
   "stories": Object {},
@@ -154,7 +154,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.42.5",
+      "version": "1.42.6",
     },
   },
   "stories": Object {
@@ -299,7 +299,7 @@ export default Button;
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.42.5",
+      "version": "1.42.6",
     },
     "ceea0565a65f75c8c7b6b355d6d335ac": Object {
       "dependencies": Object {
@@ -342,7 +342,7 @@ export default Button;
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.42.5",
+      "version": "1.42.6",
     },
   },
   "stories": Object {
@@ -445,7 +445,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.42.5",
+      "version": "1.42.6",
     },
   },
   "stories": Object {
@@ -622,7 +622,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.42.5",
+      "version": "1.42.6",
     },
   },
   "stories": Object {
@@ -769,7 +769,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.42.5",
+      "version": "1.42.6",
     },
   },
   "stories": Object {
@@ -901,7 +901,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.42.5",
+      "version": "1.42.6",
     },
   },
   "stories": Object {
