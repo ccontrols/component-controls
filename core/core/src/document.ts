@@ -315,13 +315,13 @@ export type Document<Props = unknown> = {
    */
   MDXPage?: any;
   /**
-   * storybook compatibility field
-   */
-  parameters?: any;
-  /**
    * custom prop set by mdxjs
    */
   isMDXComponent?: boolean;
+  /**
+   * storybook compatibility field
+   */
+  parameters?: any;
 } & StoryProps<Props> &
   PageLayoutProps;
 export const dateToLocalString = (date?: Date): string =>
