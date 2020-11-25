@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.42.5](https://github.com/ccontrols/component-controls/compare/v1.42.4...v1.42.5) (2020-11-25)
+
+**Note:** Version bump only for package component-controls-nextjs-starter
+
+
+
+
+
 ## [1.42.4](https://github.com/ccontrols/component-controls/compare/v1.42.3...v1.42.4) (2020-11-25)
 
 **Note:** Version bump only for package component-controls-nextjs-starter
