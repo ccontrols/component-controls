@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/design-tokens",
-  "version": "1.42.6",
+  "version": "1.42.7",
   "description": "Component controls design tokens components.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,14 +30,14 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/components": "^1.42.6",
+    "@component-controls/components": "^1.42.7",
     "copy-to-clipboard": "^3.2.1",
     "simple-color-converter": "^2.1.9",
     "tinycolor2": "^1.4.1"
   },
   "devDependencies": {
-    "@component-controls/core": "^1.42.5",
-    "@component-controls/jest-snapshots": "^1.42.6",
+    "@component-controls/core": "^1.42.7",
+    "@component-controls/jest-snapshots": "^1.42.7",
     "@component-controls/ts-markdown-docs": "^1.37.0",
     "@primer/octicons-react": "^10.0.0",
     "@types/react": "^16.9.34",
