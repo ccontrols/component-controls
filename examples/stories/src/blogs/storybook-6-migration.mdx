@@ -1,14 +1,16 @@
 ---
 title: Migration from Storybook 6
 type: blog
-date: 2020-11-25
-draft: true
+date: 2020-11-24
 author: atanasster
 route: /blogs/storybook-6-migration
 description: A step-by-step guide on migrating a documentation site from Storybook 6 to component-controls.
 tags:
   - storybook
   - gatsby
+  - nextjs
+  - migration
+image: /static/docs-and-page.jpg    
 ---
 import { Playground, Props, Story } from '@component-controls/blocks';
 import { Button } from '../components/Button'
@@ -17,251 +19,34 @@ import testingPageImg from './media/testing-page.jpg';
 
 # Migration from Storybook 6
 
-[Storybook](https://storybook.js.org) is an open-source tool for developing UI components in isolation for React, Vue, Angular, and more. It makes building stunning UIs organized and efficient.
+[Storybook](https://storybook.js.org) is an open-source tool for developing stories (aka examples) of your UI components.
 
-component-controls provides migration compatibility for many of the story(examples) and documentation features in `Storybook`. And component-controls can also use [gatsby](/tutorial/getting-started/gatsby) or [nextjs](/tutorial/getting-started/nextjs) as a static site generator to provide huge performance improvements.
+Component-controls provides migration compatibility for many of the story(examples) and documentation features in Storybook. And component-controls can also use [gatsby](/tutorial/getting-started/gatsby) or [nextjs](/tutorial/getting-started/nextjs) as a static site generator to provide ample performance improvements.
 
--- [Storybook](#storybook-ssg) as the static site generator (SSG)
+This is a 3-parts article that will guide you step-by-step through converting a Storybook 6 with Docs documentation project to component-controls using various static site generators:
+
+-- [Storybook](/blogs/storybook-6-migration-storybook-ssg) as the static site generator (SSG)
 
 [source code](https://github.com/ccontrols/tailwind-storybook-controls-starter)
 
 [live site](https://tailwind-storybook-controls-starter.netlify.app/?path=/docs-page/components-button--primary)
 
--- [Gatsby](#gatsby-ssg) as the static site generator (SSG)
+-- [Gatsby](/blogs/storybook-6-migration-gatsby-ssg) as the static site generator (SSG)
 
 [source code](https://github.com/ccontrols/tailwind-gatsby-controls-starter)
 
 [live site](https://tailwind-gatsby-controls-starter.netlify.app)
 
+-- [Nextjs](/blogs/storybook-6-migration-nextjs-ssg) as the static site generator (SSG)
+
+[source code](https://github.com/ccontrols/tailwind-nextjs-starter)
+
+[live site](https://tailwind-nextjs-controls-starter.netlify.app)
+
 > The sample project was cloned from [tw-sb-rtl-starter](https://github.com/ssengalanto/tw-sb-rtl-starter)
+
+This project was bootstrapped with CRA and covers handling of typescript, tailwind css files, react testing library and other best of class practices
 
 For a comparison of the various static site generators that can be used with component-controls, check our [Gatsby vs Nextjs vs Storybook
 ](/blogs/gatsby-vs-nextjs-vs-storybook) blog post
 
-# Storybook SSG
-
-## Insall `@component-controls/storybook`
-
-```sh
-yarn add @component-controls/storybook -D
-```
-
-component-controls has two [configuration](/configuration/overview/) files - one is used during build-time in a nodejs environment, the other is used during run-time in a browser environment. 
-
-The rough equivalents of Storybook for those two configuration files are `main.js` and `preview.(js|ts)`
-
-## Update configuration
-
-Add the storybook extension to `main.js`
-
-```js:title=.storybook/main.js {6}
-module.exports = {
-  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: [
-    '@storybook/addon-essentials',
-    '@storybook/preset-create-react-app',
-    '@component-controls/storybook'
-  ],
-};
-```
-
-At his point, you can start your documentation site 
-
-```sh
- yarn storybook
-```
-
-And a new documentation Page tab will be visible
-
-<img alt="storybook docs and page" title="docs and page" src={docsAndPageImg} />
-
-## Add testing page
-
-component-controls allows adding fully customizable documentation pages to your documentation site. 
-
-### Insall testing packages
-
-```sh
-yarn add @component-controls/axe-plugin  @component-controls/viewport-plugin -D
-```
-
-### Create a file with the page
-
-You can create any custom page using `react` and importing component-controls or external components. For this example we will create a Testing page that will contain the story description (if any), a playground to view the rendered story, a block with controls to edit properties of the current story as well as the installed axe-plugin and viewport-plugin for ally and mobile testing.
-
-```js:title=.storybook/testing-page.js
-import React from 'react';
-import {
-  Playground,
-  PropsTable,
-  Story,
-  Description,
-} from '@component-controls/blocks';
-import { getControlsCount } from '@component-controls/core';
-import { useCurrentStory } from '@component-controls/store';
-import { AllyBlock } from '@component-controls/axe-plugin';
-import { ViewportBlock } from '@component-controls/viewport-plugin';
-import { DocsContainer } from '@component-controls/storybook/DocsContainer';
-
-const TestingPage = () => {
-  const story = useCurrentStory();
-  const controlsCount = getControlsCount(story?.controls);
-  return (
-    <>
-      <Description />
-      {controlsCount > 0 && (
-        <>
-          <Playground title=".">
-            <Story id="." />
-          </Playground>
-          <PropsTable of="." title="Controls" visibility="controls" />
-        </>  
-      )}
-      <AllyBlock title="A11y tests" />
-      <ViewportBlock title="Viewport" />
-    </>  
-  );
-}
-
-export default {
-  key: 'docs-test',
-  title: 'Testing',
-  render: ({ active }) => {
-    return (
-      <DocsContainer active={active}>
-        <TestingPage />
-      </DocsContainer>
-    );
-  },
-};
-```
-
-### Configure the testing page
-
-Once the page is created, you will need to configure Storybook to load it as part of `@component-controls/storybook`
-
-```js:title=.storybook/main.js
-module.exports = {
-  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: [
-    '@storybook/addon-essentials',
-    '@storybook/preset-create-react-app',
-    {
-      name: '@component-controls/storybook',
-      options: {
-        pages: [
-          require.resolve('@component-controls/storybook/full-page'), // this is the default documentation page
-          require.resolve('./testing-page'),
-        ],
-      }
-    }
-  ],
-};
-```
-
-The new Testing Page should now be visible
-
-<img alt="testing page" title="testing page" src={testingPageImg} />
-
-
-## Add jest snapshot tests
-
-The `@component-controls/jest-snapshots` package is automatically creating jest [snapshot tests](/tutorial/testing/jest-snapshots) from your existing stories. It has an easy to use command-line interface that we will use in this example but also offers a [fully customizable API](/blogs/custom-test-runners).
-
-### Insall the jest-snapshots package
-
-```sh
-yarn add @component-controls/jest-snapshots -D
-```
-
-### Configure test script
-
-We will launch the `cc-jest` command-line with the -c parameter pointing to the folder storing your configuration files. You can also add other parameters such as `--coverage`.
-
-```js:title=package.json {7}
-{
-  "name": "tailwind-storybook-controls",
-  ...
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "cc-jest -c .storybook",
-    "eject": "react-scripts eject",
-    ...
-  },
-  ...
-}  
-```
-
-### Run the tests
-
-```sh
-yarn test
-```
-
-Running the `jest-snapshots` test will execute any existing tests (ie `src/lib/components/button/button.spec.tsx`) as well as snapshot tests automatically created for all your stories.
-
-After running the tests, you should have a file `tests/__snapshots__/stories.test.js.snap`, with snapshots like this one:
-
-```js:title=tests/__snapshots__/stories.test.js.snap
-exports[`Components/Button Primary 1`] = `
-<DocumentFragment>
-  <button
-    class="rounded-md focus:outline-none focus:shadow-outline bg-primary-500 text-white hover:bg-primary-600 py-4 px-8"
-    type="button"
-  >
-    Button Label
-  </button>
-</DocumentFragment>
-`;
-```
-
-## Remove Storybook docs
-
-At this point, you are ready to remove the Storybook docs page, and as a second step relegate all the instrumenting to component-controls
-
-### Remove @storybook/addon-essentials
-
-We can now remove `@storybook/addon-essentials` from the `main.js` configuration file - this will take out the `Docs` tab from the user interface, but will also take out the MDX instrumenting.
-
-```js:title=.storybook/main.js
-module.exports = {
-  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: [
-    '@storybook/preset-create-react-app',
-    {
-      name: '@component-controls/storybook',
-      options: {
-        pages: [
-          require.resolve('@component-controls/storybook/full-page'), // this is the default documentation oage
-          require.resolve('./testing-page'),
-        ],
-      }
-    }
-  ],
-};
-```
-
-### Add MDX instrumenting
-
-If you have MDX documents in your documentation,  we will need to add a custom `webpack` configration to `@component-controls/storybook`
-
-```js:title=.storybook/main.js
-module.exports = {
-  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: [
-    {
-      name: '@component-controls/storybook',
-      options: {
-        pages: [
-          require.resolve('@component-controls/storybook/full-page'), // this is the default documentation oage
-          require.resolve('./testing-page'),
-        ],
-        webpack: ['instrument', 'react-docgen-typescript'],
-      }  
-    }
-  ],
-};
-```
-
-# Gatsby SSG
