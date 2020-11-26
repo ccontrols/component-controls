@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.42.9](https://github.com/atanasster/component-controls/compare/v1.42.8...v1.42.9) (2020-11-26)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
 ## [1.42.8](https://github.com/atanasster/component-controls/compare/v1.42.7...v1.42.8) (2020-11-25)
 
 **Note:** Version bump only for package component-controls-simple
