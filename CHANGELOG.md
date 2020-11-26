@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.42.10](https://github.com/ccontrols/component-controls/compare/v1.42.9...v1.42.10) (2020-11-26)
+
+
+### Bug Fixes
+
+* fix spelling ([820017e](https://github.com/ccontrols/component-controls/commit/820017e8c956e29d7064fd878e84d4a86f1854f5))
+* postcss configuration file ([ef0fd04](https://github.com/ccontrols/component-controls/commit/ef0fd04e77c209138fa8e16c8e750bc492e5a53e))
+
+
+
+
+
 ## [1.42.9](https://github.com/ccontrols/component-controls/compare/v1.42.8...v1.42.9) (2020-11-26)
 
 **Note:** Version bump only for package component-controls

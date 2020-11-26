@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/instrument",
-  "version": "1.42.9",
+  "version": "1.42.10",
   "description": "Component controls instrumentation library",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
