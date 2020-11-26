@@ -48,8 +48,7 @@ module.exports = {
 ```
 
 ```js:title=.storybook/runtime.tsx
-import '../src/tailwind.output.css';
-// remove all addParameters and leave just the tailwind css import
+// empty file
 ```
 
 ## Configuration file path
@@ -104,8 +103,7 @@ module.exports = {
 };
 ```
 
-```js:title=.storybook/runtime.tsx {2-12}
-import '../src/tailwind.output.css';
+```js:title=.storybook/runtime.tsx {1-11}
 import { RunOnlyConfiguration } from "@component-controls/core";
 
 const config: RunOnlyConfiguration = {
@@ -184,12 +182,11 @@ module.exports = {
 };
 ```
 
-```js:title=.storybook/runtime.tsx {11-18}
+```js:title=.storybook/runtime.tsx {10-17}
 import React from 'react';
 import { RunConfiguration, defaultRunConfig } from "@component-controls/core";
 import { TestingPage } from "./TestingPage";
 
-import '../src/tailwind.output.css';
 const config: RunConfiguration = {
   analytics: 'UA-XXXXXXXXX-X',
   title: `Tailwind component-controls`,
