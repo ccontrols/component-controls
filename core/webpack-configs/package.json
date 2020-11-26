@@ -44,7 +44,7 @@
     "less": "^3.12.2",
     "less-loader": "^7.0.2",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
-    "postcss-loader": "^4.0.4",
+    "postcss-loader": "^4.1.0",
     "raw-loader": "^4.0.1",
     "sass": "^1.27.0",
     "sass-loader": "^10.0.4",

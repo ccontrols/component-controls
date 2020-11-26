@@ -17,13 +17,16 @@ export const react: PresetType = (options: BuildProps) => {
   const postcssOptions = customLoaderOptions(options, 'postcss-loader', {});
   const postCssOptionsFile = findUpFile(process.cwd(), 'postcss.config.js');
   const hasPostCss = Object.keys(postcssOptions).length || postCssOptionsFile;
-  if (hasPostCss) {
+  if (hasPostCss && !((postcssOptions as any).disable === true)) {
     cssLoaders.push({
       loader: 'postcss-loader',
-      options:
-        typeof postCssOptionsFile === 'string'
-          ? require(postCssOptionsFile)
-          : { sourceMap: true },
+      options: {
+        postcssOptions:
+          typeof postCssOptionsFile === 'string'
+            ? require(postCssOptionsFile)
+            : undefined,
+        sourceMap: true,
+      },
     });
   }
   const result: PresetType = {
