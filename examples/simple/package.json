@@ -2,7 +2,7 @@
   "name": "component-controls-simple",
   "description": "component-controls example with css styles",
   "private": true,
-  "version": "1.42.11",
+  "version": "1.42.12",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -12,7 +12,7 @@
     "start-next": "next -p 9031"
   },
   "dependencies": {
-    "@component-controls/gatsby-theme-stories": "^1.42.11",
+    "@component-controls/gatsby-theme-stories": "^1.42.12",
     "@emotion/core": "^10.0.27",
     "emotion": "^10.0.27",
     "emotion-server": "^10.0.27",

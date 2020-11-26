@@ -1,7 +1,7 @@
 {
   "name": "custom-pages-storybook-5",
   "private": true,
-  "version": "1.42.11",
+  "version": "1.42.12",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -18,7 +18,7 @@
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
-    "@component-controls/storybook": "^1.42.11",
+    "@component-controls/storybook": "^1.42.12",
     "@component-controls/storybook-custom-docs": "^1.41.1",
     "@storybook/addon-docs": "^5.3.18",
     "@storybook/api": "^5.3.18",
