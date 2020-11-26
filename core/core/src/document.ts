@@ -309,6 +309,10 @@ export type Document<Props = unknown> = {
   componentsLookup?: {
     [name: string]: string;
   };
+  /**
+   * storybook compatibility field
+   */
+  parameters?: any;
 
   /**
    * for MDX documents, this is an MDXContent function, to be rendered inside a MDXProvider
@@ -318,10 +322,6 @@ export type Document<Props = unknown> = {
    * custom prop set by mdxjs
    */
   isMDXComponent?: boolean;
-  /**
-   * storybook compatibility field
-   */
-  parameters?: any;
 } & StoryProps<Props> &
   PageLayoutProps;
 export const dateToLocalString = (date?: Date): string =>
