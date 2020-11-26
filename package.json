@@ -98,5 +98,8 @@
       "ui/*",
       "examples/*"
     ]
+  },
+  "resolutions": {
+    "minizlib": "2.1.2"
   }
 }
