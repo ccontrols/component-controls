@@ -23,13 +23,20 @@ component-controls provides migration compatibility for many of the story(exampl
 
 -- [Storybook](#storybook-ssg) as the static site generator (SSG)
 
-[source code](https://github.com/ccontrols/component-controls/tree/master/examples/docz-migration)
+[source code](https://github.com/ccontrols/tailwind-storybook-controls-starter)
 
-[live site](https://storybook-6-migration.netlify.app)
+[live site](https://tailwind-storybook-controls-starter.netlify.app/?path=/docs-page/components-button--primary)
 
 -- [Gatsby](#gatsby-ssg) as the static site generator (SSG)
 
-> The sample project was bootstrapped from [tw-sb-rtl-starter](https://github.com/ssengalanto/tw-sb-rtl-starter)
+[source code](https://github.com/ccontrols/tailwind-gatsby-controls-starter)
+
+[live site](https://tailwind-gatsby-controls-starter.netlify.app)
+
+> The sample project was cloned from [tw-sb-rtl-starter](https://github.com/ssengalanto/tw-sb-rtl-starter)
+
+For a comparison of the various static site generators that can be used with component-controls, check our [Gatsby vs Nextjs vs Storybook
+](/blogs/gatsby-vs-nextjs-vs-storybook) blog post
 
 # Storybook SSG
 
@@ -209,13 +216,13 @@ exports[`Components/Button Primary 1`] = `
 `;
 ```
 
-## Remove Storybook
+## Remove Storybook docs
 
 At this point, you are ready to remove the Storybook docs page, and as a second step relegate all the instrumenting to component-controls
 
-### Remove storybook-docs
+### Remove @storybook/addon-essentials
 
-We can safely remove `@storybook/addon-essentials` from the `main.js` configuration file - this will take out the `Docs` tab from the user interface
+We can now remove `@storybook/addon-essentials` from the `main.js` configuration file - this will take out the `Docs` tab from the user interface, but will also take out the MDX instrumenting.
 
 ```js:title=.storybook/main.js
 module.exports = {
@@ -237,7 +244,7 @@ module.exports = {
 
 ### Add MDX instrumenting
 
-In this step we will add the `react` webpack configration preset to component-controls
+If you have MDX documents in your documentation,  we will need to add a custom `webpack` configration to `@component-controls/storybook`
 
 ```js:title=.storybook/main.js
 module.exports = {
@@ -256,3 +263,5 @@ module.exports = {
   ],
 };
 ```
+
+# Gatsby SSG
