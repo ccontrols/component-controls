@@ -10,10 +10,11 @@ tags:
   - gatsby
   - nextjs
   - migration
-image: /static/docs-and-page.jpg    
+image: /static/docs-and-page.jpg
 ---
+
 import { Playground, Props, Story } from '@component-controls/blocks';
-import { Button } from '../components/Button'
+import { Button } from '../components/Button';
 import docsAndPageImg from './media/docs-and-page.jpg';
 import testingPageImg from './media/testing-page.jpg';
 
@@ -21,32 +22,16 @@ import testingPageImg from './media/testing-page.jpg';
 
 [Storybook](https://storybook.js.org) is an open-source tool for developing stories (aka examples) of your UI components.
 
-Component-controls provides migration compatibility for many of the story(examples) and documentation features in Storybook. And component-controls can also use [gatsby](/tutorial/getting-started/gatsby) or [nextjs](/tutorial/getting-started/nextjs) as a static site generator to provide ample performance improvements.
+When using component-controls to create stories, docs, and more, you can choose [Gatsby](/tutorial/getting-started/gatsby), [Nextjs](/tutorial/getting-started/nextjs), or Storybook's own SSG as your static site generator (SSG).
 
-This is a 3-parts article that will guide you step-by-step through converting a Storybook 6 with Docs documentation project to component-controls using various static site generators:
+_We recommend you use either Gatsby or Nextjs as your component-controls SSG because of how much faster they are than Storybook. We do an in-depth analysis of this [here](blogs/gatsby-vs-nextjs-vs-storybook)._
 
--- [Storybook](/blogs/storybook-6-migration-storybook-ssg) as the static site generator (SSG)
+Below are tutorials that'll guide you step-by-step through converting a Storybook 6 project to a component-controls project using your preferred SSG.
 
-[source code](https://github.com/ccontrols/tailwind-storybook-controls-starter)
+The sample project we'll be using for this guide is a Tailwind, Typescript, Storybook 6, and React Testing Library starter repo, and you can find it [here](https://github.com/ssengalanto/tw-sb-rtl-starter).
 
-[live site](https://tailwind-storybook-controls-starter.netlify.app/?path=/docs-page/components-button--primary)
+-- [Storybook 6 -> component-controls with Storybook as the SSG](/blogs/storybook-6-migration-storybook-ssg). Here's the [source code](https://github.com/ccontrols/tailwind-storybook-controls-starter) and the [live version](https://tailwind-storybook-controls-starter.netlify.app/?path=/docs-page/components-button--primary) of the final site.
 
--- [Gatsby](/blogs/storybook-6-migration-gatsby-ssg) as the static site generator (SSG)
+-- [Storybook 6 -> component-controls with Gatsby as the SSG](/blogs/storybook-6-migration-gatsby-ssg). Here's the [source code](https://github.com/ccontrols/tailwind-gatsby-controls-starter) and the [live version](https://tailwind-gatsby-controls-starter.netlify.app/docs/components-button--primary) of the final site.
 
-[source code](https://github.com/ccontrols/tailwind-gatsby-controls-starter)
-
-[live site](https://tailwind-gatsby-controls-starter.netlify.app/docs/components-button--primary)
-
--- [Nextjs](/blogs/storybook-6-migration-nextjs-ssg) as the static site generator (SSG)
-
-[source code](https://github.com/ccontrols/tailwind-nextjs-controls-starter)
-
-[live site](https://tailwind-nextjs-controls-starter.netlify.app/docs/components-button--primary)
-
-> The sample project was cloned from [tw-sb-rtl-starter](https://github.com/ssengalanto/tw-sb-rtl-starter)
-
-This project was bootstrapped with CRA and covers handling of typescript, tailwind css files, react testing library and other best of class practices
-
-For a comparison of the various static site generators that can be used with component-controls, check our [Gatsby vs Nextjs vs Storybook
-](/blogs/gatsby-vs-nextjs-vs-storybook) blog post
-
+-- [Storybook 6 -> component-controls with Nextjs as the SSG](/blogs/storybook-6-migration-nextjs-ssg). Here's the [source code](https://github.com/ccontrols/tailwind-nextjs-controls-starter) and the [live version](https://tailwind-nextjs-controls-starter.netlify.app/docs/components-button--primary) of the final site.
