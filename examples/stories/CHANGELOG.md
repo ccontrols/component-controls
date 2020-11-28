@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.43.0](https://github.com/ccontrols/component-controls/compare/v1.42.12...v1.43.0) (2020-11-28)
+
+
+### Bug Fixes
+
+* update imports and current doc lookup ([893293b](https://github.com/ccontrols/component-controls/commit/893293b5e208e7c61a3502fe50557321d3b70c1e))
+
+
+
+
+
 ## [1.42.10](https://github.com/ccontrols/component-controls/compare/v1.42.9...v1.42.10) (2020-11-26)
 
 **Note:** Version bump only for package component-controls-stories

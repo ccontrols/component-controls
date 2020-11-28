@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.43.0](https://github.com/ccontrols/component-controls/compare/v1.42.12...v1.43.0) (2020-11-28)
+
+
+### Features
+
+* local dependencies ([628d09f](https://github.com/ccontrols/component-controls/commit/628d09ffa2c92a92805309ad16c4596f31259582))
+
+
+
+
+
 ## [1.42.12](https://github.com/ccontrols/component-controls/compare/v1.42.11...v1.42.12) (2020-11-26)
 
 **Note:** Version bump only for package @component-controls/core

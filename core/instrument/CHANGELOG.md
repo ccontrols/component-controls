@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.43.0](https://github.com/ccontrols/component-controls/compare/v1.42.12...v1.43.0) (2020-11-28)
+
+
+### Bug Fixes
+
+* importKey ([822af3c](https://github.com/ccontrols/component-controls/commit/822af3cfc117fe79e9fb786b98eaaa28c90eb2e4))
+* importKey vs key ([524334f](https://github.com/ccontrols/component-controls/commit/524334f4c62f3ea2a38d02efe2e4fcea497ebe50))
+* less space for undefined key ([4226989](https://github.com/ccontrols/component-controls/commit/422698940531a438e1780beb6d329b2a72f69bff))
+
+
+### Features
+
+* local dependencies ([628d09f](https://github.com/ccontrols/component-controls/commit/628d09ffa2c92a92805309ad16c4596f31259582))
+
+
+
+
+
 ## [1.42.12](https://github.com/ccontrols/component-controls/compare/v1.42.11...v1.42.12) (2020-11-26)
 
 **Note:** Version bump only for package @component-controls/instrument
