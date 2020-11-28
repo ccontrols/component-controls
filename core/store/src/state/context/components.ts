@@ -116,8 +116,9 @@ export const useComponent = ({
   name,
 }: ComponentInputProps): Component | undefined => {
   const story = useStory({ id: name });
+  const currentDoc = useCurrentDocument();
   const store = useStore();
-  const doc = story && story.doc ? store.docs[story.doc] : undefined;
+  const doc = story && story.doc ? store.docs[story.doc] : currentDoc;
   let component;
   if (of === CURRENT_STORY) {
     component = story ? story.component : doc?.component;
