@@ -81,8 +81,8 @@ export const extractComponent = async (
             [from]: [
               ...acc[from],
               importKey
-                ? { name, from, importedName, key: importKey }
-                : { name, from, importedName },
+                ? { name, importedName, key: importKey }
+                : { name, importedName },
             ],
           };
         }
@@ -90,8 +90,8 @@ export const extractComponent = async (
           ...acc,
           [from]: [
             importKey
-              ? { name, from, importedName, key: importKey }
-              : { name, from, importedName },
+              ? { name, importedName, key: importKey }
+              : { name, importedName },
           ],
         };
       }, {});
