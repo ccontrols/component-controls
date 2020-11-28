@@ -1,6 +1,214 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Blocks/ComponentDeps Overview 1`] = `
+exports[`Blocks/ComponentDependencies Local Dependencies 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-1p18zt3-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="css-zdn29g"
+        >
+          <div
+            class="react-tabs"
+            data-tabs="true"
+          >
+            <ul
+              class="react-tabs__tab-list"
+              role="tablist"
+            >
+              <li
+                aria-controls="react-tabs-5"
+                aria-disabled="false"
+                aria-selected="true"
+                class="react-tabs__tab react-tabs__tab--selected"
+                id="react-tabs-4"
+                role="tab"
+                tabindex="0"
+              >
+                ArrowButton
+              </li>
+              <li
+                aria-controls="react-tabs-7"
+                aria-disabled="false"
+                aria-selected="false"
+                class="react-tabs__tab"
+                id="react-tabs-6"
+                role="tab"
+              >
+                My Button Tab
+              </li>
+            </ul>
+            <div
+              aria-labelledby="react-tabs-4"
+              class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+              id="react-tabs-5"
+              role="tabpanel"
+            >
+              <table
+                class="css-11y77l0"
+                data-testid="external-dependencies"
+                role="table"
+              >
+                <thead
+                  class="css-1g841yx"
+                >
+                  <tr
+                    class="css-vurnku"
+                    role="row"
+                  >
+                    <th
+                      class="css-101dysx"
+                      colspan="1"
+                      role="columnheader"
+                      style="width: 150px;"
+                    >
+                      <div
+                        class="css-9sqz7l"
+                      >
+                        <div
+                          class="css-12cl38p"
+                        >
+                          file
+                        </div>
+                      </div>
+                    </th>
+                    <th
+                      class="css-101dysx"
+                      colspan="1"
+                      role="columnheader"
+                      style="width: 150px;"
+                    >
+                      <div
+                        class="css-9sqz7l"
+                      >
+                        <div
+                          class="css-12cl38p"
+                        >
+                          imports
+                        </div>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="css-tuhk50"
+                  role="rowgroup"
+                >
+                  <tr
+                    class="css-ijvt85"
+                    role="row"
+                  >
+                    <td
+                      class="css-l4u9co"
+                      role="cell"
+                      style="width: 150px;"
+                    >
+                      <div
+                        class="css-16ujq0x-Cell"
+                      >
+                        ./Button
+                      </div>
+                    </td>
+                    <td
+                      class="css-l4u9co"
+                      role="cell"
+                      style="width: 150px;"
+                    >
+                      <div
+                        class="css-1jrqw14-Cell"
+                      >
+                        <span
+                          class="css-dhg2oe-Tag"
+                        >
+                          <div
+                            class="css-vurnku"
+                          >
+                            Button
+                          </div>
+                        </span>
+                        <span
+                          class="css-dhg2oe-Tag"
+                        >
+                          <div
+                            class="css-vurnku"
+                          >
+                            ButtonProps
+                          </div>
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="css-ijvt85"
+                    role="row"
+                  >
+                    <td
+                      class="css-l4u9co"
+                      role="cell"
+                      style="width: 150px;"
+                    >
+                      <div
+                        class="css-16ujq0x-Cell"
+                      >
+                        @component-controls/components
+                      </div>
+                    </td>
+                    <td
+                      class="css-l4u9co"
+                      role="cell"
+                      style="width: 150px;"
+                    >
+                      <div
+                        class="css-1jrqw14-Cell"
+                      >
+                        <span
+                          class="css-dhg2oe-Tag"
+                        >
+                          <div
+                            class="css-vurnku"
+                          >
+                            Table
+                          </div>
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              aria-labelledby="react-tabs-6"
+              class="react-tabs__tab-panel"
+              id="react-tabs-7"
+              role="tabpanel"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Blocks/ComponentDependencies Overview 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -64,7 +272,6 @@ exports[`Blocks/ComponentDeps Overview 1`] = `
             >
               <table
                 class="css-11y77l0"
-                data-testid="dependencies"
                 role="table"
               >
                 <thead
@@ -376,31 +583,31 @@ exports[`Blocks/ComponentSource Custom Title 1`] = `
               role="tablist"
             >
               <li
-                aria-controls="react-tabs-13"
+                aria-controls="react-tabs-17"
                 aria-disabled="false"
                 aria-selected="true"
                 class="react-tabs__tab react-tabs__tab--selected"
-                id="react-tabs-12"
+                id="react-tabs-16"
                 role="tab"
                 tabindex="0"
               >
                 ArrowButton
               </li>
               <li
-                aria-controls="react-tabs-15"
+                aria-controls="react-tabs-19"
                 aria-disabled="false"
                 aria-selected="false"
                 class="react-tabs__tab"
-                id="react-tabs-14"
+                id="react-tabs-18"
                 role="tab"
               >
                 My Button Tab
               </li>
             </ul>
             <div
-              aria-labelledby="react-tabs-12"
+              aria-labelledby="react-tabs-16"
               class="react-tabs__tab-panel react-tabs__tab-panel--selected"
-              id="react-tabs-13"
+              id="react-tabs-17"
               role="tabpanel"
             >
               <div>
@@ -512,9 +719,9 @@ exports[`Blocks/ComponentSource Custom Title 1`] = `
               </div>
             </div>
             <div
-              aria-labelledby="react-tabs-14"
+              aria-labelledby="react-tabs-18"
               class="react-tabs__tab-panel"
-              id="react-tabs-15"
+              id="react-tabs-19"
               role="tabpanel"
             />
           </div>
@@ -581,31 +788,31 @@ exports[`Blocks/ComponentSource Not Collapsible 1`] = `
           role="tablist"
         >
           <li
-            aria-controls="react-tabs-17"
+            aria-controls="react-tabs-21"
             aria-disabled="false"
             aria-selected="true"
             class="react-tabs__tab react-tabs__tab--selected"
-            id="react-tabs-16"
+            id="react-tabs-20"
             role="tab"
             tabindex="0"
           >
             ArrowButton
           </li>
           <li
-            aria-controls="react-tabs-19"
+            aria-controls="react-tabs-23"
             aria-disabled="false"
             aria-selected="false"
             class="react-tabs__tab"
-            id="react-tabs-18"
+            id="react-tabs-22"
             role="tab"
           >
             My Button Tab
           </li>
         </ul>
         <div
-          aria-labelledby="react-tabs-16"
+          aria-labelledby="react-tabs-20"
           class="react-tabs__tab-panel react-tabs__tab-panel--selected"
-          id="react-tabs-17"
+          id="react-tabs-21"
           role="tabpanel"
         >
           <div>
@@ -717,9 +924,9 @@ exports[`Blocks/ComponentSource Not Collapsible 1`] = `
           </div>
         </div>
         <div
-          aria-labelledby="react-tabs-18"
+          aria-labelledby="react-tabs-22"
           class="react-tabs__tab-panel"
-          id="react-tabs-19"
+          id="react-tabs-23"
           role="tabpanel"
         />
       </div>
@@ -763,31 +970,31 @@ exports[`Blocks/ComponentSource Overview 1`] = `
               role="tablist"
             >
               <li
-                aria-controls="react-tabs-5"
+                aria-controls="react-tabs-9"
                 aria-disabled="false"
                 aria-selected="true"
                 class="react-tabs__tab react-tabs__tab--selected"
-                id="react-tabs-4"
+                id="react-tabs-8"
                 role="tab"
                 tabindex="0"
               >
                 ArrowButton
               </li>
               <li
-                aria-controls="react-tabs-7"
+                aria-controls="react-tabs-11"
                 aria-disabled="false"
                 aria-selected="false"
                 class="react-tabs__tab"
-                id="react-tabs-6"
+                id="react-tabs-10"
                 role="tab"
               >
                 My Button Tab
               </li>
             </ul>
             <div
-              aria-labelledby="react-tabs-4"
+              aria-labelledby="react-tabs-8"
               class="react-tabs__tab-panel react-tabs__tab-panel--selected"
-              id="react-tabs-5"
+              id="react-tabs-9"
               role="tabpanel"
             >
               <div>
@@ -899,9 +1106,9 @@ exports[`Blocks/ComponentSource Overview 1`] = `
               </div>
             </div>
             <div
-              aria-labelledby="react-tabs-6"
+              aria-labelledby="react-tabs-10"
               class="react-tabs__tab-panel"
-              id="react-tabs-7"
+              id="react-tabs-11"
               role="tabpanel"
             />
           </div>
@@ -1096,31 +1303,31 @@ exports[`Blocks/ComponentSource Title 1`] = `
               role="tablist"
             >
               <li
-                aria-controls="react-tabs-9"
+                aria-controls="react-tabs-13"
                 aria-disabled="false"
                 aria-selected="true"
                 class="react-tabs__tab react-tabs__tab--selected"
-                id="react-tabs-8"
+                id="react-tabs-12"
                 role="tab"
                 tabindex="0"
               >
                 ArrowButton
               </li>
               <li
-                aria-controls="react-tabs-11"
+                aria-controls="react-tabs-15"
                 aria-disabled="false"
                 aria-selected="false"
                 class="react-tabs__tab"
-                id="react-tabs-10"
+                id="react-tabs-14"
                 role="tab"
               >
                 My Button Tab
               </li>
             </ul>
             <div
-              aria-labelledby="react-tabs-8"
+              aria-labelledby="react-tabs-12"
               class="react-tabs__tab-panel react-tabs__tab-panel--selected"
-              id="react-tabs-9"
+              id="react-tabs-13"
               role="tabpanel"
             >
               <div>
@@ -1232,9 +1439,9 @@ exports[`Blocks/ComponentSource Title 1`] = `
               </div>
             </div>
             <div
-              aria-labelledby="react-tabs-10"
+              aria-labelledby="react-tabs-14"
               class="react-tabs__tab-panel"
-              id="react-tabs-11"
+              id="react-tabs-15"
               role="tabpanel"
             />
           </div>
@@ -2463,21 +2670,21 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
                       style="text-align: right;"
                     >
                       <li
-                        aria-controls="react-tabs-21"
+                        aria-controls="react-tabs-25"
                         aria-disabled="false"
                         aria-selected="false"
                         class="react-tabs__tab"
-                        id="react-tabs-20"
+                        id="react-tabs-24"
                         role="tab"
                       >
                         config
                       </li>
                       <li
-                        aria-controls="react-tabs-23"
+                        aria-controls="react-tabs-27"
                         aria-disabled="false"
                         aria-selected="true"
                         class="react-tabs__tab react-tabs__tab--selected"
-                        id="react-tabs-22"
+                        id="react-tabs-26"
                         role="tab"
                         tabindex="0"
                       >
@@ -2485,15 +2692,15 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
                       </li>
                     </ul>
                     <div
-                      aria-labelledby="react-tabs-20"
+                      aria-labelledby="react-tabs-24"
                       class="react-tabs__tab-panel"
-                      id="react-tabs-21"
+                      id="react-tabs-25"
                       role="tabpanel"
                     />
                     <div
-                      aria-labelledby="react-tabs-22"
+                      aria-labelledby="react-tabs-26"
                       class="react-tabs__tab-panel react-tabs__tab-panel--selected"
-                      id="react-tabs-23"
+                      id="react-tabs-27"
                       role="tabpanel"
                     >
                       <div
@@ -3224,31 +3431,31 @@ exports[`Blocks/Playground/ESM Extra Panel 1`] = `
                       style="text-align: right;"
                     >
                       <li
-                        aria-controls="react-tabs-25"
+                        aria-controls="react-tabs-29"
                         aria-disabled="false"
                         aria-selected="false"
                         class="react-tabs__tab"
-                        id="react-tabs-24"
+                        id="react-tabs-28"
                         role="tab"
                       >
                         config
                       </li>
                       <li
-                        aria-controls="react-tabs-27"
+                        aria-controls="react-tabs-31"
                         aria-disabled="false"
                         aria-selected="false"
                         class="react-tabs__tab"
-                        id="react-tabs-26"
+                        id="react-tabs-30"
                         role="tab"
                       >
                         source
                       </li>
                       <li
-                        aria-controls="react-tabs-29"
+                        aria-controls="react-tabs-33"
                         aria-disabled="false"
                         aria-selected="true"
                         class="react-tabs__tab react-tabs__tab--selected"
-                        id="react-tabs-28"
+                        id="react-tabs-32"
                         role="tab"
                         tabindex="0"
                       >
@@ -3256,21 +3463,21 @@ exports[`Blocks/Playground/ESM Extra Panel 1`] = `
                       </li>
                     </ul>
                     <div
-                      aria-labelledby="react-tabs-24"
-                      class="react-tabs__tab-panel"
-                      id="react-tabs-25"
-                      role="tabpanel"
-                    />
-                    <div
-                      aria-labelledby="react-tabs-26"
-                      class="react-tabs__tab-panel"
-                      id="react-tabs-27"
-                      role="tabpanel"
-                    />
-                    <div
                       aria-labelledby="react-tabs-28"
-                      class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                      class="react-tabs__tab-panel"
                       id="react-tabs-29"
+                      role="tabpanel"
+                    />
+                    <div
+                      aria-labelledby="react-tabs-30"
+                      class="react-tabs__tab-panel"
+                      id="react-tabs-31"
+                      role="tabpanel"
+                    />
+                    <div
+                      aria-labelledby="react-tabs-32"
+                      class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                      id="react-tabs-33"
                       role="tabpanel"
                     >
                       <svg
@@ -5654,31 +5861,31 @@ exports[`Blocks/PropsTable Custom Title 1`] = `
               role="tablist"
             >
               <li
-                aria-controls="react-tabs-39"
+                aria-controls="react-tabs-43"
                 aria-disabled="false"
                 aria-selected="true"
                 class="react-tabs__tab react-tabs__tab--selected"
-                id="react-tabs-38"
+                id="react-tabs-42"
                 role="tab"
                 tabindex="0"
               >
                 ArrowButton
               </li>
               <li
-                aria-controls="react-tabs-41"
+                aria-controls="react-tabs-45"
                 aria-disabled="false"
                 aria-selected="false"
                 class="react-tabs__tab"
-                id="react-tabs-40"
+                id="react-tabs-44"
                 role="tab"
               >
                 My Button Tab
               </li>
             </ul>
             <div
-              aria-labelledby="react-tabs-38"
+              aria-labelledby="react-tabs-42"
               class="react-tabs__tab-panel react-tabs__tab-panel--selected"
-              id="react-tabs-39"
+              id="react-tabs-43"
               role="tabpanel"
             >
               <div>
@@ -5773,9 +5980,9 @@ exports[`Blocks/PropsTable Custom Title 1`] = `
               </div>
             </div>
             <div
-              aria-labelledby="react-tabs-40"
+              aria-labelledby="react-tabs-44"
               class="react-tabs__tab-panel"
-              id="react-tabs-41"
+              id="react-tabs-45"
               role="tabpanel"
             />
           </div>
@@ -7120,31 +7327,31 @@ exports[`Blocks/PropsTable Not Collapsible 1`] = `
           role="tablist"
         >
           <li
-            aria-controls="react-tabs-43"
+            aria-controls="react-tabs-47"
             aria-disabled="false"
             aria-selected="true"
             class="react-tabs__tab react-tabs__tab--selected"
-            id="react-tabs-42"
+            id="react-tabs-46"
             role="tab"
             tabindex="0"
           >
             ArrowButton
           </li>
           <li
-            aria-controls="react-tabs-45"
+            aria-controls="react-tabs-49"
             aria-disabled="false"
             aria-selected="false"
             class="react-tabs__tab"
-            id="react-tabs-44"
+            id="react-tabs-48"
             role="tab"
           >
             My Button Tab
           </li>
         </ul>
         <div
-          aria-labelledby="react-tabs-42"
+          aria-labelledby="react-tabs-46"
           class="react-tabs__tab-panel react-tabs__tab-panel--selected"
-          id="react-tabs-43"
+          id="react-tabs-47"
           role="tabpanel"
         >
           <div>
@@ -7239,9 +7446,9 @@ exports[`Blocks/PropsTable Not Collapsible 1`] = `
           </div>
         </div>
         <div
-          aria-labelledby="react-tabs-44"
+          aria-labelledby="react-tabs-48"
           class="react-tabs__tab-panel"
-          id="react-tabs-45"
+          id="react-tabs-49"
           role="tabpanel"
         />
       </div>
@@ -8416,204 +8623,6 @@ exports[`Blocks/PropsTable Subcomponents 1`] = `
               role="tablist"
             >
               <li
-                aria-controls="react-tabs-31"
-                aria-disabled="false"
-                aria-selected="true"
-                class="react-tabs__tab react-tabs__tab--selected"
-                id="react-tabs-30"
-                role="tab"
-                tabindex="0"
-              >
-                ArrowButton
-              </li>
-              <li
-                aria-controls="react-tabs-33"
-                aria-disabled="false"
-                aria-selected="false"
-                class="react-tabs__tab"
-                id="react-tabs-32"
-                role="tab"
-              >
-                My Button Tab
-              </li>
-            </ul>
-            <div
-              aria-labelledby="react-tabs-30"
-              class="react-tabs__tab-panel react-tabs__tab-panel--selected"
-              id="react-tabs-31"
-              role="tabpanel"
-            >
-              <div>
-                <div
-                  class="css-15owl46"
-                >
-                  <div
-                    class="css-x60p33"
-                  >
-                    <div
-                      class="css-7mlh6m"
-                    >
-                      <button
-                        aria-label="copy table as csv"
-                        class="css-1tf4h46"
-                      >
-                        copy table
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="css-m61a58"
-                >
-                  <table
-                    class="css-1in6ude-BasePropsTable"
-                    role="table"
-                  >
-                    <thead
-                      class="css-1g841yx"
-                    >
-                      <tr
-                        class="css-vurnku"
-                        role="row"
-                      >
-                        <th
-                          class="css-101dysx"
-                          colspan="1"
-                          role="columnheader"
-                          style="width: 150px;"
-                        >
-                          <div
-                            class="css-9sqz7l"
-                          >
-                            <div
-                              class="css-12cl38p"
-                            >
-                              Name
-                            </div>
-                          </div>
-                        </th>
-                        <th
-                          class="css-101dysx"
-                          colspan="1"
-                          role="columnheader"
-                          style="width: 150px;"
-                        >
-                          <div
-                            class="css-9sqz7l"
-                          >
-                            <div
-                              class="css-12cl38p"
-                            >
-                              Description
-                            </div>
-                          </div>
-                        </th>
-                        <th
-                          class="css-101dysx"
-                          colspan="1"
-                          role="columnheader"
-                          style="width: 150px;"
-                        >
-                          <div
-                            class="css-9sqz7l"
-                          >
-                            <div
-                              class="css-12cl38p"
-                            >
-                              Default
-                            </div>
-                          </div>
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody
-                      class="css-tuhk50"
-                      role="rowgroup"
-                    />
-                  </table>
-                </div>
-              </div>
-            </div>
-            <div
-              aria-labelledby="react-tabs-32"
-              class="react-tabs__tab-panel"
-              id="react-tabs-33"
-              role="tabpanel"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Blocks/PropsTable Title 1`] = `
-<DocumentFragment>
-  <div
-    class="css-1xkyebe"
-    data-testid="propstable"
-  >
-    <div
-      class="css-jxxswp"
-      id=""
-    >
-      <div
-        class="css-xhp9da"
-      >
-        <h3
-          class="css-1p18zt3-BlockContainer"
-        >
-          <div
-            class="css-tmrrvx"
-          >
-            ArrowButton
-            <a
-              aria-label="Collapse this block"
-              class="css-pkdnvg-BlockContainer"
-            >
-              <div
-                class="css-1ibxxpj"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="octicon"
-                  fill="currentColor"
-                  height="16"
-                  role="img"
-                  style="display: inline-block; user-select: none; vertical-align: middle;"
-                  viewBox="0 0 16 16"
-                  width="16"
-                >
-                  <path
-                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </div>
-            </a>
-          </div>
-        </h3>
-      </div>
-    </div>
-    <div
-      aria-hidden="false"
-      class="rah-static rah-static--height-auto"
-      style="height: auto; overflow: visible;"
-    >
-      <div>
-        <div
-          class="css-zdn29g"
-        >
-          <div
-            class="react-tabs"
-            data-tabs="true"
-          >
-            <ul
-              class="react-tabs__tab-list"
-              role="tablist"
-            >
-              <li
                 aria-controls="react-tabs-35"
                 aria-disabled="false"
                 aria-selected="true"
@@ -8736,6 +8745,204 @@ exports[`Blocks/PropsTable Title 1`] = `
               aria-labelledby="react-tabs-36"
               class="react-tabs__tab-panel"
               id="react-tabs-37"
+              role="tabpanel"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Blocks/PropsTable Title 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+    data-testid="propstable"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-1p18zt3-BlockContainer"
+        >
+          <div
+            class="css-tmrrvx"
+          >
+            ArrowButton
+            <a
+              aria-label="Collapse this block"
+              class="css-pkdnvg-BlockContainer"
+            >
+              <div
+                class="css-1ibxxpj"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="css-zdn29g"
+        >
+          <div
+            class="react-tabs"
+            data-tabs="true"
+          >
+            <ul
+              class="react-tabs__tab-list"
+              role="tablist"
+            >
+              <li
+                aria-controls="react-tabs-39"
+                aria-disabled="false"
+                aria-selected="true"
+                class="react-tabs__tab react-tabs__tab--selected"
+                id="react-tabs-38"
+                role="tab"
+                tabindex="0"
+              >
+                ArrowButton
+              </li>
+              <li
+                aria-controls="react-tabs-41"
+                aria-disabled="false"
+                aria-selected="false"
+                class="react-tabs__tab"
+                id="react-tabs-40"
+                role="tab"
+              >
+                My Button Tab
+              </li>
+            </ul>
+            <div
+              aria-labelledby="react-tabs-38"
+              class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+              id="react-tabs-39"
+              role="tabpanel"
+            >
+              <div>
+                <div
+                  class="css-15owl46"
+                >
+                  <div
+                    class="css-x60p33"
+                  >
+                    <div
+                      class="css-7mlh6m"
+                    >
+                      <button
+                        aria-label="copy table as csv"
+                        class="css-1tf4h46"
+                      >
+                        copy table
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-m61a58"
+                >
+                  <table
+                    class="css-1in6ude-BasePropsTable"
+                    role="table"
+                  >
+                    <thead
+                      class="css-1g841yx"
+                    >
+                      <tr
+                        class="css-vurnku"
+                        role="row"
+                      >
+                        <th
+                          class="css-101dysx"
+                          colspan="1"
+                          role="columnheader"
+                          style="width: 150px;"
+                        >
+                          <div
+                            class="css-9sqz7l"
+                          >
+                            <div
+                              class="css-12cl38p"
+                            >
+                              Name
+                            </div>
+                          </div>
+                        </th>
+                        <th
+                          class="css-101dysx"
+                          colspan="1"
+                          role="columnheader"
+                          style="width: 150px;"
+                        >
+                          <div
+                            class="css-9sqz7l"
+                          >
+                            <div
+                              class="css-12cl38p"
+                            >
+                              Description
+                            </div>
+                          </div>
+                        </th>
+                        <th
+                          class="css-101dysx"
+                          colspan="1"
+                          role="columnheader"
+                          style="width: 150px;"
+                        >
+                          <div
+                            class="css-9sqz7l"
+                          >
+                            <div
+                              class="css-12cl38p"
+                            >
+                              Default
+                            </div>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody
+                      class="css-tuhk50"
+                      role="rowgroup"
+                    />
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-labelledby="react-tabs-40"
+              class="react-tabs__tab-panel"
+              id="react-tabs-41"
               role="tabpanel"
             />
           </div>

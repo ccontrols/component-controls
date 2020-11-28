@@ -4,9 +4,7 @@ exports[`mdx-component component-parameters.mdx 1`] = `
 Object {
   "components": Object {
     "2f4bd34d15be236674abaf6e894afe6e": Object {
-      "from": "../../components/button-named-arrow-func",
-      "importedName": "Button",
-      "imports": Object {
+      "externalDependencies": Object {
         "react": Array [
           Object {
             "importedName": "default",
@@ -14,6 +12,16 @@ Object {
           },
         ],
       },
+      "from": "../../components/button-named-arrow-func",
+      "importedName": "Button",
+      "jsx": Array [
+        Object {
+          "attributes": Array [],
+          "children": Array [],
+          "name": "button",
+        },
+      ],
+      "localDependencies": Object {},
       "name": "Button",
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
     },
@@ -82,9 +90,7 @@ exports[`mdx-component propstable-of.mdx 1`] = `
 Object {
   "components": Object {
     "dc262d21cd7820523c7e0bacca461e87": Object {
-      "from": "../../components/button-default-arrow-func",
-      "importedName": "default",
-      "imports": Object {
+      "externalDependencies": Object {
         "react": Array [
           Object {
             "importedName": "default",
@@ -92,6 +98,16 @@ Object {
           },
         ],
       },
+      "from": "../../components/button-default-arrow-func",
+      "importedName": "default",
+      "jsx": Array [
+        Object {
+          "attributes": Array [],
+          "children": Array [],
+          "name": "button",
+        },
+      ],
+      "localDependencies": Object {},
       "name": "ArrowButton",
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
     },
@@ -190,9 +206,7 @@ exports[`mdx-component story-subcomponents.mdx 1`] = `
 Object {
   "components": Object {
     "2f4bd34d15be236674abaf6e894afe6e": Object {
-      "from": "../../components/button-named-arrow-func",
-      "importedName": "Button",
-      "imports": Object {
+      "externalDependencies": Object {
         "react": Array [
           Object {
             "importedName": "default",
@@ -200,13 +214,21 @@ Object {
           },
         ],
       },
+      "from": "../../components/button-named-arrow-func",
+      "importedName": "Button",
+      "jsx": Array [
+        Object {
+          "attributes": Array [],
+          "children": Array [],
+          "name": "button",
+        },
+      ],
+      "localDependencies": Object {},
       "name": "Button",
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
     },
     "dc262d21cd7820523c7e0bacca461e87": Object {
-      "from": "../../components/button-default-arrow-func",
-      "importedName": "default",
-      "imports": Object {
+      "externalDependencies": Object {
         "react": Array [
           Object {
             "importedName": "default",
@@ -214,6 +236,16 @@ Object {
           },
         ],
       },
+      "from": "../../components/button-default-arrow-func",
+      "importedName": "default",
+      "jsx": Array [
+        Object {
+          "attributes": Array [],
+          "children": Array [],
+          "name": "button",
+        },
+      ],
+      "localDependencies": Object {},
       "name": "ArrowButton",
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
     },
@@ -279,9 +311,7 @@ exports[`mdx-component subcomponents.mdx 1`] = `
 Object {
   "components": Object {
     "2f4bd34d15be236674abaf6e894afe6e": Object {
-      "from": "../../components/button-named-arrow-func",
-      "importedName": "Button",
-      "imports": Object {
+      "externalDependencies": Object {
         "react": Array [
           Object {
             "importedName": "default",
@@ -289,13 +319,21 @@ Object {
           },
         ],
       },
+      "from": "../../components/button-named-arrow-func",
+      "importedName": "Button",
+      "jsx": Array [
+        Object {
+          "attributes": Array [],
+          "children": Array [],
+          "name": "button",
+        },
+      ],
+      "localDependencies": Object {},
       "name": "Button",
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
     },
     "dc262d21cd7820523c7e0bacca461e87": Object {
-      "from": "../../components/button-default-arrow-func",
-      "importedName": "default",
-      "imports": Object {
+      "externalDependencies": Object {
         "react": Array [
           Object {
             "importedName": "default",
@@ -303,6 +341,16 @@ Object {
           },
         ],
       },
+      "from": "../../components/button-default-arrow-func",
+      "importedName": "default",
+      "jsx": Array [
+        Object {
+          "attributes": Array [],
+          "children": Array [],
+          "name": "button",
+        },
+      ],
+      "localDependencies": Object {},
       "name": "ArrowButton",
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
     },

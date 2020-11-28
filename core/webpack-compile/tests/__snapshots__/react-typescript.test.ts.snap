@@ -60,9 +60,7 @@ Object {
   },
   "components": Object {
     "fded7dbaa855ea6869a794f877eab680": Object {
-      "from": "./ActionBar",
-      "importedName": "ActionBar",
-      "imports": Object {
+      "externalDependencies": Object {
         "react": Array [
           Object {
             "importedName": "FC",
@@ -88,6 +86,8 @@ Object {
           },
         ],
       },
+      "from": "./ActionBar",
+      "importedName": "ActionBar",
       "info": Object {
         "description": "a strip of actions to be attached to a container
 the action items contain the labels and click event handler
@@ -115,6 +115,51 @@ actions can accept an order prop, and can also be superimposed",
           },
         },
       },
+      "jsx": Array [
+        Object {
+          "attributes": Array [
+            "key",
+            "variant",
+            "sx",
+          ],
+          "children": Array [
+            Object {
+              "attributes": Array [
+                "variant",
+                "href",
+                "aria-label",
+              ],
+              "children": Array [],
+              "name": "Link",
+            },
+            Object {
+              "attributes": Array [
+                "variant",
+                "onClick",
+                "aria-label",
+              ],
+              "children": Array [],
+              "name": "Button",
+            },
+          ],
+          "name": "Box",
+        },
+        Object {
+          "attributes": Array [
+            "variant",
+          ],
+          "children": Array [
+            Object {
+              "attributes": Array [
+                "variant",
+              ],
+              "children": Array [],
+              "name": "Box",
+            },
+          ],
+          "name": "Box",
+        },
+      ],
       "loc": Object {
         "end": Object {
           "column": 1,
@@ -124,6 +169,27 @@ actions can accept an order prop, and can also be superimposed",
           "column": 45,
           "line": 25,
         },
+      },
+      "localDependencies": Object {
+        "../Link": Array [
+          Object {
+            "importedName": "Link",
+            "key": "eb9509951cd0102ae95e248d1c9b0cd0",
+            "name": "Link",
+          },
+        ],
+        "./utils": Array [
+          Object {
+            "importedName": "getSortedActions",
+            "key": "8dc313d6e0b96be3972f9f034f201d63",
+            "name": "getSortedActions",
+          },
+          Object {
+            "importedName": "ActionItems",
+            "key": "5562debad46d8a256b666ad14fc1be3a",
+            "name": "ActionItems",
+          },
+        ],
       },
       "name": "ActionBar",
       "package": "fded7dbaa855ea6869a794f877eab680",
@@ -230,7 +296,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "theme-ui": "^0.4.0-rc.1",
       },
       "devDependencies": Object {
-        "@component-controls/jest-snapshots": "^1.42.11",
+        "@component-controls/jest-snapshots": "^1.42.12",
         "@component-controls/ts-markdown-docs": "^1.37.0",
         "@theme-ui/css": "^0.4.0-rc.1",
         "@types/markdown-to-jsx": "^6.11.0",
@@ -255,7 +321,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.42.11",
+      "version": "1.42.12",
     },
     "fded7dbaa855ea6869a794f877eab680": Object {
       "dependencies": Object {
@@ -276,7 +342,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "theme-ui": "^0.4.0-rc.1",
       },
       "devDependencies": Object {
-        "@component-controls/jest-snapshots": "^1.42.11",
+        "@component-controls/jest-snapshots": "^1.42.12",
         "@component-controls/ts-markdown-docs": "^1.37.0",
         "@theme-ui/css": "^0.4.0-rc.1",
         "@types/markdown-to-jsx": "^6.11.0",
@@ -301,7 +367,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.42.11",
+      "version": "1.42.12",
     },
   },
   "stores": Array [

@@ -2312,9 +2312,7 @@ A hint could be a sample value or a brief description of the expected format.",
 exports[`external-library component package 1`] = `
 Object {
   "component": Object {
-    "from": "theme-ui",
-    "importedName": "Button",
-    "imports": Object {
+    "externalDependencies": Object {
       "@emotion/core": Array [
         Object {
           "importedName": "InterpolationWithTheme",
@@ -2354,6 +2352,10 @@ Object {
         },
       ],
     },
+    "from": "theme-ui",
+    "importedName": "Button",
+    "jsx": Array [],
+    "localDependencies": Object {},
     "name": "Button",
     "package": "8f6835169f285fcd3ad5425d9268a8f1",
     "request": "/Users/atanasster/component-controls/node_modules/@theme-ui/components/index.d.ts",
@@ -2385,9 +2387,7 @@ exports[`external-library theme-ui.jsx 1`] = `
 Object {
   "components": Object {
     "98b2111b08fbab8e38c938acaf3e129a": Object {
-      "from": "theme-ui",
-      "importedName": "Button",
-      "imports": Object {
+      "externalDependencies": Object {
         "@emotion/core": Array [
           Object {
             "importedName": "InterpolationWithTheme",
@@ -2427,6 +2427,10 @@ Object {
           },
         ],
       },
+      "from": "theme-ui",
+      "importedName": "Button",
+      "jsx": Array [],
+      "localDependencies": Object {},
       "name": "Button",
       "package": "8f6835169f285fcd3ad5425d9268a8f1",
       "request": "/Users/atanasster/component-controls/node_modules/@theme-ui/components/index.d.ts",
@@ -2449,7 +2453,7 @@ Object {
         "@babel/generator": "^7.12.5",
         "@babel/parser": "^7.12.5",
         "@babel/traverse": "^7.12.5",
-        "@component-controls/core": "^1.42.11",
+        "@component-controls/core": "^1.42.12",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -2485,7 +2489,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.42.11",
+      "version": "1.42.12",
     },
     "8f6835169f285fcd3ad5425d9268a8f1": Object {
       "dependencies": Object {

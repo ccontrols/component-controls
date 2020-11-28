@@ -27,6 +27,5 @@ describe('extract-component', () => {
       });
     },
     ['extract-component'],
-    ['jsx-component.ts'],
   );
 });
