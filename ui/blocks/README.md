@@ -5,8 +5,10 @@
     -   [<ins>ComponentsBlockContainer</ins>](#inscomponentsblockcontainerins)
     -   [<ins>ComponentsContainer</ins>](#inscomponentscontainerins)
     -   [<ins>StoryBlockContainer</ins>](#insstoryblockcontainerins)
-    -   [<ins>ComponentDeps</ins>](#inscomponentdepsins)
-    -   [<ins>Dependencies</ins>](#insdependenciesins)
+    -   [<ins>ComponentExternalDependencies</ins>](#inscomponentexternaldependenciesins)
+    -   [<ins>ComponentLocalDependencies</ins>](#inscomponentlocaldependenciesins)
+    -   [<ins>ExternalDependencies</ins>](#insexternaldependenciesins)
+    -   [<ins>LocalDependencies</ins>](#inslocaldependenciesins)
     -   [<ins>BaseComponentSource</ins>](#insbasecomponentsourceins)
     -   [<ins>ComponentSource</ins>](#inscomponentsourceins)
     -   [<ins>Container</ins>](#inscontainerins)
@@ -102,11 +104,11 @@ _StoryBlockContainer [source code](https://github.com/ccontrols/component-contro
 | `sxStyle`             | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                           |
 | `data-testid`         | _string_             | testing id                                                                                                      |
 
-## <ins>ComponentDeps</ins>
+## <ins>ComponentExternalDependencies</ins>
 
 Displays external dependencies for a component
 
-_ComponentDeps [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ComponentDeps/ComponentDeps.tsx)_
+_ComponentExternalDependencies [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ComponentDependencies/ComponentDependencies.tsx)_
 
 ### properties
 
@@ -123,17 +125,50 @@ _ComponentDeps [source code](https://github.com/ccontrols/component-controls/tre
 | `sxStyle`     | _ThemeUIStyleObject_                                      | theme-ui styling object for Block Box                                                                                                                                                                                                                                                              |
 | `data-testid` | _string_                                                  | testing id                                                                                                                                                                                                                                                                                         |
 
-## <ins>Dependencies</ins>
+## <ins>ComponentLocalDependencies</ins>
 
-table component to display a list of dependencies
+Displays local dependencies for a component
 
-_Dependencies [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ComponentDeps/Dependencies.tsx)_
+_ComponentLocalDependencies [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ComponentDependencies/ComponentDependencies.tsx)_
 
 ### properties
 
-| Name            | Type            | Description                     |
-| --------------- | --------------- | ------------------------------- |
-| `dependencies*` | _Dependency\[]_ | list of dependencies to display |
+| Name          | Type                                                      | Description                                                                                                                                                                                                                                                                                        |
+| ------------- | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `onSelect`    | _(name: string, component: Component) => boolean \| void_ | callback to be called when the tab changes if the function returns false, it can stop chabging to the new tab                                                                                                                                                                                      |
+| `visibility`  | _ComponentVisibility_                                     | by default will show both controls and props tables user setting can display only props table or only controls                                                                                                                                                                                     |
+| `of`          | _any_                                                     | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
+| `name`        | _string_                                                  | some component-oriented ui components can also be driven by a story id (name). ie the PropsTable can display component props, or story controls                                                                                                                                                    |
+| `title`       | _string_                                                  | optional section title for the block.                                                                                                                                                                                                                                                              |
+| `description` | _string_                                                  | optional markdown description.                                                                                                                                                                                                                                                                     |
+| `id`          | _string_                                                  | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                                                                                                                                                    |
+| `collapsible` | _boolean_                                                 | if false, will nothave a collapsible frame.                                                                                                                                                                                                                                                        |
+| `sxStyle`     | _ThemeUIStyleObject_                                      | theme-ui styling object for Block Box                                                                                                                                                                                                                                                              |
+| `data-testid` | _string_                                                  | testing id                                                                                                                                                                                                                                                                                         |
+
+## <ins>ExternalDependencies</ins>
+
+base component dependencies
+
+_ExternalDependencies [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ComponentDependencies/ExternalDependencies.tsx)_
+
+### properties
+
+| Name        | Type        | Description |
+| ----------- | ----------- | ----------- |
+| `component` | _Component_ |             |
+
+## <ins>LocalDependencies</ins>
+
+base component dependencies
+
+_LocalDependencies [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ComponentDependencies/LocalDependencies.tsx)_
+
+### properties
+
+| Name        | Type        | Description |
+| ----------- | ----------- | ----------- |
+| `component` | _Component_ |             |
 
 ## <ins>BaseComponentSource</ins>
 

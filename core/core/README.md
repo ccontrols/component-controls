@@ -50,13 +50,16 @@
     -   [PropType](#proptype)
     -   [PropTypes](#proptypes)
     -   [TypeInformation](#typeinformation)
+    -   [JSXNode](#jsxnode)
+    -   [JSXTree](#jsxtree)
     -   [TypeValue](#typevalue)
     -   [getComponentName](#getcomponentname)
     -   [PropsInfoExtractorFunction](#propsinfoextractorfunction)
     -   [ActionItem](#actionitem)
     -   [CodeLocation](#codelocation)
     -   [CodePosition](#codeposition)
-    -   [ImportName](#importname)
+    -   [ImportType](#importtype)
+    -   [ImportTypes](#importtypes)
     -   [Imports](#imports)
     -   [PackageDependencies](#packagedependencies)
     -   [PackageInfo](#packageinfo)
@@ -120,7 +123,9 @@
     -   [Document](#document-1)
     -   [ExampleControls](#examplecontrols-1)
     -   [ColorPickerKind](#colorpickerkind-1)
+    -   [JSXTree](#jsxtree-1)
     -   [TypeValue](#typevalue-1)
+    -   [JSXNode](#jsxnode-1)
     -   [PackageDependency](#packagedependency-1)
     -   [StaticMenuItems](#staticmenuitems-1)
     -   [PagesConfiguration](#pagesconfiguration-1)
@@ -852,24 +857,26 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 
 component specified for stories or story files
 
-_defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L96)_
+_defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L105)_
 
 
 
 ### properties
 
-| Name            | Type                               | Description                                                                                                                                                                                                                                |
-| --------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `from`          | string                             | imported from                                                                                                                                                                                                                              |
-| `importedName`  | 'default' \| 'namespace' \| string | imported name ex: \- default import import Button from 'buttons'; \- namespace import import \* as Button from 'buttons'; \- named import import { Button } from 'buttons'; \- named alias import import { Btn as Button } from 'buttons'; |
-| `imports`       | [Imports](#imports)                | list of external imports                                                                                                                                                                                                                   |
-| `info`          | [ComponentInfo](#componentinfo)    | docgen generated component info                                                                                                                                                                                                            |
-| `loc`           | [CodeLocation](#codelocation)      | location of the import statement in the source code file                                                                                                                                                                                   |
-| `name*`         | string                             | name of the component as used in the fiel                                                                                                                                                                                                  |
-| `package`       | string                             | lookup into the global store of PackageInfo package.json                                                                                                                                                                                   |
-| `propsInfoFile` | string                             | file containing the component's props info sometimes different from the component source file for example external libraries that have a separate index.d.ts file                                                                          |
-| `request`       | string                             | resolved import request                                                                                                                                                                                                                    |
-| `source`        | string                             | the source code of the component file, extracted by the AST instrumenting loaders. Can also be overriden manually.                                                                                                                         |
+| Name                   | Type                               | Description                                                                                                                                                                                                                                |
+| ---------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `externalDependencies` | [Imports](#imports)                | list of component's file imports from external libraries                                                                                                                                                                                   |
+| `from`                 | string                             | imported from                                                                                                                                                                                                                              |
+| `importedName`         | 'default' \| 'namespace' \| string | imported name ex: \- default import import Button from 'buttons'; \- namespace import import \* as Button from 'buttons'; \- named import import { Button } from 'buttons'; \- named alias import import { Btn as Button } from 'buttons'; |
+| `info`                 | [ComponentInfo](#componentinfo)    | docgen generated component info                                                                                                                                                                                                            |
+| `jsx`                  | [JSXTree](#jsxtree)                | jsx component tree                                                                                                                                                                                                                         |
+| `loc`                  | [CodeLocation](#codelocation)      | location of the import statement in the source code file                                                                                                                                                                                   |
+| `localDependencies`    | [Imports](#imports)                | list of component's file imports from local (imported via relative import) files                                                                                                                                                           |
+| `name*`                | string                             | name of the component as used in the fiel                                                                                                                                                                                                  |
+| `package`              | string                             | lookup into the global store of PackageInfo package.json                                                                                                                                                                                   |
+| `propsInfoFile`        | string                             | file containing the component's props info sometimes different from the component source file for example external libraries that have a separate index.d.ts file                                                                          |
+| `request`              | string                             | resolved import request                                                                                                                                                                                                                    |
+| `source`               | string                             | the source code of the component file, extracted by the AST instrumenting loaders. Can also be overriden manually.                                                                                                                         |
 
 ## ComponentInfo
 
@@ -930,6 +937,26 @@ _defined in [@component-controls/core/src/components.ts](https://github.com/ccon
 | `required`  | boolean                                       | is the property required                                                      |
 | `value`     | [TypeInformation](#typeinformation)\[] \| any | type value elements of enum, array, fields of object return value of function |
 
+## JSXNode
+
+_defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L93)_
+
+### properties
+
+| Name         | Type                                     | Description |
+| ------------ | ---------------------------------------- | ----------- |
+| `Partial`    | Partial&lt;[ImportType](#importtype)>    |             |
+| `attributes` | string\[]                                |             |
+| `children`   | Partial&lt;[ImportType](#importtype)>\[] |             |
+
+## JSXTree
+
+jsx tree of elements for the component
+
+_defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L100)_
+
+[JSXNode](#jsxnode)\[]
+
 ## TypeValue
 
 _defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L3)_
@@ -940,7 +967,7 @@ _defined in [@component-controls/core/src/components.ts](https://github.com/ccon
 
 given a component, return its name
 
-_defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L154)_
+_defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L173)_
 
 **function** getComponentName(`component`\*: any): string | undefined;
 
@@ -973,7 +1000,7 @@ _defined in [@component-controls/core/src/propsInfo.ts](https://github.com/ccont
 
 an item in the ActionBar component
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L134)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L143)_
 
 
 
@@ -1023,7 +1050,7 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 | `column*` | number |             |
 | `line*`   | number |             |
 
-## ImportName
+## ImportType
 
 an import name
 
@@ -1033,18 +1060,24 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 
 ### properties
 
-| Name            | Type   | Description                                                           |
-| --------------- | ------ | --------------------------------------------------------------------- |
-| `importedName*` | string | alias imported as. If a default import, the string 'default' is here. |
-| `name*`         | string | the imported name from the import file                                |
+| Name            | Type                               | Description                                               |
+| --------------- | ---------------------------------- | --------------------------------------------------------- |
+| `from*`         | string                             | imported from                                             |
+| `importedName*` | 'default' \| 'namespace' \| string | importedName - the original named import that was aliased |
+| `key`           | string                             | key into components table                                 |
+| `name*`         | string                             | component name                                            |
+
+## ImportTypes
+
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L127)_
+
+`key`\*: string: [ImportType](#importtype)
 
 ## Imports
 
-imports - library/file as key and the imported names as an array
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L131)_
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L122)_
-
-`key`\*: string: [ImportName](#importname)\[]
+`key`\*: string: Omit&lt;[ImportType](#importtype), 'from'>\[]
 
 ## PackageDependencies
 
@@ -1093,13 +1126,13 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 
 ## ActionItems
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L180)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L189)_
 
 [ActionItem](#actionitem)\[]
 
 ## AsyncFnReturn
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L182)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L191)_
 
 **error**:  | null
 
@@ -1137,13 +1170,13 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 
 default export keyword
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L129)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L138)_
 
 
 
 ## useAsync
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L189)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L198)_
 
 **function** useAsync(`asyncFunction`\*: **function** (): Promise&lt;>;, `immediate`\*: boolean): AsyncFnReturn&lt;, >;
 
@@ -1827,11 +1860,31 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 
 'hex' | 'rgb' | 'rgba' | 'hsl' | 'hsla'
 
+## JSXTree
+
+jsx tree of elements for the component
+
+_defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L100)_
+
+[JSXNode](#jsxnode)\[]
+
 ## TypeValue
 
 _defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L3)_
 
 'any' | 'boolean' | 'number' | 'string' | 'array' | 'object' | 'enum' | 'union' | 'literal' | 'symbol' | 'function' | string
+
+## JSXNode
+
+_defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L93)_
+
+### properties
+
+| Name         | Type                                     | Description |
+| ------------ | ---------------------------------------- | ----------- |
+| `Partial`    | Partial&lt;[ImportType](#importtype)>    |             |
+| `attributes` | string\[]                                |             |
+| `children`   | Partial&lt;[ImportType](#importtype)>\[] |             |
 
 ## PackageDependency
 
@@ -1880,7 +1933,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## ActionItems
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L180)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L189)_
 
 [ActionItem](#actionitem)\[]
 
