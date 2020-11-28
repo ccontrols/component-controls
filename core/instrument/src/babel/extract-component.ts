@@ -88,7 +88,11 @@ export const extractComponent = async (
         }
         return {
           ...acc,
-          [from]: [{ name, from, importedName, key: importKey }],
+          [from]: [
+            importKey
+              ? { name, from, importedName, key: importKey }
+              : { name, from, importedName },
+          ],
         };
       }, {});
       component.externalDependencies = Object.keys(allImports)
