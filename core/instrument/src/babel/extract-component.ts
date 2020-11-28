@@ -80,7 +80,9 @@ export const extractComponent = async (
             ...acc,
             [from]: [
               ...acc[from],
-              { name, from, importedName, key: importKey },
+              key
+                ? { name, from, importedName, key: importKey }
+                : { name, from, importedName },
             ],
           };
         }
