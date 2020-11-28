@@ -6,13 +6,13 @@ import { File } from '@babel/types';
 import traverse from '@babel/traverse';
 import {
   CodeLocation,
-  Imports,
   Story,
   getASTSource,
+  ImportTypes,
 } from '@component-controls/core';
 import { extractFunctionParameters } from './extract-function-parameters';
 import { sourceLocation } from '../misc/source-location';
-import { ImportTypes, traverseImports } from './extract-imports';
+import { traverseImports } from './extract-imports';
 
 import {
   traverseExports,
@@ -31,7 +31,7 @@ export interface FollowImportType {
   loc?: CodeLocation;
   source?: string;
   imported?: string;
-  imports?: Imports;
+  imports?: ImportTypes;
   node?: any;
   path?: any;
 }
@@ -87,30 +87,7 @@ export const followImports = (
       result.source = source ? source : undefined;
       result.node = findExport.node;
       result.path = findExport.path;
-      const externalImports = Object.keys(imports)
-        .filter(key => !imports[key].from.startsWith('.'))
-        .reduce(
-          (
-            acc: {
-              [key: string]: {
-                name: string;
-                importedName: string;
-              }[];
-            },
-            key,
-          ) => {
-            const { name, from, importedName } = imports[key];
-            if (acc[from]) {
-              return {
-                ...acc,
-                [from]: [...acc[from], { name, importedName }],
-              };
-            }
-            return { ...acc, [from]: [{ name, importedName }] };
-          },
-          {},
-        );
-      result.imports = externalImports;
+      result.imports = imports;
       return result;
     } else {
       const resolvedFilePath = resolve.sync(findExport.from, {

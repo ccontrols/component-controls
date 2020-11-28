@@ -1,4 +1,4 @@
-import { CodeLocation, Imports } from './utility';
+import { CodeLocation, ImportType, Imports } from './utility';
 
 export type TypeValue =
   | 'any'
@@ -90,6 +90,15 @@ export interface ComponentInfo {
   props: PropTypes;
 }
 
+export type JSXNode = Partial<ImportType> & {
+  attributes?: string[];
+  children?: Partial<ImportType>[];
+};
+/**
+ * jsx tree of elements for the component
+ */
+export type JSXTree = JSXNode[];
+
 /**
  * component specified for stories or story files
  */
@@ -143,9 +152,19 @@ export interface Component {
    */
   info?: ComponentInfo;
   /**
-   * list of external imports
+   * list of component's file imports from external libraries
    */
-  imports?: Imports;
+  externalDependencies?: Imports;
+
+  /**
+   * list of component's file imports from local (imported via relative import) files
+   */
+  localDependencies?: Imports;
+
+  /**
+   * jsx component tree
+   */
+  jsx?: JSXTree;
 }
 /**
  * given a component, return its name

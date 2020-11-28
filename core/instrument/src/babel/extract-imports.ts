@@ -1,15 +1,6 @@
 import * as parser from '@babel/parser';
+import { ImportTypes } from '@component-controls/core';
 import traverse, { TraverseOptions } from '@babel/traverse';
-
-export interface ImportType {
-  name: string;
-  importedName: 'default' | 'namespace' | string;
-  from: string;
-}
-
-export interface ImportTypes {
-  [key: string]: ImportType;
-}
 
 export const traverseImports = (results: ImportTypes): TraverseOptions => {
   return {

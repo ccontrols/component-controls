@@ -73,7 +73,7 @@ export const store: Store = {
       name: 'ArrowButton',
       request:
         '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js',
-      imports: {
+      externalDependencies: {
         react: [
           {
             name: 'React',
@@ -82,6 +82,24 @@ export const store: Store = {
           {
             name: 'FC',
             importedName: 'FC',
+          },
+        ],
+        '@component-controls/components': [
+          {
+            name: 'Table',
+            importedName: 'Table',
+          },
+        ],
+      },
+      localDependencies: {
+        './Button': [
+          {
+            name: 'Button',
+            importedName: 'Button',
+          },
+          {
+            name: 'ButtonProps',
+            importedName: 'ButtonProps',
           },
         ],
         '@component-controls/components': [

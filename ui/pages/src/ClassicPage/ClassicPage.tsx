@@ -6,7 +6,8 @@ import {
   Playground,
   Stories,
   Description,
-  ComponentDeps,
+  ComponentExternalDependencies,
+  ComponentLocalDependencies,
   ComponentSource,
   PropsTable,
   PackageVersion,
@@ -54,7 +55,8 @@ export const ClassicPage: FC = () => {
           visibility={splitControls ? 'info' : 'all'}
         />
       )}
-      <ComponentDeps id="." title="External dependencies" />
+      <ComponentExternalDependencies id="." title="External dependencies" />
+      <ComponentLocalDependencies id="." title="Internal dependencies" />
       <Stories dark={true} />
     </div>
   );

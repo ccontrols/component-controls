@@ -105,22 +105,31 @@ export type StoryRenderFn = (
 /**
  * an import name
  */
-export interface ImportName {
+export interface ImportType {
   /**
-   * the imported name from the import file
+   * component name
    */
   name: string;
   /**
-   * alias imported as. If a default import, the string 'default' is here.
+   * importedName - the original named import that was aliased
    */
-  importedName: string;
+  importedName: 'default' | 'namespace' | string;
+  /**
+   * imported from
+   */
+  from: string;
+  /**
+   * key into components table
+   */
+  key?: string;
 }
 
-/**
- * imports - library/file as key and the imported names as an array
- */
+export interface ImportTypes {
+  [key: string]: ImportType;
+}
+
 export interface Imports {
-  [key: string]: ImportName[];
+  [key: string]: Omit<ImportType, 'from'>[];
 }
 
 /**

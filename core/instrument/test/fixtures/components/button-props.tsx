@@ -1,8 +1,9 @@
-import React, { FC } from 'react';
+import React, { FC, MouseEventHandler } from 'react';
 
 export interface ButtonProps {
   name: string;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 export const Button: FC<ButtonProps> = props => (
-  <button>{`Hello, ${props.name}`}</button>
+  <button onClick={props.onClick}>{`Hello, ${props.name}`}</button>
 );

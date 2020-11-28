@@ -1,6 +1,6 @@
 export * from './BlockContainer';
 export * from './context';
-export * from './ComponentDeps';
+export * from './ComponentDependencies';
 export * from './ComponentSource';
 export * from './Container';
 export * from './Description';

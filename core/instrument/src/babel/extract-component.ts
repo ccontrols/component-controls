@@ -1,7 +1,16 @@
+import path from 'path';
 import { File } from '@babel/types';
-import { Component, Document, PackageInfo } from '@component-controls/core';
-import { hashStoreId } from '../misc/hashStore';
+import * as resolve from 'resolve';
+import {
+  Component,
+  Document,
+  PackageInfo,
+  Imports,
+  ImportTypes,
+} from '@component-controls/core';
+import { componentKey } from '../misc/hashStore';
 import { followImports } from './follow-imports';
+import { analyze_components } from './analyze-component';
 import { packageInfo } from '../misc/package-info';
 import { readSourceFile } from '../misc/source-options';
 
@@ -32,7 +41,7 @@ export const extractComponent = async (
     options,
     initialAST,
   );
-  const { components } = options || {};
+  const { components, resolver: resolveOptions } = options || {};
   let component: Component;
   let componentPackage: PackageInfo | undefined;
   if (follow) {
@@ -42,7 +51,64 @@ export const extractComponent = async (
     if (follow.from) {
       component.from = follow.from;
     }
+    if (follow.imports) {
+      const imports: ImportTypes = follow.imports;
+      const allImports = Object.keys(imports).reduce((acc: Imports, key) => {
+        const { name, from, importedName } = imports[key];
+        let importKey = undefined;
+        if (follow.filePath && from.startsWith('.')) {
+          try {
+            const fileName = resolve.sync(from, {
+              ...resolveOptions,
+              basedir: path.dirname(follow.filePath),
+            });
+            const followImport = followImports(
+              importedName,
+              fileName,
+              undefined,
+              options,
+              undefined,
+            );
+            if (followImport?.filePath) {
+              importKey = componentKey(followImport.filePath, importedName);
+            }
+          } catch (e) {}
+        }
+
+        if (acc[from]) {
+          return {
+            ...acc,
+            [from]: [
+              ...acc[from],
+              { name, from, importedName, key: importKey },
+            ],
+          };
+        }
+        return {
+          ...acc,
+          [from]: [{ name, from, importedName, key: importKey }],
+        };
+      }, {});
+      component.externalDependencies = Object.keys(allImports)
+        .filter(key => !key.startsWith('.'))
+        .reduce(
+          (acc, key) => ({ ...acc, [key]: (allImports as Imports)[key] }),
+          {},
+        );
+      component.localDependencies = Object.keys(allImports)
+        .filter(key => key.startsWith('.'))
+        .reduce((acc, key) => {
+          return { ...acc, [key]: (allImports as Imports)[key] };
+        }, {});
+    }
+    if (follow.importedName) {
+      component.importedName = follow.importedName;
+    }
     if (follow.filePath) {
+      if (follow.imports) {
+        analyze_components(component, follow.filePath, options);
+      }
+
       component.request = follow.filePath;
       if (components && typeof components.resolvePropsFile === 'function') {
         const propsFile = components.resolvePropsFile(
@@ -53,14 +119,6 @@ export const extractComponent = async (
           component.propsInfoFile = propsFile;
         }
       }
-    }
-    if (follow.imports) {
-      component.imports = follow.imports;
-    }
-    if (follow.importedName) {
-      component.importedName = follow.importedName;
-    }
-    if (follow.filePath) {
       const saveSource = readSourceFile(
         components?.sourceFiles,
         follow.source,
@@ -112,11 +170,12 @@ export const extractStoreComponent = async (
               store.packages[componentPackage.fileHash] = componentPackage;
               component.package = componentPackage.fileHash;
             }
-            const componentKey = hashStoreId(
-              `${component.request ?? filePath}-${componentName}`,
+            const key = componentKey(
+              component.request ?? filePath,
+              componentName,
             );
-            store.components[componentKey] = component;
-            doc.componentsLookup[componentName] = componentKey;
+            store.components[key] = component;
+            doc.componentsLookup[componentName] = key;
           }
         }
       }
