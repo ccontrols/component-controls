@@ -21,8 +21,8 @@
     "@component-controls/viewport-plugin": "^1.44.1",
     "@theme-ui/presets": "^0.5.0-alpha.1",
     "gatsby": "^2.27.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
     "typescript": "^3.9.3",

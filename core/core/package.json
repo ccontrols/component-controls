@@ -47,7 +47,7 @@
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",
     "jest": "^26.4.2",
-    "react": "^16.13.1",
+    "react": "^17.0.1",
     "webpack": "^4.43.0"
   },
   "peerDependencies": {

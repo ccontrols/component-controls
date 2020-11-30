@@ -59,7 +59,7 @@ export const react: PresetType = (options: BuildProps) => {
                       corejs: 3,
                     },
                   ],
-                  '@babel/preset-react',
+                  ['@babel/preset-react', { runtime: 'automatic' }],
                 ],
               },
             },
