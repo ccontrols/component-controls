@@ -8,6 +8,7 @@ import {
   Description,
   ComponentExternalDependencies,
   ComponentLocalDependencies,
+  ComponentJSX,
   ComponentSource,
   PropsTable,
   PackageVersion,
@@ -57,6 +58,7 @@ export const ClassicPage: FC = () => {
       )}
       <ComponentExternalDependencies id="." title="External dependencies" />
       <ComponentLocalDependencies id="." title="Internal dependencies" />
+      <ComponentJSX id="." title="Component JSX" />
       <Stories dark={true} />
     </div>
   );

@@ -92,7 +92,7 @@ export interface ComponentInfo {
 
 export type JSXNode = Partial<ImportType> & {
   attributes?: string[];
-  children?: Partial<ImportType>[];
+  children?: JSXTree;
 };
 /**
  * jsx tree of elements for the component

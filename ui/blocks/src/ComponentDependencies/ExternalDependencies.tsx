@@ -1,11 +1,11 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
 import { FC, useMemo } from 'react';
-import { jsx, Flex, Box, Text } from 'theme-ui';
+import { jsx, Flex } from 'theme-ui';
 import { defaultExport, Component, ImportType } from '@component-controls/core';
 import { usePackage } from '@component-controls/store';
-import { Table, Tag, ExternalLink } from '@component-controls/components';
-
+import { Table, Tag } from '@component-controls/components';
+import { PackageLink } from '../PackageLink/PackageLink';
 export interface ExternalDependenciesProps {
   component?: Component;
 }
@@ -28,22 +28,15 @@ export const ExternalDependencies: FC<ExternalDependenciesProps> = ({
         accessor: 'name',
         Cell: ({
           row: {
-            original: { name, packageName, version },
+            original: { name },
           },
-        }: any) => {
-          const el = <Box sx={{ whiteSpace: 'nowrap' }}>{name}</Box>;
-          if (!packageName) {
-            return el;
-          }
-          const baseVersion = version.replace(/[\^=~]/, '');
-          return (
-            <ExternalLink
-              href={`https://npmjs.com/package/${packageName}/v/${baseVersion}`}
-            >
-              {el}
-            </ExternalLink>
-          );
-        },
+        }: any) => (
+          <PackageLink
+            name={name}
+            dependencies={dependencies}
+            devDependencies={devDependencies}
+          />
+        ),
       },
       {
         Header: 'imports',
@@ -60,7 +53,9 @@ export const ExternalDependencies: FC<ExternalDependenciesProps> = ({
                 variant="tag.rightmargin"
                 key={`${v.name}`}
                 borderSize={1}
-                color={v.importedName === defaultExport ? 'green' : 'lightgrey'}
+                color={
+                  v.importedName === defaultExport ? 'orange' : 'lightgrey'
+                }
               >
                 {v.importedName === defaultExport ? v.name : v.importedName}
               </Tag>
@@ -69,19 +64,12 @@ export const ExternalDependencies: FC<ExternalDependenciesProps> = ({
         ),
       },
       {
-        Header: 'version',
-        accessor: 'version',
-        Cell: ({ value }: { value?: string }) => (
-          <Text sx={{ whiteSpace: 'nowrap' }}>{value}</Text>
-        ),
-      },
-      {
         Header: 'peer',
         accessor: 'peer',
         Cell: ({ value }: { value: boolean }) => (value ? '*' : ''),
       },
     ],
-    [],
+    [dependencies, devDependencies],
   );
   const rows = useMemo(() => {
     const dependenciesKeys = Object.keys(dependencies);
@@ -114,13 +102,9 @@ export const ExternalDependencies: FC<ExternalDependenciesProps> = ({
             }
             return 0;
           }),
-          packageName,
           peer: packageName
             ? peerDependenciesKeys.includes(packageName)
             : false,
-          version: packageName
-            ? dependencies[packageName] || devDependencies[packageName]
-            : undefined,
         };
       })
       .sort((a, b) => a.name.localeCompare(b.name));

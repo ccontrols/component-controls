@@ -2,6 +2,7 @@
   "name": "@component-controls/pages",
   "version": "1.43.0",
   "description": "Component controls pre-built documentation page templates.",
+  "sideEffects": false,
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",

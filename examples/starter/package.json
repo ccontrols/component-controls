@@ -26,7 +26,7 @@
     "@emotion/core": "^10.0.27",
     "emotion": "^10.0.27",
     "emotion-server": "^10.0.27",
-    "gatsby": "^2.23.11",
+    "gatsby": "^2.27.4",
     "next": "^9.5.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

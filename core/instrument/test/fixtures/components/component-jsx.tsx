@@ -1,4 +1,5 @@
 import React, { FC, MouseEventHandler } from 'react';
+import DefaultButton from './button-default-class';
 import { Button as PropsButton } from './button-props';
 
 export interface ButtonProps {
@@ -17,8 +18,14 @@ export const Button: FC<ButtonProps> = ({
   label,
   onClick,
 }) => (
-  <div className={className}>
-    <input id={id} name={name} defaultValue={defaultValue} />
-    <PropsButton name={label} onClick={onClick}>{`Hello, ${name}`}</PropsButton>
-  </div>
+  <React.Fragment>
+    <div className={className}>
+      <input id={id} name={name} defaultValue={defaultValue} />
+      <PropsButton
+        name={label}
+        onClick={onClick}
+      >{`Hello, ${name}`}</PropsButton>
+    </div>
+    <DefaultButton name="john" />
+  </React.Fragment>
 );

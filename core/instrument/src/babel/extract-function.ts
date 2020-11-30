@@ -35,7 +35,6 @@ export const extractFunction = (
           filePath,
           source,
           _options,
-          ast,
         );
       }
       case 'ObjectExpression': {

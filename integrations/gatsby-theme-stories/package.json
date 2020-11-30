@@ -53,7 +53,7 @@
     "@component-controls/ts-markdown-docs": "^1.37.0",
     "@types/react": "^16.9.34",
     "eslint-plugin-react-hooks": "^4.1.2",
-    "gatsby": "^2.24.53",
+    "gatsby": "^2.27.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "typescript": "^4.0.5"

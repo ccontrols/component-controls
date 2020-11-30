@@ -135,7 +135,6 @@ export const extractMDXStories: (
                   filePath,
                   source,
                   _options,
-                  ast,
                   exports,
                 );
                 story = { ...followStory, ...story };

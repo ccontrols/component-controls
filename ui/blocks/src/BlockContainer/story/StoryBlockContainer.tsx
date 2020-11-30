@@ -41,6 +41,7 @@ export const StoryBlockContainer: FC<StoryBlockContainerAllProps> = ({
       id={userTitle === CURRENT_STORY && story ? story.id : undefined}
       sxStyle={sxStyle}
       description={description}
+      plain={true}
     >
       {children}
     </BlockContainer>

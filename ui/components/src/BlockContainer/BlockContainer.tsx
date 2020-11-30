@@ -38,6 +38,10 @@ export interface BlockContainerProps {
    * testing id
    */
   'data-testid'?: string;
+  /**
+   * inner container variant. default to 'inner' to display a border and shadow
+   */
+  plain?: boolean;
 }
 
 /**
@@ -51,11 +55,16 @@ export const BlockContainer: FC<BlockContainerProps> = ({
   description,
   collapsible = true,
   sxStyle,
+  plain = false,
   ...rest
 }) => {
   const [isOpen, setIsOpen] = useState(true);
   const blockId = id !== '.' ? id : undefined || title;
-
+  const content = !plain ? (
+    <Box variant="blockcontainer.inner">{children}</Box>
+  ) : (
+    children
+  );
   return (
     <Box variant="blockcontainer.container" sx={sxStyle} {...rest}>
       {(blockId || title || collapsible) && (
@@ -93,10 +102,10 @@ export const BlockContainer: FC<BlockContainerProps> = ({
         </LinkHeading>
       )}
       {description && <Description>{description}</Description>}
-      {collapsible && children ? (
-        <Collapsible isOpen={isOpen}>{children}</Collapsible>
+      {collapsible ? (
+        <Collapsible isOpen={isOpen}>{content}</Collapsible>
       ) : (
-        children
+        content
       )}
       {!isOpen && <Divider />}
     </Box>

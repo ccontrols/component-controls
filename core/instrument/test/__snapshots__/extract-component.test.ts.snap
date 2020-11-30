@@ -163,36 +163,64 @@ Object {
     "importedName": "Button",
     "jsx": Array [
       Object {
-        "attributes": Array [
-          "className",
-        ],
+        "attributes": Array [],
         "children": Array [
           Object {
             "attributes": Array [
-              "id",
-              "name",
-              "defaultValue",
+              "className",
             ],
-            "children": Array [],
-            "name": "input",
+            "children": Array [
+              Object {
+                "attributes": Array [
+                  "id",
+                  "name",
+                  "defaultValue",
+                ],
+                "children": Array [],
+                "name": "input",
+              },
+              Object {
+                "attributes": Array [
+                  "name",
+                  "onClick",
+                ],
+                "children": Array [],
+                "componentKey": "fbea66d4bd64ea2b935855efa5d522a1",
+                "from": "./button-props",
+                "importedName": "Button",
+                "name": "PropsButton",
+              },
+            ],
+            "name": "div",
           },
           Object {
             "attributes": Array [
               "name",
-              "onClick",
             ],
             "children": Array [],
-            "name": "PropsButton",
+            "componentKey": "70b5e95ff2001736f43bcb7d0affdb6a",
+            "from": "./button-default-class",
+            "importedName": "default",
+            "name": "DefaultButton",
           },
         ],
-        "name": "div",
+        "from": "react",
+        "importedName": "Fragment",
+        "name": "React.Fragment",
       },
     ],
     "localDependencies": Object {
+      "./button-default-class": Array [
+        Object {
+          "componentKey": "70b5e95ff2001736f43bcb7d0affdb6a",
+          "importedName": "default",
+          "name": "DefaultButton",
+        },
+      ],
       "./button-props": Array [
         Object {
+          "componentKey": "fbea66d4bd64ea2b935855efa5d522a1",
           "importedName": "Button",
-          "key": "fbea66d4bd64ea2b935855efa5d522a1",
           "name": "PropsButton",
         },
       ],
@@ -443,14 +471,17 @@ Object {
           "__css",
         ],
         "children": Array [],
+        "componentKey": "8713bb38e8dad53b3c99f15baef7965e",
+        "from": "./Box",
+        "importedName": "default",
         "name": "Box",
       },
     ],
     "localDependencies": Object {
       "./Box": Array [
         Object {
+          "componentKey": "8713bb38e8dad53b3c99f15baef7965e",
           "importedName": "default",
-          "key": "8713bb38e8dad53b3c99f15baef7965e",
           "name": "Box",
         },
       ],

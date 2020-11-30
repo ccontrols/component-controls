@@ -22,7 +22,7 @@ const Container: FC = ({ children }) => (
     </Box>
   </ThemeProvider>
 );
-export const overview: Example = ({ themeKey }: ActionBarProps) => (
+export const overview: Example<ActionBarProps> = ({ themeKey }) => (
   <Container>
     <ActionBar
       themeKey={themeKey}

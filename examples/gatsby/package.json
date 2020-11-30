@@ -20,7 +20,7 @@
     "@component-controls/gatsby-theme-stories": "^1.43.0",
     "@component-controls/viewport-plugin": "^1.43.0",
     "@theme-ui/presets": "^0.4.0-rc.1",
-    "gatsby": "^2.22.10",
+    "gatsby": "^2.27.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },

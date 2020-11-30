@@ -14,9 +14,9 @@ import {
   Sidebar as AppSidebar,
   ColorMode,
   SidebarContext,
-  Navmenu,
-  MenuItems,
-  MenuItem,
+  Tree,
+  TreeItems,
+  TreeItem,
   Header,
   ActionBar,
   ActionItems,
@@ -52,9 +52,9 @@ const createMenuItem = (
   levels: string[],
   page: PageConfiguration,
   activeTab?: string,
-  parent?: MenuItems,
-  item?: MenuItem,
-): MenuItem => {
+  parent?: TreeItems,
+  item?: TreeItem,
+): TreeItem => {
   if (levels.length < 1) {
     return item || {};
   }
@@ -76,7 +76,7 @@ const createMenuItem = (
     const doc = store.docs[name];
     return getDocPath(type, doc, store, name, activeTab);
   };
-  const newItem: MenuItem = {
+  const newItem: TreeItem = {
     id: levels[0],
     label: levels[0],
   };
@@ -130,7 +130,7 @@ const createMenuItem = (
   );
 };
 
-const staticMenusToMenuItems = (menu: StaticMenuItems): MenuItems =>
+const staticMenusToMenuItems = (menu: StaticMenuItems): TreeItems =>
   menu
     .filter(item => item)
     .map(item => {
@@ -143,9 +143,9 @@ const staticMenusToMenuItems = (menu: StaticMenuItems): MenuItems =>
     });
 
 const findMenuItem = (
-  items: MenuItems,
+  items: TreeItems,
   label: string,
-): MenuItem | undefined => {
+): TreeItem | undefined => {
   for (const item of items) {
     if (item.label === label) {
       return item;
@@ -182,7 +182,7 @@ export const Sidebar: FC<SidebarProps> = ({
   const menuItems = useMemo(() => {
     const staticMenus = Array.isArray(menu) ? staticMenusToMenuItems(menu) : [];
     if (store) {
-      const menuItems = docs.reduce((acc: MenuItems, doc: Document) => {
+      const menuItems = docs.reduce((acc: TreeItems, doc: Document) => {
         const { title, menu } = doc;
         if (menu) {
           const item = findMenuItem(acc, menu);
@@ -250,7 +250,8 @@ export const Sidebar: FC<SidebarProps> = ({
       )}
       <Box variant="appsidebar.container">
         <ActionBar themeKey="appsidebar" actions={actions} />
-        <Navmenu
+        <Tree
+          as="nav"
           activeItem={{ id: activeId }}
           search={search}
           items={menuItems}

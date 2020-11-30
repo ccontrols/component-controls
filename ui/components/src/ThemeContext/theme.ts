@@ -50,7 +50,7 @@ export type ControlsTheme = {
   colormode: Record<string, ThemeUIStyleObject>;
   header: ThemeUIStyleObject;
   hoverbox: Record<string, ThemeUIStyleObject>;
-  navmenu: Record<string, ThemeUIStyleObject>;
+  tree: Record<string, ThemeUIStyleObject>;
   pagination: Record<string, ThemeUIStyleObject>;
   sidebar: Record<string, ThemeUIStyleObject>;
   skiplinks: Record<string, ThemeUIStyleObject>;
@@ -164,6 +164,12 @@ export const theme: ControlsTheme = {
         fontWeight: 'bold',
         color: 'primary',
       },
+    },
+  },
+  text: {
+    small: {
+      fontSize: 1,
+      fontWeight: 'thin',
     },
   },
   forms: {
@@ -395,7 +401,6 @@ export const theme: ControlsTheme = {
     },
   },
   actioncontainer: {
-    borderRadius: '4px',
     boxShadow: (t: Theme): string => `0px 1px 3px 0px ${t.colors?.shadow}`,
     border: (t: Theme): string => ` 1px solid  ${t.colors?.shadow}`,
     display: 'flex',
@@ -410,6 +415,8 @@ export const theme: ControlsTheme = {
       scrollMarginTop: '5rem',
     },
     inner: {
+      boxShadow: (t: Theme): string => `0px 1px 3px 0px ${t.colors?.shadow}`,
+      border: (t: Theme): string => ` 1px solid  ${t.colors?.shadow}`,
       flexDirection: 'row',
       alignItems: 'center',
       ':hover': {
@@ -621,6 +628,13 @@ export const theme: ControlsTheme = {
       px: 1,
       whiteSpace: 'nowrap',
     },
+    small: {
+      ml: 1,
+      display: 'inline-block',
+      fontSize: 0,
+      lineHeight: '1rem',
+      whiteSpace: 'nowrap',
+    },
   },
   titledimage: {
     container: {
@@ -778,27 +792,27 @@ export const theme: ControlsTheme = {
     },
     text: { color: 'muted', fontWeight: 'bold' },
   },
-  navmenu: {
-    link: {
-      width: '100%',
-      px: 3,
-      py: 1,
-      background: 'none',
-      textDecoration: 'none',
-      cursor: 'pointer',
-      color: '#333',
-    },
+  tree: {
     itemcontainer: {
       flexDirection: 'row',
       alignItems: 'center',
       position: 'relative',
-    },
-    iteminner: {
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'space-between',
       width: '100%',
+      py: 1,
+      justifyContent: 'space-between',
+    },
+    link: {
+      boxShadow: 'none',
+      background: 'none',
+      textDecoration: 'none',
+      cursor: 'pointer',
+      color: 'primary',
+      px: 1,
+      py: 0,
+      flex: 1,
+      ':hover': {
+        backgroundColor: 'shadow',
+      },
     },
     labelcontainer: {
       display: 'flex',
@@ -813,9 +827,7 @@ export const theme: ControlsTheme = {
       textOverflow: 'ellipsis',
       overflow: 'hidden',
     },
-    expandicon: {
-      ml: 2,
-    },
+    expandicon: {},
   },
   pagination: {
     container: {
@@ -882,14 +894,9 @@ export const theme: ControlsTheme = {
       position: 'absolute',
     },
     inner: {
-      a: {
-        '&.active': {
-          borderLeft: (t: Theme): string => `4px solid ${t?.colors?.accent}`,
-          fontWeight: 'bold',
-        },
-        ':hover': {
-          backgroundColor: 'shadow',
-        },
+      '.selected': {
+        borderLeft: (t: Theme): string => `4px solid ${t?.colors?.accent}`,
+        fontWeight: 'bold',
       },
     },
     headercontainer: {

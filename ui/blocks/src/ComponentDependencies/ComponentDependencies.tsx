@@ -6,6 +6,7 @@ import {
 } from '../BlockContainer/components/ComponentsBlockContainer';
 import { ExternalDependencies } from './ExternalDependencies';
 import { LocalDependencies } from './LocalDependencies';
+import { useCustomProps } from '../context';
 
 export type ComponentDepsProps = {} & Omit<
   ComponentsBlockContainerProps,
@@ -15,7 +16,12 @@ export type ComponentDepsProps = {} & Omit<
  * Displays external dependencies for a component
  */
 
-export const ComponentExternalDependencies: FC<ComponentDepsProps> = props => {
+export const ComponentExternalDependencies: FC<ComponentDepsProps> = fullProps => {
+  const props = useCustomProps<ComponentDepsProps>(
+    'external_dependencies',
+    fullProps,
+  );
+
   const component = useComponent({ of: props.of });
   if (!component) {
     return null;
@@ -26,12 +32,9 @@ export const ComponentExternalDependencies: FC<ComponentDepsProps> = props => {
   }
   return (
     <ComponentsBlockContainer {...props}>
-      {(component, rest) => {
-        return externalDependencies &&
-          Object.keys(externalDependencies).length ? (
-          <ExternalDependencies component={component} {...rest} />
-        ) : null;
-      }}
+      {(component, rest) => (
+        <ExternalDependencies component={component} {...rest} />
+      )}
     </ComponentsBlockContainer>
   );
 };
@@ -40,7 +43,11 @@ export const ComponentExternalDependencies: FC<ComponentDepsProps> = props => {
  * Displays local dependencies for a component
  */
 
-export const ComponentLocalDependencies: FC<ComponentDepsProps> = props => {
+export const ComponentLocalDependencies: FC<ComponentDepsProps> = fullProps => {
+  const props = useCustomProps<ComponentDepsProps>(
+    'local_dependencies',
+    fullProps,
+  );
   const component = useComponent({ of: props.of });
   if (!component) {
     return null;
@@ -52,12 +59,9 @@ export const ComponentLocalDependencies: FC<ComponentDepsProps> = props => {
 
   return (
     <ComponentsBlockContainer visibility="info" {...props}>
-      {(component, rest) => {
-        const { localDependencies } = component;
-        return localDependencies && Object.keys(localDependencies).length ? (
-          <LocalDependencies component={component} {...rest} />
-        ) : null;
-      }}
+      {(component, rest) => (
+        <LocalDependencies component={component} {...rest} />
+      )}
     </ComponentsBlockContainer>
   );
 };

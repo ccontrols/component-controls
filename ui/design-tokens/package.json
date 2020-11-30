@@ -2,6 +2,7 @@
   "name": "@component-controls/design-tokens",
   "version": "1.43.0",
   "description": "Component controls design tokens components.",
+  "sideEffects": false,
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",

@@ -130,6 +130,9 @@ actions can accept an order prop, and can also be superimposed",
                 "aria-label",
               ],
               "children": Array [],
+              "componentKey": "eb9509951cd0102ae95e248d1c9b0cd0",
+              "from": "../Link",
+              "importedName": "Link",
               "name": "Link",
             },
             Object {
@@ -139,9 +142,13 @@ actions can accept an order prop, and can also be superimposed",
                 "aria-label",
               ],
               "children": Array [],
+              "from": "theme-ui",
+              "importedName": "Button",
               "name": "Button",
             },
           ],
+          "from": "theme-ui",
+          "importedName": "Box",
           "name": "Box",
         },
         Object {
@@ -154,9 +161,13 @@ actions can accept an order prop, and can also be superimposed",
                 "variant",
               ],
               "children": Array [],
+              "from": "theme-ui",
+              "importedName": "Box",
               "name": "Box",
             },
           ],
+          "from": "theme-ui",
+          "importedName": "Box",
           "name": "Box",
         },
       ],
@@ -173,20 +184,20 @@ actions can accept an order prop, and can also be superimposed",
       "localDependencies": Object {
         "../Link": Array [
           Object {
+            "componentKey": "eb9509951cd0102ae95e248d1c9b0cd0",
             "importedName": "Link",
-            "key": "eb9509951cd0102ae95e248d1c9b0cd0",
             "name": "Link",
           },
         ],
         "./utils": Array [
           Object {
+            "componentKey": "8dc313d6e0b96be3972f9f034f201d63",
             "importedName": "getSortedActions",
-            "key": "8dc313d6e0b96be3972f9f034f201d63",
             "name": "getSortedActions",
           },
           Object {
+            "componentKey": "5562debad46d8a256b666ad14fc1be3a",
             "importedName": "ActionItems",
-            "key": "5562debad46d8a256b666ad14fc1be3a",
             "name": "ActionItems",
           },
         ],
@@ -379,7 +390,7 @@ export const ActionBar: FC<ActionBarProps> = ({
           "ActionBar": "fded7dbaa855ea6869a794f877eab680",
         },
         "date": "2020-10-29T01:16:52.595Z",
-        "dateModified": "2020-11-17T15:42:49.199Z",
+        "dateModified": "2020-11-28T21:34:17.197Z",
         "fileName": "/Users/atanasster/component-controls/ui/components/src/ActionBar/ActionBar.stories.tsx",
         "package": "8c5a495b6c81e803332610dad9861480",
         "title": "Components/ActionBar",
@@ -559,7 +570,7 @@ export const ActionBar: FC<ActionBarProps> = ({
             Object {
               "loc": Object {
                 "end": Object {
-                  "column": 29,
+                  "column": 13,
                   "line": 0,
                 },
                 "start": Object {
@@ -617,13 +628,13 @@ export const ActionBar: FC<ActionBarProps> = ({
               "line": 41,
             },
             "start": Object {
-              "column": 33,
+              "column": 49,
               "line": 25,
             },
           },
           "name": "overview",
           "renderFn": [Function],
-          "source": "({ themeKey }: ActionBarProps) => (
+          "source": "({ themeKey }) => (
   <Container>
     <ActionBar
       themeKey={themeKey}

@@ -2,6 +2,7 @@
   "name": "@component-controls/editors",
   "version": "1.43.0",
   "description": "Component controls editors for component control values.",
+  "sideEffects": false,
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",

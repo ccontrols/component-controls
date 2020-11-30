@@ -121,7 +121,7 @@ export interface ImportType {
   /**
    * key into components table
    */
-  key?: string;
+  componentKey?: string;
 }
 
 export interface ImportTypes {
@@ -234,3 +234,6 @@ export const useAsync = <T, E = string>(
 
   return { execute, status, value, error };
 };
+
+export const isLocalImport = (filePath: string): boolean =>
+  filePath.startsWith('.');

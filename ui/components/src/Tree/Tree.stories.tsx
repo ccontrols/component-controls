@@ -9,17 +9,19 @@ import {
   TagIcon,
   TrashcanIcon,
   StarIcon,
+  TriangleDownIcon,
+  TriangleRightIcon,
 } from '@primer/octicons-react';
-import { Navmenu } from '.';
+import { Tree } from '.';
 
 export default {
-  title: 'Components/Navmenu',
-  component: Navmenu,
+  title: 'Components/Tree',
+  component: Tree,
 };
 
 export const overview: Example = () => (
   <Box css={{ width: 200 }}>
-    <Navmenu
+    <Tree
       activeItem={{ id: 'c_drive' }}
       items={[
         {
@@ -125,7 +127,7 @@ const navItems = [
 
 export const items: Example = () => (
   <Box css={{ width: 250 }}>
-    <Navmenu activeItem={{ id: 'all' }} items={navItems} />
+    <Tree activeItem={{ id: 'all' }} items={navItems} />
   </Box>
 );
 
@@ -139,7 +141,30 @@ export const search: Example = () => {
         value={search}
         onChange={e => setSearch(e.target.value)}
       />
-      <Navmenu search={search} activeItem={{ id: 'all' }} items={navItems} />
+      <Tree search={search} activeItem={{ id: 'all' }} items={navItems} />
     </Box>
   );
 };
+
+export const largeIndentation: Example = () => (
+  <Box css={{ width: 250 }}>
+    <Tree activeItem={{ id: 'all' }} items={navItems} indentPixels={24} />
+  </Box>
+);
+
+export const customExpandIcons: Example = () => (
+  <Box css={{ width: 250 }}>
+    <Tree
+      activeItem={{ id: 'all' }}
+      items={navItems}
+      iconExpanded={<TriangleDownIcon />}
+      iconCollapsed={<TriangleRightIcon />}
+    />
+  </Box>
+);
+
+export const arrowsStart: Example = () => (
+  <Box css={{ width: 250 }}>
+    <Tree activeItem={{ id: 'all' }} items={navItems} arrowPosition="start" />
+  </Box>
+);

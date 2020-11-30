@@ -1,4 +1,3 @@
-import * as parser from '@babel/parser';
 import * as fs from 'fs';
 import mdx from '@mdx-js/mdx';
 import matter from 'gray-matter';
@@ -19,6 +18,7 @@ import { extractStoreComponent } from './babel/extract-component';
 import { packageInfo } from './misc/package-info';
 import { extractStoryExports } from './misc/mdx-exports';
 import { prettify } from './misc/prettify';
+import { parseFile } from './misc/ast_store';
 import { readSourceFile } from './misc/source-options';
 import {
   LoadingDocStore,
@@ -61,7 +61,7 @@ const parseSource = async (
   options: Required<InstrumentOptions>,
 ): Promise<ParseStorieReturnType | undefined> => {
   const source = await prettify(code, options.prettier, filePath);
-  const ast = parser.parse(source, options.parser);
+  const { ast } = parseFile(source, options.parser, source);
 
   const store = traverseFn(ast, options, { source, filePath });
   if (!store) {
@@ -84,7 +84,7 @@ const parseSource = async (
       doc.source = saveSource;
     }
   }
-  await extractStoreComponent(store, filePath, source, options, ast);
+  await extractStoreComponent(store, filePath, source, options);
   const doc: Document | undefined = store.doc;
   if (doc && store.stories) {
     const storyPackage = await packageInfo(
@@ -161,7 +161,7 @@ export const parseStories = async (
       filepath: filePath,
       ...otherMDXOptions,
     });
-    const ast = parser.parse(code, mergedOptions.parser) as any;
+    const { ast } = parseFile(filePath, mergedOptions.parser, code);
 
     if (transformMDX) {
       //second pass transform - inject any necessary attributes
@@ -183,7 +183,6 @@ export const parseStories = async (
         transformed: code,
       };
     }
-    debugger;
     let transformed;
     if (transformMDX) {
       const { exports } = store || {};

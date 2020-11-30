@@ -1,23 +1,17 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
 import { FC, useMemo } from 'react';
-import { jsx, Flex, Box } from 'theme-ui';
-import {
-  Component,
-  defaultExport,
-  ImportType,
-  getStoryPath,
-} from '@component-controls/core';
-import { Table, Tag, Link } from '@component-controls/components';
-import { useStore } from '@component-controls/store';
-
+import { jsx, Flex, Text } from 'theme-ui';
+import { Component, JSXNode } from '@component-controls/core';
+import { Table } from '@component-controls/components';
+import { LocalImport } from '../PackageLink';
 export interface LocalDependenciesProps {
   component?: Component;
 }
 
 type TableImportType = {
   from: string;
-  imports: Omit<ImportType, 'from'>[];
+  imports: Omit<JSXNode, 'from'>[];
 }[];
 
 /**
@@ -27,7 +21,6 @@ type TableImportType = {
 export const LocalDependencies: FC<LocalDependenciesProps> = ({
   component,
 }) => {
-  const store = useStore();
   const imports: TableImportType = useMemo(() => {
     const { localDependencies } = component || {};
     return localDependencies
@@ -36,34 +29,13 @@ export const LocalDependencies: FC<LocalDependenciesProps> = ({
             ...acc,
             {
               from: key,
-              imports: localDependencies[key].map(local => {
-                if (local.key) {
-                  const componentHash = local.key;
-                  const docId = Object.keys(store.docs).find(id => {
-                    const doc = store.docs[id];
-                    return doc?.componentsLookup
-                      ? Object.values(doc?.componentsLookup).includes(
-                          componentHash,
-                        )
-                      : false;
-                  });
-                  if (docId) {
-                    const doc = store.docs[docId];
-                    let storyId = undefined;
-                    if (doc?.stories?.length) {
-                      storyId = doc?.stories[0];
-                    }
-                    return { ...local, doc, storyId };
-                  }
-                }
-                return local;
-              }),
+              imports: localDependencies[key],
             },
           ],
           [],
         )
       : [];
-  }, [component, store]);
+  }, [component]);
   const columns = useMemo(
     () => [
       {
@@ -73,41 +45,28 @@ export const LocalDependencies: FC<LocalDependenciesProps> = ({
           row: {
             original: { from },
           },
-        }: any) => <Box sx={{ whiteSpace: 'nowrap' }}>{from}</Box>,
+        }: any) => (
+          <Text
+            sx={{
+              fontSize: 1,
+              lineHeight: '1.2rem',
+              whiteSpace: 'nowrap',
+            }}
+          >{`"${from}"`}</Text>
+        ),
       },
       {
         Header: 'imports',
         accessor: 'imports',
-        Cell: ({
-          value,
-        }: {
-          value: (ImportType & { storyId?: string; doc: Document })[];
-        }) => (
+        Cell: ({ value }: { value: JSXNode[] }) => (
           <Flex
             sx={{
               flexWrap: 'wrap',
             }}
           >
-            {value.map(({ name, importedName, storyId, doc }) => {
-              const storypath =
-                (storyId || doc) && getStoryPath(storyId, doc, store);
-              const importName =
-                importedName === defaultExport ? name : importedName;
-              return (
-                <Tag
-                  variant="tag.rightmargin"
-                  key={`${name}`}
-                  borderSize={1}
-                  color={storypath ? 'red' : 'lightgrey'}
-                >
-                  {storypath ? (
-                    <Link href={storypath}>{importName}</Link>
-                  ) : (
-                    importName
-                  )}
-                </Tag>
-              );
-            })}
+            {value.map(node => (
+              <LocalImport key={`${node.name}`} node={node} />
+            ))}
           </Flex>
         ),
       },
@@ -120,10 +79,6 @@ export const LocalDependencies: FC<LocalDependenciesProps> = ({
   }
 
   return (
-    <Table
-      data-testid="external-dependencies"
-      data={imports}
-      columns={columns}
-    />
+    <Table data-testid="local-dependencies" data={imports} columns={columns} />
   );
 };

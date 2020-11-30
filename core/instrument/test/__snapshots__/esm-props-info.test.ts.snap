@@ -58,6 +58,9 @@ Object {
                 "flat",
               ],
               "children": Array [],
+              "componentKey": "870e1450f4494217566c31047d1f2e4e",
+              "from": "./BasePropsTable",
+              "importedName": "BasePropsTable",
               "name": "BasePropsTable",
             },
             Object {
@@ -68,39 +71,46 @@ Object {
                 Object {
                   "attributes": Array [],
                   "children": Array [],
+                  "from": "@component-controls/store",
+                  "importedName": "ControlsContextStoryProvider",
                   "name": "ControlsContextStoryProvider",
                 },
               ],
+              "from": "@component-controls/store",
+              "importedName": "StoryContextProvider",
               "name": "StoryContextProvider",
             },
           ],
+          "componentKey": "14f66a4fddf852732497993f283ae12d",
+          "from": "../BlockContainer/components/ComponentsBlockContainer",
+          "importedName": "ComponentsBlockContainer",
           "name": "ComponentsBlockContainer",
         },
       ],
       "localDependencies": Object {
         "../BlockContainer/components/ComponentsBlockContainer": Array [
           Object {
+            "componentKey": "14f66a4fddf852732497993f283ae12d",
             "importedName": "ComponentsBlockContainer",
-            "key": "14f66a4fddf852732497993f283ae12d",
             "name": "ComponentsBlockContainer",
           },
           Object {
+            "componentKey": "dbb7cca5b9405fef798fd6da135eb5c3",
             "importedName": "ComponentsBlockContainerProps",
-            "key": "dbb7cca5b9405fef798fd6da135eb5c3",
             "name": "ComponentsBlockContainerProps",
           },
         ],
         "../context": Array [
           Object {
+            "componentKey": "a2c744057911bf591d6e7de52224c963",
             "importedName": "useCustomProps",
-            "key": "a2c744057911bf591d6e7de52224c963",
             "name": "useCustomProps",
           },
         ],
         "./BasePropsTable": Array [
           Object {
+            "componentKey": "870e1450f4494217566c31047d1f2e4e",
             "importedName": "BasePropsTable",
-            "key": "870e1450f4494217566c31047d1f2e4e",
             "name": "BasePropsTable",
           },
         ],

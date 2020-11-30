@@ -64,6 +64,14 @@ ie ally plugin uses it launch a new ally test on re-render",
         "raw": "(() => void)",
       },
     },
+    "plain": Object {
+      "description": "inner container variant. default to 'inner' to display a border and shadow",
+      "parentName": "BlockContainerProps",
+      "type": Object {
+        "name": "boolean",
+        "raw": "boolean",
+      },
+    },
     "ref": Object {
       "description": "ref can be used by blocks embedding Story - ie ally plugin",
       "parentName": "StoryOwnProps",

@@ -1780,7 +1780,7 @@ exports[`Application/Sidebar Overview 1`] = `
       class="css-6cvfyb"
     />
     <div
-      class="css-15nu33e"
+      class="css-12a94nr"
     >
       <div
         class="css-1es5hcv"
@@ -1822,16 +1822,16 @@ exports[`Application/Sidebar Overview 1`] = `
             class="css-vurnku"
           >
             <div
-              class="css-j6yaho"
+              class="css-w1i3qo"
             >
-              <button
-                class="css-1jz8wry"
+              <div
+                class="css-tizfsr"
               >
                 <div
-                  class="css-1i09fc1"
+                  class="css-wj14lk"
                 >
-                  <div
-                    class="css-11328uk"
+                  <button
+                    class="css-t9fq0h"
                   >
                     <div
                       class="css-f5h6sg"
@@ -1844,45 +1844,49 @@ exports[`Application/Sidebar Overview 1`] = `
                         </strong>
                       </div>
                     </div>
-                    <div
-                      aria-label="collapse items"
-                      class="css-lzd0h4"
+                  </button>
+                </div>
+                <div
+                  class="css-q74hig"
+                >
+                  <div
+                    aria-label="collapse items"
+                    class="css-vurnku"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
                     >
-                      <svg
-                        aria-hidden="true"
-                        class="octicon"
-                        fill="currentColor"
-                        height="16"
-                        role="img"
-                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                        viewBox="0 0 16 16"
-                        width="16"
-                      >
-                        <path
-                          d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </div>
+                      <path
+                        d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
                   </div>
                 </div>
-              </button>
+              </div>
             </div>
             <div
               class="css-vurnku"
             >
               <div
-                class="css-oao09s"
+                class="css-1tdwrho"
               >
-                <a
-                  class="active css-1g97bar"
-                  href="/docs/id-of-story"
+                <div
+                  class="css-tizfsr"
                 >
                   <div
-                    class="css-1i09fc1"
+                    class="selected css-wj14lk"
                   >
-                    <div
-                      class="css-11328uk"
+                    <a
+                      class="css-p1dwhj"
+                      href="/docs/id-of-story"
                     >
                       <div
                         class="css-f5h6sg"
@@ -1912,26 +1916,29 @@ exports[`Application/Sidebar Overview 1`] = `
                           story
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
-                </a>
+                  <div
+                    class="css-q74hig"
+                  />
+                </div>
               </div>
             </div>
             <div
               class="css-vurnku"
             >
               <div
-                class="css-w1i3qo"
+                class="css-1tz2vcm"
               >
-                <a
-                  class="css-1g97bar"
-                  href="/docs/id-of-single"
+                <div
+                  class="css-tizfsr"
                 >
                   <div
-                    class="css-1i09fc1"
+                    class="css-wj14lk"
                   >
-                    <div
-                      class="css-11328uk"
+                    <a
+                      class="css-p1dwhj"
+                      href="/docs/id-of-single"
                     >
                       <div
                         class="css-f5h6sg"
@@ -1961,26 +1968,29 @@ exports[`Application/Sidebar Overview 1`] = `
                           story
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
-                </a>
+                  <div
+                    class="css-q74hig"
+                  />
+                </div>
               </div>
             </div>
             <div
               class="css-vurnku"
             >
               <div
-                class="css-w1i3qo"
+                class="css-1tz2vcm"
               >
-                <a
-                  class="css-1g97bar"
-                  href="/docs/id-of-button-story"
+                <div
+                  class="css-tizfsr"
                 >
                   <div
-                    class="css-1i09fc1"
+                    class="css-wj14lk"
                   >
-                    <div
-                      class="css-11328uk"
+                    <a
+                      class="css-p1dwhj"
+                      href="/docs/id-of-button-story"
                     >
                       <div
                         class="css-f5h6sg"
@@ -2010,26 +2020,29 @@ exports[`Application/Sidebar Overview 1`] = `
                           button
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
-                </a>
+                  <div
+                    class="css-q74hig"
+                  />
+                </div>
               </div>
             </div>
             <div
               class="css-vurnku"
             >
               <div
-                class="css-w1i3qo"
+                class="css-1tz2vcm"
               >
-                <a
-                  class="css-1g97bar"
-                  href="/docs/blocks-core-story-plain--controls"
+                <div
+                  class="css-tizfsr"
                 >
                   <div
-                    class="css-1i09fc1"
+                    class="css-wj14lk"
                   >
-                    <div
-                      class="css-11328uk"
+                    <a
+                      class="css-p1dwhj"
+                      href="/docs/blocks-core-story-plain--controls"
                     >
                       <div
                         class="css-f5h6sg"
@@ -2059,9 +2072,12 @@ exports[`Application/Sidebar Overview 1`] = `
                           controls
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
-                </a>
+                  <div
+                    class="css-q74hig"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -2069,17 +2085,17 @@ exports[`Application/Sidebar Overview 1`] = `
             class="css-vurnku"
           >
             <div
-              class="css-j6yaho"
+              class="css-w1i3qo"
             >
-              <a
-                class="css-1g97bar"
-                href="/docs/mdx-story"
+              <div
+                class="css-tizfsr"
               >
                 <div
-                  class="css-1i09fc1"
+                  class="css-wj14lk"
                 >
-                  <div
-                    class="css-11328uk"
+                  <a
+                    class="css-p1dwhj"
+                    href="/docs/mdx-story"
                   >
                     <div
                       class="css-f5h6sg"
@@ -2109,9 +2125,12 @@ exports[`Application/Sidebar Overview 1`] = `
                         MDX Story
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
-              </a>
+                <div
+                  class="css-q74hig"
+                />
+              </div>
             </div>
           </div>
         </nav>

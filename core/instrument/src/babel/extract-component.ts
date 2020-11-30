@@ -1,5 +1,4 @@
 import path from 'path';
-import { File } from '@babel/types';
 import * as resolve from 'resolve';
 import {
   Component,
@@ -7,6 +6,7 @@ import {
   PackageInfo,
   Imports,
   ImportTypes,
+  isLocalImport,
 } from '@component-controls/core';
 import { componentKey } from '../misc/hashStore';
 import { followImports } from './follow-imports';
@@ -28,19 +28,12 @@ export const extractComponent = async (
   filePath: string,
   source?: string,
   options?: InstrumentOptions,
-  initialAST?: File,
 ): Promise<ComponentParseData> => {
   const cacheKey = `${filePath}-${componentName}`;
   if (globalCache[cacheKey]) {
     return globalCache[cacheKey];
   }
-  const follow = followImports(
-    componentName,
-    filePath,
-    source,
-    options,
-    initialAST,
-  );
+  const follow = followImports(componentName, filePath, source, options);
   const { components, resolver: resolveOptions } = options || {};
   let component: Component;
   let componentPackage: PackageInfo | undefined;
@@ -56,7 +49,7 @@ export const extractComponent = async (
       const allImports = Object.keys(imports).reduce((acc: Imports, key) => {
         const { name, from, importedName } = imports[key];
         let importKey = undefined;
-        if (follow.filePath && from.startsWith('.')) {
+        if (follow.filePath && isLocalImport(from)) {
           try {
             const fileName = resolve.sync(from, {
               ...resolveOptions,
@@ -67,7 +60,6 @@ export const extractComponent = async (
               fileName,
               undefined,
               options,
-              undefined,
             );
             if (followImport?.filePath) {
               importKey = componentKey(followImport.filePath, importedName);
@@ -81,7 +73,7 @@ export const extractComponent = async (
             [from]: [
               ...acc[from],
               importKey
-                ? { name, importedName, key: importKey }
+                ? { name, importedName, componentKey: importKey }
                 : { name, importedName },
             ],
           };
@@ -90,19 +82,19 @@ export const extractComponent = async (
           ...acc,
           [from]: [
             importKey
-              ? { name, importedName, key: importKey }
+              ? { name, importedName, componentKey: importKey }
               : { name, importedName },
           ],
         };
       }, {});
       component.externalDependencies = Object.keys(allImports)
-        .filter(key => !key.startsWith('.'))
+        .filter(key => !isLocalImport(key))
         .reduce(
           (acc, key) => ({ ...acc, [key]: (allImports as Imports)[key] }),
           {},
         );
       component.localDependencies = Object.keys(allImports)
-        .filter(key => key.startsWith('.'))
+        .filter(key => isLocalImport(key))
         .reduce((acc, key) => {
           return { ...acc, [key]: (allImports as Imports)[key] };
         }, {});
@@ -156,7 +148,6 @@ export const extractStoreComponent = async (
   filePath: string,
   source: string,
   options?: InstrumentOptions,
-  initialAST?: File,
 ): Promise<void> => {
   if (store.doc) {
     const doc: Document = store.doc;
@@ -169,7 +160,6 @@ export const extractStoreComponent = async (
             filePath,
             source,
             options,
-            initialAST,
           );
           if (component) {
             if (componentPackage) {
