@@ -94,11 +94,12 @@ export const ComponentJSXTree: FC<ComponentJSXTreeProps> = ({ component }) => {
     const { dependencies, devDependencies } = componentPackage || {};
     const treeToItems = (
       tree: JSXTree,
-      level: number,
+      level: number = 0,
+      parentIndex: number = 0,
     ): TreeItems | undefined => {
       return tree.length
         ? tree.map((item, index) => ({
-            id: `${item.name}-${level}-${index}`,
+            id: `${item.name}-${level}-${parentIndex}-${index}`,
             label: ({ isExpanded }) => (
               <JSXTreeNode node={item} isExpanded={isExpanded} />
             ),
@@ -114,12 +115,12 @@ export const ComponentJSXTree: FC<ComponentJSXTreeProps> = ({ component }) => {
               ),
             expanded: level <= 1,
             items: item.children
-              ? treeToItems(item.children, level + 1)
+              ? treeToItems(item.children, level + 1, index)
               : undefined,
           }))
         : undefined;
     };
-    const newRows = jsx ? treeToItems(jsx, 0) : undefined;
+    const newRows = jsx ? treeToItems(jsx) : undefined;
     dispatch({ type: ACTIONS.SET, data: { rows: newRows } });
     updateStats(newRows);
   }, [component, componentPackage]);

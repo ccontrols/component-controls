@@ -101,14 +101,14 @@ export const Tree: FC<TreeProps> = ({
 
     const isActiveItem = activeItem && activeItem.id === id;
     const isActiveParent = hasActiveChidlren(item, activeItem);
-    const expandIcon = itemItems && (
+    const expandIcon = itemItems?.length ? (
       <Box
         aria-label={isExpanded ? 'collapse items' : 'expand items'}
         variant="tree.expandicon"
       >
         {isExpanded ? iconExpanded : iconCollapsed}
       </Box>
-    );
+    ) : null;
     const content = (
       <Flex
         sx={{
