@@ -187,11 +187,7 @@ export type TreeOwnProps = {
   /**
    * Function that will be called on expand/collapse
    */
-  onExpandCollapse?: (
-    items: TreeItems,
-    item: TreeItem,
-    isExpanded: boolean,
-  ) => void;
+  onExpandCollapse?: (expandedCount: number) => void;
 
   /** If specified, will filter the items by the search terms */
   search?: string;

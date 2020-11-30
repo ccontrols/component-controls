@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import React, { FC, useCallback, useMemo, useEffect, useState } from 'react';
+import React, { FC, useMemo, useEffect, useReducer } from 'react';
 import { TriangleDownIcon, TriangleRightIcon } from '@primer/octicons-react';
 import { Component, JSXTree, isLocalImport } from '@component-controls/core';
 import { usePackage } from '@component-controls/store';
@@ -18,27 +18,80 @@ export interface ComponentJSXTreeProps {
   component?: Component;
 }
 
+enum ACTIONS {
+  SET = 'SET_ROWS',
+  SET_STATS = 'SET_STATS',
+}
+
+type ActionSetRows = {
+  type: ACTIONS.SET;
+  data: {
+    rows: TreeItems | undefined;
+  };
+};
+
+type ActionSetStats = {
+  type: ACTIONS.SET_STATS;
+  data: {
+    canExpand: boolean;
+    canCollapse: boolean;
+    total: number;
+  };
+};
+const reducer = (
+  state: {
+    rows: TreeItems | undefined;
+    canExpand: boolean;
+    canCollapse: boolean;
+    total: number;
+  },
+  action: ActionSetRows | ActionSetStats,
+) => {
+  switch (action.type) {
+    case ACTIONS.SET:
+      return { ...state, rows: action.data.rows };
+    case ACTIONS.SET_STATS:
+      return {
+        ...state,
+        canExpand: action.data.canExpand,
+        canCollapse: action.data.canCollapse,
+        total: action.data.total,
+      };
+    default:
+      throw new Error();
+  }
+};
+
 /**
  * base component dependencies
  */
 
 export const ComponentJSXTree: FC<ComponentJSXTreeProps> = ({ component }) => {
-  const [rows, setRows] = useState<TreeItems | undefined>([]);
-  const [expandCollapse, setExpandCollapse] = useState<{
-    canExpand: boolean;
-    canCollapse: boolean;
-  }>({ canExpand: false, canCollapse: false });
+  const [{ rows, canExpand, canCollapse, total }, dispatch] = useReducer(
+    reducer,
+    {
+      rows: undefined,
+      canExpand: false,
+      canCollapse: false,
+      total: 0,
+    },
+  );
   const componentPackage = usePackage(component?.package);
-  const { dependencies = {}, devDependencies = {} } = componentPackage || {};
+
   const updateStats = (items?: TreeItems) => {
     const { total, expanded } = getTreeItemsStats(items || []);
-    setExpandCollapse({
-      canExpand: expanded < total,
-      canCollapse: expanded > 0,
+    dispatch({
+      type: ACTIONS.SET_STATS,
+      data: {
+        total,
+        canExpand: expanded < total,
+        canCollapse: expanded > 0,
+      },
     });
   };
   useEffect(() => {
     const { jsx } = component || {};
+    const { dependencies, devDependencies } = componentPackage || {};
     const treeToItems = (
       tree: JSXTree,
       level: number,
@@ -67,13 +120,12 @@ export const ComponentJSXTree: FC<ComponentJSXTreeProps> = ({ component }) => {
         : undefined;
     };
     const newRows = jsx ? treeToItems(jsx, 0) : undefined;
-    setRows(newRows);
+    dispatch({ type: ACTIONS.SET, data: { rows: newRows } });
     updateStats(newRows);
-  }, [component, dependencies, devDependencies]);
-
+  }, [component, componentPackage]);
   const actions = useMemo(() => {
     const actions = [];
-    if (expandCollapse.canCollapse) {
+    if (canCollapse) {
       actions.push({
         id: 'collapse_all',
         node: 'collapse all',
@@ -81,13 +133,13 @@ export const ComponentJSXTree: FC<ComponentJSXTreeProps> = ({ component }) => {
         onClick: () => {
           if (rows) {
             const collapsed = expandTreeItems(rows, false);
-            setRows(collapsed);
+            dispatch({ type: ACTIONS.SET, data: { rows: collapsed } });
             updateStats(collapsed);
           }
         },
       });
     }
-    if (expandCollapse.canExpand) {
+    if (canExpand) {
       actions.push({
         id: 'expand_all',
         node: 'expand all',
@@ -95,18 +147,24 @@ export const ComponentJSXTree: FC<ComponentJSXTreeProps> = ({ component }) => {
         onClick: () => {
           if (rows) {
             const expanded = expandTreeItems(rows, true);
-            setRows(expanded);
+            dispatch({ type: ACTIONS.SET, data: { rows: expanded } });
             updateStats(expanded);
           }
         },
       });
     }
     return actions;
-  }, [rows, expandCollapse]);
-  const onExpandCollapse = useCallback(
-    (items: TreeItems) => updateStats(items),
-    [],
-  );
+  }, [rows, canExpand, canCollapse]);
+  const onExpandCollapse = (expandedCount: number) => {
+    dispatch({
+      type: ACTIONS.SET_STATS,
+      data: {
+        total,
+        canExpand: expandedCount < total,
+        canCollapse: expandedCount > 0,
+      },
+    });
+  };
   return rows ? (
     <ActionContainer actions={actions}>
       <Tree

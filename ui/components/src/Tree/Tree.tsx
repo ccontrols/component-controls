@@ -83,6 +83,9 @@ export const Tree: FC<TreeProps> = ({
       ...state,
       expandedItems: newExpandedItems,
     });
+    if (typeof onExpandCollapse === 'function') {
+      onExpandCollapse(newExpandedItems.length);
+    }
   };
 
   const renderItem = (item: TreeItem, level = 0) => {
@@ -125,9 +128,6 @@ export const Tree: FC<TreeProps> = ({
                 if (itemItems) {
                   e.stopPropagation();
                   onMenuChange(item, isExpanded);
-                  if (typeof onExpandCollapse === 'function') {
-                    onExpandCollapse(items, item, isExpanded);
-                  }
                 } else if (typeof onSelect === 'function') {
                   onSelect(item);
                 }
