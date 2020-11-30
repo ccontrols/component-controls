@@ -65,7 +65,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.44.0",
+    "version": "1.44.1",
   },
 }
 `;
@@ -135,7 +135,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.44.0",
+    "version": "1.44.1",
   },
 }
 `;
@@ -269,7 +269,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.44.0",
+    "version": "1.44.1",
   },
 }
 `;
@@ -320,7 +320,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.44.0",
+    "version": "1.44.1",
   },
 }
 `;
@@ -373,7 +373,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.44.0",
+    "version": "1.44.1",
   },
 }
 `;
@@ -443,7 +443,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.44.0",
+    "version": "1.44.1",
   },
 }
 `;
@@ -542,7 +542,7 @@ Object {
       "theme-ui": "^0.4.0-rc.1",
     },
     "devDependencies": Object {
-      "@component-controls/jest-snapshots": "^1.44.0",
+      "@component-controls/jest-snapshots": "^1.44.1",
       "@component-controls/ts-markdown-docs": "^1.37.0",
       "@theme-ui/css": "^0.4.0-rc.1",
       "@types/markdown-to-jsx": "^6.11.0",
@@ -567,7 +567,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.44.0",
+    "version": "1.44.1",
   },
 }
 `;
@@ -648,7 +648,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.44.0",
+    "version": "1.44.1",
   },
 }
 `;
@@ -718,7 +718,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.44.0",
+    "version": "1.44.1",
   },
 }
 `;
