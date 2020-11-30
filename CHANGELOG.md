@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.44.1](https://github.com/ccontrols/component-controls/compare/v1.44.0...v1.44.1) (2020-11-30)
+
+
+### Bug Fixes
+
+* tree collapse/expand ([70afbab](https://github.com/ccontrols/component-controls/commit/70afbab26041a3138cc016af38131acfaa163802))
+
+
+
+
+
 # [1.44.0](https://github.com/ccontrols/component-controls/compare/v1.43.0...v1.44.0) (2020-11-30)
 
 
