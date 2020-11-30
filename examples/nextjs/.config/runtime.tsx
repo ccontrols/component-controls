@@ -25,9 +25,9 @@ const config: RunOnlyConfiguration = {
         ...defaultRunConfig.pages.story.tabs,
         { title: 'Testing', render: () => <TestingPage /> },
       ],
-      sideNav: {
-        collapseSingle: false,
-      },
+      // sideNav: {
+      //   collapseSingle: false,
+      // },
     },
     tutorial: {
       label: 'Tutorial',
