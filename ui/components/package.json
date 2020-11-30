@@ -33,8 +33,8 @@
   "license": "MIT",
   "dependencies": {
     "@primer/octicons-react": "^10.0.0",
-    "@theme-ui/match-media": "^0.4.0-rc.1",
-    "@theme-ui/presets": "^0.4.0-rc.1",
+    "@theme-ui/match-media": "^0.5.0-alpha.1",
+    "@theme-ui/presets": "^0.5.0-alpha.1",
     "copy-to-clipboard": "^3.2.1",
     "fast-memoize": "^2.5.2",
     "markdown-to-jsx": "^6.11.0",
@@ -46,12 +46,12 @@
     "react-table": "^7.0.0",
     "react-tabs": "^3.1.0",
     "scroll-into-view-if-needed": "^2.2.25",
-    "theme-ui": "^0.4.0-rc.1"
+    "theme-ui": "^0.5.0-alpha.1"
   },
   "devDependencies": {
     "@component-controls/jest-snapshots": "^1.44.1",
     "@component-controls/ts-markdown-docs": "^1.37.0",
-    "@theme-ui/css": "^0.4.0-rc.1",
+    "@theme-ui/css": "^0.5.0-alpha.1",
     "@types/markdown-to-jsx": "^6.11.0",
     "@types/react": "^16.9.34",
     "@types/react-table": "^7.0.10",
@@ -63,7 +63,7 @@
     "typescript": "^4.0.5"
   },
   "peerDependencies": {
-    "@theme-ui/css": ">= 0.4.0-rc.1",
+    "@theme-ui/css": ">= 0.5.0-alpha.1",
     "react": "^16.8.0 || ^17",
     "react-dom": "^16.8.0 || ^17"
   },

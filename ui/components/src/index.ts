@@ -1,3 +1,12 @@
+import {} from 'react';
+import { ThemeUIStyleObject } from 'theme-ui';
+
+declare module 'react' {
+  interface Attributes {
+    sx?: ThemeUIStyleObject;
+  }
+}
+
 export * from './ActionBar';
 export * from './ActionContainer';
 export * from './BlockContainer';

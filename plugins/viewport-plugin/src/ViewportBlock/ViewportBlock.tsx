@@ -6,7 +6,11 @@ import {
   StoryBlockContainerProps,
 } from '@component-controls/blocks';
 import { useStory, StoryInputProps } from '@component-controls/store';
-import { ActionContainer, Multiselect } from '@component-controls/components';
+import {
+  ActionContainer,
+  Multiselect,
+  MultiselectItem,
+} from '@component-controls/components';
 import { ViewportBox } from './ViewportBox';
 
 export interface ViewportBlockOwnProps {
@@ -40,7 +44,7 @@ export const ViewportBlock: FC<ViewportBlockProps> = ({
                   label: name,
                   selected: visible[name] !== 0,
                 }))}
-                onChange={item => {
+                onChange={(item: MultiselectItem) => {
                   setVisible({
                     ...visible,
                     [item.label]: visible[item.label] ? 0 : sizes[item.label],
