@@ -3659,13 +3659,6 @@ A hint could be a sample value or a brief description of the expected format.",
         "raw": "string",
       },
     },
-    "css": Object {
-      "parentName": "DOMAttributes",
-      "type": Object {
-        "name": "InterpolationWithTheme<any>",
-        "raw": "InterpolationWithTheme<any>",
-      },
-    },
     "dangerouslySetInnerHTML": Object {
       "parentName": "DOMAttributes",
       "type": Object {
@@ -5643,30 +5636,6 @@ A hint could be a sample value or a brief description of the expected format.",
         "raw": "boolean",
       },
     },
-    "sx": Object {
-      "description": "The sx prop lets you style elements inline, using values from your
-theme. To use the sx prop, add the custom pragma as a comment to the
-top of your module and import the jsx function.
-
-\`\`\`ts
-// @jsx jsx
-
-import { jsx } from 'theme-ui'
-\`\`\`",
-      "parentName": "SxProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ThemeUICSSObject | ThemeDerivedStyles",
-        "value": Array [
-          Object {
-            "name": "ThemeUICSSObject",
-          },
-          Object {
-            "name": "ThemeDerivedStyles",
-          },
-        ],
-      },
-    },
     "tabIndex": Object {
       "parentName": "TabProps",
       "type": Object {
@@ -6822,13 +6791,6 @@ A hint could be a sample value or a brief description of the expected format.",
       "type": Object {
         "name": "string",
         "raw": "string",
-      },
-    },
-    "css": Object {
-      "parentName": "DOMAttributes",
-      "type": Object {
-        "name": "InterpolationWithTheme<any>",
-        "raw": "InterpolationWithTheme<any>",
       },
     },
     "dangerouslySetInnerHTML": Object {
@@ -8794,30 +8756,6 @@ A hint could be a sample value or a brief description of the expected format.",
         "raw": "boolean",
       },
     },
-    "sx": Object {
-      "description": "The sx prop lets you style elements inline, using values from your
-theme. To use the sx prop, add the custom pragma as a comment to the
-top of your module and import the jsx function.
-
-\`\`\`ts
-// @jsx jsx
-
-import { jsx } from 'theme-ui'
-\`\`\`",
-      "parentName": "SxProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ThemeUICSSObject | ThemeDerivedStyles",
-        "value": Array [
-          Object {
-            "name": "ThemeUICSSObject",
-          },
-          Object {
-            "name": "ThemeDerivedStyles",
-          },
-        ],
-      },
-    },
     "tabIndex": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
@@ -9973,13 +9911,6 @@ A hint could be a sample value or a brief description of the expected format.",
       "type": Object {
         "name": "string",
         "raw": "string",
-      },
-    },
-    "css": Object {
-      "parentName": "DOMAttributes",
-      "type": Object {
-        "name": "InterpolationWithTheme<any>",
-        "raw": "InterpolationWithTheme<any>",
       },
     },
     "dangerouslySetInnerHTML": Object {
@@ -11959,30 +11890,6 @@ A hint could be a sample value or a brief description of the expected format.",
         "raw": "boolean",
       },
     },
-    "sx": Object {
-      "description": "The sx prop lets you style elements inline, using values from your
-theme. To use the sx prop, add the custom pragma as a comment to the
-top of your module and import the jsx function.
-
-\`\`\`ts
-// @jsx jsx
-
-import { jsx } from 'theme-ui'
-\`\`\`",
-      "parentName": "SxProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ThemeUICSSObject | ThemeDerivedStyles",
-        "value": Array [
-          Object {
-            "name": "ThemeUICSSObject",
-          },
-          Object {
-            "name": "ThemeDerivedStyles",
-          },
-        ],
-      },
-    },
     "tabIndex": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
@@ -13138,13 +13045,6 @@ A hint could be a sample value or a brief description of the expected format.",
       "type": Object {
         "name": "string",
         "raw": "string",
-      },
-    },
-    "css": Object {
-      "parentName": "DOMAttributes",
-      "type": Object {
-        "name": "InterpolationWithTheme<any>",
-        "raw": "InterpolationWithTheme<any>",
       },
     },
     "dangerouslySetInnerHTML": Object {
@@ -15173,30 +15073,6 @@ A hint could be a sample value or a brief description of the expected format.",
       "type": Object {
         "name": "boolean",
         "raw": "boolean",
-      },
-    },
-    "sx": Object {
-      "description": "The sx prop lets you style elements inline, using values from your
-theme. To use the sx prop, add the custom pragma as a comment to the
-top of your module and import the jsx function.
-
-\`\`\`ts
-// @jsx jsx
-
-import { jsx } from 'theme-ui'
-\`\`\`",
-      "parentName": "SxProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ThemeUICSSObject | ThemeDerivedStyles",
-        "value": Array [
-          Object {
-            "name": "ThemeUICSSObject",
-          },
-          Object {
-            "name": "ThemeDerivedStyles",
-          },
-        ],
       },
     },
     "tabIndex": Object {

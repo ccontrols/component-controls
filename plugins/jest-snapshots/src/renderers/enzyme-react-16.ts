@@ -1,6 +1,6 @@
 import { mount, configure } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import Adapter from 'enzyme-adapter-react-16';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 
 import { Store } from '@component-controls/core';
 import { RendererFn } from '../index';

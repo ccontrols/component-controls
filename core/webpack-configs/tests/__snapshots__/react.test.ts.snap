@@ -29,7 +29,12 @@ Object {
                     "useBuiltIns": "usage",
                   },
                 ],
-                "@babel/preset-react",
+                Array [
+                  "@babel/preset-react",
+                  Object {
+                    "runtime": "automatic",
+                  },
+                ],
               ],
             },
           },

@@ -51,8 +51,8 @@ Object {
   "dependencies": Object {
     "@component-controls/gatsby-theme-stories": "^1.5.6",
     "gatsby": "^2.23.11",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
   },
   "devDependencies": undefined,
   "fileHash": "0bc18efa255647cb090a51f916107c24",
