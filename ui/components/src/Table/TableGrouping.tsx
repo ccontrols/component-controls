@@ -1,6 +1,7 @@
 /* eslint-disable react/display-name */
 /* eslint-disable react/jsx-key */
-import React, { useMemo } from 'react';
+/** @jsx jsx */
+import { useMemo } from 'react';
 import {
   TableState,
   UseGroupByState,
@@ -8,7 +9,7 @@ import {
   UseExpandedRowProps,
   UseTableRowProps,
 } from 'react-table';
-import { Flex, Text } from 'theme-ui';
+import { jsx, Flex, Text } from 'theme-ui';
 import { ChevronRightIcon, ChevronDownIcon } from '@primer/octicons-react';
 
 type GroupByState = TableState &
