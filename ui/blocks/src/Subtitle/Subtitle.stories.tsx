@@ -1,17 +1,14 @@
 import React from 'react';
-import { Example } from '@component-controls/core';
+import { Document, Example } from '@component-controls/core';
 import { Subtitle } from '.';
-import { MockContext } from '../test/MockContext';
+import { mockDecorators } from '../test/MockContext';
 
 export default {
   title: 'Blocks/Subtitle',
   component: Subtitle,
-};
+  decorators: mockDecorators,
+} as Document;
 
-export const overview: Example = () => (
-  <MockContext storyId="id-of-story">
-    <Subtitle />
-  </MockContext>
-);
+export const overview: Example = () => <Subtitle />;
 
 overview.subtitle = 'This is subtitle';

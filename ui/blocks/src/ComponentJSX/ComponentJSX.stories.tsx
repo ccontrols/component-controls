@@ -1,15 +1,12 @@
 import React from 'react';
-import { Example } from '@component-controls/core';
+import { Document, Example } from '@component-controls/core';
 import { ComponentJSX } from './ComponentJSX';
-import { MockContext } from '../test/MockContext';
+import { mockDecorators } from '../test/MockContext';
 
 export default {
   title: 'Blocks/ComponentJSX',
   component: ComponentJSX,
-};
+  decorators: mockDecorators,
+} as Document;
 
-export const overview: Example = () => (
-  <MockContext storyId="id-of-story">
-    <ComponentJSX />
-  </MockContext>
-);
+export const overview: Example = () => <ComponentJSX />;

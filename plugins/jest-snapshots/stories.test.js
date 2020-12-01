@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 const { act } = require('react-dom/test-utils');
 const { loadStore } = require('@component-controls/store');
 const { getBundleName } = require('@component-controls/webpack-compile');
@@ -22,7 +23,6 @@ Object.keys(store.docs).forEach(docId => {
     describe(doc.title, () => {
       beforeAll(() => {
         jest.mock('rc-util/lib/Portal');
-        //@ts-ignore
         global.MutationObserver = class {
           constructor() {}
           disconnect() {}

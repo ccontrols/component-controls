@@ -1,13 +1,14 @@
 import React from 'react';
-import { Example } from '@component-controls/core';
+import { Document, Example } from '@component-controls/core';
 import { useDocument, useDocumentPath } from '@component-controls/store';
 import { DocumentItem } from '.';
-import { MockContext } from '../test/MockContext';
+import { mockDecorators } from '../test/MockContext';
 
 export default {
   title: 'Blocks/DocumentItem',
   component: DocumentItem,
-};
+  decorators: mockDecorators,
+} as Document;
 
 export const overview: Example = () => {
   const Story = () => {
@@ -18,9 +19,5 @@ export const overview: Example = () => {
     }
     return null;
   };
-  return (
-    <MockContext storyId="id-of-story">
-      <Story />
-    </MockContext>
-  );
+  return <Story />;
 };

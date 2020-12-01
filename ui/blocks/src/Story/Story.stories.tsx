@@ -1,43 +1,31 @@
 import React from 'react';
-import { Example } from '@component-controls/core';
+import { Document, Example } from '@component-controls/core';
 import { Story } from './Story';
-import { MockContext } from '../test/MockContext';
+import { makeDecorators } from '../test/MockContext';
+
 export default {
   title: 'Blocks/Story',
   component: Story,
-};
+} as Document;
 
-export const overview: Example = () => (
-  <MockContext storyId="blocks-core-story-plain--controls">
-    <Story id="." />
-  </MockContext>
-);
+export const overview: Example = () => <Story id="." />;
+overview.decorators = makeDecorators('blocks-core-story-plain--controls');
 
-export const title: Example = () => (
-  <MockContext storyId="blocks-core-story-plain--controls">
-    <Story title="." id="." />
-  </MockContext>
-);
+export const title: Example = () => <Story title="." id="." />;
+title.decorators = makeDecorators('blocks-core-story-plain--controls');
 
 export const customTitle: Example = () => (
-  <MockContext storyId="blocks-core-story-plain--controls">
-    <Story title="My Story Title" id="." />
-  </MockContext>
+  <Story title="My Story Title" id="." />
 );
+customTitle.decorators = makeDecorators('blocks-core-story-plain--controls');
+
 export const notCollapsible: Example = () => (
-  <MockContext storyId="blocks-core-story-plain--controls">
-    <Story title="." collapsible={false} />
-  </MockContext>
+  <Story title="." collapsible={false} />
 );
+notCollapsible.decorators = makeDecorators('blocks-core-story-plain--controls');
 
-export const description: Example = () => (
-  <MockContext storyId="id-of-story">
-    <Story id="." />
-  </MockContext>
-);
+export const description: Example = () => <Story id="." />;
+description.decorators = makeDecorators('id-of-story');
 
-export const iframe: Example = () => (
-  <MockContext storyId="blocks-core-story-plain--controls">
-    <Story id="." wrapper="iframe" />
-  </MockContext>
-);
+export const iframe: Example = () => <Story id="." wrapper="iframe" />;
+iframe.decorators = makeDecorators('blocks-core-story-plain--controls');

@@ -83,7 +83,9 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
               story.id = story.id || story.name;
               //storybook compat
               story.controls = story.controls || (story as any).args;
-              Object.assign(story, deepMerge(docStoryProps, story));
+              if (!building) {
+                Object.assign(story, deepMerge(docStoryProps, story));
+              }
               story.controls = getControls(story, doc, loadedComponents);
               if (doc.title && story.id) {
                 const id = docStoryToId(doc.title, story.id);

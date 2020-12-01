@@ -1,15 +1,12 @@
 import React from 'react';
-import { Example } from '@component-controls/core';
-import { MockContext } from '@component-controls/blocks';
+import { Document, Example } from '@component-controls/core';
+import { mockDecorators } from '@component-controls/blocks';
 import { Container } from './Container';
 
 export default {
   title: 'Application/Container',
   component: Container,
-};
+  decorators: mockDecorators,
+} as Document;
 
-export const overview: Example = () => (
-  <MockContext storyId="id-of-story">
-    <Container />
-  </MockContext>
-);
+export const overview: Example = () => <Container />;

@@ -1,15 +1,13 @@
 /* eslint-disable react/display-name */
 import React from 'react';
-import { Example } from '@component-controls/core';
+import { Document, Example } from '@component-controls/core';
 import { Pagination } from './Pagination';
-import { MockContext } from '../test/MockContext';
+import { mockDecorators } from '../test/MockContext';
+
 export default {
   title: 'Blocks/Pagination',
   component: Pagination,
-};
+  decorators: mockDecorators,
+} as Document;
 
-export const overview: Example = () => (
-  <MockContext id="id-of-story">
-    <Pagination />
-  </MockContext>
-);
+export const overview: Example = () => <Pagination />;

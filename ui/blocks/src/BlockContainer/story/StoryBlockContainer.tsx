@@ -19,7 +19,7 @@ export const StoryBlockContainer: FC<StoryBlockContainerAllProps> = ({
   story,
   collapsible,
   title: userTitle,
-  sxStyle,
+  sx,
   children,
   useStoryDescription,
   description: userDescription,
@@ -39,7 +39,7 @@ export const StoryBlockContainer: FC<StoryBlockContainerAllProps> = ({
       title={title}
       collapsible={collapsible}
       id={userTitle === CURRENT_STORY && story ? story.id : undefined}
-      sxStyle={sxStyle}
+      sx={sx}
       description={description}
       plain={true}
     >

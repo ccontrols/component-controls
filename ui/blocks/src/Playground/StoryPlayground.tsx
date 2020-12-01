@@ -32,7 +32,7 @@ export const StoryPlayground: FC<StoryPlaygroundProps> = ({
     panel: (
       <StorySource
         sourceProps={{ dark: isDark }}
-        sxStyle={{ mt: 0, mb: 0 }}
+        sx={{ mt: 0, mb: 0 }}
         id={storyId}
       />
     ),
@@ -45,7 +45,7 @@ export const StoryPlayground: FC<StoryPlaygroundProps> = ({
     panel: (
       <StoryConfig
         sourceProps={{ dark: isDark }}
-        sxStyle={{ mt: 0, mb: 0 }}
+        sx={{ mt: 0, mb: 0 }}
         id={storyId}
       />
     ),

@@ -32,7 +32,7 @@ export interface BlockContainerProps {
   /**
    * theme-ui styling object for Block Box
    */
-  sxStyle?: SxStyleProp;
+  sx?: SxStyleProp;
 
   /**
    * testing id
@@ -54,7 +54,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
   id,
   description,
   collapsible = true,
-  sxStyle,
+  sx,
   plain = false,
   ...rest
 }) => {
@@ -66,7 +66,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
     children
   );
   return (
-    <Box variant="blockcontainer.container" sx={sxStyle} {...rest}>
+    <Box variant="blockcontainer.container" sx={sx} {...rest}>
       {(blockId || title || collapsible) && (
         <LinkHeading
           as={collapsible ? 'h3' : 'h4'}

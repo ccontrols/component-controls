@@ -1,4 +1,5 @@
 import React, { FC, ComponentType } from 'react';
+import { Document } from '@component-controls/core';
 import { BlockContextProvider } from '../context';
 import { store } from './storyStore';
 
@@ -18,3 +19,16 @@ export const MockContext: FC<MockContexProps> = ({
     </BlockContextProvider>
   );
 };
+
+export const makeDecorators = (
+  storyId = 'id-of-story',
+  props?: Omit<MockContexProps, 'storyId'>,
+): Document['decorators'] => [
+  (controls, context) => (
+    <MockContext storyId={storyId} {...props}>
+      {context.renderFn(controls, context)}
+    </MockContext>
+  ),
+];
+
+export const mockDecorators: Document['decorators'] = makeDecorators();

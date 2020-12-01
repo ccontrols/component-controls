@@ -14,7 +14,7 @@ export const ViewportBox: FC<ViewportBoxProps> = ({
 }) => {
   return (
     <HoverBox label={sizeLabel}>
-      <Story id={storyId} sxStyle={{ mb: 0, minWidth: size }} />
+      <Story id={storyId} sx={{ mb: 0, minWidth: size }} />
     </HoverBox>
   );
 };

@@ -80,7 +80,7 @@ ie ally plugin uses it launch a new ally test on re-render",
         "raw": "((instance: HTMLDivElement | null) => void) | RefObject<HTMLDivElement> | null",
       },
     },
-    "sxStyle": Object {
+    "sx": Object {
       "description": "theme-ui styling object for Block Box",
       "parentName": "BlockContainerProps",
       "type": Object {

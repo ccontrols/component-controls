@@ -25,7 +25,6 @@ export interface DocumentItemProps {
 
   sx?: SxStyleProp;
 }
-
 /**
  * displays a single doument item
  */
