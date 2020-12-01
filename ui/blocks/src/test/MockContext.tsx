@@ -13,8 +13,9 @@ export const MockContext: FC<MockContexProps> = ({
   children,
   storyId = 'id-of-story',
 }) => {
+  const docId = store.stories[storyId]?.doc;
   return (
-    <BlockContextProvider storyId={storyId} store={store}>
+    <BlockContextProvider storyId={storyId} store={store} docId={docId}>
       {children}
     </BlockContextProvider>
   );
