@@ -39,7 +39,7 @@
     "@component-controls/app": "^1.44.1",
     "@component-controls/webpack-compile": "^1.44.1",
     "@component-controls/webpack-configs": "^1.44.1",
-    "next": "^9.5.0"
+    "next": "^10.0.3"
   },
   "devDependencies": {
     "@component-controls/logger": "^1.37.0",

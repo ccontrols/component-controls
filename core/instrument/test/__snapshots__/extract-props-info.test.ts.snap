@@ -864,6 +864,27 @@ A hint could be a sample value or a brief description of the expected format.",
         "raw": "string",
       },
     },
+    "backgroundColor": Object {
+      "parentName": "BackgroundColorProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+      },
+    },
+    "bg": Object {
+      "description": "The color utility parses a component's \`color\` and \`bg\` props and converts them into CSS declarations.
+By default the raw value of the prop is returned.
+
+Color palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation.
+Array values are converted into responsive values.
+
+[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color)",
+      "parentName": "BackgroundColorProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+      },
+    },
     "className": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
@@ -880,6 +901,13 @@ A hint could be a sample value or a brief description of the expected format.",
       },
     },
     "color": Object {
+      "description": "The color utility parses a component's \`color\` and \`bg\` props and converts them into CSS declarations.
+By default the raw value of the prop is returned.
+
+Color palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation.
+Array values are converted into responsive values.
+
+[MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/color)",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
@@ -1208,6 +1236,102 @@ from the title.",
       "type": Object {
         "name": "string",
         "raw": "string",
+      },
+    },
+    "m": Object {
+      "description": "Margin on top, left, bottom and right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+      },
+    },
+    "margin": Object {
+      "description": "Margin on top, left, bottom and right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+      },
+    },
+    "marginBottom": Object {
+      "description": "Margin on bottom",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+      },
+    },
+    "marginLeft": Object {
+      "description": "Margin on left",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+      },
+    },
+    "marginRight": Object {
+      "description": "Margin on right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+      },
+    },
+    "marginTop": Object {
+      "description": "Margin on top",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+      },
+    },
+    "mb": Object {
+      "description": "Margin on bottom",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+      },
+    },
+    "ml": Object {
+      "description": "Margin on left",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+      },
+    },
+    "mr": Object {
+      "description": "Margin on right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+      },
+    },
+    "mt": Object {
+      "description": "Margin on top",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+      },
+    },
+    "mx": Object {
+      "description": "Margin on left and right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+      },
+    },
+    "my": Object {
+      "description": "Margin on top and bottom",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
       },
     },
     "name": Object {
@@ -2357,11 +2481,91 @@ if the function returns false, it can stop chabging to the new tab",
         "raw": "((event: WheelEvent<HTMLDivElement>) => void)",
       },
     },
+    "p": Object {
+      "description": "Padding on top, left, bottom and right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+      },
+    },
+    "padding": Object {
+      "description": "Padding on top, left, bottom and right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+      },
+    },
+    "paddingBottom": Object {
+      "description": "Padding on bottom",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+      },
+    },
+    "paddingLeft": Object {
+      "description": "Padding on left",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+      },
+    },
+    "paddingRight": Object {
+      "description": "Padding on right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+      },
+    },
+    "paddingTop": Object {
+      "description": "Padding on top",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+      },
+    },
+    "pb": Object {
+      "description": "Padding on bottom",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+      },
+    },
+    "pl": Object {
+      "description": "Padding on left",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+      },
+    },
     "placeholder": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
         "raw": "string",
+      },
+    },
+    "plain": Object {
+      "description": "inner container variant. default to 'inner' to display a border and shadow",
+      "parentName": "BlockContainerProps",
+      "type": Object {
+        "name": "boolean",
+        "raw": "boolean",
+      },
+    },
+    "pr": Object {
+      "description": "Padding on right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
       },
     },
     "prefix": Object {
@@ -2376,6 +2580,30 @@ if the function returns false, it can stop chabging to the new tab",
       "type": Object {
         "name": "string",
         "raw": "string",
+      },
+    },
+    "pt": Object {
+      "description": "Padding on top",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+      },
+    },
+    "px": Object {
+      "description": "Padding on left and right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+      },
+    },
+    "py": Object {
+      "description": "Padding on top and bottom",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
       },
     },
     "radioGroup": Object {
@@ -2498,7 +2726,8 @@ if the function returns false, it can stop chabging to the new tab",
       },
     },
     "sx": Object {
-      "description": "The sx prop lets you style elements inline, using values from your
+      "description": "theme-ui styling object for Block Box
+The sx prop lets you style elements inline, using values from your
 theme. To use the sx prop, add the custom pragma as a comment to the
 top of your module and import the jsx function.
 
@@ -2507,22 +2736,6 @@ top of your module and import the jsx function.
 
 import { jsx } from 'theme-ui'
 \`\`\`",
-      "parentName": "SxProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ThemeUICSSObject | ThemeDerivedStyles",
-        "value": Array [
-          Object {
-            "name": "ThemeUICSSObject",
-          },
-          Object {
-            "name": "ThemeDerivedStyles",
-          },
-        ],
-      },
-    },
-    "sxStyle": Object {
-      "description": "theme-ui styling object for Block Box",
       "parentName": "BlockContainerProps",
       "type": Object {
         "name": "union",
@@ -3657,6 +3870,13 @@ A hint could be a sample value or a brief description of the expected format.",
       "type": Object {
         "name": "string",
         "raw": "string",
+      },
+    },
+    "css": Object {
+      "parentName": "DOMAttributes",
+      "type": Object {
+        "name": "InterpolationWithTheme<any>",
+        "raw": "InterpolationWithTheme<any>",
       },
     },
     "dangerouslySetInnerHTML": Object {
@@ -5636,6 +5856,30 @@ A hint could be a sample value or a brief description of the expected format.",
         "raw": "boolean",
       },
     },
+    "sx": Object {
+      "description": "The sx prop lets you style elements inline, using values from your
+theme. To use the sx prop, add the custom pragma as a comment to the
+top of your module and import the jsx function.
+
+\`\`\`ts
+// @jsx jsx
+
+import { jsx } from 'theme-ui'
+\`\`\`",
+      "parentName": "SxProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ThemeUICSSObject | ThemeDerivedStyles",
+        "value": Array [
+          Object {
+            "name": "ThemeUICSSObject",
+          },
+          Object {
+            "name": "ThemeDerivedStyles",
+          },
+        ],
+      },
+    },
     "tabIndex": Object {
       "parentName": "TabProps",
       "type": Object {
@@ -6791,6 +7035,13 @@ A hint could be a sample value or a brief description of the expected format.",
       "type": Object {
         "name": "string",
         "raw": "string",
+      },
+    },
+    "css": Object {
+      "parentName": "DOMAttributes",
+      "type": Object {
+        "name": "InterpolationWithTheme<any>",
+        "raw": "InterpolationWithTheme<any>",
       },
     },
     "dangerouslySetInnerHTML": Object {
@@ -8756,6 +9007,30 @@ A hint could be a sample value or a brief description of the expected format.",
         "raw": "boolean",
       },
     },
+    "sx": Object {
+      "description": "The sx prop lets you style elements inline, using values from your
+theme. To use the sx prop, add the custom pragma as a comment to the
+top of your module and import the jsx function.
+
+\`\`\`ts
+// @jsx jsx
+
+import { jsx } from 'theme-ui'
+\`\`\`",
+      "parentName": "SxProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ThemeUICSSObject | ThemeDerivedStyles",
+        "value": Array [
+          Object {
+            "name": "ThemeUICSSObject",
+          },
+          Object {
+            "name": "ThemeDerivedStyles",
+          },
+        ],
+      },
+    },
     "tabIndex": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
@@ -9911,6 +10186,13 @@ A hint could be a sample value or a brief description of the expected format.",
       "type": Object {
         "name": "string",
         "raw": "string",
+      },
+    },
+    "css": Object {
+      "parentName": "DOMAttributes",
+      "type": Object {
+        "name": "InterpolationWithTheme<any>",
+        "raw": "InterpolationWithTheme<any>",
       },
     },
     "dangerouslySetInnerHTML": Object {
@@ -11890,6 +12172,30 @@ A hint could be a sample value or a brief description of the expected format.",
         "raw": "boolean",
       },
     },
+    "sx": Object {
+      "description": "The sx prop lets you style elements inline, using values from your
+theme. To use the sx prop, add the custom pragma as a comment to the
+top of your module and import the jsx function.
+
+\`\`\`ts
+// @jsx jsx
+
+import { jsx } from 'theme-ui'
+\`\`\`",
+      "parentName": "SxProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ThemeUICSSObject | ThemeDerivedStyles",
+        "value": Array [
+          Object {
+            "name": "ThemeUICSSObject",
+          },
+          Object {
+            "name": "ThemeDerivedStyles",
+          },
+        ],
+      },
+    },
     "tabIndex": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
@@ -13045,6 +13351,13 @@ A hint could be a sample value or a brief description of the expected format.",
       "type": Object {
         "name": "string",
         "raw": "string",
+      },
+    },
+    "css": Object {
+      "parentName": "DOMAttributes",
+      "type": Object {
+        "name": "InterpolationWithTheme<any>",
+        "raw": "InterpolationWithTheme<any>",
       },
     },
     "dangerouslySetInnerHTML": Object {
@@ -15073,6 +15386,30 @@ A hint could be a sample value or a brief description of the expected format.",
       "type": Object {
         "name": "boolean",
         "raw": "boolean",
+      },
+    },
+    "sx": Object {
+      "description": "The sx prop lets you style elements inline, using values from your
+theme. To use the sx prop, add the custom pragma as a comment to the
+top of your module and import the jsx function.
+
+\`\`\`ts
+// @jsx jsx
+
+import { jsx } from 'theme-ui'
+\`\`\`",
+      "parentName": "SxProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ThemeUICSSObject | ThemeDerivedStyles",
+        "value": Array [
+          Object {
+            "name": "ThemeUICSSObject",
+          },
+          Object {
+            "name": "ThemeDerivedStyles",
+          },
+        ],
       },
     },
     "tabIndex": Object {

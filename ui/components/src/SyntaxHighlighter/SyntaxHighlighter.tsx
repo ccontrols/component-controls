@@ -2,7 +2,7 @@
 /* eslint react/jsx-key: 0 */
 import { jsx, Heading } from 'theme-ui';
 import { FC, Fragment, CSSProperties, ElementType } from 'react';
-import { Styled, Box, useColorMode } from 'theme-ui';
+import { Themed, Box, useColorMode } from 'theme-ui';
 import Highlight, {
   defaultProps,
   PrismTheme,
@@ -110,7 +110,7 @@ export const SyntaxHighlighter: FC<SyntaxHighlighterProps> = ({
                 {title}
               </Heading>
             )}
-            <Styled.pre
+            <Themed.pre
               className={`${className}`}
               style={{
                 ...style,
@@ -139,7 +139,7 @@ export const SyntaxHighlighter: FC<SyntaxHighlighterProps> = ({
                   </Box>
                 );
               })}
-            </Styled.pre>
+            </Themed.pre>
           </Fragment>
         );
   const props = { ...defaultProps, theme };

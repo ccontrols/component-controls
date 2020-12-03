@@ -1,6 +1,6 @@
 import React from 'react';
 import NextApp from 'next/app';
-import { CacheProvider } from '@emotion/core';
+import { CacheProvider } from '@emotion/react';
 
 // Use only { cache } from 'emotion'. Don't use { css }.
 import { cache } from 'emotion';

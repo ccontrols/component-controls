@@ -53,16 +53,16 @@ exports[`Application/App Overview 1`] = `
             class="css-f5h6sg"
           >
             <div
-              class="css-1rw838x"
+              class="css-ldwe25"
             >
               <a
                 aria-label="Component controls"
-                class="css-1vsogol-LogoLink"
+                class="css-881li9-LogoLink"
                 href="/"
               />
               <a
                 aria-label="Component controls"
-                class="css-1vsogol-LogoLink"
+                class="css-881li9-LogoLink"
                 href="/"
               >
                 <img
@@ -85,23 +85,23 @@ exports[`Application/App Overview 1`] = `
             class="css-f5h6sg"
           >
             <div
-              class="css-1rw838x"
+              class="css-ldwe25"
             >
               <div
                 class="css-12hibeq"
               >
                 <div
-                  class="css-nnvwbb-SearchInput"
+                  class="css-t2f9yn-SearchInput"
                 >
                   <input
                     aria-label="full text search"
-                    class="css-1aqyn14-SearchInput"
+                    class="css-19xk8th-SearchInput"
                     placeholder="search..."
                     value=""
                   />
                   <svg
                     aria-hidden="true"
-                    class="css-1f2hmcd-SearchInput"
+                    class="css-q4atzm-SearchInput"
                     fill="currentColor"
                     height="16"
                     role="img"
@@ -118,7 +118,7 @@ exports[`Application/App Overview 1`] = `
               </div>
             </div>
             <div
-              class="css-1229dh0"
+              class="css-vhp4dg"
             >
               <div
                 class="css-vurnku"
@@ -213,7 +213,7 @@ exports[`Application/App Overview 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-1rw838x"
+            class="css-ldwe25"
           >
             <div
               class="css-vurnku"
@@ -230,7 +230,7 @@ exports[`Application/App Overview 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-1rw838x"
+            class="css-ldwe25"
           >
             <a
               aria-label="visit project home page"
@@ -263,7 +263,7 @@ exports[`Application/AppError Overview 1`] = `
 exports[`Application/CategoryList Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-1nkee46"
+    class="css-rtbfsf"
     id="content"
   >
     <div
@@ -275,16 +275,108 @@ exports[`Application/CategoryList Overview 1`] = `
         <div
           class="css-1nu2k4w"
         >
-          <div />
+          <div
+            class="css-1h9kuou"
+          >
+            <a
+              aria-label="edit this page"
+              class="css-1t54e2w"
+              href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div
+                class="css-f5h6sg"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                <div
+                  class="css-6amu4j"
+                >
+                  Edit this page
+                </div>
+              </div>
+            </a>
+          </div>
           <div
             class="css-1hu569t"
-          />
+          >
+            <div
+              class="css-zf8zhj"
+            >
+              <div
+                class="css-13o2efz"
+              >
+                created:
+              </div>
+              <div
+                class="css-uv6qe8"
+              >
+                1/1/2020
+              </div>
+            </div>
+            <div
+              class="css-15qy1uq"
+            >
+              ,
+            </div>
+            <div
+              class="css-zf8zhj"
+            >
+              <div
+                class="css-13o2efz"
+              >
+                updated:
+              </div>
+              <div
+                class="css-uv6qe8"
+              >
+                3/31/2020
+              </div>
+            </div>
+            <div
+              class="css-lllzso"
+            >
+              <div
+                class="css-zf8zhj"
+              >
+                <div
+                  class="css-13o2efz"
+                >
+                  by
+                </div>
+                <div
+                  class="css-uv6qe8"
+                >
+                  <a
+                    class="css-1t54e2w"
+                    href="/authors/atanasster"
+                  >
+                    atanasster
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div
           class="css-hi5zbn"
         >
           <h1
-            class="css-9kctfa-Container"
+            class="css-11z6fnw-Container"
           >
             Story
           </h1>
@@ -332,7 +424,46 @@ exports[`Application/CategoryList Overview 1`] = `
             />
             <div
               class="css-vurnku"
-            />
+            >
+              <a
+                class="css-10zwoio"
+                href="/docs/mdx-story"
+              >
+                <div
+                  class="css-1my6hv5"
+                >
+                  <div
+                    class="css-c3r86m"
+                  >
+                    Next
+                  </div>
+                  <div
+                    class="css-9tifnv"
+                  >
+                    <div
+                      class="css-1s8umv4"
+                    >
+                      MDX Story
+                    </div>
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -344,7 +475,7 @@ exports[`Application/CategoryList Overview 1`] = `
 exports[`Application/CategoryPage Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-1nkee46"
+    class="css-rtbfsf"
     id="content"
   >
     <div
@@ -356,16 +487,108 @@ exports[`Application/CategoryPage Overview 1`] = `
         <div
           class="css-1nu2k4w"
         >
-          <div />
+          <div
+            class="css-1h9kuou"
+          >
+            <a
+              aria-label="edit this page"
+              class="css-1t54e2w"
+              href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div
+                class="css-f5h6sg"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                <div
+                  class="css-6amu4j"
+                >
+                  Edit this page
+                </div>
+              </div>
+            </a>
+          </div>
           <div
             class="css-1hu569t"
-          />
+          >
+            <div
+              class="css-zf8zhj"
+            >
+              <div
+                class="css-13o2efz"
+              >
+                created:
+              </div>
+              <div
+                class="css-uv6qe8"
+              >
+                1/1/2020
+              </div>
+            </div>
+            <div
+              class="css-15qy1uq"
+            >
+              ,
+            </div>
+            <div
+              class="css-zf8zhj"
+            >
+              <div
+                class="css-13o2efz"
+              >
+                updated:
+              </div>
+              <div
+                class="css-uv6qe8"
+              >
+                3/31/2020
+              </div>
+            </div>
+            <div
+              class="css-lllzso"
+            >
+              <div
+                class="css-zf8zhj"
+              >
+                <div
+                  class="css-13o2efz"
+                >
+                  by
+                </div>
+                <div
+                  class="css-uv6qe8"
+                >
+                  <a
+                    class="css-1t54e2w"
+                    href="/authors/atanasster"
+                  >
+                    atanasster
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div
           class="css-hi5zbn"
         >
           <h1
-            class="css-9kctfa-Container"
+            class="css-11z6fnw-Container"
           >
             Story
           </h1>
@@ -469,7 +692,7 @@ exports[`Application/CategoryPage Overview 1`] = `
                       href="/docs/"
                     >
                       <span
-                        class="css-pqmwqh-Tag"
+                        class="css-14znsfl-Tag"
                       >
                         <div
                           class="css-vurnku"
@@ -538,7 +761,7 @@ exports[`Application/CategoryPage Overview 1`] = `
                       href="/docs/"
                     >
                       <span
-                        class="css-pqmwqh-Tag"
+                        class="css-14znsfl-Tag"
                       >
                         <div
                           class="css-vurnku"
@@ -564,7 +787,46 @@ exports[`Application/CategoryPage Overview 1`] = `
             />
             <div
               class="css-vurnku"
-            />
+            >
+              <a
+                class="css-10zwoio"
+                href="/docs/mdx-story"
+              >
+                <div
+                  class="css-1my6hv5"
+                >
+                  <div
+                    class="css-c3r86m"
+                  >
+                    Next
+                  </div>
+                  <div
+                    class="css-9tifnv"
+                  >
+                    <div
+                      class="css-1s8umv4"
+                    >
+                      MDX Story
+                    </div>
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -584,16 +846,108 @@ exports[`Application/Container Overview 1`] = `
       <div
         class="css-1nu2k4w"
       >
-        <div />
+        <div
+          class="css-1h9kuou"
+        >
+          <a
+            aria-label="edit this page"
+            class="css-1t54e2w"
+            href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div
+              class="css-f5h6sg"
+            >
+              <svg
+                aria-hidden="true"
+                class="octicon"
+                fill="currentColor"
+                height="16"
+                role="img"
+                style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+              <div
+                class="css-6amu4j"
+              >
+                Edit this page
+              </div>
+            </div>
+          </a>
+        </div>
         <div
           class="css-1hu569t"
-        />
+        >
+          <div
+            class="css-zf8zhj"
+          >
+            <div
+              class="css-13o2efz"
+            >
+              created:
+            </div>
+            <div
+              class="css-uv6qe8"
+            >
+              1/1/2020
+            </div>
+          </div>
+          <div
+            class="css-15qy1uq"
+          >
+            ,
+          </div>
+          <div
+            class="css-zf8zhj"
+          >
+            <div
+              class="css-13o2efz"
+            >
+              updated:
+            </div>
+            <div
+              class="css-uv6qe8"
+            >
+              3/31/2020
+            </div>
+          </div>
+          <div
+            class="css-lllzso"
+          >
+            <div
+              class="css-zf8zhj"
+            >
+              <div
+                class="css-13o2efz"
+              >
+                by
+              </div>
+              <div
+                class="css-uv6qe8"
+              >
+                <a
+                  class="css-1t54e2w"
+                  href="/authors/atanasster"
+                >
+                  atanasster
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div
         class="css-hi5zbn"
       >
         <h1
-          class="css-9kctfa-Container"
+          class="css-11z6fnw-Container"
         >
           Story
         </h1>
@@ -614,7 +968,46 @@ exports[`Application/Container Overview 1`] = `
           />
           <div
             class="css-vurnku"
-          />
+          >
+            <a
+              class="css-10zwoio"
+              href="/docs/mdx-story"
+            >
+              <div
+                class="css-1my6hv5"
+              >
+                <div
+                  class="css-c3r86m"
+                >
+                  Next
+                </div>
+                <div
+                  class="css-9tifnv"
+                >
+                  <div
+                    class="css-1s8umv4"
+                  >
+                    MDX Story
+                  </div>
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -625,7 +1018,7 @@ exports[`Application/Container Overview 1`] = `
 exports[`Application/DocPage Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-8u2ol3"
+    class="css-8f52r4"
     id="content"
   >
     <div
@@ -637,16 +1030,108 @@ exports[`Application/DocPage Overview 1`] = `
         <div
           class="css-1nu2k4w"
         >
-          <div />
+          <div
+            class="css-1h9kuou"
+          >
+            <a
+              aria-label="edit this page"
+              class="css-1t54e2w"
+              href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div
+                class="css-f5h6sg"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                <div
+                  class="css-6amu4j"
+                >
+                  Edit this page
+                </div>
+              </div>
+            </a>
+          </div>
           <div
             class="css-1hu569t"
-          />
+          >
+            <div
+              class="css-zf8zhj"
+            >
+              <div
+                class="css-13o2efz"
+              >
+                created:
+              </div>
+              <div
+                class="css-uv6qe8"
+              >
+                1/1/2020
+              </div>
+            </div>
+            <div
+              class="css-15qy1uq"
+            >
+              ,
+            </div>
+            <div
+              class="css-zf8zhj"
+            >
+              <div
+                class="css-13o2efz"
+              >
+                updated:
+              </div>
+              <div
+                class="css-uv6qe8"
+              >
+                3/31/2020
+              </div>
+            </div>
+            <div
+              class="css-lllzso"
+            >
+              <div
+                class="css-zf8zhj"
+              >
+                <div
+                  class="css-13o2efz"
+                >
+                  by
+                </div>
+                <div
+                  class="css-uv6qe8"
+                >
+                  <a
+                    class="css-1t54e2w"
+                    href="/authors/atanasster"
+                  >
+                    atanasster
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div
           class="css-hi5zbn"
         >
           <h1
-            class="css-9kctfa-Container"
+            class="css-11z6fnw-Container"
           >
             Story
           </h1>
@@ -667,7 +1152,46 @@ exports[`Application/DocPage Overview 1`] = `
             />
             <div
               class="css-vurnku"
-            />
+            >
+              <a
+                class="css-10zwoio"
+                href="/docs/mdx-story"
+              >
+                <div
+                  class="css-1my6hv5"
+                >
+                  <div
+                    class="css-c3r86m"
+                  >
+                    Next
+                  </div>
+                  <div
+                    class="css-9tifnv"
+                  >
+                    <div
+                      class="css-1s8umv4"
+                    >
+                      MDX Story
+                    </div>
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -679,7 +1203,7 @@ exports[`Application/DocPage Overview 1`] = `
 exports[`Application/DocumentHomePage Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-1nkee46"
+    class="css-rtbfsf"
     id="content"
   >
     <div
@@ -691,16 +1215,108 @@ exports[`Application/DocumentHomePage Overview 1`] = `
         <div
           class="css-1nu2k4w"
         >
-          <div />
+          <div
+            class="css-1h9kuou"
+          >
+            <a
+              aria-label="edit this page"
+              class="css-1t54e2w"
+              href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div
+                class="css-f5h6sg"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                <div
+                  class="css-6amu4j"
+                >
+                  Edit this page
+                </div>
+              </div>
+            </a>
+          </div>
           <div
             class="css-1hu569t"
-          />
+          >
+            <div
+              class="css-zf8zhj"
+            >
+              <div
+                class="css-13o2efz"
+              >
+                created:
+              </div>
+              <div
+                class="css-uv6qe8"
+              >
+                1/1/2020
+              </div>
+            </div>
+            <div
+              class="css-15qy1uq"
+            >
+              ,
+            </div>
+            <div
+              class="css-zf8zhj"
+            >
+              <div
+                class="css-13o2efz"
+              >
+                updated:
+              </div>
+              <div
+                class="css-uv6qe8"
+              >
+                3/31/2020
+              </div>
+            </div>
+            <div
+              class="css-lllzso"
+            >
+              <div
+                class="css-zf8zhj"
+              >
+                <div
+                  class="css-13o2efz"
+                >
+                  by
+                </div>
+                <div
+                  class="css-uv6qe8"
+                >
+                  <a
+                    class="css-1t54e2w"
+                    href="/authors/atanasster"
+                  >
+                    atanasster
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div
           class="css-hi5zbn"
         >
           <h1
-            class="css-9kctfa-Container"
+            class="css-11z6fnw-Container"
           >
             Story
           </h1>
@@ -779,7 +1395,46 @@ exports[`Application/DocumentHomePage Overview 1`] = `
             />
             <div
               class="css-vurnku"
-            />
+            >
+              <a
+                class="css-10zwoio"
+                href="/docs/mdx-story"
+              >
+                <div
+                  class="css-1my6hv5"
+                >
+                  <div
+                    class="css-c3r86m"
+                  >
+                    Next
+                  </div>
+                  <div
+                    class="css-9tifnv"
+                  >
+                    <div
+                      class="css-1s8umv4"
+                    >
+                      MDX Story
+                    </div>
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -858,7 +1513,7 @@ exports[`Application/Footer Overview 1`] = `
         class="css-f5h6sg"
       >
         <div
-          class="css-1rw838x"
+          class="css-ldwe25"
         >
           <div
             class="css-vurnku"
@@ -875,7 +1530,7 @@ exports[`Application/Footer Overview 1`] = `
         class="css-f5h6sg"
       >
         <div
-          class="css-1rw838x"
+          class="css-ldwe25"
         >
           <a
             aria-label="visit project home page"
@@ -906,16 +1561,16 @@ exports[`Application/Header Custom Left 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-1rw838x"
+            class="css-ldwe25"
           >
             <a
               aria-label="Component controls"
-              class="css-1vsogol-LogoLink"
+              class="css-881li9-LogoLink"
               href="/"
             />
             <a
               aria-label="Component controls"
-              class="css-1vsogol-LogoLink"
+              class="css-881li9-LogoLink"
               href="/"
             >
               <img
@@ -926,7 +1581,7 @@ exports[`Application/Header Custom Left 1`] = `
             </a>
           </div>
           <div
-            class="css-1229dh0"
+            class="css-vhp4dg"
           >
             <button
               class="css-1tf4h46"
@@ -947,23 +1602,23 @@ exports[`Application/Header Custom Left 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-1rw838x"
+            class="css-ldwe25"
           >
             <div
               class="css-12hibeq"
             >
               <div
-                class="css-nnvwbb-SearchInput"
+                class="css-t2f9yn-SearchInput"
               >
                 <input
                   aria-label="full text search"
-                  class="css-1aqyn14-SearchInput"
+                  class="css-19xk8th-SearchInput"
                   placeholder="search..."
                   value=""
                 />
                 <svg
                   aria-hidden="true"
-                  class="css-1f2hmcd-SearchInput"
+                  class="css-q4atzm-SearchInput"
                   fill="currentColor"
                   height="16"
                   role="img"
@@ -980,7 +1635,7 @@ exports[`Application/Header Custom Left 1`] = `
             </div>
           </div>
           <div
-            class="css-1229dh0"
+            class="css-vhp4dg"
           >
             <div
               class="css-vurnku"
@@ -1083,16 +1738,16 @@ exports[`Application/Header Custom Right 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-1rw838x"
+            class="css-ldwe25"
           >
             <a
               aria-label="Component controls"
-              class="css-1vsogol-LogoLink"
+              class="css-881li9-LogoLink"
               href="/"
             />
             <a
               aria-label="Component controls"
-              class="css-1vsogol-LogoLink"
+              class="css-881li9-LogoLink"
               href="/"
             >
               <img
@@ -1115,7 +1770,7 @@ exports[`Application/Header Custom Right 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-1rw838x"
+            class="css-ldwe25"
           >
             <a
               aria-label="visit github repo"
@@ -1128,23 +1783,23 @@ exports[`Application/Header Custom Right 1`] = `
             </a>
           </div>
           <div
-            class="css-1229dh0"
+            class="css-vhp4dg"
           >
             <div
               class="css-12hibeq"
             >
               <div
-                class="css-nnvwbb-SearchInput"
+                class="css-t2f9yn-SearchInput"
               >
                 <input
                   aria-label="full text search"
-                  class="css-1aqyn14-SearchInput"
+                  class="css-19xk8th-SearchInput"
                   placeholder="search..."
                   value=""
                 />
                 <svg
                   aria-hidden="true"
-                  class="css-1f2hmcd-SearchInput"
+                  class="css-q4atzm-SearchInput"
                   fill="currentColor"
                   height="16"
                   role="img"
@@ -1161,7 +1816,7 @@ exports[`Application/Header Custom Right 1`] = `
             </div>
           </div>
           <div
-            class="css-1229dh0"
+            class="css-vhp4dg"
           >
             <div
               class="css-vurnku"
@@ -1264,16 +1919,16 @@ exports[`Application/Header Customized 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-1rw838x"
+            class="css-ldwe25"
           >
             <a
               aria-label="Component controls"
-              class="css-1vsogol-LogoLink"
+              class="css-881li9-LogoLink"
               href="/"
             />
             <a
               aria-label="Component controls"
-              class="css-1vsogol-LogoLink"
+              class="css-881li9-LogoLink"
               href="/"
             >
               <img
@@ -1284,7 +1939,7 @@ exports[`Application/Header Customized 1`] = `
             </a>
           </div>
           <div
-            class="css-1229dh0"
+            class="css-vhp4dg"
           >
             <a
               class="css-12cl38p"
@@ -1306,7 +1961,7 @@ exports[`Application/Header Customized 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-1rw838x"
+            class="css-ldwe25"
           >
             <a
               class="css-1t54e2w"
@@ -1315,11 +1970,11 @@ exports[`Application/Header Customized 1`] = `
               target="_blank"
             >
               <div
-                class="css-15eoqye"
+                class="css-f5h6sg"
               >
                 <svg
                   aria-hidden="true"
-                  class="css-1goj2uy"
+                  class="css-12z0wuy"
                   fill="currentColor"
                   height="32"
                   role="img"
@@ -1340,7 +1995,7 @@ exports[`Application/Header Customized 1`] = `
             </a>
           </div>
           <div
-            class="css-1229dh0"
+            class="css-vhp4dg"
           >
             <a
               aria-label="visit github repo"
@@ -1350,10 +2005,10 @@ exports[`Application/Header Customized 1`] = `
               target="_blank"
             >
               <div
-                class="css-15eoqye"
+                class="css-f5h6sg"
               >
                 <div
-                  class="css-ok0w0t"
+                  class="css-1psk70t"
                 >
                   <svg
                     aria-hidden="true"
@@ -1375,23 +2030,23 @@ exports[`Application/Header Customized 1`] = `
             </a>
           </div>
           <div
-            class="css-1229dh0"
+            class="css-vhp4dg"
           >
             <div
               class="css-12hibeq"
             >
               <div
-                class="css-nnvwbb-SearchInput"
+                class="css-t2f9yn-SearchInput"
               >
                 <input
                   aria-label="full text search"
-                  class="css-1aqyn14-SearchInput"
+                  class="css-19xk8th-SearchInput"
                   placeholder="search..."
                   value=""
                 />
                 <svg
                   aria-hidden="true"
-                  class="css-1f2hmcd-SearchInput"
+                  class="css-q4atzm-SearchInput"
                   fill="currentColor"
                   height="16"
                   role="img"
@@ -1408,7 +2063,7 @@ exports[`Application/Header Customized 1`] = `
             </div>
           </div>
           <div
-            class="css-1229dh0"
+            class="css-vhp4dg"
           >
             <div
               class="css-vurnku"
@@ -1511,16 +2166,16 @@ exports[`Application/Header Overview 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-1rw838x"
+            class="css-ldwe25"
           >
             <a
               aria-label="Component controls"
-              class="css-1vsogol-LogoLink"
+              class="css-881li9-LogoLink"
               href="/"
             />
             <a
               aria-label="Component controls"
-              class="css-1vsogol-LogoLink"
+              class="css-881li9-LogoLink"
               href="/"
             >
               <img
@@ -1543,23 +2198,23 @@ exports[`Application/Header Overview 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-1rw838x"
+            class="css-ldwe25"
           >
             <div
               class="css-12hibeq"
             >
               <div
-                class="css-nnvwbb-SearchInput"
+                class="css-t2f9yn-SearchInput"
               >
                 <input
                   aria-label="full text search"
-                  class="css-1aqyn14-SearchInput"
+                  class="css-19xk8th-SearchInput"
                   placeholder="search..."
                   value=""
                 />
                 <svg
                   aria-hidden="true"
-                  class="css-1f2hmcd-SearchInput"
+                  class="css-q4atzm-SearchInput"
                   fill="currentColor"
                   height="16"
                   role="img"
@@ -1576,7 +2231,7 @@ exports[`Application/Header Overview 1`] = `
             </div>
           </div>
           <div
-            class="css-1229dh0"
+            class="css-vhp4dg"
           >
             <div
               class="css-vurnku"
@@ -1667,7 +2322,7 @@ exports[`Application/Header Overview 1`] = `
 exports[`Application/Sidebar Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-1yaquky-Sidebar"
+    class="css-18srebt-Sidebar"
     id="sidebar"
   >
     <div
@@ -1686,7 +2341,7 @@ exports[`Application/Sidebar Overview 1`] = `
             class="css-uliqdc"
           >
             <div
-              class="css-1rw838x"
+              class="css-ldwe25"
             >
               <h3
                 class="css-yrrbzf"
@@ -1695,13 +2350,13 @@ exports[`Application/Sidebar Overview 1`] = `
               </h3>
             </div>
             <div
-              class="css-1229dh0"
+              class="css-vhp4dg"
             >
               <div
                 class="css-1dj4wno"
               >
                 <input
-                  class="css-xjq4ex-Sidebar"
+                  class="css-h1q0sm-Sidebar"
                   placeholder="filter..."
                   value=""
                 />
@@ -1716,13 +2371,13 @@ exports[`Application/Sidebar Overview 1`] = `
             class="css-vurnku"
           >
             <div
-              class="css-1em5sge"
+              class="css-w1i3qo"
             >
               <div
                 class="css-tizfsr"
               >
                 <div
-                  class="css-162ewbd"
+                  class="css-wj14lk"
                 >
                   <button
                     class="css-t9fq0h"
@@ -1731,7 +2386,7 @@ exports[`Application/Sidebar Overview 1`] = `
                       class="css-f5h6sg"
                     >
                       <div
-                        class="css-15xx8i3"
+                        class="css-4f3mio"
                       >
                         <strong>
                           Story
@@ -1741,7 +2396,7 @@ exports[`Application/Sidebar Overview 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-vthntz"
+                  class="css-q74hig"
                 >
                   <div
                     aria-label="collapse items"
@@ -1770,13 +2425,13 @@ exports[`Application/Sidebar Overview 1`] = `
               class="css-vurnku"
             >
               <div
-                class="css-48rgnb"
+                class="css-1tdwrho"
               >
                 <div
                   class="css-tizfsr"
                 >
                   <div
-                    class="selected css-162ewbd"
+                    class="selected css-wj14lk"
                   >
                     <a
                       class="css-p1dwhj"
@@ -1805,7 +2460,7 @@ exports[`Application/Sidebar Overview 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="css-15xx8i3"
+                          class="css-4f3mio"
                         >
                           story
                         </div>
@@ -1813,7 +2468,7 @@ exports[`Application/Sidebar Overview 1`] = `
                     </a>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="css-q74hig"
                   />
                 </div>
               </div>
@@ -1822,13 +2477,13 @@ exports[`Application/Sidebar Overview 1`] = `
               class="css-vurnku"
             >
               <div
-                class="css-15ej8gm"
+                class="css-1tz2vcm"
               >
                 <div
                   class="css-tizfsr"
                 >
                   <div
-                    class="css-162ewbd"
+                    class="css-wj14lk"
                   >
                     <a
                       class="css-p1dwhj"
@@ -1857,7 +2512,7 @@ exports[`Application/Sidebar Overview 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="css-7w8u7j"
+                          class="css-6e1m2i"
                         >
                           story
                         </div>
@@ -1865,7 +2520,7 @@ exports[`Application/Sidebar Overview 1`] = `
                     </a>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="css-q74hig"
                   />
                 </div>
               </div>
@@ -1874,13 +2529,13 @@ exports[`Application/Sidebar Overview 1`] = `
               class="css-vurnku"
             >
               <div
-                class="css-15ej8gm"
+                class="css-1tz2vcm"
               >
                 <div
                   class="css-tizfsr"
                 >
                   <div
-                    class="css-162ewbd"
+                    class="css-wj14lk"
                   >
                     <a
                       class="css-p1dwhj"
@@ -1909,7 +2564,7 @@ exports[`Application/Sidebar Overview 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="css-7w8u7j"
+                          class="css-6e1m2i"
                         >
                           button
                         </div>
@@ -1917,7 +2572,7 @@ exports[`Application/Sidebar Overview 1`] = `
                     </a>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="css-q74hig"
                   />
                 </div>
               </div>
@@ -1926,13 +2581,13 @@ exports[`Application/Sidebar Overview 1`] = `
               class="css-vurnku"
             >
               <div
-                class="css-15ej8gm"
+                class="css-1tz2vcm"
               >
                 <div
                   class="css-tizfsr"
                 >
                   <div
-                    class="css-162ewbd"
+                    class="css-wj14lk"
                   >
                     <a
                       class="css-p1dwhj"
@@ -1961,7 +2616,7 @@ exports[`Application/Sidebar Overview 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="css-7w8u7j"
+                          class="css-6e1m2i"
                         >
                           controls
                         </div>
@@ -1969,7 +2624,7 @@ exports[`Application/Sidebar Overview 1`] = `
                     </a>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="css-q74hig"
                   />
                 </div>
               </div>
@@ -1979,13 +2634,13 @@ exports[`Application/Sidebar Overview 1`] = `
             class="css-vurnku"
           >
             <div
-              class="css-1em5sge"
+              class="css-w1i3qo"
             >
               <div
                 class="css-tizfsr"
               >
                 <div
-                  class="css-162ewbd"
+                  class="css-wj14lk"
                 >
                   <a
                     class="css-p1dwhj"
@@ -2014,7 +2669,7 @@ exports[`Application/Sidebar Overview 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="css-7w8u7j"
+                        class="css-6e1m2i"
                       >
                         MDX Story
                       </div>
@@ -2022,7 +2677,7 @@ exports[`Application/Sidebar Overview 1`] = `
                   </a>
                 </div>
                 <div
-                  class="css-vthntz"
+                  class="css-q74hig"
                 />
               </div>
             </div>
@@ -2034,4 +2689,250 @@ exports[`Application/Sidebar Overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Application/SidebarsPage Overview 1`] = `<DocumentFragment />`;
+exports[`Application/SidebarsPage Overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1e1wax2"
+  >
+    <div
+      class="css-1npxcsd-SidebarsStoryPage"
+      id="content"
+    >
+      <div
+        class="css-dps395-Tabs"
+      >
+        <div
+          class="react-tabs"
+          data-tabs="true"
+        >
+          <ul
+            class="react-tabs__tab-list"
+            role="tablist"
+          >
+            <li
+              aria-controls="react-tabs-1"
+              aria-disabled="false"
+              aria-selected="true"
+              class="react-tabs__tab react-tabs__tab--selected"
+              id="react-tabs-0"
+              role="tab"
+              tabindex="0"
+            >
+              <a
+                class="css-1t54e2w"
+                href="/docs/id-of-story"
+              />
+            </li>
+            <li
+              aria-controls="react-tabs-3"
+              aria-disabled="false"
+              aria-selected="false"
+              class="react-tabs__tab"
+              id="react-tabs-2"
+              role="tab"
+            >
+              <a
+                class="css-1t54e2w"
+                href="/docs/id-of-story/documentation"
+              >
+                Documentation
+              </a>
+            </li>
+          </ul>
+          <div
+            class="css-8f52r4"
+          >
+            <div
+              class="css-vurnku"
+            >
+              <div
+                class="css-vurnku"
+              >
+                <div
+                  class="css-1nu2k4w"
+                >
+                  <div
+                    class="css-1h9kuou"
+                  >
+                    <a
+                      aria-label="edit this page"
+                      class="css-1t54e2w"
+                      href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <div
+                        class="css-f5h6sg"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="octicon"
+                          fill="currentColor"
+                          height="16"
+                          role="img"
+                          style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                          viewBox="0 0 16 16"
+                          width="16"
+                        >
+                          <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                        <div
+                          class="css-6amu4j"
+                        >
+                          Edit this page
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    class="css-1hu569t"
+                  >
+                    <div
+                      class="css-zf8zhj"
+                    >
+                      <div
+                        class="css-13o2efz"
+                      >
+                        created:
+                      </div>
+                      <div
+                        class="css-uv6qe8"
+                      >
+                        1/1/2020
+                      </div>
+                    </div>
+                    <div
+                      class="css-15qy1uq"
+                    >
+                      ,
+                    </div>
+                    <div
+                      class="css-zf8zhj"
+                    >
+                      <div
+                        class="css-13o2efz"
+                      >
+                        updated:
+                      </div>
+                      <div
+                        class="css-uv6qe8"
+                      >
+                        3/31/2020
+                      </div>
+                    </div>
+                    <div
+                      class="css-lllzso"
+                    >
+                      <div
+                        class="css-zf8zhj"
+                      >
+                        <div
+                          class="css-13o2efz"
+                        >
+                          by
+                        </div>
+                        <div
+                          class="css-uv6qe8"
+                        >
+                          <a
+                            class="css-1t54e2w"
+                            href="/authors/atanasster"
+                          >
+                            atanasster
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-hi5zbn"
+                >
+                  <h1
+                    class="css-11z6fnw-Container"
+                  >
+                    Story
+                  </h1>
+                </div>
+                <h2
+                  class="css-1uqrmoi"
+                >
+                  story subtitle
+                </h2>
+                <div
+                  aria-labelledby="react-tabs-0"
+                  class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                  id="react-tabs-1"
+                  role="tabpanel"
+                />
+                <div
+                  aria-labelledby="react-tabs-2"
+                  class="react-tabs__tab-panel"
+                  id="react-tabs-3"
+                  role="tabpanel"
+                />
+                <div
+                  class="css-5qse13"
+                >
+                  <div
+                    class="css-8r2q2l"
+                  >
+                    <div
+                      class="css-vurnku"
+                    />
+                    <div
+                      class="css-vurnku"
+                    >
+                      <a
+                        class="css-10zwoio"
+                        href="/docs/mdx-story"
+                      >
+                        <div
+                          class="css-1my6hv5"
+                        >
+                          <div
+                            class="css-c3r86m"
+                          >
+                            Next
+                          </div>
+                          <div
+                            class="css-9tifnv"
+                          >
+                            <div
+                              class="css-1s8umv4"
+                            >
+                              MDX Story
+                            </div>
+                            <svg
+                              aria-hidden="true"
+                              class="octicon"
+                              fill="currentColor"
+                              height="16"
+                              role="img"
+                              style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                              viewBox="0 0 16 16"
+                              width="16"
+                            >
+                              <path
+                                d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

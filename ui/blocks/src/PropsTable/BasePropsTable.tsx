@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
-import { jsx, Text, Styled, Box } from 'theme-ui';
+import { jsx, Text, Themed, Box } from 'theme-ui';
 import { FC, useMemo, MouseEvent, useState } from 'react';
 import { window } from 'global';
 import jsStringEscape from 'js-string-escape';
@@ -202,7 +202,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
                 {description && <Markdown>{description}</Markdown>}
                 {(raw ?? typeName) && (
                   <Box variant="propstable.description.type">
-                    <Styled.pre>
+                    <Themed.pre>
                       {Array.isArray(value) && value.length > 1
                         ? value.map(({ name: typeName, value }) => (
                             <Tag
@@ -216,7 +216,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
                             </Tag>
                           ))
                         : raw ?? typeName}
-                    </Styled.pre>
+                    </Themed.pre>
                   </Box>
                 )}
               </Box>
@@ -246,7 +246,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
             }
             return (
               <Box variant="propstable.defaultvalue">
-                <Styled.pre>{value}</Styled.pre>
+                <Themed.pre>{value}</Themed.pre>
               </Box>
             );
           },

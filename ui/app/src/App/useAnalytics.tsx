@@ -8,7 +8,7 @@ export const useAnalytics = (): void => {
   const config = useConfig();
   const analytics = useMemo(() => {
     const options = config.analytics;
-    if (options) {
+    if (typeof window !== 'undefined' && options) {
       if (typeof options === 'string') {
         return Analytics({
           app: config.title,

@@ -25,11 +25,15 @@ export const makeDecorators = (
   storyId = 'id-of-story',
   props?: Omit<MockContexProps, 'storyId'>,
 ): Document['decorators'] => [
-  (controls, context) => (
-    <MockContext storyId={storyId} {...props}>
-      {context.renderFn(controls, context)}
-    </MockContext>
-  ),
+  (controls, context) => {
+    const { renderFn } = context;
+    const story = typeof renderFn === 'function' ? renderFn : controls;
+    return (
+      <MockContext storyId={storyId} {...props}>
+        {story(controls, context)}
+      </MockContext>
+    );
+  },
 ];
 
 export const mockDecorators: Document['decorators'] = makeDecorators();
