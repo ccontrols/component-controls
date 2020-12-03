@@ -6,11 +6,11 @@ import {
   DetailedHTMLProps,
   ThHTMLAttributes,
 } from 'react';
-import { jsx, SxStyleProp, Theme } from 'theme-ui';
+import { jsx, BoxProps, Theme } from 'theme-ui';
 import { ContainerProps } from '../../types';
 
 export interface TableColumn {
-  sx?: SxStyleProp;
+  sx?: BoxProps['sx'];
   props?: DetailedHTMLProps<
     ThHTMLAttributes<HTMLTableHeaderCellElement>,
     HTMLTableHeaderCellElement
@@ -22,7 +22,7 @@ export interface TableColumn {
 export interface TableContainerOwnProps {
   header?: ReactNode;
   columns: TableColumn[];
-  sx?: SxStyleProp;
+  sx?: BoxProps['sx'];
 }
 
 export type TableContainerProps = TableContainerOwnProps & ContainerProps;

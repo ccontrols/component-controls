@@ -1,12 +1,12 @@
 /** @jsx jsx */
 import { FC, useState } from 'react';
-import { jsx, Flex, Link, Divider, Box, SxStyleProp, Text } from 'theme-ui';
+import { jsx, Flex, Link, Divider, Box, BoxProps, Text } from 'theme-ui';
 import { ChevronRightIcon, ChevronDownIcon } from '@primer/octicons-react';
 import { Collapsible } from '../Collapsible';
 import { LinkHeading } from '../LinkHeading';
 import { Description } from '../Description';
 
-export interface BlockContainerProps {
+export interface BlockContainerOwnProps {
   /**
    * optional section title for the block.
    */
@@ -30,11 +30,6 @@ export interface BlockContainerProps {
   collapsible?: boolean;
 
   /**
-   * theme-ui styling object for Block Box
-   */
-  sx?: SxStyleProp;
-
-  /**
    * testing id
    */
   'data-testid'?: string;
@@ -43,6 +38,8 @@ export interface BlockContainerProps {
    */
   plain?: boolean;
 }
+
+export type BlockContainerProps = BlockContainerOwnProps & BoxProps;
 
 /**
  * a collapsible block with a title. The title creates also an attribute id and an octicon for github style navigation.
@@ -54,7 +51,6 @@ export const BlockContainer: FC<BlockContainerProps> = ({
   id,
   description,
   collapsible = true,
-  sx,
   plain = false,
   ...rest
 }) => {
@@ -66,7 +62,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
     children
   );
   return (
-    <Box variant="blockcontainer.container" sx={sx} {...rest}>
+    <Box variant="blockcontainer.container" {...rest}>
       {(blockId || title || collapsible) && (
         <LinkHeading
           as={collapsible ? 'h3' : 'h4'}

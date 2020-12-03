@@ -7,14 +7,14 @@ import {
   RgbStringColorPicker,
   RgbaStringColorPicker,
 } from 'react-colorful';
-import { jsx, Button, Box, SxStyleProp, Theme } from 'theme-ui';
+import { jsx, Button, Box, BoxProps, Theme } from 'theme-ui';
 import { Popover } from '@component-controls/components';
 import { ComponentControlColor, ControlTypes } from '@component-controls/core';
 import { useControl } from '@component-controls/store';
 import { PropertyEditor } from '../types';
 import { addPropertyEditor } from '../prop-factory';
 
-const sxProps: SxStyleProp = {
+const sxProps: BoxProps['sx'] = {
   position: 'relative',
   display: 'flex',
   flexDirection: 'column',

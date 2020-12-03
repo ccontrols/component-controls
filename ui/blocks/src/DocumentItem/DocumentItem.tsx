@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Box, Text, SxStyleProp } from 'theme-ui';
+import { jsx, Box, Text, BoxProps } from 'theme-ui';
 import {
   Document,
   defDocType,
@@ -22,13 +22,15 @@ export interface DocumentItemProps {
    * document to be displayed
    */
   doc: Document;
-
-  sx?: SxStyleProp;
 }
 /**
  * displays a single doument item
  */
-export const DocumentItem: FC<DocumentItemProps> = ({ doc, link, sx }) => {
+export const DocumentItem: FC<DocumentItemProps & BoxProps> = ({
+  doc,
+  link,
+  ...rest
+}) => {
   const { type = defDocType, tags = [], date, author } = doc;
   const store = useStore();
   const dateNode = date ? (
@@ -53,7 +55,7 @@ export const DocumentItem: FC<DocumentItemProps> = ({ doc, link, sx }) => {
   ) : null;
   const tagsNode = tags.length ? <TagsList tags={tags} /> : null;
   return (
-    <Box variant="documentitem.container" sx={sx}>
+    <Box variant="documentitem.container" {...rest}>
       <Box variant="documentitem.titlerow">
         <Link href={link}>
           <Subtitle>{doc.title}</Subtitle>
