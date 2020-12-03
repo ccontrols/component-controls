@@ -69,7 +69,9 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
             subcomponents: doc.subcomponents,
             controls: doc.controls,
             smartControls: doc.smartControls,
-            decorators: doc.decorators,
+            decorators: Array.isArray(doc.decorators)
+              ? doc.decorators.filter(d => typeof d === 'function')
+              : undefined,
           };
           globalStore.docs[doc.title] = doc;
           Object.keys(storeStories).forEach((storyName: string) => {
@@ -83,9 +85,7 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
               story.id = story.id || story.name;
               //storybook compat
               story.controls = story.controls || (story as any).args;
-              if (!building) {
-                Object.assign(story, deepMerge(docStoryProps, story));
-              }
+              Object.assign(story, deepMerge(docStoryProps, story));
               story.controls = getControls(story, doc, loadedComponents);
               if (doc.title && story.id) {
                 const id = docStoryToId(doc.title, story.id);
