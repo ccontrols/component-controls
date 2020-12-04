@@ -62,7 +62,6 @@ export const BaseAllyBlock: FC<BaseAllyBlockProps> = ({ children }) => {
     }
     return actions;
   }, [incomplete.length, passes.length, violations.length]);
-  console.log('REDRAW');
   return (
     <PanelContainer actions={actions} openTab="dashboard" visibleTabs={true}>
       <HighlightSelector>{children}</HighlightSelector>

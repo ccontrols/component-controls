@@ -54,8 +54,18 @@ export interface ResultsTableProps {
 }
 
 const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
-  const columns: Column<Record<string, unknown>>[] = useMemo(
-    () => [
+  const renderRowSubComponent = useCallback(
+    ({ row }) => (
+      <NodesTable
+        nodes={row.original.nodes}
+        hideErrorColumns={hideErrorColumns}
+      />
+    ),
+    [hideErrorColumns],
+  );
+  const table = useMemo(() => {
+    console.log('MEMO', hideErrorColumns);
+    const columns: Column<Record<string, unknown>>[] = [
       {
         // Build our expander column
         id: 'expander', // Make sure it has an ID
@@ -138,26 +148,19 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
           </Flex>
         ),
       },
-    ],
-    [],
-  );
-  const renderRowSubComponent = useCallback(
-    ({ row }) => (
-      <NodesTable
-        nodes={row.original.nodes}
-        hideErrorColumns={hideErrorColumns}
+    ];
+    return (
+      <Table
+        data={results || []}
+        columns={columns}
+        hiddenColumns={hideErrorColumns ? ['impact'] : undefined}
+        renderRowSubComponent={renderRowSubComponent}
       />
-    ),
-    [hideErrorColumns],
-  );
-  return (
-    <Table
-      data={results || []}
-      columns={columns}
-      hiddenColumns={hideErrorColumns ? ['impact'] : undefined}
-      renderRowSubComponent={renderRowSubComponent}
-    />
-  );
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [results?.length, hideErrorColumns, renderRowSubComponent]);
+
+  return table;
 };
 
 export const ViolationsTable: FC = () => {

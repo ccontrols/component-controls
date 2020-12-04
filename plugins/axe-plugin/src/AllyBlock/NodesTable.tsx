@@ -20,6 +20,7 @@ export interface NodesTableProps {
 
 const SelectionCheckbox: FC<{ target: string[] }> = ({ target }) => {
   const { isSelected, selection, setSelection } = useContext(SelectionContext);
+
   const checked = isSelected(target);
   const toggleSelection = (selector: string[]) => {
     const included = tagSelectedList(selection, selector, true);
@@ -31,13 +32,7 @@ const SelectionCheckbox: FC<{ target: string[] }> = ({ target }) => {
   };
   return (
     <Label>
-      <Checkbox
-        onChange={e => {
-          toggleSelection(target);
-          e.preventDefault();
-        }}
-        checked={checked}
-      />
+      <Checkbox onChange={() => toggleSelection(target)} checked={checked} />
     </Label>
   );
 };
