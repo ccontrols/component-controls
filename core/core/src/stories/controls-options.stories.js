@@ -11,34 +11,30 @@ export const overview = ({ value }) => (
   <div>{JSON.stringify({ value }, null, 2)}</div>
 );
 
-overview.story = {
-  description: 'Story with options of different data types',
-  controls: {
-    value: {
-      type: ControlTypes.OPTIONS,
-      label: 'Select',
-      value: 1,
-      options: [1, 2, 3, undefined, null],
-      display: 'select',
-    },
+overview.description = 'Story with options of different data types';
+overview.controls = {
+  value: {
+    type: ControlTypes.OPTIONS,
+    label: 'Select',
+    value: 1,
+    options: [1, 2, 3, undefined, null],
+    display: 'select',
   },
 };
 
 export const radioEnum = ({ radio }) => radio;
 
-radioEnum.story = {
-  description: '`ControlTypes.OPTIONS` display: `radio`.',
-  controls: {
-    radio: {
-      type: ControlTypes.OPTIONS,
-      label: 'Radio',
-      value: 'Monday',
-      display: 'radio',
-      options: {
-        Monday: 'Monday',
-        Tuesday: 'Tuesday',
-        Wednesday: 'Wednesday',
-      },
+radioEnum.description = '`ControlTypes.OPTIONS` display: `radio`.';
+radioEnum.controls = {
+  radio: {
+    type: ControlTypes.OPTIONS,
+    label: 'Radio',
+    value: 'Monday',
+    display: 'radio',
+    options: {
+      Monday: 'Monday',
+      Tuesday: 'Tuesday',
+      Wednesday: 'Wednesday',
     },
   },
 };
@@ -53,22 +49,21 @@ export const complexSelect = ({ m }) => {
   );
 };
 
-complexSelect.story = {
-  description:
-    '`ControlTypes.OPTIONS` control type where the options can have different data-types.',
-  controls: {
-    m: {
-      type: ControlTypes.OPTIONS,
-      label: 'complex',
-      options: {
-        number: 1,
-        string: 'string',
-        object: {},
-        array: [1, 2, 3],
-        function: () => {},
-      },
-      value: 'string',
+complexSelect.description =
+  '`ControlTypes.OPTIONS` control type where the options can have different data-types.';
+complexSelect.controls = {
+  m: {
+    type: ControlTypes.OPTIONS,
+    label: 'complex',
+    options: {
+      number: 1,
+      string: 'string',
+      object: {},
+      array: [1, 2, 3],
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
+      function: () => {},
     },
+    value: 'string',
   },
 };
 
@@ -107,74 +102,72 @@ export const combinedOptions = ({
   );
 };
 
-combinedOptions.story = {
-  description:
-    'Showcase `ControlTypes.OPTIONS` controls of types `radio`, `inline-radio`, `select`, `multi-select`, `check` and `inline-check`.',
-  controls: {
-    optionRadio: {
-      type: ControlTypes.OPTIONS,
-      label: 'Radio',
-      options: {
-        Monday: 'Monday',
-        Tuesday: 'Tuesday',
-        Wednesday: 'Wednesday',
-      },
-      value: 'Tuesday',
-      display: 'radio',
+combinedOptions.description =
+  'Showcase `ControlTypes.OPTIONS` controls of types `radio`, `inline-radio`, `select`, `multi-select`, `check` and `inline-check`.';
+combinedOptions.controls = {
+  optionRadio: {
+    type: ControlTypes.OPTIONS,
+    label: 'Radio',
+    options: {
+      Monday: 'Monday',
+      Tuesday: 'Tuesday',
+      Wednesday: 'Wednesday',
     },
-    optionInlineRadio: {
-      type: ControlTypes.OPTIONS,
-      label: 'Inline Radio',
-      options: {
-        Saturday: 'Saturday',
-        Sunday: 'Sunday',
-      },
-      value: 'Saturday',
-      display: 'inline-radio',
+    value: 'Tuesday',
+    display: 'radio',
+  },
+  optionInlineRadio: {
+    type: ControlTypes.OPTIONS,
+    label: 'Inline Radio',
+    options: {
+      Saturday: 'Saturday',
+      Sunday: 'Sunday',
     },
-    optionSelect: {
-      type: ControlTypes.OPTIONS,
-      label: 'Select',
-      options: {
-        January: 'January',
-        February: 'February',
-        March: 'March',
-      },
-      value: 'January',
-      display: 'select',
+    value: 'Saturday',
+    display: 'inline-radio',
+  },
+  optionSelect: {
+    type: ControlTypes.OPTIONS,
+    label: 'Select',
+    options: {
+      January: 'January',
+      February: 'February',
+      March: 'March',
     },
-    optionsMultiSelect: {
-      type: ControlTypes.OPTIONS,
-      label: 'Multi Select',
-      options: {
-        Apple: 'apple',
-        Banana: 'banana',
-        Cherry: 'cherry',
-      },
-      value: ['apple'],
-      display: 'multi-select',
+    value: 'January',
+    display: 'select',
+  },
+  optionsMultiSelect: {
+    type: ControlTypes.OPTIONS,
+    label: 'Multi Select',
+    options: {
+      Apple: 'apple',
+      Banana: 'banana',
+      Cherry: 'cherry',
     },
-    optionsCheck: {
-      type: ControlTypes.OPTIONS,
-      label: 'Check',
-      options: {
-        Corn: 'corn',
-        Carrot: 'carrot',
-        Cucumber: 'cucumber',
-      },
-      value: ['carrot'],
-      display: 'check',
+    value: ['apple'],
+    display: 'multi-select',
+  },
+  optionsCheck: {
+    type: ControlTypes.OPTIONS,
+    label: 'Check',
+    options: {
+      Corn: 'corn',
+      Carrot: 'carrot',
+      Cucumber: 'cucumber',
     },
-    optionsInlineCheck: {
-      type: ControlTypes.OPTIONS,
-      label: 'Inline Check',
-      options: {
-        Milk: 'milk',
-        Cheese: 'cheese',
-        Butter: 'butter',
-      },
-      value: ['milk'],
-      display: 'inline-check',
+    value: ['carrot'],
+    display: 'check',
+  },
+  optionsInlineCheck: {
+    type: ControlTypes.OPTIONS,
+    label: 'Inline Check',
+    options: {
+      Milk: 'milk',
+      Cheese: 'cheese',
+      Butter: 'butter',
     },
+    value: ['milk'],
+    display: 'inline-check',
   },
 };

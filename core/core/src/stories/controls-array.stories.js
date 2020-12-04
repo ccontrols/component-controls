@@ -18,19 +18,17 @@ export const overview = ({ text, buttons }) => (
   </div>
 );
 
-overview.story = {
-  controls: {
-    text: { type: ControlTypes.TEXT, value: 'Button' },
-    buttons: {
-      type: ControlTypes.ARRAY,
-      value: [
-        { label: 'Button 1', color: 'red' },
-        { label: 'Button 2', color: 'grey' },
-      ],
-      rowType: {
-        label: { type: ControlTypes.TEXT },
-        color: { type: ControlTypes.COLOR },
-      },
+overview.controls = {
+  text: { type: ControlTypes.TEXT, value: 'Button' },
+  buttons: {
+    type: ControlTypes.ARRAY,
+    value: [
+      { label: 'Button 1', color: 'red' },
+      { label: 'Button 2', color: 'grey' },
+    ],
+    rowType: {
+      label: { type: ControlTypes.TEXT },
+      color: { type: ControlTypes.COLOR },
     },
   },
 };
@@ -46,38 +44,36 @@ export const arrayNested = ({ text, buttons }) => (
   </div>
 );
 
-arrayNested.story = {
-  controls: {
-    text: { type: ControlTypes.TEXT, value: 'Button' },
-    buttons: {
-      type: ControlTypes.ARRAY,
-      value: [
-        {
-          label: 'Button 1',
-          style: {
-            backgroundColor: 'white',
-            color: 'red',
-            padding: 0,
-          },
-        },
-        {
-          label: 'Button 2',
-          style: {
-            backgroundColor: 'black',
-            color: 'white',
-            padding: 15,
-          },
-        },
-      ],
-      rowType: {
-        label: { type: ControlTypes.TEXT },
+arrayNested.controls = {
+  text: { type: ControlTypes.TEXT, value: 'Button' },
+  buttons: {
+    type: ControlTypes.ARRAY,
+    value: [
+      {
+        label: 'Button 1',
         style: {
-          type: ControlTypes.OBJECT,
-          value: {
-            color: { type: ControlTypes.COLOR },
-            backgroundColor: { type: ControlTypes.COLOR },
-            padding: { type: ControlTypes.NUMBER },
-          },
+          backgroundColor: 'white',
+          color: 'red',
+          padding: 0,
+        },
+      },
+      {
+        label: 'Button 2',
+        style: {
+          backgroundColor: 'black',
+          color: 'white',
+          padding: 15,
+        },
+      },
+    ],
+    rowType: {
+      label: { type: ControlTypes.TEXT },
+      style: {
+        type: ControlTypes.OBJECT,
+        value: {
+          color: { type: ControlTypes.COLOR },
+          backgroundColor: { type: ControlTypes.COLOR },
+          padding: { type: ControlTypes.NUMBER },
         },
       },
     },
