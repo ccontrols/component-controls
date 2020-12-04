@@ -1,4 +1,6 @@
-import React, { FC, useContext } from 'react';
+/** @jsx jsx */
+import { FC, useContext } from 'react';
+import { jsx } from 'theme-ui';
 import { Story } from '@component-controls/core';
 import {
   BlockContainer,
@@ -19,11 +21,11 @@ export const StoryBlockContainer: FC<StoryBlockContainerAllProps> = ({
   story,
   collapsible,
   title: userTitle,
-  sx,
   children,
   useStoryDescription,
   description: userDescription,
   'data-testid': dataTestid,
+  ...rest
 }) => {
   const playground = useContext(PlaygroundContext);
   const title = getStoryBlockTitle({
@@ -39,9 +41,9 @@ export const StoryBlockContainer: FC<StoryBlockContainerAllProps> = ({
       title={title}
       collapsible={collapsible}
       id={userTitle === CURRENT_STORY && story ? story.id : undefined}
-      sx={sx}
       description={description}
       plain={true}
+      {...rest}
     >
       {children}
     </BlockContainer>
