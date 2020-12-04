@@ -112,12 +112,14 @@ export const BasePlayground: FC<BasePlaygroundProps> = ({
       node: background === 'light' ? 'dark' : 'light',
       id: 'background',
       group: 'story',
+      'aria-label': 'switch light and dark background',
       onClick: () => setBackground(background === 'light' ? 'dark' : 'light'),
     },
     {
       node: direction === 'rtl' ? 'LTR' : 'RTL',
       id: 'direction',
       group: 'story',
+      'aria-label': 'switch left to right/right to left',
       onClick: () => setDirection(direction === 'rtl' ? 'ltr' : 'rtl'),
     },
   ];
