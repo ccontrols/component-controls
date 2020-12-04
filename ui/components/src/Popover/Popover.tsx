@@ -1,11 +1,13 @@
 import React, { FC } from 'react';
 import TooltipTrigger from 'react-popper-tooltip';
+import { get } from '@theme-ui/css';
 import {
   TooltipTriggerProps,
   ChildrenArg,
 } from 'react-popper-tooltip/dist/types';
-import { Box } from 'theme-ui';
+import { Box, ColorModesScale } from 'theme-ui';
 import { Arrow, Wrapper } from './PopoverUtils';
+import { useTheme } from '../ThemeContext';
 
 export interface PopoverOwnProps {
   /**
@@ -33,6 +35,7 @@ export const Popover: FC<PopoverProps> = ({
   ...rest
 }) => {
   const borderColor = 'lightgrey';
+  const theme = useTheme();
   return (
     <TooltipTrigger
       placement={placement}
@@ -56,7 +59,10 @@ export const Popover: FC<PopoverProps> = ({
             ref={tooltipRef as any}
             style={{
               ...containerProps.style,
-              backgroundColor: 'background',
+              backgroundColor: get(
+                theme.colors as ColorModesScale,
+                'background',
+              ),
             }}
           >
             {arrowVisible && (
