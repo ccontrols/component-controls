@@ -20,7 +20,7 @@ import { AxeContext } from '../state/context';
 import { NodesTable } from './NodesTable';
 
 const impactColors: {
-  [key in ImpactValue]: {
+  [key in 'minor' | 'moderate' | 'serious' | 'critical']: {
     color: string;
     icon: Icon;
   };
@@ -95,7 +95,7 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
         Header: 'impact',
         accessor: 'impact',
         Cell: ({ value }: { value: ImpactValue }) => {
-          const impact = impactColors[value];
+          const impact = value ? impactColors[value] : undefined;
           return (
             <Flex
               sx={{
@@ -152,13 +152,7 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
   );
   return (
     <Table
-      data={
-        results
-          ? results.map(row => ({
-              ...row,
-            }))
-          : []
-      }
+      data={results || []}
       columns={columns}
       hiddenColumns={hideErrorColumns ? ['impact'] : undefined}
       renderRowSubComponent={renderRowSubComponent}

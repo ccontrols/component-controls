@@ -36,6 +36,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@emotion/babel-plugin": "^11.0.0",
     "@component-controls/app": "^1.44.1",
     "@component-controls/webpack-compile": "^1.44.1",
     "@component-controls/webpack-configs": "^1.44.1",

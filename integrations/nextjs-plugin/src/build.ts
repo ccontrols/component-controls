@@ -8,6 +8,7 @@ import {
 import { log } from '@component-controls/logger';
 import {
   BuildProps,
+  RuleOptions,
   defaultCompileProps,
   getCSSBundleName,
 } from '@component-controls/core';
@@ -71,6 +72,18 @@ module.exports = ({
 
       return [];
     },
+    webpack: (config: RuleOptions['config']) => {
+      const loader = config.module?.rules?.find(
+        r => (r?.use as any)?.loader === 'next-babel-loader',
+      );
+      if (loader?.options) {
+        (loader.options as any).babelPresetPlugins.push(
+          '@emotion/babel-plugin',
+        );
+      }
+      return config;
+    },
+
     ...rest,
   };
 };

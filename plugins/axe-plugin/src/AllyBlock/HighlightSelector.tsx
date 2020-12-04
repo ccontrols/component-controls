@@ -1,12 +1,16 @@
-import React, { FC, useContext } from 'react';
-import styled from '@emotion/styled';
+/** @jsx jsx */
+import { FC, useContext, useMemo } from 'react';
+import { jsx, ThemeUICSSObject, Box, BoxProps } from 'theme-ui';
 import { SelectionContext, Selection } from '../state/context';
 
 export interface StyledContainerProps {
   selection: Selection;
 }
-const HighlightNode = styled.div<StyledContainerProps>`
-  ${({ selection }) => {
+const HighlightNode: FC<StyledContainerProps & BoxProps> = ({
+  selection,
+  ...rest
+}) => {
+  const styles: ThemeUICSSObject | undefined = useMemo(() => {
     const selectors = selection.map(c => {
       const style = c.split('.story-render-container');
       let selector: string;
@@ -21,18 +25,17 @@ const HighlightNode = styled.div<StyledContainerProps>`
       }
       return `${selector}`;
     });
-    if (!selectors.length) {
-      return '';
-    }
-    const styles = `${selectors.join(', \n')}
-      {
-        outline: 3px dotted red;
-        outline-offset: 3px;
-      };
-      `;
-    return styles;
-  }}
-`;
+    return selectors.length
+      ? {
+          [`${selectors.join(', ')}`]: {
+            outline: '3px dotted red',
+            outlineOffset: '3px',
+          },
+        }
+      : undefined;
+  }, [selection]);
+  return <Box sx={styles} {...rest} />;
+};
 
 export const HighlightSelector: FC = ({ children }) => {
   const { selection } = useContext(SelectionContext);
