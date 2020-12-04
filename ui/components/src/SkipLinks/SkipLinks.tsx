@@ -13,12 +13,12 @@ export interface SkiLinksItemOwnProps {
   text: string;
 }
 
-export type SkiLinksItemProps = SkiLinksItemOwnProps & LinkProps;
+export type SkipLinksItemProps = SkiLinksItemOwnProps & LinkProps;
 
 /**
  * single skip link anchor item
  */
-export const SkiLinksItem: FC<SkiLinksItemProps & LinkProps> = ({
+export const SkiLinksItem: FC<SkipLinksItemProps & LinkProps> = ({
   target,
   text,
   ...rest
@@ -29,7 +29,7 @@ export const SkiLinksItem: FC<SkiLinksItemProps & LinkProps> = ({
 );
 
 export interface SkipLinksProps {
-  items: SkiLinksItemProps[];
+  items: SkipLinksItemProps[];
 }
 
 /**
