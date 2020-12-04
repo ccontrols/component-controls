@@ -1,7 +1,9 @@
-import { RuleSetRule } from 'webpack';
+import path from 'path';
 import { mergeWebpackConfig } from '@component-controls/webpack-configs';
 const LoaderPlugin = require('@component-controls/loader/plugin');
 import { PresetOptions, defaultRules } from './types';
+
+const toPath = (p: string) => path.join(process.cwd(), p);
 
 module.exports = {
   config: (entry: any[] = []) => {
@@ -43,51 +45,30 @@ module.exports = {
 
     return result;
   },
+
   webpackFinal: (config: any = {}, options: PresetOptions = {}) => {
     const mergedConfig = mergeWebpackConfig(
       config,
       options?.webpack || defaultRules,
       {},
     );
-    return {
+    const newConfig = {
       ...mergedConfig,
-      module: {
-        ...mergedConfig.module,
-        rules: mergedConfig.module?.rules.map(r => {
-          return Array.isArray(r.use)
-            ? {
-                ...r,
-                use: r.use.map(use =>
-                  (use as RuleSetRule).options && (use as RuleSetRule).options
-                    ? {
-                        ...(use as RuleSetRule),
-                        options: {
-                          ...(use as any).options,
-                          presets: Array.isArray((use as any).options?.presets)
-                            ? (use as any).options.presets.map(
-                                (preset: any) => {
-                                  return Array.isArray(preset)
-                                    ? preset.map(p =>
-                                        p.runtime
-                                          ? { ...p, runtime: 'classic' }
-                                          : p,
-                                      )
-                                    : preset;
-                                },
-                              )
-                            : undefined,
-                        },
-                      }
-                    : use,
-                ),
-              }
-            : r;
-        }),
-      },
       plugins: [
         ...(mergedConfig.plugins as any),
         new LoaderPlugin({ defaultConfigPath: '.storybook' }),
       ],
     };
+    if (config._version > '6.0.0') {
+      newConfig.resolve = {
+        ...config.resolve,
+        alias: {
+          ...config.resolve.alias,
+          '@emotion/core': toPath('node_modules/@emotion/react'),
+          'emotion-theming': toPath('node_modules/@emotion/react'),
+        },
+      };
+    }
+    return newConfig;
   },
 };
