@@ -64,7 +64,6 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
     [hideErrorColumns],
   );
   const table = useMemo(() => {
-    console.log('MEMO', hideErrorColumns);
     const columns: Column<Record<string, unknown>>[] = [
       {
         // Build our expander column
