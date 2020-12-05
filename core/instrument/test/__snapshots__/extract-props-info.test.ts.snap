@@ -595,13 +595,10 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "union",
-        "raw": "\\"text\\" | \\"all\\" | \\"additions\\" | \\"additions removals\\" | \\"additions text\\" | \\"removals\\" | \\"removals additions\\" | \\"removals text\\" | \\"text additions\\" | \\"text removals\\"",
+        "raw": "\\"text\\" | \\"additions\\" | \\"additions removals\\" | \\"additions text\\" | \\"all\\" | \\"removals\\" | \\"removals additions\\" | \\"removals text\\" | \\"text additions\\" | \\"text removals\\"",
         "value": Array [
           Object {
             "name": "text",
-          },
-          Object {
-            "name": "all",
           },
           Object {
             "name": "additions",
@@ -611,6 +608,9 @@ A hint could be a sample value or a brief description of the expected format.",
           },
           Object {
             "name": "additions text",
+          },
+          Object {
+            "name": "all",
           },
           Object {
             "name": "removals",
@@ -775,19 +775,13 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "BoxOwnProps",
       "type": Object {
         "name": "union",
-        "raw": "\\"symbol\\" | \\"object\\" | \\"title\\" | \\"data\\" | \\"a\\" | \\"abbr\\" | \\"address\\" | \\"area\\" | \\"article\\" | \\"aside\\" | \\"audio\\" | \\"b\\" | \\"base\\" | \\"bdi\\" | \\"bdo\\" | \\"big\\" | \\"blockquote\\" | \\"body\\" | \\"br\\" | \\"button\\" | ... 157 more ...",
+        "raw": "\\"symbol\\" | \\"object\\" | \\"a\\" | \\"abbr\\" | \\"address\\" | \\"area\\" | \\"article\\" | \\"aside\\" | \\"audio\\" | \\"b\\" | \\"base\\" | \\"bdi\\" | \\"bdo\\" | \\"big\\" | \\"blockquote\\" | \\"body\\" | \\"br\\" | \\"button\\" | \\"canvas\\" | ... 158 more ...",
         "value": Array [
           Object {
             "name": "symbol",
           },
           Object {
             "name": "object",
-          },
-          Object {
-            "name": "title",
-          },
-          Object {
-            "name": "data",
           },
           Object {
             "name": "a",
@@ -838,7 +832,10 @@ A hint could be a sample value or a brief description of the expected format.",
             "name": "button",
           },
           Object {
-            "name": "... 157 more ...",
+            "name": "canvas",
+          },
+          Object {
+            "name": "... 158 more ...",
           },
         ],
       },
@@ -894,7 +891,7 @@ Array values are converted into responsive values.
     },
     "collapsible": Object {
       "description": "if false, will nothave a collapsible frame.",
-      "parentName": "BlockContainerProps",
+      "parentName": "BlockContainerOwnProps",
       "type": Object {
         "name": "boolean",
         "raw": "boolean",
@@ -943,10 +940,10 @@ Array values are converted into responsive values.
       },
     },
     "css": Object {
-      "parentName": "DOMAttributes",
+      "parentName": "BoxOwnProps",
       "type": Object {
-        "name": "InterpolationWithTheme<any>",
-        "raw": "InterpolationWithTheme<any>",
+        "name": "Interpolation<any>",
+        "raw": "Interpolation<any>",
       },
     },
     "dangerouslySetInnerHTML": Object {
@@ -958,7 +955,7 @@ Array values are converted into responsive values.
     },
     "data-testid": Object {
       "description": "testing id",
-      "parentName": "BlockContainerProps",
+      "parentName": "BlockContainerOwnProps",
       "type": Object {
         "name": "string",
         "raw": "string",
@@ -992,7 +989,7 @@ Array values are converted into responsive values.
     },
     "description": Object {
       "description": "optional markdown description.",
-      "parentName": "BlockContainerProps",
+      "parentName": "BlockContainerOwnProps",
       "type": Object {
         "name": "string",
         "raw": "string",
@@ -1105,7 +1102,7 @@ Array values are converted into responsive values.
       "description": "optional id to be used for the block
 if no id is provided, one will be calculated automatically
 from the title.",
-      "parentName": "BlockContainerProps",
+      "parentName": "BlockContainerOwnProps",
       "type": Object {
         "name": "string",
         "raw": "string",
@@ -2554,7 +2551,7 @@ if the function returns false, it can stop chabging to the new tab",
     },
     "plain": Object {
       "description": "inner container variant. default to 'inner' to display a border and shadow",
-      "parentName": "BlockContainerProps",
+      "parentName": "BlockContainerOwnProps",
       "type": Object {
         "name": "boolean",
         "raw": "boolean",
@@ -2726,17 +2723,7 @@ if the function returns false, it can stop chabging to the new tab",
       },
     },
     "sx": Object {
-      "description": "theme-ui styling object for Block Box
-The sx prop lets you style elements inline, using values from your
-theme. To use the sx prop, add the custom pragma as a comment to the
-top of your module and import the jsx function.
-
-\`\`\`ts
-// @jsx jsx
-
-import { jsx } from 'theme-ui'
-\`\`\`",
-      "parentName": "BlockContainerProps",
+      "parentName": "Attributes",
       "type": Object {
         "name": "union",
         "raw": "ThemeUICSSObject | ThemeDerivedStyles",
@@ -2759,7 +2746,7 @@ import { jsx } from 'theme-ui'
     },
     "title": Object {
       "description": "optional section title for the block.",
-      "parentName": "BlockContainerProps",
+      "parentName": "BlockContainerOwnProps",
       "type": Object {
         "name": "string",
         "raw": "string",
@@ -2814,16 +2801,16 @@ import { jsx } from 'theme-ui'
 user setting can display only props table or only controls",
       "type": Object {
         "name": "union",
-        "raw": "\\"controls\\" | \\"info\\" | \\"all\\"",
+        "raw": "\\"all\\" | \\"controls\\" | \\"info\\"",
         "value": Array [
+          Object {
+            "name": "all",
+          },
           Object {
             "name": "controls",
           },
           Object {
             "name": "info",
-          },
-          Object {
-            "name": "all",
           },
         ],
       },
@@ -3870,13 +3857,6 @@ A hint could be a sample value or a brief description of the expected format.",
       "type": Object {
         "name": "string",
         "raw": "string",
-      },
-    },
-    "css": Object {
-      "parentName": "DOMAttributes",
-      "type": Object {
-        "name": "InterpolationWithTheme<any>",
-        "raw": "InterpolationWithTheme<any>",
       },
     },
     "dangerouslySetInnerHTML": Object {
@@ -5856,30 +5836,6 @@ A hint could be a sample value or a brief description of the expected format.",
         "raw": "boolean",
       },
     },
-    "sx": Object {
-      "description": "The sx prop lets you style elements inline, using values from your
-theme. To use the sx prop, add the custom pragma as a comment to the
-top of your module and import the jsx function.
-
-\`\`\`ts
-// @jsx jsx
-
-import { jsx } from 'theme-ui'
-\`\`\`",
-      "parentName": "SxProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ThemeUICSSObject | ThemeDerivedStyles",
-        "value": Array [
-          Object {
-            "name": "ThemeUICSSObject",
-          },
-          Object {
-            "name": "ThemeDerivedStyles",
-          },
-        ],
-      },
-    },
     "tabIndex": Object {
       "parentName": "TabProps",
       "type": Object {
@@ -7035,13 +6991,6 @@ A hint could be a sample value or a brief description of the expected format.",
       "type": Object {
         "name": "string",
         "raw": "string",
-      },
-    },
-    "css": Object {
-      "parentName": "DOMAttributes",
-      "type": Object {
-        "name": "InterpolationWithTheme<any>",
-        "raw": "InterpolationWithTheme<any>",
       },
     },
     "dangerouslySetInnerHTML": Object {
@@ -9007,30 +8956,6 @@ A hint could be a sample value or a brief description of the expected format.",
         "raw": "boolean",
       },
     },
-    "sx": Object {
-      "description": "The sx prop lets you style elements inline, using values from your
-theme. To use the sx prop, add the custom pragma as a comment to the
-top of your module and import the jsx function.
-
-\`\`\`ts
-// @jsx jsx
-
-import { jsx } from 'theme-ui'
-\`\`\`",
-      "parentName": "SxProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ThemeUICSSObject | ThemeDerivedStyles",
-        "value": Array [
-          Object {
-            "name": "ThemeUICSSObject",
-          },
-          Object {
-            "name": "ThemeDerivedStyles",
-          },
-        ],
-      },
-    },
     "tabIndex": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
@@ -10186,13 +10111,6 @@ A hint could be a sample value or a brief description of the expected format.",
       "type": Object {
         "name": "string",
         "raw": "string",
-      },
-    },
-    "css": Object {
-      "parentName": "DOMAttributes",
-      "type": Object {
-        "name": "InterpolationWithTheme<any>",
-        "raw": "InterpolationWithTheme<any>",
       },
     },
     "dangerouslySetInnerHTML": Object {
@@ -12172,30 +12090,6 @@ A hint could be a sample value or a brief description of the expected format.",
         "raw": "boolean",
       },
     },
-    "sx": Object {
-      "description": "The sx prop lets you style elements inline, using values from your
-theme. To use the sx prop, add the custom pragma as a comment to the
-top of your module and import the jsx function.
-
-\`\`\`ts
-// @jsx jsx
-
-import { jsx } from 'theme-ui'
-\`\`\`",
-      "parentName": "SxProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ThemeUICSSObject | ThemeDerivedStyles",
-        "value": Array [
-          Object {
-            "name": "ThemeUICSSObject",
-          },
-          Object {
-            "name": "ThemeDerivedStyles",
-          },
-        ],
-      },
-    },
     "tabIndex": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
@@ -13351,13 +13245,6 @@ A hint could be a sample value or a brief description of the expected format.",
       "type": Object {
         "name": "string",
         "raw": "string",
-      },
-    },
-    "css": Object {
-      "parentName": "DOMAttributes",
-      "type": Object {
-        "name": "InterpolationWithTheme<any>",
-        "raw": "InterpolationWithTheme<any>",
       },
     },
     "dangerouslySetInnerHTML": Object {
@@ -15386,30 +15273,6 @@ A hint could be a sample value or a brief description of the expected format.",
       "type": Object {
         "name": "boolean",
         "raw": "boolean",
-      },
-    },
-    "sx": Object {
-      "description": "The sx prop lets you style elements inline, using values from your
-theme. To use the sx prop, add the custom pragma as a comment to the
-top of your module and import the jsx function.
-
-\`\`\`ts
-// @jsx jsx
-
-import { jsx } from 'theme-ui'
-\`\`\`",
-      "parentName": "SxProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ThemeUICSSObject | ThemeDerivedStyles",
-        "value": Array [
-          Object {
-            "name": "ThemeUICSSObject",
-          },
-          Object {
-            "name": "ThemeDerivedStyles",
-          },
-        ],
       },
     },
     "tabIndex": Object {

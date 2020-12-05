@@ -13,7 +13,7 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
         class="css-xhp9da"
       >
         <h3
-          class="css-1p18zt3-BlockContainer"
+          class="css-16ist9v-BlockContainer"
         />
       </div>
     </div>
@@ -31,7 +31,7 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-7mlh6m"
+                class="css-1rfzzcg"
               >
                 <div
                   class="css-12hibeq"
@@ -49,7 +49,7 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
             class="css-eqxzio"
           >
             <div
-              class="css-1ur9rf0-ViewportBlock"
+              class="css-10nnqwz-ViewportBlock"
             >
               <div
                 class="css-vkd8ti"
@@ -58,7 +58,7 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
                   class="css-xtndwh"
                 >
                   <div
-                    class="css-1xkyebe"
+                    class="css-x14tbo-Story"
                   >
                     <div
                       class="css-jxxswp"
@@ -68,7 +68,7 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
                         class="css-xhp9da"
                       >
                         <h3
-                          class="css-1p18zt3-BlockContainer"
+                          class="css-16ist9v-BlockContainer"
                         />
                       </div>
                     </div>
@@ -120,11 +120,11 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
                     </div>
                   </div>
                 </div>
-                <div
+                <span
                   class="hoverbox-text css-1cgogy4"
                 >
                   320px
-                </div>
+                </span>
               </div>
               <div
                 class="css-vkd8ti"
@@ -133,7 +133,7 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
                   class="css-xtndwh"
                 >
                   <div
-                    class="css-1xkyebe"
+                    class="css-1voh55n-Story"
                   >
                     <div
                       class="css-jxxswp"
@@ -143,7 +143,7 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
                         class="css-xhp9da"
                       >
                         <h3
-                          class="css-1p18zt3-BlockContainer"
+                          class="css-16ist9v-BlockContainer"
                         />
                       </div>
                     </div>
@@ -195,11 +195,11 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
                     </div>
                   </div>
                 </div>
-                <div
+                <span
                   class="hoverbox-text css-1cgogy4"
                 >
                   375px
-                </div>
+                </span>
               </div>
               <div
                 class="css-vkd8ti"
@@ -208,7 +208,7 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
                   class="css-xtndwh"
                 >
                   <div
-                    class="css-1xkyebe"
+                    class="css-6nxj2r-Story"
                   >
                     <div
                       class="css-jxxswp"
@@ -218,7 +218,7 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
                         class="css-xhp9da"
                       >
                         <h3
-                          class="css-1p18zt3-BlockContainer"
+                          class="css-16ist9v-BlockContainer"
                         />
                       </div>
                     </div>
@@ -270,11 +270,11 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
                     </div>
                   </div>
                 </div>
-                <div
+                <span
                   class="hoverbox-text css-1cgogy4"
                 >
                   768px
-                </div>
+                </span>
               </div>
               <div
                 class="css-vkd8ti"
@@ -283,7 +283,7 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
                   class="css-xtndwh"
                 >
                   <div
-                    class="css-1xkyebe"
+                    class="css-pct2xa-Story"
                   >
                     <div
                       class="css-jxxswp"
@@ -293,7 +293,7 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
                         class="css-xhp9da"
                       >
                         <h3
-                          class="css-1p18zt3-BlockContainer"
+                          class="css-16ist9v-BlockContainer"
                         />
                       </div>
                     </div>
@@ -345,11 +345,11 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
                     </div>
                   </div>
                 </div>
-                <div
+                <span
                   class="hoverbox-text css-1cgogy4"
                 >
                   1024px
-                </div>
+                </span>
               </div>
             </div>
           </div>
@@ -373,7 +373,7 @@ exports[`Plugins/ViewportBlock Sizes 1`] = `
         class="css-xhp9da"
       >
         <h3
-          class="css-1p18zt3-BlockContainer"
+          class="css-16ist9v-BlockContainer"
         />
       </div>
     </div>
@@ -391,7 +391,7 @@ exports[`Plugins/ViewportBlock Sizes 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-7mlh6m"
+                class="css-1rfzzcg"
               >
                 <div
                   class="css-12hibeq"
@@ -409,7 +409,7 @@ exports[`Plugins/ViewportBlock Sizes 1`] = `
             class="css-eqxzio"
           >
             <div
-              class="css-1ur9rf0-ViewportBlock"
+              class="css-10nnqwz-ViewportBlock"
             >
               <div
                 class="css-vkd8ti"
@@ -418,7 +418,7 @@ exports[`Plugins/ViewportBlock Sizes 1`] = `
                   class="css-xtndwh"
                 >
                   <div
-                    class="css-1xkyebe"
+                    class="css-ntvi2e-Story"
                   >
                     <div
                       class="css-jxxswp"
@@ -428,7 +428,7 @@ exports[`Plugins/ViewportBlock Sizes 1`] = `
                         class="css-xhp9da"
                       >
                         <h3
-                          class="css-1p18zt3-BlockContainer"
+                          class="css-16ist9v-BlockContainer"
                         />
                       </div>
                     </div>
@@ -480,11 +480,11 @@ exports[`Plugins/ViewportBlock Sizes 1`] = `
                     </div>
                   </div>
                 </div>
-                <div
+                <span
                   class="hoverbox-text css-1cgogy4"
                 >
                   xsmall
-                </div>
+                </span>
               </div>
               <div
                 class="css-vkd8ti"
@@ -493,7 +493,7 @@ exports[`Plugins/ViewportBlock Sizes 1`] = `
                   class="css-xtndwh"
                 >
                   <div
-                    class="css-1xkyebe"
+                    class="css-vhed6k-Story"
                   >
                     <div
                       class="css-jxxswp"
@@ -503,7 +503,7 @@ exports[`Plugins/ViewportBlock Sizes 1`] = `
                         class="css-xhp9da"
                       >
                         <h3
-                          class="css-1p18zt3-BlockContainer"
+                          class="css-16ist9v-BlockContainer"
                         />
                       </div>
                     </div>
@@ -555,11 +555,11 @@ exports[`Plugins/ViewportBlock Sizes 1`] = `
                     </div>
                   </div>
                 </div>
-                <div
+                <span
                   class="hoverbox-text css-1cgogy4"
                 >
                   small
-                </div>
+                </span>
               </div>
             </div>
           </div>

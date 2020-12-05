@@ -53,16 +53,16 @@ exports[`Application/App Overview 1`] = `
             class="css-f5h6sg"
           >
             <div
-              class="css-ldwe25"
+              class="css-1rw838x"
             >
               <a
                 aria-label="Component controls"
-                class="css-881li9-LogoLink"
+                class="css-1vsogol-LogoLink"
                 href="/"
               />
               <a
                 aria-label="Component controls"
-                class="css-881li9-LogoLink"
+                class="css-1vsogol-LogoLink"
                 href="/"
               >
                 <img
@@ -85,23 +85,23 @@ exports[`Application/App Overview 1`] = `
             class="css-f5h6sg"
           >
             <div
-              class="css-ldwe25"
+              class="css-1rw838x"
             >
               <div
                 class="css-12hibeq"
               >
                 <div
-                  class="css-t2f9yn-SearchInput"
+                  class="css-nnvwbb-SearchInput"
                 >
                   <input
                     aria-label="full text search"
-                    class="css-19xk8th-SearchInput"
+                    class="css-1aqyn14-SearchInput"
                     placeholder="search..."
                     value=""
                   />
                   <svg
                     aria-hidden="true"
-                    class="css-q4atzm-SearchInput"
+                    class="css-1f2hmcd-SearchInput"
                     fill="currentColor"
                     height="16"
                     role="img"
@@ -118,7 +118,7 @@ exports[`Application/App Overview 1`] = `
               </div>
             </div>
             <div
-              class="css-vhp4dg"
+              class="css-1229dh0"
             >
               <div
                 class="css-vurnku"
@@ -213,13 +213,13 @@ exports[`Application/App Overview 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-ldwe25"
+            class="css-1rw838x"
           >
-            <div
+            <span
               class="css-vurnku"
             >
               Copyright © 2020 by @component-controls
-            </div>
+            </span>
           </div>
         </div>
       </div>
@@ -230,7 +230,7 @@ exports[`Application/App Overview 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-ldwe25"
+            class="css-1rw838x"
           >
             <a
               aria-label="visit project home page"
@@ -263,7 +263,7 @@ exports[`Application/AppError Overview 1`] = `
 exports[`Application/CategoryList Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-rtbfsf"
+    class="css-1nkee46"
     id="content"
   >
     <div
@@ -303,11 +303,11 @@ exports[`Application/CategoryList Overview 1`] = `
                     fill-rule="evenodd"
                   />
                 </svg>
-                <div
+                <span
                   class="css-6amu4j"
                 >
                   Edit this page
-                </div>
+                </span>
               </div>
             </a>
           </div>
@@ -317,35 +317,35 @@ exports[`Application/CategoryList Overview 1`] = `
             <div
               class="css-zf8zhj"
             >
-              <div
+              <span
                 class="css-13o2efz"
               >
                 created:
-              </div>
-              <div
+              </span>
+              <span
                 class="css-uv6qe8"
               >
                 1/1/2020
-              </div>
+              </span>
             </div>
-            <div
+            <span
               class="css-15qy1uq"
             >
               ,
-            </div>
+            </span>
             <div
               class="css-zf8zhj"
             >
-              <div
+              <span
                 class="css-13o2efz"
               >
                 updated:
-              </div>
-              <div
+              </span>
+              <span
                 class="css-uv6qe8"
               >
                 3/31/2020
-              </div>
+              </span>
             </div>
             <div
               class="css-lllzso"
@@ -353,12 +353,12 @@ exports[`Application/CategoryList Overview 1`] = `
               <div
                 class="css-zf8zhj"
               >
-                <div
+                <span
                   class="css-13o2efz"
                 >
                   by
-                </div>
-                <div
+                </span>
+                <span
                   class="css-uv6qe8"
                 >
                   <a
@@ -367,7 +367,7 @@ exports[`Application/CategoryList Overview 1`] = `
                   >
                     atanasster
                   </a>
-                </div>
+                </span>
               </div>
             </div>
           </div>
@@ -376,7 +376,7 @@ exports[`Application/CategoryList Overview 1`] = `
           class="css-hi5zbn"
         >
           <h1
-            class="css-11z6fnw-Container"
+            class="css-9kctfa-Container"
           >
             Story
           </h1>
@@ -432,19 +432,19 @@ exports[`Application/CategoryList Overview 1`] = `
                 <div
                   class="css-1my6hv5"
                 >
-                  <div
+                  <span
                     class="css-c3r86m"
                   >
                     Next
-                  </div>
+                  </span>
                   <div
                     class="css-9tifnv"
                   >
-                    <div
+                    <span
                       class="css-1s8umv4"
                     >
                       MDX Story
-                    </div>
+                    </span>
                     <svg
                       aria-hidden="true"
                       class="octicon"
@@ -475,7 +475,7 @@ exports[`Application/CategoryList Overview 1`] = `
 exports[`Application/CategoryPage Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-rtbfsf"
+    class="css-1nkee46"
     id="content"
   >
     <div
@@ -515,11 +515,11 @@ exports[`Application/CategoryPage Overview 1`] = `
                     fill-rule="evenodd"
                   />
                 </svg>
-                <div
+                <span
                   class="css-6amu4j"
                 >
                   Edit this page
-                </div>
+                </span>
               </div>
             </a>
           </div>
@@ -529,35 +529,35 @@ exports[`Application/CategoryPage Overview 1`] = `
             <div
               class="css-zf8zhj"
             >
-              <div
+              <span
                 class="css-13o2efz"
               >
                 created:
-              </div>
-              <div
+              </span>
+              <span
                 class="css-uv6qe8"
               >
                 1/1/2020
-              </div>
+              </span>
             </div>
-            <div
+            <span
               class="css-15qy1uq"
             >
               ,
-            </div>
+            </span>
             <div
               class="css-zf8zhj"
             >
-              <div
+              <span
                 class="css-13o2efz"
               >
                 updated:
-              </div>
-              <div
+              </span>
+              <span
                 class="css-uv6qe8"
               >
                 3/31/2020
-              </div>
+              </span>
             </div>
             <div
               class="css-lllzso"
@@ -565,12 +565,12 @@ exports[`Application/CategoryPage Overview 1`] = `
               <div
                 class="css-zf8zhj"
               >
-                <div
+                <span
                   class="css-13o2efz"
                 >
                   by
-                </div>
-                <div
+                </span>
+                <span
                   class="css-uv6qe8"
                 >
                   <a
@@ -579,7 +579,7 @@ exports[`Application/CategoryPage Overview 1`] = `
                   >
                     atanasster
                   </a>
-                </div>
+                </span>
               </div>
             </div>
           </div>
@@ -588,7 +588,7 @@ exports[`Application/CategoryPage Overview 1`] = `
           class="css-hi5zbn"
         >
           <h1
-            class="css-11z6fnw-Container"
+            class="css-9kctfa-Container"
           >
             Story
           </h1>
@@ -692,13 +692,13 @@ exports[`Application/CategoryPage Overview 1`] = `
                       href="/docs/"
                     >
                       <span
-                        class="css-14znsfl-Tag"
+                        class="css-pqmwqh-Tag"
                       >
-                        <div
+                        <span
                           class="css-vurnku"
                         >
                           story
-                        </div>
+                        </span>
                       </span>
                     </a>
                   </div>
@@ -716,16 +716,16 @@ exports[`Application/CategoryPage Overview 1`] = `
                       <div
                         class="css-f5h6sg"
                       >
-                        <div
+                        <span
                           class="css-9cwl6c"
                         >
                           ,
-                        </div>
-                        <div
+                        </span>
+                        <span
                           class="css-12cl38p"
                         >
                           by
-                        </div>
+                        </span>
                         <a
                           class="css-1t54e2w"
                           href="/authors/atanasster"
@@ -761,13 +761,13 @@ exports[`Application/CategoryPage Overview 1`] = `
                       href="/docs/"
                     >
                       <span
-                        class="css-14znsfl-Tag"
+                        class="css-pqmwqh-Tag"
                       >
-                        <div
+                        <span
                           class="css-vurnku"
                         >
                           story
-                        </div>
+                        </span>
                       </span>
                     </a>
                   </div>
@@ -795,19 +795,19 @@ exports[`Application/CategoryPage Overview 1`] = `
                 <div
                   class="css-1my6hv5"
                 >
-                  <div
+                  <span
                     class="css-c3r86m"
                   >
                     Next
-                  </div>
+                  </span>
                   <div
                     class="css-9tifnv"
                   >
-                    <div
+                    <span
                       class="css-1s8umv4"
                     >
                       MDX Story
-                    </div>
+                    </span>
                     <svg
                       aria-hidden="true"
                       class="octicon"
@@ -874,11 +874,11 @@ exports[`Application/Container Overview 1`] = `
                   fill-rule="evenodd"
                 />
               </svg>
-              <div
+              <span
                 class="css-6amu4j"
               >
                 Edit this page
-              </div>
+              </span>
             </div>
           </a>
         </div>
@@ -888,35 +888,35 @@ exports[`Application/Container Overview 1`] = `
           <div
             class="css-zf8zhj"
           >
-            <div
+            <span
               class="css-13o2efz"
             >
               created:
-            </div>
-            <div
+            </span>
+            <span
               class="css-uv6qe8"
             >
               1/1/2020
-            </div>
+            </span>
           </div>
-          <div
+          <span
             class="css-15qy1uq"
           >
             ,
-          </div>
+          </span>
           <div
             class="css-zf8zhj"
           >
-            <div
+            <span
               class="css-13o2efz"
             >
               updated:
-            </div>
-            <div
+            </span>
+            <span
               class="css-uv6qe8"
             >
               3/31/2020
-            </div>
+            </span>
           </div>
           <div
             class="css-lllzso"
@@ -924,12 +924,12 @@ exports[`Application/Container Overview 1`] = `
             <div
               class="css-zf8zhj"
             >
-              <div
+              <span
                 class="css-13o2efz"
               >
                 by
-              </div>
-              <div
+              </span>
+              <span
                 class="css-uv6qe8"
               >
                 <a
@@ -938,7 +938,7 @@ exports[`Application/Container Overview 1`] = `
                 >
                   atanasster
                 </a>
-              </div>
+              </span>
             </div>
           </div>
         </div>
@@ -947,7 +947,7 @@ exports[`Application/Container Overview 1`] = `
         class="css-hi5zbn"
       >
         <h1
-          class="css-11z6fnw-Container"
+          class="css-9kctfa-Container"
         >
           Story
         </h1>
@@ -976,19 +976,19 @@ exports[`Application/Container Overview 1`] = `
               <div
                 class="css-1my6hv5"
               >
-                <div
+                <span
                   class="css-c3r86m"
                 >
                   Next
-                </div>
+                </span>
                 <div
                   class="css-9tifnv"
                 >
-                  <div
+                  <span
                     class="css-1s8umv4"
                   >
                     MDX Story
-                  </div>
+                  </span>
                   <svg
                     aria-hidden="true"
                     class="octicon"
@@ -1018,7 +1018,7 @@ exports[`Application/Container Overview 1`] = `
 exports[`Application/DocPage Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-8f52r4"
+    class="css-8u2ol3"
     id="content"
   >
     <div
@@ -1058,11 +1058,11 @@ exports[`Application/DocPage Overview 1`] = `
                     fill-rule="evenodd"
                   />
                 </svg>
-                <div
+                <span
                   class="css-6amu4j"
                 >
                   Edit this page
-                </div>
+                </span>
               </div>
             </a>
           </div>
@@ -1072,35 +1072,35 @@ exports[`Application/DocPage Overview 1`] = `
             <div
               class="css-zf8zhj"
             >
-              <div
+              <span
                 class="css-13o2efz"
               >
                 created:
-              </div>
-              <div
+              </span>
+              <span
                 class="css-uv6qe8"
               >
                 1/1/2020
-              </div>
+              </span>
             </div>
-            <div
+            <span
               class="css-15qy1uq"
             >
               ,
-            </div>
+            </span>
             <div
               class="css-zf8zhj"
             >
-              <div
+              <span
                 class="css-13o2efz"
               >
                 updated:
-              </div>
-              <div
+              </span>
+              <span
                 class="css-uv6qe8"
               >
                 3/31/2020
-              </div>
+              </span>
             </div>
             <div
               class="css-lllzso"
@@ -1108,12 +1108,12 @@ exports[`Application/DocPage Overview 1`] = `
               <div
                 class="css-zf8zhj"
               >
-                <div
+                <span
                   class="css-13o2efz"
                 >
                   by
-                </div>
-                <div
+                </span>
+                <span
                   class="css-uv6qe8"
                 >
                   <a
@@ -1122,7 +1122,7 @@ exports[`Application/DocPage Overview 1`] = `
                   >
                     atanasster
                   </a>
-                </div>
+                </span>
               </div>
             </div>
           </div>
@@ -1131,7 +1131,7 @@ exports[`Application/DocPage Overview 1`] = `
           class="css-hi5zbn"
         >
           <h1
-            class="css-11z6fnw-Container"
+            class="css-9kctfa-Container"
           >
             Story
           </h1>
@@ -1160,19 +1160,19 @@ exports[`Application/DocPage Overview 1`] = `
                 <div
                   class="css-1my6hv5"
                 >
-                  <div
+                  <span
                     class="css-c3r86m"
                   >
                     Next
-                  </div>
+                  </span>
                   <div
                     class="css-9tifnv"
                   >
-                    <div
+                    <span
                       class="css-1s8umv4"
                     >
                       MDX Story
-                    </div>
+                    </span>
                     <svg
                       aria-hidden="true"
                       class="octicon"
@@ -1203,7 +1203,7 @@ exports[`Application/DocPage Overview 1`] = `
 exports[`Application/DocumentHomePage Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-rtbfsf"
+    class="css-1nkee46"
     id="content"
   >
     <div
@@ -1243,11 +1243,11 @@ exports[`Application/DocumentHomePage Overview 1`] = `
                     fill-rule="evenodd"
                   />
                 </svg>
-                <div
+                <span
                   class="css-6amu4j"
                 >
                   Edit this page
-                </div>
+                </span>
               </div>
             </a>
           </div>
@@ -1257,35 +1257,35 @@ exports[`Application/DocumentHomePage Overview 1`] = `
             <div
               class="css-zf8zhj"
             >
-              <div
+              <span
                 class="css-13o2efz"
               >
                 created:
-              </div>
-              <div
+              </span>
+              <span
                 class="css-uv6qe8"
               >
                 1/1/2020
-              </div>
+              </span>
             </div>
-            <div
+            <span
               class="css-15qy1uq"
             >
               ,
-            </div>
+            </span>
             <div
               class="css-zf8zhj"
             >
-              <div
+              <span
                 class="css-13o2efz"
               >
                 updated:
-              </div>
-              <div
+              </span>
+              <span
                 class="css-uv6qe8"
               >
                 3/31/2020
-              </div>
+              </span>
             </div>
             <div
               class="css-lllzso"
@@ -1293,12 +1293,12 @@ exports[`Application/DocumentHomePage Overview 1`] = `
               <div
                 class="css-zf8zhj"
               >
-                <div
+                <span
                   class="css-13o2efz"
                 >
                   by
-                </div>
-                <div
+                </span>
+                <span
                   class="css-uv6qe8"
                 >
                   <a
@@ -1307,7 +1307,7 @@ exports[`Application/DocumentHomePage Overview 1`] = `
                   >
                     atanasster
                   </a>
-                </div>
+                </span>
               </div>
             </div>
           </div>
@@ -1316,7 +1316,7 @@ exports[`Application/DocumentHomePage Overview 1`] = `
           class="css-hi5zbn"
         >
           <h1
-            class="css-11z6fnw-Container"
+            class="css-9kctfa-Container"
           >
             Story
           </h1>
@@ -1403,19 +1403,19 @@ exports[`Application/DocumentHomePage Overview 1`] = `
                 <div
                   class="css-1my6hv5"
                 >
-                  <div
+                  <span
                     class="css-c3r86m"
                   >
                     Next
-                  </div>
+                  </span>
                   <div
                     class="css-9tifnv"
                   >
-                    <div
+                    <span
                       class="css-1s8umv4"
                     >
                       MDX Story
-                    </div>
+                    </span>
                     <svg
                       aria-hidden="true"
                       class="octicon"
@@ -1513,13 +1513,13 @@ exports[`Application/Footer Overview 1`] = `
         class="css-f5h6sg"
       >
         <div
-          class="css-ldwe25"
+          class="css-1rw838x"
         >
-          <div
+          <span
             class="css-vurnku"
           >
             Copyright © 2020 by @component-controls
-          </div>
+          </span>
         </div>
       </div>
     </div>
@@ -1530,7 +1530,7 @@ exports[`Application/Footer Overview 1`] = `
         class="css-f5h6sg"
       >
         <div
-          class="css-ldwe25"
+          class="css-1rw838x"
         >
           <a
             aria-label="visit project home page"
@@ -1561,16 +1561,16 @@ exports[`Application/Header Custom Left 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-ldwe25"
+            class="css-1rw838x"
           >
             <a
               aria-label="Component controls"
-              class="css-881li9-LogoLink"
+              class="css-1vsogol-LogoLink"
               href="/"
             />
             <a
               aria-label="Component controls"
-              class="css-881li9-LogoLink"
+              class="css-1vsogol-LogoLink"
               href="/"
             >
               <img
@@ -1581,7 +1581,7 @@ exports[`Application/Header Custom Left 1`] = `
             </a>
           </div>
           <div
-            class="css-vhp4dg"
+            class="css-1229dh0"
           >
             <button
               class="css-1tf4h46"
@@ -1602,23 +1602,23 @@ exports[`Application/Header Custom Left 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-ldwe25"
+            class="css-1rw838x"
           >
             <div
               class="css-12hibeq"
             >
               <div
-                class="css-t2f9yn-SearchInput"
+                class="css-nnvwbb-SearchInput"
               >
                 <input
                   aria-label="full text search"
-                  class="css-19xk8th-SearchInput"
+                  class="css-1aqyn14-SearchInput"
                   placeholder="search..."
                   value=""
                 />
                 <svg
                   aria-hidden="true"
-                  class="css-q4atzm-SearchInput"
+                  class="css-1f2hmcd-SearchInput"
                   fill="currentColor"
                   height="16"
                   role="img"
@@ -1635,7 +1635,7 @@ exports[`Application/Header Custom Left 1`] = `
             </div>
           </div>
           <div
-            class="css-vhp4dg"
+            class="css-1229dh0"
           >
             <div
               class="css-vurnku"
@@ -1738,16 +1738,16 @@ exports[`Application/Header Custom Right 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-ldwe25"
+            class="css-1rw838x"
           >
             <a
               aria-label="Component controls"
-              class="css-881li9-LogoLink"
+              class="css-1vsogol-LogoLink"
               href="/"
             />
             <a
               aria-label="Component controls"
-              class="css-881li9-LogoLink"
+              class="css-1vsogol-LogoLink"
               href="/"
             >
               <img
@@ -1770,7 +1770,7 @@ exports[`Application/Header Custom Right 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-ldwe25"
+            class="css-1rw838x"
           >
             <a
               aria-label="visit github repo"
@@ -1783,23 +1783,23 @@ exports[`Application/Header Custom Right 1`] = `
             </a>
           </div>
           <div
-            class="css-vhp4dg"
+            class="css-1229dh0"
           >
             <div
               class="css-12hibeq"
             >
               <div
-                class="css-t2f9yn-SearchInput"
+                class="css-nnvwbb-SearchInput"
               >
                 <input
                   aria-label="full text search"
-                  class="css-19xk8th-SearchInput"
+                  class="css-1aqyn14-SearchInput"
                   placeholder="search..."
                   value=""
                 />
                 <svg
                   aria-hidden="true"
-                  class="css-q4atzm-SearchInput"
+                  class="css-1f2hmcd-SearchInput"
                   fill="currentColor"
                   height="16"
                   role="img"
@@ -1816,7 +1816,7 @@ exports[`Application/Header Custom Right 1`] = `
             </div>
           </div>
           <div
-            class="css-vhp4dg"
+            class="css-1229dh0"
           >
             <div
               class="css-vurnku"
@@ -1919,16 +1919,16 @@ exports[`Application/Header Customized 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-ldwe25"
+            class="css-1rw838x"
           >
             <a
               aria-label="Component controls"
-              class="css-881li9-LogoLink"
+              class="css-1vsogol-LogoLink"
               href="/"
             />
             <a
               aria-label="Component controls"
-              class="css-881li9-LogoLink"
+              class="css-1vsogol-LogoLink"
               href="/"
             >
               <img
@@ -1939,7 +1939,7 @@ exports[`Application/Header Customized 1`] = `
             </a>
           </div>
           <div
-            class="css-vhp4dg"
+            class="css-1229dh0"
           >
             <a
               class="css-12cl38p"
@@ -1961,7 +1961,7 @@ exports[`Application/Header Customized 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-ldwe25"
+            class="css-1rw838x"
           >
             <a
               class="css-1t54e2w"
@@ -1970,11 +1970,11 @@ exports[`Application/Header Customized 1`] = `
               target="_blank"
             >
               <div
-                class="css-f5h6sg"
+                class="css-15eoqye"
               >
                 <svg
                   aria-hidden="true"
-                  class="css-12z0wuy"
+                  class="css-1goj2uy"
                   fill="currentColor"
                   height="32"
                   role="img"
@@ -1995,7 +1995,7 @@ exports[`Application/Header Customized 1`] = `
             </a>
           </div>
           <div
-            class="css-vhp4dg"
+            class="css-1229dh0"
           >
             <a
               aria-label="visit github repo"
@@ -2005,10 +2005,10 @@ exports[`Application/Header Customized 1`] = `
               target="_blank"
             >
               <div
-                class="css-f5h6sg"
+                class="css-15eoqye"
               >
-                <div
-                  class="css-1psk70t"
+                <span
+                  class="css-ok0w0t"
                 >
                   <svg
                     aria-hidden="true"
@@ -2024,29 +2024,29 @@ exports[`Application/Header Customized 1`] = `
                       d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 01-.686 0 16.709 16.709 0 01-.465-.252 31.147 31.147 0 01-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0114 20.408z"
                     />
                   </svg>
-                </div>
+                </span>
                 parteon
               </div>
             </a>
           </div>
           <div
-            class="css-vhp4dg"
+            class="css-1229dh0"
           >
             <div
               class="css-12hibeq"
             >
               <div
-                class="css-t2f9yn-SearchInput"
+                class="css-nnvwbb-SearchInput"
               >
                 <input
                   aria-label="full text search"
-                  class="css-19xk8th-SearchInput"
+                  class="css-1aqyn14-SearchInput"
                   placeholder="search..."
                   value=""
                 />
                 <svg
                   aria-hidden="true"
-                  class="css-q4atzm-SearchInput"
+                  class="css-1f2hmcd-SearchInput"
                   fill="currentColor"
                   height="16"
                   role="img"
@@ -2063,7 +2063,7 @@ exports[`Application/Header Customized 1`] = `
             </div>
           </div>
           <div
-            class="css-vhp4dg"
+            class="css-1229dh0"
           >
             <div
               class="css-vurnku"
@@ -2166,16 +2166,16 @@ exports[`Application/Header Overview 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-ldwe25"
+            class="css-1rw838x"
           >
             <a
               aria-label="Component controls"
-              class="css-881li9-LogoLink"
+              class="css-1vsogol-LogoLink"
               href="/"
             />
             <a
               aria-label="Component controls"
-              class="css-881li9-LogoLink"
+              class="css-1vsogol-LogoLink"
               href="/"
             >
               <img
@@ -2198,23 +2198,23 @@ exports[`Application/Header Overview 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-ldwe25"
+            class="css-1rw838x"
           >
             <div
               class="css-12hibeq"
             >
               <div
-                class="css-t2f9yn-SearchInput"
+                class="css-nnvwbb-SearchInput"
               >
                 <input
                   aria-label="full text search"
-                  class="css-19xk8th-SearchInput"
+                  class="css-1aqyn14-SearchInput"
                   placeholder="search..."
                   value=""
                 />
                 <svg
                   aria-hidden="true"
-                  class="css-q4atzm-SearchInput"
+                  class="css-1f2hmcd-SearchInput"
                   fill="currentColor"
                   height="16"
                   role="img"
@@ -2231,7 +2231,7 @@ exports[`Application/Header Overview 1`] = `
             </div>
           </div>
           <div
-            class="css-vhp4dg"
+            class="css-1229dh0"
           >
             <div
               class="css-vurnku"
@@ -2322,7 +2322,7 @@ exports[`Application/Header Overview 1`] = `
 exports[`Application/Sidebar Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-18srebt-Sidebar"
+    class="css-1yaquky-Sidebar"
     id="sidebar"
   >
     <div
@@ -2341,7 +2341,7 @@ exports[`Application/Sidebar Overview 1`] = `
             class="css-uliqdc"
           >
             <div
-              class="css-ldwe25"
+              class="css-1rw838x"
             >
               <h3
                 class="css-yrrbzf"
@@ -2350,13 +2350,13 @@ exports[`Application/Sidebar Overview 1`] = `
               </h3>
             </div>
             <div
-              class="css-vhp4dg"
+              class="css-1229dh0"
             >
               <div
                 class="css-1dj4wno"
               >
                 <input
-                  class="css-h1q0sm-Sidebar"
+                  class="css-xjq4ex-Sidebar"
                   placeholder="filter..."
                   value=""
                 />
@@ -2371,13 +2371,13 @@ exports[`Application/Sidebar Overview 1`] = `
             class="css-vurnku"
           >
             <div
-              class="css-w1i3qo"
+              class="css-1em5sge"
             >
               <div
                 class="css-tizfsr"
               >
                 <div
-                  class="css-wj14lk"
+                  class="css-162ewbd"
                 >
                   <button
                     class="css-t9fq0h"
@@ -2385,18 +2385,18 @@ exports[`Application/Sidebar Overview 1`] = `
                     <div
                       class="css-f5h6sg"
                     >
-                      <div
-                        class="css-4f3mio"
+                      <span
+                        class="css-15xx8i3"
                       >
                         <strong>
                           Story
                         </strong>
-                      </div>
+                      </span>
                     </div>
                   </button>
                 </div>
                 <div
-                  class="css-q74hig"
+                  class="css-vthntz"
                 >
                   <div
                     aria-label="collapse items"
@@ -2425,13 +2425,13 @@ exports[`Application/Sidebar Overview 1`] = `
               class="css-vurnku"
             >
               <div
-                class="css-1tdwrho"
+                class="css-48rgnb"
               >
                 <div
                   class="css-tizfsr"
                 >
                   <div
-                    class="selected css-wj14lk"
+                    class="selected css-162ewbd"
                   >
                     <a
                       class="css-p1dwhj"
@@ -2459,16 +2459,16 @@ exports[`Application/Sidebar Overview 1`] = `
                             />
                           </svg>
                         </div>
-                        <div
-                          class="css-4f3mio"
+                        <span
+                          class="css-15xx8i3"
                         >
                           story
-                        </div>
+                        </span>
                       </div>
                     </a>
                   </div>
                   <div
-                    class="css-q74hig"
+                    class="css-vthntz"
                   />
                 </div>
               </div>
@@ -2477,13 +2477,13 @@ exports[`Application/Sidebar Overview 1`] = `
               class="css-vurnku"
             >
               <div
-                class="css-1tz2vcm"
+                class="css-15ej8gm"
               >
                 <div
                   class="css-tizfsr"
                 >
                   <div
-                    class="css-wj14lk"
+                    class="css-162ewbd"
                   >
                     <a
                       class="css-p1dwhj"
@@ -2511,16 +2511,16 @@ exports[`Application/Sidebar Overview 1`] = `
                             />
                           </svg>
                         </div>
-                        <div
-                          class="css-6e1m2i"
+                        <span
+                          class="css-7w8u7j"
                         >
                           story
-                        </div>
+                        </span>
                       </div>
                     </a>
                   </div>
                   <div
-                    class="css-q74hig"
+                    class="css-vthntz"
                   />
                 </div>
               </div>
@@ -2529,13 +2529,13 @@ exports[`Application/Sidebar Overview 1`] = `
               class="css-vurnku"
             >
               <div
-                class="css-1tz2vcm"
+                class="css-15ej8gm"
               >
                 <div
                   class="css-tizfsr"
                 >
                   <div
-                    class="css-wj14lk"
+                    class="css-162ewbd"
                   >
                     <a
                       class="css-p1dwhj"
@@ -2563,16 +2563,16 @@ exports[`Application/Sidebar Overview 1`] = `
                             />
                           </svg>
                         </div>
-                        <div
-                          class="css-6e1m2i"
+                        <span
+                          class="css-7w8u7j"
                         >
                           button
-                        </div>
+                        </span>
                       </div>
                     </a>
                   </div>
                   <div
-                    class="css-q74hig"
+                    class="css-vthntz"
                   />
                 </div>
               </div>
@@ -2581,13 +2581,13 @@ exports[`Application/Sidebar Overview 1`] = `
               class="css-vurnku"
             >
               <div
-                class="css-1tz2vcm"
+                class="css-15ej8gm"
               >
                 <div
                   class="css-tizfsr"
                 >
                   <div
-                    class="css-wj14lk"
+                    class="css-162ewbd"
                   >
                     <a
                       class="css-p1dwhj"
@@ -2615,16 +2615,16 @@ exports[`Application/Sidebar Overview 1`] = `
                             />
                           </svg>
                         </div>
-                        <div
-                          class="css-6e1m2i"
+                        <span
+                          class="css-7w8u7j"
                         >
                           controls
-                        </div>
+                        </span>
                       </div>
                     </a>
                   </div>
                   <div
-                    class="css-q74hig"
+                    class="css-vthntz"
                   />
                 </div>
               </div>
@@ -2634,13 +2634,13 @@ exports[`Application/Sidebar Overview 1`] = `
             class="css-vurnku"
           >
             <div
-              class="css-w1i3qo"
+              class="css-1em5sge"
             >
               <div
                 class="css-tizfsr"
               >
                 <div
-                  class="css-wj14lk"
+                  class="css-162ewbd"
                 >
                   <a
                     class="css-p1dwhj"
@@ -2668,16 +2668,16 @@ exports[`Application/Sidebar Overview 1`] = `
                           />
                         </svg>
                       </div>
-                      <div
-                        class="css-6e1m2i"
+                      <span
+                        class="css-7w8u7j"
                       >
                         MDX Story
-                      </div>
+                      </span>
                     </div>
                   </a>
                 </div>
                 <div
-                  class="css-q74hig"
+                  class="css-vthntz"
                 />
               </div>
             </div>
@@ -2695,11 +2695,11 @@ exports[`Application/SidebarsPage Overview 1`] = `
     class="css-1e1wax2"
   >
     <div
-      class="css-1npxcsd-SidebarsStoryPage"
+      class="css-1mistll-SidebarsStoryPage"
       id="content"
     >
       <div
-        class="css-dps395-Tabs"
+        class="css-3pyqel-Tabs"
       >
         <div
           class="react-tabs"
@@ -2740,7 +2740,7 @@ exports[`Application/SidebarsPage Overview 1`] = `
             </li>
           </ul>
           <div
-            class="css-8f52r4"
+            class="css-8u2ol3"
           >
             <div
               class="css-vurnku"
@@ -2779,11 +2779,11 @@ exports[`Application/SidebarsPage Overview 1`] = `
                             fill-rule="evenodd"
                           />
                         </svg>
-                        <div
+                        <span
                           class="css-6amu4j"
                         >
                           Edit this page
-                        </div>
+                        </span>
                       </div>
                     </a>
                   </div>
@@ -2793,35 +2793,35 @@ exports[`Application/SidebarsPage Overview 1`] = `
                     <div
                       class="css-zf8zhj"
                     >
-                      <div
+                      <span
                         class="css-13o2efz"
                       >
                         created:
-                      </div>
-                      <div
+                      </span>
+                      <span
                         class="css-uv6qe8"
                       >
                         1/1/2020
-                      </div>
+                      </span>
                     </div>
-                    <div
+                    <span
                       class="css-15qy1uq"
                     >
                       ,
-                    </div>
+                    </span>
                     <div
                       class="css-zf8zhj"
                     >
-                      <div
+                      <span
                         class="css-13o2efz"
                       >
                         updated:
-                      </div>
-                      <div
+                      </span>
+                      <span
                         class="css-uv6qe8"
                       >
                         3/31/2020
-                      </div>
+                      </span>
                     </div>
                     <div
                       class="css-lllzso"
@@ -2829,12 +2829,12 @@ exports[`Application/SidebarsPage Overview 1`] = `
                       <div
                         class="css-zf8zhj"
                       >
-                        <div
+                        <span
                           class="css-13o2efz"
                         >
                           by
-                        </div>
-                        <div
+                        </span>
+                        <span
                           class="css-uv6qe8"
                         >
                           <a
@@ -2843,7 +2843,7 @@ exports[`Application/SidebarsPage Overview 1`] = `
                           >
                             atanasster
                           </a>
-                        </div>
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -2852,7 +2852,7 @@ exports[`Application/SidebarsPage Overview 1`] = `
                   class="css-hi5zbn"
                 >
                   <h1
-                    class="css-11z6fnw-Container"
+                    class="css-9kctfa-Container"
                   >
                     Story
                   </h1>
@@ -2893,19 +2893,19 @@ exports[`Application/SidebarsPage Overview 1`] = `
                         <div
                           class="css-1my6hv5"
                         >
-                          <div
+                          <span
                             class="css-c3r86m"
                           >
                             Next
-                          </div>
+                          </span>
                           <div
                             class="css-9tifnv"
                           >
-                            <div
+                            <span
                               class="css-1s8umv4"
                             >
                               MDX Story
-                            </div>
+                            </span>
                             <svg
                               aria-hidden="true"
                               class="octicon"

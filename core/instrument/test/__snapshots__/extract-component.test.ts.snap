@@ -491,25 +491,25 @@ Object {
   },
   "componentPackage": Object {
     "dependencies": Object {
-      "@theme-ui/color-modes": "^0.4.0-rc.14",
-      "@theme-ui/components": "0.4.0-rc.13",
-      "@theme-ui/core": "^0.4.0-rc.13",
-      "@theme-ui/css": "^0.4.0-rc.13",
-      "@theme-ui/mdx": "^0.4.0-rc.13",
-      "@theme-ui/theme-provider": "^0.4.0-rc.14",
+      "@theme-ui/color-modes": "0.6.0-alpha.1",
+      "@theme-ui/components": "0.6.0-alpha.1",
+      "@theme-ui/core": "0.6.0-alpha.1",
+      "@theme-ui/css": "0.6.0-alpha.1",
+      "@theme-ui/mdx": "0.6.0-alpha.1",
+      "@theme-ui/theme-provider": "0.6.0-alpha.1",
     },
     "devDependencies": undefined,
     "fileHash": "8f6835169f285fcd3ad5425d9268a8f1",
     "name": "theme-ui",
     "peerDependencies": Object {
-      "react": "^16.11.0",
+      "react": "^16.14.0 || ^17.0.0",
     },
     "repository": Object {
       "browse": "https://github.com/system-ui/theme-ui/tree/master/dist/index.js",
       "docs": "https://github.com/system-ui/theme-ui/tree/master#readme",
       "issues": "https://github.com/system-ui/theme-ui/issues",
     },
-    "version": "0.4.0-rc.14",
+    "version": "0.6.0-alpha.1",
   },
 }
 `;
@@ -528,8 +528,8 @@ Object {
   "componentPackage": Object {
     "dependencies": Object {
       "@primer/octicons-react": "^10.0.0",
-      "@theme-ui/match-media": "^0.4.0-rc.1",
-      "@theme-ui/presets": "^0.4.0-rc.1",
+      "@theme-ui/match-media": "^0.6.0-alpha.1",
+      "@theme-ui/presets": "^0.6.0-alpha.1",
       "copy-to-clipboard": "^3.2.1",
       "fast-memoize": "^2.5.2",
       "markdown-to-jsx": "^6.11.0",
@@ -541,12 +541,12 @@ Object {
       "react-table": "^7.0.0",
       "react-tabs": "^3.1.0",
       "scroll-into-view-if-needed": "^2.2.25",
-      "theme-ui": "^0.4.0-rc.1",
+      "theme-ui": "^0.6.0-alpha.1",
     },
     "devDependencies": Object {
       "@component-controls/jest-snapshots": "^1.44.1",
       "@component-controls/ts-markdown-docs": "^1.37.0",
-      "@theme-ui/css": "^0.4.0-rc.1",
+      "@theme-ui/css": "^0.6.0-alpha.1",
       "@types/markdown-to-jsx": "^6.11.0",
       "@types/react": "^16.9.34",
       "@types/react-table": "^7.0.10",
