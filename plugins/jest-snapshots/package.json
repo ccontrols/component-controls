@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/jest-snapshots",
-  "version": "1.44.1",
+  "version": "2.0.0",
   "description": "Viewport plugin",
   "keywords": [
     "addon",
@@ -43,13 +43,13 @@
     "cc-jest": "./bin/index.js"
   },
   "dependencies": {
-    "@component-controls/store": "^1.44.1",
-    "@component-controls/webpack-compile": "^1.44.1",
-    "@component-controls/webpack-configs": "^1.44.1",
+    "@component-controls/store": "^2.0.0",
+    "@component-controls/webpack-compile": "^2.0.0",
+    "@component-controls/webpack-configs": "^2.0.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^10.4.9",
-    "enzyme": "^3.11.0",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.3.1",
+    "enzyme": "^3.11.0",
     "enzyme-to-json": "^3.5.0",
     "jest-cli": "^26.4.2",
     "rc-util": "^5.0.7",

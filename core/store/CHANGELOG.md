@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/ccontrols/component-controls/compare/v1.44.1...v2.0.0) (2020-12-05)
+
+
+### Bug Fixes
+
+* decorators typecheck at loading ([d157bae](https://github.com/ccontrols/component-controls/commit/d157bae2baa30ea5292889e0abc0bcee172a5322))
+
+
+
+
+
 ## [1.44.1](https://github.com/ccontrols/component-controls/compare/v1.44.0...v1.44.1) (2020-11-30)
 
 **Note:** Version bump only for package @component-controls/store

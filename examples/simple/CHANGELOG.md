@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/atanasster/component-controls/compare/v1.44.1...v2.0.0) (2020-12-05)
+
+
+### chore
+
+* upgrade nextjs emption 11 ([7fc4168](https://github.com/atanasster/component-controls/commit/7fc4168308f53a7a989550628d35f7e3b5dd6c10))
+
+
+### BREAKING CHANGES
+
+* emotion 11 and nextjs 10 required
+
+
+
+
+
 ## [1.44.1](https://github.com/atanasster/component-controls/compare/v1.44.0...v1.44.1) (2020-11-30)
 
 **Note:** Version bump only for package component-controls-simple

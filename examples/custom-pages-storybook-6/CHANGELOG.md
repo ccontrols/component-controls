@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/ccontrols/component-controls/compare/v1.44.1...v2.0.0) (2020-12-05)
+
+
+### Bug Fixes
+
+* workarounds for storybook emotion v10 ([b7be12b](https://github.com/ccontrols/component-controls/commit/b7be12b540167f25edcdd937ca14070f03d5cfcd))
+
+
+
+
+
 ## [1.44.1](https://github.com/ccontrols/component-controls/compare/v1.44.0...v1.44.1) (2020-11-30)
 
 **Note:** Version bump only for package custom-pages-storybook-6

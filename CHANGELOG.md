@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/ccontrols/component-controls/compare/v1.44.1...v2.0.0) (2020-12-05)
+
+
+### Bug Fixes
+
+* decorators typecheck at loading ([d157bae](https://github.com/ccontrols/component-controls/commit/d157bae2baa30ea5292889e0abc0bcee172a5322))
+* emotion alias for sb manager ([72ab298](https://github.com/ccontrols/component-controls/commit/72ab2986aaff728ffe8d9085c0504897defc1d1e))
+* memoize ally table to avoid reset ([79e4456](https://github.com/ccontrols/component-controls/commit/79e4456eb3b33ec0e228a600a605de66a00e82cb))
+* remove log ([ade7cd7](https://github.com/ccontrols/component-controls/commit/ade7cd7e0c265cc33e21f8598c6b3ac40e40ca5a))
+* spelling for SkipLinksItemProps ([2c11e3a](https://github.com/ccontrols/component-controls/commit/2c11e3a3ae0e09d8d5b24f95124d8e098474bb7f))
+* sx prop upgrade ([37d43fc](https://github.com/ccontrols/component-controls/commit/37d43fce6d916379002631c5c8084870def25148))
+* sx props on story ([ccb1749](https://github.com/ccontrols/component-controls/commit/ccb174964127aa9c56142178e3900092f76ff89c))
+* update popover style color ([87e44b2](https://github.com/ccontrols/component-controls/commit/87e44b2e94f0749b2e47941419e9e6777bd14220))
+* workarounds for storybook emotion v10 ([b7be12b](https://github.com/ccontrols/component-controls/commit/b7be12b540167f25edcdd937ca14070f03d5cfcd))
+
+
+### chore
+
+* upgrade nextjs emption 11 ([7fc4168](https://github.com/ccontrols/component-controls/commit/7fc4168308f53a7a989550628d35f7e3b5dd6c10))
+
+
+### Features
+
+* add aria-labels for bckg and rtl ([4b7b684](https://github.com/ccontrols/component-controls/commit/4b7b6849ee1e747288fa7e305c09292373895e95))
+
+
+### BREAKING CHANGES
+
+* emotion 11 and nextjs 10 required
+
+
+
+
+
 ## [1.44.1](https://github.com/ccontrols/component-controls/compare/v1.44.0...v1.44.1) (2020-11-30)
 
 

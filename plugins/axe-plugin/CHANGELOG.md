@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/ccontrols/component-controls/compare/v1.44.1...v2.0.0) (2020-12-05)
+
+
+### Bug Fixes
+
+* memoize ally table to avoid reset ([79e4456](https://github.com/ccontrols/component-controls/commit/79e4456eb3b33ec0e228a600a605de66a00e82cb))
+* remove log ([ade7cd7](https://github.com/ccontrols/component-controls/commit/ade7cd7e0c265cc33e21f8598c6b3ac40e40ca5a))
+
+
+### chore
+
+* upgrade nextjs emption 11 ([7fc4168](https://github.com/ccontrols/component-controls/commit/7fc4168308f53a7a989550628d35f7e3b5dd6c10))
+
+
+### BREAKING CHANGES
+
+* emotion 11 and nextjs 10 required
+
+
+
+
+
 ## [1.44.1](https://github.com/ccontrols/component-controls/compare/v1.44.0...v1.44.1) (2020-11-30)
 
 **Note:** Version bump only for package @component-controls/axe-plugin

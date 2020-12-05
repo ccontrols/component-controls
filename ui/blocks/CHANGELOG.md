@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/ccontrols/component-controls/compare/v1.44.1...v2.0.0) (2020-12-05)
+
+
+### Bug Fixes
+
+* sx prop upgrade ([37d43fc](https://github.com/ccontrols/component-controls/commit/37d43fce6d916379002631c5c8084870def25148))
+* sx props on story ([ccb1749](https://github.com/ccontrols/component-controls/commit/ccb174964127aa9c56142178e3900092f76ff89c))
+
+
+### Features
+
+* add aria-labels for bckg and rtl ([4b7b684](https://github.com/ccontrols/component-controls/commit/4b7b6849ee1e747288fa7e305c09292373895e95))
+
+
+
+
+
 ## [1.44.1](https://github.com/ccontrols/component-controls/compare/v1.44.0...v1.44.1) (2020-11-30)
 
 

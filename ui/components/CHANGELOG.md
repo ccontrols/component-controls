@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/ccontrols/component-controls/compare/v1.44.1...v2.0.0) (2020-12-05)
+
+
+### Bug Fixes
+
+* spelling for SkipLinksItemProps ([2c11e3a](https://github.com/ccontrols/component-controls/commit/2c11e3a3ae0e09d8d5b24f95124d8e098474bb7f))
+* sx prop upgrade ([37d43fc](https://github.com/ccontrols/component-controls/commit/37d43fce6d916379002631c5c8084870def25148))
+* update popover style color ([87e44b2](https://github.com/ccontrols/component-controls/commit/87e44b2e94f0749b2e47941419e9e6777bd14220))
+
+
+
+
+
 ## [1.44.1](https://github.com/ccontrols/component-controls/compare/v1.44.0...v1.44.1) (2020-11-30)
 
 
