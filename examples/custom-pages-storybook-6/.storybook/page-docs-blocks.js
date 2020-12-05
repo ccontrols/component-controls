@@ -15,7 +15,7 @@ const Page = () => {
   )
 }
 const page = {
-  key: 'docs-page',
+  key: 'docs-blocks',
   title: 'Docs blocks',
   render: ({ active }) => active ? <Page /> : null,
 }
