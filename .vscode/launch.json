@@ -13,7 +13,7 @@
       "stopOnEntry": true,
       "runtimeArgs": [
         "run-script",
-        "debug"
+        "start"
       ],
       "port": 9229,
       "skipFiles": [
