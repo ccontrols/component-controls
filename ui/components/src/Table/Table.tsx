@@ -25,6 +25,8 @@ import {
   UseGroupByRowProps,
   UseExpandedState,
   UseRowSelectState,
+  UseSortByState,
+  SortingRule,
   UseGroupByState,
   TableState,
 } from 'react-table';
@@ -103,6 +105,11 @@ interface TableOwnProps {
    * callback to render a SubComponent row
    */
   renderRowSubComponent?: (props: { row: Row }) => ReactNode;
+
+  /**
+   * initial sorting
+   */
+  sortBy?: Array<SortingRule<any>>;
 }
 
 export type TableProps = TableOwnProps & BoxProps;
@@ -126,6 +133,7 @@ export const Table: FC<TableProps> = ({
   initialSelected = {},
   onSelectRowsChange,
   rowSelect,
+  sortBy,
   ...rest
 }) => {
   const plugins = [
@@ -143,12 +151,16 @@ export const Table: FC<TableProps> = ({
   const initialState: Partial<TableState<Record<string, unknown>>> &
     Partial<UseExpandedState<Record<string, unknown>>> &
     Partial<UseGroupByState<Record<string, unknown>>> &
+    Partial<UseSortByState<Record<string, unknown>>> &
     Partial<UseRowSelectState<Record<string, unknown>>> = {};
   if (Array.isArray(groupBy)) {
     initialState.groupBy = groupBy;
     initialState.hiddenColumns = hiddenColumns || groupBy;
   } else if (hiddenColumns !== undefined) {
     initialState.hiddenColumns = hiddenColumns;
+  }
+  if (Array.isArray(sortBy)) {
+    initialState.sortBy = sortBy;
   }
   if (typeof expanded === 'object') {
     initialState.expanded = expanded;

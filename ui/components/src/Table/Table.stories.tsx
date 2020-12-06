@@ -74,7 +74,17 @@ export const sortable: Example = () => {
   const data = useMemo(mockData, []);
   return (
     <ThemeProvider>
-      <Table sorting={true} columns={columns} data={data} />
+      <Table
+        sorting={true}
+        columns={columns}
+        data={data}
+        sortBy={[
+          {
+            id: 'age',
+            desc: true,
+          },
+        ]}
+      />
     </ThemeProvider>
   );
 };
