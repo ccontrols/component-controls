@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/ccontrols/component-controls/compare/v2.0.0...v2.0.1) (2020-12-06)
+
+
+### Bug Fixes
+
+* replace faker avatar with picsum ([4577697](https://github.com/ccontrols/component-controls/commit/457769777f4952c425bf6c4ca1b608b3946bc888))
+
+
+
+
+
 # [2.0.0](https://github.com/ccontrols/component-controls/compare/v1.44.1...v2.0.0) (2020-12-05)
 
 **Note:** Version bump only for package @component-controls/core

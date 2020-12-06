@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/ccontrols/component-controls/compare/v2.0.0...v2.0.1) (2020-12-06)
+
+
+### Bug Fixes
+
+* page id dupe ([9599b8f](https://github.com/ccontrols/component-controls/commit/9599b8fa8b9c893724bd849630a7648c656acea4))
+
+
+
+
+
 # [2.0.0](https://github.com/ccontrols/component-controls/compare/v1.44.1...v2.0.0) (2020-12-05)
 
 **Note:** Version bump only for package custom-pages-storybook-5

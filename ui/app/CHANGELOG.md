@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/ccontrols/component-controls/compare/v2.0.0...v2.0.1) (2020-12-06)
+
+
+### Bug Fixes
+
+* remove conditional hook call ([534746d](https://github.com/ccontrols/component-controls/commit/534746dafd917c541bb34657c6595f1162585633))
+
+
+
+
+
 # [2.0.0](https://github.com/ccontrols/component-controls/compare/v1.44.1...v2.0.0) (2020-12-05)
 
 
