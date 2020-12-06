@@ -330,7 +330,8 @@ export const theme: ControlsTheme = {
     },
     th: {
       border: 'none',
-      px: 2,
+      py: 2,
+      pr: 2,
       pl: 3,
     },
     tbody: {
@@ -339,8 +340,8 @@ export const theme: ControlsTheme = {
       },
     },
     thead: {
-      borderBottom: (t: Theme): string => ` 1px solid  ${t.colors?.shadow}`,
-      backgroundColor: 'muted',
+      borderBottom: (t: Theme): string => ` 2px solid  ${t.colors?.shadow}`,
+      backgroundColor: 'background',
       color: 'text',
     },
     td: {
