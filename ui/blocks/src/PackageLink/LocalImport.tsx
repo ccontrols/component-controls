@@ -14,14 +14,25 @@ export const LocalImport: FC<LocalImportProps> = ({ node }) => {
   const store = useStore();
   const { componentKey, importedName, name } = node;
   const storypath = useMemo(() => {
-    const docId = componentKey
-      ? Object.keys(store.docs).find(id => {
+    let docId =
+      componentKey &&
+      Object.keys(store.docs).find(id => {
+        const doc = store.docs[id];
+        return doc?.componentsLookup
+          ? Object.values(doc?.componentsLookup).includes(componentKey)
+          : false;
+      });
+    if (!docId) {
+      // if we can not find it by id - example theme-ui exports both named and default exports
+      docId =
+        name &&
+        Object.keys(store.docs).find(id => {
           const doc = store.docs[id];
           return doc?.componentsLookup
-            ? Object.values(doc?.componentsLookup).includes(componentKey)
+            ? Object.keys(doc?.componentsLookup).includes(name)
             : false;
-        })
-      : undefined;
+        });
+    }
     if (docId) {
       const doc = store.docs[docId];
       let storyId = undefined;
@@ -31,7 +42,7 @@ export const LocalImport: FC<LocalImportProps> = ({ node }) => {
       return (storyId || doc) && getStoryPath(storyId, doc, store);
     }
     return undefined;
-  }, [store, componentKey]);
+  }, [store, componentKey, name]);
   const displayName = importedName === defaultExport ? name : importedName;
   return displayName ? (
     <Tag
