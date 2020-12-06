@@ -37,7 +37,7 @@ export const SEO: FC<SEOProps> = ({ Helmet, doc, config }) => {
     links = defaultLinks,
   } = config || {};
   const pageImage = doc?.image || image;
-  const isLocalImage = pageImage && useIsLocalLink(pageImage);
+  const isLocalImage = useIsLocalLink(pageImage);
   const theme = useTheme();
   const imageUrl =
     isLocalImage && pageImage
