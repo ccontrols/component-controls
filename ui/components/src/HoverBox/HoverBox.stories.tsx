@@ -1,12 +1,12 @@
 import React from 'react';
 import { Donut, Text } from 'theme-ui';
-import { Example } from '@component-controls/core';
+import { Document, Example } from '@component-controls/core';
 import { HoverBox } from '.';
 
 export default {
   title: 'Components/HoverBox',
   component: HoverBox,
-};
+} as Document;
 
 export const overview: Example = () => (
   <HoverBox label="donut component">

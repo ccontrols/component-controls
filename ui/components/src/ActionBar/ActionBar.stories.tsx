@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Box } from 'theme-ui';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Document, Example, ControlTypes } from '@component-controls/core';
 import { ActionBar, ActionBarProps } from './ActionBar';
 import { ThemeProvider } from '../ThemeContext';
 import { ExternalLink } from '../ExternalLink';
@@ -8,7 +8,7 @@ import { ExternalLink } from '../ExternalLink';
 export default {
   title: 'Components/ActionBar',
   component: ActionBar,
-};
+} as Document;
 
 const Container: FC = ({ children }) => (
   <ThemeProvider>

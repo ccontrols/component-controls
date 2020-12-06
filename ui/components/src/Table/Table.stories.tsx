@@ -1,13 +1,13 @@
 /* eslint-disable react/display-name */
 import React, { useMemo, useState, useEffect } from 'react';
-import { Example, faker } from '@component-controls/core';
+import { Document, Example, faker } from '@component-controls/core';
 import { Table } from './Table';
 import { ThemeProvider } from '../ThemeContext';
 
 export default {
   title: 'Components/Table',
   component: Table,
-};
+} as Document;
 
 const columns = [
   {

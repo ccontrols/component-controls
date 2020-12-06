@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Box, Badge, Input } from 'theme-ui';
-import { Example } from '@component-controls/core';
+import { Document, Example } from '@component-controls/core';
 import {
   InboxIcon,
   MailIcon,
@@ -17,7 +17,7 @@ import { Tree } from '.';
 export default {
   title: 'Components/Tree',
   component: Tree,
-};
+} as Document;
 
 export const overview: Example = () => (
   <Box css={{ width: 200 }}>

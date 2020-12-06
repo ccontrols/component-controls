@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Flex, Checkbox, Label } from 'theme-ui';
 import { EyeIcon, EyeClosedIcon } from '@primer/octicons-react';
-import { Example } from '@component-controls/core';
+import { Document, Example } from '@component-controls/core';
 import { Toggle } from './Toggle';
 
 export default {
   title: 'Components/Toggle',
   component: Toggle,
-};
+} as Document;
 
 export const overview: Example = () => {
   const [checked, setChecked] = useState(false);

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Box, Button, Donut } from 'theme-ui';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Document, Example, ControlTypes } from '@component-controls/core';
 import { Popover, PopoverProps } from './Popover';
 
 export default {
   title: 'Components/Popover',
   component: Popover,
-};
+} as Document;
 
 export const overview: Example<PopoverProps> = ({ placement, trigger }) => {
   const [isOpen, setIsOpen] = useState(false);

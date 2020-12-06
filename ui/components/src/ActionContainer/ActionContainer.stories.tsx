@@ -1,13 +1,13 @@
 import React from 'react';
 import { Donut } from 'theme-ui';
-import { Example } from '@component-controls/core';
+import { Document, Example } from '@component-controls/core';
 import { ExternalLink } from '../ExternalLink';
 import { ActionContainer } from './ActionContainer';
 
 export default {
   title: 'Components/ActionContainer',
   component: ActionContainer,
-};
+} as Document;
 
 export const overview: Example = () => {
   return (

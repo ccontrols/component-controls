@@ -9,14 +9,14 @@ import nightOwlLight from 'prism-react-renderer/themes/nightOwlLight';
 import oceanicNext from 'prism-react-renderer/themes/oceanicNext';
 import palenight from 'prism-react-renderer/themes/palenight';
 import shadesOfPurple from 'prism-react-renderer/themes/shadesOfPurple';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Document, Example, ControlTypes } from '@component-controls/core';
 import { Source, SourceProps } from './Source';
 import { ActionItem } from '../ActionBar';
 
 export default {
   title: 'Components/Source',
   component: Source,
-};
+} as Document;
 
 const source = `export const sample = () => {
   const [state, setState] = React.useState(false);

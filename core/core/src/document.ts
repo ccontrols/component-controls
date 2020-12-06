@@ -90,9 +90,10 @@ export interface StoryProps<Props = unknown> {
   /**
    * multiple components option
    */
-  subcomponents?: {
-    [key: string]: string | Record<string, unknown>;
-  };
+  subcomponents?: Record<
+    string,
+    string | Record<string, unknown> | ComponentType<Props>
+  >;
 
   /**
    * object of key/value pairs specifying the controls for the story

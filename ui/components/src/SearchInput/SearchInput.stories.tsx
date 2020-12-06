@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Example, faker } from '@component-controls/core';
+import { Document, Example, faker } from '@component-controls/core';
 import { SearchInput } from './SearchInput';
 
 export default {
   title: 'Components/SearchInput',
   component: SearchInput,
-};
+} as Document;
 
 interface FakeItem {
   id: number;
