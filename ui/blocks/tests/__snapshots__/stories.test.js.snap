@@ -139,12 +139,17 @@ exports[`Blocks/ComponentDependencies Local Dependencies 1`] = `
                           class="css-zivbkl-Cell"
                         >
                           <span
-                            class="css-dktbw5-LocalImport"
+                            class="css-kabhsx-LocalImport"
                           >
                             <span
                               class="css-vurnku"
                             >
-                              Button
+                              <a
+                                class="css-1t54e2w"
+                                href="/docs/id-of-story"
+                              >
+                                Button
+                              </a>
                             </span>
                           </span>
                           <span
