@@ -85,7 +85,7 @@ export const ComponentJSXTree: FC<ComponentJSXTreeProps> = ({ component }) => {
       data: {
         total,
         canExpand: expanded < total,
-        canCollapse: expanded > 0,
+        canCollapse: expanded > 0 && expanded < total,
       },
     });
   };
