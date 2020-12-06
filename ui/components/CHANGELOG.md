@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/ccontrols/component-controls/compare/v2.0.1...v2.1.0) (2020-12-06)
+
+
+### Features
+
+* table default sorting prop ([e5451f3](https://github.com/ccontrols/component-controls/commit/e5451f37c48648600d974f1c3d01a22a508536e0))
+
+
+
+
+
 ## [2.0.1](https://github.com/ccontrols/component-controls/compare/v2.0.0...v2.0.1) (2020-12-06)
 
 **Note:** Version bump only for package @component-controls/components
