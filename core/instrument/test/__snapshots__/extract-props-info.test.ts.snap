@@ -2675,6 +2675,19 @@ if the function returns false, it can stop chabging to the new tab",
         "raw": "string",
       },
     },
+    "sortBy": Object {
+      "description": "initial sorting",
+      "parentName": "TableOwnProps",
+      "type": Object {
+        "name": "array",
+        "raw": "SortingRule<any>[]",
+        "value": Array [
+          Object {
+            "name": "SortingRule<any>",
+          },
+        ],
+      },
+    },
     "sorting": Object {
       "description": "enable.disable sorting.",
       "parentName": "TableOwnProps",

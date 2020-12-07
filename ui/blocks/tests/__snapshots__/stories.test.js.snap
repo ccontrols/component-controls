@@ -71,14 +71,14 @@ exports[`Blocks/ComponentDependencies Local Dependencies 1`] = `
                   role="table"
                 >
                   <thead
-                    class="css-1g841yx"
+                    class="css-14kw1rx"
                   >
                     <tr
                       class="css-vurnku"
                       role="row"
                     >
                       <th
-                        class="css-101dysx"
+                        class="css-9hyy6f"
                         colspan="1"
                         role="columnheader"
                         style="width: 150px;"
@@ -94,7 +94,7 @@ exports[`Blocks/ComponentDependencies Local Dependencies 1`] = `
                         </div>
                       </th>
                       <th
-                        class="css-101dysx"
+                        class="css-9hyy6f"
                         colspan="1"
                         role="columnheader"
                         style="width: 150px;"
@@ -287,14 +287,14 @@ exports[`Blocks/ComponentDependencies Overview 1`] = `
                   role="table"
                 >
                   <thead
-                    class="css-1g841yx"
+                    class="css-14kw1rx"
                   >
                     <tr
                       class="css-vurnku"
                       role="row"
                     >
                       <th
-                        class="css-101dysx"
+                        class="css-9hyy6f"
                         colspan="1"
                         role="columnheader"
                         style="width: 150px;"
@@ -310,7 +310,7 @@ exports[`Blocks/ComponentDependencies Overview 1`] = `
                         </div>
                       </th>
                       <th
-                        class="css-101dysx"
+                        class="css-9hyy6f"
                         colspan="1"
                         role="columnheader"
                         style="width: 70%;"
@@ -326,7 +326,7 @@ exports[`Blocks/ComponentDependencies Overview 1`] = `
                         </div>
                       </th>
                       <th
-                        class="css-101dysx"
+                        class="css-9hyy6f"
                         colspan="1"
                         role="columnheader"
                         style="width: 150px;"
@@ -6046,14 +6046,14 @@ exports[`Blocks/PropsTable Controls 1`] = `
                 role="table"
               >
                 <thead
-                  class="css-1g841yx"
+                  class="css-14kw1rx"
                 >
                   <tr
                     class="css-vurnku"
                     role="row"
                   >
                     <th
-                      class="css-101dysx"
+                      class="css-9hyy6f"
                       colspan="1"
                       role="columnheader"
                       style="width: 150px;"
@@ -6069,7 +6069,7 @@ exports[`Blocks/PropsTable Controls 1`] = `
                       </div>
                     </th>
                     <th
-                      class="css-101dysx"
+                      class="css-9hyy6f"
                       colspan="1"
                       role="columnheader"
                       style="width: 150px;"
@@ -6085,7 +6085,7 @@ exports[`Blocks/PropsTable Controls 1`] = `
                       </div>
                     </th>
                     <th
-                      class="css-101dysx"
+                      class="css-9hyy6f"
                       colspan="1"
                       role="columnheader"
                       style="width: 150px;"
@@ -6101,7 +6101,7 @@ exports[`Blocks/PropsTable Controls 1`] = `
                       </div>
                     </th>
                     <th
-                      class="css-101dysx"
+                      class="css-9hyy6f"
                       colspan="1"
                       role="columnheader"
                       style="width: 150px;"
@@ -6394,14 +6394,14 @@ exports[`Blocks/PropsTable Custom Title 1`] = `
                       role="table"
                     >
                       <thead
-                        class="css-1g841yx"
+                        class="css-14kw1rx"
                       >
                         <tr
                           class="css-vurnku"
                           role="row"
                         >
                           <th
-                            class="css-101dysx"
+                            class="css-9hyy6f"
                             colspan="1"
                             role="columnheader"
                             style="width: 150px;"
@@ -6417,7 +6417,7 @@ exports[`Blocks/PropsTable Custom Title 1`] = `
                             </div>
                           </th>
                           <th
-                            class="css-101dysx"
+                            class="css-9hyy6f"
                             colspan="1"
                             role="columnheader"
                             style="width: 150px;"
@@ -6433,7 +6433,7 @@ exports[`Blocks/PropsTable Custom Title 1`] = `
                             </div>
                           </th>
                           <th
-                            class="css-101dysx"
+                            class="css-9hyy6f"
                             colspan="1"
                             role="columnheader"
                             style="width: 150px;"
@@ -6527,14 +6527,14 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                 role="table"
               >
                 <thead
-                  class="css-1g841yx"
+                  class="css-14kw1rx"
                 >
                   <tr
                     class="css-vurnku"
                     role="row"
                   >
                     <th
-                      class="css-101dysx"
+                      class="css-9hyy6f"
                       colspan="1"
                       role="columnheader"
                       style="width: 150px;"
@@ -6550,7 +6550,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       </div>
                     </th>
                     <th
-                      class="css-101dysx"
+                      class="css-9hyy6f"
                       colspan="1"
                       role="columnheader"
                       style="width: 150px;"
@@ -6566,7 +6566,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       </div>
                     </th>
                     <th
-                      class="css-101dysx"
+                      class="css-9hyy6f"
                       colspan="1"
                       role="columnheader"
                       style="width: 150px;"
@@ -6582,7 +6582,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       </div>
                     </th>
                     <th
-                      class="css-101dysx"
+                      class="css-9hyy6f"
                       colspan="1"
                       role="columnheader"
                       style="width: 150px;"
@@ -7868,14 +7868,14 @@ exports[`Blocks/PropsTable Not Collapsible 1`] = `
                   role="table"
                 >
                   <thead
-                    class="css-1g841yx"
+                    class="css-14kw1rx"
                   >
                     <tr
                       class="css-vurnku"
                       role="row"
                     >
                       <th
-                        class="css-101dysx"
+                        class="css-9hyy6f"
                         colspan="1"
                         role="columnheader"
                         style="width: 150px;"
@@ -7891,7 +7891,7 @@ exports[`Blocks/PropsTable Not Collapsible 1`] = `
                         </div>
                       </th>
                       <th
-                        class="css-101dysx"
+                        class="css-9hyy6f"
                         colspan="1"
                         role="columnheader"
                         style="width: 150px;"
@@ -7907,7 +7907,7 @@ exports[`Blocks/PropsTable Not Collapsible 1`] = `
                         </div>
                       </th>
                       <th
-                        class="css-101dysx"
+                        class="css-9hyy6f"
                         colspan="1"
                         role="columnheader"
                         style="width: 150px;"
@@ -7999,14 +7999,14 @@ exports[`Blocks/PropsTable Overview 1`] = `
                 role="table"
               >
                 <thead
-                  class="css-1g841yx"
+                  class="css-14kw1rx"
                 >
                   <tr
                     class="css-vurnku"
                     role="row"
                   >
                     <th
-                      class="css-101dysx"
+                      class="css-9hyy6f"
                       colspan="1"
                       role="columnheader"
                       style="width: 150px;"
@@ -8022,7 +8022,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       </div>
                     </th>
                     <th
-                      class="css-101dysx"
+                      class="css-9hyy6f"
                       colspan="1"
                       role="columnheader"
                       style="width: 150px;"
@@ -8038,7 +8038,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       </div>
                     </th>
                     <th
-                      class="css-101dysx"
+                      class="css-9hyy6f"
                       colspan="1"
                       role="columnheader"
                       style="width: 150px;"
@@ -9172,14 +9172,14 @@ exports[`Blocks/PropsTable Subcomponents 1`] = `
                       role="table"
                     >
                       <thead
-                        class="css-1g841yx"
+                        class="css-14kw1rx"
                       >
                         <tr
                           class="css-vurnku"
                           role="row"
                         >
                           <th
-                            class="css-101dysx"
+                            class="css-9hyy6f"
                             colspan="1"
                             role="columnheader"
                             style="width: 150px;"
@@ -9195,7 +9195,7 @@ exports[`Blocks/PropsTable Subcomponents 1`] = `
                             </div>
                           </th>
                           <th
-                            class="css-101dysx"
+                            class="css-9hyy6f"
                             colspan="1"
                             role="columnheader"
                             style="width: 150px;"
@@ -9211,7 +9211,7 @@ exports[`Blocks/PropsTable Subcomponents 1`] = `
                             </div>
                           </th>
                           <th
-                            class="css-101dysx"
+                            class="css-9hyy6f"
                             colspan="1"
                             role="columnheader"
                             style="width: 150px;"
@@ -9374,14 +9374,14 @@ exports[`Blocks/PropsTable Title 1`] = `
                       role="table"
                     >
                       <thead
-                        class="css-1g841yx"
+                        class="css-14kw1rx"
                       >
                         <tr
                           class="css-vurnku"
                           role="row"
                         >
                           <th
-                            class="css-101dysx"
+                            class="css-9hyy6f"
                             colspan="1"
                             role="columnheader"
                             style="width: 150px;"
@@ -9397,7 +9397,7 @@ exports[`Blocks/PropsTable Title 1`] = `
                             </div>
                           </th>
                           <th
-                            class="css-101dysx"
+                            class="css-9hyy6f"
                             colspan="1"
                             role="columnheader"
                             style="width: 150px;"
@@ -9413,7 +9413,7 @@ exports[`Blocks/PropsTable Title 1`] = `
                             </div>
                           </th>
                           <th
-                            class="css-101dysx"
+                            class="css-9hyy6f"
                             colspan="1"
                             role="columnheader"
                             style="width: 150px;"
