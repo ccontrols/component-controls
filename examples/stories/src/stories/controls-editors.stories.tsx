@@ -1,5 +1,12 @@
 import React from 'react';
-import { Document, Example, ControlTypes } from '@component-controls/core';
+import {
+  Document,
+  Example,
+  ComponentControlNumber,
+  ControlTypes,
+  faker,
+} from '@component-controls/core';
+import { useControl } from '@component-controls/store';
 
 export default {
   title: 'ESM/Controls',
@@ -332,5 +339,32 @@ orderControls.controls = {
     label: 'Mesage',
     value: 'Hello!',
     order: 0,
+  },
+};
+
+interface HooksProps {
+  numberProp: number;
+}
+
+export const withHooks: Example<HooksProps> = ({ numberProp }) => {
+  const [control, setValue] = useControl<ComponentControlNumber>('numberProp');
+  return (
+    <button
+      onClick={() =>
+        setValue(faker.random.number({ min: control.min, max: control.max }))
+      }
+    >{`Click me to change: ${numberProp}`}</button>
+  );
+};
+
+withHooks.description =
+  "Dynamic controls - you can update the control's value directly from a hook in the story function.";
+
+withHooks.controls = {
+  numberProp: {
+    type: ControlTypes.NUMBER,
+    value: 20,
+    min: 10,
+    max: 50,
   },
 };
