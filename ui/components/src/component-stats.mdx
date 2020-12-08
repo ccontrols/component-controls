@@ -1,9 +1,16 @@
 ---
 title: Components/internal usage
 ---
-import { ComponentUsage, AttributeUsage, ComponentUsageList, AttributesUsageList } from '@component-controls/addon-stats';
 
-export const filter = ({ doc, component}) => component && doc.title.startsWith('Components');
+import {
+  ComponentUsage,
+  AttributeUsage,
+  ComponentUsageList,
+  AttributesUsageList,
+} from '@component-controls/addon-stats';
+
+export const filter = ({ doc, component }) =>
+  component && doc.title.startsWith('Components');
 
 # Components JSX stats
 
