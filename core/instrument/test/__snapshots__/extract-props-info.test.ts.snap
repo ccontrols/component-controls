@@ -1020,14 +1020,6 @@ Array values are converted into responsive values.
         ],
       },
     },
-    "expanded": Object {
-      "description": "object listing the initially expanded rows.",
-      "parentName": "TableOwnProps",
-      "type": Object {
-        "name": "object",
-        "raw": "{ [key: string]: boolean; }",
-      },
-    },
     "extraColumns": Object {
       "description": "extra custom columns passed to the PropsTable.",
       "parentName": "PropsTableOwnProps",
@@ -1041,38 +1033,9 @@ Array values are converted into responsive values.
         ],
       },
     },
-    "filtering": Object {
-      "description": "enable/disable filtering.",
-      "parentName": "TableOwnProps",
-      "type": Object {
-        "name": "boolean",
-        "raw": "boolean",
-      },
-    },
     "flat": Object {
       "description": "if true, will flatten the group by",
       "parentName": "PropsTableOwnProps",
-      "type": Object {
-        "name": "boolean",
-        "raw": "boolean",
-      },
-    },
-    "groupBy": Object {
-      "description": "field to be grouped by.",
-      "parentName": "TableOwnProps",
-      "type": Object {
-        "name": "array",
-        "raw": "string[]",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-        ],
-      },
-    },
-    "header": Object {
-      "description": "show or hide the header element.",
-      "parentName": "TableOwnProps",
       "type": Object {
         "name": "boolean",
         "raw": "boolean",
@@ -1085,19 +1048,6 @@ Array values are converted into responsive values.
         "raw": "boolean",
       },
     },
-    "hiddenColumns": Object {
-      "description": "list of columns to hide.",
-      "parentName": "TableOwnProps",
-      "type": Object {
-        "name": "array",
-        "raw": "string[]",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-        ],
-      },
-    },
     "id": Object {
       "description": "optional id to be used for the block
 if no id is provided, one will be calculated automatically
@@ -1106,14 +1056,6 @@ from the title.",
       "type": Object {
         "name": "string",
         "raw": "string",
-      },
-    },
-    "initialSelected": Object {
-      "description": "initially selected rows",
-      "parentName": "TableOwnProps",
-      "type": Object {
-        "name": "Record<number, boolean>",
-        "raw": "Record<number, boolean>",
       },
     },
     "inlist": Object {
@@ -1197,14 +1139,6 @@ from the title.",
     },
     "itemType": Object {
       "parentName": "HTMLAttributes",
-      "type": Object {
-        "name": "string",
-        "raw": "string",
-      },
-    },
-    "itemsLabel": Object {
-      "description": "string label for 'items' - used in the filter placeholder and grouping header.",
-      "parentName": "TableOwnProps",
       "type": Object {
         "name": "string",
         "raw": "string",
@@ -2302,14 +2236,6 @@ if the function returns false, it can stop chabging to the new tab",
         "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
       },
     },
-    "onSelectRowsChange": Object {
-      "description": "callback when selected rows change",
-      "parentName": "TableOwnProps",
-      "type": Object {
-        "name": "function",
-        "raw": "((selected: Record<number, boolean>) => void)",
-      },
-    },
     "onStalled": Object {
       "parentName": "DOMAttributes",
       "type": Object {
@@ -2616,14 +2542,6 @@ if the function returns false, it can stop chabging to the new tab",
         "raw": "((instance: HTMLDivElement | null) => void) | RefObject<HTMLDivElement> | null",
       },
     },
-    "renderRowSubComponent": Object {
-      "description": "callback to render a SubComponent row",
-      "parentName": "TableOwnProps",
-      "type": Object {
-        "name": "function",
-        "raw": "((props: { row: Row<{}>; }) => ReactNode)",
-      },
-    },
     "resource": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
@@ -2645,14 +2563,6 @@ if the function returns false, it can stop chabging to the new tab",
         "raw": "string",
       },
     },
-    "rowSelect": Object {
-      "description": "if true, will enable row selection",
-      "parentName": "TableOwnProps",
-      "type": Object {
-        "name": "boolean",
-        "raw": "boolean",
-      },
-    },
     "security": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
@@ -2660,40 +2570,11 @@ if the function returns false, it can stop chabging to the new tab",
         "raw": "string",
       },
     },
-    "skipPageReset": Object {
-      "description": "reset state update while update table data",
-      "parentName": "TableOwnProps",
-      "type": Object {
-        "name": "boolean",
-        "raw": "boolean",
-      },
-    },
     "slot": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
         "raw": "string",
-      },
-    },
-    "sortBy": Object {
-      "description": "initial sorting",
-      "parentName": "TableOwnProps",
-      "type": Object {
-        "name": "array",
-        "raw": "SortingRule<any>[]",
-        "value": Array [
-          Object {
-            "name": "SortingRule<any>",
-          },
-        ],
-      },
-    },
-    "sorting": Object {
-      "description": "enable.disable sorting.",
-      "parentName": "TableOwnProps",
-      "type": Object {
-        "name": "boolean",
-        "raw": "boolean",
       },
     },
     "spellCheck": Object {

@@ -1924,6 +1924,25 @@ exports[`Components/Popover Overview 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Components/ProgressIndicator Overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-iapobn-ProgressIndicator"
+  >
+    <progress
+      class="css-1fssii9"
+      max="10"
+      value="3"
+    />
+    <span
+      class="css-cagqfd-ProgressIndicator"
+    >
+      3
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Components/SearchInput Default Render 1`] = `
 <DocumentFragment>
   <div

@@ -5,12 +5,6 @@ Object {
   "components": Object {
     "26090286b0d42fa7a92590e6843f1687": Object {
       "externalDependencies": Object {
-        "@component-controls/components": Array [
-          Object {
-            "importedName": "TableProps",
-            "name": "TableProps",
-          },
-        ],
         "@component-controls/store": Array [
           Object {
             "importedName": "StoryContextProvider",
