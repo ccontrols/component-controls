@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/ccontrols/component-controls/compare/v2.1.0...v2.2.0) (2020-12-08)
+
+
+### Bug Fixes
+
+* linting changes ([314f140](https://github.com/ccontrols/component-controls/commit/314f14005cc2aa73ca702eec3b9bfb857914d5e4))
+* plain prop ([82257b7](https://github.com/ccontrols/component-controls/commit/82257b7d74b4a4b511f3155d18ec6c90bf3cb1a6))
+* table header styling ([6a522aa](https://github.com/ccontrols/component-controls/commit/6a522aab6d7220dcc678167a2f93902f5abadb90))
+
+
+### Features
+
+* addon-stats ([0204f50](https://github.com/ccontrols/component-controls/commit/0204f50533cea5e2eeb694fe64cc6fc115fd2fd4))
+
+
+
+
+
 # [2.1.0](https://github.com/ccontrols/component-controls/compare/v2.0.1...v2.1.0) (2020-12-06)
 
 

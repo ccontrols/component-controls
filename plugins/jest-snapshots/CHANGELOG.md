@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/ccontrols/component-controls/compare/v2.1.0...v2.2.0) (2020-12-08)
+
+**Note:** Version bump only for package @component-controls/jest-snapshots
+
+
+
+
+
 # [2.1.0](https://github.com/ccontrols/component-controls/compare/v2.0.1...v2.1.0) (2020-12-06)
 
 **Note:** Version bump only for package @component-controls/jest-snapshots

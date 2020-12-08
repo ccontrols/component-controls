@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/ccontrols/component-controls/compare/v2.1.0...v2.2.0) (2020-12-08)
+
+
+### Bug Fixes
+
+* change node name ([cdb5b5c](https://github.com/ccontrols/component-controls/commit/cdb5b5c9bfa2201c53c9795fb553e70d33e55dfe))
+* linting changes ([314f140](https://github.com/ccontrols/component-controls/commit/314f14005cc2aa73ca702eec3b9bfb857914d5e4))
+
+
+### Features
+
+* addon-stats ([0204f50](https://github.com/ccontrols/component-controls/commit/0204f50533cea5e2eeb694fe64cc6fc115fd2fd4))
+
+
+
+
+
 # [2.1.0](https://github.com/ccontrols/component-controls/compare/v2.0.1...v2.1.0) (2020-12-06)
 
 **Note:** Version bump only for package @component-controls/blocks
