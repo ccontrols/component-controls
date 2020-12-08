@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.1](https://github.com/ccontrols/component-controls/compare/v2.2.0...v2.2.1) (2020-12-08)
+
+
+### Bug Fixes
+
+* import image ([9f46198](https://github.com/ccontrols/component-controls/commit/9f46198d8566c4062b5a5a3cbc6bfb42a9260359))
+
+
+
+
+
 # [2.2.0](https://github.com/ccontrols/component-controls/compare/v2.1.0...v2.2.0) (2020-12-08)
 
 
