@@ -70,7 +70,7 @@ export const LocalDependencies: FC<LocalDependenciesProps> = ({
                 <LocalImport
                   key={`${node.name}`}
                   componentHash={node.componentKey}
-                  name={Node.name}
+                  name={node.name as string}
                 />
               ))}
             </Flex>
