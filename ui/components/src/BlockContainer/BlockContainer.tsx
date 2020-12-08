@@ -56,11 +56,6 @@ export const BlockContainer: FC<BlockContainerProps> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(true);
   const blockId = id !== '.' ? id : undefined || title;
-  const content = !plain ? (
-    <Box variant="blockcontainer.inner">{children}</Box>
-  ) : (
-    children
-  );
   return (
     <Box variant="blockcontainer.container" {...rest}>
       {(blockId || title || collapsible) && (
@@ -99,9 +94,17 @@ export const BlockContainer: FC<BlockContainerProps> = ({
       )}
       {description && <Description>{description}</Description>}
       {collapsible ? (
-        <Collapsible isOpen={isOpen}>{content}</Collapsible>
+        <Collapsible isOpen={isOpen}>
+          {!plain ? (
+            <Box variant="blockcontainer.inner">{children}</Box>
+          ) : (
+            children
+          )}
+        </Collapsible>
+      ) : !plain ? (
+        <Box variant="blockcontainer.inner">{children}</Box>
       ) : (
-        content
+        children
       )}
       {!isOpen && <Divider />}
     </Box>
