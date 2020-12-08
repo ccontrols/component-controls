@@ -304,11 +304,11 @@ export const ActionBar: FC<ActionBarProps> = ({
         "react-table": "^7.0.0",
         "react-tabs": "^3.1.0",
         "scroll-into-view-if-needed": "^2.2.25",
-        "theme-ui": "^0.6.0-alpha.1",
+        "theme-ui": "^0.6.0-alpha.3",
       },
       "devDependencies": Object {
-        "@component-controls/jest-snapshots": "^2.1.0",
-        "@component-controls/ts-markdown-docs": "^2.0.0",
+        "@component-controls/jest-snapshots": "^2.2.0",
+        "@component-controls/ts-markdown-docs": "^2.2.0",
         "@theme-ui/css": "^0.6.0-alpha.1",
         "@types/markdown-to-jsx": "^6.11.0",
         "@types/react": "^16.9.34",
@@ -332,7 +332,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.1.0",
+      "version": "2.2.0",
     },
     "fded7dbaa855ea6869a794f877eab680": Object {
       "dependencies": Object {
@@ -350,11 +350,11 @@ export const ActionBar: FC<ActionBarProps> = ({
         "react-table": "^7.0.0",
         "react-tabs": "^3.1.0",
         "scroll-into-view-if-needed": "^2.2.25",
-        "theme-ui": "^0.6.0-alpha.1",
+        "theme-ui": "^0.6.0-alpha.3",
       },
       "devDependencies": Object {
-        "@component-controls/jest-snapshots": "^2.1.0",
-        "@component-controls/ts-markdown-docs": "^2.0.0",
+        "@component-controls/jest-snapshots": "^2.2.0",
+        "@component-controls/ts-markdown-docs": "^2.2.0",
         "@theme-ui/css": "^0.6.0-alpha.1",
         "@types/markdown-to-jsx": "^6.11.0",
         "@types/react": "^16.9.34",
@@ -378,7 +378,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.1.0",
+      "version": "2.2.0",
     },
   },
   "stores": Array [

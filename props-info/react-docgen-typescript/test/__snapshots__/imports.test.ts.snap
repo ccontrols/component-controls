@@ -865,7 +865,7 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "BackgroundColorProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "bg": Object {
@@ -879,7 +879,7 @@ Array values are converted into responsive values.
       "parentName": "BackgroundColorProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "className": Object {
@@ -1161,7 +1161,7 @@ from the title.",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "margin": Object {
@@ -1169,7 +1169,7 @@ from the title.",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "marginBottom": Object {
@@ -1177,7 +1177,7 @@ from the title.",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "marginLeft": Object {
@@ -1185,7 +1185,7 @@ from the title.",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "marginRight": Object {
@@ -1193,7 +1193,7 @@ from the title.",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "marginTop": Object {
@@ -1201,7 +1201,23 @@ from the title.",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+      },
+    },
+    "marginX": Object {
+      "description": "Margin on left and right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+      },
+    },
+    "marginY": Object {
+      "description": "Margin on top and bottom",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "mb": Object {
@@ -1209,7 +1225,7 @@ from the title.",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "ml": Object {
@@ -1217,7 +1233,7 @@ from the title.",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "mr": Object {
@@ -1225,7 +1241,7 @@ from the title.",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "mt": Object {
@@ -1233,7 +1249,7 @@ from the title.",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "mx": Object {
@@ -1241,7 +1257,7 @@ from the title.",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "my": Object {
@@ -1249,7 +1265,7 @@ from the title.",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "name": Object {
@@ -2388,12 +2404,23 @@ ie ally plugin uses it launch a new ally test on re-render",
         "raw": "((event: WheelEvent<HTMLDivElement>) => void)",
       },
     },
+    "opacity": Object {
+      "description": "The opacity CSS property sets the transparency of an element or the degree to which content
+behind an element is visible.
+
+[MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)",
+      "parentName": "OpacityProps",
+      "type": Object {
+        "name": "function",
+        "raw": "\\"inherit\\" | \\"-moz-initial\\" | \\"initial\\" | \\"revert\\" | \\"unset\\" | (string & {}) | (number & {}) | (\\"inherit\\" | \\"-moz-initial\\" | \\"initial\\" | \\"revert\\" | \\"unset\\" | (string & {}) | (number & {}) | null)[] | { ...; } | null",
+      },
+    },
     "p": Object {
       "description": "Padding on top, left, bottom and right",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "padding": Object {
@@ -2401,7 +2428,7 @@ ie ally plugin uses it launch a new ally test on re-render",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "paddingBottom": Object {
@@ -2409,7 +2436,7 @@ ie ally plugin uses it launch a new ally test on re-render",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "paddingLeft": Object {
@@ -2417,7 +2444,7 @@ ie ally plugin uses it launch a new ally test on re-render",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "paddingRight": Object {
@@ -2425,7 +2452,7 @@ ie ally plugin uses it launch a new ally test on re-render",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "paddingTop": Object {
@@ -2433,7 +2460,23 @@ ie ally plugin uses it launch a new ally test on re-render",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+      },
+    },
+    "paddingX": Object {
+      "description": "Padding on left and right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+      },
+    },
+    "paddingY": Object {
+      "description": "Padding on top and bottom",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "function",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "pb": Object {
@@ -2441,7 +2484,7 @@ ie ally plugin uses it launch a new ally test on re-render",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "pl": Object {
@@ -2449,7 +2492,7 @@ ie ally plugin uses it launch a new ally test on re-render",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "placeholder": Object {
@@ -2472,7 +2515,7 @@ ie ally plugin uses it launch a new ally test on re-render",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "prefix": Object {
@@ -2494,7 +2537,7 @@ ie ally plugin uses it launch a new ally test on re-render",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "px": Object {
@@ -2502,7 +2545,7 @@ ie ally plugin uses it launch a new ally test on re-render",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "py": Object {
@@ -2510,7 +2553,7 @@ ie ally plugin uses it launch a new ally test on re-render",
       "parentName": "SpaceProps",
       "type": Object {
         "name": "function",
-        "raw": "string | number | (string | number | null)[] | { [key: string]: ReactText; }",
+        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
       },
     },
     "radioGroup": Object {
