@@ -3,7 +3,6 @@
 import { jsx } from 'theme-ui';
 import { FC } from 'react';
 import { Column } from 'react-table';
-import { TableProps } from '@component-controls/components';
 import {
   StoryContextProvider,
   ControlsContextStoryProvider,
@@ -26,8 +25,7 @@ export interface PropsTableOwnProps {
   flat?: boolean;
 }
 export type PropsTableProps = PropsTableOwnProps &
-  Omit<ComponentsBlockContainerProps, 'children'> &
-  Omit<TableProps, 'columns' | 'data'>;
+  Omit<ComponentsBlockContainerProps, 'children'>;
 
 const NAME = 'propstable';
 

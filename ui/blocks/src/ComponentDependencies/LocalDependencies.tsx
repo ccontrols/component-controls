@@ -3,16 +3,17 @@
 import { FC, useMemo } from 'react';
 import { jsx, Flex, Text } from 'theme-ui';
 import { Component, JSXNode } from '@component-controls/core';
-import { Table } from '@component-controls/components';
+import { Table, Column } from '@component-controls/components';
 import { LocalImport } from '../PackageLink';
 export interface LocalDependenciesProps {
   component?: Component;
 }
 
-type TableImportType = {
+type TableImportTypeRow = {
   from: string;
   imports: Omit<JSXNode, 'from'>[];
-}[];
+};
+type TableImportType = TableImportTypeRow[];
 
 /**
  * base component dependencies
@@ -37,40 +38,45 @@ export const LocalDependencies: FC<LocalDependenciesProps> = ({
       : [];
   }, [component]);
   const columns = useMemo(
-    () => [
-      {
-        Header: 'file',
-        accessor: 'name',
-        Cell: ({
-          row: {
-            original: { from },
-          },
-        }: any) => (
-          <Text
-            sx={{
-              fontSize: 1,
-              lineHeight: '1.2rem',
-              whiteSpace: 'nowrap',
-            }}
-          >{`"${from}"`}</Text>
-        ),
-      },
-      {
-        Header: 'imports',
-        accessor: 'imports',
-        Cell: ({ value }: { value: JSXNode[] }) => (
-          <Flex
-            sx={{
-              flexWrap: 'wrap',
-            }}
-          >
-            {value.map(node => (
-              <LocalImport key={`${node.name}`} node={node} />
-            ))}
-          </Flex>
-        ),
-      },
-    ],
+    () =>
+      [
+        {
+          Header: 'file',
+          accessor: 'name',
+          Cell: ({
+            row: {
+              original: { from },
+            },
+          }: any) => (
+            <Text
+              sx={{
+                fontSize: 1,
+                lineHeight: '1.2rem',
+                whiteSpace: 'nowrap',
+              }}
+            >{`"${from}"`}</Text>
+          ),
+        },
+        {
+          Header: 'imports',
+          accessor: 'imports',
+          Cell: ({ value }: { value: JSXNode[] }) => (
+            <Flex
+              sx={{
+                flexWrap: 'wrap',
+              }}
+            >
+              {value.map(node => (
+                <LocalImport
+                  key={`${node.name}`}
+                  componentHash={node.componentKey}
+                  name={Node.name}
+                />
+              ))}
+            </Flex>
+          ),
+        },
+      ] as Column<TableImportTypeRow>[],
     [],
   );
 
@@ -79,6 +85,10 @@ export const LocalDependencies: FC<LocalDependenciesProps> = ({
   }
 
   return (
-    <Table data-testid="local-dependencies" data={imports} columns={columns} />
+    <Table<TableImportTypeRow>
+      data-testid="local-dependencies"
+      data={imports}
+      columns={columns}
+    />
   );
 };

@@ -4,7 +4,7 @@ import { FC, useMemo } from 'react';
 import { jsx, Flex } from 'theme-ui';
 import { defaultExport, Component, ImportType } from '@component-controls/core';
 import { usePackage } from '@component-controls/store';
-import { Table, Tag } from '@component-controls/components';
+import { Table, Column, Tag } from '@component-controls/components';
 import { PackageLink } from '../PackageLink/PackageLink';
 export interface ExternalDependenciesProps {
   component?: Component;
@@ -17,61 +17,67 @@ export interface ExternalDependenciesProps {
 export const ExternalDependencies: FC<ExternalDependenciesProps> = ({
   component,
 }) => {
+  type DataType = {
+    name: string;
+    imports: ImportType[];
+    peer: boolean;
+  };
   const componentPackage = usePackage(component?.package);
   const { dependencies = {}, devDependencies = {}, peerDependencies = {} } =
     componentPackage || {};
   const { externalDependencies: imports = {} } = component || {};
   const columns = useMemo(
-    () => [
-      {
-        Header: 'package',
-        accessor: 'name',
-        Cell: ({
-          row: {
-            original: { name },
-          },
-        }: any) => (
-          <PackageLink
-            name={name}
-            dependencies={dependencies}
-            devDependencies={devDependencies}
-          />
-        ),
-      },
-      {
-        Header: 'imports',
-        accessor: 'imports',
-        width: '70%',
-        Cell: ({ value }: { value: ImportType[] }) => (
-          <Flex
-            sx={{
-              flexWrap: 'wrap',
-            }}
-          >
-            {value.map(v => (
-              <Tag
-                variant="tag.rightmargin"
-                key={`${v.name}`}
-                borderSize={1}
-                color={
-                  v.importedName === defaultExport ? 'orange' : 'lightgrey'
-                }
-              >
-                {v.importedName === defaultExport ? v.name : v.importedName}
-              </Tag>
-            ))}
-          </Flex>
-        ),
-      },
-      {
-        Header: 'peer',
-        accessor: 'peer',
-        Cell: ({ value }: { value: boolean }) => (value ? '*' : ''),
-      },
-    ],
+    () =>
+      [
+        {
+          Header: 'package',
+          accessor: 'name',
+          Cell: ({
+            row: {
+              original: { name },
+            },
+          }: any) => (
+            <PackageLink
+              name={name}
+              dependencies={dependencies}
+              devDependencies={devDependencies}
+            />
+          ),
+        },
+        {
+          Header: 'imports',
+          accessor: 'imports',
+          width: '70%',
+          Cell: ({ value }: { value: ImportType[] }) => (
+            <Flex
+              sx={{
+                flexWrap: 'wrap',
+              }}
+            >
+              {value.map(v => (
+                <Tag
+                  variant="tag.rightmargin"
+                  key={`${v.name}`}
+                  borderSize={1}
+                  color={
+                    v.importedName === defaultExport ? 'orange' : 'lightgrey'
+                  }
+                >
+                  {v.importedName === defaultExport ? v.name : v.importedName}
+                </Tag>
+              ))}
+            </Flex>
+          ),
+        },
+        {
+          Header: 'peer',
+          accessor: 'peer',
+          Cell: ({ value }: { value: boolean }) => (value ? '*' : ''),
+        },
+      ] as Column<DataType>[],
     [dependencies, devDependencies],
   );
-  const rows = useMemo(() => {
+  const rows: DataType[] = useMemo(() => {
     const dependenciesKeys = Object.keys(dependencies);
     const devDependenciesKeys = Object.keys(devDependencies);
     const peerDependenciesKeys =
@@ -113,5 +119,5 @@ export const ExternalDependencies: FC<ExternalDependenciesProps> = ({
     return null;
   }
 
-  return <Table data={rows} columns={columns} />;
+  return <Table<DataType> data={rows} columns={columns} />;
 };

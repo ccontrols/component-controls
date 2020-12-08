@@ -2,24 +2,24 @@
 /** @jsx jsx */
 import { FC, useMemo } from 'react';
 import { jsx } from 'theme-ui';
-import { defaultExport, getStoryPath, JSXNode } from '@component-controls/core';
+import { getStoryPath } from '@component-controls/core';
 import { Tag, Link } from '@component-controls/components';
 import { useStore } from '@component-controls/store';
 
 export interface LocalImportProps {
-  node: JSXNode;
+  componentHash?: string;
+  name: string;
 }
 
-export const LocalImport: FC<LocalImportProps> = ({ node }) => {
+export const LocalImport: FC<LocalImportProps> = ({ componentHash, name }) => {
   const store = useStore();
-  const { componentKey, importedName, name } = node;
   const storypath = useMemo(() => {
     let docId =
-      componentKey &&
+      componentHash &&
       Object.keys(store.docs).find(id => {
         const doc = store.docs[id];
         return doc?.componentsLookup
-          ? Object.values(doc?.componentsLookup).includes(componentKey)
+          ? Object.values(doc?.componentsLookup).includes(componentHash)
           : false;
       });
     if (!docId) {
@@ -42,8 +42,8 @@ export const LocalImport: FC<LocalImportProps> = ({ node }) => {
       return (storyId || doc) && getStoryPath(storyId, doc, store);
     }
     return undefined;
-  }, [store, componentKey, name]);
-  const displayName = importedName === defaultExport ? name : importedName;
+  }, [store, componentHash, name]);
+  const displayName = name;
   return displayName ? (
     <Tag
       variant="tag.rightmargin"

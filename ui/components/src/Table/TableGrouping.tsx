@@ -28,9 +28,9 @@ const useControlledState = (state: GroupByState) => {
     return state;
   }, [state]);
 };
-export const useExpanderColumn = (itemsLabel: string) => (
-  hooks: UseTableHooks<Record<string, unknown>>,
-): void => {
+export const useExpanderColumn = <D extends Record<string, unknown>>(
+  itemsLabel: string,
+) => (hooks: UseTableHooks<D>): void => {
   hooks.useControlledState.push(useControlledState);
   hooks.visibleColumns.push((columns, { instance }) => {
     if (
@@ -48,8 +48,8 @@ export const useExpanderColumn = (itemsLabel: string) => (
         Cell: ({
           row,
         }: {
-          row: UseExpandedRowProps<Record<string, unknown>> &
-            UseTableRowProps<Record<string, unknown>> & {
+          row: UseExpandedRowProps<D> &
+            UseTableRowProps<D> & {
               groupByVal: any;
             };
         }) => {

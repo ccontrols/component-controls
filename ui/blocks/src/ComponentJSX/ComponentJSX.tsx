@@ -20,7 +20,7 @@ const NAME = 'component_jsx';
 export const ComponentJSX: FC<ComponentJSXProps> = fullProps => {
   const props = useCustomProps<ComponentJSXProps>(NAME, fullProps);
   const component = useComponent({ of: props.of });
-  if (!component?.jsx) {
+  if (!component?.jsx?.length) {
     return null;
   }
   return (

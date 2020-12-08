@@ -67,7 +67,7 @@ export const Button: FC<ButtonProps> = ({
       padding,
     }}
   >
-    {children}
+    <div>{children}</div>
   </button>
 );
 

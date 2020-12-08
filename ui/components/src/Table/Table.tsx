@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
 /** @jsx jsx */
-import { FC, Fragment, ReactNode, useEffect } from 'react';
+import { Fragment, ReactNode, ReactElement, useEffect } from 'react';
 import { Box, BoxProps, Flex, jsx } from 'theme-ui';
 import memoize from 'fast-memoize';
 import {
@@ -13,6 +13,7 @@ import {
   Column,
   Cell,
   Row,
+  PluginHook,
   TableOptions,
   UseFiltersOptions,
   UseExpandedOptions,
@@ -40,16 +41,17 @@ const defaultColumn = memoize(() => ({
   accessor: '',
 }));
 
+export { Column, Cell, Row };
 export type SelectedRowIds = Record<number, boolean>;
-interface TableOwnProps {
+interface TableOwnProps<D extends { [key: string]: any }> {
   /**
    * the columns object as an array.
    */
-  columns: Column<Record<string, unknown>>[];
+  columns: Column<D>[];
   /**
    * array of data rows.
    */
-  data?: any[];
+  data?: D[];
   /**
    * show or hide the header element.
    */
@@ -112,13 +114,14 @@ interface TableOwnProps {
   sortBy?: Array<SortingRule<any>>;
 }
 
-export type TableProps = TableOwnProps & BoxProps;
+export type TableProps<D extends { [key: string]: any }> = TableOwnProps<D> &
+  BoxProps;
 
 /**
  * Table component. Uses [react-table](https://github.com/tannerlinsley/react-table) to display the data.
  * Can be grouped, filtered, sorted. Themed with theme-ui for consistency.
  */
-export const Table: FC<TableProps> = ({
+export function Table<D extends { [key: string]: any }>({
   columns,
   data = [],
   header = true,
@@ -135,8 +138,8 @@ export const Table: FC<TableProps> = ({
   rowSelect,
   sortBy,
   ...rest
-}) => {
-  const plugins = [
+}: TableProps<D>): ReactElement<any, any> | null {
+  const plugins: PluginHook<D>[] = [
     useTableLayout,
     useGlobalFilter,
     useGroupBy,
@@ -148,11 +151,11 @@ export const Table: FC<TableProps> = ({
   if (rowSelect) {
     plugins.push(useRowSelectionColumn);
   }
-  const initialState: Partial<TableState<Record<string, unknown>>> &
-    Partial<UseExpandedState<Record<string, unknown>>> &
-    Partial<UseGroupByState<Record<string, unknown>>> &
-    Partial<UseSortByState<Record<string, unknown>>> &
-    Partial<UseRowSelectState<Record<string, unknown>>> = {};
+  const initialState: Partial<TableState<D>> &
+    Partial<UseExpandedState<Record<number, boolean>>> &
+    Partial<UseGroupByState<D>> &
+    Partial<UseSortByState<D>> &
+    Partial<UseRowSelectState<Record<number, boolean>>> = {};
   if (Array.isArray(groupBy)) {
     initialState.groupBy = groupBy;
     initialState.hiddenColumns = hiddenColumns || groupBy;
@@ -166,17 +169,17 @@ export const Table: FC<TableProps> = ({
     initialState.expanded = expanded;
   }
   initialState.selectedRowIds = initialSelected;
-  const options: TableOptions<Record<string, unknown>> &
-    UseFiltersOptions<Record<string, unknown>> &
-    UseExpandedOptions<Record<string, unknown>> &
-    UsePaginationOptions<Record<string, unknown>> &
-    UseGroupByOptions<Record<string, unknown>> &
-    UseRowSelectOptions<Record<string, unknown>> &
-    UseSortByOptions<Record<string, unknown>> &
-    UseRowStateOptions<Record<string, unknown>> = {
+  const options: TableOptions<D> &
+    UseFiltersOptions<D> &
+    UseExpandedOptions<D> &
+    UsePaginationOptions<D> &
+    UseGroupByOptions<D> &
+    UseRowSelectOptions<D> &
+    UseSortByOptions<D> &
+    UseRowStateOptions<D> = {
     columns,
     data,
-    defaultColumn: defaultColumn() as Column<Record<string, unknown>>,
+    defaultColumn: defaultColumn() as Column<D>,
     initialState,
     autoResetPage: !skipPageReset,
     autoResetExpanded: !skipPageReset,
@@ -187,7 +190,7 @@ export const Table: FC<TableProps> = ({
     autoResetRowState: !skipPageReset,
   };
 
-  const tableOptions = useTable(options, ...plugins) as any;
+  const tableOptions = useTable<D>(options, ...plugins) as any;
   const {
     getTableProps,
     getTableBodyProps,
@@ -265,7 +268,7 @@ export const Table: FC<TableProps> = ({
         {rows.map(
           (
             row: Row &
-              UseGroupByRowProps<Record<string, unknown>> & {
+              UseGroupByRowProps<D> & {
                 isExpanded?: boolean;
               },
           ) => {
@@ -277,12 +280,7 @@ export const Table: FC<TableProps> = ({
                   {row.isGrouped
                     ? row.cells[0].render('Aggregated')
                     : row.cells.map(
-                        (
-                          cell: Cell &
-                            Partial<
-                              UseGroupByCellProps<Record<string, unknown>>
-                            >,
-                        ) => {
+                        (cell: Cell & Partial<UseGroupByCellProps<D>>) => {
                           return (
                             <Box
                               as="td"
@@ -311,4 +309,4 @@ export const Table: FC<TableProps> = ({
       </Box>
     </Box>
   );
-};
+}

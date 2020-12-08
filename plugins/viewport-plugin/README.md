@@ -32,7 +32,7 @@ yarn add @component-controls/viewport-plugin --dev
 ## Configure route
 
 in `.config/buildtime.js`
-
+```
     const { defaultBuildConfig } = require('@component-controls/core');
 
     module.exports = {
@@ -48,11 +48,11 @@ in `.config/buildtime.js`
         },
       },
     }  
-
+```
 ## Configure page display
 
 in `.config/runtime.tsx`
-
+```
     import React from 'react';
     import { RunOnlyConfiguration, defaultRunConfig } from "@component-controls/core";
     import { ViewportPage } from "@component-controls/viewport-plugin";
@@ -70,7 +70,7 @@ in `.config/runtime.tsx`
     };
 
     export default config;
-
+```
 # API
 
 <react-docgen-typescript path="./src" />

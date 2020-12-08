@@ -25,6 +25,7 @@ export * from './Multiselect';
 export * from './Pagination';
 export * from './PanelContainer';
 export * from './Popover';
+export * from './ProgressIndicator';
 export * from './SearchInput';
 export * from './Sidebar';
 export * from './SkipLinks';

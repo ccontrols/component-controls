@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 import React, { useMemo, useState, useEffect } from 'react';
 import { Document, Example, faker } from '@component-controls/core';
-import { Table } from './Table';
+import { Table, Column } from './Table';
 import { ThemeProvider } from '../ThemeContext';
 
 export default {
@@ -9,7 +9,17 @@ export default {
   component: Table,
 } as Document;
 
-const columns = [
+type DataType = {
+  age: number;
+  name: string;
+  username: string;
+  address: {
+    street: string;
+    city: string;
+    zipcode: string;
+  };
+};
+const columns: Column<DataType>[] = [
   {
     Header: 'Age',
     accessor: 'age',
@@ -25,18 +35,18 @@ const columns = [
   },
   {
     Header: 'Street',
-    accessor: 'address.street',
+    accessor: 'address.street' as any,
   },
   {
     Header: 'City',
-    accessor: 'address.city',
+    accessor: 'address.city' as any,
   },
   {
     Header: 'Zip Code',
-    accessor: 'address.zipcode',
+    accessor: 'address.zipcode' as any,
   },
 ];
-const mockData = () => {
+const mockData = (): DataType[] => {
   let i = 10;
   faker.seed(123);
   // eslint-disable-next-line prefer-spread
@@ -52,7 +62,7 @@ export const overview: Example = () => {
   const data = useMemo(mockData, []);
   return (
     <ThemeProvider>
-      <Table hiddenColumns={['age']} columns={columns} data={data} />
+      <Table<DataType> hiddenColumns={['age']} columns={columns} data={data} />
     </ThemeProvider>
   );
 };
@@ -61,7 +71,7 @@ export const noHeader: Example = () => {
   const data = useMemo(mockData, []);
   return (
     <ThemeProvider>
-      <Table
+      <Table<DataType>
         header={false}
         hiddenColumns={['age']}
         columns={columns}
@@ -74,7 +84,7 @@ export const sortable: Example = () => {
   const data = useMemo(mockData, []);
   return (
     <ThemeProvider>
-      <Table
+      <Table<DataType>
         sorting={true}
         columns={columns}
         data={data}
@@ -102,7 +112,7 @@ export const grouping: Example = () => {
   const data = useMemo(mockData, []);
   return (
     <ThemeProvider>
-      <Table
+      <Table<DataType>
         expanded={{ 'age:21': true }}
         groupBy={['age']}
         columns={columns}
@@ -119,29 +129,34 @@ export const editing: Example = () => {
     setSkipPageReset(false);
   }, [data]);
   const columns = useMemo(
-    () => [
-      {
-        Header: 'Value',
-        accessor: 'value',
-        Cell: ({ cell: { value } }: any) => {
-          return (
-            <input
-              value={value}
-              onChange={e => {
-                setSkipPageReset(true);
-                setData([{ value: e.target.value }]);
-              }}
-            />
-          );
+    () =>
+      [
+        {
+          Header: 'Value',
+          accessor: 'value',
+          Cell: ({ cell: { value } }: any) => {
+            return (
+              <input
+                value={value}
+                onChange={e => {
+                  setSkipPageReset(true);
+                  setData([{ value: e.target.value }]);
+                }}
+              />
+            );
+          },
         },
-      },
-    ],
+      ] as Column<{ value: string }>[],
     [],
   );
 
   return (
     <ThemeProvider>
-      <Table skipPageReset={skipPageReset} columns={columns} data={data} />
+      <Table<{ value: string }>
+        skipPageReset={skipPageReset}
+        columns={columns}
+        data={data}
+      />
     </ThemeProvider>
   );
 };
@@ -150,7 +165,7 @@ export const rowSelect: Example = () => {
   const data = useMemo(mockData, []);
   return (
     <ThemeProvider>
-      <Table rowSelect={true} columns={columns} data={data} />
+      <Table<DataType> rowSelect={true} columns={columns} data={data} />
     </ThemeProvider>
   );
 };

@@ -8,7 +8,10 @@ import { LocalImport } from '../PackageLink';
 export const ImportLabel: FC<{ node: JSXNode }> = ({ node }) => {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-      <LocalImport node={node} />
+      <LocalImport
+        name={node.name as string}
+        componentHash={node.componentKey}
+      />
       {node.from && (
         <Box
           sx={{ display: 'flex', flexDirection: 'row', alignItems: 'baseline' }}

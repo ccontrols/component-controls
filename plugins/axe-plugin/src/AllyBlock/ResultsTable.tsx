@@ -2,7 +2,6 @@
 /** @jsx jsx */
 import { FC, useMemo, useCallback, useContext } from 'react';
 import { jsx, Flex, Box, Text } from 'theme-ui';
-import { Column } from 'react-table';
 import {
   ChevronRightIcon,
   ChevronDownIcon,
@@ -15,7 +14,12 @@ import {
   IssueOpenedIcon,
 } from '@primer/octicons-react';
 import { Result, ImpactValue } from 'axe-core';
-import { Table, ExternalLink, Tag } from '@component-controls/components';
+import {
+  Table,
+  Column,
+  ExternalLink,
+  Tag,
+} from '@component-controls/components';
 import { AxeContext } from '../state/context';
 import { NodesTable } from './NodesTable';
 
@@ -64,7 +68,7 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
     [hideErrorColumns],
   );
   const table = useMemo(() => {
-    const columns: Column<Record<string, unknown>>[] = [
+    const columns: Column<Result>[] = [
       {
         // Build our expander column
         id: 'expander', // Make sure it has an ID
@@ -149,7 +153,7 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
       },
     ];
     return (
-      <Table
+      <Table<Result>
         data={results || []}
         columns={columns}
         hiddenColumns={hideErrorColumns ? ['impact'] : undefined}
