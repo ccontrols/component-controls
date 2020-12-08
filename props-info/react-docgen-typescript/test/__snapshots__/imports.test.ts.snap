@@ -2460,7 +2460,7 @@ ie ally plugin uses it launch a new ally test on re-render",
       },
     },
     "plain": Object {
-      "description": "inner container variant. default to 'inner' to display a border and shadow",
+      "description": "inner container variant or plain",
       "parentName": "BlockContainerOwnProps",
       "type": Object {
         "name": "boolean",

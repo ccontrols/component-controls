@@ -139,12 +139,17 @@ exports[`Blocks/ComponentDependencies Local Dependencies 1`] = `
                           class="css-zivbkl-Cell"
                         >
                           <span
-                            class="css-dktbw5-LocalImport"
+                            class="css-kabhsx-LocalImport"
                           >
                             <span
                               class="css-vurnku"
                             >
-                              Node
+                              <a
+                                class="css-1t54e2w"
+                                href="/docs/id-of-story"
+                              >
+                                Button
+                              </a>
                             </span>
                           </span>
                           <span
@@ -153,7 +158,7 @@ exports[`Blocks/ComponentDependencies Local Dependencies 1`] = `
                             <span
                               class="css-vurnku"
                             >
-                              Node
+                              ButtonProps
                             </span>
                           </span>
                         </div>
@@ -188,7 +193,7 @@ exports[`Blocks/ComponentDependencies Local Dependencies 1`] = `
                             <span
                               class="css-vurnku"
                             >
-                              Node
+                              Table
                             </span>
                           </span>
                         </div>
