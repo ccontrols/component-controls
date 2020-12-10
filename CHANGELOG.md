@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.2](https://github.com/ccontrols/component-controls/compare/v2.2.1...v2.2.2) (2020-12-10)
+
+
+### Bug Fixes
+
+* loading of gatsby-config.js ([71d9308](https://github.com/ccontrols/component-controls/commit/71d9308f5ab8f8132831bd4af9e91a2e96334ba0))
+
+
+
+
+
 ## [2.2.1](https://github.com/ccontrols/component-controls/compare/v2.2.0...v2.2.1) (2020-12-08)
 
 
