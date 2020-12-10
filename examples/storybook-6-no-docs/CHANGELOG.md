@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.3](https://github.com/ccontrols/component-controls/compare/v2.2.2...v2.2.3) (2020-12-10)
+
+**Note:** Version bump only for package component-controls-storybook-6-no-docs
+
+
+
+
+
 ## [2.2.2](https://github.com/ccontrols/component-controls/compare/v2.2.1...v2.2.2) (2020-12-10)
 
 **Note:** Version bump only for package component-controls-storybook-6-no-docs

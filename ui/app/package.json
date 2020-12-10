@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/app",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "Component controls standalone application.",
   "sideEffects": false,
   "main": "dist/index.js",
@@ -31,15 +31,15 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/blocks": "^2.2.2",
-    "@component-controls/components": "^2.2.2",
+    "@component-controls/blocks": "^2.2.3",
+    "@component-controls/components": "^2.2.3",
     "@component-controls/core": "^2.2.0",
-    "@component-controls/pages": "^2.2.2",
-    "@component-controls/store": "^2.2.2",
+    "@component-controls/pages": "^2.2.3",
+    "@component-controls/store": "^2.2.3",
     "query-string": "^6.13.5"
   },
   "devDependencies": {
-    "@component-controls/jest-snapshots": "^2.2.2",
+    "@component-controls/jest-snapshots": "^2.2.3",
     "@component-controls/ts-markdown-docs": "^2.2.0",
     "@types/query-string": "^6.3.0",
     "@types/react": "^16.9.34",
