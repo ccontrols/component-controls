@@ -8,6 +8,7 @@ import {
 import { useStore } from './store';
 import { useStory, useCurrentStory } from './story';
 import { useCurrentDocument } from './document';
+import { useMemo } from 'react';
 
 export interface ComponentInputProps {
   /**
@@ -33,78 +34,80 @@ export const useComponents = ({
   const store = useStore();
   const story = useStory({ id: name });
   const currentDoc = useCurrentDocument();
-  const { component: storyComponentName } = story || {};
-  const storyComponent = getComponentName(storyComponentName);
-  const doc = story && story.doc ? store.docs[story.doc] : currentDoc;
-  const component =
-    storyComponent && doc && doc.componentsLookup
-      ? store.components[doc.componentsLookup[storyComponent]]
-      : undefined;
+  return useMemo(() => {
+    const { component: storyComponentName } = story || {};
+    const storyComponent = getComponentName(storyComponentName);
+    const doc = story && story.doc ? store.docs[story.doc] : currentDoc;
+    const component =
+      storyComponent && doc && doc.componentsLookup
+        ? store.components[doc.componentsLookup[storyComponent]]
+        : undefined;
 
-  let components: Components | undefined = undefined;
-  const getComponents = (
-    components: { [key: string]: any } | undefined,
-  ): Components => {
-    const getComponent = (name: string) =>
-      doc?.componentsLookup?.[name] &&
-      store?.components[doc.componentsLookup[name]];
-    return store && doc && components
-      ? Object.keys(components).reduce((acc, key) => {
-          const comp = components[key];
-          if (comp === CURRENT_STORY) {
-            const comps: Record<string, Component> = {};
-            const name = getComponentName(doc.component);
+    let components: Components | undefined = undefined;
+    const getComponents = (
+      components: { [key: string]: any } | undefined,
+    ): Components => {
+      const getComponent = (name: string) =>
+        doc?.componentsLookup?.[name] &&
+        store?.components[doc.componentsLookup[name]];
+      return store && doc && components
+        ? Object.keys(components).reduce((acc, key) => {
+            const comp = components[key];
+            if (comp === CURRENT_STORY) {
+              const comps: Record<string, Component> = {};
+              const name = getComponentName(doc.component);
+              if (name) {
+                const component = getComponent(name);
+                if (component) {
+                  comps[name] = component;
+                }
+              }
+              if (doc.subcomponents) {
+                Object.keys(doc.subcomponents).forEach(subKey => {
+                  const name = getComponentName(doc.subcomponents?.[subKey]);
+                  if (name) {
+                    const component = getComponent(name);
+                    if (component) {
+                      comps[name] = component;
+                    }
+                  }
+                });
+              }
+              return { ...acc, ...comps };
+            }
+            const keys = doc.componentsLookup
+              ? Object.keys(doc.componentsLookup)
+              : [];
+            const name = keys.length === 1 ? keys[0] : getComponentName(comp);
             if (name) {
               const component = getComponent(name);
               if (component) {
-                comps[name] = component;
+                return { ...acc, [key]: component };
               }
             }
-            if (doc.subcomponents) {
-              Object.keys(doc.subcomponents).forEach(subKey => {
-                const name = getComponentName(doc.subcomponents?.[subKey]);
-                if (name) {
-                  const component = getComponent(name);
-                  if (component) {
-                    comps[name] = component;
-                  }
-                }
-              });
-            }
-            return { ...acc, ...comps };
-          }
-          const keys = doc.componentsLookup
-            ? Object.keys(doc.componentsLookup)
-            : [];
-          const name = keys.length === 1 ? keys[0] : getComponentName(comp);
-          if (name) {
-            const component = getComponent(name);
-            if (component) {
-              return { ...acc, [key]: component };
-            }
-          }
-          return acc;
-        }, {})
-      : {};
-  };
-  if (of === CURRENT_STORY && story) {
-    if (component) {
-      const name = getComponentName(component);
-      if (name) {
-        components = {
-          [name]: component,
-          ...getComponents(story.subcomponents),
-        };
+            return acc;
+          }, {})
+        : {};
+    };
+    if (of === CURRENT_STORY && story) {
+      if (component) {
+        const name = getComponentName(component);
+        if (name) {
+          components = {
+            [name]: component,
+            ...getComponents(story.subcomponents),
+          };
+        } else {
+          components = getComponents(story.subcomponents);
+        }
       } else {
         components = getComponents(story.subcomponents);
       }
     } else {
-      components = getComponents(story.subcomponents);
+      components = getComponents({ of });
     }
-  } else {
-    components = getComponents({ of });
-  }
-  return components;
+    return components;
+  }, [currentDoc, of, store, story]);
 };
 
 /**
@@ -118,17 +121,19 @@ export const useComponent = ({
   const story = useStory({ id: name });
   const currentDoc = useCurrentDocument();
   const store = useStore();
-  const doc = story && story.doc ? store.docs[story.doc] : currentDoc;
-  let component;
-  if (of === CURRENT_STORY) {
-    component = story ? story.component : doc?.component;
-  } else {
-    component = of;
-  }
-  const componentName = getComponentName(component);
-  return componentName && doc && doc.componentsLookup
-    ? store.components[doc.componentsLookup[componentName]]
-    : undefined;
+  return useMemo(() => {
+    const doc = story && story.doc ? store.docs[story.doc] : currentDoc;
+    let component;
+    if (of === CURRENT_STORY) {
+      component = story ? story.component : doc?.component;
+    } else {
+      component = of;
+    }
+    const componentName = getComponentName(component);
+    return componentName && doc && doc.componentsLookup
+      ? store.components[doc.componentsLookup[componentName]]
+      : undefined;
+  }, [currentDoc, of, store, story]);
 };
 
 /**
@@ -141,12 +146,16 @@ export const useCurrentPropsCount = (): number => {
   const story = useCurrentStory();
   const components = useComponents({ name: story?.id });
   const doc = useCurrentDocument();
-  return components && doc
-    ? Object.keys(components).reduce((acc, key) => {
-        const component = doc.componentsLookup
-          ? store.components[doc.componentsLookup[key]]
-          : undefined;
-        return acc + Object.keys(component?.info?.props || {}).length;
-      }, 0)
-    : 0;
+  return useMemo(
+    () =>
+      components && doc
+        ? Object.keys(components).reduce((acc, key) => {
+            const component = doc.componentsLookup
+              ? store.components[doc.componentsLookup[key]]
+              : undefined;
+            return acc + Object.keys(component?.info?.props || {}).length;
+          }, 0)
+        : 0,
+    [components, doc, store],
+  );
 };

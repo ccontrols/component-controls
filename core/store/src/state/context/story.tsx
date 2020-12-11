@@ -2,6 +2,7 @@ import React, {
   FC,
   createContext,
   useContext,
+  useMemo,
   useState,
   useEffect,
 } from 'react';
@@ -103,16 +104,18 @@ export const useStoryById = (storyId: string): Story | undefined => {
  */
 export const useStoryIdFromName = (name?: string): string | undefined => {
   const store = useStore();
-  if (name) {
-    for (const docId in store.docs) {
-      const doc = store.docs[docId];
-      const storyId = docStoryToId(docId, name);
-      if (doc.stories && doc.stories.indexOf(storyId) > -1) {
-        return storyId;
+  return useMemo(() => {
+    if (name) {
+      for (const docId in store.docs) {
+        const doc = store.docs[docId];
+        const storyId = docStoryToId(docId, name);
+        if (doc.stories && doc.stories.indexOf(storyId) > -1) {
+          return storyId;
+        }
       }
     }
-  }
-  return undefined;
+    return undefined;
+  }, [name, store.docs]);
 };
 
 export interface StoryInputProps {
@@ -166,16 +169,20 @@ export const useStoryComponent = (
 ): Component | undefined => {
   const storyId = useStoryId(props);
   const store = useStore();
-  const story: Story | undefined = storyId ? store.stories[storyId] : undefined;
-  const storyComponent: any = story?.component;
-
-  const componentName = getComponentName(storyComponent);
-  const doc = story && story.doc ? store.docs[story.doc] : undefined;
-  const component =
-    componentName && doc?.componentsLookup?.[componentName]
-      ? store.components[doc.componentsLookup[componentName]]
+  return useMemo(() => {
+    const story: Story | undefined = storyId
+      ? store.stories[storyId]
       : undefined;
-  return component;
+    const storyComponent: any = story?.component;
+
+    const componentName = getComponentName(storyComponent);
+    const doc = story && story.doc ? store.docs[story.doc] : undefined;
+    const component =
+      componentName && doc?.componentsLookup?.[componentName]
+        ? store.components[doc.componentsLookup[componentName]]
+        : undefined;
+    return component;
+  }, [store, storyId]);
 };
 
 /**

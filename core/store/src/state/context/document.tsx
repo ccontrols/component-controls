@@ -129,26 +129,28 @@ export const useDocSort = (
   return [sort[type] || 'date', newSort => setSort(type, newSort)];
 };
 
+const getDocsByType = (docs: Documents, type: DocType) =>
+  Object.keys(docs).reduce((acc: Pages, key: string) => {
+    const doc: Document | undefined = docs[key];
+    if (doc) {
+      const { type: docType = defDocType } = doc;
+      if (docType === type) {
+        return [...acc, { ...doc }];
+      }
+    }
+    return acc;
+  }, []);
 /**
  * Returns an array of all documents of a specific doc type
  */
 export const useDocByType = (type: DocType): Pages => {
-  return useGetDocByType()(type);
+  const docs = useDocs();
+  return useMemo(() => getDocsByType(docs, type), [docs, type]);
 };
 
 export const useGetDocByType = (): ((type: DocType) => Pages) => {
   const docs = useDocs();
-  return (type: DocType) =>
-    Object.keys(docs).reduce((acc: Pages, key: string) => {
-      const doc: Document | undefined = docs[key];
-      if (doc) {
-        const { type: docType = defDocType } = doc;
-        if (docType === type) {
-          return [...acc, { ...doc }];
-        }
-      }
-      return acc;
-    }, []);
+  return (type: DocType) => getDocsByType(docs, type);
 };
 
 /**
@@ -157,7 +159,7 @@ export const useGetDocByType = (): ((type: DocType) => Pages) => {
 export const useSortedDocByType = (type: DocType): Pages => {
   const docs = useDocByType(type);
   const [sort] = useDocSort(type);
-  return [...docs].sort(docSortFn(sort));
+  return useMemo(() => [...docs].sort(docSortFn(sort)), [docs, sort]);
 };
 
 export type DocCountType = Record<DocType, { count: number; home?: Document }>;
