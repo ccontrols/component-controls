@@ -53,7 +53,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.2.2",
+      "version": "2.2.3",
     },
   },
   "stories": Object {
@@ -138,7 +138,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.2.2",
+      "version": "2.2.3",
     },
   },
   "stories": Object {
@@ -223,7 +223,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.2.2",
+      "version": "2.2.3",
     },
   },
   "stories": Object {},
