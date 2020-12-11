@@ -172,17 +172,15 @@ export const Sidebar: FC<SidebarProps> = ({
   const story = useCurrentStory();
   const activeId = story ? story.id : docId;
   const config = useConfig() || {};
-  const { pages, menu, sidebar = [] } = config;
-  const page: PageConfiguration = useMemo(() => pages?.[type] || {}, [
-    pages,
-    type,
-  ]);
-  const { label = '' } = page;
   const docs: Pages = useDocByType(type);
-  const menuItems = useMemo(() => {
-    const staticMenus = Array.isArray(menu) ? staticMenusToMenuItems(menu) : [];
+  const [search, setSearch] = useState<string | undefined>(undefined);
+  const node = useMemo(() => {
+    const { pages, menu, sidebar = [] } = config;
+    const page: PageConfiguration = pages?.[type] || {};
+    const { label = '' } = page;
+    let menuItems = Array.isArray(menu) ? staticMenusToMenuItems(menu) : [];
     if (store) {
-      const menuItems = docs.reduce((acc: TreeItems, doc: Document) => {
+      menuItems = docs.reduce((acc: TreeItems, doc: Document) => {
         const { title, menu } = doc;
         if (menu) {
           const item = findMenuItem(acc, menu);
@@ -205,58 +203,65 @@ export const Sidebar: FC<SidebarProps> = ({
         const levels = title.split('/');
         createMenuItem(store, doc, type, levels, page, activeTab, acc);
         return acc;
-      }, staticMenus);
-      return menuItems;
+      }, menuItems);
     }
-    return staticMenus;
-  }, [type, activeTab, store, page, docs, menu]);
-  const [search, setSearch] = useState<string | undefined>(undefined);
-  const actions: ActionItems = [...sidebar];
-
-  if (propsTitle || label) {
+    const actions: ActionItems = [...sidebar];
+    if (propsTitle || label) {
+      actions.push({
+        node: (
+          <Heading as="h3" variant="appsidebar.items">
+            {propsTitle || label}
+          </Heading>
+        ),
+        id: 'title',
+      });
+    }
     actions.push({
       node: (
-        <Heading as="h3" variant="appsidebar.items">
-          {propsTitle || label}
-        </Heading>
+        <Box variant="appsidebar.items">
+          <Input
+            sx={{
+              // fix ie 11
+              lineHeight: 'normal',
+            }}
+            placeholder="filter..."
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            onClick={e => e.stopPropagation()}
+          />
+        </Box>
       ),
-      id: 'title',
+      id: 'filter',
     });
-  }
-  actions.push({
-    node: (
-      <Box variant="appsidebar.items">
-        <Input
-          sx={{
-            // fix ie 11
-            lineHeight: 'normal',
-          }}
-          placeholder="filter..."
-          value={search}
-          onChange={e => setSearch(e.target.value)}
-          onClick={e => e.stopPropagation()}
-        />
-      </Box>
-    ),
-    id: 'filter',
-  });
-  return (
-    <AppSidebar variant="appsidebar.sidebar" id="sidebar">
-      {responsive && (
-        <Header sx={{ boxShadow: 'unset' }}>
-          <SidebarClose />
-          <ColorMode />
-        </Header>
-      )}
-      <Box variant="appsidebar.container">
-        <ActionBar themeKey="appsidebar" actions={actions} />
-        <Tree
-          as="nav"
-          activeItem={{ id: activeId }}
-          search={search}
-          items={menuItems}
-        />
-      </Box>
-    </AppSidebar>
-  );
+    return (
+      <AppSidebar variant="appsidebar.sidebar" id="sidebar">
+        {responsive && (
+          <Header sx={{ boxShadow: 'unset' }}>
+            <SidebarClose />
+            <ColorMode />
+          </Header>
+        )}
+        <Box variant="appsidebar.container">
+          <ActionBar themeKey="appsidebar" actions={actions} />
+          <Tree
+            as="nav"
+            activeItem={{ id: activeId }}
+            search={search}
+            items={menuItems}
+          />
+        </Box>
+      </AppSidebar>
+    );
+  }, [
+    activeId,
+    activeTab,
+    config,
+    docs,
+    propsTitle,
+    responsive,
+    search,
+    store,
+    type,
+  ]);
+  return node;
 };
