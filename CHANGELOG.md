@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.4](https://github.com/ccontrols/component-controls/compare/v2.2.3...v2.2.4) (2020-12-14)
+
+
+### Performance Improvements
+
+* memoize common hooks ([6a8af1d](https://github.com/ccontrols/component-controls/commit/6a8af1d1bfa814299c8d1e52ee80c9bd24f81acd))
+* memoize sidebar ([20f4fab](https://github.com/ccontrols/component-controls/commit/20f4fab46974fb9748b7337864f1431431354f99))
+
+
+
+
+
 ## [2.2.3](https://github.com/ccontrols/component-controls/compare/v2.2.2...v2.2.3) (2020-12-10)
 
 **Note:** Version bump only for package component-controls
