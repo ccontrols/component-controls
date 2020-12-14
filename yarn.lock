@@ -12923,11 +12923,6 @@ gatsby-plugin-root-import@^2.0.5:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-root-import/-/gatsby-plugin-root-import-2.0.5.tgz#04e520dc661d67f49aa7950f11b7c780fd2fdbd3"
   integrity sha512-/yA6rFjfjiFb8D6nCjfFrrGqYQMkOt4J3u2o6s7VYEF/zpA5dw2C9ENJ5fDKkJSCbbwLiEIGVMMee3vMEip2zA==
 
-gatsby-plugin-theme-ui@^0.6.0-alpha.3:
-  version "0.6.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-theme-ui/-/gatsby-plugin-theme-ui-0.6.0-alpha.3.tgz#68f9c17e72fd655ad4eee94eeabb1bcf9bbbddad"
-  integrity sha512-ZwGoa5YRanrQfEc/8Zm1O7Knrz5YwcBLVintCu5tOowDpgFrb7irJGLFL+jEauOatiKN2ybzF/PsDx45gOTY0A==
-
 gatsby-plugin-typescript@^2.1.6, gatsby-plugin-typescript@^2.4.24:
   version "2.4.24"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.4.24.tgz#c644d3919bd7460fc9b926b768cdf6c2f2f7b4e3"

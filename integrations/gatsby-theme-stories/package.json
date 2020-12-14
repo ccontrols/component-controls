@@ -43,7 +43,6 @@
     "@component-controls/pages": "^2.2.3",
     "@component-controls/webpack-compile": "^2.2.3",
     "@component-controls/webpack-configs": "^2.2.3",
-    "gatsby-plugin-theme-ui": "^0.6.0-alpha.3",
     "gatsby-plugin-typescript": "^2.4.24",
     "react-helmet": "^6.0.0",
     "theme-ui": "^0.6.0-alpha.3"
