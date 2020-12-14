@@ -2356,7 +2356,7 @@ exports[`Application/Sidebar Overview 1`] = `
                 class="css-1dj4wno"
               >
                 <input
-                  class="css-xjq4ex-Sidebar"
+                  class="css-n6or39"
                   placeholder="filter..."
                   value=""
                 />
