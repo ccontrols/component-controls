@@ -6,7 +6,6 @@ import {
   useStore,
   useCurrentDocument,
   useDocByType,
-  useConfig,
   useActiveTab,
   useCurrentStory,
 } from '@component-controls/store';
@@ -171,10 +170,10 @@ export const Sidebar: FC<SidebarProps> = ({
   const { title: docId } = useCurrentDocument() || {};
   const story = useCurrentStory();
   const activeId = story ? story.id : docId;
-  const config = useConfig() || {};
   const docs: Pages = useDocByType(type);
   const [search, setSearch] = useState<string | undefined>(undefined);
   const node = useMemo(() => {
+    const { config } = store;
     const { pages, menu, sidebar = [] } = config;
     const page: PageConfiguration = pages?.[type] || {};
     const { label = '' } = page;
@@ -252,16 +251,6 @@ export const Sidebar: FC<SidebarProps> = ({
         </Box>
       </AppSidebar>
     );
-  }, [
-    activeId,
-    activeTab,
-    config,
-    docs,
-    propsTitle,
-    responsive,
-    search,
-    store,
-    type,
-  ]);
+  }, [activeId, activeTab, docs, propsTitle, responsive, search, store, type]);
   return node;
 };
