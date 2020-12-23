@@ -9,6 +9,7 @@ import {
   getDocPath,
   getHomePath,
   getComponentName,
+  SearchResult,
 } from '@component-controls/core';
 import { useStore, useActiveTab } from './store';
 
@@ -289,4 +290,9 @@ export const useDocDescription = (
     }
   }
   return undefined;
+};
+
+export const useSearch = (): SearchResult | undefined => {
+  const store = useStore();
+  return store.search ? store.search(store) : undefined;
 };

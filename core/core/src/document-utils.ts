@@ -20,17 +20,17 @@ export const ensureTrailingSlash = (route: string): string =>
 export const ensureStartingSlash = (route: string): string =>
   route.startsWith('/') ? route : '/' + route;
 
-export const removeTrailingSlash = (route: string): string => {
+export const removeTrailingSlash = (route: string, index = 1): string => {
   let result = route;
-  while (result.length > 1 && result.endsWith('/')) {
+  while (result.length > index && result.endsWith('/')) {
     result = result.substr(0, result.length - 1);
   }
   return result;
 };
 
-export const removeStartingSlash = (route: string): string => {
+export const removeStartingSlash = (route: string, index = 1): string => {
   let result = route;
-  while (result.length > 1 && result.startsWith('/')) {
+  while (result.length > index && result.startsWith('/')) {
     result = result.substr(1);
   }
   return result;
@@ -62,7 +62,7 @@ export const getDocPath = (
     : `${ensureTrailingSlash(basePath)}${strToId(name)}${
         activeTab ? ensureStartingSlash(activeTab) : ''
       }`;
-  return encodeURI(`${siteRoot}${removeStartingSlash(route)}`);
+  return encodeURI(`${siteRoot}${removeStartingSlash(route, 0)}`);
 };
 
 export const getStoryPath = (

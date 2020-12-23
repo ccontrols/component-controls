@@ -41,6 +41,7 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
       if (!globalStore.config.renderFn) {
         globalStore.config.renderFn = reactRender;
       }
+      globalStore.search = store.search;
       stores.forEach(s => {
         const storeDoc = s.doc;
         const storeStories = s.stories;

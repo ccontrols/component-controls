@@ -11,6 +11,7 @@ import { ActionItems } from './utility';
 import { StoryRenderFn } from './utility';
 import { ReactElement } from 'react';
 import { Story, Document } from './document';
+import { SearchOptions } from './search';
 
 /**
  * render function by framework. By default 'react'
@@ -181,6 +182,10 @@ export type BuildConfiguration = BuildProps & {
    * instrumentation configuration
    */
   instrument?: any;
+  /**
+   * search options
+   */
+  search?: SearchOptions;
 };
 
 export interface ToolbarConfig {
@@ -332,46 +337,6 @@ export interface RunOnlyConfiguration {
 export type RunConfiguration = RunOnlyConfiguration &
   Omit<BuildConfiguration, 'pages'>;
 
-export const defaultRunConfig: RunConfiguration = {
-  title: 'Component controls',
-  description:
-    'Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site.',
-  language: 'en',
-  author: '@component-controls',
-  controls: {
-    threshold: 10,
-  },
-  pages: {
-    story: {
-      label: 'Docs',
-      navSidebar: true,
-      contextSidebar: true,
-      topMenu: true,
-      tabs: [{ title: 'Documentation', type: 'ClassicPage' }],
-    },
-    blog: {
-      label: 'Blog',
-      contextSidebar: true,
-      topMenu: true,
-      indexHome: true,
-    },
-    author: {
-      label: 'Authors',
-    },
-    page: {
-      label: 'Page',
-      container: null,
-    },
-    tags: {
-      label: 'Tags',
-    },
-  },
-};
-
-export const convertConfig = (config: RunConfiguration): RunConfiguration => {
-  return config;
-};
-
 export const defaultBuildConfig: BuildConfiguration = {
   siteRoot: '/',
   siteMap: {
@@ -417,4 +382,49 @@ export const defaultBuildConfig: BuildConfiguration = {
       basePath: 'tags/',
     },
   },
+  search: {
+    /**
+     * the search plugin search routine
+     */
+    searchingModule: require.resolve('@component-controls/search-fusejs'),
+  },
+};
+export const defaultRunConfig: RunConfiguration = {
+  title: 'Component controls',
+  description:
+    'Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site.',
+  language: 'en',
+  author: '@component-controls',
+  controls: {
+    threshold: 10,
+  },
+  pages: {
+    story: {
+      label: 'Docs',
+      navSidebar: true,
+      contextSidebar: true,
+      topMenu: true,
+      tabs: [{ title: 'Documentation', type: 'ClassicPage' }],
+    },
+    blog: {
+      label: 'Blog',
+      contextSidebar: true,
+      topMenu: true,
+      indexHome: true,
+    },
+    author: {
+      label: 'Authors',
+    },
+    page: {
+      label: 'Page',
+      container: null,
+    },
+    tags: {
+      label: 'Tags',
+    },
+  },
+};
+
+export const convertConfig = (config: RunConfiguration): RunConfiguration => {
+  return config;
 };

@@ -40,6 +40,9 @@ Object {
         "basePath": "tags/",
       },
     },
+    "search": Object {
+      "searchingModule": "/Users/atanasster/component-controls/search/fusejs/dist/index.js",
+    },
     "siteMap": Object {
       "pages": Object {
         "doc": Object {
@@ -381,6 +384,7 @@ export const ActionBar: FC<ActionBarProps> = ({
       "version": "2.2.4",
     },
   },
+  "search": [Function],
   "stores": Array [
     Object {
       "doc": Object {

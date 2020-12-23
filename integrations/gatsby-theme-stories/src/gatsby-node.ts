@@ -5,6 +5,7 @@ import {
   compile,
   watch,
   CompilerCallbackFn,
+  searchIndexing,
 } from '@component-controls/webpack-compile';
 import {
   BuildProps,
@@ -30,7 +31,6 @@ import {
   loadStore,
   getSiteMap,
 } from '@component-controls/store';
-
 const { StorePlugin } = require('@component-controls/store/plugin');
 
 export const createPagesStatefully = async (
@@ -43,7 +43,7 @@ export const createPagesStatefully = async (
     ...defaultCompileProps,
     ...options,
   };
-  const onBundle: CompilerCallbackFn = ({ store: loadingStore }) => {
+  const onBundle: CompilerCallbackFn = async ({ store: loadingStore }) => {
     if (loadingStore) {
       const store: Store = loadStore(loadingStore, true);
       const createGatsbyPage: CreatePagesArgs['actions']['createPage'] = props => {
@@ -105,18 +105,21 @@ export const createPagesStatefully = async (
           });
         },
       );
-      if (process.env.NODE_ENV === 'production' && store.config.siteMap) {
-        const sitemap = getSiteMap(store);
-        const staticFolder =
-          config.staticFolder ||
-          sysPath.join(process.cwd(), 'public', 'static');
-        const sitemapfolder = sysPath.resolve(staticFolder as string, '..');
-        if (!fs.existsSync(sitemapfolder)) {
-          fs.mkdirSync(sitemapfolder, { recursive: true });
+      if (process.env.NODE_ENV === 'production') {
+        if (store.config.siteMap) {
+          const sitemap = getSiteMap(store);
+          const staticFolder =
+            config.staticFolder ||
+            sysPath.join(process.cwd(), 'public', 'static');
+          const sitemapfolder = sysPath.resolve(staticFolder as string, '..');
+          if (!fs.existsSync(sitemapfolder)) {
+            fs.mkdirSync(sitemapfolder, { recursive: true });
+          }
+          const sitemapname = sysPath.resolve(sitemapfolder, 'sitemap.xml');
+          log('creating sitemap', sitemapname);
+          fs.writeFileSync(sitemapname, sitemap, 'utf8');
         }
-        const sitemapname = sysPath.resolve(sitemapfolder, 'sitemap.xml');
-        log('creating sitemap', sitemapname);
-        fs.writeFileSync(sitemapname, sitemap, 'utf8');
+        await searchIndexing(store);
       }
       process.env.GATSBY_CC_CSS_FILENAME = getCSSBundleName(store.config);
     }
@@ -127,10 +130,10 @@ export const createPagesStatefully = async (
   await run(config, onBundle);
 };
 
-exports.onCreateWebpackConfig = (
+export const onCreateWebpackConfig = (
   { actions }: CreateWebpackConfigArgs,
   options: BuildProps,
-) => {
+): void => {
   //inject store bundle name
   actions.setWebpackConfig({
     plugins: [

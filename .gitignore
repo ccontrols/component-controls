@@ -7,3 +7,4 @@ dist
 public
 .next
 out
+**/.env

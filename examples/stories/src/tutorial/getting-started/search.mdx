@@ -1,0 +1,327 @@
+---
+title: Getting started/Site search
+author: atanasster
+type: tutorial
+order: 7
+route: /tutorial/getting-started/search
+tags:
+  - configuration
+  - search
+image: /static/search-algolia.jpg
+description: component-controls provides site search using Fuse.js or Algolia Search API
+---
+
+import searchAlgoliaImg from './media/search-algolia.jpg';
+import searchAnumation from './media/search-animated.gif';
+
+<p align="center">
+  <img
+    alt="gatsby documentation site"
+    title="search in action"
+    src={searchAnumation}
+  />
+</p>
+
+`component-controls` offers site searching out of the box and you can configure it to use your preferred search library:
+
+- [Fuse.js](https://fusejs.io) is a powerful, lightweight fuzzy-search library, with zero dependencies.
+- [Algolia](https://www.algolia.com) is the most flexible search & navigation platform
+
+The default search engine `component-controls` is [Fuse.js](https://fusejs.io) as it requires no third-party registrations and is the easiest to setup.
+
+# Live examples
+
+- The [gatsby](https://component-controls.com) version of our documentation site uses [Algolia](https://www.algolia.com)
+- The [nextjs](https://nextjs.component-controls.com) version of our documentation site uses [Fuse.js](https://fusejs.io)
+
+You can play with both sites and see which experience (speed, search accuracy) works best for your needs.
+
+# Advantages
+
+- [Fuse.js](https://fusejs.io) advantages:
+
+  - fully contained library with 0 dependencies
+  - the search index is contained within your site
+  - free (no registration)
+
+- [Alogolia Search](https://www.algolia.com/products/search/) advantages:
+
+  - powerful and flexible search engine
+  - the search index is on (fast) algolia servers
+  - free tier with registration
+
+# Configuration
+
+The `component-controls` search indexing and search hooks are configured in your [buildtime](/configuration/buildtime/) configuration file.
+
+> - The search indexing takes place during build-time in a node.js environment.
+> - The search by keyword takes place during run-time in a browser environment.
+
+## indexingModule
+
+When the search plugin is using indexing, you can the indexing routine here
+
+```js:title=.config/buildtime.js
+module.exports = {
+  ...
+  search: {
+    indexingModule: require.resolve('@component-controls/search-algolia/indexing'),
+  },
+};
+```
+
+## searchingModule
+
+The search plugin search react hook, in the format `(store: Store): SearchResult`
+
+```js:title=.config/buildtime.js
+module.exports = {
+  ...
+  search: {
+    searchingModule: require.resolve('@component-controls/search-algolia'),
+  },
+};
+```
+
+## fields
+
+A list of the fields to search by. The default search fields are `title`, `description`, `stories`, and `components`.
+
+```js:title=.config/buildtime.js
+module.exports = {
+  ...
+  search: {
+    fields: [
+      'title',
+      'description',
+      'source',
+      'author',
+      'stories',
+      'tags',
+      'components',
+    ],
+  },
+};
+```
+
+## emptySearchDocuments
+
+A list of the documents to display when doing an empty search. Usually, this should be the most often used/ most important documents. By default, no search results are displayed on an empty search.
+
+```js:title=.config/buildtime.js
+module.exports = {
+  ...
+  search: {
+    emptySearchDocuments: [
+      'Getting started/Site generators/Gatsby',
+      'Getting started/Site generators/Nextjs',
+      'Getting started/Documentation site',
+      'Writing Documentation/ESM Stories',
+      'Getting started/UI customization',
+      'Writing Documentation/MDX Documentation',
+      'Writing Documentation/MDX Stories',
+    ],
+  },
+};
+```
+
+## hitsPerPage
+
+The number of search results per page. By default, this is 20.
+
+```js:title=.config/buildtime.js
+module.exports = {
+  ...
+  search: {
+    hitsPerPage: 10,
+  },
+};
+```
+
+## options
+
+An object with options, specific to the search engine.
+
+The list of standard options for each engine can be found here:
+
+- [Fuse.js search options](https://fusejs.io/api/options.html)
+- [Algolia search parameters](https://www.algolia.com/doc/api-reference/search-api-parameters/)
+
+This is also the place to configure your Algolia search API keys:
+
+```js:title=.config/buildtime.js
+module.exports = {
+  ...
+  search: {
+    options: {
+      saveIndex: true, // turn to false when you dont need to index the site anymore
+      indexName: <Index name>,
+      appID: <App ID>,
+      searchAPIKey: <Search API Key>,
+      adminAPIKey: <Admin API Key>, //required for indexing
+    }
+  }
+}
+```
+
+# Configure the Algolia search
+
+To start, you will need to configure the search to use the `@component-controls/search-algolia` package:
+
+```js:title=.config/buildtime.js
+module.exports = {
+  ...
+  search: {
+    indexingModule: require.resolve('@component-controls/search-algolia/indexing'),
+    searchingModule: require.resolve('@component-controls/search-algolia'),
+  }
+}
+```
+
+## Register with Algolia
+
+The Alogolia Search needs a [registration](<(https://www.algolia.com/users/sign_up)>) - once registered, you can use 10 units (approx 10k searches) per month for free. If you need additional search units, you will need a paid account.
+
+## API Keys
+
+Go to the [API Keys](https://www.algolia.com/api-keys) section of your Algolia profile and copy the `Application ID`, `Search-Only API Key` and `Admin API Key`.
+
+## Create an index
+
+Go to the [Indices](https://www.algolia.com/explorer) section of your Algolia profile, create a new index, and save the index name.
+
+## Update configuration
+
+At this point, your configuration should look like this:
+
+```js:title=.config/buildtime.js
+module.exports = {
+  ...
+  search: {
+    indexingModule: require.resolve('@component-controls/search-algolia/indexing'),
+    searchingModule: require.resolve('@component-controls/search-algolia'),
+    options: {
+      saveIndex: true, // turn to false when you dont need to index the site anymore
+      indexName: <Index name>,
+      appID: <App ID>,
+      searchAPIKey: <Search API Key>,
+      adminAPIKey: <Admin API Key>, //required for indexing
+    }
+  }
+}
+```
+
+## Secure the API keys
+
+You can create a `.env` file (or otherwise create environment variables) to keep your API Keys private - this regards especially the Admin keys. This file should not be checked-in a public source repository.
+
+```sh:title=.env
+ALGOLIA_SEARCH_INDEX_NAME=<Index name>
+ALGOLIA_SEARCH_APP_ID=<App ID>
+ALGOLIA_SEARCH_SEARCH_KEY=<Search API Key>
+ALGOLIA_SEARCH_ADMIN_KEY=<Admin API Key>
+```
+
+And you can configure your build-time configuration
+
+```js:title=.config/buildtime.js
+require('dotenv').config();
+module.exports = {
+  ...
+  search: {
+    indexingModule: require.resolve('@component-controls/search-algolia/indexing'),
+    searchingModule: require.resolve('@component-controls/search-algolia'),
+    options: {
+      saveIndex: true, // turn to false when no more needed to re-index algolia search
+      indexName: process.env.ALGOLIA_SEARCH_INDEX_NAME,
+      appID: process.env.ALGOLIA_SEARCH_APP_ID,
+      searchAPIKey: process.env.ALGOLIA_SEARCH_SEARCH_KEY,
+      adminAPIKey: process.env.ALGOLIA_SEARCH_ADMIN_KEY,
+    },
+  }
+}
+```
+
+## Algolia search parameters
+
+You can use any [Algolia search parameters](https://www.algolia.com/doc/api-reference/search-api-parameters/):
+
+- the `indexOptions` field will contain indexing options
+- the `searchOptions` field will contain searching options
+
+The following example will filter the search to only documents of type `blog` with an `author` name. For this purpose, we need to create [facets](https://www.algolia.com/doc/api-reference/api-parameters/attributesForFaceting) - or the fields that will be filtrable in the index, and then apply a filter in the search.
+
+```js:title=.config/buildtime.js
+require('dotenv').config();
+module.exports = {
+  ...
+  search: {
+    indexingModule: require.resolve('@component-controls/search-algolia/indexing'),
+    searchingModule: require.resolve('@component-controls/search-algolia'),
+    fields: [
+      'title',
+      'description',
+      'source',
+      'author',
+      'stories',
+      'tags',
+      'type',
+      'components',
+    ],
+    options: {
+      saveIndex: true, // turn to false when no more needed to re-index algolia search
+      indexName: process.env.ALGOLIA_SEARCH_INDEX_NAME,
+      appID: process.env.ALGOLIA_SEARCH_APP_ID,
+      searchAPIKey: process.env.ALGOLIA_SEARCH_SEARCH_KEY,
+      adminAPIKey: process.env.ALGOLIA_SEARCH_ADMIN_KEY,
+      indexOptions: {
+        attributesForFaceting: ['type', 'author'],
+      },
+      searchOptions: {
+        filters: 'type:"blog" AND author:"John Doe"',
+      },
+    },
+  }
+}
+```
+
+# Configure the Fuse.js search
+
+You can customize the [Fuse.js search options](https://fusejs.io/api/options.html) using the `options` search configuration field:
+
+```js:title=.config/buildtime.js
+module.exports = {
+  ...
+  search: {
+    fields: [
+      'title',
+      'description',
+      'source',
+      'author',
+      'stories',
+      'tags',
+      'type',
+      'components',
+    ],
+    options: {
+      isCaseSensitive: true,
+    },
+  }
+}
+```
+
+The default Fuse.js indexing options are:
+
+```
+  includeScore: true,
+  useExtendedSearch: true,
+  keys: [
+    { name: 'title', weight: 0.2 },
+    { name: 'description', weight: 0.2 },
+    { name: 'source', weight: 0.1 },
+    { name: 'author', weight: 0.04 },
+    { name: 'stories', weight: 0.04 },
+    { name: 'tags', weight: 0.3 },
+    { name: 'components', weight: 0.1 },
+  ],
+```

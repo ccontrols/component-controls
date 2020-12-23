@@ -1,4 +1,6 @@
 import {
+  Store,
+  SearchResult,
   Components,
   Packages,
   BuildConfiguration,
@@ -49,6 +51,7 @@ export interface LoadingStore {
     filePath: string;
     hash?: string;
   })[];
+  search: Store['search'];
 }
 
 export const store: LoadingStore = {
@@ -57,6 +60,9 @@ export const store: LoadingStore = {
   packages: {},
   config: {},
   buildConfig: {},
+  search: () => {
+    return {} as SearchResult;
+  },
 };
 
 let instrumentOptions: InstrumentOptions = {};

@@ -1,3 +1,4 @@
+
 /** @jsx jsx */
 import { jsx, Box, Text } from 'theme-ui';
 import { RunOnlyConfiguration, defaultRunConfig } from "@component-controls/core";
@@ -32,7 +33,7 @@ const config: RunOnlyConfiguration = {
       navSidebar: true,
       contextSidebar: true,
     },
-  },  
+  },
   storySort: (a, b) => {
     const aDoc = a.split('/')[0];
     const aIndex = categories.findIndex(c => c === aDoc);

@@ -6,6 +6,7 @@
     "integrations/**/*",
     "plugins/**/*",
     "props-info/**/*",
+    "search/**/*",
     "ui/**/*"
   ],
   "version": "2.2.4",

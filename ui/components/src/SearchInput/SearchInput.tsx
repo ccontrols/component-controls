@@ -60,6 +60,10 @@ export interface SearchInputOwnProps<ItemType> {
    * customize the popover
    */
   popoverProps?: PopoverProps;
+  /**
+   * custom renver of the search items popup
+   */
+  render?: (rendered: ReactNode) => ReactNode;
 }
 
 export type SearchInputProps<ItemType> = SearchInputOwnProps<ItemType> &
@@ -73,6 +77,7 @@ export const SearchInput = <ItemType extends SearchInputItemType>({
   children,
   onSelect,
   popoverProps,
+  render = rendered => rendered,
   ...rest
 }: SearchInputProps<ItemType>): JSX.Element => {
   const [selected, setSelected] = useState<number | undefined>(undefined);
@@ -157,41 +162,43 @@ export const SearchInput = <ItemType extends SearchInputItemType>({
         onVisibilityChange={(isVisible: boolean) => {
           updateIsOpen(isVisible);
         }}
-        tooltip={() => (
-          <Box variant="searchinput.popover">
-            {
-              <Box as="ul" variant="searchinput.list">
-                {items.map((item, index) => {
-                  const props = {
-                    item,
-                    index,
-                    isOpen,
-                    search: search || '',
-                    selected,
-                    selectItem,
-                  };
-                  return (
-                    <Box
-                      key={`search_item_${item.id || index}`}
-                      id={`search_item_${index}`}
-                      variant="searchinput.item"
-                      as="li"
-                      className={selected === index ? 'active' : undefined}
-                      onClick={e => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        selectItem(item, index, true);
-                      }}
-                      {...rest}
-                    >
-                      {children ? children(props) : item.label || item}
-                    </Box>
-                  );
-                })}
-              </Box>
-            }
-          </Box>
-        )}
+        tooltip={() =>
+          render(
+            <Box variant="searchinput.popover">
+              {
+                <Box as="ul" variant="searchinput.list">
+                  {items.map((item, index) => {
+                    const props = {
+                      item,
+                      index,
+                      isOpen,
+                      search: search || '',
+                      selected,
+                      selectItem,
+                    };
+                    return (
+                      <Box
+                        key={`search_item_${item.id || index}`}
+                        id={`search_item_${index}`}
+                        variant="searchinput.item"
+                        as="li"
+                        className={selected === index ? 'active' : undefined}
+                        onClick={e => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          selectItem(item, index, true);
+                        }}
+                        {...rest}
+                      >
+                        {children ? children(props) : item.label || item}
+                      </Box>
+                    );
+                  })}
+                </Box>
+              }
+            </Box>,
+          )
+        }
         {...popoverProps}
         tooltipShown={isOpen}
       >

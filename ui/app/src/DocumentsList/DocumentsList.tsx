@@ -1,12 +1,13 @@
 /** @jsx jsx */
 import { FC } from 'react';
 import { jsx, Select, Label, Box } from 'theme-ui';
-import { Pages, DocType } from '@component-controls/core';
 import {
-  useGetDocumentPath,
-  useDocSort,
-  DocSortOrder,
-} from '@component-controls/store';
+  Pages,
+  DocType,
+  getDocPath,
+  defDocType,
+} from '@component-controls/core';
+import { useDocSort, DocSortOrder, useStore } from '@component-controls/store';
 import { DocumentItem } from '@component-controls/blocks';
 
 export interface DocumentsListProps {
@@ -24,7 +25,7 @@ export interface DocumentsListProps {
  * displays a list of the provided document pages
  */
 export const DocumentsList: FC<DocumentsListProps> = ({ pages, type }) => {
-  const getDocumentPath = useGetDocumentPath();
+  const store = useStore();
   const [sortOrder, setSortOrder] = useDocSort(type);
   return (
     <Box variant="documentslist.container">
@@ -44,11 +45,16 @@ export const DocumentsList: FC<DocumentsListProps> = ({ pages, type }) => {
         </Select>
       </Box>
       <Box as="ul" variant="documentslist.list">
-        {pages.map(page => (
-          <Box as="li" key={page?.title} variant="documentslist.listitem">
+        {pages.map(doc => (
+          <Box as="li" key={doc.title} variant="documentslist.listitem">
             <DocumentItem
-              link={getDocumentPath(page.type, page.title)}
-              doc={page}
+              item={{
+                ...doc,
+                link: getDocPath(doc.type || defDocType, doc, store, doc.title),
+                authorLink: doc.author
+                  ? getDocPath('author', undefined, store, doc.author)
+                  : undefined,
+              }}
             />
           </Box>
         ))}

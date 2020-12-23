@@ -4,6 +4,7 @@ import { CodeLocation, PackageInfo, StoryRenderFn } from './utility';
 import { Component } from './components';
 import { ComponentControls, ComponentControl } from './controls';
 import { RunConfiguration, DocType, PageLayoutProps } from './configuration';
+import { SearchResult } from './search';
 /**
  * an identifier/variable.argument in the source code
  */
@@ -332,6 +333,21 @@ export const dateToLocalString = (date?: Date): string =>
       })
     : '';
 /**
+ * short document information. used in search results, or index page
+ */
+export type DocInfo = Pick<
+  Document,
+  'title' | 'description' | 'type' | 'tags' | 'date' | 'author'
+> & {
+  /**
+   * following fields are useful for highlighting search results
+   */
+  link: string;
+  authorLink?: string;
+  rawTags?: string[];
+  rawType?: string;
+};
+/**
  * list of components used in stories
  */
 
@@ -397,6 +413,7 @@ export interface Store {
    * update store, for example controls or state
    */
   updateStory: (story: Story) => void;
+  search?: (store: Store) => SearchResult;
 }
 
 class DefaultStore {

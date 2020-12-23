@@ -40,6 +40,9 @@ Object {
         "basePath": "tags/",
       },
     },
+    "search": Object {
+      "searchingModule": "/Users/atanasster/component-controls/search/fusejs/dist/index.js",
+    },
     "siteMap": Object {
       "pages": Object {
         "doc": Object {
@@ -61,6 +64,7 @@ Object {
   "components": Object {},
   "config": undefined,
   "packages": Object {},
+  "search": [Function],
   "stores": Array [],
 }
 `;

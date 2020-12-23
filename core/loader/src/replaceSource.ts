@@ -17,6 +17,12 @@ export const replaceSource = (
 const configJSON = ${
     configFilePath ? `require("${normalizePath(configFilePath)}")` : 'undefined'
   };
+
+const search = ${
+    typeof config?.search?.searchingModule === 'string'
+      ? `require("${normalizePath(config.search.searchingModule)}")`
+      : 'undefined'
+  };
 const contexts = [];
 ${contexts
   .map(
@@ -97,6 +103,7 @@ ${contexts
 const path = require('path');
 ${imports}
 ${storeConst}
+store.search = search.default || search;
 store.config = ${configFilePath ? 'configJSON.default ||' : ''} configJSON;
 store.buildConfig = ${config ? JSON.stringify(config) : '{}'};
 ${loadStories}

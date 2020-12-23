@@ -512,11 +512,21 @@ export const theme: ControlsTheme = {
     popover: {
       minWidth: 300,
       maxHeight: 400,
+      maxWidth: 500,
       overflowY: 'auto',
     },
-    list: { p: 2, listStyle: 'none' },
+    list: {
+      py: 2,
+      paddingLeft: 0,
+      listStyle: 'none',
+      em: {
+        fontStyle: 'normal',
+        bg: 'primary',
+        color: 'background',
+      },
+    },
     item: {
-      p: 2,
+      px: 1,
       cursor: 'pointer',
       ':hover': {
         backgroundColor: 'shadow',
@@ -693,7 +703,7 @@ export const theme: ControlsTheme = {
     fontFamily: 'body',
     flex: '1 0 auto',
     py: 4,
-    px: [1, 1, 5],
+    px: [2, 3, 5],
     margin: 'auto',
     width: '100%',
     position: 'relative',

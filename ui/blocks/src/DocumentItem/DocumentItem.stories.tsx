@@ -14,8 +14,8 @@ export const overview: Example = () => {
   const Story = () => {
     const doc = useDocument('Story');
     if (doc) {
-      const path = useDocumentPath(doc.type, doc.title);
-      return <DocumentItem link={path} doc={doc} />;
+      const link = useDocumentPath(doc.type, doc.title);
+      return <DocumentItem item={{ ...doc, link }} />;
     }
     return null;
   };

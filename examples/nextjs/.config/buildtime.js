@@ -1,5 +1,6 @@
 const path = require('path');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin;
 const { defaultBuildConfig } = require('@component-controls/core');
 
 module.exports = {
@@ -29,7 +30,10 @@ module.exports = {
     '../../../plugins/viewport-plugin/src/stories/**/*.stories.@(js|jsx|tsx|mdx)',
     // '../../stories/src/blogs/introduction-to-controls.mdx',
   ],
-  siteUrl: process.env.NODE_ENV === 'development' ? 'http://localhost:9021' : `https://nextjs.component-controls.com`,
+  siteUrl:
+    process.env.NODE_ENV === 'development'
+      ? 'http://localhost:9021'
+      : `https://nextjs.component-controls.com`,
   pages: {
     story: {
       basePath: 'api/',
@@ -39,21 +43,34 @@ module.exports = {
       basePath: 'tutorial/',
     },
   },
+  search: {
+    fields: ['title', 'description', 'source', 'tags', 'components'],
+    emptySearchDocuments: [
+      'Getting started/Site generators/Gatsby',
+      'Getting started/Site generators/Nextjs',
+      'Getting started/Documentation site',
+      'Writing Documentation/ESM Stories',
+      'Getting started/UI customization',
+      'Writing Documentation/MDX Documentation',
+      'Writing Documentation/MDX Stories',
+    ],
+    options: {
+      isCaseSensitive: true,
+    },
+  },
   webpack: (config = {}, options = {}) => {
     return {
       ...config,
       plugins: [
         ...config.plugins,
         //new BundleAnalyzerPlugin({ generateStatsFile: true, statsFilename: 'stats.json' })
-      ]
+      ],
     };
   },
   instrument: {
     components: {
       resolveFile: (componentName, filePath) => {
-        
         if (filePath.includes('theme-ui/dist')) {
-          
           const resolved = path.resolve(
             path.dirname(filePath),
             `../../@theme-ui/components/index.d.ts`,
@@ -63,5 +80,5 @@ module.exports = {
         return filePath;
       },
     },
-  }
+  },
 };

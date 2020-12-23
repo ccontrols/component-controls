@@ -10,12 +10,17 @@ export interface TagsListProps {
    * string list of tag names
    */
   tags?: string[];
+
+  /**
+   * raw string values, usefule for highlighting search results
+   */
+  raw?: string[];
 }
 
 /**
  * displays a row of tags assigned to the current document, with links to their pages
  */
-export const TagsList: FC<TagsListProps> = ({ tags }) => {
+export const TagsList: FC<TagsListProps> = ({ tags, raw }) => {
   const [tagColors, setTagColors] = useState<{ [tag: string]: string }>({});
   const tagCounts = useDocPropCount('tags');
   const store = useStore();
@@ -33,13 +38,20 @@ export const TagsList: FC<TagsListProps> = ({ tags }) => {
 
   return tags ? (
     <Box variant="taglist.container">
-      {tags.map(tag => (
-        <Link key={tag} href={getDocPath('tags', undefined, store, tag)}>
-          <Tag color={tagColors[tag] || '#dddddd'} variant="tag.leftmargin">
-            {tag}
-          </Tag>
-        </Link>
-      ))}
+      {tags.map((tag, index) => {
+        const rawTag = raw ? raw[index] : undefined;
+        return (
+          <Link key={tag} href={getDocPath('tags', undefined, store, tag)}>
+            <Tag
+              color={tagColors[tag] || '#dddddd'}
+              variant="tag.leftmargin"
+              raw={rawTag}
+            >
+              {tag}
+            </Tag>
+          </Link>
+        );
+      })}
     </Box>
   ) : null;
 };
