@@ -888,7 +888,7 @@ export const theme: ControlsTheme = {
     default: {
       overflowX: 'hidden',
       position: 'sticky',
-      top: '5rem',
+      top: '4.5rem',
       maxWidth: '300px',
       overflowY: 'auto',
       backgroundColor: 'background',
@@ -962,6 +962,9 @@ export const theme: ControlsTheme = {
       fontSize: 1,
       color: 'mutedText',
       fontWeight: 'body',
+      ':hover': {
+        textDecoration: 'underline',
+      },
     },
     toggle: {
       position: 'fixed',
@@ -975,6 +978,9 @@ export const theme: ControlsTheme = {
       display: 'flex',
       flexDirection: 'column',
     },
+    item: {
+      ml: 0,
+    },
     items: {
       my: 2,
     },
@@ -986,6 +992,7 @@ export const theme: ControlsTheme = {
       display: 'flex',
       flexDirection: 'column',
       px: 2,
+      mb: 2,
     },
   },
   appheader: {

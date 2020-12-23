@@ -204,7 +204,7 @@ export const Sidebar: FC<SidebarProps> = ({
         return acc;
       }, menuItems);
     }
-    const actions: ActionItems = [...sidebar];
+    const actions: ActionItems = [];
     if (propsTitle || label) {
       actions.push({
         node: (
@@ -231,7 +231,9 @@ export const Sidebar: FC<SidebarProps> = ({
         </Box>
       ),
       id: 'filter',
+      hidden: true,
     });
+    actions.push(...sidebar);
     return (
       <AppSidebar variant="appsidebar.sidebar" id="sidebar">
         {responsive && (
