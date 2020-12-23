@@ -956,11 +956,11 @@ export const theme: ControlsTheme = {
   sidecontext: {
     container: {
       px: 3,
-      borderLeft: (t: Theme): string => `1px solid ${t.colors?.shadow}`,
     },
     nav: { display: 'flex', flexDirection: 'column' },
     navlink: {
       fontSize: 1,
+      color: 'mutedText',
       fontWeight: 'body',
     },
     toggle: {
@@ -979,6 +979,7 @@ export const theme: ControlsTheme = {
       my: 2,
     },
     sidebar: {
+      height: '100vh',
       borderRight: (t: Theme): string => `1px solid ${t.colors?.shadow}`,
     },
     container: {
@@ -1105,7 +1106,7 @@ export const theme: ControlsTheme = {
       display: 'flex',
       flexDirection: 'row',
       flex: '1 0 auto',
-      minHeight: '100vh',
+      minHeight: 'calc(100vh - 68px)', //height of toolbar
       position: 'relative',
     },
   },
