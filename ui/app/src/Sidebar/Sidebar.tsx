@@ -176,7 +176,7 @@ export const Sidebar: FC<SidebarProps> = ({
     const { config } = store;
     const { pages, menu, sidebar = [] } = config;
     const page: PageConfiguration = pages?.[type] || {};
-    const { label = '' } = page;
+    const { label = propsTitle } = page;
     let menuItems = Array.isArray(menu) ? staticMenusToMenuItems(menu) : [];
     if (store) {
       menuItems = docs.reduce((acc: TreeItems, doc: Document) => {
@@ -205,11 +205,11 @@ export const Sidebar: FC<SidebarProps> = ({
       }, menuItems);
     }
     const actions: ActionItems = [];
-    if (propsTitle || label) {
+    if (label) {
       actions.push({
         node: (
           <Heading as="h3" variant="appsidebar.items">
-            {propsTitle || label}
+            {label}
           </Heading>
         ),
         id: 'title',
