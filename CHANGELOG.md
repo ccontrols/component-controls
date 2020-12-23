@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/ccontrols/component-controls/compare/v2.2.4...v2.3.0) (2020-12-23)
+
+
+### Bug Fixes
+
+* docs sidecontext ([13b34f0](https://github.com/ccontrols/component-controls/commit/13b34f03efb5b5177ddc6a838bcb816d2fb2e359))
+* larger indent of side items ([3bc27fe](https://github.com/ccontrols/component-controls/commit/3bc27fe70f5b2ff2df91afe9dbaab2c9d4656e35))
+* page title ([b6143d9](https://github.com/ccontrols/component-controls/commit/b6143d9eb06ae74be0b4daae272fd2f47b65e866))
+* rule of hooks ([c586ce6](https://github.com/ccontrols/component-controls/commit/c586ce6997889f3920cb7705ad0b6de8009d374a))
+* sidebar styling ([9750307](https://github.com/ccontrols/component-controls/commit/975030766aca0dddb9cab347dd9a16b8a14fff03))
+* style side bars ([d9999a6](https://github.com/ccontrols/component-controls/commit/d9999a6f2d36c0cda3dcde47d0296c98c7612d7e))
+* sx prop in mdx ([a62394f](https://github.com/ccontrols/component-controls/commit/a62394fbd02791bec963eff24f13c97e32d977b6))
+* sx styles ([c34c592](https://github.com/ccontrols/component-controls/commit/c34c592e5da0c6bfb133ef397d226603d417215a))
+
+
+### Features
+
+* add algolia confurable site search ([e136c2d](https://github.com/ccontrols/component-controls/commit/e136c2d9e415c124d84796a70bccd5544575cfe6))
+
+
+
+
+
 ## [2.2.4](https://github.com/ccontrols/component-controls/compare/v2.2.3...v2.2.4) (2020-12-14)
 
 
