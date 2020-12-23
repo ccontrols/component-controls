@@ -2176,7 +2176,7 @@ exports[`Application/Header Overview 1`] = `
 exports[`Application/Sidebar Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-1yaquky-Sidebar"
+    class="css-19daslh-Sidebar"
     id="sidebar"
   >
     <div
@@ -2186,35 +2186,22 @@ exports[`Application/Sidebar Overview 1`] = `
       class="css-12a94nr"
     >
       <div
-        class="css-1es5hcv"
+        class="css-10ch4bz"
       >
         <div
-          class="css-1es5hcv"
+          class="css-10ch4bz"
         >
           <div
             class="css-uliqdc"
           >
             <div
-              class="css-1rw838x"
+              class="css-1lml2j3"
             >
               <h3
                 class="css-yrrbzf"
               >
-                sidebar
+                Docs
               </h3>
-            </div>
-            <div
-              class="css-1229dh0"
-            >
-              <div
-                class="css-1dj4wno"
-              >
-                <input
-                  class="css-n6or39"
-                  placeholder="filter..."
-                  value=""
-                />
-              </div>
             </div>
           </div>
         </div>
@@ -2546,7 +2533,7 @@ exports[`Application/Sidebar Overview 1`] = `
 exports[`Application/SidebarsPage Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-1e1wax2"
+    class="css-100p3zm"
   >
     <div
       class="css-1mistll-SidebarsStoryPage"

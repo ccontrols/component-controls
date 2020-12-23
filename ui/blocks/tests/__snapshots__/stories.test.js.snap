@@ -624,7 +624,7 @@ exports[`Blocks/ComponentSource Custom Title 1`] = `
                       class="css-x60p33"
                     >
                       <div
-                        class="css-1rfzzcg"
+                        class="css-1vga9oy"
                       >
                         <button
                           aria-label="copy the displayed source code"
@@ -634,7 +634,7 @@ exports[`Blocks/ComponentSource Custom Title 1`] = `
                         </button>
                       </div>
                       <div
-                        class="css-1ulb236"
+                        class="css-q7w4rh"
                       >
                         <a
                           aria-label="browse repository"
@@ -647,7 +647,7 @@ exports[`Blocks/ComponentSource Custom Title 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1ulb236"
+                        class="css-q7w4rh"
                       >
                         <a
                           aria-label="browse readme documentation"
@@ -660,7 +660,7 @@ exports[`Blocks/ComponentSource Custom Title 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1ulb236"
+                        class="css-q7w4rh"
                       >
                         <a
                           aria-label="browse filed issues"
@@ -865,7 +865,7 @@ exports[`Blocks/ComponentSource No Component 1`] = `
                       class="css-x60p33"
                     >
                       <div
-                        class="css-1rfzzcg"
+                        class="css-1vga9oy"
                       >
                         <button
                           aria-label="copy the displayed source code"
@@ -875,7 +875,7 @@ exports[`Blocks/ComponentSource No Component 1`] = `
                         </button>
                       </div>
                       <div
-                        class="css-1ulb236"
+                        class="css-q7w4rh"
                       >
                         <a
                           aria-label="browse repository"
@@ -888,7 +888,7 @@ exports[`Blocks/ComponentSource No Component 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1ulb236"
+                        class="css-q7w4rh"
                       >
                         <a
                           aria-label="browse readme documentation"
@@ -901,7 +901,7 @@ exports[`Blocks/ComponentSource No Component 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1ulb236"
+                        class="css-q7w4rh"
                       >
                         <a
                           aria-label="browse filed issues"
@@ -1072,7 +1072,7 @@ exports[`Blocks/ComponentSource Not Collapsible 1`] = `
                   class="css-x60p33"
                 >
                   <div
-                    class="css-1rfzzcg"
+                    class="css-1vga9oy"
                   >
                     <button
                       aria-label="copy the displayed source code"
@@ -1082,7 +1082,7 @@ exports[`Blocks/ComponentSource Not Collapsible 1`] = `
                     </button>
                   </div>
                   <div
-                    class="css-1ulb236"
+                    class="css-q7w4rh"
                   >
                     <a
                       aria-label="browse repository"
@@ -1095,7 +1095,7 @@ exports[`Blocks/ComponentSource Not Collapsible 1`] = `
                     </a>
                   </div>
                   <div
-                    class="css-1ulb236"
+                    class="css-q7w4rh"
                   >
                     <a
                       aria-label="browse readme documentation"
@@ -1108,7 +1108,7 @@ exports[`Blocks/ComponentSource Not Collapsible 1`] = `
                     </a>
                   </div>
                   <div
-                    class="css-1ulb236"
+                    class="css-q7w4rh"
                   >
                     <a
                       aria-label="browse filed issues"
@@ -1258,7 +1258,7 @@ exports[`Blocks/ComponentSource Overview 1`] = `
                       class="css-x60p33"
                     >
                       <div
-                        class="css-1rfzzcg"
+                        class="css-1vga9oy"
                       >
                         <button
                           aria-label="copy the displayed source code"
@@ -1268,7 +1268,7 @@ exports[`Blocks/ComponentSource Overview 1`] = `
                         </button>
                       </div>
                       <div
-                        class="css-1ulb236"
+                        class="css-q7w4rh"
                       >
                         <a
                           aria-label="browse repository"
@@ -1281,7 +1281,7 @@ exports[`Blocks/ComponentSource Overview 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1ulb236"
+                        class="css-q7w4rh"
                       >
                         <a
                           aria-label="browse readme documentation"
@@ -1294,7 +1294,7 @@ exports[`Blocks/ComponentSource Overview 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1ulb236"
+                        class="css-q7w4rh"
                       >
                         <a
                           aria-label="browse filed issues"
@@ -1407,7 +1407,7 @@ exports[`Blocks/ComponentSource Theme 1`] = `
                 class="css-x60p33"
               >
                 <div
-                  class="css-1rfzzcg"
+                  class="css-1vga9oy"
                 >
                   <button
                     aria-label="copy the displayed source code"
@@ -1599,7 +1599,7 @@ exports[`Blocks/ComponentSource Title 1`] = `
                       class="css-x60p33"
                     >
                       <div
-                        class="css-1rfzzcg"
+                        class="css-1vga9oy"
                       >
                         <button
                           aria-label="copy the displayed source code"
@@ -1609,7 +1609,7 @@ exports[`Blocks/ComponentSource Title 1`] = `
                         </button>
                       </div>
                       <div
-                        class="css-1ulb236"
+                        class="css-q7w4rh"
                       >
                         <a
                           aria-label="browse repository"
@@ -1622,7 +1622,7 @@ exports[`Blocks/ComponentSource Title 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1ulb236"
+                        class="css-q7w4rh"
                       >
                         <a
                           aria-label="browse readme documentation"
@@ -1635,7 +1635,7 @@ exports[`Blocks/ComponentSource Title 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1ulb236"
+                        class="css-q7w4rh"
                       >
                         <a
                           aria-label="browse filed issues"
@@ -2167,7 +2167,7 @@ exports[`Blocks/Playground/ESM Child 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-1o6sr4p"
+                class="css-rkyxeq"
               >
                 <button
                   aria-label="switch light and dark background"
@@ -2177,7 +2177,7 @@ exports[`Blocks/Playground/ESM Child 1`] = `
                 </button>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   aria-label="switch left to right/right to left"
@@ -2187,7 +2187,7 @@ exports[`Blocks/Playground/ESM Child 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="reset zoom"
@@ -2212,7 +2212,7 @@ exports[`Blocks/Playground/ESM Child 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="zoom out"
@@ -2237,7 +2237,7 @@ exports[`Blocks/Playground/ESM Child 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="zoom in"
@@ -2389,7 +2389,7 @@ exports[`Blocks/Playground/ESM Custom Title 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-1o6sr4p"
+                class="css-rkyxeq"
               >
                 <button
                   aria-label="switch light and dark background"
@@ -2399,7 +2399,7 @@ exports[`Blocks/Playground/ESM Custom Title 1`] = `
                 </button>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   aria-label="switch left to right/right to left"
@@ -2409,7 +2409,7 @@ exports[`Blocks/Playground/ESM Custom Title 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="reset zoom"
@@ -2434,7 +2434,7 @@ exports[`Blocks/Playground/ESM Custom Title 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="zoom out"
@@ -2459,7 +2459,7 @@ exports[`Blocks/Playground/ESM Custom Title 1`] = `
                 </button>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   aria-label="zoom in"
@@ -2484,7 +2484,7 @@ exports[`Blocks/Playground/ESM Custom Title 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="display story source code"
@@ -2494,7 +2494,7 @@ exports[`Blocks/Playground/ESM Custom Title 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="display story configuration object"
@@ -2631,7 +2631,7 @@ exports[`Blocks/Playground/ESM Dark Theme 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-1o6sr4p"
+                class="css-rkyxeq"
               >
                 <button
                   aria-label="switch light and dark background"
@@ -2641,7 +2641,7 @@ exports[`Blocks/Playground/ESM Dark Theme 1`] = `
                 </button>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   aria-label="switch left to right/right to left"
@@ -2651,7 +2651,7 @@ exports[`Blocks/Playground/ESM Dark Theme 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="reset zoom"
@@ -2676,7 +2676,7 @@ exports[`Blocks/Playground/ESM Dark Theme 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="zoom out"
@@ -2701,7 +2701,7 @@ exports[`Blocks/Playground/ESM Dark Theme 1`] = `
                 </button>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   aria-label="zoom in"
@@ -2726,7 +2726,7 @@ exports[`Blocks/Playground/ESM Dark Theme 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="display story source code"
@@ -2736,7 +2736,7 @@ exports[`Blocks/Playground/ESM Dark Theme 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="display story configuration object"
@@ -2873,7 +2873,7 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-1o6sr4p"
+                class="css-rkyxeq"
               >
                 <button
                   aria-label="switch light and dark background"
@@ -2883,7 +2883,7 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
                 </button>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   aria-label="switch left to right/right to left"
@@ -2893,7 +2893,7 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="reset zoom"
@@ -2918,7 +2918,7 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="zoom out"
@@ -2943,7 +2943,7 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
                 </button>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   aria-label="zoom in"
@@ -2968,7 +2968,7 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="display story source code"
@@ -2978,7 +2978,7 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="display story configuration object"
@@ -3150,7 +3150,7 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
                                   class="css-x60p33"
                                 >
                                   <div
-                                    class="css-1rfzzcg"
+                                    class="css-1vga9oy"
                                   >
                                     <button
                                       aria-label="copy the displayed source code"
@@ -3160,7 +3160,7 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
                                     </button>
                                   </div>
                                   <div
-                                    class="css-1ulb236"
+                                    class="css-q7w4rh"
                                   >
                                     <a
                                       aria-label="browse repository"
@@ -3173,7 +3173,7 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
                                     </a>
                                   </div>
                                   <div
-                                    class="css-1ulb236"
+                                    class="css-q7w4rh"
                                   >
                                     <a
                                       aria-label="browse readme documentation"
@@ -3186,7 +3186,7 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
                                     </a>
                                   </div>
                                   <div
-                                    class="css-1lbrvwg"
+                                    class="css-7d11p2"
                                   >
                                     <a
                                       aria-label="browse filed issues"
@@ -3199,7 +3199,7 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
                                     </a>
                                   </div>
                                   <div
-                                    class="css-1lbrvwg"
+                                    class="css-7d11p2"
                                   >
                                     <button
                                       class="css-1tf4h46"
@@ -3501,7 +3501,7 @@ exports[`Blocks/Playground/ESM Disable Zoom Pan 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-1o6sr4p"
+                class="css-rkyxeq"
               >
                 <button
                   aria-label="switch light and dark background"
@@ -3511,7 +3511,7 @@ exports[`Blocks/Playground/ESM Disable Zoom Pan 1`] = `
                 </button>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   aria-label="switch left to right/right to left"
@@ -3521,7 +3521,7 @@ exports[`Blocks/Playground/ESM Disable Zoom Pan 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="display story source code"
@@ -3531,7 +3531,7 @@ exports[`Blocks/Playground/ESM Disable Zoom Pan 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="display story configuration object"
@@ -3668,7 +3668,7 @@ exports[`Blocks/Playground/ESM Extra Panel 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-1o6sr4p"
+                class="css-rkyxeq"
               >
                 <button
                   aria-label="switch light and dark background"
@@ -3678,7 +3678,7 @@ exports[`Blocks/Playground/ESM Extra Panel 1`] = `
                 </button>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   aria-label="switch left to right/right to left"
@@ -3688,7 +3688,7 @@ exports[`Blocks/Playground/ESM Extra Panel 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="reset zoom"
@@ -3713,7 +3713,7 @@ exports[`Blocks/Playground/ESM Extra Panel 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="zoom out"
@@ -3738,7 +3738,7 @@ exports[`Blocks/Playground/ESM Extra Panel 1`] = `
                 </button>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   aria-label="zoom in"
@@ -3763,7 +3763,7 @@ exports[`Blocks/Playground/ESM Extra Panel 1`] = `
                 </button>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   class="css-1tf4h46"
@@ -3772,7 +3772,7 @@ exports[`Blocks/Playground/ESM Extra Panel 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="display story source code"
@@ -3782,7 +3782,7 @@ exports[`Blocks/Playground/ESM Extra Panel 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="display story configuration object"
@@ -4044,7 +4044,7 @@ exports[`Blocks/Playground/ESM Multi Child 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-1o6sr4p"
+                class="css-rkyxeq"
               >
                 <button
                   aria-label="switch light and dark background"
@@ -4054,7 +4054,7 @@ exports[`Blocks/Playground/ESM Multi Child 1`] = `
                 </button>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   aria-label="switch left to right/right to left"
@@ -4064,7 +4064,7 @@ exports[`Blocks/Playground/ESM Multi Child 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="reset zoom"
@@ -4089,7 +4089,7 @@ exports[`Blocks/Playground/ESM Multi Child 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="zoom out"
@@ -4114,7 +4114,7 @@ exports[`Blocks/Playground/ESM Multi Child 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="zoom in"
@@ -4292,7 +4292,7 @@ exports[`Blocks/Playground/ESM Multi Stories 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-1o6sr4p"
+                class="css-rkyxeq"
               >
                 <button
                   aria-label="switch light and dark background"
@@ -4302,7 +4302,7 @@ exports[`Blocks/Playground/ESM Multi Stories 1`] = `
                 </button>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   aria-label="switch left to right/right to left"
@@ -4312,7 +4312,7 @@ exports[`Blocks/Playground/ESM Multi Stories 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="reset zoom"
@@ -4337,7 +4337,7 @@ exports[`Blocks/Playground/ESM Multi Stories 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="zoom out"
@@ -4362,7 +4362,7 @@ exports[`Blocks/Playground/ESM Multi Stories 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="zoom in"
@@ -4576,7 +4576,7 @@ exports[`Blocks/Playground/ESM Not Collapsible 1`] = `
           class="css-x60p33"
         >
           <div
-            class="css-1o6sr4p"
+            class="css-rkyxeq"
           >
             <button
               aria-label="switch light and dark background"
@@ -4586,7 +4586,7 @@ exports[`Blocks/Playground/ESM Not Collapsible 1`] = `
             </button>
           </div>
           <div
-            class="css-1lbrvwg"
+            class="css-7d11p2"
           >
             <button
               aria-label="switch left to right/right to left"
@@ -4596,7 +4596,7 @@ exports[`Blocks/Playground/ESM Not Collapsible 1`] = `
             </button>
           </div>
           <div
-            class="css-1ulb236"
+            class="css-q7w4rh"
           >
             <button
               aria-label="reset zoom"
@@ -4621,7 +4621,7 @@ exports[`Blocks/Playground/ESM Not Collapsible 1`] = `
             </button>
           </div>
           <div
-            class="css-1ulb236"
+            class="css-q7w4rh"
           >
             <button
               aria-label="zoom out"
@@ -4646,7 +4646,7 @@ exports[`Blocks/Playground/ESM Not Collapsible 1`] = `
             </button>
           </div>
           <div
-            class="css-1lbrvwg"
+            class="css-7d11p2"
           >
             <button
               aria-label="zoom in"
@@ -4671,7 +4671,7 @@ exports[`Blocks/Playground/ESM Not Collapsible 1`] = `
             </button>
           </div>
           <div
-            class="css-1ulb236"
+            class="css-q7w4rh"
           >
             <button
               aria-label="display story source code"
@@ -4681,7 +4681,7 @@ exports[`Blocks/Playground/ESM Not Collapsible 1`] = `
             </button>
           </div>
           <div
-            class="css-1ulb236"
+            class="css-q7w4rh"
           >
             <button
               aria-label="display story configuration object"
@@ -4816,7 +4816,7 @@ exports[`Blocks/Playground/ESM Overview 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-1o6sr4p"
+                class="css-rkyxeq"
               >
                 <button
                   aria-label="switch light and dark background"
@@ -4826,7 +4826,7 @@ exports[`Blocks/Playground/ESM Overview 1`] = `
                 </button>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   aria-label="switch left to right/right to left"
@@ -4836,7 +4836,7 @@ exports[`Blocks/Playground/ESM Overview 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="reset zoom"
@@ -4861,7 +4861,7 @@ exports[`Blocks/Playground/ESM Overview 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="zoom out"
@@ -4886,7 +4886,7 @@ exports[`Blocks/Playground/ESM Overview 1`] = `
                 </button>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   aria-label="zoom in"
@@ -4911,7 +4911,7 @@ exports[`Blocks/Playground/ESM Overview 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="display story source code"
@@ -4921,7 +4921,7 @@ exports[`Blocks/Playground/ESM Overview 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="display story configuration object"
@@ -5058,7 +5058,7 @@ exports[`Blocks/Playground/ESM Scale 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-1o6sr4p"
+                class="css-rkyxeq"
               >
                 <button
                   aria-label="switch light and dark background"
@@ -5068,7 +5068,7 @@ exports[`Blocks/Playground/ESM Scale 1`] = `
                 </button>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   aria-label="switch left to right/right to left"
@@ -5078,7 +5078,7 @@ exports[`Blocks/Playground/ESM Scale 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="reset zoom"
@@ -5103,7 +5103,7 @@ exports[`Blocks/Playground/ESM Scale 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="zoom out"
@@ -5128,7 +5128,7 @@ exports[`Blocks/Playground/ESM Scale 1`] = `
                 </button>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   aria-label="zoom in"
@@ -5153,7 +5153,7 @@ exports[`Blocks/Playground/ESM Scale 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="display story source code"
@@ -5163,7 +5163,7 @@ exports[`Blocks/Playground/ESM Scale 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="display story configuration object"
@@ -5358,7 +5358,7 @@ exports[`Blocks/Playground/ESM Title 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-1o6sr4p"
+                class="css-rkyxeq"
               >
                 <button
                   aria-label="switch light and dark background"
@@ -5368,7 +5368,7 @@ exports[`Blocks/Playground/ESM Title 1`] = `
                 </button>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   aria-label="switch left to right/right to left"
@@ -5378,7 +5378,7 @@ exports[`Blocks/Playground/ESM Title 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="reset zoom"
@@ -5403,7 +5403,7 @@ exports[`Blocks/Playground/ESM Title 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="zoom out"
@@ -5428,7 +5428,7 @@ exports[`Blocks/Playground/ESM Title 1`] = `
                 </button>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   aria-label="zoom in"
@@ -5453,7 +5453,7 @@ exports[`Blocks/Playground/ESM Title 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="display story source code"
@@ -5463,7 +5463,7 @@ exports[`Blocks/Playground/ESM Title 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="display story configuration object"
@@ -5577,7 +5577,7 @@ exports[`Blocks/Playground/ESM Visible Tabs 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-1o6sr4p"
+                class="css-rkyxeq"
               >
                 <button
                   aria-label="switch light and dark background"
@@ -5587,7 +5587,7 @@ exports[`Blocks/Playground/ESM Visible Tabs 1`] = `
                 </button>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   aria-label="switch left to right/right to left"
@@ -5597,7 +5597,7 @@ exports[`Blocks/Playground/ESM Visible Tabs 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="reset zoom"
@@ -5622,7 +5622,7 @@ exports[`Blocks/Playground/ESM Visible Tabs 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="zoom out"
@@ -5647,7 +5647,7 @@ exports[`Blocks/Playground/ESM Visible Tabs 1`] = `
                 </button>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   aria-label="zoom in"
@@ -5672,7 +5672,7 @@ exports[`Blocks/Playground/ESM Visible Tabs 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="display story source code"
@@ -5682,7 +5682,7 @@ exports[`Blocks/Playground/ESM Visible Tabs 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="display story configuration object"
@@ -5819,7 +5819,7 @@ exports[`Blocks/Playground/ESM Zoom Disabled 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-1o6sr4p"
+                class="css-rkyxeq"
               >
                 <button
                   aria-label="switch light and dark background"
@@ -5829,7 +5829,7 @@ exports[`Blocks/Playground/ESM Zoom Disabled 1`] = `
                 </button>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   aria-label="switch left to right/right to left"
@@ -5839,7 +5839,7 @@ exports[`Blocks/Playground/ESM Zoom Disabled 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="display story source code"
@@ -5849,7 +5849,7 @@ exports[`Blocks/Playground/ESM Zoom Disabled 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <button
                   aria-label="display story configuration object"
@@ -5992,7 +5992,7 @@ exports[`Blocks/PropsTable Controls 1`] = `
                 class="css-x60p33"
               >
                 <div
-                  class="css-1rfzzcg"
+                  class="css-1vga9oy"
                 >
                   <button
                     aria-label="copy table as csv"
@@ -6002,7 +6002,7 @@ exports[`Blocks/PropsTable Controls 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="copy control values"
@@ -6012,7 +6012,7 @@ exports[`Blocks/PropsTable Controls 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="generate random values for the component controls"
@@ -6022,7 +6022,7 @@ exports[`Blocks/PropsTable Controls 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="copy the control values as url search params"
@@ -6032,7 +6032,7 @@ exports[`Blocks/PropsTable Controls 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="reset control values to their initial value"
@@ -6380,7 +6380,7 @@ exports[`Blocks/PropsTable Custom Title 1`] = `
                       class="css-x60p33"
                     >
                       <div
-                        class="css-1rfzzcg"
+                        class="css-1vga9oy"
                       >
                         <button
                           aria-label="copy table as csv"
@@ -6513,7 +6513,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                 class="css-x60p33"
               >
                 <div
-                  class="css-1rfzzcg"
+                  class="css-1vga9oy"
                 >
                   <button
                     aria-label="copy table as csv"
@@ -7854,7 +7854,7 @@ exports[`Blocks/PropsTable Not Collapsible 1`] = `
                   class="css-x60p33"
                 >
                   <div
-                    class="css-1rfzzcg"
+                    class="css-1vga9oy"
                   >
                     <button
                       aria-label="copy table as csv"
@@ -7985,7 +7985,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                 class="css-x60p33"
               >
                 <div
-                  class="css-1rfzzcg"
+                  class="css-1vga9oy"
                 >
                   <button
                     aria-label="copy table as csv"
@@ -9158,7 +9158,7 @@ exports[`Blocks/PropsTable Subcomponents 1`] = `
                       class="css-x60p33"
                     >
                       <div
-                        class="css-1rfzzcg"
+                        class="css-1vga9oy"
                       >
                         <button
                           aria-label="copy table as csv"
@@ -9360,7 +9360,7 @@ exports[`Blocks/PropsTable Title 1`] = `
                       class="css-x60p33"
                     >
                       <div
-                        class="css-1rfzzcg"
+                        class="css-1vga9oy"
                       >
                         <button
                           aria-label="copy table as csv"
@@ -9562,7 +9562,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                 class="css-x60p33"
               >
                 <div
-                  class="css-1o6sr4p"
+                  class="css-rkyxeq"
                 >
                   <button
                     aria-label="switch light and dark background"
@@ -9572,7 +9572,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1lbrvwg"
+                  class="css-7d11p2"
                 >
                   <button
                     aria-label="switch left to right/right to left"
@@ -9582,7 +9582,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="reset zoom"
@@ -9607,7 +9607,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="zoom out"
@@ -9632,7 +9632,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1lbrvwg"
+                  class="css-7d11p2"
                 >
                   <button
                     aria-label="zoom in"
@@ -9657,7 +9657,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="display story source code"
@@ -9667,7 +9667,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="display story configuration object"
@@ -9793,7 +9793,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                 class="css-x60p33"
               >
                 <div
-                  class="css-1o6sr4p"
+                  class="css-rkyxeq"
                 >
                   <button
                     aria-label="switch light and dark background"
@@ -9803,7 +9803,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1lbrvwg"
+                  class="css-7d11p2"
                 >
                   <button
                     aria-label="switch left to right/right to left"
@@ -9813,7 +9813,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="reset zoom"
@@ -9838,7 +9838,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="zoom out"
@@ -9863,7 +9863,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1lbrvwg"
+                  class="css-7d11p2"
                 >
                   <button
                     aria-label="zoom in"
@@ -9888,7 +9888,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="display story source code"
@@ -9898,7 +9898,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="display story configuration object"
@@ -10024,7 +10024,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                 class="css-x60p33"
               >
                 <div
-                  class="css-1o6sr4p"
+                  class="css-rkyxeq"
                 >
                   <button
                     aria-label="switch light and dark background"
@@ -10034,7 +10034,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1lbrvwg"
+                  class="css-7d11p2"
                 >
                   <button
                     aria-label="switch left to right/right to left"
@@ -10044,7 +10044,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="reset zoom"
@@ -10069,7 +10069,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="zoom out"
@@ -10094,7 +10094,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1lbrvwg"
+                  class="css-7d11p2"
                 >
                   <button
                     aria-label="zoom in"
@@ -10119,7 +10119,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="display story source code"
@@ -10129,7 +10129,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="display story configuration object"
@@ -10337,7 +10337,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                 class="css-x60p33"
               >
                 <div
-                  class="css-1o6sr4p"
+                  class="css-rkyxeq"
                 >
                   <button
                     aria-label="switch light and dark background"
@@ -10347,7 +10347,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1lbrvwg"
+                  class="css-7d11p2"
                 >
                   <button
                     aria-label="switch left to right/right to left"
@@ -10357,7 +10357,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="reset zoom"
@@ -10382,7 +10382,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="zoom out"
@@ -10407,7 +10407,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1lbrvwg"
+                  class="css-7d11p2"
                 >
                   <button
                     aria-label="zoom in"
@@ -10432,7 +10432,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="display story source code"
@@ -10442,7 +10442,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="display story configuration object"
@@ -10568,7 +10568,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                 class="css-x60p33"
               >
                 <div
-                  class="css-1o6sr4p"
+                  class="css-rkyxeq"
                 >
                   <button
                     aria-label="switch light and dark background"
@@ -10578,7 +10578,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1lbrvwg"
+                  class="css-7d11p2"
                 >
                   <button
                     aria-label="switch left to right/right to left"
@@ -10588,7 +10588,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="reset zoom"
@@ -10613,7 +10613,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="zoom out"
@@ -10638,7 +10638,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1lbrvwg"
+                  class="css-7d11p2"
                 >
                   <button
                     aria-label="zoom in"
@@ -10663,7 +10663,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="display story source code"
@@ -10673,7 +10673,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="display story configuration object"
@@ -10799,7 +10799,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                 class="css-x60p33"
               >
                 <div
-                  class="css-1o6sr4p"
+                  class="css-rkyxeq"
                 >
                   <button
                     aria-label="switch light and dark background"
@@ -10809,7 +10809,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1lbrvwg"
+                  class="css-7d11p2"
                 >
                   <button
                     aria-label="switch left to right/right to left"
@@ -10819,7 +10819,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="reset zoom"
@@ -10844,7 +10844,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="zoom out"
@@ -10869,7 +10869,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1lbrvwg"
+                  class="css-7d11p2"
                 >
                   <button
                     aria-label="zoom in"
@@ -10894,7 +10894,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="display story source code"
@@ -10904,7 +10904,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="display story configuration object"
@@ -11101,7 +11101,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
             class="css-x60p33"
           >
             <div
-              class="css-1o6sr4p"
+              class="css-rkyxeq"
             >
               <button
                 aria-label="switch light and dark background"
@@ -11111,7 +11111,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
               </button>
             </div>
             <div
-              class="css-1lbrvwg"
+              class="css-7d11p2"
             >
               <button
                 aria-label="switch left to right/right to left"
@@ -11121,7 +11121,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
               </button>
             </div>
             <div
-              class="css-1ulb236"
+              class="css-q7w4rh"
             >
               <button
                 aria-label="reset zoom"
@@ -11146,7 +11146,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
               </button>
             </div>
             <div
-              class="css-1ulb236"
+              class="css-q7w4rh"
             >
               <button
                 aria-label="zoom out"
@@ -11171,7 +11171,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
               </button>
             </div>
             <div
-              class="css-1lbrvwg"
+              class="css-7d11p2"
             >
               <button
                 aria-label="zoom in"
@@ -11196,7 +11196,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
               </button>
             </div>
             <div
-              class="css-1ulb236"
+              class="css-q7w4rh"
             >
               <button
                 aria-label="display story source code"
@@ -11206,7 +11206,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
               </button>
             </div>
             <div
-              class="css-1ulb236"
+              class="css-q7w4rh"
             >
               <button
                 aria-label="display story configuration object"
@@ -11332,7 +11332,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
             class="css-x60p33"
           >
             <div
-              class="css-1o6sr4p"
+              class="css-rkyxeq"
             >
               <button
                 aria-label="switch light and dark background"
@@ -11342,7 +11342,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
               </button>
             </div>
             <div
-              class="css-1lbrvwg"
+              class="css-7d11p2"
             >
               <button
                 aria-label="switch left to right/right to left"
@@ -11352,7 +11352,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
               </button>
             </div>
             <div
-              class="css-1ulb236"
+              class="css-q7w4rh"
             >
               <button
                 aria-label="reset zoom"
@@ -11377,7 +11377,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
               </button>
             </div>
             <div
-              class="css-1ulb236"
+              class="css-q7w4rh"
             >
               <button
                 aria-label="zoom out"
@@ -11402,7 +11402,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
               </button>
             </div>
             <div
-              class="css-1lbrvwg"
+              class="css-7d11p2"
             >
               <button
                 aria-label="zoom in"
@@ -11427,7 +11427,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
               </button>
             </div>
             <div
-              class="css-1ulb236"
+              class="css-q7w4rh"
             >
               <button
                 aria-label="display story source code"
@@ -11437,7 +11437,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
               </button>
             </div>
             <div
-              class="css-1ulb236"
+              class="css-q7w4rh"
             >
               <button
                 aria-label="display story configuration object"
@@ -11563,7 +11563,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
             class="css-x60p33"
           >
             <div
-              class="css-1o6sr4p"
+              class="css-rkyxeq"
             >
               <button
                 aria-label="switch light and dark background"
@@ -11573,7 +11573,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
               </button>
             </div>
             <div
-              class="css-1lbrvwg"
+              class="css-7d11p2"
             >
               <button
                 aria-label="switch left to right/right to left"
@@ -11583,7 +11583,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
               </button>
             </div>
             <div
-              class="css-1ulb236"
+              class="css-q7w4rh"
             >
               <button
                 aria-label="reset zoom"
@@ -11608,7 +11608,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
               </button>
             </div>
             <div
-              class="css-1ulb236"
+              class="css-q7w4rh"
             >
               <button
                 aria-label="zoom out"
@@ -11633,7 +11633,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
               </button>
             </div>
             <div
-              class="css-1lbrvwg"
+              class="css-7d11p2"
             >
               <button
                 aria-label="zoom in"
@@ -11658,7 +11658,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
               </button>
             </div>
             <div
-              class="css-1ulb236"
+              class="css-q7w4rh"
             >
               <button
                 aria-label="display story source code"
@@ -11668,7 +11668,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
               </button>
             </div>
             <div
-              class="css-1ulb236"
+              class="css-q7w4rh"
             >
               <button
                 aria-label="display story configuration object"
@@ -11874,7 +11874,7 @@ exports[`Blocks/Stories Overview 1`] = `
                 class="css-x60p33"
               >
                 <div
-                  class="css-1o6sr4p"
+                  class="css-rkyxeq"
                 >
                   <button
                     aria-label="switch light and dark background"
@@ -11884,7 +11884,7 @@ exports[`Blocks/Stories Overview 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1lbrvwg"
+                  class="css-7d11p2"
                 >
                   <button
                     aria-label="switch left to right/right to left"
@@ -11894,7 +11894,7 @@ exports[`Blocks/Stories Overview 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="reset zoom"
@@ -11919,7 +11919,7 @@ exports[`Blocks/Stories Overview 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="zoom out"
@@ -11944,7 +11944,7 @@ exports[`Blocks/Stories Overview 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1lbrvwg"
+                  class="css-7d11p2"
                 >
                   <button
                     aria-label="zoom in"
@@ -11969,7 +11969,7 @@ exports[`Blocks/Stories Overview 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="display story source code"
@@ -11979,7 +11979,7 @@ exports[`Blocks/Stories Overview 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="display story configuration object"
@@ -12105,7 +12105,7 @@ exports[`Blocks/Stories Overview 1`] = `
                 class="css-x60p33"
               >
                 <div
-                  class="css-1o6sr4p"
+                  class="css-rkyxeq"
                 >
                   <button
                     aria-label="switch light and dark background"
@@ -12115,7 +12115,7 @@ exports[`Blocks/Stories Overview 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1lbrvwg"
+                  class="css-7d11p2"
                 >
                   <button
                     aria-label="switch left to right/right to left"
@@ -12125,7 +12125,7 @@ exports[`Blocks/Stories Overview 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="reset zoom"
@@ -12150,7 +12150,7 @@ exports[`Blocks/Stories Overview 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="zoom out"
@@ -12175,7 +12175,7 @@ exports[`Blocks/Stories Overview 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1lbrvwg"
+                  class="css-7d11p2"
                 >
                   <button
                     aria-label="zoom in"
@@ -12200,7 +12200,7 @@ exports[`Blocks/Stories Overview 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="display story source code"
@@ -12210,7 +12210,7 @@ exports[`Blocks/Stories Overview 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="display story configuration object"
@@ -12336,7 +12336,7 @@ exports[`Blocks/Stories Overview 1`] = `
                 class="css-x60p33"
               >
                 <div
-                  class="css-1o6sr4p"
+                  class="css-rkyxeq"
                 >
                   <button
                     aria-label="switch light and dark background"
@@ -12346,7 +12346,7 @@ exports[`Blocks/Stories Overview 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1lbrvwg"
+                  class="css-7d11p2"
                 >
                   <button
                     aria-label="switch left to right/right to left"
@@ -12356,7 +12356,7 @@ exports[`Blocks/Stories Overview 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="reset zoom"
@@ -12381,7 +12381,7 @@ exports[`Blocks/Stories Overview 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="zoom out"
@@ -12406,7 +12406,7 @@ exports[`Blocks/Stories Overview 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1lbrvwg"
+                  class="css-7d11p2"
                 >
                   <button
                     aria-label="zoom in"
@@ -12431,7 +12431,7 @@ exports[`Blocks/Stories Overview 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="display story source code"
@@ -12441,7 +12441,7 @@ exports[`Blocks/Stories Overview 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-1ulb236"
+                  class="css-q7w4rh"
                 >
                   <button
                     aria-label="display story configuration object"
@@ -13058,7 +13058,7 @@ exports[`Blocks/StoryConfig Custom Title 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-1rfzzcg"
+                class="css-1vga9oy"
               >
                 <button
                   aria-label="copy the displayed source code"
@@ -13068,7 +13068,7 @@ exports[`Blocks/StoryConfig Custom Title 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <a
                   aria-label="browse repository"
@@ -13081,7 +13081,7 @@ exports[`Blocks/StoryConfig Custom Title 1`] = `
                 </a>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <a
                   aria-label="browse readme documentation"
@@ -13094,7 +13094,7 @@ exports[`Blocks/StoryConfig Custom Title 1`] = `
                 </a>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <a
                   aria-label="browse filed issues"
@@ -13526,7 +13526,7 @@ exports[`Blocks/StoryConfig No Margin 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-1rfzzcg"
+                class="css-1vga9oy"
               >
                 <button
                   aria-label="copy the displayed source code"
@@ -13536,7 +13536,7 @@ exports[`Blocks/StoryConfig No Margin 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <a
                   aria-label="browse repository"
@@ -13549,7 +13549,7 @@ exports[`Blocks/StoryConfig No Margin 1`] = `
                 </a>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <a
                   aria-label="browse readme documentation"
@@ -13562,7 +13562,7 @@ exports[`Blocks/StoryConfig No Margin 1`] = `
                 </a>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <a
                   aria-label="browse filed issues"
@@ -14013,7 +14013,7 @@ exports[`Blocks/StoryConfig Not Collapsible 1`] = `
           class="css-x60p33"
         >
           <div
-            class="css-1rfzzcg"
+            class="css-1vga9oy"
           >
             <button
               aria-label="copy the displayed source code"
@@ -14023,7 +14023,7 @@ exports[`Blocks/StoryConfig Not Collapsible 1`] = `
             </button>
           </div>
           <div
-            class="css-1ulb236"
+            class="css-q7w4rh"
           >
             <a
               aria-label="browse repository"
@@ -14036,7 +14036,7 @@ exports[`Blocks/StoryConfig Not Collapsible 1`] = `
             </a>
           </div>
           <div
-            class="css-1ulb236"
+            class="css-q7w4rh"
           >
             <a
               aria-label="browse readme documentation"
@@ -14049,7 +14049,7 @@ exports[`Blocks/StoryConfig Not Collapsible 1`] = `
             </a>
           </div>
           <div
-            class="css-1ulb236"
+            class="css-q7w4rh"
           >
             <a
               aria-label="browse filed issues"
@@ -14479,7 +14479,7 @@ exports[`Blocks/StoryConfig Overview 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-1rfzzcg"
+                class="css-1vga9oy"
               >
                 <button
                   aria-label="copy the displayed source code"
@@ -14489,7 +14489,7 @@ exports[`Blocks/StoryConfig Overview 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <a
                   aria-label="browse repository"
@@ -14502,7 +14502,7 @@ exports[`Blocks/StoryConfig Overview 1`] = `
                 </a>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <a
                   aria-label="browse readme documentation"
@@ -14515,7 +14515,7 @@ exports[`Blocks/StoryConfig Overview 1`] = `
                 </a>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <a
                   aria-label="browse filed issues"
@@ -14947,7 +14947,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-1rfzzcg"
+                class="css-1vga9oy"
               >
                 <button
                   aria-label="copy the displayed source code"
@@ -14957,7 +14957,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <a
                   aria-label="browse repository"
@@ -14970,7 +14970,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </a>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <a
                   aria-label="browse readme documentation"
@@ -14983,7 +14983,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </a>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <a
                   aria-label="browse filed issues"
@@ -15630,7 +15630,7 @@ exports[`Blocks/StoryConfig Theme Selector 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-1rfzzcg"
+          class="css-1vga9oy"
         >
           <button
             class="css-1tf4h46"
@@ -15672,7 +15672,7 @@ exports[`Blocks/StoryConfig Theme Selector 1`] = `
                   class="css-x60p33"
                 >
                   <div
-                    class="css-1rfzzcg"
+                    class="css-1vga9oy"
                   >
                     <button
                       aria-label="copy the displayed source code"
@@ -15682,7 +15682,7 @@ exports[`Blocks/StoryConfig Theme Selector 1`] = `
                     </button>
                   </div>
                   <div
-                    class="css-1ulb236"
+                    class="css-q7w4rh"
                   >
                     <a
                       aria-label="browse repository"
@@ -15695,7 +15695,7 @@ exports[`Blocks/StoryConfig Theme Selector 1`] = `
                     </a>
                   </div>
                   <div
-                    class="css-1ulb236"
+                    class="css-q7w4rh"
                   >
                     <a
                       aria-label="browse readme documentation"
@@ -15708,7 +15708,7 @@ exports[`Blocks/StoryConfig Theme Selector 1`] = `
                     </a>
                   </div>
                   <div
-                    class="css-1ulb236"
+                    class="css-q7w4rh"
                   >
                     <a
                       aria-label="browse filed issues"
@@ -16381,7 +16381,7 @@ exports[`Blocks/StorySource Custom Title 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-1rfzzcg"
+                class="css-1vga9oy"
               >
                 <button
                   aria-label="copy the displayed source code"
@@ -16391,7 +16391,7 @@ exports[`Blocks/StorySource Custom Title 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <a
                   aria-label="browse repository"
@@ -16404,7 +16404,7 @@ exports[`Blocks/StorySource Custom Title 1`] = `
                 </a>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <a
                   aria-label="browse readme documentation"
@@ -16417,7 +16417,7 @@ exports[`Blocks/StorySource Custom Title 1`] = `
                 </a>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <a
                   aria-label="browse filed issues"
@@ -16517,7 +16517,7 @@ exports[`Blocks/StorySource No Margin 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-1rfzzcg"
+                class="css-1vga9oy"
               >
                 <button
                   aria-label="copy the displayed source code"
@@ -16527,7 +16527,7 @@ exports[`Blocks/StorySource No Margin 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <a
                   aria-label="browse repository"
@@ -16540,7 +16540,7 @@ exports[`Blocks/StorySource No Margin 1`] = `
                 </a>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <a
                   aria-label="browse readme documentation"
@@ -16553,7 +16553,7 @@ exports[`Blocks/StorySource No Margin 1`] = `
                 </a>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <a
                   aria-label="browse filed issues"
@@ -16672,7 +16672,7 @@ exports[`Blocks/StorySource Not Collapsible 1`] = `
           class="css-x60p33"
         >
           <div
-            class="css-1rfzzcg"
+            class="css-1vga9oy"
           >
             <button
               aria-label="copy the displayed source code"
@@ -16682,7 +16682,7 @@ exports[`Blocks/StorySource Not Collapsible 1`] = `
             </button>
           </div>
           <div
-            class="css-1ulb236"
+            class="css-q7w4rh"
           >
             <a
               aria-label="browse repository"
@@ -16695,7 +16695,7 @@ exports[`Blocks/StorySource Not Collapsible 1`] = `
             </a>
           </div>
           <div
-            class="css-1ulb236"
+            class="css-q7w4rh"
           >
             <a
               aria-label="browse readme documentation"
@@ -16708,7 +16708,7 @@ exports[`Blocks/StorySource Not Collapsible 1`] = `
             </a>
           </div>
           <div
-            class="css-1ulb236"
+            class="css-q7w4rh"
           >
             <a
               aria-label="browse filed issues"
@@ -16806,7 +16806,7 @@ exports[`Blocks/StorySource Overview 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-1rfzzcg"
+                class="css-1vga9oy"
               >
                 <button
                   aria-label="copy the displayed source code"
@@ -16816,7 +16816,7 @@ exports[`Blocks/StorySource Overview 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <a
                   aria-label="browse repository"
@@ -16829,7 +16829,7 @@ exports[`Blocks/StorySource Overview 1`] = `
                 </a>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <a
                   aria-label="browse readme documentation"
@@ -16842,7 +16842,7 @@ exports[`Blocks/StorySource Overview 1`] = `
                 </a>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <a
                   aria-label="browse filed issues"
@@ -16855,7 +16855,7 @@ exports[`Blocks/StorySource Overview 1`] = `
                 </a>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   class="css-1tf4h46"
@@ -17146,7 +17146,7 @@ exports[`Blocks/StorySource Theme 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-1rfzzcg"
+                class="css-1vga9oy"
               >
                 <button
                   aria-label="copy the displayed source code"
@@ -17156,7 +17156,7 @@ exports[`Blocks/StorySource Theme 1`] = `
                 </button>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <a
                   aria-label="browse repository"
@@ -17169,7 +17169,7 @@ exports[`Blocks/StorySource Theme 1`] = `
                 </a>
               </div>
               <div
-                class="css-1ulb236"
+                class="css-q7w4rh"
               >
                 <a
                   aria-label="browse readme documentation"
@@ -17182,7 +17182,7 @@ exports[`Blocks/StorySource Theme 1`] = `
                 </a>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <a
                   aria-label="browse filed issues"
@@ -17195,7 +17195,7 @@ exports[`Blocks/StorySource Theme 1`] = `
                 </a>
               </div>
               <div
-                class="css-1lbrvwg"
+                class="css-7d11p2"
               >
                 <button
                   class="css-1tf4h46"
@@ -17465,7 +17465,7 @@ exports[`Blocks/StorySource Theme Selector 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-1rfzzcg"
+          class="css-1vga9oy"
         >
           <button
             class="css-1tf4h46"
@@ -17507,7 +17507,7 @@ exports[`Blocks/StorySource Theme Selector 1`] = `
                   class="css-x60p33"
                 >
                   <div
-                    class="css-1rfzzcg"
+                    class="css-1vga9oy"
                   >
                     <button
                       aria-label="copy the displayed source code"
@@ -17517,7 +17517,7 @@ exports[`Blocks/StorySource Theme Selector 1`] = `
                     </button>
                   </div>
                   <div
-                    class="css-1ulb236"
+                    class="css-q7w4rh"
                   >
                     <a
                       aria-label="browse repository"
@@ -17530,7 +17530,7 @@ exports[`Blocks/StorySource Theme Selector 1`] = `
                     </a>
                   </div>
                   <div
-                    class="css-1ulb236"
+                    class="css-q7w4rh"
                   >
                     <a
                       aria-label="browse readme documentation"
@@ -17543,7 +17543,7 @@ exports[`Blocks/StorySource Theme Selector 1`] = `
                     </a>
                   </div>
                   <div
-                    class="css-1lbrvwg"
+                    class="css-7d11p2"
                   >
                     <a
                       aria-label="browse filed issues"
@@ -17556,7 +17556,7 @@ exports[`Blocks/StorySource Theme Selector 1`] = `
                     </a>
                   </div>
                   <div
-                    class="css-1lbrvwg"
+                    class="css-7d11p2"
                   >
                     <button
                       class="css-1tf4h46"
