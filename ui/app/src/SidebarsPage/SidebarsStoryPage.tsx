@@ -77,26 +77,25 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
                 const route =
                   tab.route || (tab.title ? tab.title.toLowerCase() : '');
                 return (
-                  <Tab key={`tab_${route}`}>
-                    <Link
-                      href={
-                        story && story.id
-                          ? getStoryPath(
-                              story.id,
-                              tabIndex > 0 ? route : undefined,
-                            )
-                          : docId
-                          ? getDocumentPath(
-                              type,
-                              docId,
-                              tabIndex > 0 ? route : undefined,
-                            )
-                          : '#'
-                      }
-                    >
-                      {tab.title}
-                    </Link>
-                  </Tab>
+                  <Link
+                    key={`tab_${route}`}
+                    href={
+                      story && story.id
+                        ? getStoryPath(
+                            story.id,
+                            tabIndex > 0 ? route : undefined,
+                          )
+                        : docId
+                        ? getDocumentPath(
+                            type,
+                            docId,
+                            tabIndex > 0 ? route : undefined,
+                          )
+                        : '#'
+                    }
+                  >
+                    <Tab>{tab.title}</Tab>
+                  </Link>
                 );
               })}
             </TabList>
