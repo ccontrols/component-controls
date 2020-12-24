@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/pages",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "description": "Component controls pre-built documentation page templates.",
   "sideEffects": false,
   "main": "dist/index.js",
@@ -39,9 +39,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/axe-plugin": "^2.4.1",
-    "@component-controls/blocks": "^2.4.1",
-    "@component-controls/viewport-plugin": "^2.4.1"
+    "@component-controls/axe-plugin": "^2.4.2",
+    "@component-controls/blocks": "^2.4.2",
+    "@component-controls/viewport-plugin": "^2.4.2"
   },
   "devDependencies": {
     "@component-controls/ts-markdown-docs": "^2.2.0",
