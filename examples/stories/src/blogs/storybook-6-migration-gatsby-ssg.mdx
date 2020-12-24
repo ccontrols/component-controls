@@ -10,13 +10,14 @@ tags:
   - tailwind
 image: /static/gatsby-page.jpg
 ---
-import { Button } from '../components/Button'
+
+import { Button } from '../components/Button';
 import gatsbyImg from './media/gatsby-page.jpg';
 import testingPageImg from './media/component-controls-testing.jpg';
 
 # Gatsby as a static site generator
 
-The starting sample project was cloned from 
+The starting sample project was cloned from
 
 [tw-sb-rtl-starter](https://github.com/ssengalanto/tw-sb-rtl-starter)
 
@@ -32,7 +33,7 @@ The final project can be found here:
 yarn add gatsby @component-controls/gatsby-theme-stories -D
 ```
 
-component-controls has two [configuration](/configuration/overview/) files - one is used during build-time in a nodejs environment, the other is used during run-time in a browser environment. 
+component-controls has two [configuration](/configuration/overview/) files - one is used during build-time in a nodejs environment, the other is used during run-time in a browser environment.
 
 The rough equivalents of Storybook for those two configuration files are `main.js` and `preview.(js|ts)`
 
@@ -54,7 +55,7 @@ import '../src/tailwind.output.css';
 
 ## Configuration file path
 
- By default, the Storybook configuration file is kept in a folder name `.storybook`, while component-controls uses a `.config` folder. We will configure the gatsby stories theme in `gatsby-config.js`.
+By default, the Storybook configuration file is kept in a folder name `.storybook`, while component-controls uses a `.config` folder. We will configure the gatsby stories theme in `gatsby-config.js`.
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -84,7 +85,7 @@ Next, you should add the gatsby develop and gatsby build scripts to the project'
   },
 ```
 
-At his point, you can start your documentation site 
+At his point, you can start your documentation site
 
 ```sh
  yarn docs:start
@@ -97,6 +98,7 @@ And a new documentation site should be up and running
 ## Configure documentation site
 
 You can configure the name, site and various other site parameters for the new documentation site
+
 ```js:title=.storybook/main.js {3}
 module.exports = {
   stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
@@ -106,112 +108,45 @@ module.exports = {
 
 ```js:title=.storybook/runtime.tsx {2-12}
 import '../src/tailwind.output.css';
-import { RunOnlyConfiguration } from "@component-controls/core";
+import { RunOnlyConfiguration } from '@component-controls/core';
 
 const config: RunOnlyConfiguration = {
   analytics: 'UA-XXXXXXXXX-X',
   title: `Tailwind component-controls`,
   description: `Tailwind project with typescript, react testing library and component-controls`,
   author: `@component-controls`,
-}
+};
 
 export default config;
 ```
 
 ## Add testing page
 
-component-controls allows adding fully customizable documentation pages to your documentation site. 
+component-controls allows adding fully customizable documentation pages to your site and comes with package of pre-configured pages.
 
-### Install testing packages
-
-```sh
-yarn add @component-controls/axe-plugin  @component-controls/viewport-plugin -D
-```
-
-### Create a file with the page
-
-You can create any custom page using `react` and importing component-controls or external components. For this example we will create a Testing page that will contain the story description (if any), a playground to view the rendered story, a block with controls to edit properties of the current story as well as the installed axe-plugin and viewport-plugin for ally and mobile testing.
-
-```js:title=.storybook/testing-page.tsx
-/* eslint-disable react/display-name */
-import React from 'react';
-import {
-  Playground,
-  PropsTable,
-  Story,
-  Description,
-} from '@component-controls/blocks';
-import { getControlsCount } from '@component-controls/core';
-import { useCurrentStory } from '@component-controls/store';
-import { AllyBlock } from '@component-controls/axe-plugin';
-import { ViewportBlock } from '@component-controls/viewport-plugin';
-
-export const TestingPage = () => {
-  const story = useCurrentStory();
-  const controlsCount = getControlsCount(story?.controls);
-  return (
-    <>
-      <Description />
-      {controlsCount > 0 && (
-        <>
-          <Playground title=".">
-            <Story id="." />
-          </Playground>
-
-          <PropsTable of="." title="Controls" visibility="controls" />
-        </>  
-      )}
-      <AllyBlock title="A11y tests" />
-      <ViewportBlock title="Viewport"/>
-    </>
-  );
-}
-```
-
-### Configure the testing page
-
-Once the page is created, you will need to configure component-controls for the new page url:
-
-```js:title=.storybook/main.js {4-8}
+```js:title=.storybook/main.js {5-12}
+const { defaultBuildConfig } = require('@component-controls/core');
 module.exports = {
   stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
   siteUrl: 'https://tailwind-gatsby-controls-starter.netlify.app',
   pages: {
     story: {
-      tabs: [{ route: 'page' }, { route: 'test' }],
+      tabs: [
+        ...defaultBuildConfig.pages.story.tabs,
+        {
+          route: 'test',
+          title: 'Testing',
+          template: '@component-controls/pages/TestingPage',
+        },
+      ],
     },
   },
 };
 ```
 
-```js:title=.storybook/runtime.tsx {11-18}
-import React from 'react';
-import { RunConfiguration, defaultRunConfig } from "@component-controls/core";
-import { TestingPage } from "./TestingPage";
-
-import '../src/tailwind.output.css';
-const config: RunConfiguration = {
-  analytics: 'UA-XXXXXXXXX-X',
-  title: `Tailwind component-controls`,
-  description: `Tailwind project with typescript, react testing library and component-controls`,
-  author: `@component-controls`,
-  pages: {
-    story: {
-      tabs: [
-        ...defaultRunConfig.pages.story.tabs,
-        { title: 'Testing', render: () => <TestingPage /> },
-      ],
-    },
-  }  
-};
-
-export default config;
-```
-
 The new Testing Page should now be visible
 
 <img alt="testing page" title="testing page" src={testingPageImg} />
-
 
 ## Add jest snapshot tests
 
@@ -239,7 +174,7 @@ We will launch the `cc-jest` command-line with the -c parameter pointing to the 
     ...
   },
   ...
-}  
+}
 ```
 
 ### Run the tests
