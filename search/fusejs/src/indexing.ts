@@ -1,3 +1,3 @@
-module.exports = async (): Promise<void> => {
+export default async (): Promise<void> => {
   return;
 };

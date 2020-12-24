@@ -1,4 +1,4 @@
-import { useSearch as useFuseSearch } from './useSearch';
+import { useSearch } from './useSearch';
 export { FuseJSSearchOptions } from './types';
 
-module.exports = useFuseSearch;
+export default useSearch;

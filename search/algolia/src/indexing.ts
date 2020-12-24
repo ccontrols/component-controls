@@ -6,8 +6,7 @@ import {
 } from '@component-controls/core';
 import { log } from '@component-controls/logger';
 import { AlgoliaSearchOptions } from './types';
-
-module.exports = async (store: Store): Promise<void> => {
+export default async (store: Store): Promise<void> => {
   const { options, fields } = store.config.search || {};
   if (!options) {
     return;
