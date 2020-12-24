@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/search-algolia",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "Component controls Algolia search and index",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
