@@ -40,6 +40,7 @@
     "@component-controls/search-algolia": "^2.4.1",
     "@component-controls/search-fusejs": "^2.4.1",
     "@component-controls/store": "^2.4.1",
+    "@component-controls/pages": "^2.4.1",
     "@component-controls/webpack-compile": "^2.4.1",
     "@component-controls/webpack-configs": "^2.4.1",
     "@emotion/babel-plugin": "^11.0.0",
