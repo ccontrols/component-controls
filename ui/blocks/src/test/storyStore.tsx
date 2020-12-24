@@ -12,12 +12,26 @@ import {
 import { render as reactRender } from '@component-controls/render/react';
 
 import { MDXContent } from './MDXStory';
+import ClassicPage from '@component-controls/pages/ClassicPage';
 
 export const store: Store = {
   ...getDefaultStore(),
   config: {
     renderFn: reactRender,
     ...deepMerge(defaultBuildConfig, defaultRunConfig),
+    pages: {
+      ...defaultBuildConfig.pages,
+      story: {
+        ...defaultBuildConfig.pages?.story,
+        tabs: [
+          {
+            route: 'page',
+            title: 'Documentation',
+            template: ClassicPage,
+          },
+        ],
+      },
+    },
   },
   packages: {
     'test-package': {

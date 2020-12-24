@@ -9,7 +9,6 @@ import {
   useCurrentStory,
   useGetStoryPath,
 } from '@component-controls/store';
-import * as pages from '@component-controls/pages';
 import {
   Tabs,
   Tab,
@@ -59,11 +58,8 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
     0,
   );
   const renderTab = (tab: TabConfiguration) => {
-    if (tab.render) {
-      return tab.render({ docId });
-    }
-    if (tab.type) {
-      const Page = (pages as Record<string, ComponentType>)[tab.type];
+    if (tab.template) {
+      const Page = tab.template as ComponentType;
       if (Page) {
         return <Page />;
       }

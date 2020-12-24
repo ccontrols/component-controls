@@ -33,6 +33,8 @@ Object {
         "tabs": Array [
           Object {
             "route": "page",
+            "template": [Function],
+            "title": "Documentation",
           },
         ],
       },
@@ -41,7 +43,7 @@ Object {
       },
     },
     "search": Object {
-      "searchingModule": "/Users/atanasster/component-controls/search/fusejs/dist/index.js",
+      "searchingModule": "@component-controls/search-fusejs",
     },
     "siteMap": Object {
       "pages": Object {

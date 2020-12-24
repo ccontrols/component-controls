@@ -9,7 +9,15 @@
   "files": [
     "dist/",
     "package.json",
-    "README.md"
+    "README.md",
+    "CanvasPage.d.ts",
+    "CanvasPage.js",
+    "ClassicPage.d.ts",
+    "ClassicPage.js",
+    "CurrentStoryPage.d.ts",
+    "CurrentStoryPage.js",
+    "TestingPage.d.ts",
+    "TestingPage.js"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
@@ -31,7 +39,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/blocks": "^2.3.0"
+    "@component-controls/axe-plugin": "^2.3.0",
+    "@component-controls/blocks": "^2.3.0",
+    "@component-controls/viewport-plugin": "^2.3.0"
   },
   "devDependencies": {
     "@component-controls/ts-markdown-docs": "^2.2.0",

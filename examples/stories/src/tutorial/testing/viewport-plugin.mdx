@@ -40,30 +40,11 @@ module.exports = {
   stories: [...],
   pages: {
     story: {
-      tabs: [...defaultBuildConfig.pages.story.tabs, { route: 'viewport' }],
+      tabs: [...defaultBuildConfig.pages.story.tabs, { route: 'viewport', title: 'Viewport', template: '@component-controls/viewport-plugin/ViewportPage' }],
   },
 }  
 ```
 
-### Add the page to site:
-
-```js:title=.config/runtime.tsx
-import { RunOnlyConfiguration, defaultRunConfig } from "@component-controls/core";
-import { ViewportPage } from '@component-controls/viewport-plugin';
-
-const config: RunOnlyConfiguration = {
-  pages: {
-    story: {
-      tabs: [
-        ...defaultRunConfig.pages.story.tabs,
-        { title: 'Viewport', render: ViewportPage },
-      ],
-    },
-  },  
-}
-
-export default config;
-```
 <br />
 
 <img alt="viewport page integration" title="viewport page" src={viewportPageImg} />

@@ -1,5 +1,9 @@
 import { RequireContextProps } from '@component-controls/config';
-import { BuildConfiguration, normalizePath } from '@component-controls/core';
+import {
+  BuildConfiguration,
+  PagesOnlyRoutes,
+  normalizePath,
+} from '@component-controls/core';
 
 export interface StoryPath {
   absPath: string;
@@ -23,6 +27,26 @@ const search = ${
       ? `require("${normalizePath(config.search.searchingModule)}")`
       : 'undefined'
   };
+${
+  config?.pages
+    ? Object.keys(config.pages)
+        .map(key => {
+          const { tabs = [] } = (config.pages as PagesOnlyRoutes)[key];
+          return (
+            tabs
+              .map((tab, index) =>
+                typeof tab.template === 'string'
+                  ? `const ${key}_${index} = require("${tab.template}");`
+                  : undefined,
+              )
+              .filter(template => template)
+              .join('\n') || undefined
+          );
+        })
+        .filter(page => page)
+        .join('') || ''
+    : ''
+}
 const contexts = [];
 ${contexts
   .map(
@@ -106,6 +130,26 @@ ${storeConst}
 store.search = search.default || search;
 store.config = ${configFilePath ? 'configJSON.default ||' : ''} configJSON;
 store.buildConfig = ${config ? JSON.stringify(config) : '{}'};
+${
+  config?.pages
+    ? Object.keys(config.pages)
+        .map(key => {
+          const { tabs = [] } = (config.pages as PagesOnlyRoutes)[key];
+          return (
+            tabs
+              .map((tab, index) =>
+                typeof tab.template === 'string'
+                  ? `store.buildConfig.pages.${key}.tabs[${index}].template = ${key}_${index}.default || ${key}_${index};`
+                  : undefined,
+              )
+              .filter(template => template)
+              .join('\n') || undefined
+          );
+        })
+        .filter(page => page)
+        .join('') || ''
+    : ''
+}
 ${loadStories}
 ${exports}
 `;

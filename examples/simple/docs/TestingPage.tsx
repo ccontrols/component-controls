@@ -1,5 +1,4 @@
-/* eslint-disable react/display-name */
-import React from 'react';
+import React, { FC } from 'react';
 import {
   Playground,
   PropsTable,
@@ -11,7 +10,7 @@ import { useCurrentStory } from '@component-controls/store';
 import { AllyBlock } from '@component-controls/axe-plugin';
 import { ViewportBlock } from '@component-controls/viewport-plugin';
 
-export const TestingPage = () => {
+const TestingPage: FC = () => {
   const story = useCurrentStory();
   const controlsCount = getControlsCount(story?.controls);
   return (
@@ -24,11 +23,12 @@ export const TestingPage = () => {
           </Playground>
 
           <PropsTable of="." title="Controls" visibility="controls" />
-        </>  
+        </>
       )}
       <AllyBlock title="A11y tests" />
-      <ViewportBlock title="Viewport"/>
+      <ViewportBlock title="Viewport" />
     </>
   );
-}
+};
 
+export default TestingPage;

@@ -40,7 +40,14 @@ module.exports = {
   pages: {
     story: {
       basePath: 'api/',
-      tabs: [...defaultBuildConfig.pages.story.tabs, { route: 'test' }],
+      tabs: [
+        ...defaultBuildConfig.pages.story.tabs,
+        {
+          route: 'test',
+          title: 'Testing',
+          template: '@component-controls/pages/TestingPage',
+        },
+      ],
     },
     tutorial: {
       basePath: 'tutorial/',

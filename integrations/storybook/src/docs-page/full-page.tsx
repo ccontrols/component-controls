@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 import React from 'react';
-import { ClassicPage } from '@component-controls/pages';
+import ClassicPage from '@component-controls/pages/ClassicPage';
 import { DocsContainer } from './DocsContainer';
 
 module.exports = {

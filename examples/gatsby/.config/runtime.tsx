@@ -4,7 +4,6 @@ import { jsx, Box, Text } from 'theme-ui';
 import { RunOnlyConfiguration, defaultRunConfig } from "@component-controls/core";
 import { Link } from "@component-controls/components";
 import { OctofaceIcon } from '@primer/octicons-react';
-import { TestingPage } from "./TestingPage";
 
 const categories = ['ESM', 'MDX', 'Application','Controls','Blocks', 'Design Tokens',  'Editors', 'Components', 'Plugins']
 
@@ -22,10 +21,6 @@ const config: RunOnlyConfiguration = {
   pages: {
     story: {
       label: 'API',
-      tabs: [
-        ...defaultRunConfig.pages.story.tabs,
-        { title: 'Testing', render: () => <TestingPage /> },
-      ],
     },
     tutorial: {
       label: 'Tutorial',

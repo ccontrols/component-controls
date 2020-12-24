@@ -34,7 +34,6 @@
     "@component-controls/blocks": "^2.3.0",
     "@component-controls/components": "^2.3.0",
     "@component-controls/core": "^2.3.0",
-    "@component-controls/pages": "^2.3.0",
     "@component-controls/store": "^2.3.0",
     "query-string": "^6.13.5"
   },

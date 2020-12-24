@@ -33,15 +33,11 @@ export interface TabConfiguration {
   /**
    * title will be used as tab caption
    */
-  title: string;
+  title?: string;
   /**
-   * page container type - a key into the component-controls/pages package
+   * page template - can be a package deafult template
    */
-  type?: string;
-  /**
-   * render function, returns a react component
-   */
-  render?: (props: any) => ReactNode;
+  template?: string | ComponentType;
 }
 
 export type PageTabs = TabConfiguration[];
@@ -119,7 +115,7 @@ export type PagesConfiguration = Record<DocType, PageConfiguration>;
 export type PagesOnlyRoutes = Record<
   DocType,
   Pick<PageConfiguration, 'basePath' | 'sideNav'> & {
-    tabs?: Pick<TabConfiguration, 'route'>[];
+    tabs?: TabConfiguration[];
   }
 >;
 
@@ -367,7 +363,13 @@ export const defaultBuildConfig: BuildConfiguration = {
         storyPaths: true,
         collapseSingle: true,
       },
-      tabs: [{ route: 'page' }],
+      tabs: [
+        {
+          route: 'page',
+          title: 'Documentation',
+          template: require.resolve('@component-controls/pages/ClassicPage'),
+        },
+      ],
     },
     blog: {
       basePath: 'blogs/',
@@ -386,7 +388,7 @@ export const defaultBuildConfig: BuildConfiguration = {
     /**
      * the search plugin search routine
      */
-    searchingModule: require.resolve('@component-controls/search-fusejs'),
+    searchingModule: '@component-controls/search-fusejs',
   },
 };
 export const defaultRunConfig: RunConfiguration = {
@@ -404,7 +406,6 @@ export const defaultRunConfig: RunConfiguration = {
       navSidebar: true,
       contextSidebar: true,
       topMenu: true,
-      tabs: [{ title: 'Documentation', type: 'ClassicPage' }],
     },
     blog: {
       label: 'Blog',

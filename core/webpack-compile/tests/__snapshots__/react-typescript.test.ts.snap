@@ -33,6 +33,8 @@ Object {
         "tabs": Array [
           Object {
             "route": "page",
+            "template": [Function],
+            "title": "Documentation",
           },
         ],
       },
@@ -41,7 +43,7 @@ Object {
       },
     },
     "search": Object {
-      "searchingModule": "/Users/atanasster/component-controls/search/fusejs/dist/index.js",
+      "searchingModule": "@component-controls/search-fusejs",
     },
     "siteMap": Object {
       "pages": Object {
@@ -309,7 +311,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "theme-ui": "^0.6.0-alpha.3",
       },
       "devDependencies": Object {
-        "@component-controls/jest-snapshots": "^2.2.4",
+        "@component-controls/jest-snapshots": "^2.3.0",
         "@component-controls/ts-markdown-docs": "^2.2.0",
         "@theme-ui/css": "^0.6.0-alpha.1",
         "@types/markdown-to-jsx": "^6.11.0",
@@ -334,7 +336,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.2.4",
+      "version": "2.3.0",
     },
     "fded7dbaa855ea6869a794f877eab680": Object {
       "dependencies": Object {
@@ -355,7 +357,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "theme-ui": "^0.6.0-alpha.3",
       },
       "devDependencies": Object {
-        "@component-controls/jest-snapshots": "^2.2.4",
+        "@component-controls/jest-snapshots": "^2.3.0",
         "@component-controls/ts-markdown-docs": "^2.2.0",
         "@theme-ui/css": "^0.6.0-alpha.1",
         "@types/markdown-to-jsx": "^6.11.0",
@@ -380,7 +382,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.2.4",
+      "version": "2.3.0",
     },
   },
   "search": [Function],
