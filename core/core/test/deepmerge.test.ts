@@ -1,55 +1,101 @@
 import { deepMerge, deepMergeArrays } from '../src';
 describe('deep merge', () => {
   it('Should append arrays', () => {
-    expect(
-      deepMerge(
+    const a = deepMerge(
+      {
+        a: [{ a: 'a', b: 'b' }],
+      },
+      {
+        a: [{ c: 'c', d: 'd' }],
+      },
+    );
+    expect(a).toMatchObject({
+      a: [
         {
-          a: [{ a: 'a', b: 'b' }],
+          a: 'a',
+          b: 'b',
         },
         {
-          a: [{ c: 'c', d: 'd' }],
+          c: 'c',
+          d: 'd',
         },
-      ),
-    ).toMatchSnapshot();
+      ],
+    });
   });
 
   it('Should merge arrays', () => {
-    expect(
-      deepMergeArrays(
+    const a = deepMergeArrays(
+      {
+        a: [{ a: 'a', b: 'b' }],
+      },
+      {
+        a: [{ c: 'c', d: 'd' }],
+      },
+    );
+    expect(a).toMatchObject({
+      a: [
         {
-          a: [{ a: 'a', b: 'b' }],
+          a: 'a',
+          b: 'b',
+          c: 'c',
+          d: 'd',
         },
-        {
-          a: [{ c: 'c', d: 'd' }],
-        },
-      ),
-    ).toMatchSnapshot();
+      ],
+    });
   });
   it('Should merge arrays and fields', () => {
-    expect(
-      deepMergeArrays(
+    const a = deepMergeArrays(
+      {
+        a: [
+          { a: 'a', b: 'b' },
+          { c: 'c', d: 'd' },
+        ],
+      },
+      {
+        a: [{ b: 'c' }],
+      },
+    );
+    expect(a).toMatchObject({
+      a: [
         {
-          a: [
-            { a: 'a', b: 'b' },
-            { c: 'c', d: 'd' },
-          ],
+          a: 'a',
+          b: 'c',
         },
-        {
-          a: [{ b: 'c' }],
-        },
-      ),
-    ).toMatchSnapshot();
+      ],
+    });
   });
   it('Should merge arrays mistmatched fields', () => {
-    expect(
-      deepMergeArrays(
+    const a = deepMergeArrays(
+      {
+        b: [{ a: 'a', b: 'b' }],
+      },
+      {
+        a: [{ b: 'c' }],
+      },
+    );
+    expect(a).toMatchObject({
+      a: [
         {
-          b: [{ a: 'a', b: 'b' }],
+          b: 'c',
         },
+      ],
+      b: [
         {
-          a: [{ b: 'c' }],
+          a: 'a',
+          b: 'b',
         },
-      ),
-    ).toMatchSnapshot();
+      ],
+    });
+  });
+  it('Should merge arrays of string', () => {
+    const a = deepMergeArrays(
+      {
+        a: ['abc'],
+      },
+      {
+        a: ['abc', 'cde', 'efg'],
+      },
+    );
+    expect(a).toMatchObject({ a: ['abc', 'cde', 'efg'] });
   });
 });
