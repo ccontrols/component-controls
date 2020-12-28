@@ -156,7 +156,7 @@ export const Button: FC<ButtonProps> = props => (
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.5.0",
+      "version": "2.5.1",
     },
     "fbea66d4bd64ea2b935855efa5d522a1": Object {
       "dependencies": Object {
@@ -199,7 +199,7 @@ export const Button: FC<ButtonProps> = props => (
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.5.0",
+      "version": "2.5.1",
     },
   },
   "stories": Object {
