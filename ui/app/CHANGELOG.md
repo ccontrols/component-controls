@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/ccontrols/component-controls/compare/v2.4.2...v2.5.0) (2020-12-28)
+
+
+### Bug Fixes
+
+* anchor enclose tab to handle click ([c37dff9](https://github.com/ccontrols/component-controls/commit/c37dff9616a6ae54379d648c4f5414e54f768f03))
+
+
+### Features
+
+* custom esm pages ([ae76a6e](https://github.com/ccontrols/component-controls/commit/ae76a6e936b0edb66b7ecbd71450c1858ce0c575))
+
+
+
+
+
 ## [2.4.2](https://github.com/ccontrols/component-controls/compare/v2.4.1...v2.4.2) (2020-12-24)
 
 **Note:** Version bump only for package @component-controls/app
