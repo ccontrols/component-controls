@@ -2108,9 +2108,51 @@ exports[`Blocks/Pagination Overview 1`] = `
 exports[`Blocks/Playground/ESM Child 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
     data-testid="playground"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        >
+          <div
+            class="css-tmrrvx"
+          >
+            My donut example 
+            <a
+              aria-label="Collapse this block"
+              class="css-1t48u3b-BlockContainer"
+            >
+              <span
+                class="css-1ibxxpj"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -2288,9 +2330,51 @@ exports[`Blocks/Playground/ESM Child 1`] = `
 exports[`Blocks/Playground/ESM Custom Title 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
     data-testid="playground"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        >
+          <div
+            class="css-tmrrvx"
+          >
+            Custom playground title
+            <a
+              aria-label="Collapse this block"
+              class="css-1t48u3b-BlockContainer"
+            >
+              <span
+                class="css-1ibxxpj"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -2434,8 +2518,20 @@ exports[`Blocks/Playground/ESM Custom Title 1`] = `
                   class="css-1j909cg"
                 >
                   <div
-                    class="css-j1r933"
+                    class="css-1xkyebe"
                   >
+                    <div
+                      class="css-jxxswp"
+                      id=""
+                    >
+                      <div
+                        class="css-xhp9da"
+                      >
+                        <h3
+                          class="css-16ist9v-BlockContainer"
+                        />
+                      </div>
+                    </div>
                     <div
                       aria-hidden="false"
                       class="rah-static rah-static--height-auto"
@@ -2506,9 +2602,21 @@ exports[`Blocks/Playground/ESM Custom Title 1`] = `
 exports[`Blocks/Playground/ESM Dark Theme 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
     data-testid="playground"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -2652,8 +2760,20 @@ exports[`Blocks/Playground/ESM Dark Theme 1`] = `
                   class="css-1j909cg"
                 >
                   <div
-                    class="css-j1r933"
+                    class="css-1xkyebe"
                   >
+                    <div
+                      class="css-jxxswp"
+                      id=""
+                    >
+                      <div
+                        class="css-xhp9da"
+                      >
+                        <h3
+                          class="css-16ist9v-BlockContainer"
+                        />
+                      </div>
+                    </div>
                     <div
                       aria-hidden="false"
                       class="rah-static rah-static--height-auto"
@@ -2724,9 +2844,21 @@ exports[`Blocks/Playground/ESM Dark Theme 1`] = `
 exports[`Blocks/Playground/ESM Default Open Source 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
     data-testid="playground"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -2870,8 +3002,20 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
                   class="css-1j909cg"
                 >
                   <div
-                    class="css-j1r933"
+                    class="css-1xkyebe"
                   >
+                    <div
+                      class="css-jxxswp"
+                      id=""
+                    >
+                      <div
+                        class="css-xhp9da"
+                      >
+                        <h3
+                          class="css-16ist9v-BlockContainer"
+                        />
+                      </div>
+                    </div>
                     <div
                       aria-hidden="false"
                       class="rah-static rah-static--height-auto"
@@ -2978,8 +3122,20 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
                       role="tabpanel"
                     >
                       <div
-                        class="css-l344jk-StoryBlockContainer"
+                        class="css-7wa6r1-StoryBlockContainer"
                       >
+                        <div
+                          class="css-jxxswp"
+                          id=""
+                        >
+                          <div
+                            class="css-xhp9da"
+                          >
+                            <h3
+                              class="css-16ist9v-BlockContainer"
+                            />
+                          </div>
+                        </div>
                         <div
                           aria-hidden="false"
                           class="rah-static rah-static--height-auto"
@@ -3316,9 +3472,21 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
 exports[`Blocks/Playground/ESM Disable Zoom Pan 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
     data-testid="playground"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -3387,8 +3555,20 @@ exports[`Blocks/Playground/ESM Disable Zoom Pan 1`] = `
                   class="css-1j909cg"
                 >
                   <div
-                    class="css-j1r933"
+                    class="css-1xkyebe"
                   >
+                    <div
+                      class="css-jxxswp"
+                      id=""
+                    >
+                      <div
+                        class="css-xhp9da"
+                      >
+                        <h3
+                          class="css-16ist9v-BlockContainer"
+                        />
+                      </div>
+                    </div>
                     <div
                       aria-hidden="false"
                       class="rah-static rah-static--height-auto"
@@ -3459,9 +3639,21 @@ exports[`Blocks/Playground/ESM Disable Zoom Pan 1`] = `
 exports[`Blocks/Playground/ESM Extra Panel 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
     data-testid="playground"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -3614,8 +3806,20 @@ exports[`Blocks/Playground/ESM Extra Panel 1`] = `
                   class="css-1j909cg"
                 >
                   <div
-                    class="css-j1r933"
+                    class="css-1xkyebe"
                   >
+                    <div
+                      class="css-jxxswp"
+                      id=""
+                    >
+                      <div
+                        class="css-xhp9da"
+                      >
+                        <h3
+                          class="css-16ist9v-BlockContainer"
+                        />
+                      </div>
+                    </div>
                     <div
                       aria-hidden="false"
                       class="rah-static rah-static--height-auto"
@@ -3781,9 +3985,51 @@ exports[`Blocks/Playground/ESM Extra Panel 1`] = `
 exports[`Blocks/Playground/ESM Multi Child 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
     data-testid="playground"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        >
+          <div
+            class="css-tmrrvx"
+          >
+            Multiple donuts
+            <a
+              aria-label="Collapse this block"
+              class="css-1t48u3b-BlockContainer"
+            >
+              <span
+                class="css-1ibxxpj"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -4017,9 +4263,21 @@ exports[`Blocks/Playground/ESM Multi Child 1`] = `
 exports[`Blocks/Playground/ESM Multi Stories 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
     data-testid="playground"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -4146,8 +4404,20 @@ exports[`Blocks/Playground/ESM Multi Stories 1`] = `
                     class="css-t5jv09"
                   >
                     <div
-                      class="css-j1r933"
+                      class="css-1xkyebe"
                     >
+                      <div
+                        class="css-jxxswp"
+                        id=""
+                      >
+                        <div
+                          class="css-xhp9da"
+                        >
+                          <h3
+                            class="css-16ist9v-BlockContainer"
+                          />
+                        </div>
+                      </div>
                       <div
                         aria-hidden="false"
                         class="rah-static rah-static--height-auto"
@@ -4173,8 +4443,20 @@ exports[`Blocks/Playground/ESM Multi Stories 1`] = `
                       </div>
                     </div>
                     <div
-                      class="css-j1r933"
+                      class="css-1xkyebe"
                     >
+                      <div
+                        class="css-jxxswp"
+                        id=""
+                      >
+                        <div
+                          class="css-xhp9da"
+                        >
+                          <h3
+                            class="css-16ist9v-BlockContainer"
+                          />
+                        </div>
+                      </div>
                       <div
                         aria-hidden="false"
                         class="rah-static rah-static--height-auto"
@@ -4246,9 +4528,46 @@ exports[`Blocks/Playground/ESM Multi Stories 1`] = `
 exports[`Blocks/Playground/ESM Not Collapsible 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
     data-testid="playground"
   >
+    <div
+      class="css-jxxswp"
+      id="blocks-core-story-plain--controls"
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <a
+          class="css-1ptrway-LinkHeading"
+          data-id="blocks-core-story-plain--controls"
+          data-level="4"
+          data-title="controls"
+          href="http://localhost/#blocks-core-story-plain--controls"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="16"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h4
+          class="css-vsfm4-BlockContainer"
+        >
+          controls
+        </h4>
+      </div>
+    </div>
     <div>
       <div
         class="css-15owl46"
@@ -4386,8 +4705,20 @@ exports[`Blocks/Playground/ESM Not Collapsible 1`] = `
               class="css-1j909cg"
             >
               <div
-                class="css-j1r933"
+                class="css-1xkyebe"
               >
+                <div
+                  class="css-jxxswp"
+                  id=""
+                >
+                  <div
+                    class="css-xhp9da"
+                  >
+                    <h3
+                      class="css-16ist9v-BlockContainer"
+                    />
+                  </div>
+                </div>
                 <div
                   aria-hidden="false"
                   class="rah-static rah-static--height-auto"
@@ -4456,9 +4787,21 @@ exports[`Blocks/Playground/ESM Not Collapsible 1`] = `
 exports[`Blocks/Playground/ESM Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
     data-testid="playground"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -4602,8 +4945,20 @@ exports[`Blocks/Playground/ESM Overview 1`] = `
                   class="css-1j909cg"
                 >
                   <div
-                    class="css-j1r933"
+                    class="css-1xkyebe"
                   >
+                    <div
+                      class="css-jxxswp"
+                      id=""
+                    >
+                      <div
+                        class="css-xhp9da"
+                      >
+                        <h3
+                          class="css-16ist9v-BlockContainer"
+                        />
+                      </div>
+                    </div>
                     <div
                       aria-hidden="false"
                       class="rah-static rah-static--height-auto"
@@ -4674,9 +5029,21 @@ exports[`Blocks/Playground/ESM Overview 1`] = `
 exports[`Blocks/Playground/ESM Scale 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
     data-testid="playground"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -4820,8 +5187,20 @@ exports[`Blocks/Playground/ESM Scale 1`] = `
                   class="css-1idkk08"
                 >
                   <div
-                    class="css-j1r933"
+                    class="css-1xkyebe"
                   >
+                    <div
+                      class="css-jxxswp"
+                      id=""
+                    >
+                      <div
+                        class="css-xhp9da"
+                      >
+                        <h3
+                          class="css-16ist9v-BlockContainer"
+                        />
+                      </div>
+                    </div>
                     <div
                       aria-hidden="false"
                       class="rah-static rah-static--height-auto"
@@ -4892,9 +5271,74 @@ exports[`Blocks/Playground/ESM Scale 1`] = `
 exports[`Blocks/Playground/ESM Title 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
     data-testid="playground"
   >
+    <div
+      class="css-jxxswp"
+      id="id-of-story"
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <a
+          class="css-walqom-LinkHeading"
+          data-id="id-of-story"
+          data-level="3"
+          data-title="story"
+          href="http://localhost/#id-of-story"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="18"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h3
+          class="css-16ist9v-BlockContainer"
+        >
+          <div
+            class="css-tmrrvx"
+          >
+            story
+            <a
+              aria-label="Collapse this block"
+              class="css-1t48u3b-BlockContainer"
+            >
+              <span
+                class="css-1ibxxpj"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
     <p
       class="css-p7s6cm"
     >
@@ -5043,8 +5487,20 @@ exports[`Blocks/Playground/ESM Title 1`] = `
                   class="css-1j909cg"
                 >
                   <div
-                    class="css-j1r933"
+                    class="css-1xkyebe"
                   >
+                    <div
+                      class="css-jxxswp"
+                      id=""
+                    >
+                      <div
+                        class="css-xhp9da"
+                      >
+                        <h3
+                          class="css-16ist9v-BlockContainer"
+                        />
+                      </div>
+                    </div>
                     <div
                       aria-hidden="false"
                       class="rah-static rah-static--height-auto"
@@ -5092,9 +5548,21 @@ exports[`Blocks/Playground/ESM Title 1`] = `
 exports[`Blocks/Playground/ESM Visible Tabs 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
     data-testid="playground"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -5238,8 +5706,20 @@ exports[`Blocks/Playground/ESM Visible Tabs 1`] = `
                   class="css-1j909cg"
                 >
                   <div
-                    class="css-j1r933"
+                    class="css-1xkyebe"
                   >
+                    <div
+                      class="css-jxxswp"
+                      id=""
+                    >
+                      <div
+                        class="css-xhp9da"
+                      >
+                        <h3
+                          class="css-16ist9v-BlockContainer"
+                        />
+                      </div>
+                    </div>
                     <div
                       aria-hidden="false"
                       class="rah-static rah-static--height-auto"
@@ -5310,9 +5790,21 @@ exports[`Blocks/Playground/ESM Visible Tabs 1`] = `
 exports[`Blocks/Playground/ESM Zoom Disabled 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
     data-testid="playground"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -5381,8 +5873,20 @@ exports[`Blocks/Playground/ESM Zoom Disabled 1`] = `
                   class="css-1j909cg"
                 >
                   <div
-                    class="css-j1r933"
+                    class="css-1xkyebe"
                   >
+                    <div
+                      class="css-jxxswp"
+                      id=""
+                    >
+                      <div
+                        class="css-xhp9da"
+                      >
+                        <h3
+                          class="css-16ist9v-BlockContainer"
+                        />
+                      </div>
+                    </div>
                     <div
                       aria-hidden="false"
                       class="rah-static rah-static--height-auto"
@@ -8959,8 +9463,50 @@ exports[`Blocks/Search Overview 1`] = `<DocumentFragment />`;
 exports[`Blocks/Stories Custom Title 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        >
+          <div
+            class="css-tmrrvx"
+          >
+            My Story Title
+            <a
+              aria-label="Collapse this block"
+              class="css-1t48u3b-BlockContainer"
+            >
+              <span
+                class="css-1ibxxpj"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -8968,9 +9514,46 @@ exports[`Blocks/Stories Custom Title 1`] = `
     >
       <div>
         <div
-          class="css-j1r933"
+          class="css-1xkyebe"
           data-testid="playground"
         >
+          <div
+            class="css-jxxswp"
+            id="story"
+          >
+            <div
+              class="css-xhp9da"
+            >
+              <a
+                class="css-1ptrway-LinkHeading"
+                data-id="story"
+                data-level="4"
+                data-title="story"
+                href="http://localhost/#story"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <h4
+                class="css-vsfm4-BlockContainer"
+              >
+                story
+              </h4>
+            </div>
+          </div>
           <div>
             <div
               class="css-15owl46"
@@ -9108,8 +9691,20 @@ exports[`Blocks/Stories Custom Title 1`] = `
                     class="css-1j909cg"
                   >
                     <div
-                      class="css-j1r933"
+                      class="css-1xkyebe"
                     >
+                      <div
+                        class="css-jxxswp"
+                        id=""
+                      >
+                        <div
+                          class="css-xhp9da"
+                        >
+                          <h3
+                            class="css-16ist9v-BlockContainer"
+                          />
+                        </div>
+                      </div>
                       <div
                         aria-hidden="false"
                         class="rah-static rah-static--height-auto"
@@ -9150,9 +9745,46 @@ exports[`Blocks/Stories Custom Title 1`] = `
           </div>
         </div>
         <div
-          class="css-j1r933"
+          class="css-1xkyebe"
           data-testid="playground"
         >
+          <div
+            class="css-jxxswp"
+            id="button"
+          >
+            <div
+              class="css-xhp9da"
+            >
+              <a
+                class="css-1ptrway-LinkHeading"
+                data-id="button"
+                data-level="4"
+                data-title="button"
+                href="http://localhost/#button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <h4
+                class="css-vsfm4-BlockContainer"
+              >
+                button
+              </h4>
+            </div>
+          </div>
           <div>
             <div
               class="css-15owl46"
@@ -9290,8 +9922,20 @@ exports[`Blocks/Stories Custom Title 1`] = `
                     class="css-1j909cg"
                   >
                     <div
-                      class="css-j1r933"
+                      class="css-1xkyebe"
                     >
+                      <div
+                        class="css-jxxswp"
+                        id=""
+                      >
+                        <div
+                          class="css-xhp9da"
+                        >
+                          <h3
+                            class="css-16ist9v-BlockContainer"
+                          />
+                        </div>
+                      </div>
                       <div
                         aria-hidden="false"
                         class="rah-static rah-static--height-auto"
@@ -9332,9 +9976,46 @@ exports[`Blocks/Stories Custom Title 1`] = `
           </div>
         </div>
         <div
-          class="css-j1r933"
+          class="css-1xkyebe"
           data-testid="playground"
         >
+          <div
+            class="css-jxxswp"
+            id="controls"
+          >
+            <div
+              class="css-xhp9da"
+            >
+              <a
+                class="css-1ptrway-LinkHeading"
+                data-id="controls"
+                data-level="4"
+                data-title="controls"
+                href="http://localhost/#controls"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <h4
+                class="css-vsfm4-BlockContainer"
+              >
+                controls
+              </h4>
+            </div>
+          </div>
           <div>
             <div
               class="css-15owl46"
@@ -9472,8 +10153,20 @@ exports[`Blocks/Stories Custom Title 1`] = `
                     class="css-1j909cg"
                   >
                     <div
-                      class="css-j1r933"
+                      class="css-1xkyebe"
                     >
+                      <div
+                        class="css-jxxswp"
+                        id=""
+                      >
+                        <div
+                          class="css-xhp9da"
+                        >
+                          <h3
+                            class="css-16ist9v-BlockContainer"
+                          />
+                        </div>
+                      </div>
                       <div
                         aria-hidden="false"
                         class="rah-static rah-static--height-auto"
@@ -9545,8 +10238,50 @@ exports[`Blocks/Stories Custom Title 1`] = `
 exports[`Blocks/Stories Dark Theme 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        >
+          <div
+            class="css-tmrrvx"
+          >
+            Stories
+            <a
+              aria-label="Collapse this block"
+              class="css-1t48u3b-BlockContainer"
+            >
+              <span
+                class="css-1ibxxpj"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -9554,9 +10289,46 @@ exports[`Blocks/Stories Dark Theme 1`] = `
     >
       <div>
         <div
-          class="css-j1r933"
+          class="css-1xkyebe"
           data-testid="playground"
         >
+          <div
+            class="css-jxxswp"
+            id="story"
+          >
+            <div
+              class="css-xhp9da"
+            >
+              <a
+                class="css-1ptrway-LinkHeading"
+                data-id="story"
+                data-level="4"
+                data-title="story"
+                href="http://localhost/#story"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <h4
+                class="css-vsfm4-BlockContainer"
+              >
+                story
+              </h4>
+            </div>
+          </div>
           <div>
             <div
               class="css-15owl46"
@@ -9694,8 +10466,20 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                     class="css-1j909cg"
                   >
                     <div
-                      class="css-j1r933"
+                      class="css-1xkyebe"
                     >
+                      <div
+                        class="css-jxxswp"
+                        id=""
+                      >
+                        <div
+                          class="css-xhp9da"
+                        >
+                          <h3
+                            class="css-16ist9v-BlockContainer"
+                          />
+                        </div>
+                      </div>
                       <div
                         aria-hidden="false"
                         class="rah-static rah-static--height-auto"
@@ -9736,9 +10520,46 @@ exports[`Blocks/Stories Dark Theme 1`] = `
           </div>
         </div>
         <div
-          class="css-j1r933"
+          class="css-1xkyebe"
           data-testid="playground"
         >
+          <div
+            class="css-jxxswp"
+            id="button"
+          >
+            <div
+              class="css-xhp9da"
+            >
+              <a
+                class="css-1ptrway-LinkHeading"
+                data-id="button"
+                data-level="4"
+                data-title="button"
+                href="http://localhost/#button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <h4
+                class="css-vsfm4-BlockContainer"
+              >
+                button
+              </h4>
+            </div>
+          </div>
           <div>
             <div
               class="css-15owl46"
@@ -9876,8 +10697,20 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                     class="css-1j909cg"
                   >
                     <div
-                      class="css-j1r933"
+                      class="css-1xkyebe"
                     >
+                      <div
+                        class="css-jxxswp"
+                        id=""
+                      >
+                        <div
+                          class="css-xhp9da"
+                        >
+                          <h3
+                            class="css-16ist9v-BlockContainer"
+                          />
+                        </div>
+                      </div>
                       <div
                         aria-hidden="false"
                         class="rah-static rah-static--height-auto"
@@ -9918,9 +10751,46 @@ exports[`Blocks/Stories Dark Theme 1`] = `
           </div>
         </div>
         <div
-          class="css-j1r933"
+          class="css-1xkyebe"
           data-testid="playground"
         >
+          <div
+            class="css-jxxswp"
+            id="controls"
+          >
+            <div
+              class="css-xhp9da"
+            >
+              <a
+                class="css-1ptrway-LinkHeading"
+                data-id="controls"
+                data-level="4"
+                data-title="controls"
+                href="http://localhost/#controls"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <h4
+                class="css-vsfm4-BlockContainer"
+              >
+                controls
+              </h4>
+            </div>
+          </div>
           <div>
             <div
               class="css-15owl46"
@@ -10058,8 +10928,20 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                     class="css-1j909cg"
                   >
                     <div
-                      class="css-j1r933"
+                      class="css-1xkyebe"
                     >
+                      <div
+                        class="css-jxxswp"
+                        id=""
+                      >
+                        <div
+                          class="css-xhp9da"
+                        >
+                          <h3
+                            class="css-16ist9v-BlockContainer"
+                          />
+                        </div>
+                      </div>
                       <div
                         aria-hidden="false"
                         class="rah-static rah-static--height-auto"
@@ -10131,12 +11013,86 @@ exports[`Blocks/Stories Dark Theme 1`] = `
 exports[`Blocks/Stories Not Collapsible 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
   >
     <div
-      class="css-j1r933"
+      class="css-jxxswp"
+      id="stories"
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <a
+          class="css-1ptrway-LinkHeading"
+          data-id="stories"
+          data-level="4"
+          data-title="Stories"
+          href="http://localhost/#stories"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="16"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h4
+          class="css-vsfm4-BlockContainer"
+        >
+          Stories
+        </h4>
+      </div>
+    </div>
+    <div
+      class="css-1xkyebe"
       data-testid="playground"
     >
+      <div
+        class="css-jxxswp"
+        id="story"
+      >
+        <div
+          class="css-xhp9da"
+        >
+          <a
+            class="css-1ptrway-LinkHeading"
+            data-id="story"
+            data-level="4"
+            data-title="story"
+            href="http://localhost/#story"
+          >
+            <svg
+              aria-hidden="true"
+              class="octicon"
+              fill="currentColor"
+              height="16"
+              role="img"
+              style="display: inline-block; user-select: none; vertical-align: middle;"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </a>
+          <h4
+            class="css-vsfm4-BlockContainer"
+          >
+            story
+          </h4>
+        </div>
+      </div>
       <div>
         <div
           class="css-15owl46"
@@ -10274,8 +11230,20 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
                 class="css-1j909cg"
               >
                 <div
-                  class="css-j1r933"
+                  class="css-1xkyebe"
                 >
+                  <div
+                    class="css-jxxswp"
+                    id=""
+                  >
+                    <div
+                      class="css-xhp9da"
+                    >
+                      <h3
+                        class="css-16ist9v-BlockContainer"
+                      />
+                    </div>
+                  </div>
                   <div
                     aria-hidden="false"
                     class="rah-static rah-static--height-auto"
@@ -10316,9 +11284,46 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
       </div>
     </div>
     <div
-      class="css-j1r933"
+      class="css-1xkyebe"
       data-testid="playground"
     >
+      <div
+        class="css-jxxswp"
+        id="button"
+      >
+        <div
+          class="css-xhp9da"
+        >
+          <a
+            class="css-1ptrway-LinkHeading"
+            data-id="button"
+            data-level="4"
+            data-title="button"
+            href="http://localhost/#button"
+          >
+            <svg
+              aria-hidden="true"
+              class="octicon"
+              fill="currentColor"
+              height="16"
+              role="img"
+              style="display: inline-block; user-select: none; vertical-align: middle;"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </a>
+          <h4
+            class="css-vsfm4-BlockContainer"
+          >
+            button
+          </h4>
+        </div>
+      </div>
       <div>
         <div
           class="css-15owl46"
@@ -10456,8 +11461,20 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
                 class="css-1j909cg"
               >
                 <div
-                  class="css-j1r933"
+                  class="css-1xkyebe"
                 >
+                  <div
+                    class="css-jxxswp"
+                    id=""
+                  >
+                    <div
+                      class="css-xhp9da"
+                    >
+                      <h3
+                        class="css-16ist9v-BlockContainer"
+                      />
+                    </div>
+                  </div>
                   <div
                     aria-hidden="false"
                     class="rah-static rah-static--height-auto"
@@ -10498,9 +11515,46 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
       </div>
     </div>
     <div
-      class="css-j1r933"
+      class="css-1xkyebe"
       data-testid="playground"
     >
+      <div
+        class="css-jxxswp"
+        id="controls"
+      >
+        <div
+          class="css-xhp9da"
+        >
+          <a
+            class="css-1ptrway-LinkHeading"
+            data-id="controls"
+            data-level="4"
+            data-title="controls"
+            href="http://localhost/#controls"
+          >
+            <svg
+              aria-hidden="true"
+              class="octicon"
+              fill="currentColor"
+              height="16"
+              role="img"
+              style="display: inline-block; user-select: none; vertical-align: middle;"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </a>
+          <h4
+            class="css-vsfm4-BlockContainer"
+          >
+            controls
+          </h4>
+        </div>
+      </div>
       <div>
         <div
           class="css-15owl46"
@@ -10638,8 +11692,20 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
                 class="css-1j909cg"
               >
                 <div
-                  class="css-j1r933"
+                  class="css-1xkyebe"
                 >
+                  <div
+                    class="css-jxxswp"
+                    id=""
+                  >
+                    <div
+                      class="css-xhp9da"
+                    >
+                      <h3
+                        class="css-16ist9v-BlockContainer"
+                      />
+                    </div>
+                  </div>
                   <div
                     aria-hidden="false"
                     class="rah-static rah-static--height-auto"
@@ -10709,8 +11775,50 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
 exports[`Blocks/Stories Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        >
+          <div
+            class="css-tmrrvx"
+          >
+            Stories
+            <a
+              aria-label="Collapse this block"
+              class="css-1t48u3b-BlockContainer"
+            >
+              <span
+                class="css-1ibxxpj"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -10718,9 +11826,46 @@ exports[`Blocks/Stories Overview 1`] = `
     >
       <div>
         <div
-          class="css-j1r933"
+          class="css-1xkyebe"
           data-testid="playground"
         >
+          <div
+            class="css-jxxswp"
+            id="story"
+          >
+            <div
+              class="css-xhp9da"
+            >
+              <a
+                class="css-1ptrway-LinkHeading"
+                data-id="story"
+                data-level="4"
+                data-title="story"
+                href="http://localhost/#story"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <h4
+                class="css-vsfm4-BlockContainer"
+              >
+                story
+              </h4>
+            </div>
+          </div>
           <div>
             <div
               class="css-15owl46"
@@ -10858,8 +12003,20 @@ exports[`Blocks/Stories Overview 1`] = `
                     class="css-1j909cg"
                   >
                     <div
-                      class="css-j1r933"
+                      class="css-1xkyebe"
                     >
+                      <div
+                        class="css-jxxswp"
+                        id=""
+                      >
+                        <div
+                          class="css-xhp9da"
+                        >
+                          <h3
+                            class="css-16ist9v-BlockContainer"
+                          />
+                        </div>
+                      </div>
                       <div
                         aria-hidden="false"
                         class="rah-static rah-static--height-auto"
@@ -10900,9 +12057,46 @@ exports[`Blocks/Stories Overview 1`] = `
           </div>
         </div>
         <div
-          class="css-j1r933"
+          class="css-1xkyebe"
           data-testid="playground"
         >
+          <div
+            class="css-jxxswp"
+            id="button"
+          >
+            <div
+              class="css-xhp9da"
+            >
+              <a
+                class="css-1ptrway-LinkHeading"
+                data-id="button"
+                data-level="4"
+                data-title="button"
+                href="http://localhost/#button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <h4
+                class="css-vsfm4-BlockContainer"
+              >
+                button
+              </h4>
+            </div>
+          </div>
           <div>
             <div
               class="css-15owl46"
@@ -11040,8 +12234,20 @@ exports[`Blocks/Stories Overview 1`] = `
                     class="css-1j909cg"
                   >
                     <div
-                      class="css-j1r933"
+                      class="css-1xkyebe"
                     >
+                      <div
+                        class="css-jxxswp"
+                        id=""
+                      >
+                        <div
+                          class="css-xhp9da"
+                        >
+                          <h3
+                            class="css-16ist9v-BlockContainer"
+                          />
+                        </div>
+                      </div>
                       <div
                         aria-hidden="false"
                         class="rah-static rah-static--height-auto"
@@ -11082,9 +12288,46 @@ exports[`Blocks/Stories Overview 1`] = `
           </div>
         </div>
         <div
-          class="css-j1r933"
+          class="css-1xkyebe"
           data-testid="playground"
         >
+          <div
+            class="css-jxxswp"
+            id="controls"
+          >
+            <div
+              class="css-xhp9da"
+            >
+              <a
+                class="css-1ptrway-LinkHeading"
+                data-id="controls"
+                data-level="4"
+                data-title="controls"
+                href="http://localhost/#controls"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <h4
+                class="css-vsfm4-BlockContainer"
+              >
+                controls
+              </h4>
+            </div>
+          </div>
           <div>
             <div
               class="css-15owl46"
@@ -11222,8 +12465,20 @@ exports[`Blocks/Stories Overview 1`] = `
                     class="css-1j909cg"
                   >
                     <div
-                      class="css-j1r933"
+                      class="css-1xkyebe"
                     >
+                      <div
+                        class="css-jxxswp"
+                        id=""
+                      >
+                        <div
+                          class="css-xhp9da"
+                        >
+                          <h3
+                            class="css-16ist9v-BlockContainer"
+                          />
+                        </div>
+                      </div>
                       <div
                         aria-hidden="false"
                         class="rah-static rah-static--height-auto"
@@ -11295,8 +12550,50 @@ exports[`Blocks/Stories Overview 1`] = `
 exports[`Blocks/Story Custom Title 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        >
+          <div
+            class="css-tmrrvx"
+          >
+            My Story Title
+            <a
+              aria-label="Collapse this block"
+              class="css-1t48u3b-BlockContainer"
+            >
+              <span
+                class="css-1ibxxpj"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -11350,8 +12647,20 @@ exports[`Blocks/Story Custom Title 1`] = `
 exports[`Blocks/Story Description 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -11382,8 +12691,20 @@ exports[`Blocks/Story Description 1`] = `
 exports[`Blocks/Story Iframe 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -11408,8 +12729,45 @@ exports[`Blocks/Story Iframe 1`] = `
 exports[`Blocks/Story Not Collapsible 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
   >
+    <div
+      class="css-jxxswp"
+      id="blocks-core-story-plain--controls"
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <a
+          class="css-1ptrway-LinkHeading"
+          data-id="blocks-core-story-plain--controls"
+          data-level="4"
+          data-title="controls"
+          href="http://localhost/#blocks-core-story-plain--controls"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="16"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h4
+          class="css-vsfm4-BlockContainer"
+        >
+          controls
+        </h4>
+      </div>
+    </div>
     <div
       class="css-154oin1"
       data-testid="story"
@@ -11455,8 +12813,20 @@ exports[`Blocks/Story Not Collapsible 1`] = `
 exports[`Blocks/Story Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -11510,8 +12880,73 @@ exports[`Blocks/Story Overview 1`] = `
 exports[`Blocks/Story Title 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
   >
+    <div
+      class="css-jxxswp"
+      id="blocks-core-story-plain--controls"
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <a
+          class="css-walqom-LinkHeading"
+          data-id="blocks-core-story-plain--controls"
+          data-level="3"
+          data-title="controls"
+          href="http://localhost/#blocks-core-story-plain--controls"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="18"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h3
+          class="css-16ist9v-BlockContainer"
+        >
+          <div
+            class="css-tmrrvx"
+          >
+            controls
+            <a
+              aria-label="Collapse this block"
+              class="css-1t48u3b-BlockContainer"
+            >
+              <span
+                class="css-1ibxxpj"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -11565,8 +13000,50 @@ exports[`Blocks/Story Title 1`] = `
 exports[`Blocks/StoryConfig Custom Title 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        >
+          <div
+            class="css-tmrrvx"
+          >
+            Story configuration
+            <a
+              aria-label="Collapse this block"
+              class="css-1t48u3b-BlockContainer"
+            >
+              <span
+                class="css-1ibxxpj"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -12021,8 +13498,20 @@ exports[`Blocks/StoryConfig Custom Title 1`] = `
 exports[`Blocks/StoryConfig No Margin 1`] = `
 <DocumentFragment>
   <div
-    class="css-2nhs9a-StoryConfig"
+    class="css-1nb3m1b-StoryConfig"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -12477,8 +13966,45 @@ exports[`Blocks/StoryConfig No Margin 1`] = `
 exports[`Blocks/StoryConfig Not Collapsible 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
   >
+    <div
+      class="css-jxxswp"
+      id="id-of-story"
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <a
+          class="css-1ptrway-LinkHeading"
+          data-id="id-of-story"
+          data-level="4"
+          data-title="story"
+          href="http://localhost/#id-of-story"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="16"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h4
+          class="css-vsfm4-BlockContainer"
+        >
+          story
+        </h4>
+      </div>
+    </div>
     <div>
       <div
         class="css-15owl46"
@@ -12925,8 +14451,20 @@ exports[`Blocks/StoryConfig Not Collapsible 1`] = `
 exports[`Blocks/StoryConfig Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -13381,8 +14919,20 @@ exports[`Blocks/StoryConfig Overview 1`] = `
 exports[`Blocks/StoryConfig Theme 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -14094,8 +15644,20 @@ exports[`Blocks/StoryConfig Theme Selector 1`] = `
       class="css-eqxzio"
     >
       <div
-        class="css-j1r933"
+        class="css-1xkyebe"
       >
+        <div
+          class="css-jxxswp"
+          id=""
+        >
+          <div
+            class="css-xhp9da"
+          >
+            <h3
+              class="css-16ist9v-BlockContainer"
+            />
+          </div>
+        </div>
         <div
           aria-hidden="false"
           class="rah-static rah-static--height-auto"
@@ -14761,8 +16323,50 @@ exports[`Blocks/StoryConfig Theme Selector 1`] = `
 exports[`Blocks/StorySource Custom Title 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        >
+          <div
+            class="css-tmrrvx"
+          >
+            Story source
+            <a
+              aria-label="Collapse this block"
+              class="css-1t48u3b-BlockContainer"
+            >
+              <span
+                class="css-1ibxxpj"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -14885,8 +16489,20 @@ exports[`Blocks/StorySource Custom Title 1`] = `
 exports[`Blocks/StorySource No Margin 1`] = `
 <DocumentFragment>
   <div
-    class="css-l344jk-StoryBlockContainer"
+    class="css-7wa6r1-StoryBlockContainer"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -15009,8 +16625,45 @@ exports[`Blocks/StorySource No Margin 1`] = `
 exports[`Blocks/StorySource Not Collapsible 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
   >
+    <div
+      class="css-jxxswp"
+      id="id-of-story"
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <a
+          class="css-1ptrway-LinkHeading"
+          data-id="id-of-story"
+          data-level="4"
+          data-title="story"
+          href="http://localhost/#id-of-story"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="16"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h4
+          class="css-vsfm4-BlockContainer"
+        >
+          story
+        </h4>
+      </div>
+    </div>
     <div>
       <div
         class="css-15owl46"
@@ -15125,8 +16778,20 @@ exports[`Blocks/StorySource Not Collapsible 1`] = `
 exports[`Blocks/StorySource Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -15453,8 +17118,20 @@ exports[`Blocks/StorySource Overview 1`] = `
 exports[`Blocks/StorySource Theme 1`] = `
 <DocumentFragment>
   <div
-    class="css-j1r933"
+    class="css-1xkyebe"
   >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -15802,8 +17479,20 @@ exports[`Blocks/StorySource Theme Selector 1`] = `
       class="css-eqxzio"
     >
       <div
-        class="css-j1r933"
+        class="css-1xkyebe"
       >
+        <div
+          class="css-jxxswp"
+          id=""
+        >
+          <div
+            class="css-xhp9da"
+          >
+            <h3
+              class="css-16ist9v-BlockContainer"
+            />
+          </div>
+        </div>
         <div
           aria-hidden="false"
           class="rah-static rah-static--height-auto"
