@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.1](https://github.com/ccontrols/component-controls/compare/v2.5.0...v2.5.1) (2020-12-28)
+
+
+### Bug Fixes
+
+* restore story block style ([b5ee186](https://github.com/ccontrols/component-controls/commit/b5ee18699154c17c603fba9465511ed3f3bb9aac))
+
+
+
+
+
 # [2.5.0](https://github.com/ccontrols/component-controls/compare/v2.4.2...v2.5.0) (2020-12-28)
 
 

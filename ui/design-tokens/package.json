@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/design-tokens",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "description": "Component controls design tokens components.",
   "sideEffects": false,
   "main": "dist/index.js",
@@ -31,14 +31,14 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/components": "^2.5.0",
+    "@component-controls/components": "^2.5.1",
     "copy-to-clipboard": "^3.2.1",
     "simple-color-converter": "^2.1.9",
     "tinycolor2": "^1.4.1"
   },
   "devDependencies": {
     "@component-controls/core": "^2.5.0",
-    "@component-controls/jest-snapshots": "^2.5.0",
+    "@component-controls/jest-snapshots": "^2.5.1",
     "@component-controls/ts-markdown-docs": "^2.2.0",
     "@primer/octicons-react": "^10.0.0",
     "@types/react": "^16.9.34",
