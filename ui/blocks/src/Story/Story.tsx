@@ -7,9 +7,7 @@ import {
   StoryBlockContainerProps,
 } from '../BlockContainer/story';
 import { useCustomProps } from '../context';
-import { StoryRender, StoryWrapperType } from './StoryRender';
-
-const NAME = 'story';
+import { StoryRender, StoryWrapperType, NAME } from './StoryRender';
 
 export interface StoryOwnProps {
   /**

@@ -62,8 +62,8 @@ export const BlockContainer: FC<BlockContainerProps> = ({
     children
   );
   return (
-    <Box variant={`blockcontainer.${plain ? 'plain' : 'container'}`} {...rest}>
-      {(blockId || title || collapsible) && !plain && (
+    <Box variant="blockcontainer.container" {...rest}>
+      {(blockId || title || collapsible) && (
         <LinkHeading
           as={collapsible ? 'h3' : 'h4'}
           id={blockId}
