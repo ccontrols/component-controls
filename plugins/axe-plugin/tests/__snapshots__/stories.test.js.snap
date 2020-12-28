@@ -3,20 +3,8 @@
 exports[`Plugins/AllyBlock Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-1xkyebe"
+    class="css-j1r933"
   >
-    <div
-      class="css-jxxswp"
-      id=""
-    >
-      <div
-        class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
-    </div>
     <div
       aria-hidden="false"
       class="rah-static rah-static--height-auto"
@@ -50,20 +38,8 @@ exports[`Plugins/AllyBlock Overview 1`] = `
                 class="css-vurnku"
               >
                 <div
-                  class="css-1xkyebe"
+                  class="css-j1r933"
                 >
-                  <div
-                    class="css-jxxswp"
-                    id=""
-                  >
-                    <div
-                      class="css-xhp9da"
-                    >
-                      <h3
-                        class="css-16ist9v-BlockContainer"
-                      />
-                    </div>
-                  </div>
                   <div
                     aria-hidden="false"
                     class="rah-static rah-static--height-auto"

@@ -4,7 +4,7 @@ import {
   StoryProps,
   Story,
   Document,
-  deepMergeArrays,
+  mergeConfig,
   deepMerge,
   defaultRunConfig,
   convertConfig,
@@ -34,9 +34,9 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
       buildConfig = {},
     } = store;
     if (stores) {
-      globalStore.config = deepMergeArrays(
+      globalStore.config = mergeConfig(
         defaultRunConfig,
-        convertConfig(deepMergeArrays(buildConfig, config)),
+        convertConfig(mergeConfig(buildConfig, config)),
       );
       if (!globalStore.config.renderFn) {
         globalStore.config.renderFn = reactRender;

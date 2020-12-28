@@ -11,7 +11,10 @@ import {
 } from 'react-table';
 
 const IndeterminateCheckbox: FC<TableToggleAllRowsSelectedProps> = forwardRef(
-  ({ onChange, checked }, ref: Ref<HTMLInputElement>) => {
+  function IndeterminateCheckbox(
+    { onChange, checked },
+    ref: Ref<HTMLInputElement>,
+  ) {
     return (
       <Label>
         <Checkbox ref={ref} onChange={onChange} checked={checked} />

@@ -1,3 +1,3 @@
-import { ClassicPage } from './dist/pages/ClassicPage';
+import ClassicPage from './dist/pages/ClassicPage';
 
 export default ClassicPage;

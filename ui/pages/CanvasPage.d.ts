@@ -1,2 +1,2 @@
-import { CanvasPage } from './dist/pages/CanvasPage';
+import CanvasPage from './dist/pages/CanvasPage';
 export default CanvasPage;

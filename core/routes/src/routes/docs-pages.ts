@@ -1,100 +1,16 @@
 import {
   Store,
+  PageConfiguration,
   defDocType,
   DocType,
-  getDocTypePath,
   getHomePath,
   getRoutePath,
-  removeTrailingSlash,
-  ensureStartingSlash,
   Pages,
-  TabConfiguration,
   getDocPath,
   getStoryPath,
 } from '@component-controls/core';
 
-import { HomePageInfo } from '../types';
-
-export const getIndexPage = (store: Store): HomePageInfo => {
-  const docs = Object.keys(store.docs);
-  const homePath = getHomePath(store);
-  const homePageId = docs.find(key => {
-    const doc = store.docs[key];
-    return getRoutePath(store, doc.route) === homePath;
-  });
-  const homePage = homePageId
-    ? store.docs[homePageId]
-    : docs.length > 0
-    ? store.docs[docs[0]]
-    : undefined;
-  const docId = homePage?.title;
-  const docStories: string[] =
-    docId && store.docs[docId] ? store.docs[docId].stories || [] : [];
-  const storyId: string | undefined = docStories.length
-    ? docStories[0]
-    : undefined;
-  return {
-    lastModified: homePage?.dateModified
-      ? new Date(homePage?.dateModified).toISOString()
-      : undefined,
-    path: homePath,
-    storyId,
-    docId,
-    type: homePage?.type || defDocType,
-  };
-};
-
-export interface DocHomePagesPath {
-  type: DocType;
-  path: string;
-  docId?: string;
-  storyId?: string;
-  lastModified?: string;
-}
-export const getHomePages = (store: Store): DocHomePagesPath[] => {
-  const { pages = {} } = store?.config || {};
-  if (pages) {
-    const docs = Object.keys(store.docs);
-    const paths: DocHomePagesPath[] = Object.keys(pages)
-      .map((type: DocType) => {
-        const page = pages[type];
-        const path = getDocTypePath(store, page) as string;
-
-        const docId = page.indexHome
-          ? undefined
-          : docs.find(key => {
-              const doc = store.docs[key];
-              return (
-                removeTrailingSlash(ensureStartingSlash(doc?.route || '')) ===
-                path
-              );
-            }) ||
-            docs.find(key => (store.docs[key].type || defDocType) === type);
-        const doc = docId ? store.docs[docId] : undefined;
-        const docStories: string[] = doc?.stories || [];
-        const storyId: string | undefined = docStories.length
-          ? docStories[0]
-          : undefined;
-        return {
-          lastModified: doc?.dateModified
-            ? new Date(doc?.dateModified).toISOString()
-            : undefined,
-          type,
-          path,
-          docId,
-          storyId,
-        };
-      })
-      .filter(({ path }) => path);
-    return paths;
-  }
-  return [];
-};
-
-export const getPageList = (
-  store: Store,
-  type: DocType = defDocType,
-): Pages => {
+const getPageList = (store: Store, type: DocType = defDocType): Pages => {
   if (store) {
     return Object.keys(store.docs).reduce((acc: Pages, key: string) => {
       const doc = store.docs[key];
@@ -110,7 +26,7 @@ export const getPageList = (
   return [];
 };
 
-export const getUniquesByField = (
+const getUniquesByField = (
   store: Store,
   field: string,
 ): { [key: string]: number } => {
@@ -142,6 +58,16 @@ export interface DocPagesPath {
   category?: string | null;
   activeTab?: string | null;
 }
+
+export const getPageTabs = (
+  page: PageConfiguration,
+): (string | undefined)[] => {
+  if (page && page.tabs) {
+    return Object.keys(page.tabs);
+  }
+  return [undefined];
+};
+
 export const getDocPages = (store: Store): DocPagesPath[] => {
   const { pages = {}, categories = [] } = store?.config || {};
   const docPaths: DocPagesPath[] = [];
@@ -151,14 +77,9 @@ export const getDocPages = (store: Store): DocPagesPath[] => {
       const page = pages[type as DocType];
       const docType = type as DocType;
       const docs: Pages = getPageList(store, docType);
-      const tabs: Pick<TabConfiguration, 'route' | 'title'>[] = page.tabs || [
-        { route: undefined, title: '' },
-      ];
+      const tabs = getPageTabs(page);
       tabs.forEach((tab, tabIndex) => {
-        const route =
-          tabIndex > 0
-            ? tab.route || (tab.title ? tab.title.toLowerCase() : '')
-            : undefined;
+        const route = tabIndex > 0 ? tab : undefined;
         docs.forEach(doc => {
           if (getRoutePath(store, doc.route) !== homePath) {
             const stories =

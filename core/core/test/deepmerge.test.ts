@@ -1,4 +1,4 @@
-import { deepMerge, deepMergeArrays } from '../src';
+import { deepMerge, mergeConfig } from '../src';
 describe('deep merge', () => {
   it('Should append arrays', () => {
     const a = deepMerge(
@@ -24,7 +24,7 @@ describe('deep merge', () => {
   });
 
   it('Should merge arrays', () => {
-    const a = deepMergeArrays(
+    const a = mergeConfig(
       {
         a: [{ a: 'a', b: 'b' }],
       },
@@ -44,7 +44,7 @@ describe('deep merge', () => {
     });
   });
   it('Should merge arrays and fields', () => {
-    const a = deepMergeArrays(
+    const a = mergeConfig(
       {
         a: [
           { a: 'a', b: 'b' },
@@ -65,7 +65,7 @@ describe('deep merge', () => {
     });
   });
   it('Should merge arrays mistmatched fields', () => {
-    const a = deepMergeArrays(
+    const a = mergeConfig(
       {
         b: [{ a: 'a', b: 'b' }],
       },
@@ -88,7 +88,7 @@ describe('deep merge', () => {
     });
   });
   it('Should merge arrays of string', () => {
-    const a = deepMergeArrays(
+    const a = mergeConfig(
       {
         a: ['abc'],
       },
@@ -97,5 +97,52 @@ describe('deep merge', () => {
       },
     );
     expect(a).toMatchObject({ a: ['abc', 'cde', 'efg'] });
+  });
+
+  it('Should merge overwrite tabs', () => {
+    const a = mergeConfig(
+      {
+        pages: {
+          story: {
+            option: { a: 'a', z: 'z' },
+            tabs: { a: 'a', z: 'z' },
+          },
+        },
+      },
+      {
+        pages: {
+          story: {
+            option: {
+              w: 'w',
+              x: 'x',
+              y: 'y',
+            },
+            tabs: {
+              w: 'w',
+              x: 'x',
+              y: 'y',
+            },
+          },
+        },
+      },
+    );
+    expect(a).toMatchObject({
+      pages: {
+        story: {
+          option: {
+            a: 'a',
+            z: 'z',
+            w: 'w',
+            x: 'x',
+            y: 'y',
+          },
+          tabs: {
+            w: 'w',
+            x: 'x',
+            y: 'y',
+          },
+        },
+      },
+    });
   });
 });

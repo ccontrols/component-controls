@@ -25,29 +25,30 @@ export type ToggleProps = Omit<ReactSwitchProps, keyof ToggleOwnProps> &
  * Toggle components can be used to edit boolean values. Uses [react-switch](https://github.com/markusenglund/react-switch) component.
  *
  */
-export const Toggle: FC<ToggleProps> = forwardRef(
-  ({ checked = false, onChange, label, id, ...rest }, ref: ToggleRef) => {
-    const toggle = (
-      <ReactSwitch
-        aria-checked={checked}
-        ref={ref}
-        id={id}
-        checked={checked}
-        onChange={onChange}
-        {...rest}
-      />
-    );
+export const Toggle: FC<ToggleProps> = forwardRef(function Toggle(
+  { checked = false, onChange, label, id, ...rest },
+  ref: ToggleRef,
+) {
+  const toggle = (
+    <ReactSwitch
+      aria-checked={checked}
+      ref={ref}
+      id={id}
+      checked={checked}
+      onChange={onChange}
+      {...rest}
+    />
+  );
 
-    if (label) {
-      return (
-        <Label htmlFor={id}>
-          <Text sx={{ mx: 2 }}>{label}</Text>
-          {toggle}
-        </Label>
-      );
-    }
-    return toggle;
-  },
-);
+  if (label) {
+    return (
+      <Label htmlFor={id}>
+        <Text sx={{ mx: 2 }}>{label}</Text>
+        {toggle}
+      </Label>
+    );
+  }
+  return toggle;
+});
 
 Toggle.displayName = 'Toggle';

@@ -1,19 +1,17 @@
-import React, { FC } from 'react';
-import {
-  Story,
-  Playground,
-  Description,
-  ComponentSource,
-  PropsTable,
-} from '@component-controls/blocks';
+import React, { FC, Fragment } from 'react';
+import { TabConfiguration } from '@component-controls/core';
+import { Story, Playground, Description } from '@component-controls/blocks';
 
-export const CurrentStoryPage: FC = () => (
-  <>
+const CurrentStoryPage: FC = () => (
+  <Fragment>
     <Description />
-    <ComponentSource id="." title="Component" />
     <Playground openTab="source" title=".">
       <Story id="." />
     </Playground>
-    <PropsTable of="." title="Props" />
-  </>
+  </Fragment>
 );
+
+export default {
+  title: 'Story',
+  component: CurrentStoryPage,
+} as TabConfiguration;

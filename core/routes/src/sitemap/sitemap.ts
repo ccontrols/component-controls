@@ -1,11 +1,11 @@
 import { Store, removeTrailingSlash } from '@component-controls/core';
 import {
-  getIndexPage,
   getHomePages,
   DocHomePagesPath,
   getDocPages,
   DocPagesPath,
-} from '../create-pages';
+  getIndexPage,
+} from '../routes';
 
 export const getSiteMap = (store: Store): string => {
   const config = store.config.siteMap;

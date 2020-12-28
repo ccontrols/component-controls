@@ -1,16 +1,7 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
-import {
-  FC,
-  useEffect,
-  forwardRef,
-  Ref,
-  ComponentType,
-  ReactText,
-} from 'react';
+import { FC, useEffect, forwardRef, Ref, ComponentType } from 'react';
 import { jsx, Box, BoxProps } from 'theme-ui';
-import { get } from '@theme-ui/css';
-import { useTheme } from '@component-controls/components';
 import { useCurrentDocument } from '@component-controls/store';
 import { Container } from '../Container/Container';
 import { getURL } from '../utils/url';
@@ -39,10 +30,10 @@ export type PageContainerProps = PageContainerOwnProps &
  * Otherwise, the page elements are passed as children
  */
 export const PageContainer: FC<PageContainerProps> = forwardRef(
-  (
-    { children, variant, wrapper: Wrapper = Container, ...rest },
+  function PageContainer(
+    { children, wrapper: Wrapper = Container, ...rest },
     ref: Ref<HTMLDivElement>,
-  ) => {
+  ) {
     useEffect(() => {
       const parseURLHash = () => {
         try {
@@ -75,7 +66,6 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
         }
       };
     }, []);
-    const theme = useTheme();
     const doc = useCurrentDocument();
     const { MDXPage, parameters } = doc || {};
     const node = MDXPage ? (
@@ -86,12 +76,7 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
       children
     );
     return (
-      <Box
-        variant="pagecontainer"
-        sx={get(theme, variant as ReactText)}
-        ref={ref}
-        {...rest}
-      >
+      <Box ref={ref} {...rest}>
         {Wrapper ? <Wrapper>{node}</Wrapper> : node}
       </Box>
     );

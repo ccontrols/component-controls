@@ -1,1 +1,1 @@
-module.exports = require('./dist/CanvasPage').CanvasPage;
+module.exports = require('./dist/CanvasPage');

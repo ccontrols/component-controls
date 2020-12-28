@@ -1,7 +1,6 @@
 const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin;
-const { defaultBuildConfig } = require('@component-controls/core');
 
 module.exports = {
   stories: [
@@ -37,14 +36,10 @@ module.exports = {
   pages: {
     story: {
       basePath: 'api/',
-      tabs: [
-        ...defaultBuildConfig.pages.story.tabs,
-        {
-          route: 'test',
-          title: 'Testing',
-          template: '@component-controls/pages/TestingPage',
-        },
-      ],
+      tabs: {
+        page: '@component-controls/pages/ClassicPage',
+        test: '@component-controls/pages/TestingPage',
+      },
     },
     tutorial: {
       basePath: 'tutorial/',

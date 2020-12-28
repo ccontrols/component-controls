@@ -13,17 +13,20 @@ export type PageContainerProps = {
    * document type
    */
   type: DocType;
-} & Omit<BlockPageContainerProps, 'wrapper'>;
+} & BlockPageContainerProps;
 
 /**
  * page container to enhance the inner page wrapper
  */
 export const PageContainer: FC<PageContainerProps> = forwardRef(
-  ({ type, ...props }, ref: Ref<HTMLDivElement>) => {
+  function PageContainer(
+    { type, wrapper = DefaultContainer, ...props },
+    ref: Ref<HTMLDivElement>,
+  ) {
     const config = useConfig();
     const { pages } = config || {};
     const page = pages ? pages[type] : undefined;
-    const { container = DefaultContainer } = page || {};
+    const { container = wrapper } = page || {};
     return <BlockPageContainer ref={ref} wrapper={container} {...props} />;
   },
 );

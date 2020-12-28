@@ -1,5 +1,4 @@
 const path = require('path');
-const { defaultBuildConfig } = require('@component-controls/core');
 require('dotenv').config();
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin;
@@ -40,14 +39,10 @@ module.exports = {
   pages: {
     story: {
       basePath: 'api/',
-      tabs: [
-        ...defaultBuildConfig.pages.story.tabs,
-        {
-          route: 'test',
-          title: 'Testing',
-          template: '@component-controls/pages/TestingPage',
-        },
-      ],
+      tabs: {
+        page: '@component-controls/pages/ClassicPage',
+        test: '@component-controls/pages/TestingPage',
+      },
     },
     tutorial: {
       basePath: 'tutorial/',

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import { FC } from 'react';
+import { FC, Fragment } from 'react';
 import {
   Story,
   Playground,
@@ -13,14 +13,14 @@ import {
   PropsTable,
   PackageVersion,
 } from '@component-controls/blocks';
-import { getControlsCount } from '@component-controls/core';
+import { getControlsCount, TabConfiguration } from '@component-controls/core';
 import {
   useCurrentStory,
   useStore,
   useCurrentPropsCount,
 } from '@component-controls/store';
 
-export const ClassicPage: FC = () => {
+const ClassicPage: FC = () => {
   const store = useStore();
   const { controls: { threshold = 10 } = {} } = store.config;
   const story = useCurrentStory();
@@ -33,7 +33,7 @@ export const ClassicPage: FC = () => {
       (controlsCount < propsCount && propsCount >= threshold));
   const mixedControls = !splitControls && controlsCount >= propsCount;
   return (
-    <div>
+    <Fragment>
       <PackageVersion />
       <Description />
       <ComponentSource id="." title="Component" />
@@ -60,6 +60,11 @@ export const ClassicPage: FC = () => {
       <ComponentLocalDependencies id="." title="Internal dependencies" />
       <ComponentJSX id="." title="Component JSX" />
       <Stories dark={true} />
-    </div>
+    </Fragment>
   );
 };
+
+export default {
+  title: 'Documentation',
+  component: ClassicPage,
+} as TabConfiguration;

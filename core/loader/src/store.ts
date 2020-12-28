@@ -5,7 +5,7 @@ import {
   Packages,
   BuildConfiguration,
   RunConfiguration,
-  deepMergeArrays,
+  mergeConfig,
   defaultBuildConfig,
 } from '@component-controls/core';
 
@@ -143,7 +143,7 @@ export const initializeBuildOptions = (
     defaultConfigPath,
   );
   if (config && config.config) {
-    config.config = deepMergeArrays(defaultBuildConfig, config.config);
+    config.config = mergeConfig(defaultBuildConfig, config.config);
   }
   store.buildConfig = config?.config || defaultBuildConfig;
 };

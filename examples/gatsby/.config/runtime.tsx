@@ -1,7 +1,7 @@
 
 /** @jsx jsx */
 import { jsx, Box, Text } from 'theme-ui';
-import { RunOnlyConfiguration, defaultRunConfig } from "@component-controls/core";
+import { RunOnlyConfiguration } from "@component-controls/core";
 import { Link } from "@component-controls/components";
 import { OctofaceIcon } from '@primer/octicons-react';
 

@@ -1,1 +1,1 @@
-module.exports = require('./dist/AllyPage').AllyPage;
+module.exports = require('./dist/AllyPage');

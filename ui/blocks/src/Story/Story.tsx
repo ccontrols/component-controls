@@ -37,30 +37,31 @@ export type StoryProps = StoryOwnProps &
 /**
  * block component to render story function with decorators
  */
-export const Story: FC<StoryProps> = forwardRef(
-  (fullProps: StoryProps, ref: Ref<HTMLDivElement>) => {
-    const custom = useCustomProps<StoryProps>(NAME, fullProps);
-    const { wrapper, onRender, iframeStyle, ...props } = custom;
-    useEffect(() => onRender && onRender());
+export const Story: FC<StoryProps> = forwardRef(function Story(
+  fullProps: StoryProps,
+  ref: Ref<HTMLDivElement>,
+) {
+  const custom = useCustomProps<StoryProps>(NAME, fullProps);
+  const { wrapper, onRender, iframeStyle, ...props } = custom;
+  useEffect(() => onRender && onRender());
 
-    const { id, name, ...rest } = props;
-    const story = useStory({ id, name });
-    if (story && story.id && story.renderFn) {
-      return (
-        <StoryBlockContainer {...rest} story={story}>
-          <StoryRender
-            ref={ref}
-            story={story}
-            iframeStyle={iframeStyle}
-            wrapper={wrapper}
-          />
-        </StoryBlockContainer>
-      );
-    } else {
-      console.error('Story function not found');
-      return null;
-    }
-  },
-);
+  const { id, name, ...rest } = props;
+  const story = useStory({ id, name });
+  if (story && story.id && story.renderFn) {
+    return (
+      <StoryBlockContainer {...rest} story={story}>
+        <StoryRender
+          ref={ref}
+          story={story}
+          iframeStyle={iframeStyle}
+          wrapper={wrapper}
+        />
+      </StoryBlockContainer>
+    );
+  } else {
+    console.error('Story function not found');
+    return null;
+  }
+});
 
 Story.displayName = 'Story';

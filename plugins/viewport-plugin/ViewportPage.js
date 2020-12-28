@@ -1,1 +1,1 @@
-module.exports = require('./dist/ViewportPage').ViewportPage;
+module.exports = require('./dist/ViewportPage');

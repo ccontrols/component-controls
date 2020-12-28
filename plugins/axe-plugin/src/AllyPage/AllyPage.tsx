@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
+import { TabConfiguration } from '@component-controls/core';
 import { Description } from '@component-controls/blocks';
 import { AllyBlock } from '../AllyBlock';
 
-export const AllyPage: FC = () => {
+const AllyPage: FC = () => {
   return (
     <>
       <Description />
@@ -10,3 +11,7 @@ export const AllyPage: FC = () => {
     </>
   );
 };
+export default {
+  title: 'Ally',
+  component: AllyPage,
+} as TabConfiguration;

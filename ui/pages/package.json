@@ -14,8 +14,12 @@
     "CanvasPage.js",
     "ClassicPage.d.ts",
     "ClassicPage.js",
+    "ComponentPage.d.ts",
+    "ComponentPage.js",
     "CurrentStoryPage.d.ts",
     "CurrentStoryPage.js",
+    "StoriesPage.d.ts",
+    "StoriesPage.js",
     "TestingPage.d.ts",
     "TestingPage.js"
   ],

@@ -22,15 +22,16 @@ import {
   PluginCallback,
   Page,
 } from 'gatsby';
+import { loadStore } from '@component-controls/store';
 import {
   getIndexPage,
   getHomePages,
   DocHomePagesPath,
   getDocPages,
   DocPagesPath,
-  loadStore,
   getSiteMap,
-} from '@component-controls/store';
+} from '@component-controls/routes';
+
 const { StorePlugin } = require('@component-controls/store/plugin');
 
 export const createPagesStatefully = async (

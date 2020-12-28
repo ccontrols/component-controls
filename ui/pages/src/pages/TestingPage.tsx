@@ -1,20 +1,20 @@
-import React, { FC } from 'react';
+import React, { FC, Fragment } from 'react';
 import {
   Playground,
   PropsTable,
   Story,
   Description,
 } from '@component-controls/blocks';
-import { getControlsCount } from '@component-controls/core';
+import { getControlsCount, TabConfiguration } from '@component-controls/core';
 import { useCurrentStory } from '@component-controls/store';
 import { AllyBlock } from '@component-controls/axe-plugin';
 import { ViewportBlock } from '@component-controls/viewport-plugin';
 
-export const TestingPage: FC = () => {
+const TestingPage: FC = () => {
   const story = useCurrentStory();
   const controlsCount = getControlsCount(story?.controls);
   return (
-    <>
+    <Fragment>
       <Description />
       {controlsCount > 0 && (
         <>
@@ -27,6 +27,11 @@ export const TestingPage: FC = () => {
       )}
       <AllyBlock title="A11y tests" />
       <ViewportBlock title="Viewport" />
-    </>
+    </Fragment>
   );
 };
+
+export default {
+  title: 'Testing',
+  component: TestingPage,
+} as TabConfiguration;

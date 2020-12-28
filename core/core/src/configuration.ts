@@ -27,20 +27,52 @@ export type FrameworkRenderFn = (
  */
 export interface TabConfiguration {
   /**
-   * tab route string
-   */
-  route?: string;
-  /**
    * title will be used as tab caption
    */
   title?: string;
   /**
-   * page template - can be a package deafult template
+   * page template - can be a package default export
    */
-  template?: string | ComponentType;
+  component: ComponentType;
+
+  /**
+   * page container react component
+   */
+  container?: ComponentType | null;
+
+  /**
+   * variant key in the pagecontainer theme value
+   */
+  variant?: string;
 }
 
-export type PageTabs = TabConfiguration[];
+export type PageTab = string | TabConfiguration | [string, TabConfiguration];
+
+export type PageTabs = Record<string, PageTab>;
+
+export const loadDefaultExport = (
+  imported?: { default: TabConfiguration } | TabConfiguration,
+): TabConfiguration => {
+  return (imported as { default: TabConfiguration })?.default || imported;
+};
+export const loadPageTab = (
+  tab: PageTab,
+  imported?: TabConfiguration,
+): TabConfiguration => {
+  if (imported) {
+    if (Array.isArray(tab)) {
+      if (tab.length === 2) {
+        const loaded =
+          typeof tab[0] === 'string' ? loadDefaultExport(imported) : tab[0];
+        return { ...loaded, ...tab[1] };
+      }
+    }
+    if (typeof tab === 'string') {
+      return loadDefaultExport(imported);
+    }
+  }
+  return tab as TabConfiguration;
+};
 
 export type DocType = 'story' | 'blog' | 'page' | 'tags' | 'author' | string;
 
@@ -107,7 +139,7 @@ export type PageConfiguration = {
   /**
    * tabs configuration for story-type pages
    */
-  tabs?: PageTabs;
+  tabs?: Record<string, TabConfiguration>;
 } & PageLayoutProps;
 
 export type PagesConfiguration = Record<DocType, PageConfiguration>;
@@ -115,7 +147,7 @@ export type PagesConfiguration = Record<DocType, PageConfiguration>;
 export type PagesOnlyRoutes = Record<
   DocType,
   Pick<PageConfiguration, 'basePath' | 'sideNav'> & {
-    tabs?: TabConfiguration[];
+    tabs?: PageTabs;
   }
 >;
 
@@ -363,13 +395,9 @@ export const defaultBuildConfig: BuildConfiguration = {
         storyPaths: true,
         collapseSingle: true,
       },
-      tabs: [
-        {
-          route: 'page',
-          title: 'Documentation',
-          template: require.resolve('@component-controls/pages/ClassicPage'),
-        },
-      ],
+      tabs: {
+        page: require.resolve('@component-controls/pages/ClassicPage'),
+      },
     },
     blog: {
       basePath: 'blogs/',

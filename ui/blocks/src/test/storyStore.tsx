@@ -23,13 +23,7 @@ export const store: Store = {
       ...defaultBuildConfig.pages,
       story: {
         ...defaultBuildConfig.pages?.story,
-        tabs: [
-          {
-            route: 'page',
-            title: 'Documentation',
-            template: ClassicPage,
-          },
-        ],
+        tabs: { page: ClassicPage },
       },
     },
   },

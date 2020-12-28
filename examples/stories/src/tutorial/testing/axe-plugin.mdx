@@ -44,7 +44,11 @@ module.exports = {
   stories: [...],
   pages: {
     story: {
-      tabs: [...defaultBuildConfig.pages.story.tabs, { route: 'ally', title: 'A11Y', template: '@component-controls/axe-plugin/AllyPage' }],
+      tabs: {
+        ...defaultBuildConfig.pages.story.tabs, 
+        'ally': '@component-controls/axe-plugin/AllyPage'
+      },
+    },  
   },
 }  
 ```

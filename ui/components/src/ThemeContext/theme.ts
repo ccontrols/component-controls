@@ -23,6 +23,19 @@ const ActionItemStyle: ThemeUIStyleObject = {
   border: (t: Theme) => `1px solid ${t.colors?.action}`,
 };
 
+export const PageContainerDefaults: ThemeUIStyleObject = {
+  bg: 'background',
+  color: 'text',
+  fontFamily: 'body',
+  flex: '1 0 auto',
+  py: 4,
+  px: [2, 3, 5],
+  margin: 'auto',
+  width: '100%',
+  position: 'relative',
+  maxWidth: '1000px',
+};
+
 export type ControlsTheme = {
   actionbar: Record<string, ThemeUIStyleObject>;
   toolbar: Record<string, ThemeUIStyleObject>;
@@ -415,6 +428,11 @@ export const theme: ControlsTheme = {
       width: '100%',
       scrollMarginTop: '5rem',
     },
+    plain: {
+      position: 'relative',
+      width: '100%',
+      scrollMarginTop: '5rem',
+    },
     inner: {
       boxShadow: (t: Theme): string => `0px 1px 3px 0px ${t.colors?.shadow}`,
       border: (t: Theme): string => ` 1px solid  ${t.colors?.shadow}`,
@@ -698,21 +716,8 @@ export const theme: ControlsTheme = {
     },
   },
   pagecontainer: {
-    bg: 'background',
-    color: 'text',
-    fontFamily: 'body',
-    flex: '1 0 auto',
-    py: 4,
-    px: [2, 3, 5],
-    margin: 'auto',
-    width: '100%',
-    position: 'relative',
-    maxWidth: '1000px',
-    blog: { maxWidth: '1200px' },
-    story: { maxWidth: '1200px' },
-    doc: { maxWidth: '1200px' },
-    page: { maxWidth: '1200px' },
-    full: { maxWidth: 'unset', p: [0, 0, 0] },
+    default: { ...PageContainerDefaults },
+    full: { ...PageContainerDefaults, maxWidth: 'unset', p: [0, 0, 0] },
   },
   playground: {
     container: {
@@ -832,6 +837,9 @@ export const theme: ControlsTheme = {
     },
     labelicon: {
       mr: 2,
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
     },
     labeltext: {
       whiteSpace: 'nowrap',
@@ -908,6 +916,7 @@ export const theme: ControlsTheme = {
       '.selected': {
         borderLeft: (t: Theme): string => `4px solid ${t?.colors?.accent}`,
         fontWeight: 'bold',
+        pl: 1,
       },
     },
     headercontainer: {
@@ -1031,15 +1040,15 @@ export const theme: ControlsTheme = {
     },
   },
   categorylist: {
-    pagecontainer: { maxWidth: '1000px' },
+    pagecontainer: { ...PageContainerDefaults, maxWidth: '1000px' },
     list: {},
     item: { my: 2 },
   },
   pagelist: {
-    container: { maxWidth: '1000px' },
+    container: { ...PageContainerDefaults, maxWidth: '1000px' },
   },
   categorypage: {
-    pagecontainer: { maxWidth: '1000px' },
+    pagecontainer: { ...PageContainerDefaults, maxWidth: '1000px' },
     titlecontainer: {
       display: 'flex',
       flexDirection: 'row',

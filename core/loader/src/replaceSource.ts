@@ -31,17 +31,19 @@ ${
   config?.pages
     ? Object.keys(config.pages)
         .map(key => {
-          const { tabs = [] } = (config.pages as PagesOnlyRoutes)[key];
-          return (
-            tabs
-              .map((tab, index) =>
-                typeof tab.template === 'string'
-                  ? `const ${key}_${index} = require("${tab.template}");`
-                  : undefined,
-              )
-              .filter(template => template)
-              .join('\n') || undefined
-          );
+          const { tabs } = (config.pages as PagesOnlyRoutes)[key];
+          return tabs
+            ? Object.keys(tabs)
+                .map((route, index) => {
+                  const tab = tabs[route];
+                  const m = Array.isArray(tab) ? tab[0] : tab;
+                  return typeof m === 'string'
+                    ? `const ${key}_${index} = require("${m}");`
+                    : undefined;
+                })
+                .filter(tab => tab)
+                .join('\n')
+            : undefined;
         })
         .filter(page => page)
         .join('') || ''
@@ -125,6 +127,7 @@ ${contexts
   const newContent = `
 
 const path = require('path');
+const { loadPageTab } = require('@component-controls/core')
 ${imports}
 ${storeConst}
 store.search = search.default || search;
@@ -134,13 +137,13 @@ ${
   config?.pages
     ? Object.keys(config.pages)
         .map(key => {
-          const { tabs = [] } = (config.pages as PagesOnlyRoutes)[key];
+          const { tabs = {} } = (config.pages as PagesOnlyRoutes)[key];
           return (
-            tabs
-              .map((tab, index) =>
-                typeof tab.template === 'string'
-                  ? `store.buildConfig.pages.${key}.tabs[${index}].template = ${key}_${index}.default || ${key}_${index};`
-                  : undefined,
+            Object.keys(tabs)
+              .map(
+                (tab, index) =>
+                  `store.buildConfig.pages.${key}.tabs["${tab}"] = 
+  loadPageTab(store.buildConfig.pages.${key}.tabs["${tab}"], ${key}_${index});`,
               )
               .filter(template => template)
               .join('\n') || undefined

@@ -60,14 +60,10 @@ module.exports = {
   pages: {
     story: {
       basePath: 'api/',
-      tabs: [
+      tabs: {
         ...defaultBuildConfig.pages.story.tabs,
-        {
-          route: 'test',
-          title: 'Testing',
-          template: '@component-controls/pages/TestingPage',
-        },
-      ],
+        test: '@component-controls/pages/TestingPage',
+      },
     },
     tutorial: {
       basePath: 'tutorial/',

@@ -40,7 +40,11 @@ module.exports = {
   stories: [...],
   pages: {
     story: {
-      tabs: [...defaultBuildConfig.pages.story.tabs, { route: 'viewport', title: 'Viewport', template: '@component-controls/viewport-plugin/ViewportPage' }],
+      tabs: {
+        ...defaultBuildConfig.pages.story.tabs, 
+        'viewport': '@component-controls/viewport-plugin/ViewportPage'
+      },
+    },  
   },
 }  
 ```

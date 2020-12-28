@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FC, useState } from 'react';
-import { Box, jsx, Button } from 'theme-ui';
+import { Box, jsx, Button, ThemeUIStyleObject } from 'theme-ui';
 import {
   StoryBlockContainer,
   StoryBlockContainerProps,
@@ -15,6 +15,7 @@ import { ViewportBox } from './ViewportBox';
 
 export interface ViewportBlockOwnProps {
   sizes?: Record<string, number>;
+  sxContainer?: ThemeUIStyleObject;
 }
 
 export type ViewportBlockProps = ViewportBlockOwnProps &
@@ -29,6 +30,7 @@ export const ViewportBlock: FC<ViewportBlockProps> = ({
     '768px': 768,
     '1024px': 1024,
   },
+  sxContainer,
   ...props
 }) => {
   const story = useStory({ id, name });
@@ -67,6 +69,7 @@ export const ViewportBlock: FC<ViewportBlockProps> = ({
             pt: 3,
             pb: 4,
             pl: 1,
+            ...sxContainer,
           }}
         >
           {Object.keys(visible)

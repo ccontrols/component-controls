@@ -14,7 +14,8 @@ import {
   getCSSBundleName,
 } from '@component-controls/core';
 import { Store } from '@component-controls/core';
-import { loadStore, getSiteMap } from '@component-controls/store';
+import { loadStore } from '@component-controls/store';
+import { getSiteMap } from '@component-controls/routes';
 
 module.exports = ({
   bundleName,

@@ -78,7 +78,10 @@ export interface StoryRenderProps {
   ref?: Ref<HTMLDivElement>;
 }
 export const StoryRender: FC<StoryRenderProps & StoryWrapperProps> = forwardRef(
-  ({ story, wrapper, iframeStyle, ...rest }, ref: Ref<HTMLDivElement>) => {
+  function StoryRender(
+    { story, wrapper, iframeStyle, ...rest },
+    ref: Ref<HTMLDivElement>,
+  ) {
     const store = useStore();
     const options = useExternalOptions();
     const rendered = store.config.renderFn

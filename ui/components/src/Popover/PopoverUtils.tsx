@@ -24,8 +24,11 @@ const matchPx = (
 export const Arrow: FC<{
   placement: string;
   borderColor: string;
-} & BoxProps> = forwardRef(
-  ({ placement, borderColor, ...rest }, ref: Ref<HTMLDivElement>) => (
+} & BoxProps> = forwardRef(function Arrow(
+  { placement, borderColor, ...rest },
+  ref: Ref<HTMLDivElement>,
+) {
+  return (
     <Box
       sx={{
         position: 'absolute',
@@ -74,15 +77,18 @@ export const Arrow: FC<{
       ref={ref}
       {...rest}
     />
-  ),
-);
+  );
+});
 
 export const Wrapper: FC<{
   placement: string;
   borderColor: string;
   hidden: boolean;
-} & BoxProps> = forwardRef(
-  ({ placement, borderColor, hidden, ...rest }, ref: Ref<HTMLDivElement>) => (
+} & BoxProps> = forwardRef(function Wrapper(
+  { placement, borderColor, hidden, ...rest },
+  ref: Ref<HTMLDivElement>,
+) {
+  return (
     <Box
       sx={{
         display: hidden ? 'none' : 'inline-block',
@@ -101,5 +107,5 @@ export const Wrapper: FC<{
       ref={ref}
       {...rest}
     />
-  ),
-);
+  );
+});

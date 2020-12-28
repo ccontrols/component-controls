@@ -18,18 +18,18 @@ Configurable document type. By default, all documents are treated as **story** p
 
 **defaults**
 
-| property              | story                                                                                      | blog   | page   | tags  | author   |
-| --------------------- | ------------------------------------------------------------------------------------------ | ------ | ------ | ----- | -------- |
-| basePath              | docs/                                                                                      | blogs/ | pages/ | tags/ | authors/ |
-| storyPaths            | true                                                                                       |        |        |       |          |
-| label                 | Docs                                                                                       | Blog   | Page   | Tags  | Authors  |
-| indexHome             |                                                                                            | true   |        |       |          |
-| layout.fullPage       |                                                                                            |        |        |       |          |
-| layout.navSidebar     | true                                                                                       |        |        |       |          |
-| layout.contextSidebar | true                                                                                       | true   |        |       |          |
-| topMenu               | true                                                                                       | true   |        |       |          |
-| container             |                                                                                            |        |        |       |          |
-| tabs                  | [{ title: 'Documentation', type: '@component-controls/pages/ClassicPage', route: 'page' }] |        |        |       |          |
+| property              | story                                             | blog   | page   | tags  | author   |
+| --------------------- | ------------------------------------------------- | ------ | ------ | ----- | -------- |
+| basePath              | docs/                                             | blogs/ | pages/ | tags/ | authors/ |
+| storyPaths            | true                                              |        |        |       |          |
+| label                 | Docs                                              | Blog   | Page   | Tags  | Authors  |
+| indexHome             |                                                   | true   |        |       |          |
+| layout.fullPage       |                                                   |        |        |       |          |
+| layout.navSidebar     | true                                              |        |        |       |          |
+| layout.contextSidebar | true                                              | true   |        |       |          |
+| topMenu               | true                                              | true   |        |       |          |
+| container             |                                                   |        |        |       |          |
+| tabs                  | { page: '@component-controls/pages/ClassicPage' } |        |        |       |          |
 
 ## WebpackConfig
 
@@ -61,7 +61,7 @@ Story render function. The resolved control values are passed as the first argum
 
 ## PageTabs
 
-an array of tab configurations
+Object of tab page configurations, the key is a string for the tab route.
 
 [TabConfiguration[]](#tabconfiguration)
 

@@ -1,1 +1,3 @@
-export * from './pages/ClassicPage';
+import ClassicPage from './pages/ClassicPage';
+
+export default ClassicPage;

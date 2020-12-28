@@ -38,6 +38,7 @@
   "dependencies": {
     "@component-controls/app": "^2.4.2",
     "@component-controls/pages": "^2.4.2",
+    "@component-controls/routes": "^2.4.2",
     "@component-controls/search-algolia": "^2.4.1",
     "@component-controls/search-fusejs": "^2.4.1",
     "@component-controls/store": "^2.4.2",

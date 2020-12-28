@@ -1,2 +1,2 @@
-import { CurrentStoryPage } from './dist/pages/CurrentStoryPage';
+import CurrentStoryPage from './dist/pages/CurrentStoryPage';
 export default CurrentStoryPage;
