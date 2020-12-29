@@ -61,7 +61,7 @@ const parseSource = async (
   options: Required<InstrumentOptions>,
 ): Promise<ParseStorieReturnType | undefined> => {
   const source = await prettify(code, options.prettier, filePath);
-  const { ast } = parseFile(source, options.parser, source);
+  const { ast } = parseFile(filePath, options.parser, source);
 
   const store = traverseFn(ast, options, { source, filePath });
   if (!store) {
@@ -161,7 +161,7 @@ export const parseStories = async (
       filepath: filePath,
       ...otherMDXOptions,
     });
-    const { ast } = parseFile(filePath, mergedOptions.parser, code);
+    const { ast } = parseFile(filePath, mergedOptions.parser, code, false);
 
     if (transformMDX) {
       //second pass transform - inject any necessary attributes
