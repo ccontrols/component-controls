@@ -961,13 +961,37 @@ export const theme: ControlsTheme = {
     container: {
       px: 3,
     },
-    nav: { display: 'flex', flexDirection: 'column' },
+    nav: {
+      display: 'flex',
+      flexDirection: 'column',
+      a: {
+        ':hover': {
+          textDecoration: 'underline',
+        },
+      },
+    },
     navlink: {
-      fontSize: 1,
-      color: 'mutedText',
-      fontWeight: 'body',
-      ':hover': {
-        textDecoration: 'underline',
+      '1': {
+        fontSize: 2,
+        pt: 2,
+      },
+      '2': {
+        fontSize: 1,
+        fontWeight: 'body',
+        pl: 1,
+        ':hover': {
+          textDecoration: 'underline',
+        },
+      },
+      '3': {
+        fontSize: 0,
+        color: 'mutedText',
+        fontWeight: 'body',
+        pl: 3,
+        ':hover': {
+          color: 'primary',
+          textDecoration: 'underline',
+        },
       },
     },
     toggle: {
