@@ -55,7 +55,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
   ...rest
 }) => {
   const [isOpen, setIsOpen] = useState(true);
-  const blockId = id !== '.' ? id : undefined || title;
+  const blockId = id !== '.' ? id || title : title;
   const content = !plain ? (
     <Box variant="blockcontainer.inner">{children}</Box>
   ) : (
