@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.3](https://github.com/ccontrols/component-controls/compare/v2.5.2...v2.5.3) (2020-12-30)
+
+
+### Bug Fixes
+
+* context sxidebar ui styles ([5cee440](https://github.com/ccontrols/component-controls/commit/5cee440fadec5e26efcef59080ab4185fc697a9a))
+* link when no id prop ([0f1019c](https://github.com/ccontrols/component-controls/commit/0f1019c9d1c630dc14123e0cb3ebcee6f3a6e53c))
+
+
+
+
+
 ## [2.5.2](https://github.com/ccontrols/component-controls/compare/v2.5.1...v2.5.2) (2020-12-29)
 
 

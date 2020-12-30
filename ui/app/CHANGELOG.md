@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.3](https://github.com/ccontrols/component-controls/compare/v2.5.2...v2.5.3) (2020-12-30)
+
+
+### Bug Fixes
+
+* context sxidebar ui styles ([5cee440](https://github.com/ccontrols/component-controls/commit/5cee440fadec5e26efcef59080ab4185fc697a9a))
+
+
+
+
+
 ## [2.5.2](https://github.com/ccontrols/component-controls/compare/v2.5.1...v2.5.2) (2020-12-29)
 
 **Note:** Version bump only for package @component-controls/app
