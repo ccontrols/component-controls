@@ -69,7 +69,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.5.2",
+      "version": "2.5.3",
     },
   },
   "stories": Object {
