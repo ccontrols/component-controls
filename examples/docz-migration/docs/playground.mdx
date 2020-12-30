@@ -5,25 +5,18 @@ menu: Components
 import { Playground, Story } from '@component-controls/blocks';
 import { Button } from '../src/components/Button'
 
-## Basic usage
-
+## Import
 
 ```js:title=playground.mdx
 ---
 name: Playground
 menu: Components
 ---
-
 import { Playground } from '@component-controls/blocks';
-import { Button } from '../src/components/Button'
 
-# Button
-
-<Playground>
-  <Button>Click me</Button>
-  <Button kind="secondary">Click me</Button>
-</Playground>
 ```
+
+## Basic usage
 
 <Playground>
   <Button>Click me</Button>
@@ -31,23 +24,6 @@ import { Button } from '../src/components/Button'
 </Playground>
 
 ## Single child
-
-```js:title=playground.mdx
----
-name: Playground
-menu: Components
----
-
-import { Playground } from '@component-controls/blocks';
-import { Button } from '../src/components/Button'
-
-# Button
-
-<Playground>
-  <Button>Click me</Button>
-</Playground>
-```
-
 
 <Playground>
   <Button>Click me</Button>
@@ -57,49 +33,23 @@ import { Button } from '../src/components/Button'
 
 ## Stateful
 
-```js:title=playground.mdx
----
-name: Playground
-menu: Components
----
-
-import { Playground } from '@component-controls/blocks';
-import { Button } from '../src/components/Button'
-
-# Button
-
 <Playground>
   {() => {
     const [counter, setCounter] = React.useState(0);
     return (
-      <>
+      <div>
         <Button onClick={() => setCounter(counter => counter+1)}>
           Increase
         </Button>
-        <p>{counter}</p>
-      </>
-    )
-  }}
-</Playground>
-```
-
-<Playground>
-  {() => {
-    const [counter, setCounter] = React.useState(0);
-    return (
-      <>
-        <Button onClick={() => setCounter(counter => counter+1)}>
-          Increase
-        </Button>
-        <p>{counter}</p>
-      </>
+        <span style={{ marginLeft : 20 }}>{counter}</span>
+      </div>
     )
   }}
 </Playground>
 
-# Story wrapper
+## Story wrapper
 
-You can wrap the component code in a `<Story />` component in order to display the source code
+You can wrap the example code in a `<Story />` component - this will give you an identifier (story id) to reference this specific example of code.
 
 ```js:title=playground.mdx
 ---

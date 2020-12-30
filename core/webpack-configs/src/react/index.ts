@@ -9,19 +9,24 @@ import {
   defCssFileName,
   customLoaderOptions,
 } from '@component-controls/core';
-import { findUpFile } from '@component-controls/instrument';
+import { findUpFile } from '@component-controls/core/node-utils';
 
 export const react: PresetType = (options: BuildProps) => {
   const isProd = process.env.NODE_ENV === 'production';
   const cssLoaders: RuleSetLoader[] = [];
   const postcssOptions = customLoaderOptions(options, 'postcss-loader', {});
-  const hasPostCss =
-    Object.keys(postcssOptions).length ||
-    findUpFile(process.cwd(), 'postcss.config.js');
-  if (hasPostCss) {
+  const postCssOptionsFile = findUpFile(process.cwd(), 'postcss.config.js');
+  const hasPostCss = Object.keys(postcssOptions).length || postCssOptionsFile;
+  if (hasPostCss && !((postcssOptions as any).disable === true)) {
     cssLoaders.push({
       loader: 'postcss-loader',
-      options: {},
+      options: {
+        postcssOptions:
+          typeof postCssOptionsFile === 'string'
+            ? require(postCssOptionsFile)
+            : undefined,
+        sourceMap: true,
+      },
     });
   }
   const result: PresetType = {
@@ -42,8 +47,19 @@ export const react: PresetType = (options: BuildProps) => {
               loader: 'babel-loader',
               options: {
                 presets: [
-                  ['@babel/preset-env', { modules: 'commonjs' }],
-                  '@babel/preset-react',
+                  [
+                    '@babel/preset-env',
+                    {
+                      targets: {
+                        browsers: ['last 5 versions', 'ie >= 9'],
+                        node: 'current',
+                      },
+                      modules: 'commonjs',
+                      useBuiltIns: 'usage',
+                      corejs: 3,
+                    },
+                  ],
+                  ['@babel/preset-react', { runtime: 'automatic' }],
                 ],
               },
             },
@@ -67,7 +83,18 @@ export const react: PresetType = (options: BuildProps) => {
           loader: 'babel-loader',
           options: {
             presets: [
-              ['@babel/preset-env', { modules: 'commonjs' }],
+              [
+                '@babel/preset-env',
+                {
+                  targets: {
+                    browsers: ['last 5 versions', 'ie >= 9'],
+                    node: 'current',
+                  },
+                  modules: 'commonjs',
+                  useBuiltIns: 'usage',
+                  corejs: 3,
+                },
+              ],
               '@babel/preset-react',
             ],
           },
@@ -102,7 +129,7 @@ export const react: PresetType = (options: BuildProps) => {
           ],
         },
         {
-          test: /\.(css|sass|scss|less|styl)$/i,
+          test: /\.(css|sass|scss|less)$/i,
           use: [
             // Creates `style` nodes from JS strings
             // will export to a consolidated css file
@@ -110,23 +137,24 @@ export const react: PresetType = (options: BuildProps) => {
             {
               // Translates CSS into CommonJS
               loader: 'css-loader',
-              options: customLoaderOptions(options, 'css-loader', {}),
+              options: customLoaderOptions(options, 'css-loader', {
+                sourceMap: true,
+              }),
             },
             ...cssLoaders,
             {
               // Compiles Sass to CSS
               loader: 'sass-loader',
-              options: customLoaderOptions(options, 'sass-loader', {}),
+              options: customLoaderOptions(options, 'sass-loader', {
+                sourceMap: true,
+              }),
             },
             {
               // Compiles less to CSS
               loader: 'less-loader',
-              options: customLoaderOptions(options, 'less-loader', {}),
-            },
-            {
-              // Compiles stylus to CSS
-              loader: 'stylus-loader',
-              options: customLoaderOptions(options, 'stylus-loader', {}),
+              options: customLoaderOptions(options, 'less-loader', {
+                sourceMap: true,
+              }),
             },
           ],
         },

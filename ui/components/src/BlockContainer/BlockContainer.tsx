@@ -1,12 +1,12 @@
 /** @jsx jsx */
-import React, { FC } from 'react';
-import { jsx, Flex, Link, Divider, Box, SxStyleProp, Text } from 'theme-ui';
+import { FC, useState } from 'react';
+import { jsx, Flex, Link, Divider, Box, BoxProps, Text } from 'theme-ui';
 import { ChevronRightIcon, ChevronDownIcon } from '@primer/octicons-react';
 import { Collapsible } from '../Collapsible';
 import { LinkHeading } from '../LinkHeading';
 import { Description } from '../Description';
 
-export interface BlockContainerProps {
+export interface BlockContainerOwnProps {
   /**
    * optional section title for the block.
    */
@@ -30,15 +30,16 @@ export interface BlockContainerProps {
   collapsible?: boolean;
 
   /**
-   * theme-ui styling object for Block Box
-   */
-  sxStyle?: SxStyleProp;
-
-  /**
    * testing id
    */
   'data-testid'?: string;
+  /**
+   * inner container variant or plain
+   */
+  plain?: boolean;
 }
+
+export type BlockContainerProps = BlockContainerOwnProps & BoxProps;
 
 /**
  * a collapsible block with a title. The title creates also an attribute id and an octicon for github style navigation.
@@ -50,14 +51,18 @@ export const BlockContainer: FC<BlockContainerProps> = ({
   id,
   description,
   collapsible = true,
-  sxStyle,
+  plain = false,
   ...rest
 }) => {
-  const [isOpen, setIsOpen] = React.useState(true);
-  const blockId = id !== '.' ? id : undefined || title;
-
+  const [isOpen, setIsOpen] = useState(true);
+  const blockId = id !== '.' ? id || title : title;
+  const content = !plain ? (
+    <Box variant="blockcontainer.inner">{children}</Box>
+  ) : (
+    children
+  );
   return (
-    <Box variant="blockcontainer.container" sx={sxStyle} {...rest}>
+    <Box variant="blockcontainer.container" {...rest}>
       {(blockId || title || collapsible) && (
         <LinkHeading
           as={collapsible ? 'h3' : 'h4'}
@@ -93,10 +98,10 @@ export const BlockContainer: FC<BlockContainerProps> = ({
         </LinkHeading>
       )}
       {description && <Description>{description}</Description>}
-      {collapsible && children ? (
-        <Collapsible isOpen={isOpen}>{children}</Collapsible>
+      {collapsible ? (
+        <Collapsible isOpen={isOpen}>{content}</Collapsible>
       ) : (
-        children
+        content
       )}
       {!isOpen && <Divider />}
     </Box>

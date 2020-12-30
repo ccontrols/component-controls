@@ -1,5 +1,5 @@
 import { config } from '../../rollup-config';
 
 export default config({
-  input: ['./src/index.tsx'],
+  input: ['./src/index.tsx', './src/AllyPage/AllyPage.tsx'],
 });

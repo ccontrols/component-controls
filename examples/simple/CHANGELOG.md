@@ -3,6 +3,399 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.3](https://github.com/atanasster/component-controls/compare/v2.5.2...v2.5.3) (2020-12-30)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [2.5.2](https://github.com/atanasster/component-controls/compare/v2.5.1...v2.5.2) (2020-12-29)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [2.5.1](https://github.com/atanasster/component-controls/compare/v2.5.0...v2.5.1) (2020-12-28)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+# [2.5.0](https://github.com/atanasster/component-controls/compare/v2.4.2...v2.5.0) (2020-12-28)
+
+
+### Features
+
+* custom esm pages ([ae76a6e](https://github.com/atanasster/component-controls/commit/ae76a6e936b0edb66b7ecbd71450c1858ce0c575))
+
+
+
+
+
+## [2.4.2](https://github.com/atanasster/component-controls/compare/v2.4.1...v2.4.2) (2020-12-24)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [2.4.1](https://github.com/atanasster/component-controls/compare/v2.4.0...v2.4.1) (2020-12-24)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+# [2.4.0](https://github.com/atanasster/component-controls/compare/v2.3.0...v2.4.0) (2020-12-24)
+
+
+### Features
+
+* configurable page templates in packages ([8aee3b4](https://github.com/atanasster/component-controls/commit/8aee3b46f6e06fb71e55a8cc597e0b397dcc704b))
+
+
+
+
+
+# [2.3.0](https://github.com/atanasster/component-controls/compare/v2.2.4...v2.3.0) (2020-12-23)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [2.2.4](https://github.com/atanasster/component-controls/compare/v2.2.3...v2.2.4) (2020-12-14)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [2.2.3](https://github.com/atanasster/component-controls/compare/v2.2.2...v2.2.3) (2020-12-10)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [2.2.2](https://github.com/atanasster/component-controls/compare/v2.2.1...v2.2.2) (2020-12-10)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [2.2.1](https://github.com/atanasster/component-controls/compare/v2.2.0...v2.2.1) (2020-12-08)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+# [2.2.0](https://github.com/atanasster/component-controls/compare/v2.1.0...v2.2.0) (2020-12-08)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+# [2.1.0](https://github.com/atanasster/component-controls/compare/v2.0.1...v2.1.0) (2020-12-06)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [2.0.1](https://github.com/atanasster/component-controls/compare/v2.0.0...v2.0.1) (2020-12-06)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+# [2.0.0](https://github.com/atanasster/component-controls/compare/v1.44.1...v2.0.0) (2020-12-05)
+
+
+### chore
+
+* upgrade nextjs emption 11 ([7fc4168](https://github.com/atanasster/component-controls/commit/7fc4168308f53a7a989550628d35f7e3b5dd6c10))
+
+
+### BREAKING CHANGES
+
+* emotion 11 and nextjs 10 required
+
+
+
+
+
+## [1.44.1](https://github.com/atanasster/component-controls/compare/v1.44.0...v1.44.1) (2020-11-30)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+# [1.44.0](https://github.com/atanasster/component-controls/compare/v1.43.0...v1.44.0) (2020-11-30)
+
+
+### Features
+
+* component jsx explorer ([c530e29](https://github.com/atanasster/component-controls/commit/c530e29f73414fe47ae648134385ed7b36670955))
+
+
+
+
+
+# [1.43.0](https://github.com/atanasster/component-controls/compare/v1.42.12...v1.43.0) (2020-11-28)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.42.12](https://github.com/atanasster/component-controls/compare/v1.42.11...v1.42.12) (2020-11-26)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.42.11](https://github.com/atanasster/component-controls/compare/v1.42.10...v1.42.11) (2020-11-26)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.42.10](https://github.com/atanasster/component-controls/compare/v1.42.9...v1.42.10) (2020-11-26)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.42.9](https://github.com/atanasster/component-controls/compare/v1.42.8...v1.42.9) (2020-11-26)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.42.8](https://github.com/atanasster/component-controls/compare/v1.42.7...v1.42.8) (2020-11-25)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.42.7](https://github.com/atanasster/component-controls/compare/v1.42.6...v1.42.7) (2020-11-25)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.42.6](https://github.com/atanasster/component-controls/compare/v1.42.5...v1.42.6) (2020-11-25)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.42.5](https://github.com/atanasster/component-controls/compare/v1.42.4...v1.42.5) (2020-11-25)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.42.4](https://github.com/atanasster/component-controls/compare/v1.42.3...v1.42.4) (2020-11-25)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.42.3](https://github.com/atanasster/component-controls/compare/v1.42.2...v1.42.3) (2020-11-25)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.42.2](https://github.com/atanasster/component-controls/compare/v1.42.1...v1.42.2) (2020-11-24)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.42.1](https://github.com/atanasster/component-controls/compare/v1.42.0...v1.42.1) (2020-11-24)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+# [1.42.0](https://github.com/atanasster/component-controls/compare/v1.41.1...v1.42.0) (2020-11-24)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.41.1](https://github.com/atanasster/component-controls/compare/v1.41.0...v1.41.1) (2020-11-24)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+# [1.41.0](https://github.com/atanasster/component-controls/compare/v1.40.5...v1.41.0) (2020-11-23)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.40.5](https://github.com/atanasster/component-controls/compare/v1.40.4...v1.40.5) (2020-11-16)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.40.4](https://github.com/atanasster/component-controls/compare/v1.40.3...v1.40.4) (2020-11-16)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.40.3](https://github.com/atanasster/component-controls/compare/v1.40.2...v1.40.3) (2020-11-16)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.40.2](https://github.com/atanasster/component-controls/compare/v1.40.1...v1.40.2) (2020-11-16)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.40.1](https://github.com/atanasster/component-controls/compare/v1.40.0...v1.40.1) (2020-11-16)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+# [1.40.0](https://github.com/atanasster/component-controls/compare/v1.39.4...v1.40.0) (2020-11-15)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.39.4](https://github.com/atanasster/component-controls/compare/v1.39.3...v1.39.4) (2020-11-15)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.39.3](https://github.com/atanasster/component-controls/compare/v1.39.2...v1.39.3) (2020-11-15)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.39.2](https://github.com/atanasster/component-controls/compare/v1.39.1...v1.39.2) (2020-11-14)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.39.1](https://github.com/atanasster/component-controls/compare/v1.39.0...v1.39.1) (2020-11-14)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+# [1.39.0](https://github.com/atanasster/component-controls/compare/v1.38.2...v1.39.0) (2020-11-13)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.38.2](https://github.com/atanasster/component-controls/compare/v1.38.1...v1.38.2) (2020-11-11)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
+## [1.38.1](https://github.com/atanasster/component-controls/compare/v1.38.0...v1.38.1) (2020-11-11)
+
+**Note:** Version bump only for package component-controls-simple
+
+
+
+
+
 # [1.38.0](https://github.com/atanasster/component-controls/compare/v1.37.0...v1.38.0) (2020-11-05)
 
 

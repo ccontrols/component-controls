@@ -2,10 +2,14 @@
 /** @jsx jsx */
 import { FC, useMemo, useContext } from 'react';
 import { jsx, Flex, Box, Label, Checkbox } from 'theme-ui';
-import { Column } from 'react-table';
 import { NodeResult } from 'axe-core';
-import { SyntaxHighlighter, Table, Tag } from '@component-controls/components';
-import { SelectionContext } from '../state/context';
+import {
+  SyntaxHighlighter,
+  Table,
+  Column,
+  Tag,
+} from '@component-controls/components';
+import { SelectionContext, tagSelectedList, trimNode } from '../state/context';
 
 export interface NodesTableProps {
   /**
@@ -20,10 +24,12 @@ export interface NodesTableProps {
 
 const SelectionCheckbox: FC<{ target: string[] }> = ({ target }) => {
   const { isSelected, selection, setSelection } = useContext(SelectionContext);
+
   const checked = isSelected(target);
   const toggleSelection = (selector: string[]) => {
-    if (selector.some(s => selection.includes(s))) {
-      setSelection(selection.filter((e: string) => !selector.includes(e)));
+    const included = tagSelectedList(selection, selector, true);
+    if (included.length) {
+      setSelection(tagSelectedList(selection, selector, false));
     } else {
       setSelection([...selection, ...selector]);
     }
@@ -38,11 +44,11 @@ export const NodesTable: FC<NodesTableProps> = ({
   nodes,
   hideErrorColumns,
 }) => {
-  const columns: Column<Record<string, unknown>>[] = useMemo(
+  const columns: Column<NodeResult>[] = useMemo(
     () => [
       {
         Header: '',
-        accessor: 'selected',
+        accessor: 'target',
         width: 80,
         Cell: ({
           row: {
@@ -90,7 +96,7 @@ export const NodesTable: FC<NodesTableProps> = ({
                     color="lightgrey"
                     variant="tag.rightmargin"
                   >
-                    {target}
+                    {trimNode(target)}
                   </Tag>
                 ))}
             </Flex>
@@ -106,7 +112,7 @@ export const NodesTable: FC<NodesTableProps> = ({
         backgroundColor: 'shadow',
       }}
     >
-      <Table
+      <Table<NodeResult>
         data={nodes}
         columns={columns}
         hiddenColumns={

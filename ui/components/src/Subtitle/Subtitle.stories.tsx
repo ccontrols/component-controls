@@ -1,11 +1,11 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Document, Example, ControlTypes } from '@component-controls/core';
 import { Subtitle, SubtitleProps } from './Subtitle';
 
 export default {
   title: 'Components/Subtitle',
   component: Subtitle,
-};
+} as Document;
 
 export const overview: Example<SubtitleProps> = ({ children }) => {
   return <Subtitle>{children}</Subtitle>;

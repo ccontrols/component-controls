@@ -44,29 +44,13 @@ module.exports = {
   stories: [...],
   pages: {
     story: {
-      tabs: [...defaultBuildConfig.pages.story.tabs, { route: 'ally' }],
+      tabs: {
+        ...defaultBuildConfig.pages.story.tabs, 
+        'ally': '@component-controls/axe-plugin/AllyPage'
+      },
+    },  
   },
 }  
-```
-
-### Add the page to site:
-
-```js:title=.config/runtime.tsx
-import { RunOnlyConfiguration, defaultRunConfig } from "@component-controls/core";
-import { AllyPage } from '@component-controls/axe-plugin';
-
-const config: RunOnlyConfiguration = {
-  pages: {
-    story: {
-      tabs: [
-        ...defaultRunConfig.pages.story.tabs,
-        { title: 'A11Y', render: AllyPage },
-      ],
-    },
-  },  
-}
-
-export default config;
 ```
 <br />
 

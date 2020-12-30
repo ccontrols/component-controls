@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { FC, useState } from 'react';
-import { Styled } from 'theme-ui';
+import { Themed } from 'theme-ui';
 import { Story, Document, PackageInfo } from '@component-controls/core';
 import {
   Source,
@@ -89,7 +89,7 @@ export const BaseStorySource: FC<BaseStorySourceProps> = ({
         { theme }: any,
       ) => {
         return (
-          <Styled.pre
+          <Themed.pre
             className={`${className}`}
             style={{ ...style, padding: '25px 10px 10px', margin: 0 }}
           >
@@ -135,7 +135,7 @@ export const BaseStorySource: FC<BaseStorySourceProps> = ({
                 })()}
               </div>
             ))}
-          </Styled.pre>
+          </Themed.pre>
         );
       }}
     >

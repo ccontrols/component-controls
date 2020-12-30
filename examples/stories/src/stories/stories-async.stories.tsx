@@ -1,11 +1,12 @@
 /* eslint-disable react/display-name */
 import React, { useState, useEffect } from 'react';
-import { useAsync } from '@component-controls/core';
+import { Document, Example, useAsync } from '@component-controls/core';
 
 export default {
-  title: 'Introduction/Async stories',
+  title: 'ESM/Async stories',
   author: 'atanasster',
-};
+  order: 10,
+} as Document;
 
 const fetchData = async () => {
   const response = await fetch('//dummy.restapiexample.com/api/v1/employee/1');
@@ -18,7 +19,7 @@ const storyTemplate = employee => (
     employee ? employee.employee_name : 'loading...'
   }.`}</h2>
 );
-export const asyncStory = () => {
+export const asyncStory: Example = () => {
   const { value } = useAsync(fetchData);
   return storyTemplate(value);
 };
@@ -26,7 +27,7 @@ export const asyncStory = () => {
 asyncStory.description =
   'Stories can invoke async operations using the useAsync hook.';
 
-export const hooksStory = () => {
+export const hooksStory: Example = () => {
   const [employee, setEmployee] = useState('');
   useEffect(() => {
     const data = async () => {

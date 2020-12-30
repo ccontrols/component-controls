@@ -1,9 +1,11 @@
 import {
+  Store,
+  SearchResult,
   Components,
   Packages,
   BuildConfiguration,
   RunConfiguration,
-  deepMergeArrays,
+  mergeConfig,
   defaultBuildConfig,
 } from '@component-controls/core';
 
@@ -49,6 +51,7 @@ export interface LoadingStore {
     filePath: string;
     hash?: string;
   })[];
+  search: Store['search'];
 }
 
 export const store: LoadingStore = {
@@ -57,6 +60,9 @@ export const store: LoadingStore = {
   packages: {},
   config: {},
   buildConfig: {},
+  search: () => {
+    return {} as SearchResult;
+  },
 };
 
 let instrumentOptions: InstrumentOptions = {};
@@ -128,10 +134,16 @@ export let config: ConfigurationResult | undefined;
 export const initializeBuildOptions = (
   rootPath: string,
   configPath?: string,
+  defaultConfigPath?: string,
 ): void => {
-  config = loadConfiguration(rootPath, configPath);
+  config = loadConfiguration(
+    rootPath,
+    configPath,
+    undefined,
+    defaultConfigPath,
+  );
   if (config && config.config) {
-    config.config = deepMergeArrays(defaultBuildConfig, config.config);
+    config.config = mergeConfig(defaultBuildConfig, config.config);
   }
   store.buildConfig = config?.config || defaultBuildConfig;
 };

@@ -1,13 +1,13 @@
 import React from 'react';
-import { addParameters, addDecorator } from '@storybook/react';
+import { addParameters } from '@storybook/react';
 import { ThemeProvider } from '@component-controls/storybook';
 
-addDecorator(story => (
-  <ThemeProvider>{story()}</ThemeProvider>
-));
-const categories = ['Introduction', 'Application','Controls','Blocks', 'Design Tokens',  'Editors', 'Components', 'Plugins']
+export const decorators = [
+  story => <ThemeProvider>{story()}</ThemeProvider>
+];
+
+const categories = ['ESM', 'MDX', 'Application','Controls','Blocks', 'Design Tokens',  'Editors', 'Components', 'Plugins']
 addParameters({
-  dependencies: { hideEmpty: true },
   options: {
     storySort: (a, b) => {
       const aKind = a[1].kind.split('/')[0];

@@ -1,5 +1,9 @@
 import { RequireContextProps } from '@component-controls/config';
-import { BuildConfiguration, normalizePath } from '@component-controls/core';
+import {
+  BuildConfiguration,
+  PagesOnlyRoutes,
+  normalizePath,
+} from '@component-controls/core';
 
 export interface StoryPath {
   absPath: string;
@@ -17,6 +21,34 @@ export const replaceSource = (
 const configJSON = ${
     configFilePath ? `require("${normalizePath(configFilePath)}")` : 'undefined'
   };
+
+const search = ${
+    typeof config?.search?.searchingModule === 'string'
+      ? `require("${normalizePath(config.search.searchingModule)}")`
+      : 'undefined'
+  };
+${
+  config?.pages
+    ? Object.keys(config.pages)
+        .map(key => {
+          const { tabs } = (config.pages as PagesOnlyRoutes)[key];
+          return tabs
+            ? Object.keys(tabs)
+                .map((route, index) => {
+                  const tab = tabs[route];
+                  const m = Array.isArray(tab) ? tab[0] : tab;
+                  return typeof m === 'string'
+                    ? `const ${key}_${index} = require("${m}");`
+                    : undefined;
+                })
+                .filter(tab => tab)
+                .join('\n')
+            : undefined;
+        })
+        .filter(page => page)
+        .join('') || ''
+    : ''
+}
 const contexts = [];
 ${contexts
   .map(
@@ -65,19 +97,18 @@ ${contexts
       }
       if (exports) {
         try {
-          Object.keys(exports).forEach(key => {
+          if (exports.default) {
+            const { storySource, ...rest } = exports.default;
+            assignProps(doc, rest);
+          }
+          Object.keys(exports).filter(key => key !== 'default').forEach(key => {
             const exported = exports[key];
-            if (key === 'default') {
-              const { storySource, ...rest } = exported;
-              assignProps(doc, rest);
-            } else {
-              const story = s.stories[key];
-              if (story) {
-                story.renderFn = exported;
-                assignProps(story, exported);
-                if (exported.story) {
-                  assignProps(story, exported.story);
-                }
+            const story = s.stories[key];
+            if (story) {
+              story.renderFn = typeof exported === 'function' ? exported : (doc.template || exported);
+              assignProps(story, exported);
+              if (exported.story) {
+                assignProps(story, exported.story);
               }
             }
           });
@@ -96,10 +127,32 @@ ${contexts
   const newContent = `
 
 const path = require('path');
+const { loadPageTab } = require('@component-controls/core')
 ${imports}
 ${storeConst}
+store.search = search.default || search;
 store.config = ${configFilePath ? 'configJSON.default ||' : ''} configJSON;
 store.buildConfig = ${config ? JSON.stringify(config) : '{}'};
+${
+  config?.pages
+    ? Object.keys(config.pages)
+        .map(key => {
+          const { tabs = {} } = (config.pages as PagesOnlyRoutes)[key];
+          return (
+            Object.keys(tabs)
+              .map(
+                (tab, index) =>
+                  `store.buildConfig.pages.${key}.tabs["${tab}"] = 
+  loadPageTab(store.buildConfig.pages.${key}.tabs["${tab}"], ${key}_${index});`,
+              )
+              .filter(template => template)
+              .join('\n') || undefined
+          );
+        })
+        .filter(page => page)
+        .join('') || ''
+    : ''
+}
 ${loadStories}
 ${exports}
 `;

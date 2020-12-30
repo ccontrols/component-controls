@@ -4,7 +4,7 @@ import {
   StoryProps,
   Story,
   Document,
-  deepMergeArrays,
+  mergeConfig,
   deepMerge,
   defaultRunConfig,
   convertConfig,
@@ -18,7 +18,7 @@ import {
 } from '@component-controls/core';
 import { LoadingStore } from '@component-controls/loader';
 import { render as reactRender } from '@component-controls/render/react';
-import { transformControls } from './transform-controls';
+import { getControls } from './transform-controls';
 
 export { LoadingStore };
 
@@ -34,13 +34,14 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
       buildConfig = {},
     } = store;
     if (stores) {
-      globalStore.config = deepMergeArrays(
+      globalStore.config = mergeConfig(
         defaultRunConfig,
-        convertConfig(deepMergeArrays(buildConfig, config)),
+        convertConfig(mergeConfig(buildConfig, config)),
       );
       if (!globalStore.config.renderFn) {
         globalStore.config.renderFn = reactRender;
       }
+      globalStore.search = store.search;
       stores.forEach(s => {
         const storeDoc = s.doc;
         const storeStories = s.stories;
@@ -57,6 +58,8 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
           const docGlobalProps = {
             decorators: globalStore.config.decorators,
           };
+          //storybook compat
+          storeDoc.controls = storeDoc.controls || (storeDoc as any).args;
           const doc: Document = deepMerge<Document>(
             pageLayout,
             deepMerge(docGlobalProps, storeDoc),
@@ -67,7 +70,9 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
             subcomponents: doc.subcomponents,
             controls: doc.controls,
             smartControls: doc.smartControls,
-            decorators: doc.decorators,
+            decorators: Array.isArray(doc.decorators)
+              ? doc.decorators.filter(d => typeof d === 'function')
+              : undefined,
           };
           globalStore.docs[doc.title] = doc;
           Object.keys(storeStories).forEach((storyName: string) => {
@@ -79,8 +84,10 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
             );
             stories.forEach(story => {
               story.id = story.id || story.name;
+              //storybook compat
+              story.controls = story.controls || (story as any).args;
               Object.assign(story, deepMerge(docStoryProps, story));
-              story.controls = transformControls(story, doc, loadedComponents);
+              story.controls = getControls(story, doc, loadedComponents);
               if (doc.title && story.id) {
                 const id = docStoryToId(doc.title, story.id);
                 if (!doc.stories) {

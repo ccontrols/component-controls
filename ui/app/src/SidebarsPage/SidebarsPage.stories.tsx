@@ -1,15 +1,12 @@
 import React from 'react';
-import { Example } from '@component-controls/core';
-import { MockContext } from '@component-controls/blocks';
+import { Document, Example } from '@component-controls/core';
+import { mockDecorators } from '@component-controls/blocks';
 import { SidebarsPage } from './SidebarsPage';
 
 export default {
   title: 'Application/SidebarsPage',
   component: SidebarsPage,
-};
+  decorators: mockDecorators,
+} as Document;
 
-export const overview: Example = () => (
-  <MockContext storyId="id-of-story">
-    <SidebarsPage type="story" />
-  </MockContext>
-);
+export const overview: Example = () => <SidebarsPage type="story" />;

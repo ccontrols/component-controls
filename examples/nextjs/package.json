@@ -1,7 +1,7 @@
 {
   "name": "component-controls-nextjs-starter",
   "private": true,
-  "version": "1.38.0",
+  "version": "2.5.3",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -16,20 +16,18 @@
     "directory": "examples/nextjs"
   },
   "dependencies": {
-    "@component-controls/axe-plugin": "^1.38.0",
-    "@component-controls/blocks": "^1.38.0",
-    "@component-controls/core": "^1.38.0",
-    "@component-controls/nextjs-plugin": "^1.38.0",
-    "@component-controls/viewport-plugin": "^1.38.0",
-    "@emotion/core": "^10.0.27",
-    "@theme-ui/presets": "^0.4.0-rc.1",
-    "emotion": "^10.0.27",
-    "emotion-server": "^10.0.27",
-    "next": "^9.5.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "@component-controls/axe-plugin": "^2.5.3",
+    "@component-controls/blocks": "^2.5.3",
+    "@component-controls/core": "^2.5.0",
+    "@component-controls/nextjs-plugin": "^2.5.3",
+    "@component-controls/viewport-plugin": "^2.5.3",
+    "@theme-ui/presets": "^0.6.0-alpha.1",
+    "next": "^10.0.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
+    "babel-preset-react-app": "^9.0.0",
     "typescript": "^3.9.3",
     "webpack-bundle-analyzer": "^3.7.0"
   }

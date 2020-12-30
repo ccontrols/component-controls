@@ -1,12 +1,12 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes, Document } from '@component-controls/core';
 import { ETradeColor, ETradeColorPalette } from './ETradeColor';
 import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/ETradeColor',
   component: ETradeColor,
-};
+} as Document;
 
 export const overview: Example<ColorProps> = ({ name, color }) => (
   <ETradeColor name={name} color={color} />

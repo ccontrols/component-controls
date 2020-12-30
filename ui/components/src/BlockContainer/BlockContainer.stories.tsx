@@ -1,13 +1,13 @@
 import React from 'react';
 import { Donut } from 'theme-ui';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Document, Example, ControlTypes } from '@component-controls/core';
 import { ThemeProvider } from '../ThemeContext';
 import { BlockContainer, BlockContainerProps } from './BlockContainer';
 
 export default {
   title: 'Components/BlockContainer',
   component: BlockContainer,
-};
+} as Document;
 
 export const overview: Example = ({ title }: BlockContainerProps) => {
   return (

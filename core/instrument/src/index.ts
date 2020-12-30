@@ -1,4 +1,3 @@
-import * as parser from '@babel/parser';
 import * as fs from 'fs';
 import mdx from '@mdx-js/mdx';
 import matter from 'gray-matter';
@@ -14,11 +13,12 @@ import {
 
 import { extractCSFStories } from './babel/esm-stories';
 import { extractMDXStories } from './babel/mdx-stories';
-import { transformTree } from './babel/transform-ast-tree';
+import { transformMDXAttributes } from './babel/transform-ast-tree';
 import { extractStoreComponent } from './babel/extract-component';
 import { packageInfo } from './misc/package-info';
 import { extractStoryExports } from './misc/mdx-exports';
 import { prettify } from './misc/prettify';
+import { parseFile } from './misc/ast_store';
 import { readSourceFile } from './misc/source-options';
 import {
   LoadingDocStore,
@@ -38,7 +38,6 @@ import {
 
 export * from './types';
 export { getComponentProps } from './misc/props-info';
-export { findUpFile } from './misc/package-info';
 
 type TraverseFn = (
   ast: File,
@@ -61,8 +60,8 @@ const parseSource = async (
   filePath: string,
   options: Required<InstrumentOptions>,
 ): Promise<ParseStorieReturnType | undefined> => {
-  const source = await prettify(code, filePath, options.prettier);
-  const ast = parser.parse(source, options.parser);
+  const source = await prettify(code, options.prettier, filePath);
+  const { ast } = parseFile(filePath, options.parser, source);
 
   const store = traverseFn(ast, options, { source, filePath });
   if (!store) {
@@ -85,7 +84,7 @@ const parseSource = async (
       doc.source = saveSource;
     }
   }
-  await extractStoreComponent(store, filePath, source, options, ast);
+  await extractStoreComponent(store, filePath, source, options);
   const doc: Document | undefined = store.doc;
   if (doc && store.stories) {
     const storyPackage = await packageInfo(
@@ -158,16 +157,20 @@ export const parseStories = async (
   } = mergedOptions.mdx;
   if (test && filePath.match(test)) {
     const { data, content } = matter(source);
-    const mdxParsed = await mdx(content, {
+    code = await mdx(content, {
       filepath: filePath,
       ...otherMDXOptions,
     });
-    const ast = parser.parse(mdxParsed, mergedOptions.parser) as any;
-    traverse(ast, transformTree());
-    ({ code } = generate(ast, {
-      retainFunctionParens: true,
-      retainLines: true,
-    }));
+    const { ast } = parseFile(filePath, mergedOptions.parser, code, false);
+
+    if (transformMDX) {
+      //second pass transform - inject any necessary attributes
+      traverse(ast, transformMDXAttributes(code));
+      ({ code } = generate(ast, {
+        retainFunctionParens: true,
+        retainLines: false,
+      }));
+    }
     const store = await parseSource(
       code,
       extractMDXStories(data),
@@ -180,21 +183,17 @@ export const parseStories = async (
         transformed: code,
       };
     }
-    const { stories, doc, components, exports, packages } = store || {};
-    const exportsSource = extractStoryExports(storybookExports, exports);
-    let transformed = `
-    
-    ${content}
-`;
+    let transformed;
     if (transformMDX) {
+      const { exports } = store || {};
+      const exportsSource = extractStoryExports(storybookExports, exports);
       transformed = `${renderer}\n${code}\n${exportsSource}`;
+    } else {
+      transformed = source;
     }
     return {
       transformed,
-      stories,
-      doc,
-      components,
-      packages,
+      ...store,
     };
   } else {
     const store = await parseSource(

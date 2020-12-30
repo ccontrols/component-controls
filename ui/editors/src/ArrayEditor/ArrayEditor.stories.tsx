@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ControlTypes, Example } from '@component-controls/core';
 import { ControlsStateProvider } from '@component-controls/store';
 import { ArrayEditor } from './ArrayEditor';
@@ -9,7 +9,7 @@ export default {
 };
 
 export const overview: Example = () => {
-  const [state, setState] = React.useState([
+  const [state, setState] = useState([
     { name: 'Laptop' },
     { name: 'Book' },
     { name: 'Whiskey' },
@@ -34,7 +34,7 @@ export const overview: Example = () => {
 };
 
 export const inline: Example = () => {
-  const [state, setState] = React.useState([
+  const [state, setState] = useState([
     { name: 'Laptop' },
     { name: 'Book' },
     { name: 'Whiskey' },

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React from 'react';
+import { useState } from 'react';
 import {
   HexColorPicker,
   HslaStringColorPicker,
@@ -7,14 +7,14 @@ import {
   RgbStringColorPicker,
   RgbaStringColorPicker,
 } from 'react-colorful';
-import { jsx, Button, Box, SxStyleProp, Theme } from 'theme-ui';
+import { jsx, Button, Box, BoxProps, Theme } from 'theme-ui';
 import { Popover } from '@component-controls/components';
 import { ComponentControlColor, ControlTypes } from '@component-controls/core';
 import { useControl } from '@component-controls/store';
 import { PropertyEditor } from '../types';
 import { addPropertyEditor } from '../prop-factory';
 
-const sxProps: SxStyleProp = {
+const sxProps: BoxProps['sx'] = {
   position: 'relative',
   display: 'flex',
   flexDirection: 'column',
@@ -115,7 +115,7 @@ const sxProps: SxStyleProp = {
 
 export const ColorEditor: PropertyEditor = ({ name }) => {
   const [control, onChange] = useControl<ComponentControlColor>(name);
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const { kind } = control;
   const handleChange = (color: string) => {
     onChange(color);

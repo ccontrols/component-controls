@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { FC, useMemo, useRef, useEffect } from 'react';
 import { API, Consumer, Combo } from '@storybook/api';
 import { UPDATE_STORY_CONTEXT } from '../types';
 
@@ -9,11 +9,11 @@ interface ManagerContainerProps {
   title: string;
 }
 
-export const ManagerContainer: React.FC<ManagerContainerProps> = props => {
+export const ManagerContainer: FC<ManagerContainerProps> = props => {
   const { active, api, route } = props;
-  const channel = React.useMemo(() => api.getChannel(), [api]);
-  const storyRef = React.useRef('');
-  React.useEffect(() => {
+  const channel = useMemo(() => api.getChannel(), [api]);
+  const storyRef = useRef('');
+  useEffect(() => {
     const ATTACH_DOCS_PAGE = `attach_docs_page_${route}`;
 
     const sendMessage = () => {

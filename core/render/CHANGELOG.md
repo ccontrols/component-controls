@@ -3,6 +3,190 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/ccontrols/component-controls/compare/v2.4.2...v2.5.0) (2020-12-28)
+
+**Note:** Version bump only for package @component-controls/render
+
+
+
+
+
+# [2.4.0](https://github.com/ccontrols/component-controls/compare/v2.3.0...v2.4.0) (2020-12-24)
+
+**Note:** Version bump only for package @component-controls/render
+
+
+
+
+
+# [2.3.0](https://github.com/ccontrols/component-controls/compare/v2.2.4...v2.3.0) (2020-12-23)
+
+**Note:** Version bump only for package @component-controls/render
+
+
+
+
+
+# [2.2.0](https://github.com/ccontrols/component-controls/compare/v2.1.0...v2.2.0) (2020-12-08)
+
+**Note:** Version bump only for package @component-controls/render
+
+
+
+
+
+# [2.1.0](https://github.com/ccontrols/component-controls/compare/v2.0.1...v2.1.0) (2020-12-06)
+
+**Note:** Version bump only for package @component-controls/render
+
+
+
+
+
+## [2.0.1](https://github.com/ccontrols/component-controls/compare/v2.0.0...v2.0.1) (2020-12-06)
+
+**Note:** Version bump only for package @component-controls/render
+
+
+
+
+
+# [2.0.0](https://github.com/ccontrols/component-controls/compare/v1.44.1...v2.0.0) (2020-12-05)
+
+**Note:** Version bump only for package @component-controls/render
+
+
+
+
+
+# [1.44.0](https://github.com/ccontrols/component-controls/compare/v1.43.0...v1.44.0) (2020-11-30)
+
+**Note:** Version bump only for package @component-controls/render
+
+
+
+
+
+# [1.43.0](https://github.com/ccontrols/component-controls/compare/v1.42.12...v1.43.0) (2020-11-28)
+
+**Note:** Version bump only for package @component-controls/render
+
+
+
+
+
+## [1.42.12](https://github.com/ccontrols/component-controls/compare/v1.42.11...v1.42.12) (2020-11-26)
+
+**Note:** Version bump only for package @component-controls/render
+
+
+
+
+
+## [1.42.11](https://github.com/ccontrols/component-controls/compare/v1.42.10...v1.42.11) (2020-11-26)
+
+**Note:** Version bump only for package @component-controls/render
+
+
+
+
+
+## [1.42.9](https://github.com/ccontrols/component-controls/compare/v1.42.8...v1.42.9) (2020-11-26)
+
+**Note:** Version bump only for package @component-controls/render
+
+
+
+
+
+## [1.42.8](https://github.com/ccontrols/component-controls/compare/v1.42.7...v1.42.8) (2020-11-25)
+
+**Note:** Version bump only for package @component-controls/render
+
+
+
+
+
+## [1.42.7](https://github.com/ccontrols/component-controls/compare/v1.42.6...v1.42.7) (2020-11-25)
+
+**Note:** Version bump only for package @component-controls/render
+
+
+
+
+
+## [1.42.5](https://github.com/ccontrols/component-controls/compare/v1.42.4...v1.42.5) (2020-11-25)
+
+**Note:** Version bump only for package @component-controls/render
+
+
+
+
+
+# [1.42.0](https://github.com/ccontrols/component-controls/compare/v1.41.1...v1.42.0) (2020-11-24)
+
+**Note:** Version bump only for package @component-controls/render
+
+
+
+
+
+# [1.41.0](https://github.com/ccontrols/component-controls/compare/v1.40.5...v1.41.0) (2020-11-23)
+
+
+### Bug Fixes
+
+* stprybook defaults for params and configpath ([b649fa2](https://github.com/ccontrols/component-controls/commit/b649fa2e9d272d13a2ebc363274d403dbe9a3979))
+
+
+### Features
+
+* doc template ([5bc41c3](https://github.com/ccontrols/component-controls/commit/5bc41c371a1ed440971892ad22324e871f30f89d))
+
+
+
+
+
+## [1.40.2](https://github.com/ccontrols/component-controls/compare/v1.40.1...v1.40.2) (2020-11-16)
+
+**Note:** Version bump only for package @component-controls/render
+
+
+
+
+
+# [1.40.0](https://github.com/ccontrols/component-controls/compare/v1.39.4...v1.40.0) (2020-11-15)
+
+**Note:** Version bump only for package @component-controls/render
+
+
+
+
+
+## [1.39.4](https://github.com/ccontrols/component-controls/compare/v1.39.3...v1.39.4) (2020-11-15)
+
+**Note:** Version bump only for package @component-controls/render
+
+
+
+
+
+## [1.39.3](https://github.com/ccontrols/component-controls/compare/v1.39.2...v1.39.3) (2020-11-15)
+
+**Note:** Version bump only for package @component-controls/render
+
+
+
+
+
+## [1.39.1](https://github.com/ccontrols/component-controls/compare/v1.39.0...v1.39.1) (2020-11-14)
+
+**Note:** Version bump only for package @component-controls/render
+
+
+
+
+
 # [1.38.0](https://github.com/ccontrols/component-controls/compare/v1.37.0...v1.38.0) (2020-11-05)
 
 **Note:** Version bump only for package @component-controls/render

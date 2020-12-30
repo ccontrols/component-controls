@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC, ReactNode, Fragment } from 'react';
 import { jsx, Box } from 'theme-ui';
-import { SkipLinks, SkiLinksItemProps } from '@component-controls/components';
+import { SkipLinks, SkipLinksItemProps } from '@component-controls/components';
 import {
   useStore,
   useCurrentDocument,
@@ -25,7 +25,7 @@ export const App: FC<AppProps> = ({ children, Helmet }) => {
   const doc = useCurrentDocument();
   const config = useConfig();
   const { toolbar } = config;
-  const items: SkiLinksItemProps[] = [
+  const items: SkipLinksItemProps[] = [
     {
       target: 'content',
       text: 'skip to main content',

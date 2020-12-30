@@ -1,62 +1,25 @@
 import { Story, Document, Stories } from '@component-controls/core';
 import { File } from '@babel/types';
-import traverse from '@babel/traverse';
-import { extractFunctionParameters } from './extract-function-parameters';
+import traverse, { NodePath } from '@babel/traverse';
 import { extractAttributes } from './extract-attributes';
-import { followStoryImport } from './follow-imports';
 import { componentsFromParams } from '../misc/component-attributes';
-import { sourceLocation } from '../misc/source-location';
 import {
   LoadingDocStore,
   ParseStorieReturnType,
   InstrumentOptions,
 } from '../types';
-
+import {
+  extractFunction as extractFunctionTemplate,
+  extractVarFunction,
+} from './extract-function';
 export const extractCSFStories = (
   ast: File,
   _options: InstrumentOptions,
   { source, filePath }: { source: string; filePath: string },
 ): ParseStorieReturnType => {
   const globals: Stories = {};
-  const localStories: Stories = {};
+  const locals: Stories = {};
 
-  const extractFunction = (path: any, declaration: any): Story | undefined => {
-    if (declaration.init) {
-      switch (declaration.init.type) {
-        case 'ArrowFunctionExpression': {
-          const el = declaration.init.body;
-          const name = declaration.id.name;
-          const story: Story = {
-            loc: sourceLocation(el.loc),
-            name,
-            id: name,
-          };
-          traverse(path.node, extractFunctionParameters(story), path.scope);
-          return story;
-        }
-        case 'Identifier': {
-          return followStoryImport(
-            declaration.id.name,
-            declaration.init.name,
-            filePath,
-            source,
-            _options,
-            ast,
-          );
-        }
-      }
-    } else if (declaration.type === 'FunctionDeclaration') {
-      const name = declaration.id.name;
-      const story: Story = {
-        loc: sourceLocation(declaration.body.loc),
-        name,
-        id: name,
-      };
-      traverse(path.node, extractFunctionParameters(story), path.scope);
-      return story;
-    }
-    return undefined;
-  };
   let components: { [key: string]: string | undefined } = {};
   const store: LoadingDocStore = {
     stories: {},
@@ -64,12 +27,31 @@ export const extractCSFStories = (
     components: {},
     packages: {},
   };
-  traverse(ast as any, {
+  const extractFunction = (path: NodePath, declaration: any, name: string) =>
+    extractFunctionTemplate(
+      ast,
+      _options,
+      { source, filePath },
+      path,
+      declaration,
+      name,
+      store.doc?.template,
+      locals,
+    );
+  traverse(ast, {
     ExportDefaultDeclaration: (path: any) => {
       const { declaration } = path.node;
       const attributes = extractAttributes(declaration);
-
+      const template = declaration.expression?.properties.find(
+        (prop: any) =>
+          prop.key?.name === 'template' &&
+          prop.value?.type === 'ArrowFunctionExpression',
+      );
       const { title: docTitle, name } = attributes || {};
+      if (template) {
+        delete attributes.template;
+      }
+
       const title = docTitle || name;
       if (typeof title === 'string') {
         const attrComponents = componentsFromParams(attributes);
@@ -85,7 +67,13 @@ export const extractCSFStories = (
         if (attrComponents.length > 0) {
           doc.component = attrComponents[0];
         }
-
+        if (template) {
+          doc.template = extractFunction(
+            path as NodePath,
+            { type: 'VariableDeclarator', init: template.value },
+            template.key.name,
+          ) as Document['template'];
+        }
         store.doc = doc;
       }
     },
@@ -124,35 +112,24 @@ export const extractCSFStories = (
       }
     },
     VariableDeclaration: (path: any) => {
-      const { declarations } = path.node;
-
-      if (Array.isArray(declarations) && declarations.length > 0) {
-        const declaration = declarations[0];
-        if (declaration) {
-          const name = declaration.id.name;
-          //check if it was a named export
-          if (!store.stories[name]) {
-            const story = extractFunction(path, declaration);
-            if (story && story.name) {
-              localStories[story.name] = story;
-            }
-          }
-        }
+      const story = extractVarFunction(
+        ast,
+        _options,
+        { source, filePath },
+        path,
+        store.doc?.template,
+        locals,
+      );
+      if (story && story.name) {
+        locals[story.name] = story;
       }
     },
     ExportSpecifier: (path: any) => {
       const { node } = path;
       const localName = node.local.name;
       const exportedName = node.exported.name;
-      const story = localStories[localName];
+      const story = locals[localName];
       if (story) {
-        const global = globals[localName];
-        if (global) {
-          localStories[localName] = {
-            ...story,
-            ...global,
-          };
-        }
         store.stories[exportedName] = story;
       }
     },
@@ -162,7 +139,11 @@ export const extractCSFStories = (
         const { declarations } = declaration;
         if (declarations) {
           if (Array.isArray(declarations) && declarations.length > 0) {
-            const story = extractFunction(path, declarations[0]);
+            const story = extractFunction(
+              path as NodePath,
+              declarations[0],
+              declarations[0].id.name,
+            );
             if (story) {
               const name = story.name;
               store.stories[name] = {
@@ -173,7 +154,11 @@ export const extractCSFStories = (
           }
         } else {
           if (declaration.type === 'FunctionDeclaration') {
-            const story = extractFunction(path, declaration);
+            const story = extractFunction(
+              path as NodePath,
+              declaration,
+              declaration.id.name,
+            );
             if (story) {
               const name = story.name;
               store.stories[name] = {

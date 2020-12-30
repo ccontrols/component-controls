@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/react-docgen-typescript-info",
-  "version": "1.38.0",
+  "version": "2.5.0",
   "description": "Component controls react-docgen-typescript props info loader",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,17 +30,17 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/core": "^1.38.0",
+    "@component-controls/core": "^2.5.0",
     "react-docgen-typescript": "^1.20.5"
   },
   "devDependencies": {
-    "@component-controls/ts-markdown-docs": "^1.37.0",
+    "@component-controls/ts-markdown-docs": "^2.2.0",
     "@types/jest": "^26.0.10",
     "@types/react": "^16.9.34",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",
     "jest": "^26.4.2",
-    "react": "^16.12.0",
+    "react": "^17.0.1",
     "typescript": "^4.0.5"
   },
   "peerDependencies": {
@@ -58,5 +58,5 @@
   "authors": [
     "Atanas Stoyanov"
   ],
-  "gitHead": "db62ecc61d3445304bbc4f8f104dc4b1ebba96ba"
+  "gitHead": "e30d62f101e104711a16261fce04785d58cac1eb"
 }

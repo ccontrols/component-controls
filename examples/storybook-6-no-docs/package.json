@@ -1,27 +1,25 @@
 {
   "private": true,
-  "version": "1.38.0",
+  "version": "2.5.3",
   "name": "component-controls-storybook-6-no-docs",
   "license": "MIT",
   "scripts": {
-    "debug": "NODE_OPTIONS=--inspect-brk start-storybook -p 9016 -c .storybook",
     "start": "start-storybook -p 9016 -c .storybook",
     "build-sample": "rm -rf node_modules/.cache/storybook && build-storybook -c .storybook -o ./public"
   },
   "dependencies": {
-    "@component-controls/axe-plugin": "^1.38.0",
-    "@component-controls/blocks": "^1.38.0",
-    "@component-controls/core": "^1.38.0",
-    "@component-controls/store": "^1.38.0",
-    "@component-controls/storybook": "^1.38.0",
-    "@component-controls/viewport-plugin": "^1.38.0",
-    "@storybook/react": "next",
+    "@component-controls/axe-plugin": "^2.5.3",
+    "@component-controls/blocks": "^2.5.3",
+    "@component-controls/core": "^2.5.0",
+    "@component-controls/store": "^2.5.3",
+    "@component-controls/storybook": "^2.5.3",
+    "@component-controls/viewport-plugin": "^2.5.3",
+    "@storybook/react": "^6.2.0-alpha.3",
     "babel-loader": "^8.0.6",
     "babel-preset-react-app": "^9.0.0",
-    "cross-env": "^5.2.0",
     "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "typescript": "^3.8.3"
   },
   "devDependencies": {

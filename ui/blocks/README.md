@@ -3,9 +3,12 @@
 -   [Overview](#overview)
 -   [List of components](#list-of-components)
     -   [<ins>ComponentsBlockContainer</ins>](#inscomponentsblockcontainerins)
+    -   [<ins>ComponentsContainer</ins>](#inscomponentscontainerins)
     -   [<ins>StoryBlockContainer</ins>](#insstoryblockcontainerins)
-    -   [<ins>ComponentDeps</ins>](#inscomponentdepsins)
-    -   [<ins>Dependencies</ins>](#insdependenciesins)
+    -   [<ins>ComponentExternalDependencies</ins>](#inscomponentexternaldependenciesins)
+    -   [<ins>ComponentLocalDependencies</ins>](#inscomponentlocaldependenciesins)
+    -   [<ins>ExternalDependencies</ins>](#insexternaldependenciesins)
+    -   [<ins>LocalDependencies</ins>](#inslocaldependenciesins)
     -   [<ins>BaseComponentSource</ins>](#insbasecomponentsourceins)
     -   [<ins>ComponentSource</ins>](#inscomponentsourceins)
     -   [<ins>Container</ins>](#inscontainerins)
@@ -31,8 +34,10 @@
     -   [<ins>TagsList</ins>](#instagslistins)
     -   [<ins>ThemeProvider</ins>](#insthemeproviderins)
     -   [<ins>Title</ins>](#institleins)
+    -   [<ins>BlockContextProvider</ins>](#insblockcontextproviderins)
     -   [<ins>InvalidType</ins>](#insinvalidtypeins)
     -   [<ins>MDXContent</ins>](#insmdxcontentins)
+    -   [<ins>MockContext</ins>](#insmockcontextins)
     -   [<ins>getStoryBlockTitle</ins>](#insgetstoryblocktitleins)
 
 # Overview
@@ -71,6 +76,17 @@ _ComponentsBlockContainer [source code](https://github.com/ccontrols/component-c
 | `sxStyle`     | _ThemeUIStyleObject_                                      | theme-ui styling object for Block Box                                                                                                                                                                                                                                                              |
 | `data-testid` | _string_                                                  | testing id                                                                                                                                                                                                                                                                                         |
 
+## <ins>ComponentsContainer</ins>
+
+_ComponentsContainer [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/BlockContainer/components/ComponentsContainer.tsx)_
+
+### properties
+
+| Name          | Type                                                      | Description                                                                                                   |
+| ------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `components*` | _Record&lt;string, Component>_                            |                                                                                                               |
+| `onSelect`    | _(name: string, component: Component) => boolean \| void_ | callback to be called when the tab changes if the function returns false, it can stop chabging to the new tab |
+
 ## <ins>StoryBlockContainer</ins>
 
 _StoryBlockContainer [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/BlockContainer/story/StoryBlockContainer.tsx)_
@@ -79,7 +95,7 @@ _StoryBlockContainer [source code](https://github.com/ccontrols/component-contro
 
 | Name                  | Type                 | Description                                                                                                     |
 | --------------------- | -------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `story`               | _Story_              |                                                                                                                 |
+| `story`               | _Story&lt;unknown>_  |                                                                                                                 |
 | `useStoryDescription` | _boolean_            |                                                                                                                 |
 | `title`               | _string_             | optional section title for the block.                                                                           |
 | `description`         | _string_             | optional markdown description.                                                                                  |
@@ -88,11 +104,11 @@ _StoryBlockContainer [source code](https://github.com/ccontrols/component-contro
 | `sxStyle`             | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                           |
 | `data-testid`         | _string_             | testing id                                                                                                      |
 
-## <ins>ComponentDeps</ins>
+## <ins>ComponentExternalDependencies</ins>
 
 Displays external dependencies for a component
 
-_ComponentDeps [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ComponentDeps/ComponentDeps.tsx)_
+_ComponentExternalDependencies [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ComponentDependencies/ComponentDependencies.tsx)_
 
 ### properties
 
@@ -109,17 +125,50 @@ _ComponentDeps [source code](https://github.com/ccontrols/component-controls/tre
 | `sxStyle`     | _ThemeUIStyleObject_                                      | theme-ui styling object for Block Box                                                                                                                                                                                                                                                              |
 | `data-testid` | _string_                                                  | testing id                                                                                                                                                                                                                                                                                         |
 
-## <ins>Dependencies</ins>
+## <ins>ComponentLocalDependencies</ins>
 
-table component to display a list of dependencies
+Displays local dependencies for a component
 
-_Dependencies [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ComponentDeps/Dependencies.tsx)_
+_ComponentLocalDependencies [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ComponentDependencies/ComponentDependencies.tsx)_
 
 ### properties
 
-| Name            | Type            | Description                     |
-| --------------- | --------------- | ------------------------------- |
-| `dependencies*` | _Dependency\[]_ | list of dependencies to display |
+| Name          | Type                                                      | Description                                                                                                                                                                                                                                                                                        |
+| ------------- | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `onSelect`    | _(name: string, component: Component) => boolean \| void_ | callback to be called when the tab changes if the function returns false, it can stop chabging to the new tab                                                                                                                                                                                      |
+| `visibility`  | _ComponentVisibility_                                     | by default will show both controls and props tables user setting can display only props table or only controls                                                                                                                                                                                     |
+| `of`          | _any_                                                     | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
+| `name`        | _string_                                                  | some component-oriented ui components can also be driven by a story id (name). ie the PropsTable can display component props, or story controls                                                                                                                                                    |
+| `title`       | _string_                                                  | optional section title for the block.                                                                                                                                                                                                                                                              |
+| `description` | _string_                                                  | optional markdown description.                                                                                                                                                                                                                                                                     |
+| `id`          | _string_                                                  | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                                                                                                                                                    |
+| `collapsible` | _boolean_                                                 | if false, will nothave a collapsible frame.                                                                                                                                                                                                                                                        |
+| `sxStyle`     | _ThemeUIStyleObject_                                      | theme-ui styling object for Block Box                                                                                                                                                                                                                                                              |
+| `data-testid` | _string_                                                  | testing id                                                                                                                                                                                                                                                                                         |
+
+## <ins>ExternalDependencies</ins>
+
+base component dependencies
+
+_ExternalDependencies [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ComponentDependencies/ExternalDependencies.tsx)_
+
+### properties
+
+| Name        | Type        | Description |
+| ----------- | ----------- | ----------- |
+| `component` | _Component_ |             |
+
+## <ins>LocalDependencies</ins>
+
+base component dependencies
+
+_LocalDependencies [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ComponentDependencies/LocalDependencies.tsx)_
+
+### properties
+
+| Name        | Type        | Description |
+| ----------- | ----------- | ----------- |
+| `component` | _Component_ |             |
 
 ## <ins>BaseComponentSource</ins>
 
@@ -209,10 +258,10 @@ _DocumentItem [source code](https://github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name    | Type       | Description              |
-| ------- | ---------- | ------------------------ |
-| `link*` | _string_   | link to the document     |
-| `doc*`  | _Document_ | document to be displayed |
+| Name    | Type                   | Description              |
+| ------- | ---------------------- | ------------------------ |
+| `link*` | _string_               | link to the document     |
+| `doc*`  | _Document&lt;unknown>_ | document to be displayed |
 
 ## <ins>EditPage</ins>
 
@@ -269,6 +318,7 @@ _BasePlayground [source code](https://github.com/ccontrols/component-controls/tr
 | Name          | Type                 | Description                                                                                                     |
 | ------------- | -------------------- | --------------------------------------------------------------------------------------------------------------- |
 | `scale`       | _number_             | default scale for the zoom feature. If scale is set to 0, the zoom feature will be disabled.                    |
+| `source`      | _string_             | playground source option - valid when a Story is not embedded inside the Playground.                            |
 | `dark`        | _boolean_            | whether to use the dark theme for the story source component.                                                   |
 | `title`       | _string_             | optional section title for the block.                                                                           |
 | `description` | _string_             | optional markdown description.                                                                                  |
@@ -276,13 +326,14 @@ _BasePlayground [source code](https://github.com/ccontrols/component-controls/tr
 | `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                     |
 | `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                           |
 | `data-testid` | _string_             | testing id                                                                                                      |
-| `openTab`     | _any_                | by default, which tab to have open.                                                                             |
+| `openTab`     | _ReactNode_          | by default, which tab to have open.                                                                             |
 | `visibleTabs` | _boolean_            | if true, the tabs on the panels will be visible                                                                 |
 | `background`  | _BackgroundType_     | background pattern type                                                                                         |
 | `direction`   | _DirectionType_      | direction type                                                                                                  |
 | `actions`     | _ActionItem\[]_      | optional actions provided to the component                                                                      |
 | `plain`       | _boolean_            | if plain, skip the border and spacing around the children                                                       |
-| `story`       | _Story_              |                                                                                                                 |
+| `story`       | _Story&lt;unknown>_  |                                                                                                                 |
+| `isDark`      | _boolean_            |                                                                                                                 |
 | `wrapper`     | _boolean_            |                                                                                                                 |
 
 ## <ins>Playground</ins>
@@ -296,6 +347,7 @@ _Playground [source code](https://github.com/ccontrols/component-controls/tree/m
 | Name          | Type                 | Description                                                                                                     |
 | ------------- | -------------------- | --------------------------------------------------------------------------------------------------------------- |
 | `scale`       | _number_             | default scale for the zoom feature. If scale is set to 0, the zoom feature will be disabled.                    |
+| `source`      | _string_             | playground source option - valid when a Story is not embedded inside the Playground.                            |
 | `dark`        | _boolean_            | whether to use the dark theme for the story source component.                                                   |
 | `title`       | _string_             | optional section title for the block.                                                                           |
 | `description` | _string_             | optional markdown description.                                                                                  |
@@ -303,7 +355,7 @@ _Playground [source code](https://github.com/ccontrols/component-controls/tree/m
 | `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                     |
 | `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                           |
 | `data-testid` | _string_             | testing id                                                                                                      |
-| `openTab`     | _any_                | by default, which tab to have open.                                                                             |
+| `openTab`     | _ReactNode_          | by default, which tab to have open.                                                                             |
 | `visibleTabs` | _boolean_            | if true, the tabs on the panels will be visible                                                                 |
 | `background`  | _BackgroundType_     | background pattern type                                                                                         |
 | `direction`   | _DirectionType_      | direction type                                                                                                  |
@@ -320,6 +372,7 @@ _StoryPlayground [source code](https://github.com/ccontrols/component-controls/t
 | ------------- | -------------------- | --------------------------------------------------------------------------------------------------------------- |
 | `storyProps`  | _any_                |                                                                                                                 |
 | `scale`       | _number_             | default scale for the zoom feature. If scale is set to 0, the zoom feature will be disabled.                    |
+| `source`      | _string_             | playground source option - valid when a Story is not embedded inside the Playground.                            |
 | `dark`        | _boolean_            | whether to use the dark theme for the story source component.                                                   |
 | `title`       | _string_             | optional section title for the block.                                                                           |
 | `description` | _string_             | optional markdown description.                                                                                  |
@@ -327,7 +380,7 @@ _StoryPlayground [source code](https://github.com/ccontrols/component-controls/t
 | `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                     |
 | `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                           |
 | `data-testid` | _string_             | testing id                                                                                                      |
-| `openTab`     | _any_                | by default, which tab to have open.                                                                             |
+| `openTab`     | _ReactNode_          | by default, which tab to have open.                                                                             |
 | `visibleTabs` | _boolean_            | if true, the tabs on the panels will be visible                                                                 |
 | `background`  | _BackgroundType_     | background pattern type                                                                                         |
 | `direction`   | _DirectionType_      | direction type                                                                                                  |
@@ -376,11 +429,11 @@ _useControlsActions [source code](https://github.com/ccontrols/component-control
 
 ### properties
 
-| Name              | Type                | Description |
-| ----------------- | ------------------- | ----------- |
-| `controls`        | _ComponentControls_ |             |
-| `storyId`         | _string_            |             |
-| `setControlValue` | _SetControlValueFn_ |             |
+| Name              | Type                                             | Description |
+| ----------------- | ------------------------------------------------ | ----------- |
+| `controls`        | _ComponentControls&lt;ComponentControl&lt;any>>_ |             |
+| `storyId`         | _string_                                         |             |
+| `setControlValue` | _SetControlValueFn_                              |             |
 
 ## <ins>Search</ins>
 
@@ -388,11 +441,11 @@ _Search [source code](https://github.com/ccontrols/component-controls/tree/maste
 
 ### properties
 
-| Name           | Type                                                                                                                                                                                                                                                     | Description                                                                 |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `onSelect`     | _(item: Document) => void_                                                                                                                                                                                                                               | on select a search item.                                                    |
-| `children`     | _((props: SearchBoxCallbackProps&lt;Document>) => ReactNode) \| (((props: SearchBoxCallbackProps&lt;Document>) => ReactNode) & string) \| ... 35 more ... \| (((props: SearchBoxCallbackProps&lt;...>) => ReactNode) & ... 1 more ... & ReactNodeArray)_ | children is a render prop to allow custom rendering of items, one at a time |
-| `popoverProps` | _PopoverProps_                                                                                                                                                                                                                                           | customize the popover                                                       |
+| Name           | Type                                                                                                                                                                                                                                                                             | Description                                                                 |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `onSelect`     | _(item: Document&lt;unknown>) => void_                                                                                                                                                                                                                                           | on select a search item.                                                    |
+| `children`     | _((props: SearchBoxCallbackProps&lt;Document&lt;unknown>>) => ReactNode) \| (((props: SearchBoxCallbackProps&lt;Document&lt;unknown>>) => ReactNode) & string) \| ... 35 more ... \| (((props: SearchBoxCallbackProps&lt;...>) => ReactNode) & ... 1 more ... & ReactNodeArray)_ | children is a render prop to allow custom rendering of items, one at a time |
+| `popoverProps` | _PopoverProps_                                                                                                                                                                                                                                                                   | customize the popover                                                       |
 
 ## <ins>Stories</ins>
 
@@ -409,12 +462,13 @@ _Stories [source code](https://github.com/ccontrols/component-controls/tree/mast
 | `name`        | _string_             |                                                                                                                            |
 | `storyProps`  | _any_                |                                                                                                                            |
 | `scale`       | _number_             | default scale for the zoom feature. If scale is set to 0, the zoom feature will be disabled.                               |
+| `source`      | _string_             | playground source option - valid when a Story is not embedded inside the Playground.                                       |
 | `title`       | _string_             | optional section title for the block.                                                                                      |
 | `description` | _string_             | optional markdown description.                                                                                             |
 | `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                                |
 | `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                                      |
 | `data-testid` | _string_             | testing id                                                                                                                 |
-| `openTab`     | _any_                | by default, which tab to have open.                                                                                        |
+| `openTab`     | _ReactNode_          | by default, which tab to have open.                                                                                        |
 | `visibleTabs` | _boolean_            | if true, the tabs on the panels will be visible                                                                            |
 | `background`  | _BackgroundType_     | background pattern type                                                                                                    |
 | `direction`   | _DirectionType_      | direction type                                                                                                             |
@@ -451,7 +505,7 @@ _StoryRender [source code](https://github.com/ccontrols/component-controls/tree/
 
 | Name          | Type                     | Description |
 | ------------- | ------------------------ | ----------- |
-| `story*`      | _Story_                  |             |
+| `story*`      | _Story&lt;unknown>_      |             |
 | `ref`         | _Ref&lt;HTMLDivElement>_ |             |
 | `wrapper`     | _StoryWrapperType_       |             |
 | `iframeStyle` | _CSSProperties_          |             |
@@ -551,6 +605,22 @@ _Title [source code](https://github.com/ccontrols/component-controls/tree/master
 | `children` | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | text to be displayed in the component. |
 | `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_                                                                                                                                                                                                       |                                        |
 
+## <ins>BlockContextProvider</ins>
+
+_BlockContextProvider [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/context/BlockContext.tsx)_
+
+### properties
+
+| Name         | Type                    | Description                                                                            |
+| ------------ | ----------------------- | -------------------------------------------------------------------------------------- |
+| `storyId`    | _string_                | current story id                                                                       |
+| `docId`      | _string_                | current documentation page, if no story is selected                                    |
+| `store*`     | _Store_                 | store object                                                                           |
+| `activeTab`  | _string_                | active page tab                                                                        |
+| `values`     | _any_                   | initial control values. usually passed from the url                                    |
+| `options`    | _object_                | global options passed from container those are global parameters as well as decorators |
+| `components` | _MarkdownComponentType_ | components to customize the markdown display.                                          |
+
 ## <ins>InvalidType</ins>
 
 error message when the control type is not found.
@@ -567,15 +637,26 @@ _MDXContent [source code](https://github.com/ccontrols/component-controls/tree/m
 | ------------- | ----- | ----------- |
 | `components*` | _any_ |             |
 
+## <ins>MockContext</ins>
+
+_MockContext [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/test/MockContext.tsx)_
+
+### properties
+
+| Name        | Type                   | Description |
+| ----------- | ---------------------- | ----------- |
+| `storyId`   | _string_               |             |
+| `component` | _ComponentType&lt;{}>_ |             |
+
 ## <ins>getStoryBlockTitle</ins>
 
 _getStoryBlockTitle [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/utils/constants.ts)_
 
 ### properties
 
-| Name    | Type     | Description |
-| ------- | -------- | ----------- |
-| `story` | _Story_  |             |
-| `title` | _string_ |             |
+| Name    | Type                | Description |
+| ------- | ------------------- | ----------- |
+| `story` | _Story&lt;unknown>_ |             |
+| `title` | _string_            |             |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

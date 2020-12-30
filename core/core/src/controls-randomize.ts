@@ -70,7 +70,7 @@ export const randomizeData = (controls: ComponentControls): RandomizedData => {
           if (name.startsWith('src')) {
             return {
               name,
-              value: faker.internet.avatar(),
+              value: 'https://picsum.photos/seed/picsum/128/128',
             };
           }
           return {

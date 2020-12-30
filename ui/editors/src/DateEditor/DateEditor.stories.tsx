@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ControlTypes, Example } from '@component-controls/core';
 import { ControlsStateProvider } from '@component-controls/store';
 import { DateEditor } from './DateEditor';
@@ -9,7 +9,7 @@ export default {
 };
 
 export const overview: Example = () => {
-  const [state, setState] = React.useState(new Date());
+  const [state, setState] = useState(new Date());
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -23,7 +23,7 @@ export const overview: Example = () => {
 };
 
 export const onlyDatePicker: Example = () => {
-  const [state, setState] = React.useState(new Date());
+  const [state, setState] = useState(new Date());
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -37,7 +37,7 @@ export const onlyDatePicker: Example = () => {
 };
 
 export const onlyTimePicker: Example = () => {
-  const [state, setState] = React.useState(new Date());
+  const [state, setState] = useState(new Date());
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}

@@ -18,7 +18,7 @@ export const componentsFromParams = (
 ): string[] => {
   const result = [];
   const { component } = element;
-  const name = componentName(component);
+  const name = componentName(component as string);
   if (name) {
     result.push(name);
   }

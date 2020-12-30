@@ -1,4 +1,4 @@
-import React, { useMemo, MouseEvent } from 'react';
+import { useState, useMemo, MouseEvent } from 'react';
 import { window } from 'global';
 import copy from 'copy-to-clipboard';
 import queryString from 'query-string';
@@ -28,8 +28,8 @@ export const useControlsActions = (
   'aria-label': string;
 }[] => {
   const { controls, setControlValue, storyId } = props;
-  const [copied, setCopied] = React.useState(false);
-  const [urlCopied, setURLCopied] = React.useState(false);
+  const [copied, setCopied] = useState(false);
+  const [urlCopied, setURLCopied] = useState(false);
   const { hasControls, canReset, canRandomize } = useMemo(() => {
     const keys = controls ? Object.keys(controls) : [];
     const canRandomize =

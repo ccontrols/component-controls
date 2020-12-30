@@ -1,8 +1,8 @@
 /** @jsx jsx */
 /* eslint react/jsx-key: 0 */
 import { jsx, Heading } from 'theme-ui';
-import { FC, Fragment } from 'react';
-import { Styled, Box, useColorMode } from 'theme-ui';
+import { FC, Fragment, CSSProperties, ElementType } from 'react';
+import { Themed, Box, useColorMode } from 'theme-ui';
 import Highlight, {
   defaultProps,
   PrismTheme,
@@ -69,12 +69,12 @@ export interface SyntaxHighlighterProps {
   /**
    * css styles for the container.
    */
-  style?: React.CSSProperties;
+  style?: CSSProperties;
 
   /**
    * syntax container as element. Can be used as `div` or `span`.
    */
-  as?: React.ElementType;
+  as?: ElementType;
 
   /**
    * code configuration string passed from MDX
@@ -110,7 +110,7 @@ export const SyntaxHighlighter: FC<SyntaxHighlighterProps> = ({
                 {title}
               </Heading>
             )}
-            <Styled.pre
+            <Themed.pre
               className={`${className}`}
               style={{
                 ...style,
@@ -139,7 +139,7 @@ export const SyntaxHighlighter: FC<SyntaxHighlighterProps> = ({
                   </Box>
                 );
               })}
-            </Styled.pre>
+            </Themed.pre>
           </Fragment>
         );
   const props = { ...defaultProps, theme };

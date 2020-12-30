@@ -1,6 +1,11 @@
 /* eslint-disable react/display-name */
 import React, { FC, useRef, useContext, useState, useEffect } from 'react';
-import { run as runAxe, configure as configureAxe, reset } from 'axe-core';
+import {
+  run as runAxe,
+  configure as configureAxe,
+  reset,
+  cleanup,
+} from 'axe-core';
 
 import { useStory, StoryInputProps } from '@component-controls/store';
 import { resetTabCounter } from '@component-controls/components';
@@ -80,6 +85,11 @@ export const AllyBlock: FC<AllyBlockProps> = ({
   ...props
 }) => {
   const story = useStory({ id, name });
+  useEffect(() => {
+    return () => {
+      cleanup();
+    };
+  }, []);
   return story ? (
     <StoryBlockContainer story={story} {...props}>
       <AxeContextProvider>

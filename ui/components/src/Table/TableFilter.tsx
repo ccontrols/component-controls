@@ -1,5 +1,6 @@
-import React, { FC } from 'react';
-import { Input, Flex, Label } from 'theme-ui';
+/** @jsx jsx */
+import { FC } from 'react';
+import { jsx, Input, Flex, Label } from 'theme-ui';
 import {
   UseGlobalFiltersOptions,
   UseGlobalFiltersInstanceProps,

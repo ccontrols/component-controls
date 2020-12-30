@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ControlTypes, Example } from '@component-controls/core';
 import { ControlsStateProvider } from '@component-controls/store';
 import { BooleanEditor } from './BooleanEditor';
@@ -9,7 +9,7 @@ export default {
 };
 
 export const overview: Example = () => {
-  const [state, setState] = React.useState(false);
+  const [state, setState] = useState(false);
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}

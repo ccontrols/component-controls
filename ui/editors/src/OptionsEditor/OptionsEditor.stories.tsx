@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ControlTypes, Example } from '@component-controls/core';
 import { ControlsStateProvider } from '@component-controls/store';
 import { OptionsEditor } from './OptionsEditor';
@@ -9,7 +9,7 @@ export default {
 };
 
 export const overview: Example = () => {
-  const [state, setState] = React.useState('one');
+  const [state, setState] = useState('one');
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -27,7 +27,7 @@ export const overview: Example = () => {
 };
 
 export const objects: Example = () => {
-  const [state, setState] = React.useState('one');
+  const [state, setState] = useState('one');
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -45,7 +45,7 @@ export const objects: Example = () => {
 };
 
 export const numeric: Example = () => {
-  const [state, setState] = React.useState(1);
+  const [state, setState] = useState(1);
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -67,7 +67,7 @@ export const numeric: Example = () => {
 };
 
 export const multiSelectSimple: Example = () => {
-  const [state, setState] = React.useState(['one']);
+  const [state, setState] = useState(['one']);
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -86,7 +86,7 @@ export const multiSelectSimple: Example = () => {
 };
 
 export const multiSelectObjects: Example = () => {
-  const [state, setState] = React.useState(['one']);
+  const [state, setState] = useState(['one']);
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -105,7 +105,7 @@ export const multiSelectObjects: Example = () => {
 };
 
 export const multiSelectNumeric: Example = () => {
-  const [state, setState] = React.useState([1]);
+  const [state, setState] = useState([1]);
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -128,7 +128,7 @@ export const multiSelectNumeric: Example = () => {
 };
 
 export const simpleRadios: Example = () => {
-  const [state, setState] = React.useState('one');
+  const [state, setState] = useState('one');
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -147,7 +147,7 @@ export const simpleRadios: Example = () => {
 };
 
 export const objectsRadios: Example = () => {
-  const [state, setState] = React.useState('one');
+  const [state, setState] = useState('one');
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -166,7 +166,7 @@ export const objectsRadios: Example = () => {
 };
 
 export const numericRadios: Example = () => {
-  const [state, setState] = React.useState(1);
+  const [state, setState] = useState(1);
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -189,7 +189,7 @@ export const numericRadios: Example = () => {
 };
 
 export const simpleRadiosInline: Example = () => {
-  const [state, setState] = React.useState('one');
+  const [state, setState] = useState('one');
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -208,7 +208,7 @@ export const simpleRadiosInline: Example = () => {
 };
 
 export const objectsRadiosInline: Example = () => {
-  const [state, setState] = React.useState('one');
+  const [state, setState] = useState('one');
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -227,7 +227,7 @@ export const objectsRadiosInline: Example = () => {
 };
 
 export const numericRadiosInline: Example = () => {
-  const [state, setState] = React.useState(1);
+  const [state, setState] = useState(1);
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -250,7 +250,7 @@ export const numericRadiosInline: Example = () => {
 };
 
 export const simpleCheck: Example = () => {
-  const [state, setState] = React.useState('one');
+  const [state, setState] = useState('one');
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -269,7 +269,7 @@ export const simpleCheck: Example = () => {
 };
 
 export const objectsCheck: Example = () => {
-  const [state, setState] = React.useState('one');
+  const [state, setState] = useState('one');
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -288,7 +288,7 @@ export const objectsCheck: Example = () => {
 };
 
 export const numericCheck: Example = () => {
-  const [state, setState] = React.useState(1);
+  const [state, setState] = useState(1);
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -311,7 +311,7 @@ export const numericCheck: Example = () => {
 };
 
 export const simpleCheckInline: Example = () => {
-  const [state, setState] = React.useState('one');
+  const [state, setState] = useState('one');
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -330,7 +330,7 @@ export const simpleCheckInline: Example = () => {
 };
 
 export const objectsCheckInline: Example = () => {
-  const [state, setState] = React.useState('one');
+  const [state, setState] = useState('one');
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -349,7 +349,7 @@ export const objectsCheckInline: Example = () => {
 };
 
 export const numericCheckInline: Example = () => {
-  const [state, setState] = React.useState(1);
+  const [state, setState] = useState(1);
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}

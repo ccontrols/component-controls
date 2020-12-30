@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import React, { FC } from 'react';
 
-interface ButtonProps {
+export interface ButtonProps {
   /**
    *  Boolean indicating whether the button should render as disabled
    */
@@ -66,7 +67,7 @@ export const Button: FC<ButtonProps> = ({
       padding,
     }}
   >
-    {children}
+    <div>{children}</div>
   </button>
 );
 

@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
-import { jsx, Text, Styled, Box } from 'theme-ui';
+import { jsx, Text, Themed, Box } from 'theme-ui';
 import { FC, useMemo, MouseEvent, useState } from 'react';
 import { window } from 'global';
 import jsStringEscape from 'js-string-escape';
@@ -38,6 +38,9 @@ interface PropRow {
 
 export interface BasePropsTableProps {
   component?: Component;
+  /**
+   * additional columns
+   */
   extraColumns: Column[];
   /**
    * if true, will flatten the group by
@@ -48,7 +51,7 @@ export interface BasePropsTableProps {
 }
 
 type GroupingProps = Partial<
-  Pick<TableProps, 'groupBy' | 'hiddenColumns' | 'expanded'>
+  Pick<TableProps<PropRow>, 'groupBy' | 'hiddenColumns' | 'expanded'>
 >;
 export const BasePropsTable: FC<BasePropsTableProps> = ({
   component = {},
@@ -149,10 +152,10 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
       } else {
         groupProps.hiddenColumns = ['prop.parentName'];
       }
-      const columns = [
+      const columns: Column<PropRow>[] = [
         {
           Header: 'Parent',
-          accessor: 'prop.parentName',
+          accessor: 'prop.parentName' as any,
         },
         {
           Header: 'Name',
@@ -185,7 +188,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
         },
         {
           Header: 'Description',
-          accessor: 'prop.description',
+          accessor: 'prop.description' as any,
           Cell: ({ row: { original } }: any) => {
             if (!original) {
               return null;
@@ -202,7 +205,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
                 {description && <Markdown>{description}</Markdown>}
                 {(raw ?? typeName) && (
                   <Box variant="propstable.description.type">
-                    <Styled.pre>
+                    <Themed.pre>
                       {Array.isArray(value) && value.length > 1
                         ? value.map(({ name: typeName, value }) => (
                             <Tag
@@ -216,7 +219,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
                             </Tag>
                           ))
                         : raw ?? typeName}
-                    </Styled.pre>
+                    </Themed.pre>
                   </Box>
                 )}
               </Box>
@@ -225,7 +228,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
         },
         {
           Header: 'Default',
-          accessor: 'prop.defaultValue',
+          accessor: 'prop.defaultValue' as any,
           Cell: ({ row: { original } }: any) => {
             if (!original) {
               return null;
@@ -246,12 +249,12 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
             }
             return (
               <Box variant="propstable.defaultvalue">
-                <Styled.pre>{value}</Styled.pre>
+                <Themed.pre>{value}</Themed.pre>
               </Box>
             );
           },
         },
-        ...extraColumns,
+        ...(extraColumns as Column<PropRow>[]),
       ];
       if (hasControls) {
         columns.push({

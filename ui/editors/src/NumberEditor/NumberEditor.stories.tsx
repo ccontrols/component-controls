@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ControlTypes, Example } from '@component-controls/core';
 import { ControlsStateProvider } from '@component-controls/store';
 import { NumberEditor } from './NumberEditor';
@@ -9,7 +9,7 @@ export default {
 };
 
 export const overview: Example = () => {
-  const [value, setValue] = React.useState(10);
+  const [value, setValue] = useState(10);
   return (
     <ControlsStateProvider
       onChange={(nama, newValue) => setValue(newValue)}
@@ -23,7 +23,7 @@ export const overview: Example = () => {
 };
 
 export const range: Example = () => {
-  const [value, setValue] = React.useState(10);
+  const [value, setValue] = useState(10);
   return (
     <ControlsStateProvider
       onChange={(nama, newValue) => setValue(newValue)}
@@ -43,7 +43,7 @@ export const range: Example = () => {
 };
 
 export const step: Example = () => {
-  const [value, setValue] = React.useState(10);
+  const [value, setValue] = useState(10);
   return (
     <ControlsStateProvider
       onChange={(nama, newValue) => setValue(newValue)}

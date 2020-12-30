@@ -67,8 +67,9 @@ export const extractAttributes = (
   node: any,
 ): Record<string, unknown> | any | undefined => {
   if (node) {
-    if (node.properties) {
-      const attributes: Record<string, unknown> = node.properties.reduce(
+    const properties = node.properties || node.expression?.properties;
+    if (properties) {
+      const attributes: Record<string, unknown> = properties.reduce(
         (acc: Record<string, unknown>, propNode: any) => {
           const attribute = nodeToAttribute(propNode);
           if (attribute) {
@@ -91,4 +92,26 @@ export const extractAttributes = (
     }
   }
   return undefined;
+};
+
+export const collectAttributes = (node: any): Record<string, string> => {
+  return node.attributes.reduce(
+    (acc: Record<string, unknown>, attribute: any) => {
+      if (!attribute.value) {
+        //console.log(attribute);
+      } else if (attribute.value.type === 'StringLiteral') {
+        return {
+          ...acc,
+          [attribute.name.name]: attribute.value.value,
+        };
+      } else if (attribute.value.type === 'JSXExpressionContainer') {
+        return {
+          ...acc,
+          [attribute.name.name]: extractAttributes(attribute.value.expression),
+        };
+      }
+      return acc;
+    },
+    {},
+  );
 };

@@ -1,0 +1,36 @@
+---
+title: Migration from Storybook 6
+type: blog
+date: 2020-11-24
+author: atanasster
+route: /blogs/storybook-6-migration
+description: A step-by-step guide on migrating a documentation site from Storybook 6 to component-controls.
+tags:
+  - storybook
+  - gatsby
+  - nextjs
+  - migration
+image: /static/docs-and-page.jpg
+---
+
+import { Playground, Props, Story } from '@component-controls/blocks';
+import { Button } from '../components/Button';
+import docsAndPageImg from './media/docs-and-page.jpg';
+
+# Migration from Storybook 6
+
+[Storybook](https://storybook.js.org) is an open-source tool for developing stories (aka examples) of your UI components.
+
+When using component-controls to create stories, docs, and more, you can choose [Gatsby](/tutorial/getting-started/gatsby), [Nextjs](/tutorial/getting-started/nextjs), or Storybook's own SSG as your static site generator (SSG).
+
+_We recommend you use either Gatsby or Nextjs as your component-controls SSG because of how much faster they are than Storybook. We do an in-depth analysis of this [here](blogs/gatsby-vs-nextjs-vs-storybook)._
+
+Below are tutorials that'll guide you step-by-step through converting a Storybook 6 project to a component-controls project using your preferred SSG.
+
+The sample project we'll be using for this guide is a Tailwind, Typescript, Storybook 6, and React Testing Library starter repo, and you can find it [here](https://github.com/ssengalanto/tw-sb-rtl-starter).
+
+-- [Storybook 6 -> component-controls with Storybook as the SSG](/blogs/storybook-6-migration-storybook-ssg). Here's the [source code](https://github.com/ccontrols/tailwind-storybook-controls-starter) and the [live version](https://tailwind-storybook-controls-starter.netlify.app/?path=/docs-page/components-button--primary) of the final site.
+
+-- [Storybook 6 -> component-controls with Gatsby as the SSG](/blogs/storybook-6-migration-gatsby-ssg). Here's the [source code](https://github.com/ccontrols/tailwind-gatsby-controls-starter) and the [live version](https://tailwind-gatsby-controls-starter.netlify.app/docs/components-button--primary) of the final site.
+
+-- [Storybook 6 -> component-controls with Nextjs as the SSG](/blogs/storybook-6-migration-nextjs-ssg). Here's the [source code](https://github.com/ccontrols/tailwind-nextjs-controls-starter) and the [live version](https://tailwind-nextjs-controls-starter.netlify.app/docs/components-button--primary) of the final site.

@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/ccontrols/component-controls/compare/v2.1.0...v2.2.0) (2020-12-08)
+
+**Note:** Version bump only for package @component-controls/storybook-custom-docs
+
+
+
+
+
+# [2.0.0](https://github.com/ccontrols/component-controls/compare/v1.44.1...v2.0.0) (2020-12-05)
+
+
+### Bug Fixes
+
+* workarounds for storybook emotion v10 ([b7be12b](https://github.com/ccontrols/component-controls/commit/b7be12b540167f25edcdd937ca14070f03d5cfcd))
+
+
+
+
+
+## [1.41.1](https://github.com/ccontrols/component-controls/compare/v1.41.0...v1.41.1) (2020-11-24)
+
+**Note:** Version bump only for package @component-controls/storybook-custom-docs
+
+
+
+
+
+# [1.41.0](https://github.com/ccontrols/component-controls/compare/v1.40.5...v1.41.0) (2020-11-23)
+
+**Note:** Version bump only for package @component-controls/storybook-custom-docs
+
+
+
+
+
 # [1.37.0](https://github.com/ccontrols/component-controls/compare/v1.36.14...v1.37.0) (2020-11-01)
 
 **Note:** Version bump only for package @component-controls/storybook-custom-docs

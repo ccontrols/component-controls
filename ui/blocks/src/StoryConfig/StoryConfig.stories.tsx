@@ -1,5 +1,5 @@
-import React from 'react';
-import { Example } from '@component-controls/core';
+import React, { useState } from 'react';
+import { Document, Example } from '@component-controls/core';
 import { ActionItem, ActionContainer } from '@component-controls/components';
 import { PrismTheme } from 'prism-react-renderer';
 import dracula from 'prism-react-renderer/themes/dracula';
@@ -11,25 +11,21 @@ import nightOwlLight from 'prism-react-renderer/themes/nightOwlLight';
 import oceanicNext from 'prism-react-renderer/themes/oceanicNext';
 import palenight from 'prism-react-renderer/themes/palenight';
 import shadesOfPurple from 'prism-react-renderer/themes/shadesOfPurple';
-
 import { StoryConfig } from './StoryConfig';
-import { MockContext } from '../test/MockContext';
+import { makeDecorators } from '../test/MockContext';
+
 export default {
   title: 'Blocks/StoryConfig',
   component: StoryConfig,
-};
+} as Document;
 
-export const overview: Example = () => (
-  <MockContext storyId="id-of-story">
-    <StoryConfig id="." />
-  </MockContext>
-);
+export const overview: Example = () => <StoryConfig id="." />;
+overview.decorators = makeDecorators();
 
 export const theme: Example = () => (
-  <MockContext storyId="blocks-core-story-plain--controls">
-    <StoryConfig id="." sourceProps={{ theme: shadesOfPurple }} />
-  </MockContext>
+  <StoryConfig id="." sourceProps={{ theme: shadesOfPurple }} />
 );
+theme.decorators = makeDecorators('blocks-core-story-plain--controls');
 
 const themes: {
   [key: string]: PrismTheme;
@@ -45,7 +41,7 @@ const themes: {
   shadesOfPurple,
 };
 export const themeSelector: Example = () => {
-  const [theme, setTheme] = React.useState('dracula');
+  const [theme, setTheme] = useState('dracula');
   const themeAction: ActionItem = {
     node: theme,
     onClick: () => {
@@ -56,28 +52,22 @@ export const themeSelector: Example = () => {
     },
   };
   return (
-    <MockContext storyId="blocks-core-story-plain--controls">
-      <ActionContainer actions={[themeAction]}>
-        <StoryConfig id="." sourceProps={{ theme: themes[theme] }} />
-      </ActionContainer>
-    </MockContext>
+    <ActionContainer actions={[themeAction]}>
+      <StoryConfig id="." sourceProps={{ theme: themes[theme] }} />
+    </ActionContainer>
   );
 };
+themeSelector.decorators = makeDecorators('blocks-core-story-plain--controls');
 
 export const customTitle: Example = () => (
-  <MockContext storyId="id-of-story">
-    <StoryConfig title="Story configuration" />
-  </MockContext>
+  <StoryConfig title="Story configuration" />
 );
+customTitle.decorators = makeDecorators();
 
 export const notCollapsible: Example = () => (
-  <MockContext>
-    <StoryConfig title="." collapsible={false} />
-  </MockContext>
+  <StoryConfig title="." collapsible={false} />
 );
+notCollapsible.decorators = makeDecorators();
 
-export const noMargin: Example = () => (
-  <MockContext storyId="id-of-story">
-    <StoryConfig sx={{ mt: 0, mb: 0 }} />
-  </MockContext>
-);
+export const noMargin: Example = () => <StoryConfig sx={{ mt: 0, mb: 0 }} />;
+noMargin.decorators = makeDecorators();

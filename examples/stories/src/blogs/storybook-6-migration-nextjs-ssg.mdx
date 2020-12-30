@@ -1,0 +1,212 @@
+---
+title: Migration from Storybook 6 - Nextjs
+type: blog
+date: 2020-11-26
+author: atanasster
+route: /blogs/storybook-6-migration-nextjs-ssg
+description: Migrate a documentation site from Storybook 6 to component-controls using Nextjs as the static site generator.
+tags:
+  - nextjs
+  - tailwind
+image: /static/gatsby-page.jpg
+---
+
+import { Button } from '../components/Button';
+import gatsbyImg from './media/gatsby-page.jpg';
+import testingPageImg from './media/component-controls-testing.jpg';
+
+# Nextjs as a static site generator
+
+The starting sample project was cloned from
+
+[tw-sb-rtl-starter](https://github.com/ssengalanto/tw-sb-rtl-starter)
+
+The final project can be found here:
+
+[source code](https://github.com/ccontrols/tailwind-nextjs-controls-starter)
+
+[live site](https://tailwind-nextjs-controls-starter.netlify.app/docs/components-button--primary)
+
+## Install nextjs
+
+```sh
+yarn add next emotion@10.0.27 emotion-server@10.0.27 @emotion/core@10.1.1 @component-controls/nextjs-plugin -D
+```
+
+component-controls has two [configuration](/configuration/overview/) files - one is used during build-time in a nodejs environment, the other is used during run-time in a browser environment.
+
+The rough equivalents of Storybook for those two configuration files are `main.js` and `preview.(js|ts)`
+
+## Update configuration
+
+You can keep the `main.js` Storybook configuration file and rename `preview.ts` to `runtime.tsx`:
+
+```js:title=.storybook/main.js
+module.exports = {
+  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
+  // remove all storybook addons
+};
+```
+
+```js:title=.storybook/runtime.tsx
+// empty file
+```
+
+## Configuration file path
+
+By default, the Storybook configuration file is kept in a folder name `.storybook`, while component-controls uses a `.config` folder. We will configure the nextjs plugin in `next.config.js`.
+
+```js:title=next.config.js
+const withStories = require('@component-controls/nextjs-plugin/build');
+module.exports = withStories({ configPath: '.storybook' });
+```
+
+## Create page templates
+
+The component-controls nextjs plugin needs to be set up with page templates in a `pages` folder of your project
+
+```sh
+mkdir pages
+```
+
+You can either copy the pages from this [github repo](https://github.com/atanasster/nextjs-controls-starter/tree/master/pages) or follow the [getting started with nextjs](/tutorial/getting-started/nextjs#create-a-pages-folder) tutorial.
+
+### Inject tailwind css
+
+```js:title=pages/_app.js {4}
+import React from 'react';
+import NextApp from 'next/app';
+import '../src/tailwind.output.css';
+
+export default class App extends NextApp {
+  render() {
+    const { Component, pageProps } = this.props;
+    return <Component {...pageProps} />;
+  }
+}
+```
+
+## Launch scripts
+
+Next, you should add the gatsby develop and gatsby build scripts to the project's `package.json`
+
+```json:title=package.json {4-5}
+  "scripts": {
+    ...
+    "tailwind:watch": "postcss ./src/styles/tailwind.css -o ./src/tailwind.output.css --watch",
+    "docs:build": "next build && next export",
+    "docs:start": "next -p 6006",
+    "lint": "eslint \"./src/**/*.{ts,tsx,js,jsx}\"",
+    ...
+  },
+```
+
+At his point, you can start your documentation site
+
+```sh
+ yarn docs:start
+```
+
+And a new documentation site should be up and running
+
+<img alt="gatsby documentation site" title="gatsby site" src={gatsbyImg} />
+
+## Configure documentation site
+
+You can configure the name, site and various other site parameters for the new documentation site
+
+```js:title=.storybook/main.js {3}
+module.exports = {
+  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
+  siteUrl: 'https://tailwind-gatsby-controls-starter.netlify.app',
+};
+```
+
+```js:title=.storybook/runtime.tsx {1-11}
+import { RunOnlyConfiguration } from '@component-controls/core';
+
+const config: RunOnlyConfiguration = {
+  analytics: 'UA-XXXXXXXXX-X',
+  title: `Tailwind component-controls`,
+  description: `Tailwind project with typescript, react testing library and component-controls`,
+  author: `@component-controls`,
+};
+
+export default config;
+```
+
+## Add testing page
+
+component-controls allows adding fully customizable documentation pages to your site and comes with package of pre-configured pages.
+
+```js:title=.storybook/main.js {5-15}
+const { defaultBuildConfig } = require('@component-controls/core');
+module.exports = {
+  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
+  siteUrl: 'https://tailwind-gatsby-controls-starter.netlify.app',
+  pages: {
+    story: {
+      tabs: {
+        ...defaultBuildConfig.pages.story.tabs,
+        test: '@component-controls/pages/TestingPage',
+      },
+    },
+  },
+};
+```
+
+The new Testing Page should now be visible
+
+<img alt="testing page" title="testing page" src={testingPageImg} />
+
+## Add jest snapshot tests
+
+The `@component-controls/jest-snapshots` package is automatically creating jest [snapshot tests](/tutorial/testing/jest-snapshots) from your existing stories. It has an easy to use command-line interface that we will use in this example but also offers a [fully customizable API](/blogs/custom-test-runners).
+
+### Install the jest-snapshots package
+
+```sh
+yarn add @component-controls/jest-snapshots -D
+```
+
+### Configure test script
+
+We will launch the `cc-jest` command-line with the -c parameter pointing to the folder storing your configuration files. You can also add other parameters such as `--coverage`.
+
+```js:title=package.json {7}
+{
+  "name": "tailwind-storybook-controls",
+  ...
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "cc-jest -c .storybook",
+    "eject": "react-scripts eject",
+    ...
+  },
+  ...
+}
+```
+
+### Run the tests
+
+```sh
+yarn test
+```
+
+Running the `jest-snapshots` test will execute any existing tests (ie `src/lib/components/button/button.spec.tsx`) as well as snapshot tests automatically created for all your stories.
+
+After running the tests, you should have a file `tests/__snapshots__/stories.test.js.snap`, with snapshots like this one:
+
+```js:title=tests/__snapshots__/stories.test.js.snap
+exports[`Components/Button Primary 1`] = `
+<DocumentFragment>
+  <button
+    class="rounded-md focus:outline-none focus:shadow-outline bg-primary-500 text-white hover:bg-primary-600 py-4 px-8"
+    type="button"
+  >
+    Button Label
+  </button>
+</DocumentFragment>
+`;
+```

@@ -1,14 +1,12 @@
 import React from 'react';
-import { Example } from '@component-controls/core';
+import { Document, Example } from '@component-controls/core';
 import { EditPage } from './EditPage';
-import { MockContext } from '../test/MockContext';
+import { mockDecorators } from '../test/MockContext';
+
 export default {
   title: 'Blocks/EditPage',
   component: EditPage,
-};
+  decorators: mockDecorators,
+} as Document;
 
-export const overview: Example = () => (
-  <MockContext id="id-of-story">
-    <EditPage />
-  </MockContext>
-);
+export const overview: Example = () => <EditPage />;

@@ -9,6 +9,7 @@ import {
   getDocPath,
   getHomePath,
   getComponentName,
+  SearchResult,
 } from '@component-controls/core';
 import { useStore, useActiveTab } from './store';
 
@@ -129,26 +130,28 @@ export const useDocSort = (
   return [sort[type] || 'date', newSort => setSort(type, newSort)];
 };
 
+const getDocsByType = (docs: Documents, type: DocType) =>
+  Object.keys(docs).reduce((acc: Pages, key: string) => {
+    const doc: Document | undefined = docs[key];
+    if (doc) {
+      const { type: docType = defDocType } = doc;
+      if (docType === type) {
+        return [...acc, { ...doc }];
+      }
+    }
+    return acc;
+  }, []);
 /**
  * Returns an array of all documents of a specific doc type
  */
 export const useDocByType = (type: DocType): Pages => {
-  return useGetDocByType()(type);
+  const docs = useDocs();
+  return useMemo(() => getDocsByType(docs, type), [docs, type]);
 };
 
 export const useGetDocByType = (): ((type: DocType) => Pages) => {
   const docs = useDocs();
-  return (type: DocType) =>
-    Object.keys(docs).reduce((acc: Pages, key: string) => {
-      const doc: Document | undefined = docs[key];
-      if (doc) {
-        const { type: docType = defDocType } = doc;
-        if (docType === type) {
-          return [...acc, { ...doc }];
-        }
-      }
-      return acc;
-    }, []);
+  return (type: DocType) => getDocsByType(docs, type);
 };
 
 /**
@@ -157,7 +160,7 @@ export const useGetDocByType = (): ((type: DocType) => Pages) => {
 export const useSortedDocByType = (type: DocType): Pages => {
   const docs = useDocByType(type);
   const [sort] = useDocSort(type);
-  return [...docs].sort(docSortFn(sort));
+  return useMemo(() => [...docs].sort(docSortFn(sort)), [docs, sort]);
 };
 
 export type DocCountType = Record<DocType, { count: number; home?: Document }>;
@@ -267,7 +270,9 @@ export const useGetDocumentPath = (): UseGetDocumentPath => {
 /**
  * Returns the descript for a document page. It uses the doc.description property if available, or if there is a component assigned to the document will return the component's name.
  */
-export const useDocDescription = (doc?: Document): string | undefined => {
+export const useDocDescription = (
+  doc?: Document,
+): string | JSX.Element | undefined => {
   const store = useStore();
   if (!doc) {
     return undefined;
@@ -277,11 +282,17 @@ export const useDocDescription = (doc?: Document): string | undefined => {
   }
   const componentName = getComponentName(doc.component);
   if (componentName) {
-    const componnetHash = doc.componentsLookup[componentName];
-    const component = store.components[componnetHash];
+    const component = doc.componentsLookup
+      ? store.components[doc.componentsLookup[componentName]]
+      : undefined;
     if (component?.info?.description) {
       return component.info.description;
     }
   }
   return undefined;
+};
+
+export const useSearch = (): SearchResult | undefined => {
+  const store = useStore();
+  return store.search ? store.search(store) : undefined;
 };

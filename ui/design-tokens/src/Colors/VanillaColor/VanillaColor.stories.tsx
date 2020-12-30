@@ -1,12 +1,12 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes, Document } from '@component-controls/core';
 import { VanillaColor, VanillaColorPalette } from './VanillaColor';
 import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/VanillaColor',
   component: VanillaColor,
-};
+} as Document;
 
 export const overview: Example<ColorProps> = ({ name, color }) => (
   <VanillaColor name={name} color={color} />

@@ -4,7 +4,7 @@ import { Store } from '@component-controls/core';
 import { storeState, activeTabState, optionsState } from './store';
 import { documentIdState } from './document';
 import { storyIdState } from './story';
-import { controlsValuesState } from './controls';
+import { currentControlsState } from './controls';
 
 export interface StateRootProps {
   /**
@@ -52,7 +52,7 @@ export const StateRoot: FC<StateRootProps> = ({
         set(storyIdState, storyId);
         set(activeTabState, activeTab);
         set(optionsState, options || {});
-        set(controlsValuesState, values);
+        set(currentControlsState, values);
       }}
     >
       {children}

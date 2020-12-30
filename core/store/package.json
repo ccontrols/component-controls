@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/store",
-  "version": "1.38.0",
+  "version": "2.5.3",
   "description": "Component controls shared store",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -38,16 +38,17 @@
   "license": "MIT",
   "dependencies": {
     "@analytics/google-analytics": "^0.4.0",
-    "@component-controls/core": "^1.38.0",
-    "@component-controls/loader": "^1.38.0",
-    "@component-controls/render": "^1.38.0",
+    "@component-controls/core": "^2.5.0",
+    "@component-controls/loader": "^2.5.3",
+    "@component-controls/logger": "^2.5.0",
+    "@component-controls/render": "^2.5.0",
     "analytics": "^0.5.2",
     "broadcast-channel": "^3.1.0",
     "recoil": "^0.0.10",
     "typescript": "^4.0.5"
   },
   "devDependencies": {
-    "@component-controls/ts-markdown-docs": "^1.37.0",
+    "@component-controls/ts-markdown-docs": "^2.2.0",
     "@types/jest": "^26.0.10",
     "@types/react": "^16.9.34",
     "@types/recoil": "^0.0.1",
@@ -56,7 +57,7 @@
     "eslint": "^6.5.1",
     "jest": "^26.4.2",
     "loader-utils": "^1.2.3",
-    "react": "^16.13.1",
+    "react": "^17.0.1",
     "webpack": "^4.41.6"
   },
   "peerDependencies": {
@@ -68,5 +69,5 @@
   "authors": [
     "Atanas Stoyanov"
   ],
-  "gitHead": "1b83d23bd43f1b2143ac8f66f828fe5806b40310"
+  "gitHead": "e30d62f101e104711a16261fce04785d58cac1eb"
 }

@@ -17,10 +17,24 @@ Object {
                 Array [
                   "@babel/preset-env",
                   Object {
+                    "corejs": 3,
                     "modules": "commonjs",
+                    "targets": Object {
+                      "browsers": Array [
+                        "last 5 versions",
+                        "ie >= 9",
+                      ],
+                      "node": "current",
+                    },
+                    "useBuiltIns": "usage",
                   },
                 ],
-                "@babel/preset-react",
+                Array [
+                  "@babel/preset-react",
+                  Object {
+                    "runtime": "automatic",
+                  },
+                ],
               ],
             },
           },
@@ -58,7 +72,16 @@ Object {
             Array [
               "@babel/preset-env",
               Object {
+                "corejs": 3,
                 "modules": "commonjs",
+                "targets": Object {
+                  "browsers": Array [
+                    "last 5 versions",
+                    "ie >= 9",
+                  ],
+                  "node": "current",
+                },
+                "useBuiltIns": "usage",
               },
             ],
             "@babel/preset-react",
@@ -92,24 +115,26 @@ Object {
         ],
       },
       Object {
-        "test": /\\\\\\.\\(css\\|sass\\|scss\\|less\\|styl\\)\\$/i,
+        "test": /\\\\\\.\\(css\\|sass\\|scss\\|less\\)\\$/i,
         "use": Array [
           "/Users/atanasster/component-controls/node_modules/extract-css-chunks-webpack-plugin/dist/loader.js",
           Object {
             "loader": "css-loader",
-            "options": Object {},
+            "options": Object {
+              "sourceMap": true,
+            },
           },
           Object {
             "loader": "sass-loader",
-            "options": Object {},
+            "options": Object {
+              "sourceMap": true,
+            },
           },
           Object {
             "loader": "less-loader",
-            "options": Object {},
-          },
-          Object {
-            "loader": "stylus-loader",
-            "options": Object {},
+            "options": Object {
+              "sourceMap": true,
+            },
           },
         ],
       },

@@ -1,11 +1,11 @@
+
 /** @jsx jsx */
 import { jsx, Box, Text } from 'theme-ui';
-import { RunOnlyConfiguration, defaultRunConfig } from "@component-controls/core";
+import { RunOnlyConfiguration } from "@component-controls/core";
 import { Link } from "@component-controls/components";
 import { OctofaceIcon } from '@primer/octicons-react';
-import { TestingPage } from "./TestingPage";
 
-const categories = ['Introduction', 'Application','Controls','Blocks', 'Design Tokens',  'Editors', 'Components', 'Plugins']
+const categories = ['ESM', 'MDX', 'Application','Controls','Blocks', 'Design Tokens',  'Editors', 'Components', 'Plugins']
 
 const config: RunOnlyConfiguration = {
   analytics: 'UA-172446254-1',
@@ -21,10 +21,6 @@ const config: RunOnlyConfiguration = {
   pages: {
     story: {
       label: 'API',
-      tabs: [
-        ...defaultRunConfig.pages.story.tabs,
-        { title: 'Testing', render: () => <TestingPage /> },
-      ],
     },
     tutorial: {
       label: 'Tutorial',
@@ -32,7 +28,7 @@ const config: RunOnlyConfiguration = {
       navSidebar: true,
       contextSidebar: true,
     },
-  },  
+  },
   storySort: (a, b) => {
     const aDoc = a.split('/')[0];
     const aIndex = categories.findIndex(c => c === aDoc);

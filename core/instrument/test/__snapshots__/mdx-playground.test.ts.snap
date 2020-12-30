@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mdx-playground format-source.mdx 1`] = `
+Object {
+  "components": Object {},
+  "doc": Object {
+    "componentsLookup": Object {},
+    "date": 2020-11-12T13:44:39.824Z,
+    "dateModified": 2020-11-13T15:50:05.556Z,
+    "title": "MDX",
+  },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "componentsLookup": Object {},
+        "date": 2020-11-12T13:44:39.824Z,
+        "dateModified": 2020-11-13T15:50:05.556Z,
+        "title": "MDX",
+      },
+    },
+  },
+  "packages": Object {},
+  "stories": Object {},
+  "transformed": "
+import React from 'react';
+import { mdx } from '@mdx-js/react';
+
+/* @jsxRuntime classic */
+
+/* @jsx mdx */
+import { Playground } from '@component-controls/blocks';
+import Button from '../components/BaseButton';
+const layoutProps = {};
+const MDXLayout = \\"wrapper\\";
+
+function MDXContent({
+  components,
+  ...props
+}) {
+  return <MDXLayout {...layoutProps} {...props} components={components}>
+
+    <Playground source={\`{() => {
+  const [counter, setCounter] = React.useState(0);
+  return <>
+  <Button onClick={() => setCounter(counter => counter + 1)} >
+    Increase
+  </Button>
+  <span style={{
+      marginLeft: 20
+    }}>{counter}</span>
+</>;
+}}\`}>
+  {() => {
+        const [counter, setCounter] = React.useState(0);
+        return <>
+        <Button onClick={() => setCounter(counter => counter + 1)}>
+          Increase
+        </Button>
+        <span style={{
+            marginLeft: 20
+          }}>{counter}</span>
+      </>;
+      }}
+    </Playground>
+    </MDXLayout>;
+}
+
+;
+MDXContent.isMDXComponent = true;
+
+        const mdxDefaultExport = MDXContent;
+        Object.assign(mdxDefaultExport, 
+        {
+        \\"MDXPage\\": MDXContent,\\"title\\": \\"MDX\\",\\"componentsLookup\\": 
+        {
+        
+        }
+        ,\\"dateModified\\": 
+        {
+        
+        }
+        ,\\"date\\": 
+        {
+        
+        }
+        
+        }
+        );
+        export default mdxDefaultExport;
+",
+}
+`;
+
+exports[`mdx-playground source-prop.mdx 1`] = `
+Object {
+  "components": Object {},
+  "doc": Object {
+    "componentsLookup": Object {},
+    "date": 2020-11-12T13:03:59.618Z,
+    "dateModified": 2020-11-12T13:42:48.374Z,
+    "title": "MDX",
+  },
+  "exports": Object {
+    "default": Object {
+      "story": Object {
+        "componentsLookup": Object {},
+        "date": 2020-11-12T13:03:59.618Z,
+        "dateModified": 2020-11-12T13:42:48.374Z,
+        "title": "MDX",
+      },
+    },
+  },
+  "packages": Object {},
+  "stories": Object {},
+  "transformed": "
+import React from 'react';
+import { mdx } from '@mdx-js/react';
+
+/* @jsxRuntime classic */
+
+/* @jsx mdx */
+import { Playground } from '@component-controls/blocks';
+import Button from '../components/BaseButton';
+const layoutProps = {};
+const MDXLayout = \\"wrapper\\";
+
+function MDXContent({
+  components,
+  ...props
+}) {
+  return <MDXLayout {...layoutProps} {...props} components={components}>
+
+    <Playground source={\`<Button />\`}>
+  <Button />
+    </Playground>
+    </MDXLayout>;
+}
+
+;
+MDXContent.isMDXComponent = true;
+
+        const mdxDefaultExport = MDXContent;
+        Object.assign(mdxDefaultExport, 
+        {
+        \\"MDXPage\\": MDXContent,\\"title\\": \\"MDX\\",\\"componentsLookup\\": 
+        {
+        
+        }
+        ,\\"dateModified\\": 
+        {
+        
+        }
+        ,\\"date\\": 
+        {
+        
+        }
+        
+        }
+        );
+        export default mdxDefaultExport;
+",
+}
+`;

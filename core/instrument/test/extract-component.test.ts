@@ -11,9 +11,9 @@ describe('extract-component', () => {
         components: {
           sourceFiles: false,
           package: {
-            storeBrowseLink: true,
-            storeDocsLink: true,
-            storeIssuesLink: true,
+            browseLink: true,
+            docsLink: true,
+            issuesLink: true,
           },
           resolveFile: (componentName: string, filePath: string) => {
             if (filePath.includes('/theme-ui/dist')) {
@@ -27,5 +27,6 @@ describe('extract-component', () => {
       });
     },
     ['extract-component'],
+    // ['jsx-component.ts'],
   );
 });

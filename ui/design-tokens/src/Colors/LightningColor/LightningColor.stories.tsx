@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes, Document } from '@component-controls/core';
 import { LightningColor, LightningColorPalette } from './LightningColor';
 import { TableColumn } from '../../containers';
 import { ColorProps } from '../../types';
@@ -49,7 +49,7 @@ const lightningColumns: TableColumn[] = [
 export default {
   title: 'Design Tokens/Colors/LightningColor',
   component: LightningColor,
-};
+} as Document;
 
 export const overview: Example<ColorProps> = ({ name, color }) => (
   <LightningColor columns={lightningColumns} name={name} color={color} />

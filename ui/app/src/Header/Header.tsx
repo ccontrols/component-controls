@@ -2,8 +2,11 @@
 import { FC, useContext, useMemo } from 'react';
 import { jsx, Box, Heading, Image } from 'theme-ui';
 import { DocType, getDocTypePath, getHomePath } from '@component-controls/core';
-import { ActionBar, ActionItems, Link } from '@component-controls/components';
+import { getIndexPage } from '@component-controls/routes';
 import {
+  ActionBar,
+  ActionItems,
+  Link,
   ColorMode,
   SidebarContext,
   Header as AppHeader,
@@ -12,7 +15,6 @@ import {
   useConfig,
   useDocTypeCount,
   useCurrentDocument,
-  getIndexPage,
   useStore,
 } from '@component-controls/store';
 import { Search } from '@component-controls/blocks';

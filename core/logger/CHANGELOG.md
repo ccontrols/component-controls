@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/ccontrols/component-controls/compare/v2.4.2...v2.5.0) (2020-12-28)
+
+
+### Features
+
+* custom esm pages ([ae76a6e](https://github.com/ccontrols/component-controls/commit/ae76a6e936b0edb66b7ecbd71450c1858ce0c575))
+
+
+
+
+
+# [2.2.0](https://github.com/ccontrols/component-controls/compare/v2.1.0...v2.2.0) (2020-12-08)
+
+**Note:** Version bump only for package @component-controls/logger
+
+
+
+
+
+# [2.0.0](https://github.com/ccontrols/component-controls/compare/v1.44.1...v2.0.0) (2020-12-05)
+
+**Note:** Version bump only for package @component-controls/logger
+
+
+
+
+
 # [1.37.0](https://github.com/ccontrols/component-controls/compare/v1.36.14...v1.37.0) (2020-11-01)
 
 **Note:** Version bump only for package @component-controls/logger

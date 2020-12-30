@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { PrismTheme } from 'prism-react-renderer';
 import dracula from 'prism-react-renderer/themes/dracula';
 import duotoneDark from 'prism-react-renderer/themes/duotoneDark';
@@ -9,14 +9,14 @@ import nightOwlLight from 'prism-react-renderer/themes/nightOwlLight';
 import oceanicNext from 'prism-react-renderer/themes/oceanicNext';
 import palenight from 'prism-react-renderer/themes/palenight';
 import shadesOfPurple from 'prism-react-renderer/themes/shadesOfPurple';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Document, Example, ControlTypes } from '@component-controls/core';
 import { Source, SourceProps } from './Source';
 import { ActionItem } from '../ActionBar';
 
 export default {
   title: 'Components/Source',
   component: Source,
-};
+} as Document;
 
 const source = `export const sample = () => {
   const [state, setState] = React.useState(false);
@@ -28,11 +28,11 @@ const source = `export const sample = () => {
     />
   );
 };`;
-export const overview: Example = ({
+export const overview: Example<SourceProps> = ({
   language,
   children,
   dark,
-}: SourceProps) => {
+}) => {
   return (
     <Source language={language} dark={dark}>
       {children}
@@ -104,7 +104,7 @@ const themes: {
   shadesOfPurple,
 };
 export const themeSelector: Example = () => {
-  const [theme, setTheme] = React.useState('dracula');
+  const [theme, setTheme] = useState('dracula');
   const themeAction: ActionItem = {
     node: theme,
     onClick: () => {

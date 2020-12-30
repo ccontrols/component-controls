@@ -1,8 +1,8 @@
-import * as parser from '@babel/parser';
+import { ParserOptions } from '@babel/parser';
 import traverse, { TraverseOptions } from '@babel/traverse';
 import { CodeLocation } from '@component-controls/core';
 import { sourceLocation } from '../misc/source-location';
-
+import { parseFile } from '../misc/ast_store';
 export interface ExportType {
   name: string;
   internalName: string;
@@ -207,13 +207,13 @@ export const traverseExports = (results: ExportTypes): TraverseOptions => {
 };
 
 export const extractExports = (
-  source: string,
-  parserOptions?: parser.ParserOptions,
+  fileName: string,
+  parserOptions?: ParserOptions,
 ): ExportTypes => {
   const results: ExportTypes = {
     named: {},
   };
-  const ast = parser.parse(source, parserOptions);
+  const { ast } = parseFile(fileName, parserOptions);
 
   traverse(ast as any, traverseExports(results));
   return results;

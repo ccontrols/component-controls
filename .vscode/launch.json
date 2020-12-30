@@ -10,14 +10,10 @@
       "name": "storybook-6",
       "runtimeExecutable": "npm",
       "cwd": "${workspaceFolder}/examples/storybook-6",
-      "runtimeArgs": [
-        "run-script",
-        "debug"
-      ],
+      "stopOnEntry": true,
+      "runtimeArgs": ["run-script", "start"],
       "port": 9229,
-      "skipFiles": [
-        "<node_internals>/**"
-      ]
+      "skipFiles": ["<node_internals>/**"]
     },
     {
       "type": "node",
@@ -25,14 +21,10 @@
       "name": "storybook-6-build",
       "runtimeExecutable": "npm",
       "cwd": "${workspaceFolder}/examples/storybook-6",
-      "runtimeArgs": [
-        "run-script",
-        "debug-build"
-      ],
+      "stopOnEntry": true,
+      "runtimeArgs": ["run-script", "build-sample"],
       "port": 9229,
-      "skipFiles": [
-        "<node_internals>/**"
-      ]
+      "skipFiles": ["<node_internals>/**"]
     },
     {
       "type": "node",
@@ -40,14 +32,10 @@
       "name": "storybook-6-no-docs",
       "runtimeExecutable": "npm",
       "cwd": "${workspaceFolder}/examples/storybook-6-no-docs",
-      "runtimeArgs": [
-        "run-script",
-        "debug"
-      ],
+      "stopOnEntry": true,
+      "runtimeArgs": ["run-script", "start"],
       "port": 9229,
-      "skipFiles": [
-        "<node_internals>/**"
-      ]
+      "skipFiles": ["<node_internals>/**"]
     },
     {
       "type": "node",
@@ -55,14 +43,10 @@
       "name": "custom-pages-storybook-5",
       "runtimeExecutable": "npm",
       "cwd": "${workspaceFolder}/examples/custom-pages-storybook-5",
-      "runtimeArgs": [
-        "run-script",
-        "debug"
-      ],
+      "stopOnEntry": true,
+      "runtimeArgs": ["run-script", "start"],
       "port": 9229,
-      "skipFiles": [
-        "<node_internals>/**"
-      ]
+      "skipFiles": ["<node_internals>/**"]
     },
     {
       "type": "node",
@@ -70,14 +54,10 @@
       "name": "custom-pages-storybook-6",
       "runtimeExecutable": "npm",
       "cwd": "${workspaceFolder}/examples/custom-pages-storybook-6",
-      "runtimeArgs": [
-        "run-script",
-        "debug"
-      ],
+      "stopOnEntry": true,
+      "runtimeArgs": ["run-script", "start"],
       "port": 9229,
-      "skipFiles": [
-        "<node_internals>/**"
-      ]
+      "skipFiles": ["<node_internals>/**"]
     },
     {
       "name": "gatsby start",
@@ -96,9 +76,7 @@
       "type": "node",
       "request": "attach",
       "port": 9229,
-      "skipFiles": [
-        "<node_internals>/**"
-      ]
+      "skipFiles": ["<node_internals>/**"]
     },
     {
       "type": "node",
@@ -106,14 +84,12 @@
       "name": "jest config",
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "cwd": "${workspaceFolder}/core/config",
-      "args": [
-        "stories",
-      ],
+      "args": ["stories"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "disableOptimisticBPs": true,
       "windows": {
-        "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest"
       }
     },
     {
@@ -122,14 +98,12 @@
       "name": "jest core",
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "cwd": "${workspaceFolder}/core/core",
-      "args": [
-        "randomize",
-      ],
+      "args": ["deepmerge"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "disableOptimisticBPs": true,
       "windows": {
-        "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest"
       }
     },
     {
@@ -138,14 +112,26 @@
       "name": "jest instrument",
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "cwd": "${workspaceFolder}/core/instrument",
-      "args": [
-        "mdx-async",
-      ],
+      "args": ["mdx-story-source"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "disableOptimisticBPs": true,
       "windows": {
-        "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "jest react-docgen-typescript",
+      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      "cwd": "${workspaceFolder}/props-info/react-docgen-typescript",
+      "args": ["extends"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "windows": {
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest"
       }
     },
     {
@@ -154,14 +140,12 @@
       "name": "jest webpack-configs",
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "cwd": "${workspaceFolder}/core/webpack-configs",
-      "args": [
-        "webpack-merge",
-      ],
+      "args": ["webpack-merge"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "disableOptimisticBPs": true,
       "windows": {
-        "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest"
       }
     },
     {
@@ -170,14 +154,12 @@
       "name": "jest webpack-compile",
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "cwd": "${workspaceFolder}/core/webpack-compile",
-      "args": [
-        "draft",
-      ],
+      "args": ["draft"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "disableOptimisticBPs": true,
       "windows": {
-        "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest"
       }
     },
     {
@@ -186,14 +168,12 @@
       "name": "jest jest-addon",
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "cwd": "${workspaceFolder}/plugins/jest-snapshots",
-      "args": [
-        "stories",
-      ],
+      "args": ["stories"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "disableOptimisticBPs": true,
       "windows": {
-        "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest"
       }
     }
   ]

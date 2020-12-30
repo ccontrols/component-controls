@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ControlTypes, Example } from '@component-controls/core';
 import { ControlsStateProvider } from '@component-controls/store';
 import { ColorEditor } from './ColorEditor';
@@ -9,7 +9,7 @@ export default {
 };
 
 export const overview: Example = () => {
-  const [state, setState] = React.useState('#dedede');
+  const [state, setState] = useState('#dedede');
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -23,7 +23,7 @@ export const overview: Example = () => {
 };
 
 export const rgb: Example = () => {
-  const [state, setState] = React.useState('rgb(192, 0, 0)');
+  const [state, setState] = useState('rgb(192, 0, 0)');
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -37,7 +37,7 @@ export const rgb: Example = () => {
 };
 
 export const rgba: Example = () => {
-  const [state, setState] = React.useState('rgba(0, 192, 0, 0.5)');
+  const [state, setState] = useState('rgba(0, 192, 0, 0.5)');
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -51,7 +51,7 @@ export const rgba: Example = () => {
 };
 
 export const hsl: Example = () => {
-  const [state, setState] = React.useState('hsl(213, 50%, 16%)');
+  const [state, setState] = useState('hsl(213, 50%, 16%)');
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -65,7 +65,7 @@ export const hsl: Example = () => {
 };
 
 export const hsla: Example = () => {
-  const [state, setState] = React.useState('hsla(213, 50%, 16%, 0.5)');
+  const [state, setState] = useState('hsla(213, 50%, 16%, 0.5)');
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}

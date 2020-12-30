@@ -1,4 +1,4 @@
-import React, { MouseEvent, useEffect, useState, useCallback } from 'react';
+import { MouseEvent, ReactNode, useEffect, useState, useCallback } from 'react';
 
 /**
  * position in the stories source code
@@ -105,22 +105,31 @@ export type StoryRenderFn = (
 /**
  * an import name
  */
-export interface ImportName {
+export interface ImportType {
   /**
-   * the imported name from the import file
+   * component name
    */
   name: string;
   /**
-   * alias imported as. If a default import, the string 'default' is here.
+   * importedName - the original named import that was aliased
    */
-  importedName: string;
+  importedName: 'default' | 'namespace' | string;
+  /**
+   * imported from
+   */
+  from: string;
+  /**
+   * key into components table
+   */
+  componentKey?: string;
 }
 
-/**
- * imports - library/file as key and the imported names as an array
- */
+export interface ImportTypes {
+  [key: string]: ImportType;
+}
+
 export interface Imports {
-  [key: string]: ImportName[];
+  [key: string]: Omit<ImportType, 'from'>[];
 }
 
 /**
@@ -139,7 +148,7 @@ export interface ActionItem {
   /**
    * title - if a string, will use the built-in components, else can prvide custom React component
    */
-  node: React.ReactNode;
+  node: ReactNode;
 
   /**
    * if the title is a string and href is set will use a default `<Link />` component
@@ -174,7 +183,7 @@ export interface ActionItem {
    * panel for Tab-enabled UI, where an action item can open up a panel with tabs
    * in this case, the onClick function can return true/false whether to open up the panel
    */
-  panel?: React.ReactNode;
+  panel?: ReactNode;
 }
 
 export type ActionItems = ActionItem[];
@@ -225,3 +234,6 @@ export const useAsync = <T, E = string>(
 
   return { execute, status, value, error };
 };
+
+export const isLocalImport = (filePath: string): boolean =>
+  filePath.startsWith('.');

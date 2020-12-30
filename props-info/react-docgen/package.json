@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/react-docgen-info",
-  "version": "1.38.0",
+  "version": "2.5.0",
   "description": "Component controls react-docgen props info loader",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,11 +30,11 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/core": "^1.38.0",
+    "@component-controls/core": "^2.5.0",
     "react-docgen": "^5.3.0"
   },
   "devDependencies": {
-    "@component-controls/ts-markdown-docs": "^1.37.0",
+    "@component-controls/ts-markdown-docs": "^2.2.0",
     "@types/jest": "^26.0.10",
     "@types/prop-types": "^15.7.3",
     "@types/react": "^16.9.34",
@@ -60,5 +60,5 @@
   "authors": [
     "Atanas Stoyanov"
   ],
-  "gitHead": "db62ecc61d3445304bbc4f8f104dc4b1ebba96ba"
+  "gitHead": "e30d62f101e104711a16261fce04785d58cac1eb"
 }

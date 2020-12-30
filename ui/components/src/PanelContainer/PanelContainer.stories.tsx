@@ -1,12 +1,13 @@
 import React from 'react';
 import { Donut } from 'theme-ui';
-import { Example } from '@component-controls/core';
+import { Document, Example } from '@component-controls/core';
 import { PanelContainer } from './PanelContainer';
 
 export default {
   title: 'Components/PanelContainer',
   component: PanelContainer,
-};
+} as Document;
+
 const actions = [
   {
     node: 'panel-1',

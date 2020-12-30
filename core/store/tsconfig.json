@@ -8,6 +8,6 @@
     "types": ["node", "jest", "webpack-env"],
     "typeRoots": ["../../node_modules/@types", "node_modules/@types"]
   },
-  "include": ["src/**/*", "src/typings.d.ts"],
+  "include": ["src/**/*", "src/typings.d.ts", "../loader/src/node-store"],
   "exclude": ["node_modules/**"]
 }

@@ -34,14 +34,22 @@ export const AppContext: FC<AppContextProps> = ({
     typeof window !== 'undefined'
       ? queryString.parse(window.location.search)
       : undefined;
-  const dynStoryId =
-    query &&
-    docId &&
-    storyId &&
-    !store.stories[storyId] &&
-    typeof query.story === 'string'
-      ? docStoryToId(docId, query.story)
-      : storyId;
+  let dynStoryId: string | undefined;
+  if (query && docId && storyId && !store.stories[storyId]) {
+    if (typeof query.story === 'string') {
+      dynStoryId = docStoryToId(docId, query.story);
+    } else {
+      //if dynamic stories - the storyId could be wrong
+      if (store.docs[docId] && store.docs[docId].stories) {
+        const stories = store.docs[docId].stories as string[];
+        if (stories.length) {
+          dynStoryId = stories[0];
+        }
+      }
+    }
+  } else {
+    dynStoryId = storyId;
+  }
   return (
     <BlockContextProvider
       storyId={dynStoryId}

@@ -3,6 +3,221 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/ccontrols/component-controls/compare/v2.4.2...v2.5.0) (2020-12-28)
+
+
+### Features
+
+* custom esm pages ([ae76a6e](https://github.com/ccontrols/component-controls/commit/ae76a6e936b0edb66b7ecbd71450c1858ce0c575))
+
+
+
+
+
+# [2.4.0](https://github.com/ccontrols/component-controls/compare/v2.3.0...v2.4.0) (2020-12-24)
+
+
+### Features
+
+* configurable page templates in packages ([8aee3b4](https://github.com/ccontrols/component-controls/commit/8aee3b46f6e06fb71e55a8cc597e0b397dcc704b))
+
+
+
+
+
+# [2.3.0](https://github.com/ccontrols/component-controls/compare/v2.2.4...v2.3.0) (2020-12-23)
+
+
+### Features
+
+* add algolia confurable site search ([e136c2d](https://github.com/ccontrols/component-controls/commit/e136c2d9e415c124d84796a70bccd5544575cfe6))
+
+
+
+
+
+# [2.2.0](https://github.com/ccontrols/component-controls/compare/v2.1.0...v2.2.0) (2020-12-08)
+
+**Note:** Version bump only for package @component-controls/core
+
+
+
+
+
+# [2.1.0](https://github.com/ccontrols/component-controls/compare/v2.0.1...v2.1.0) (2020-12-06)
+
+**Note:** Version bump only for package @component-controls/core
+
+
+
+
+
+## [2.0.1](https://github.com/ccontrols/component-controls/compare/v2.0.0...v2.0.1) (2020-12-06)
+
+
+### Bug Fixes
+
+* replace faker avatar with picsum ([4577697](https://github.com/ccontrols/component-controls/commit/457769777f4952c425bf6c4ca1b608b3946bc888))
+
+
+
+
+
+# [2.0.0](https://github.com/ccontrols/component-controls/compare/v1.44.1...v2.0.0) (2020-12-05)
+
+**Note:** Version bump only for package @component-controls/core
+
+
+
+
+
+# [1.44.0](https://github.com/ccontrols/component-controls/compare/v1.43.0...v1.44.0) (2020-11-30)
+
+
+### Features
+
+* component jsx explorer ([c530e29](https://github.com/ccontrols/component-controls/commit/c530e29f73414fe47ae648134385ed7b36670955))
+
+
+
+
+
+# [1.43.0](https://github.com/ccontrols/component-controls/compare/v1.42.12...v1.43.0) (2020-11-28)
+
+
+### Features
+
+* local dependencies ([628d09f](https://github.com/ccontrols/component-controls/commit/628d09ffa2c92a92805309ad16c4596f31259582))
+
+
+
+
+
+## [1.42.12](https://github.com/ccontrols/component-controls/compare/v1.42.11...v1.42.12) (2020-11-26)
+
+**Note:** Version bump only for package @component-controls/core
+
+
+
+
+
+## [1.42.11](https://github.com/ccontrols/component-controls/compare/v1.42.10...v1.42.11) (2020-11-26)
+
+**Note:** Version bump only for package @component-controls/core
+
+
+
+
+
+## [1.42.9](https://github.com/ccontrols/component-controls/compare/v1.42.8...v1.42.9) (2020-11-26)
+
+**Note:** Version bump only for package @component-controls/core
+
+
+
+
+
+## [1.42.8](https://github.com/ccontrols/component-controls/compare/v1.42.7...v1.42.8) (2020-11-25)
+
+**Note:** Version bump only for package @component-controls/core
+
+
+
+
+
+## [1.42.7](https://github.com/ccontrols/component-controls/compare/v1.42.6...v1.42.7) (2020-11-25)
+
+**Note:** Version bump only for package @component-controls/core
+
+
+
+
+
+## [1.42.5](https://github.com/ccontrols/component-controls/compare/v1.42.4...v1.42.5) (2020-11-25)
+
+**Note:** Version bump only for package @component-controls/core
+
+
+
+
+
+# [1.42.0](https://github.com/ccontrols/component-controls/compare/v1.41.1...v1.42.0) (2020-11-24)
+
+
+### Features
+
+* findUpFile to node utils ([bfcde64](https://github.com/ccontrols/component-controls/commit/bfcde64df07c04e814735e18b5ca8acb32406ece))
+* support for union type ([67ef09f](https://github.com/ccontrols/component-controls/commit/67ef09f7628ab083b7fbce924d5b8be396cd64bb))
+
+
+
+
+
+# [1.41.0](https://github.com/ccontrols/component-controls/compare/v1.40.5...v1.41.0) (2020-11-23)
+
+
+### Features
+
+* doc template ([5bc41c3](https://github.com/ccontrols/component-controls/commit/5bc41c371a1ed440971892ad22324e871f30f89d))
+
+
+
+
+
+## [1.40.2](https://github.com/ccontrols/component-controls/compare/v1.40.1...v1.40.2) (2020-11-16)
+
+
+### Bug Fixes
+
+* update type private ([96303ae](https://github.com/ccontrols/component-controls/commit/96303ae0047e42b921e3bc70457faa225fe0cac1))
+
+
+
+
+
+# [1.40.0](https://github.com/ccontrols/component-controls/compare/v1.39.4...v1.40.0) (2020-11-15)
+
+
+### Features
+
+* bind templates to stories ([a4dfb9f](https://github.com/ccontrols/component-controls/commit/a4dfb9ff61330620614c2faa0b6547a38f386368))
+
+
+
+
+
+## [1.39.4](https://github.com/ccontrols/component-controls/compare/v1.39.3...v1.39.4) (2020-11-15)
+
+
+### Bug Fixes
+
+* document and example ts types update ([c54b319](https://github.com/ccontrols/component-controls/commit/c54b319767f1621e826a6de9803243e8e3b5a6b4))
+
+
+
+
+
+## [1.39.3](https://github.com/ccontrols/component-controls/compare/v1.39.2...v1.39.3) (2020-11-15)
+
+**Note:** Version bump only for package @component-controls/core
+
+
+
+
+
+## [1.39.1](https://github.com/ccontrols/component-controls/compare/v1.39.0...v1.39.1) (2020-11-14)
+
+
+### Bug Fixes
+
+* cleanup dynamic stories ssr ([f828a34](https://github.com/ccontrols/component-controls/commit/f828a34e918186f25a991dca37a36d515f63ba41))
+* dynamic stories routes for gatsby ssr ([7943752](https://github.com/ccontrols/component-controls/commit/7943752c65549c7b8f9e7c2d680fab7b5eb8fc85))
+* dynamic story paths ([7dff541](https://github.com/ccontrols/component-controls/commit/7dff541243ea4f3607970f4af44f5fe0dd344f9c))
+
+
+
+
+
 # [1.38.0](https://github.com/ccontrols/component-controls/compare/v1.37.0...v1.38.0) (2020-11-05)
 
 

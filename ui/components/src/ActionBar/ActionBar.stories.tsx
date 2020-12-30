@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Box } from 'theme-ui';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Document, Example, ControlTypes } from '@component-controls/core';
 import { ActionBar, ActionBarProps } from './ActionBar';
 import { ThemeProvider } from '../ThemeContext';
 import { ExternalLink } from '../ExternalLink';
@@ -8,9 +8,9 @@ import { ExternalLink } from '../ExternalLink';
 export default {
   title: 'Components/ActionBar',
   component: ActionBar,
-};
+} as Document;
 
-const Container: React.FC = ({ children }) => (
+const Container: FC = ({ children }) => (
   <ThemeProvider>
     <Box
       style={{
@@ -22,7 +22,7 @@ const Container: React.FC = ({ children }) => (
     </Box>
   </ThemeProvider>
 );
-export const overview: Example = ({ themeKey }: ActionBarProps) => (
+export const overview: Example<ActionBarProps> = ({ themeKey }) => (
   <Container>
     <ActionBar
       themeKey={themeKey}

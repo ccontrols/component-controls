@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { ThemeProvider as ThemeUIProvider } from '@component-controls/blocks';
 
-export const ThemeProvider: React.FC = ({ children }) => {
+export const ThemeProvider: FC = ({ children }) => {
   return <ThemeUIProvider>{children}</ThemeUIProvider>;
 };

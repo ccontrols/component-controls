@@ -1,12 +1,12 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes, Document } from '@component-controls/core';
 import { DuetColor, DuetColorPalette } from './DuetColor';
 import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/DuetColor',
   component: DuetColor,
-};
+} as Document;
 
 export const overview: Example<ColorProps> = ({ name, color }) => (
   <DuetColor name={name} color={color} />

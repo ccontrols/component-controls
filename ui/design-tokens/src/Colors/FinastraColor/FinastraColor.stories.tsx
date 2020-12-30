@@ -1,12 +1,12 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes, Document } from '@component-controls/core';
 import { FinastraColor, FinastraColorPalette } from './FinastraColor';
 import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/FinastraColor',
   component: FinastraColor,
-};
+} as Document;
 
 export const overview: Example<ColorProps> = ({ name, color }) => (
   <FinastraColor name={name} color={color} />

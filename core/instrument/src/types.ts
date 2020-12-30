@@ -29,7 +29,13 @@ export const defaultResolveOptions: ResolveOptions = {
 
 export const defaultParserOptions: ParserOptions = {
   sourceType: 'module',
-  plugins: ['jsx', 'typescript', 'classProperties'],
+  plugins: [
+    'jsx',
+    'typescript',
+    'classProperties',
+    'dynamicImport',
+    'objectRestSpread',
+  ],
 };
 
 /**

@@ -5,6 +5,7 @@
 -   [API](#api)
     -   [<ins>onRenderBody</ins>](#insonrenderbodyins)
     -   [<ins>onPreRenderHTML</ins>](#insonprerenderhtmlins)
+    -   [<ins>Helmet</ins>](#inshelmetins)
     -   [<ins>GatsbyLink</ins>](#insgatsbylinkins)
     -   [<ins>Layout</ins>](#inslayoutins)
     -   [<ins>DefaultName</ins>](#insdefaultnameins)
@@ -40,6 +41,10 @@ _onRenderBody [source code](https://github.com/ccontrols/component-controls/tree
 ## <ins>onPreRenderHTML</ins>
 
 _onPreRenderHTML [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/gatsby-ssr.tsx)_
+
+## <ins>Helmet</ins>
+
+_Helmet [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/index.ts)_
 
 ## <ins>GatsbyLink</ins>
 

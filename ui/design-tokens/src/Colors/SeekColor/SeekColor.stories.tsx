@@ -1,12 +1,12 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes, Document } from '@component-controls/core';
 import { SeekColor, SeekColorPalette } from './SeekColor';
 import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/SeekColor',
   component: SeekColor,
-};
+} as Document;
 
 export const overview: Example<ColorProps> = ({ name, color }) => (
   <SeekColor name={name} color={color} />

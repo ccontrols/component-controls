@@ -16,21 +16,22 @@ interface ScrollElement {
   title: string | null;
   id: string | null;
   level: number;
+  offset: number;
 }
 
 export const SideContext: FC<SideContext> = ({ pageRef }) => {
   const [items, setItems] = useState<ScrollElement[]>([]);
   const [activeItem, setActiveItem] = useState<number>(-1);
+  const windRef = pageRef?.current;
   const onScroll = useCallback(() => {
-    if (pageRef?.current) {
-      const { top = 0 } = pageRef.current.getBoundingClientRect() || {};
+    if (windRef) {
+      const { top = 0 } = windRef.getBoundingClientRect() || {};
       const topScroll = window.scrollY + top - 80;
       //find first anchor element that is below the scroll position
       const curItem = items.findIndex((item, index) => {
-        const el = pageRef.current?.querySelector(`#${item.id}`);
+        const el = windRef?.querySelector(`#${item.id}`);
         const nextItem = index < items.length - 1 && items[index + 1];
-        const nextEl =
-          nextItem && pageRef.current?.querySelector(`#${nextItem.id}`);
+        const nextEl = nextItem && windRef?.querySelector(`#${nextItem.id}`);
         if (el) {
           const { top: elTop } = el.getBoundingClientRect();
           const { top: nextTop = 0 } = nextEl
@@ -42,33 +43,49 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
       });
       setActiveItem(curItem);
     }
-  }, [items, pageRef]);
+  }, [items, windRef]);
   useEffect(() => {
-    const links: ScrollElement[] = [];
-    const pageEl = pageRef?.current;
-    if (pageEl) {
-      const anchors = pageEl.querySelectorAll('a[data-title]');
+    if (windRef) {
+      const links: ScrollElement[] = [];
+      const anchors = windRef.querySelectorAll('a[data-title]');
       if (anchors.length > 0) {
         anchors.forEach(el => {
           const href = el.getAttribute('href');
           const id = el.getAttribute('data-id');
-          if (href && id) {
+          const level = parseInt(el.getAttribute('data-level') || '1');
+          const title = el.getAttribute('data-title');
+          const offset = (el as HTMLElement).offsetTop;
+          if (href && id && title && level < 4) {
             links.push({
               href,
               id,
-              title: el.getAttribute('data-title'),
-              level: parseInt(el.getAttribute('data-level') || '1'),
+              title,
+              level,
+              offset,
             });
           }
         });
       }
+      if (!links.length) {
+        setItems([]);
+      } else {
+        const minLevel = links.reduce(
+          (m, l) => Math.min(m, l.level),
+          links[0].level,
+        );
+        setItems(links.map(l => ({ ...l, level: l.level - (minLevel - 1) })));
+      }
+    } else {
+      setItems([]);
     }
-    setItems(links);
-  }, [pageRef]);
+  }, [windRef]);
 
   useEffect(() => {
     if (typeof window !== 'undefined' && window) {
-      window.addEventListener('scroll', onScroll, false);
+      window.addEventListener('scroll', onScroll, {
+        capture: false,
+        passive: true,
+      });
     }
     onScroll();
     return () => {
@@ -77,7 +94,7 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
       }
     };
   }, [onScroll]);
-  return items.length ? (
+  return items.length > 1 ? (
     <SidebarContextProvider>
       <SidebarContext.Consumer>
         {({ SidebarClose, SidebarToggle, collapsed, responsive }) => (
@@ -92,11 +109,9 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
                 <Box as="nav" variant="sidecontext.nav">
                   {items?.map((el, index) => (
                     <NavLink
-                      variant="sidecontext.navlink"
+                      variant={`sidecontext.navlink.${el.level}`}
                       key={`context_link_${index}`}
                       href={el.href}
-                      // eslint-disable-next-line no-mixed-operators
-                      sx={{ pl: `${4 + (el.level - 1) * 6}px` }}
                       className={index === activeItem ? 'active' : undefined}
                     >
                       {el.title}

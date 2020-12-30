@@ -1,4 +1,13 @@
-import React, { FC, MouseEvent, useCallback } from 'react';
+import React, {
+  FC,
+  ReactNode,
+  MouseEvent,
+  useCallback,
+  useState,
+  useEffect,
+  useMemo,
+  CSSProperties,
+} from 'react';
 import { Button, ButtonProps } from 'theme-ui';
 import { Collapsible } from '../Collapsible';
 import { Tab, Tabs, TabList, TabPanel } from '../Tabs';
@@ -18,7 +27,7 @@ export interface PanelContainerOwnProps {
   /**
    * by default, which tab to have open.
    */
-  openTab?: React.ReactNode;
+  openTab?: ReactNode;
 
   /**
    * if true, the tabs on the panels will be visible
@@ -50,9 +59,7 @@ export const PanelContainer: FC<PanelContainerProps> = ({
   direction,
   ...rest
 }) => {
-  const [tabsIndex, setTabsIndex] = React.useState<number | undefined>(
-    undefined,
-  );
+  const [tabsIndex, setTabsIndex] = useState<number | undefined>(undefined);
 
   const theme = useTheme();
 
@@ -66,11 +73,11 @@ export const PanelContainer: FC<PanelContainerProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [JSON.stringify(panels.map(p => p.id || p.node))],
   );
-  React.useEffect(() => {
+  useEffect(() => {
     const index = findPanel(openTab);
     setTabsIndex(index > -1 ? index : undefined);
   }, [openTab, findPanel]);
-  const panelActions = React.useMemo(
+  const panelActions = useMemo(
     () =>
       actions.map((panel: ActionItem) => {
         const index = panels.findIndex((p: ActionItem) => p.id === panel.id);
@@ -105,7 +112,7 @@ export const PanelContainer: FC<PanelContainerProps> = ({
     [actions, tabsIndex, panels],
   );
 
-  const style: React.CSSProperties = {
+  const style: CSSProperties = {
     direction,
   };
   if (background) {

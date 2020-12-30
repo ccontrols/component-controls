@@ -3,6 +3,428 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.3](https://github.com/ccontrols/component-controls/compare/v2.5.2...v2.5.3) (2020-12-30)
+
+
+### Bug Fixes
+
+* context sxidebar ui styles ([5cee440](https://github.com/ccontrols/component-controls/commit/5cee440fadec5e26efcef59080ab4185fc697a9a))
+
+
+
+
+
+## [2.5.2](https://github.com/ccontrols/component-controls/compare/v2.5.1...v2.5.2) (2020-12-29)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [2.5.1](https://github.com/ccontrols/component-controls/compare/v2.5.0...v2.5.1) (2020-12-28)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+# [2.5.0](https://github.com/ccontrols/component-controls/compare/v2.4.2...v2.5.0) (2020-12-28)
+
+
+### Bug Fixes
+
+* anchor enclose tab to handle click ([c37dff9](https://github.com/ccontrols/component-controls/commit/c37dff9616a6ae54379d648c4f5414e54f768f03))
+
+
+### Features
+
+* custom esm pages ([ae76a6e](https://github.com/ccontrols/component-controls/commit/ae76a6e936b0edb66b7ecbd71450c1858ce0c575))
+
+
+
+
+
+## [2.4.2](https://github.com/ccontrols/component-controls/compare/v2.4.1...v2.4.2) (2020-12-24)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [2.4.1](https://github.com/ccontrols/component-controls/compare/v2.4.0...v2.4.1) (2020-12-24)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+# [2.4.0](https://github.com/ccontrols/component-controls/compare/v2.3.0...v2.4.0) (2020-12-24)
+
+
+### Features
+
+* configurable page templates in packages ([8aee3b4](https://github.com/ccontrols/component-controls/commit/8aee3b46f6e06fb71e55a8cc597e0b397dcc704b))
+
+
+
+
+
+# [2.3.0](https://github.com/ccontrols/component-controls/compare/v2.2.4...v2.3.0) (2020-12-23)
+
+
+### Bug Fixes
+
+* larger indent of side items ([3bc27fe](https://github.com/ccontrols/component-controls/commit/3bc27fe70f5b2ff2df91afe9dbaab2c9d4656e35))
+* page title ([b6143d9](https://github.com/ccontrols/component-controls/commit/b6143d9eb06ae74be0b4daae272fd2f47b65e866))
+* rule of hooks ([c586ce6](https://github.com/ccontrols/component-controls/commit/c586ce6997889f3920cb7705ad0b6de8009d374a))
+* sidebar styling ([9750307](https://github.com/ccontrols/component-controls/commit/975030766aca0dddb9cab347dd9a16b8a14fff03))
+
+
+### Features
+
+* add algolia confurable site search ([e136c2d](https://github.com/ccontrols/component-controls/commit/e136c2d9e415c124d84796a70bccd5544575cfe6))
+
+
+
+
+
+## [2.2.4](https://github.com/ccontrols/component-controls/compare/v2.2.3...v2.2.4) (2020-12-14)
+
+
+### Performance Improvements
+
+* memoize sidebar ([20f4fab](https://github.com/ccontrols/component-controls/commit/20f4fab46974fb9748b7337864f1431431354f99))
+
+
+
+
+
+## [2.2.3](https://github.com/ccontrols/component-controls/compare/v2.2.2...v2.2.3) (2020-12-10)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [2.2.2](https://github.com/ccontrols/component-controls/compare/v2.2.1...v2.2.2) (2020-12-10)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [2.2.1](https://github.com/ccontrols/component-controls/compare/v2.2.0...v2.2.1) (2020-12-08)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+# [2.2.0](https://github.com/ccontrols/component-controls/compare/v2.1.0...v2.2.0) (2020-12-08)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+# [2.1.0](https://github.com/ccontrols/component-controls/compare/v2.0.1...v2.1.0) (2020-12-06)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [2.0.1](https://github.com/ccontrols/component-controls/compare/v2.0.0...v2.0.1) (2020-12-06)
+
+
+### Bug Fixes
+
+* remove conditional hook call ([534746d](https://github.com/ccontrols/component-controls/commit/534746dafd917c541bb34657c6595f1162585633))
+
+
+
+
+
+# [2.0.0](https://github.com/ccontrols/component-controls/compare/v1.44.1...v2.0.0) (2020-12-05)
+
+
+### Bug Fixes
+
+* spelling for SkipLinksItemProps ([2c11e3a](https://github.com/ccontrols/component-controls/commit/2c11e3a3ae0e09d8d5b24f95124d8e098474bb7f))
+
+
+
+
+
+## [1.44.1](https://github.com/ccontrols/component-controls/compare/v1.44.0...v1.44.1) (2020-11-30)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+# [1.44.0](https://github.com/ccontrols/component-controls/compare/v1.43.0...v1.44.0) (2020-11-30)
+
+
+### Features
+
+* component jsx explorer ([c530e29](https://github.com/ccontrols/component-controls/commit/c530e29f73414fe47ae648134385ed7b36670955))
+
+
+
+
+
+# [1.43.0](https://github.com/ccontrols/component-controls/compare/v1.42.12...v1.43.0) (2020-11-28)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.42.12](https://github.com/ccontrols/component-controls/compare/v1.42.11...v1.42.12) (2020-11-26)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.42.11](https://github.com/ccontrols/component-controls/compare/v1.42.10...v1.42.11) (2020-11-26)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.42.10](https://github.com/ccontrols/component-controls/compare/v1.42.9...v1.42.10) (2020-11-26)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.42.9](https://github.com/ccontrols/component-controls/compare/v1.42.8...v1.42.9) (2020-11-26)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.42.8](https://github.com/ccontrols/component-controls/compare/v1.42.7...v1.42.8) (2020-11-25)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.42.7](https://github.com/ccontrols/component-controls/compare/v1.42.6...v1.42.7) (2020-11-25)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.42.6](https://github.com/ccontrols/component-controls/compare/v1.42.5...v1.42.6) (2020-11-25)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.42.5](https://github.com/ccontrols/component-controls/compare/v1.42.4...v1.42.5) (2020-11-25)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.42.4](https://github.com/ccontrols/component-controls/compare/v1.42.3...v1.42.4) (2020-11-25)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.42.3](https://github.com/ccontrols/component-controls/compare/v1.42.2...v1.42.3) (2020-11-25)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.42.2](https://github.com/ccontrols/component-controls/compare/v1.42.1...v1.42.2) (2020-11-24)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.42.1](https://github.com/ccontrols/component-controls/compare/v1.42.0...v1.42.1) (2020-11-24)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+# [1.42.0](https://github.com/ccontrols/component-controls/compare/v1.41.1...v1.42.0) (2020-11-24)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.41.1](https://github.com/ccontrols/component-controls/compare/v1.41.0...v1.41.1) (2020-11-24)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+# [1.41.0](https://github.com/ccontrols/component-controls/compare/v1.40.5...v1.41.0) (2020-11-23)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.40.5](https://github.com/ccontrols/component-controls/compare/v1.40.4...v1.40.5) (2020-11-16)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.40.4](https://github.com/ccontrols/component-controls/compare/v1.40.3...v1.40.4) (2020-11-16)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.40.3](https://github.com/ccontrols/component-controls/compare/v1.40.2...v1.40.3) (2020-11-16)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.40.2](https://github.com/ccontrols/component-controls/compare/v1.40.1...v1.40.2) (2020-11-16)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.40.1](https://github.com/ccontrols/component-controls/compare/v1.40.0...v1.40.1) (2020-11-16)
+
+
+### Bug Fixes
+
+* doc description type ([40c02e1](https://github.com/ccontrols/component-controls/commit/40c02e1d1e0076d97f1b12b19f9fc98735f26e05))
+
+
+
+
+
+# [1.40.0](https://github.com/ccontrols/component-controls/compare/v1.39.4...v1.40.0) (2020-11-15)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.39.4](https://github.com/ccontrols/component-controls/compare/v1.39.3...v1.39.4) (2020-11-15)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.39.3](https://github.com/ccontrols/component-controls/compare/v1.39.2...v1.39.3) (2020-11-15)
+
+
+### Bug Fixes
+
+* input lineHeight for ie11 ([8f8d7c9](https://github.com/ccontrols/component-controls/commit/8f8d7c9e4fd5638fb0172723031422e1597827c9))
+
+
+
+
+
+## [1.39.2](https://github.com/ccontrols/component-controls/compare/v1.39.1...v1.39.2) (2020-11-14)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.39.1](https://github.com/ccontrols/component-controls/compare/v1.39.0...v1.39.1) (2020-11-14)
+
+
+### Bug Fixes
+
+* dynamic stories routes for gatsby ssr ([7943752](https://github.com/ccontrols/component-controls/commit/7943752c65549c7b8f9e7c2d680fab7b5eb8fc85))
+
+
+
+
+
+# [1.39.0](https://github.com/ccontrols/component-controls/compare/v1.38.2...v1.39.0) (2020-11-13)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.38.2](https://github.com/ccontrols/component-controls/compare/v1.38.1...v1.38.2) (2020-11-11)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.38.1](https://github.com/ccontrols/component-controls/compare/v1.38.0...v1.38.1) (2020-11-11)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
 # [1.38.0](https://github.com/ccontrols/component-controls/compare/v1.37.0...v1.38.0) (2020-11-05)
 
 

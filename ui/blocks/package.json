@@ -1,7 +1,8 @@
 {
   "name": "@component-controls/blocks",
-  "version": "1.38.0",
+  "version": "2.5.3",
   "description": "Component controls core documentation blocks.",
+  "sideEffects": false,
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
@@ -30,14 +31,14 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/components": "^1.38.0",
-    "@component-controls/core": "^1.38.0",
-    "@component-controls/editors": "^1.38.0",
-    "@component-controls/render": "^1.38.0",
-    "@component-controls/store": "^1.38.0",
-    "@theme-ui/css": "^0.4.0-rc.1",
+    "@component-controls/components": "^2.5.3",
+    "@component-controls/core": "^2.5.0",
+    "@component-controls/editors": "^2.5.3",
+    "@component-controls/render": "^2.5.0",
+    "@component-controls/search-algolia": "^2.5.0",
+    "@component-controls/store": "^2.5.3",
+    "@theme-ui/css": "^0.6.0-alpha.1",
     "copy-to-clipboard": "^3.2.1",
-    "fuse.js": "^6.4.1",
     "global": "^4.3.2",
     "js-string-escape": "^1.0.1",
     "query-string": "^6.13.5",
@@ -45,13 +46,13 @@
     "react-resize-detector": "^5.0.6",
     "recoil": "^0.0.10",
     "stringify-object": "^3.3.0",
-    "theme-ui": "^0.4.0-rc.1"
+    "theme-ui": "^0.6.0-alpha.3"
   },
   "devDependencies": {
-    "@component-controls/jest-snapshots": "^1.38.0",
-    "@component-controls/ts-markdown-docs": "^1.37.0",
+    "@component-controls/jest-snapshots": "^2.5.3",
+    "@component-controls/ts-markdown-docs": "^2.2.0",
     "@primer/octicons-react": "^10.0.0",
-    "@theme-ui/presets": "^0.3.0",
+    "@theme-ui/presets": "^0.6.0-alpha.1",
     "@types/mdx-js__react": "^1.5.1",
     "@types/query-string": "^6.3.0",
     "@types/react": "^16.9.34",
@@ -61,8 +62,8 @@
     "@types/stringify-object": "^3.2.0",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-table": "^7.0.0",
     "typescript": "^4.0.5"
   },
@@ -78,5 +79,5 @@
   "authors": [
     "Atanas Stoyanov"
   ],
-  "gitHead": "1b83d23bd43f1b2143ac8f66f828fe5806b40310"
+  "gitHead": "e30d62f101e104711a16261fce04785d58cac1eb"
 }

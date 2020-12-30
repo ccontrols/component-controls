@@ -285,7 +285,7 @@ Retrieves a Story object from a story id
 ```
 import { useStoryById } from '@component-controls/store';
 {
-  const story = useStoryById('introduction-starter--overview');
+  const story = useStoryById('esm-starter--overview');
   console.log(story.description);
 }
 ```
@@ -327,7 +327,7 @@ Returns a link to a story from a story id
 ```
 import { useStoryPath } from '@component-controls/store';
 {
-  const href = useStoryPath('introduction-starter--overview');
+  const href = useStoryPath('esm-starter--overview');
   return <a href={href}>Visit tutorial</a>
 }
 ```
@@ -398,7 +398,7 @@ Returns the controls associated with a story
 ```
 import { useStoryControls } from '@component-controls/store';
 {
-  const controls = useStoryControls('introduction-starter--overview');
+  const controls = useStoryControls('esm-starter--overview');
   console.log(controls);
 }
 ```

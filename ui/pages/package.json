@@ -1,14 +1,27 @@
 {
   "name": "@component-controls/pages",
-  "version": "1.38.0",
+  "version": "2.5.3",
   "description": "Component controls pre-built documentation page templates.",
+  "sideEffects": false,
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist/",
     "package.json",
-    "README.md"
+    "README.md",
+    "CanvasPage.d.ts",
+    "CanvasPage.js",
+    "ClassicPage.d.ts",
+    "ClassicPage.js",
+    "ComponentPage.d.ts",
+    "ComponentPage.js",
+    "CurrentStoryPage.d.ts",
+    "CurrentStoryPage.js",
+    "StoriesPage.d.ts",
+    "StoriesPage.js",
+    "TestingPage.d.ts",
+    "TestingPage.js"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
@@ -30,16 +43,18 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/blocks": "^1.38.0"
+    "@component-controls/axe-plugin": "^2.5.3",
+    "@component-controls/blocks": "^2.5.3",
+    "@component-controls/viewport-plugin": "^2.5.3"
   },
   "devDependencies": {
-    "@component-controls/ts-markdown-docs": "^1.37.0",
+    "@component-controls/ts-markdown-docs": "^2.2.0",
     "@types/jest": "^26.0.10",
     "@types/react": "^16.9.34",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",
     "jest": "^26.4.2",
-    "react": "^16.8.3",
+    "react": "^17.0.1",
     "typescript": "^4.0.5"
   },
   "peerDependencies": {
@@ -51,5 +66,5 @@
   "authors": [
     "Atanas Stoyanov"
   ],
-  "gitHead": "1b83d23bd43f1b2143ac8f66f828fe5806b40310"
+  "gitHead": "e30d62f101e104711a16261fce04785d58cac1eb"
 }

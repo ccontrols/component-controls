@@ -20,9 +20,8 @@ export const loadTestFiles = (
 ): void => {
   const folderName = path.join(__dirname, 'fixtures', ...filePaths);
   const fileNames = fs.readdirSync(folderName);
-  //.filter(name => name === 'string-template.js');
+  //.filter(name => name === 'format-source.mdx');
 
-  // .filter(fn => fn === 'node-modules-source.js');
   fileNames
     .filter(
       fName => !include || include.length === 0 || include.indexOf(fName) > -1,

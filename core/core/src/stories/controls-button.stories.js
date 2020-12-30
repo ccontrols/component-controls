@@ -12,13 +12,11 @@ export const overview = ({ onClick }) => (
   <Button onClick={onClick}>click me!</Button>
 );
 
-overview.story = {
-  description: 'A simple story with a clickable button',
-  controls: {
-    onClick: {
-      type: ControlTypes.BUTTON,
-      value: () => console.log('clicked'),
-      description: 'a button control',
-    },
+overview.description = 'A simple story with a clickable button';
+overview.controls = {
+  onClick: {
+    type: ControlTypes.BUTTON,
+    value: () => console.log('clicked'),
+    description: 'a button control',
   },
 };

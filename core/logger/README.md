@@ -1,21 +1,21 @@
 # Table of contents
 
--   [Overview](#overview)
--   [Installation](#installation)
--   [API](#api)
-    -   [LogOptions](#logoptions)
-    -   [LogLevel](#loglevel)
-    -   [error](#error)
-    -   [log](#log)
-    -   [output](#output)
-    -   [setLogOptions](#setlogoptions)
-    -   [defaultOptions](#defaultoptions)
-    -   [logOptions](#logoptions-1)
-    -   [LogLevel](#loglevel-1)
+- [Overview](#overview)
+- [Installation](#installation)
+- [API](#api)
+  - [LogOptions](#logoptions)
+  - [LogLevel](#loglevel)
+  - [error](#error)
+  - [log](#log)
+  - [output](#output)
+  - [setLogOptions](#setlogoptions)
+  - [defaultOptions](#defaultoptions)
+  - [logOptions](#logoptions-1)
+  - [LogLevel](#loglevel-1)
 
 # Overview
 
-Logging utilities. Uses the [chalk](https://github.com/chalk/chalk#readme) package for logging utput
+Logging utilities. Uses the [chalk](https://github.com/chalk/chalk#readme) package for logging output
 
 # Installation
 
@@ -34,8 +34,6 @@ $ npm install @component-controls/logger --save-dev
 ## LogOptions
 
 _defined in [@component-controls/logger/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/logger/src/index.ts#L5)_
-
-
 
 ### properties
 
@@ -109,8 +107,6 @@ _defined in [@component-controls/logger/src/index.ts](https://github.com/ccontro
 
 _defined in [@component-controls/logger/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/logger/src/index.ts#L10)_
 
-
-
 ### properties
 
 | Name        | Type                      | Description |
@@ -121,8 +117,6 @@ _defined in [@component-controls/logger/src/index.ts](https://github.com/ccontro
 ## logOptions
 
 _defined in [@component-controls/logger/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/logger/src/index.ts#L15)_
-
-
 
 ## LogLevel
 

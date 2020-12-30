@@ -3,6 +3,218 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.3](https://github.com/ccontrols/component-controls/compare/v2.5.2...v2.5.3) (2020-12-30)
+
+**Note:** Version bump only for package component-controls-stories
+
+
+
+
+
+## [2.5.2](https://github.com/ccontrols/component-controls/compare/v2.5.1...v2.5.2) (2020-12-29)
+
+**Note:** Version bump only for package component-controls-stories
+
+
+
+
+
+# [2.5.0](https://github.com/ccontrols/component-controls/compare/v2.4.2...v2.5.0) (2020-12-28)
+
+
+### Features
+
+* custom esm pages ([ae76a6e](https://github.com/ccontrols/component-controls/commit/ae76a6e936b0edb66b7ecbd71450c1858ce0c575))
+
+
+
+
+
+# [2.4.0](https://github.com/ccontrols/component-controls/compare/v2.3.0...v2.4.0) (2020-12-24)
+
+
+### Features
+
+* configurable page templates in packages ([8aee3b4](https://github.com/ccontrols/component-controls/commit/8aee3b46f6e06fb71e55a8cc597e0b397dcc704b))
+
+
+
+
+
+# [2.3.0](https://github.com/ccontrols/component-controls/compare/v2.2.4...v2.3.0) (2020-12-23)
+
+
+### Bug Fixes
+
+* sidebar styling ([9750307](https://github.com/ccontrols/component-controls/commit/975030766aca0dddb9cab347dd9a16b8a14fff03))
+* sx prop in mdx ([a62394f](https://github.com/ccontrols/component-controls/commit/a62394fbd02791bec963eff24f13c97e32d977b6))
+* sx styles ([c34c592](https://github.com/ccontrols/component-controls/commit/c34c592e5da0c6bfb133ef397d226603d417215a))
+
+
+### Features
+
+* add algolia confurable site search ([e136c2d](https://github.com/ccontrols/component-controls/commit/e136c2d9e415c124d84796a70bccd5544575cfe6))
+
+
+
+
+
+## [2.2.2](https://github.com/ccontrols/component-controls/compare/v2.2.1...v2.2.2) (2020-12-10)
+
+**Note:** Version bump only for package component-controls-stories
+
+
+
+
+
+## [2.2.1](https://github.com/ccontrols/component-controls/compare/v2.2.0...v2.2.1) (2020-12-08)
+
+
+### Bug Fixes
+
+* import image ([9f46198](https://github.com/ccontrols/component-controls/commit/9f46198d8566c4062b5a5a3cbc6bfb42a9260359))
+
+
+
+
+
+# [2.2.0](https://github.com/ccontrols/component-controls/compare/v2.1.0...v2.2.0) (2020-12-08)
+
+
+### Features
+
+* addon-stats ([0204f50](https://github.com/ccontrols/component-controls/commit/0204f50533cea5e2eeb694fe64cc6fc115fd2fd4))
+
+
+
+
+
+# [2.1.0](https://github.com/ccontrols/component-controls/compare/v2.0.1...v2.1.0) (2020-12-06)
+
+**Note:** Version bump only for package component-controls-stories
+
+
+
+
+
+# [2.0.0](https://github.com/ccontrols/component-controls/compare/v1.44.1...v2.0.0) (2020-12-05)
+
+
+### chore
+
+* upgrade nextjs emption 11 ([7fc4168](https://github.com/ccontrols/component-controls/commit/7fc4168308f53a7a989550628d35f7e3b5dd6c10))
+
+
+### BREAKING CHANGES
+
+* emotion 11 and nextjs 10 required
+
+
+
+
+
+# [1.43.0](https://github.com/ccontrols/component-controls/compare/v1.42.12...v1.43.0) (2020-11-28)
+
+
+### Bug Fixes
+
+* update imports and current doc lookup ([893293b](https://github.com/ccontrols/component-controls/commit/893293b5e208e7c61a3502fe50557321d3b70c1e))
+
+
+
+
+
+## [1.42.10](https://github.com/ccontrols/component-controls/compare/v1.42.9...v1.42.10) (2020-11-26)
+
+**Note:** Version bump only for package component-controls-stories
+
+
+
+
+
+## [1.42.5](https://github.com/ccontrols/component-controls/compare/v1.42.4...v1.42.5) (2020-11-25)
+
+**Note:** Version bump only for package component-controls-stories
+
+
+
+
+
+## [1.42.3](https://github.com/ccontrols/component-controls/compare/v1.42.2...v1.42.3) (2020-11-25)
+
+**Note:** Version bump only for package component-controls-stories
+
+
+
+
+
+# [1.41.0](https://github.com/ccontrols/component-controls/compare/v1.40.5...v1.41.0) (2020-11-23)
+
+
+### Bug Fixes
+
+* stprybook defaults for params and configpath ([b649fa2](https://github.com/ccontrols/component-controls/commit/b649fa2e9d272d13a2ebc363274d403dbe9a3979))
+
+
+### Features
+
+* doc template ([5bc41c3](https://github.com/ccontrols/component-controls/commit/5bc41c371a1ed440971892ad22324e871f30f89d))
+* mdx story templates ([d5a1ccd](https://github.com/ccontrols/component-controls/commit/d5a1ccdd00dd84e5cd988952fbc9f66cd6219bd2))
+
+
+
+
+
+# [1.40.0](https://github.com/ccontrols/component-controls/compare/v1.39.4...v1.40.0) (2020-11-15)
+
+
+### Features
+
+* bind templates to stories ([a4dfb9f](https://github.com/ccontrols/component-controls/commit/a4dfb9ff61330620614c2faa0b6547a38f386368))
+
+
+
+
+
+## [1.39.3](https://github.com/ccontrols/component-controls/compare/v1.39.2...v1.39.3) (2020-11-15)
+
+**Note:** Version bump only for package component-controls-stories
+
+
+
+
+
+## [1.39.1](https://github.com/ccontrols/component-controls/compare/v1.39.0...v1.39.1) (2020-11-14)
+
+
+### Bug Fixes
+
+* cleanup dynamic stories ssr ([f828a34](https://github.com/ccontrols/component-controls/commit/f828a34e918186f25a991dca37a36d515f63ba41))
+* dynamic stories routes for gatsby ssr ([7943752](https://github.com/ccontrols/component-controls/commit/7943752c65549c7b8f9e7c2d680fab7b5eb8fc85))
+
+
+
+
+
+# [1.39.0](https://github.com/ccontrols/component-controls/compare/v1.38.2...v1.39.0) (2020-11-13)
+
+
+### Features
+
+* ability to show source for Playground ([08cba79](https://github.com/ccontrols/component-controls/commit/08cba79ef57c6004f28cf39680f3690cee27e4ed))
+
+
+
+
+
+## [1.38.1](https://github.com/ccontrols/component-controls/compare/v1.38.0...v1.38.1) (2020-11-11)
+
+**Note:** Version bump only for package component-controls-stories
+
+
+
+
+
 # [1.38.0](https://github.com/ccontrols/component-controls/compare/v1.37.0...v1.38.0) (2020-11-05)
 
 

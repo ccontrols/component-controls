@@ -703,6 +703,49 @@ A hint could be a sample value or a brief description of the expected format.",
         "raw": "string",
       },
     },
+    "backgroundColor": Object {
+      "parentName": "BackgroundColorProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "bg": Object {
+      "description": "The color utility parses a component's \`color\` and \`bg\` props and converts them into CSS declarations.
+By default the raw value of the prop is returned.
+
+Color palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation.
+Array values are converted into responsive values.
+
+[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color)",
+      "parentName": "BackgroundColorProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
     "className": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
@@ -711,6 +754,13 @@ A hint could be a sample value or a brief description of the expected format.",
       },
     },
     "color": Object {
+      "description": "The color utility parses a component's \`color\` and \`bg\` props and converts them into CSS declarations.
+By default the raw value of the prop is returned.
+
+Color palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation.
+Array values are converted into responsive values.
+
+[MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/color)",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
@@ -746,10 +796,10 @@ A hint could be a sample value or a brief description of the expected format.",
       },
     },
     "css": Object {
-      "parentName": "DOMAttributes",
+      "parentName": "BoxOwnProps",
       "type": Object {
-        "name": "InterpolationWithTheme<any>",
-        "raw": "InterpolationWithTheme<any>",
+        "name": "Interpolation<any>",
+        "raw": "Interpolation<any>",
       },
     },
     "dangerouslySetInnerHTML": Object {
@@ -959,16 +1009,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "key": Object {
       "parentName": "Attributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "TLengthStyledSystem",
+        "raw": "TLengthStyledSystem",
       },
     },
     "lang": Object {
@@ -976,6 +1018,272 @@ A hint could be a sample value or a brief description of the expected format.",
       "type": Object {
         "name": "string",
         "raw": "string",
+      },
+    },
+    "m": Object {
+      "description": "Margin on top, left, bottom and right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "margin": Object {
+      "description": "Margin on top, left, bottom and right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "marginBottom": Object {
+      "description": "Margin on bottom",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "marginLeft": Object {
+      "description": "Margin on left",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "marginRight": Object {
+      "description": "Margin on right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "marginTop": Object {
+      "description": "Margin on top",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "marginX": Object {
+      "description": "Margin on left and right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "marginY": Object {
+      "description": "Margin on top and bottom",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "mb": Object {
+      "description": "Margin on bottom",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "ml": Object {
+      "description": "Margin on left",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "mr": Object {
+      "description": "Margin on right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "mt": Object {
+      "description": "Margin on top",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "mx": Object {
+      "description": "Margin on left and right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "my": Object {
+      "description": "Margin on top and bottom",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "name": Object {
@@ -2105,11 +2413,231 @@ A hint could be a sample value or a brief description of the expected format.",
         "raw": "(event: WheelEvent<HTMLButtonElement>) => void",
       },
     },
+    "opacity": Object {
+      "description": "The opacity CSS property sets the transparency of an element or the degree to which content
+behind an element is visible.
+
+[MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)",
+      "parentName": "OpacityProps",
+      "type": Object {
+        "name": "ResponsiveValue<Opacity, Required<Theme<TLengthStyledSystem>>>",
+        "raw": "ResponsiveValue<Opacity, Required<Theme<TLengthStyledSystem>>>",
+      },
+    },
+    "p": Object {
+      "description": "Padding on top, left, bottom and right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "padding": Object {
+      "description": "Padding on top, left, bottom and right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "paddingBottom": Object {
+      "description": "Padding on bottom",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "paddingLeft": Object {
+      "description": "Padding on left",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "paddingRight": Object {
+      "description": "Padding on right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "paddingTop": Object {
+      "description": "Padding on top",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "paddingX": Object {
+      "description": "Padding on left and right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "paddingY": Object {
+      "description": "Padding on top and bottom",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "pb": Object {
+      "description": "Padding on bottom",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "pl": Object {
+      "description": "Padding on left",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
     "placeholder": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
         "raw": "string",
+      },
+    },
+    "pr": Object {
+      "description": "Padding on right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "prefix": Object {
@@ -2124,6 +2652,63 @@ A hint could be a sample value or a brief description of the expected format.",
       "type": Object {
         "name": "string",
         "raw": "string",
+      },
+    },
+    "pt": Object {
+      "description": "Padding on top",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "px": Object {
+      "description": "Padding on left and right",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
+      },
+    },
+    "py": Object {
+      "description": "Padding on top and bottom",
+      "parentName": "SpaceProps",
+      "type": Object {
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "radioGroup": Object {
@@ -2201,6 +2786,13 @@ A hint could be a sample value or a brief description of the expected format.",
       "type": Object {
         "name": "boolean",
         "raw": "boolean",
+      },
+    },
+    "sx": Object {
+      "parentName": "BoxOwnProps",
+      "type": Object {
+        "name": "ThemeUIStyleObject",
+        "raw": "ThemeUIStyleObject",
       },
     },
     "tabIndex": Object {
@@ -2312,13 +2904,11 @@ A hint could be a sample value or a brief description of the expected format.",
 exports[`external-library component package 1`] = `
 Object {
   "component": Object {
-    "from": "theme-ui",
-    "importedName": "Button",
-    "imports": Object {
-      "@emotion/core": Array [
+    "externalDependencies": Object {
+      "@emotion/react": Array [
         Object {
-          "importedName": "InterpolationWithTheme",
-          "name": "InterpolationWithTheme",
+          "importedName": "Interpolation",
+          "name": "Interpolation",
         },
       ],
       "@emotion/styled": Array [
@@ -2331,6 +2921,10 @@ Object {
         Object {
           "importedName": "ResponsiveStyleValue",
           "name": "ResponsiveStyleValue",
+        },
+        Object {
+          "importedName": "ThemeUIStyleObject",
+          "name": "ThemeUIStyleObject",
         },
       ],
       "react": Array [
@@ -2354,29 +2948,35 @@ Object {
         },
       ],
     },
+    "from": "theme-ui",
+    "importedName": "Button",
+    "jsx": Array [],
+    "localDependencies": Object {},
     "name": "Button",
     "package": "8f6835169f285fcd3ad5425d9268a8f1",
     "request": "/Users/atanasster/component-controls/node_modules/@theme-ui/components/index.d.ts",
   },
   "componentPackage": Object {
     "dependencies": Object {
-      "@theme-ui/color-modes": "^0.4.0-rc.5",
-      "@theme-ui/components": "^0.4.0-rc.5",
-      "@theme-ui/core": "^0.4.0-rc.5",
-      "@theme-ui/css": "^0.4.0-rc.5",
-      "@theme-ui/mdx": "^0.4.0-rc.5",
-      "@theme-ui/theme-provider": "^0.4.0-rc.5",
+      "@theme-ui/color-modes": "^0.6.0-alpha.3",
+      "@theme-ui/components": "^0.6.0-alpha.3",
+      "@theme-ui/core": "0.6.0-alpha.1",
+      "@theme-ui/css": "0.6.0-alpha.1",
+      "@theme-ui/mdx": "0.6.0-alpha.1",
+      "@theme-ui/theme-provider": "^0.6.0-alpha.3",
     },
     "devDependencies": undefined,
     "fileHash": "8f6835169f285fcd3ad5425d9268a8f1",
     "name": "theme-ui",
-    "peerDependencies": undefined,
+    "peerDependencies": Object {
+      "react": "^16.14.0 || ^17.0.0",
+    },
     "repository": Object {
       "browse": "https://github.com/system-ui/theme-ui/tree/master/dist/index.js",
       "docs": "https://github.com/system-ui/theme-ui/tree/master#readme",
       "issues": "https://github.com/system-ui/theme-ui/issues",
     },
-    "version": "0.4.0-rc.5",
+    "version": "0.6.0-alpha.3",
   },
 }
 `;
@@ -2385,13 +2985,11 @@ exports[`external-library theme-ui.jsx 1`] = `
 Object {
   "components": Object {
     "98b2111b08fbab8e38c938acaf3e129a": Object {
-      "from": "theme-ui",
-      "importedName": "Button",
-      "imports": Object {
-        "@emotion/core": Array [
+      "externalDependencies": Object {
+        "@emotion/react": Array [
           Object {
-            "importedName": "InterpolationWithTheme",
-            "name": "InterpolationWithTheme",
+            "importedName": "Interpolation",
+            "name": "Interpolation",
           },
         ],
         "@emotion/styled": Array [
@@ -2404,6 +3002,10 @@ Object {
           Object {
             "importedName": "ResponsiveStyleValue",
             "name": "ResponsiveStyleValue",
+          },
+          Object {
+            "importedName": "ThemeUIStyleObject",
+            "name": "ThemeUIStyleObject",
           },
         ],
         "react": Array [
@@ -2427,6 +3029,10 @@ Object {
           },
         ],
       },
+      "from": "theme-ui",
+      "importedName": "Button",
+      "jsx": Array [],
+      "localDependencies": Object {},
       "name": "Button",
       "package": "8f6835169f285fcd3ad5425d9268a8f1",
       "request": "/Users/atanasster/component-controls/node_modules/@theme-ui/components/index.d.ts",
@@ -2446,10 +3052,10 @@ Object {
   "packages": Object {
     "295d57ccad25aab2260adf38810e8858": Object {
       "dependencies": Object {
-        "@babel/generator": "^7.9.4",
-        "@babel/parser": "^7.9.4",
-        "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.38.0",
+        "@babel/generator": "^7.12.5",
+        "@babel/parser": "^7.12.5",
+        "@babel/traverse": "^7.12.5",
+        "@component-controls/core": "^2.5.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -2467,8 +3073,8 @@ Object {
         "typescript": "^4.0.5",
       },
       "devDependencies": Object {
-        "@babel/types": "^7.9.0",
-        "@component-controls/ts-markdown-docs": "^1.37.0",
+        "@babel/types": "^7.12.6",
+        "@component-controls/ts-markdown-docs": "^2.2.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -2485,27 +3091,29 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.38.0",
+      "version": "2.5.3",
     },
     "8f6835169f285fcd3ad5425d9268a8f1": Object {
       "dependencies": Object {
-        "@theme-ui/color-modes": "^0.4.0-rc.5",
-        "@theme-ui/components": "^0.4.0-rc.5",
-        "@theme-ui/core": "^0.4.0-rc.5",
-        "@theme-ui/css": "^0.4.0-rc.5",
-        "@theme-ui/mdx": "^0.4.0-rc.5",
-        "@theme-ui/theme-provider": "^0.4.0-rc.5",
+        "@theme-ui/color-modes": "^0.6.0-alpha.3",
+        "@theme-ui/components": "^0.6.0-alpha.3",
+        "@theme-ui/core": "0.6.0-alpha.1",
+        "@theme-ui/css": "0.6.0-alpha.1",
+        "@theme-ui/mdx": "0.6.0-alpha.1",
+        "@theme-ui/theme-provider": "^0.6.0-alpha.3",
       },
       "devDependencies": undefined,
       "fileHash": "8f6835169f285fcd3ad5425d9268a8f1",
       "name": "theme-ui",
-      "peerDependencies": undefined,
+      "peerDependencies": Object {
+        "react": "^16.14.0 || ^17.0.0",
+      },
       "repository": Object {
         "browse": "https://github.com/system-ui/theme-ui/tree/master/dist/index.js",
         "docs": "https://github.com/system-ui/theme-ui/tree/master#readme",
         "issues": "https://github.com/system-ui/theme-ui/issues",
       },
-      "version": "0.4.0-rc.5",
+      "version": "0.6.0-alpha.3",
     },
   },
   "stories": Object {},

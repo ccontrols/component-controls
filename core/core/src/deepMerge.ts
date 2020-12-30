@@ -9,13 +9,22 @@ const mergeArrays = (dest: any[], src: any[]) => {
   const result =
     src.length > 0
       ? src.map((s, idx) =>
-          idx < dest.length ? deepMergeArrays<any[]>(dest[idx], s) : s,
+          typeof s === 'object' &&
+          typeof dest[idx] === 'object' &&
+          idx < dest.length
+            ? mergeConfig<any[]>(dest[idx], s)
+            : s,
         )
       : src;
   return result;
 };
-export const deepMergeArrays = <T>(a: any, b: any): T =>
-  merge<T>(a, b, { arrayMerge: mergeArrays });
+export const mergeConfig = <T>(a: any, b: any): T =>
+  merge<T>(a, b, {
+    arrayMerge: mergeArrays,
+    customMerge: (key: string) => (src: any, dest: any) => {
+      return key === 'tabs' ? dest || src : mergeConfig<T>(src, dest);
+    },
+  });
 
 export const deepMergeReplaceArrays = <T>(a: any, b: any): T =>
   merge<T>(a, b, {

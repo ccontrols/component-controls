@@ -1,9 +1,13 @@
-/** @jsx jsx */
-import { FC } from 'react';
+import React, { FC } from 'react';
 import TooltipTrigger from 'react-popper-tooltip';
-import { TooltipTriggerProps } from 'react-popper-tooltip/dist/types';
-import { jsx, Box, SxStyleProp } from 'theme-ui';
+import { get } from '@theme-ui/css';
+import {
+  TooltipTriggerProps,
+  ChildrenArg,
+} from 'react-popper-tooltip/dist/types';
+import { Box, ColorModesScale } from 'theme-ui';
 import { Arrow, Wrapper } from './PopoverUtils';
+import { useTheme } from '../ThemeContext';
 
 export interface PopoverOwnProps {
   /**
@@ -28,9 +32,10 @@ export const Popover: FC<PopoverProps> = ({
   children,
   tooltipShown,
   onVisibilityChange,
-  ...props
+  ...rest
 }) => {
   const borderColor = 'lightgrey';
+  const theme = useTheme();
   return (
     <TooltipTrigger
       placement={placement}
@@ -52,9 +57,12 @@ export const Popover: FC<PopoverProps> = ({
             borderColor={borderColor}
             hidden={hidden}
             ref={tooltipRef as any}
-            sx={{
-              ...(containerProps.style as SxStyleProp),
-              backgroundColor: 'background',
+            style={{
+              ...containerProps.style,
+              backgroundColor: get(
+                theme.colors as ColorModesScale,
+                'background',
+              ),
             }}
           >
             {arrowVisible && (
@@ -62,8 +70,8 @@ export const Popover: FC<PopoverProps> = ({
                 placement={placement}
                 borderColor={borderColor}
                 ref={arrowRef as any}
-                sx={{
-                  ...(getArrowProps().style as SxStyleProp),
+                style={{
+                  ...getArrowProps().style,
                 }}
               />
             )}
@@ -72,12 +80,12 @@ export const Popover: FC<PopoverProps> = ({
         );
       }}
     >
-      {({ getTriggerProps, triggerRef }) => (
+      {({ getTriggerProps, triggerRef }: ChildrenArg) => (
         <Box
           ref={triggerRef as any}
           {...getTriggerProps()}
-          {...props}
           css={{ display: 'inline-block' }}
+          {...rest}
         >
           {children}
         </Box>

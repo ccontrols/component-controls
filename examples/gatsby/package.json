@@ -1,7 +1,7 @@
 {
   "name": "component-controls-gatsby-starter",
   "private": true,
-  "version": "1.38.0",
+  "version": "2.5.3",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -14,15 +14,15 @@
     "directory": "examples/gatsby"
   },
   "dependencies": {
-    "@component-controls/axe-plugin": "^1.38.0",
-    "@component-controls/blocks": "^1.38.0",
-    "@component-controls/core": "^1.38.0",
-    "@component-controls/gatsby-theme-stories": "^1.38.0",
-    "@component-controls/viewport-plugin": "^1.38.0",
-    "@theme-ui/presets": "^0.4.0-rc.1",
-    "gatsby": "^2.22.10",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "@component-controls/axe-plugin": "^2.5.3",
+    "@component-controls/blocks": "^2.5.3",
+    "@component-controls/core": "^2.5.0",
+    "@component-controls/gatsby-theme-stories": "^2.5.3",
+    "@component-controls/viewport-plugin": "^2.5.3",
+    "@theme-ui/presets": "^0.6.0-alpha.1",
+    "gatsby": "^2.27.4",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
     "typescript": "^3.9.3",

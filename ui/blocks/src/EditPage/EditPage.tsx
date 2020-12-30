@@ -11,10 +11,10 @@ import { useDocPackage } from '@component-controls/store';
  * Display a Edit this page link to the page source repository.
  * In order for this to work, you need to set up the `repository` field in `package.json`.
  */
-export const EditPage: FC = () => {
+export const EditPage: FC = props => {
   const docPackage = useDocPackage();
   return docPackage && docPackage.repository && docPackage.repository.browse ? (
-    <Box variant="editpage.container">
+    <Box variant="editpage.container" {...props}>
       <ExternalLink
         href={docPackage.repository.browse}
         aria-label="edit this page"

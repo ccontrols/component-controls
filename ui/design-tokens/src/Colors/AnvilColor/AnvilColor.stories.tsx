@@ -1,12 +1,12 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Example, Document, ControlTypes } from '@component-controls/core';
 import { AnvilColor, AnvilColorPalette } from './AnvilColor';
 import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/AnvilColor',
   component: AnvilColor,
-};
+} as Document;
 
 export const overview: Example<ColorProps> = ({ name, color }) => (
   <AnvilColor name={name} color={color} />

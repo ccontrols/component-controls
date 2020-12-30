@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/axe-plugin",
-  "version": "1.38.0",
+  "version": "2.5.3",
   "description": "Axe ally testing plugin",
   "keywords": [
     "addon",
@@ -13,7 +13,8 @@
     "dist/",
     "package.json",
     "README.md",
-    "preset.js"
+    "AllyPage.d.ts",
+    "AllyPage.js"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
@@ -35,22 +36,21 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/blocks": "^1.38.0",
-    "@component-controls/components": "^1.38.0",
-    "@component-controls/core": "^1.38.0",
-    "@component-controls/store": "^1.38.0",
-    "@emotion/styled": "^10.0.27",
+    "@component-controls/blocks": "^2.5.3",
+    "@component-controls/components": "^2.5.3",
+    "@component-controls/core": "^2.5.0",
+    "@component-controls/store": "^2.5.3",
     "@primer/octicons-react": "^10.0.0",
-    "axe-core": "^3.5.3",
+    "axe-core": "^4.1.1",
     "react-google-charts": "^3.0.15"
   },
   "devDependencies": {
-    "@component-controls/jest-snapshots": "^1.38.0",
-    "@component-controls/ts-markdown-docs": "^1.37.0",
+    "@component-controls/jest-snapshots": "^2.5.3",
+    "@component-controls/ts-markdown-docs": "^2.2.0",
     "@types/react": "^16.9.34",
     "@types/recoil": "^0.0.1",
-    "react": "^16.12.0",
-    "theme-ui": "^0.4.0-rc.1",
+    "react": "^17.0.1",
+    "theme-ui": "^0.6.0-alpha.3",
     "typescript": "^4.0.5"
   },
   "peerDependencies": {
@@ -63,5 +63,5 @@
   "authors": [
     "Atanas Stoyanov"
   ],
-  "gitHead": "1b83d23bd43f1b2143ac8f66f828fe5806b40310"
+  "gitHead": "e30d62f101e104711a16261fce04785d58cac1eb"
 }

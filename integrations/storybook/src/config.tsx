@@ -20,8 +20,10 @@ addDecorator(
       const values =
         story && story.controls ? getControlValues(story.controls) : undefined;
       if (context.hasOwnProperty('args')) {
-        //storybook-6 beta fake args
-        return storyFn({ ...context, args: values as Args });
+        return storyFn({
+          ...context,
+          args: values as Args,
+        });
       }
       //storybook 5 and 6 alphas
       return values ? (storyFn as any)(values, context) : storyFn(context);

@@ -1,0 +1,108 @@
+---
+title: Introducing JSX stats
+type: blog
+date: 2020-12-08
+author: atanasster
+route: /blogs/components-stats
+description: Introducing the addon-stats - cross-reference components and attributes usage statistics for jsx
+tags:
+  - jsx
+  - stats
+  - components usage
+image: /static/components-usage-blog.jpg
+component: BlockContainer
+---
+
+import { ComponentJSX, Playground } from '@component-controls/blocks';
+import {
+  ComponentUsage,
+  AttributeUsage,
+  ComponentUsageList,
+  AttributesUsageList,
+} from '@component-controls/addon-stats';
+import componentsUsageImg from './media/components-usage-blog.jpg';
+import { BlockContainer } from '../../../../ui/components/src/BlockContainer/BlockContainer.tsx';
+
+export const filter = ({ doc, component }) =>
+  component && doc.title.startsWith('Components');
+
+# Addon stats
+
+We just published the new jsx instrumenting feature and related cross/usage jsx components statistics for component-controls.
+
+This unique feature allows you to view the jsx trees of your components and answer questions such as - which of my components is the most used as a building block, and which attributes of each component are most used.
+
+# JSX Tree display
+
+This is displayed on the documentation page of each component, where you can see a tree of jsx nodes and the attributes used in each node.
+
+Here is a live example of our [BlockContainer](/api/components-blockcontainer--overview) component:
+
+<Playground>
+  <ComponentJSX of={BlockContainer} />
+</Playground>
+
+# Addon-stats
+
+The addon-stats package contains several api functions, react hooks, and ui elements to make it easy to display cross-usage statistics on the components in your documentation site.
+
+## Install
+
+```sh
+yarn add @component-controls/addon-stats --dev
+```
+
+## Usage
+
+```mdx:title=stats-page.mdx
+import {
+  ComponentUsage,
+  AttributeUsage,
+  ComponentUsageList,
+  AttributesUsageList,
+} from '@component-controls/addon-stats';
+
+## Attributes usage summary
+
+Attributes usage - how many times an attribute is being set on a component, and on which component it is being set
+
+<AttributeUsage />
+
+## Components usage details
+
+How many times a component is being used from another component, with a list of the components using it
+
+<ComponentUsageList />
+
+## Attributes usage details
+
+How many times an attribute is being used on a component, with a list of those components
+
+<AttributesUsageList />
+```
+
+# Live examples
+
+## Components usage summary
+
+Components usage - how many times a component is being used from another component and which of its properties are used
+
+<ComponentUsage filter={filter} />
+
+## Attributes usage summary
+
+Attributes usage - how many times an attribute is being set on a component, and the component it is being set on
+
+<AttributeUsage filter={filter} />
+
+## Components usage details
+
+How many times a component is being used from another component, with a list of the components using it
+
+<ComponentUsageList filter={filter} />
+
+## Attributes usage details
+
+How many times an attribute is being used on a component, with a list of those components
+
+<AttributesUsageList filter={filter} />

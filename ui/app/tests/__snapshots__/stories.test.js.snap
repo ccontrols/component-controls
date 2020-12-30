@@ -4,7 +4,7 @@ exports[`Application/App Overview 1`] = `
 <DocumentFragment>
   <section
     aria-label="skip tab order to linked items"
-    class="css-u7r4qj"
+    class="css-7x1h4p"
   >
     <div
       class="css-vurnku"
@@ -41,10 +41,10 @@ exports[`Application/App Overview 1`] = `
     class="css-18pgspc"
   >
     <header
-      class="css-1hp4xbx"
+      class="css-10bhldn"
     >
       <div
-        class="css-2qw0qa"
+        class="css-1995r1v"
       >
         <div
           class="css-vurnku"
@@ -53,16 +53,16 @@ exports[`Application/App Overview 1`] = `
             class="css-f5h6sg"
           >
             <div
-              class="css-ldwe25"
+              class="css-1rw838x"
             >
               <a
                 aria-label="Component controls"
-                class="css-1s49mzj-LogoLink"
+                class="css-1vsogol-LogoLink"
                 href="/"
               />
               <a
                 aria-label="Component controls"
-                class="css-1s49mzj-LogoLink"
+                class="css-1vsogol-LogoLink"
                 href="/"
               >
                 <img
@@ -76,7 +76,7 @@ exports[`Application/App Overview 1`] = `
         </div>
       </div>
       <div
-        class="css-2qw0qa"
+        class="css-1995r1v"
       >
         <div
           class="css-vurnku"
@@ -85,40 +85,10 @@ exports[`Application/App Overview 1`] = `
             class="css-f5h6sg"
           >
             <div
-              class="css-ldwe25"
-            >
-              <div
-                class="css-12hibeq"
-              >
-                <div
-                  class="css-t2f9yn-SearchInput"
-                >
-                  <input
-                    aria-label="full text search"
-                    class="css-yc2jh4-SearchInput"
-                    placeholder="search..."
-                    value=""
-                  />
-                  <svg
-                    aria-hidden="true"
-                    class="css-nxci97-SearchInput"
-                    fill="currentColor"
-                    height="16"
-                    role="img"
-                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                    viewBox="0 0 16 16"
-                    width="16"
-                  >
-                    <path
-                      d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
+              class="css-1rw838x"
+            />
             <div
-              class="css-vhp4dg"
+              class="css-1229dh0"
             >
               <div
                 class="css-vurnku"
@@ -204,7 +174,7 @@ exports[`Application/App Overview 1`] = `
       </div>
     </header>
     <footer
-      class="css-1y4ny45"
+      class="css-gtql5a"
     >
       <div
         class="css-vurnku"
@@ -213,13 +183,13 @@ exports[`Application/App Overview 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-ldwe25"
+            class="css-1rw838x"
           >
-            <div
+            <span
               class="css-vurnku"
             >
               Copyright © 2020 by @component-controls
-            </div>
+            </span>
           </div>
         </div>
       </div>
@@ -230,11 +200,11 @@ exports[`Application/App Overview 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-ldwe25"
+            class="css-1rw838x"
           >
             <a
               aria-label="visit project home page"
-              class="css-ax59ca"
+              class="css-1t54e2w"
               href="/"
             >
               Component controls
@@ -263,7 +233,7 @@ exports[`Application/AppError Overview 1`] = `
 exports[`Application/CategoryList Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-isly2z"
+    class="css-1hkyity"
     id="content"
   >
     <div
@@ -275,30 +245,120 @@ exports[`Application/CategoryList Overview 1`] = `
         <div
           class="css-1nu2k4w"
         >
-          <div />
+          <div
+            class="css-1h9kuou"
+          >
+            <a
+              aria-label="edit this page"
+              class="css-1t54e2w"
+              href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div
+                class="css-f5h6sg"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                <span
+                  class="css-6amu4j"
+                >
+                  Edit this page
+                </span>
+              </div>
+            </a>
+          </div>
           <div
             class="css-1hu569t"
-          />
+          >
+            <div
+              class="css-zf8zhj"
+            >
+              <span
+                class="css-13o2efz"
+              >
+                created:
+              </span>
+              <span
+                class="css-uv6qe8"
+              >
+                1/1/2020
+              </span>
+            </div>
+            <span
+              class="css-15qy1uq"
+            >
+              ,
+            </span>
+            <div
+              class="css-zf8zhj"
+            >
+              <span
+                class="css-13o2efz"
+              >
+                updated:
+              </span>
+              <span
+                class="css-uv6qe8"
+              >
+                3/31/2020
+              </span>
+            </div>
+            <div
+              class="css-lllzso"
+            >
+              <div
+                class="css-zf8zhj"
+              >
+                <span
+                  class="css-13o2efz"
+                >
+                  by
+                </span>
+                <span
+                  class="css-uv6qe8"
+                >
+                  <a
+                    class="css-1t54e2w"
+                    href="/authors/atanasster"
+                  >
+                    atanasster
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
         <div
           class="css-hi5zbn"
         >
           <h1
-            class="css-11z6fnw-Container"
+            class="css-9kctfa-Container"
           >
             Story
           </h1>
         </div>
         <h2
-          class="css-1942w8h"
+          class="css-1uqrmoi"
         >
           story subtitle
         </h2>
         <h1
           class="css-ixvu55"
-        >
-          Authors
-        </h1>
+        />
         <div
           class="css-vurnku"
         >
@@ -308,11 +368,11 @@ exports[`Application/CategoryList Overview 1`] = `
                 class="css-1dj4wno"
               >
                 <a
-                  class="css-ax59ca"
+                  class="css-1t54e2w"
                   href="/authors/atanasster"
                 >
                   <h2
-                    class="css-1942w8h"
+                    class="css-1uqrmoi"
                   >
                     atanasster (2)
                   </h2>
@@ -332,7 +392,46 @@ exports[`Application/CategoryList Overview 1`] = `
             />
             <div
               class="css-vurnku"
-            />
+            >
+              <a
+                class="css-10zwoio"
+                href="/docs/mdx-story"
+              >
+                <div
+                  class="css-1my6hv5"
+                >
+                  <span
+                    class="css-c3r86m"
+                  >
+                    Next
+                  </span>
+                  <div
+                    class="css-9tifnv"
+                  >
+                    <span
+                      class="css-1s8umv4"
+                    >
+                      MDX Story
+                    </span>
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -344,7 +443,7 @@ exports[`Application/CategoryList Overview 1`] = `
 exports[`Application/CategoryPage Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-isly2z"
+    class="css-1hkyity"
     id="content"
   >
     <div
@@ -356,22 +455,114 @@ exports[`Application/CategoryPage Overview 1`] = `
         <div
           class="css-1nu2k4w"
         >
-          <div />
+          <div
+            class="css-1h9kuou"
+          >
+            <a
+              aria-label="edit this page"
+              class="css-1t54e2w"
+              href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div
+                class="css-f5h6sg"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                <span
+                  class="css-6amu4j"
+                >
+                  Edit this page
+                </span>
+              </div>
+            </a>
+          </div>
           <div
             class="css-1hu569t"
-          />
+          >
+            <div
+              class="css-zf8zhj"
+            >
+              <span
+                class="css-13o2efz"
+              >
+                created:
+              </span>
+              <span
+                class="css-uv6qe8"
+              >
+                1/1/2020
+              </span>
+            </div>
+            <span
+              class="css-15qy1uq"
+            >
+              ,
+            </span>
+            <div
+              class="css-zf8zhj"
+            >
+              <span
+                class="css-13o2efz"
+              >
+                updated:
+              </span>
+              <span
+                class="css-uv6qe8"
+              >
+                3/31/2020
+              </span>
+            </div>
+            <div
+              class="css-lllzso"
+            >
+              <div
+                class="css-zf8zhj"
+              >
+                <span
+                  class="css-13o2efz"
+                >
+                  by
+                </span>
+                <span
+                  class="css-uv6qe8"
+                >
+                  <a
+                    class="css-1t54e2w"
+                    href="/authors/atanasster"
+                  >
+                    atanasster
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
         <div
           class="css-hi5zbn"
         >
           <h1
-            class="css-11z6fnw-Container"
+            class="css-9kctfa-Container"
           >
             Story
           </h1>
         </div>
         <h2
-          class="css-1942w8h"
+          class="css-1uqrmoi"
         >
           story subtitle
         </h2>
@@ -384,10 +575,10 @@ exports[`Application/CategoryPage Overview 1`] = `
             atanasster
           </h1>
           <a
-            class="css-ax59ca"
+            class="css-1t54e2w"
             href="/authors/"
           >
-            All Authors
+            All undefined
           </a>
         </div>
         <div
@@ -446,7 +637,7 @@ exports[`Application/CategoryPage Overview 1`] = `
               class="css-da1yre"
             >
               <li
-                class="css-1ijilga"
+                class="css-ijvt85"
               >
                 <div
                   class="css-127g8mg"
@@ -455,27 +646,27 @@ exports[`Application/CategoryPage Overview 1`] = `
                     class="css-4136op"
                   >
                     <a
-                      class="css-ax59ca"
+                      class="css-1t54e2w"
                       href="/docs/id-of-story"
                     >
                       <h2
-                        class="css-1942w8h"
+                        class="css-cmp44e-DocumentItem"
                       >
                         Story
                       </h2>
                     </a>
                     <a
-                      class="css-ax59ca"
+                      class="css-1t54e2w"
                       href="/docs/"
                     >
                       <span
-                        class="css-14znsfl-Tag"
+                        class="css-pqmwqh-Tag"
                       >
-                        <div
+                        <span
                           class="css-vurnku"
                         >
                           story
-                        </div>
+                        </span>
                       </span>
                     </a>
                   </div>
@@ -486,28 +677,32 @@ exports[`Application/CategoryPage Overview 1`] = `
                       class="css-f5h6sg"
                     >
                       <div
-                        class="css-83lfx1"
+                        class="css-z4eqsg"
                       >
                         created: 1/1/2020
                       </div>
                       <div
                         class="css-f5h6sg"
                       >
-                        <div
+                        <span
                           class="css-9cwl6c"
                         >
                           ,
-                        </div>
-                        <div
+                        </span>
+                        <span
                           class="css-12cl38p"
                         >
                           by
-                        </div>
+                        </span>
                         <a
-                          class="css-ax59ca"
+                          class="css-1t54e2w"
                           href="/authors/atanasster"
                         >
-                          atanasster
+                          <span
+                            class="css-vurnku"
+                          >
+                            atanasster
+                          </span>
                         </a>
                       </div>
                     </div>
@@ -515,7 +710,7 @@ exports[`Application/CategoryPage Overview 1`] = `
                 </div>
               </li>
               <li
-                class="css-1ijilga"
+                class="css-ijvt85"
               >
                 <div
                   class="css-127g8mg"
@@ -524,27 +719,27 @@ exports[`Application/CategoryPage Overview 1`] = `
                     class="css-4136op"
                   >
                     <a
-                      class="css-ax59ca"
+                      class="css-1t54e2w"
                       href="/docs/mdx-story"
                     >
                       <h2
-                        class="css-1942w8h"
+                        class="css-cmp44e-DocumentItem"
                       >
                         MDX Story
                       </h2>
                     </a>
                     <a
-                      class="css-ax59ca"
+                      class="css-1t54e2w"
                       href="/docs/"
                     >
                       <span
-                        class="css-14znsfl-Tag"
+                        class="css-pqmwqh-Tag"
                       >
-                        <div
+                        <span
                           class="css-vurnku"
                         >
                           story
-                        </div>
+                        </span>
                       </span>
                     </a>
                   </div>
@@ -564,7 +759,46 @@ exports[`Application/CategoryPage Overview 1`] = `
             />
             <div
               class="css-vurnku"
-            />
+            >
+              <a
+                class="css-10zwoio"
+                href="/docs/mdx-story"
+              >
+                <div
+                  class="css-1my6hv5"
+                >
+                  <span
+                    class="css-c3r86m"
+                  >
+                    Next
+                  </span>
+                  <div
+                    class="css-9tifnv"
+                  >
+                    <span
+                      class="css-1s8umv4"
+                    >
+                      MDX Story
+                    </span>
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -584,22 +818,114 @@ exports[`Application/Container Overview 1`] = `
       <div
         class="css-1nu2k4w"
       >
-        <div />
+        <div
+          class="css-1h9kuou"
+        >
+          <a
+            aria-label="edit this page"
+            class="css-1t54e2w"
+            href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div
+              class="css-f5h6sg"
+            >
+              <svg
+                aria-hidden="true"
+                class="octicon"
+                fill="currentColor"
+                height="16"
+                role="img"
+                style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+              <span
+                class="css-6amu4j"
+              >
+                Edit this page
+              </span>
+            </div>
+          </a>
+        </div>
         <div
           class="css-1hu569t"
-        />
+        >
+          <div
+            class="css-zf8zhj"
+          >
+            <span
+              class="css-13o2efz"
+            >
+              created:
+            </span>
+            <span
+              class="css-uv6qe8"
+            >
+              1/1/2020
+            </span>
+          </div>
+          <span
+            class="css-15qy1uq"
+          >
+            ,
+          </span>
+          <div
+            class="css-zf8zhj"
+          >
+            <span
+              class="css-13o2efz"
+            >
+              updated:
+            </span>
+            <span
+              class="css-uv6qe8"
+            >
+              3/31/2020
+            </span>
+          </div>
+          <div
+            class="css-lllzso"
+          >
+            <div
+              class="css-zf8zhj"
+            >
+              <span
+                class="css-13o2efz"
+              >
+                by
+              </span>
+              <span
+                class="css-uv6qe8"
+              >
+                <a
+                  class="css-1t54e2w"
+                  href="/authors/atanasster"
+                >
+                  atanasster
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
       <div
         class="css-hi5zbn"
       >
         <h1
-          class="css-11z6fnw-Container"
+          class="css-9kctfa-Container"
         >
           Story
         </h1>
       </div>
       <h2
-        class="css-1942w8h"
+        class="css-1uqrmoi"
       >
         story subtitle
       </h2>
@@ -614,7 +940,46 @@ exports[`Application/Container Overview 1`] = `
           />
           <div
             class="css-vurnku"
-          />
+          >
+            <a
+              class="css-10zwoio"
+              href="/docs/mdx-story"
+            >
+              <div
+                class="css-1my6hv5"
+              >
+                <span
+                  class="css-c3r86m"
+                >
+                  Next
+                </span>
+                <div
+                  class="css-9tifnv"
+                >
+                  <span
+                    class="css-1s8umv4"
+                  >
+                    MDX Story
+                  </span>
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -625,7 +990,7 @@ exports[`Application/Container Overview 1`] = `
 exports[`Application/DocPage Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-11ay4b0"
+    class="css-vurnku"
     id="content"
   >
     <div
@@ -637,22 +1002,114 @@ exports[`Application/DocPage Overview 1`] = `
         <div
           class="css-1nu2k4w"
         >
-          <div />
+          <div
+            class="css-1h9kuou"
+          >
+            <a
+              aria-label="edit this page"
+              class="css-1t54e2w"
+              href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div
+                class="css-f5h6sg"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                <span
+                  class="css-6amu4j"
+                >
+                  Edit this page
+                </span>
+              </div>
+            </a>
+          </div>
           <div
             class="css-1hu569t"
-          />
+          >
+            <div
+              class="css-zf8zhj"
+            >
+              <span
+                class="css-13o2efz"
+              >
+                created:
+              </span>
+              <span
+                class="css-uv6qe8"
+              >
+                1/1/2020
+              </span>
+            </div>
+            <span
+              class="css-15qy1uq"
+            >
+              ,
+            </span>
+            <div
+              class="css-zf8zhj"
+            >
+              <span
+                class="css-13o2efz"
+              >
+                updated:
+              </span>
+              <span
+                class="css-uv6qe8"
+              >
+                3/31/2020
+              </span>
+            </div>
+            <div
+              class="css-lllzso"
+            >
+              <div
+                class="css-zf8zhj"
+              >
+                <span
+                  class="css-13o2efz"
+                >
+                  by
+                </span>
+                <span
+                  class="css-uv6qe8"
+                >
+                  <a
+                    class="css-1t54e2w"
+                    href="/authors/atanasster"
+                  >
+                    atanasster
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
         <div
           class="css-hi5zbn"
         >
           <h1
-            class="css-11z6fnw-Container"
+            class="css-9kctfa-Container"
           >
             Story
           </h1>
         </div>
         <h2
-          class="css-1942w8h"
+          class="css-1uqrmoi"
         >
           story subtitle
         </h2>
@@ -667,7 +1124,46 @@ exports[`Application/DocPage Overview 1`] = `
             />
             <div
               class="css-vurnku"
-            />
+            >
+              <a
+                class="css-10zwoio"
+                href="/docs/mdx-story"
+              >
+                <div
+                  class="css-1my6hv5"
+                >
+                  <span
+                    class="css-c3r86m"
+                  >
+                    Next
+                  </span>
+                  <div
+                    class="css-9tifnv"
+                  >
+                    <span
+                      class="css-1s8umv4"
+                    >
+                      MDX Story
+                    </span>
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -679,7 +1175,7 @@ exports[`Application/DocPage Overview 1`] = `
 exports[`Application/DocumentHomePage Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-isly2z"
+    class="css-vurnku"
     id="content"
   >
     <div
@@ -691,83 +1187,117 @@ exports[`Application/DocumentHomePage Overview 1`] = `
         <div
           class="css-1nu2k4w"
         >
-          <div />
+          <div
+            class="css-1h9kuou"
+          >
+            <a
+              aria-label="edit this page"
+              class="css-1t54e2w"
+              href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div
+                class="css-f5h6sg"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                <span
+                  class="css-6amu4j"
+                >
+                  Edit this page
+                </span>
+              </div>
+            </a>
+          </div>
           <div
             class="css-1hu569t"
-          />
+          >
+            <div
+              class="css-zf8zhj"
+            >
+              <span
+                class="css-13o2efz"
+              >
+                created:
+              </span>
+              <span
+                class="css-uv6qe8"
+              >
+                1/1/2020
+              </span>
+            </div>
+            <span
+              class="css-15qy1uq"
+            >
+              ,
+            </span>
+            <div
+              class="css-zf8zhj"
+            >
+              <span
+                class="css-13o2efz"
+              >
+                updated:
+              </span>
+              <span
+                class="css-uv6qe8"
+              >
+                3/31/2020
+              </span>
+            </div>
+            <div
+              class="css-lllzso"
+            >
+              <div
+                class="css-zf8zhj"
+              >
+                <span
+                  class="css-13o2efz"
+                >
+                  by
+                </span>
+                <span
+                  class="css-uv6qe8"
+                >
+                  <a
+                    class="css-1t54e2w"
+                    href="/authors/atanasster"
+                  >
+                    atanasster
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
         <div
           class="css-hi5zbn"
         >
           <h1
-            class="css-11z6fnw-Container"
+            class="css-9kctfa-Container"
           >
             Story
           </h1>
         </div>
         <h2
-          class="css-1942w8h"
+          class="css-1uqrmoi"
         >
           story subtitle
         </h2>
-        <h1
-          class="css-ixvu55"
-        >
-          Blog
-        </h1>
-        <div
-          class="css-vurnku"
-        >
-          <div
-            class="css-18xaazt"
-          >
-            <label
-              class="css-okr6fe"
-              for="sortorder"
-            >
-              Sort by:
-            </label>
-            <div
-              class="css-4cffwv"
-            >
-              <select
-                class="css-1lmm0mo"
-                name="sortorder"
-              >
-                <option
-                  value="date"
-                >
-                  By date created
-                </option>
-                <option
-                  value="dateModified"
-                >
-                  By last updated
-                </option>
-                <option
-                  value="title"
-                >
-                  By title
-                </option>
-              </select>
-              <svg
-                class="css-1swud1q"
-                fill="currentcolor"
-                height="24"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7 10l5 5 5-5z"
-                />
-              </svg>
-            </div>
-          </div>
-          <ul
-            class="css-da1yre"
-          />
-        </div>
         <div
           class="css-5qse13"
         >
@@ -779,7 +1309,46 @@ exports[`Application/DocumentHomePage Overview 1`] = `
             />
             <div
               class="css-vurnku"
-            />
+            >
+              <a
+                class="css-10zwoio"
+                href="/docs/mdx-story"
+              >
+                <div
+                  class="css-1my6hv5"
+                >
+                  <span
+                    class="css-c3r86m"
+                  >
+                    Next
+                  </span>
+                  <div
+                    class="css-9tifnv"
+                  >
+                    <span
+                      class="css-1s8umv4"
+                    >
+                      MDX Story
+                    </span>
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -841,113 +1410,7 @@ exports[`Application/DocumentsList Overview 1`] = `
     </div>
     <ul
       class="css-da1yre"
-    >
-      <li
-        class="css-1ijilga"
-      >
-        <div
-          class="css-127g8mg"
-        >
-          <div
-            class="css-4136op"
-          >
-            <a
-              class="css-ax59ca"
-              href="/docs/id-of-story"
-            >
-              <h2
-                class="css-1942w8h"
-              >
-                Story
-              </h2>
-            </a>
-            <a
-              class="css-ax59ca"
-              href="/docs/"
-            >
-              <span
-                class="css-14znsfl-Tag"
-              >
-                <div
-                  class="css-vurnku"
-                >
-                  story
-                </div>
-              </span>
-            </a>
-          </div>
-          <div
-            class="css-1jbmnp7"
-          >
-            <div
-              class="css-f5h6sg"
-            >
-              <div
-                class="css-83lfx1"
-              >
-                created: 1/1/2020
-              </div>
-              <div
-                class="css-f5h6sg"
-              >
-                <div
-                  class="css-9cwl6c"
-                >
-                  ,
-                </div>
-                <div
-                  class="css-12cl38p"
-                >
-                  by
-                </div>
-                <a
-                  class="css-ax59ca"
-                  href="/authors/atanasster"
-                >
-                  atanasster
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li
-        class="css-1ijilga"
-      >
-        <div
-          class="css-127g8mg"
-        >
-          <div
-            class="css-4136op"
-          >
-            <a
-              class="css-ax59ca"
-              href="/docs/mdx-story"
-            >
-              <h2
-                class="css-1942w8h"
-              >
-                MDX Story
-              </h2>
-            </a>
-            <a
-              class="css-ax59ca"
-              href="/docs/"
-            >
-              <span
-                class="css-14znsfl-Tag"
-              >
-                <div
-                  class="css-vurnku"
-                >
-                  story
-                </div>
-              </span>
-            </a>
-          </div>
-        </div>
-      </li>
-    </ul>
+    />
   </div>
 </DocumentFragment>
 `;
@@ -955,7 +1418,7 @@ exports[`Application/DocumentsList Overview 1`] = `
 exports[`Application/Footer Overview 1`] = `
 <DocumentFragment>
   <footer
-    class="css-1y4ny45"
+    class="css-gtql5a"
   >
     <div
       class="css-vurnku"
@@ -964,13 +1427,13 @@ exports[`Application/Footer Overview 1`] = `
         class="css-f5h6sg"
       >
         <div
-          class="css-ldwe25"
+          class="css-1rw838x"
         >
-          <div
+          <span
             class="css-vurnku"
           >
             Copyright © 2020 by @component-controls
-          </div>
+          </span>
         </div>
       </div>
     </div>
@@ -981,11 +1444,11 @@ exports[`Application/Footer Overview 1`] = `
         class="css-f5h6sg"
       >
         <div
-          class="css-ldwe25"
+          class="css-1rw838x"
         >
           <a
             aria-label="visit project home page"
-            class="css-ax59ca"
+            class="css-1t54e2w"
             href="/"
           >
             Component controls
@@ -1000,10 +1463,10 @@ exports[`Application/Footer Overview 1`] = `
 exports[`Application/Header Custom Left 1`] = `
 <DocumentFragment>
   <header
-    class="css-1hp4xbx"
+    class="css-10bhldn"
   >
     <div
-      class="css-2qw0qa"
+      class="css-1995r1v"
     >
       <div
         class="css-vurnku"
@@ -1012,16 +1475,16 @@ exports[`Application/Header Custom Left 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-ldwe25"
+            class="css-1rw838x"
           >
             <a
               aria-label="Component controls"
-              class="css-1s49mzj-LogoLink"
+              class="css-1vsogol-LogoLink"
               href="/"
             />
             <a
               aria-label="Component controls"
-              class="css-1s49mzj-LogoLink"
+              class="css-1vsogol-LogoLink"
               href="/"
             >
               <img
@@ -1032,10 +1495,10 @@ exports[`Application/Header Custom Left 1`] = `
             </a>
           </div>
           <div
-            class="css-vhp4dg"
+            class="css-1229dh0"
           >
             <button
-              class="css-1b2uwqj"
+              class="css-1tf4h46"
             >
               custom
             </button>
@@ -1044,7 +1507,7 @@ exports[`Application/Header Custom Left 1`] = `
       </div>
     </div>
     <div
-      class="css-2qw0qa"
+      class="css-1995r1v"
     >
       <div
         class="css-vurnku"
@@ -1053,40 +1516,10 @@ exports[`Application/Header Custom Left 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-ldwe25"
-          >
-            <div
-              class="css-12hibeq"
-            >
-              <div
-                class="css-t2f9yn-SearchInput"
-              >
-                <input
-                  aria-label="full text search"
-                  class="css-yc2jh4-SearchInput"
-                  placeholder="search..."
-                  value=""
-                />
-                <svg
-                  aria-hidden="true"
-                  class="css-nxci97-SearchInput"
-                  fill="currentColor"
-                  height="16"
-                  role="img"
-                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                  viewBox="0 0 16 16"
-                  width="16"
-                >
-                  <path
-                    d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
+            class="css-1rw838x"
+          />
           <div
-            class="css-vhp4dg"
+            class="css-1229dh0"
           >
             <div
               class="css-vurnku"
@@ -1177,10 +1610,10 @@ exports[`Application/Header Custom Left 1`] = `
 exports[`Application/Header Custom Right 1`] = `
 <DocumentFragment>
   <header
-    class="css-1hp4xbx"
+    class="css-10bhldn"
   >
     <div
-      class="css-2qw0qa"
+      class="css-1995r1v"
     >
       <div
         class="css-vurnku"
@@ -1189,16 +1622,16 @@ exports[`Application/Header Custom Right 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-ldwe25"
+            class="css-1rw838x"
           >
             <a
               aria-label="Component controls"
-              class="css-1s49mzj-LogoLink"
+              class="css-1vsogol-LogoLink"
               href="/"
             />
             <a
               aria-label="Component controls"
-              class="css-1s49mzj-LogoLink"
+              class="css-1vsogol-LogoLink"
               href="/"
             >
               <img
@@ -1212,7 +1645,7 @@ exports[`Application/Header Custom Right 1`] = `
       </div>
     </div>
     <div
-      class="css-2qw0qa"
+      class="css-1995r1v"
     >
       <div
         class="css-vurnku"
@@ -1221,7 +1654,7 @@ exports[`Application/Header Custom Right 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-ldwe25"
+            class="css-1rw838x"
           >
             <a
               aria-label="visit github repo"
@@ -1234,40 +1667,10 @@ exports[`Application/Header Custom Right 1`] = `
             </a>
           </div>
           <div
-            class="css-vhp4dg"
-          >
-            <div
-              class="css-12hibeq"
-            >
-              <div
-                class="css-t2f9yn-SearchInput"
-              >
-                <input
-                  aria-label="full text search"
-                  class="css-yc2jh4-SearchInput"
-                  placeholder="search..."
-                  value=""
-                />
-                <svg
-                  aria-hidden="true"
-                  class="css-nxci97-SearchInput"
-                  fill="currentColor"
-                  height="16"
-                  role="img"
-                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                  viewBox="0 0 16 16"
-                  width="16"
-                >
-                  <path
-                    d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
+            class="css-1229dh0"
+          />
           <div
-            class="css-vhp4dg"
+            class="css-1229dh0"
           >
             <div
               class="css-vurnku"
@@ -1358,10 +1761,10 @@ exports[`Application/Header Custom Right 1`] = `
 exports[`Application/Header Customized 1`] = `
 <DocumentFragment>
   <header
-    class="css-1hp4xbx"
+    class="css-10bhldn"
   >
     <div
-      class="css-2qw0qa"
+      class="css-1995r1v"
     >
       <div
         class="css-vurnku"
@@ -1370,16 +1773,16 @@ exports[`Application/Header Customized 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-ldwe25"
+            class="css-1rw838x"
           >
             <a
               aria-label="Component controls"
-              class="css-1s49mzj-LogoLink"
+              class="css-1vsogol-LogoLink"
               href="/"
             />
             <a
               aria-label="Component controls"
-              class="css-1s49mzj-LogoLink"
+              class="css-1vsogol-LogoLink"
               href="/"
             >
               <img
@@ -1390,7 +1793,7 @@ exports[`Application/Header Customized 1`] = `
             </a>
           </div>
           <div
-            class="css-vhp4dg"
+            class="css-1229dh0"
           >
             <a
               class="css-12cl38p"
@@ -1403,7 +1806,7 @@ exports[`Application/Header Customized 1`] = `
       </div>
     </div>
     <div
-      class="css-2qw0qa"
+      class="css-1995r1v"
     >
       <div
         class="css-vurnku"
@@ -1412,20 +1815,20 @@ exports[`Application/Header Customized 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-ldwe25"
+            class="css-1rw838x"
           >
             <a
-              class="css-ax59ca"
+              class="css-1t54e2w"
               href="https://github.com/ccontrols/component-controls"
               rel="noopener noreferrer"
               target="_blank"
             >
               <div
-                class="css-f5h6sg"
+                class="css-15eoqye"
               >
                 <svg
                   aria-hidden="true"
-                  class="css-12z0wuy"
+                  class="css-1goj2uy"
                   fill="currentColor"
                   height="32"
                   role="img"
@@ -1446,20 +1849,20 @@ exports[`Application/Header Customized 1`] = `
             </a>
           </div>
           <div
-            class="css-vhp4dg"
+            class="css-1229dh0"
           >
             <a
               aria-label="visit github repo"
-              class="css-ax59ca"
+              class="css-1t54e2w"
               href="https://github.com/ccontrols/component-controls"
               rel="noopener noreferrer"
               target="_blank"
             >
               <div
-                class="css-f5h6sg"
+                class="css-15eoqye"
               >
-                <div
-                  class="css-1psk70t"
+                <span
+                  class="css-ok0w0t"
                 >
                   <svg
                     aria-hidden="true"
@@ -1475,46 +1878,16 @@ exports[`Application/Header Customized 1`] = `
                       d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 01-.686 0 16.709 16.709 0 01-.465-.252 31.147 31.147 0 01-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0114 20.408z"
                     />
                   </svg>
-                </div>
+                </span>
                 parteon
               </div>
             </a>
           </div>
           <div
-            class="css-vhp4dg"
-          >
-            <div
-              class="css-12hibeq"
-            >
-              <div
-                class="css-t2f9yn-SearchInput"
-              >
-                <input
-                  aria-label="full text search"
-                  class="css-yc2jh4-SearchInput"
-                  placeholder="search..."
-                  value=""
-                />
-                <svg
-                  aria-hidden="true"
-                  class="css-nxci97-SearchInput"
-                  fill="currentColor"
-                  height="16"
-                  role="img"
-                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                  viewBox="0 0 16 16"
-                  width="16"
-                >
-                  <path
-                    d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
+            class="css-1229dh0"
+          />
           <div
-            class="css-vhp4dg"
+            class="css-1229dh0"
           >
             <div
               class="css-vurnku"
@@ -1605,10 +1978,10 @@ exports[`Application/Header Customized 1`] = `
 exports[`Application/Header Overview 1`] = `
 <DocumentFragment>
   <header
-    class="css-1hp4xbx"
+    class="css-10bhldn"
   >
     <div
-      class="css-2qw0qa"
+      class="css-1995r1v"
     >
       <div
         class="css-vurnku"
@@ -1617,16 +1990,16 @@ exports[`Application/Header Overview 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-ldwe25"
+            class="css-1rw838x"
           >
             <a
               aria-label="Component controls"
-              class="css-1s49mzj-LogoLink"
+              class="css-1vsogol-LogoLink"
               href="/"
             />
             <a
               aria-label="Component controls"
-              class="css-1s49mzj-LogoLink"
+              class="css-1vsogol-LogoLink"
               href="/"
             >
               <img
@@ -1640,7 +2013,7 @@ exports[`Application/Header Overview 1`] = `
       </div>
     </div>
     <div
-      class="css-2qw0qa"
+      class="css-1995r1v"
     >
       <div
         class="css-vurnku"
@@ -1649,40 +2022,10 @@ exports[`Application/Header Overview 1`] = `
           class="css-f5h6sg"
         >
           <div
-            class="css-ldwe25"
-          >
-            <div
-              class="css-12hibeq"
-            >
-              <div
-                class="css-t2f9yn-SearchInput"
-              >
-                <input
-                  aria-label="full text search"
-                  class="css-yc2jh4-SearchInput"
-                  placeholder="search..."
-                  value=""
-                />
-                <svg
-                  aria-hidden="true"
-                  class="css-nxci97-SearchInput"
-                  fill="currentColor"
-                  height="16"
-                  role="img"
-                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                  viewBox="0 0 16 16"
-                  width="16"
-                >
-                  <path
-                    d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
+            class="css-1rw838x"
+          />
           <div
-            class="css-vhp4dg"
+            class="css-1229dh0"
           >
             <div
               class="css-vurnku"
@@ -1773,45 +2116,32 @@ exports[`Application/Header Overview 1`] = `
 exports[`Application/Sidebar Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-1mz8zpz-Sidebar"
+    class="css-19daslh-Sidebar"
     id="sidebar"
   >
     <div
       class="css-6cvfyb"
     />
     <div
-      class="css-t8rvym"
+      class="css-d8brrc"
     >
       <div
-        class="css-1es5hcv"
+        class="css-10ch4bz"
       >
         <div
-          class="css-1es5hcv"
+          class="css-10ch4bz"
         >
           <div
             class="css-uliqdc"
           >
             <div
-              class="css-ldwe25"
+              class="css-1lml2j3"
             >
               <h3
                 class="css-yrrbzf"
               >
                 sidebar
               </h3>
-            </div>
-            <div
-              class="css-vhp4dg"
-            >
-              <div
-                class="css-1dj4wno"
-              >
-                <input
-                  class="css-1onaisy"
-                  placeholder="filter..."
-                  value=""
-                />
-              </div>
             </div>
           </div>
         </div>
@@ -1822,122 +2152,77 @@ exports[`Application/Sidebar Overview 1`] = `
             class="css-vurnku"
           >
             <div
-              class="css-j6yaho"
+              class="css-1em5sge"
             >
-              <button
-                class="active css-161l3jj"
+              <div
+                class="css-tizfsr"
               >
                 <div
-                  class="css-1i09fc1"
+                  class="css-162ewbd"
                 >
-                  <div
-                    class="css-11328uk"
+                  <button
+                    class="css-t9fq0h"
                   >
                     <div
                       class="css-f5h6sg"
                     >
-                      <div
-                        class="css-1k0f1bf"
+                      <span
+                        class="css-15xx8i3"
                       >
                         <strong>
                           Story
                         </strong>
-                      </div>
+                      </span>
                     </div>
-                    <div
-                      aria-label="collapse items"
-                      class="css-lzd0h4"
+                  </button>
+                </div>
+                <div
+                  class="css-vthntz"
+                >
+                  <div
+                    aria-label="collapse items"
+                    class="css-vurnku"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
                     >
-                      <svg
-                        aria-hidden="true"
-                        class="octicon"
-                        fill="currentColor"
-                        height="16"
-                        role="img"
-                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                        viewBox="0 0 16 16"
-                        width="16"
-                      >
-                        <path
-                          d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </div>
+                      <path
+                        d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
                   </div>
                 </div>
-              </button>
-            </div>
-            <div
-              class="css-vurnku"
-            >
-              <div
-                class="css-oao09s"
-              >
-                <a
-                  class="active css-1t6zyk7"
-                  href="/docs/id-of-story"
-                >
-                  <div
-                    class="css-1i09fc1"
-                  >
-                    <div
-                      class="css-11328uk"
-                    >
-                      <div
-                        class="css-f5h6sg"
-                      >
-                        <div
-                          class="css-9cwl6c"
-                        >
-                          <svg
-                            aria-hidden="true"
-                            class="octicon"
-                            fill="currentColor"
-                            height="16"
-                            role="img"
-                            style="display: inline-block; user-select: none; vertical-align: middle;"
-                            viewBox="0 0 16 16"
-                            width="16"
-                          >
-                            <path
-                              d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5zm1.75-.25a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25v-8.5a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"
-                              fill-rule="evenodd"
-                            />
-                          </svg>
-                        </div>
-                        <div
-                          class="css-1k0f1bf"
-                        >
-                          story
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
               </div>
             </div>
             <div
               class="css-vurnku"
             >
               <div
-                class="css-w1i3qo"
+                class="css-48rgnb"
               >
-                <a
-                  class="css-1t6zyk7"
-                  href="/docs/id-of-single"
+                <div
+                  class="css-tizfsr"
                 >
                   <div
-                    class="css-1i09fc1"
+                    class="selected css-162ewbd"
                   >
-                    <div
-                      class="css-11328uk"
+                    <a
+                      class="css-p1dwhj"
+                      href="/docs/id-of-story"
                     >
                       <div
                         class="css-f5h6sg"
                       >
                         <div
-                          class="css-9cwl6c"
+                          class="css-1ve1p3p"
                         >
                           <svg
                             aria-hidden="true"
@@ -1955,38 +2240,41 @@ exports[`Application/Sidebar Overview 1`] = `
                             />
                           </svg>
                         </div>
-                        <div
-                          class="css-11c8po5"
+                        <span
+                          class="css-15xx8i3"
                         >
                           story
-                        </div>
+                        </span>
                       </div>
-                    </div>
+                    </a>
                   </div>
-                </a>
+                  <div
+                    class="css-vthntz"
+                  />
+                </div>
               </div>
             </div>
             <div
               class="css-vurnku"
             >
               <div
-                class="css-w1i3qo"
+                class="css-15ej8gm"
               >
-                <a
-                  class="css-1t6zyk7"
-                  href="/docs/id-of-button-story"
+                <div
+                  class="css-tizfsr"
                 >
                   <div
-                    class="css-1i09fc1"
+                    class="css-162ewbd"
                   >
-                    <div
-                      class="css-11328uk"
+                    <a
+                      class="css-p1dwhj"
+                      href="/docs/id-of-single"
                     >
                       <div
                         class="css-f5h6sg"
                       >
                         <div
-                          class="css-9cwl6c"
+                          class="css-1ve1p3p"
                         >
                           <svg
                             aria-hidden="true"
@@ -2004,38 +2292,93 @@ exports[`Application/Sidebar Overview 1`] = `
                             />
                           </svg>
                         </div>
+                        <span
+                          class="css-7w8u7j"
+                        >
+                          story
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    class="css-vthntz"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="css-vurnku"
+            >
+              <div
+                class="css-15ej8gm"
+              >
+                <div
+                  class="css-tizfsr"
+                >
+                  <div
+                    class="css-162ewbd"
+                  >
+                    <a
+                      class="css-p1dwhj"
+                      href="/docs/id-of-button-story"
+                    >
+                      <div
+                        class="css-f5h6sg"
+                      >
                         <div
-                          class="css-11c8po5"
+                          class="css-1ve1p3p"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="octicon"
+                            fill="currentColor"
+                            height="16"
+                            role="img"
+                            style="display: inline-block; user-select: none; vertical-align: middle;"
+                            viewBox="0 0 16 16"
+                            width="16"
+                          >
+                            <path
+                              d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5zm1.75-.25a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25v-8.5a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </div>
+                        <span
+                          class="css-7w8u7j"
                         >
                           button
-                        </div>
+                        </span>
                       </div>
-                    </div>
+                    </a>
                   </div>
-                </a>
+                  <div
+                    class="css-vthntz"
+                  />
+                </div>
               </div>
             </div>
             <div
               class="css-vurnku"
             >
               <div
-                class="css-w1i3qo"
+                class="css-15ej8gm"
               >
-                <a
-                  class="css-1t6zyk7"
-                  href="/docs/blocks-core-story-plain--controls"
+                <div
+                  class="css-tizfsr"
                 >
                   <div
-                    class="css-1i09fc1"
+                    class="css-162ewbd"
                   >
-                    <div
-                      class="css-11328uk"
+                    <a
+                      class="css-p1dwhj"
+                      href="/docs/blocks-core-story-plain--controls"
                     >
                       <div
                         class="css-f5h6sg"
                       >
                         <div
-                          class="css-9cwl6c"
+                          class="css-1ve1p3p"
                         >
                           <svg
                             aria-hidden="true"
@@ -2053,15 +2396,18 @@ exports[`Application/Sidebar Overview 1`] = `
                             />
                           </svg>
                         </div>
-                        <div
-                          class="css-11c8po5"
+                        <span
+                          class="css-7w8u7j"
                         >
                           controls
-                        </div>
+                        </span>
                       </div>
-                    </div>
+                    </a>
                   </div>
-                </a>
+                  <div
+                    class="css-vthntz"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -2069,23 +2415,23 @@ exports[`Application/Sidebar Overview 1`] = `
             class="css-vurnku"
           >
             <div
-              class="css-j6yaho"
+              class="css-1em5sge"
             >
-              <a
-                class="css-1t6zyk7"
-                href="/docs/mdx-story"
+              <div
+                class="css-tizfsr"
               >
                 <div
-                  class="css-1i09fc1"
+                  class="css-162ewbd"
                 >
-                  <div
-                    class="css-11328uk"
+                  <a
+                    class="css-p1dwhj"
+                    href="/docs/mdx-story"
                   >
                     <div
                       class="css-f5h6sg"
                     >
                       <div
-                        class="css-9cwl6c"
+                        class="css-1ve1p3p"
                       >
                         <svg
                           aria-hidden="true"
@@ -2103,15 +2449,18 @@ exports[`Application/Sidebar Overview 1`] = `
                           />
                         </svg>
                       </div>
-                      <div
-                        class="css-11c8po5"
+                      <span
+                        class="css-7w8u7j"
                       >
                         MDX Story
-                      </div>
+                      </span>
                     </div>
-                  </div>
+                  </a>
                 </div>
-              </a>
+                <div
+                  class="css-vthntz"
+                />
+              </div>
             </div>
           </div>
         </nav>
@@ -2121,4 +2470,2169 @@ exports[`Application/Sidebar Overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Application/SidebarsPage Overview 1`] = `<DocumentFragment />`;
+exports[`Application/SidebarsPage Overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-100p3zm"
+  >
+    <div
+      class="css-1mistll-SidebarsStoryPage"
+      id="content"
+    >
+      <div
+        class="css-3pyqel-Tabs"
+      >
+        <div
+          class="react-tabs"
+          data-tabs="true"
+        >
+          <div
+            class="css-1hkyity"
+          >
+            <div
+              class="css-vurnku"
+            >
+              <div
+                class="css-vurnku"
+              >
+                <div
+                  class="css-1nu2k4w"
+                >
+                  <div
+                    class="css-1h9kuou"
+                  >
+                    <a
+                      aria-label="edit this page"
+                      class="css-1t54e2w"
+                      href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <div
+                        class="css-f5h6sg"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="octicon"
+                          fill="currentColor"
+                          height="16"
+                          role="img"
+                          style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                          viewBox="0 0 16 16"
+                          width="16"
+                        >
+                          <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                        <span
+                          class="css-6amu4j"
+                        >
+                          Edit this page
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    class="css-1hu569t"
+                  >
+                    <div
+                      class="css-zf8zhj"
+                    >
+                      <span
+                        class="css-13o2efz"
+                      >
+                        created:
+                      </span>
+                      <span
+                        class="css-uv6qe8"
+                      >
+                        1/1/2020
+                      </span>
+                    </div>
+                    <span
+                      class="css-15qy1uq"
+                    >
+                      ,
+                    </span>
+                    <div
+                      class="css-zf8zhj"
+                    >
+                      <span
+                        class="css-13o2efz"
+                      >
+                        updated:
+                      </span>
+                      <span
+                        class="css-uv6qe8"
+                      >
+                        3/31/2020
+                      </span>
+                    </div>
+                    <div
+                      class="css-lllzso"
+                    >
+                      <div
+                        class="css-zf8zhj"
+                      >
+                        <span
+                          class="css-13o2efz"
+                        >
+                          by
+                        </span>
+                        <span
+                          class="css-uv6qe8"
+                        >
+                          <a
+                            class="css-1t54e2w"
+                            href="/authors/atanasster"
+                          >
+                            atanasster
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-hi5zbn"
+                >
+                  <h1
+                    class="css-9kctfa-Container"
+                  >
+                    Story
+                  </h1>
+                </div>
+                <h2
+                  class="css-1uqrmoi"
+                >
+                  story subtitle
+                </h2>
+                <div
+                  class="css-121ufn9-PackageLink"
+                >
+                  <a
+                    class="css-1t54e2w"
+                    href="https://npmjs.com/package/@component-controls/blocks/v/1.0.3"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <div
+                      class="css-13b120i-PackageLink"
+                    >
+                      @component-controls/blocks
+                    </div>
+                  </a>
+                  <span
+                    class="css-n8ts03-PackageLink"
+                  >
+                    <span
+                      class="css-vurnku"
+                    >
+                      1.0.3
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="css-nm5f2c-Tabs"
+                >
+                  <div
+                    class="react-tabs"
+                    data-tabs="true"
+                  >
+                    <ul
+                      class="react-tabs__tab-list"
+                      role="tablist"
+                    >
+                      <li
+                        aria-controls="react-tabs-1"
+                        aria-disabled="false"
+                        aria-selected="true"
+                        class="react-tabs__tab react-tabs__tab--selected"
+                        id="react-tabs-0"
+                        role="tab"
+                        tabindex="0"
+                      >
+                        ArrowButton
+                      </li>
+                      <li
+                        aria-controls="react-tabs-3"
+                        aria-disabled="false"
+                        aria-selected="false"
+                        class="react-tabs__tab"
+                        id="react-tabs-2"
+                        role="tab"
+                      >
+                        My Button Tab
+                      </li>
+                    </ul>
+                    <div
+                      aria-labelledby="react-tabs-0"
+                      class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                      id="react-tabs-1"
+                      role="tabpanel"
+                    />
+                    <div
+                      aria-labelledby="react-tabs-2"
+                      class="react-tabs__tab-panel"
+                      id="react-tabs-3"
+                      role="tabpanel"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="css-1xkyebe"
+                >
+                  <div
+                    class="css-jxxswp"
+                    id="component"
+                  >
+                    <div
+                      class="css-xhp9da"
+                    >
+                      <a
+                        class="css-walqom-LinkHeading"
+                        data-id="component"
+                        data-level="3"
+                        data-title="Component"
+                        href="http://localhost/#component"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="octicon"
+                          fill="currentColor"
+                          height="18"
+                          role="img"
+                          style="display: inline-block; user-select: none; vertical-align: middle;"
+                          viewBox="0 0 16 16"
+                          width="18"
+                        >
+                          <path
+                            d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                      <h3
+                        class="css-16ist9v-BlockContainer"
+                      >
+                        <div
+                          class="css-tmrrvx"
+                        >
+                          Component
+                          <a
+                            aria-label="Collapse this block"
+                            class="css-1t48u3b-BlockContainer"
+                          >
+                            <span
+                              class="css-1ibxxpj"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="octicon"
+                                fill="currentColor"
+                                height="16"
+                                role="img"
+                                style="display: inline-block; user-select: none; vertical-align: middle;"
+                                viewBox="0 0 16 16"
+                                width="16"
+                              >
+                                <path
+                                  d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                          </a>
+                        </div>
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="false"
+                    class="rah-static rah-static--height-auto"
+                    style="height: auto; overflow: visible;"
+                  >
+                    <div>
+                      <div
+                        class="css-1d6wxci"
+                      >
+                        <div
+                          class="css-nm5f2c-Tabs"
+                        >
+                          <div
+                            class="react-tabs"
+                            data-tabs="true"
+                          >
+                            <ul
+                              class="react-tabs__tab-list"
+                              role="tablist"
+                            >
+                              <li
+                                aria-controls="react-tabs-5"
+                                aria-disabled="false"
+                                aria-selected="true"
+                                class="react-tabs__tab react-tabs__tab--selected"
+                                id="react-tabs-4"
+                                role="tab"
+                                tabindex="0"
+                              >
+                                ArrowButton
+                              </li>
+                              <li
+                                aria-controls="react-tabs-7"
+                                aria-disabled="false"
+                                aria-selected="false"
+                                class="react-tabs__tab"
+                                id="react-tabs-6"
+                                role="tab"
+                              >
+                                My Button Tab
+                              </li>
+                            </ul>
+                            <div
+                              aria-labelledby="react-tabs-4"
+                              class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                              id="react-tabs-5"
+                              role="tabpanel"
+                            >
+                              <div>
+                                <div
+                                  class="css-15owl46"
+                                >
+                                  <div
+                                    class="css-x60p33"
+                                  >
+                                    <div
+                                      class="css-1vga9oy"
+                                    >
+                                      <button
+                                        aria-label="copy the displayed source code"
+                                        class="css-1tf4h46"
+                                      >
+                                        copy
+                                      </button>
+                                    </div>
+                                    <div
+                                      class="css-q7w4rh"
+                                    >
+                                      <a
+                                        aria-label="browse repository"
+                                        class="css-1t54e2w"
+                                        href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                      >
+                                        browse
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="css-q7w4rh"
+                                    >
+                                      <a
+                                        aria-label="browse readme documentation"
+                                        class="css-1t54e2w"
+                                        href="https://github.com/ccontrols/component-controls/tree/master#readme"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                      >
+                                        docs
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="css-q7w4rh"
+                                    >
+                                      <a
+                                        aria-label="browse filed issues"
+                                        class="css-1t54e2w"
+                                        href="https://github.com/ccontrols/component-controls/issues"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                      >
+                                        issues
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="css-eqxzio"
+                                >
+                                  <pre
+                                    class="prism-code language-jsx css-3y8hb3"
+                                    style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; display: block; margin: 0px;"
+                                  >
+                                    <div
+                                      class="token-line css-vurnku"
+                                      style="color: rgb(114, 143, 203);"
+                                    >
+                                      <span
+                                        class="token keyword css-13aqjzy"
+                                        style="color: rgb(114, 143, 203);"
+                                      >
+                                        import
+                                      </span>
+                                      <span
+                                        class="token plain css-13aqjzy"
+                                      >
+                                         ArrowButton 
+                                      </span>
+                                      <span
+                                        class="token keyword css-13aqjzy"
+                                        style="color: rgb(114, 143, 203);"
+                                      >
+                                        from
+                                      </span>
+                                      <span
+                                        class="token plain css-13aqjzy"
+                                      >
+                                         
+                                      </span>
+                                      <span
+                                        class="token string css-13aqjzy"
+                                        style="color: rgb(114, 143, 203);"
+                                      >
+                                        '@component-controls/blocks'
+                                      </span>
+                                      <span
+                                        class="token punctuation css-13aqjzy"
+                                        style="color: rgb(182, 173, 154);"
+                                      >
+                                        ;
+                                      </span>
+                                    </div>
+                                  </pre>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              aria-labelledby="react-tabs-6"
+                              class="react-tabs__tab-panel"
+                              id="react-tabs-7"
+                              role="tabpanel"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1xkyebe"
+                  data-testid="playground"
+                >
+                  <div
+                    class="css-jxxswp"
+                    id="id-of-story"
+                  >
+                    <div
+                      class="css-xhp9da"
+                    >
+                      <a
+                        class="css-walqom-LinkHeading"
+                        data-id="id-of-story"
+                        data-level="3"
+                        data-title="story"
+                        href="http://localhost/#id-of-story"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="octicon"
+                          fill="currentColor"
+                          height="18"
+                          role="img"
+                          style="display: inline-block; user-select: none; vertical-align: middle;"
+                          viewBox="0 0 16 16"
+                          width="18"
+                        >
+                          <path
+                            d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                      <h3
+                        class="css-16ist9v-BlockContainer"
+                      >
+                        <div
+                          class="css-tmrrvx"
+                        >
+                          story
+                          <a
+                            aria-label="Collapse this block"
+                            class="css-1t48u3b-BlockContainer"
+                          >
+                            <span
+                              class="css-1ibxxpj"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="octicon"
+                                fill="currentColor"
+                                height="16"
+                                role="img"
+                                style="display: inline-block; user-select: none; vertical-align: middle;"
+                                viewBox="0 0 16 16"
+                                width="16"
+                              >
+                                <path
+                                  d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                          </a>
+                        </div>
+                      </h3>
+                    </div>
+                  </div>
+                  <p
+                    class="css-p7s6cm"
+                  >
+                    description of story
+                  </p>
+                  <div
+                    aria-hidden="false"
+                    class="rah-static rah-static--height-auto"
+                    style="height: auto; overflow: visible;"
+                  >
+                    <div>
+                      <div>
+                        <div
+                          class="css-15owl46"
+                        >
+                          <div
+                            class="css-x60p33"
+                          >
+                            <div
+                              class="css-rkyxeq"
+                            >
+                              <button
+                                aria-label="switch light and dark background"
+                                class="css-1tf4h46"
+                              >
+                                dark
+                              </button>
+                            </div>
+                            <div
+                              class="css-7d11p2"
+                            >
+                              <button
+                                aria-label="switch left to right/right to left"
+                                class="css-1tf4h46"
+                              >
+                                RTL
+                              </button>
+                            </div>
+                            <div
+                              class="css-q7w4rh"
+                            >
+                              <button
+                                aria-label="reset zoom"
+                                class="css-j69xip"
+                                style="padding-top: 3px; padding-bottom: 3px;"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="octicon"
+                                  fill="currentColor"
+                                  height="16"
+                                  role="img"
+                                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                  viewBox="0 0 16 16"
+                                  width="16"
+                                >
+                                  <path
+                                    d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                            <div
+                              class="css-q7w4rh"
+                            >
+                              <button
+                                aria-label="zoom out"
+                                class="css-j69xip"
+                                style="padding-top: 3px; padding-bottom: 3px;"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="octicon"
+                                  fill="currentColor"
+                                  height="16"
+                                  role="img"
+                                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                  viewBox="0 0 16 16"
+                                  width="16"
+                                >
+                                  <path
+                                    d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                            <div
+                              class="css-7d11p2"
+                            >
+                              <button
+                                aria-label="zoom in"
+                                class="css-j69xip"
+                                style="padding-top: 3px; padding-bottom: 3px;"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="octicon"
+                                  fill="currentColor"
+                                  height="16"
+                                  role="img"
+                                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                  viewBox="0 0 16 16"
+                                  width="16"
+                                >
+                                  <path
+                                    d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                            <div
+                              class="css-q7w4rh"
+                            >
+                              <button
+                                aria-label="display story source code"
+                                class="css-1tf4h46"
+                              >
+                                open source
+                              </button>
+                            </div>
+                            <div
+                              class="css-q7w4rh"
+                            >
+                              <button
+                                aria-label="display story configuration object"
+                                class="css-1tf4h46"
+                              >
+                                open config
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="css-eqxzio"
+                        >
+                          <div
+                            style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+                          >
+                            <div
+                              class="css-1s8zxab"
+                            >
+                              <div
+                                class="css-1j909cg"
+                              >
+                                <div
+                                  class="css-1xkyebe"
+                                >
+                                  <div
+                                    class="css-jxxswp"
+                                    id=""
+                                  >
+                                    <div
+                                      class="css-xhp9da"
+                                    >
+                                      <h3
+                                        class="css-16ist9v-BlockContainer"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div
+                                    aria-hidden="false"
+                                    class="rah-static rah-static--height-auto"
+                                    style="height: auto; overflow: visible;"
+                                  >
+                                    <div>
+                                      <div
+                                        class="css-154oin1"
+                                        data-testid="story"
+                                        id="id-of-story"
+                                      >
+                                        <div
+                                          class="story-render-container css-dhmrnb"
+                                        >
+                                          <h2
+                                            class="css-229nmx"
+                                          >
+                                            Components
+                                          </h2>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            class="rah-static rah-static--height-zero"
+                            style="height: 0px; overflow: hidden;"
+                          >
+                            <div
+                              style="display: none;"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1xkyebe"
+                >
+                  <div
+                    class="css-jxxswp"
+                    id="external-dependencies"
+                  >
+                    <div
+                      class="css-xhp9da"
+                    >
+                      <a
+                        class="css-walqom-LinkHeading"
+                        data-id="external-dependencies"
+                        data-level="3"
+                        data-title="External dependencies"
+                        href="http://localhost/#external-dependencies"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="octicon"
+                          fill="currentColor"
+                          height="18"
+                          role="img"
+                          style="display: inline-block; user-select: none; vertical-align: middle;"
+                          viewBox="0 0 16 16"
+                          width="18"
+                        >
+                          <path
+                            d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                      <h3
+                        class="css-16ist9v-BlockContainer"
+                      >
+                        <div
+                          class="css-tmrrvx"
+                        >
+                          External dependencies
+                          <a
+                            aria-label="Collapse this block"
+                            class="css-1t48u3b-BlockContainer"
+                          >
+                            <span
+                              class="css-1ibxxpj"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="octicon"
+                                fill="currentColor"
+                                height="16"
+                                role="img"
+                                style="display: inline-block; user-select: none; vertical-align: middle;"
+                                viewBox="0 0 16 16"
+                                width="16"
+                              >
+                                <path
+                                  d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                          </a>
+                        </div>
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="false"
+                    class="rah-static rah-static--height-auto"
+                    style="height: auto; overflow: visible;"
+                  >
+                    <div>
+                      <div
+                        class="css-1d6wxci"
+                      >
+                        <div
+                          class="css-nm5f2c-Tabs"
+                        >
+                          <div
+                            class="react-tabs"
+                            data-tabs="true"
+                          >
+                            <ul
+                              class="react-tabs__tab-list"
+                              role="tablist"
+                            >
+                              <li
+                                aria-controls="react-tabs-9"
+                                aria-disabled="false"
+                                aria-selected="true"
+                                class="react-tabs__tab react-tabs__tab--selected"
+                                id="react-tabs-8"
+                                role="tab"
+                                tabindex="0"
+                              >
+                                ArrowButton
+                              </li>
+                              <li
+                                aria-controls="react-tabs-11"
+                                aria-disabled="false"
+                                aria-selected="false"
+                                class="react-tabs__tab"
+                                id="react-tabs-10"
+                                role="tab"
+                              >
+                                My Button Tab
+                              </li>
+                            </ul>
+                            <div
+                              aria-labelledby="react-tabs-8"
+                              class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                              id="react-tabs-9"
+                              role="tabpanel"
+                            >
+                              <table
+                                class="css-11y77l0"
+                                role="table"
+                              >
+                                <thead
+                                  class="css-14kw1rx"
+                                >
+                                  <tr
+                                    class="css-vurnku"
+                                    role="row"
+                                  >
+                                    <th
+                                      class="css-9hyy6f"
+                                      colspan="1"
+                                      role="columnheader"
+                                      style="width: 150px;"
+                                    >
+                                      <div
+                                        class="css-wwqljn"
+                                      >
+                                        <div
+                                          class="css-206mi5"
+                                        >
+                                          package
+                                        </div>
+                                      </div>
+                                    </th>
+                                    <th
+                                      class="css-9hyy6f"
+                                      colspan="1"
+                                      role="columnheader"
+                                      style="width: 70%;"
+                                    >
+                                      <div
+                                        class="css-wwqljn"
+                                      >
+                                        <div
+                                          class="css-206mi5"
+                                        >
+                                          imports
+                                        </div>
+                                      </div>
+                                    </th>
+                                    <th
+                                      class="css-9hyy6f"
+                                      colspan="1"
+                                      role="columnheader"
+                                      style="width: 150px;"
+                                    >
+                                      <div
+                                        class="css-wwqljn"
+                                      >
+                                        <div
+                                          class="css-206mi5"
+                                        >
+                                          peer
+                                        </div>
+                                      </div>
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody
+                                  class="css-tuhk50"
+                                  role="rowgroup"
+                                >
+                                  <tr
+                                    class="css-ijvt85"
+                                    role="row"
+                                  >
+                                    <td
+                                      class="css-l4u9co"
+                                      role="cell"
+                                      style="width: 150px;"
+                                    >
+                                      <div
+                                        class="css-121ufn9-PackageLink"
+                                      >
+                                        <a
+                                          class="css-1t54e2w"
+                                          href="https://npmjs.com/package/@component-controls/components/v/1.0.1"
+                                          rel="noopener noreferrer"
+                                          target="_blank"
+                                        >
+                                          <div
+                                            class="css-13b120i-PackageLink"
+                                          >
+                                            @component-controls/components
+                                          </div>
+                                        </a>
+                                        <span
+                                          class="css-n8ts03-PackageLink"
+                                        >
+                                          <span
+                                            class="css-vurnku"
+                                          >
+                                            ^1.0.1
+                                          </span>
+                                        </span>
+                                      </div>
+                                    </td>
+                                    <td
+                                      class="css-l4u9co"
+                                      role="cell"
+                                      style="width: 70%;"
+                                    >
+                                      <div
+                                        class="css-zivbkl-Cell"
+                                      >
+                                        <span
+                                          class="css-1ghqg3n-Tag"
+                                        >
+                                          <span
+                                            class="css-vurnku"
+                                          >
+                                            Table
+                                          </span>
+                                        </span>
+                                      </div>
+                                    </td>
+                                    <td
+                                      class="css-l4u9co"
+                                      role="cell"
+                                      style="width: 150px;"
+                                    />
+                                  </tr>
+                                  <tr
+                                    class="css-ijvt85"
+                                    role="row"
+                                  >
+                                    <td
+                                      class="css-l4u9co"
+                                      role="cell"
+                                      style="width: 150px;"
+                                    >
+                                      <div
+                                        class="css-121ufn9-PackageLink"
+                                      >
+                                        <a
+                                          class="css-1t54e2w"
+                                          href="https://npmjs.com/package/react/v/16.13.1"
+                                          rel="noopener noreferrer"
+                                          target="_blank"
+                                        >
+                                          <div
+                                            class="css-13b120i-PackageLink"
+                                          >
+                                            react
+                                          </div>
+                                        </a>
+                                        <span
+                                          class="css-n8ts03-PackageLink"
+                                        >
+                                          <span
+                                            class="css-vurnku"
+                                          >
+                                            ^16.13.1
+                                          </span>
+                                        </span>
+                                      </div>
+                                    </td>
+                                    <td
+                                      class="css-l4u9co"
+                                      role="cell"
+                                      style="width: 70%;"
+                                    >
+                                      <div
+                                        class="css-zivbkl-Cell"
+                                      >
+                                        <span
+                                          class="css-13kvkw9-Tag"
+                                        >
+                                          <span
+                                            class="css-vurnku"
+                                          >
+                                            React
+                                          </span>
+                                        </span>
+                                        <span
+                                          class="css-1ghqg3n-Tag"
+                                        >
+                                          <span
+                                            class="css-vurnku"
+                                          >
+                                            FC
+                                          </span>
+                                        </span>
+                                      </div>
+                                    </td>
+                                    <td
+                                      class="css-l4u9co"
+                                      role="cell"
+                                      style="width: 150px;"
+                                    >
+                                      *
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <div
+                              aria-labelledby="react-tabs-10"
+                              class="react-tabs__tab-panel"
+                              id="react-tabs-11"
+                              role="tabpanel"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1xkyebe"
+                >
+                  <div
+                    class="css-jxxswp"
+                    id="internal-dependencies"
+                  >
+                    <div
+                      class="css-xhp9da"
+                    >
+                      <a
+                        class="css-walqom-LinkHeading"
+                        data-id="internal-dependencies"
+                        data-level="3"
+                        data-title="Internal dependencies"
+                        href="http://localhost/#internal-dependencies"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="octicon"
+                          fill="currentColor"
+                          height="18"
+                          role="img"
+                          style="display: inline-block; user-select: none; vertical-align: middle;"
+                          viewBox="0 0 16 16"
+                          width="18"
+                        >
+                          <path
+                            d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                      <h3
+                        class="css-16ist9v-BlockContainer"
+                      >
+                        <div
+                          class="css-tmrrvx"
+                        >
+                          Internal dependencies
+                          <a
+                            aria-label="Collapse this block"
+                            class="css-1t48u3b-BlockContainer"
+                          >
+                            <span
+                              class="css-1ibxxpj"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="octicon"
+                                fill="currentColor"
+                                height="16"
+                                role="img"
+                                style="display: inline-block; user-select: none; vertical-align: middle;"
+                                viewBox="0 0 16 16"
+                                width="16"
+                              >
+                                <path
+                                  d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                          </a>
+                        </div>
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="false"
+                    class="rah-static rah-static--height-auto"
+                    style="height: auto; overflow: visible;"
+                  >
+                    <div>
+                      <div
+                        class="css-1d6wxci"
+                      >
+                        <div
+                          class="css-nm5f2c-Tabs"
+                        >
+                          <div
+                            class="react-tabs"
+                            data-tabs="true"
+                          >
+                            <ul
+                              class="react-tabs__tab-list"
+                              role="tablist"
+                            >
+                              <li
+                                aria-controls="react-tabs-13"
+                                aria-disabled="false"
+                                aria-selected="true"
+                                class="react-tabs__tab react-tabs__tab--selected"
+                                id="react-tabs-12"
+                                role="tab"
+                                tabindex="0"
+                              >
+                                ArrowButton
+                              </li>
+                              <li
+                                aria-controls="react-tabs-15"
+                                aria-disabled="false"
+                                aria-selected="false"
+                                class="react-tabs__tab"
+                                id="react-tabs-14"
+                                role="tab"
+                              >
+                                My Button Tab
+                              </li>
+                            </ul>
+                            <div
+                              aria-labelledby="react-tabs-12"
+                              class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                              id="react-tabs-13"
+                              role="tabpanel"
+                            >
+                              <table
+                                class="css-11y77l0"
+                                data-testid="local-dependencies"
+                                role="table"
+                              >
+                                <thead
+                                  class="css-14kw1rx"
+                                >
+                                  <tr
+                                    class="css-vurnku"
+                                    role="row"
+                                  >
+                                    <th
+                                      class="css-9hyy6f"
+                                      colspan="1"
+                                      role="columnheader"
+                                      style="width: 150px;"
+                                    >
+                                      <div
+                                        class="css-wwqljn"
+                                      >
+                                        <div
+                                          class="css-206mi5"
+                                        >
+                                          file
+                                        </div>
+                                      </div>
+                                    </th>
+                                    <th
+                                      class="css-9hyy6f"
+                                      colspan="1"
+                                      role="columnheader"
+                                      style="width: 150px;"
+                                    >
+                                      <div
+                                        class="css-wwqljn"
+                                      >
+                                        <div
+                                          class="css-206mi5"
+                                        >
+                                          imports
+                                        </div>
+                                      </div>
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody
+                                  class="css-tuhk50"
+                                  role="rowgroup"
+                                >
+                                  <tr
+                                    class="css-ijvt85"
+                                    role="row"
+                                  >
+                                    <td
+                                      class="css-l4u9co"
+                                      role="cell"
+                                      style="width: 150px;"
+                                    >
+                                      <span
+                                        class="css-b7g03d-Cell"
+                                      >
+                                        "./Button"
+                                      </span>
+                                    </td>
+                                    <td
+                                      class="css-l4u9co"
+                                      role="cell"
+                                      style="width: 150px;"
+                                    >
+                                      <div
+                                        class="css-zivbkl-Cell"
+                                      >
+                                        <span
+                                          class="css-kabhsx-LocalImport"
+                                        >
+                                          <span
+                                            class="css-vurnku"
+                                          >
+                                            <a
+                                              class="css-1t54e2w"
+                                              href="/docs/id-of-story"
+                                            >
+                                              Button
+                                            </a>
+                                          </span>
+                                        </span>
+                                        <span
+                                          class="css-dktbw5-LocalImport"
+                                        >
+                                          <span
+                                            class="css-vurnku"
+                                          >
+                                            ButtonProps
+                                          </span>
+                                        </span>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr
+                                    class="css-ijvt85"
+                                    role="row"
+                                  >
+                                    <td
+                                      class="css-l4u9co"
+                                      role="cell"
+                                      style="width: 150px;"
+                                    >
+                                      <span
+                                        class="css-b7g03d-Cell"
+                                      >
+                                        "@component-controls/components"
+                                      </span>
+                                    </td>
+                                    <td
+                                      class="css-l4u9co"
+                                      role="cell"
+                                      style="width: 150px;"
+                                    >
+                                      <div
+                                        class="css-zivbkl-Cell"
+                                      >
+                                        <span
+                                          class="css-dktbw5-LocalImport"
+                                        >
+                                          <span
+                                            class="css-vurnku"
+                                          >
+                                            Table
+                                          </span>
+                                        </span>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <div
+                              aria-labelledby="react-tabs-14"
+                              class="react-tabs__tab-panel"
+                              id="react-tabs-15"
+                              role="tabpanel"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1xkyebe"
+                >
+                  <div
+                    class="css-jxxswp"
+                    id="stories"
+                  >
+                    <div
+                      class="css-xhp9da"
+                    >
+                      <a
+                        class="css-walqom-LinkHeading"
+                        data-id="stories"
+                        data-level="3"
+                        data-title="Stories"
+                        href="http://localhost/#stories"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="octicon"
+                          fill="currentColor"
+                          height="18"
+                          role="img"
+                          style="display: inline-block; user-select: none; vertical-align: middle;"
+                          viewBox="0 0 16 16"
+                          width="18"
+                        >
+                          <path
+                            d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                      <h3
+                        class="css-16ist9v-BlockContainer"
+                      >
+                        <div
+                          class="css-tmrrvx"
+                        >
+                          Stories
+                          <a
+                            aria-label="Collapse this block"
+                            class="css-1t48u3b-BlockContainer"
+                          >
+                            <span
+                              class="css-1ibxxpj"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="octicon"
+                                fill="currentColor"
+                                height="16"
+                                role="img"
+                                style="display: inline-block; user-select: none; vertical-align: middle;"
+                                viewBox="0 0 16 16"
+                                width="16"
+                              >
+                                <path
+                                  d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                          </a>
+                        </div>
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="false"
+                    class="rah-static rah-static--height-auto"
+                    style="height: auto; overflow: visible;"
+                  >
+                    <div>
+                      <div
+                        class="css-1xkyebe"
+                        data-testid="playground"
+                      >
+                        <div
+                          class="css-jxxswp"
+                          id="story"
+                        >
+                          <div
+                            class="css-xhp9da"
+                          >
+                            <a
+                              class="css-1ptrway-LinkHeading"
+                              data-id="story"
+                              data-level="4"
+                              data-title="story"
+                              href="http://localhost/#story"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="octicon"
+                                fill="currentColor"
+                                height="16"
+                                role="img"
+                                style="display: inline-block; user-select: none; vertical-align: middle;"
+                                viewBox="0 0 16 16"
+                                width="16"
+                              >
+                                <path
+                                  d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </a>
+                            <h4
+                              class="css-vsfm4-BlockContainer"
+                            >
+                              story
+                            </h4>
+                          </div>
+                        </div>
+                        <div>
+                          <div
+                            class="css-15owl46"
+                          >
+                            <div
+                              class="css-x60p33"
+                            >
+                              <div
+                                class="css-rkyxeq"
+                              >
+                                <button
+                                  aria-label="switch light and dark background"
+                                  class="css-1tf4h46"
+                                >
+                                  dark
+                                </button>
+                              </div>
+                              <div
+                                class="css-7d11p2"
+                              >
+                                <button
+                                  aria-label="switch left to right/right to left"
+                                  class="css-1tf4h46"
+                                >
+                                  RTL
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="reset zoom"
+                                  class="css-j69xip"
+                                  style="padding-top: 3px; padding-bottom: 3px;"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="octicon"
+                                    fill="currentColor"
+                                    height="16"
+                                    role="img"
+                                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                    viewBox="0 0 16 16"
+                                    width="16"
+                                  >
+                                    <path
+                                      d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                                      fill-rule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="zoom out"
+                                  class="css-j69xip"
+                                  style="padding-top: 3px; padding-bottom: 3px;"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="octicon"
+                                    fill="currentColor"
+                                    height="16"
+                                    role="img"
+                                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                    viewBox="0 0 16 16"
+                                    width="16"
+                                  >
+                                    <path
+                                      d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                                      fill-rule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                              <div
+                                class="css-7d11p2"
+                              >
+                                <button
+                                  aria-label="zoom in"
+                                  class="css-j69xip"
+                                  style="padding-top: 3px; padding-bottom: 3px;"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="octicon"
+                                    fill="currentColor"
+                                    height="16"
+                                    role="img"
+                                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                    viewBox="0 0 16 16"
+                                    width="16"
+                                  >
+                                    <path
+                                      d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                                      fill-rule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="display story source code"
+                                  class="css-1tf4h46"
+                                >
+                                  open source
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="display story configuration object"
+                                  class="css-1tf4h46"
+                                >
+                                  open config
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="css-eqxzio"
+                          >
+                            <div
+                              style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+                            >
+                              <div
+                                class="css-1s8zxab"
+                              >
+                                <div
+                                  class="css-1j909cg"
+                                >
+                                  <div
+                                    class="css-1xkyebe"
+                                  >
+                                    <div
+                                      class="css-jxxswp"
+                                      id=""
+                                    >
+                                      <div
+                                        class="css-xhp9da"
+                                      >
+                                        <h3
+                                          class="css-16ist9v-BlockContainer"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div
+                                      aria-hidden="false"
+                                      class="rah-static rah-static--height-auto"
+                                      style="height: auto; overflow: visible;"
+                                    >
+                                      <div>
+                                        <div
+                                          class="css-154oin1"
+                                          data-testid="story"
+                                          id="id-of-single"
+                                        >
+                                          <div
+                                            class="story-render-container css-dhmrnb"
+                                          >
+                                            <h2
+                                              class="css-229nmx"
+                                            >
+                                              Components
+                                            </h2>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              aria-hidden="true"
+                              class="rah-static rah-static--height-zero"
+                              style="height: 0px; overflow: hidden;"
+                            >
+                              <div
+                                style="display: none;"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="css-1xkyebe"
+                        data-testid="playground"
+                      >
+                        <div
+                          class="css-jxxswp"
+                          id="button"
+                        >
+                          <div
+                            class="css-xhp9da"
+                          >
+                            <a
+                              class="css-1ptrway-LinkHeading"
+                              data-id="button"
+                              data-level="4"
+                              data-title="button"
+                              href="http://localhost/#button"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="octicon"
+                                fill="currentColor"
+                                height="16"
+                                role="img"
+                                style="display: inline-block; user-select: none; vertical-align: middle;"
+                                viewBox="0 0 16 16"
+                                width="16"
+                              >
+                                <path
+                                  d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </a>
+                            <h4
+                              class="css-vsfm4-BlockContainer"
+                            >
+                              button
+                            </h4>
+                          </div>
+                        </div>
+                        <div>
+                          <div
+                            class="css-15owl46"
+                          >
+                            <div
+                              class="css-x60p33"
+                            >
+                              <div
+                                class="css-rkyxeq"
+                              >
+                                <button
+                                  aria-label="switch light and dark background"
+                                  class="css-1tf4h46"
+                                >
+                                  dark
+                                </button>
+                              </div>
+                              <div
+                                class="css-7d11p2"
+                              >
+                                <button
+                                  aria-label="switch left to right/right to left"
+                                  class="css-1tf4h46"
+                                >
+                                  RTL
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="reset zoom"
+                                  class="css-j69xip"
+                                  style="padding-top: 3px; padding-bottom: 3px;"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="octicon"
+                                    fill="currentColor"
+                                    height="16"
+                                    role="img"
+                                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                    viewBox="0 0 16 16"
+                                    width="16"
+                                  >
+                                    <path
+                                      d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                                      fill-rule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="zoom out"
+                                  class="css-j69xip"
+                                  style="padding-top: 3px; padding-bottom: 3px;"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="octicon"
+                                    fill="currentColor"
+                                    height="16"
+                                    role="img"
+                                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                    viewBox="0 0 16 16"
+                                    width="16"
+                                  >
+                                    <path
+                                      d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                                      fill-rule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                              <div
+                                class="css-7d11p2"
+                              >
+                                <button
+                                  aria-label="zoom in"
+                                  class="css-j69xip"
+                                  style="padding-top: 3px; padding-bottom: 3px;"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="octicon"
+                                    fill="currentColor"
+                                    height="16"
+                                    role="img"
+                                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                    viewBox="0 0 16 16"
+                                    width="16"
+                                  >
+                                    <path
+                                      d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                                      fill-rule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="display story source code"
+                                  class="css-1tf4h46"
+                                >
+                                  open source
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="display story configuration object"
+                                  class="css-1tf4h46"
+                                >
+                                  open config
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="css-eqxzio"
+                          >
+                            <div
+                              style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+                            >
+                              <div
+                                class="css-1s8zxab"
+                              >
+                                <div
+                                  class="css-1j909cg"
+                                >
+                                  <div
+                                    class="css-1xkyebe"
+                                  >
+                                    <div
+                                      class="css-jxxswp"
+                                      id=""
+                                    >
+                                      <div
+                                        class="css-xhp9da"
+                                      >
+                                        <h3
+                                          class="css-16ist9v-BlockContainer"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div
+                                      aria-hidden="false"
+                                      class="rah-static rah-static--height-auto"
+                                      style="height: auto; overflow: visible;"
+                                    >
+                                      <div>
+                                        <div
+                                          class="css-154oin1"
+                                          data-testid="story"
+                                          id="id-of-button-story"
+                                        >
+                                          <div
+                                            class="story-render-container css-dhmrnb"
+                                          >
+                                            <button
+                                              class="css-j69xip"
+                                            >
+                                              test
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              aria-hidden="true"
+                              class="rah-static rah-static--height-zero"
+                              style="height: 0px; overflow: hidden;"
+                            >
+                              <div
+                                style="display: none;"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="css-1xkyebe"
+                        data-testid="playground"
+                      >
+                        <div
+                          class="css-jxxswp"
+                          id="controls"
+                        >
+                          <div
+                            class="css-xhp9da"
+                          >
+                            <a
+                              class="css-1ptrway-LinkHeading"
+                              data-id="controls"
+                              data-level="4"
+                              data-title="controls"
+                              href="http://localhost/#controls"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="octicon"
+                                fill="currentColor"
+                                height="16"
+                                role="img"
+                                style="display: inline-block; user-select: none; vertical-align: middle;"
+                                viewBox="0 0 16 16"
+                                width="16"
+                              >
+                                <path
+                                  d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </a>
+                            <h4
+                              class="css-vsfm4-BlockContainer"
+                            >
+                              controls
+                            </h4>
+                          </div>
+                        </div>
+                        <div>
+                          <div
+                            class="css-15owl46"
+                          >
+                            <div
+                              class="css-x60p33"
+                            >
+                              <div
+                                class="css-rkyxeq"
+                              >
+                                <button
+                                  aria-label="switch light and dark background"
+                                  class="css-1tf4h46"
+                                >
+                                  dark
+                                </button>
+                              </div>
+                              <div
+                                class="css-7d11p2"
+                              >
+                                <button
+                                  aria-label="switch left to right/right to left"
+                                  class="css-1tf4h46"
+                                >
+                                  RTL
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="reset zoom"
+                                  class="css-j69xip"
+                                  style="padding-top: 3px; padding-bottom: 3px;"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="octicon"
+                                    fill="currentColor"
+                                    height="16"
+                                    role="img"
+                                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                    viewBox="0 0 16 16"
+                                    width="16"
+                                  >
+                                    <path
+                                      d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                                      fill-rule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="zoom out"
+                                  class="css-j69xip"
+                                  style="padding-top: 3px; padding-bottom: 3px;"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="octicon"
+                                    fill="currentColor"
+                                    height="16"
+                                    role="img"
+                                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                    viewBox="0 0 16 16"
+                                    width="16"
+                                  >
+                                    <path
+                                      d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                                      fill-rule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                              <div
+                                class="css-7d11p2"
+                              >
+                                <button
+                                  aria-label="zoom in"
+                                  class="css-j69xip"
+                                  style="padding-top: 3px; padding-bottom: 3px;"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="octicon"
+                                    fill="currentColor"
+                                    height="16"
+                                    role="img"
+                                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                    viewBox="0 0 16 16"
+                                    width="16"
+                                  >
+                                    <path
+                                      d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                                      fill-rule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="display story source code"
+                                  class="css-1tf4h46"
+                                >
+                                  open source
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="display story configuration object"
+                                  class="css-1tf4h46"
+                                >
+                                  open config
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="css-eqxzio"
+                          >
+                            <div
+                              style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+                            >
+                              <div
+                                class="css-1s8zxab"
+                              >
+                                <div
+                                  class="css-1j909cg"
+                                >
+                                  <div
+                                    class="css-1xkyebe"
+                                  >
+                                    <div
+                                      class="css-jxxswp"
+                                      id=""
+                                    >
+                                      <div
+                                        class="css-xhp9da"
+                                      >
+                                        <h3
+                                          class="css-16ist9v-BlockContainer"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div
+                                      aria-hidden="false"
+                                      class="rah-static rah-static--height-auto"
+                                      style="height: auto; overflow: visible;"
+                                    >
+                                      <div>
+                                        <div
+                                          class="css-154oin1"
+                                          data-testid="story"
+                                          id="blocks-core-story-plain--controls"
+                                        >
+                                          <div
+                                            class="story-render-container css-dhmrnb"
+                                          >
+                                            <svg
+                                              aria-valuemax="1"
+                                              aria-valuemin="0"
+                                              aria-valuenow="0.5"
+                                              class="css-14d2907"
+                                              fill="none"
+                                              height="128"
+                                              role="img"
+                                              stroke="currentcolor"
+                                              stroke-width="2"
+                                              viewBox="0 0 32 32"
+                                              width="128"
+                                            >
+                                              <circle
+                                                cx="16"
+                                                cy="16"
+                                                opacity="0.125"
+                                                r="14"
+                                              />
+                                              <circle
+                                                cx="16"
+                                                cy="16"
+                                                r="14"
+                                                stroke-dasharray="87.96459430051421"
+                                                stroke-dashoffset="43.982297150257104"
+                                                transform="rotate(-90 16 16)"
+                                              />
+                                            </svg>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              aria-hidden="true"
+                              class="rah-static rah-static--height-zero"
+                              style="height: 0px; overflow: hidden;"
+                            >
+                              <div
+                                style="display: none;"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-5qse13"
+                >
+                  <div
+                    class="css-8r2q2l"
+                  >
+                    <div
+                      class="css-vurnku"
+                    />
+                    <div
+                      class="css-vurnku"
+                    >
+                      <a
+                        class="css-10zwoio"
+                        href="/docs/mdx-story"
+                      >
+                        <div
+                          class="css-1my6hv5"
+                        >
+                          <span
+                            class="css-c3r86m"
+                          >
+                            Next
+                          </span>
+                          <div
+                            class="css-9tifnv"
+                          >
+                            <span
+                              class="css-1s8umv4"
+                            >
+                              MDX Story
+                            </span>
+                            <svg
+                              aria-hidden="true"
+                              class="octicon"
+                              fill="currentColor"
+                              height="16"
+                              role="img"
+                              style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                              viewBox="0 0 16 16"
+                              width="16"
+                            >
+                              <path
+                                d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,3 +1,12 @@
+import {} from 'react';
+import { ThemeUIStyleObject } from 'theme-ui';
+
+declare module 'react' {
+  interface Attributes {
+    sx?: ThemeUIStyleObject;
+  }
+}
+
 export * from './ActionBar';
 export * from './ActionContainer';
 export * from './BlockContainer';
@@ -13,10 +22,10 @@ export * from './Link';
 export * from './LinkHeading';
 export * from './Markdown';
 export * from './Multiselect';
-export * from './Navmenu';
 export * from './Pagination';
 export * from './PanelContainer';
 export * from './Popover';
+export * from './ProgressIndicator';
 export * from './SearchInput';
 export * from './Sidebar';
 export * from './SkipLinks';
@@ -31,5 +40,6 @@ export * from './ThemeContext';
 export * from './Title';
 export * from './TitledImage';
 export * from './Toggle';
+export * from './Tree';
 export * from './Value';
 export * from './Zoom';

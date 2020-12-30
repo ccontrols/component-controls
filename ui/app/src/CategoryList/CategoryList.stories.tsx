@@ -1,15 +1,12 @@
 import React from 'react';
-import { Example } from '@component-controls/core';
-import { MockContext } from '@component-controls/blocks';
+import { Document, Example } from '@component-controls/core';
+import { mockDecorators } from '@component-controls/blocks';
 import { CategoryList } from './CategoryList';
 
 export default {
   title: 'Application/CategoryList',
   component: CategoryList,
-};
+  decorators: mockDecorators,
+} as Document;
 
-export const overview: Example = () => (
-  <MockContext storyId="id-of-story">
-    <CategoryList type="author" />
-  </MockContext>
-);
+export const overview: Example = () => <CategoryList type="author" />;

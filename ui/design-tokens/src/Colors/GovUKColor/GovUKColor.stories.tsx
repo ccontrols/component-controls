@@ -1,12 +1,12 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes, Document } from '@component-controls/core';
 import { GovUKColor, GovUKColorPalette } from './GovUKColor';
 import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/GovUKColor',
   component: GovUKColor,
-};
+} as Document;
 
 export const overview: Example<ColorProps> = ({ name, color }) => (
   <GovUKColor name={name} color={color} />

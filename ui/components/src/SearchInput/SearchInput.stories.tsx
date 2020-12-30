@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Example, faker } from '@component-controls/core';
+import { Theme, Box } from 'theme-ui';
+import { GlobeIcon } from '@primer/octicons-react';
+import { Document, Example, faker } from '@component-controls/core';
 import { SearchInput } from './SearchInput';
 
 export default {
   title: 'Components/SearchInput',
   component: SearchInput,
-};
+} as Document;
 
 interface FakeItem {
   id: number;
@@ -41,7 +43,16 @@ export const overview: Example = () => {
       items={items}
       onSelect={item => alert(JSON.stringify(item, null, 2))}
     >
-      {props => props.item.label}
+      {props => (
+        <Box
+          sx={{
+            py: 1,
+            borderBottom: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
+          }}
+        >
+          {props.item.label}
+        </Box>
+      )}
     </SearchInput>
   );
 };
@@ -65,6 +76,26 @@ export const placeholder: Example = () => {
       items={items}
       onSelect={item => alert(JSON.stringify(item, null, 2))}
       placeholder="start typing..."
+      aria-label="search items"
+    />
+  );
+};
+
+export const customize: Example = () => {
+  const [items, setSearch] = useMockData();
+  return (
+    <SearchInput
+      onSearch={search => setSearch(search)}
+      items={items}
+      render={def => (
+        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+          {def}
+          <Box sx={{ p: 1 }}>
+            Powered by: <GlobeIcon />
+          </Box>
+        </Box>
+      )}
+      onSelect={item => alert(JSON.stringify(item, null, 2))}
       aria-label="search items"
     />
   );

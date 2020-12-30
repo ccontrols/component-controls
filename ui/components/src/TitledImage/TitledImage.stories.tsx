@@ -1,12 +1,12 @@
 import React from 'react';
 import { ImageProps } from 'theme-ui';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Document, Example, ControlTypes } from '@component-controls/core';
 import { TitledImage } from './TitledImage';
 
 export default {
   title: 'Components/TitledImage',
   component: TitledImage,
-};
+} as Document;
 
 export const overview: Example<ImageProps> = ({ title }) => {
   return (

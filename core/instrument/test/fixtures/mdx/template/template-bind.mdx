@@ -1,0 +1,20 @@
+import { ButtonProps, Button } from '../../components/button-props';
+
+export const Template = props => (
+  <Button {...props} />
+);
+
+<Meta title="MDX"  />
+
+<Story name='john' controls={{
+  name: 'john',
+}}>
+  {Template.bind()}
+</Story>
+
+
+<Story name='mary' controls={{
+  name: 'mary',
+}}>
+  {Template.bind()}
+</Story>

@@ -1,40 +1,33 @@
 import React from 'react';
-import { Example } from '@component-controls/core';
+import { Document, Example } from '@component-controls/core';
 import { useStoryControls } from '@component-controls/store';
 import { PropsTable } from './PropsTable';
-import { MockContext } from '../test/MockContext';
+import { makeDecorators } from '../test/MockContext';
 
 export default {
   title: 'Blocks/PropsTable',
   component: PropsTable,
-};
+} as Document;
 
-export const overview: Example = () => (
-  <MockContext storyId="id-of-button-story">
-    <PropsTable />
-  </MockContext>
-);
+export const overview: Example = () => <PropsTable />;
+overview.decorators = makeDecorators('id-of-button-story');
 
-export const subcomponents: Example = () => (
-  <MockContext storyId="id-of-story">
-    <PropsTable />
-  </MockContext>
-);
+export const subcomponents: Example = () => <PropsTable />;
+subcomponents.decorators = makeDecorators('id-of-story');
 
 export const extraColumns: Example = () => (
-  <MockContext storyId="id-of-button-story">
-    <PropsTable
-      extraColumns={[
-        {
-          Header: 'Custom',
-          Cell: ({ row }) => {
-            return (row.original as any).name.toUpperCase();
-          },
+  <PropsTable
+    extraColumns={[
+      {
+        Header: 'Custom',
+        Cell: ({ row }) => {
+          return (row.original as any).name.toUpperCase();
         },
-      ]}
-    />
-  </MockContext>
+      },
+    ]}
+  />
 );
+extraColumns.decorators = makeDecorators('id-of-button-story');
 
 export const controls: Example = () => {
   const Story = () => {
@@ -44,26 +37,23 @@ export const controls: Example = () => {
     );
   };
   return (
-    <MockContext storyId="blocks-core-story-plain--controls">
+    <>
       <Story />
       <PropsTable />
-    </MockContext>
+    </>
   );
 };
+controls.decorators = makeDecorators('blocks-core-story-plain--controls');
 
-export const title: Example = () => (
-  <MockContext storyId="id-of-story">
-    <PropsTable title="." />
-  </MockContext>
-);
+export const title: Example = () => <PropsTable title="." />;
+title.decorators = makeDecorators('id-of-story');
 
 export const customTitle: Example = () => (
-  <MockContext storyId="id-of-story">
-    <PropsTable title="Custom Props Table Title" />
-  </MockContext>
+  <PropsTable title="Custom Props Table Title" />
 );
+customTitle.decorators = makeDecorators('id-of-story');
+
 export const notCollapsible: Example = () => (
-  <MockContext storyId="id-of-story">
-    <PropsTable title="." collapsible={false} />
-  </MockContext>
+  <PropsTable title="." collapsible={false} />
 );
+notCollapsible.decorators = makeDecorators('id-of-story');

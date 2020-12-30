@@ -115,6 +115,31 @@ export const controlFromProps = (
         value,
       };
     }
+    case 'union': {
+      const value =
+        typeof defaultValue === 'string'
+          ? cleanQuotes(defaultValue)
+          : undefined;
+      if (typeof propDef.type !== 'object') {
+        return null;
+      }
+      const options = Array.isArray(propDef.type.value)
+        ? propDef.type.value.map((v: { name: string }) => v.name)
+        : typeof propDef.type.raw === 'string' &&
+          propDef.type.raw.split('|').map(v => v.trim());
+
+      if (!Array.isArray(options)) {
+        return null;
+      }
+
+      return {
+        type: ControlTypes.OPTIONS,
+        options: options.map((v: any) => {
+          return cleanQuotes(v.value ?? v);
+        }),
+        value,
+      };
+    }
     // typescript callback function signature
     case '(() => void)':
     case 'func': {

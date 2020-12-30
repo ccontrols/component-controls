@@ -35,13 +35,13 @@ export const ActionBar: FC<ActionBarProps> = ({
         return (
           <Box
             key={`${typeof node === 'string' ? node : 'item'}_${index}`}
-            variant={`${themeKey}.item`}
             sx={{
               mr: index === 0 ? 1 : 0,
               ml: nextGroup !== group || group === undefined ? 2 : 1,
               display: 'flex',
               flexDirection: 'row',
               alignItems: 'center',
+              variant: `${themeKey}.item`,
             }}
           >
             {typeof node === 'string' ? (

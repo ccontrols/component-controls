@@ -30,15 +30,19 @@ Object {
           "collapseSingle": true,
           "storyPaths": true,
         },
-        "tabs": Array [
-          Object {
-            "route": "page",
+        "tabs": Object {
+          "page": Object {
+            "component": [Function],
+            "title": "Documentation",
           },
-        ],
+        },
       },
       "tags": Object {
         "basePath": "tags/",
       },
+    },
+    "search": Object {
+      "searchingModule": "@component-controls/search-fusejs",
     },
     "siteMap": Object {
       "pages": Object {
@@ -61,6 +65,7 @@ Object {
   "components": Object {},
   "config": undefined,
   "packages": Object {},
+  "search": [Function],
   "stores": Array [],
 }
 `;

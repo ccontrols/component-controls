@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/webpack-configs",
-  "version": "1.38.0",
+  "version": "2.5.3",
   "description": "Webpack preset configurations",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,33 +30,32 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/instrument": "^1.38.0",
-    "@component-controls/logger": "^1.37.0",
-    "@component-controls/react-docgen-info": "^1.38.0",
-    "@component-controls/react-docgen-typescript-info": "^1.38.0",
-    "@component-controls/store": "^1.38.0",
+    "@component-controls/instrument": "^2.5.3",
+    "@component-controls/logger": "^2.5.0",
+    "@component-controls/react-docgen-info": "^2.5.0",
+    "@component-controls/react-docgen-typescript-info": "^2.5.0",
+    "@component-controls/store": "^2.5.3",
     "babel-loader": "^8.0.6",
     "babel-preset-react-app": "^9.0.0",
+    "core-js": "^3.7.0",
     "css-loader": "^5.0.0",
     "extract-css-chunks-webpack-plugin": "^4.7.5",
     "file-loader": "^6.0.0",
     "less": "^3.12.2",
     "less-loader": "^7.0.2",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
-    "postcss-loader": "^4.0.4",
+    "postcss-loader": "^4.1.0",
     "raw-loader": "^4.0.1",
     "sass": "^1.27.0",
     "sass-loader": "^10.0.4",
     "style-loader": "^2.0.0",
-    "stylus": "^0.54.8",
-    "stylus-loader": "^4.1.1",
     "typescript": "^4.0.5",
     "url-loader": "^4.1.0",
     "webpack": "^4.43.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.9.0",
-    "@component-controls/ts-markdown-docs": "^1.37.0",
+    "@component-controls/ts-markdown-docs": "^2.2.0",
     "@types/jest": "^26.0.10",
     "@types/node": "^14.14.5",
     "@types/optimize-css-assets-webpack-plugin": "^5.0.1",
@@ -76,5 +75,5 @@
   "authors": [
     "Atanas Stoyanov"
   ],
-  "gitHead": "1b83d23bd43f1b2143ac8f66f828fe5806b40310"
+  "gitHead": "e30d62f101e104711a16261fce04785d58cac1eb"
 }

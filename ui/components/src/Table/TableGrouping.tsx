@@ -1,6 +1,7 @@
 /* eslint-disable react/display-name */
 /* eslint-disable react/jsx-key */
-import React from 'react';
+/** @jsx jsx */
+import { useMemo } from 'react';
 import {
   TableState,
   UseGroupByState,
@@ -8,13 +9,13 @@ import {
   UseExpandedRowProps,
   UseTableRowProps,
 } from 'react-table';
-import { Flex, Text } from 'theme-ui';
+import { jsx, Flex, Text } from 'theme-ui';
 import { ChevronRightIcon, ChevronDownIcon } from '@primer/octicons-react';
 
 type GroupByState = TableState &
   Partial<UseGroupByState<Record<string, unknown>>>;
 const useControlledState = (state: GroupByState) => {
-  return React.useMemo(() => {
+  return useMemo(() => {
     if (state?.groupBy?.length) {
       return {
         ...state,
@@ -27,9 +28,9 @@ const useControlledState = (state: GroupByState) => {
     return state;
   }, [state]);
 };
-export const useExpanderColumn = (itemsLabel: string) => (
-  hooks: UseTableHooks<Record<string, unknown>>,
-): void => {
+export const useExpanderColumn = <D extends Record<string, unknown>>(
+  itemsLabel: string,
+) => (hooks: UseTableHooks<D>): void => {
   hooks.useControlledState.push(useControlledState);
   hooks.visibleColumns.push((columns, { instance }) => {
     if (
@@ -47,8 +48,8 @@ export const useExpanderColumn = (itemsLabel: string) => (
         Cell: ({
           row,
         }: {
-          row: UseExpandedRowProps<Record<string, unknown>> &
-            UseTableRowProps<Record<string, unknown>> & {
+          row: UseExpandedRowProps<D> &
+            UseTableRowProps<D> & {
               groupByVal: any;
             };
         }) => {

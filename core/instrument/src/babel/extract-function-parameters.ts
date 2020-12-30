@@ -1,6 +1,17 @@
-import traverse, { TraverseOptions } from '@babel/traverse';
+import traverse, { TraverseOptions, NodePath } from '@babel/traverse';
+import {
+  ArrowFunctionExpression,
+  CallExpression,
+  JSXElement,
+  FunctionDeclaration,
+} from '@babel/types';
 import generate from '@babel/generator';
-import { Story, CodeLocation, StoryArguments } from '@component-controls/core';
+import {
+  Story,
+  CodeLocation,
+  StoryArguments,
+  Stories,
+} from '@component-controls/core';
 import { adjustSourceLocation } from '../misc/source-location';
 import {
   extractArgumentsUsage,
@@ -106,18 +117,41 @@ const extractPatameters = (
 export const extractFunctionParameters = (
   story: Story,
   exports?: MDXExportType,
+  locals?: Stories,
 ): TraverseOptions => ({
-  ArrowFunctionExpression: (path: any) => {
+  CallExpression: (path: NodePath<CallExpression>) => {
+    const methodName = (path.node.callee as { property: { name: string } })
+      .property.name;
+    if (methodName === 'bind' && locals) {
+      const name = (path.node.callee as { object: { name: string } }).object
+        .name;
+      if (locals[name]) {
+        const local = locals[name];
+        story.loc = local.loc;
+        story.arguments = local.arguments;
+        const { code } = generate(path.node, {
+          retainFunctionParens: true,
+          retainLines: true,
+        });
+        if (exports) {
+          exports.render = code.trim();
+        }
+      }
+    }
+    path.skip();
+  },
+  ArrowFunctionExpression: (path: NodePath<ArrowFunctionExpression>) => {
     extractPatameters(path, story, exports);
     path.skip();
   },
-  FunctionDeclaration: (path: any) => {
+  FunctionDeclaration: (path: NodePath<FunctionDeclaration>) => {
     extractPatameters(path, story, exports);
     path.skip();
   },
-  JSXElement: (path: any) => {
-    if (exports && path.parent.children) {
-      const children = path.parent.children
+  JSXElement: (path: NodePath<JSXElement>) => {
+    const children = (path.parent as { children: any }).children;
+    if (exports && children) {
+      const childStr = children
         .map((child: any) => {
           const { code } = generate(child, {
             retainFunctionParens: true,
@@ -126,54 +160,8 @@ export const extractFunctionParameters = (
           return code.trim();
         })
         .join('\n');
-      exports.render = `() => (<>\n${children}\n</>)`;
+      exports.render = `() => (<>\n${childStr}\n</>)`;
     }
     path.skip();
   },
 });
-
-const adjustCodeLocation = (
-  loc: CodeLocation,
-  line: number,
-  chars: number,
-): CodeLocation => {
-  return {
-    start: {
-      line: loc.start.line,
-      column:
-        line === loc.start.line
-          ? Math.max(0, loc.start.column - chars)
-          : loc.start.column,
-    },
-    end: {
-      line: loc.end.line,
-      column:
-        line === loc.end.line
-          ? Math.max(0, loc.end.column - chars)
-          : loc.end.column,
-    },
-  };
-};
-
-// adjust source location, when timmiong white spaces
-export const adjustArgumentsLocation = (
-  args: StoryArguments,
-  line: number,
-  chars: number,
-): StoryArguments =>
-  args.map(arg => {
-    const ret = {
-      ...arg,
-      loc: arg.loc ? adjustCodeLocation(arg.loc, line, chars) : undefined,
-      value: Array.isArray(arg.value)
-        ? adjustArgumentsLocation(arg.value, line, chars)
-        : arg.value,
-    };
-    if (arg.usage) {
-      ret.usage = arg.usage.map(usage => ({
-        ...usage,
-        loc: adjustCodeLocation(usage.loc, line, chars),
-      }));
-    }
-    return ret;
-  });

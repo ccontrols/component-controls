@@ -1,7 +1,7 @@
 import React, { FC, createContext, useContext } from 'react';
 import { Link, LinkProps, Box } from 'theme-ui';
 
-export type LinkClassType = React.FC<LinkProps>;
+export type LinkClassType = FC<LinkProps>;
 const LinkContext = createContext<LinkClassType>(Link);
 export interface LinkContextProviderProps {
   linkClass: LinkClassType;

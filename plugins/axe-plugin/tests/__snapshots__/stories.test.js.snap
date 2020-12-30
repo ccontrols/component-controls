@@ -13,7 +13,7 @@ exports[`Plugins/AllyBlock Overview 1`] = `
         class="css-xhp9da"
       >
         <h3
-          class="css-1p18zt3-BlockContainer"
+          class="css-16ist9v-BlockContainer"
         />
       </div>
     </div>
@@ -31,11 +31,11 @@ exports[`Plugins/AllyBlock Overview 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-192nmz2"
+                class="css-1vga9oy"
               >
                 <button
                   aria-label="display the accessibility overview dashboard"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   close dashboard
                 </button>
@@ -43,11 +43,11 @@ exports[`Plugins/AllyBlock Overview 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-eqxzio"
           >
             <div>
               <div
-                class="css-1oteowz"
+                class="css-vurnku"
               >
                 <div
                   class="css-1xkyebe"
@@ -60,7 +60,7 @@ exports[`Plugins/AllyBlock Overview 1`] = `
                       class="css-xhp9da"
                     >
                       <h3
-                        class="css-1p18zt3-BlockContainer"
+                        class="css-16ist9v-BlockContainer"
                       />
                     </div>
                   </div>
@@ -82,7 +82,7 @@ exports[`Plugins/AllyBlock Overview 1`] = `
                             aria-valuemax="1"
                             aria-valuemin="0"
                             aria-valuenow="0.5"
-                            class="css-agj820"
+                            class="css-14d2907"
                             fill="none"
                             height="128"
                             role="img"

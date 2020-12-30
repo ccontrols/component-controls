@@ -1,12 +1,12 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes, Document } from '@component-controls/core';
 import { TableColor, TableColorPalette, ColorAALegend } from './TableColor';
 import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/TableColor',
   component: TableColor,
-};
+} as Document;
 
 export const overview: Example<ColorProps> = ({ name, color }) => (
   <TableColor name={name} color={color} />

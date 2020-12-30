@@ -1,12 +1,12 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes, Document } from '@component-controls/core';
 import { FishTankColor, FishTankColorPalette } from './FishTankColor';
 import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/FishTankColor',
   component: FishTankColor,
-};
+} as Document;
 
 export const overview: Example<ColorProps> = ({ name, color }) => (
   <FishTankColor name={name} color={color} />

@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/storybook",
-  "version": "1.38.0",
+  "version": "2.5.3",
   "description": "Storybook Addon For live editing of component controls",
   "keywords": [
     "addon",
@@ -38,28 +38,27 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/blocks": "^1.38.0",
-    "@component-controls/components": "^1.38.0",
-    "@component-controls/core": "^1.38.0",
-    "@component-controls/loader": "^1.38.0",
-    "@component-controls/pages": "^1.38.0",
-    "@component-controls/store": "^1.38.0",
-    "@component-controls/storybook-custom-docs": "^1.37.0",
-    "@component-controls/webpack-configs": "^1.38.0",
-    "broadcast-channel": "^3.1.0",
-    "deepmerge": "^4.2.2",
-    "global": "^4.3.2",
+    "@component-controls/blocks": "^2.5.3",
+    "@component-controls/components": "^2.5.3",
+    "@component-controls/core": "^2.5.0",
+    "@component-controls/loader": "^2.5.3",
+    "@component-controls/pages": "^2.5.3",
+    "@component-controls/store": "^2.5.3",
+    "@component-controls/storybook-custom-docs": "^2.2.0",
+    "@component-controls/webpack-configs": "^2.5.3",
+    "@emotion/react": "^11.1.1",
+    "@emotion/styled": "^11.0.0",
     "typescript": "^4.0.5"
   },
   "devDependencies": {
-    "@component-controls/ts-markdown-docs": "^1.37.0",
-    "@storybook/addons": "next",
-    "@storybook/api": "next",
-    "@storybook/client-api": "next",
+    "@component-controls/ts-markdown-docs": "^2.2.0",
+    "@emotion/babel-plugin": "^11.0.0",
+    "@storybook/addons": "^6.2.0-alpha.3",
+    "@storybook/api": "^6.2.0-alpha.3",
+    "@storybook/client-api": "^6.2.0-alpha.3",
     "@types/node": "^13.7.0",
     "@types/react": "^16.9.34",
-    "polished": "^3.4.4",
-    "react": "^16.12.0"
+    "react": "^17.0.1"
   },
   "peerDependencies": {
     "@storybook/addons": "5.x 6.x",
@@ -74,5 +73,5 @@
   "authors": [
     "Atanas Stoyanov"
   ],
-  "gitHead": "1b83d23bd43f1b2143ac8f66f828fe5806b40310"
+  "gitHead": "e30d62f101e104711a16261fce04785d58cac1eb"
 }

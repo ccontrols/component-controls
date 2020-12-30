@@ -13,7 +13,9 @@
     -   [Components](#components)
     -   [Document](#document)
     -   [Documents](#documents)
+    -   [DynamicExamples](#dynamicexamples)
     -   [Example](#example)
+    -   [ExampleControls](#examplecontrols)
     -   [Packages](#packages)
     -   [Pages](#pages)
     -   [StoreObserver](#storeobserver)
@@ -48,13 +50,16 @@
     -   [PropType](#proptype)
     -   [PropTypes](#proptypes)
     -   [TypeInformation](#typeinformation)
+    -   [JSXNode](#jsxnode)
+    -   [JSXTree](#jsxtree)
     -   [TypeValue](#typevalue)
     -   [getComponentName](#getcomponentname)
     -   [PropsInfoExtractorFunction](#propsinfoextractorfunction)
     -   [ActionItem](#actionitem)
     -   [CodeLocation](#codelocation)
     -   [CodePosition](#codeposition)
-    -   [ImportName](#importname)
+    -   [ImportType](#importtype)
+    -   [ImportTypes](#importtypes)
     -   [Imports](#imports)
     -   [PackageDependencies](#packagedependencies)
     -   [PackageInfo](#packageinfo)
@@ -116,9 +121,11 @@
     -   [StoryRenderFn](#storyrenderfn-1)
     -   [DocType](#doctype-1)
     -   [Document](#document-1)
+    -   [ExampleControls](#examplecontrols-1)
     -   [ColorPickerKind](#colorpickerkind-1)
-    -   [ComponentControl](#componentcontrol-1)
+    -   [JSXTree](#jsxtree-1)
     -   [TypeValue](#typevalue-1)
+    -   [JSXNode](#jsxnode-1)
     -   [PackageDependency](#packagedependency-1)
     -   [StaticMenuItems](#staticmenuitems-1)
     -   [PagesConfiguration](#pagesconfiguration-1)
@@ -177,7 +184,7 @@ $ npm install @component-controls/core --save-dev
 
 ## DefaultStore
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L375)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L401)_
 
 
 
@@ -241,7 +248,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 store of stories information in memory after the loader is applied
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L336)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L362)_
 
 
 
@@ -286,19 +293,19 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ### properties
 
-| Name            | Type                                                 | Description                                                                                |
-| --------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| `component`     | string \| Record&lt;string, unknown>                 | id for component associated with the story                                                 |
-| `controls`      | [ComponentControls](#componentcontrols)              | object of key/value pairs specifying the controls for the story                            |
-| `decorators`    | [StoryRenderFn](#storyrenderfn)\[]                   | array of wrapper functions (decorators) to be called when rendering each individual story. |
-| `smartControls` | [SmartControls](#smartcontrols)                      | "smart" controls options                                                                   |
-| `subcomponents` | \[key: string]: string \| Record&lt;string, unknown> | multiple components option                                                                 |
+| Name            | Type                                                       | Description                                                                                |
+| --------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `component`     | string \| Record&lt;string, unknown> \| ComponentType&lt;> | id for component associated with the story                                                 |
+| `controls`      | [ComponentControls](#componentcontrols)                    | object of key/value pairs specifying the controls for the story                            |
+| `decorators`    | [StoryRenderFn](#storyrenderfn)\[]                         | array of wrapper functions (decorators) to be called when rendering each individual story. |
+| `smartControls` | [SmartControls](#smartcontrols)                            | "smart" controls options                                                                   |
+| `subcomponents` | \[key: string]: string \| Record&lt;string, unknown>       | multiple components option                                                                 |
 
 ## Components
 
 list of components used in stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L311)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L337)_
 
 Record&lt;string, 
 
@@ -312,40 +319,42 @@ A documentation file's metadata.
 For MDX files, fromtmatter is used to declare the document properties.
 For ESM (ES Modules) documentation files, the default export is used.
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L192)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L211)_
 
 ### properties
 
-| Name                | Type                                | Description                                                                                                                                                                                  |
-| ------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `MDXPage`           | any                                 | for MDX documents, this is an MDXContent function, to be rendered inside a MDXProvider                                                                                                       |
-| `author`            | string                              | document author                                                                                                                                                                              |
-| `componentsLookup*` | \[name: string]: string             | lookup into the global store.components since multiple components of the same name can be used example: \['Button']: 'c:/myapp/Button.tsx'                                                   |
-| `date`              | [Date](#date)                       |  optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                     |
-| `dateModified`      | [Date](#date)                       |  optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                   |
-| `description`       | string                              |  documentation file description                                                                                                                                                              |
-| `draft`             | boolean                             | if set to true, the document will be hidden in production builds.                                                                                                                            |
-| `fileName`          | string                              | file name of the file of stories                                                                                                                                                             |
-| `image`             | string                              | link to an image for the document, will be used for SEO                                                                                                                                      |
-| `isMDXComponent`    | boolean                             | custom prop set by mdxjs                                                                                                                                                                     |
-| `keywords`          | string\[]                           |  comma-separated list of SEO keywords                                                                                                                                                        |
-| `menu`              | string                              | to which static menu to attach the document compatibility with docz                                                                                                                          |
-| `order`             | number                              | document order, used to sort documents within the same parent                                                                                                                                |
-| `package`           | string                              | lookup into the global store of PackageInfo package.json                                                                                                                                     |
-| `route`             | string                              | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
-| `source`            | string                              | source code of the entire file of stories                                                                                                                                                    |
-| `stories`           | string\[]                           | list of story ids contained in the document.                                                                                                                                                 |
-| `tags`              | string\[]                           |  comma-separated list of document tags, used for search and for SOE keywords unless keyswords are specified.                                                                                 |
-| `title*`            | string                              | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
-| `type`              | [DocType](#doctype)                 | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
-| `StoryProps`        | [StoryProps](#storyprops)           |                                                                                                                                                                                              |
-| `PageLayoutProps`   | [PageLayoutProps](#pagelayoutprops) |                                                                                                                                                                                              |
+| Name               | Type                                | Description                                                                                                                                                                                  |
+| ------------------ | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `MDXPage`          | any                                 | for MDX documents, this is an MDXContent function, to be rendered inside a MDXProvider                                                                                                       |
+| `author`           | string                              | document author                                                                                                                                                                              |
+| `componentsLookup` | \[name: string]: string             | lookup into the global store.components since multiple components of the same name can be used example: \['Button']: 'c:/myapp/Button.tsx'                                                   |
+| `date`             | [Date](#date)                       |  optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                     |
+| `dateModified`     | [Date](#date)                       |  optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                   |
+| `description`      | string \| [Element](#element)       |  documentation file description                                                                                                                                                              |
+| `draft`            | boolean                             | if set to true, the document will be hidden in production builds.                                                                                                                            |
+| `fileName`         | string                              | file name of the file of stories                                                                                                                                                             |
+| `image`            | string                              | link to an image for the document, will be used for SEO                                                                                                                                      |
+| `isMDXComponent`   | boolean                             | custom prop set by mdxjs                                                                                                                                                                     |
+| `keywords`         | string\[]                           |  comma-separated list of SEO keywords                                                                                                                                                        |
+| `menu`             | string                              | to which static menu to attach the document compatibility with docz                                                                                                                          |
+| `order`            | number                              | document order, used to sort documents within the same parent                                                                                                                                |
+| `package`          | string                              | lookup into the global store of PackageInfo package.json                                                                                                                                     |
+| `parameters`       | any                                 | storybook compatibility field                                                                                                                                                                |
+| `route`            | string                              | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
+| `source`           | string                              | source code of the entire file of stories                                                                                                                                                    |
+| `stories`          | string\[]                           | list of story ids contained in the document.                                                                                                                                                 |
+| `tags`             | string\[]                           |  comma-separated list of document tags, used for search and for SOE keywords unless keyswords are specified.                                                                                 |
+| `template`         | Example&lt;>                        | template component to be linked to document stories                                                                                                                                          |
+| `title*`           | string                              | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
+| `type`             | [DocType](#doctype)                 | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
+| `StoryProps`       | StoryProps&lt;>                     |                                                                                                                                                                                              |
+| `PageLayoutProps`  | [PageLayoutProps](#pagelayoutprops) |                                                                                                                                                                                              |
 
 ## Documents
 
 list of story files, or groups
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L316)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L342)_
 
 Record&lt;string, 
 
@@ -353,24 +362,39 @@ Record&lt;string,
 
 >
 
+## DynamicExamples
+
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L175)_
+
+[Story](#story)\[]
+
 ## Example
 
 es named export function, excapsulates a contained example code.
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L174)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L189)_
 
 ### properties
 
-| Name       | Type                                         | Description |
-| ---------- | -------------------------------------------- | ----------- |
-| `Omit`     | Omit&lt;[Story](#story), 'controls'>         |             |
-| `controls` |  \| string \| string\[] \| boolean \| number |             |
+| Name       | Type                                              | Description |
+| ---------- | ------------------------------------------------- | ----------- |
+| `bind*`    | **function** (`props`: Story&lt;>): Example&lt;>; |             |
+| `Omit`     | Omit&lt;Story&lt;>, 'controls'>                   |             |
+| `controls` | [ExampleControls](#examplecontrols)               |             |
+
+## ExampleControls
+
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L177)_
+
+\[name: string]: 
+
+ComponentControl&lt;[ExampleControls](#examplecontrols)> | string | string\[] | boolean | number
 
 ## Packages
 
 list of repositories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L328)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L354)_
 
 Record&lt;string, 
 
@@ -380,13 +404,13 @@ Record&lt;string,
 
 ## Pages
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L318)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L344)_
 
 [Document](#document)\[]
 
 ## StoreObserver
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L330)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L356)_
 
 **function** (`story`: [Story](#story)): void;
 
@@ -401,7 +425,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L323)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L349)_
 
 Record&lt;string, 
 
@@ -429,8 +453,9 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `name*`       | string                            | name of the Story.                                                                                                                                |
 | `renderFn`    | [StoryRenderFn](#storyrenderfn)   | render function for the story                                                                                                                     |
 | `source`      | string                            | the source code of the story, extracted by the AST instrumenting loaders                                                                          |
+| `storyName`   | string                            | alternative name prop                                                                                                                             |
 | `subtitle`    | string                            | optional story subtitle property                                                                                                                  |
-| `StoryProps`  | [StoryProps](#storyprops)         |                                                                                                                                                   |
+| `StoryProps`  | StoryProps&lt;>                   |                                                                                                                                                   |
 
 ## StoryArguments
 
@@ -446,7 +471,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 dynamic story creator function type.
 returns an array of dynamically loaded stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L184)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L203)_
 
 **function** (`doc`\*: [Document](#document)): ### properties| Name        | Type               | Description |
 | ----------- | ------------------ | ----------- |
@@ -462,19 +487,19 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## CURRENT_STORY
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L332)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L358)_
 
 
 
 ## defDocType
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L186)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L205)_
 
 
 
 ## dateToLocalString
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L301)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L327)_
 
 **function** dateToLocalString(`date`: [Date](#date)): string;
 
@@ -487,7 +512,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## getDefaultStore
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L401)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L427)_
 
 **function** getDefaultStore(): [Store](#store);
 
@@ -715,14 +740,14 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 
 _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L279)_
 
-** extends ComponentControlBase&lt;[ComponentControls](#componentcontrols)>**
+** extends ComponentControlBase&lt;>**
 
 ### properties
 
 | Name           | Type                                                           | Description                                                                                                                                            |
 | -------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js data can be set to false, if the control should not be randomized |
-| `defaultValue` | [ComponentControls](#componentcontrols)                        | default value is automatically set at run-time, from the value                                                                                         |
+| `defaultValue` |                                                                | default value is automatically set at run-time, from the value                                                                                         |
 | `description`  | string                                                         | full text property description. can use markdown.                                                                                                      |
 | `editLabel`    | string                                                         | the label for the editor button                                                                                                                        |
 | `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                               |
@@ -732,7 +757,7 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 | `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)               |
 | `required`     | boolean                                                        | visually display the control property as required                                                                                                      |
 | `type*`        | [OBJECT](#object)                                              |                                                                                                                                                        |
-| `value`        | [ComponentControls](#componentcontrols)                        | a default value for the property                                                                                                                       |
+| `value`        |                                                                | a default value for the property                                                                                                                       |
 
 ## ComponentControlOptions
 
@@ -794,7 +819,7 @@ and the value is the ComponentControl
 
 _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L395)_
 
-`name`\*: string: [ComponentControl](#componentcontrol)
+`name`\*: string: ComponentControl&lt;>
 
 ## ColorPickerKind
 
@@ -812,7 +837,7 @@ or a shortcut can be used:
 
 _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L378)_
 
-[ComponentControlText](#componentcontroltext) \| [ComponentControlBoolean](#componentcontrolboolean) \| [ComponentControlColor](#componentcontrolcolor) \| [ComponentControlDate](#componentcontroldate) \| [ComponentControlObject](#componentcontrolobject) \| [ComponentControlButton](#componentcontrolbutton) \| [ComponentControlOptions](#componentcontroloptions) \| [ComponentControlNumber](#componentcontrolnumber) \| [ComponentControlArray](#componentcontrolarray) \| [ComponentControlFiles](#componentcontrolfiles)
+[ComponentControlText](#componentcontroltext) \| [ComponentControlBoolean](#componentcontrolboolean) \| [ComponentControlColor](#componentcontrolcolor) \| [ComponentControlDate](#componentcontroldate) | ComponentControlObject&lt;> | [ComponentControlButton](#componentcontrolbutton) \| [ComponentControlOptions](#componentcontroloptions) \| [ComponentControlNumber](#componentcontrolnumber) \| [ComponentControlArray](#componentcontrolarray) \| [ComponentControlFiles](#componentcontrolfiles)
 
 ## OptionsListType
 
@@ -832,24 +857,26 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 
 component specified for stories or story files
 
-_defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L96)_
+_defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L105)_
 
 
 
 ### properties
 
-| Name            | Type                               | Description                                                                                                                                                                                                                                |
-| --------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `from`          | string                             | imported from                                                                                                                                                                                                                              |
-| `importedName`  | 'default' \| 'namespace' \| string | imported name ex: \- default import import Button from 'buttons'; \- namespace import import \* as Button from 'buttons'; \- named import import { Button } from 'buttons'; \- named alias import import { Btn as Button } from 'buttons'; |
-| `imports`       | [Imports](#imports)                | list of external imports                                                                                                                                                                                                                   |
-| `info`          | [ComponentInfo](#componentinfo)    | docgen generated component info                                                                                                                                                                                                            |
-| `loc`           | [CodeLocation](#codelocation)      | location of the import statement in the source code file                                                                                                                                                                                   |
-| `name*`         | string                             | name of the component as used in the fiel                                                                                                                                                                                                  |
-| `package`       | string                             | lookup into the global store of PackageInfo package.json                                                                                                                                                                                   |
-| `propsInfoFile` | string                             | file containing the component's props info sometimes different from the component source file for example external libraries that have a separate index.d.ts file                                                                          |
-| `request`       | string                             | resolved import request                                                                                                                                                                                                                    |
-| `source`        | string                             | the source code of the component file, extracted by the AST instrumenting loaders. Can also be overriden manually.                                                                                                                         |
+| Name                   | Type                               | Description                                                                                                                                                                                                                                |
+| ---------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `externalDependencies` | [Imports](#imports)                | list of component's file imports from external libraries                                                                                                                                                                                   |
+| `from`                 | string                             | imported from                                                                                                                                                                                                                              |
+| `importedName`         | 'default' \| 'namespace' \| string | imported name ex: \- default import import Button from 'buttons'; \- namespace import import \* as Button from 'buttons'; \- named import import { Button } from 'buttons'; \- named alias import import { Btn as Button } from 'buttons'; |
+| `info`                 | [ComponentInfo](#componentinfo)    | docgen generated component info                                                                                                                                                                                                            |
+| `jsx`                  | [JSXTree](#jsxtree)                | jsx component tree                                                                                                                                                                                                                         |
+| `loc`                  | [CodeLocation](#codelocation)      | location of the import statement in the source code file                                                                                                                                                                                   |
+| `localDependencies`    | [Imports](#imports)                | list of component's file imports from local (imported via relative import) files                                                                                                                                                           |
+| `name*`                | string                             | name of the component as used in the fiel                                                                                                                                                                                                  |
+| `package`              | string                             | lookup into the global store of PackageInfo package.json                                                                                                                                                                                   |
+| `propsInfoFile`        | string                             | file containing the component's props info sometimes different from the component source file for example external libraries that have a separate index.d.ts file                                                                          |
+| `request`              | string                             | resolved import request                                                                                                                                                                                                                    |
+| `source`               | string                             | the source code of the component file, extracted by the AST instrumenting loaders. Can also be overriden manually.                                                                                                                         |
 
 ## ComponentInfo
 
@@ -910,6 +937,26 @@ _defined in [@component-controls/core/src/components.ts](https://github.com/ccon
 | `required`  | boolean                                       | is the property required                                                      |
 | `value`     | [TypeInformation](#typeinformation)\[] \| any | type value elements of enum, array, fields of object return value of function |
 
+## JSXNode
+
+_defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L93)_
+
+### properties
+
+| Name         | Type                                     | Description |
+| ------------ | ---------------------------------------- | ----------- |
+| `Partial`    | Partial&lt;[ImportType](#importtype)>    |             |
+| `attributes` | string\[]                                |             |
+| `children`   | Partial&lt;[ImportType](#importtype)>\[] |             |
+
+## JSXTree
+
+jsx tree of elements for the component
+
+_defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L100)_
+
+[JSXNode](#jsxnode)\[]
+
 ## TypeValue
 
 _defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L3)_
@@ -920,7 +967,7 @@ _defined in [@component-controls/core/src/components.ts](https://github.com/ccon
 
 given a component, return its name
 
-_defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L154)_
+_defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L173)_
 
 **function** getComponentName(`component`\*: any): string | undefined;
 
@@ -953,7 +1000,7 @@ _defined in [@component-controls/core/src/propsInfo.ts](https://github.com/ccont
 
 an item in the ActionBar component
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L134)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L143)_
 
 
 
@@ -966,10 +1013,10 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 | `hidden`     | boolean                                                                                        | hide an action item                                                                                                                                                |
 | `href`       | string                                                                                         | if the title is a string and href is set will use a default \`&lt;Link />\` component                                                                              |
 | `id`         | string                                                                                         | optional id, used if title is not set                                                                                                                              |
-| `node*`      | [React.ReactNode](#react.reactnode)                                                            | title - if a string, will use the built-in components, else can prvide custom React component                                                                      |
+| `node*`      | [ReactNode](#reactnode)                                                                        | title - if a string, will use the built-in components, else can prvide custom React component                                                                      |
 | `onClick`    | **function** (`e`\*: MouseEvent&lt;[HTMLButtonElement](#htmlbuttonelement)>): void \| boolean; | if the title is a string and href is not set, onClick will be used on a \`&lt;Button />\` component                                                                |
 | `order`      | number                                                                                         | optional order, if not provided will use the natural order of items from right to left                                                                             |
-| `panel`      | [React.ReactNode](#react.reactnode)                                                            | panel for Tab-enabled UI, where an action item can open up a panel with tabs in this case, the onClick function can return true/false whether to open up the panel |
+| `panel`      | [ReactNode](#reactnode)                                                                        | panel for Tab-enabled UI, where an action item can open up a panel with tabs in this case, the onClick function can return true/false whether to open up the panel |
 
 ## CodeLocation
 
@@ -1003,7 +1050,7 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 | `column*` | number |             |
 | `line*`   | number |             |
 
-## ImportName
+## ImportType
 
 an import name
 
@@ -1013,18 +1060,24 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 
 ### properties
 
-| Name            | Type   | Description                                                           |
-| --------------- | ------ | --------------------------------------------------------------------- |
-| `importedName*` | string | alias imported as. If a default import, the string 'default' is here. |
-| `name*`         | string | the imported name from the import file                                |
+| Name            | Type                               | Description                                               |
+| --------------- | ---------------------------------- | --------------------------------------------------------- |
+| `from*`         | string                             | imported from                                             |
+| `importedName*` | 'default' \| 'namespace' \| string | importedName - the original named import that was aliased |
+| `key`           | string                             | key into components table                                 |
+| `name*`         | string                             | component name                                            |
+
+## ImportTypes
+
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L127)_
+
+`key`\*: string: [ImportType](#importtype)
 
 ## Imports
 
-imports - library/file as key and the imported names as an array
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L131)_
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L122)_
-
-`key`\*: string: [ImportName](#importname)\[]
+`key`\*: string: Omit&lt;[ImportType](#importtype), 'from'>\[]
 
 ## PackageDependencies
 
@@ -1073,13 +1126,13 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 
 ## ActionItems
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L180)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L189)_
 
 [ActionItem](#actionitem)\[]
 
 ## AsyncFnReturn
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L182)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L191)_
 
 **error**:  | null
 
@@ -1117,13 +1170,13 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 
 default export keyword
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L129)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L138)_
 
 
 
 ## useAsync
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L189)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L198)_
 
 **function** useAsync(`asyncFunction`\*: **function** (): Promise&lt;>;, `immediate`\*: boolean): AsyncFnReturn&lt;, >;
 
@@ -1631,7 +1684,7 @@ _defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols
 
 ## StoreObserver
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L330)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L356)_
 
 **function** (`story`: [Story](#story)): void;
 
@@ -1662,14 +1715,15 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `name*`       | string                            | name of the Story.                                                                                                                                |
 | `renderFn`    | [StoryRenderFn](#storyrenderfn)   | render function for the story                                                                                                                     |
 | `source`      | string                            | the source code of the story, extracted by the AST instrumenting loaders                                                                          |
+| `storyName`   | string                            | alternative name prop                                                                                                                             |
 | `subtitle`    | string                            | optional story subtitle property                                                                                                                  |
-| `StoryProps`  | [StoryProps](#storyprops)         |                                                                                                                                                   |
+| `StoryProps`  | StoryProps&lt;>                   |                                                                                                                                                   |
 
 ## Components
 
 list of components used in stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L311)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L337)_
 
 Record&lt;string, 
 
@@ -1692,7 +1746,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 list of story files, or groups
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L316)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L342)_
 
 Record&lt;string, 
 
@@ -1704,7 +1758,7 @@ Record&lt;string,
 
 list of repositories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L328)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L354)_
 
 Record&lt;string, 
 
@@ -1716,7 +1770,7 @@ Record&lt;string,
 
 list of stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L323)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L349)_
 
 Record&lt;string, 
 
@@ -1761,34 +1815,44 @@ A documentation file's metadata.
 For MDX files, fromtmatter is used to declare the document properties.
 For ESM (ES Modules) documentation files, the default export is used.
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L192)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L211)_
 
 ### properties
 
-| Name                | Type                                | Description                                                                                                                                                                                  |
-| ------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `MDXPage`           | any                                 | for MDX documents, this is an MDXContent function, to be rendered inside a MDXProvider                                                                                                       |
-| `author`            | string                              | document author                                                                                                                                                                              |
-| `componentsLookup*` | \[name: string]: string             | lookup into the global store.components since multiple components of the same name can be used example: \['Button']: 'c:/myapp/Button.tsx'                                                   |
-| `date`              | [Date](#date)                       |  optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                     |
-| `dateModified`      | [Date](#date)                       |  optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                   |
-| `description`       | string                              |  documentation file description                                                                                                                                                              |
-| `draft`             | boolean                             | if set to true, the document will be hidden in production builds.                                                                                                                            |
-| `fileName`          | string                              | file name of the file of stories                                                                                                                                                             |
-| `image`             | string                              | link to an image for the document, will be used for SEO                                                                                                                                      |
-| `isMDXComponent`    | boolean                             | custom prop set by mdxjs                                                                                                                                                                     |
-| `keywords`          | string\[]                           |  comma-separated list of SEO keywords                                                                                                                                                        |
-| `menu`              | string                              | to which static menu to attach the document compatibility with docz                                                                                                                          |
-| `order`             | number                              | document order, used to sort documents within the same parent                                                                                                                                |
-| `package`           | string                              | lookup into the global store of PackageInfo package.json                                                                                                                                     |
-| `route`             | string                              | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
-| `source`            | string                              | source code of the entire file of stories                                                                                                                                                    |
-| `stories`           | string\[]                           | list of story ids contained in the document.                                                                                                                                                 |
-| `tags`              | string\[]                           |  comma-separated list of document tags, used for search and for SOE keywords unless keyswords are specified.                                                                                 |
-| `title*`            | string                              | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
-| `type`              | [DocType](#doctype)                 | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
-| `StoryProps`        | [StoryProps](#storyprops)           |                                                                                                                                                                                              |
-| `PageLayoutProps`   | [PageLayoutProps](#pagelayoutprops) |                                                                                                                                                                                              |
+| Name               | Type                                | Description                                                                                                                                                                                  |
+| ------------------ | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `MDXPage`          | any                                 | for MDX documents, this is an MDXContent function, to be rendered inside a MDXProvider                                                                                                       |
+| `author`           | string                              | document author                                                                                                                                                                              |
+| `componentsLookup` | \[name: string]: string             | lookup into the global store.components since multiple components of the same name can be used example: \['Button']: 'c:/myapp/Button.tsx'                                                   |
+| `date`             | [Date](#date)                       |  optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                     |
+| `dateModified`     | [Date](#date)                       |  optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                   |
+| `description`      | string \| [Element](#element)       |  documentation file description                                                                                                                                                              |
+| `draft`            | boolean                             | if set to true, the document will be hidden in production builds.                                                                                                                            |
+| `fileName`         | string                              | file name of the file of stories                                                                                                                                                             |
+| `image`            | string                              | link to an image for the document, will be used for SEO                                                                                                                                      |
+| `isMDXComponent`   | boolean                             | custom prop set by mdxjs                                                                                                                                                                     |
+| `keywords`         | string\[]                           |  comma-separated list of SEO keywords                                                                                                                                                        |
+| `menu`             | string                              | to which static menu to attach the document compatibility with docz                                                                                                                          |
+| `order`            | number                              | document order, used to sort documents within the same parent                                                                                                                                |
+| `package`          | string                              | lookup into the global store of PackageInfo package.json                                                                                                                                     |
+| `parameters`       | any                                 | storybook compatibility field                                                                                                                                                                |
+| `route`            | string                              | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
+| `source`           | string                              | source code of the entire file of stories                                                                                                                                                    |
+| `stories`          | string\[]                           | list of story ids contained in the document.                                                                                                                                                 |
+| `tags`             | string\[]                           |  comma-separated list of document tags, used for search and for SOE keywords unless keyswords are specified.                                                                                 |
+| `template`         | Example&lt;>                        | template component to be linked to document stories                                                                                                                                          |
+| `title*`           | string                              | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
+| `type`             | [DocType](#doctype)                 | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
+| `StoryProps`       | StoryProps&lt;>                     |                                                                                                                                                                                              |
+| `PageLayoutProps`  | [PageLayoutProps](#pagelayoutprops) |                                                                                                                                                                                              |
+
+## ExampleControls
+
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L177)_
+
+\[name: string]: 
+
+ComponentControl&lt;[ExampleControls](#examplecontrols)> | string | string\[] | boolean | number
 
 ## ColorPickerKind
 
@@ -1796,23 +1860,31 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 
 'hex' | 'rgb' | 'rgba' | 'hsl' | 'hsla'
 
-## ComponentControl
+## JSXTree
 
-ComponentControl is a either an object of property settings
-or a shortcut can be used:
- properties: {
-  text: 'Hello',
-},
+jsx tree of elements for the component
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L378)_
+_defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L100)_
 
-[ComponentControlText](#componentcontroltext) \| [ComponentControlBoolean](#componentcontrolboolean) \| [ComponentControlColor](#componentcontrolcolor) \| [ComponentControlDate](#componentcontroldate) \| [ComponentControlObject](#componentcontrolobject) \| [ComponentControlButton](#componentcontrolbutton) \| [ComponentControlOptions](#componentcontroloptions) \| [ComponentControlNumber](#componentcontrolnumber) \| [ComponentControlArray](#componentcontrolarray) \| [ComponentControlFiles](#componentcontrolfiles)
+[JSXNode](#jsxnode)\[]
 
 ## TypeValue
 
 _defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L3)_
 
 'any' | 'boolean' | 'number' | 'string' | 'array' | 'object' | 'enum' | 'union' | 'literal' | 'symbol' | 'function' | string
+
+## JSXNode
+
+_defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L93)_
+
+### properties
+
+| Name         | Type                                     | Description |
+| ------------ | ---------------------------------------- | ----------- |
+| `Partial`    | Partial&lt;[ImportType](#importtype)>    |             |
+| `attributes` | string\[]                                |             |
+| `children`   | Partial&lt;[ImportType](#importtype)>\[] |             |
 
 ## PackageDependency
 
@@ -1861,7 +1933,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## ActionItems
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L180)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L189)_
 
 [ActionItem](#actionitem)\[]
 
@@ -2018,8 +2090,9 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `name*`       | string                            | name of the Story.                                                                                                                                |
 | `renderFn`    | [StoryRenderFn](#storyrenderfn)   | render function for the story                                                                                                                     |
 | `source`      | string                            | the source code of the story, extracted by the AST instrumenting loaders                                                                          |
+| `storyName`   | string                            | alternative name prop                                                                                                                             |
 | `subtitle`    | string                            | optional story subtitle property                                                                                                                  |
-| `StoryProps`  | [StoryProps](#storyprops)         |                                                                                                                                                   |
+| `StoryProps`  | StoryProps&lt;>                   |                                                                                                                                                   |
 
 ## DocType
 
@@ -2033,34 +2106,36 @@ A documentation file's metadata.
 For MDX files, fromtmatter is used to declare the document properties.
 For ESM (ES Modules) documentation files, the default export is used.
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L192)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L211)_
 
 ### properties
 
-| Name                | Type                                | Description                                                                                                                                                                                  |
-| ------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `MDXPage`           | any                                 | for MDX documents, this is an MDXContent function, to be rendered inside a MDXProvider                                                                                                       |
-| `author`            | string                              | document author                                                                                                                                                                              |
-| `componentsLookup*` | \[name: string]: string             | lookup into the global store.components since multiple components of the same name can be used example: \['Button']: 'c:/myapp/Button.tsx'                                                   |
-| `date`              | [Date](#date)                       |  optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                     |
-| `dateModified`      | [Date](#date)                       |  optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                   |
-| `description`       | string                              |  documentation file description                                                                                                                                                              |
-| `draft`             | boolean                             | if set to true, the document will be hidden in production builds.                                                                                                                            |
-| `fileName`          | string                              | file name of the file of stories                                                                                                                                                             |
-| `image`             | string                              | link to an image for the document, will be used for SEO                                                                                                                                      |
-| `isMDXComponent`    | boolean                             | custom prop set by mdxjs                                                                                                                                                                     |
-| `keywords`          | string\[]                           |  comma-separated list of SEO keywords                                                                                                                                                        |
-| `menu`              | string                              | to which static menu to attach the document compatibility with docz                                                                                                                          |
-| `order`             | number                              | document order, used to sort documents within the same parent                                                                                                                                |
-| `package`           | string                              | lookup into the global store of PackageInfo package.json                                                                                                                                     |
-| `route`             | string                              | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
-| `source`            | string                              | source code of the entire file of stories                                                                                                                                                    |
-| `stories`           | string\[]                           | list of story ids contained in the document.                                                                                                                                                 |
-| `tags`              | string\[]                           |  comma-separated list of document tags, used for search and for SOE keywords unless keyswords are specified.                                                                                 |
-| `title*`            | string                              | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
-| `type`              | [DocType](#doctype)                 | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
-| `StoryProps`        | [StoryProps](#storyprops)           |                                                                                                                                                                                              |
-| `PageLayoutProps`   | [PageLayoutProps](#pagelayoutprops) |                                                                                                                                                                                              |
+| Name               | Type                                | Description                                                                                                                                                                                  |
+| ------------------ | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `MDXPage`          | any                                 | for MDX documents, this is an MDXContent function, to be rendered inside a MDXProvider                                                                                                       |
+| `author`           | string                              | document author                                                                                                                                                                              |
+| `componentsLookup` | \[name: string]: string             | lookup into the global store.components since multiple components of the same name can be used example: \['Button']: 'c:/myapp/Button.tsx'                                                   |
+| `date`             | [Date](#date)                       |  optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                     |
+| `dateModified`     | [Date](#date)                       |  optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                   |
+| `description`      | string \| [Element](#element)       |  documentation file description                                                                                                                                                              |
+| `draft`            | boolean                             | if set to true, the document will be hidden in production builds.                                                                                                                            |
+| `fileName`         | string                              | file name of the file of stories                                                                                                                                                             |
+| `image`            | string                              | link to an image for the document, will be used for SEO                                                                                                                                      |
+| `isMDXComponent`   | boolean                             | custom prop set by mdxjs                                                                                                                                                                     |
+| `keywords`         | string\[]                           |  comma-separated list of SEO keywords                                                                                                                                                        |
+| `menu`             | string                              | to which static menu to attach the document compatibility with docz                                                                                                                          |
+| `order`            | number                              | document order, used to sort documents within the same parent                                                                                                                                |
+| `package`          | string                              | lookup into the global store of PackageInfo package.json                                                                                                                                     |
+| `parameters`       | any                                 | storybook compatibility field                                                                                                                                                                |
+| `route`            | string                              | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
+| `source`           | string                              | source code of the entire file of stories                                                                                                                                                    |
+| `stories`          | string\[]                           | list of story ids contained in the document.                                                                                                                                                 |
+| `tags`             | string\[]                           |  comma-separated list of document tags, used for search and for SOE keywords unless keyswords are specified.                                                                                 |
+| `template`         | Example&lt;>                        | template component to be linked to document stories                                                                                                                                          |
+| `title*`           | string                              | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
+| `type`             | [DocType](#doctype)                 | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
+| `StoryProps`       | StoryProps&lt;>                     |                                                                                                                                                                                              |
+| `PageLayoutProps`  | [PageLayoutProps](#pagelayoutprops) |                                                                                                                                                                                              |
 
 ## PageTabs
 

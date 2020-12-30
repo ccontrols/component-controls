@@ -5,30 +5,32 @@ type: tutorial
 order: 1
 tags:
   - configuration
-author: atanasster  
+author: atanasster
 ---
 
 ## File
+
 The build-time configuration file is located in the [configuration-path](/configuration/overview/#configuration-path) folder.
 This file runs under a **nodejs** process and some functionlity is limited (e.g. typescript).
 Possible names for the file:
+
 - `buildtime.js`
 - `build.js`
 - `main.js`
 
 ## Configurable Fields
 
-| Name           | Type                                | Description                                                                                                                                    |
-| -------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `categories`   | [DocType[]](/tutorial/reference/configuration#doctype)            | page types that are considered as categories fields as well                                                                                     |
-| `pages`        | [PagesOnlyRoutes](/tutorial/reference/configuration#pagesonlyroutes) | base url path for API documentation pages.|
-| `stories` or `files` | string | string[]                           | wild card search string for the stories internally using [glob](https://www.npmjs.com/package/glob)|
-| `ignore` | string[]                           | files to ignore while building the site, in lowercase. Defaults to ['readme.md', 'changelog.md', 'code_of_conduct.md', 'contributing.md', 'license.md',]|
-| `webpack` or `finalWebpack`     | [WebpackConfig](/tutorial/reference/configuration#webpackconfig)     | custom webpack configuration setup. One or the other will be used                                                                             |
-| `siteRoot` | string                           | the site base url, by default the site starts at /|
-| `siteMap`         |   `{ pages?: { home: SitemapConfigPage; index: SitemapConfigPage; doc: SitemapConfigPage;};`     | if false, disable automatic sitemap generation or specify priority of pages|
-| `siteUrl`         | string                               | Deployed site url, also used for auto generated sitemap.                                                                                                |
-| `loaders`         |  'css-loader'/| 'postcss-loader' /| 'sass-loader' /| 'less-loader' /| 'stylus-loader' /| 'url-loader' /| 'raw-loader' /| 'file-loader';                              | Shortcut to change the webpack loaders' options, instead of using the webpack setting|
+| Name                        | Type                                                                                       | Description                                                                                                                                              |
+| --------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `categories`                | [DocType[]](/tutorial/reference/configuration#doctype)                                     | page types that are considered as categories fields as well                                                                                              |
+| `pages`                     | [PagesOnlyRoutes](/tutorial/reference/configuration#pagesonlyroutes)                       | base url path for API documentation pages.                                                                                                               |
+| `stories` or `files`        | string                                                                                     | string[]                                                                                                                                                 | wild card search string for the stories internally using [glob](https://www.npmjs.com/package/glob) |
+| `ignore`                    | string[]                                                                                   | files to ignore while building the site, in lowercase. Defaults to ['readme.md', 'changelog.md', 'code_of_conduct.md', 'contributing.md', 'license.md',] |
+| `webpack` or `finalWebpack` | [WebpackConfig](/tutorial/reference/configuration#webpackconfig)                           | custom webpack configuration setup. One or the other will be used                                                                                        |
+| `siteRoot`                  | string                                                                                     | the site base url, by default the site starts at /                                                                                                       |
+| `siteMap`                   | `{ pages?: { home: SitemapConfigPage; index: SitemapConfigPage; doc: SitemapConfigPage;};` | if false, disable automatic sitemap generation or specify priority of pages                                                                              |
+| `siteUrl`                   | string                                                                                     | Deployed site url, also used for auto generated sitemap.                                                                                                 |
+| `loaders`                   | 'css-loader'/                                                                              | 'postcss-loader' /                                                                                                                                       | 'sass-loader' / | 'less-loader' / | 'stylus-loader' / | 'url-loader' / | 'raw-loader' / | 'file-loader'; | Shortcut to change the webpack loaders' options, instead of using the webpack setting |
 
 ## categories
 
@@ -43,13 +45,13 @@ module.exports = {
       basePath: 'lang/',
     },
   },
-}  
+}
 ```
-
 
 ## pages
 
 the following example sets up custom page types and routes
+
 - `api` is replacing standard `docs` and adds a new custom tab `test`
 - `tutorial` is a new page type
 
@@ -58,13 +60,16 @@ module.exports = {
   pages: {
     story: {
       basePath: 'api/',
-      tabs: [...defaultBuildConfig.pages.story.tabs, { route: 'test' }],
+      tabs: {
+        ...defaultBuildConfig.pages.story.tabs,
+        test: '@component-controls/pages/TestingPage',
+      },
     },
     tutorial: {
       basePath: 'tutorial/',
     },
   },
-}  
+};
 ```
 
 ## stories
@@ -75,10 +80,8 @@ the following example will search for documents in the `../src/docs` folder
 
 ```js:title=.config/buildtime.js
 module.exports = {
-  stories: [
-    '../src/docs/*.@(mdx|tsx)',
-  ],
-}  
+  stories: ['../src/docs/*.@(mdx|tsx)'],
+};
 ```
 
 ## siteRoot
@@ -90,7 +93,7 @@ the following example will prefix all paths with `/docs/`
 ```js:title=.config/buildtime.js
 module.exports = {
   siteRoot: '/docs/',
-}  
+};
 ```
 
 ## siteMap
@@ -100,9 +103,8 @@ the following example will disable automatic generating the `sitemap.xml` file.
 ```js:title=.config/buildtime.js
 module.exports = {
   siteMap: false,
-}  
+};
 ```
-
 
 ## loaders
 
@@ -117,5 +119,5 @@ module.exports = {
       },
     },
   },
-}
+};
 ```

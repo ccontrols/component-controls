@@ -25,6 +25,10 @@ export interface TagProps {
    * theme variant additional
    */
   variant?: string;
+  /**
+   * raw string value to be injected. Useful for highlighting searh results
+   */
+  raw?: string;
 }
 
 /**
@@ -32,6 +36,7 @@ export interface TagProps {
  */
 export const Tag: FC<TagProps & Omit<BoxProps, 'variant'>> = ({
   children,
+  raw,
   color = 'white',
   borderSize = 2,
   transparentAmount = 0.85,
@@ -50,7 +55,11 @@ export const Tag: FC<TagProps & Omit<BoxProps, 'variant'>> = ({
         ...get(theme, variant as ReactText),
       }}
     >
-      <Text>{children}</Text>
+      {raw ? (
+        <Text dangerouslySetInnerHTML={{ __html: raw }} />
+      ) : (
+        <Text>{children}</Text>
+      )}
     </Box>
   );
 };

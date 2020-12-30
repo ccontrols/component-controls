@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/logger",
-  "version": "1.37.0",
+  "version": "2.5.0",
   "description": "compilation logging utilities",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -33,7 +33,7 @@
     "chalk": "^4.0.0"
   },
   "devDependencies": {
-    "@component-controls/ts-markdown-docs": "^1.37.0",
+    "@component-controls/ts-markdown-docs": "^2.2.0",
     "@types/jest": "^26.0.10",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ControlTypes, Example } from '@component-controls/core';
 import { ControlsStateProvider } from '@component-controls/store';
 import { TextEditor } from './TextEditor';
@@ -9,7 +9,7 @@ export default {
 };
 
 export const overview: Example = () => {
-  const [state, setState] = React.useState('Hello');
+  const [state, setState] = useState('Hello');
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -23,7 +23,7 @@ export const overview: Example = () => {
 };
 
 export const placeholder: Example = () => {
-  const [state, setState] = React.useState();
+  const [state, setState] = useState();
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
@@ -41,7 +41,7 @@ export const placeholder: Example = () => {
 };
 
 export const textArea: Example = () => {
-  const [state, setState] = React.useState();
+  const [state, setState] = useState();
   return (
     <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}

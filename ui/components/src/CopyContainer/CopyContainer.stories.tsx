@@ -1,11 +1,11 @@
 import React from 'react';
-import { Example } from '@component-controls/core';
+import { Document, Example } from '@component-controls/core';
 import { CopyContainer } from '.';
 
 export default {
   title: 'Components/CopyContainer',
   component: CopyContainer,
-};
+} as Document;
 
 export const overview: Example = () => (
   <CopyContainer value="some text">

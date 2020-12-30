@@ -48,7 +48,7 @@ export const useComponents = ({
     components: { [key: string]: any } | undefined,
   ): Components => {
     const getComponent = (name: string) =>
-      doc?.componentsLookup[name] &&
+      doc?.componentsLookup?.[name] &&
       store?.components[doc.componentsLookup[name]];
     return store && doc && components
       ? Object.keys(components).reduce((acc, key) => {
@@ -141,8 +141,13 @@ export const useCurrentPropsCount = (): number => {
   const doc = useCurrentDocument();
   return components && doc
     ? Object.keys(components).reduce((acc, key) => {
-        const component = store.components[doc.componentsLookup[key]];
-        return acc + Object.keys(component.info?.props || {}).length;
+        const component = doc.componentsLookup
+          ? store.components[doc.componentsLookup[key]]
+          : undefined;
+        return (
+          acc +
+          (component ? Object.keys(component.info?.props || {}).length : 0)
+        );
       }, 0)
     : 0;
 };

@@ -1,25 +1,16 @@
-import * as fs from 'fs';
 import * as resolve from 'resolve';
-import * as parser from '@babel/parser';
 import * as path from 'path';
-import { File } from '@babel/types';
 import traverse from '@babel/traverse';
 import {
   CodeLocation,
-  Imports,
   Story,
   getASTSource,
+  ImportTypes,
 } from '@component-controls/core';
 import { extractFunctionParameters } from './extract-function-parameters';
 import { sourceLocation } from '../misc/source-location';
-import { ImportTypes, traverseImports } from './extract-imports';
-
-import {
-  traverseExports,
-  ExportTypes,
-  ExportType,
-  EXPORT_ALL,
-} from './extract-exports';
+import { parseFile, parseImports, parseExports } from '../misc/ast_store';
+import { ExportType, EXPORT_ALL } from './extract-exports';
 import { InstrumentOptions, MDXExportType } from '../types';
 
 export interface FollowImportType {
@@ -31,7 +22,7 @@ export interface FollowImportType {
   loc?: CodeLocation;
   source?: string;
   imported?: string;
-  imports?: Imports;
+  imports?: ImportTypes;
   node?: any;
   path?: any;
 }
@@ -41,10 +32,12 @@ export const followImports = (
   filePath: string,
   fileSource?: string,
   options?: InstrumentOptions,
-  initialAST?: File,
 ): FollowImportType | undefined => {
   const { parser: parserOptions, resolver: resolveOptions, components } =
     options || {};
+  if (!importName) {
+    return undefined;
+  }
   const fileName =
     components && components.resolveFile
       ? components.resolveFile(importName, filePath)
@@ -52,22 +45,11 @@ export const followImports = (
   if (!fileName) {
     return undefined;
   }
-  const source =
-    fileName === filePath && fileSource
-      ? fileSource
-      : fs.readFileSync(fileName, 'utf8');
-  const ast =
-    fileName === filePath && initialAST
-      ? initialAST
-      : parser.parse(source, parserOptions);
+  const { source } = parseFile(fileName, parserOptions);
   const baseImportedName = importName.split('.')[0];
 
-  const imports: ImportTypes = {};
-  traverse(ast, traverseImports(imports));
-  const exports: ExportTypes = {
-    named: {},
-  };
-  traverse(ast, traverseExports(exports));
+  const imports = parseImports(fileName, parserOptions);
+  const exports = parseExports(fileName, parserOptions);
   const folderName = path.dirname(fileName);
   const findExport =
     baseImportedName === 'default' || baseImportedName === 'namespace'
@@ -84,30 +66,7 @@ export const followImports = (
       result.source = source ? source : undefined;
       result.node = findExport.node;
       result.path = findExport.path;
-      const externalImports = Object.keys(imports)
-        .filter(key => !imports[key].from.startsWith('.'))
-        .reduce(
-          (
-            acc: {
-              [key: string]: {
-                name: string;
-                importedName: string;
-              }[];
-            },
-            key,
-          ) => {
-            const { name, from, importedName } = imports[key];
-            if (acc[from]) {
-              return {
-                ...acc,
-                [from]: [...acc[from], { name, importedName }],
-              };
-            }
-            return { ...acc, [from]: [{ name, importedName }] };
-          },
-          {},
-        );
-      result.imports = externalImports;
+      result.imports = imports;
       return result;
     } else {
       const resolvedFilePath = resolve.sync(findExport.from, {
@@ -194,10 +153,9 @@ export const followStoryImport = (
   filePath: string,
   source: string,
   options: InstrumentOptions,
-  ast: File,
   exports?: MDXExportType,
 ): Story | undefined => {
-  const follow = followImports(importedName, filePath, source, options, ast);
+  const follow = followImports(importedName, filePath, source, options);
   if (follow) {
     const story: Story = { name: storyName, id: storyName };
     if (follow.loc) {

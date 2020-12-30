@@ -1,12 +1,12 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes, Document } from '@component-controls/core';
 import { BoltColor, BoltColorPalette } from './BoltColor';
 import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/BoltColor',
   component: BoltColor,
-};
+} as Document;
 
 export const overview: Example<ColorProps> = ({ name, color }) => (
   <BoltColor name={name} color={color} />

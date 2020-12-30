@@ -4,7 +4,7 @@ import {
   DocHomePagesPath,
   getDocPages,
   DocPagesPath,
-} from '@component-controls/store';
+} from '@component-controls/routes';
 import {
   Store,
   DocType,
@@ -12,7 +12,7 @@ import {
   getRoutePath,
   ensureTrailingSlash,
 } from '@component-controls/core';
-export { getIndexPage } from '@component-controls/store';
+export { getIndexPage } from '@component-controls/routes';
 
 export const getHomePagesPaths = (store: Store): string[] => {
   const pages = getHomePagesStore(store);

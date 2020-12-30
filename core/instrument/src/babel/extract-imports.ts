@@ -1,15 +1,7 @@
-import * as parser from '@babel/parser';
+import { ParserOptions } from '@babel/parser';
+import { ImportTypes } from '@component-controls/core';
 import traverse, { TraverseOptions } from '@babel/traverse';
-
-export interface ImportType {
-  name: string;
-  importedName: 'default' | 'namespace' | string;
-  from: string;
-}
-
-export interface ImportTypes {
-  [key: string]: ImportType;
-}
+import { parseFile } from '../misc/ast_store';
 
 export const traverseImports = (results: ImportTypes): TraverseOptions => {
   return {
@@ -41,11 +33,11 @@ export const traverseImports = (results: ImportTypes): TraverseOptions => {
 };
 
 export const extractImports = (
-  source: string,
-  parserOptions?: parser.ParserOptions,
+  fileName: string,
+  parserOptions?: ParserOptions,
 ): ImportTypes => {
   const results: ImportTypes = {};
-  const ast = parser.parse(source, parserOptions);
+  const { ast } = parseFile(fileName, parserOptions);
 
   traverse(ast as any, traverseImports(results));
   return results;

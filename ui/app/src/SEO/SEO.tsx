@@ -37,13 +37,17 @@ export const SEO: FC<SEOProps> = ({ Helmet, doc, config }) => {
     links = defaultLinks,
   } = config || {};
   const pageImage = doc?.image || image;
-  const isLocalImage = pageImage && useIsLocalLink(pageImage);
+  const isLocalImage = useIsLocalLink(pageImage);
   const theme = useTheme();
   const imageUrl =
     isLocalImage && pageImage
       ? ensureTrailingSlash(siteUrl) + removeStartingSlash(pageImage)
       : pageImage;
-  const pageDescription = story?.description || docDescription || description;
+  const pageDescription = ((typeof story?.description === 'string'
+    ? story.description
+    : undefined) ||
+    docDescription ||
+    description) as string | undefined;
   const url =
     typeof window === 'undefined'
       ? getStoryPath(story?.id, doc, store, tab)

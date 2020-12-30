@@ -1,55 +1,148 @@
-import { deepMerge, deepMergeArrays } from '../src';
+import { deepMerge, mergeConfig } from '../src';
 describe('deep merge', () => {
   it('Should append arrays', () => {
-    expect(
-      deepMerge(
+    const a = deepMerge(
+      {
+        a: [{ a: 'a', b: 'b' }],
+      },
+      {
+        a: [{ c: 'c', d: 'd' }],
+      },
+    );
+    expect(a).toMatchObject({
+      a: [
         {
-          a: [{ a: 'a', b: 'b' }],
+          a: 'a',
+          b: 'b',
         },
         {
-          a: [{ c: 'c', d: 'd' }],
+          c: 'c',
+          d: 'd',
         },
-      ),
-    ).toMatchSnapshot();
+      ],
+    });
   });
 
   it('Should merge arrays', () => {
-    expect(
-      deepMergeArrays(
+    const a = mergeConfig(
+      {
+        a: [{ a: 'a', b: 'b' }],
+      },
+      {
+        a: [{ c: 'c', d: 'd' }],
+      },
+    );
+    expect(a).toMatchObject({
+      a: [
         {
-          a: [{ a: 'a', b: 'b' }],
+          a: 'a',
+          b: 'b',
+          c: 'c',
+          d: 'd',
         },
-        {
-          a: [{ c: 'c', d: 'd' }],
-        },
-      ),
-    ).toMatchSnapshot();
+      ],
+    });
   });
   it('Should merge arrays and fields', () => {
-    expect(
-      deepMergeArrays(
+    const a = mergeConfig(
+      {
+        a: [
+          { a: 'a', b: 'b' },
+          { c: 'c', d: 'd' },
+        ],
+      },
+      {
+        a: [{ b: 'c' }],
+      },
+    );
+    expect(a).toMatchObject({
+      a: [
         {
-          a: [
-            { a: 'a', b: 'b' },
-            { c: 'c', d: 'd' },
-          ],
+          a: 'a',
+          b: 'c',
         },
-        {
-          a: [{ b: 'c' }],
-        },
-      ),
-    ).toMatchSnapshot();
+      ],
+    });
   });
   it('Should merge arrays mistmatched fields', () => {
-    expect(
-      deepMergeArrays(
+    const a = mergeConfig(
+      {
+        b: [{ a: 'a', b: 'b' }],
+      },
+      {
+        a: [{ b: 'c' }],
+      },
+    );
+    expect(a).toMatchObject({
+      a: [
         {
-          b: [{ a: 'a', b: 'b' }],
+          b: 'c',
         },
+      ],
+      b: [
         {
-          a: [{ b: 'c' }],
+          a: 'a',
+          b: 'b',
         },
-      ),
-    ).toMatchSnapshot();
+      ],
+    });
+  });
+  it('Should merge arrays of string', () => {
+    const a = mergeConfig(
+      {
+        a: ['abc'],
+      },
+      {
+        a: ['abc', 'cde', 'efg'],
+      },
+    );
+    expect(a).toMatchObject({ a: ['abc', 'cde', 'efg'] });
+  });
+
+  it('Should merge overwrite tabs', () => {
+    const a = mergeConfig(
+      {
+        pages: {
+          story: {
+            option: { a: 'a', z: 'z' },
+            tabs: { a: 'a', z: 'z' },
+          },
+        },
+      },
+      {
+        pages: {
+          story: {
+            option: {
+              w: 'w',
+              x: 'x',
+              y: 'y',
+            },
+            tabs: {
+              w: 'w',
+              x: 'x',
+              y: 'y',
+            },
+          },
+        },
+      },
+    );
+    expect(a).toMatchObject({
+      pages: {
+        story: {
+          option: {
+            a: 'a',
+            z: 'z',
+            w: 'w',
+            x: 'x',
+            y: 'y',
+          },
+          tabs: {
+            w: 'w',
+            x: 'x',
+            y: 'y',
+          },
+        },
+      },
+    });
   });
 });

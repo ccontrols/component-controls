@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, SxStyleProp } from 'theme-ui';
+import { jsx, BoxProps } from 'theme-ui';
 import tinycolor from 'tinycolor2';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr, mostReadable, contrastGrade } from '../utils';
@@ -43,7 +43,7 @@ export const BaseCometColor: FC<ColorBlockProps> = ({
   const contrast = tinycolor.readability(hex, contrastColor);
 
   let accessibilityTest;
-  const testProps: SxStyleProp = {
+  const testProps: BoxProps['sx'] = {
     ml: 3,
     width: '40px',
     textAlign: 'center',

@@ -40,8 +40,8 @@ Object {
     "optionalElement": Object {
       "parentName": "MyComponentProps",
       "type": Object {
-        "name": "any",
-        "raw": "any",
+        "name": "function",
+        "raw": "ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)> | null) | (new (props: any) => Component<any, any, any>)>",
       },
     },
     "optionalElementType": Object {
@@ -54,16 +54,14 @@ Object {
     "optionalEnum": Object {
       "parentName": "MyComponentProps",
       "type": Object {
-        "name": "enum",
+        "name": "union",
         "raw": "\\"News\\" | \\"Photos\\"",
         "value": Array [
           Object {
-            "name": "string",
-            "value": "News",
+            "name": "News",
           },
           Object {
-            "name": "string",
-            "value": "Photos",
+            "name": "Photos",
           },
         ],
       },
@@ -72,7 +70,7 @@ Object {
       "parentName": "MyComponentProps",
       "type": Object {
         "name": "function",
-        "raw": "(args: any) => any",
+        "raw": "((args: any) => any)",
       },
     },
     "optionalMessage": Object {
@@ -85,8 +83,8 @@ Object {
     "optionalNode": Object {
       "parentName": "MyComponentProps",
       "type": Object {
-        "name": "any",
-        "raw": "any",
+        "name": "ReactNode",
+        "raw": "ReactNode",
       },
     },
     "optionalNumber": Object {
@@ -115,14 +113,14 @@ Object {
       "parentName": "MyComponentProps",
       "type": Object {
         "name": "object",
-        "raw": "{ optionalProperty?: string; requiredProperty: number; }",
+        "raw": "{ optionalProperty?: string; requiredProperty: number; } | undefined",
       },
     },
     "optionalObjectWithStrictShape": Object {
       "parentName": "MyComponentProps",
       "type": Object {
         "name": "object",
-        "raw": "{ optionalProperty?: string; requiredProperty: number; }",
+        "raw": "{ optionalProperty?: string; requiredProperty: number; } | undefined",
       },
     },
     "optionalString": Object {

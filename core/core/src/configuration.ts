@@ -11,6 +11,7 @@ import { ActionItems } from './utility';
 import { StoryRenderFn } from './utility';
 import { ReactElement } from 'react';
 import { Story, Document } from './document';
+import { SearchOptions } from './search';
 
 /**
  * render function by framework. By default 'react'
@@ -26,24 +27,52 @@ export type FrameworkRenderFn = (
  */
 export interface TabConfiguration {
   /**
-   * tab route string
-   */
-  route?: string;
-  /**
    * title will be used as tab caption
    */
-  title: string;
+  title?: string;
   /**
-   * page container type - a key into the component-controls/pages package
+   * page template - can be a package default export
    */
-  type?: string;
+  component: ComponentType;
+
   /**
-   * render function, returns a react component
+   * page container react component
    */
-  render?: (props: any) => ReactNode;
+  container?: ComponentType | null;
+
+  /**
+   * variant key in the pagecontainer theme value
+   */
+  variant?: string;
 }
 
-export type PageTabs = TabConfiguration[];
+export type PageTab = string | TabConfiguration | [string, TabConfiguration];
+
+export type PageTabs = Record<string, PageTab>;
+
+export const loadDefaultExport = (
+  imported?: { default: TabConfiguration } | TabConfiguration,
+): TabConfiguration => {
+  return (imported as { default: TabConfiguration })?.default || imported;
+};
+export const loadPageTab = (
+  tab: PageTab,
+  imported?: TabConfiguration,
+): TabConfiguration => {
+  if (imported) {
+    if (Array.isArray(tab)) {
+      if (tab.length === 2) {
+        const loaded =
+          typeof tab[0] === 'string' ? loadDefaultExport(imported) : tab[0];
+        return { ...loaded, ...tab[1] };
+      }
+    }
+    if (typeof tab === 'string') {
+      return loadDefaultExport(imported);
+    }
+  }
+  return tab as TabConfiguration;
+};
 
 export type DocType = 'story' | 'blog' | 'page' | 'tags' | 'author' | string;
 
@@ -110,7 +139,7 @@ export type PageConfiguration = {
   /**
    * tabs configuration for story-type pages
    */
-  tabs?: PageTabs;
+  tabs?: Record<string, TabConfiguration>;
 } & PageLayoutProps;
 
 export type PagesConfiguration = Record<DocType, PageConfiguration>;
@@ -118,7 +147,7 @@ export type PagesConfiguration = Record<DocType, PageConfiguration>;
 export type PagesOnlyRoutes = Record<
   DocType,
   Pick<PageConfiguration, 'basePath' | 'sideNav'> & {
-    tabs?: Pick<TabConfiguration, 'route'>[];
+    tabs?: PageTabs;
   }
 >;
 
@@ -181,6 +210,10 @@ export type BuildConfiguration = BuildProps & {
    * instrumentation configuration
    */
   instrument?: any;
+  /**
+   * search options
+   */
+  search?: SearchOptions;
 };
 
 export interface ToolbarConfig {
@@ -332,46 +365,6 @@ export interface RunOnlyConfiguration {
 export type RunConfiguration = RunOnlyConfiguration &
   Omit<BuildConfiguration, 'pages'>;
 
-export const defaultRunConfig: RunConfiguration = {
-  title: 'Component controls',
-  description:
-    'Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site.',
-  language: 'en',
-  author: '@component-controls',
-  controls: {
-    threshold: 10,
-  },
-  pages: {
-    story: {
-      label: 'Docs',
-      navSidebar: true,
-      contextSidebar: true,
-      topMenu: true,
-      tabs: [{ title: 'Documentation', type: 'ClassicPage' }],
-    },
-    blog: {
-      label: 'Blog',
-      contextSidebar: true,
-      topMenu: true,
-      indexHome: true,
-    },
-    author: {
-      label: 'Authors',
-    },
-    page: {
-      label: 'Page',
-      container: null,
-    },
-    tags: {
-      label: 'Tags',
-    },
-  },
-};
-
-export const convertConfig = (config: RunConfiguration): RunConfiguration => {
-  return config;
-};
-
 export const defaultBuildConfig: BuildConfiguration = {
   siteRoot: '/',
   siteMap: {
@@ -402,7 +395,9 @@ export const defaultBuildConfig: BuildConfiguration = {
         storyPaths: true,
         collapseSingle: true,
       },
-      tabs: [{ route: 'page' }],
+      tabs: {
+        page: require.resolve('@component-controls/pages/ClassicPage'),
+      },
     },
     blog: {
       basePath: 'blogs/',
@@ -417,4 +412,48 @@ export const defaultBuildConfig: BuildConfiguration = {
       basePath: 'tags/',
     },
   },
+  search: {
+    /**
+     * the search plugin search routine
+     */
+    searchingModule: '@component-controls/search-fusejs',
+  },
+};
+export const defaultRunConfig: RunConfiguration = {
+  title: 'Component controls',
+  description:
+    'Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site.',
+  language: 'en',
+  author: '@component-controls',
+  controls: {
+    threshold: 10,
+  },
+  pages: {
+    story: {
+      label: 'Docs',
+      navSidebar: true,
+      contextSidebar: true,
+      topMenu: true,
+    },
+    blog: {
+      label: 'Blog',
+      contextSidebar: true,
+      topMenu: true,
+      indexHome: true,
+    },
+    author: {
+      label: 'Authors',
+    },
+    page: {
+      label: 'Page',
+      container: null,
+    },
+    tags: {
+      label: 'Tags',
+    },
+  },
+};
+
+export const convertConfig = (config: RunConfiguration): RunConfiguration => {
+  return config;
 };

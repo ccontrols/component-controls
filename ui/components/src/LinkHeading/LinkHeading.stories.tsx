@@ -1,12 +1,12 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Document, Example, ControlTypes } from '@component-controls/core';
 
 import { LinkHeading, LinkHeadingProps } from './';
 
 export default {
   title: 'Components/LinkHeading',
   component: LinkHeading,
-};
+} as Document;
 
 export const overview: Example<LinkHeadingProps> = ({ as, children }) => (
   <LinkHeading as={as}>{children}</LinkHeading>

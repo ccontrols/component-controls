@@ -6,11 +6,11 @@ import {
   DetailedHTMLProps,
   ThHTMLAttributes,
 } from 'react';
-import { jsx, SxStyleProp, Theme } from 'theme-ui';
+import { jsx, BoxProps, Theme } from 'theme-ui';
 import { ContainerProps } from '../../types';
 
 export interface TableColumn {
-  sx?: SxStyleProp;
+  sx?: BoxProps['sx'];
   props?: DetailedHTMLProps<
     ThHTMLAttributes<HTMLTableHeaderCellElement>,
     HTMLTableHeaderCellElement
@@ -22,6 +22,7 @@ export interface TableColumn {
 export interface TableContainerOwnProps {
   header?: ReactNode;
   columns: TableColumn[];
+  sx?: BoxProps['sx'];
 }
 
 export type TableContainerProps = TableContainerOwnProps & ContainerProps;
@@ -57,6 +58,7 @@ export const TableContainer: FC<TableContainerProps> = ({
   palette,
   children,
   header,
+  sx,
   ...rest
 }) => {
   const [hover, setHover] = useState(false);
@@ -75,6 +77,7 @@ export const TableContainer: FC<TableContainerProps> = ({
         '& > tbody > tr > td': {
           borderTop: (t: Theme) => `1px solid  ${t.colors?.shadow}`,
         },
+        ...sx,
       }}
       {...rest}
     >

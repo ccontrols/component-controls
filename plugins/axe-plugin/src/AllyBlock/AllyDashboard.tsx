@@ -7,6 +7,7 @@ import {
   useTaggedList,
   SelectionContext,
   useIsTagSelected,
+  tagSelectedList,
 } from '../state/context';
 
 type StatsStatus = 'passes' | 'violations';
@@ -15,15 +16,13 @@ const TagSelectionCheckbox: FC<{ tag: string }> = ({ tag }) => {
   const isSelected = useIsTagSelected(tag);
   const { selection, setSelection } = useContext(SelectionContext);
   const tagged = useTaggedList();
-  const toggleTagSelected = (tag: string) => {
+  const toggleTagSelected = () => {
     if (tagged[tag]) {
-      const wasSelected = tagged[tag].some((s: string) =>
-        selection.includes(s),
-      );
-      setSelection(selection.filter((e: string) => !tagged[tag].includes(e)));
-      if (!wasSelected) {
-        setSelection([...selection, ...tagged[tag]]);
+      const newSelection = tagSelectedList(selection, tagged[tag], false);
+      if (!isSelected) {
+        Array.prototype.push.apply(newSelection, tagged[tag]);
       }
+      setSelection(newSelection);
     }
   };
 
@@ -35,10 +34,7 @@ const TagSelectionCheckbox: FC<{ tag: string }> = ({ tag }) => {
       }}
     >
       <Label>
-        <Checkbox
-          onChange={() => toggleTagSelected(tag)}
-          checked={isSelected}
-        />
+        <Checkbox onChange={() => toggleTagSelected()} checked={isSelected} />
         {isSelected ? 'hide outlines' : 'show errors'}
       </Label>
     </Flex>

@@ -1,12 +1,12 @@
 import React from 'react';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes, Document } from '@component-controls/core';
 import { BeelineColor, BeelineColorPalette } from './BeelineColor';
 import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/BeelineColor',
   component: BeelineColor,
-};
+} as Document;
 
 export const overview: Example<ColorProps> = ({ name, color }) => (
   <BeelineColor name={name} color={color} />

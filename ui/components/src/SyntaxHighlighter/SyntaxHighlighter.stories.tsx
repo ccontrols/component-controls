@@ -1,12 +1,12 @@
 import React from 'react';
 import shadesOfPurple from 'prism-react-renderer/themes/shadesOfPurple';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Document, Example, ControlTypes } from '@component-controls/core';
 import { SyntaxHighlighter, SyntaxHighlighterProps } from './SyntaxHighlighter';
 
 export default {
   title: 'Components/SyntaxHighlighter',
   component: SyntaxHighlighter,
-};
+} as Document;
 
 const source = `import { Button } from 'theme-ui';`;
 export const overview: Example<SyntaxHighlighterProps> = ({

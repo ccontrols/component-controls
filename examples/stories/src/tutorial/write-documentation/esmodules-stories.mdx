@@ -76,6 +76,62 @@ myStory.story = {
 };
  
 ```
+### Story templates
+
+Using story templates you can reduce the amount of repetitive code in your ESM stories documentation. This is usually needed when you want to create separate stories for the various state values of your components.
+
+Component-controls supports two ways of creating story templates:
+
+  1. Use the document `template` field.
+
+This is a more compact syntax, where you can assign the template to the document object. 
+
+```
+import React from 'react';
+import { Document } from '@component-controls/core';
+import { ButtonProps, Button } from '../../components/button-props';
+
+export default {
+  title: 'Introduction/Template doc',
+  component: Button,
+  template: props => <Button {...props} />,
+} as Document<ButtonProps>;
+
+export const John = {
+  controls: {
+    children: 'john',
+    type: 'reset',
+  },
+};
+```
+[live example](/api/esm-template-doc--john)
+
+  2. Bind stories to a template
+
+This syntax is slightly more verbose and is compatible with Storybook 6
+
+```
+import { Example, Document } from '@component-controls/core';
+import { ButtonProps, Button } from '../components/Button';
+
+export default {
+  title: 'Introduction/Template bind',
+  component: Button,
+  smartControls: false,
+} as Document;
+
+const ComponentTemplate: Example<ButtonProps> = props => <Button {...props} />;
+
+export const John = ComponentTemplate.bind();
+John.controls = {
+  children: 'john',
+  type: 'reset',
+};
+
+```
+
+[live example](/api/esm-template-bind--john)
+
 
 ### Dynamic stories
 
@@ -107,7 +163,7 @@ export const buttonColors = () => {
 
 buttonColors.dynamic = true;
 ```
-[live example](/api/introduction-dynamic-stories--button-colors/?story=Background)
+[live example](/api/esm-dynamic-stories--button-colors/?story=Background)
 
 > dynamic stories are created at run-time (when the site loads in the browser), while in the case of [gatsby](/tutorial/getting-started/gatsby), the static page routes are created under a `nodejs` process. This makes it so all the newly created dynamic stories for `gatsby` will reside under the URL of the dynamic parent story, with a `story` parameter: `https://xxx/api/components-button--button-colors/?story=Background`
 
@@ -131,6 +187,6 @@ export const asyncFetch = () => {
   }.`}</h2>;
 };
 ```
-[live example](/api/introduction-async-stories--async-story)
+[live example](/api/esm-async-stories--async-story)
 
 > Note that you can also fetch data using react's useEffect hooks, without using `useAsync`.

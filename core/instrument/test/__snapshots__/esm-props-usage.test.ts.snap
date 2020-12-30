@@ -14,10 +14,10 @@ Object {
   "packages": Object {
     "a7193179ecf0779da0f8745aa25fb16f": Object {
       "dependencies": Object {
-        "@babel/generator": "^7.9.4",
-        "@babel/parser": "^7.9.4",
-        "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.38.0",
+        "@babel/generator": "^7.12.5",
+        "@babel/parser": "^7.12.5",
+        "@babel/traverse": "^7.12.5",
+        "@component-controls/core": "^2.5.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -35,8 +35,8 @@ Object {
         "typescript": "^4.0.5",
       },
       "devDependencies": Object {
-        "@babel/types": "^7.9.0",
-        "@component-controls/ts-markdown-docs": "^1.37.0",
+        "@babel/types": "^7.12.6",
+        "@component-controls/ts-markdown-docs": "^2.2.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -53,7 +53,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.38.0",
+      "version": "2.5.3",
     },
   },
   "stories": Object {
@@ -131,10 +131,10 @@ Object {
   "packages": Object {
     "e29c8135e9c608fe008a315d25c201b0": Object {
       "dependencies": Object {
-        "@babel/generator": "^7.9.4",
-        "@babel/parser": "^7.9.4",
-        "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.38.0",
+        "@babel/generator": "^7.12.5",
+        "@babel/parser": "^7.12.5",
+        "@babel/traverse": "^7.12.5",
+        "@component-controls/core": "^2.5.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -152,8 +152,8 @@ Object {
         "typescript": "^4.0.5",
       },
       "devDependencies": Object {
-        "@babel/types": "^7.9.0",
-        "@component-controls/ts-markdown-docs": "^1.37.0",
+        "@babel/types": "^7.12.6",
+        "@component-controls/ts-markdown-docs": "^2.2.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -170,7 +170,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.38.0",
+      "version": "2.5.3",
     },
   },
   "stories": Object {
@@ -276,10 +276,10 @@ Object {
   "packages": Object {
     "6b1e224ac16097889a07e950dc91da6a": Object {
       "dependencies": Object {
-        "@babel/generator": "^7.9.4",
-        "@babel/parser": "^7.9.4",
-        "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.38.0",
+        "@babel/generator": "^7.12.5",
+        "@babel/parser": "^7.12.5",
+        "@babel/traverse": "^7.12.5",
+        "@component-controls/core": "^2.5.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -297,8 +297,8 @@ Object {
         "typescript": "^4.0.5",
       },
       "devDependencies": Object {
-        "@babel/types": "^7.9.0",
-        "@component-controls/ts-markdown-docs": "^1.37.0",
+        "@babel/types": "^7.12.6",
+        "@component-controls/ts-markdown-docs": "^2.2.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -315,7 +315,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.38.0",
+      "version": "2.5.3",
     },
   },
   "stories": Object {
@@ -403,10 +403,10 @@ Object {
   "packages": Object {
     "4c19f3b76b8ab9a7c8cd349af53adcd6": Object {
       "dependencies": Object {
-        "@babel/generator": "^7.9.4",
-        "@babel/parser": "^7.9.4",
-        "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.38.0",
+        "@babel/generator": "^7.12.5",
+        "@babel/parser": "^7.12.5",
+        "@babel/traverse": "^7.12.5",
+        "@component-controls/core": "^2.5.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -424,8 +424,8 @@ Object {
         "typescript": "^4.0.5",
       },
       "devDependencies": Object {
-        "@babel/types": "^7.9.0",
-        "@component-controls/ts-markdown-docs": "^1.37.0",
+        "@babel/types": "^7.12.6",
+        "@component-controls/ts-markdown-docs": "^2.2.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -442,7 +442,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.38.0",
+      "version": "2.5.3",
     },
   },
   "stories": Object {
@@ -548,10 +548,10 @@ Object {
   "packages": Object {
     "31a3398d2705e8d1f3606294985d9c04": Object {
       "dependencies": Object {
-        "@babel/generator": "^7.9.4",
-        "@babel/parser": "^7.9.4",
-        "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.38.0",
+        "@babel/generator": "^7.12.5",
+        "@babel/parser": "^7.12.5",
+        "@babel/traverse": "^7.12.5",
+        "@component-controls/core": "^2.5.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -569,8 +569,8 @@ Object {
         "typescript": "^4.0.5",
       },
       "devDependencies": Object {
-        "@babel/types": "^7.9.0",
-        "@component-controls/ts-markdown-docs": "^1.37.0",
+        "@babel/types": "^7.12.6",
+        "@component-controls/ts-markdown-docs": "^2.2.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -587,7 +587,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.38.0",
+      "version": "2.5.3",
     },
   },
   "stories": Object {
@@ -699,10 +699,10 @@ Object {
   "packages": Object {
     "02163b946b4a3e645402a9dd80ac6ad2": Object {
       "dependencies": Object {
-        "@babel/generator": "^7.9.4",
-        "@babel/parser": "^7.9.4",
-        "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.38.0",
+        "@babel/generator": "^7.12.5",
+        "@babel/parser": "^7.12.5",
+        "@babel/traverse": "^7.12.5",
+        "@component-controls/core": "^2.5.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -720,8 +720,8 @@ Object {
         "typescript": "^4.0.5",
       },
       "devDependencies": Object {
-        "@babel/types": "^7.9.0",
-        "@component-controls/ts-markdown-docs": "^1.37.0",
+        "@babel/types": "^7.12.6",
+        "@component-controls/ts-markdown-docs": "^2.2.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -738,7 +738,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.38.0",
+      "version": "2.5.3",
     },
   },
   "stories": Object {
@@ -932,10 +932,10 @@ Object {
   "packages": Object {
     "148100976725fa64e0cd3e6b8f5ab70f": Object {
       "dependencies": Object {
-        "@babel/generator": "^7.9.4",
-        "@babel/parser": "^7.9.4",
-        "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.38.0",
+        "@babel/generator": "^7.12.5",
+        "@babel/parser": "^7.12.5",
+        "@babel/traverse": "^7.12.5",
+        "@component-controls/core": "^2.5.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -953,8 +953,8 @@ Object {
         "typescript": "^4.0.5",
       },
       "devDependencies": Object {
-        "@babel/types": "^7.9.0",
-        "@component-controls/ts-markdown-docs": "^1.37.0",
+        "@babel/types": "^7.12.6",
+        "@component-controls/ts-markdown-docs": "^2.2.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -971,7 +971,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.38.0",
+      "version": "2.5.3",
     },
   },
   "stories": Object {
@@ -1044,10 +1044,10 @@ Object {
   "packages": Object {
     "5cb9f0e4e9b7610ff459490ccfda3dcc": Object {
       "dependencies": Object {
-        "@babel/generator": "^7.9.4",
-        "@babel/parser": "^7.9.4",
-        "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.38.0",
+        "@babel/generator": "^7.12.5",
+        "@babel/parser": "^7.12.5",
+        "@babel/traverse": "^7.12.5",
+        "@component-controls/core": "^2.5.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -1065,8 +1065,8 @@ Object {
         "typescript": "^4.0.5",
       },
       "devDependencies": Object {
-        "@babel/types": "^7.9.0",
-        "@component-controls/ts-markdown-docs": "^1.37.0",
+        "@babel/types": "^7.12.6",
+        "@component-controls/ts-markdown-docs": "^2.2.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -1083,7 +1083,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.38.0",
+      "version": "2.5.3",
     },
   },
   "stories": Object {
@@ -1186,10 +1186,10 @@ Object {
   "packages": Object {
     "9f47664ae1fdd66baf7a9ce52c961032": Object {
       "dependencies": Object {
-        "@babel/generator": "^7.9.4",
-        "@babel/parser": "^7.9.4",
-        "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.38.0",
+        "@babel/generator": "^7.12.5",
+        "@babel/parser": "^7.12.5",
+        "@babel/traverse": "^7.12.5",
+        "@component-controls/core": "^2.5.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -1207,8 +1207,8 @@ Object {
         "typescript": "^4.0.5",
       },
       "devDependencies": Object {
-        "@babel/types": "^7.9.0",
-        "@component-controls/ts-markdown-docs": "^1.37.0",
+        "@babel/types": "^7.12.6",
+        "@component-controls/ts-markdown-docs": "^2.2.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -1225,7 +1225,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.38.0",
+      "version": "2.5.3",
     },
   },
   "stories": Object {
@@ -1331,10 +1331,10 @@ Object {
   "packages": Object {
     "e293029d97356050be6d9dce1d8dad98": Object {
       "dependencies": Object {
-        "@babel/generator": "^7.9.4",
-        "@babel/parser": "^7.9.4",
-        "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.38.0",
+        "@babel/generator": "^7.12.5",
+        "@babel/parser": "^7.12.5",
+        "@babel/traverse": "^7.12.5",
+        "@component-controls/core": "^2.5.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -1352,8 +1352,8 @@ Object {
         "typescript": "^4.0.5",
       },
       "devDependencies": Object {
-        "@babel/types": "^7.9.0",
-        "@component-controls/ts-markdown-docs": "^1.37.0",
+        "@babel/types": "^7.12.6",
+        "@component-controls/ts-markdown-docs": "^2.2.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -1370,7 +1370,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.38.0",
+      "version": "2.5.3",
     },
   },
   "stories": Object {
@@ -1484,10 +1484,10 @@ Object {
   "packages": Object {
     "c02f1c496c215a299355ba50a365e183": Object {
       "dependencies": Object {
-        "@babel/generator": "^7.9.4",
-        "@babel/parser": "^7.9.4",
-        "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.38.0",
+        "@babel/generator": "^7.12.5",
+        "@babel/parser": "^7.12.5",
+        "@babel/traverse": "^7.12.5",
+        "@component-controls/core": "^2.5.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -1505,8 +1505,8 @@ Object {
         "typescript": "^4.0.5",
       },
       "devDependencies": Object {
-        "@babel/types": "^7.9.0",
-        "@component-controls/ts-markdown-docs": "^1.37.0",
+        "@babel/types": "^7.12.6",
+        "@component-controls/ts-markdown-docs": "^2.2.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -1523,7 +1523,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.38.0",
+      "version": "2.5.3",
     },
   },
   "stories": Object {
@@ -1694,10 +1694,10 @@ Object {
   "packages": Object {
     "3d35813c0140070f94d9f5783e7191c7": Object {
       "dependencies": Object {
-        "@babel/generator": "^7.9.4",
-        "@babel/parser": "^7.9.4",
-        "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.38.0",
+        "@babel/generator": "^7.12.5",
+        "@babel/parser": "^7.12.5",
+        "@babel/traverse": "^7.12.5",
+        "@component-controls/core": "^2.5.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -1715,8 +1715,8 @@ Object {
         "typescript": "^4.0.5",
       },
       "devDependencies": Object {
-        "@babel/types": "^7.9.0",
-        "@component-controls/ts-markdown-docs": "^1.37.0",
+        "@babel/types": "^7.12.6",
+        "@component-controls/ts-markdown-docs": "^2.2.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -1733,7 +1733,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.38.0",
+      "version": "2.5.3",
     },
   },
   "stories": Object {
@@ -1820,10 +1820,10 @@ Object {
   "packages": Object {
     "71aec6b23825670f65c73ae6a7aa081d": Object {
       "dependencies": Object {
-        "@babel/generator": "^7.9.4",
-        "@babel/parser": "^7.9.4",
-        "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.38.0",
+        "@babel/generator": "^7.12.5",
+        "@babel/parser": "^7.12.5",
+        "@babel/traverse": "^7.12.5",
+        "@component-controls/core": "^2.5.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -1841,8 +1841,8 @@ Object {
         "typescript": "^4.0.5",
       },
       "devDependencies": Object {
-        "@babel/types": "^7.9.0",
-        "@component-controls/ts-markdown-docs": "^1.37.0",
+        "@babel/types": "^7.12.6",
+        "@component-controls/ts-markdown-docs": "^2.2.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -1859,7 +1859,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.38.0",
+      "version": "2.5.3",
     },
   },
   "stories": Object {
@@ -1980,10 +1980,10 @@ Object {
   "packages": Object {
     "3446779011041fa8b753053121a4b4b0": Object {
       "dependencies": Object {
-        "@babel/generator": "^7.9.4",
-        "@babel/parser": "^7.9.4",
-        "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.38.0",
+        "@babel/generator": "^7.12.5",
+        "@babel/parser": "^7.12.5",
+        "@babel/traverse": "^7.12.5",
+        "@component-controls/core": "^2.5.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -2001,8 +2001,8 @@ Object {
         "typescript": "^4.0.5",
       },
       "devDependencies": Object {
-        "@babel/types": "^7.9.0",
-        "@component-controls/ts-markdown-docs": "^1.37.0",
+        "@babel/types": "^7.12.6",
+        "@component-controls/ts-markdown-docs": "^2.2.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -2019,7 +2019,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.38.0",
+      "version": "2.5.3",
     },
   },
   "stories": Object {

@@ -16,7 +16,7 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "clean": "lerna clean && rm -rf node_modules",
+    "clean": "lerna clean --yes && rm -rf node_modules",
     "docs": "lerna run docs && ts-md",
     "packages": "yarn fix && yarn lint && yarn build && yarn test",
     "fix": "lerna run --parallel fix && echo",
@@ -25,7 +25,7 @@
     "build": "lerna run build",
     "test": "lerna run test --stream",
     "prerelease": "yarn run packages",
-    "release": "lerna publish --conventional-commits",
+    "release": "lerna publish --conventional-commits --yes",
     "release:next": "yarn run packages && lerna publish --conventional-commits --conventional-prerelease --dist-tag=next --exact",
     "promote:next": "lerna publish --conventional-commits --conventional-graduate",
     "release:beta": "yarn release --dist-tag=beta --preid=beta",
@@ -51,7 +51,7 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@commitlint/config-lerna-scopes": "^11.0.0",
-    "@component-controls/ts-markdown-docs": "^1.3.0", 
+    "@component-controls/ts-markdown-docs": "^1.3.0",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "@rollup/plugin-image": "^2.0.5",
     "@rollup/plugin-json": "^4.0.2",
@@ -95,8 +95,15 @@
       "misc/*",
       "plugins/*",
       "props-info/*",
+      "search/*",
       "ui/*",
       "examples/*"
     ]
+  },
+  "resolutions": {
+    "@emotion/styled": "11.0.0",
+    "npm-packlist": "1.1.12",
+    "**/react": "17.0.1",
+    "**/react-dom": "17.0.1"
   }
 }

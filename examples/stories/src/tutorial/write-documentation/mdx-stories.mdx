@@ -172,3 +172,40 @@ Displays a row of tags assigned to the current document, with links to their pag
 
 [TagsList](/api/blocks-tagslist--overview)
 
+
+### Story templates
+
+Using story templates you can reduce the amount of repetitive code in your MDX stories documentation. This is usually needed when you want to create separate stories for the various state values of your components.
+
+In MDX files, you can bind stories to a template, and this syntax is compatible with Storybook 6
+
+```
+---
+title: "MDX/Template bind"
+component: Button
+---
+import { Playground, Story } from '@component-controls/blocks';
+import { Button } from '../../../stories/src/components/Button';
+
+export const Template = props => (
+  <Button {...props}>Button</Button>
+);
+
+<Playground>
+  <Story name='tom' controls={{
+    name: 'tom',
+  }}>
+    {Template.bind()}
+  </Story>
+</Playground>
+
+<Playground>
+  <Story name='harry' controls={{
+    name: 'harry',
+  }}>
+    {Template.bind()}
+  </Story>
+</Playground>
+```
+
+[live example](/api/esm-template-bind--john)

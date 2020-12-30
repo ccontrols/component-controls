@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/webpack-compile",
-  "version": "1.38.0",
+  "version": "2.5.3",
   "description": "Webpack compile api",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -37,17 +37,17 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/config": "^1.38.0",
-    "@component-controls/loader": "^1.38.0",
-    "@component-controls/logger": "^1.37.0",
-    "@component-controls/webpack-configs": "^1.38.0",
+    "@component-controls/config": "^2.5.0",
+    "@component-controls/loader": "^2.5.3",
+    "@component-controls/logger": "^2.5.0",
+    "@component-controls/webpack-configs": "^2.5.3",
     "memory-fs": "^0.5.0",
     "typescript": "^4.0.5",
     "webpack": "^4.43.0",
     "yargs": "^15.3.1"
   },
   "devDependencies": {
-    "@component-controls/ts-markdown-docs": "^1.37.0",
+    "@component-controls/ts-markdown-docs": "^2.2.0",
     "@types/jest": "^26.0.10",
     "@types/memory-fs": "^0.3.2",
     "cross-env": "^5.2.1",
@@ -67,5 +67,5 @@
   "authors": [
     "Atanas Stoyanov"
   ],
-  "gitHead": "1b83d23bd43f1b2143ac8f66f828fe5806b40310"
+  "gitHead": "e30d62f101e104711a16261fce04785d58cac1eb"
 }

@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, ReactElement, FC } from 'react';
 import { Component, Components } from '@component-controls/core';
 
 import { Tab, Tabs, TabList, TabPanel } from '@component-controls/components';
 
 export type ComponentsContainerProps = {
-  children: (component: Component, props: any) => React.ReactElement | null;
+  children: (component: Component, props: any) => ReactElement | null;
 
   components: Components;
   /**
@@ -14,7 +14,7 @@ export type ComponentsContainerProps = {
   onSelect?: (name: string, component: Component) => boolean | void;
 };
 
-export const ComponentsContainer: React.FC<ComponentsContainerProps> = ({
+export const ComponentsContainer: FC<ComponentsContainerProps> = ({
   components,
   children,
   onSelect,

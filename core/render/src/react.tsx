@@ -17,8 +17,12 @@ export const render: FrameworkRenderFn = (story, doc, options: any = {}) => {
   const controls = story.controls;
   const values = getControlValues(controls);
   //parameters added to avoid bug in SB6 rc that assumes parameters exist
-  const context = { story, doc, controls, parameters: {} };
-
+  const context = {
+    story,
+    doc,
+    controls,
+    ...options,
+  };
   const { decorators: globalDecorators = [] } = options;
   const { decorators: storyDecorators = [] } = story;
   const decorators = deepMerge<StoryRenderFn[]>(
@@ -30,15 +34,15 @@ export const render: FrameworkRenderFn = (story, doc, options: any = {}) => {
   for (let i = 0; i < sortedDecorators.length; i += 1) {
     const decorator = sortedDecorators[i];
     const childFn = renderFn;
-    const nextRenderFn = (_: any, nexContext: any) =>
-      (childFn as StoryRenderFn)(values, { ...context, ...nexContext });
+    const nextRenderFn = (_: any, nextContext: any) =>
+      (childFn as StoryRenderFn)(values, { ...context, ...nextContext });
     renderFn = () =>
       decorator(nextRenderFn, {
         ...context,
         renderFn: nextRenderFn,
       });
   }
-  let node: any = null;
-  node = () => (renderFn as StoryRenderFn)(values, context);
-  return createElement(node);
+  return typeof renderFn === 'function'
+    ? createElement(() => (renderFn as StoryRenderFn)(values, context))
+    : createElement('div', 'invalid render function');
 };

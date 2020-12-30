@@ -4,15 +4,18 @@ import {
   compile,
   watch,
   CompilerCallbackFn,
+  searchIndexing,
 } from '@component-controls/webpack-compile';
 import { log } from '@component-controls/logger';
 import {
   BuildProps,
+  RuleOptions,
   defaultCompileProps,
   getCSSBundleName,
 } from '@component-controls/core';
 import { Store } from '@component-controls/core';
-import { loadStore, getSiteMap } from '@component-controls/store';
+import { loadStore } from '@component-controls/store';
+import { getSiteMap } from '@component-controls/routes';
 
 module.exports = ({
   bundleName,
@@ -44,21 +47,24 @@ module.exports = ({
       if (presets) {
         config.presets = presets;
       }
-      const onBundle: CompilerCallbackFn = ({ store: loadingStore }) => {
+      const onBundle: CompilerCallbackFn = async ({ store: loadingStore }) => {
         if (loadingStore) {
           const store: Store = loadStore(loadingStore, true);
-          if (process.env.NODE_ENV === 'production' && store.config.siteMap) {
-            const sitemap = getSiteMap(store);
-            const sitemapfolder = path.resolve(
-              config.staticFolder as string,
-              '..',
-            );
-            if (!fs.existsSync(sitemapfolder)) {
-              fs.mkdirSync(sitemapfolder, { recursive: true });
+          if (process.env.NODE_ENV === 'production') {
+            if (store.config.siteMap) {
+              const sitemap = getSiteMap(store);
+              const sitemapfolder = path.resolve(
+                config.staticFolder as string,
+                '..',
+              );
+              if (!fs.existsSync(sitemapfolder)) {
+                fs.mkdirSync(sitemapfolder, { recursive: true });
+              }
+              const sitemapname = path.join(sitemapfolder, 'sitemap.xml');
+              log('creating sitemap', sitemapname);
+              fs.writeFileSync(sitemapname, sitemap, 'utf8');
             }
-            const sitemapname = path.join(sitemapfolder, 'sitemap.xml');
-            log('creating sitemap', sitemapname);
-            fs.writeFileSync(sitemapname, sitemap, 'utf8');
+            await searchIndexing(store);
           }
           process.env.NEXT_CC_CSS_FILENAME = getCSSBundleName(store.config);
         }
@@ -71,6 +77,18 @@ module.exports = ({
 
       return [];
     },
+    webpack: (config: RuleOptions['config']) => {
+      const loader = config.module?.rules?.find(
+        r => (r?.use as any)?.loader === 'next-babel-loader',
+      );
+      if (loader?.options) {
+        (loader.options as any).babelPresetPlugins.push(
+          '@emotion/babel-plugin',
+        );
+      }
+      return config;
+    },
+
     ...rest,
   };
 };

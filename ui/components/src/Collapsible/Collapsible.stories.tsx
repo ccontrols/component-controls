@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Button } from 'theme-ui';
-import { Example, ControlTypes } from '@component-controls/core';
+import { Document, Example, ControlTypes } from '@component-controls/core';
 import { Collapsible, CollapsibleProps } from './Collapsible';
 
 export default {
   title: 'Components/Collapsible',
   component: Collapsible,
-};
+} as Document;
 
-export const overview: Example = ({ easing }: CollapsibleProps) => {
-  const [isOpen, setIsOpen] = React.useState(false);
+export const overview: Example<CollapsibleProps> = ({ easing }) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <Box>
       <Button onClick={() => setIsOpen(!isOpen)}>

@@ -1,5 +1,6 @@
-import React, { FC, ComponentClass } from 'react';
-import { Box } from 'theme-ui';
+/** @jsx jsx */
+import { FC, ComponentClass } from 'react';
+import { jsx, Box } from 'theme-ui';
 import {
   Tab as OriginalTab,
   TabProps,

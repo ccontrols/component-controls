@@ -1,11 +1,11 @@
 import React from 'react';
-import { Example } from '@component-controls/core';
+import { Document, Example } from '@component-controls/core';
 import { Pagination } from '.';
 
 export default {
   title: 'Components/Pagination',
   component: Pagination,
-};
+} as Document;
 
 export const overview: Example = () => (
   <Pagination

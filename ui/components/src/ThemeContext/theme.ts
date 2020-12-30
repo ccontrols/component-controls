@@ -23,6 +23,19 @@ const ActionItemStyle: ThemeUIStyleObject = {
   border: (t: Theme) => `1px solid ${t.colors?.action}`,
 };
 
+export const PageContainerDefaults: ThemeUIStyleObject = {
+  bg: 'background',
+  color: 'text',
+  fontFamily: 'body',
+  flex: '1 0 auto',
+  py: 4,
+  px: [2, 3, 5],
+  margin: 'auto',
+  width: '100%',
+  position: 'relative',
+  maxWidth: '1000px',
+};
+
 export type ControlsTheme = {
   actionbar: Record<string, ThemeUIStyleObject>;
   toolbar: Record<string, ThemeUIStyleObject>;
@@ -50,7 +63,7 @@ export type ControlsTheme = {
   colormode: Record<string, ThemeUIStyleObject>;
   header: ThemeUIStyleObject;
   hoverbox: Record<string, ThemeUIStyleObject>;
-  navmenu: Record<string, ThemeUIStyleObject>;
+  tree: Record<string, ThemeUIStyleObject>;
   pagination: Record<string, ThemeUIStyleObject>;
   sidebar: Record<string, ThemeUIStyleObject>;
   skiplinks: Record<string, ThemeUIStyleObject>;
@@ -70,6 +83,7 @@ export type ControlsTheme = {
   documentslist: Record<string, ThemeUIStyleObject>;
 } & Theme;
 export const theme: ControlsTheme = {
+  useCustomProperties: false,
   colors: {
     text: '#454f5b',
     background: '#ffffff',
@@ -163,6 +177,12 @@ export const theme: ControlsTheme = {
         fontWeight: 'bold',
         color: 'primary',
       },
+    },
+  },
+  text: {
+    small: {
+      fontSize: 1,
+      fontWeight: 'thin',
     },
   },
   forms: {
@@ -323,7 +343,8 @@ export const theme: ControlsTheme = {
     },
     th: {
       border: 'none',
-      px: 2,
+      py: 2,
+      pr: 2,
       pl: 3,
     },
     tbody: {
@@ -332,8 +353,8 @@ export const theme: ControlsTheme = {
       },
     },
     thead: {
-      borderBottom: (t: Theme): string => ` 1px solid  ${t.colors?.shadow}`,
-      backgroundColor: 'muted',
+      borderBottom: (t: Theme): string => ` 2px solid  ${t.colors?.shadow}`,
+      backgroundColor: 'background',
       color: 'text',
     },
     td: {
@@ -394,7 +415,6 @@ export const theme: ControlsTheme = {
     },
   },
   actioncontainer: {
-    borderRadius: '4px',
     boxShadow: (t: Theme): string => `0px 1px 3px 0px ${t.colors?.shadow}`,
     border: (t: Theme): string => ` 1px solid  ${t.colors?.shadow}`,
     display: 'flex',
@@ -409,6 +429,8 @@ export const theme: ControlsTheme = {
       scrollMarginTop: '5rem',
     },
     inner: {
+      boxShadow: (t: Theme): string => `0px 1px 3px 0px ${t.colors?.shadow}`,
+      border: (t: Theme): string => ` 1px solid  ${t.colors?.shadow}`,
       flexDirection: 'row',
       alignItems: 'center',
       ':hover': {
@@ -480,6 +502,10 @@ export const theme: ControlsTheme = {
     },
     link: {
       position: 'absolute',
+      margin: 'auto',
+      top: 0,
+      bottom: 0,
+      height: '32px',
       visibility: 'hidden',
       ':hover': {
         visibility: 'visible',
@@ -499,11 +525,21 @@ export const theme: ControlsTheme = {
     popover: {
       minWidth: 300,
       maxHeight: 400,
+      maxWidth: 500,
       overflowY: 'auto',
     },
-    list: { p: 2, listStyle: 'none' },
+    list: {
+      py: 2,
+      paddingLeft: 0,
+      listStyle: 'none',
+      em: {
+        fontStyle: 'normal',
+        bg: 'primary',
+        color: 'background',
+      },
+    },
     item: {
-      p: 2,
+      px: 1,
       cursor: 'pointer',
       ':hover': {
         backgroundColor: 'shadow',
@@ -616,6 +652,13 @@ export const theme: ControlsTheme = {
       px: 1,
       whiteSpace: 'nowrap',
     },
+    small: {
+      ml: 1,
+      display: 'inline-block',
+      fontSize: 0,
+      lineHeight: '1rem',
+      whiteSpace: 'nowrap',
+    },
   },
   titledimage: {
     container: {
@@ -668,21 +711,8 @@ export const theme: ControlsTheme = {
     },
   },
   pagecontainer: {
-    bg: 'background',
-    color: 'text',
-    fontFamily: 'body',
-    flex: '1 0 auto',
-    py: 4,
-    px: [1, 1, 5],
-    margin: 'auto',
-    width: '100%',
-    position: 'relative',
-    maxWidth: '1000px',
-    blog: { maxWidth: '1200px' },
-    story: { maxWidth: '1200px' },
-    doc: { maxWidth: '1200px' },
-    page: { maxWidth: '1200px' },
-    full: { maxWidth: 'unset', p: [0, 0, 0] },
+    default: { ...PageContainerDefaults },
+    full: { ...PageContainerDefaults, maxWidth: 'unset', p: [0, 0, 0] },
   },
   playground: {
     container: {
@@ -773,27 +803,27 @@ export const theme: ControlsTheme = {
     },
     text: { color: 'muted', fontWeight: 'bold' },
   },
-  navmenu: {
-    link: {
-      width: '100%',
-      px: 3,
-      py: 1,
-      background: 'none',
-      textDecoration: 'none',
-      cursor: 'pointer',
-      color: '#333',
-    },
+  tree: {
     itemcontainer: {
       flexDirection: 'row',
       alignItems: 'center',
       position: 'relative',
-    },
-    iteminner: {
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'space-between',
       width: '100%',
+      py: 1,
+      justifyContent: 'space-between',
+    },
+    link: {
+      boxShadow: 'none',
+      background: 'none',
+      textDecoration: 'none',
+      cursor: 'pointer',
+      color: 'primary',
+      px: 1,
+      py: 0,
+      flex: 1,
+      ':hover': {
+        backgroundColor: 'shadow',
+      },
     },
     labelcontainer: {
       display: 'flex',
@@ -802,15 +832,16 @@ export const theme: ControlsTheme = {
     },
     labelicon: {
       mr: 2,
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
     },
     labeltext: {
       whiteSpace: 'nowrap',
       textOverflow: 'ellipsis',
       overflow: 'hidden',
     },
-    expandicon: {
-      ml: 2,
-    },
+    expandicon: {},
   },
   pagination: {
     container: {
@@ -860,8 +891,8 @@ export const theme: ControlsTheme = {
     default: {
       overflowX: 'hidden',
       position: 'sticky',
-      top: '5rem',
-      maxHeight: '100vh',
+      top: '4.5rem',
+      maxWidth: '300px',
       overflowY: 'auto',
       backgroundColor: 'background',
     },
@@ -877,14 +908,10 @@ export const theme: ControlsTheme = {
       position: 'absolute',
     },
     inner: {
-      a: {
-        '&.active': {
-          borderLeft: (t: Theme): string => `4px solid ${t?.colors?.accent}`,
-          fontWeight: 'bold',
-        },
-        ':hover': {
-          backgroundColor: 'shadow',
-        },
+      '.selected': {
+        borderLeft: (t: Theme): string => `4px solid ${t?.colors?.accent}`,
+        fontWeight: 'bold',
+        pl: 1,
       },
     },
     headercontainer: {
@@ -933,12 +960,39 @@ export const theme: ControlsTheme = {
   sidecontext: {
     container: {
       px: 3,
-      borderLeft: (t: Theme): string => `1px solid ${t.colors?.shadow}`,
     },
-    nav: { display: 'flex', flexDirection: 'column' },
+    nav: {
+      display: 'flex',
+      flexDirection: 'column',
+      a: {
+        ':hover': {
+          textDecoration: 'underline',
+        },
+      },
+    },
     navlink: {
-      fontSize: 1,
-      fontWeight: 'body',
+      '1': {
+        fontSize: 2,
+        pt: 2,
+      },
+      '2': {
+        fontSize: 1,
+        fontWeight: 'body',
+        pl: 1,
+        ':hover': {
+          textDecoration: 'underline',
+        },
+      },
+      '3': {
+        fontSize: 0,
+        color: 'mutedText',
+        fontWeight: 'body',
+        pl: 3,
+        ':hover': {
+          color: 'primary',
+          textDecoration: 'underline',
+        },
+      },
     },
     toggle: {
       position: 'fixed',
@@ -952,16 +1006,21 @@ export const theme: ControlsTheme = {
       display: 'flex',
       flexDirection: 'column',
     },
+    item: {
+      ml: 0,
+    },
     items: {
       my: 2,
     },
     sidebar: {
+      height: '100vh',
       borderRight: (t: Theme): string => `1px solid ${t.colors?.shadow}`,
     },
     container: {
       display: 'flex',
       flexDirection: 'column',
       px: 2,
+      mb: 2,
     },
   },
   appheader: {
@@ -1000,15 +1059,15 @@ export const theme: ControlsTheme = {
     },
   },
   categorylist: {
-    pagecontainer: { maxWidth: '1000px' },
+    pagecontainer: { ...PageContainerDefaults, maxWidth: '1000px' },
     list: {},
     item: { my: 2 },
   },
   pagelist: {
-    container: { maxWidth: '1000px' },
+    container: { ...PageContainerDefaults, maxWidth: '1000px' },
   },
   categorypage: {
-    pagecontainer: { maxWidth: '1000px' },
+    pagecontainer: { ...PageContainerDefaults, maxWidth: '1000px' },
     titlecontainer: {
       display: 'flex',
       flexDirection: 'row',
@@ -1066,24 +1125,23 @@ export const theme: ControlsTheme = {
   },
   appsidebarpage: {
     allsidebar: {
-      display: 'grid',
-      flex: 1,
-      minHeight: '100vh',
-      gridTemplateColumns: ['1fr', '1fr', '300px 1fr 250px'],
+      display: 'flex',
+      flexDirection: 'row',
+      flex: '1 0 auto',
       position: 'relative',
     },
     navsidebar: {
-      display: 'grid',
-      flex: 1,
+      display: 'flex',
+      flexDirection: 'row',
+      flex: '1 0 auto',
       minHeight: '100vh',
-      gridTemplateColumns: ['1fr', '1fr', '300px 1fr'],
       position: 'relative',
     },
     contextsidebar: {
-      display: 'grid',
-      flex: 1,
-      minHeight: '100vh',
-      gridTemplateColumns: ['1fr', '1fr', '1fr 300px'],
+      display: 'flex',
+      flexDirection: 'row',
+      flex: '1 0 auto',
+      minHeight: 'calc(100vh - 68px)', //height of toolbar
       position: 'relative',
     },
   },

@@ -1,43 +1,34 @@
 import React from 'react';
 import shadesOfPurple from 'prism-react-renderer/themes/shadesOfPurple';
-import { Example } from '@component-controls/core';
+import { Document, Example } from '@component-controls/core';
 import { ComponentSource } from './ComponentSource';
-import { MockContext } from '../test/MockContext';
+import { makeDecorators } from '../test/MockContext';
 
 export default {
   title: 'Blocks/ComponentSource',
   component: ComponentSource,
-};
+} as Document;
 
-export const overview: Example = () => (
-  <MockContext storyId="id-of-story">
-    <ComponentSource />
-  </MockContext>
-);
+export const overview: Example = () => <ComponentSource />;
+overview.decorators = makeDecorators();
 
-export const theme: Example = () => (
-  <MockContext storyId="blocks-core-story-plain--controls">
-    <ComponentSource theme={shadesOfPurple} />
-  </MockContext>
-);
-export const title: Example = () => (
-  <MockContext storyId="id-of-story">
-    <ComponentSource title="." />
-  </MockContext>
-);
+export const theme: Example = () => <ComponentSource theme={shadesOfPurple} />;
+theme.decorators = makeDecorators('blocks-core-story-plain--controls');
+
+export const title: Example = () => <ComponentSource title="." />;
+title.decorators = makeDecorators();
 
 export const customTitle: Example = () => (
-  <MockContext storyId="id-of-story">
-    <ComponentSource title="My Story Title" id="." />
-  </MockContext>
+  <ComponentSource title="My Story Title" id="." />
 );
+customTitle.decorators = makeDecorators();
+
 export const notCollapsible: Example = () => (
-  <MockContext storyId="id-of-story">
-    <ComponentSource title="." collapsible={false} />
-  </MockContext>
+  <ComponentSource title="." collapsible={false} />
 );
+notCollapsible.decorators = makeDecorators();
+
 export const noComponent: Example = () => (
-  <MockContext storyId="id-no-component">
-    <ComponentSource title="Component" id="." />
-  </MockContext>
+  <ComponentSource title="Component" id="." />
 );
+noComponent.decorators = makeDecorators();

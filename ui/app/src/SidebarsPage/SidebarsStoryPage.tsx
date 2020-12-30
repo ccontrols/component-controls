@@ -1,7 +1,12 @@
 /** @jsx jsx */
-import { FC, ComponentType, useRef } from 'react';
+import { FC, ComponentType, useRef, useMemo } from 'react';
 import { jsx, Box } from 'theme-ui';
-import { DocType, TabConfiguration, Document } from '@component-controls/core';
+import {
+  DocType,
+  TabConfiguration,
+  Document,
+  PageTab,
+} from '@component-controls/core';
 import {
   useActiveTab,
   useGetDocumentPath,
@@ -9,7 +14,6 @@ import {
   useCurrentStory,
   useGetStoryPath,
 } from '@component-controls/store';
-import * as pages from '@component-controls/pages';
 import {
   Tabs,
   Tab,
@@ -43,27 +47,35 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
   const getDocumentPath = useGetDocumentPath();
   const getStoryPath = useGetStoryPath();
   const activeTab = useActiveTab();
-  const pageConfig = config.pages?.[type] || {};
-  const { tabs = [] } = pageConfig;
-  const selectedTab = activeTab
-    ? activeTab
-    : tabs.length > 0
-    ? tabs[0].route
-    : undefined;
   const pageRef = useRef<HTMLDivElement>(null);
-  const tabIndex = Math.max(
-    tabs.findIndex(tab => {
-      const route = tab.route || (tab.title ? tab.title.toLowerCase() : '');
-      return route === selectedTab;
-    }),
-    0,
-  );
-  const renderTab = (tab: TabConfiguration) => {
-    if (tab.render) {
-      return tab.render({ docId });
-    }
-    if (tab.type) {
-      const Page = (pages as Record<string, ComponentType>)[tab.type];
+  const pageConfig = config.pages?.[type] || {};
+  const tabs = Object.keys(pageConfig.tabs || {});
+
+  const { tabIndex, tabConfig } = useMemo(() => {
+    const selectedTab = activeTab
+      ? activeTab
+      : tabs?.length > 0
+      ? tabs[0]
+      : undefined;
+    const tabIndex = Math.max(
+      tabs.findIndex(route => route === selectedTab),
+      0,
+    );
+    return {
+      tabIndex,
+      tabConfig: selectedTab
+        ? ((pageConfig.tabs as Record<string, PageTab>)[
+            selectedTab
+          ] as TabConfiguration)
+        : { variant: '', container: undefined },
+    };
+  }, [activeTab, pageConfig.tabs, tabs]);
+  const renderTab = (route: string) => {
+    const tab: TabConfiguration | undefined = pageConfig.tabs?.[
+      route
+    ] as TabConfiguration;
+    if (tab.component) {
+      const Page = tab.component as ComponentType;
       if (Page) {
         return <Page />;
       }
@@ -74,33 +86,39 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
     <Box variant={docToVariant(doc)}>
       {doc.navSidebar && <Sidebar type={type} />}
       <Box sx={{ flexGrow: 1 }} id="content">
-        <Tabs fontSize={2} defaultIndex={tabIndex}>
+        <Tabs
+          fontSize={2}
+          selectedIndex={tabIndex}
+          onSelect={() => {
+            //noop
+          }}
+        >
           {tabs && tabs.length > 1 && (
             <TabList>
-              {tabs.map((tab, tabIndex) => {
-                const route =
-                  tab.route || (tab.title ? tab.title.toLowerCase() : '');
+              {tabs.map((route, tabIndex) => {
+                const tab = (pageConfig.tabs as Record<string, PageTab>)[
+                  route
+                ] as TabConfiguration;
                 return (
-                  <Tab key={`tab_${route}`}>
-                    <Link
-                      href={
-                        story && story.id
-                          ? getStoryPath(
-                              story.id,
-                              tabIndex > 0 ? route : undefined,
-                            )
-                          : docId
-                          ? getDocumentPath(
-                              type,
-                              docId,
-                              tabIndex > 0 ? route : undefined,
-                            )
-                          : '#'
-                      }
-                    >
-                      {tab.title}
-                    </Link>
-                  </Tab>
+                  <Link
+                    key={`tab_${route}`}
+                    href={
+                      story && story.id
+                        ? getStoryPath(
+                            story.id,
+                            tabIndex > 0 ? route : undefined,
+                          )
+                        : docId
+                        ? getDocumentPath(
+                            type,
+                            docId,
+                            tabIndex > 0 ? route : undefined,
+                          )
+                        : '#'
+                    }
+                  >
+                    <Tab>{tab.title}</Tab>
+                  </Link>
                 );
               })}
             </TabList>
@@ -108,18 +126,21 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
 
           <PageContainer
             type={type}
-            variant={`pagecontainer.${type}`}
+            variant={
+              typeof tabConfig.variant === 'string'
+                ? tabConfig.variant
+                : 'pagecontainer.default'
+            }
             ref={pageRef}
+            wrapper={tabConfig.container}
           >
             {tabs &&
               (tabs.length === 1
                 ? renderTab(tabs[0])
-                : tabs.map((tab, index) => {
-                    const route =
-                      tab.route || (tab.title ? tab.title.toLowerCase() : '');
+                : tabs.map((route, index) => {
                     return (
                       <TabPanel key={`panel_${route}`}>
-                        {tabIndex === index ? renderTab(tab) : null}
+                        {tabIndex === index ? renderTab(route) : null}
                       </TabPanel>
                     );
                   }))}

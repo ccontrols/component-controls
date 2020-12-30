@@ -1,0 +1,28 @@
+---
+title: "MDX/Template bind"
+component: Button
+order: 2
+author: atanasster
+---
+import { Playground, Story } from '@component-controls/blocks';
+import { Button } from '../../../stories/src/components/Button';
+
+export const Template = props => <Button {...props} />;
+
+You can bind stories to templates to reduce the amount of repetitive code. Click on the "Edit this page" button above to see how the templates are linked to the stories.
+
+<Playground>
+  <Story name='tom' controls={{
+    children: 'tom',
+  }}>
+    {Template.bind()}
+  </Story>
+</Playground>
+
+<Playground>
+  <Story name='harry' controls={{
+    children: 'harry',
+  }}>
+    {Template.bind()}
+  </Story>
+</Playground>

@@ -41,11 +41,31 @@ export const AxeContextProvider: FC = ({ children }) => {
         results: state,
       }}
     >
-      <AxeSetContext.Provider value={{ setResults: setState }}>
+      <AxeSetContext.Provider
+        value={{
+          setResults: results => {
+            setState(results);
+          },
+        }}
+      >
         {children}
       </AxeSetContext.Provider>
     </AxeContext.Provider>
   );
+};
+
+export const trimNode = (tag: string): string => {
+  const trimmedList = tag.split('>');
+  const storyNode = trimmedList.findIndex(s =>
+    s.includes('[data-testid="story"]'),
+  );
+  trimmedList.splice(0, storyNode + 1);
+  trimmedList.pop();
+  return trimmedList.join('>');
+};
+
+const trimNodeList = (tagList: string[]): string[] => {
+  return tagList.map(el => trimNode(el));
 };
 
 export const useTaggedList = (): { [tag: string]: string[] } => {
@@ -88,9 +108,11 @@ export const SelectionContextProvider: FC = ({ children }) => {
   const value = useMemo(
     () => ({
       selection,
-      setSelection,
+      setSelection: (newSelection: string[]) => {
+        setSelection(newSelection);
+      },
       isSelected: (targets: string[]) =>
-        targets.some((s: string) => selection.includes(s)),
+        tagSelectedList(selection, targets, true).length > 0,
     }),
     [selection],
   );
@@ -101,10 +123,21 @@ export const SelectionContextProvider: FC = ({ children }) => {
   );
 };
 
-export const useIsTagSelected = (tag: string = ''): boolean => {
+export const useIsTagSelected = (tag = ''): boolean => {
   const tagged = useTaggedList();
   const { selection } = useContext(SelectionContext);
   return tagged[tag]
-    ? tagged[tag].some((s: string) => selection.includes(s))
+    ? tagSelectedList(selection, tagged[tag], true).length > 0
     : false;
+};
+
+export const tagSelectedList = (
+  selection: string[],
+  tags: string[],
+  selected: boolean,
+): string[] => {
+  const tagsTrimmed = trimNodeList(tags);
+  return selection.filter((e: string) => {
+    return tagsTrimmed.includes(trimNode(e)) === selected;
+  });
 };

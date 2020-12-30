@@ -1,12 +1,11 @@
 /** @jsx jsx */
-import { FC, useState, useMemo, useContext } from 'react';
+import { FC, ReactNode, useState, useMemo, useContext } from 'react';
 import { jsx, Input, Box, Heading } from 'theme-ui';
 import { NoteIcon, BookIcon } from '@primer/octicons-react';
 import {
   useStore,
   useCurrentDocument,
   useDocByType,
-  useConfig,
   useActiveTab,
   useCurrentStory,
 } from '@component-controls/store';
@@ -14,9 +13,9 @@ import {
   Sidebar as AppSidebar,
   ColorMode,
   SidebarContext,
-  Navmenu,
-  MenuItems,
-  MenuItem,
+  Tree,
+  TreeItems,
+  TreeItem,
   Header,
   ActionBar,
   ActionItems,
@@ -37,7 +36,7 @@ export interface SidebarProps {
   /**
    * title element
    */
-  title?: React.ReactNode;
+  title?: ReactNode;
 
   /**
    * document type
@@ -52,9 +51,9 @@ const createMenuItem = (
   levels: string[],
   page: PageConfiguration,
   activeTab?: string,
-  parent?: MenuItems,
-  item?: MenuItem,
-): MenuItem => {
+  parent?: TreeItems,
+  item?: TreeItem,
+): TreeItem => {
   if (levels.length < 1) {
     return item || {};
   }
@@ -76,7 +75,7 @@ const createMenuItem = (
     const doc = store.docs[name];
     return getDocPath(type, doc, store, name, activeTab);
   };
-  const newItem: MenuItem = {
+  const newItem: TreeItem = {
     id: levels[0],
     label: levels[0],
   };
@@ -130,7 +129,7 @@ const createMenuItem = (
   );
 };
 
-const staticMenusToMenuItems = (menu: StaticMenuItems): MenuItems =>
+const staticMenusToMenuItems = (menu: StaticMenuItems): TreeItems =>
   menu
     .filter(item => item)
     .map(item => {
@@ -143,9 +142,9 @@ const staticMenusToMenuItems = (menu: StaticMenuItems): MenuItems =>
     });
 
 const findMenuItem = (
-  items: MenuItems,
+  items: TreeItems,
   label: string,
-): MenuItem | undefined => {
+): TreeItem | undefined => {
   for (const item of items) {
     if (item.label === label) {
       return item;
@@ -171,18 +170,16 @@ export const Sidebar: FC<SidebarProps> = ({
   const { title: docId } = useCurrentDocument() || {};
   const story = useCurrentStory();
   const activeId = story ? story.id : docId;
-  const config = useConfig() || {};
-  const { pages, menu, sidebar = [] } = config;
-  const page: PageConfiguration = useMemo(() => pages?.[type] || {}, [
-    pages,
-    type,
-  ]);
-  const { label = '' } = page;
   const docs: Pages = useDocByType(type);
-  const menuItems = useMemo(() => {
-    const staticMenus = Array.isArray(menu) ? staticMenusToMenuItems(menu) : [];
+  const [search, setSearch] = useState<string | undefined>(undefined);
+  const node = useMemo(() => {
+    const { config } = store;
+    const { pages, menu, sidebar = [] } = config;
+    const page: PageConfiguration = pages?.[type] || {};
+    const { label = propsTitle } = page;
+    let menuItems = Array.isArray(menu) ? staticMenusToMenuItems(menu) : [];
     if (store) {
-      const menuItems = docs.reduce((acc: MenuItems, doc: Document) => {
+      menuItems = docs.reduce((acc: TreeItems, doc: Document) => {
         const { title, menu } = doc;
         if (menu) {
           const item = findMenuItem(acc, menu);
@@ -205,53 +202,57 @@ export const Sidebar: FC<SidebarProps> = ({
         const levels = title.split('/');
         createMenuItem(store, doc, type, levels, page, activeTab, acc);
         return acc;
-      }, staticMenus);
-      return menuItems;
+      }, menuItems);
     }
-    return staticMenus;
-  }, [type, activeTab, store, page, docs, menu]);
-  const [search, setSearch] = useState<string | undefined>(undefined);
-  const actions: ActionItems = [...sidebar];
-
-  if (propsTitle || label) {
+    const actions: ActionItems = [];
+    if (label) {
+      actions.push({
+        node: (
+          <Heading as="h3" variant="appsidebar.items">
+            {label}
+          </Heading>
+        ),
+        id: 'title',
+      });
+    }
     actions.push({
       node: (
-        <Heading as="h3" variant="appsidebar.items">
-          {propsTitle || label}
-        </Heading>
+        <Box variant="appsidebar.items">
+          <Input
+            sx={{
+              // fix ie 11
+              lineHeight: 'normal',
+            }}
+            placeholder="filter..."
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            onClick={e => e.stopPropagation()}
+          />
+        </Box>
       ),
-      id: 'title',
+      id: 'filter',
+      hidden: true,
     });
-  }
-  actions.push({
-    node: (
-      <Box variant="appsidebar.items">
-        <Input
-          placeholder="filter..."
-          value={search}
-          onChange={e => setSearch(e.target.value)}
-          onClick={e => e.stopPropagation()}
-        />
-      </Box>
-    ),
-    id: 'filter',
-  });
-  return (
-    <AppSidebar variant="appsidebar.sidebar" id="sidebar">
-      {responsive && (
-        <Header sx={{ boxShadow: 'unset' }}>
-          <SidebarClose />
-          <ColorMode />
-        </Header>
-      )}
-      <Box variant="appsidebar.container">
-        <ActionBar themeKey="appsidebar" actions={actions} />
-        <Navmenu
-          activeItem={{ id: activeId }}
-          search={search}
-          items={menuItems}
-        />
-      </Box>
-    </AppSidebar>
-  );
+    actions.push(...sidebar);
+    return (
+      <AppSidebar variant="appsidebar.sidebar" id="sidebar">
+        {responsive && (
+          <Header sx={{ boxShadow: 'unset' }}>
+            <SidebarClose />
+            <ColorMode />
+          </Header>
+        )}
+        <Box variant="appsidebar.container">
+          <ActionBar themeKey="appsidebar" actions={actions} />
+          <Tree
+            as="nav"
+            activeItem={{ id: activeId }}
+            search={search}
+            items={menuItems}
+          />
+        </Box>
+      </AppSidebar>
+    );
+  }, [activeId, activeTab, docs, propsTitle, responsive, search, store, type]);
+  return node;
 };

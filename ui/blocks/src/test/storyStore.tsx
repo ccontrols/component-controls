@@ -12,12 +12,20 @@ import {
 import { render as reactRender } from '@component-controls/render/react';
 
 import { MDXContent } from './MDXStory';
+import ClassicPage from '@component-controls/pages/ClassicPage';
 
 export const store: Store = {
   ...getDefaultStore(),
   config: {
     renderFn: reactRender,
     ...deepMerge(defaultBuildConfig, defaultRunConfig),
+    pages: {
+      ...defaultBuildConfig.pages,
+      story: {
+        ...defaultBuildConfig.pages?.story,
+        tabs: { page: ClassicPage },
+      },
+    },
   },
   packages: {
     'test-package': {
@@ -73,7 +81,7 @@ export const store: Store = {
       name: 'ArrowButton',
       request:
         '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js',
-      imports: {
+      externalDependencies: {
         react: [
           {
             name: 'React',
@@ -82,6 +90,24 @@ export const store: Store = {
           {
             name: 'FC',
             importedName: 'FC',
+          },
+        ],
+        '@component-controls/components': [
+          {
+            name: 'Table',
+            importedName: 'Table',
+          },
+        ],
+      },
+      localDependencies: {
+        './Button': [
+          {
+            name: 'Button',
+            importedName: 'Button',
+          },
+          {
+            name: 'ButtonProps',
+            importedName: 'ButtonProps',
           },
         ],
         '@component-controls/components': [

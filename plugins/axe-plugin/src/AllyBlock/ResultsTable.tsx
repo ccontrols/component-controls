@@ -2,7 +2,6 @@
 /** @jsx jsx */
 import { FC, useMemo, useCallback, useContext } from 'react';
 import { jsx, Flex, Box, Text } from 'theme-ui';
-import { Column } from 'react-table';
 import {
   ChevronRightIcon,
   ChevronDownIcon,
@@ -15,12 +14,17 @@ import {
   IssueOpenedIcon,
 } from '@primer/octicons-react';
 import { Result, ImpactValue } from 'axe-core';
-import { Table, ExternalLink, Tag } from '@component-controls/components';
+import {
+  Table,
+  Column,
+  ExternalLink,
+  Tag,
+} from '@component-controls/components';
 import { AxeContext } from '../state/context';
 import { NodesTable } from './NodesTable';
 
 const impactColors: {
-  [key in ImpactValue]: {
+  [key in 'minor' | 'moderate' | 'serious' | 'critical']: {
     color: string;
     icon: Icon;
   };
@@ -54,8 +58,17 @@ export interface ResultsTableProps {
 }
 
 const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
-  const columns: Column<Record<string, unknown>>[] = useMemo(
-    () => [
+  const renderRowSubComponent = useCallback(
+    ({ row }) => (
+      <NodesTable
+        nodes={row.original.nodes}
+        hideErrorColumns={hideErrorColumns}
+      />
+    ),
+    [hideErrorColumns],
+  );
+  const table = useMemo(() => {
+    const columns: Column<Result>[] = [
       {
         // Build our expander column
         id: 'expander', // Make sure it has an ID
@@ -95,7 +108,7 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
         Header: 'impact',
         accessor: 'impact',
         Cell: ({ value }: { value: ImpactValue }) => {
-          const impact = impactColors[value];
+          const impact = value ? impactColors[value] : undefined;
           return (
             <Flex
               sx={{
@@ -138,32 +151,19 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
           </Flex>
         ),
       },
-    ],
-    [],
-  );
-  const renderRowSubComponent = useCallback(
-    ({ row }) => (
-      <NodesTable
-        nodes={row.original.nodes}
-        hideErrorColumns={hideErrorColumns}
+    ];
+    return (
+      <Table<Result>
+        data={results || []}
+        columns={columns}
+        hiddenColumns={hideErrorColumns ? ['impact'] : undefined}
+        renderRowSubComponent={renderRowSubComponent}
       />
-    ),
-    [hideErrorColumns],
-  );
-  return (
-    <Table
-      data={
-        results
-          ? results.map(row => ({
-              ...row,
-            }))
-          : []
-      }
-      columns={columns}
-      hiddenColumns={hideErrorColumns ? ['impact'] : undefined}
-      renderRowSubComponent={renderRowSubComponent}
-    />
-  );
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [results?.length, hideErrorColumns, renderRowSubComponent]);
+
+  return table;
 };
 
 export const ViolationsTable: FC = () => {

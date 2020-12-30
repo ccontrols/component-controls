@@ -262,9 +262,9 @@ _LinkContextProvider [source code](https://github.com/ccontrols/component-contro
 
 ### properties
 
-| Name         | Type  | Description |
-| ------------ | ----- | ----------- |
-| `linkClass*` | _any_ |             |
+| Name         | Type               | Description |
+| ------------ | ------------------ | ----------- |
+| `linkClass*` | _FC&lt;LinkProps>_ |             |
 
 ## <ins>useIsLocalLink</ins>
 
@@ -363,7 +363,7 @@ _PanelContainer [source code](https://github.com/ccontrols/component-controls/tr
 
 | Name          | Type             | Description                                               |
 | ------------- | ---------------- | --------------------------------------------------------- |
-| `openTab`     | _any_            | by default, which tab to have open.                       |
+| `openTab`     | _ReactNode_      | by default, which tab to have open.                       |
 | `visibleTabs` | _boolean_        | if true, the tabs on the panels will be visible           |
 | `background`  | _BackgroundType_ | background pattern type                                   |
 | `direction`   | _DirectionType_  | direction type                                            |
@@ -409,14 +409,14 @@ _Sidebar [source code](https://github.com/ccontrols/component-controls/tree/mast
 
 ### properties
 
-| Name          | Type                                                                   | Description                                          |
-| ------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
-| `title`       | _any_                                                                  | Title string or any react node                       |
-| `collapsible` | _boolean_                                                              | Whether the sidebar can be collapsed                 |
-| `children`    | _any_                                                                  | children content elements to be displayed in Sidebar |
-| `ref`         | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                                                      |
-| `as`          | _ElementType&lt;any>_                                                  |                                                      |
-| `variant`     | _string_                                                               |                                                      |
+| Name          | Type                                                                                                                                                                                                                                                                                 | Description                                          |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- |
+| `title`       | _string \| ({} & string) \| (ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)> & string) \| (ReactNodeArray & string) \| (ReactPortal & string)_ | Title string or any react node                       |
+| `collapsible` | _boolean_                                                                                                                                                                                                                                                                            | Whether the sidebar can be collapsed                 |
+| `children`    | _ReactNode_                                                                                                                                                                                                                                                                          | children content elements to be displayed in Sidebar |
+| `ref`         | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_                                                                                                                                                                                                               |                                                      |
+| `as`          | _ElementType&lt;any>_                                                                                                                                                                                                                                                                |                                                      |
+| `variant`     | _string_                                                                                                                                                                                                                                                                             |                                                      |
 
 ## <ins>SidebarContextProvider</ins>
 

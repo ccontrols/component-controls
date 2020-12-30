@@ -38,8 +38,7 @@ are all optional.",
     "optionalElement": Object {
       "description": "A React element (ie. <MyComponent />).",
       "type": Object {
-        "name": "ReactReactElement",
-        "raw": "React.ReactElement",
+        "name": "ReactElement",
         "required": false,
       },
     },
@@ -97,13 +96,11 @@ JS's instanceof operator.",
       "description": "Anything that can be rendered: numbers, strings, elements or an array
 (or fragment) containing these types.",
       "type": Object {
-        "name": "ReactReactNode",
-        "raw": "React.ReactNode",
+        "name": "ReactNode",
         "required": false,
       },
     },
     "optionalNumber": Object {
-      "defaultValue": "21",
       "type": Object {
         "name": "number",
         "required": false,

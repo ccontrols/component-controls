@@ -55,7 +55,9 @@ export const getBundleName = (): string => {
 /**
  * callback function to monitor new documents/deleted documents
  */
-export type CompilerCallbackFn = (results: CompileResults) => void;
+export type CompilerCallbackFn = (
+  results: CompileResults,
+) => void | Promise<void>;
 
 const createConfig = (options: BuildProps): webpack.Configuration => {
   const {
@@ -125,7 +127,6 @@ const createConfig = (options: BuildProps): webpack.Configuration => {
 export const runCompiler = (
   run: (compiler: Compiler, callback: Parameters<Compiler['run']>[0]) => void,
   props: BuildProps,
-  callback?: CompilerCallbackFn,
 ): Promise<CompileResults> => {
   return new Promise(resolve => {
     const buildConfig = mergeBuildConfiguration(props);
@@ -169,9 +170,6 @@ module.exports = ${JSON.stringify({
         log(`compiled ${store.stores.length} documents`, bundleName);
       } else {
         error('error creating bundle', bundleName);
-      }
-      if (callback) {
-        callback({ bundleName, stats: stats as Stats, store });
       }
       resolve({ bundleName, stats: stats as Stats, store });
     });

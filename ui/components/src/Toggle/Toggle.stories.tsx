@@ -1,21 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Flex, Checkbox, Label } from 'theme-ui';
 import { EyeIcon, EyeClosedIcon } from '@primer/octicons-react';
-import { Example } from '@component-controls/core';
+import { Document, Example } from '@component-controls/core';
 import { Toggle } from './Toggle';
 
 export default {
   title: 'Components/Toggle',
   component: Toggle,
-};
+} as Document;
 
 export const overview: Example = () => {
-  const [checked, setChecked] = React.useState(false);
+  const [checked, setChecked] = useState(false);
   return <Toggle checked={checked} onChange={check => setChecked(check)} />;
 };
 
 export const label: Example = () => {
-  const [checked, setChecked] = React.useState(false);
+  const [checked, setChecked] = useState(false);
   return (
     <Toggle
       label="with label"
@@ -27,7 +27,7 @@ export const label: Example = () => {
 };
 
 export const customIcons: Example = () => {
-  const [checked, setChecked] = React.useState(false);
+  const [checked, setChecked] = useState(false);
   return (
     <Toggle
       uncheckedIcon={
@@ -47,7 +47,7 @@ export const customIcons: Example = () => {
 };
 
 export const octicons: Example = () => {
-  const [checked, setChecked] = React.useState(false);
+  const [checked, setChecked] = useState(false);
   return (
     <Toggle
       onHandleColor="#ffffff"
@@ -107,7 +107,7 @@ export const octicons: Example = () => {
 };
 
 export const checkbox: Example = () => {
-  const [checked, setChecked] = React.useState(true);
+  const [checked, setChecked] = useState(true);
   return (
     <Label>
       <Checkbox onChange={() => setChecked(!checked)} checked={checked} />

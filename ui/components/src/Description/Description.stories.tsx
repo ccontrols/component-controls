@@ -1,11 +1,11 @@
 import React from 'react';
-import { Example } from '@component-controls/core';
+import { Document, Example } from '@component-controls/core';
 import { Description } from '.';
 
 export default {
   title: 'Components/Description',
   component: Description,
-};
+} as Document;
 
 export const overview: Example = () => (
   <Description>Some **description** markdown</Description>

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, ReactElement, useState, useEffect } from 'react';
 import {
   BlockContainer,
   BlockContainerProps,
@@ -37,7 +37,7 @@ export type ComponentsBlockContainerProps = {
     component: Component,
     props: any,
     story?: Story,
-  ) => React.ReactElement | null;
+  ) => ReactElement | null;
 } & Omit<ComponentsContainerProps, 'components' | 'children'> &
   ComponentInputProps &
   BlockContainerProps;
@@ -53,10 +53,10 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   'data-testid': dataTestid,
   ...rest
 }) => {
-  const [title, setTitle] = React.useState<string | undefined>();
+  const [title, setTitle] = useState<string | undefined>();
   const components = useComponents({ of });
   const story = useStory({ id, name });
-  React.useEffect(() => {
+  useEffect(() => {
     const componentNames = Object.keys(components);
     setTitle(
       userTitle === CURRENT_STORY && componentNames.length
@@ -77,7 +77,7 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   if (keys.length === 0) {
     return null;
   }
-  let child: React.ReactElement | null = null;
+  let child: ReactElement | null = null;
   const block = (
     <ComponentsContainer
       components={components}

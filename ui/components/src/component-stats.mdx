@@ -1,0 +1,41 @@
+---
+title: Components/internal usage
+---
+
+import {
+  ComponentUsage,
+  AttributeUsage,
+  ComponentUsageList,
+  AttributesUsageList,
+} from '@component-controls/addon-stats';
+
+export const filter = ({ doc, component }) =>
+  component && doc.title.startsWith('Components');
+
+# Components JSX stats
+
+This is an analysis of the `@component-controls/components` jsx components that have 'stories'
+
+## Components usage summary
+
+Components usage - how many times a component is being used from another component and which of their properties are used
+
+<ComponentUsage filter={filter} />
+
+## Attributes usage summary
+
+Attributes usage - how many times an attribute is being set on a component, and on which component it is being set
+
+<AttributeUsage filter={filter} />
+
+## Components usage details
+
+How many times a component is being used from another component, with a list of the components using it
+
+<ComponentUsageList filter={filter} />
+
+## Attributes usage details
+
+How many times an attribute is being used on a component, with a list of those components
+
+<AttributesUsageList filter={filter} />

@@ -8,9 +8,16 @@ import {
 import { useDocPropCount, useConfig } from '@component-controls/store';
 
 export interface PageTypeTagProps {
+  /**
+   * page type
+   */
   type: DocType;
+  /**
+   * raw string - useful for highlighting in search results
+   */
+  raw?: string;
 }
-export const PageTypeTag: FC<PageTypeTagProps> = ({ type }) => {
+export const PageTypeTag: FC<PageTypeTagProps> = ({ type, raw }) => {
   const config = useConfig();
   const tags = useDocPropCount('type');
   const [colors, setColors] = useState<{ [key: string]: string }>({});
@@ -28,7 +35,9 @@ export const PageTypeTag: FC<PageTypeTagProps> = ({ type }) => {
   }, [tags]);
   return (
     <Link href={`/${config.pages?.[type].basePath}`}>
-      <Tag color={colors[type] || '#f49342'}>{type}</Tag>
+      <Tag color={colors[type] || '#f49342'} raw={raw}>
+        {type}
+      </Tag>
     </Link>
   );
 };

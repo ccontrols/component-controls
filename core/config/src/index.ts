@@ -59,8 +59,9 @@ export const loadConfiguration = (
   baseFolder: string,
   configFolder?: string,
   args?: string[],
+  defaultConfigPath?: string,
 ): ConfigurationResult | undefined => {
-  const folder = configFolder ?? getConfigurationArg(args);
+  const folder = configFolder ?? getConfigurationArg(args) ?? defaultConfigPath;
   const configPath = folder ? path.resolve(baseFolder, folder) : baseFolder;
   const hasConfigFolder = fs.existsSync(configPath);
   if (!hasConfigFolder) {
@@ -74,13 +75,13 @@ export const loadConfiguration = (
     optionsFileNames.includes(file.toLowerCase()),
   );
   if (buildConfigFile) {
-    const buildPagth = path.resolve(configPath, buildConfigFile);
-    let config = require('esm')(module)(buildPagth);
+    const buildPath = path.resolve(configPath, buildConfigFile);
+    let config = require('esm')(module)(buildPath);
     if (
       !config ||
       (typeof config === 'object' && Object.keys(config).length === 0)
     ) {
-      config = require(buildPagth);
+      config = require(buildPath);
     }
     return {
       config: config.default || config,

@@ -12,14 +12,12 @@ export const overview = ({ text, background: { color } }) => {
   return <Button css={{ backgroundColor: color }}>{text}</Button>;
 };
 
-overview.story = {
-  controls: {
-    text: { type: ControlTypes.TEXT, value: 'Button' },
-    background: {
-      type: ControlTypes.OBJECT,
-      value: {
-        color: { type: ControlTypes.COLOR, value: 'red' },
-      },
+overview.controls = {
+  text: { type: ControlTypes.TEXT, value: 'Button' },
+  background: {
+    type: ControlTypes.OBJECT,
+    value: {
+      color: { type: ControlTypes.COLOR, value: 'red' },
     },
   },
 };
@@ -36,18 +34,16 @@ export const objectNested = ({
   );
 };
 
-objectNested.story = {
-  controls: {
-    text: { type: ControlTypes.TEXT, value: 'Button' },
-    style: {
-      type: ControlTypes.OBJECT,
-      value: {
-        padding: { type: ControlTypes.NUMBER, value: 5 },
-        background: {
-          type: ControlTypes.OBJECT,
-          value: {
-            color: { type: ControlTypes.COLOR, value: 'red' },
-          },
+objectNested.controls = {
+  text: { type: ControlTypes.TEXT, value: 'Button' },
+  style: {
+    type: ControlTypes.OBJECT,
+    value: {
+      padding: { type: ControlTypes.NUMBER, value: 5 },
+      background: {
+        type: ControlTypes.OBJECT,
+        value: {
+          color: { type: ControlTypes.COLOR, value: 'red' },
         },
       },
     },
@@ -58,14 +54,12 @@ export const editLabel = ({ background: { color } }) => {
   return <Button css={{ backgroundColor: color }}>custom label</Button>;
 };
 
-editLabel.story = {
-  controls: {
-    background: {
-      type: ControlTypes.OBJECT,
-      editLabel: 'click to edit object',
-      value: {
-        color: { type: ControlTypes.COLOR, value: 'red' },
-      },
+editLabel.controls = {
+  background: {
+    type: ControlTypes.OBJECT,
+    editLabel: 'click to edit object',
+    value: {
+      color: { type: ControlTypes.COLOR, value: 'red' },
     },
   },
 };

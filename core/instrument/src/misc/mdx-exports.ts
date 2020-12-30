@@ -12,11 +12,8 @@ const mdxPropertiesExport = (
 const mdxFunctionExport = (
   name: string,
   exportType: MDXExportType,
-): string | undefined => {
-  return exportType && exportType.render
-    ? `export const ${name} = ${exportType.render}`
-    : undefined;
-};
+): string | undefined =>
+  `export const ${name} = ${exportType.render ? exportType.render : '{}'}`;
 
 export const extractStoryExports = (
   storybookExports: boolean,

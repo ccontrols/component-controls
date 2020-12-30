@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useMemo } from 'react';
 import {
   PageContainer as BlockPageContainer,
   BlockContextProvider,
@@ -10,14 +10,28 @@ import {
 import { store } from '@component-controls/store/live_store';
 
 export const PageContextContainer: FC = ({ children }) => {
-  const options = React.useMemo(() => getGlobalOptions(), []);
-  const { storyId, docId } = useCurrentData();
+  const globOptions = useMemo(() => {
+    const o = getGlobalOptions();
+    if (o && Array.isArray(o.decorators)) {
+      o.decorators = o.decorators.filter(
+        (d: { name: string }) => !d.name || !d.name.startsWith('with'),
+      );
+    }
+    return o || {};
+  }, []);
+  const { storyId, docId, parameters } = useCurrentData();
+
   return (
     <BlockContextProvider
       storyId={storyId}
       store={store}
       docId={docId}
-      options={options}
+      options={{
+        ...globOptions,
+        parameters: globOptions.parameters
+          ? { ...globOptions.parameters, ...parameters }
+          : parameters,
+      }}
     >
       <BlockPageContainer variant="pagecontainer.storybook">
         {children}

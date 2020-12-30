@@ -30,15 +30,19 @@ Object {
           "collapseSingle": true,
           "storyPaths": true,
         },
-        "tabs": Array [
-          Object {
-            "route": "page",
+        "tabs": Object {
+          "page": Object {
+            "component": [Function],
+            "title": "Documentation",
           },
-        ],
+        },
       },
       "tags": Object {
         "basePath": "tags/",
       },
+    },
+    "search": Object {
+      "searchingModule": "@component-controls/search-fusejs",
     },
     "siteMap": Object {
       "pages": Object {
@@ -60,9 +64,7 @@ Object {
   },
   "components": Object {
     "fded7dbaa855ea6869a794f877eab680": Object {
-      "from": "./ActionBar",
-      "importedName": "ActionBar",
-      "imports": Object {
+      "externalDependencies": Object {
         "react": Array [
           Object {
             "importedName": "FC",
@@ -88,6 +90,8 @@ Object {
           },
         ],
       },
+      "from": "./ActionBar",
+      "importedName": "ActionBar",
       "info": Object {
         "description": "a strip of actions to be attached to a container
 the action items contain the labels and click event handler
@@ -115,6 +119,61 @@ actions can accept an order prop, and can also be superimposed",
           },
         },
       },
+      "jsx": Array [
+        Object {
+          "attributes": Array [
+            "key",
+            "sx",
+          ],
+          "children": Array [
+            Object {
+              "attributes": Array [
+                "variant",
+                "href",
+                "aria-label",
+              ],
+              "children": Array [],
+              "componentKey": "eb9509951cd0102ae95e248d1c9b0cd0",
+              "from": "../Link",
+              "importedName": "Link",
+              "name": "Link",
+            },
+            Object {
+              "attributes": Array [
+                "variant",
+                "onClick",
+                "aria-label",
+              ],
+              "children": Array [],
+              "from": "theme-ui",
+              "importedName": "Button",
+              "name": "Button",
+            },
+          ],
+          "from": "theme-ui",
+          "importedName": "Box",
+          "name": "Box",
+        },
+        Object {
+          "attributes": Array [
+            "variant",
+          ],
+          "children": Array [
+            Object {
+              "attributes": Array [
+                "variant",
+              ],
+              "children": Array [],
+              "from": "theme-ui",
+              "importedName": "Box",
+              "name": "Box",
+            },
+          ],
+          "from": "theme-ui",
+          "importedName": "Box",
+          "name": "Box",
+        },
+      ],
       "loc": Object {
         "end": Object {
           "column": 1,
@@ -124,6 +183,27 @@ actions can accept an order prop, and can also be superimposed",
           "column": 45,
           "line": 25,
         },
+      },
+      "localDependencies": Object {
+        "../Link": Array [
+          Object {
+            "componentKey": "eb9509951cd0102ae95e248d1c9b0cd0",
+            "importedName": "Link",
+            "name": "Link",
+          },
+        ],
+        "./utils": Array [
+          Object {
+            "componentKey": "8dc313d6e0b96be3972f9f034f201d63",
+            "importedName": "getSortedActions",
+            "name": "getSortedActions",
+          },
+          Object {
+            "componentKey": "5562debad46d8a256b666ad14fc1be3a",
+            "importedName": "ActionItems",
+            "name": "ActionItems",
+          },
+        ],
       },
       "name": "ActionBar",
       "package": "fded7dbaa855ea6869a794f877eab680",
@@ -165,13 +245,13 @@ export const ActionBar: FC<ActionBarProps> = ({
         return (
           <Box
             key={\`\${typeof node === 'string' ? node : 'item'}_\${index}\`}
-            variant={\`\${themeKey}.item\`}
             sx={{
               mr: index === 0 ? 1 : 0,
               ml: nextGroup !== group || group === undefined ? 2 : 1,
               display: 'flex',
               flexDirection: 'row',
               alignItems: 'center',
+              variant: \`\${themeKey}.item\`,
             }}
           >
             {typeof node === 'string' ? (
@@ -214,8 +294,8 @@ export const ActionBar: FC<ActionBarProps> = ({
     "8c5a495b6c81e803332610dad9861480": Object {
       "dependencies": Object {
         "@primer/octicons-react": "^10.0.0",
-        "@theme-ui/match-media": "^0.4.0-rc.1",
-        "@theme-ui/presets": "^0.4.0-rc.1",
+        "@theme-ui/match-media": "^0.6.0-alpha.1",
+        "@theme-ui/presets": "^0.6.0-alpha.1",
         "copy-to-clipboard": "^3.2.1",
         "fast-memoize": "^2.5.2",
         "markdown-to-jsx": "^6.11.0",
@@ -227,20 +307,20 @@ export const ActionBar: FC<ActionBarProps> = ({
         "react-table": "^7.0.0",
         "react-tabs": "^3.1.0",
         "scroll-into-view-if-needed": "^2.2.25",
-        "theme-ui": "^0.4.0-rc.1",
+        "theme-ui": "^0.6.0-alpha.3",
       },
       "devDependencies": Object {
-        "@component-controls/jest-snapshots": "^1.38.0",
-        "@component-controls/ts-markdown-docs": "^1.37.0",
-        "@theme-ui/css": "^0.4.0-rc.1",
+        "@component-controls/jest-snapshots": "^2.5.3",
+        "@component-controls/ts-markdown-docs": "^2.2.0",
+        "@theme-ui/css": "^0.6.0-alpha.1",
         "@types/markdown-to-jsx": "^6.11.0",
         "@types/react": "^16.9.34",
         "@types/react-table": "^7.0.10",
         "@types/react-tabs": "^2.3.1",
         "cross-env": "^5.2.1",
         "eslint": "^6.5.1",
-        "react": "^16.13.1",
-        "react-dom": "^16.13.1",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
         "typescript": "^4.0.5",
       },
       "fileHash": "8c5a495b6c81e803332610dad9861480",
@@ -255,13 +335,13 @@ export const ActionBar: FC<ActionBarProps> = ({
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.38.0",
+      "version": "2.5.3",
     },
     "fded7dbaa855ea6869a794f877eab680": Object {
       "dependencies": Object {
         "@primer/octicons-react": "^10.0.0",
-        "@theme-ui/match-media": "^0.4.0-rc.1",
-        "@theme-ui/presets": "^0.4.0-rc.1",
+        "@theme-ui/match-media": "^0.6.0-alpha.1",
+        "@theme-ui/presets": "^0.6.0-alpha.1",
         "copy-to-clipboard": "^3.2.1",
         "fast-memoize": "^2.5.2",
         "markdown-to-jsx": "^6.11.0",
@@ -273,20 +353,20 @@ export const ActionBar: FC<ActionBarProps> = ({
         "react-table": "^7.0.0",
         "react-tabs": "^3.1.0",
         "scroll-into-view-if-needed": "^2.2.25",
-        "theme-ui": "^0.4.0-rc.1",
+        "theme-ui": "^0.6.0-alpha.3",
       },
       "devDependencies": Object {
-        "@component-controls/jest-snapshots": "^1.38.0",
-        "@component-controls/ts-markdown-docs": "^1.37.0",
-        "@theme-ui/css": "^0.4.0-rc.1",
+        "@component-controls/jest-snapshots": "^2.5.3",
+        "@component-controls/ts-markdown-docs": "^2.2.0",
+        "@theme-ui/css": "^0.6.0-alpha.1",
         "@types/markdown-to-jsx": "^6.11.0",
         "@types/react": "^16.9.34",
         "@types/react-table": "^7.0.10",
         "@types/react-tabs": "^2.3.1",
         "cross-env": "^5.2.1",
         "eslint": "^6.5.1",
-        "react": "^16.13.1",
-        "react-dom": "^16.13.1",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
         "typescript": "^4.0.5",
       },
       "fileHash": "fded7dbaa855ea6869a794f877eab680",
@@ -301,9 +381,10 @@ export const ActionBar: FC<ActionBarProps> = ({
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.38.0",
+      "version": "2.5.3",
     },
   },
+  "search": [Function],
   "stores": Array [
     Object {
       "doc": Object {
@@ -313,7 +394,7 @@ export const ActionBar: FC<ActionBarProps> = ({
           "ActionBar": "fded7dbaa855ea6869a794f877eab680",
         },
         "date": "2020-10-29T01:16:52.595Z",
-        "dateModified": "2020-10-29T01:16:52.596Z",
+        "dateModified": "2020-12-06T02:30:15.977Z",
         "fileName": "/Users/atanasster/component-controls/ui/components/src/ActionBar/ActionBar.stories.tsx",
         "package": "8c5a495b6c81e803332610dad9861480",
         "title": "Components/ActionBar",
@@ -493,7 +574,7 @@ export const ActionBar: FC<ActionBarProps> = ({
             Object {
               "loc": Object {
                 "end": Object {
-                  "column": 29,
+                  "column": 13,
                   "line": 0,
                 },
                 "start": Object {
@@ -551,13 +632,13 @@ export const ActionBar: FC<ActionBarProps> = ({
               "line": 41,
             },
             "start": Object {
-              "column": 33,
+              "column": 49,
               "line": 25,
             },
           },
           "name": "overview",
           "renderFn": [Function],
-          "source": "({ themeKey }: ActionBarProps) => (
+          "source": "({ themeKey }) => (
   <Container>
     <ActionBar
       themeKey={themeKey}

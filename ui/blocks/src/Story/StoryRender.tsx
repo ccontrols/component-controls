@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { FC, useState, Fragment, forwardRef } from 'react';
-import { jsx, CSSProperties, Box } from 'theme-ui';
+import { FC, forwardRef, Ref, useState, Fragment } from 'react';
+import { jsx, CSSProperties, Box, BoxProps } from 'theme-ui';
 
 import Iframe from 'react-frame-component';
 import ReactResizeDetector from 'react-resize-detector';
@@ -73,15 +73,15 @@ const StoryWrapper: FC<StoryWrapperProps> = ({
 };
 export const NAME = 'story';
 
-export interface StoryRenderProps {
+export type StoryRenderProps = {
   story: Story;
-  ref?: React.Ref<HTMLDivElement>;
-}
+  ref?: Ref<HTMLDivElement>;
+} & BoxProps;
 export const StoryRender: FC<StoryRenderProps & StoryWrapperProps> = forwardRef(
-  (
+  function StoryRender(
     { story, wrapper, iframeStyle, ...rest },
-    ref: React.Ref<HTMLDivElement>,
-  ) => {
+    ref: Ref<HTMLDivElement>,
+  ) {
     const store = useStore();
     const options = useExternalOptions();
     const rendered = store.config.renderFn

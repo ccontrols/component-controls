@@ -1,21 +1,16 @@
 import React from 'react';
-import { Example } from '@component-controls/core';
-import { MockContext } from '@component-controls/blocks';
+import { Document, Example } from '@component-controls/core';
+import { mockDecorators } from '@component-controls/blocks';
 import { useDocByType } from '@component-controls/store';
 import { DocumentsList } from './DocumentsList';
 
 export default {
   title: 'Application/DocumentsList',
   component: DocumentsList,
-};
+  decorators: mockDecorators,
+} as Document;
 
-const MockList = () => {
+export const overview: Example = () => {
   const pages = useDocByType('story');
   return <DocumentsList pages={pages} type="story" />;
 };
-
-export const overview: Example = () => (
-  <MockContext storyId="id-of-story">
-    <MockList />
-  </MockContext>
-);

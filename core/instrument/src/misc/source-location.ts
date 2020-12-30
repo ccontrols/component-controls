@@ -25,7 +25,13 @@ export const adjustSourceLocation = (
   };
 };
 
-export const sourceLocation = (loc: CodeLocation): CodeLocation => ({
-  start: { ...loc.start },
-  end: { ...loc.end },
-});
+export const sourceLocation = (
+  loc: CodeLocation | null,
+): CodeLocation | undefined => {
+  return loc
+    ? {
+        start: { ...loc.start },
+        end: { ...loc.end },
+      }
+    : undefined;
+};

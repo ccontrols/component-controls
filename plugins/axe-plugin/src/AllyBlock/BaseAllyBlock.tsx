@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
-import React, { FC, useEffect, useContext } from 'react';
-import { Spec, cleanup } from 'axe-core';
+import React, { FC, useContext, useMemo } from 'react';
+import { Spec } from 'axe-core';
 
 import { PanelContainer, ActionItems } from '@component-controls/components';
 import { ViolationsTable, PassesTable, IncompleteTable } from './ResultsTable';
@@ -23,50 +23,45 @@ export const BaseAllyBlock: FC<BaseAllyBlockProps> = ({ children }) => {
     results: { violations, passes, incomplete },
   } = useContext(AxeContext);
 
-  useEffect(() => {
-    return () => {
-      cleanup();
-    };
-  }, []);
-  const actions: ActionItems = [
-    {
-      node: `dashboard`,
-      id: 'dashboard',
-      'aria-label': 'display the accessibility overview dashboard',
-      panel: <AllyDashboard />,
-    },
-  ];
-  if (violations?.length) {
-    actions.push({
-      node: `errors (${violations.length})`,
-      id: 'errors',
-      group: 'results',
-      'aria-label': 'display the accessibility violations',
-      panel: <ViolationsTable />,
-    });
-  }
-  if (passes?.length) {
-    actions.push({
-      node: `passed (${passes?.length})`,
-      id: 'passed',
-      group: 'results',
-      'aria-label': 'display the accessibility successfully passed tests',
-      panel: <PassesTable />,
-    });
-  }
+  const actions: ActionItems = useMemo(() => {
+    const actions: ActionItems = [
+      {
+        node: `dashboard`,
+        id: 'dashboard',
+        'aria-label': 'display the accessibility overview dashboard',
+        panel: <AllyDashboard />,
+      },
+    ];
+    if (violations.length) {
+      actions.push({
+        node: `errors (${violations.length})`,
+        id: 'errors',
+        group: 'results',
+        'aria-label': 'display the accessibility violations',
+        panel: <ViolationsTable />,
+      });
+    }
+    if (passes.length) {
+      actions.push({
+        node: `passed (${passes.length})`,
+        id: 'passed',
+        group: 'results',
+        'aria-label': 'display the accessibility successfully passed tests',
+        panel: <PassesTable />,
+      });
+    }
 
-  if (incomplete?.length) {
-    actions.push({
-      node: `incomplete (${incomplete.length})`,
-      id: 'incomplete',
-      group: 'results',
-      'aria-label': 'display the incomplete accessibility tests',
-      panel: <IncompleteTable />,
-    });
-  }
-
-  // console.log(results);
-
+    if (incomplete.length) {
+      actions.push({
+        node: `incomplete (${incomplete.length})`,
+        id: 'incomplete',
+        group: 'results',
+        'aria-label': 'display the incomplete accessibility tests',
+        panel: <IncompleteTable />,
+      });
+    }
+    return actions;
+  }, [incomplete.length, passes.length, violations.length]);
   return (
     <PanelContainer actions={actions} openTab="dashboard" visibleTabs={true}>
       <HighlightSelector>{children}</HighlightSelector>
