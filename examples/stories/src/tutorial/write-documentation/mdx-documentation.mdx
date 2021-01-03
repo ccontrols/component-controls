@@ -8,6 +8,9 @@ tags:
 order: 0
 author: atanasster
 ---
+
+import { Markdown } from '@component-controls/components';
+import changelog from '../../../CHANGELOG.md';
 import Transclusion from '../../sections/transclusion.mdx';
 
 ## MDX
@@ -32,6 +35,7 @@ tags:
   - documentation
 order: 0
 ---
+
 ```
 
 [Check all Document fields](/tutorial/reference/document)
@@ -49,18 +53,75 @@ import { Button } from 'theme-ui';
 <Button onClick={() => alert('clicked')}>click me</Button>
 ```
 
-
 ## Transclusion
 
-MDX allows you to import external MDX and MD files statically and display their content:
+mdxjs allows you to import external `.mdx` files statically and display their content:
 
 ```mdx
 ---
 title: Test Transclusion
 ---
+
 import Transclusion from '../sections/transclusion.mdx';
 
 <Transclusion />
+```
+
+By default, `.md` files are not transformed to react components - they are rather loaded with [raw-loader](https://webpack.js.org/loaders/raw-loader/) and are translated as a string.
+
+You can still display `.md` files using our `<Markdown />` component:
+
+```mdx
+---
+title: Test Transclusion
+---
+
+import { Markdown } from '@component-controls/components';
+import changelog from '../../../CHANGELOG.md';
+
+<Markdown>{changelog}</Markdown>
+```
+
+If you prefer to compile `.md` files with `mdxjs` and use transclusion, you can set up a custom [webpack config](https://mdxjs.com/getting-started/webpack):
+
+```js:title=.config/buildtime.js
+module.exports = {
+  webpack: (config = {}) => {
+    return {
+      ...config,
+      module: {
+        ...config.module,
+        rules: [
+          ...config.module.rules.filter(rule => !rule.test.test('.md')),
+          {
+            test: /\.md$/i,
+            use: [
+              {
+                loader: 'babel-loader',
+                options: {
+                  presets: ['@babel/preset-env', '@babel/preset-react'],
+                },
+              },
+              '@mdx-js/loader',
+            ],
+          },
+        ],
+      },
+    };
+  },
+};
+```
+
+And then use the imported markdown file as a react component:
+
+```mdx
+---
+title: Test Transclusion
+---
+
+import Changelog from '../../../CHANGELOG.md';
+
+<Changelog />
 ```
 
 ## Syntax highlighting
@@ -70,11 +131,12 @@ You can include source code in your MDX and MD documentation and add some useful
 ### Language
 
 The language can be specified as the first parameter
+
 ````mdx
 ```jsx
-  import { Button } from 'theme-ui';   
+import { Button } from 'theme-ui';
 ```
-````  
+````
 
 ### Title
 
@@ -82,30 +144,32 @@ A title attribute can be added. Due to some current MDX limitations, the title c
 
 ````mdx:title=my-title
 ```jsx:title=my-title
-import { Button } from 'theme-ui';   
+import { Button } from 'theme-ui';
 ```
-````   
+````
 
 ### Highlight lines
 
 You can specify a line to highlight
+
 ````markdown {2}
 ```jsx {2}
-import { Button } from 'theme-ui';   
-<Button >click me </Button>
+import { Button } from 'theme-ui';
+<Button>click me </Button>;
 ```
 ````
 
 Or a range of lines
+
 ````markdown {2-3}
 ```jsx {2-3}
-import { Button } from 'theme-ui';   
-<Button >click me </Button>
+import { Button } from 'theme-ui';
+<Button>click me </Button>;
 ```
 ````
 
 ## Emoji
 
-You can use `:emoji:` in your documents 
+You can use `:emoji:` in your documents
 
-`:rocket: :dog: :+1:` =  :rocket: :dog: :+1:
+`:rocket: :dog: :+1:` = :rocket: :dog: :+1:
