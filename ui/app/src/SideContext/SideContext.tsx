@@ -30,9 +30,9 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
       //find first anchor element that is below the scroll position
       const curItem = items.findIndex((item, index) => {
         const el = windRef?.querySelector(`#${item.id}`);
-        const nextItem = index < items.length - 1 && items[index + 1];
-        const nextEl = nextItem && windRef?.querySelector(`#${nextItem.id}`);
         if (el) {
+          const nextItem = index < items.length - 1 && items[index + 1];
+          const nextEl = nextItem && windRef?.querySelector(`#${nextItem.id}`);
           const { top: elTop } = el.getBoundingClientRect();
           const { top: nextTop = 0 } = nextEl
             ? nextEl.getBoundingClientRect()
@@ -50,19 +50,21 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
       const anchors = windRef.querySelectorAll('a[data-title]');
       if (anchors.length > 0) {
         anchors.forEach(el => {
-          const href = el.getAttribute('href');
-          const id = el.getAttribute('data-id');
-          const level = parseInt(el.getAttribute('data-level') || '1');
-          const title = el.getAttribute('data-title');
-          const offset = (el as HTMLElement).offsetTop;
-          if (href && id && title && level < 4) {
-            links.push({
-              href,
-              id,
-              title,
-              level,
-              offset,
-            });
+          if (!el.closest('.story-render-container')) {
+            const href = el.getAttribute('href');
+            const id = el.getAttribute('data-id');
+            const level = parseInt(el.getAttribute('data-level') || '1');
+            const title = el.getAttribute('data-title');
+            const offset = (el as HTMLElement).offsetTop;
+            if (href && id && title && level < 4) {
+              links.push({
+                href,
+                id,
+                title,
+                level,
+                offset,
+              });
+            }
           }
         });
       }
