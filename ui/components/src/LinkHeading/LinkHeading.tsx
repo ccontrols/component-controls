@@ -25,7 +25,18 @@ export const LinkHeading: FC<LinkHeadingProps> = ({
 }) => {
   const { size, level } = iconSize[as as string];
   const padding = 4;
-  const linkId = titleToId(id || children);
+  const childStrings = Array.isArray(children)
+    ? children
+        .map(child =>
+          typeof child === 'string'
+            ? child
+            : typeof child === 'object'
+            ? ((child as unknown) as any).props?.children
+            : null,
+        )
+        .filter(child => child)
+    : children;
+  const linkId = titleToId(id || childStrings);
   return (
     <Box id={linkId} variant="linkheading.container">
       <Box variant="linkheading.inner">
@@ -34,7 +45,7 @@ export const LinkHeading: FC<LinkHeadingProps> = ({
             sx={{ paddingRight: `${padding}px`, left: -(size + padding) }}
             variant="linkheading.link"
             href={pageLink(linkId)}
-            data-title={title || children}
+            data-title={title || childStrings}
             data-id={linkId}
             data-level={level}
           >

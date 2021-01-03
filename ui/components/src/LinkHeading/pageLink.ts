@@ -1,6 +1,11 @@
 export const titleToId = (id: any): string => {
   const strId = typeof id === 'string' ? id : '';
-  return strId.replace(/\W/g, '-').toLowerCase();
+  const value = strId.replace(/\W/g, '-').toLowerCase();
+  if (value.match(/^[A-Z]/i)) {
+    return value;
+  }
+  //firce start with letter
+  return `i-${value}`;
 };
 export const pageLink = (id: string): string => {
   let url = '';
