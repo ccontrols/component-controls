@@ -4,7 +4,7 @@ export const reactDocgenTypescript: Configuration = {
   module: {
     rules: [
       {
-        test: /\.(md|mdx)$/,
+        test: /\.mdx$/i,
         exclude: [/node_modules/],
         loader: '@component-controls/loader/loader',
         enforce: 'pre',
@@ -23,7 +23,7 @@ export const reactDocgenTypescript: Configuration = {
       },
 
       {
-        test: /\.(story|stories).(js|jsx|ts|tsx|mdx)$/,
+        test: /\.(story|stories).(js|jsx|ts|tsx|mdx)$/i,
         loader: '@component-controls/loader/loader',
         exclude: [/node_modules/],
         enforce: 'pre',

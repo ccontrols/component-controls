@@ -15,7 +15,7 @@ export const instrument: Configuration = {
         ],
       },
       {
-        test: /\.(md|mdx)$/,
+        test: /\.mdx$/i,
         exclude: [/node_modules/],
         loader: 'babel-loader',
         options: {
@@ -26,7 +26,7 @@ export const instrument: Configuration = {
         },
       },
       {
-        test: /\.(md|mdx)$/,
+        test: /\.mdx$/i,
         exclude: [/node_modules/],
         loader: '@component-controls/loader/loader',
         enforce: 'pre',

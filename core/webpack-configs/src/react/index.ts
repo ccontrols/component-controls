@@ -78,7 +78,7 @@ export const react: PresetType = (options: BuildProps) => {
           ],
         },
         {
-          test: /\.(md|mdx)$/i,
+          test: /\.mdx$/i,
           exclude: [/node_modules/],
           loader: 'babel-loader',
           options: {
@@ -100,7 +100,7 @@ export const react: PresetType = (options: BuildProps) => {
           },
         },
         {
-          test: /\.(eot|md|svg|ico|jpg|jpeg|png|gif|ttf|woff|woff2|pdf|mp4|web|wav|mp3|m4a|aac|oga)$/i,
+          test: /\.(eot|svg|ico|jpg|jpeg|png|gif|ttf|woff|woff2|pdf|mp4|web|wav|mp3|m4a|aac|oga)$/i,
           exclude: [/node_modules/],
           loader: 'url-loader',
           options: customLoaderOptions(options, 'url-loader', {
@@ -167,9 +167,17 @@ export const react: PresetType = (options: BuildProps) => {
             },
           ],
         },
-
         {
-          test: /\.(md|mdx)$/i,
+          test: /\.md$/i,
+          use: [
+            {
+              loader: 'raw-loader',
+              options: customLoaderOptions(options, 'raw-loader', {}),
+            },
+          ],
+        },
+        {
+          test: /\.mdx$/i,
           exclude: [/node_modules/],
           loader: '@component-controls/loader/loader',
           enforce: 'pre',
