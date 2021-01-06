@@ -1,43 +1,37 @@
 import React from 'react';
 import { Document, Example, ControlTypes } from '@component-controls/core';
+import { VariantButton, VariantButtonProps } from '../components/VariantButton';
+import design_notes from '../sections/design-notes.md';
 
 export default {
   title: 'ESM/Starter',
   author: 'atanasster',
   order: 0,
+  component: VariantButton,
+  plugins: {
+    figma: [
+      'https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1',
+    ],
+    notes: {
+      title: 'Design brief',
+      items: [design_notes],
+    },
+  },
+  description: `This example demonstrates documentiing a hypotethical Button component that supports variants, icons, text, and padding`,
 } as Document;
 
-interface DocsControlsTable {
-  name: string;
-  age: number;
-}
-
-export const overview: Example<DocsControlsTable> = ({ name, age }) => (
-  <h2>{`Hello, my name is ${name}, and I am ${age} years old.`}</h2>
+export const overview: Example<VariantButtonProps> = props => (
+  <VariantButton {...props} />
 );
 
-overview.description =
-  'Story with two dynamic control values: `name` and `age`. You can use the controls to edit the story properties at run-time.';
-
 overview.controls = {
-  name: {
-    type: ControlTypes.TEXT,
-    label: 'Name',
-    value: 'Mark',
-    description: `
-**name of the person**
-any *markdown* is allowed
-`,
-  },
-  age: {
+  text: 'Button',
+  icon: 'search',
+  fontSize: {
     type: ControlTypes.NUMBER,
-    description: `
-**age of the person**
-numeric, values between 10 and 75 allowed
-`,
-    label: 'Age',
-    value: 19,
-    min: 10,
-    max: 75,
+    data: { name: 'random.number', options: { min: 12, max: 32 } },
   },
 };
+
+overview.description =
+  'You can play with the Button component by changing some of the properties in the **Controls** table below.';

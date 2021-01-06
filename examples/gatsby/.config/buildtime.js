@@ -28,6 +28,8 @@ module.exports = {
     '../../../ui/editors/src/**/*.stories.@(js|jsx|tsx|mdx)',
     '../../../plugins/axe-plugin/src/stories/**/*.stories.@(js|jsx|tsx|mdx)',
     '../../../plugins/viewport-plugin/src/stories/**/*.stories.@(js|jsx|tsx|mdx)',
+    '../../../plugins/figma-embed/src/stories/**/*.stories.@(js|jsx|tsx|mdx)',
+    '../../../plugins/addon-notes/src/stories/**/*.stories.@(js|jsx|tsx|mdx)',
     //'../../stories/src/blogs/introduction-to-controls.mdx',
     //'../../stories/src/stories/controls-editors-starter.stories.tsx',
     //'../../stories/src/blogs/gatsby-nextjs-storybook.mdx',
@@ -42,6 +44,7 @@ module.exports = {
       tabs: {
         page: '@component-controls/pages/ClassicPage',
         test: '@component-controls/pages/TestingPage',
+        design: '@component-controls/pages/DesignPage',
       },
     },
     tutorial: {
