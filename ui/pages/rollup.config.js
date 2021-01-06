@@ -7,6 +7,7 @@ export default config({
     './src/pages/ClassicPage.tsx',
     './src/pages/ComponentPage.tsx',
     './src/pages/CurrentStoryPage.tsx',
+    './src/pages/DesignPage.tsx',
     './src/pages/StoriesPage.tsx',
     './src/pages/TestingPage.tsx',
   ],

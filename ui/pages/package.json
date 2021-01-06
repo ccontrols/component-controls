@@ -18,6 +18,8 @@
     "ComponentPage.js",
     "CurrentStoryPage.d.ts",
     "CurrentStoryPage.js",
+    "DesignPage.d.ts",
+    "DesignPage.js",
     "StoriesPage.d.ts",
     "StoriesPage.js",
     "TestingPage.d.ts",
@@ -43,8 +45,10 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@component-controls/addon-notes": "^2.5.3",
     "@component-controls/axe-plugin": "^2.5.3",
     "@component-controls/blocks": "^2.5.3",
+    "@component-controls/figma-embed": "^2.5.3",
     "@component-controls/viewport-plugin": "^2.5.3"
   },
   "devDependencies": {
