@@ -642,6 +642,7 @@ export const theme: ControlsTheme = {
     },
     rightmargin: {
       mr: 1,
+      my: '2px',
       display: 'inline-block',
       px: 1,
       whiteSpace: 'nowrap',
