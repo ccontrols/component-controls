@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { FC } from 'react';
 import { jsx, Theme } from 'theme-ui';
-import { CopyContainer } from '@component-controls/components';
 import { ColorBlockProps, ColorValue } from '../../types';
 import {
   TableContainerProps,
@@ -18,26 +17,20 @@ export type LightningFontProps = {
  * Design inspired by Oracle's [Lightning Design System](https://www.lightningdesignsystem.com/design-tokens/#category-color).
  */
 
-export const LightningColor: FC<LightningFontProps> = props => (
+export const LightningFont: FC<LightningFontProps> = props => (
   <TableRowContainer>
-    <BaseLightningColor {...props} />
+    <BaseLightningFont {...props} />
   </TableRowContainer>
 );
 
-const BaseLightningColor: FC<LightningFontProps> = ({
+const BaseLightningFont: FC<LightningFontProps> = ({
   name,
   color,
   columns,
 }) => {
   const colorObj: ColorValue =
     typeof color === 'string' ? { value: color } : color;
-  const {
-    value: colorValue,
-    name: colorName = name,
-    description,
-    sass,
-  } = colorObj;
-  const { hex, rgba } = colorToStr(colorValue);
+  const { name: colorName = name, description, sass } = colorObj;
   return (
     <tr
       sx={{
@@ -68,20 +61,6 @@ const BaseLightningColor: FC<LightningFontProps> = ({
             wordWrap: 'break-word',
           }}
         >
-          <CopyContainer value={hex} name={colorName}>
-            <div
-              sx={{
-                height: 50,
-                bg: colorValue,
-                mr: 3,
-              }}
-            />
-          </CopyContainer>
-
-          <div sx={{ mr: 3 }}>{`rgb${rgba.a !== 1 ? 'a' : ''}(${rgba.r}, ${
-            rgba.g
-          }, ${rgba.b}${rgba.a !== 1 ? `, ${rgba.a}` : ''})`}</div>
-          <div sx={{ mr: 3 }}>{hex}</div>
           <div>{colorName}</div>
         </div>
       </td>
@@ -110,7 +89,7 @@ type Optional<T, K extends keyof T> = Omit<T, K> & Partial<T>;
  * palette displayed with LightningColor items
  * using a css flex display direction column
  */
-export const LightningColorPalette: FC<Optional<
+export const LightningFontTheme: FC<Optional<
   Omit<TableContainerProps, 'children'>,
   'columns'
 >> = ({ columns = [], ...props }) => (
@@ -132,7 +111,7 @@ export const LightningColorPalette: FC<Optional<
     {...props}
   >
     {({ name, value }) => (
-      <BaseLightningColor
+      <BaseLightningFont
         key={`color_item_${name}}`}
         name={name}
         color={value}
