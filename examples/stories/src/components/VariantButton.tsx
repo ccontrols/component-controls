@@ -119,14 +119,13 @@ export const VariantButton: FC<VariantButtonProps> = ({
         borderRadius: 8,
         border: `1px solid #000000`,
         display: 'flex',
-        flexDirection: 'row',
+        flexDirection: iconSide === 'left' ? 'row' : 'row-reverse',
         alignItems: 'center',
       }}
     >
-      {Icon && iconSide === 'left' && (
+      {Icon && (
         <div
           style={{
-            padding: '0 10px 0 0',
             display: 'flex',
             alignItems: 'center',
           }}
@@ -134,18 +133,7 @@ export const VariantButton: FC<VariantButtonProps> = ({
           <Icon size={iconSize} />
         </div>
       )}
-      <div>{text}</div>
-      {Icon && iconSide === 'right' && (
-        <div
-          style={{
-            padding: '0 0 0 10px',
-            display: 'flex',
-            alignItems: 'center',
-          }}
-        >
-          <Icon size={iconSize} />
-        </div>
-      )}
+      <div style={{ padding: '0 10px' }}>{text}</div>
     </button>
   );
 };
