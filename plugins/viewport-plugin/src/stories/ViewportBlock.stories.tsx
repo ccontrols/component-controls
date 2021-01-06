@@ -1,13 +1,14 @@
-import React, { FC } from 'react';
+import React from 'react';
+import { Document, Example } from '@component-controls/core';
 import { BlockContextProvider, store } from '@component-controls/blocks';
 import { ViewportBlock } from '../index';
 
 export default {
   title: 'Plugins/ViewportBlock',
   component: ViewportBlock,
-};
+} as Document;
 
-export const overview: FC = () => {
+export const overview: Example = () => {
   return (
     <BlockContextProvider
       storyId="blocks-core-story-plain--controls"
@@ -18,7 +19,7 @@ export const overview: FC = () => {
   );
 };
 
-export const sizes: FC = () => {
+export const sizes: Example = () => {
   return (
     <BlockContextProvider
       storyId="blocks-core-story-plain--controls"
