@@ -1,18 +1,18 @@
 # Table of contents
 
--   [In action](#in-action)
--   [Overview](#overview)
--   [Getting Started](#getting-started)
-    -   [Install](#install)
-    -   [Add to a document](#add-to-a-document)
-    -   [Add to a story](#add-to-a-story)
-    -   [Insert into an MDX document](#insert-into-an-mdx-document)
-    -   [Configure props globally](#configure-props-globally)
--   [API](#api)
-    -   [<ins>ImagesBlock</ins>](#insimagesblockins)
-    -   [<ins>overview</ins>](#insoverviewins)
-    -   [<ins>customItems</ins>](#inscustomitemsins)
-    -   [<ins>customConfigProps</ins>](#inscustomconfigpropsins)
+- [In action](#in-action)
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+  - [Install](#install)
+  - [Add to a document](#add-to-a-document)
+  - [Add to a story](#add-to-a-story)
+  - [Insert into an MDX document](#insert-into-an-mdx-document)
+  - [Configure props globally](#configure-props-globally)
+- [API](#api)
+  - [<ins>ImagesBlock</ins>](#insimagesblockins)
+  - [<ins>overview</ins>](#insoverviewins)
+  - [<ins>customItems</ins>](#inscustomitemsins)
+  - [<ins>customConfigProps</ins>](#inscustomconfigpropsins)
 
 # In action
 
@@ -20,7 +20,7 @@
 
 # Overview
 
-This addon contains a `ImagesBlock` that you can integrate into any page, as well as a standalone `ImagesPage`
+This addon contains an `ImagesBlock` that you can integrate into any page, as well as a standalone `ImagesPage`
 
 # Getting Started
 
@@ -54,7 +54,7 @@ export default {
 
 ## Add to a story
 
-The images will be assigned only to the specific story. This allows multiple stories in the document to have different images associated with them.
+The images will be assigned only to a specific story. This allows multiple stories in the document to have different images associated with them.
 
 in `mystory.stories.tsx`
 

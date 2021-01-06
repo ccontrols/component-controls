@@ -55,7 +55,7 @@ export default {
 
 ## Add to a story
 
-The notes will be assigned only to the specific story. This allows multiple stories in the document to have different notes associated with them.
+The notes will be assigned only to a specific story. This allows multiple stories in the document to have different notes associated with them.
 
 in `mystory.stories.tsx`
 

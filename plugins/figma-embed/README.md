@@ -54,7 +54,7 @@ export default {
 
 ## Add to a story
 
-The figma file will be assigned only to the specific story. This allows multiple stories in the document to have different figma files associated with them.
+The figma file will be assigned only to a specific story. This allows multiple stories in the document to have different figma files associated with them.
 
 in `mystory.stories.tsx`
 
