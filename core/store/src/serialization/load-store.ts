@@ -73,6 +73,7 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
             decorators: Array.isArray(doc.decorators)
               ? doc.decorators.filter(d => typeof d === 'function')
               : undefined,
+            plugins: doc.plugins,
           };
           globalStore.docs[doc.title] = doc;
           Object.keys(storeStories).forEach((storyName: string) => {
