@@ -44,6 +44,11 @@ export interface TabConfiguration {
    * variant key in the pagecontainer theme value
    */
   variant?: string;
+
+  /**
+   * callback to determine if the tab is visible
+   */
+  isVisible?: (props: { story: Story; doc: Document }) => boolean;
 }
 
 export type PageTab = string | TabConfiguration | [string, TabConfiguration];
