@@ -27,7 +27,6 @@ export const FigmaEmbedBlock: FC<FigmaEmbedBlockProps> = fullProps => {
     width = '100%',
     style,
     allow,
-    allowTransparency,
     loading,
     referrerPolicy,
     sandbox,
@@ -60,7 +59,6 @@ export const FigmaEmbedBlock: FC<FigmaEmbedBlockProps> = fullProps => {
             }}
             style={style}
             allow={allow}
-            allowTransparency={allowTransparency}
             loading={loading}
             referrerPolicy={referrerPolicy}
             sandbox={sandbox}

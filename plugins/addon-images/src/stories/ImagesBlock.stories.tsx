@@ -1,12 +1,12 @@
 import React from 'react';
 import { Document, Example } from '@component-controls/core';
 import { BlockContextProvider, store } from '@component-controls/blocks';
-import { NotesBlock } from '../index';
-import notes from './notes.md';
+import { ImagesBlock } from '../index';
+import img from './example_image.jpg';
 
 export default {
-  title: 'Plugins/NotesBlock',
-  component: NotesBlock,
+  title: 'Plugins/ImagesBlock',
+  component: ImagesBlock,
 } as Document;
 
 export const overview: Example = () => {
@@ -15,7 +15,7 @@ export const overview: Example = () => {
       storyId="blocks-core-story-plain--controls"
       store={store}
     >
-      <NotesBlock id="." />
+      <ImagesBlock id="." />
     </BlockContextProvider>
   );
 };
@@ -26,13 +26,14 @@ export const customItems: Example = () => {
       storyId="blocks-core-story-plain--controls"
       store={store}
     >
-      <NotesBlock
+      <ImagesBlock
         id="."
         items={[
-          `
-# Introduction
-some **markdown**
-`,
+          {
+            title: 'Image',
+            width: 200,
+            src: img,
+          },
         ]}
       />
     </BlockContextProvider>
@@ -48,16 +49,12 @@ export const customConfigProps: Example = () => {
         config: {
           ...store.config,
           components: {
-            notes: { collapsible: false, title: 'Custom title here' },
+            images: { collapsible: false, title: 'Custom title here' },
           },
         },
       }}
     >
-      <NotesBlock id="." />
+      <ImagesBlock id="." />
     </BlockContextProvider>
   );
-};
-
-export const markdownFile: Example = () => {
-  return <NotesBlock items={[notes]} />;
 };

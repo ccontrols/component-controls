@@ -10,9 +10,9 @@ import {
   defaultRunConfig,
 } from '@component-controls/core';
 import { render as reactRender } from '@component-controls/render/react';
-
-import { MDXContent } from './MDXStory';
 import ClassicPage from '@component-controls/pages/ClassicPage';
+import { MDXContent } from './MDXStory';
+import img_example from './image_example.jpg';
 
 export const store: Store = {
   ...getDefaultStore(),
@@ -461,6 +461,7 @@ and a [link](https://google.com)
             `,
           },
         ],
+        images: [img_example],
       },
       arguments: [
         {

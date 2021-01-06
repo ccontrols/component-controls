@@ -10,7 +10,7 @@ import { useStory, StoryInputProps } from '@component-controls/store';
 import { Markdown } from '@component-controls/components';
 
 export interface NotesBlockOwnProps {
-  items?: (string | { url: string; [key: string]: any })[];
+  items?: (string | { text: string; [key: string]: any })[];
 }
 export type NotesBlockProps = NotesBlockOwnProps &
   StoryBlockContainerProps &
