@@ -443,6 +443,25 @@ and a [link](https://google.com)
           value: 19,
         },
       },
+      plugins: {
+        figma: [
+          {
+            url:
+              'https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1',
+          },
+        ],
+        notes: [
+          {
+            text: `
+## Component *design notes*
+
+1. Be user-friendly
+2. Be a11y accessible
+3. **Go to 1**
+            `,
+          },
+        ],
+      },
       arguments: [
         {
           loc: {
