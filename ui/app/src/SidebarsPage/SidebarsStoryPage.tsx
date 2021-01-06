@@ -49,7 +49,11 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
   const activeTab = useActiveTab();
   const pageRef = useRef<HTMLDivElement>(null);
   const pageConfig = config.pages?.[type] || {};
-  const tabs = Object.keys(pageConfig.tabs || {});
+  const tabKeys = pageConfig.tabs || {};
+  const tabs = Object.keys(tabKeys).filter(key => {
+    const tab = tabKeys[key];
+    return story && (!tab.isVisible || tab.isVisible({ doc, story }));
+  });
 
   const { tabIndex, tabConfig } = useMemo(() => {
     const selectedTab = activeTab
