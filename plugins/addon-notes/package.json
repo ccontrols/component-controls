@@ -12,7 +12,9 @@
   "files": [
     "dist/",
     "package.json",
-    "README.md"
+    "README.md",
+    "NotesPage.d.ts",
+    "NotesPage.js"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
