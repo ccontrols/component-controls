@@ -79,7 +79,7 @@ export interface SmartControls {
 }
 
 /**
- * story prooperties that can be inherited from the document, or each story can have its properties
+ * story properties that can be inherited from the document, or each story can have its properties
  */
 
 export interface StoryProps<Props = unknown> {
@@ -109,6 +109,11 @@ export interface StoryProps<Props = unknown> {
    * array of wrapper functions (decorators) to be called when rendering each individual story.
    */
   decorators?: StoryRenderFn[];
+
+  /**
+   * plugins configuration settings
+   */
+  plugins?: any;
 }
 
 /**
