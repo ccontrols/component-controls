@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.6.1](https://github.com/ccontrols/component-controls/compare/v2.6.0...v2.6.1) (2021-01-07)
+
+
+### Bug Fixes
+
+* activetab check isVisible ([cfe66ea](https://github.com/ccontrols/component-controls/commit/cfe66ea93956cd805165351968dfa810bf97af8a))
+
+
+
+
+
 # [2.6.0](https://github.com/ccontrols/component-controls/compare/v2.5.3...v2.6.0) (2021-01-07)
 
 
