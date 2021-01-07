@@ -10,6 +10,7 @@ module.exports = {
     '../../stories/src/tutorial/getting-started/ssg/*.mdx',
     '../../stories/src/tutorial/getting-started/*.mdx',
     '../../stories/src/tutorial/write-documentation/*.mdx',
+    '../../stories/src/tutorial/design/*.mdx',
     '../../stories/src/tutorial/design/tokens/*.mdx',
     '../../stories/src/tutorial/testing/*.mdx',
     '../../stories/src/tutorial/configuration/*.mdx',

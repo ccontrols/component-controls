@@ -1,0 +1,325 @@
+---
+title: Design/Design assets
+route: /tutorial/design/design-assets
+type: tutorial
+tags:
+  - design
+  - figma
+  - design assets
+author: atanasster
+image: /static/design-page-overview.jpg
+---
+
+import overviewImg from './media/design-page-overview.jpg';
+
+## Overview
+
+During the software development process, your team will often have various design assets ([Figma](https://www.figma.com), markdown, or image files) associated with each component.
+
+The design extensions of `component-controls` allow you to organize such assets and keep them alongside the actual component.
+
+You can find an example [design page](/api/esm-starter--overview/design) that deonstrates associating a design brief(description), [Figma](https://www.figma.com), and Markdown files with a `VariantButton` component.
+
+## Design plugins
+
+There are several plugins in `component-controls` to help with design assets:
+
+- Figma files with ['@component-controls/figma-embed'](/api/plugins-figmaembedblock--overview)
+- Markdown files with ['@component-controls/addon-notes'](/api/plugins-notesblock--overview)
+- Image files with ['@component-controls/addon-images'](/api/plugins-imagesblock--overview)
+
+All the plugins contain a "block" that can be incorporated in a page, as well as a standalone page component.
+
+## DesignPage
+
+The easiest way to start incorporating design assets in your documentation site is by adding a `DesignPage` to your sites's configuration
+
+```js:title=.config/buildtime.js
+module.exports = {
+  ...
+  pages: {
+    story: {
+      tabs: {
+        page: '@component-controls/pages/ClassicPage',
+        test: '@component-controls/pages/TestingPage',
+        design: '@component-controls/pages/DesignPage',
+      },
+    },
+  },
+};
+```
+
+The `DesignPage` tab will only be visible once you add some design assets associated with the current document(file) or individual story
+
+## Quick configure
+
+The design plugins can be configured in the `plugins` section of a document or a story. All the design plugins support an array of asset items.
+
+```js:title=Button.stories.tsx
+import { Document } from '@component-controls/core';
+import design_notes from '../sections/design-notes.md';
+import image_screenshot from './media/image_screenshot.jpg';
+
+export default {
+  title: 'Button',
+  component: Button,
+  plugins: {
+    figma: [
+      'https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1',
+    ],
+    notes: {
+      // using an object consisting of global configuration props (ie title) and items
+      title: 'Design brief',
+      items: [design_notes],
+    },
+    images: [image_screenshot],
+  },
+} as Document;
+```
+
+At this point you should see the Design page tab and the design assets that you have associated with the document:
+
+<img alt="design page" title="DesignPage" src={overviewImg} />
+
+## Figma files
+
+You can associate [Figma](https://www.figma.com) files such as wireframes or full-color designs to your components documentation files
+
+### Add to a document
+
+The [Figma](https://www.figma.com) file will be assigned to all the stories in the current document
+
+```js:title=mystory.stories.tsx
+import { Document } from '@component-controls/core';
+
+export default {
+  title: 'MyStory',
+  plugins: {
+    figma: [
+      'https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1',
+    ],
+  },
+} as Document;
+```
+
+### Add to a story
+
+The Figma file will be assigned only to a specific story. This allows multiple stories in the document to have different Figma files associated with them.
+
+```js:title=mystory.stories.tsx
+import React from 'react';
+import { Document, Example, ControlTypes } from '@component-controls/core';
+import { Button, ButtonProps } from './Button';
+
+export default {
+  title: 'MyStory',
+} as Document;
+
+export const story: Example<ButtonProps> = () => <Button>click me</Button>;
+
+story.design = plugins: {
+  figma: [{
+    title: 'My Figma files',
+    url: 'https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1',
+  }],
+};
+```
+
+### Insert into an MDX document
+
+```js:title=mystory.mdx
+---
+title: MyStory
+---
+import { FigmaEmbedBlock } from '@component-controls/figma-plugin';
+
+<FigmaEmbedBlock
+  items={[
+    {
+      url:
+        'https://www.figma.com/file/hS1sLjYq49vjnKXhwGgHwg/Navigation-UI-design-components-Community?node-id=1%3A2309',
+    },
+    {
+      url:
+        'https://www.figma.com/file/LtgbR2mbVPbQTNDfDQxbKL/Atanas-Stoyanov-s-Team-Colors?node-id=0%3A1',
+    },
+  ]}
+/>
+```
+
+### Configure props globally
+
+You can globally change the iframe options for the FigmaEmbedBlock component
+
+```js:title=.config/runtime.tsx
+import { RunOnlyConfiguration } from '@component-controls/core';
+const config: RunOnlyConfiguration = {
+  ...
+  components: {
+    figma: {
+      width: '200'
+    }
+  },
+};
+
+export default config;
+```
+
+## Markdown files
+
+You can associate markdown files such as design briefs/outlines to your components documentation files
+
+### Add to a document
+
+The notes will be assigned to all the stories in the current document
+
+```js:title=mystory.stories.tsx
+import { Document } from '@component-controls/core';
+import design_notes from '../sections/design-notes.md';
+
+export default {
+  title: 'MyStory',
+  plugins: {
+    notes: {
+      title: 'Design brief',
+      items: [design_notes],
+    },
+  },
+} as Document;
+```
+
+### Add to a story
+
+The notes will be assigned only to a specific story. This allows multiple stories in the document to have different notes associated with them.
+
+```js:title=mystory.stories.tsx
+import React from 'react';
+import { Document, Example } from '@component-controls/core';
+
+export default {
+  title: 'MyStory',
+} as Document;
+
+export const story: Example = () => <Button>click me</Button>;
+story.design = {
+  plugins: {
+    notes: [`
+    # Introduction
+    some **markdown**
+    `],
+  },
+};
+```
+
+### Insert into an MDX document
+
+```js:title=mystory.mdx
+---
+title: MyStory
+---
+import { NotesBlock } from '@component-controls/addon-notes';
+
+<NotesBlock
+  items={[`
+    # Introduction
+    some **markdown**
+  `
+  ]}
+/>
+```
+
+### Configure props globally
+
+You can globally change the default options of the NotesBlock component
+
+```js:title=.config/runtime.tsx
+import { RunOnlyConfiguration } from "@component-controls/core";
+
+const config: RunOnlyConfiguration = {
+  ...
+  components: {
+    notes: {
+      title: 'Design files'
+    }
+  },
+};
+
+export default config;
+```
+
+### Image files
+
+You can associate image such as screenshots to your components documentation files
+
+### Add to a document
+
+The images will be assigned to all the stories in the current document
+
+```js:title=mystory.stories.tsx
+import { Document } from '@component-controls/core';
+import main_screen from './media/main-screen.jpg';
+
+export default {
+  title: 'MyStory',
+  plugins: {
+    images: {
+      title: 'Screen design',
+      items: [main_screen],
+    },
+  },
+} as Document;
+```
+
+### Add to a story
+
+The images will be assigned only to a specific story. This allows multiple stories in the document to have different images associated with them.
+
+```js:title=mystory.stories.tsx
+import React from 'react';
+import { Document, Example } from '@component-controls/core';
+import main_screen from './media/main-screen.jpg';
+
+export default {
+  title: 'MyStory',
+} as Document;
+
+export const story: Example = () => <Button>click me</Button>;
+
+story.design = {
+  plugins: {
+    images: [main_screen],
+  },
+};
+```
+
+### Insert into an MDX document
+
+```js:title=mystory.mdx
+---
+title: MyStory
+---
+import { ImagesBlock } from '@component-controls/addon-images';
+import login_screen from './media/login-screen.jpg';
+import logout_screen from './media/logout-screen.jpg';
+
+<ImagesBlock items={[login_screen, logout_screen]} />
+```
+
+### Configure props globally
+
+You can globally change the default options of the NotesBlock component
+
+```js:title=.config/runtime.tsx
+import { RunOnlyConfiguration } from '@component-controls/core';
+
+const config: RunOnlyConfiguration = {
+...
+  components: {
+    images: {
+      title: 'Screenshots'
+    }
+  },
+};
+
+export default config;
+```

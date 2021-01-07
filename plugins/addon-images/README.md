@@ -49,7 +49,6 @@ export default {
     },
   },
 } as Document;
-
 ```
 
 ## Add to a story
@@ -58,36 +57,40 @@ The images will be assigned only to a specific story. This allows multiple stori
 
 in `mystory.stories.tsx`
 
-    import React from 'react';
-    import { Document, Example } from '@component-controls/core';
-    import main_screen from './media/main-screen.jpg';
+```
+import React from 'react';
+import { Document, Example } from '@component-controls/core';
+import main_screen from './media/main-screen.jpg';
 
-    export default {
-      title: 'MyStory',
-    } as Document;
+export default {
+  title: 'MyStory',
+} as Document;
 
-    export const story: Example = () => <Button>click me</Button>;
+export const story: Example = () => <Button>click me</Button>;
 
-    story.design = {
-      plugins: {
-        images: [main_screen],
-      },
-    };
+story.design = {
+  plugins: {
+    images: [main_screen],
+  },
+};
+```
 
 ## Insert into an MDX document
 
 in `mystory.mdx`
 
-    ---
-    title: MyStory
-    ---
-    import { ImagesBlock } from '@component-controls/addon-images';
-    import login_screen from './media/login-screen.jpg';
-    import logout_screen from './media/logout-screen.jpg';
+```
+---
+title: MyStory
+---
+import { ImagesBlock } from '@component-controls/addon-images';
+import login_screen from './media/login-screen.jpg';
+import logout_screen from './media/logout-screen.jpg';
 
-    <ImagesBlock
-      items={[login_screen, logout_screen]}
-    />
+<ImagesBlock
+  items={[login_screen, logout_screen]}
+/>
+```
 
 ## Configure props globally
 
@@ -95,18 +98,20 @@ You can globally change the default options of the NotesBlock component
 
 in `.config/runtime.tsx`
 
-    import { RunOnlyConfiguration } from "@component-controls/core";
+```
+import { RunOnlyConfiguration } from "@component-controls/core";
 
-    const config: RunOnlyConfiguration = {
-      ...
-      components: {
-        images: {
-          title: 'Screenshots'
-        }
-      },
-    };
+const config: RunOnlyConfiguration = {
+  ...
+  components: {
+    images: {
+      title: 'Screenshots'
+    }
+  },
+};
 
-    export default config;
+export default config;
+```
 
 # API
 

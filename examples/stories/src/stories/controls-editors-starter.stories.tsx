@@ -17,7 +17,10 @@ export default {
       title: 'Design brief',
       items: [design_notes],
     },
-    images: [image_screenshot],
+    images: {
+      title: 'Screenshots',
+      items: [image_screenshot],
+    },
   },
   description: `This example demonstrates documenting a hypothetical Button component that supports variants, icons, text, and padding`,
 } as Document;
@@ -36,4 +39,4 @@ overview.controls = {
 };
 
 overview.description =
-  'You can play with the Button component by changing some of the properties in the **Controls** table below.';
+  'In the Playground, you can view the source code, apply zoom or background...';
