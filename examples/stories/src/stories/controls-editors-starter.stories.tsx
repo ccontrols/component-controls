@@ -19,7 +19,7 @@ export default {
     },
     images: [image_screenshot],
   },
-  description: `This example demonstrates documentiing a hypotethical Button component that supports variants, icons, text, and padding`,
+  description: `This example demonstrates documenting a hypothetical Button component that supports variants, icons, text, and padding`,
 } as Document;
 
 export const overview: Example<VariantButtonProps> = props => (
