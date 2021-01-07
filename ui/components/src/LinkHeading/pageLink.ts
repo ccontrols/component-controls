@@ -5,7 +5,7 @@ export const titleToId = (id: any): string => {
     return value;
   }
   //firce start with letter
-  return `i-${value}`;
+  return value ? `i-${value}` : value;
 };
 export const pageLink = (id: string): string => {
   let url = '';
