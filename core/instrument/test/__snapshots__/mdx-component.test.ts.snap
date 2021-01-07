@@ -31,8 +31,8 @@ Object {
     "componentsLookup": Object {
       "Button": "2f4bd34d15be236674abaf6e894afe6e",
     },
-    "date": 2020-10-21T01:23:26.440Z,
-    "dateModified": 2020-11-12T23:53:25.689Z,
+    "date": 2020-12-30T06:22:19.023Z,
+    "dateModified": 2020-12-30T06:22:19.024Z,
     "mdxType": "Meta",
     "title": "MDX",
   },
@@ -67,8 +67,8 @@ Object {
     "componentsLookup": Object {
       "Button": "dc86c4457416c54c13147e780d972747",
     },
-    "date": 2020-10-21T01:23:26.440Z,
-    "dateModified": 2020-11-12T23:53:30.143Z,
+    "date": 2020-12-30T06:22:19.024Z,
+    "dateModified": 2020-12-30T06:22:19.024Z,
     "title": "MDX",
   },
   "exports": Object {
@@ -160,8 +160,8 @@ Object {
       "Button": "1e542c3ba23e8699f77ec19bf3f9e3ea",
       "Toggle": "7e2f74e50bd73c6a0bf50c40d3c149d4",
     },
-    "date": 2020-10-21T01:23:26.440Z,
-    "dateModified": 2020-11-12T23:53:33.833Z,
+    "date": 2020-12-30T06:22:19.025Z,
+    "dateModified": 2020-12-30T06:22:19.025Z,
     "mdxType": "Meta",
     "title": "MDX",
   },

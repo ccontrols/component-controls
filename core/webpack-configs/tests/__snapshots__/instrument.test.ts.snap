@@ -39,7 +39,7 @@ Object {
             "@babel/preset-react",
           ],
         },
-        "test": /\\\\\\.\\(md\\|mdx\\)\\$/,
+        "test": /\\\\\\.mdx\\$/i,
       },
       Object {
         "enforce": "pre",
@@ -64,7 +64,7 @@ Object {
             },
           ],
         },
-        "test": /\\\\\\.\\(md\\|mdx\\)\\$/,
+        "test": /\\\\\\.mdx\\$/i,
       },
       Object {
         "enforce": "pre",
@@ -139,7 +139,7 @@ Object {
             "@babel/preset-react",
           ],
         },
-        "test": /\\\\\\.\\(md\\|mdx\\)\\$/,
+        "test": /\\\\\\.mdx\\$/i,
       },
       Object {
         "enforce": "pre",
@@ -167,7 +167,7 @@ Object {
             },
           ],
         },
-        "test": /\\\\\\.\\(md\\|mdx\\)\\$/,
+        "test": /\\\\\\.mdx\\$/i,
       },
       Object {
         "enforce": "pre",

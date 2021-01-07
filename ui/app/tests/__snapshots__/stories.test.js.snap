@@ -188,7 +188,7 @@ exports[`Application/App Overview 1`] = `
             <span
               class="css-vurnku"
             >
-              Copyright © 2020 by @component-controls
+              Copyright © 2021 by @component-controls
             </span>
           </div>
         </div>
@@ -1432,7 +1432,7 @@ exports[`Application/Footer Overview 1`] = `
           <span
             class="css-vurnku"
           >
-            Copyright © 2020 by @component-controls
+            Copyright © 2021 by @component-controls
           </span>
         </div>
       </div>
@@ -3414,7 +3414,7 @@ exports[`Application/SidebarsPage Overview 1`] = `
                                         class="css-zivbkl-Cell"
                                       >
                                         <span
-                                          class="css-1ghqg3n-Tag"
+                                          class="css-hpa617-Tag"
                                         >
                                           <span
                                             class="css-vurnku"
@@ -3474,7 +3474,7 @@ exports[`Application/SidebarsPage Overview 1`] = `
                                         class="css-zivbkl-Cell"
                                       >
                                         <span
-                                          class="css-13kvkw9-Tag"
+                                          class="css-1j59y6j-Tag"
                                         >
                                           <span
                                             class="css-vurnku"
@@ -3483,7 +3483,7 @@ exports[`Application/SidebarsPage Overview 1`] = `
                                           </span>
                                         </span>
                                         <span
-                                          class="css-1ghqg3n-Tag"
+                                          class="css-hpa617-Tag"
                                         >
                                           <span
                                             class="css-vurnku"
@@ -3706,7 +3706,7 @@ exports[`Application/SidebarsPage Overview 1`] = `
                                         class="css-zivbkl-Cell"
                                       >
                                         <span
-                                          class="css-kabhsx-LocalImport"
+                                          class="css-1ver5lo-LocalImport"
                                         >
                                           <span
                                             class="css-vurnku"
@@ -3720,7 +3720,7 @@ exports[`Application/SidebarsPage Overview 1`] = `
                                           </span>
                                         </span>
                                         <span
-                                          class="css-dktbw5-LocalImport"
+                                          class="css-9c8bof-LocalImport"
                                         >
                                           <span
                                             class="css-vurnku"
@@ -3755,7 +3755,7 @@ exports[`Application/SidebarsPage Overview 1`] = `
                                         class="css-zivbkl-Cell"
                                       >
                                         <span
-                                          class="css-dktbw5-LocalImport"
+                                          class="css-9c8bof-LocalImport"
                                         >
                                           <span
                                             class="css-vurnku"

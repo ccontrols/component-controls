@@ -63,8 +63,8 @@ export const Button: FC<ButtonProps> = props => (
     "componentsLookup": Object {
       "Button": "fbea66d4bd64ea2b935855efa5d522a1",
     },
-    "date": 2020-11-16T18:58:36.724Z,
-    "dateModified": 2020-11-16T21:16:17.737Z,
+    "date": 2020-12-30T06:22:19.021Z,
+    "dateModified": 2020-12-30T06:22:19.022Z,
     "package": "f4ca1c7bc1501c3fcaf51e85d24145e2",
     "smartControls": false,
     "template": Object {

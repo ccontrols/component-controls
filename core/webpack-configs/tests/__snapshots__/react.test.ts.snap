@@ -87,7 +87,7 @@ Object {
             "@babel/preset-react",
           ],
         },
-        "test": /\\\\\\.\\(md\\|mdx\\)\\$/i,
+        "test": /\\\\\\.mdx\\$/i,
       },
       Object {
         "exclude": Array [
@@ -100,7 +100,7 @@ Object {
           "outputPath": "",
           "publicPath": "/static",
         },
-        "test": /\\\\\\.\\(eot\\|md\\|svg\\|ico\\|jpg\\|jpeg\\|png\\|gif\\|ttf\\|woff\\|woff2\\|pdf\\|mp4\\|web\\|wav\\|mp3\\|m4a\\|aac\\|oga\\)\\$/i,
+        "test": /\\\\\\.\\(eot\\|svg\\|ico\\|jpg\\|jpeg\\|png\\|gif\\|ttf\\|woff\\|woff2\\|pdf\\|mp4\\|web\\|wav\\|mp3\\|m4a\\|aac\\|oga\\)\\$/i,
       },
       Object {
         "test": /\\\\\\.\\(woff\\(2\\)\\?\\|ttf\\|eot\\|svg\\)\\(\\\\\\?v=\\\\d\\+\\\\\\.\\\\d\\+\\\\\\.\\\\d\\+\\)\\?\\$/,
@@ -148,6 +148,15 @@ Object {
         ],
       },
       Object {
+        "test": /\\\\\\.md\\$/i,
+        "use": Array [
+          Object {
+            "loader": "raw-loader",
+            "options": Object {},
+          },
+        ],
+      },
+      Object {
         "enforce": "pre",
         "exclude": Array [
           /node_modules/,
@@ -169,7 +178,7 @@ Object {
             },
           ],
         },
-        "test": /\\\\\\.\\(md\\|mdx\\)\\$/i,
+        "test": /\\\\\\.mdx\\$/i,
       },
       Object {
         "enforce": "pre",

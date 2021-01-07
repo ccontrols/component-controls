@@ -5,16 +5,16 @@ Object {
   "components": Object {},
   "doc": Object {
     "componentsLookup": Object {},
-    "date": 2020-11-12T13:44:39.824Z,
-    "dateModified": 2020-11-13T15:50:05.556Z,
+    "date": 2020-12-30T06:22:19.025Z,
+    "dateModified": 2020-12-30T06:22:19.025Z,
     "title": "MDX",
   },
   "exports": Object {
     "default": Object {
       "story": Object {
         "componentsLookup": Object {},
-        "date": 2020-11-12T13:44:39.824Z,
-        "dateModified": 2020-11-13T15:50:05.556Z,
+        "date": 2020-12-30T06:22:19.025Z,
+        "dateModified": 2020-12-30T06:22:19.025Z,
         "title": "MDX",
       },
     },
@@ -96,16 +96,16 @@ Object {
   "components": Object {},
   "doc": Object {
     "componentsLookup": Object {},
-    "date": 2020-11-12T13:03:59.618Z,
-    "dateModified": 2020-11-12T13:42:48.374Z,
+    "date": 2020-12-30T06:22:19.025Z,
+    "dateModified": 2020-12-30T06:22:19.026Z,
     "title": "MDX",
   },
   "exports": Object {
     "default": Object {
       "story": Object {
         "componentsLookup": Object {},
-        "date": 2020-11-12T13:03:59.618Z,
-        "dateModified": 2020-11-12T13:42:48.374Z,
+        "date": 2020-12-30T06:22:19.025Z,
+        "dateModified": 2020-12-30T06:22:19.026Z,
         "title": "MDX",
       },
     },
