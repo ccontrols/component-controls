@@ -56,11 +56,12 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
   });
 
   const { tabIndex, tabConfig } = useMemo(() => {
-    const selectedTab = activeTab
-      ? activeTab
-      : tabs?.length > 0
-      ? tabs[0]
-      : undefined;
+    const selectedTab =
+      activeTab && tabs.includes(activeTab)
+        ? activeTab
+        : tabs?.length > 0
+        ? tabs[0]
+        : undefined;
     const tabIndex = Math.max(
       tabs.findIndex(route => route === selectedTab),
       0,
