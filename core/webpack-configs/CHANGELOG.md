@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/ccontrols/component-controls/compare/v2.5.3...v2.6.0) (2021-01-07)
+
+
+### Bug Fixes
+
+* md files to use raw-loader ([f3b5297](https://github.com/ccontrols/component-controls/commit/f3b52978f72febdcffd29c6cb579cf3461bc9459))
+
+
+
+
+
 ## [2.5.3](https://github.com/ccontrols/component-controls/compare/v2.5.2...v2.5.3) (2020-12-30)
 
 **Note:** Version bump only for package @component-controls/webpack-configs

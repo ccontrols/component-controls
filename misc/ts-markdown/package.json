@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/ts-markdown-docs",
-  "version": "2.2.0",
+  "version": "2.6.0",
   "description": "Typescript documentation generator for markdown files",
   "keywords": [
     "markdown",

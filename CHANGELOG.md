@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/ccontrols/component-controls/compare/v2.5.3...v2.6.0) (2021-01-07)
+
+
+### Bug Fixes
+
+* links with react children and start number ([370af1d](https://github.com/ccontrols/component-controls/commit/370af1d4fb5fe3f982e86e302d61c3d3a7e2fd92))
+* loading stories immutable ([3844289](https://github.com/ccontrols/component-controls/commit/38442890c8b57aa707d52e2101a572baea110678))
+* md files to use raw-loader ([f3b5297](https://github.com/ccontrols/component-controls/commit/f3b52978f72febdcffd29c6cb579cf3461bc9459))
+* no side selectors for story children ([549ff05](https://github.com/ccontrols/component-controls/commit/549ff056f1453677582e88b0284f5f68f1bc6bed))
+* rightmargin tages vert pad ([cc591f8](https://github.com/ccontrols/component-controls/commit/cc591f8746496da648cc1853f2afe0fbfeae6e19))
+* smart controls default to true ([c9ad5ff](https://github.com/ccontrols/component-controls/commit/c9ad5ff7681984da06e14bf15a36d0ad915f7493))
+* start with leter conditionally ([500e22a](https://github.com/ccontrols/component-controls/commit/500e22a03bec98a1dc5f3fa917df25f6e3b8b3d3))
+* type stories ([ed9c2c0](https://github.com/ccontrols/component-controls/commit/ed9c2c0afc0564b3948382cb104ce1944ac8e6d8))
+
+
+### Features
+
+* add DesignPage ([3151653](https://github.com/ccontrols/component-controls/commit/3151653a7edbb0462f14a096f1a3d171a2fedb19))
+* add isVisible prop for tab pages ([d709587](https://github.com/ccontrols/component-controls/commit/d709587709d93e6610c6f5b82805442fe02b47fc))
+* add pages for design addons ([1c16be6](https://github.com/ccontrols/component-controls/commit/1c16be6ca5f647172972c52880b8fe0afc58b256))
+* add plugins settoings field ([bb1da88](https://github.com/ccontrols/component-controls/commit/bb1da8844b019cf7a234a1c134aaf0a3bbfa39bf))
+* addon-images ([ce1ead9](https://github.com/ccontrols/component-controls/commit/ce1ead9a60ffd8d783422d79d471593f63048e44))
+* figma embed addon ([8522e54](https://github.com/ccontrols/component-controls/commit/8522e543dec6a0eee0dc48df90ef687fe9abc52d))
+* lightning font ([428e186](https://github.com/ccontrols/component-controls/commit/428e186c056b928c66513afb9b31128936ee822b))
+* merge plugins settings ([a925206](https://github.com/ccontrols/component-controls/commit/a9252064f30e1cd13e82a2364094139476ce6963))
+* new addon-notes ([1d1f0b5](https://github.com/ccontrols/component-controls/commit/1d1f0b5b30804ba014cb85507f2ea5aadb1a1adc))
+* support for isVisible page prop ([f5f6c27](https://github.com/ccontrols/component-controls/commit/f5f6c27db39f9dfc07d55aade33b4a0239b96d7e))
+
+
+
+
+
 ## [2.5.3](https://github.com/ccontrols/component-controls/compare/v2.5.2...v2.5.3) (2020-12-30)
 
 

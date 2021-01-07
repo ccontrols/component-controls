@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/ccontrols/component-controls/compare/v2.5.3...v2.6.0) (2021-01-07)
+
+
+### Bug Fixes
+
+* links with react children and start number ([370af1d](https://github.com/ccontrols/component-controls/commit/370af1d4fb5fe3f982e86e302d61c3d3a7e2fd92))
+* rightmargin tages vert pad ([cc591f8](https://github.com/ccontrols/component-controls/commit/cc591f8746496da648cc1853f2afe0fbfeae6e19))
+* start with leter conditionally ([500e22a](https://github.com/ccontrols/component-controls/commit/500e22a03bec98a1dc5f3fa917df25f6e3b8b3d3))
+
+
+
+
+
 ## [2.5.3](https://github.com/ccontrols/component-controls/compare/v2.5.2...v2.5.3) (2020-12-30)
 
 

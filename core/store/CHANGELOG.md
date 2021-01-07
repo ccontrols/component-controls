@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/ccontrols/component-controls/compare/v2.5.3...v2.6.0) (2021-01-07)
+
+
+### Bug Fixes
+
+* loading stories immutable ([3844289](https://github.com/ccontrols/component-controls/commit/38442890c8b57aa707d52e2101a572baea110678))
+* smart controls default to true ([c9ad5ff](https://github.com/ccontrols/component-controls/commit/c9ad5ff7681984da06e14bf15a36d0ad915f7493))
+
+
+### Features
+
+* merge plugins settings ([a925206](https://github.com/ccontrols/component-controls/commit/a9252064f30e1cd13e82a2364094139476ce6963))
+
+
+
+
+
 ## [2.5.3](https://github.com/ccontrols/component-controls/compare/v2.5.2...v2.5.3) (2020-12-30)
 
 **Note:** Version bump only for package @component-controls/store

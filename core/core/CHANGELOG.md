@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/ccontrols/component-controls/compare/v2.5.3...v2.6.0) (2021-01-07)
+
+
+### Features
+
+* add isVisible prop for tab pages ([d709587](https://github.com/ccontrols/component-controls/commit/d709587709d93e6610c6f5b82805442fe02b47fc))
+* add plugins settoings field ([bb1da88](https://github.com/ccontrols/component-controls/commit/bb1da8844b019cf7a234a1c134aaf0a3bbfa39bf))
+
+
+
+
+
 # [2.5.0](https://github.com/ccontrols/component-controls/compare/v2.4.2...v2.5.0) (2020-12-28)
 
 

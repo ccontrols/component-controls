@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/ccontrols/component-controls/compare/v2.5.3...v2.6.0) (2021-01-07)
+
+
+### Features
+
+* lightning font ([428e186](https://github.com/ccontrols/component-controls/commit/428e186c056b928c66513afb9b31128936ee822b))
+
+
+
+
+
 ## [2.5.3](https://github.com/ccontrols/component-controls/compare/v2.5.2...v2.5.3) (2020-12-30)
 
 **Note:** Version bump only for package @component-controls/design-tokens

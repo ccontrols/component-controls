@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/ccontrols/component-controls/compare/v2.5.3...v2.6.0) (2021-01-07)
+
+
+### Bug Fixes
+
+* no side selectors for story children ([549ff05](https://github.com/ccontrols/component-controls/commit/549ff056f1453677582e88b0284f5f68f1bc6bed))
+
+
+### Features
+
+* support for isVisible page prop ([f5f6c27](https://github.com/ccontrols/component-controls/commit/f5f6c27db39f9dfc07d55aade33b4a0239b96d7e))
+
+
+
+
+
 ## [2.5.3](https://github.com/ccontrols/component-controls/compare/v2.5.2...v2.5.3) (2020-12-30)
 
 

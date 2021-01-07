@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/ccontrols/component-controls/compare/v2.5.3...v2.6.0) (2021-01-07)
+
+
+### Bug Fixes
+
+* type stories ([ed9c2c0](https://github.com/ccontrols/component-controls/commit/ed9c2c0afc0564b3948382cb104ce1944ac8e6d8))
+
+
+### Features
+
+* add pages for design addons ([1c16be6](https://github.com/ccontrols/component-controls/commit/1c16be6ca5f647172972c52880b8fe0afc58b256))
+
+
+
+
+
 ## [2.5.3](https://github.com/ccontrols/component-controls/compare/v2.5.2...v2.5.3) (2020-12-30)
 
 **Note:** Version bump only for package @component-controls/viewport-plugin

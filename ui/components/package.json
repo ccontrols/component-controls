@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/components",
-  "version": "2.5.3",
+  "version": "2.6.0",
   "description": "Component controls commonly used UI components.",
   "sideEffects": false,
   "main": "dist/index.js",
@@ -49,8 +49,8 @@
     "theme-ui": "^0.6.0-alpha.3"
   },
   "devDependencies": {
-    "@component-controls/jest-snapshots": "^2.5.3",
-    "@component-controls/ts-markdown-docs": "^2.2.0",
+    "@component-controls/jest-snapshots": "^2.6.0",
+    "@component-controls/ts-markdown-docs": "^2.6.0",
     "@theme-ui/css": "^0.6.0-alpha.1",
     "@types/markdown-to-jsx": "^6.11.0",
     "@types/react": "^16.9.34",
