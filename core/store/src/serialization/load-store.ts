@@ -83,24 +83,24 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
               doc,
               building,
             );
-            stories.forEach(story => {
-              story.id = story.id || story.name;
-              //storybook compat
-              story.controls = story.controls || (story as any).args;
-              Object.assign(story, deepMerge(docStoryProps, story));
-              story.controls = getControls(story, doc, loadedComponents);
-              if (doc.title && story.id) {
-                const id = docStoryToId(doc.title, story.id);
+            stories.forEach(docStory => {
+              const id = docStory.id || docStory.name;
+              if (doc.title && id) {
+                const story = {
+                  ...docStory,
+                  id: docStoryToId(doc.title, id),
+                  name: storyNameFromExport(docStory.name),
+                  doc: doc.title,
+                };
+                //storybook compat
+                story.controls = story.controls || (story as any).args;
+                Object.assign(story, deepMerge(docStoryProps, story));
+                story.controls = getControls(story, doc, loadedComponents);
                 if (!doc.stories) {
                   doc.stories = [];
                 }
-                doc.stories.push(id);
-                globalStore.stories[id] = {
-                  ...story,
-                  name: storyNameFromExport(story.name),
-                  id,
-                  doc: doc.title,
-                };
+                doc.stories.push(story.id);
+                globalStore.stories[story.id] = story;
               }
             });
           });
