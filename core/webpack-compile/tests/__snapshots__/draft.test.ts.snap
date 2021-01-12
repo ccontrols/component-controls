@@ -33,6 +33,7 @@ Object {
         "tabs": Object {
           "page": Object {
             "component": [Function],
+            "controlsThreshold": 10,
             "title": "Documentation",
           },
         },

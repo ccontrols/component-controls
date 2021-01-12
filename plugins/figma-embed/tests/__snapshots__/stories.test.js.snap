@@ -24,6 +24,7 @@ exports[`Plugins/FigmaEmbedBlock Custom Config Props 1`] = `
     >
       <div>
         <iframe
+          allowfullscreen=""
           class="css-6u5w61"
           height="450"
           src="https://www.figma.com/embed?embed_host=component-controls&url=https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1"
