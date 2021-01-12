@@ -10,9 +10,7 @@ export default {
   order: 0,
   component: VariantButton,
   plugins: {
-    figma: [
-      'https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1',
-    ],
+    figma: ['https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr'],
     notes: {
       title: 'Design brief',
       items: [design_notes],

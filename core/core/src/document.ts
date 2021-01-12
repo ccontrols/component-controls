@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/ban-types */
-import { ComponentType, PropsWithChildren, ReactElement } from 'react';
+import { PropsWithChildren, ReactElement } from 'react';
 import { CodeLocation, PackageInfo, StoryRenderFn } from './utility';
 import { Component } from './components';
-import { ComponentControls, ComponentControl } from './controls';
+import { StoryProps } from './common';
+import { ComponentControl } from './controls';
 import { RunConfiguration, DocType, PageLayoutProps } from './configuration';
 import { SearchResult } from './search';
 /**
@@ -61,60 +62,6 @@ export interface StoryArgument {
  * the first argument are the control 'values'
  */
 export type StoryArguments = StoryArgument[];
-
-export interface SmartControls {
-  /**
-   * whether to generate "smart" controls for a story
-   */
-  smart?: boolean;
-  /**
-   * include props only
-   */
-  include?: string[];
-
-  /**
-   * exclude props only
-   */
-  exclude?: string[];
-}
-
-/**
- * story properties that can be inherited from the document, or each story can have its properties
- */
-
-export interface StoryProps<Props = unknown> {
-  /**
-   * id for component associated with the story
-   */
-  component?: string | Record<string, unknown> | ComponentType<Props>;
-
-  /**
-   * multiple components option
-   */
-  subcomponents?: Record<
-    string,
-    string | Record<string, unknown> | ComponentType<Props>
-  >;
-
-  /**
-   * object of key/value pairs specifying the controls for the story
-   */
-  controls?: ComponentControls;
-
-  /**
-   * "smart" controls options
-   */
-  smartControls?: SmartControls;
-  /**
-   * array of wrapper functions (decorators) to be called when rendering each individual story.
-   */
-  decorators?: StoryRenderFn[];
-
-  /**
-   * plugins configuration settings
-   */
-  plugins?: any;
-}
 
 /**
  * Story interface - usually extracted by the AST instrumenting loader

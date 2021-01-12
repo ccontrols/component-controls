@@ -42,6 +42,16 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
         globalStore.config.renderFn = reactRender;
       }
       globalStore.search = store.search;
+      const storeStoryProps: StoryProps = {
+        component: globalStore.config.component,
+        subcomponents: globalStore.config.subcomponents,
+        controls: globalStore.config.controls,
+        smartControls: globalStore.config.smartControls,
+        decorators: Array.isArray(globalStore.config.decorators)
+          ? globalStore.config.decorators.filter(d => typeof d === 'function')
+          : undefined,
+        plugins: globalStore.config.plugins,
+      };
       stores.forEach(s => {
         const storeDoc = s.doc;
         const storeStories = s.stories;
@@ -55,14 +65,11 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
             fullPage: page.fullPage,
             navSidebar: page.navSidebar,
           };
-          const docGlobalProps = {
-            decorators: globalStore.config.decorators,
-          };
           //storybook compat
           storeDoc.controls = storeDoc.controls || (storeDoc as any).args;
           const doc: Document = deepMerge<Document>(
             pageLayout,
-            deepMerge(docGlobalProps, storeDoc),
+            deepMerge(storeStoryProps, storeDoc),
           );
           //props shared by document and story, extract so story gets default values from doc
           const docStoryProps: StoryProps = {

@@ -1,172 +1,171 @@
 # Table of contents
 
--   [Overview](#overview)
--   [Installation](#installation)
--   [API](#api)
-    -   [DefaultStore](#defaultstore)
-    -   [ArgUsageLocation](#argusagelocation)
-    -   [SmartControls](#smartcontrols)
-    -   [SourceIdentifier](#sourceidentifier)
-    -   [Store](#store)
-    -   [StoryArgument](#storyargument)
-    -   [StoryProps](#storyprops)
-    -   [Components](#components)
-    -   [Document](#document)
-    -   [Documents](#documents)
-    -   [DynamicExamples](#dynamicexamples)
-    -   [Example](#example)
-    -   [ExampleControls](#examplecontrols)
-    -   [Packages](#packages)
-    -   [Pages](#pages)
-    -   [StoreObserver](#storeobserver)
-    -   [Stories](#stories)
-    -   [Story](#story)
-    -   [StoryArguments](#storyarguments)
-    -   [StoryFactoryFn](#storyfactoryfn)
-    -   [CURRENT_STORY](#current_story)
-    -   [defDocType](#defdoctype)
-    -   [dateToLocalString](#datetolocalstring)
-    -   [getDefaultStore](#getdefaultstore)
-    -   [ControlTypes](#controltypes)
-    -   [ComponentControlArray](#componentcontrolarray)
-    -   [ComponentControlBase](#componentcontrolbase)
-    -   [ComponentControlBoolean](#componentcontrolboolean)
-    -   [ComponentControlButton](#componentcontrolbutton)
-    -   [ComponentControlColor](#componentcontrolcolor)
-    -   [ComponentControlData](#componentcontroldata)
-    -   [ComponentControlDate](#componentcontroldate)
-    -   [ComponentControlFiles](#componentcontrolfiles)
-    -   [ComponentControlNumber](#componentcontrolnumber)
-    -   [ComponentControlObject](#componentcontrolobject)
-    -   [ComponentControlOptions](#componentcontroloptions)
-    -   [ComponentControlText](#componentcontroltext)
-    -   [ComponentControls](#componentcontrols)
-    -   [ColorPickerKind](#colorpickerkind)
-    -   [ComponentControl](#componentcontrol)
-    -   [OptionsListType](#optionslisttype)
-    -   [OptionsValueType](#optionsvaluetype)
-    -   [Component](#component)
-    -   [ComponentInfo](#componentinfo)
-    -   [PropType](#proptype)
-    -   [PropTypes](#proptypes)
-    -   [TypeInformation](#typeinformation)
-    -   [JSXNode](#jsxnode)
-    -   [JSXTree](#jsxtree)
-    -   [TypeValue](#typevalue)
-    -   [getComponentName](#getcomponentname)
-    -   [PropsInfoExtractorFunction](#propsinfoextractorfunction)
-    -   [ActionItem](#actionitem)
-    -   [CodeLocation](#codelocation)
-    -   [CodePosition](#codeposition)
-    -   [ImportType](#importtype)
-    -   [ImportTypes](#importtypes)
-    -   [Imports](#imports)
-    -   [PackageDependencies](#packagedependencies)
-    -   [PackageInfo](#packageinfo)
-    -   [PackageRepository](#packagerepository)
-    -   [ActionItems](#actionitems)
-    -   [AsyncFnReturn](#asyncfnreturn)
-    -   [PackageDependency](#packagedependency)
-    -   [StoryRenderFn](#storyrenderfn)
-    -   [defaultExport](#defaultexport)
-    -   [useAsync](#useasync)
-    -   [ControlsConfig](#controlsconfig)
-    -   [PageLayoutProps](#pagelayoutprops)
-    -   [RunOnlyConfiguration](#runonlyconfiguration)
-    -   [SideNavConfiguration](#sidenavconfiguration)
-    -   [SitemapConfigPage](#sitemapconfigpage)
-    -   [TabConfiguration](#tabconfiguration)
-    -   [ToolbarConfig](#toolbarconfig)
-    -   [BuildConfiguration](#buildconfiguration)
-    -   [DocType](#doctype)
-    -   [FrameworkRenderFn](#frameworkrenderfn)
-    -   [PageConfiguration](#pageconfiguration)
-    -   [PageTabs](#pagetabs)
-    -   [PagesConfiguration](#pagesconfiguration)
-    -   [PagesOnlyRoutes](#pagesonlyroutes)
-    -   [RunConfiguration](#runconfiguration)
-    -   [SitemapConfig](#sitemapconfig)
-    -   [StaticMenuItem](#staticmenuitem)
-    -   [StaticMenuItems](#staticmenuitems)
-    -   [convertConfig](#convertconfig)
-    -   [defaultBuildConfig](#defaultbuildconfig)
-    -   [defaultRunConfig](#defaultrunconfig)
-    -   [BuildProps](#buildprops)
-    -   [RuleOptions](#ruleoptions)
-    -   [PresetCallback](#presetcallback)
-    -   [PresetType](#presettype)
-    -   [RuleType](#ruletype)
-    -   [RuleTypes](#ruletypes)
-    -   [WatchOptions](#watchoptions)
-    -   [WatchProps](#watchprops)
-    -   [WebpackConfig](#webpackconfig)
-    -   [WebpackConfigFn](#webpackconfigfn)
-    -   [WebpackLoader](#webpackloader)
-    -   [defBundleName](#defbundlename)
-    -   [defCssFileName](#defcssfilename)
-    -   [defaultPresets](#defaultpresets)
-    -   [customLoaderOptions](#customloaderoptions)
-    -   [getBundleName](#getbundlename)
-    -   [getCSSBundleName](#getcssbundlename)
-    -   [getDistName](#getdistname)
-    -   [defaultCompileProps](#defaultcompileprops)
-    -   [StoreObserver](#storeobserver-1)
-    -   [Story](#story-1)
-    -   [Components](#components-1)
-    -   [RunConfiguration](#runconfiguration-1)
-    -   [Documents](#documents-1)
-    -   [Packages](#packages-1)
-    -   [Stories](#stories-1)
-    -   [StoryArguments](#storyarguments-1)
-    -   [StoryRenderFn](#storyrenderfn-1)
-    -   [DocType](#doctype-1)
-    -   [Document](#document-1)
-    -   [ExampleControls](#examplecontrols-1)
-    -   [ColorPickerKind](#colorpickerkind-1)
-    -   [JSXTree](#jsxtree-1)
-    -   [TypeValue](#typevalue-1)
-    -   [JSXNode](#jsxnode-1)
-    -   [PackageDependency](#packagedependency-1)
-    -   [StaticMenuItems](#staticmenuitems-1)
-    -   [PagesConfiguration](#pagesconfiguration-1)
-    -   [FrameworkRenderFn](#frameworkrenderfn-1)
-    -   [ActionItems](#actionitems-1)
-    -   [PagesOnlyRoutes](#pagesonlyroutes-1)
-    -   [SitemapConfig](#sitemapconfig-1)
-    -   [PageTabs](#pagetabs-1)
-    -   [PageConfiguration](#pageconfiguration-1)
-    -   [BuildConfiguration](#buildconfiguration-1)
-    -   [StaticMenuItem](#staticmenuitem-1)
-    -   [WebpackConfig](#webpackconfig-1)
-    -   [RuleTypes](#ruletypes-1)
-    -   [PresetCallback](#presetcallback-1)
-    -   [RuleType](#ruletype-1)
-    -   [WatchOptions](#watchoptions-1)
-    -   [WebpackConfigFn](#webpackconfigfn-1)
-    -   [WebpackLoader](#webpackloader-1)
-    -   [Story](#story-2)
-    -   [DocType](#doctype-2)
-    -   [Document](#document-2)
-    -   [PageTabs](#pagetabs-2)
-    -   [PagesOnlyRoutes](#pagesonlyroutes-2)
-    -   [SitemapConfig](#sitemapconfig-2)
-    -   [StoryArguments](#storyarguments-2)
-    -   [StoryRenderFn](#storyrenderfn-2)
-    -   [DocType](#doctype-3)
-    -   [PageConfiguration](#pageconfiguration-2)
-    -   [PageTabs](#pagetabs-3)
+- [Overview](#overview)
+- [Installation](#installation)
+- [API](#api)
+  - [DefaultStore](#defaultstore)
+  - [ArgUsageLocation](#argusagelocation)
+  - [SmartControls](#smartcontrols)
+  - [SourceIdentifier](#sourceidentifier)
+  - [Store](#store)
+  - [StoryArgument](#storyargument)
+  - [StoryProps](#storyprops)
+  - [Components](#components)
+  - [Document](#document)
+  - [Documents](#documents)
+  - [DynamicExamples](#dynamicexamples)
+  - [Example](#example)
+  - [ExampleControls](#examplecontrols)
+  - [Packages](#packages)
+  - [Pages](#pages)
+  - [StoreObserver](#storeobserver)
+  - [Stories](#stories)
+  - [Story](#story)
+  - [StoryArguments](#storyarguments)
+  - [StoryFactoryFn](#storyfactoryfn)
+  - [CURRENT_STORY](#current_story)
+  - [defDocType](#defdoctype)
+  - [dateToLocalString](#datetolocalstring)
+  - [getDefaultStore](#getdefaultstore)
+  - [ControlTypes](#controltypes)
+  - [ComponentControlArray](#componentcontrolarray)
+  - [ComponentControlBase](#componentcontrolbase)
+  - [ComponentControlBoolean](#componentcontrolboolean)
+  - [ComponentControlButton](#componentcontrolbutton)
+  - [ComponentControlColor](#componentcontrolcolor)
+  - [ComponentControlData](#componentcontroldata)
+  - [ComponentControlDate](#componentcontroldate)
+  - [ComponentControlFiles](#componentcontrolfiles)
+  - [ComponentControlNumber](#componentcontrolnumber)
+  - [ComponentControlObject](#componentcontrolobject)
+  - [ComponentControlOptions](#componentcontroloptions)
+  - [ComponentControlText](#componentcontroltext)
+  - [ComponentControls](#componentcontrols)
+  - [ColorPickerKind](#colorpickerkind)
+  - [ComponentControl](#componentcontrol)
+  - [OptionsListType](#optionslisttype)
+  - [OptionsValueType](#optionsvaluetype)
+  - [Component](#component)
+  - [ComponentInfo](#componentinfo)
+  - [PropType](#proptype)
+  - [PropTypes](#proptypes)
+  - [TypeInformation](#typeinformation)
+  - [JSXNode](#jsxnode)
+  - [JSXTree](#jsxtree)
+  - [TypeValue](#typevalue)
+  - [getComponentName](#getcomponentname)
+  - [PropsInfoExtractorFunction](#propsinfoextractorfunction)
+  - [ActionItem](#actionitem)
+  - [CodeLocation](#codelocation)
+  - [CodePosition](#codeposition)
+  - [ImportType](#importtype)
+  - [ImportTypes](#importtypes)
+  - [Imports](#imports)
+  - [PackageDependencies](#packagedependencies)
+  - [PackageInfo](#packageinfo)
+  - [PackageRepository](#packagerepository)
+  - [ActionItems](#actionitems)
+  - [AsyncFnReturn](#asyncfnreturn)
+  - [PackageDependency](#packagedependency)
+  - [StoryRenderFn](#storyrenderfn)
+  - [defaultExport](#defaultexport)
+  - [useAsync](#useasync)
+  - [PageLayoutProps](#pagelayoutprops)
+  - [RunOnlyConfiguration](#runonlyconfiguration)
+  - [SideNavConfiguration](#sidenavconfiguration)
+  - [SitemapConfigPage](#sitemapconfigpage)
+  - [TabConfiguration](#tabconfiguration)
+  - [ToolbarConfig](#toolbarconfig)
+  - [BuildConfiguration](#buildconfiguration)
+  - [DocType](#doctype)
+  - [FrameworkRenderFn](#frameworkrenderfn)
+  - [PageConfiguration](#pageconfiguration)
+  - [PageTabs](#pagetabs)
+  - [PagesConfiguration](#pagesconfiguration)
+  - [PagesOnlyRoutes](#pagesonlyroutes)
+  - [RunConfiguration](#runconfiguration)
+  - [SitemapConfig](#sitemapconfig)
+  - [StaticMenuItem](#staticmenuitem)
+  - [StaticMenuItems](#staticmenuitems)
+  - [convertConfig](#convertconfig)
+  - [defaultBuildConfig](#defaultbuildconfig)
+  - [defaultRunConfig](#defaultrunconfig)
+  - [BuildProps](#buildprops)
+  - [RuleOptions](#ruleoptions)
+  - [PresetCallback](#presetcallback)
+  - [PresetType](#presettype)
+  - [RuleType](#ruletype)
+  - [RuleTypes](#ruletypes)
+  - [WatchOptions](#watchoptions)
+  - [WatchProps](#watchprops)
+  - [WebpackConfig](#webpackconfig)
+  - [WebpackConfigFn](#webpackconfigfn)
+  - [WebpackLoader](#webpackloader)
+  - [defBundleName](#defbundlename)
+  - [defCssFileName](#defcssfilename)
+  - [defaultPresets](#defaultpresets)
+  - [customLoaderOptions](#customloaderoptions)
+  - [getBundleName](#getbundlename)
+  - [getCSSBundleName](#getcssbundlename)
+  - [getDistName](#getdistname)
+  - [defaultCompileProps](#defaultcompileprops)
+  - [StoreObserver](#storeobserver-1)
+  - [Story](#story-1)
+  - [Components](#components-1)
+  - [RunConfiguration](#runconfiguration-1)
+  - [Documents](#documents-1)
+  - [Packages](#packages-1)
+  - [Stories](#stories-1)
+  - [StoryArguments](#storyarguments-1)
+  - [StoryRenderFn](#storyrenderfn-1)
+  - [DocType](#doctype-1)
+  - [Document](#document-1)
+  - [ExampleControls](#examplecontrols-1)
+  - [ColorPickerKind](#colorpickerkind-1)
+  - [JSXTree](#jsxtree-1)
+  - [TypeValue](#typevalue-1)
+  - [JSXNode](#jsxnode-1)
+  - [PackageDependency](#packagedependency-1)
+  - [StaticMenuItems](#staticmenuitems-1)
+  - [PagesConfiguration](#pagesconfiguration-1)
+  - [FrameworkRenderFn](#frameworkrenderfn-1)
+  - [ActionItems](#actionitems-1)
+  - [PagesOnlyRoutes](#pagesonlyroutes-1)
+  - [SitemapConfig](#sitemapconfig-1)
+  - [PageTabs](#pagetabs-1)
+  - [PageConfiguration](#pageconfiguration-1)
+  - [BuildConfiguration](#buildconfiguration-1)
+  - [StaticMenuItem](#staticmenuitem-1)
+  - [WebpackConfig](#webpackconfig-1)
+  - [RuleTypes](#ruletypes-1)
+  - [PresetCallback](#presetcallback-1)
+  - [RuleType](#ruletype-1)
+  - [WatchOptions](#watchoptions-1)
+  - [WebpackConfigFn](#webpackconfigfn-1)
+  - [WebpackLoader](#webpackloader-1)
+  - [Story](#story-2)
+  - [DocType](#doctype-2)
+  - [Document](#document-2)
+  - [PageTabs](#pagetabs-2)
+  - [PagesOnlyRoutes](#pagesonlyroutes-2)
+  - [SitemapConfig](#sitemapconfig-2)
+  - [StoryArguments](#storyarguments-2)
+  - [StoryRenderFn](#storyrenderfn-2)
+  - [DocType](#doctype-3)
+  - [PageConfiguration](#pageconfiguration-2)
+  - [PageTabs](#pagetabs-3)
 
 # Overview
 
 Type definitions of the component-controls specification and accompanying utility functions.
 Includes definitions for:
 
--   [Story](https://github.com/ccontrols/component-controls/tree/master/core/core#story)
--   [Stories](https://github.com/ccontrols/component-controls/tree/master/core/core#stories)
--   [ControlTypes](https://github.com/ccontrols/component-controls/tree/master/core/core#controltypes)
--   [ComponentControl](https://github.com/ccontrols/component-controls/tree/master/core/core#componentcontrol)
--   [PropTypes](https://github.com/ccontrols/component-controls/tree/master/core/core#proptypes)
--   and more...
+- [Story](https://github.com/ccontrols/component-controls/tree/master/core/core#story)
+- [Stories](https://github.com/ccontrols/component-controls/tree/master/core/core#stories)
+- [ControlTypes](https://github.com/ccontrols/component-controls/tree/master/core/core#controltypes)
+- [ComponentControl](https://github.com/ccontrols/component-controls/tree/master/core/core#componentcontrol)
+- [PropTypes](https://github.com/ccontrols/component-controls/tree/master/core/core#proptypes)
+- and more...
 
 # Installation
 
@@ -186,8 +185,6 @@ $ npm install @component-controls/core --save-dev
 
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L401)_
 
-
-
 ### properties
 
 | Name              | Type                                                                              | Description |
@@ -205,8 +202,6 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L14)_
 
-
-
 ### properties
 
 | Name        | Type                                  | Description                                                                                                                                                          |
@@ -218,8 +213,6 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 ## SmartControls
 
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L64)_
-
-
 
 ### properties
 
@@ -235,8 +228,6 @@ an identifier/variable.argument in the source code
 
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L10)_
 
-
-
 ### properties
 
 | Name    | Type                          | Description |
@@ -249,8 +240,6 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 store of stories information in memory after the loader is applied
 
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L362)_
-
-
 
 ### properties
 
@@ -272,8 +261,6 @@ arguments passed to the 'story' function, extracted by an AST loader
 
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L38)_
 
-
-
 ### properties
 
 | Name     | Type                                        | Description                                                                                |
@@ -288,8 +275,6 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 story prooperties that can be inherited from the document, or each story can have its properties
 
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L84)_
-
-
 
 ### properties
 
@@ -307,7 +292,7 @@ list of components used in stories
 
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L337)_
 
-Record&lt;string, 
+Record&lt;string,
 
 [Component](#component)
 
@@ -328,14 +313,14 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `MDXPage`          | any                                 | for MDX documents, this is an MDXContent function, to be rendered inside a MDXProvider                                                                                                       |
 | `author`           | string                              | document author                                                                                                                                                                              |
 | `componentsLookup` | \[name: string]: string             | lookup into the global store.components since multiple components of the same name can be used example: \['Button']: 'c:/myapp/Button.tsx'                                                   |
-| `date`             | [Date](#date)                       |  optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                     |
-| `dateModified`     | [Date](#date)                       |  optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                   |
-| `description`      | string \| [Element](#element)       |  documentation file description                                                                                                                                                              |
+| `date`             | [Date](#date)                       | optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                      |
+| `dateModified`     | [Date](#date)                       | optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                    |
+| `description`      | string \| [Element](#element)       | documentation file description                                                                                                                                                               |
 | `draft`            | boolean                             | if set to true, the document will be hidden in production builds.                                                                                                                            |
 | `fileName`         | string                              | file name of the file of stories                                                                                                                                                             |
 | `image`            | string                              | link to an image for the document, will be used for SEO                                                                                                                                      |
 | `isMDXComponent`   | boolean                             | custom prop set by mdxjs                                                                                                                                                                     |
-| `keywords`         | string\[]                           |  comma-separated list of SEO keywords                                                                                                                                                        |
+| `keywords`         | string\[]                           | comma-separated list of SEO keywords                                                                                                                                                         |
 | `menu`             | string                              | to which static menu to attach the document compatibility with docz                                                                                                                          |
 | `order`            | number                              | document order, used to sort documents within the same parent                                                                                                                                |
 | `package`          | string                              | lookup into the global store of PackageInfo package.json                                                                                                                                     |
@@ -343,7 +328,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `route`            | string                              | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
 | `source`           | string                              | source code of the entire file of stories                                                                                                                                                    |
 | `stories`          | string\[]                           | list of story ids contained in the document.                                                                                                                                                 |
-| `tags`             | string\[]                           |  comma-separated list of document tags, used for search and for SOE keywords unless keyswords are specified.                                                                                 |
+| `tags`             | string\[]                           | comma-separated list of document tags, used for search and for SOE keywords unless keyswords are specified.                                                                                  |
 | `template`         | Example&lt;>                        | template component to be linked to document stories                                                                                                                                          |
 | `title*`           | string                              | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
 | `type`             | [DocType](#doctype)                 | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
@@ -356,7 +341,7 @@ list of story files, or groups
 
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L342)_
 
-Record&lt;string, 
+Record&lt;string,
 
 [Document](#document)
 
@@ -386,7 +371,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L177)_
 
-\[name: string]: 
+\[name: string]:
 
 ComponentControl&lt;[ExampleControls](#examplecontrols)> | string | string\[] | boolean | number
 
@@ -396,7 +381,7 @@ list of repositories
 
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L354)_
 
-Record&lt;string, 
+Record&lt;string,
 
 [PackageInfo](#packageinfo)
 
@@ -427,7 +412,7 @@ list of stories
 
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L349)_
 
-Record&lt;string, 
+Record&lt;string,
 
 [Story](#story)
 
@@ -473,29 +458,25 @@ returns an array of dynamically loaded stories
 
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L203)_
 
-**function** (`doc`\*: [Document](#document)): ### properties| Name        | Type               | Description |
-| ----------- | ------------------ | ----------- |
-| `undefined` | [Story](#story)\[] |             |
-| `Story`     | [Story](#story)    |             |;
+| **function** (`doc`\*: [Document](#document)): ### properties | Name               | Type | Description |
+| ------------------------------------------------------------- | ------------------ | ---- | ----------- |
+| `undefined`                                                   | [Story](#story)\[] |      |
+| `Story`                                                       | [Story](#story)    |      | ;           |
 
 ### parameters
 
-| Name      | Type                                                                                                                                                                                                                      | Description |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `doc*`    | [Document](#document)                                                                                                                                                                                                     |             |
-| `returns` | ### properties| Name        | Type               | Description | | ----------- | ------------------ | ----------- | | `undefined` | [Story](#story)\[] |             | | `Story`     | [Story](#story)    |             | |             |
+| Name      | Type                  | Description |
+| --------- | --------------------- | ----------- |
+| `doc*`    | [Document](#document) |             |
+| `returns` | ### properties        | Name        | Type | Description |  | ----------- | ------------------ | ----------- |  | `undefined` | [Story](#story)\[] |  |  | `Story` | [Story](#story) |  |  |  |
 
 ## CURRENT_STORY
 
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L358)_
 
-
-
 ## defDocType
 
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L205)_
-
-
 
 ## dateToLocalString
 
@@ -523,22 +504,20 @@ examples are provided for the different types:
 
 _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L6)_
 
-
-
 ### properties
 
-| Name       | Type                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ---------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ARRAY*`   | **function** ARRAY   | arrayItems: {   type: ControlTypes.ARRAY,   label: 'Items',   rowType: {     name: { type: ControlTypes.TEXT },   },   value: \[{ name: 'Laptop' }, { name: 'Book' }, { name: 'Whiskey' }], },                                                                                                                                                                                                                                                                                                                                                                          |
-| `BOOLEAN*` | **function** BOOLEAN | nice: {  type: ControlTypes.BOOLEAN,  label: 'Nice',  value: true, },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `BUTTON*`  | **function** BUTTON  | button: {  type: ControlTypes.BUTTON,   onClick: () => {    ... code to modify some variables  } },                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `COLOR*`   | **function** COLOR   | color: {   type: ControlTypes.COLOR,   value: '#000000', },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `DATE*`    | **function** DATE    |  birthday: {   type: ControlTypes.DATE,   label: 'Birthday',   value: new Date(),  },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `FILES*`   | **function** FILES   | images: {   type: ControlTypes.FILES,   label: 'Happy Picture',   accept: 'image/\*',   value: \[     'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiARwMCyEWcOFPAAAAP0lEQVQoz8WQMQoAIAwDL/7/z3GwghSp4KDZyiUpBMCYUgd8rehtH16/l3XewgU2KAzapjXBbNFaPS6lDMlKB6OiDv3iAH1OAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTAxLTI4VDEyOjExOjMzLTA3OjAwlAHQBgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wMS0yOFQxMjoxMTozMy0wNzowMOVcaLoAAAAASUVORK5CYII=',   ], }, |
-| `NUMBER*`  | **function** NUMBER  |  age: {   type: ControlTypes.NUMBER,   label: 'Age',   value: 78,   range: true,   min: 0,   max: 90,   step: 5, },                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `OBJECT*`  | **function** OBJECT  |  style: {    type: ControlTypes.OBJECT,    label: 'Styles',    value: {      // do not randomize the border style      border: { type: ControlTypes.TEXT, value: '2px dashed silver', data: null },      borderRadius: { type: ControlTypes.NUMBER, value: 10 },      padding: { type: ControlTypes.NUMBER, value: 10 },    },  }                                                                                                                                                                                                                                       |
-| `OPTIONS*` | **function** OPTIONS | fruit: {   type: ControlTypes.OPTIONS,   label: 'Fruit',   value: 'apple',   options: {     Apple: 'apple',     Banana: 'banana',     Cherry: 'cherry',   }, },                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `TEXT*`    | **function** TEXT    | userName: {   type: ControlTypes.TEXT,   label: 'Name',   value: 'Storyteller', },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Name       | Type                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ---------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ARRAY*`   | **function** ARRAY   | arrayItems: { type: ControlTypes.ARRAY, label: 'Items', rowType: { name: { type: ControlTypes.TEXT }, }, value: \[{ name: 'Laptop' }, { name: 'Book' }, { name: 'Whiskey' }], },                                                                                                                                                                                                                                                                                                                                                                          |
+| `BOOLEAN*` | **function** BOOLEAN | nice: { type: ControlTypes.BOOLEAN, label: 'Nice', value: true, },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `BUTTON*`  | **function** BUTTON  | button: { type: ControlTypes.BUTTON, onClick: () => { ... code to modify some variables } },                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `COLOR*`   | **function** COLOR   | color: { type: ControlTypes.COLOR, value: '#000000', },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `DATE*`    | **function** DATE    | birthday: { type: ControlTypes.DATE, label: 'Birthday', value: new Date(), },                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `FILES*`   | **function** FILES   | images: { type: ControlTypes.FILES, label: 'Happy Picture', accept: 'image/\*', value: \[ 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiARwMCyEWcOFPAAAAP0lEQVQoz8WQMQoAIAwDL/7/z3GwghSp4KDZyiUpBMCYUgd8rehtH16/l3XewgU2KAzapjXBbNFaPS6lDMlKB6OiDv3iAH1OAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTAxLTI4VDEyOjExOjMzLTA3OjAwlAHQBgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wMS0yOFQxMjoxMTozMy0wNzowMOVcaLoAAAAASUVORK5CYII=', ], }, |
+| `NUMBER*`  | **function** NUMBER  | age: { type: ControlTypes.NUMBER, label: 'Age', value: 78, range: true, min: 0, max: 90, step: 5, },                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `OBJECT*`  | **function** OBJECT  | style: { type: ControlTypes.OBJECT, label: 'Styles', value: { // do not randomize the border style border: { type: ControlTypes.TEXT, value: '2px dashed silver', data: null }, borderRadius: { type: ControlTypes.NUMBER, value: 10 }, padding: { type: ControlTypes.NUMBER, value: 10 }, }, }                                                                                                                                                                                                                                                           |
+| `OPTIONS*` | **function** OPTIONS | fruit: { type: ControlTypes.OPTIONS, label: 'Fruit', value: 'apple', options: { Apple: 'apple', Banana: 'banana', Cherry: 'cherry', }, },                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `TEXT*`    | **function** TEXT    | userName: { type: ControlTypes.TEXT, label: 'Name', value: 'Storyteller', },                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
 ## ComponentControlArray
 
@@ -556,7 +535,7 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 | `editLabel`    | string                                                         | the label for the editor button                                                                                                                        |
 | `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                               |
 | `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                     |
-| `inline`       | boolean                                                        |  if true, the editor will be rendered inline instead of a popup                                                                                        |
+| `inline`       | boolean                                                        | if true, the editor will be rendered inline instead of a popup                                                                                         |
 | `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                     |
 | `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)               |
 | `required`     | boolean                                                        | visually display the control property as required                                                                                                      |
@@ -570,8 +549,6 @@ Base inteface for creating control types
 All new property typs should extend this interface and support
 
 _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L140)_
-
-
 
 ### properties
 
@@ -657,14 +634,12 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 
 _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L118)_
 
-
-
 ### properties
 
-| Name      | Type                | Description                                                                                                                    |
-| --------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| `name*`   | string              | 'name' for generating random data from faker.js  usually comprised of two parts, separated by a dot  example 'internet.avatar' |
-| `options` | \[key: string]: any | options to be passed to the random data generators example {  min: 10, max: 20 }                                               |
+| Name      | Type                | Description                                                                                                                  |
+| --------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `name*`   | string              | 'name' for generating random data from faker.js usually comprised of two parts, separated by a dot example 'internet.avatar' |
+| `options` | \[key: string]: any | options to be passed to the random data generators example { min: 10, max: 20 }                                              |
 
 ## ComponentControlDate
 
@@ -752,7 +727,7 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 | `editLabel`    | string                                                         | the label for the editor button                                                                                                                        |
 | `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                               |
 | `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                     |
-| `inline`       | boolean                                                        |  if true, the editor will be rendered inline instead of a popup                                                                                        |
+| `inline`       | boolean                                                        | if true, the editor will be rendered inline instead of a popup                                                                                         |
 | `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                     |
 | `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)               |
 | `required`     | boolean                                                        | visually display the control property as required                                                                                                      |
@@ -831,8 +806,8 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 
 ComponentControl is a either an object of property settings
 or a shortcut can be used:
- properties: {
-  text: 'Hello',
+properties: {
+text: 'Hello',
 },
 
 _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L378)_
@@ -845,21 +820,19 @@ value/label pairs or array of OptionsValueType
 
 _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L312)_
 
-\[key: string]:  \| OptionsValueType&lt;>\[]
+\[key: string]: \| OptionsValueType&lt;>\[]
 
 ## OptionsValueType
 
 _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L302)_
 
- | number | string\[] \| number\[] \| **label**: string**value**: any
+| number | string\[] \| number\[] \| **label**: string**value**: any
 
 ## Component
 
 component specified for stories or story files
 
 _defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L105)_
-
-
 
 ### properties
 
@@ -884,8 +857,6 @@ DocGen type onfo generated for a compoennt
 
 _defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L76)_
 
-
-
 ### properties
 
 | Name           | Type                    | Description           |
@@ -901,8 +872,6 @@ mapped to common types to be consumed by component-controls
 check props-info packages for implementations
 
 _defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L47)_
-
-
 
 ### properties
 
@@ -924,8 +893,6 @@ _defined in [@component-controls/core/src/components.ts](https://github.com/ccon
 ## TypeInformation
 
 _defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L17)_
-
-
 
 ### properties
 
@@ -973,14 +940,14 @@ _defined in [@component-controls/core/src/components.ts](https://github.com/ccon
 
 ### parameters
 
-| Name         | Type                | Description                                                                                |
-| ------------ | ------------------- | ------------------------------------------------------------------------------------------ |
-| `component*` | any                 | a string component name, or a component class, with a name or displayName static property  |
-| `returns`    | string \| undefined |                                                                                            |
+| Name         | Type                | Description                                                                               |
+| ------------ | ------------------- | ----------------------------------------------------------------------------------------- |
+| `component*` | any                 | a string component name, or a component class, with a name or displayName static property |
+| `returns`    | string \| undefined |                                                                                           |
 
 ## PropsInfoExtractorFunction
 
-callback function to extract props info table  - ie docgen type libraries
+callback function to extract props info table - ie docgen type libraries
 used to extract displayName, and props tables for a component
 
 _defined in [@component-controls/core/src/propsInfo.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/propsInfo.ts#L13)_
@@ -1001,8 +968,6 @@ _defined in [@component-controls/core/src/propsInfo.ts](https://github.com/ccont
 an item in the ActionBar component
 
 _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L143)_
-
-
 
 ### properties
 
@@ -1025,8 +990,6 @@ ie. arguments, usage of arguments
 
 _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L18)_
 
-
-
 ### properties
 
 | Name     | Type                          | Description |
@@ -1041,8 +1004,6 @@ usually taken from AST traverse loaders
 
 _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L8)_
 
-
-
 ### properties
 
 | Name      | Type   | Description |
@@ -1055,8 +1016,6 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 an import name
 
 _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L108)_
-
-
 
 ### properties
 
@@ -1094,8 +1053,6 @@ information about the repository of the stories and components
 
 _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L59)_
 
-
-
 ### properties
 
 | Name               | Type                                        | Description                                                                   |
@@ -1113,8 +1070,6 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 repository information from package.json
 
 _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L26)_
-
-
 
 ### properties
 
@@ -1134,13 +1089,13 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 
 _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L191)_
 
-**error**:  | null
+**error**: | null
 
 **execute**: **function** (): Promise&lt;void>;
 
 **status**: 'idle' | 'pending' | 'success' | 'error'
 
-**value**:  | null
+**value**: | null
 
 ## PackageDependency
 
@@ -1172,8 +1127,6 @@ default export keyword
 
 _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L138)_
 
-
-
 ## useAsync
 
 _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L198)_
@@ -1188,27 +1141,11 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 | `immediate*`     | boolean                        |             |
 | `returns`        | AsyncFnReturn&lt;, >           |             |
 
-## ControlsConfig
-
-configuration options for the controls module
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L206)_
-
-
-
-### properties
-
-| Name        | Type   | Description                                                                                 |
-| ----------- | ------ | ------------------------------------------------------------------------------------------- |
-| `threshold` | number | threshold for when to display the controls in their own table separate from the props table |
-
 ## PageLayoutProps
 
 page layout - sidebars, full width
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L54)_
-
-
 
 ### properties
 
@@ -1225,8 +1162,6 @@ stored in a file named main.js/main.ts
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L218)_
 
-
-
 ### properties
 
 | Name          | Type                                                                                                                     | Description                                                                                                                                                         |
@@ -1235,7 +1170,6 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `app`         | [FC](#fc)                                                                                                                | application wrapper, can be used to insert tags or styles. The application will be passed as children                                                               |
 | `author`      | string                                                                                                                   | author: Default is "@component-controls"                                                                                                                            |
 | `components`  | Record&lt;string, unknown>                                                                                               | custom props to components ex: components: { story:{ wrapper: 'iframe' } },                                                                                         |
-| `controls`    | [ControlsConfig](#controlsconfig)                                                                                        | controls module configuration options                                                                                                                               |
 | `copyright`   | string                                                                                                                   | copyright notice displayed in the footer                                                                                                                            |
 | `decorators`  | [StoryRenderFn](#storyrenderfn)\[]                                                                                       | story decorator functions - used to wrap stories example: \[story => &lt;ThemeProvider>{story()}&lt;/ThemeProvider>]                                                |
 | `description` | string                                                                                                                   | site description. Default is "Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site." |
@@ -1258,8 +1192,6 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L68)_
 
-
-
 ### properties
 
 | Name             | Type    | Description                                                                                                                  |
@@ -1270,8 +1202,6 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 ## SitemapConfigPage
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L125)_
-
-
 
 ### properties
 
@@ -1285,8 +1215,6 @@ story type pages can have multiple tabs with separate page configurations.
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L27)_
 
-
-
 ### properties
 
 | Name     | Type                                                    | Description                                                           |
@@ -1299,8 +1227,6 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 ## ToolbarConfig
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L186)_
-
-
 
 ### properties
 
@@ -1385,7 +1311,7 @@ Record&lt;
 
 [DocType](#doctype)
 
-, 
+,
 
 [PageConfiguration](#pageconfiguration)
 
@@ -1399,7 +1325,7 @@ Record&lt;
 
 [DocType](#doctype)
 
-, 
+,
 
 ### properties
 
@@ -1458,8 +1384,6 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L375)_
 
-
-
 ### properties
 
 | Name          | Type      | Description |
@@ -1473,8 +1397,6 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 ## defaultRunConfig
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L335)_
-
-
 
 ### properties
 
@@ -1492,8 +1414,6 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 configuration properties for compile and run
 
 _defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L32)_
-
-
 
 ### properties
 
@@ -1514,8 +1434,6 @@ _defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols
 ## RuleOptions
 
 _defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L8)_
-
-
 
 ### properties
 
@@ -1602,19 +1520,13 @@ _defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols
 
 _defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L106)_
 
-
-
 ## defCssFileName
 
 _defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L111)_
 
-
-
 ## defaultPresets
 
 _defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L86)_
-
-
 
 ## customLoaderOptions
 
@@ -1674,8 +1586,6 @@ _defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols
 
 _defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L88)_
 
-
-
 ### properties
 
 | Name       | Type      | Description |
@@ -1725,7 +1635,7 @@ list of components used in stories
 
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L337)_
 
-Record&lt;string, 
+Record&lt;string,
 
 [Component](#component)
 
@@ -1748,7 +1658,7 @@ list of story files, or groups
 
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L342)_
 
-Record&lt;string, 
+Record&lt;string,
 
 [Document](#document)
 
@@ -1760,7 +1670,7 @@ list of repositories
 
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L354)_
 
-Record&lt;string, 
+Record&lt;string,
 
 [PackageInfo](#packageinfo)
 
@@ -1772,7 +1682,7 @@ list of stories
 
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L349)_
 
-Record&lt;string, 
+Record&lt;string,
 
 [Story](#story)
 
@@ -1824,14 +1734,14 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `MDXPage`          | any                                 | for MDX documents, this is an MDXContent function, to be rendered inside a MDXProvider                                                                                                       |
 | `author`           | string                              | document author                                                                                                                                                                              |
 | `componentsLookup` | \[name: string]: string             | lookup into the global store.components since multiple components of the same name can be used example: \['Button']: 'c:/myapp/Button.tsx'                                                   |
-| `date`             | [Date](#date)                       |  optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                     |
-| `dateModified`     | [Date](#date)                       |  optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                   |
-| `description`      | string \| [Element](#element)       |  documentation file description                                                                                                                                                              |
+| `date`             | [Date](#date)                       | optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                      |
+| `dateModified`     | [Date](#date)                       | optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                    |
+| `description`      | string \| [Element](#element)       | documentation file description                                                                                                                                                               |
 | `draft`            | boolean                             | if set to true, the document will be hidden in production builds.                                                                                                                            |
 | `fileName`         | string                              | file name of the file of stories                                                                                                                                                             |
 | `image`            | string                              | link to an image for the document, will be used for SEO                                                                                                                                      |
 | `isMDXComponent`   | boolean                             | custom prop set by mdxjs                                                                                                                                                                     |
-| `keywords`         | string\[]                           |  comma-separated list of SEO keywords                                                                                                                                                        |
+| `keywords`         | string\[]                           | comma-separated list of SEO keywords                                                                                                                                                         |
 | `menu`             | string                              | to which static menu to attach the document compatibility with docz                                                                                                                          |
 | `order`            | number                              | document order, used to sort documents within the same parent                                                                                                                                |
 | `package`          | string                              | lookup into the global store of PackageInfo package.json                                                                                                                                     |
@@ -1839,7 +1749,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `route`            | string                              | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
 | `source`           | string                              | source code of the entire file of stories                                                                                                                                                    |
 | `stories`          | string\[]                           | list of story ids contained in the document.                                                                                                                                                 |
-| `tags`             | string\[]                           |  comma-separated list of document tags, used for search and for SOE keywords unless keyswords are specified.                                                                                 |
+| `tags`             | string\[]                           | comma-separated list of document tags, used for search and for SOE keywords unless keyswords are specified.                                                                                  |
 | `template`         | Example&lt;>                        | template component to be linked to document stories                                                                                                                                          |
 | `title*`           | string                              | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
 | `type`             | [DocType](#doctype)                 | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
@@ -1850,7 +1760,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L177)_
 
-\[name: string]: 
+\[name: string]:
 
 ComponentControl&lt;[ExampleControls](#examplecontrols)> | string | string\[] | boolean | number
 
@@ -1908,7 +1818,7 @@ Record&lt;
 
 [DocType](#doctype)
 
-, 
+,
 
 [PageConfiguration](#pageconfiguration)
 
@@ -1945,7 +1855,7 @@ Record&lt;
 
 [DocType](#doctype)
 
-, 
+,
 
 ### properties
 
@@ -2115,14 +2025,14 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `MDXPage`          | any                                 | for MDX documents, this is an MDXContent function, to be rendered inside a MDXProvider                                                                                                       |
 | `author`           | string                              | document author                                                                                                                                                                              |
 | `componentsLookup` | \[name: string]: string             | lookup into the global store.components since multiple components of the same name can be used example: \['Button']: 'c:/myapp/Button.tsx'                                                   |
-| `date`             | [Date](#date)                       |  optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                     |
-| `dateModified`     | [Date](#date)                       |  optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                   |
-| `description`      | string \| [Element](#element)       |  documentation file description                                                                                                                                                              |
+| `date`             | [Date](#date)                       | optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                      |
+| `dateModified`     | [Date](#date)                       | optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                    |
+| `description`      | string \| [Element](#element)       | documentation file description                                                                                                                                                               |
 | `draft`            | boolean                             | if set to true, the document will be hidden in production builds.                                                                                                                            |
 | `fileName`         | string                              | file name of the file of stories                                                                                                                                                             |
 | `image`            | string                              | link to an image for the document, will be used for SEO                                                                                                                                      |
 | `isMDXComponent`   | boolean                             | custom prop set by mdxjs                                                                                                                                                                     |
-| `keywords`         | string\[]                           |  comma-separated list of SEO keywords                                                                                                                                                        |
+| `keywords`         | string\[]                           | comma-separated list of SEO keywords                                                                                                                                                         |
 | `menu`             | string                              | to which static menu to attach the document compatibility with docz                                                                                                                          |
 | `order`            | number                              | document order, used to sort documents within the same parent                                                                                                                                |
 | `package`          | string                              | lookup into the global store of PackageInfo package.json                                                                                                                                     |
@@ -2130,7 +2040,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `route`            | string                              | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
 | `source`           | string                              | source code of the entire file of stories                                                                                                                                                    |
 | `stories`          | string\[]                           | list of story ids contained in the document.                                                                                                                                                 |
-| `tags`             | string\[]                           |  comma-separated list of document tags, used for search and for SOE keywords unless keyswords are specified.                                                                                 |
+| `tags`             | string\[]                           | comma-separated list of document tags, used for search and for SOE keywords unless keyswords are specified.                                                                                  |
 | `template`         | Example&lt;>                        | template component to be linked to document stories                                                                                                                                          |
 | `title*`           | string                              | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
 | `type`             | [DocType](#doctype)                 | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
@@ -2151,7 +2061,7 @@ Record&lt;
 
 [DocType](#doctype)
 
-, 
+,
 
 ### properties
 

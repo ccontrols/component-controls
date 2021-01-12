@@ -4,14 +4,14 @@ import {
   ReactNode,
   DetailedHTMLProps,
   LinkHTMLAttributes,
+  ReactElement,
 } from 'react';
 import { BuildProps } from './build';
+import { StoryProps } from './common';
 import { ActionItems } from './utility';
-
-import { StoryRenderFn } from './utility';
-import { ReactElement } from 'react';
 import { Story, Document } from './document';
 import { SearchOptions } from './search';
+import { TokenOptions } from './tokens';
 
 /**
  * render function by framework. By default 'react'
@@ -33,7 +33,7 @@ export interface TabConfiguration {
   /**
    * page template - can be a package default export
    */
-  component: ComponentType;
+  component: FC<Partial<TabConfiguration>>;
 
   /**
    * page container react component
@@ -48,7 +48,15 @@ export interface TabConfiguration {
   /**
    * callback to determine if the tab is visible
    */
-  isVisible?: (props: { story: Story; doc: Document }) => boolean;
+  isVisible?: (props: {
+    config: RunConfiguration;
+    story: Story;
+    doc: Document;
+  }) => boolean;
+  /**
+   * any custom page options
+   */
+  [option: string]: any;
 }
 
 export type PageTab = string | TabConfiguration | [string, TabConfiguration];
@@ -219,7 +227,8 @@ export type BuildConfiguration = BuildProps & {
    * search options
    */
   search?: SearchOptions;
-};
+  tokens?: TokenOptions;
+} & StoryProps;
 
 export interface ToolbarConfig {
   /**
@@ -238,31 +247,16 @@ export interface ToolbarConfig {
  */
 export type StaticMenuItem = string | { name: string; menu?: StaticMenuItem[] };
 export type StaticMenuItems = StaticMenuItem[];
-/**
- * configuration options for the controls module
- */
-export interface ControlsConfig {
-  /**
-   * threshold for when to display the controls in their own table
-   * separate from the props table
-   */
-  threshold?: number;
-}
 
 /**
  * global configuration used at build time
  * stored in a file named main.js/main.ts
  */
-export interface RunOnlyConfiguration {
+export type RunOnlyConfiguration = {
   /**
    * framework-specific render function. By default react render
    */
   renderFn?: FrameworkRenderFn;
-  /**
-   * story decorator functions - used to wrap stories
-   * example: [story => <ThemeProvider>{story()}</ThemeProvider>]
-   */
-  decorators?: StoryRenderFn[];
   /**
    * standalone site title. Default is "Component controls"
    */
@@ -350,10 +344,6 @@ export interface RunOnlyConfiguration {
   menu?: StaticMenuItems;
 
   /**
-   * controls module configuration options
-   */
-  controls?: ControlsConfig;
-  /**
    * custom props to components
    * ex:
    * components: { story:{ wrapper: 'iframe' } },
@@ -365,7 +355,7 @@ export interface RunOnlyConfiguration {
    * analytics options
    */
   analytics?: any;
-}
+} & StoryProps;
 
 export type RunConfiguration = RunOnlyConfiguration &
   Omit<BuildConfiguration, 'pages'>;
@@ -430,9 +420,6 @@ export const defaultRunConfig: RunConfiguration = {
     'Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site.',
   language: 'en',
   author: '@component-controls',
-  controls: {
-    threshold: 10,
-  },
   pages: {
     story: {
       label: 'Docs',
