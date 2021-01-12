@@ -1,8 +1,11 @@
 {
-  "name": "@component-controls/pages",
+  "name": "@component-controls/figma-api",
   "version": "2.6.1",
-  "description": "Component controls pre-built documentation page templates.",
-  "sideEffects": false,
+  "description": "Figma api connection for your documentation",
+  "keywords": [
+    "figma",
+    "figma embed"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
@@ -10,20 +13,8 @@
     "dist/",
     "package.json",
     "README.md",
-    "CanvasPage.d.ts",
-    "CanvasPage.js",
-    "ClassicPage.d.ts",
-    "ClassicPage.js",
-    "ComponentPage.d.ts",
-    "ComponentPage.js",
-    "CurrentStoryPage.d.ts",
-    "CurrentStoryPage.js",
-    "DesignPage.d.ts",
-    "DesignPage.js",
-    "StoriesPage.d.ts",
-    "StoriesPage.js",
-    "TestingPage.d.ts",
-    "TestingPage.js"
+    "FigmaPage.d.ts",
+    "FigmaPage.js"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
@@ -32,7 +23,7 @@
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "prepare": "yarn build",
-    "test": "yarn jest --passWithNoTests"
+    "test": "cc-jest -c ./.config"
   },
   "homepage": "https://github.com/ccontrols/component-controls",
   "bugs": {
@@ -41,30 +32,25 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ccontrols/component-controls.git",
-    "directory": "ui/pages"
+    "directory": "plugins/figma-api"
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/addon-images": "^2.6.1",
-    "@component-controls/addon-notes": "^2.6.1",
-    "@component-controls/axe-plugin": "^2.6.1",
     "@component-controls/blocks": "^2.6.1",
-    "@component-controls/figma-api": "^2.6.1",
-    "@component-controls/figma-embed": "^2.6.1",
-    "@component-controls/viewport-plugin": "^2.6.1"
+    "@component-controls/components": "^2.6.1",
+    "@component-controls/store": "^2.6.1",
+    "figma-js": "^1.13.0"
   },
   "devDependencies": {
-    "@component-controls/ts-markdown-docs": "^2.6.0",
-    "@types/jest": "^26.0.10",
+    "@component-controls/jest-snapshots": "^2.6.1",
     "@types/react": "^16.9.34",
-    "cross-env": "^5.2.1",
-    "eslint": "^6.5.1",
-    "jest": "^26.4.2",
     "react": "^17.0.1",
+    "theme-ui": "^0.6.0-alpha.3",
     "typescript": "^4.0.5"
   },
   "peerDependencies": {
-    "react": "^16.8.0 || ^17"
+    "react": "^16.8.0 || ^17",
+    "theme-ui": ">= 0.4.0-rc.1"
   },
   "publishConfig": {
     "access": "public"

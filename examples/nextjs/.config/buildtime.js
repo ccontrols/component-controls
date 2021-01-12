@@ -1,4 +1,5 @@
 const path = require('path');
+require('dotenv').config();
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin;
 
@@ -64,6 +65,9 @@ module.exports = {
     options: {
       isCaseSensitive: true,
     },
+  },
+  tokens: {
+    figmaAccessToken: process.env.FIGMA_ACCESS_TOKEN,
   },
   webpack: (config = {}, options = {}) => {
     return {

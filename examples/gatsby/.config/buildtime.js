@@ -47,11 +47,15 @@ module.exports = {
         page: '@component-controls/pages/ClassicPage',
         test: '@component-controls/pages/TestingPage',
         design: '@component-controls/pages/DesignPage',
+        figma: '@component-controls/figma-api/FigmaPage',
       },
     },
     tutorial: {
       basePath: 'tutorial/',
     },
+  },
+  tokens: {
+    figmaAccessToken: process.env.FIGMA_ACCESS_TOKEN,
   },
   search: {
     indexingModule: require.resolve(
@@ -76,7 +80,9 @@ module.exports = {
       adminAPIKey: process.env.ALGOLIA_SEARCH_ADMIN_KEY,
     },
   },
-
+  figma: {
+    accessToken: process.env.FIGMA_ACCESS_TOKEN,
+  },
   webpack: (config = {}, options = {}) => {
     return {
       ...config,
