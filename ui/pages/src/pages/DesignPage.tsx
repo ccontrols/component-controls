@@ -34,5 +34,8 @@ export default {
   component: DesignPage,
   isVisible: ({ story }) =>
     story.plugins &&
-    (story.plugins.figma || story.plugins.notes || story.plugins.images),
+    (Array.isArray(story.plugins?.figma) ||
+      story.plugins?.figma?.items ||
+      story.plugins.notes ||
+      story.plugins.images),
 } as TabConfiguration;

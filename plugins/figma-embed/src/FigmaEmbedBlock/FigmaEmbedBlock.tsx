@@ -17,7 +17,7 @@ export type FigmaEmbedBlockProps = FigmaEmbedBlockOwnProps &
   StoryInputProps &
   IframeHTMLAttributes<HTMLIFrameElement>;
 export const FigmaEmbedBlock: FC<FigmaEmbedBlockProps> = fullProps => {
-  const custom = useCustomProps<FigmaEmbedBlockProps>('figma', fullProps);
+  const custom = useCustomProps<FigmaEmbedBlockProps>('figma-embed', fullProps);
   const {
     id,
     name,

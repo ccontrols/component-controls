@@ -16,21 +16,18 @@ import {
 import { getControlsCount, TabConfiguration } from '@component-controls/core';
 import {
   useCurrentStory,
-  useStore,
   useCurrentPropsCount,
 } from '@component-controls/store';
 
-const ClassicPage: FC = () => {
-  const store = useStore();
-  const { controls: { threshold = 10 } = {} } = store.config;
+const ClassicPage: FC<TabConfiguration> = ({ controlsThreshold = 10 }) => {
   const story = useCurrentStory();
   const controlsCount = getControlsCount(story?.controls);
   const propsCount = useCurrentPropsCount();
   const splitControls =
     controlsCount > 0 &&
-    controlsCount <= threshold &&
+    controlsCount <= controlsThreshold &&
     (propsCount === 0 ||
-      (controlsCount < propsCount && propsCount >= threshold));
+      (controlsCount < propsCount && propsCount >= controlsThreshold));
   const mixedControls = !splitControls && controlsCount >= propsCount;
   return (
     <Fragment>
@@ -52,7 +49,7 @@ const ClassicPage: FC = () => {
         <PropsTable
           of="."
           title={mixedControls ? 'Controls' : 'Properties'}
-          flat={propsCount <= threshold && !mixedControls}
+          flat={propsCount <= controlsThreshold && !mixedControls}
           visibility={splitControls ? 'info' : 'all'}
         />
       )}
@@ -67,4 +64,5 @@ const ClassicPage: FC = () => {
 export default {
   title: 'Documentation',
   component: ClassicPage,
+  controlsThreshold: 10,
 } as TabConfiguration;

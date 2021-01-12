@@ -13,5 +13,6 @@ const FigmaEmbedPage: FC<FigmaEmbedBlockProps> = props => (
 export default {
   title: 'Figma',
   component: FigmaEmbedPage,
-  isVisible: ({ story }) => story.plugins?.figma,
+  isVisible: ({ story }) =>
+    Array.isArray(story.plugins?.figma) || story.plugins?.figma?.items,
 } as TabConfiguration;

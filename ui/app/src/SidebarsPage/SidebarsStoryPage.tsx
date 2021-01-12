@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FC, ComponentType, useRef, useMemo } from 'react';
+import { FC, useRef, useMemo } from 'react';
 import { jsx, Box } from 'theme-ui';
 import {
   DocType,
@@ -52,7 +52,7 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
   const tabKeys = pageConfig.tabs || {};
   const tabs = Object.keys(tabKeys).filter(key => {
     const tab = tabKeys[key];
-    return story && (!tab.isVisible || tab.isVisible({ doc, story }));
+    return story && (!tab.isVisible || tab.isVisible({ config, doc, story }));
   });
 
   const { tabIndex, tabConfig } = useMemo(() => {
@@ -80,9 +80,9 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
       route
     ] as TabConfiguration;
     if (tab.component) {
-      const Page = tab.component as ComponentType;
+      const Page = tab.component;
       if (Page) {
-        return <Page />;
+        return <Page {...tab} />;
       }
     }
     return null;
