@@ -143,7 +143,7 @@ Object {
         "react-resize-detector": "^5.0.6",
         "recoil": "^0.0.10",
         "stringify-object": "^3.3.0",
-        "theme-ui": "^0.6.0-alpha.3",
+        "theme-ui": "^0.6.0-alpha.6",
       },
       "devDependencies": Object {
         "@component-controls/jest-snapshots": "^2.6.2",

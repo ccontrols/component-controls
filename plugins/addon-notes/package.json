@@ -44,7 +44,7 @@
     "@component-controls/jest-snapshots": "^2.6.2",
     "@types/react": "^16.9.34",
     "react": "^17.0.1",
-    "theme-ui": "^0.6.0-alpha.3",
+    "theme-ui": "^0.6.0-alpha.6",
     "typescript": "^4.0.5"
   },
   "peerDependencies": {
