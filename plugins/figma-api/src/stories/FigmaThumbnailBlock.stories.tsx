@@ -1,11 +1,11 @@
 import React from 'react';
 import { Document, Example } from '@component-controls/core';
 import { BlockContextProvider, store } from '@component-controls/blocks';
-import { FigmaEmbedBlock } from '../index';
+import { FigmaThumbnailBlock } from '../index';
 
 export default {
-  title: 'Plugins/FigmaEmbedBlock',
-  component: FigmaEmbedBlock,
+  title: 'Plugins/Figma',
+  component: FigmaThumbnailBlock,
 } as Document;
 
 export const overview: Example = () => {
@@ -14,7 +14,7 @@ export const overview: Example = () => {
       storyId="blocks-core-story-plain--controls"
       store={store}
     >
-      <FigmaEmbedBlock id="." />
+      <FigmaThumbnailBlock id="." />
     </BlockContextProvider>
   );
 };
@@ -25,7 +25,7 @@ export const customURLS: Example = () => {
       storyId="blocks-core-story-plain--controls"
       store={store}
     >
-      <FigmaEmbedBlock
+      <FigmaThumbnailBlock
         id="."
         items={[
           {
@@ -47,7 +47,7 @@ export const noFullScreen: Example = () => {
       storyId="blocks-core-story-plain--controls"
       store={store}
     >
-      <FigmaEmbedBlock id="." allowFullScreen={false} />
+      <FigmaThumbnailBlock id="." />
     </BlockContextProvider>
   );
 };
@@ -58,7 +58,7 @@ export const customIFrameProps: Example = () => {
       storyId="blocks-core-story-plain--controls"
       store={store}
     >
-      <FigmaEmbedBlock
+      <FigmaThumbnailBlock
         id="."
         items={[
           {
@@ -84,7 +84,7 @@ export const customConfigProps: Example = () => {
         },
       }}
     >
-      <FigmaEmbedBlock id="." />
+      <FigmaThumbnailBlock id="." />
     </BlockContextProvider>
   );
 };

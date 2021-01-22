@@ -1,12 +1,21 @@
 import React, { FC } from 'react';
 import { TabConfiguration } from '@component-controls/core';
-import { Description } from '@component-controls/blocks';
-import { FigmaBlock, FigmaBlockProps } from '../FigmaBlock';
+import { Description, Playground, Story } from '@component-controls/blocks';
+import {
+  FigmaThumbnailBlock,
+  FigmaThumbnailBlockProps,
+} from '../FigmaThumbnailBlock';
 
-const FigmaPage: FC<FigmaBlockProps> = props => (
+import { FigmaComponentBlock } from '../FigmaComponentBlock';
+
+const FigmaPage: FC<FigmaThumbnailBlockProps> = props => (
   <>
     <Description />
-    <FigmaBlock {...props} />
+    <Playground title=".">
+      <Story id="." />
+    </Playground>
+    <FigmaComponentBlock {...props} title="Component" />
+    <FigmaThumbnailBlock {...props} title="Thumbnail" />
   </>
 );
 
