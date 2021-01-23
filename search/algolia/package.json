@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/search-algolia",
-  "version": "2.6.2",
+  "version": "2.6.3",
   "description": "Component controls Algolia search and index",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -31,7 +31,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/core": "^2.6.2",
+    "@component-controls/core": "^2.6.3",
     "@component-controls/logger": "^2.6.0",
     "algoliasearch": "^4.8.3"
   },

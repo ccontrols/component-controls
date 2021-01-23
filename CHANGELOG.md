@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.6.3](https://github.com/ccontrols/component-controls/compare/v2.6.2...v2.6.3) (2021-01-23)
+
+
+### Reverts
+
+* Revert "chore: upgrade to theme-ui@0.6.0-alpha.3" ([f4a9ff3](https://github.com/ccontrols/component-controls/commit/f4a9ff3ab94df4a568362f50dc2b631f241ec1d9))
+
+
+
+
+
 ## [2.6.2](https://github.com/ccontrols/component-controls/compare/v2.6.1...v2.6.2) (2021-01-12)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/loader",
-  "version": "2.6.2",
+  "version": "2.6.3",
   "description": "Webpack loader for component controls instrumentation",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -35,9 +35,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/config": "^2.6.2",
-    "@component-controls/core": "^2.6.2",
-    "@component-controls/instrument": "^2.6.2",
+    "@component-controls/config": "^2.6.3",
+    "@component-controls/core": "^2.6.3",
+    "@component-controls/instrument": "^2.6.3",
     "@component-controls/logger": "^2.6.0",
     "js-string-escape": "^1.0.1",
     "loader-utils": "^1.2.3",
