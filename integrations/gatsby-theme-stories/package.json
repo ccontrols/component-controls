@@ -49,7 +49,7 @@
     "@component-controls/webpack-configs": "^2.6.2",
     "gatsby-plugin-typescript": "^2.4.24",
     "react-helmet": "^6.0.0",
-    "theme-ui": "^0.6.0-alpha.6"
+    "theme-ui": "^0.6.0-alpha.3"
   },
   "devDependencies": {
     "@component-controls/logger": "^2.6.0",

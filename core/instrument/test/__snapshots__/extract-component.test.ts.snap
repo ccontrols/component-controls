@@ -491,12 +491,12 @@ Object {
   },
   "componentPackage": Object {
     "dependencies": Object {
-      "@theme-ui/color-modes": "^0.6.0-alpha.6",
-      "@theme-ui/components": "^0.6.0-alpha.6",
+      "@theme-ui/color-modes": "^0.6.0-alpha.3",
+      "@theme-ui/components": "^0.6.0-alpha.3",
       "@theme-ui/core": "0.6.0-alpha.1",
       "@theme-ui/css": "0.6.0-alpha.1",
       "@theme-ui/mdx": "0.6.0-alpha.1",
-      "@theme-ui/theme-provider": "^0.6.0-alpha.6",
+      "@theme-ui/theme-provider": "^0.6.0-alpha.3",
     },
     "devDependencies": undefined,
     "fileHash": "8f6835169f285fcd3ad5425d9268a8f1",
@@ -509,7 +509,7 @@ Object {
       "docs": "https://github.com/system-ui/theme-ui/tree/master#readme",
       "issues": "https://github.com/system-ui/theme-ui/issues",
     },
-    "version": "0.6.0-alpha.6",
+    "version": "0.6.0-alpha.3",
   },
 }
 `;
@@ -541,7 +541,7 @@ Object {
       "react-table": "^7.0.0",
       "react-tabs": "^3.1.0",
       "scroll-into-view-if-needed": "^2.2.25",
-      "theme-ui": "^0.6.0-alpha.6",
+      "theme-ui": "^0.6.0-alpha.3",
     },
     "devDependencies": Object {
       "@component-controls/jest-snapshots": "^2.6.2",

@@ -308,7 +308,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "react-table": "^7.0.0",
         "react-tabs": "^3.1.0",
         "scroll-into-view-if-needed": "^2.2.25",
-        "theme-ui": "^0.6.0-alpha.6",
+        "theme-ui": "^0.6.0-alpha.3",
       },
       "devDependencies": Object {
         "@component-controls/jest-snapshots": "^2.6.2",
@@ -354,7 +354,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "react-table": "^7.0.0",
         "react-tabs": "^3.1.0",
         "scroll-into-view-if-needed": "^2.2.25",
-        "theme-ui": "^0.6.0-alpha.6",
+        "theme-ui": "^0.6.0-alpha.3",
       },
       "devDependencies": Object {
         "@component-controls/jest-snapshots": "^2.6.2",
