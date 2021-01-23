@@ -56,7 +56,7 @@ export const store: Store = {
         'theme-ui': '^0.3.1',
       },
       devDependencies: {
-        '@theme-ui/presets': '^0.3.0',
+        '@theme-ui/presets': '^0.6.0-alpha.6',
         '@types/jest': '^26.0.10',
         '@types/mdx-js__react': '^1.5.1',
         '@types/stringify-object': '^3.2.0',
