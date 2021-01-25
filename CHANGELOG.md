@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.6.5](https://github.com/ccontrols/component-controls/compare/v2.6.4...v2.6.5) (2021-01-25)
+
+
+### Bug Fixes
+
+* add dependency ([6c923aa](https://github.com/ccontrols/component-controls/commit/6c923aacd309aacbf6000b53787a819e5445a5b6))
+
+
+
+
+
 ## [2.6.4](https://github.com/ccontrols/component-controls/compare/v2.6.3...v2.6.4) (2021-01-25)
 
 
