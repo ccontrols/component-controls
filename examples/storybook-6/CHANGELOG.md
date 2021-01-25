@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.6.4](https://github.com/ccontrols/component-controls/compare/v2.6.3...v2.6.4) (2021-01-25)
+
+
+### Bug Fixes
+
+* storybook emotion 11 hack ([a6f55b0](https://github.com/ccontrols/component-controls/commit/a6f55b0fcb4a60e3ff736385fceba09c7f0782f3))
+
+
+
+
+
 ## [2.6.3](https://github.com/ccontrols/component-controls/compare/v2.6.2...v2.6.3) (2021-01-23)
 
 **Note:** Version bump only for package component-controls-storybook-6

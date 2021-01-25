@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/nextjs-plugin",
-  "version": "2.6.3",
+  "version": "2.6.4",
   "description": "Nextjs plugin to create stories documentation sites",
   "keywords": [
     "story",
@@ -36,14 +36,14 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/app": "^2.6.3",
-    "@component-controls/pages": "^2.6.3",
+    "@component-controls/app": "^2.6.4",
+    "@component-controls/pages": "^2.6.4",
     "@component-controls/routes": "^2.6.3",
     "@component-controls/search-algolia": "^2.6.3",
     "@component-controls/search-fusejs": "^2.6.3",
-    "@component-controls/store": "^2.6.3",
-    "@component-controls/webpack-compile": "^2.6.3",
-    "@component-controls/webpack-configs": "^2.6.3",
+    "@component-controls/store": "^2.6.4",
+    "@component-controls/webpack-compile": "^2.6.4",
+    "@component-controls/webpack-configs": "^2.6.4",
     "@emotion/babel-plugin": "^11.0.0",
     "next": "^10.0.3"
   },
