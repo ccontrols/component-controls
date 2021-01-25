@@ -33,7 +33,7 @@ export const PageContextContainer: FC = ({ children }) => {
           : parameters,
       }}
     >
-      <BlockPageContainer variant="pagecontainer.storybook">
+      <BlockPageContainer variant="pagecontainer.default">
         {children}
       </BlockPageContainer>
     </BlockContextProvider>
