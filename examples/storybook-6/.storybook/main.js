@@ -1,5 +1,6 @@
 const path = require('path');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin;
 
 module.exports = {
   stories: [
@@ -27,12 +28,13 @@ module.exports = {
         pages: [
           require.resolve('@component-controls/storybook/full-page'),
           require.resolve('./testing-page'),
+          require.resolve('./design-page'),
         ],
-        propsPanel: true,
-        storySourcePanel: true,
-        storyConfigPanel: true,
-      }
-    }  
+        // propsPanel: true,
+        // storySourcePanel: true,
+        // storyConfigPanel: true,
+      },
+    },
   ],
   webpackFinal: (config = {}, options = {}) => {
     return {
@@ -40,7 +42,7 @@ module.exports = {
       plugins: [
         ...config.plugins,
         // new BundleAnalyzerPlugin({ generateStatsFile: true, statsFilename: 'stats.json' })
-      ]
+      ],
     };
   },
 };

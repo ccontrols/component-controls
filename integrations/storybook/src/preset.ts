@@ -1,7 +1,27 @@
+import fs from 'fs';
+import path from 'path';
+
 import { RuleSetRule } from 'webpack';
 import { mergeWebpackConfig } from '@component-controls/webpack-configs';
 const LoaderPlugin = require('@component-controls/loader/plugin');
 import { PresetOptions, defaultRules } from './types';
+
+// https://github.com/storybookjs/storybook/issues/13277#issuecomment-765525245
+const getPackageDir = (filepath: string) => {
+  let currDir = path.dirname(require.resolve(filepath));
+  while (true) {
+    if (fs.existsSync(path.join(currDir, 'package.json'))) {
+      return currDir;
+    }
+    const { dir, root } = path.parse(currDir);
+    if (dir === root) {
+      throw new Error(
+        `Could not find package.json in the parent directories starting from ${filepath}.`,
+      );
+    }
+    currDir = dir;
+  }
+};
 
 module.exports = {
   config: (entry: any[] = []) => {
@@ -60,8 +80,9 @@ module.exports = {
         ...config.resolve,
         alias: {
           ...config.resolve.alias,
-          '@emotion/core': require.resolve('@emotion/react'),
-          'emotion-theming': require.resolve('@emotion/react'),
+          '@emotion/core': getPackageDir('@emotion/react'),
+          '@emotion/styled': getPackageDir('@emotion/styled'),
+          'emotion-theming': getPackageDir('@emotion/react'),
         },
       },
     };
@@ -118,8 +139,9 @@ module.exports = {
         ...config.resolve,
         alias: {
           ...config.resolve.alias,
-          '@emotion/core': require.resolve('@emotion/react'),
-          'emotion-theming': require.resolve('@emotion/react'),
+          '@emotion/core': getPackageDir('@emotion/react'),
+          '@emotion/styled': getPackageDir('@emotion/styled'),
+          'emotion-theming': getPackageDir('@emotion/react'),
         },
       };
     }

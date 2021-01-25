@@ -1,34 +1,39 @@
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin;
 
 module.exports = {
-  
-  addons: [{
-    name: '@component-controls/storybook',
-    options: {
-      pages: [
-        require.resolve('@component-controls/storybook/full-page'),
-        require.resolve('./testing-page.js'),
-      ],
-      webpack: ['instrument',
-      {
-        name: 'react-docgen-typescript', 
-        config: {
-          module: {
-            rules: [
-              {
-                loader: '@component-controls/loader/loader',
-                options: {
-                  stories: {
-                    sourceFiles: false, //
+  addons: [
+    {
+      name: '@component-controls/storybook',
+      options: {
+        pages: [
+          require.resolve('@component-controls/storybook/full-page'),
+          require.resolve('./testing-page.js'),
+          require.resolve('./design-page.js'),
+        ],
+        webpack: [
+          'instrument',
+          {
+            name: 'react-docgen-typescript',
+            config: {
+              module: {
+                rules: [
+                  {
+                    loader: '@component-controls/loader/loader',
+                    options: {
+                      stories: {
+                        sourceFiles: false, //
+                      },
+                    },
                   },
-                },  
+                ],
               },
-            ],
-          }
-        },  
-      }],
-    }
-  }],    
+            },
+          },
+        ],
+      },
+    },
+  ],
   stories: [
     '../../../ui/editors/src/**/*.stories.@(js|jsx|tsx|mdx)',
     '../../../ui/components/src/**/*.stories.@(js|jsx|tsx|mdx)',
@@ -50,8 +55,7 @@ module.exports = {
       plugins: [
         ...config.plugins,
         // new BundleAnalyzerPlugin({ generateStatsFile: true, statsFilename: 'stats.json' })
-      ]
+      ],
     };
   },
-
 };

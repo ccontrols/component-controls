@@ -24,22 +24,29 @@ const encodeFn = (name: string, val: any) => {
   return val;
 };
 export const saveStore = (store: Store): void => {
-  for (const key in localStorage) {
-    if (key.indexOf(COMPONENT_CONTROLS_STORAGE) === 0) {
-      localStorage.removeItem(key);
+  try {
+    for (const key in localStorage) {
+      if (key.indexOf(COMPONENT_CONTROLS_STORAGE) === 0) {
+        localStorage.removeItem(key);
+      }
     }
+    const save: Omit<
+      Store,
+      'addObserver' | 'removeObserver' | 'updateStory'
+    > = {
+      stories: store.stories,
+      config: store.config,
+      components: store.components,
+      docs: store.docs,
+      packages: store.packages,
+    };
+    localStorage.setItem(
+      COMPONENT_CONTROLS_STORAGE,
+      JSON.stringify(save, encodeFn),
+    );
+  } catch (e) {
+    console.error(e);
   }
-  const save: Omit<Store, 'addObserver' | 'removeObserver' | 'updateStory'> = {
-    stories: store.stories,
-    config: store.config,
-    components: store.components,
-    docs: store.docs,
-    packages: store.packages,
-  };
-  localStorage.setItem(
-    COMPONENT_CONTROLS_STORAGE,
-    JSON.stringify(save, encodeFn),
-  );
 };
 
 export const readStore = (stories: Stories): Store => {
