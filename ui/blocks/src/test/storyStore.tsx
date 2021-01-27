@@ -75,12 +75,21 @@ export const store: Store = {
     },
   },
   components: {
-    '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js': {
+    ArrowButton: {
       from: '../../components/button-default-arrow-func',
       importedName: 'default',
       name: 'ArrowButton',
       request:
         '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js',
+      jsx: [
+        {
+          from: './Button',
+          name: 'Button',
+          componentKey: 'Button',
+          importedName: 'Button',
+          attributes: ['ref', 'id'],
+        },
+      ],
       externalDependencies: {
         react: [
           {
@@ -119,7 +128,7 @@ export const store: Store = {
       },
       package: 'test-package',
     },
-    '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js': {
+    Button: {
       from: '../../components/button-named-arrow-func',
       importedName: 'Button',
       name: 'Button',
@@ -305,7 +314,7 @@ and a [link](https://google.com)
         },
       },
     },
-    '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/custom-controls.js': {
+    Control: {
       from: '../../components/button-named-arrow-func',
       importedName: 'Button',
       name: 'Button',
@@ -337,12 +346,9 @@ and a [link](https://google.com)
       dateModified: new Date('2020-03-31'),
       package: 'test-package',
       componentsLookup: {
-        ArrowButton:
-          '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js',
-        Button:
-          '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js',
-        Control:
-          '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/custom-controls.js',
+        ArrowButton: 'ArrowButton',
+        Button: 'Button',
+        Control: 'Control',
       },
       author: 'atanasster',
       title: 'Story',

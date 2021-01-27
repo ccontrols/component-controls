@@ -14,9 +14,16 @@ import { LocalImport } from '@component-controls/blocks';
 import { ComponentStats } from '../../types';
 
 export type ComponentUsageDetailsProps = {
+  /**
+   * a row of usage statistics
+   */
+
   stats: ComponentStats;
 } & BlockContainerProps;
 
+/**
+ * Table to display the components usage, with a % progress indicator
+ */
 export const ComponentUsageDetails: FC<ComponentUsageDetailsProps> = ({
   stats,
   ...rest

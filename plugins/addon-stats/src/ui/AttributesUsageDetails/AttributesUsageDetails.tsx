@@ -14,9 +14,15 @@ import { LocalImport } from '@component-controls/blocks';
 import { AttributeAggregateRow } from '../../types';
 
 export type AttributesUsageDetailsProps = {
+  /**
+   * a row of usage statistics
+   */
   stats: AttributeAggregateRow;
 } & BlockContainerProps;
 
+/**
+ * Table to display the attributes usage, with a % progress indicator
+ */
 export const AttributesUsageDetails: FC<AttributesUsageDetailsProps> = ({
   stats,
   ...rest

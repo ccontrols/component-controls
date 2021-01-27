@@ -5,9 +5,15 @@ import { useAttributesUsageAggregate } from '../../hooks/components';
 import { AttributesUsageDetails } from '../AttributesUsageDetails';
 
 export type AttributesUsageListProps = {
+  /**
+   * filter which stories to apply
+   */
   filter?: StatsFilter;
 } & BlockContainerProps;
 
+/**
+ * Tables for all the filtered attributes, and the components using them
+ */
 export const AttributesUsageList: FC<AttributesUsageListProps> = ({
   filter,
   ...rest

@@ -16,10 +16,16 @@ import { StatsFilter, AttributeAggregateRow } from '../../types';
 import { useAttributesUsageAggregate } from '../../hooks/components';
 
 export type AttributeUsageProps = {
+  /**
+   * filter which stories to apply
+   */
   filter?: StatsFilter;
   linkAttributes?: boolean;
 } & BlockContainerProps;
 
+/**
+ * Table of all the used attributes, with their components
+ */
 export const AttributeUsage: FC<AttributeUsageProps> = ({
   filter,
   linkAttributes = true,
