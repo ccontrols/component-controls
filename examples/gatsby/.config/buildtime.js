@@ -30,6 +30,7 @@ module.exports = {
     '../../../plugins/axe-plugin/src/stories/**/*.stories.@(js|jsx|tsx|mdx)',
     '../../../plugins/viewport-plugin/src/stories/**/*.stories.@(js|jsx|tsx|mdx)',
     '../../../plugins/figma-embed/src/stories/**/*.stories.@(js|jsx|tsx|mdx)',
+    '../../../plugins/figma-api/src/stories/**/*.stories.@(js|jsx|tsx|mdx)',
     '../../../plugins/addon-notes/src/stories/**/*.stories.@(js|jsx|tsx|mdx)',
     '../../../plugins/addon-images/src/stories/**/*.stories.@(js|jsx|tsx|mdx)',
     //'../../stories/src/blogs/introduction-to-controls.mdx',
