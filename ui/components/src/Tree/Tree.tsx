@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC, useEffect, useState } from 'react';
 import { jsx, Box, Flex, Text, Button, BoxProps, ButtonProps } from 'theme-ui';
-import { ChevronDownIcon, ChevronRightIcon } from '@primer/octicons-react';
+import { ChevronDownIcon } from '@primer/octicons-react';
 import {
   Keyboard,
   LEFT_ARROW,
@@ -34,8 +34,7 @@ export const Tree: FC<TreeProps> = ({
   onSelect,
   onExpandCollapse,
   arrowPosition = 'end',
-  iconExpanded = <ChevronDownIcon />,
-  iconCollapsed = <ChevronRightIcon />,
+  chevronIcon = <ChevronDownIcon />,
   indentPixels = 8,
   ...rest
 }) => {
@@ -105,8 +104,11 @@ export const Tree: FC<TreeProps> = ({
       <Box
         aria-label={isExpanded ? 'collapse items' : 'expand items'}
         variant="tree.expandicon"
+        sx={{
+          transform: isExpanded ? undefined : 'rotate(-90deg)',
+        }}
       >
-        {isExpanded ? iconExpanded : iconCollapsed}
+        {chevronIcon}
       </Box>
     ) : null;
     const content = (
@@ -133,29 +135,35 @@ export const Tree: FC<TreeProps> = ({
                 }
               }}
             >
-              <Box variant="tree.labelcontainer">
-                {arrowPosition === 'start' ? expandIcon : null}
-                {icon && <Box variant="tree.labelicon">{icon}</Box>}
-                {typeof label === 'string' ? (
-                  <Text
-                    variant="tree.labeltext"
-                    sx={{
-                      color: isActiveParent ? 'primary' : 'text',
-                    }}
-                  >
-                    {itemItems ? <strong>{label}</strong> : label}
-                  </Text>
-                ) : typeof label === 'function' ? (
-                  label({ isExpanded, ...item })
-                ) : (
-                  label
-                )}
-              </Box>
+              <Flex
+                sx={{ flexDirection: 'row', justifyContent: 'space-between' }}
+              >
+                <Box variant="tree.labelcontainer">
+                  {arrowPosition === 'start' ? expandIcon : null}
+                  {icon && <Box variant="tree.labelicon">{icon}</Box>}
+                  {typeof label === 'string' ? (
+                    <Text
+                      variant="tree.labeltext"
+                      sx={{
+                        color: isActiveParent ? 'primary' : 'text',
+                      }}
+                    >
+                      {itemItems ? <strong>{label}</strong> : label}
+                    </Text>
+                  ) : typeof label === 'function' ? (
+                    label({ isExpanded, ...item })
+                  ) : (
+                    label
+                  )}
+                </Box>
+                <Flex
+                  sx={{ flexDirection: 'row', alignItems: 'center', px: 2 }}
+                >
+                  {widget && <Box variant="tree.widget">{widget}</Box>}
+                  {arrowPosition === 'end' ? expandIcon : null}
+                </Flex>
+              </Flex>
             </LinkClass>
-          </Flex>
-          <Flex sx={{ flexDirection: 'row', alignItems: 'center', px: 2 }}>
-            {widget && <Box variant="tree.widget">{widget}</Box>}
-            {arrowPosition === 'end' ? expandIcon : null}
           </Flex>
         </Flex>
       </Flex>
