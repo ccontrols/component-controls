@@ -193,14 +193,10 @@ export type TreeOwnProps = {
   search?: string;
 
   /**
-   * custom icon when the item is expanded
+   * custom chevron icon
    */
-  iconExpanded?: ReactNode;
 
-  /**
-   * custom icon when the item is collapsed
-   */
-  iconCollapsed?: ReactNode;
+  chevronIcon?: ReactNode;
 
   /**
    * indentation in pixels for each elevel, By default 6 pixels
