@@ -5,13 +5,15 @@ order: 2
 route: /configuration/runtime/
 tags:
   - configuration
-author: atanasster  
+author: atanasster
 ---
 
 ## File
+
 The run-time configuration file is located in the [configuration-path](/configuration/overview/#configuration-path) folder.
 This file runs in a **browser** environment and you can use regular javascript or typescript.
 Possible names for the file are:
+
 - `buildtime.js`
 - `runtime.js`
 - `runtime.ts`
@@ -22,16 +24,16 @@ Possible names for the file are:
 
 ## Configurable Fields
 
-| Name              | Type                                                                                                                       | Description                                                                                                                                                                          |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `author`          | string                                                                                                                     | author: Default is "@component-controls"                                                                                                                                             |
-| `decorators`      | [StoryRenderFn]((/tutorial/reference/configuration/#storyrenderfn)\[]                                                      | story decorator functions - used to wrap stories. Example: \[story => &lt;ThemeProvider>{story()}&lt;/ThemeProvider>]                                                                 |
-| `pages`           | [PagesConfiguration]((/tutorial/reference/configuration#pagesconfiguration)                                                | page types configurations                                                                                                                                                            |
-| `description` | string                                                                                                                     | site description. Default is "Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site." |
-| `copyright` | string                                                                                                                     | copyright notice displayed in the footer|
-| `image`       | string                                                                                                                     | link to site image, used in page meta tag `<meta name="image" content={language} />`                                                                                                                                                                     |
-| `language`    | string                                                                                                                     | site language, Deault is "en"                                                                                                                                                        |
-| `title`           | string                                                                                                                     | standalone site title. Default is "Component controls"                                                                                                                               |
-| `storySort`       | **function** (`a`\*: string, `b`\*: string): number;                                                                       | story sorting function                                                                                                                                                               |
-| `theme`           | \[key: string]: any                                                                                                        | theme-ui theme configuration                                                                                                                                                         |
-| `toolbar`         | [ToolbarConfig](/tutorial/reference/configuration#toolbarconfig)                                                           | custom toolbar items                                                                                              
+| Name          | Type                                                                        | Description                                                                                                                                                         |
+| ------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `author`      | string                                                                      | author: Default is "@component-controls"                                                                                                                            |
+| `decorators`  | [StoryRenderFn]((/tutorial/reference/configuration/#storyrenderfn)\[]       | story decorator functions - used to wrap stories. Example: \[story => &lt;ThemeProvider>{story()}&lt;/ThemeProvider>]                                               |
+| `pages`       | [PagesConfiguration]((/tutorial/reference/configuration#pagesconfiguration) | page types configurations                                                                                                                                           |
+| `description` | string                                                                      | site description. Default is "Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site." |
+| `copyright`   | string                                                                      | copyright notice displayed in the footer                                                                                                                            |
+| `image`       | string                                                                      | link to site image, used in page meta tag `<meta name="image" content={language} />`                                                                                |
+| `language`    | string                                                                      | site language, Default is "en"                                                                                                                                      |
+| `title`       | string                                                                      | standalone site title. Default is "Component controls"                                                                                                              |
+| `storySort`   | **function** (`a`\*: string, `b`\*: string): number;                        | story sorting function                                                                                                                                              |
+| `theme`       | \[key: string]: any                                                         | theme-ui theme configuration                                                                                                                                        |
+| `toolbar`     | [ToolbarConfig](/tutorial/reference/configuration#toolbarconfig)            | custom toolbar items                                                                                                                                                |

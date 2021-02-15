@@ -282,7 +282,7 @@ export type RunOnlyConfiguration = {
    */
   copyright?: string;
   /**
-   * site language, Deault is "en"
+   * site language, Default is "en"
    */
   language?: string;
 
