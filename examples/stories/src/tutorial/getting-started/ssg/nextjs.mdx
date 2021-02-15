@@ -8,7 +8,7 @@ tags:
   - nextjs
 ---
 
-Below, we go over how to add a `component-controls` documentation site to both [new](#new-project) and [existing](#existing-nextjs-project) nextjs projects.
+Below, we go over how to add a `component-controls` documentation site to [new Nextjs projects](#new-project), [existing React projects](#existing--non-nextjs--react-project), and [existing Nextjs projects](#existing-nextjs-project).
 
 You can find a [git repo](https://github.com/atanasster/nextjs-controls-starter) and a [live site](https://nextjs-controls-starter.netlify.app/).
 
@@ -23,7 +23,7 @@ git clone https://github.com/atanasster/nextjs-controls-starter my-nextjs-projec
 
 ## New project
 
-If you want to create and configure a nextjs documentation site from scratch instead of cloning the starter repo, the following steps are required:
+If you want to create and configure a Nextjs documentation site from scratch instead of cloning the starter repo, the following steps are required:
 
 ```sh
 mkdir my-nextjs-project && cd my-nextjs-project
@@ -57,10 +57,19 @@ yarn add --dev typescript @types/react @types/node
 
 ```
 
-The remaining steps are the same as for an existing nextjs project.
+The remaining steps are the same as for [existing Nextjs projects](#existing-nextjs-project).
 
+## Existing (non-Nextjs) React project
 
-## Existing nextjs project
+All you have to do is add Nextjs as a dependency:
+
+```sh
+yarn add next
+```
+
+Then follow the steps for [existing Nextjs projects](#existing-nextjs-project).
+
+## Existing Nextjs project
 
 ### Add component-controls
 
