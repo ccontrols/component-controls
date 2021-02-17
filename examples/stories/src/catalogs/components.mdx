@@ -1,0 +1,37 @@
+import { Meta } from './Meta';
+import { Catalog } from '@component-controls/addon-catalog';
+
+<Meta title="Components/index" />
+
+# Overview
+
+`@component-controls/components` is an ecclectic collection of [theme-ui](https://theme-ui.com)-based components that are used throughout `component-controls`.
+
+Third-party libraries used:
+
+- [prism](https://prismjs.com) for source code syntax highlighting, rendered with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer).
+- [markdown-to-jsx](https://probablyup.com/markdown-to-jsx/) to transform markdown to JSX at runtime.
+- [react-table](https://github.com/tannerlinsley/react-table) to display tabular data.
+- [octicons](https://octicons.github.com) for icons used in the components.
+- [react-tabs](https://reactcommunity.org/react-tabs/) for tabs and multi-page components.
+- [react-popper-tooltip](https://react-popper-tooltip.netlify.com) for popups and tooltips.
+- [react-animate-height](https://muffinman.io/react-animate-height/) for collapsible components.
+- [@theme-ui/presets](https://theme-ui.com/packages/presets/) for custom theming.
+- [react-switch](https://github.com/markusenglund/react-switch) for toggle/boolean inputs.
+
+# Installation
+
+```bash
+$ npm install @component-controls/components --save
+```
+
+# Cross-usage
+
+You can view a table with the [cross-usage](/api/components-internal-usage) of the included components
+
+# Components
+
+<Catalog
+  filter={({ doc }) => doc.title.startsWith('Components')}
+  group={({ story }) => story.category}
+/>

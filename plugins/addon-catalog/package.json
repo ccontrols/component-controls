@@ -1,0 +1,60 @@
+{
+  "name": "@component-controls/addon-catalog",
+  "version": "2.6.5",
+  "description": "Component-controls addon to display a catalog of components",
+  "keywords": [
+    "components",
+    "catalog"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "yarn cross-env NODE_ENV=production rollup -c",
+    "dev": "yarn cross-env NODE_ENV=development rollup -cw",
+    "docs": "ts-md",
+    "fix": "yarn lint --fix",
+    "lint": "yarn eslint . --ext mdx,ts,tsx",
+    "prepare": "yarn build",
+    "test": "cc-jest -c ./.config"
+  },
+  "homepage": "https://github.com/ccontrols/component-controls",
+  "bugs": {
+    "url": "https://github.com/ccontrols/component-controls/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccontrols/component-controls.git",
+    "directory": "plugins/addon-catalog"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@component-controls/blocks": "^2.6.5",
+    "@component-controls/components": "^2.6.5",
+    "@component-controls/core": "^2.6.3",
+    "@component-controls/store": "^2.6.5",
+    "timeago.js": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.34",
+    "react": "^17.0.1",
+    "theme-ui": "^0.6.0-alpha.6",
+    "typescript": "^4.0.5"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17",
+    "react-table": ">= 7.0.0",
+    "theme-ui": ">= 0.4.0-rc.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": [
+    "Atanas Stoyanov"
+  ]
+}

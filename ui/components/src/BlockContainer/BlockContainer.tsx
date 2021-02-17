@@ -42,7 +42,7 @@ export interface BlockContainerOwnProps {
 export type BlockContainerProps = BlockContainerOwnProps & BoxProps;
 
 /**
- * a collapsible block with a title. The title creates also an attribute id and an octicon for github style navigation.
+ * Collapsible block container with a title. The title creates also an attribute id and an octicon for github style navigation.
  *
  */
 export const BlockContainer: FC<BlockContainerProps> = ({

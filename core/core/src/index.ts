@@ -8,6 +8,7 @@ export * from './deepMerge';
 export * from './propsInfo';
 export * from './document';
 export * from './document-utils';
+export * from './files';
 export * from './utility';
 export { randomizeData, canRandomizeControl } from './controls-randomize';
 export * from './controls-smart';

@@ -1,496 +1,117 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Blocks/ComponentDependencies Local Dependencies 1`] = `
+exports[`Blocks/ComponentContributors Caption 1`] = `
 <DocumentFragment>
   <div
-    class="css-1xkyebe"
+    class="css-6582y1-ComponentContributors"
   >
     <div
-      class="css-jxxswp"
-      id=""
+      class="css-1nwo78o-ComponentContributors"
     >
-      <div
-        class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      contributors
     </div>
     <div
-      aria-hidden="false"
-      class="rah-static rah-static--height-auto"
-      style="height: auto; overflow: visible;"
+      aria-label="avatars of [object Object], [object Object], [object Object]"
+      class="css-1wxrz40-GithubAvatarList"
     >
-      <div>
-        <div
-          class="css-1d6wxci"
-        >
-          <div
-            class="css-nm5f2c-Tabs"
-          >
-            <div
-              class="react-tabs"
-              data-tabs="true"
-            >
-              <ul
-                class="react-tabs__tab-list"
-                role="tablist"
-              >
-                <li
-                  aria-controls="react-tabs-5"
-                  aria-disabled="false"
-                  aria-selected="true"
-                  class="react-tabs__tab react-tabs__tab--selected"
-                  id="react-tabs-4"
-                  role="tab"
-                  tabindex="0"
-                >
-                  ArrowButton
-                </li>
-                <li
-                  aria-controls="react-tabs-7"
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="react-tabs__tab"
-                  id="react-tabs-6"
-                  role="tab"
-                >
-                  My Button Tab
-                </li>
-              </ul>
-              <div
-                aria-labelledby="react-tabs-4"
-                class="react-tabs__tab-panel react-tabs__tab-panel--selected"
-                id="react-tabs-5"
-                role="tabpanel"
-              >
-                <table
-                  class="css-11y77l0"
-                  data-testid="local-dependencies"
-                  role="table"
-                >
-                  <thead
-                    class="css-14kw1rx"
-                  >
-                    <tr
-                      class="css-vurnku"
-                      role="row"
-                    >
-                      <th
-                        class="css-9hyy6f"
-                        colspan="1"
-                        role="columnheader"
-                        style="width: 150px;"
-                      >
-                        <div
-                          class="css-wwqljn"
-                        >
-                          <div
-                            class="css-206mi5"
-                          >
-                            file
-                          </div>
-                        </div>
-                      </th>
-                      <th
-                        class="css-9hyy6f"
-                        colspan="1"
-                        role="columnheader"
-                        style="width: 150px;"
-                      >
-                        <div
-                          class="css-wwqljn"
-                        >
-                          <div
-                            class="css-206mi5"
-                          >
-                            imports
-                          </div>
-                        </div>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody
-                    class="css-tuhk50"
-                    role="rowgroup"
-                  >
-                    <tr
-                      class="css-ijvt85"
-                      role="row"
-                    >
-                      <td
-                        class="css-l4u9co"
-                        role="cell"
-                        style="width: 150px;"
-                      >
-                        <span
-                          class="css-b7g03d-Cell"
-                        >
-                          "./Button"
-                        </span>
-                      </td>
-                      <td
-                        class="css-l4u9co"
-                        role="cell"
-                        style="width: 150px;"
-                      >
-                        <div
-                          class="css-zivbkl-Cell"
-                        >
-                          <span
-                            class="css-1ver5lo-LocalImport"
-                          >
-                            <span
-                              class="css-vurnku"
-                            >
-                              <a
-                                class="css-1t54e2w"
-                                href="/docs/id-of-story"
-                              >
-                                Button
-                              </a>
-                            </span>
-                          </span>
-                          <span
-                            class="css-9c8bof-LocalImport"
-                          >
-                            <span
-                              class="css-vurnku"
-                            >
-                              ButtonProps
-                            </span>
-                          </span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr
-                      class="css-ijvt85"
-                      role="row"
-                    >
-                      <td
-                        class="css-l4u9co"
-                        role="cell"
-                        style="width: 150px;"
-                      >
-                        <span
-                          class="css-b7g03d-Cell"
-                        >
-                          "@component-controls/components"
-                        </span>
-                      </td>
-                      <td
-                        class="css-l4u9co"
-                        role="cell"
-                        style="width: 150px;"
-                      >
-                        <div
-                          class="css-zivbkl-Cell"
-                        >
-                          <span
-                            class="css-9c8bof-LocalImport"
-                          >
-                            <span
-                              class="css-vurnku"
-                            >
-                              Table
-                            </span>
-                          </span>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div
-                aria-labelledby="react-tabs-6"
-                class="react-tabs__tab-panel"
-                id="react-tabs-7"
-                role="tabpanel"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      <a
+        aria-label="visit profile of hasparus"
+        class="css-1yyqj5g-GithubAvatarItem"
+        href=""
+      >
+        <img
+          alt="hasparus"
+          class="css-1y16e88"
+          height="24"
+          src="https://github.com/hasparus"
+          title="hasparus"
+          width="24"
+        />
+      </a>
+      <a
+        aria-label="visit profile of lachlanjc"
+        class="css-1yyqj5g-GithubAvatarItem"
+        href=""
+      >
+        <img
+          alt="lachlanjc"
+          class="css-1y16e88"
+          height="24"
+          src="https://github.com/lachlanjc"
+          title="lachlanjc"
+          width="24"
+        />
+      </a>
+      <a
+        aria-label="visit profile of atanasster"
+        class="css-1yyqj5g-GithubAvatarItem"
+        href=""
+      >
+        <img
+          alt="atanasster"
+          class="css-1y16e88"
+          height="24"
+          src="https://github.com/atanasster"
+          title="atanasster"
+          width="24"
+        />
+      </a>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Blocks/ComponentDependencies Overview 1`] = `
+exports[`Blocks/ComponentContributors Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-1xkyebe"
+    class="css-6582y1-ComponentContributors"
   >
     <div
-      class="css-jxxswp"
-      id=""
+      aria-label="avatars of [object Object], [object Object], [object Object]"
+      class="css-1wxrz40-GithubAvatarList"
     >
-      <div
-        class="css-xhp9da"
+      <a
+        aria-label="visit profile of hasparus"
+        class="css-1yyqj5g-GithubAvatarItem"
+        href=""
       >
-        <h3
-          class="css-16ist9v-BlockContainer"
+        <img
+          alt="hasparus"
+          class="css-1y16e88"
+          height="24"
+          src="https://github.com/hasparus"
+          title="hasparus"
+          width="24"
         />
-      </div>
-    </div>
-    <div
-      aria-hidden="false"
-      class="rah-static rah-static--height-auto"
-      style="height: auto; overflow: visible;"
-    >
-      <div>
-        <div
-          class="css-1d6wxci"
-        >
-          <div
-            class="css-nm5f2c-Tabs"
-          >
-            <div
-              class="react-tabs"
-              data-tabs="true"
-            >
-              <ul
-                class="react-tabs__tab-list"
-                role="tablist"
-              >
-                <li
-                  aria-controls="react-tabs-1"
-                  aria-disabled="false"
-                  aria-selected="true"
-                  class="react-tabs__tab react-tabs__tab--selected"
-                  id="react-tabs-0"
-                  role="tab"
-                  tabindex="0"
-                >
-                  ArrowButton
-                </li>
-                <li
-                  aria-controls="react-tabs-3"
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="react-tabs__tab"
-                  id="react-tabs-2"
-                  role="tab"
-                >
-                  My Button Tab
-                </li>
-              </ul>
-              <div
-                aria-labelledby="react-tabs-0"
-                class="react-tabs__tab-panel react-tabs__tab-panel--selected"
-                id="react-tabs-1"
-                role="tabpanel"
-              >
-                <table
-                  class="css-11y77l0"
-                  role="table"
-                >
-                  <thead
-                    class="css-14kw1rx"
-                  >
-                    <tr
-                      class="css-vurnku"
-                      role="row"
-                    >
-                      <th
-                        class="css-9hyy6f"
-                        colspan="1"
-                        role="columnheader"
-                        style="width: 150px;"
-                      >
-                        <div
-                          class="css-wwqljn"
-                        >
-                          <div
-                            class="css-206mi5"
-                          >
-                            package
-                          </div>
-                        </div>
-                      </th>
-                      <th
-                        class="css-9hyy6f"
-                        colspan="1"
-                        role="columnheader"
-                        style="width: 70%;"
-                      >
-                        <div
-                          class="css-wwqljn"
-                        >
-                          <div
-                            class="css-206mi5"
-                          >
-                            imports
-                          </div>
-                        </div>
-                      </th>
-                      <th
-                        class="css-9hyy6f"
-                        colspan="1"
-                        role="columnheader"
-                        style="width: 150px;"
-                      >
-                        <div
-                          class="css-wwqljn"
-                        >
-                          <div
-                            class="css-206mi5"
-                          >
-                            peer
-                          </div>
-                        </div>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody
-                    class="css-tuhk50"
-                    role="rowgroup"
-                  >
-                    <tr
-                      class="css-ijvt85"
-                      role="row"
-                    >
-                      <td
-                        class="css-l4u9co"
-                        role="cell"
-                        style="width: 150px;"
-                      >
-                        <div
-                          class="css-121ufn9-PackageLink"
-                        >
-                          <a
-                            class="css-1t54e2w"
-                            href="https://npmjs.com/package/@component-controls/components/v/1.0.1"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                          >
-                            <div
-                              class="css-13b120i-PackageLink"
-                            >
-                              @component-controls/components
-                            </div>
-                          </a>
-                          <span
-                            class="css-n8ts03-PackageLink"
-                          >
-                            <span
-                              class="css-vurnku"
-                            >
-                              ^1.0.1
-                            </span>
-                          </span>
-                        </div>
-                      </td>
-                      <td
-                        class="css-l4u9co"
-                        role="cell"
-                        style="width: 70%;"
-                      >
-                        <div
-                          class="css-zivbkl-Cell"
-                        >
-                          <span
-                            class="css-hpa617-Tag"
-                          >
-                            <span
-                              class="css-vurnku"
-                            >
-                              Table
-                            </span>
-                          </span>
-                        </div>
-                      </td>
-                      <td
-                        class="css-l4u9co"
-                        role="cell"
-                        style="width: 150px;"
-                      />
-                    </tr>
-                    <tr
-                      class="css-ijvt85"
-                      role="row"
-                    >
-                      <td
-                        class="css-l4u9co"
-                        role="cell"
-                        style="width: 150px;"
-                      >
-                        <div
-                          class="css-121ufn9-PackageLink"
-                        >
-                          <a
-                            class="css-1t54e2w"
-                            href="https://npmjs.com/package/react/v/16.13.1"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                          >
-                            <div
-                              class="css-13b120i-PackageLink"
-                            >
-                              react
-                            </div>
-                          </a>
-                          <span
-                            class="css-n8ts03-PackageLink"
-                          >
-                            <span
-                              class="css-vurnku"
-                            >
-                              ^16.13.1
-                            </span>
-                          </span>
-                        </div>
-                      </td>
-                      <td
-                        class="css-l4u9co"
-                        role="cell"
-                        style="width: 70%;"
-                      >
-                        <div
-                          class="css-zivbkl-Cell"
-                        >
-                          <span
-                            class="css-1j59y6j-Tag"
-                          >
-                            <span
-                              class="css-vurnku"
-                            >
-                              React
-                            </span>
-                          </span>
-                          <span
-                            class="css-hpa617-Tag"
-                          >
-                            <span
-                              class="css-vurnku"
-                            >
-                              FC
-                            </span>
-                          </span>
-                        </div>
-                      </td>
-                      <td
-                        class="css-l4u9co"
-                        role="cell"
-                        style="width: 150px;"
-                      >
-                        *
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div
-                aria-labelledby="react-tabs-2"
-                class="react-tabs__tab-panel"
-                id="react-tabs-3"
-                role="tabpanel"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      </a>
+      <a
+        aria-label="visit profile of lachlanjc"
+        class="css-1yyqj5g-GithubAvatarItem"
+        href=""
+      >
+        <img
+          alt="lachlanjc"
+          class="css-1y16e88"
+          height="24"
+          src="https://github.com/lachlanjc"
+          title="lachlanjc"
+          width="24"
+        />
+      </a>
+      <a
+        aria-label="visit profile of atanasster"
+        class="css-1yyqj5g-GithubAvatarItem"
+        href=""
+      >
+        <img
+          alt="atanasster"
+          class="css-1y16e88"
+          height="24"
+          src="https://github.com/atanasster"
+          title="atanasster"
+          width="24"
+        />
+      </a>
     </div>
   </div>
 </DocumentFragment>
@@ -602,85 +223,109 @@ exports[`Blocks/ComponentJSX Overview 1`] = `
                                 class="css-p1dwhj"
                                 rel="noopener noreferrer"
                                 target="_blank"
+                              />
+                              <div
+                                class="css-dcq909"
                               >
-                                <div
-                                  class="css-f5h6sg"
+                                <a
+                                  class="css-p1dwhj"
+                                  rel="noopener noreferrer"
+                                  target="_blank"
                                 >
                                   <div
-                                    class="css-1ujq37u-JSXTreeNode"
+                                    class="css-f5h6sg"
                                   >
-                                    <span
-                                      class="css-kde9kw-JSXTreeNode"
-                                    >
-                                      &lt;Button
-                                    </span>
                                     <div
-                                      class="css-1j19kj1-JSXTreeNode"
+                                      class="css-1ujq37u-JSXTreeNode"
                                     >
                                       <span
-                                        class="css-19j54vt-Tag"
+                                        class="css-kde9kw-JSXTreeNode"
                                       >
-                                        <span
-                                          class="css-vurnku"
-                                        >
-                                          ref
-                                        </span>
+                                        &lt;Button
                                       </span>
-                                      <span
-                                        class="css-19j54vt-Tag"
+                                      <div
+                                        class="css-1j19kj1-JSXTreeNode"
                                       >
                                         <span
-                                          class="css-vurnku"
+                                          class="css-19j54vt-Tag"
                                         >
-                                          id
+                                          <span
+                                            class="css-vurnku"
+                                          >
+                                            ref
+                                          </span>
                                         </span>
+                                        <span
+                                          class="css-19j54vt-Tag"
+                                        >
+                                          <span
+                                            class="css-vurnku"
+                                          >
+                                            id
+                                          </span>
+                                        </span>
+                                      </div>
+                                      <span
+                                        class="css-kde9kw-JSXTreeNode"
+                                      >
+                                        /&gt;
                                       </span>
                                     </div>
-                                    <span
-                                      class="css-kde9kw-JSXTreeNode"
-                                    >
-                                      /&gt;
-                                    </span>
                                   </div>
-                                </div>
-                              </a>
-                            </div>
-                            <div
-                              class="css-vthntz"
-                            >
-                              <div
-                                class="css-vurnku"
-                              >
+                                </a>
                                 <div
-                                  class="css-u91vyr-ImportLabel"
+                                  class="css-vthntz"
                                 >
-                                  <span
-                                    class="css-1ver5lo-LocalImport"
+                                  <a
+                                    class="css-p1dwhj"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                  />
+                                  <div
+                                    class="css-vurnku"
                                   >
-                                    <span
-                                      class="css-vurnku"
+                                    <a
+                                      class="css-p1dwhj"
+                                      rel="noopener noreferrer"
+                                      target="_blank"
+                                    />
+                                    <div
+                                      class="css-u91vyr-ImportLabel"
                                     >
+                                      <a
+                                        class="css-p1dwhj"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                      >
+                                        <span
+                                          class="css-1ver5lo-LocalImport"
+                                        >
+                                          <span
+                                            class="css-vurnku"
+                                          />
+                                        </span>
+                                      </a>
                                       <a
                                         class="css-1t54e2w"
                                         href="/docs/id-of-story"
                                       >
                                         Button
                                       </a>
-                                    </span>
-                                  </span>
-                                  <div
-                                    class="css-10stqcc-ImportLabel"
-                                  >
-                                    <span
-                                      class="css-1tf5k16-ImportLabel"
-                                    >
-                                      from
-                                    </span>
-                                    <span
-                                      class="css-tfsmtt-ImportLabel"
-                                    >
-                                      "./Button"
-                                    </span>
+                                      <div
+                                        class="css-10stqcc-ImportLabel"
+                                      >
+                                        <span
+                                          class="css-1tf5k16-ImportLabel"
+                                        >
+                                          from
+                                        </span>
+                                        <span
+                                          class="css-tfsmtt-ImportLabel"
+                                        >
+                                          "./Button"
+                                        </span>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -1625,6 +1270,16 @@ exports[`Blocks/ComponentSource Theme 1`] = `
                     copy
                   </button>
                 </div>
+                <div
+                  class="css-7d11p2"
+                >
+                  <button
+                    aria-label="view Button stats"
+                    class="css-1tf4h46"
+                  >
+                    stats
+                  </button>
+                </div>
               </div>
             </div>
             <div
@@ -2029,13 +1684,17 @@ exports[`Blocks/Container Overview 1`] = `
       </div>
     </div>
     <div
-      class="css-hi5zbn"
+      class="css-i0y2du"
     >
-      <h1
-        class="css-9kctfa-Container"
+      <div
+        class="css-1k9l6xu-Container"
       >
-        Story
-      </h1>
+        <h1
+          class="css-ymxumn"
+        >
+          Story
+        </h1>
+      </div>
     </div>
     <h2
       class="css-1uqrmoi"
@@ -2244,23 +1903,527 @@ exports[`Blocks/EditPage Overview 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Blocks/ExternalDependencies Overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="css-1d6wxci"
+        >
+          <div
+            class="css-nm5f2c-Tabs"
+          >
+            <div
+              class="react-tabs"
+              data-tabs="true"
+            >
+              <ul
+                class="react-tabs__tab-list"
+                role="tablist"
+              >
+                <li
+                  aria-controls="react-tabs-1"
+                  aria-disabled="false"
+                  aria-selected="true"
+                  class="react-tabs__tab react-tabs__tab--selected"
+                  id="react-tabs-0"
+                  role="tab"
+                  tabindex="0"
+                >
+                  ArrowButton
+                </li>
+                <li
+                  aria-controls="react-tabs-3"
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="react-tabs__tab"
+                  id="react-tabs-2"
+                  role="tab"
+                >
+                  My Button Tab
+                </li>
+              </ul>
+              <div
+                aria-labelledby="react-tabs-0"
+                class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                id="react-tabs-1"
+                role="tabpanel"
+              >
+                <table
+                  class="css-11y77l0"
+                  role="table"
+                >
+                  <thead
+                    class="css-14kw1rx"
+                  >
+                    <tr
+                      class="css-vurnku"
+                      role="row"
+                    >
+                      <th
+                        class="css-9hyy6f"
+                        colspan="1"
+                        role="columnheader"
+                        style="width: 150px;"
+                      >
+                        <div
+                          class="css-wwqljn"
+                        >
+                          <div
+                            class="css-206mi5"
+                          >
+                            package
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="css-9hyy6f"
+                        colspan="1"
+                        role="columnheader"
+                        style="width: 70%;"
+                      >
+                        <div
+                          class="css-wwqljn"
+                        >
+                          <div
+                            class="css-206mi5"
+                          >
+                            imports
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="css-9hyy6f"
+                        colspan="1"
+                        role="columnheader"
+                        style="width: 150px;"
+                      >
+                        <div
+                          class="css-wwqljn"
+                        >
+                          <div
+                            class="css-206mi5"
+                          >
+                            peer
+                          </div>
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    class="css-tuhk50"
+                    role="rowgroup"
+                  >
+                    <tr
+                      class="css-ijvt85"
+                      role="row"
+                    >
+                      <td
+                        class="css-l4u9co"
+                        role="cell"
+                        style="width: 150px;"
+                      >
+                        <div
+                          class="css-14a8v30-PackageLink"
+                        >
+                          <a
+                            class="css-1t54e2w"
+                            href="https://npmjs.com/package/@component-controls/components/v/1.0.1"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <div
+                              class="css-13b120i-PackageLink"
+                            >
+                              @component-controls/components
+                            </div>
+                          </a>
+                          <span
+                            class="css-n8ts03-PackageLink"
+                          >
+                            <span
+                              class="css-vurnku"
+                            >
+                              ^1.0.1
+                            </span>
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="css-l4u9co"
+                        role="cell"
+                        style="width: 70%;"
+                      >
+                        <div
+                          class="css-zivbkl-Cell"
+                        >
+                          <span
+                            class="css-hpa617-Tag"
+                          >
+                            <span
+                              class="css-vurnku"
+                            >
+                              Table
+                            </span>
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="css-l4u9co"
+                        role="cell"
+                        style="width: 150px;"
+                      />
+                    </tr>
+                    <tr
+                      class="css-ijvt85"
+                      role="row"
+                    >
+                      <td
+                        class="css-l4u9co"
+                        role="cell"
+                        style="width: 150px;"
+                      >
+                        <div
+                          class="css-14a8v30-PackageLink"
+                        >
+                          <a
+                            class="css-1t54e2w"
+                            href="https://npmjs.com/package/react/v/16.13.1"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <div
+                              class="css-13b120i-PackageLink"
+                            >
+                              react
+                            </div>
+                          </a>
+                          <span
+                            class="css-n8ts03-PackageLink"
+                          >
+                            <span
+                              class="css-vurnku"
+                            >
+                              ^16.13.1
+                            </span>
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="css-l4u9co"
+                        role="cell"
+                        style="width: 70%;"
+                      >
+                        <div
+                          class="css-zivbkl-Cell"
+                        >
+                          <span
+                            class="css-1j59y6j-Tag"
+                          >
+                            <span
+                              class="css-vurnku"
+                            >
+                              React
+                            </span>
+                          </span>
+                          <span
+                            class="css-hpa617-Tag"
+                          >
+                            <span
+                              class="css-vurnku"
+                            >
+                              FC
+                            </span>
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="css-l4u9co"
+                        role="cell"
+                        style="width: 150px;"
+                      >
+                        *
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div
+                aria-labelledby="react-tabs-2"
+                class="react-tabs__tab-panel"
+                id="react-tabs-3"
+                role="tabpanel"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Blocks/LocalDependencies Overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="css-1d6wxci"
+        >
+          <div
+            class="css-nm5f2c-Tabs"
+          >
+            <div
+              class="react-tabs"
+              data-tabs="true"
+            >
+              <ul
+                class="react-tabs__tab-list"
+                role="tablist"
+              >
+                <li
+                  aria-controls="react-tabs-5"
+                  aria-disabled="false"
+                  aria-selected="true"
+                  class="react-tabs__tab react-tabs__tab--selected"
+                  id="react-tabs-4"
+                  role="tab"
+                  tabindex="0"
+                >
+                  ArrowButton
+                </li>
+                <li
+                  aria-controls="react-tabs-7"
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="react-tabs__tab"
+                  id="react-tabs-6"
+                  role="tab"
+                >
+                  My Button Tab
+                </li>
+              </ul>
+              <div
+                aria-labelledby="react-tabs-4"
+                class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                id="react-tabs-5"
+                role="tabpanel"
+              >
+                <table
+                  class="css-11y77l0"
+                  data-testid="local-dependencies"
+                  role="table"
+                >
+                  <thead
+                    class="css-14kw1rx"
+                  >
+                    <tr
+                      class="css-vurnku"
+                      role="row"
+                    >
+                      <th
+                        class="css-9hyy6f"
+                        colspan="1"
+                        role="columnheader"
+                        style="width: 150px;"
+                      >
+                        <div
+                          class="css-wwqljn"
+                        >
+                          <div
+                            class="css-206mi5"
+                          >
+                            file
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="css-9hyy6f"
+                        colspan="1"
+                        role="columnheader"
+                        style="width: 150px;"
+                      >
+                        <div
+                          class="css-wwqljn"
+                        >
+                          <div
+                            class="css-206mi5"
+                          >
+                            imports
+                          </div>
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    class="css-tuhk50"
+                    role="rowgroup"
+                  >
+                    <tr
+                      class="css-ijvt85"
+                      role="row"
+                    >
+                      <td
+                        class="css-l4u9co"
+                        role="cell"
+                        style="width: 150px;"
+                      >
+                        <span
+                          class="css-b7g03d-Cell"
+                        >
+                          "./Button"
+                        </span>
+                      </td>
+                      <td
+                        class="css-l4u9co"
+                        role="cell"
+                        style="width: 150px;"
+                      >
+                        <div
+                          class="css-zivbkl-Cell"
+                        >
+                          <span
+                            class="css-1ver5lo-LocalImport"
+                          >
+                            <span
+                              class="css-vurnku"
+                            >
+                              <a
+                                class="css-1t54e2w"
+                                href="/docs/id-of-story"
+                              >
+                                Button
+                              </a>
+                            </span>
+                          </span>
+                          <span
+                            class="css-9c8bof-LocalImport"
+                          >
+                            <span
+                              class="css-vurnku"
+                            >
+                              ButtonProps
+                            </span>
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr
+                      class="css-ijvt85"
+                      role="row"
+                    >
+                      <td
+                        class="css-l4u9co"
+                        role="cell"
+                        style="width: 150px;"
+                      >
+                        <span
+                          class="css-b7g03d-Cell"
+                        >
+                          "@component-controls/components"
+                        </span>
+                      </td>
+                      <td
+                        class="css-l4u9co"
+                        role="cell"
+                        style="width: 150px;"
+                      >
+                        <div
+                          class="css-zivbkl-Cell"
+                        >
+                          <span
+                            class="css-9c8bof-LocalImport"
+                          >
+                            <span
+                              class="css-vurnku"
+                            >
+                              Table
+                            </span>
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div
+                aria-labelledby="react-tabs-6"
+                class="react-tabs__tab-panel"
+                id="react-tabs-7"
+                role="tabpanel"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Blocks/PageContainer Components 1`] = `
 <DocumentFragment>
-  <h1
-    class="css-ixvu55"
+  <div
+    class="css-cwbyoi-Title"
   >
-    MDX Story
-  </h1>
+    <h1
+      class="css-ymxumn"
+    >
+      MDX Story
+    </h1>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`Blocks/PageContainer Overview 1`] = `
 <DocumentFragment>
-  <h1
-    class="css-ixvu55"
+  <div
+    class="css-cwbyoi-Title"
   >
-    Story
-  </h1>
+    <h1
+      class="css-ymxumn"
+    >
+      Story
+    </h1>
+  </div>
 </DocumentFragment>
 `;
 
@@ -19135,10 +19298,14 @@ exports[`Blocks/TagsList Overview 1`] = `
 
 exports[`Blocks/Title Overview 1`] = `
 <DocumentFragment>
-  <h1
-    class="css-ixvu55"
+  <div
+    class="css-cwbyoi-Title"
   >
-    Story
-  </h1>
+    <h1
+      class="css-ymxumn"
+    >
+      Story
+    </h1>
+  </div>
 </DocumentFragment>
 `;

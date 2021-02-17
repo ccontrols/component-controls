@@ -11,7 +11,7 @@ export interface CollapsibleOwnProps {
 export type CollapsibleProps = CollapsibleOwnProps & AnimateHeightProps;
 
 /**
- * Animated expand/collapse container component
+ * Animated expand/collapse container component, using [react-animate-height](https://github.com/Stanko/react-animate-height).
  *
  */
 export const Collapsible: FC<CollapsibleProps> = ({

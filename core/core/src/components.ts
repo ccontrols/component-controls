@@ -1,4 +1,5 @@
 import { CodeLocation, ImportType, Imports } from './utility';
+import { FileInfo } from './files';
 
 export type TypeValue =
   | 'any'
@@ -127,6 +128,11 @@ export interface Component {
   request?: string;
 
   /**
+   * file name with extension
+   */
+  fileName?: string;
+
+  /**
    * file containing the component's props info
    * sometimes different from the component source file
    * for example external libraries that have a separate index.d.ts file
@@ -165,6 +171,11 @@ export interface Component {
    * jsx component tree
    */
   jsx?: JSXTree;
+
+  /**
+   * source file info
+   */
+  fileInfo?: FileInfo;
 }
 /**
  * given a component, return its name

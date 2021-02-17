@@ -6,6 +6,7 @@ import { makeDecorators } from '../test/MockContext';
 export default {
   title: 'Blocks/Story',
   component: Story,
+  category: 'Stories',
 } as Document;
 
 export const overview: Example = () => <Story id="." />;

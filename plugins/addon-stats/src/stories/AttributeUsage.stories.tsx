@@ -6,6 +6,7 @@ import { AttributeUsage } from '../ui/AttributeUsage';
 export default {
   title: 'Plugins/AddonStats/AttributeUsage',
   component: AttributeUsage,
+  category: 'Components',
 } as Document;
 
 export const overview: Example = () => {

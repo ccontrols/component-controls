@@ -320,8 +320,28 @@ and a [link](https://google.com)
       name: 'Button',
       request:
         '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js',
+      fileInfo: {
+        commits: [
+          {
+            committerName: 'hasparus',
+            authorName: 'hasparus',
+          },
+          {
+            committerName: 'hasparus',
+            authorName: 'lachlanjc',
+          },
+          {
+            committerName: 'lachlanjc',
+
+            authorName: 'atanasster',
+          },
+        ],
+      },
       info: {
-        description: '',
+        description: `
+Markdown descripton for component.
+with a [link](https://google.com)
+        `,
         displayName: 'Control',
         props: {
           name: {

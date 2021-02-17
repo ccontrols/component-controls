@@ -55,7 +55,7 @@ export interface SearchInputOwnProps<ItemType> {
   /**
    * items array
    */
-  items: ItemType[];
+  items?: ItemType[];
   /**
    * customize the popover
    */
@@ -73,7 +73,7 @@ export type SearchInputProps<ItemType> = SearchInputOwnProps<ItemType> &
  */
 export const SearchInput = <ItemType extends SearchInputItemType>({
   onSearch,
-  items,
+  items = [],
   children,
   onSelect,
   popoverProps,

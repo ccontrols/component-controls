@@ -118,7 +118,7 @@ export type TableProps<D extends { [key: string]: any }> = TableOwnProps<D> &
   BoxProps;
 
 /**
- * Table component. Uses [react-table](https://github.com/tannerlinsley/react-table) to display the data.
+ * Table component using [react-table](https://github.com/tannerlinsley/react-table) to display the data.
  * Can be grouped, filtered, sorted. Themed with theme-ui for consistency.
  */
 export function Table<D extends { [key: string]: any }>({

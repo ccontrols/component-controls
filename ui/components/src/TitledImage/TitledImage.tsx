@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Image, ImageProps, Embed, Text, Box } from 'theme-ui';
 
 /**
- * image components with a title if available
+ * Image component with a title if available
  */
 export const TitledImage: FC<Omit<ImageProps, 'ref'>> = props => {
   const { title, src } = props;

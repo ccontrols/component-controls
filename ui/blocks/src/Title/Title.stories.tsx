@@ -7,6 +7,7 @@ export default {
   title: 'Blocks/Title',
   component: Title,
   decorators: mockDecorators,
+  category: 'Page',
 } as Document;
 
 export const overview: Example = () => <Title />;

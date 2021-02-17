@@ -7,6 +7,7 @@ export default {
   title: 'Application/DocumentHomePage',
   component: DocumentHomePage,
   decorators: mockDecorators,
+  category: 'Pages',
 } as Document;
 
 export const overview: Example = () => <DocumentHomePage type="blog" />;

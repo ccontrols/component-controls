@@ -13,6 +13,7 @@ import { followImports } from './follow-imports';
 import { analyze_components } from './analyze-component';
 import { packageInfo } from '../misc/package-info';
 import { readSourceFile } from '../misc/source-options';
+import { getFileIinfo } from '../misc/file-info';
 
 import { LoadingDocStore, InstrumentOptions } from '../types';
 
@@ -108,15 +109,7 @@ export const extractComponent = async (
       }
 
       component.request = follow.filePath;
-      if (components && typeof components.resolvePropsFile === 'function') {
-        const propsFile = components.resolvePropsFile(
-          componentName,
-          follow.filePath,
-        );
-        if (propsFile !== component.request) {
-          component.propsInfoFile = propsFile;
-        }
-      }
+      component.fileName = path.basename(follow.filePath);
       const saveSource = readSourceFile(
         components?.sourceFiles,
         follow.source,
@@ -126,6 +119,16 @@ export const extractComponent = async (
       if (saveSource) {
         component.source = saveSource;
         component.loc = follow.loc;
+      }
+      component.fileInfo = await getFileIinfo(follow.filePath, saveSource);
+      if (components && typeof components.resolvePropsFile === 'function') {
+        const propsFile = components.resolvePropsFile(
+          componentName,
+          follow.filePath,
+        );
+        if (propsFile !== component.request) {
+          component.propsInfoFile = propsFile;
+        }
       }
     }
     componentPackage = await packageInfo(

@@ -1,0 +1,21 @@
+import { Meta } from './Meta';
+import { Catalog } from '@component-controls/addon-catalog';
+
+<Meta title="Application/index" />
+
+# Overview
+
+Components to create a `@component-controls` standalone application, that is connected to the store of documents.
+
+- Portability between different build systems ie - Gatsby, CRA, Vercel.
+- Create a true CMS-type user-interface, allowing for different document types ie. "stories", "blogs", "articles".
+- Category pages for "tags", "authors".
+- Fully customizable standalone pages, including Home page.
+- Responsive user/interface, with sidebars transforming into popouts for small screen resolutions.
+
+# Components
+
+<Catalog
+  filter={({ doc }) => doc.title.startsWith('Application')}
+  group={({ story }) => story.category}
+/>

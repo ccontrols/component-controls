@@ -6,6 +6,7 @@ import { ThemeProvider } from '../ThemeContext';
 export default {
   title: 'Components/Markdown',
   component: Markdown,
+  category: 'Typography',
 } as Document;
 
 export const overview: Example = () => (

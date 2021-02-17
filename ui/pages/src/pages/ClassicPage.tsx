@@ -6,8 +6,8 @@ import {
   Playground,
   Stories,
   Description,
-  ComponentExternalDependencies,
-  ComponentLocalDependencies,
+  ExternalDependencies,
+  LocalDependencies,
   ComponentJSX,
   ComponentSource,
   PropsTable,
@@ -53,8 +53,8 @@ const ClassicPage: FC<TabConfiguration> = ({ controlsThreshold = 10 }) => {
           visibility={splitControls ? 'info' : 'all'}
         />
       )}
-      <ComponentExternalDependencies id="." title="External dependencies" />
-      <ComponentLocalDependencies id="." title="Internal dependencies" />
+      <ExternalDependencies id="." title="External dependencies" />
+      <LocalDependencies id="." title="Internal dependencies" />
       <ComponentJSX id="." title="Component JSX" />
       <Stories dark={true} />
     </Fragment>

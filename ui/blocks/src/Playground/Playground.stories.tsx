@@ -8,6 +8,7 @@ import { makeDecorators } from '../test/MockContext';
 export default {
   title: 'Blocks/Playground/ESM',
   component: Playground,
+  category: 'Stories',
 } as Document;
 
 export const overview: Example = () => (

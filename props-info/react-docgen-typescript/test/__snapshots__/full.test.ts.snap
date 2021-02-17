@@ -6,6 +6,15 @@ Object {
   "displayName": "typescript",
   "methods": Array [],
   "props": Object {
+    "isObsolete": Object {
+      "description": "boolean switch - obsolete depracated property
+@deprecated since version 1.0",
+      "parentName": "MyComponentProps",
+      "type": Object {
+        "name": "React.ReactElement",
+        "raw": "React.ReactElement",
+      },
+    },
     "optionalArray": Object {
       "parentName": "MyComponentProps",
       "type": Object {
@@ -41,7 +50,7 @@ Object {
       "parentName": "MyComponentProps",
       "type": Object {
         "name": "function",
-        "raw": "ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)> | null) | (new (props: any) => Component<any, any, any>)>",
+        "raw": "ReactElement<any, string | ((props: any) => ReactElement<any, any> | null) | (new (props: any) => Component<any, any, any>)>",
       },
     },
     "optionalElementType": Object {
@@ -172,5 +181,6 @@ Object {
       },
     },
   },
+  "tags": Object {},
 }
 `;

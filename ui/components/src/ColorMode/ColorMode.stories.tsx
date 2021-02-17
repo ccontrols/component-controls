@@ -6,6 +6,7 @@ import { ColorMode } from '.';
 export default {
   title: 'Components/ColorMode',
   component: ColorMode,
+  category: 'Utilities',
 } as Document;
 
 export const overview: Example = () => (

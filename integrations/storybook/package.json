@@ -54,9 +54,9 @@
   "devDependencies": {
     "@component-controls/ts-markdown-docs": "^2.6.0",
     "@emotion/babel-plugin": "^11.0.0",
-    "@storybook/addons": "^6.2.0-alpha.3",
-    "@storybook/api": "^6.2.0-alpha.3",
-    "@storybook/client-api": "^6.2.0-alpha.3",
+    "@storybook/addons": "^6.2.0-alpha.29",
+    "@storybook/api": "^6.2.0-alpha.29",
+    "@storybook/client-api": "^6.2.0-alpha.29",
     "@types/node": "^13.7.0",
     "@types/react": "^16.9.34",
     "react": "^17.0.1"

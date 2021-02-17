@@ -7,6 +7,7 @@ export default {
   title: 'Blocks/PageTypeTag',
   component: PageTypeTag,
   decorators: mockDecorators,
+  category: 'Document',
 } as Document;
 
 export const overview: Example = () => <PageTypeTag type="story" />;

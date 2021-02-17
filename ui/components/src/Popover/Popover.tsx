@@ -5,7 +5,7 @@ import {
   TooltipTriggerProps,
   ChildrenArg,
 } from 'react-popper-tooltip/dist/types';
-import { Box, ColorModesScale } from 'theme-ui';
+import { ColorModesScale } from 'theme-ui';
 import { Arrow, Wrapper } from './PopoverUtils';
 import { useTheme } from '../ThemeContext';
 
@@ -20,8 +20,7 @@ export type PopoverProps = PopoverOwnProps &
   Omit<Partial<TooltipTriggerProps>, 'children'>;
 
 /**
- * A Popover container that is triggered by a click/hover event.
- * Used to display enhanced information that could not fit into the main scren.
+ * Popover container that is triggered by a click/hover event, using [react-popper-tooltip](https://github.com/mohsinulhaq/react-popper-tooltip).
  */
 export const Popover: FC<PopoverProps> = ({
   arrowVisible = true,
@@ -81,14 +80,14 @@ export const Popover: FC<PopoverProps> = ({
       }}
     >
       {({ getTriggerProps, triggerRef }: ChildrenArg) => (
-        <Box
+        <div
           ref={triggerRef as any}
           {...getTriggerProps()}
-          css={{ display: 'inline-block' }}
+          style={{ display: 'inline-block' }}
           {...rest}
         >
           {children}
-        </Box>
+        </div>
       )}
     </TooltipTrigger>
   );

@@ -1,0 +1,22 @@
+import { Meta } from './Meta';
+import { Catalog } from '@component-controls/addon-catalog';
+
+<Meta title="Editors/index" />
+
+# Overview
+
+`@component-controls/editors` is a collection of control editors part to enable to run-time editing of [controls api](/tutorial/reference/controls-api) properties.
+
+- Extensible using `addPropertyEditor`, so you can replace or add new editors.
+- All editors offer a consistent interface through the `getPropertyEditor` factory.
+
+# Installation
+
+This package is installed as part of `component-controls` and you should never need to install it manually.
+
+# Components
+
+<Catalog
+  filter={({ doc }) => doc.title.startsWith('Editors')}
+  group={({ story }) => story.category}
+/>

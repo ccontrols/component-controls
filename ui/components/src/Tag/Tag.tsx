@@ -32,7 +32,7 @@ export interface TagProps {
 }
 
 /**
- * A copntainer component to display text in a colored box.
+ * A container component to display text in a colored box, with a semi-transparent background.
  */
 export const Tag: FC<TagProps & Omit<BoxProps, 'variant'>> = ({
   children,

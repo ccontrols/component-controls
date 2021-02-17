@@ -16,7 +16,7 @@ import { PackageLink } from './PackageLink';
 export const PackageVersion: FC<ComponentInputProps> = props => {
   const component = useComponent(props);
   const componentPackage = usePackage(component?.package);
-  return componentPackage?.name ? (
+  return componentPackage?.name && componentPackage.privateNpm !== true ? (
     <PackageLink
       name={componentPackage.name}
       version={componentPackage.version}

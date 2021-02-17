@@ -15,7 +15,7 @@ export interface CopyContainerProps {
 }
 
 /**
- * conainer to enclose items that will provide copy fnctionality on click
+ * Container component to enclose items that will provide copy functionality on click.
  *
  */
 export const CopyContainer: FC<CopyContainerProps> = ({

@@ -6,6 +6,7 @@ import { Popover, PopoverProps } from './Popover';
 export default {
   title: 'Components/Popover',
   component: Popover,
+  category: 'Containers',
 } as Document;
 
 export const overview: Example<PopoverProps> = ({ placement, trigger }) => {

@@ -8,6 +8,7 @@ export default {
   title: 'Blocks/Description',
   component: Description,
   decorators: mockDecorators,
+  category: 'Page',
 } as Document;
 
 export const overview: Example = () => <Description of="Button" />;

@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 import React, { FC, useMemo, useEffect, useReducer } from 'react';
-import { TriangleDownIcon, TriangleRightIcon } from '@primer/octicons-react';
+import { TriangleDownIcon } from '@primer/octicons-react';
 import { Component, JSXTree, isLocalImport } from '@component-controls/core';
 import { usePackage } from '@component-controls/store';
 import {
@@ -174,8 +174,7 @@ export const ComponentJSXTree: FC<ComponentJSXTreeProps> = ({ component }) => {
         arrowPosition="start"
         onExpandCollapse={onExpandCollapse}
         items={rows}
-        iconExpanded={<TriangleDownIcon />}
-        iconCollapsed={<TriangleRightIcon />}
+        chevronIcon={<TriangleDownIcon />}
         indentPixels={16}
       />
     </ActionContainer>

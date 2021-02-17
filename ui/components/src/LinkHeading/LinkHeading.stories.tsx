@@ -6,10 +6,13 @@ import { LinkHeading, LinkHeadingProps } from './';
 export default {
   title: 'Components/LinkHeading',
   component: LinkHeading,
+  category: 'Navigation',
 } as Document;
 
 export const overview: Example<LinkHeadingProps> = ({ as, children }) => (
-  <LinkHeading as={as}>{children}</LinkHeading>
+  <div style={{ marginLeft: '32px' }}>
+    <LinkHeading as={as}>{children}</LinkHeading>
+  </div>
 );
 
 overview.controls = {

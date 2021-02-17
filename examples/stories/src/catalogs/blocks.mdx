@@ -1,0 +1,32 @@
+import { Meta } from './Meta';
+import { Catalog } from '@component-controls/addon-catalog';
+
+<Meta title="Blocks/index" />
+
+# Overview
+
+`@component-controls/blocks` is a library of context-sensitive components to display specific bits of information
+about the pages, documents, components and stories in your documentation site.
+
+- There are thre main categories of components:
+  - that display information about a page/document.
+  - that display story data (i.e. story source, story render)
+  - that display component(s) data (i.e. prop tables, component sources)
+- Many of the block components should have a 'plain' and a 'block' version, where the block version adds a collapsible box with a title.
+- Some components accept a list of custom ActionItems to be extended.
+- Components that deal with source code (story or component source) display actions to browse their respective repositories.
+
+# Installation
+
+This package is installed as part of `component-controls` and you should never need to install it manually.
+
+# Cross-usage
+
+You can view a table with the [cross-usage](/api/blocks-internal-usage) of the included components
+
+# Components
+
+<Catalog
+  filter={({ doc }) => doc.title.startsWith('Blocks')}
+  group={({ story }) => story.category}
+/>

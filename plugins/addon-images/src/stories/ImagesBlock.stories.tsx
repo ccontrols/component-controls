@@ -7,6 +7,7 @@ import img from './example_image.jpg';
 export default {
   title: 'Plugins/ImagesBlock',
   component: ImagesBlock,
+  category: 'Design',
 } as Document;
 
 export const overview: Example = () => {

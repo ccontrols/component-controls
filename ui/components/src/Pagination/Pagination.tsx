@@ -21,7 +21,7 @@ export interface PaginationProps {
   next?: PaginationPage;
 }
 /**
- * A pagination component, navigate previous and next page
+ * Pagination component to navigate previous/next page
  */
 export const Pagination: FC<PaginationProps> = ({ prev, next }) => (
   <Box variant="pagination.container">

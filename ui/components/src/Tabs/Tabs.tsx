@@ -35,7 +35,7 @@ export interface TabsOwnProps {
 type TabsProps = TabsOwnProps & Omit<OriginalTabsProps, 'ref'>;
 
 /**
- * Create tabs and multi-page ui layouts. Uses [react-tabs](https://reactcommunity.org/react-tabs/) component.
+ * Tabs component with [react-tabs](https://reactcommunity.org/react-tabs/) and theme-ui styling.
  *
  */
 export const Tabs: FC<TabsProps> = ({ fontSize = 1, ...props }) => {

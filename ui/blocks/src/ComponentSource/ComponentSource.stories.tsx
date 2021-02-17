@@ -7,6 +7,7 @@ import { makeDecorators } from '../test/MockContext';
 export default {
   title: 'Blocks/ComponentSource',
   component: ComponentSource,
+  category: ' Component',
 } as Document;
 
 export const overview: Example = () => <ComponentSource />;

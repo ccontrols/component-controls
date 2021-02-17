@@ -2,11 +2,19 @@ import React from 'react';
 import { addParameters } from '@storybook/react';
 import { ThemeProvider } from '@component-controls/storybook';
 
-export const decorators = [
-  story => <ThemeProvider>{story()}</ThemeProvider>
-];
+export const decorators = [story => <ThemeProvider>{story()}</ThemeProvider>];
 
-const categories = ['ESM', 'MDX', 'Application','Controls','Blocks', 'Design Tokens',  'Editors', 'Components', 'Plugins']
+const categories = [
+  'ESM',
+  'MDX',
+  'Components',
+  'Blocks',
+  'Design Tokens',
+  'Plugins',
+  'Controls',
+  'Editors',
+  'Application',
+];
 addParameters({
   options: {
     storySort: (a, b) => {

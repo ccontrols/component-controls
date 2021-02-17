@@ -7,6 +7,10 @@ export interface ProgressIndicatorProps {
   max: number;
   color?: string;
 }
+/**
+ * Progress indicator with a label
+ *
+ */
 export const ProgressIndicator: FC<ProgressIndicatorProps> = ({
   value,
   max,

@@ -16,6 +16,7 @@ import { ActionItem } from '../ActionBar';
 export default {
   title: 'Components/Source',
   component: Source,
+  category: 'Display',
 } as Document;
 
 const source = `export const sample = () => {

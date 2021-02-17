@@ -6,6 +6,7 @@ export default {
   title: 'Blocks/Search',
   component: Search,
   decorators: mockDecorators,
+  category: 'Document',
 } as Document;
 
 export const overview: Example = () => <Search />;

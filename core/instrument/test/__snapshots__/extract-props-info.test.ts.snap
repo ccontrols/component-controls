@@ -775,13 +775,16 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "BoxOwnProps",
       "type": Object {
         "name": "union",
-        "raw": "\\"symbol\\" | \\"object\\" | \\"a\\" | \\"abbr\\" | \\"address\\" | \\"area\\" | \\"article\\" | \\"aside\\" | \\"audio\\" | \\"b\\" | \\"base\\" | \\"bdi\\" | \\"bdo\\" | \\"big\\" | \\"blockquote\\" | \\"body\\" | \\"br\\" | \\"button\\" | \\"canvas\\" | ... 158 more ...",
+        "raw": "\\"symbol\\" | \\"object\\" | \\"div\\" | \\"a\\" | \\"abbr\\" | \\"address\\" | \\"area\\" | \\"article\\" | \\"aside\\" | \\"audio\\" | \\"b\\" | \\"base\\" | \\"bdi\\" | \\"bdo\\" | \\"big\\" | \\"blockquote\\" | \\"body\\" | \\"br\\" | \\"button\\" | \\"canvas\\" | ... 157 more ...",
         "value": Array [
           Object {
             "name": "symbol",
           },
           Object {
             "name": "object",
+          },
+          Object {
+            "name": "div",
           },
           Object {
             "name": "a",
@@ -835,7 +838,7 @@ A hint could be a sample value or a brief description of the expected format.",
             "name": "canvas",
           },
           Object {
-            "name": "... 158 more ...",
+            "name": "... 157 more ...",
           },
         ],
       },
@@ -1067,7 +1070,7 @@ from the title.",
     },
     "inputMode": Object {
       "description": "Hints at the type of data that might be entered by the user while editing the element or its contents
-@see https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute",
+@see https ://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "union",
@@ -1102,7 +1105,7 @@ from the title.",
     },
     "is": Object {
       "description": "Specify that a standard HTML element should behave like a defined custom built-in element
-@see https://html.spec.whatwg.org/multipage/custom-elements.html#attr-is",
+@see https ://html.spec.whatwg.org/multipage/custom-elements.html#attr-is",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
@@ -2760,6 +2763,7 @@ user setting can display only props table or only controls",
       },
     },
   },
+  "tags": Object {},
 }
 `;
 
@@ -4047,7 +4051,7 @@ A hint could be a sample value or a brief description of the expected format.",
     },
     "inputMode": Object {
       "description": "Hints at the type of data that might be entered by the user while editing the element or its contents
-@see https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute",
+@see https ://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "union",
@@ -4089,7 +4093,7 @@ A hint could be a sample value or a brief description of the expected format.",
     },
     "is": Object {
       "description": "Specify that a standard HTML element should behave like a defined custom built-in element
-@see https://html.spec.whatwg.org/multipage/custom-elements.html#attr-is",
+@see https ://html.spec.whatwg.org/multipage/custom-elements.html#attr-is",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
@@ -5894,6 +5898,7 @@ A hint could be a sample value or a brief description of the expected format.",
       },
     },
   },
+  "tags": Object {},
 }
 `;
 
@@ -7174,7 +7179,7 @@ A hint could be a sample value or a brief description of the expected format.",
     },
     "inputMode": Object {
       "description": "Hints at the type of data that might be entered by the user while editing the element or its contents
-@see https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute",
+@see https ://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "union",
@@ -7216,7 +7221,7 @@ A hint could be a sample value or a brief description of the expected format.",
     },
     "is": Object {
       "description": "Specify that a standard HTML element should behave like a defined custom built-in element
-@see https://html.spec.whatwg.org/multipage/custom-elements.html#attr-is",
+@see https ://html.spec.whatwg.org/multipage/custom-elements.html#attr-is",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
@@ -9014,6 +9019,7 @@ A hint could be a sample value or a brief description of the expected format.",
       },
     },
   },
+  "tags": Object {},
 }
 `;
 
@@ -10301,7 +10307,7 @@ A hint could be a sample value or a brief description of the expected format.",
     },
     "inputMode": Object {
       "description": "Hints at the type of data that might be entered by the user while editing the element or its contents
-@see https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute",
+@see https ://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "union",
@@ -10343,7 +10349,7 @@ A hint could be a sample value or a brief description of the expected format.",
     },
     "is": Object {
       "description": "Specify that a standard HTML element should behave like a defined custom built-in element
-@see https://html.spec.whatwg.org/multipage/custom-elements.html#attr-is",
+@see https ://html.spec.whatwg.org/multipage/custom-elements.html#attr-is",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
@@ -12148,12 +12154,13 @@ A hint could be a sample value or a brief description of the expected format.",
       },
     },
   },
+  "tags": Object {},
 }
 `;
 
 exports[`extract-props-info Tabs 1`] = `
 Object {
-  "description": "Create tabs and multi-page ui layouts. Uses [react-tabs](https://reactcommunity.org/react-tabs/) component.",
+  "description": "Tabs component with [react-tabs](https://reactcommunity.org/react-tabs/) and theme-ui styling.",
   "displayName": "Tabs",
   "methods": Array [],
   "props": Object {
@@ -13479,7 +13486,7 @@ A hint could be a sample value or a brief description of the expected format.",
     },
     "inputMode": Object {
       "description": "Hints at the type of data that might be entered by the user while editing the element or its contents
-@see https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute",
+@see https ://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "union",
@@ -13521,7 +13528,7 @@ A hint could be a sample value or a brief description of the expected format.",
     },
     "is": Object {
       "description": "Specify that a standard HTML element should behave like a defined custom built-in element
-@see https://html.spec.whatwg.org/multipage/custom-elements.html#attr-is",
+@see https ://html.spec.whatwg.org/multipage/custom-elements.html#attr-is",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
@@ -15333,5 +15340,6 @@ A hint could be a sample value or a brief description of the expected format.",
       },
     },
   },
+  "tags": Object {},
 }
 `;

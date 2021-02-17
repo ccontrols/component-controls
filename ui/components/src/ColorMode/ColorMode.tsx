@@ -6,7 +6,7 @@ import { FC } from 'react';
 import { Toggle, ToggleProps } from '../Toggle';
 
 /**
- * dark/light mode toggle for theme-ui themes
+ * Theme-ui dark/light mode toggle.
  */
 export const ColorMode: FC<Omit<
   ToggleProps,

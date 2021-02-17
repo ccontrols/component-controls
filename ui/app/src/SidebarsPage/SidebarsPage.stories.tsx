@@ -7,6 +7,7 @@ export default {
   title: 'Application/SidebarsPage',
   component: SidebarsPage,
   decorators: mockDecorators,
+  category: 'Pages',
 } as Document;
 
 export const overview: Example = () => <SidebarsPage type="story" />;

@@ -7,6 +7,7 @@ export default {
   title: 'Blocks/ComponentJSX',
   component: ComponentJSX,
   decorators: mockDecorators,
+  category: ' Component',
 } as Document;
 
 export const overview: Example = () => <ComponentJSX />;

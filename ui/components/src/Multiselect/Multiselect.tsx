@@ -22,7 +22,7 @@ export type MultiselectProps = MultiselectOwnProps &
   Omit<PopoverProps, 'tooltip'>;
 
 /**
- * A Popover multiselect displaying checkboxes for select/unselect.
+ * Popover multiselect displaying checkboxes to select/unselect.
  */
 export const Multiselect: FC<MultiselectProps> = ({
   items,

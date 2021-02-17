@@ -58,7 +58,7 @@ $ npm install @component-controls/components --save
 
 # Documentation
 
-[live documentation site](https://component-controls.com/api/components-actionbar--overview)
+[live documentation site](https://component-controls.com/api/components-index)
 
 # Overview
 

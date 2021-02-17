@@ -8,6 +8,7 @@ import { Sidebar, SidebarContext, SidebarContextProvider } from '.';
 export default {
   title: 'Components/Sidebar',
   component: Sidebar,
+  category: 'Navigation',
 } as Document;
 
 export const overview: Example<{

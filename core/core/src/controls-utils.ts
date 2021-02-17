@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import escape from 'escape-html';
 import { deepmerge } from './deepMerge';
 import {

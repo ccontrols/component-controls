@@ -6,6 +6,7 @@ import { SyntaxHighlighter, SyntaxHighlighterProps } from './SyntaxHighlighter';
 export default {
   title: 'Components/SyntaxHighlighter',
   component: SyntaxHighlighter,
+  category: 'Display',
 } as Document;
 
 const source = `import { Button } from 'theme-ui';`;

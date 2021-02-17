@@ -73,6 +73,9 @@ export const packageInfo = async (
         devDependencies,
         peerDependencies,
       };
+      if (packageJSON['private']) {
+        result.privateNpm = true;
+      }
       if (repositoryURL) {
         const templates =
           hostedGitInfo.fromUrl(repositoryURL) ||

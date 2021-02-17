@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx } from 'theme-ui';
+import { jsx, Themed } from 'theme-ui';
 import { DocType } from '@component-controls/core';
-import { Title } from '@component-controls/components';
 import { useConfig, useSortedDocByType } from '@component-controls/store';
 import { PageContainer } from '../PageContainer';
 import { DocumentsList } from '../DocumentsList';
@@ -28,7 +27,7 @@ export const DocumentHomePage: FC<DocumentHomePageProps> = ({ type }) => {
   if (page.indexHome) {
     return (
       <PageContainer variant="pagelist.container" type={type} id="content">
-        <Title>{page.label}</Title>
+        <Themed.h1>{page.label}</Themed.h1>
         <DocumentsList pages={pages} type={type} />
       </PageContainer>
     );

@@ -6,7 +6,8 @@ exports[`Design Tokens/Colors/AltaColor Hsl 1`] = `
     class="css-439ki4-AltaColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-yx90az-AltaColor"
@@ -37,7 +38,8 @@ exports[`Design Tokens/Colors/AltaColor Hsla 1`] = `
     class="css-439ki4-AltaColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-ckbm8u-AltaColor"
@@ -68,7 +70,8 @@ exports[`Design Tokens/Colors/AltaColor Name 1`] = `
     class="css-439ki4-AltaColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-1iwjbaz-AltaColor"
@@ -99,7 +102,8 @@ exports[`Design Tokens/Colors/AltaColor Overview 1`] = `
     class="css-439ki4-AltaColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-1hla3tt-AltaColor"
@@ -133,7 +137,8 @@ exports[`Design Tokens/Colors/AltaColor Palette 1`] = `
       class="css-439ki4-AltaColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1hla3tt-AltaColor"
@@ -159,7 +164,8 @@ exports[`Design Tokens/Colors/AltaColor Palette 1`] = `
       class="css-439ki4-AltaColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1sn3c0w-AltaColor"
@@ -185,7 +191,8 @@ exports[`Design Tokens/Colors/AltaColor Palette 1`] = `
       class="css-439ki4-AltaColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1er29gs-AltaColor"
@@ -211,7 +218,8 @@ exports[`Design Tokens/Colors/AltaColor Palette 1`] = `
       class="css-439ki4-AltaColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-12wouqw-AltaColor"
@@ -237,7 +245,8 @@ exports[`Design Tokens/Colors/AltaColor Palette 1`] = `
       class="css-439ki4-AltaColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1optur2-AltaColor"
@@ -263,7 +272,8 @@ exports[`Design Tokens/Colors/AltaColor Palette 1`] = `
       class="css-439ki4-AltaColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1x2f4zp-AltaColor"
@@ -295,7 +305,8 @@ exports[`Design Tokens/Colors/AltaColor Rgb 1`] = `
     class="css-439ki4-AltaColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-y9kc04-AltaColor"
@@ -326,7 +337,8 @@ exports[`Design Tokens/Colors/AltaColor Rgba 1`] = `
     class="css-439ki4-AltaColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-1pb5h4r-AltaColor"
@@ -357,7 +369,8 @@ exports[`Design Tokens/Colors/AntdHorzColor Hsl 1`] = `
     class="css-skiu9w-AntdHorzColor"
   >
     <div
-      class="css-1p77ffd-AntdHorzColor"
+      class="css-1mveibm-AntdHorzColor"
+      style="display: inline-block;"
     >
       <div
         class="css-1h8ihea-AntdHorzColor"
@@ -384,7 +397,8 @@ exports[`Design Tokens/Colors/AntdHorzColor Hsla 1`] = `
     class="css-skiu9w-AntdHorzColor"
   >
     <div
-      class="css-1p77ffd-AntdHorzColor"
+      class="css-1mveibm-AntdHorzColor"
+      style="display: inline-block;"
     >
       <div
         class="css-1t8wt0p-AntdHorzColor"
@@ -411,7 +425,8 @@ exports[`Design Tokens/Colors/AntdHorzColor Name 1`] = `
     class="css-skiu9w-AntdHorzColor"
   >
     <div
-      class="css-1p77ffd-AntdHorzColor"
+      class="css-1mveibm-AntdHorzColor"
+      style="display: inline-block;"
     >
       <div
         class="css-1a87q4z-AntdHorzColor"
@@ -438,7 +453,8 @@ exports[`Design Tokens/Colors/AntdHorzColor Overview 1`] = `
     class="css-skiu9w-AntdHorzColor"
   >
     <div
-      class="css-1p77ffd-AntdHorzColor"
+      class="css-1mveibm-AntdHorzColor"
+      style="display: inline-block;"
     >
       <div
         class="css-yxgeg7-AntdHorzColor"
@@ -468,7 +484,8 @@ exports[`Design Tokens/Colors/AntdHorzColor Palette 1`] = `
       class="css-skiu9w-AntdHorzColor"
     >
       <div
-        class="css-1p77ffd-AntdHorzColor"
+        class="css-1mveibm-AntdHorzColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1mftmip-AntdHorzColor"
@@ -490,7 +507,8 @@ exports[`Design Tokens/Colors/AntdHorzColor Palette 1`] = `
       class="css-skiu9w-AntdHorzColor"
     >
       <div
-        class="css-1p77ffd-AntdHorzColor"
+        class="css-1mveibm-AntdHorzColor"
+        style="display: inline-block;"
       >
         <div
           class="css-iye3sn-AntdHorzColor"
@@ -512,7 +530,8 @@ exports[`Design Tokens/Colors/AntdHorzColor Palette 1`] = `
       class="css-skiu9w-AntdHorzColor"
     >
       <div
-        class="css-1p77ffd-AntdHorzColor"
+        class="css-1mveibm-AntdHorzColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1tbmaqy-AntdHorzColor"
@@ -534,7 +553,8 @@ exports[`Design Tokens/Colors/AntdHorzColor Palette 1`] = `
       class="css-skiu9w-AntdHorzColor"
     >
       <div
-        class="css-1p77ffd-AntdHorzColor"
+        class="css-1mveibm-AntdHorzColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1ztjbi-AntdHorzColor"
@@ -556,7 +576,8 @@ exports[`Design Tokens/Colors/AntdHorzColor Palette 1`] = `
       class="css-skiu9w-AntdHorzColor"
     >
       <div
-        class="css-1p77ffd-AntdHorzColor"
+        class="css-1mveibm-AntdHorzColor"
+        style="display: inline-block;"
       >
         <div
           class="css-6lf98k-AntdHorzColor"
@@ -578,7 +599,8 @@ exports[`Design Tokens/Colors/AntdHorzColor Palette 1`] = `
       class="css-skiu9w-AntdHorzColor"
     >
       <div
-        class="css-1p77ffd-AntdHorzColor"
+        class="css-1mveibm-AntdHorzColor"
+        style="display: inline-block;"
       >
         <div
           class="css-fsnyeo-AntdHorzColor"
@@ -600,7 +622,8 @@ exports[`Design Tokens/Colors/AntdHorzColor Palette 1`] = `
       class="css-skiu9w-AntdHorzColor"
     >
       <div
-        class="css-1p77ffd-AntdHorzColor"
+        class="css-1mveibm-AntdHorzColor"
+        style="display: inline-block;"
       >
         <div
           class="css-yxgeg7-AntdHorzColor"
@@ -622,7 +645,8 @@ exports[`Design Tokens/Colors/AntdHorzColor Palette 1`] = `
       class="css-skiu9w-AntdHorzColor"
     >
       <div
-        class="css-1p77ffd-AntdHorzColor"
+        class="css-1mveibm-AntdHorzColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1uxip3h-AntdHorzColor"
@@ -650,7 +674,8 @@ exports[`Design Tokens/Colors/AntdHorzColor Rgb 1`] = `
     class="css-skiu9w-AntdHorzColor"
   >
     <div
-      class="css-1p77ffd-AntdHorzColor"
+      class="css-1mveibm-AntdHorzColor"
+      style="display: inline-block;"
     >
       <div
         class="css-1th2ox9-AntdHorzColor"
@@ -677,7 +702,8 @@ exports[`Design Tokens/Colors/AntdHorzColor Rgba 1`] = `
     class="css-skiu9w-AntdHorzColor"
   >
     <div
-      class="css-1p77ffd-AntdHorzColor"
+      class="css-1mveibm-AntdHorzColor"
+      style="display: inline-block;"
     >
       <div
         class="css-r5kfc4-AntdHorzColor"
@@ -704,7 +730,8 @@ exports[`Design Tokens/Colors/AntdVertColor Hsl 1`] = `
     class="css-1svx4hl-AntdVertColor"
   >
     <div
-      class="css-18b94tu-AntdVertColor"
+      class="css-or38fy-AntdVertColor"
+      style="display: inline-block;"
     >
       <div
         class="css-r1mi8q-AntdVertColor"
@@ -731,7 +758,8 @@ exports[`Design Tokens/Colors/AntdVertColor Hsla 1`] = `
     class="css-1svx4hl-AntdVertColor"
   >
     <div
-      class="css-18b94tu-AntdVertColor"
+      class="css-or38fy-AntdVertColor"
+      style="display: inline-block;"
     >
       <div
         class="css-1epbkhy-AntdVertColor"
@@ -758,7 +786,8 @@ exports[`Design Tokens/Colors/AntdVertColor Name 1`] = `
     class="css-1svx4hl-AntdVertColor"
   >
     <div
-      class="css-18b94tu-AntdVertColor"
+      class="css-or38fy-AntdVertColor"
+      style="display: inline-block;"
     >
       <div
         class="css-5fo7n4-AntdVertColor"
@@ -785,7 +814,8 @@ exports[`Design Tokens/Colors/AntdVertColor Overview 1`] = `
     class="css-1svx4hl-AntdVertColor"
   >
     <div
-      class="css-18b94tu-AntdVertColor"
+      class="css-or38fy-AntdVertColor"
+      style="display: inline-block;"
     >
       <div
         class="css-1431yxi-AntdVertColor"
@@ -815,7 +845,8 @@ exports[`Design Tokens/Colors/AntdVertColor Palette 1`] = `
       class="css-1svx4hl-AntdVertColor"
     >
       <div
-        class="css-18b94tu-AntdVertColor"
+        class="css-or38fy-AntdVertColor"
+        style="display: inline-block;"
       >
         <div
           class="css-13gy2oz-AntdVertColor"
@@ -837,7 +868,8 @@ exports[`Design Tokens/Colors/AntdVertColor Palette 1`] = `
       class="css-1svx4hl-AntdVertColor"
     >
       <div
-        class="css-18b94tu-AntdVertColor"
+        class="css-or38fy-AntdVertColor"
+        style="display: inline-block;"
       >
         <div
           class="css-bcjsha-AntdVertColor"
@@ -859,7 +891,8 @@ exports[`Design Tokens/Colors/AntdVertColor Palette 1`] = `
       class="css-1svx4hl-AntdVertColor"
     >
       <div
-        class="css-18b94tu-AntdVertColor"
+        class="css-or38fy-AntdVertColor"
+        style="display: inline-block;"
       >
         <div
           class="css-xou29f-AntdVertColor"
@@ -881,7 +914,8 @@ exports[`Design Tokens/Colors/AntdVertColor Palette 1`] = `
       class="css-1svx4hl-AntdVertColor"
     >
       <div
-        class="css-18b94tu-AntdVertColor"
+        class="css-or38fy-AntdVertColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1w9kufw-AntdVertColor"
@@ -903,7 +937,8 @@ exports[`Design Tokens/Colors/AntdVertColor Palette 1`] = `
       class="css-1svx4hl-AntdVertColor"
     >
       <div
-        class="css-18b94tu-AntdVertColor"
+        class="css-or38fy-AntdVertColor"
+        style="display: inline-block;"
       >
         <div
           class="css-jcuyny-AntdVertColor"
@@ -925,7 +960,8 @@ exports[`Design Tokens/Colors/AntdVertColor Palette 1`] = `
       class="css-1svx4hl-AntdVertColor"
     >
       <div
-        class="css-18b94tu-AntdVertColor"
+        class="css-or38fy-AntdVertColor"
+        style="display: inline-block;"
       >
         <div
           class="css-qgtbv7-AntdVertColor"
@@ -947,7 +983,8 @@ exports[`Design Tokens/Colors/AntdVertColor Palette 1`] = `
       class="css-1svx4hl-AntdVertColor"
     >
       <div
-        class="css-18b94tu-AntdVertColor"
+        class="css-or38fy-AntdVertColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1xxgoop-AntdVertColor"
@@ -969,7 +1006,8 @@ exports[`Design Tokens/Colors/AntdVertColor Palette 1`] = `
       class="css-1svx4hl-AntdVertColor"
     >
       <div
-        class="css-18b94tu-AntdVertColor"
+        class="css-or38fy-AntdVertColor"
+        style="display: inline-block;"
       >
         <div
           class="css-yhijth-AntdVertColor"
@@ -991,7 +1029,8 @@ exports[`Design Tokens/Colors/AntdVertColor Palette 1`] = `
       class="css-1svx4hl-AntdVertColor"
     >
       <div
-        class="css-18b94tu-AntdVertColor"
+        class="css-or38fy-AntdVertColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1ajjka7-AntdVertColor"
@@ -1013,7 +1052,8 @@ exports[`Design Tokens/Colors/AntdVertColor Palette 1`] = `
       class="css-1svx4hl-AntdVertColor"
     >
       <div
-        class="css-18b94tu-AntdVertColor"
+        class="css-or38fy-AntdVertColor"
+        style="display: inline-block;"
       >
         <div
           class="css-16e13mz-AntdVertColor"
@@ -1041,7 +1081,8 @@ exports[`Design Tokens/Colors/AntdVertColor Rgb 1`] = `
     class="css-1svx4hl-AntdVertColor"
   >
     <div
-      class="css-18b94tu-AntdVertColor"
+      class="css-or38fy-AntdVertColor"
+      style="display: inline-block;"
     >
       <div
         class="css-1av4rc2-AntdVertColor"
@@ -1068,7 +1109,8 @@ exports[`Design Tokens/Colors/AntdVertColor Rgba 1`] = `
     class="css-1svx4hl-AntdVertColor"
   >
     <div
-      class="css-18b94tu-AntdVertColor"
+      class="css-or38fy-AntdVertColor"
+      style="display: inline-block;"
     >
       <div
         class="css-11g6osm-AntdVertColor"
@@ -1095,7 +1137,8 @@ exports[`Design Tokens/Colors/AnvilColor Hsl 1`] = `
     class="css-r1a9t8-AnvilColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-vpy9k6-AnvilColor"
@@ -1129,7 +1172,8 @@ exports[`Design Tokens/Colors/AnvilColor Hsla 1`] = `
     class="css-r1a9t8-AnvilColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-ta0yjv-AnvilColor"
@@ -1163,7 +1207,8 @@ exports[`Design Tokens/Colors/AnvilColor Name 1`] = `
     class="css-r1a9t8-AnvilColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-o9uq3g-AnvilColor"
@@ -1197,7 +1242,8 @@ exports[`Design Tokens/Colors/AnvilColor Overview 1`] = `
     class="css-r1a9t8-AnvilColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-13tdddk-AnvilColor"
@@ -1234,7 +1280,8 @@ exports[`Design Tokens/Colors/AnvilColor Palette 1`] = `
       class="css-r1a9t8-AnvilColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-o9uq3g-AnvilColor"
@@ -1263,7 +1310,8 @@ exports[`Design Tokens/Colors/AnvilColor Palette 1`] = `
       class="css-r1a9t8-AnvilColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-6lpvq4-AnvilColor"
@@ -1292,7 +1340,8 @@ exports[`Design Tokens/Colors/AnvilColor Palette 1`] = `
       class="css-r1a9t8-AnvilColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1e00yvt-AnvilColor"
@@ -1321,7 +1370,8 @@ exports[`Design Tokens/Colors/AnvilColor Palette 1`] = `
       class="css-r1a9t8-AnvilColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-13tdddk-AnvilColor"
@@ -1350,7 +1400,8 @@ exports[`Design Tokens/Colors/AnvilColor Palette 1`] = `
       class="css-r1a9t8-AnvilColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-l69ita-AnvilColor"
@@ -1379,7 +1430,8 @@ exports[`Design Tokens/Colors/AnvilColor Palette 1`] = `
       class="css-r1a9t8-AnvilColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-5339h0-AnvilColor"
@@ -1414,7 +1466,8 @@ exports[`Design Tokens/Colors/AnvilColor Rgb 1`] = `
     class="css-r1a9t8-AnvilColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-12f9a1f-AnvilColor"
@@ -1448,7 +1501,8 @@ exports[`Design Tokens/Colors/AnvilColor Rgba 1`] = `
     class="css-r1a9t8-AnvilColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-1ntimi3-AnvilColor"
@@ -1482,7 +1536,8 @@ exports[`Design Tokens/Colors/AtlassianColor Hsl 1`] = `
     class="css-vpkdz5-AtlassianColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-218x1i-AtlassianColor"
@@ -1599,7 +1654,8 @@ exports[`Design Tokens/Colors/AtlassianColor Hsla 1`] = `
     class="css-vpkdz5-AtlassianColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-ysbnop-AtlassianColor"
@@ -1716,7 +1772,8 @@ exports[`Design Tokens/Colors/AtlassianColor Name 1`] = `
     class="css-vpkdz5-AtlassianColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-710neg-AtlassianColor"
@@ -1833,7 +1890,8 @@ exports[`Design Tokens/Colors/AtlassianColor Overview 1`] = `
     class="css-vpkdz5-AtlassianColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-1z03bfs-AtlassianColor"
@@ -1953,7 +2011,8 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
       class="css-vpkdz5-AtlassianColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1uckatl-AtlassianColor"
@@ -2065,7 +2124,8 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
       class="css-vpkdz5-AtlassianColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-qk15tg-AtlassianColor"
@@ -2177,7 +2237,8 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
       class="css-vpkdz5-AtlassianColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-392f6q-AtlassianColor"
@@ -2289,7 +2350,8 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
       class="css-vpkdz5-AtlassianColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-bcecln-AtlassianColor"
@@ -2401,7 +2463,8 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
       class="css-vpkdz5-AtlassianColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-bl029o-AtlassianColor"
@@ -2513,7 +2576,8 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
       class="css-vpkdz5-AtlassianColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-710neg-AtlassianColor"
@@ -2631,7 +2695,8 @@ exports[`Design Tokens/Colors/AtlassianColor Rgb 1`] = `
     class="css-vpkdz5-AtlassianColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-xj104v-AtlassianColor"
@@ -2748,7 +2813,8 @@ exports[`Design Tokens/Colors/AtlassianColor Rgba 1`] = `
     class="css-vpkdz5-AtlassianColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-1me72tc-AtlassianColor"
@@ -2865,7 +2931,8 @@ exports[`Design Tokens/Colors/AudiDSColor Hsl 1`] = `
     class="css-1wbnvp4-AudiDSColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-qtikz3-AudiDSColor"
@@ -2915,7 +2982,8 @@ exports[`Design Tokens/Colors/AudiDSColor Hsla 1`] = `
     class="css-1wbnvp4-AudiDSColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-yxx48s-AudiDSColor"
@@ -2965,7 +3033,8 @@ exports[`Design Tokens/Colors/AudiDSColor Name 1`] = `
     class="css-1wbnvp4-AudiDSColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-8sksre-AudiDSColor"
@@ -3015,7 +3084,8 @@ exports[`Design Tokens/Colors/AudiDSColor Overview 1`] = `
     class="css-1wbnvp4-AudiDSColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-1fk6wm6-AudiDSColor"
@@ -3068,7 +3138,8 @@ exports[`Design Tokens/Colors/AudiDSColor Palette 1`] = `
       class="css-1wbnvp4-AudiDSColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1jg5rfj-AudiDSColor"
@@ -3113,7 +3184,8 @@ exports[`Design Tokens/Colors/AudiDSColor Palette 1`] = `
       class="css-1wbnvp4-AudiDSColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1ugg3zs-AudiDSColor"
@@ -3158,7 +3230,8 @@ exports[`Design Tokens/Colors/AudiDSColor Palette 1`] = `
       class="css-1wbnvp4-AudiDSColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-fk8tzu-AudiDSColor"
@@ -3203,7 +3276,8 @@ exports[`Design Tokens/Colors/AudiDSColor Palette 1`] = `
       class="css-1wbnvp4-AudiDSColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1yzyoiv-AudiDSColor"
@@ -3248,7 +3322,8 @@ exports[`Design Tokens/Colors/AudiDSColor Palette 1`] = `
       class="css-1wbnvp4-AudiDSColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-jgf7au-AudiDSColor"
@@ -3293,7 +3368,8 @@ exports[`Design Tokens/Colors/AudiDSColor Palette 1`] = `
       class="css-1wbnvp4-AudiDSColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-8sksre-AudiDSColor"
@@ -3344,7 +3420,8 @@ exports[`Design Tokens/Colors/AudiDSColor Rgb 1`] = `
     class="css-1wbnvp4-AudiDSColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-19z0v0h-AudiDSColor"
@@ -3394,7 +3471,8 @@ exports[`Design Tokens/Colors/AudiDSColor Rgba 1`] = `
     class="css-1wbnvp4-AudiDSColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-1iyq71j-AudiDSColor"
@@ -3444,7 +3522,8 @@ exports[`Design Tokens/Colors/BackpackColor Hsl 1`] = `
     class="css-1irte6g-BackpackColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-1x62ady-BackpackColor"
@@ -3490,7 +3569,8 @@ exports[`Design Tokens/Colors/BackpackColor Hsla 1`] = `
     class="css-1irte6g-BackpackColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-10kr13t-BackpackColor"
@@ -3536,7 +3616,8 @@ exports[`Design Tokens/Colors/BackpackColor Name 1`] = `
     class="css-1irte6g-BackpackColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-ia7qd9-BackpackColor"
@@ -3582,7 +3663,8 @@ exports[`Design Tokens/Colors/BackpackColor Overview 1`] = `
     class="css-1irte6g-BackpackColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-l1b4xb-BackpackColor"
@@ -3626,7 +3708,8 @@ exports[`Design Tokens/Colors/BackpackColor Palette 1`] = `
       class="css-1irte6g-BackpackColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1scqe0m-BackpackColor"
@@ -3667,7 +3750,8 @@ exports[`Design Tokens/Colors/BackpackColor Palette 1`] = `
       class="css-1irte6g-BackpackColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-17wkblc-BackpackColor"
@@ -3708,7 +3792,8 @@ exports[`Design Tokens/Colors/BackpackColor Palette 1`] = `
       class="css-1irte6g-BackpackColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-14ztj62-BackpackColor"
@@ -3749,7 +3834,8 @@ exports[`Design Tokens/Colors/BackpackColor Palette 1`] = `
       class="css-1irte6g-BackpackColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-2n6ijs-BackpackColor"
@@ -3785,7 +3871,8 @@ exports[`Design Tokens/Colors/BackpackColor Palette 1`] = `
       class="css-1irte6g-BackpackColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1ua17l1-BackpackColor"
@@ -3826,7 +3913,8 @@ exports[`Design Tokens/Colors/BackpackColor Palette 1`] = `
       class="css-1irte6g-BackpackColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-ia7qd9-BackpackColor"
@@ -3873,7 +3961,8 @@ exports[`Design Tokens/Colors/BackpackColor Rgb 1`] = `
     class="css-1irte6g-BackpackColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-1q0vf7j-BackpackColor"
@@ -3919,7 +4008,8 @@ exports[`Design Tokens/Colors/BackpackColor Rgba 1`] = `
     class="css-1irte6g-BackpackColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-k62wz8-BackpackColor"
@@ -3973,7 +4063,8 @@ exports[`Design Tokens/Colors/BaseWebColor Overview 1`] = `
             class="css-iiq0sn-BaseBaseWebColor"
           >
             <div
-              class="css-jorsh9-BaseBaseWebColor"
+              class="css-105l5d0-BaseBaseWebColor"
+              style="display: inline-block;"
             />
           </div>
         </td>
@@ -4026,7 +4117,8 @@ exports[`Design Tokens/Colors/BaseWebColor Palette 1`] = `
             class="css-iiq0sn-BaseBaseWebColor"
           >
             <div
-              class="css-1a2lz49-BaseBaseWebColor"
+              class="css-1balwgv-BaseBaseWebColor"
+              style="display: inline-block;"
             />
           </div>
         </td>
@@ -4057,7 +4149,8 @@ exports[`Design Tokens/Colors/BaseWebColor Palette 1`] = `
             class="css-iiq0sn-BaseBaseWebColor"
           >
             <div
-              class="css-ixuzzw-BaseBaseWebColor"
+              class="css-uqzlgg-BaseBaseWebColor"
+              style="display: inline-block;"
             />
           </div>
         </td>
@@ -4088,7 +4181,8 @@ exports[`Design Tokens/Colors/BaseWebColor Palette 1`] = `
             class="css-iiq0sn-BaseBaseWebColor"
           >
             <div
-              class="css-14suhv2-BaseBaseWebColor"
+              class="css-1utt1la-BaseBaseWebColor"
+              style="display: inline-block;"
             />
           </div>
         </td>
@@ -4119,7 +4213,8 @@ exports[`Design Tokens/Colors/BaseWebColor Palette 1`] = `
             class="css-iiq0sn-BaseBaseWebColor"
           >
             <div
-              class="css-12f7l60-BaseBaseWebColor"
+              class="css-1wpwymb-BaseBaseWebColor"
+              style="display: inline-block;"
             />
           </div>
         </td>
@@ -4150,7 +4245,8 @@ exports[`Design Tokens/Colors/BaseWebColor Palette 1`] = `
             class="css-iiq0sn-BaseBaseWebColor"
           >
             <div
-              class="css-1hx7igh-BaseBaseWebColor"
+              class="css-df45si-BaseBaseWebColor"
+              style="display: inline-block;"
             />
           </div>
         </td>
@@ -4181,7 +4277,8 @@ exports[`Design Tokens/Colors/BaseWebColor Palette 1`] = `
             class="css-iiq0sn-BaseBaseWebColor"
           >
             <div
-              class="css-1s3lqtv-BaseBaseWebColor"
+              class="css-pykau9-BaseBaseWebColor"
+              style="display: inline-block;"
             />
           </div>
         </td>
@@ -4212,7 +4309,8 @@ exports[`Design Tokens/Colors/BaseWebColor Palette 1`] = `
             class="css-iiq0sn-BaseBaseWebColor"
           >
             <div
-              class="css-1czaktl-BaseBaseWebColor"
+              class="css-193xcnt-BaseBaseWebColor"
+              style="display: inline-block;"
             />
           </div>
         </td>
@@ -4243,7 +4341,8 @@ exports[`Design Tokens/Colors/BaseWebColor Palette 1`] = `
             class="css-iiq0sn-BaseBaseWebColor"
           >
             <div
-              class="css-1f7ckh6-BaseBaseWebColor"
+              class="css-1kcyjbk-BaseBaseWebColor"
+              style="display: inline-block;"
             />
           </div>
         </td>
@@ -4277,7 +4376,8 @@ exports[`Design Tokens/Colors/BeelineColor Hsl 1`] = `
     class="css-8jebb7-BeelineColor"
   >
     <div
-      class="css-4evh77-BeelineColor"
+      class="css-15abo7m-BeelineColor"
+      style="display: inline-block;"
     >
       <div
         class="css-drvamt-BeelineColor"
@@ -4346,7 +4446,8 @@ exports[`Design Tokens/Colors/BeelineColor Hsla 1`] = `
     class="css-8jebb7-BeelineColor"
   >
     <div
-      class="css-4evh77-BeelineColor"
+      class="css-15abo7m-BeelineColor"
+      style="display: inline-block;"
     >
       <div
         class="css-10p0v0i-BeelineColor"
@@ -4415,7 +4516,8 @@ exports[`Design Tokens/Colors/BeelineColor Name 1`] = `
     class="css-8jebb7-BeelineColor"
   >
     <div
-      class="css-4evh77-BeelineColor"
+      class="css-15abo7m-BeelineColor"
+      style="display: inline-block;"
     >
       <div
         class="css-ns511m-BeelineColor"
@@ -4484,7 +4586,8 @@ exports[`Design Tokens/Colors/BeelineColor Overview 1`] = `
     class="css-8jebb7-BeelineColor"
   >
     <div
-      class="css-4evh77-BeelineColor"
+      class="css-15abo7m-BeelineColor"
+      style="display: inline-block;"
     >
       <div
         class="css-1uvaddk-BeelineColor"
@@ -4556,7 +4659,8 @@ exports[`Design Tokens/Colors/BeelineColor Palette 1`] = `
       class="css-8jebb7-BeelineColor"
     >
       <div
-        class="css-4evh77-BeelineColor"
+        class="css-15abo7m-BeelineColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1nsi3y5-BeelineColor"
@@ -4620,7 +4724,8 @@ exports[`Design Tokens/Colors/BeelineColor Palette 1`] = `
       class="css-8jebb7-BeelineColor"
     >
       <div
-        class="css-4evh77-BeelineColor"
+        class="css-15abo7m-BeelineColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1c7zi3o-BeelineColor"
@@ -4684,7 +4789,8 @@ exports[`Design Tokens/Colors/BeelineColor Palette 1`] = `
       class="css-8jebb7-BeelineColor"
     >
       <div
-        class="css-4evh77-BeelineColor"
+        class="css-15abo7m-BeelineColor"
+        style="display: inline-block;"
       >
         <div
           class="css-mrw9rk-BeelineColor"
@@ -4748,7 +4854,8 @@ exports[`Design Tokens/Colors/BeelineColor Palette 1`] = `
       class="css-8jebb7-BeelineColor"
     >
       <div
-        class="css-4evh77-BeelineColor"
+        class="css-15abo7m-BeelineColor"
+        style="display: inline-block;"
       >
         <div
           class="css-phkizb-BeelineColor"
@@ -4812,7 +4919,8 @@ exports[`Design Tokens/Colors/BeelineColor Palette 1`] = `
       class="css-8jebb7-BeelineColor"
     >
       <div
-        class="css-4evh77-BeelineColor"
+        class="css-15abo7m-BeelineColor"
+        style="display: inline-block;"
       >
         <div
           class="css-11th0go-BeelineColor"
@@ -4876,7 +4984,8 @@ exports[`Design Tokens/Colors/BeelineColor Palette 1`] = `
       class="css-8jebb7-BeelineColor"
     >
       <div
-        class="css-4evh77-BeelineColor"
+        class="css-15abo7m-BeelineColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1dqoq8e-BeelineColor"
@@ -4940,7 +5049,8 @@ exports[`Design Tokens/Colors/BeelineColor Palette 1`] = `
       class="css-8jebb7-BeelineColor"
     >
       <div
-        class="css-4evh77-BeelineColor"
+        class="css-15abo7m-BeelineColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1wqo7q2-BeelineColor"
@@ -5010,7 +5120,8 @@ exports[`Design Tokens/Colors/BeelineColor Rgb 1`] = `
     class="css-8jebb7-BeelineColor"
   >
     <div
-      class="css-4evh77-BeelineColor"
+      class="css-15abo7m-BeelineColor"
+      style="display: inline-block;"
     >
       <div
         class="css-14158i4-BeelineColor"
@@ -5079,7 +5190,8 @@ exports[`Design Tokens/Colors/BeelineColor Rgba 1`] = `
     class="css-8jebb7-BeelineColor"
   >
     <div
-      class="css-4evh77-BeelineColor"
+      class="css-15abo7m-BeelineColor"
+      style="display: inline-block;"
     >
       <div
         class="css-eu60px-BeelineColor"
@@ -5148,7 +5260,8 @@ exports[`Design Tokens/Colors/BoltColor Overview 1`] = `
     class="css-4v5u4a-BoltColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-khxced-BoltColor"
@@ -5353,7 +5466,8 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
       class="css-4v5u4a-BoltColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-xmhfjq-BoltColor"
@@ -5550,7 +5664,8 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
       class="css-4v5u4a-BoltColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-10uhy6v-BoltColor"
@@ -5747,7 +5862,8 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
       class="css-4v5u4a-BoltColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-20jqdy-BoltColor"
@@ -5944,7 +6060,8 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
       class="css-4v5u4a-BoltColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1ah5b97-BoltColor"
@@ -6141,7 +6258,8 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
       class="css-4v5u4a-BoltColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-rk9g5k-BoltColor"
@@ -6338,7 +6456,8 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
       class="css-4v5u4a-BoltColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-zpe0vp-BoltColor"
@@ -6535,7 +6654,8 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
       class="css-4v5u4a-BoltColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1lt6bdv-BoltColor"
@@ -6732,7 +6852,8 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
       class="css-4v5u4a-BoltColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-uk61gl-BoltColor"
@@ -6929,7 +7050,8 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
       class="css-4v5u4a-BoltColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-45puxl-BoltColor"
@@ -7126,7 +7248,8 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
       class="css-4v5u4a-BoltColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1o7w04h-BoltColor"
@@ -7323,7 +7446,8 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
       class="css-4v5u4a-BoltColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-aw3ixd-BoltColor"
@@ -7529,7 +7653,8 @@ exports[`Design Tokens/Colors/CanvasColor Overview 1`] = `
       class="css-1p0irht-CanvasColor"
     >
       <div
-        class="css-npqvc7-CanvasColor"
+        class="css-12gchfm-CanvasColor"
+        style="display: inline-block;"
       >
         <div
           class="css-4wqjru-CanvasColor"
@@ -7577,7 +7702,8 @@ exports[`Design Tokens/Colors/CanvasColor Palette 1`] = `
         class="css-1p0irht-CanvasColor"
       >
         <div
-          class="css-npqvc7-CanvasColor"
+          class="css-12gchfm-CanvasColor"
+          style="display: inline-block;"
         >
           <div
             class="css-ryd7xe-CanvasColor"
@@ -7617,7 +7743,8 @@ exports[`Design Tokens/Colors/CanvasColor Palette 1`] = `
         class="css-1p0irht-CanvasColor"
       >
         <div
-          class="css-npqvc7-CanvasColor"
+          class="css-12gchfm-CanvasColor"
+          style="display: inline-block;"
         >
           <div
             class="css-1xkgbqi-CanvasColor"
@@ -7657,7 +7784,8 @@ exports[`Design Tokens/Colors/CanvasColor Palette 1`] = `
         class="css-1p0irht-CanvasColor"
       >
         <div
-          class="css-npqvc7-CanvasColor"
+          class="css-12gchfm-CanvasColor"
+          style="display: inline-block;"
         >
           <div
             class="css-hxgym3-CanvasColor"
@@ -7697,7 +7825,8 @@ exports[`Design Tokens/Colors/CanvasColor Palette 1`] = `
         class="css-1p0irht-CanvasColor"
       >
         <div
-          class="css-npqvc7-CanvasColor"
+          class="css-12gchfm-CanvasColor"
+          style="display: inline-block;"
         >
           <div
             class="css-hzdkpl-CanvasColor"
@@ -7750,7 +7879,8 @@ exports[`Design Tokens/Colors/CedarColor Overview 1`] = `
             class="css-ztbtlm-BaseCedarColor"
           >
             <div
-              class="css-1g7akrn-CopyContainer"
+              class="css-6bf4yd-CopyContainer"
+              style="display: inline-block;"
             >
               <div
                 class="css-f6qke8-BaseCedarColor"
@@ -7814,7 +7944,8 @@ exports[`Design Tokens/Colors/CedarColor Palette 1`] = `
             class="css-ztbtlm-BaseCedarColor"
           >
             <div
-              class="css-1g7akrn-CopyContainer"
+              class="css-6bf4yd-CopyContainer"
+              style="display: inline-block;"
             >
               <div
                 class="css-bwhgqt-BaseCedarColor"
@@ -7856,7 +7987,8 @@ exports[`Design Tokens/Colors/CedarColor Palette 1`] = `
             class="css-ztbtlm-BaseCedarColor"
           >
             <div
-              class="css-1g7akrn-CopyContainer"
+              class="css-6bf4yd-CopyContainer"
+              style="display: inline-block;"
             >
               <div
                 class="css-1n3jb6n-BaseCedarColor"
@@ -7898,7 +8030,8 @@ exports[`Design Tokens/Colors/CedarColor Palette 1`] = `
             class="css-ztbtlm-BaseCedarColor"
           >
             <div
-              class="css-1g7akrn-CopyContainer"
+              class="css-6bf4yd-CopyContainer"
+              style="display: inline-block;"
             >
               <div
                 class="css-1rup1sq-BaseCedarColor"
@@ -7940,7 +8073,8 @@ exports[`Design Tokens/Colors/CedarColor Palette 1`] = `
             class="css-ztbtlm-BaseCedarColor"
           >
             <div
-              class="css-1g7akrn-CopyContainer"
+              class="css-6bf4yd-CopyContainer"
+              style="display: inline-block;"
             >
               <div
                 class="css-mj9ojc-BaseCedarColor"
@@ -7982,7 +8116,8 @@ exports[`Design Tokens/Colors/CedarColor Palette 1`] = `
             class="css-ztbtlm-BaseCedarColor"
           >
             <div
-              class="css-1g7akrn-CopyContainer"
+              class="css-6bf4yd-CopyContainer"
+              style="display: inline-block;"
             >
               <div
                 class="css-dg5tri-BaseCedarColor"
@@ -8024,7 +8159,8 @@ exports[`Design Tokens/Colors/CedarColor Palette 1`] = `
             class="css-ztbtlm-BaseCedarColor"
           >
             <div
-              class="css-1g7akrn-CopyContainer"
+              class="css-6bf4yd-CopyContainer"
+              style="display: inline-block;"
             >
               <div
                 class="css-2q2vy5-BaseCedarColor"
@@ -8066,7 +8202,8 @@ exports[`Design Tokens/Colors/CedarColor Palette 1`] = `
             class="css-ztbtlm-BaseCedarColor"
           >
             <div
-              class="css-1g7akrn-CopyContainer"
+              class="css-6bf4yd-CopyContainer"
+              style="display: inline-block;"
             >
               <div
                 class="css-1wr8o74-BaseCedarColor"
@@ -8108,7 +8245,8 @@ exports[`Design Tokens/Colors/CedarColor Palette 1`] = `
             class="css-ztbtlm-BaseCedarColor"
           >
             <div
-              class="css-1g7akrn-CopyContainer"
+              class="css-6bf4yd-CopyContainer"
+              style="display: inline-block;"
             >
               <div
                 class="css-nw5jkn-BaseCedarColor"
@@ -8170,7 +8308,8 @@ exports[`Design Tokens/Colors/CometColor Overview 1`] = `
           class="css-qe1bk5-BaseCometColor"
         >
           <div
-            class="css-pdwfm9-BaseCometColor"
+            class="css-18qqazo-BaseCometColor"
+            style="display: inline-block;"
           >
             #2F9D89
           </div>
@@ -8233,7 +8372,8 @@ exports[`Design Tokens/Colors/CometColor Palette 1`] = `
           class="css-qe1bk5-BaseCometColor"
         >
           <div
-            class="css-pdwfm9-BaseCometColor"
+            class="css-18qqazo-BaseCometColor"
+            style="display: inline-block;"
           >
             #020D17
           </div>
@@ -8271,7 +8411,8 @@ exports[`Design Tokens/Colors/CometColor Palette 1`] = `
           class="css-qe1bk5-BaseCometColor"
         >
           <div
-            class="css-pdwfm9-BaseCometColor"
+            class="css-18qqazo-BaseCometColor"
+            style="display: inline-block;"
           >
             #041B2F
           </div>
@@ -8309,7 +8450,8 @@ exports[`Design Tokens/Colors/CometColor Palette 1`] = `
           class="css-qe1bk5-BaseCometColor"
         >
           <div
-            class="css-pdwfm9-BaseCometColor"
+            class="css-18qqazo-BaseCometColor"
+            style="display: inline-block;"
           >
             #08365E
           </div>
@@ -8347,7 +8489,8 @@ exports[`Design Tokens/Colors/CometColor Palette 1`] = `
           class="css-qe1bk5-BaseCometColor"
         >
           <div
-            class="css-pdwfm9-BaseCometColor"
+            class="css-18qqazo-BaseCometColor"
+            style="display: inline-block;"
           >
             #0C518D
           </div>
@@ -8385,7 +8528,8 @@ exports[`Design Tokens/Colors/CometColor Palette 1`] = `
           class="css-qe1bk5-BaseCometColor"
         >
           <div
-            class="css-pdwfm9-BaseCometColor"
+            class="css-18qqazo-BaseCometColor"
+            style="display: inline-block;"
           >
             #106CBC
           </div>
@@ -8423,7 +8567,8 @@ exports[`Design Tokens/Colors/CometColor Palette 1`] = `
           class="css-qe1bk5-BaseCometColor"
         >
           <div
-            class="css-pdwfm9-BaseCometColor"
+            class="css-18qqazo-BaseCometColor"
+            style="display: inline-block;"
           >
             #1487EB
           </div>
@@ -8461,7 +8606,8 @@ exports[`Design Tokens/Colors/CometColor Palette 1`] = `
           class="css-qe1bk5-BaseCometColor"
         >
           <div
-            class="css-pdwfm9-BaseCometColor"
+            class="css-18qqazo-BaseCometColor"
+            style="display: inline-block;"
           >
             #439FEF
           </div>
@@ -8499,7 +8645,8 @@ exports[`Design Tokens/Colors/CometColor Palette 1`] = `
           class="css-qe1bk5-BaseCometColor"
         >
           <div
-            class="css-pdwfm9-BaseCometColor"
+            class="css-18qqazo-BaseCometColor"
+            style="display: inline-block;"
           >
             #72B7F3
           </div>
@@ -8537,7 +8684,8 @@ exports[`Design Tokens/Colors/CometColor Palette 1`] = `
           class="css-qe1bk5-BaseCometColor"
         >
           <div
-            class="css-pdwfm9-BaseCometColor"
+            class="css-18qqazo-BaseCometColor"
+            style="display: inline-block;"
           >
             #A1CFF7
           </div>
@@ -8575,7 +8723,8 @@ exports[`Design Tokens/Colors/CometColor Palette 1`] = `
           class="css-qe1bk5-BaseCometColor"
         >
           <div
-            class="css-pdwfm9-BaseCometColor"
+            class="css-18qqazo-BaseCometColor"
+            style="display: inline-block;"
           >
             #D0E7FB
           </div>
@@ -8608,7 +8757,8 @@ exports[`Design Tokens/Colors/DuetColor Overview 1`] = `
       <tr>
         <td>
           <div
-            class="css-1dygb3x-BaseDuetColor"
+            class="css-5qp9u2-BaseDuetColor"
+            style="display: inline-block;"
           >
             <div
               class="css-27pr37-BaseDuetColor"
@@ -8751,7 +8901,8 @@ exports[`Design Tokens/Colors/DuetColor Palette 1`] = `
       <tr>
         <td>
           <div
-            class="css-1dygb3x-BaseDuetColor"
+            class="css-5qp9u2-BaseDuetColor"
+            style="display: inline-block;"
           >
             <div
               class="css-qv0k7b-BaseDuetColor"
@@ -8837,7 +8988,8 @@ exports[`Design Tokens/Colors/DuetColor Palette 1`] = `
       <tr>
         <td>
           <div
-            class="css-1dygb3x-BaseDuetColor"
+            class="css-5qp9u2-BaseDuetColor"
+            style="display: inline-block;"
           >
             <div
               class="css-12bc92q-BaseDuetColor"
@@ -8923,7 +9075,8 @@ exports[`Design Tokens/Colors/DuetColor Palette 1`] = `
       <tr>
         <td>
           <div
-            class="css-1dygb3x-BaseDuetColor"
+            class="css-5qp9u2-BaseDuetColor"
+            style="display: inline-block;"
           >
             <div
               class="css-12q4pw7-BaseDuetColor"
@@ -9009,7 +9162,8 @@ exports[`Design Tokens/Colors/DuetColor Palette 1`] = `
       <tr>
         <td>
           <div
-            class="css-1dygb3x-BaseDuetColor"
+            class="css-5qp9u2-BaseDuetColor"
+            style="display: inline-block;"
           >
             <div
               class="css-1lgp57y-BaseDuetColor"
@@ -9095,7 +9249,8 @@ exports[`Design Tokens/Colors/DuetColor Palette 1`] = `
       <tr>
         <td>
           <div
-            class="css-1dygb3x-BaseDuetColor"
+            class="css-5qp9u2-BaseDuetColor"
+            style="display: inline-block;"
           >
             <div
               class="css-2ps3j-BaseDuetColor"
@@ -9181,7 +9336,8 @@ exports[`Design Tokens/Colors/DuetColor Palette 1`] = `
       <tr>
         <td>
           <div
-            class="css-1dygb3x-BaseDuetColor"
+            class="css-5qp9u2-BaseDuetColor"
+            style="display: inline-block;"
           >
             <div
               class="css-16hgej1-BaseDuetColor"
@@ -9267,7 +9423,8 @@ exports[`Design Tokens/Colors/DuetColor Palette 1`] = `
       <tr>
         <td>
           <div
-            class="css-1dygb3x-BaseDuetColor"
+            class="css-5qp9u2-BaseDuetColor"
+            style="display: inline-block;"
           >
             <div
               class="css-1y32sq7-BaseDuetColor"
@@ -9635,7 +9792,8 @@ exports[`Design Tokens/Colors/FinastraColor Overview 1`] = `
     class="css-1bwszv8-FinastraColor"
   >
     <div
-      class="css-r1gjcn-FinastraColor"
+      class="css-1f7br22-FinastraColor"
+      style="display: inline-block;"
     >
       <div
         class="css-19r5wv0-FinastraColor"
@@ -9672,7 +9830,8 @@ exports[`Design Tokens/Colors/FinastraColor Palette 1`] = `
       class="css-1bwszv8-FinastraColor"
     >
       <div
-        class="css-s6a43d-FinastraColor"
+        class="css-vzao1u-FinastraColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1aeak5z-FinastraColor"
@@ -9715,7 +9874,8 @@ exports[`Design Tokens/Colors/FinastraColor Palette 1`] = `
       class="css-1bwszv8-FinastraColor"
     >
       <div
-        class="css-r1gjcn-FinastraColor"
+        class="css-1f7br22-FinastraColor"
+        style="display: inline-block;"
       >
         <div
           class="css-deiode-FinastraColor"
@@ -9744,7 +9904,8 @@ exports[`Design Tokens/Colors/FinastraColor Palette 1`] = `
       class="css-1bwszv8-FinastraColor"
     >
       <div
-        class="css-s6a43d-FinastraColor"
+        class="css-vzao1u-FinastraColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1a3ay15-FinastraColor"
@@ -9787,7 +9948,8 @@ exports[`Design Tokens/Colors/FinastraColor Palette 1`] = `
       class="css-1bwszv8-FinastraColor"
     >
       <div
-        class="css-s6a43d-FinastraColor"
+        class="css-vzao1u-FinastraColor"
+        style="display: inline-block;"
       >
         <div
           class="css-b34uw7-FinastraColor"
@@ -9830,7 +9992,8 @@ exports[`Design Tokens/Colors/FinastraColor Palette 1`] = `
       class="css-1bwszv8-FinastraColor"
     >
       <div
-        class="css-s6a43d-FinastraColor"
+        class="css-vzao1u-FinastraColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1na11rk-FinastraColor"
@@ -9873,7 +10036,8 @@ exports[`Design Tokens/Colors/FinastraColor Palette 1`] = `
       class="css-1bwszv8-FinastraColor"
     >
       <div
-        class="css-s6a43d-FinastraColor"
+        class="css-vzao1u-FinastraColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1q0spo5-FinastraColor"
@@ -9916,7 +10080,8 @@ exports[`Design Tokens/Colors/FinastraColor Palette 1`] = `
       class="css-1bwszv8-FinastraColor"
     >
       <div
-        class="css-s6a43d-FinastraColor"
+        class="css-vzao1u-FinastraColor"
+        style="display: inline-block;"
       >
         <div
           class="css-ena3j9-FinastraColor"
@@ -9965,7 +10130,8 @@ exports[`Design Tokens/Colors/FishTankColor Overview 1`] = `
     class="css-342njo-FishTankColor"
   >
     <div
-      class="css-18g2yk4-FishTankColor"
+      class="css-10l0wtq-FishTankColor"
+      style="display: inline-block;"
     >
       <div
         class="css-17dpkc6-FishTankColor"
@@ -9993,7 +10159,8 @@ exports[`Design Tokens/Colors/FishTankColor Palette 1`] = `
       class="css-342njo-FishTankColor"
     >
       <div
-        class="css-18g2yk4-FishTankColor"
+        class="css-10l0wtq-FishTankColor"
+        style="display: inline-block;"
       >
         <div
           class="css-n2kr0m-FishTankColor"
@@ -10013,7 +10180,8 @@ exports[`Design Tokens/Colors/FishTankColor Palette 1`] = `
       class="css-342njo-FishTankColor"
     >
       <div
-        class="css-18g2yk4-FishTankColor"
+        class="css-10l0wtq-FishTankColor"
+        style="display: inline-block;"
       >
         <div
           class="css-3qv04b-FishTankColor"
@@ -10033,7 +10201,8 @@ exports[`Design Tokens/Colors/FishTankColor Palette 1`] = `
       class="css-342njo-FishTankColor"
     >
       <div
-        class="css-18g2yk4-FishTankColor"
+        class="css-10l0wtq-FishTankColor"
+        style="display: inline-block;"
       >
         <div
           class="css-7q5pci-FishTankColor"
@@ -10053,7 +10222,8 @@ exports[`Design Tokens/Colors/FishTankColor Palette 1`] = `
       class="css-342njo-FishTankColor"
     >
       <div
-        class="css-18g2yk4-FishTankColor"
+        class="css-10l0wtq-FishTankColor"
+        style="display: inline-block;"
       >
         <div
           class="css-u6wdzn-FishTankColor"
@@ -10073,7 +10243,8 @@ exports[`Design Tokens/Colors/FishTankColor Palette 1`] = `
       class="css-342njo-FishTankColor"
     >
       <div
-        class="css-18g2yk4-FishTankColor"
+        class="css-10l0wtq-FishTankColor"
+        style="display: inline-block;"
       >
         <div
           class="css-g9kav8-FishTankColor"
@@ -10093,7 +10264,8 @@ exports[`Design Tokens/Colors/FishTankColor Palette 1`] = `
       class="css-342njo-FishTankColor"
     >
       <div
-        class="css-18g2yk4-FishTankColor"
+        class="css-10l0wtq-FishTankColor"
+        style="display: inline-block;"
       >
         <div
           class="css-14ig1sy-FishTankColor"
@@ -10124,7 +10296,8 @@ exports[`Design Tokens/Colors/GovUKColor Overview 1`] = `
           class="css-6czczp-BaseGovUKColor"
         >
           <div
-            class="css-1nnpdwv-BaseGovUKColor"
+            class="css-1hbsp8d-BaseGovUKColor"
+            style="display: inline-block;"
           >
             <div
               class="css-14nx74d-BaseGovUKColor"
@@ -10171,7 +10344,8 @@ exports[`Design Tokens/Colors/GovUKColor Palette 1`] = `
           class="css-6czczp-BaseGovUKColor"
         >
           <div
-            class="css-1nnpdwv-BaseGovUKColor"
+            class="css-1hbsp8d-BaseGovUKColor"
+            style="display: inline-block;"
           >
             <div
               class="css-14nx74d-BaseGovUKColor"
@@ -10196,7 +10370,8 @@ exports[`Design Tokens/Colors/GovUKColor Palette 1`] = `
           class="css-6czczp-BaseGovUKColor"
         >
           <div
-            class="css-1nnpdwv-BaseGovUKColor"
+            class="css-1hbsp8d-BaseGovUKColor"
+            style="display: inline-block;"
           >
             <div
               class="css-kxrznt-BaseGovUKColor"
@@ -10221,7 +10396,8 @@ exports[`Design Tokens/Colors/GovUKColor Palette 1`] = `
           class="css-6czczp-BaseGovUKColor"
         >
           <div
-            class="css-1nnpdwv-BaseGovUKColor"
+            class="css-1hbsp8d-BaseGovUKColor"
+            style="display: inline-block;"
           >
             <div
               class="css-wragvq-BaseGovUKColor"
@@ -10246,7 +10422,8 @@ exports[`Design Tokens/Colors/GovUKColor Palette 1`] = `
           class="css-6czczp-BaseGovUKColor"
         >
           <div
-            class="css-1nnpdwv-BaseGovUKColor"
+            class="css-1hbsp8d-BaseGovUKColor"
+            style="display: inline-block;"
           >
             <div
               class="css-1d23rae-BaseGovUKColor"
@@ -10277,7 +10454,8 @@ exports[`Design Tokens/Colors/HelpScoutColor Overview 1`] = `
     class="css-1n1j3d6-HelpScoutColor"
   >
     <div
-      class="css-1juq8fu-HelpScoutColor"
+      class="css-18z1l5g-HelpScoutColor"
+      style="display: inline-block;"
     >
       <div
         class="css-aqcb4x-HelpScoutColor"
@@ -10316,7 +10494,8 @@ exports[`Design Tokens/Colors/HelpScoutColor Palette 1`] = `
       class="css-1n1j3d6-HelpScoutColor"
     >
       <div
-        class="css-1juq8fu-HelpScoutColor"
+        class="css-18z1l5g-HelpScoutColor"
+        style="display: inline-block;"
       >
         <div
           class="css-aqcb4x-HelpScoutColor"
@@ -10347,7 +10526,8 @@ exports[`Design Tokens/Colors/HelpScoutColor Palette 1`] = `
       class="css-1n1j3d6-HelpScoutColor"
     >
       <div
-        class="css-1juq8fu-HelpScoutColor"
+        class="css-18z1l5g-HelpScoutColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1ag8w52-HelpScoutColor"
@@ -10373,7 +10553,8 @@ exports[`Design Tokens/Colors/HelpScoutColor Palette 1`] = `
       class="css-1n1j3d6-HelpScoutColor"
     >
       <div
-        class="css-1juq8fu-HelpScoutColor"
+        class="css-18z1l5g-HelpScoutColor"
+        style="display: inline-block;"
       >
         <div
           class="css-18qlzyj-HelpScoutColor"
@@ -10399,7 +10580,8 @@ exports[`Design Tokens/Colors/HelpScoutColor Palette 1`] = `
       class="css-1n1j3d6-HelpScoutColor"
     >
       <div
-        class="css-1juq8fu-HelpScoutColor"
+        class="css-18z1l5g-HelpScoutColor"
+        style="display: inline-block;"
       >
         <div
           class="css-6zd3ex-HelpScoutColor"
@@ -10425,7 +10607,8 @@ exports[`Design Tokens/Colors/HelpScoutColor Palette 1`] = `
       class="css-1n1j3d6-HelpScoutColor"
     >
       <div
-        class="css-1juq8fu-HelpScoutColor"
+        class="css-18z1l5g-HelpScoutColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1ng6ch1-HelpScoutColor"
@@ -10451,7 +10634,8 @@ exports[`Design Tokens/Colors/HelpScoutColor Palette 1`] = `
       class="css-1n1j3d6-HelpScoutColor"
     >
       <div
-        class="css-1juq8fu-HelpScoutColor"
+        class="css-18z1l5g-HelpScoutColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1f7ap52-HelpScoutColor"
@@ -10477,7 +10661,8 @@ exports[`Design Tokens/Colors/HelpScoutColor Palette 1`] = `
       class="css-1n1j3d6-HelpScoutColor"
     >
       <div
-        class="css-1juq8fu-HelpScoutColor"
+        class="css-18z1l5g-HelpScoutColor"
+        style="display: inline-block;"
       >
         <div
           class="css-z1c5gx-HelpScoutColor"
@@ -10503,7 +10688,8 @@ exports[`Design Tokens/Colors/HelpScoutColor Palette 1`] = `
       class="css-1n1j3d6-HelpScoutColor"
     >
       <div
-        class="css-1juq8fu-HelpScoutColor"
+        class="css-18z1l5g-HelpScoutColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1lsl3v9-HelpScoutColor"
@@ -10529,7 +10715,8 @@ exports[`Design Tokens/Colors/HelpScoutColor Palette 1`] = `
       class="css-1n1j3d6-HelpScoutColor"
     >
       <div
-        class="css-1juq8fu-HelpScoutColor"
+        class="css-18z1l5g-HelpScoutColor"
+        style="display: inline-block;"
       >
         <div
           class="css-119t9l9-HelpScoutColor"
@@ -10555,7 +10742,8 @@ exports[`Design Tokens/Colors/HelpScoutColor Palette 1`] = `
       class="css-1n1j3d6-HelpScoutColor"
     >
       <div
-        class="css-1juq8fu-HelpScoutColor"
+        class="css-18z1l5g-HelpScoutColor"
+        style="display: inline-block;"
       >
         <div
           class="css-tfhfu8-HelpScoutColor"
@@ -10587,7 +10775,8 @@ exports[`Design Tokens/Colors/IBMDLColor Overview 1`] = `
     class="css-fi4kcj-IBMDLColor"
   >
     <div
-      class="css-r50bgy-IBMDLColor"
+      class="css-hodk44-IBMDLColor"
+      style="display: inline-block;"
     >
       <div
         class="css-1y0pmz4-IBMDLColor"
@@ -10690,7 +10879,8 @@ exports[`Design Tokens/Colors/IBMDLColor Palette 1`] = `
           class="css-fi4kcj-IBMDLColor"
         >
           <div
-            class="css-r50bgy-IBMDLColor"
+            class="css-hodk44-IBMDLColor"
+            style="display: inline-block;"
           >
             <div
               class="css-ge4ene-IBMDLColor"
@@ -10708,7 +10898,8 @@ exports[`Design Tokens/Colors/IBMDLColor Palette 1`] = `
           class="css-fi4kcj-IBMDLColor"
         >
           <div
-            class="css-r50bgy-IBMDLColor"
+            class="css-hodk44-IBMDLColor"
+            style="display: inline-block;"
           >
             <div
               class="css-7o21xe-IBMDLColor"
@@ -10726,7 +10917,8 @@ exports[`Design Tokens/Colors/IBMDLColor Palette 1`] = `
           class="css-fi4kcj-IBMDLColor"
         >
           <div
-            class="css-r50bgy-IBMDLColor"
+            class="css-hodk44-IBMDLColor"
+            style="display: inline-block;"
           >
             <div
               class="css-1egz8yx-IBMDLColor"
@@ -10744,7 +10936,8 @@ exports[`Design Tokens/Colors/IBMDLColor Palette 1`] = `
           class="css-fi4kcj-IBMDLColor"
         >
           <div
-            class="css-r50bgy-IBMDLColor"
+            class="css-hodk44-IBMDLColor"
+            style="display: inline-block;"
           >
             <div
               class="css-1ex8yyu-IBMDLColor"
@@ -10762,7 +10955,8 @@ exports[`Design Tokens/Colors/IBMDLColor Palette 1`] = `
           class="css-fi4kcj-IBMDLColor"
         >
           <div
-            class="css-r50bgy-IBMDLColor"
+            class="css-hodk44-IBMDLColor"
+            style="display: inline-block;"
           >
             <div
               class="css-18gbjc3-IBMDLColor"
@@ -10780,7 +10974,8 @@ exports[`Design Tokens/Colors/IBMDLColor Palette 1`] = `
           class="css-fi4kcj-IBMDLColor"
         >
           <div
-            class="css-r50bgy-IBMDLColor"
+            class="css-hodk44-IBMDLColor"
+            style="display: inline-block;"
           >
             <div
               class="css-165xz9j-IBMDLColor"
@@ -10798,7 +10993,8 @@ exports[`Design Tokens/Colors/IBMDLColor Palette 1`] = `
           class="css-fi4kcj-IBMDLColor"
         >
           <div
-            class="css-r50bgy-IBMDLColor"
+            class="css-hodk44-IBMDLColor"
+            style="display: inline-block;"
           >
             <div
               class="css-16nsvuw-IBMDLColor"
@@ -10816,7 +11012,8 @@ exports[`Design Tokens/Colors/IBMDLColor Palette 1`] = `
           class="css-fi4kcj-IBMDLColor"
         >
           <div
-            class="css-r50bgy-IBMDLColor"
+            class="css-hodk44-IBMDLColor"
+            style="display: inline-block;"
           >
             <div
               class="css-1foomvm-IBMDLColor"
@@ -10834,7 +11031,8 @@ exports[`Design Tokens/Colors/IBMDLColor Palette 1`] = `
           class="css-fi4kcj-IBMDLColor"
         >
           <div
-            class="css-r50bgy-IBMDLColor"
+            class="css-hodk44-IBMDLColor"
+            style="display: inline-block;"
           >
             <div
               class="css-1arc3da-IBMDLColor"
@@ -10852,7 +11050,8 @@ exports[`Design Tokens/Colors/IBMDLColor Palette 1`] = `
           class="css-fi4kcj-IBMDLColor"
         >
           <div
-            class="css-r50bgy-IBMDLColor"
+            class="css-hodk44-IBMDLColor"
+            style="display: inline-block;"
           >
             <div
               class="css-1rqvl69-IBMDLColor"
@@ -10902,7 +11101,8 @@ exports[`Design Tokens/Colors/LightningColor Overview 1`] = `
             class="css-1od7n6o-BaseLightningColor"
           >
             <div
-              class="css-1g7akrn-CopyContainer"
+              class="css-6bf4yd-CopyContainer"
+              style="display: inline-block;"
             >
               <div
                 class="css-fzkjs4-BaseLightningColor"
@@ -11030,7 +11230,8 @@ exports[`Design Tokens/Colors/LightningColor Palette 1`] = `
             class="css-1od7n6o-BaseLightningColor"
           >
             <div
-              class="css-1g7akrn-CopyContainer"
+              class="css-6bf4yd-CopyContainer"
+              style="display: inline-block;"
             >
               <div
                 class="css-yk894m-BaseLightningColor"
@@ -11101,7 +11302,8 @@ exports[`Design Tokens/Colors/LightningColor Palette 1`] = `
             class="css-1od7n6o-BaseLightningColor"
           >
             <div
-              class="css-1g7akrn-CopyContainer"
+              class="css-6bf4yd-CopyContainer"
+              style="display: inline-block;"
             >
               <div
                 class="css-ax231y-BaseLightningColor"
@@ -11172,7 +11374,8 @@ exports[`Design Tokens/Colors/LightningColor Palette 1`] = `
             class="css-1od7n6o-BaseLightningColor"
           >
             <div
-              class="css-1g7akrn-CopyContainer"
+              class="css-6bf4yd-CopyContainer"
+              style="display: inline-block;"
             >
               <div
                 class="css-gr2f5z-BaseLightningColor"
@@ -11243,7 +11446,8 @@ exports[`Design Tokens/Colors/LightningColor Palette 1`] = `
             class="css-1od7n6o-BaseLightningColor"
           >
             <div
-              class="css-1g7akrn-CopyContainer"
+              class="css-6bf4yd-CopyContainer"
+              style="display: inline-block;"
             >
               <div
                 class="css-1500z3b-BaseLightningColor"
@@ -11314,7 +11518,8 @@ exports[`Design Tokens/Colors/LightningColor Palette 1`] = `
             class="css-1od7n6o-BaseLightningColor"
           >
             <div
-              class="css-1g7akrn-CopyContainer"
+              class="css-6bf4yd-CopyContainer"
+              style="display: inline-block;"
             >
               <div
                 class="css-1y0nrn7-BaseLightningColor"
@@ -11372,7 +11577,8 @@ exports[`Design Tokens/Colors/LiquidColor Overview 1`] = `
     class="css-1qywpve-LiquidColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-5jzeib-LiquidColor"
@@ -11388,25 +11594,32 @@ exports[`Design Tokens/Colors/LiquidColor Overview 1`] = `
       class="css-1h05woe-LiquidColor"
     >
       <div
-        class="css-1v5rbmn-CopyContainer"
+        class="css-1qqfxu1-CopyContainer"
+        style="display: inline-block;"
       />
       <div
-        class="css-1sm790l-CopyContainer"
+        class="css-1rsqsro-CopyContainer"
+        style="display: inline-block;"
       />
       <div
-        class="css-gdjl4f-CopyContainer"
+        class="css-51xuxg-CopyContainer"
+        style="display: inline-block;"
       />
       <div
-        class="css-1sz1r2k-CopyContainer"
+        class="css-ojdeb1-CopyContainer"
+        style="display: inline-block;"
       />
       <div
-        class="css-pql3fk-CopyContainer"
+        class="css-4o7nwh-CopyContainer"
+        style="display: inline-block;"
       />
       <div
-        class="css-1xbrdbl-CopyContainer"
+        class="css-tf2xu5-CopyContainer"
+        style="display: inline-block;"
       />
       <div
-        class="css-vt7u1f-CopyContainer"
+        class="css-1hnhnat-CopyContainer"
+        style="display: inline-block;"
       />
     </div>
     <div
@@ -11434,7 +11647,8 @@ exports[`Design Tokens/Colors/LiquidColor Palette 1`] = `
       class="css-1qywpve-LiquidColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1gfzkeu-LiquidColor"
@@ -11450,25 +11664,32 @@ exports[`Design Tokens/Colors/LiquidColor Palette 1`] = `
         class="css-1h05woe-LiquidColor"
       >
         <div
-          class="css-2q59w8-CopyContainer"
+          class="css-1jbp0cf-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-wj79aw-CopyContainer"
+          class="css-1d7y41e-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-nkq8w0-CopyContainer"
+          class="css-1iho6iw-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-a9xv1x-CopyContainer"
+          class="css-80tv0e-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-ixioka-CopyContainer"
+          class="css-1r32100-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-2phhov-CopyContainer"
+          class="css-1ri77cm-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-1fibmug-CopyContainer"
+          class="css-1bwdeew-CopyContainer"
+          style="display: inline-block;"
         />
       </div>
       <div
@@ -11488,7 +11709,8 @@ exports[`Design Tokens/Colors/LiquidColor Palette 1`] = `
       class="css-1qywpve-LiquidColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1x702yq-LiquidColor"
@@ -11504,25 +11726,32 @@ exports[`Design Tokens/Colors/LiquidColor Palette 1`] = `
         class="css-1h05woe-LiquidColor"
       >
         <div
-          class="css-1mats90-CopyContainer"
+          class="css-13lw946-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-zatwk8-CopyContainer"
+          class="css-1svo3tx-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-1qccn99-CopyContainer"
+          class="css-1f9le0k-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-5vzcgk-CopyContainer"
+          class="css-18x6war-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-w222p-CopyContainer"
+          class="css-1n3x6b4-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-1kck8wd-CopyContainer"
+          class="css-1jf6vjp-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-f2eweb-CopyContainer"
+          class="css-1vg8irb-CopyContainer"
+          style="display: inline-block;"
         />
       </div>
       <div
@@ -11542,7 +11771,8 @@ exports[`Design Tokens/Colors/LiquidColor Palette 1`] = `
       class="css-1qywpve-LiquidColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1rfv0fv-LiquidColor"
@@ -11558,25 +11788,32 @@ exports[`Design Tokens/Colors/LiquidColor Palette 1`] = `
         class="css-1h05woe-LiquidColor"
       >
         <div
-          class="css-47m573-CopyContainer"
+          class="css-1w1gfed-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-k9toiv-CopyContainer"
+          class="css-1r4mfkk-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-11k8v22-CopyContainer"
+          class="css-om9fmo-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-1ka5e7d-CopyContainer"
+          class="css-qz2ty0-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-9x18oh-CopyContainer"
+          class="css-1ez4y7x-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-14ktmpc-CopyContainer"
+          class="css-oysset-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-7tqsbu-CopyContainer"
+          class="css-10w5nih-CopyContainer"
+          style="display: inline-block;"
         />
       </div>
       <div
@@ -11596,7 +11833,8 @@ exports[`Design Tokens/Colors/LiquidColor Palette 1`] = `
       class="css-1qywpve-LiquidColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-6ahcgq-LiquidColor"
@@ -11612,25 +11850,32 @@ exports[`Design Tokens/Colors/LiquidColor Palette 1`] = `
         class="css-1h05woe-LiquidColor"
       >
         <div
-          class="css-1ap2ncc-CopyContainer"
+          class="css-1w5efpd-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-wogk32-CopyContainer"
+          class="css-1vrvuir-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-11b6jhg-CopyContainer"
+          class="css-u5vecu-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-iu5shp-CopyContainer"
+          class="css-3f9ejt-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-xrww50-CopyContainer"
+          class="css-1iz1cke-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-1cs0qp8-CopyContainer"
+          class="css-iih37k-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-108hg7e-CopyContainer"
+          class="css-lgifqo-CopyContainer"
+          style="display: inline-block;"
         />
       </div>
       <div
@@ -11650,7 +11895,8 @@ exports[`Design Tokens/Colors/LiquidColor Palette 1`] = `
       class="css-1qywpve-LiquidColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1fzs3x0-LiquidColor"
@@ -11666,25 +11912,32 @@ exports[`Design Tokens/Colors/LiquidColor Palette 1`] = `
         class="css-1h05woe-LiquidColor"
       >
         <div
-          class="css-u3hq63-CopyContainer"
+          class="css-zdd1c2-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-aeqmhh-CopyContainer"
+          class="css-1sff2c3-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-1vb0kpi-CopyContainer"
+          class="css-bhchk9-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-lerkuw-CopyContainer"
+          class="css-12jhmfg-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-lcj7dl-CopyContainer"
+          class="css-5e1izp-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-1ehhbfj-CopyContainer"
+          class="css-117hznk-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-glxmyx-CopyContainer"
+          class="css-d6v9od-CopyContainer"
+          style="display: inline-block;"
         />
       </div>
       <div
@@ -11704,7 +11957,8 @@ exports[`Design Tokens/Colors/LiquidColor Palette 1`] = `
       class="css-1qywpve-LiquidColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-8mgb18-LiquidColor"
@@ -11720,25 +11974,32 @@ exports[`Design Tokens/Colors/LiquidColor Palette 1`] = `
         class="css-1h05woe-LiquidColor"
       >
         <div
-          class="css-si5qf3-CopyContainer"
+          class="css-qo9tro-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-1j9rza9-CopyContainer"
+          class="css-3znhhg-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-nyu9qf-CopyContainer"
+          class="css-176r0ns-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-8io9qs-CopyContainer"
+          class="css-1o7nmb2-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-1jgqh08-CopyContainer"
+          class="css-nazygl-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-bde0u4-CopyContainer"
+          class="css-qjfr6q-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-1qoml6u-CopyContainer"
+          class="css-xf9xlw-CopyContainer"
+          style="display: inline-block;"
         />
       </div>
       <div
@@ -11758,7 +12019,8 @@ exports[`Design Tokens/Colors/LiquidColor Palette 1`] = `
       class="css-1qywpve-LiquidColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-uzmout-LiquidColor"
@@ -11774,25 +12036,32 @@ exports[`Design Tokens/Colors/LiquidColor Palette 1`] = `
         class="css-1h05woe-LiquidColor"
       >
         <div
-          class="css-8x9bt8-CopyContainer"
+          class="css-3gfwqi-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-ctp6qh-CopyContainer"
+          class="css-1w2pei7-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-a5mmpk-CopyContainer"
+          class="css-1r97ynz-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-1pdcodg-CopyContainer"
+          class="css-1aokvha-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-80kiq3-CopyContainer"
+          class="css-17us36k-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-1egaubj-CopyContainer"
+          class="css-1ekqzu8-CopyContainer"
+          style="display: inline-block;"
         />
         <div
-          class="css-1u4t1my-CopyContainer"
+          class="css-dpqt5-CopyContainer"
+          style="display: inline-block;"
         />
       </div>
       <div
@@ -11837,7 +12106,8 @@ exports[`Design Tokens/Colors/MorningstarColor Overview 1`] = `
         </td>
         <td>
           <div
-            class="css-e4182m-BaseMorningstarColor"
+            class="css-1puxa0q-BaseMorningstarColor"
+            style="display: inline-block;"
           >
             #f2f2f2
           </div>
@@ -11903,7 +12173,8 @@ exports[`Design Tokens/Colors/MorningstarColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-e4182m-BaseMorningstarColor"
+            class="css-1puxa0q-BaseMorningstarColor"
+            style="display: inline-block;"
           >
             #c9c7c5
           </div>
@@ -11928,7 +12199,8 @@ exports[`Design Tokens/Colors/MorningstarColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-e4182m-BaseMorningstarColor"
+            class="css-1puxa0q-BaseMorningstarColor"
+            style="display: inline-block;"
           >
             #ff0000
           </div>
@@ -11953,7 +12225,8 @@ exports[`Design Tokens/Colors/MorningstarColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-e4182m-BaseMorningstarColor"
+            class="css-1puxa0q-BaseMorningstarColor"
+            style="display: inline-block;"
           >
             #ffe5e5
           </div>
@@ -11978,7 +12251,8 @@ exports[`Design Tokens/Colors/MorningstarColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-e4182m-BaseMorningstarColor"
+            class="css-1puxa0q-BaseMorningstarColor"
+            style="display: inline-block;"
           >
             #f5c400
           </div>
@@ -12003,7 +12277,8 @@ exports[`Design Tokens/Colors/MorningstarColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-e4182m-BaseMorningstarColor"
+            class="css-1puxa0q-BaseMorningstarColor"
+            style="display: inline-block;"
           >
             #fef9e5
           </div>
@@ -12028,7 +12303,8 @@ exports[`Design Tokens/Colors/MorningstarColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-e4182m-BaseMorningstarColor"
+            class="css-1puxa0q-BaseMorningstarColor"
+            style="display: inline-block;"
           >
             #00af41
           </div>
@@ -12053,7 +12329,8 @@ exports[`Design Tokens/Colors/MorningstarColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-e4182m-BaseMorningstarColor"
+            class="css-1puxa0q-BaseMorningstarColor"
+            style="display: inline-block;"
           >
             #e5f7eb
           </div>
@@ -12078,7 +12355,8 @@ exports[`Design Tokens/Colors/MorningstarColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-e4182m-BaseMorningstarColor"
+            class="css-1puxa0q-BaseMorningstarColor"
+            style="display: inline-block;"
           >
             #004376
           </div>
@@ -12100,7 +12378,8 @@ exports[`Design Tokens/Colors/OPatternColor Overview 1`] = `
           class="css-1jam8bv-BaseOPatternColor"
         >
           <div
-            class="css-r3uwki-BaseOPatternColor"
+            class="css-k4c39n-BaseOPatternColor"
+            style="display: inline-block;"
           />
         </td>
         <td>
@@ -12186,7 +12465,8 @@ exports[`Design Tokens/Colors/OPatternColor Palette 1`] = `
           class="css-1jam8bv-BaseOPatternColor"
         >
           <div
-            class="css-163n45h-BaseOPatternColor"
+            class="css-bz3e3j-BaseOPatternColor"
+            style="display: inline-block;"
           />
         </td>
         <td>
@@ -12215,7 +12495,8 @@ exports[`Design Tokens/Colors/OPatternColor Palette 1`] = `
           class="css-1jam8bv-BaseOPatternColor"
         >
           <div
-            class="css-11y07mb-BaseOPatternColor"
+            class="css-mhbo0c-BaseOPatternColor"
+            style="display: inline-block;"
           />
         </td>
         <td>
@@ -12236,7 +12517,8 @@ exports[`Design Tokens/Colors/OPatternColor Palette 1`] = `
           class="css-1jam8bv-BaseOPatternColor"
         >
           <div
-            class="css-11avwd7-BaseOPatternColor"
+            class="css-17z58b8-BaseOPatternColor"
+            style="display: inline-block;"
           />
         </td>
         <td>
@@ -12265,7 +12547,8 @@ exports[`Design Tokens/Colors/OPatternColor Palette 1`] = `
           class="css-1jam8bv-BaseOPatternColor"
         >
           <div
-            class="css-1ycs6v1-BaseOPatternColor"
+            class="css-alwy4x-BaseOPatternColor"
+            style="display: inline-block;"
           />
         </td>
         <td>
@@ -12286,7 +12569,8 @@ exports[`Design Tokens/Colors/OPatternColor Palette 1`] = `
           class="css-1jam8bv-BaseOPatternColor"
         >
           <div
-            class="css-r3uwki-BaseOPatternColor"
+            class="css-k4c39n-BaseOPatternColor"
+            style="display: inline-block;"
           />
         </td>
         <td>
@@ -12324,7 +12608,8 @@ exports[`Design Tokens/Colors/PajamasColor Overview 1`] = `
       class="css-1djey04-PajamasColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-zwalmi-PajamasColor"
@@ -12358,7 +12643,8 @@ exports[`Design Tokens/Colors/PajamasColor Palette 1`] = `
         class="css-16zwuq9-PajamasColor"
       >
         <div
-          class="css-1g7akrn-CopyContainer"
+          class="css-6bf4yd-CopyContainer"
+          style="display: inline-block;"
         >
           <div
             class="css-1596pni-PajamasColor"
@@ -12384,7 +12670,8 @@ exports[`Design Tokens/Colors/PajamasColor Palette 1`] = `
         class="css-7nky3o-PajamasColor"
       >
         <div
-          class="css-1g7akrn-CopyContainer"
+          class="css-6bf4yd-CopyContainer"
+          style="display: inline-block;"
         >
           <div
             class="css-1lvpx6o-PajamasColor"
@@ -12410,7 +12697,8 @@ exports[`Design Tokens/Colors/PajamasColor Palette 1`] = `
         class="css-11p7s4r-PajamasColor"
       >
         <div
-          class="css-1g7akrn-CopyContainer"
+          class="css-6bf4yd-CopyContainer"
+          style="display: inline-block;"
         >
           <div
             class="css-4kgfu6-PajamasColor"
@@ -12436,7 +12724,8 @@ exports[`Design Tokens/Colors/PajamasColor Palette 1`] = `
         class="css-1evlmky-PajamasColor"
       >
         <div
-          class="css-1g7akrn-CopyContainer"
+          class="css-6bf4yd-CopyContainer"
+          style="display: inline-block;"
         >
           <div
             class="css-1va077p-PajamasColor"
@@ -12462,7 +12751,8 @@ exports[`Design Tokens/Colors/PajamasColor Palette 1`] = `
         class="css-1v9xh57-PajamasColor"
       >
         <div
-          class="css-1g7akrn-CopyContainer"
+          class="css-6bf4yd-CopyContainer"
+          style="display: inline-block;"
         >
           <div
             class="css-1trlb21-PajamasColor"
@@ -12488,7 +12778,8 @@ exports[`Design Tokens/Colors/PajamasColor Palette 1`] = `
         class="css-12k8y49-PajamasColor"
       >
         <div
-          class="css-1g7akrn-CopyContainer"
+          class="css-6bf4yd-CopyContainer"
+          style="display: inline-block;"
         >
           <div
             class="css-1jgn48-PajamasColor"
@@ -12514,7 +12805,8 @@ exports[`Design Tokens/Colors/PajamasColor Palette 1`] = `
         class="css-1k14pp8-PajamasColor"
       >
         <div
-          class="css-1g7akrn-CopyContainer"
+          class="css-6bf4yd-CopyContainer"
+          style="display: inline-block;"
         >
           <div
             class="css-1ps4mp3-PajamasColor"
@@ -12540,7 +12832,8 @@ exports[`Design Tokens/Colors/PajamasColor Palette 1`] = `
         class="css-otj0s4-PajamasColor"
       >
         <div
-          class="css-1g7akrn-CopyContainer"
+          class="css-6bf4yd-CopyContainer"
+          style="display: inline-block;"
         >
           <div
             class="css-1jd9f61-PajamasColor"
@@ -12566,7 +12859,8 @@ exports[`Design Tokens/Colors/PajamasColor Palette 1`] = `
         class="css-13dfhaq-PajamasColor"
       >
         <div
-          class="css-1g7akrn-CopyContainer"
+          class="css-6bf4yd-CopyContainer"
+          style="display: inline-block;"
         >
           <div
             class="css-jd62ce-PajamasColor"
@@ -12592,7 +12886,8 @@ exports[`Design Tokens/Colors/PajamasColor Palette 1`] = `
         class="css-4lcqy9-PajamasColor"
       >
         <div
-          class="css-1g7akrn-CopyContainer"
+          class="css-6bf4yd-CopyContainer"
+          style="display: inline-block;"
         >
           <div
             class="css-5272s7-PajamasColor"
@@ -12618,7 +12913,8 @@ exports[`Design Tokens/Colors/PajamasColor Palette 1`] = `
         class="css-2dx655-PajamasColor"
       >
         <div
-          class="css-1g7akrn-CopyContainer"
+          class="css-6bf4yd-CopyContainer"
+          style="display: inline-block;"
         >
           <div
             class="css-1pzw97d-PajamasColor"
@@ -12650,7 +12946,8 @@ exports[`Design Tokens/Colors/PatternFlyColor Overview 1`] = `
       class="css-1mrhukl-PatternFlyColor"
     >
       <div
-        class="css-1xuke71-PatternFlyColor"
+        class="css-1ghb3ac-PatternFlyColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1m2lfh5-PatternFlyColor"
@@ -12687,7 +12984,8 @@ exports[`Design Tokens/Colors/PatternFlyColor Palette 1`] = `
         class="css-1mrhukl-PatternFlyColor"
       >
         <div
-          class="css-1xuke71-PatternFlyColor"
+          class="css-1ghb3ac-PatternFlyColor"
+          style="display: inline-block;"
         >
           <div
             class="css-17vda4n-PatternFlyColor"
@@ -12716,7 +13014,8 @@ exports[`Design Tokens/Colors/PatternFlyColor Palette 1`] = `
         class="css-1mrhukl-PatternFlyColor"
       >
         <div
-          class="css-1xuke71-PatternFlyColor"
+          class="css-1ghb3ac-PatternFlyColor"
+          style="display: inline-block;"
         >
           <div
             class="css-1n55f48-PatternFlyColor"
@@ -12745,7 +13044,8 @@ exports[`Design Tokens/Colors/PatternFlyColor Palette 1`] = `
         class="css-1mrhukl-PatternFlyColor"
       >
         <div
-          class="css-1xuke71-PatternFlyColor"
+          class="css-1ghb3ac-PatternFlyColor"
+          style="display: inline-block;"
         >
           <div
             class="css-kukgae-PatternFlyColor"
@@ -12774,7 +13074,8 @@ exports[`Design Tokens/Colors/PatternFlyColor Palette 1`] = `
         class="css-1mrhukl-PatternFlyColor"
       >
         <div
-          class="css-1xuke71-PatternFlyColor"
+          class="css-1ghb3ac-PatternFlyColor"
+          style="display: inline-block;"
         >
           <div
             class="css-ihczjm-PatternFlyColor"
@@ -12803,7 +13104,8 @@ exports[`Design Tokens/Colors/PatternFlyColor Palette 1`] = `
         class="css-1mrhukl-PatternFlyColor"
       >
         <div
-          class="css-1xuke71-PatternFlyColor"
+          class="css-1ghb3ac-PatternFlyColor"
+          style="display: inline-block;"
         >
           <div
             class="css-f5tfy2-PatternFlyColor"
@@ -12838,7 +13140,8 @@ exports[`Design Tokens/Colors/PhotonColor Overview 1`] = `
       <tr>
         <td>
           <div
-            class="css-ce9a08-BasePhotonColor"
+            class="css-1lfuaij-BasePhotonColor"
+            style="display: inline-block;"
           >
             <div
               class="css-1s3hn2c-BasePhotonColor"
@@ -12850,7 +13153,8 @@ exports[`Design Tokens/Colors/PhotonColor Overview 1`] = `
         </td>
         <td>
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <code
               class="css-r8gx0k-BasePhotonColor"
@@ -12910,7 +13214,8 @@ exports[`Design Tokens/Colors/PhotonColor Palette 1`] = `
       <tr>
         <td>
           <div
-            class="css-ce9a08-BasePhotonColor"
+            class="css-1lfuaij-BasePhotonColor"
+            style="display: inline-block;"
           >
             <div
               class="css-1b4kcbm-BasePhotonColor"
@@ -12922,7 +13227,8 @@ exports[`Design Tokens/Colors/PhotonColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <code
               class="css-r8gx0k-BasePhotonColor"
@@ -12957,7 +13263,8 @@ exports[`Design Tokens/Colors/PhotonColor Palette 1`] = `
       <tr>
         <td>
           <div
-            class="css-ce9a08-BasePhotonColor"
+            class="css-1lfuaij-BasePhotonColor"
+            style="display: inline-block;"
           >
             <div
               class="css-1o5fmes-BasePhotonColor"
@@ -12969,7 +13276,8 @@ exports[`Design Tokens/Colors/PhotonColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <code
               class="css-r8gx0k-BasePhotonColor"
@@ -13004,7 +13312,8 @@ exports[`Design Tokens/Colors/PhotonColor Palette 1`] = `
       <tr>
         <td>
           <div
-            class="css-ce9a08-BasePhotonColor"
+            class="css-1lfuaij-BasePhotonColor"
+            style="display: inline-block;"
           >
             <div
               class="css-1uzb3dx-BasePhotonColor"
@@ -13016,7 +13325,8 @@ exports[`Design Tokens/Colors/PhotonColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <code
               class="css-r8gx0k-BasePhotonColor"
@@ -13051,7 +13361,8 @@ exports[`Design Tokens/Colors/PhotonColor Palette 1`] = `
       <tr>
         <td>
           <div
-            class="css-ce9a08-BasePhotonColor"
+            class="css-1lfuaij-BasePhotonColor"
+            style="display: inline-block;"
           >
             <div
               class="css-6d6dg7-BasePhotonColor"
@@ -13063,7 +13374,8 @@ exports[`Design Tokens/Colors/PhotonColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <code
               class="css-r8gx0k-BasePhotonColor"
@@ -13098,7 +13410,8 @@ exports[`Design Tokens/Colors/PhotonColor Palette 1`] = `
       <tr>
         <td>
           <div
-            class="css-ce9a08-BasePhotonColor"
+            class="css-1lfuaij-BasePhotonColor"
+            style="display: inline-block;"
           >
             <div
               class="css-yi4k5m-BasePhotonColor"
@@ -13110,7 +13423,8 @@ exports[`Design Tokens/Colors/PhotonColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <code
               class="css-r8gx0k-BasePhotonColor"
@@ -13153,7 +13467,8 @@ exports[`Design Tokens/Colors/PrimerColor Overview 1`] = `
     class="css-yv97k9-PrimerColor"
   >
     <div
-      class="css-6qwdg2-PrimerColor"
+      class="css-1drieyl-PrimerColor"
+      style="display: inline-block;"
     >
       <div
         class="css-1wmh0wy-PrimerColor"
@@ -13190,7 +13505,8 @@ exports[`Design Tokens/Colors/PrimerColor Palette 1`] = `
       class="css-yv97k9-PrimerColor"
     >
       <div
-        class="css-6qwdg2-PrimerColor"
+        class="css-1drieyl-PrimerColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1wmh0wy-PrimerColor"
@@ -13219,7 +13535,8 @@ exports[`Design Tokens/Colors/PrimerColor Palette 1`] = `
       class="css-1q0a4da-PrimerColor"
     >
       <div
-        class="css-6qwdg2-PrimerColor"
+        class="css-1drieyl-PrimerColor"
+        style="display: inline-block;"
       >
         <div
           class="css-bmsj4s-PrimerColor"
@@ -13243,7 +13560,8 @@ exports[`Design Tokens/Colors/PrimerColor Palette 1`] = `
       class="css-1q0a4da-PrimerColor"
     >
       <div
-        class="css-6qwdg2-PrimerColor"
+        class="css-1drieyl-PrimerColor"
+        style="display: inline-block;"
       >
         <div
           class="css-j8onzl-PrimerColor"
@@ -13267,7 +13585,8 @@ exports[`Design Tokens/Colors/PrimerColor Palette 1`] = `
       class="css-1q0a4da-PrimerColor"
     >
       <div
-        class="css-6qwdg2-PrimerColor"
+        class="css-1drieyl-PrimerColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1yl7g3w-PrimerColor"
@@ -13291,7 +13610,8 @@ exports[`Design Tokens/Colors/PrimerColor Palette 1`] = `
       class="css-1q0a4da-PrimerColor"
     >
       <div
-        class="css-6qwdg2-PrimerColor"
+        class="css-1drieyl-PrimerColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1kpcn19-PrimerColor"
@@ -13315,7 +13635,8 @@ exports[`Design Tokens/Colors/PrimerColor Palette 1`] = `
       class="css-1q0a4da-PrimerColor"
     >
       <div
-        class="css-6qwdg2-PrimerColor"
+        class="css-1drieyl-PrimerColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1djuu3x-PrimerColor"
@@ -13339,7 +13660,8 @@ exports[`Design Tokens/Colors/PrimerColor Palette 1`] = `
       class="css-1q0a4da-PrimerColor"
     >
       <div
-        class="css-6qwdg2-PrimerColor"
+        class="css-1drieyl-PrimerColor"
+        style="display: inline-block;"
       >
         <div
           class="css-14g47lk-PrimerColor"
@@ -13363,7 +13685,8 @@ exports[`Design Tokens/Colors/PrimerColor Palette 1`] = `
       class="css-1q0a4da-PrimerColor"
     >
       <div
-        class="css-6qwdg2-PrimerColor"
+        class="css-1drieyl-PrimerColor"
+        style="display: inline-block;"
       >
         <div
           class="css-10qd37l-PrimerColor"
@@ -13387,7 +13710,8 @@ exports[`Design Tokens/Colors/PrimerColor Palette 1`] = `
       class="css-1q0a4da-PrimerColor"
     >
       <div
-        class="css-6qwdg2-PrimerColor"
+        class="css-1drieyl-PrimerColor"
+        style="display: inline-block;"
       >
         <div
           class="css-13eaueb-PrimerColor"
@@ -13411,7 +13735,8 @@ exports[`Design Tokens/Colors/PrimerColor Palette 1`] = `
       class="css-1q0a4da-PrimerColor"
     >
       <div
-        class="css-6qwdg2-PrimerColor"
+        class="css-1drieyl-PrimerColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1arrtjz-PrimerColor"
@@ -13435,7 +13760,8 @@ exports[`Design Tokens/Colors/PrimerColor Palette 1`] = `
       class="css-13wz6lj-PrimerColor"
     >
       <div
-        class="css-6qwdg2-PrimerColor"
+        class="css-1drieyl-PrimerColor"
+        style="display: inline-block;"
       >
         <div
           class="css-oovmdd-PrimerColor"
@@ -13465,7 +13791,8 @@ exports[`Design Tokens/Colors/SeedsColor Overview 1`] = `
     class="css-j1e95v-SeedsColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-6p93im-SeedsColor"
@@ -13494,7 +13821,8 @@ exports[`Design Tokens/Colors/SeedsColor Overview 1`] = `
           class="css-16pqqt5-SeedsColor"
         >
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <div
               class="css-xdfvha"
@@ -13508,7 +13836,8 @@ exports[`Design Tokens/Colors/SeedsColor Overview 1`] = `
             </div>
           </div>
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <div
               class="css-xdfvha"
@@ -13542,7 +13871,8 @@ exports[`Design Tokens/Colors/SeedsColor Palette 1`] = `
       class="css-j1e95v-SeedsColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-fskl50-SeedsColor"
@@ -13571,7 +13901,8 @@ exports[`Design Tokens/Colors/SeedsColor Palette 1`] = `
             class="css-16pqqt5-SeedsColor"
           >
             <div
-              class="css-1g7akrn-CopyContainer"
+              class="css-6bf4yd-CopyContainer"
+              style="display: inline-block;"
             >
               <div
                 class="css-xdfvha"
@@ -13597,7 +13928,8 @@ exports[`Design Tokens/Colors/SeedsColor Palette 1`] = `
       class="css-j1e95v-SeedsColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-17r1xfd-SeedsColor"
@@ -13626,7 +13958,8 @@ exports[`Design Tokens/Colors/SeedsColor Palette 1`] = `
             class="css-16pqqt5-SeedsColor"
           >
             <div
-              class="css-1g7akrn-CopyContainer"
+              class="css-6bf4yd-CopyContainer"
+              style="display: inline-block;"
             >
               <div
                 class="css-xdfvha"
@@ -13652,7 +13985,8 @@ exports[`Design Tokens/Colors/SeedsColor Palette 1`] = `
       class="css-j1e95v-SeedsColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-7heze0-SeedsColor"
@@ -13681,7 +14015,8 @@ exports[`Design Tokens/Colors/SeedsColor Palette 1`] = `
             class="css-16pqqt5-SeedsColor"
           >
             <div
-              class="css-1g7akrn-CopyContainer"
+              class="css-6bf4yd-CopyContainer"
+              style="display: inline-block;"
             >
               <div
                 class="css-xdfvha"
@@ -13707,7 +14042,8 @@ exports[`Design Tokens/Colors/SeedsColor Palette 1`] = `
       class="css-j1e95v-SeedsColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1ikoet1-SeedsColor"
@@ -13741,7 +14077,8 @@ exports[`Design Tokens/Colors/SeedsColor Palette 1`] = `
             class="css-16pqqt5-SeedsColor"
           >
             <div
-              class="css-1g7akrn-CopyContainer"
+              class="css-6bf4yd-CopyContainer"
+              style="display: inline-block;"
             >
               <div
                 class="css-xdfvha"
@@ -13755,7 +14092,8 @@ exports[`Design Tokens/Colors/SeedsColor Palette 1`] = `
               </div>
             </div>
             <div
-              class="css-1g7akrn-CopyContainer"
+              class="css-6bf4yd-CopyContainer"
+              style="display: inline-block;"
             >
               <div
                 class="css-xdfvha"
@@ -13779,7 +14117,8 @@ exports[`Design Tokens/Colors/SeedsColor Palette 1`] = `
       class="css-j1e95v-SeedsColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1xn5i87-SeedsColor"
@@ -13813,7 +14152,8 @@ exports[`Design Tokens/Colors/SeedsColor Palette 1`] = `
             class="css-16pqqt5-SeedsColor"
           >
             <div
-              class="css-1g7akrn-CopyContainer"
+              class="css-6bf4yd-CopyContainer"
+              style="display: inline-block;"
             >
               <div
                 class="css-xdfvha"
@@ -13827,7 +14167,8 @@ exports[`Design Tokens/Colors/SeedsColor Palette 1`] = `
               </div>
             </div>
             <div
-              class="css-1g7akrn-CopyContainer"
+              class="css-6bf4yd-CopyContainer"
+              style="display: inline-block;"
             >
               <div
                 class="css-xdfvha"
@@ -13857,7 +14198,8 @@ exports[`Design Tokens/Colors/SeekColor Overview 1`] = `
     class="css-1fkk250-SeekColor"
   >
     <div
-      class="css-1aom2mv-SeekColor"
+      class="css-115vdi9-SeekColor"
+      style="display: inline-block;"
     >
       <div
         class="css-gtcl95-SeekColor"
@@ -13890,7 +14232,8 @@ exports[`Design Tokens/Colors/SeekColor Palette 1`] = `
       class="css-1fkk250-SeekColor"
     >
       <div
-        class="css-1aom2mv-SeekColor"
+        class="css-115vdi9-SeekColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1dvmge9-SeekColor"
@@ -13915,7 +14258,8 @@ exports[`Design Tokens/Colors/SeekColor Palette 1`] = `
       class="css-1fkk250-SeekColor"
     >
       <div
-        class="css-1aom2mv-SeekColor"
+        class="css-115vdi9-SeekColor"
+        style="display: inline-block;"
       >
         <div
           class="css-79csev-SeekColor"
@@ -13940,7 +14284,8 @@ exports[`Design Tokens/Colors/SeekColor Palette 1`] = `
       class="css-1fkk250-SeekColor"
     >
       <div
-        class="css-1aom2mv-SeekColor"
+        class="css-115vdi9-SeekColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1ynjwgt-SeekColor"
@@ -13965,7 +14310,8 @@ exports[`Design Tokens/Colors/SeekColor Palette 1`] = `
       class="css-1fkk250-SeekColor"
     >
       <div
-        class="css-1aom2mv-SeekColor"
+        class="css-115vdi9-SeekColor"
+        style="display: inline-block;"
       >
         <div
           class="css-18fh14v-SeekColor"
@@ -13990,7 +14336,8 @@ exports[`Design Tokens/Colors/SeekColor Palette 1`] = `
       class="css-1fkk250-SeekColor"
     >
       <div
-        class="css-1aom2mv-SeekColor"
+        class="css-115vdi9-SeekColor"
+        style="display: inline-block;"
       >
         <div
           class="css-nd6nth-SeekColor"
@@ -14015,7 +14362,8 @@ exports[`Design Tokens/Colors/SeekColor Palette 1`] = `
       class="css-1fkk250-SeekColor"
     >
       <div
-        class="css-1aom2mv-SeekColor"
+        class="css-115vdi9-SeekColor"
+        style="display: inline-block;"
       >
         <div
           class="css-fdtrmc-SeekColor"
@@ -14040,7 +14388,8 @@ exports[`Design Tokens/Colors/SeekColor Palette 1`] = `
       class="css-1fkk250-SeekColor"
     >
       <div
-        class="css-1aom2mv-SeekColor"
+        class="css-115vdi9-SeekColor"
+        style="display: inline-block;"
       >
         <div
           class="css-ozltmm-SeekColor"
@@ -14133,7 +14482,8 @@ exports[`Design Tokens/Colors/SkylineColor Overview 1`] = `
         </td>
         <td>
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <code
               class="css-jrgdz6-BaseSkylineColor"
@@ -14144,7 +14494,8 @@ exports[`Design Tokens/Colors/SkylineColor Overview 1`] = `
         </td>
         <td>
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <div
               class="css-1u81vgs-BaseSkylineColor"
@@ -14275,7 +14626,8 @@ exports[`Design Tokens/Colors/SkylineColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <code
               class="css-jrgdz6-BaseSkylineColor"
@@ -14286,7 +14638,8 @@ exports[`Design Tokens/Colors/SkylineColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <div
               class="css-yuvx8p-BaseSkylineColor"
@@ -14360,7 +14713,8 @@ exports[`Design Tokens/Colors/SkylineColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <code
               class="css-jrgdz6-BaseSkylineColor"
@@ -14371,7 +14725,8 @@ exports[`Design Tokens/Colors/SkylineColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <div
               class="css-1c49loi-BaseSkylineColor"
@@ -14445,7 +14800,8 @@ exports[`Design Tokens/Colors/SkylineColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <code
               class="css-jrgdz6-BaseSkylineColor"
@@ -14456,7 +14812,8 @@ exports[`Design Tokens/Colors/SkylineColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <div
               class="css-57qzsq-BaseSkylineColor"
@@ -14530,7 +14887,8 @@ exports[`Design Tokens/Colors/SkylineColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <code
               class="css-jrgdz6-BaseSkylineColor"
@@ -14541,7 +14899,8 @@ exports[`Design Tokens/Colors/SkylineColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <div
               class="css-fylszp-BaseSkylineColor"
@@ -14615,7 +14974,8 @@ exports[`Design Tokens/Colors/SkylineColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <code
               class="css-jrgdz6-BaseSkylineColor"
@@ -14626,7 +14986,8 @@ exports[`Design Tokens/Colors/SkylineColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <div
               class="css-nx8r5n-BaseSkylineColor"
@@ -14700,7 +15061,8 @@ exports[`Design Tokens/Colors/SkylineColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <code
               class="css-jrgdz6-BaseSkylineColor"
@@ -14711,7 +15073,8 @@ exports[`Design Tokens/Colors/SkylineColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <div
               class="css-1u81vgs-BaseSkylineColor"
@@ -14785,7 +15148,8 @@ exports[`Design Tokens/Colors/SkylineColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <code
               class="css-jrgdz6-BaseSkylineColor"
@@ -14796,7 +15160,8 @@ exports[`Design Tokens/Colors/SkylineColor Palette 1`] = `
         </td>
         <td>
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             <div
               class="css-t4x4qw-BaseSkylineColor"
@@ -14825,7 +15190,8 @@ exports[`Design Tokens/Colors/SolidColor Overview 1`] = `
         class="css-1smpc93-SolidColor"
       >
         <div
-          class="css-1g7akrn-CopyContainer"
+          class="css-6bf4yd-CopyContainer"
+          style="display: inline-block;"
         >
           .fill-red
         </div>
@@ -14837,7 +15203,8 @@ exports[`Design Tokens/Colors/SolidColor Overview 1`] = `
       </div>
     </div>
     <div
-      class="css-177l2jw-SolidColor"
+      class="css-19lyg85-SolidColor"
+      style="display: inline-block;"
     />
   </div>
 </DocumentFragment>
@@ -14858,7 +15225,8 @@ exports[`Design Tokens/Colors/SolidColor Palette 1`] = `
           class="css-1smpc93-SolidColor"
         >
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             .fill-red
           </div>
@@ -14870,7 +15238,8 @@ exports[`Design Tokens/Colors/SolidColor Palette 1`] = `
         </div>
       </div>
       <div
-        class="css-177l2jw-SolidColor"
+        class="css-19lyg85-SolidColor"
+        style="display: inline-block;"
       />
     </div>
     <div
@@ -14883,7 +15252,8 @@ exports[`Design Tokens/Colors/SolidColor Palette 1`] = `
           class="css-1smpc93-SolidColor"
         >
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             .fill-red-lighter
           </div>
@@ -14895,7 +15265,8 @@ exports[`Design Tokens/Colors/SolidColor Palette 1`] = `
         </div>
       </div>
       <div
-        class="css-1adjbel-SolidColor"
+        class="css-1brlwzb-SolidColor"
+        style="display: inline-block;"
       />
     </div>
     <div
@@ -14908,7 +15279,8 @@ exports[`Design Tokens/Colors/SolidColor Palette 1`] = `
           class="css-1smpc93-SolidColor"
         >
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             .fill-pink
           </div>
@@ -14920,7 +15292,8 @@ exports[`Design Tokens/Colors/SolidColor Palette 1`] = `
         </div>
       </div>
       <div
-        class="css-1ojojuw-SolidColor"
+        class="css-1jun2mr-SolidColor"
+        style="display: inline-block;"
       />
     </div>
     <div
@@ -14933,7 +15306,8 @@ exports[`Design Tokens/Colors/SolidColor Palette 1`] = `
           class="css-1smpc93-SolidColor"
         >
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             .fill-blue
           </div>
@@ -14945,7 +15319,8 @@ exports[`Design Tokens/Colors/SolidColor Palette 1`] = `
         </div>
       </div>
       <div
-        class="css-1l0qpat-SolidColor"
+        class="css-1fl1hou-SolidColor"
+        style="display: inline-block;"
       />
     </div>
     <div
@@ -14958,7 +15333,8 @@ exports[`Design Tokens/Colors/SolidColor Palette 1`] = `
           class="css-1smpc93-SolidColor"
         >
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             .fill-purple
           </div>
@@ -14970,7 +15346,8 @@ exports[`Design Tokens/Colors/SolidColor Palette 1`] = `
         </div>
       </div>
       <div
-        class="css-azsddl-SolidColor"
+        class="css-1b8snqp-SolidColor"
+        style="display: inline-block;"
       />
     </div>
     <div
@@ -14983,7 +15360,8 @@ exports[`Design Tokens/Colors/SolidColor Palette 1`] = `
           class="css-1smpc93-SolidColor"
         >
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             .fill-promoted-orange
           </div>
@@ -14995,7 +15373,8 @@ exports[`Design Tokens/Colors/SolidColor Palette 1`] = `
         </div>
       </div>
       <div
-        class="css-1hjty0c-SolidColor"
+        class="css-1rbj1vq-SolidColor"
+        style="display: inline-block;"
       />
     </div>
     <div
@@ -15008,7 +15387,8 @@ exports[`Design Tokens/Colors/SolidColor Palette 1`] = `
           class="css-1smpc93-SolidColor"
         >
           <div
-            class="css-1g7akrn-CopyContainer"
+            class="css-6bf4yd-CopyContainer"
+            style="display: inline-block;"
           >
             .fill-twitter
           </div>
@@ -15020,7 +15400,8 @@ exports[`Design Tokens/Colors/SolidColor Palette 1`] = `
         </div>
       </div>
       <div
-        class="css-1ez797l-SolidColor"
+        class="css-1ts5k65-SolidColor"
+        style="display: inline-block;"
       />
     </div>
   </div>
@@ -15168,7 +15549,8 @@ exports[`Design Tokens/Colors/TableColor Overview 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-144m9ml-ColorBox"
+              class="css-1fkezaw-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -15177,7 +15559,8 @@ exports[`Design Tokens/Colors/TableColor Overview 1`] = `
               </div>
             </div>
             <div
-              class="css-1s2phw3-ColorBox"
+              class="css-pc41ae-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -15292,7 +15675,8 @@ exports[`Design Tokens/Colors/TableColor Palette 1`] = `
           class="css-1ozpifp"
         >
           <div
-            class="css-vntnrh-ColorBox"
+            class="css-tqbnps-ColorBox"
+            style="display: inline-block;"
           >
             <div
               class="css-munmj1-ColorBox"
@@ -15305,7 +15689,8 @@ exports[`Design Tokens/Colors/TableColor Palette 1`] = `
           class="css-1ozpifp"
         >
           <div
-            class="css-18eeknw-ColorBox"
+            class="css-16bx2u1-ColorBox"
+            style="display: inline-block;"
           >
             <div
               class="css-munmj1-ColorBox"
@@ -15323,7 +15708,8 @@ exports[`Design Tokens/Colors/TableColor Palette 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-12pkca7-ColorBox"
+              class="css-bi2d9m-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -15371,7 +15757,8 @@ exports[`Design Tokens/Colors/TableColor Palette 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-yjlg11-ColorBox"
+              class="css-ixvrbu-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -15419,7 +15806,8 @@ exports[`Design Tokens/Colors/TableColor Palette 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-1qkyv1e-ColorBox"
+              class="css-1t34ls1-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -15467,7 +15855,8 @@ exports[`Design Tokens/Colors/TableColor Palette 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-1s10rrx-ColorBox"
+              class="css-1lgecqa-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -15515,7 +15904,8 @@ exports[`Design Tokens/Colors/TableColor Palette 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-1wsqkuh-ColorBox"
+              class="css-1c34uf1-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -15563,7 +15953,8 @@ exports[`Design Tokens/Colors/TableColor Palette 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-g5vu86-ColorBox"
+              class="css-1obedmp-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -15611,7 +16002,8 @@ exports[`Design Tokens/Colors/TableColor Palette 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-dvv4ty-ColorBox"
+              class="css-1008ll4-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -15659,7 +16051,8 @@ exports[`Design Tokens/Colors/TableColor Palette 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-1x0czhv-ColorBox"
+              class="css-14tfaia-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -15707,7 +16100,8 @@ exports[`Design Tokens/Colors/TableColor Palette 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-1yk4abs-ColorBox"
+              class="css-1n9fb1r-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -15809,7 +16203,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
           class="css-1ozpifp"
         >
           <div
-            class="css-vntnrh-ColorBox"
+            class="css-tqbnps-ColorBox"
+            style="display: inline-block;"
           >
             <div
               class="css-munmj1-ColorBox"
@@ -15822,7 +16217,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
           class="css-1ozpifp"
         >
           <div
-            class="css-18eeknw-ColorBox"
+            class="css-16bx2u1-ColorBox"
+            style="display: inline-block;"
           >
             <div
               class="css-munmj1-ColorBox"
@@ -15835,7 +16231,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
           class="css-1ozpifp"
         >
           <div
-            class="css-vntnrh-ColorBox"
+            class="css-tqbnps-ColorBox"
+            style="display: inline-block;"
           >
             <div
               class="css-munmj1-ColorBox"
@@ -15848,7 +16245,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
           class="css-1ozpifp"
         >
           <div
-            class="css-18eeknw-ColorBox"
+            class="css-16bx2u1-ColorBox"
+            style="display: inline-block;"
           >
             <div
               class="css-munmj1-ColorBox"
@@ -15866,7 +16264,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-7rlwtm-ColorBox"
+              class="css-byobbq-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -15875,7 +16274,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
               </div>
             </div>
             <div
-              class="css-abjk6l-ColorBox"
+              class="css-1smie11-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -15945,7 +16345,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-vntnrh-ColorBox"
+              class="css-tqbnps-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -15954,7 +16355,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
               </div>
             </div>
             <div
-              class="css-dp1x49-ColorBox"
+              class="css-1wyokb5-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -16024,7 +16426,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-144m9ml-ColorBox"
+              class="css-1fkezaw-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -16033,7 +16436,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
               </div>
             </div>
             <div
-              class="css-1s2phw3-ColorBox"
+              class="css-pc41ae-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -16103,7 +16507,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-skp3qw-ColorBox"
+              class="css-1mf8qla-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -16112,7 +16517,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
               </div>
             </div>
             <div
-              class="css-wq4okf-ColorBox"
+              class="css-1e8g5cl-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -16182,7 +16588,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-1qj0hxy-ColorBox"
+              class="css-1jettux-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -16191,7 +16598,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
               </div>
             </div>
             <div
-              class="css-1qj0hxy-ColorBox"
+              class="css-1jettux-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -16261,7 +16669,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-ug9vus-ColorBox"
+              class="css-hn9ur-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -16270,7 +16679,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
               </div>
             </div>
             <div
-              class="css-1ppd6up-ColorBox"
+              class="css-17dqbhq-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -16340,7 +16750,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-1vq12i9-ColorBox"
+              class="css-1a9oz7f-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -16390,7 +16801,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-k8u59k-ColorBox"
+              class="css-6vemym-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -16440,7 +16852,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-b5tasz-ColorBox"
+              class="css-vybv4f-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -16449,7 +16862,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
               </div>
             </div>
             <div
-              class="css-1rlntx3-ColorBox"
+              class="css-4v2rxa-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -16519,7 +16933,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-b5tasz-ColorBox"
+              class="css-vybv4f-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -16528,7 +16943,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
               </div>
             </div>
             <div
-              class="css-18eeknw-ColorBox"
+              class="css-16bx2u1-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -16598,7 +17014,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-rilkjm-ColorBox"
+              class="css-1cnx8t-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -16607,7 +17024,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
               </div>
             </div>
             <div
-              class="css-18eu2cq-ColorBox"
+              class="css-kpn8fa-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -16677,7 +17095,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-ovtsl2-ColorBox"
+              class="css-7k895w-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -16686,7 +17105,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
               </div>
             </div>
             <div
-              class="css-rilkjm-ColorBox"
+              class="css-1cnx8t-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -16756,7 +17176,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-dfrknx-ColorBox"
+              class="css-1405q8k-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -16765,7 +17186,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
               </div>
             </div>
             <div
-              class="css-2zfksl-ColorBox"
+              class="css-vvhdhr-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -16835,7 +17257,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
             class="css-qxabq3-BaseTableColor"
           >
             <div
-              class="css-1d05pz2-ColorBox"
+              class="css-1oovpyv-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -16844,7 +17267,8 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
               </div>
             </div>
             <div
-              class="css-1t8tjq0-ColorBox"
+              class="css-1svwqby-ColorBox"
+              style="display: inline-block;"
             >
               <div
                 class="css-munmj1-ColorBox"
@@ -16927,7 +17351,8 @@ exports[`Design Tokens/Colors/UniformColor Overview 1`] = `
             class="css-dez9lm-BaseUniformColor"
           >
             <div
-              class="css-1bkqdvr-BaseUniformColor"
+              class="css-1owynij-BaseUniformColor"
+              style="display: inline-block;"
             />
           </div>
         </td>
@@ -16993,7 +17418,8 @@ exports[`Design Tokens/Colors/UniformColor Palette 1`] = `
             class="css-dez9lm-BaseUniformColor"
           >
             <div
-              class="css-9ihgak-BaseUniformColor"
+              class="css-13itijy-BaseUniformColor"
+              style="display: inline-block;"
             />
           </div>
         </td>
@@ -17018,7 +17444,8 @@ exports[`Design Tokens/Colors/UniformColor Palette 1`] = `
             class="css-dez9lm-BaseUniformColor"
           >
             <div
-              class="css-to3gnz-BaseUniformColor"
+              class="css-159pajb-BaseUniformColor"
+              style="display: inline-block;"
             />
           </div>
         </td>
@@ -17043,7 +17470,8 @@ exports[`Design Tokens/Colors/UniformColor Palette 1`] = `
             class="css-dez9lm-BaseUniformColor"
           >
             <div
-              class="css-xkt5dw-BaseUniformColor"
+              class="css-1tn2cy2-BaseUniformColor"
+              style="display: inline-block;"
             />
           </div>
         </td>
@@ -17068,7 +17496,8 @@ exports[`Design Tokens/Colors/UniformColor Palette 1`] = `
             class="css-dez9lm-BaseUniformColor"
           >
             <div
-              class="css-1p1fnnk-BaseUniformColor"
+              class="css-1nyl3u7-BaseUniformColor"
+              style="display: inline-block;"
             />
           </div>
         </td>
@@ -17093,7 +17522,8 @@ exports[`Design Tokens/Colors/UniformColor Palette 1`] = `
             class="css-dez9lm-BaseUniformColor"
           >
             <div
-              class="css-1bkqdvr-BaseUniformColor"
+              class="css-1owynij-BaseUniformColor"
+              style="display: inline-block;"
             />
           </div>
         </td>
@@ -17121,7 +17551,8 @@ exports[`Design Tokens/Colors/VanillaColor Overview 1`] = `
     class="css-1m19f2s-VanillaColor"
   >
     <div
-      class="css-1o9w6rn-VanillaColor"
+      class="css-1t5r9du-VanillaColor"
+      style="display: inline-block;"
     />
     <div
       class="css-g6l6bb-VanillaColor"
@@ -17146,7 +17577,8 @@ exports[`Design Tokens/Colors/VanillaColor Palette 1`] = `
       class="css-1m19f2s-VanillaColor"
     >
       <div
-        class="css-464sm2-VanillaColor"
+        class="css-1gxpwzz-VanillaColor"
+        style="display: inline-block;"
       />
       <div
         class="css-g6l6bb-VanillaColor"
@@ -17163,7 +17595,8 @@ exports[`Design Tokens/Colors/VanillaColor Palette 1`] = `
       class="css-1m19f2s-VanillaColor"
     >
       <div
-        class="css-1g6oo9j-VanillaColor"
+        class="css-1so1hks-VanillaColor"
+        style="display: inline-block;"
       />
       <div
         class="css-g6l6bb-VanillaColor"
@@ -17180,7 +17613,8 @@ exports[`Design Tokens/Colors/VanillaColor Palette 1`] = `
       class="css-1m19f2s-VanillaColor"
     >
       <div
-        class="css-17gmjgw-VanillaColor"
+        class="css-1a5myma-VanillaColor"
+        style="display: inline-block;"
       />
       <div
         class="css-g6l6bb-VanillaColor"
@@ -17197,7 +17631,8 @@ exports[`Design Tokens/Colors/VanillaColor Palette 1`] = `
       class="css-1m19f2s-VanillaColor"
     >
       <div
-        class="css-1o9w6rn-VanillaColor"
+        class="css-1t5r9du-VanillaColor"
+        style="display: inline-block;"
       />
       <div
         class="css-g6l6bb-VanillaColor"
@@ -17214,7 +17649,8 @@ exports[`Design Tokens/Colors/VanillaColor Palette 1`] = `
       class="css-1m19f2s-VanillaColor"
     >
       <div
-        class="css-1fngrtr-VanillaColor"
+        class="css-a50c0n-VanillaColor"
+        style="display: inline-block;"
       />
       <div
         class="css-g6l6bb-VanillaColor"
@@ -17231,7 +17667,8 @@ exports[`Design Tokens/Colors/VanillaColor Palette 1`] = `
       class="css-1m19f2s-VanillaColor"
     >
       <div
-        class="css-i74cbs-VanillaColor"
+        class="css-1j6lmlp-VanillaColor"
+        style="display: inline-block;"
       />
       <div
         class="css-g6l6bb-VanillaColor"
@@ -17248,7 +17685,8 @@ exports[`Design Tokens/Colors/VanillaColor Palette 1`] = `
       class="css-1m19f2s-VanillaColor"
     >
       <div
-        class="css-464sm2-VanillaColor"
+        class="css-1gxpwzz-VanillaColor"
+        style="display: inline-block;"
       />
       <div
         class="css-g6l6bb-VanillaColor"
@@ -17271,7 +17709,8 @@ exports[`Design Tokens/Colors/XColor Overview 1`] = `
     class="css-1oqofgf-XColor"
   >
     <div
-      class="css-1ptcohi-XColor"
+      class="css-o02nii-XColor"
+      style="display: inline-block;"
     >
       <div
         class="css-b8943i-XColor"
@@ -17335,7 +17774,8 @@ exports[`Design Tokens/Colors/XColor Palette 1`] = `
       class="css-1oqofgf-XColor"
     >
       <div
-        class="css-1ptcohi-XColor"
+        class="css-o02nii-XColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1bjz38s-XColor"
@@ -17391,7 +17831,8 @@ exports[`Design Tokens/Colors/XColor Palette 1`] = `
       class="css-1oqofgf-XColor"
     >
       <div
-        class="css-1ptcohi-XColor"
+        class="css-o02nii-XColor"
+        style="display: inline-block;"
       >
         <div
           class="css-gfrtss-XColor"
@@ -17447,7 +17888,8 @@ exports[`Design Tokens/Colors/XColor Palette 1`] = `
       class="css-1oqofgf-XColor"
     >
       <div
-        class="css-1ptcohi-XColor"
+        class="css-o02nii-XColor"
+        style="display: inline-block;"
       >
         <div
           class="css-15su858-XColor"
@@ -17503,7 +17945,8 @@ exports[`Design Tokens/Colors/XColor Palette 1`] = `
       class="css-1oqofgf-XColor"
     >
       <div
-        class="css-1ptcohi-XColor"
+        class="css-o02nii-XColor"
+        style="display: inline-block;"
       >
         <div
           class="css-12axp66-XColor"
@@ -17559,7 +18002,8 @@ exports[`Design Tokens/Colors/XColor Palette 1`] = `
       class="css-1oqofgf-XColor"
     >
       <div
-        class="css-1ptcohi-XColor"
+        class="css-o02nii-XColor"
+        style="display: inline-block;"
       >
         <div
           class="css-k76mk4-XColor"
@@ -17615,7 +18059,8 @@ exports[`Design Tokens/Colors/XColor Palette 1`] = `
       class="css-1oqofgf-XColor"
     >
       <div
-        class="css-1ptcohi-XColor"
+        class="css-o02nii-XColor"
+        style="display: inline-block;"
       >
         <div
           class="css-1a9g8y0-XColor"
@@ -17671,7 +18116,8 @@ exports[`Design Tokens/Colors/XColor Palette 1`] = `
       class="css-1oqofgf-XColor"
     >
       <div
-        class="css-1ptcohi-XColor"
+        class="css-o02nii-XColor"
+        style="display: inline-block;"
       >
         <div
           class="css-16g3y4c-XColor"
@@ -17733,7 +18179,8 @@ exports[`Design Tokens/Colors/ZendeskColor Overview 1`] = `
     class="css-1kjty3v-ZendeskColor"
   >
     <div
-      class="css-1g7akrn-CopyContainer"
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
     >
       <div
         class="css-wows6d-ZendeskColor"
@@ -17764,7 +18211,8 @@ exports[`Design Tokens/Colors/ZendeskColor Palette 1`] = `
       class="css-1kjty3v-ZendeskColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-x3417m-ZendeskColor"
@@ -17787,7 +18235,8 @@ exports[`Design Tokens/Colors/ZendeskColor Palette 1`] = `
       class="css-1kjty3v-ZendeskColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-18u0cw4-ZendeskColor"
@@ -17810,7 +18259,8 @@ exports[`Design Tokens/Colors/ZendeskColor Palette 1`] = `
       class="css-1kjty3v-ZendeskColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-14alg98-ZendeskColor"
@@ -17833,7 +18283,8 @@ exports[`Design Tokens/Colors/ZendeskColor Palette 1`] = `
       class="css-1kjty3v-ZendeskColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1ytmxak-ZendeskColor"
@@ -17856,7 +18307,8 @@ exports[`Design Tokens/Colors/ZendeskColor Palette 1`] = `
       class="css-1kjty3v-ZendeskColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1n6ck6c-ZendeskColor"
@@ -17879,7 +18331,8 @@ exports[`Design Tokens/Colors/ZendeskColor Palette 1`] = `
       class="css-1kjty3v-ZendeskColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-1n6ck6c-ZendeskColor"
@@ -17902,7 +18355,8 @@ exports[`Design Tokens/Colors/ZendeskColor Palette 1`] = `
       class="css-1kjty3v-ZendeskColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-xjt7n7-ZendeskColor"
@@ -17925,7 +18379,8 @@ exports[`Design Tokens/Colors/ZendeskColor Palette 1`] = `
       class="css-1kjty3v-ZendeskColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-18u0q5g-ZendeskColor"
@@ -17948,7 +18403,8 @@ exports[`Design Tokens/Colors/ZendeskColor Palette 1`] = `
       class="css-1kjty3v-ZendeskColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-fvjyey-ZendeskColor"
@@ -17971,7 +18427,8 @@ exports[`Design Tokens/Colors/ZendeskColor Palette 1`] = `
       class="css-1kjty3v-ZendeskColor"
     >
       <div
-        class="css-1g7akrn-CopyContainer"
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
       >
         <div
           class="css-7t30ou-ZendeskColor"

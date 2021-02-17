@@ -7,6 +7,7 @@ export default {
   title: 'Application/CategoryPage',
   component: CategoryPage,
   decorators: mockDecorators,
+  category: 'Pages',
 } as Document;
 
 export const overview: Example = () => (

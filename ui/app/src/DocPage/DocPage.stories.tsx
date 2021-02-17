@@ -7,6 +7,7 @@ export default {
   title: 'Application/DocPage',
   component: DocPage,
   decorators: mockDecorators,
+  category: 'Pages',
 } as Document;
 
 export const overview: Example = () => <DocPage type="story" />;

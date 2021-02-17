@@ -13,7 +13,8 @@ export const loadTestFiles = (folders: string[]): void => {
   fileNames.forEach(file => {
     const fileName = path.join(folderName, file);
     it(file, async () => {
-      expect(await run()(fileName, 'MyComponent')).toMatchSnapshot();
+      const result = await run()(fileName, 'MyComponent');
+      expect(result).toMatchSnapshot();
     });
   });
 };

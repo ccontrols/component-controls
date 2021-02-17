@@ -7,6 +7,7 @@ export default {
   title: 'Application/Sidebar',
   component: Sidebar,
   decorators: mockDecorators,
+  category: 'Application',
 } as Document;
 
 export const overview: Example = () => <Sidebar title="sidebar" type="story" />;

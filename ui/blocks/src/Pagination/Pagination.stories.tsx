@@ -8,6 +8,7 @@ export default {
   title: 'Blocks/Pagination',
   component: Pagination,
   decorators: mockDecorators,
+  category: 'Page',
 } as Document;
 
 export const overview: Example = () => <Pagination />;

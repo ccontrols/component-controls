@@ -7,6 +7,7 @@ import { SearchInput } from './SearchInput';
 export default {
   title: 'Components/SearchInput',
   component: SearchInput,
+  category: 'Input',
 } as Document;
 
 interface FakeItem {

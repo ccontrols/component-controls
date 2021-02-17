@@ -5,7 +5,7 @@ export type ExternalLinkProps = LinkProps;
 
 /**
  * Anchor link to an external url,
- * adds the default `target="_blank" rel="noopener noreferrer"` props
+ * adds the default `target="_blank" rel="noopener noreferrer"` props.
  */
 export const ExternalLink: FC<ExternalLinkProps> = props => (
   <Link {...(props as LinkProps)} target="_blank" rel="noopener noreferrer" />

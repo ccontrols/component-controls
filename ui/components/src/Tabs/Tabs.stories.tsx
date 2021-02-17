@@ -10,6 +10,7 @@ export default {
     TabList,
     TabPanel,
   },
+  category: 'Navigation',
 } as Document;
 
 const tabs: {

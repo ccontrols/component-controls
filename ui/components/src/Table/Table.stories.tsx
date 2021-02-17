@@ -7,6 +7,7 @@ import { ThemeProvider } from '../ThemeContext';
 export default {
   title: 'Components/Table',
   component: Table,
+  category: 'Display',
 } as Document;
 
 type DataType = {

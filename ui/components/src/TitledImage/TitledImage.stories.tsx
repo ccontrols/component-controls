@@ -6,6 +6,7 @@ import { TitledImage } from './TitledImage';
 export default {
   title: 'Components/TitledImage',
   component: TitledImage,
+  category: 'Display',
 } as Document;
 
 export const overview: Example<ImageProps> = ({ title }) => {

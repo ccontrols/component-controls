@@ -6,6 +6,7 @@ import { AttributesUsageList } from '../ui/AttributesUsageList';
 export default {
   title: 'Plugins/AddonStats/AttributesUsageList',
   component: AttributesUsageList,
+  category: 'Components',
 } as Document;
 
 export const overview: Example = () => {

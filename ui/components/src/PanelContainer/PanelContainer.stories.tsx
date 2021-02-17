@@ -1,11 +1,12 @@
 import React from 'react';
-import { Donut } from 'theme-ui';
+import { Box, Donut } from 'theme-ui';
 import { Document, Example } from '@component-controls/core';
 import { PanelContainer } from './PanelContainer';
 
 export default {
   title: 'Components/PanelContainer',
   component: PanelContainer,
+  category: 'Containers',
 } as Document;
 
 const actions = [
@@ -39,9 +40,13 @@ const actions = [
 ];
 export const overview: Example = () => {
   return (
-    <PanelContainer actions={actions}>
-      <Donut value={1} />
-    </PanelContainer>
+    <Box style={{ width: '100%' }}>
+      <PanelContainer actions={actions}>
+        <Box sx={{ mt: '30px' }}>
+          <Donut value={1} />
+        </Box>
+      </PanelContainer>
+    </Box>
   );
 };
 

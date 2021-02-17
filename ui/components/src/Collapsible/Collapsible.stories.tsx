@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Box, Button } from 'theme-ui';
+import { Box, Button, Donut } from 'theme-ui';
 import { Document, Example, ControlTypes } from '@component-controls/core';
 import { Collapsible, CollapsibleProps } from './Collapsible';
 
 export default {
   title: 'Components/Collapsible',
   component: Collapsible,
+  category: 'Containers',
 } as Document;
 
 export const overview: Example<CollapsibleProps> = ({ easing }) => {
@@ -16,7 +17,7 @@ export const overview: Example<CollapsibleProps> = ({ easing }) => {
         {isOpen ? 'close' : 'open'}
       </Button>
       <Collapsible isOpen={isOpen} easing={easing}>
-        content
+        <Donut value={1 / 2} />
       </Collapsible>
     </Box>
   );

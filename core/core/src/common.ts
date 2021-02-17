@@ -54,4 +54,9 @@ export interface StoryProps<Props = unknown> {
    * plugins configuration settings
    */
   plugins?: any;
+
+  /**
+   * category string - can be used for cleanly separating stories/components
+   */
+  category?: string;
 }

@@ -6,6 +6,7 @@ import { ViewportBlock } from '../index';
 export default {
   title: 'Plugins/ViewportBlock',
   component: ViewportBlock,
+  category: 'Testing',
 } as Document;
 
 export const overview: Example = () => {

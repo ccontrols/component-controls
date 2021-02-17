@@ -7,6 +7,7 @@ export default {
   title: 'Application/CategoryList',
   component: CategoryList,
   decorators: mockDecorators,
+  category: 'Documents',
 } as Document;
 
 export const overview: Example = () => <CategoryList type="author" />;

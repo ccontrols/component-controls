@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Box } from 'theme-ui';
+import { jsx, Box, Themed } from 'theme-ui';
 import { DocType } from '@component-controls/core';
-import { Title, Link } from '@component-controls/components';
+import { Link } from '@component-controls/components';
 import {
   useDocument,
   useDocsByCategory,
@@ -29,7 +29,7 @@ export const CategoryPage: FC<CategoryPageProps> = ({ type, category }) => {
       id="content"
     >
       <Box variant="categorypage.titlecontainer">
-        <Title>{category}</Title>
+        <Themed.h1>{category}</Themed.h1>
         <Link
           href={`/${pageConfig.basePath}`}
         >{`All ${pageConfig.label}`}</Link>

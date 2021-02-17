@@ -6,6 +6,7 @@ import { AppError, AppErrorProps } from './AppError';
 export default {
   title: 'Application/AppError',
   component: AppError,
+  category: 'Application',
 };
 
 export const overview: Example<AppErrorProps> = ({ error }) => (

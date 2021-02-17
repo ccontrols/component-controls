@@ -160,12 +160,16 @@ export const theme: ControlsTheme = {
   },
   cards: {
     primary: {
+      overflow: 'hidden',
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center',
       padding: 2,
-      borderRadius: 4,
-      boxShadow: '0 0 8px rgba(0, 0, 0, 0.125)',
+      borderRadius: 8,
+      border: '1px solid rgba(0, 0, 0, 0.125)',
+      ':hover': {
+        border: '1px solid rgba(0, 0, 0, 0.25)',
+        boxShadow: '0 0 8px rgba(0, 0, 0, 0.125)',
+      },
     },
   },
   links: {
@@ -469,7 +473,7 @@ export const theme: ControlsTheme = {
       pt: 2,
     },
     titlerow: {
-      my: 4,
+      mt: 4,
     },
     createdbox: {
       container: {

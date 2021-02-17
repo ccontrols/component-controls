@@ -16,7 +16,7 @@ export interface ActionContainerProps {
 }
 
 /**
- * a boxed container with actions.
+ * Container box with actions.
  */
 export const ActionContainer: FC<ActionContainerProps> = ({
   children,

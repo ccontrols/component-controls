@@ -7,6 +7,7 @@ import notes from './notes.md';
 export default {
   title: 'Plugins/NotesBlock',
   component: NotesBlock,
+  category: 'Design',
 } as Document;
 
 export const overview: Example = () => {

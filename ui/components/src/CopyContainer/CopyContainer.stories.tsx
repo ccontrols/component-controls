@@ -5,6 +5,7 @@ import { CopyContainer } from '.';
 export default {
   title: 'Components/CopyContainer',
   component: CopyContainer,
+  category: 'Utilities',
 } as Document;
 
 export const overview: Example = () => (

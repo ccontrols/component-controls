@@ -10,13 +10,13 @@ import {
   TrashcanIcon,
   StarIcon,
   TriangleDownIcon,
-  TriangleRightIcon,
 } from '@primer/octicons-react';
 import { Tree } from '.';
 
 export default {
   title: 'Components/Tree',
   component: Tree,
+  category: 'Navigation',
 } as Document;
 
 export const overview: Example = () => (
@@ -157,8 +157,7 @@ export const customExpandIcons: Example = () => (
     <Tree
       activeItem={{ id: 'all' }}
       items={navItems}
-      iconExpanded={<TriangleDownIcon />}
-      iconCollapsed={<TriangleRightIcon />}
+      chevronIcon={<TriangleDownIcon />}
     />
   </Box>
 );

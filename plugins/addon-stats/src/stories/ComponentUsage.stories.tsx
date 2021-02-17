@@ -6,6 +6,7 @@ import { ComponentUsage } from '../ui/ComponentUsage';
 export default {
   title: 'Plugins/AddonStats/ComponentUsage',
   component: ComponentUsage,
+  category: 'Components',
 } as Document;
 
 export const overview: Example = () => {

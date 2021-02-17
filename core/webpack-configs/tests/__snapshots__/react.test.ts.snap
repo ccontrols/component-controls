@@ -32,7 +32,7 @@ Object {
                 Array [
                   "@babel/preset-react",
                   Object {
-                    "runtime": "automatic",
+                    "runtime": "classic",
                   },
                 ],
               ],

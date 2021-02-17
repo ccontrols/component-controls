@@ -921,7 +921,7 @@ Array values are converted into responsive values.
     },
     "inputMode": Object {
       "description": "Hints at the type of data that might be entered by the user while editing the element or its contents
-@see https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute",
+@see https ://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "enum",
@@ -964,7 +964,7 @@ Array values are converted into responsive values.
     },
     "is": Object {
       "description": "Specify that a standard HTML element should behave like a defined custom built-in element
-@see https://html.spec.whatwg.org/multipage/custom-elements.html#attr-is",
+@see https ://html.spec.whatwg.org/multipage/custom-elements.html#attr-is",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
@@ -2898,6 +2898,9 @@ behind an element is visible.
       },
     },
   },
+  "tags": Object {
+    "see": "https ://theme-ui.com/components/button",
+  },
 }
 `;
 
@@ -2948,6 +2951,11 @@ Object {
         },
       ],
     },
+    "fileInfo": Object {
+      "dateCreated": "2021-02-14T20:01:09.002Z",
+      "dateModified": "2021-02-14T20:01:09.002Z",
+    },
+    "fileName": "index.d.ts",
     "from": "theme-ui",
     "importedName": "Button",
     "jsx": Array [],
@@ -3029,6 +3037,11 @@ Object {
           },
         ],
       },
+      "fileInfo": Object {
+        "dateCreated": "2021-02-14T20:01:09.002Z",
+        "dateModified": "2021-02-14T20:01:09.002Z",
+      },
+      "fileName": "index.d.ts",
       "from": "theme-ui",
       "importedName": "Button",
       "jsx": Array [],
@@ -3044,8 +3057,8 @@ Object {
     "componentsLookup": Object {
       "Button": "98b2111b08fbab8e38c938acaf3e129a",
     },
-    "date": 2020-10-21T01:23:26.430Z,
-    "dateModified": 2020-10-21T01:23:26.430Z,
+    "date": "2020-08-05T13:28:21.000Z",
+    "dateModified": "2020-08-05T13:28:21.000Z",
     "package": "295d57ccad25aab2260adf38810e8858",
     "title": "Storybook/Blocks/Button",
   },
@@ -3062,14 +3075,17 @@ Object {
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gitlog": "^4.0.4",
         "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "isomorphic-git": "^1.8.0",
         "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "remark-emoji": "^2.1.0",
         "remark-images": "^2.0.0",
         "resolve": "^1.15.1",
+        "sloc": "^0.2.1",
         "typescript": "^4.0.5",
       },
       "devDependencies": Object {
@@ -3079,6 +3095,7 @@ Object {
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
         "@types/jest": "^26.0.10",
+        "@types/sloc": "^0.2.0",
         "cross-env": "^5.2.1",
         "eslint": "^6.5.1",
         "jest": "^26.4.2",

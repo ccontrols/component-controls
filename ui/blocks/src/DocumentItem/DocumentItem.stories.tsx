@@ -8,6 +8,7 @@ export default {
   title: 'Blocks/DocumentItem',
   component: DocumentItem,
   decorators: mockDecorators,
+  category: 'Document',
 } as Document;
 
 export const overview: Example = () => {

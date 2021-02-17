@@ -8,6 +8,7 @@ import { Title } from '../Title';
 export default {
   title: 'Blocks/PageContainer',
   component: PageContainer,
+  category: 'Page',
 } as Document;
 
 export const overview: Example = () => <Title />;

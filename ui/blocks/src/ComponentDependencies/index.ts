@@ -1,1 +1,3 @@
-export * from './ComponentDependencies';
+export * from './ExternalDependencies';
+export * from './LocalDependencies';
+export * from './types';

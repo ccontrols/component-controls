@@ -6,6 +6,7 @@ import { ComponentUsageList } from '../ui/ComponentUsageList';
 export default {
   title: 'Plugins/AddonStats/ComponentUsageList',
   component: ComponentUsageList,
+  category: 'Components',
 } as Document;
 
 export const overview: Example = () => {

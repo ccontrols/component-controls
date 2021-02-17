@@ -8,6 +8,11 @@ import {
   ArrowUpIcon,
 } from '@primer/octicons-react';
 
+/**
+ * @todo Write the documentation.
+ * @todo Add variant for spinner.
+ */
+
 type ButtonVariant =
   | 'primary'
   | 'accent'
@@ -94,6 +99,12 @@ export interface VariantButtonProps {
    * padding variants
    */
   padding: SizeVariants;
+
+  /**
+   * boolean switch for primary variant
+   * @deprecated since version 1.0
+   */
+  isPrimary?: boolean;
 }
 
 /**
@@ -106,14 +117,16 @@ export const VariantButton: FC<VariantButtonProps> = ({
   variant = 'primary',
   iconSide = 'left',
   padding = 'medium',
+  isPrimary = false,
   icon,
 }) => {
   const Icon = variant_icons[icon];
+  const finalVariant = isPrimary ? 'primary' : variant;
   return (
     <button
       style={{
-        color: variant_colors[variant],
-        backgroundColor: variant_backgrounds[variant],
+        color: variant_colors[finalVariant],
+        backgroundColor: variant_backgrounds[finalVariant],
         fontSize,
         padding: paddings[padding],
         borderRadius: 8,

@@ -60,6 +60,13 @@ interface MyComponentProps {
 
   // A value of any data type
   requiredAny: any;
+
+  /**
+   * boolean switch - obsolete depracated property
+   * @type React.ReactElement
+   * @deprecated since version 1.0
+   */
+  isObsolete?: boolean;
 }
 
 /**

@@ -9,7 +9,7 @@ export interface ZoomProps {
 }
 
 /**
- * zooming transform component
+ * zoom effect using transform
  */
 export const Zoom: FC<ZoomProps> = ({ scale = 1, children }) => {
   return (

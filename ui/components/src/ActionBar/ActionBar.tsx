@@ -17,9 +17,9 @@ export interface ActionBarProps {
 }
 
 /**
- * a strip of actions to be attached to a container
- * the action items contain the labels and click event handler
- * actions can accept an order prop, and can also be superimposed
+ * A strip of actions to be attached to a container.
+ * The action items contain the labels and click event handlers.
+ * Actions can accept an order prop, and can also overwrite default actions.
  *
  */
 export const ActionBar: FC<ActionBarProps> = ({

@@ -4,7 +4,7 @@ exports[`Components/ActionBar Group End 1`] = `
 <DocumentFragment>
   <div
     class="css-vurnku"
-    style="height: 100px; background-color: rgb(250, 248, 245);"
+    style="height: 100px; width: 100%; background-color: rgb(250, 248, 245);"
   >
     <div
       class="css-15owl46"
@@ -49,7 +49,7 @@ exports[`Components/ActionBar Group Start 1`] = `
 <DocumentFragment>
   <div
     class="css-vurnku"
-    style="height: 100px; background-color: rgb(250, 248, 245);"
+    style="height: 100px; width: 100%; background-color: rgb(250, 248, 245);"
   >
     <div
       class="css-15owl46"
@@ -94,7 +94,7 @@ exports[`Components/ActionBar Link 1`] = `
 <DocumentFragment>
   <div
     class="css-vurnku"
-    style="height: 100px; background-color: rgb(250, 248, 245);"
+    style="height: 100px; width: 100%; background-color: rgb(250, 248, 245);"
   >
     <div
       class="css-15owl46"
@@ -124,7 +124,7 @@ exports[`Components/ActionBar Order 1`] = `
 <DocumentFragment>
   <div
     class="css-vurnku"
-    style="height: 100px; background-color: rgb(250, 248, 245);"
+    style="height: 100px; width: 100%; background-color: rgb(250, 248, 245);"
   >
     <div
       class="css-15owl46"
@@ -163,7 +163,7 @@ exports[`Components/ActionBar Override 1`] = `
 <DocumentFragment>
   <div
     class="css-vurnku"
-    style="height: 100px; background-color: rgb(250, 248, 245);"
+    style="height: 100px; width: 100%; background-color: rgb(250, 248, 245);"
   >
     <div
       class="css-15owl46"
@@ -202,7 +202,7 @@ exports[`Components/ActionBar Overview 1`] = `
 <DocumentFragment>
   <div
     class="css-vurnku"
-    style="height: 100px; background-color: rgb(250, 248, 245);"
+    style="height: 100px; width: 100%; background-color: rgb(250, 248, 245);"
   >
     <div
       class="css-15owl46"
@@ -375,67 +375,72 @@ exports[`Components/ActionContainer Override 1`] = `
 
 exports[`Components/ActionContainer Overview 1`] = `
 <DocumentFragment>
-  <div>
-    <div
-      class="css-15owl46"
-    >
+  <div
+    class="css-vurnku"
+    style="width: 100%;"
+  >
+    <div>
       <div
-        class="css-x60p33"
+        class="css-15owl46"
       >
         <div
-          class="css-1vga9oy"
+          class="css-x60p33"
         >
-          <button
-            class="css-1tf4h46"
+          <div
+            class="css-1vga9oy"
           >
-            action 1
-          </button>
-        </div>
-        <div
-          class="css-7d11p2"
-        >
-          <a
-            class="css-1t54e2w"
-            href="https://google.com"
-            rel="noopener noreferrer"
-            target="_blank"
+            <button
+              class="css-1tf4h46"
+            >
+              action 1
+            </button>
+          </div>
+          <div
+            class="css-7d11p2"
           >
-            google
-          </a>
+            <a
+              class="css-1t54e2w"
+              href="https://google.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              google
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      class="css-eqxzio"
-    >
-      <svg
-        aria-valuemax="1"
-        aria-valuemin="0"
-        aria-valuenow="0.5"
-        class="css-14d2907"
-        fill="none"
-        height="128"
-        role="img"
-        stroke="currentcolor"
-        stroke-width="2"
-        viewBox="0 0 32 32"
-        width="128"
+      <div
+        class="css-eqxzio"
       >
-        <circle
-          cx="16"
-          cy="16"
-          opacity="0.125"
-          r="14"
-        />
-        <circle
-          cx="16"
-          cy="16"
-          r="14"
-          stroke-dasharray="87.96459430051421"
-          stroke-dashoffset="43.982297150257104"
-          transform="rotate(-90 16 16)"
-        />
-      </svg>
+        <svg
+          aria-valuemax="1"
+          aria-valuemin="0"
+          aria-valuenow="0.5"
+          class="css-14d2907"
+          fill="none"
+          height="128"
+          role="img"
+          stroke="currentcolor"
+          stroke-width="2"
+          viewBox="0 0 32 32"
+          width="128"
+        >
+          <circle
+            cx="16"
+            cy="16"
+            opacity="0.125"
+            r="14"
+          />
+          <circle
+            cx="16"
+            cy="16"
+            r="14"
+            stroke-dasharray="87.96459430051421"
+            stroke-dashoffset="43.982297150257104"
+            transform="rotate(-90 16 16)"
+          />
+        </svg>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -972,7 +977,8 @@ exports[`Components/ColorMode Overview 1`] = `
 exports[`Components/CopyContainer Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-1g7akrn-CopyContainer"
+    class="css-6bf4yd-CopyContainer"
+    style="display: inline-block;"
   >
     <div
       style="border: 1px solid black; padding: 5px;"
@@ -1012,6 +1018,101 @@ exports[`Components/ExternalLink Overview 1`] = `
   >
     https://www.google.com
   </a>
+</DocumentFragment>
+`;
+
+exports[`Components/GithubAvatarList Max Items 1`] = `
+<DocumentFragment>
+  <div
+    aria-label="avatars of [object Object], [object Object], [object Object]"
+    class="css-i07oab-GithubAvatarList"
+  >
+    <a
+      aria-label="visit profile of hasparus"
+      class="css-zypmzx-GithubAvatarItem"
+      href=""
+    >
+      <img
+        alt="hasparus"
+        class="css-1y16e88"
+        height="32"
+        src="https://github.com/hasparus"
+        title="hasparus"
+        width="32"
+      />
+    </a>
+    <a
+      aria-label="visit profile of lachlanjc"
+      class="css-zypmzx-GithubAvatarItem"
+      href=""
+    >
+      <img
+        alt="lachlanjc"
+        class="css-1y16e88"
+        height="32"
+        src="https://github.com/lachlanjc"
+        title="lachlanjc"
+        width="32"
+      />
+    </a>
+    <div
+      class="css-1tdzql8-GithubAvatarList"
+    >
+      ...
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Components/GithubAvatarList Overview 1`] = `
+<DocumentFragment>
+  <div
+    aria-label="avatars of [object Object], [object Object], [object Object]"
+    class="css-i07oab-GithubAvatarList"
+  >
+    <a
+      aria-label="visit profile of hasparus"
+      class="css-zypmzx-GithubAvatarItem"
+      href=""
+    >
+      <img
+        alt="hasparus"
+        class="css-1y16e88"
+        height="32"
+        src="https://github.com/hasparus"
+        title="hasparus"
+        width="32"
+      />
+    </a>
+    <a
+      aria-label="visit profile of lachlanjc"
+      class="css-zypmzx-GithubAvatarItem"
+      href=""
+    >
+      <img
+        alt="lachlanjc"
+        class="css-1y16e88"
+        height="32"
+        src="https://github.com/lachlanjc"
+        title="lachlanjc"
+        width="32"
+      />
+    </a>
+    <a
+      aria-label="visit profile of atanasster"
+      class="css-zypmzx-GithubAvatarItem"
+      href=""
+    >
+      <img
+        alt="atanasster"
+        class="css-1y16e88"
+        height="32"
+        src="https://github.com/atanasster"
+        title="atanasster"
+        width="32"
+      />
+    </a>
+  </div>
 </DocumentFragment>
 `;
 
@@ -1090,42 +1191,46 @@ exports[`Components/Link Overview 1`] = `
 exports[`Components/LinkHeading Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-jxxswp"
-    id="linkheading-text"
+    style="margin-left: 32px;"
   >
     <div
-      class="css-xhp9da"
+      class="css-jxxswp"
+      id="linkheading-text"
     >
-      <a
-        class="css-6ugsdx-LinkHeading"
-        data-id="linkheading-text"
-        data-level="1"
-        data-title="LinkHeading text"
-        href="http://localhost/#linkheading-text"
+      <div
+        class="css-xhp9da"
       >
-        <svg
-          aria-hidden="true"
-          class="octicon"
-          fill="currentColor"
-          height="28"
-          role="img"
-          style="display: inline-block; user-select: none; vertical-align: middle;"
-          viewBox="0 0 24 24"
-          width="28"
+        <a
+          class="css-6ugsdx-LinkHeading"
+          data-id="linkheading-text"
+          data-level="1"
+          data-title="LinkHeading text"
+          href="http://localhost/#linkheading-text"
         >
-          <path
-            d="M14.78 3.653a3.936 3.936 0 115.567 5.567l-3.627 3.627a3.936 3.936 0 01-5.88-.353.75.75 0 00-1.18.928 5.436 5.436 0 008.12.486l3.628-3.628a5.436 5.436 0 10-7.688-7.688l-3 3a.75.75 0 001.06 1.061l3-3z"
-          />
-          <path
-            d="M7.28 11.153a3.936 3.936 0 015.88.353.75.75 0 001.18-.928 5.436 5.436 0 00-8.12-.486L2.592 13.72a5.436 5.436 0 107.688 7.688l3-3a.75.75 0 10-1.06-1.06l-3 3a3.936 3.936 0 01-5.567-5.568l3.627-3.627z"
-          />
-        </svg>
-      </a>
-      <h1
-        class="css-ixvu55"
-      >
-        LinkHeading text
-      </h1>
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="28"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 24 24"
+            width="28"
+          >
+            <path
+              d="M14.78 3.653a3.936 3.936 0 115.567 5.567l-3.627 3.627a3.936 3.936 0 01-5.88-.353.75.75 0 00-1.18.928 5.436 5.436 0 008.12.486l3.628-3.628a5.436 5.436 0 10-7.688-7.688l-3 3a.75.75 0 001.06 1.061l3-3z"
+            />
+            <path
+              d="M7.28 11.153a3.936 3.936 0 015.88.353.75.75 0 001.18-.928 5.436 5.436 0 00-8.12-.486L2.592 13.72a5.436 5.436 0 107.688 7.688l3-3a.75.75 0 10-1.06-1.06l-3 3a3.936 3.936 0 01-5.567-5.568l3.627-3.627z"
+            />
+          </svg>
+        </a>
+        <h1
+          class="css-ixvu55"
+        >
+          LinkHeading text
+        </h1>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -1373,7 +1478,7 @@ exports[`Components/Markdown Overview 1`] = `
 exports[`Components/Multiselect Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-12hibeq"
+    style="display: inline-block;"
   >
     <button
       class="css-j69xip"
@@ -1495,91 +1600,96 @@ exports[`Components/Pagination Only Prev 1`] = `
 exports[`Components/Pagination Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-8r2q2l"
+    class="css-vurnku"
+    style="width: 100%;"
   >
     <div
-      class="css-vurnku"
+      class="css-8r2q2l"
     >
-      <a
-        class="css-10zwoio"
-        href="/"
+      <div
+        class="css-vurnku"
       >
-        <div
-          class="css-1gq2x6q"
+        <a
+          class="css-10zwoio"
+          href="/"
         >
-          <span
-            class="css-c3r86m"
-          >
-            Previous
-          </span>
           <div
-            class="css-9tifnv"
-          >
-            <svg
-              aria-hidden="true"
-              class="octicon"
-              fill="currentColor"
-              height="16"
-              role="img"
-              style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-              viewBox="0 0 16 16"
-              width="16"
-            >
-              <path
-                d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"
-                fill-rule="evenodd"
-              />
-            </svg>
-            <span
-              class="css-1s8umv4"
-            >
-              link to prev
-            </span>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div
-      class="css-vurnku"
-    >
-      <a
-        class="css-10zwoio"
-        href="/"
-      >
-        <div
-          class="css-1my6hv5"
-        >
-          <span
-            class="css-c3r86m"
-          >
-            Next
-          </span>
-          <div
-            class="css-9tifnv"
+            class="css-1gq2x6q"
           >
             <span
-              class="css-1s8umv4"
+              class="css-c3r86m"
             >
-              link to prev
+              Previous
             </span>
-            <svg
-              aria-hidden="true"
-              class="octicon"
-              fill="currentColor"
-              height="16"
-              role="img"
-              style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-              viewBox="0 0 16 16"
-              width="16"
+            <div
+              class="css-9tifnv"
             >
-              <path
-                d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"
-                fill-rule="evenodd"
-              />
-            </svg>
+              <svg
+                aria-hidden="true"
+                class="octicon"
+                fill="currentColor"
+                height="16"
+                role="img"
+                style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+              <span
+                class="css-1s8umv4"
+              >
+                link to prev
+              </span>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
+      <div
+        class="css-vurnku"
+      >
+        <a
+          class="css-10zwoio"
+          href="/"
+        >
+          <div
+            class="css-1my6hv5"
+          >
+            <span
+              class="css-c3r86m"
+            >
+              Next
+            </span>
+            <div
+              class="css-9tifnv"
+            >
+              <span
+                class="css-1s8umv4"
+              >
+                link to prev
+              </span>
+              <svg
+                aria-hidden="true"
+                class="octicon"
+                fill="currentColor"
+                height="16"
+                role="img"
+                style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -1759,86 +1869,95 @@ exports[`Components/PanelContainer Open Tab 1`] = `
 
 exports[`Components/PanelContainer Overview 1`] = `
 <DocumentFragment>
-  <div>
-    <div
-      class="css-15owl46"
-    >
+  <div
+    class="css-vurnku"
+    style="width: 100%;"
+  >
+    <div>
       <div
-        class="css-x60p33"
+        class="css-15owl46"
       >
         <div
-          class="css-1vga9oy"
+          class="css-x60p33"
         >
-          <button
-            aria-label="display panel 1"
-            class="css-1tf4h46"
+          <div
+            class="css-1vga9oy"
           >
-            open panel-1
-          </button>
-        </div>
-        <div
-          class="css-7d11p2"
-        >
-          <button
-            aria-label="display panel 2"
-            class="css-1tf4h46"
+            <button
+              aria-label="display panel 1"
+              class="css-1tf4h46"
+            >
+              open panel-1
+            </button>
+          </div>
+          <div
+            class="css-7d11p2"
           >
-            open panel-2
-          </button>
-        </div>
-        <div
-          class="css-7d11p2"
-        >
-          <button
-            aria-label="some action without panel"
-            class="css-1tf4h46"
+            <button
+              aria-label="display panel 2"
+              class="css-1tf4h46"
+            >
+              open panel-2
+            </button>
+          </div>
+          <div
+            class="css-7d11p2"
           >
-            action
-          </button>
+            <button
+              aria-label="some action without panel"
+              class="css-1tf4h46"
+            >
+              action
+            </button>
+          </div>
         </div>
-      </div>
-    </div>
-    <div
-      class="css-eqxzio"
-    >
-      <div>
-        <svg
-          aria-valuemax="1"
-          aria-valuemin="0"
-          aria-valuenow="1"
-          class="css-14d2907"
-          fill="none"
-          height="128"
-          role="img"
-          stroke="currentcolor"
-          stroke-width="2"
-          viewBox="0 0 32 32"
-          width="128"
-        >
-          <circle
-            cx="16"
-            cy="16"
-            opacity="0.125"
-            r="14"
-          />
-          <circle
-            cx="16"
-            cy="16"
-            r="14"
-            stroke-dasharray="87.96459430051421"
-            stroke-dashoffset="0"
-            transform="rotate(-90 16 16)"
-          />
-        </svg>
       </div>
       <div
-        aria-hidden="true"
-        class="rah-static rah-static--height-zero"
-        style="height: 0px; overflow: hidden;"
+        class="css-eqxzio"
       >
+        <div>
+          <div
+            class="css-12y95y7"
+          >
+            <svg
+              aria-valuemax="1"
+              aria-valuemin="0"
+              aria-valuenow="1"
+              class="css-14d2907"
+              fill="none"
+              height="128"
+              role="img"
+              stroke="currentcolor"
+              stroke-width="2"
+              viewBox="0 0 32 32"
+              width="128"
+            >
+              <circle
+                cx="16"
+                cy="16"
+                opacity="0.125"
+                r="14"
+              />
+              <circle
+                cx="16"
+                cy="16"
+                r="14"
+                stroke-dasharray="87.96459430051421"
+                stroke-dashoffset="0"
+                transform="rotate(-90 16 16)"
+              />
+            </svg>
+          </div>
+        </div>
         <div
-          style="display: none;"
-        />
+          aria-hidden="true"
+          class="rah-static rah-static--height-zero"
+          style="height: 0px; overflow: hidden;"
+        >
+          <div
+            style="display: none;"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -1936,7 +2055,7 @@ exports[`Components/PanelContainer Visible Tabs 1`] = `
 exports[`Components/Popover Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-12hibeq"
+    style="display: inline-block;"
   >
     <button
       class="css-gnc703"
@@ -1950,18 +2069,22 @@ exports[`Components/Popover Overview 1`] = `
 exports[`Components/ProgressIndicator Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-iapobn-ProgressIndicator"
+    style="width: 100%;"
   >
-    <progress
-      class="css-1fssii9"
-      max="10"
-      value="3"
-    />
-    <span
-      class="css-cagqfd-ProgressIndicator"
+    <div
+      class="css-iapobn-ProgressIndicator"
     >
-      3
-    </span>
+      <progress
+        class="css-1fssii9"
+        max="10"
+        value="3"
+      />
+      <span
+        class="css-cagqfd-ProgressIndicator"
+      >
+        3
+      </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -1969,7 +2092,7 @@ exports[`Components/ProgressIndicator Overview 1`] = `
 exports[`Components/SearchInput Customize 1`] = `
 <DocumentFragment>
   <div
-    class="css-12hibeq"
+    style="display: inline-block;"
   >
     <div
       class="css-nnvwbb-SearchInput"
@@ -2002,7 +2125,7 @@ exports[`Components/SearchInput Customize 1`] = `
 exports[`Components/SearchInput Default Render 1`] = `
 <DocumentFragment>
   <div
-    class="css-12hibeq"
+    style="display: inline-block;"
   >
     <div
       class="css-nnvwbb-SearchInput"
@@ -2035,7 +2158,7 @@ exports[`Components/SearchInput Default Render 1`] = `
 exports[`Components/SearchInput Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-12hibeq"
+    style="display: inline-block;"
   >
     <div
       class="css-nnvwbb-SearchInput"
@@ -2068,7 +2191,7 @@ exports[`Components/SearchInput Overview 1`] = `
 exports[`Components/SearchInput Placeholder 1`] = `
 <DocumentFragment>
   <div
-    class="css-12hibeq"
+    style="display: inline-block;"
   >
     <div
       class="css-nnvwbb-SearchInput"
@@ -4047,16 +4170,6 @@ exports[`Components/Source Theme Selector 1`] = `
       </pre>
     </div>
   </div>
-</DocumentFragment>
-`;
-
-exports[`Components/Subheading Overview 1`] = `
-<DocumentFragment>
-  <h3
-    class="css-1sr91xu"
-  >
-    Subheading text
-  </h3>
 </DocumentFragment>
 `;
 
@@ -10805,16 +10918,6 @@ exports[`Components/Tag Overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Components/Title Overview 1`] = `
-<DocumentFragment>
-  <h1
-    class="css-ixvu55"
-  >
-    Title text
-  </h1>
-</DocumentFragment>
-`;
-
 exports[`Components/TitledImage Overview 1`] = `
 <DocumentFragment>
   <div
@@ -11161,60 +11264,64 @@ exports[`Components/Tree Arrows Start 1`] = `
                 class="css-t9fq0h"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    aria-label="collapse items"
-                    class="css-vurnku"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      aria-label="collapse items"
+                      class="css-aqscwe"
                     >
-                      <path
-                        d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="css-1ve1p3p"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M2.8 2.06A1.75 1.75 0 014.41 1h7.18c.7 0 1.333.417 1.61 1.06l2.74 6.395a.75.75 0 01.06.295v4.5A1.75 1.75 0 0114.25 15H1.75A1.75 1.75 0 010 13.25v-4.5a.75.75 0 01.06-.295L2.8 2.06zm1.61.44a.25.25 0 00-.23.152L1.887 8H4.75a.75.75 0 01.6.3L6.625 10h2.75l1.275-1.7a.75.75 0 01.6-.3h2.863L11.82 2.652a.25.25 0 00-.23-.152H4.41zm10.09 7h-2.875l-1.275 1.7a.75.75 0 01-.6.3h-3.5a.75.75 0 01-.6-.3L4.375 9.5H1.5v3.75c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V9.5z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-15xx8i3"
+                    >
+                      <strong>
+                        Inbox
+                      </strong>
+                    </span>
                   </div>
                   <div
-                    class="css-1ve1p3p"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
-                    >
-                      <path
-                        d="M2.8 2.06A1.75 1.75 0 014.41 1h7.18c.7 0 1.333.417 1.61 1.06l2.74 6.395a.75.75 0 01.06.295v4.5A1.75 1.75 0 0114.25 15H1.75A1.75 1.75 0 010 13.25v-4.5a.75.75 0 01.06-.295L2.8 2.06zm1.61.44a.25.25 0 00-.23.152L1.887 8H4.75a.75.75 0 01.6.3L6.625 10h2.75l1.275-1.7a.75.75 0 01.6-.3h2.863L11.82 2.652a.25.25 0 00-.23-.152H4.41zm10.09 7h-2.875l-1.275 1.7a.75.75 0 01-.6.3h-3.5a.75.75 0 01-.6-.3L4.375 9.5H1.5v3.75c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V9.5z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <span
-                    class="css-15xx8i3"
-                  >
-                    <strong>
-                      Inbox
-                    </strong>
-                  </span>
+                    class="css-vthntz"
+                  />
                 </div>
               </button>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
         <div
@@ -11234,28 +11341,32 @@ exports[`Components/Tree Arrows Start 1`] = `
                   href="/inbox/all"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="css-dcq909"
                   >
-                    <span
-                      class="css-15xx8i3"
+                    <div
+                      class="css-f5h6sg"
                     >
-                      All
-                    </span>
+                      <span
+                        class="css-15xx8i3"
+                      >
+                        All
+                      </span>
+                    </div>
+                    <div
+                      class="css-vthntz"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        <div
+                          class="css-1jxn1yx"
+                        >
+                          10
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </a>
-              </div>
-              <div
-                class="css-vthntz"
-              >
-                <div
-                  class="css-vurnku"
-                >
-                  <div
-                    class="css-1jxn1yx"
-                  >
-                    10
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -11277,28 +11388,32 @@ exports[`Components/Tree Arrows Start 1`] = `
                   href="/inbox/gmail"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="css-dcq909"
                   >
-                    <span
-                      class="css-7w8u7j"
+                    <div
+                      class="css-f5h6sg"
                     >
-                      GMail
-                    </span>
+                      <span
+                        class="css-7w8u7j"
+                      >
+                        GMail
+                      </span>
+                    </div>
+                    <div
+                      class="css-vthntz"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        <div
+                          class="css-1jxn1yx"
+                        >
+                          8
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </a>
-              </div>
-              <div
-                class="css-vthntz"
-              >
-                <div
-                  class="css-vurnku"
-                >
-                  <div
-                    class="css-1jxn1yx"
-                  >
-                    8
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -11320,28 +11435,32 @@ exports[`Components/Tree Arrows Start 1`] = `
                   href="/inbox/work"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="css-dcq909"
                   >
-                    <span
-                      class="css-7w8u7j"
+                    <div
+                      class="css-f5h6sg"
                     >
-                      Work
-                    </span>
+                      <span
+                        class="css-7w8u7j"
+                      >
+                        Work
+                      </span>
+                    </div>
+                    <div
+                      class="css-vthntz"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        <div
+                          class="css-1jxn1yx"
+                        >
+                          1
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </a>
-              </div>
-              <div
-                class="css-vthntz"
-              >
-                <div
-                  class="css-vurnku"
-                >
-                  <div
-                    class="css-1jxn1yx"
-                  >
-                    1
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -11363,28 +11482,32 @@ exports[`Components/Tree Arrows Start 1`] = `
                   href="/inbox/amazon"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="css-dcq909"
                   >
-                    <span
-                      class="css-7w8u7j"
+                    <div
+                      class="css-f5h6sg"
                     >
-                      Amazon
-                    </span>
+                      <span
+                        class="css-7w8u7j"
+                      >
+                        Amazon
+                      </span>
+                    </div>
+                    <div
+                      class="css-vthntz"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        <div
+                          class="css-1jxn1yx"
+                        >
+                          1
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </a>
-              </div>
-              <div
-                class="css-vthntz"
-              >
-                <div
-                  class="css-vurnku"
-                >
-                  <div
-                    class="css-1jxn1yx"
-                  >
-                    1
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -11407,38 +11530,42 @@ exports[`Components/Tree Arrows Start 1`] = `
                 href="/inbox/sent"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M1.75 2A1.75 1.75 0 000 3.75v.736a.75.75 0 000 .027v7.737C0 13.216.784 14 1.75 14h12.5A1.75 1.75 0 0016 12.25v-8.5A1.75 1.75 0 0014.25 2H1.75zM14.5 4.07v-.32a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25v.32L8 7.88l6.5-3.81zm-13 1.74v6.441c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V5.809L8.38 9.397a.75.75 0 01-.76 0L1.5 5.809z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M1.75 2A1.75 1.75 0 000 3.75v.736a.75.75 0 000 .027v7.737C0 13.216.784 14 1.75 14h12.5A1.75 1.75 0 0016 12.25v-8.5A1.75 1.75 0 0014.25 2H1.75zM14.5 4.07v-.32a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25v.32L8 7.88l6.5-3.81zm-13 1.74v6.441c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V5.809L8.38 9.397a.75.75 0 01-.76 0L1.5 5.809z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Sent
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Sent
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -11459,47 +11586,51 @@ exports[`Components/Tree Arrows Start 1`] = `
                 href="/inbox/flagged"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M7.998 14.5c2.832 0 5-1.98 5-4.5 0-1.463-.68-2.19-1.879-3.383l-.036-.037c-1.013-1.008-2.3-2.29-2.834-4.434-.322.256-.63.579-.864.953-.432.696-.621 1.58-.046 2.73.473.947.67 2.284-.278 3.232-.61.61-1.545.84-2.403.633a2.788 2.788 0 01-1.436-.874A3.21 3.21 0 003 10c0 2.53 2.164 4.5 4.998 4.5zM9.533.753C9.496.34 9.16.009 8.77.146 7.035.75 4.34 3.187 5.997 6.5c.344.689.285 1.218.003 1.5-.419.419-1.54.487-2.04-.832-.173-.454-.659-.762-1.035-.454C2.036 7.44 1.5 8.702 1.5 10c0 3.512 2.998 6 6.498 6s6.5-2.5 6.5-6c0-2.137-1.128-3.26-2.312-4.438-1.19-1.184-2.436-2.425-2.653-4.81z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M7.998 14.5c2.832 0 5-1.98 5-4.5 0-1.463-.68-2.19-1.879-3.383l-.036-.037c-1.013-1.008-2.3-2.29-2.834-4.434-.322.256-.63.579-.864.953-.432.696-.621 1.58-.046 2.73.473.947.67 2.284-.278 3.232-.61.61-1.545.84-2.403.633a2.788 2.788 0 01-1.436-.874A3.21 3.21 0 003 10c0 2.53 2.164 4.5 4.998 4.5zM9.533.753C9.496.34 9.16.009 8.77.146 7.035.75 4.34 3.187 5.997 6.5c.344.689.285 1.218.003 1.5-.419.419-1.54.487-2.04-.832-.173-.454-.659-.762-1.035-.454C2.036 7.44 1.5 8.702 1.5 10c0 3.512 2.998 6 6.498 6s6.5-2.5 6.5-6c0-2.137-1.128-3.26-2.312-4.438-1.19-1.184-2.436-2.425-2.653-4.81z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Flagged
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
+                  <div
+                    class="css-vthntz"
                   >
-                    Flagged
-                  </span>
+                    <div
+                      class="css-vurnku"
+                    >
+                      <div
+                        class="css-1jxn1yx"
+                      >
+                        3
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </a>
-            </div>
-            <div
-              class="css-vthntz"
-            >
-              <div
-                class="css-vurnku"
-              >
-                <div
-                  class="css-1jxn1yx"
-                >
-                  3
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -11521,38 +11652,42 @@ exports[`Components/Tree Arrows Start 1`] = `
                 href="/inbox/starred"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Starred
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Starred
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -11573,38 +11708,42 @@ exports[`Components/Tree Arrows Start 1`] = `
                 href="/inbox/drafts"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Drafts
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Drafts
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -11625,38 +11764,42 @@ exports[`Components/Tree Arrows Start 1`] = `
                 href="/inbox/tagged"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Tagged
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Tagged
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -11677,38 +11820,42 @@ exports[`Components/Tree Arrows Start 1`] = `
                 href="/inbox/trash"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M6.5 1.75a.25.25 0 01.25-.25h2.5a.25.25 0 01.25.25V3h-3V1.75zm4.5 0V3h2.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H5V1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75zM4.496 6.675a.75.75 0 10-1.492.15l.66 6.6A1.75 1.75 0 005.405 15h5.19c.9 0 1.652-.681 1.741-1.576l.66-6.6a.75.75 0 00-1.492-.149l-.66 6.6a.25.25 0 01-.249.225h-5.19a.25.25 0 01-.249-.225l-.66-6.6z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M6.5 1.75a.25.25 0 01.25-.25h2.5a.25.25 0 01.25.25V3h-3V1.75zm4.5 0V3h2.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H5V1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75zM4.496 6.675a.75.75 0 10-1.492.15l.66 6.6A1.75 1.75 0 005.405 15h5.19c.9 0 1.652-.681 1.741-1.576l.66-6.6a.75.75 0 00-1.492-.149l-.66 6.6a.25.25 0 01-.249.225h-5.19a.25.25 0 01-.249-.225l-.66-6.6z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Trash
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Trash
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -11741,59 +11888,63 @@ exports[`Components/Tree Custom Expand Icons 1`] = `
                 class="css-t9fq0h"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M2.8 2.06A1.75 1.75 0 014.41 1h7.18c.7 0 1.333.417 1.61 1.06l2.74 6.395a.75.75 0 01.06.295v4.5A1.75 1.75 0 0114.25 15H1.75A1.75 1.75 0 010 13.25v-4.5a.75.75 0 01.06-.295L2.8 2.06zm1.61.44a.25.25 0 00-.23.152L1.887 8H4.75a.75.75 0 01.6.3L6.625 10h2.75l1.275-1.7a.75.75 0 01.6-.3h2.863L11.82 2.652a.25.25 0 00-.23-.152H4.41zm10.09 7h-2.875l-1.275 1.7a.75.75 0 01-.6.3h-3.5a.75.75 0 01-.6-.3L4.375 9.5H1.5v3.75c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V9.5z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M2.8 2.06A1.75 1.75 0 014.41 1h7.18c.7 0 1.333.417 1.61 1.06l2.74 6.395a.75.75 0 01.06.295v4.5A1.75 1.75 0 0114.25 15H1.75A1.75 1.75 0 010 13.25v-4.5a.75.75 0 01.06-.295L2.8 2.06zm1.61.44a.25.25 0 00-.23.152L1.887 8H4.75a.75.75 0 01.6.3L6.625 10h2.75l1.275-1.7a.75.75 0 01.6-.3h2.863L11.82 2.652a.25.25 0 00-.23-.152H4.41zm10.09 7h-2.875l-1.275 1.7a.75.75 0 01-.6.3h-3.5a.75.75 0 01-.6-.3L4.375 9.5H1.5v3.75c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V9.5z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-15xx8i3"
+                    >
+                      <strong>
+                        Inbox
+                      </strong>
+                    </span>
                   </div>
-                  <span
-                    class="css-15xx8i3"
+                  <div
+                    class="css-vthntz"
                   >
-                    <strong>
-                      Inbox
-                    </strong>
-                  </span>
+                    <div
+                      aria-label="collapse items"
+                      class="css-aqscwe"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M4.427 7.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 7H4.604a.25.25 0 00-.177.427z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </button>
-            </div>
-            <div
-              class="css-vthntz"
-            >
-              <div
-                aria-label="collapse items"
-                class="css-vurnku"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="octicon"
-                  fill="currentColor"
-                  height="16"
-                  role="img"
-                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                  viewBox="0 0 16 16"
-                  width="16"
-                >
-                  <path
-                    d="M4.427 7.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 7H4.604a.25.25 0 00-.177.427z"
-                  />
-                </svg>
-              </div>
             </div>
           </div>
         </div>
@@ -11814,28 +11965,32 @@ exports[`Components/Tree Custom Expand Icons 1`] = `
                   href="/inbox/all"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="css-dcq909"
                   >
-                    <span
-                      class="css-15xx8i3"
+                    <div
+                      class="css-f5h6sg"
                     >
-                      All
-                    </span>
+                      <span
+                        class="css-15xx8i3"
+                      >
+                        All
+                      </span>
+                    </div>
+                    <div
+                      class="css-vthntz"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        <div
+                          class="css-1jxn1yx"
+                        >
+                          10
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </a>
-              </div>
-              <div
-                class="css-vthntz"
-              >
-                <div
-                  class="css-vurnku"
-                >
-                  <div
-                    class="css-1jxn1yx"
-                  >
-                    10
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -11857,28 +12012,32 @@ exports[`Components/Tree Custom Expand Icons 1`] = `
                   href="/inbox/gmail"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="css-dcq909"
                   >
-                    <span
-                      class="css-7w8u7j"
+                    <div
+                      class="css-f5h6sg"
                     >
-                      GMail
-                    </span>
+                      <span
+                        class="css-7w8u7j"
+                      >
+                        GMail
+                      </span>
+                    </div>
+                    <div
+                      class="css-vthntz"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        <div
+                          class="css-1jxn1yx"
+                        >
+                          8
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </a>
-              </div>
-              <div
-                class="css-vthntz"
-              >
-                <div
-                  class="css-vurnku"
-                >
-                  <div
-                    class="css-1jxn1yx"
-                  >
-                    8
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -11900,28 +12059,32 @@ exports[`Components/Tree Custom Expand Icons 1`] = `
                   href="/inbox/work"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="css-dcq909"
                   >
-                    <span
-                      class="css-7w8u7j"
+                    <div
+                      class="css-f5h6sg"
                     >
-                      Work
-                    </span>
+                      <span
+                        class="css-7w8u7j"
+                      >
+                        Work
+                      </span>
+                    </div>
+                    <div
+                      class="css-vthntz"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        <div
+                          class="css-1jxn1yx"
+                        >
+                          1
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </a>
-              </div>
-              <div
-                class="css-vthntz"
-              >
-                <div
-                  class="css-vurnku"
-                >
-                  <div
-                    class="css-1jxn1yx"
-                  >
-                    1
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -11943,28 +12106,32 @@ exports[`Components/Tree Custom Expand Icons 1`] = `
                   href="/inbox/amazon"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="css-dcq909"
                   >
-                    <span
-                      class="css-7w8u7j"
+                    <div
+                      class="css-f5h6sg"
                     >
-                      Amazon
-                    </span>
+                      <span
+                        class="css-7w8u7j"
+                      >
+                        Amazon
+                      </span>
+                    </div>
+                    <div
+                      class="css-vthntz"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        <div
+                          class="css-1jxn1yx"
+                        >
+                          1
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </a>
-              </div>
-              <div
-                class="css-vthntz"
-              >
-                <div
-                  class="css-vurnku"
-                >
-                  <div
-                    class="css-1jxn1yx"
-                  >
-                    1
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -11987,38 +12154,42 @@ exports[`Components/Tree Custom Expand Icons 1`] = `
                 href="/inbox/sent"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M1.75 2A1.75 1.75 0 000 3.75v.736a.75.75 0 000 .027v7.737C0 13.216.784 14 1.75 14h12.5A1.75 1.75 0 0016 12.25v-8.5A1.75 1.75 0 0014.25 2H1.75zM14.5 4.07v-.32a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25v.32L8 7.88l6.5-3.81zm-13 1.74v6.441c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V5.809L8.38 9.397a.75.75 0 01-.76 0L1.5 5.809z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M1.75 2A1.75 1.75 0 000 3.75v.736a.75.75 0 000 .027v7.737C0 13.216.784 14 1.75 14h12.5A1.75 1.75 0 0016 12.25v-8.5A1.75 1.75 0 0014.25 2H1.75zM14.5 4.07v-.32a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25v.32L8 7.88l6.5-3.81zm-13 1.74v6.441c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V5.809L8.38 9.397a.75.75 0 01-.76 0L1.5 5.809z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Sent
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Sent
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -12039,47 +12210,51 @@ exports[`Components/Tree Custom Expand Icons 1`] = `
                 href="/inbox/flagged"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M7.998 14.5c2.832 0 5-1.98 5-4.5 0-1.463-.68-2.19-1.879-3.383l-.036-.037c-1.013-1.008-2.3-2.29-2.834-4.434-.322.256-.63.579-.864.953-.432.696-.621 1.58-.046 2.73.473.947.67 2.284-.278 3.232-.61.61-1.545.84-2.403.633a2.788 2.788 0 01-1.436-.874A3.21 3.21 0 003 10c0 2.53 2.164 4.5 4.998 4.5zM9.533.753C9.496.34 9.16.009 8.77.146 7.035.75 4.34 3.187 5.997 6.5c.344.689.285 1.218.003 1.5-.419.419-1.54.487-2.04-.832-.173-.454-.659-.762-1.035-.454C2.036 7.44 1.5 8.702 1.5 10c0 3.512 2.998 6 6.498 6s6.5-2.5 6.5-6c0-2.137-1.128-3.26-2.312-4.438-1.19-1.184-2.436-2.425-2.653-4.81z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M7.998 14.5c2.832 0 5-1.98 5-4.5 0-1.463-.68-2.19-1.879-3.383l-.036-.037c-1.013-1.008-2.3-2.29-2.834-4.434-.322.256-.63.579-.864.953-.432.696-.621 1.58-.046 2.73.473.947.67 2.284-.278 3.232-.61.61-1.545.84-2.403.633a2.788 2.788 0 01-1.436-.874A3.21 3.21 0 003 10c0 2.53 2.164 4.5 4.998 4.5zM9.533.753C9.496.34 9.16.009 8.77.146 7.035.75 4.34 3.187 5.997 6.5c.344.689.285 1.218.003 1.5-.419.419-1.54.487-2.04-.832-.173-.454-.659-.762-1.035-.454C2.036 7.44 1.5 8.702 1.5 10c0 3.512 2.998 6 6.498 6s6.5-2.5 6.5-6c0-2.137-1.128-3.26-2.312-4.438-1.19-1.184-2.436-2.425-2.653-4.81z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Flagged
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
+                  <div
+                    class="css-vthntz"
                   >
-                    Flagged
-                  </span>
+                    <div
+                      class="css-vurnku"
+                    >
+                      <div
+                        class="css-1jxn1yx"
+                      >
+                        3
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </a>
-            </div>
-            <div
-              class="css-vthntz"
-            >
-              <div
-                class="css-vurnku"
-              >
-                <div
-                  class="css-1jxn1yx"
-                >
-                  3
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -12101,38 +12276,42 @@ exports[`Components/Tree Custom Expand Icons 1`] = `
                 href="/inbox/starred"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Starred
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Starred
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -12153,38 +12332,42 @@ exports[`Components/Tree Custom Expand Icons 1`] = `
                 href="/inbox/drafts"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Drafts
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Drafts
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -12205,38 +12388,42 @@ exports[`Components/Tree Custom Expand Icons 1`] = `
                 href="/inbox/tagged"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Tagged
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Tagged
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -12257,38 +12444,42 @@ exports[`Components/Tree Custom Expand Icons 1`] = `
                 href="/inbox/trash"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M6.5 1.75a.25.25 0 01.25-.25h2.5a.25.25 0 01.25.25V3h-3V1.75zm4.5 0V3h2.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H5V1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75zM4.496 6.675a.75.75 0 10-1.492.15l.66 6.6A1.75 1.75 0 005.405 15h5.19c.9 0 1.652-.681 1.741-1.576l.66-6.6a.75.75 0 00-1.492-.149l-.66 6.6a.25.25 0 01-.249.225h-5.19a.25.25 0 01-.249-.225l-.66-6.6z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M6.5 1.75a.25.25 0 01.25-.25h2.5a.25.25 0 01.25.25V3h-3V1.75zm4.5 0V3h2.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H5V1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75zM4.496 6.675a.75.75 0 10-1.492.15l.66 6.6A1.75 1.75 0 005.405 15h5.19c.9 0 1.652-.681 1.741-1.576l.66-6.6a.75.75 0 00-1.492-.149l-.66 6.6a.25.25 0 01-.249.225h-5.19a.25.25 0 01-.249-.225l-.66-6.6z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Trash
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Trash
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -12321,60 +12512,64 @@ exports[`Components/Tree Items 1`] = `
                 class="css-t9fq0h"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M2.8 2.06A1.75 1.75 0 014.41 1h7.18c.7 0 1.333.417 1.61 1.06l2.74 6.395a.75.75 0 01.06.295v4.5A1.75 1.75 0 0114.25 15H1.75A1.75 1.75 0 010 13.25v-4.5a.75.75 0 01.06-.295L2.8 2.06zm1.61.44a.25.25 0 00-.23.152L1.887 8H4.75a.75.75 0 01.6.3L6.625 10h2.75l1.275-1.7a.75.75 0 01.6-.3h2.863L11.82 2.652a.25.25 0 00-.23-.152H4.41zm10.09 7h-2.875l-1.275 1.7a.75.75 0 01-.6.3h-3.5a.75.75 0 01-.6-.3L4.375 9.5H1.5v3.75c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V9.5z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M2.8 2.06A1.75 1.75 0 014.41 1h7.18c.7 0 1.333.417 1.61 1.06l2.74 6.395a.75.75 0 01.06.295v4.5A1.75 1.75 0 0114.25 15H1.75A1.75 1.75 0 010 13.25v-4.5a.75.75 0 01.06-.295L2.8 2.06zm1.61.44a.25.25 0 00-.23.152L1.887 8H4.75a.75.75 0 01.6.3L6.625 10h2.75l1.275-1.7a.75.75 0 01.6-.3h2.863L11.82 2.652a.25.25 0 00-.23-.152H4.41zm10.09 7h-2.875l-1.275 1.7a.75.75 0 01-.6.3h-3.5a.75.75 0 01-.6-.3L4.375 9.5H1.5v3.75c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V9.5z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-15xx8i3"
+                    >
+                      <strong>
+                        Inbox
+                      </strong>
+                    </span>
                   </div>
-                  <span
-                    class="css-15xx8i3"
+                  <div
+                    class="css-vthntz"
                   >
-                    <strong>
-                      Inbox
-                    </strong>
-                  </span>
+                    <div
+                      aria-label="collapse items"
+                      class="css-aqscwe"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </button>
-            </div>
-            <div
-              class="css-vthntz"
-            >
-              <div
-                aria-label="collapse items"
-                class="css-vurnku"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="octicon"
-                  fill="currentColor"
-                  height="16"
-                  role="img"
-                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                  viewBox="0 0 16 16"
-                  width="16"
-                >
-                  <path
-                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </div>
             </div>
           </div>
         </div>
@@ -12395,28 +12590,32 @@ exports[`Components/Tree Items 1`] = `
                   href="/inbox/all"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="css-dcq909"
                   >
-                    <span
-                      class="css-15xx8i3"
+                    <div
+                      class="css-f5h6sg"
                     >
-                      All
-                    </span>
+                      <span
+                        class="css-15xx8i3"
+                      >
+                        All
+                      </span>
+                    </div>
+                    <div
+                      class="css-vthntz"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        <div
+                          class="css-1jxn1yx"
+                        >
+                          10
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </a>
-              </div>
-              <div
-                class="css-vthntz"
-              >
-                <div
-                  class="css-vurnku"
-                >
-                  <div
-                    class="css-1jxn1yx"
-                  >
-                    10
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -12438,28 +12637,32 @@ exports[`Components/Tree Items 1`] = `
                   href="/inbox/gmail"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="css-dcq909"
                   >
-                    <span
-                      class="css-7w8u7j"
+                    <div
+                      class="css-f5h6sg"
                     >
-                      GMail
-                    </span>
+                      <span
+                        class="css-7w8u7j"
+                      >
+                        GMail
+                      </span>
+                    </div>
+                    <div
+                      class="css-vthntz"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        <div
+                          class="css-1jxn1yx"
+                        >
+                          8
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </a>
-              </div>
-              <div
-                class="css-vthntz"
-              >
-                <div
-                  class="css-vurnku"
-                >
-                  <div
-                    class="css-1jxn1yx"
-                  >
-                    8
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -12481,28 +12684,32 @@ exports[`Components/Tree Items 1`] = `
                   href="/inbox/work"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="css-dcq909"
                   >
-                    <span
-                      class="css-7w8u7j"
+                    <div
+                      class="css-f5h6sg"
                     >
-                      Work
-                    </span>
+                      <span
+                        class="css-7w8u7j"
+                      >
+                        Work
+                      </span>
+                    </div>
+                    <div
+                      class="css-vthntz"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        <div
+                          class="css-1jxn1yx"
+                        >
+                          1
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </a>
-              </div>
-              <div
-                class="css-vthntz"
-              >
-                <div
-                  class="css-vurnku"
-                >
-                  <div
-                    class="css-1jxn1yx"
-                  >
-                    1
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -12524,28 +12731,32 @@ exports[`Components/Tree Items 1`] = `
                   href="/inbox/amazon"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="css-dcq909"
                   >
-                    <span
-                      class="css-7w8u7j"
+                    <div
+                      class="css-f5h6sg"
                     >
-                      Amazon
-                    </span>
+                      <span
+                        class="css-7w8u7j"
+                      >
+                        Amazon
+                      </span>
+                    </div>
+                    <div
+                      class="css-vthntz"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        <div
+                          class="css-1jxn1yx"
+                        >
+                          1
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </a>
-              </div>
-              <div
-                class="css-vthntz"
-              >
-                <div
-                  class="css-vurnku"
-                >
-                  <div
-                    class="css-1jxn1yx"
-                  >
-                    1
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -12568,38 +12779,42 @@ exports[`Components/Tree Items 1`] = `
                 href="/inbox/sent"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M1.75 2A1.75 1.75 0 000 3.75v.736a.75.75 0 000 .027v7.737C0 13.216.784 14 1.75 14h12.5A1.75 1.75 0 0016 12.25v-8.5A1.75 1.75 0 0014.25 2H1.75zM14.5 4.07v-.32a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25v.32L8 7.88l6.5-3.81zm-13 1.74v6.441c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V5.809L8.38 9.397a.75.75 0 01-.76 0L1.5 5.809z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M1.75 2A1.75 1.75 0 000 3.75v.736a.75.75 0 000 .027v7.737C0 13.216.784 14 1.75 14h12.5A1.75 1.75 0 0016 12.25v-8.5A1.75 1.75 0 0014.25 2H1.75zM14.5 4.07v-.32a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25v.32L8 7.88l6.5-3.81zm-13 1.74v6.441c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V5.809L8.38 9.397a.75.75 0 01-.76 0L1.5 5.809z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Sent
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Sent
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -12620,47 +12835,51 @@ exports[`Components/Tree Items 1`] = `
                 href="/inbox/flagged"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M7.998 14.5c2.832 0 5-1.98 5-4.5 0-1.463-.68-2.19-1.879-3.383l-.036-.037c-1.013-1.008-2.3-2.29-2.834-4.434-.322.256-.63.579-.864.953-.432.696-.621 1.58-.046 2.73.473.947.67 2.284-.278 3.232-.61.61-1.545.84-2.403.633a2.788 2.788 0 01-1.436-.874A3.21 3.21 0 003 10c0 2.53 2.164 4.5 4.998 4.5zM9.533.753C9.496.34 9.16.009 8.77.146 7.035.75 4.34 3.187 5.997 6.5c.344.689.285 1.218.003 1.5-.419.419-1.54.487-2.04-.832-.173-.454-.659-.762-1.035-.454C2.036 7.44 1.5 8.702 1.5 10c0 3.512 2.998 6 6.498 6s6.5-2.5 6.5-6c0-2.137-1.128-3.26-2.312-4.438-1.19-1.184-2.436-2.425-2.653-4.81z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M7.998 14.5c2.832 0 5-1.98 5-4.5 0-1.463-.68-2.19-1.879-3.383l-.036-.037c-1.013-1.008-2.3-2.29-2.834-4.434-.322.256-.63.579-.864.953-.432.696-.621 1.58-.046 2.73.473.947.67 2.284-.278 3.232-.61.61-1.545.84-2.403.633a2.788 2.788 0 01-1.436-.874A3.21 3.21 0 003 10c0 2.53 2.164 4.5 4.998 4.5zM9.533.753C9.496.34 9.16.009 8.77.146 7.035.75 4.34 3.187 5.997 6.5c.344.689.285 1.218.003 1.5-.419.419-1.54.487-2.04-.832-.173-.454-.659-.762-1.035-.454C2.036 7.44 1.5 8.702 1.5 10c0 3.512 2.998 6 6.498 6s6.5-2.5 6.5-6c0-2.137-1.128-3.26-2.312-4.438-1.19-1.184-2.436-2.425-2.653-4.81z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Flagged
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
+                  <div
+                    class="css-vthntz"
                   >
-                    Flagged
-                  </span>
+                    <div
+                      class="css-vurnku"
+                    >
+                      <div
+                        class="css-1jxn1yx"
+                      >
+                        3
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </a>
-            </div>
-            <div
-              class="css-vthntz"
-            >
-              <div
-                class="css-vurnku"
-              >
-                <div
-                  class="css-1jxn1yx"
-                >
-                  3
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -12682,38 +12901,42 @@ exports[`Components/Tree Items 1`] = `
                 href="/inbox/starred"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Starred
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Starred
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -12734,38 +12957,42 @@ exports[`Components/Tree Items 1`] = `
                 href="/inbox/drafts"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Drafts
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Drafts
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -12786,38 +13013,42 @@ exports[`Components/Tree Items 1`] = `
                 href="/inbox/tagged"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Tagged
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Tagged
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -12838,38 +13069,42 @@ exports[`Components/Tree Items 1`] = `
                 href="/inbox/trash"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M6.5 1.75a.25.25 0 01.25-.25h2.5a.25.25 0 01.25.25V3h-3V1.75zm4.5 0V3h2.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H5V1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75zM4.496 6.675a.75.75 0 10-1.492.15l.66 6.6A1.75 1.75 0 005.405 15h5.19c.9 0 1.652-.681 1.741-1.576l.66-6.6a.75.75 0 00-1.492-.149l-.66 6.6a.25.25 0 01-.249.225h-5.19a.25.25 0 01-.249-.225l-.66-6.6z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M6.5 1.75a.25.25 0 01.25-.25h2.5a.25.25 0 01.25.25V3h-3V1.75zm4.5 0V3h2.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H5V1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75zM4.496 6.675a.75.75 0 10-1.492.15l.66 6.6A1.75 1.75 0 005.405 15h5.19c.9 0 1.652-.681 1.741-1.576l.66-6.6a.75.75 0 00-1.492-.149l-.66 6.6a.25.25 0 01-.249.225h-5.19a.25.25 0 01-.249-.225l-.66-6.6z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Trash
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Trash
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -12902,60 +13137,64 @@ exports[`Components/Tree Large Indentation 1`] = `
                 class="css-t9fq0h"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M2.8 2.06A1.75 1.75 0 014.41 1h7.18c.7 0 1.333.417 1.61 1.06l2.74 6.395a.75.75 0 01.06.295v4.5A1.75 1.75 0 0114.25 15H1.75A1.75 1.75 0 010 13.25v-4.5a.75.75 0 01.06-.295L2.8 2.06zm1.61.44a.25.25 0 00-.23.152L1.887 8H4.75a.75.75 0 01.6.3L6.625 10h2.75l1.275-1.7a.75.75 0 01.6-.3h2.863L11.82 2.652a.25.25 0 00-.23-.152H4.41zm10.09 7h-2.875l-1.275 1.7a.75.75 0 01-.6.3h-3.5a.75.75 0 01-.6-.3L4.375 9.5H1.5v3.75c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V9.5z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M2.8 2.06A1.75 1.75 0 014.41 1h7.18c.7 0 1.333.417 1.61 1.06l2.74 6.395a.75.75 0 01.06.295v4.5A1.75 1.75 0 0114.25 15H1.75A1.75 1.75 0 010 13.25v-4.5a.75.75 0 01.06-.295L2.8 2.06zm1.61.44a.25.25 0 00-.23.152L1.887 8H4.75a.75.75 0 01.6.3L6.625 10h2.75l1.275-1.7a.75.75 0 01.6-.3h2.863L11.82 2.652a.25.25 0 00-.23-.152H4.41zm10.09 7h-2.875l-1.275 1.7a.75.75 0 01-.6.3h-3.5a.75.75 0 01-.6-.3L4.375 9.5H1.5v3.75c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V9.5z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-15xx8i3"
+                    >
+                      <strong>
+                        Inbox
+                      </strong>
+                    </span>
                   </div>
-                  <span
-                    class="css-15xx8i3"
+                  <div
+                    class="css-vthntz"
                   >
-                    <strong>
-                      Inbox
-                    </strong>
-                  </span>
+                    <div
+                      aria-label="collapse items"
+                      class="css-aqscwe"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </button>
-            </div>
-            <div
-              class="css-vthntz"
-            >
-              <div
-                aria-label="collapse items"
-                class="css-vurnku"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="octicon"
-                  fill="currentColor"
-                  height="16"
-                  role="img"
-                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                  viewBox="0 0 16 16"
-                  width="16"
-                >
-                  <path
-                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </div>
             </div>
           </div>
         </div>
@@ -12976,28 +13215,32 @@ exports[`Components/Tree Large Indentation 1`] = `
                   href="/inbox/all"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="css-dcq909"
                   >
-                    <span
-                      class="css-15xx8i3"
+                    <div
+                      class="css-f5h6sg"
                     >
-                      All
-                    </span>
+                      <span
+                        class="css-15xx8i3"
+                      >
+                        All
+                      </span>
+                    </div>
+                    <div
+                      class="css-vthntz"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        <div
+                          class="css-1jxn1yx"
+                        >
+                          10
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </a>
-              </div>
-              <div
-                class="css-vthntz"
-              >
-                <div
-                  class="css-vurnku"
-                >
-                  <div
-                    class="css-1jxn1yx"
-                  >
-                    10
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -13019,28 +13262,32 @@ exports[`Components/Tree Large Indentation 1`] = `
                   href="/inbox/gmail"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="css-dcq909"
                   >
-                    <span
-                      class="css-7w8u7j"
+                    <div
+                      class="css-f5h6sg"
                     >
-                      GMail
-                    </span>
+                      <span
+                        class="css-7w8u7j"
+                      >
+                        GMail
+                      </span>
+                    </div>
+                    <div
+                      class="css-vthntz"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        <div
+                          class="css-1jxn1yx"
+                        >
+                          8
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </a>
-              </div>
-              <div
-                class="css-vthntz"
-              >
-                <div
-                  class="css-vurnku"
-                >
-                  <div
-                    class="css-1jxn1yx"
-                  >
-                    8
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -13062,28 +13309,32 @@ exports[`Components/Tree Large Indentation 1`] = `
                   href="/inbox/work"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="css-dcq909"
                   >
-                    <span
-                      class="css-7w8u7j"
+                    <div
+                      class="css-f5h6sg"
                     >
-                      Work
-                    </span>
+                      <span
+                        class="css-7w8u7j"
+                      >
+                        Work
+                      </span>
+                    </div>
+                    <div
+                      class="css-vthntz"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        <div
+                          class="css-1jxn1yx"
+                        >
+                          1
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </a>
-              </div>
-              <div
-                class="css-vthntz"
-              >
-                <div
-                  class="css-vurnku"
-                >
-                  <div
-                    class="css-1jxn1yx"
-                  >
-                    1
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -13105,28 +13356,32 @@ exports[`Components/Tree Large Indentation 1`] = `
                   href="/inbox/amazon"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="css-dcq909"
                   >
-                    <span
-                      class="css-7w8u7j"
+                    <div
+                      class="css-f5h6sg"
                     >
-                      Amazon
-                    </span>
+                      <span
+                        class="css-7w8u7j"
+                      >
+                        Amazon
+                      </span>
+                    </div>
+                    <div
+                      class="css-vthntz"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        <div
+                          class="css-1jxn1yx"
+                        >
+                          1
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </a>
-              </div>
-              <div
-                class="css-vthntz"
-              >
-                <div
-                  class="css-vurnku"
-                >
-                  <div
-                    class="css-1jxn1yx"
-                  >
-                    1
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -13149,38 +13404,42 @@ exports[`Components/Tree Large Indentation 1`] = `
                 href="/inbox/sent"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M1.75 2A1.75 1.75 0 000 3.75v.736a.75.75 0 000 .027v7.737C0 13.216.784 14 1.75 14h12.5A1.75 1.75 0 0016 12.25v-8.5A1.75 1.75 0 0014.25 2H1.75zM14.5 4.07v-.32a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25v.32L8 7.88l6.5-3.81zm-13 1.74v6.441c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V5.809L8.38 9.397a.75.75 0 01-.76 0L1.5 5.809z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M1.75 2A1.75 1.75 0 000 3.75v.736a.75.75 0 000 .027v7.737C0 13.216.784 14 1.75 14h12.5A1.75 1.75 0 0016 12.25v-8.5A1.75 1.75 0 0014.25 2H1.75zM14.5 4.07v-.32a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25v.32L8 7.88l6.5-3.81zm-13 1.74v6.441c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V5.809L8.38 9.397a.75.75 0 01-.76 0L1.5 5.809z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Sent
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Sent
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -13201,47 +13460,51 @@ exports[`Components/Tree Large Indentation 1`] = `
                 href="/inbox/flagged"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M7.998 14.5c2.832 0 5-1.98 5-4.5 0-1.463-.68-2.19-1.879-3.383l-.036-.037c-1.013-1.008-2.3-2.29-2.834-4.434-.322.256-.63.579-.864.953-.432.696-.621 1.58-.046 2.73.473.947.67 2.284-.278 3.232-.61.61-1.545.84-2.403.633a2.788 2.788 0 01-1.436-.874A3.21 3.21 0 003 10c0 2.53 2.164 4.5 4.998 4.5zM9.533.753C9.496.34 9.16.009 8.77.146 7.035.75 4.34 3.187 5.997 6.5c.344.689.285 1.218.003 1.5-.419.419-1.54.487-2.04-.832-.173-.454-.659-.762-1.035-.454C2.036 7.44 1.5 8.702 1.5 10c0 3.512 2.998 6 6.498 6s6.5-2.5 6.5-6c0-2.137-1.128-3.26-2.312-4.438-1.19-1.184-2.436-2.425-2.653-4.81z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M7.998 14.5c2.832 0 5-1.98 5-4.5 0-1.463-.68-2.19-1.879-3.383l-.036-.037c-1.013-1.008-2.3-2.29-2.834-4.434-.322.256-.63.579-.864.953-.432.696-.621 1.58-.046 2.73.473.947.67 2.284-.278 3.232-.61.61-1.545.84-2.403.633a2.788 2.788 0 01-1.436-.874A3.21 3.21 0 003 10c0 2.53 2.164 4.5 4.998 4.5zM9.533.753C9.496.34 9.16.009 8.77.146 7.035.75 4.34 3.187 5.997 6.5c.344.689.285 1.218.003 1.5-.419.419-1.54.487-2.04-.832-.173-.454-.659-.762-1.035-.454C2.036 7.44 1.5 8.702 1.5 10c0 3.512 2.998 6 6.498 6s6.5-2.5 6.5-6c0-2.137-1.128-3.26-2.312-4.438-1.19-1.184-2.436-2.425-2.653-4.81z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Flagged
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
+                  <div
+                    class="css-vthntz"
                   >
-                    Flagged
-                  </span>
+                    <div
+                      class="css-vurnku"
+                    >
+                      <div
+                        class="css-1jxn1yx"
+                      >
+                        3
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </a>
-            </div>
-            <div
-              class="css-vthntz"
-            >
-              <div
-                class="css-vurnku"
-              >
-                <div
-                  class="css-1jxn1yx"
-                >
-                  3
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -13263,38 +13526,42 @@ exports[`Components/Tree Large Indentation 1`] = `
                 href="/inbox/starred"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Starred
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Starred
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -13315,38 +13582,42 @@ exports[`Components/Tree Large Indentation 1`] = `
                 href="/inbox/drafts"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Drafts
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Drafts
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -13367,38 +13638,42 @@ exports[`Components/Tree Large Indentation 1`] = `
                 href="/inbox/tagged"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Tagged
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Tagged
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -13419,38 +13694,42 @@ exports[`Components/Tree Large Indentation 1`] = `
                 href="/inbox/trash"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M6.5 1.75a.25.25 0 01.25-.25h2.5a.25.25 0 01.25.25V3h-3V1.75zm4.5 0V3h2.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H5V1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75zM4.496 6.675a.75.75 0 10-1.492.15l.66 6.6A1.75 1.75 0 005.405 15h5.19c.9 0 1.652-.681 1.741-1.576l.66-6.6a.75.75 0 00-1.492-.149l-.66 6.6a.25.25 0 01-.249.225h-5.19a.25.25 0 01-.249-.225l-.66-6.6z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M6.5 1.75a.25.25 0 01.25-.25h2.5a.25.25 0 01.25.25V3h-3V1.75zm4.5 0V3h2.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H5V1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75zM4.496 6.675a.75.75 0 10-1.492.15l.66 6.6A1.75 1.75 0 005.405 15h5.19c.9 0 1.652-.681 1.741-1.576l.66-6.6a.75.75 0 00-1.492-.149l-.66 6.6a.25.25 0 01-.249.225h-5.19a.25.25 0 01-.249-.225l-.66-6.6z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Trash
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Trash
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -13483,41 +13762,45 @@ exports[`Components/Tree Overview 1`] = `
                 class="css-t9fq0h"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
-                  <span
-                    class="css-15xx8i3"
+                  <div
+                    class="css-f5h6sg"
                   >
-                    <strong>
-                      Local
-                    </strong>
-                  </span>
+                    <span
+                      class="css-15xx8i3"
+                    >
+                      <strong>
+                        Local
+                      </strong>
+                    </span>
+                  </div>
+                  <div
+                    class="css-vthntz"
+                  >
+                    <div
+                      aria-label="collapse items"
+                      class="css-aqscwe"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </button>
-            </div>
-            <div
-              class="css-vthntz"
-            >
-              <div
-                aria-label="collapse items"
-                class="css-vurnku"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="octicon"
-                  fill="currentColor"
-                  height="16"
-                  role="img"
-                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                  viewBox="0 0 16 16"
-                  width="16"
-                >
-                  <path
-                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </div>
             </div>
           </div>
         </div>
@@ -13538,19 +13821,23 @@ exports[`Components/Tree Overview 1`] = `
                   href="/c_drive"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="css-dcq909"
                   >
-                    <span
-                      class="css-15xx8i3"
+                    <div
+                      class="css-f5h6sg"
                     >
-                      C: drive
-                    </span>
+                      <span
+                        class="css-15xx8i3"
+                      >
+                        C: drive
+                      </span>
+                    </div>
+                    <div
+                      class="css-vthntz"
+                    />
                   </div>
                 </a>
               </div>
-              <div
-                class="css-vthntz"
-              />
             </div>
           </div>
         </div>
@@ -13572,19 +13859,23 @@ exports[`Components/Tree Overview 1`] = `
                   target="_blank"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="css-dcq909"
                   >
-                    <span
-                      class="css-7w8u7j"
+                    <div
+                      class="css-f5h6sg"
                     >
-                      F: drive
-                    </span>
+                      <span
+                        class="css-7w8u7j"
+                      >
+                        F: drive
+                      </span>
+                    </div>
+                    <div
+                      class="css-vthntz"
+                    />
                   </div>
                 </a>
               </div>
-              <div
-                class="css-vthntz"
-              />
             </div>
           </div>
         </div>
@@ -13605,41 +13896,45 @@ exports[`Components/Tree Overview 1`] = `
                 class="css-t9fq0h"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
-                  <span
-                    class="css-7w8u7j"
+                  <div
+                    class="css-f5h6sg"
                   >
-                    <strong>
-                      Cloud
-                    </strong>
-                  </span>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      <strong>
+                        Cloud
+                      </strong>
+                    </span>
+                  </div>
+                  <div
+                    class="css-vthntz"
+                  >
+                    <div
+                      aria-label="expand items"
+                      class="css-164ifi5"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </button>
-            </div>
-            <div
-              class="css-vthntz"
-            >
-              <div
-                aria-label="expand items"
-                class="css-vurnku"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="octicon"
-                  fill="currentColor"
-                  height="16"
-                  role="img"
-                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                  viewBox="0 0 16 16"
-                  width="16"
-                >
-                  <path
-                    d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </div>
             </div>
           </div>
         </div>
@@ -13678,60 +13973,64 @@ exports[`Components/Tree Search 1`] = `
                 class="css-t9fq0h"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M2.8 2.06A1.75 1.75 0 014.41 1h7.18c.7 0 1.333.417 1.61 1.06l2.74 6.395a.75.75 0 01.06.295v4.5A1.75 1.75 0 0114.25 15H1.75A1.75 1.75 0 010 13.25v-4.5a.75.75 0 01.06-.295L2.8 2.06zm1.61.44a.25.25 0 00-.23.152L1.887 8H4.75a.75.75 0 01.6.3L6.625 10h2.75l1.275-1.7a.75.75 0 01.6-.3h2.863L11.82 2.652a.25.25 0 00-.23-.152H4.41zm10.09 7h-2.875l-1.275 1.7a.75.75 0 01-.6.3h-3.5a.75.75 0 01-.6-.3L4.375 9.5H1.5v3.75c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V9.5z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M2.8 2.06A1.75 1.75 0 014.41 1h7.18c.7 0 1.333.417 1.61 1.06l2.74 6.395a.75.75 0 01.06.295v4.5A1.75 1.75 0 0114.25 15H1.75A1.75 1.75 0 010 13.25v-4.5a.75.75 0 01.06-.295L2.8 2.06zm1.61.44a.25.25 0 00-.23.152L1.887 8H4.75a.75.75 0 01.6.3L6.625 10h2.75l1.275-1.7a.75.75 0 01.6-.3h2.863L11.82 2.652a.25.25 0 00-.23-.152H4.41zm10.09 7h-2.875l-1.275 1.7a.75.75 0 01-.6.3h-3.5a.75.75 0 01-.6-.3L4.375 9.5H1.5v3.75c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V9.5z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-15xx8i3"
+                    >
+                      <strong>
+                        Inbox
+                      </strong>
+                    </span>
                   </div>
-                  <span
-                    class="css-15xx8i3"
+                  <div
+                    class="css-vthntz"
                   >
-                    <strong>
-                      Inbox
-                    </strong>
-                  </span>
+                    <div
+                      aria-label="collapse items"
+                      class="css-aqscwe"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </button>
-            </div>
-            <div
-              class="css-vthntz"
-            >
-              <div
-                aria-label="collapse items"
-                class="css-vurnku"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="octicon"
-                  fill="currentColor"
-                  height="16"
-                  role="img"
-                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                  viewBox="0 0 16 16"
-                  width="16"
-                >
-                  <path
-                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </div>
             </div>
           </div>
         </div>
@@ -13752,28 +14051,32 @@ exports[`Components/Tree Search 1`] = `
                   href="/inbox/all"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="css-dcq909"
                   >
-                    <span
-                      class="css-15xx8i3"
+                    <div
+                      class="css-f5h6sg"
                     >
-                      All
-                    </span>
+                      <span
+                        class="css-15xx8i3"
+                      >
+                        All
+                      </span>
+                    </div>
+                    <div
+                      class="css-vthntz"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        <div
+                          class="css-1jxn1yx"
+                        >
+                          10
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </a>
-              </div>
-              <div
-                class="css-vthntz"
-              >
-                <div
-                  class="css-vurnku"
-                >
-                  <div
-                    class="css-1jxn1yx"
-                  >
-                    10
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -13795,28 +14098,32 @@ exports[`Components/Tree Search 1`] = `
                   href="/inbox/gmail"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="css-dcq909"
                   >
-                    <span
-                      class="css-7w8u7j"
+                    <div
+                      class="css-f5h6sg"
                     >
-                      GMail
-                    </span>
+                      <span
+                        class="css-7w8u7j"
+                      >
+                        GMail
+                      </span>
+                    </div>
+                    <div
+                      class="css-vthntz"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        <div
+                          class="css-1jxn1yx"
+                        >
+                          8
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </a>
-              </div>
-              <div
-                class="css-vthntz"
-              >
-                <div
-                  class="css-vurnku"
-                >
-                  <div
-                    class="css-1jxn1yx"
-                  >
-                    8
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -13838,28 +14145,32 @@ exports[`Components/Tree Search 1`] = `
                   href="/inbox/work"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="css-dcq909"
                   >
-                    <span
-                      class="css-7w8u7j"
+                    <div
+                      class="css-f5h6sg"
                     >
-                      Work
-                    </span>
+                      <span
+                        class="css-7w8u7j"
+                      >
+                        Work
+                      </span>
+                    </div>
+                    <div
+                      class="css-vthntz"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        <div
+                          class="css-1jxn1yx"
+                        >
+                          1
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </a>
-              </div>
-              <div
-                class="css-vthntz"
-              >
-                <div
-                  class="css-vurnku"
-                >
-                  <div
-                    class="css-1jxn1yx"
-                  >
-                    1
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -13881,28 +14192,32 @@ exports[`Components/Tree Search 1`] = `
                   href="/inbox/amazon"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="css-dcq909"
                   >
-                    <span
-                      class="css-7w8u7j"
+                    <div
+                      class="css-f5h6sg"
                     >
-                      Amazon
-                    </span>
+                      <span
+                        class="css-7w8u7j"
+                      >
+                        Amazon
+                      </span>
+                    </div>
+                    <div
+                      class="css-vthntz"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        <div
+                          class="css-1jxn1yx"
+                        >
+                          1
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </a>
-              </div>
-              <div
-                class="css-vthntz"
-              >
-                <div
-                  class="css-vurnku"
-                >
-                  <div
-                    class="css-1jxn1yx"
-                  >
-                    1
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -13925,38 +14240,42 @@ exports[`Components/Tree Search 1`] = `
                 href="/inbox/sent"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M1.75 2A1.75 1.75 0 000 3.75v.736a.75.75 0 000 .027v7.737C0 13.216.784 14 1.75 14h12.5A1.75 1.75 0 0016 12.25v-8.5A1.75 1.75 0 0014.25 2H1.75zM14.5 4.07v-.32a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25v.32L8 7.88l6.5-3.81zm-13 1.74v6.441c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V5.809L8.38 9.397a.75.75 0 01-.76 0L1.5 5.809z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M1.75 2A1.75 1.75 0 000 3.75v.736a.75.75 0 000 .027v7.737C0 13.216.784 14 1.75 14h12.5A1.75 1.75 0 0016 12.25v-8.5A1.75 1.75 0 0014.25 2H1.75zM14.5 4.07v-.32a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25v.32L8 7.88l6.5-3.81zm-13 1.74v6.441c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V5.809L8.38 9.397a.75.75 0 01-.76 0L1.5 5.809z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Sent
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Sent
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -13977,47 +14296,51 @@ exports[`Components/Tree Search 1`] = `
                 href="/inbox/flagged"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M7.998 14.5c2.832 0 5-1.98 5-4.5 0-1.463-.68-2.19-1.879-3.383l-.036-.037c-1.013-1.008-2.3-2.29-2.834-4.434-.322.256-.63.579-.864.953-.432.696-.621 1.58-.046 2.73.473.947.67 2.284-.278 3.232-.61.61-1.545.84-2.403.633a2.788 2.788 0 01-1.436-.874A3.21 3.21 0 003 10c0 2.53 2.164 4.5 4.998 4.5zM9.533.753C9.496.34 9.16.009 8.77.146 7.035.75 4.34 3.187 5.997 6.5c.344.689.285 1.218.003 1.5-.419.419-1.54.487-2.04-.832-.173-.454-.659-.762-1.035-.454C2.036 7.44 1.5 8.702 1.5 10c0 3.512 2.998 6 6.498 6s6.5-2.5 6.5-6c0-2.137-1.128-3.26-2.312-4.438-1.19-1.184-2.436-2.425-2.653-4.81z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M7.998 14.5c2.832 0 5-1.98 5-4.5 0-1.463-.68-2.19-1.879-3.383l-.036-.037c-1.013-1.008-2.3-2.29-2.834-4.434-.322.256-.63.579-.864.953-.432.696-.621 1.58-.046 2.73.473.947.67 2.284-.278 3.232-.61.61-1.545.84-2.403.633a2.788 2.788 0 01-1.436-.874A3.21 3.21 0 003 10c0 2.53 2.164 4.5 4.998 4.5zM9.533.753C9.496.34 9.16.009 8.77.146 7.035.75 4.34 3.187 5.997 6.5c.344.689.285 1.218.003 1.5-.419.419-1.54.487-2.04-.832-.173-.454-.659-.762-1.035-.454C2.036 7.44 1.5 8.702 1.5 10c0 3.512 2.998 6 6.498 6s6.5-2.5 6.5-6c0-2.137-1.128-3.26-2.312-4.438-1.19-1.184-2.436-2.425-2.653-4.81z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Flagged
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
+                  <div
+                    class="css-vthntz"
                   >
-                    Flagged
-                  </span>
+                    <div
+                      class="css-vurnku"
+                    >
+                      <div
+                        class="css-1jxn1yx"
+                      >
+                        3
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </a>
-            </div>
-            <div
-              class="css-vthntz"
-            >
-              <div
-                class="css-vurnku"
-              >
-                <div
-                  class="css-1jxn1yx"
-                >
-                  3
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -14039,38 +14362,42 @@ exports[`Components/Tree Search 1`] = `
                 href="/inbox/starred"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Starred
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Starred
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -14091,38 +14418,42 @@ exports[`Components/Tree Search 1`] = `
                 href="/inbox/drafts"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Drafts
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Drafts
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -14143,38 +14474,42 @@ exports[`Components/Tree Search 1`] = `
                 href="/inbox/tagged"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Tagged
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Tagged
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -14195,38 +14530,42 @@ exports[`Components/Tree Search 1`] = `
                 href="/inbox/trash"
               >
                 <div
-                  class="css-f5h6sg"
+                  class="css-dcq909"
                 >
                   <div
-                    class="css-1ve1p3p"
+                    class="css-f5h6sg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
+                    <div
+                      class="css-1ve1p3p"
                     >
-                      <path
-                        d="M6.5 1.75a.25.25 0 01.25-.25h2.5a.25.25 0 01.25.25V3h-3V1.75zm4.5 0V3h2.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H5V1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75zM4.496 6.675a.75.75 0 10-1.492.15l.66 6.6A1.75 1.75 0 005.405 15h5.19c.9 0 1.652-.681 1.741-1.576l.66-6.6a.75.75 0 00-1.492-.149l-.66 6.6a.25.25 0 01-.249.225h-5.19a.25.25 0 01-.249-.225l-.66-6.6z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="16"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M6.5 1.75a.25.25 0 01.25-.25h2.5a.25.25 0 01.25.25V3h-3V1.75zm4.5 0V3h2.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H5V1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75zM4.496 6.675a.75.75 0 10-1.492.15l.66 6.6A1.75 1.75 0 005.405 15h5.19c.9 0 1.652-.681 1.741-1.576l.66-6.6a.75.75 0 00-1.492-.149l-.66 6.6a.25.25 0 01-.249.225h-5.19a.25.25 0 01-.249-.225l-.66-6.6z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="css-7w8u7j"
+                    >
+                      Trash
+                    </span>
                   </div>
-                  <span
-                    class="css-7w8u7j"
-                  >
-                    Trash
-                  </span>
+                  <div
+                    class="css-vthntz"
+                  />
                 </div>
               </a>
             </div>
-            <div
-              class="css-vthntz"
-            />
           </div>
         </div>
       </div>
@@ -14256,79 +14595,88 @@ exports[`Components/Value Overview 1`] = `
 
 exports[`Components/Zoom Overview 1`] = `
 <DocumentFragment>
-  <div>
-    <div
-      class="css-15owl46"
-    >
+  <div
+    class="css-vurnku"
+    style="width: 100%;"
+  >
+    <div>
       <div
-        class="css-x60p33"
+        class="css-15owl46"
       >
         <div
-          class="css-1vga9oy"
+          class="css-x60p33"
         >
-          <button
-            class="css-1tf4h46"
+          <div
+            class="css-1vga9oy"
           >
-            reset
-          </button>
-        </div>
-        <div
-          class="css-7d11p2"
-        >
-          <button
-            class="css-1tf4h46"
+            <button
+              class="css-1tf4h46"
+            >
+              reset
+            </button>
+          </div>
+          <div
+            class="css-7d11p2"
           >
-            zoom out
-          </button>
-        </div>
-        <div
-          class="css-7d11p2"
-        >
-          <button
-            class="css-1tf4h46"
+            <button
+              class="css-1tf4h46"
+            >
+              zoom out
+            </button>
+          </div>
+          <div
+            class="css-7d11p2"
           >
-            zoom in
-          </button>
+            <button
+              class="css-1tf4h46"
+            >
+              zoom in
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      class="css-eqxzio"
-    >
       <div
-        class="css-1s8zxab"
+        class="css-eqxzio"
       >
         <div
-          class="css-1j909cg"
+          class="css-12y95y7"
         >
-          <svg
-            aria-valuemax="1"
-            aria-valuemin="0"
-            aria-valuenow="0.5"
-            class="css-14d2907"
-            fill="none"
-            height="128"
-            role="img"
-            stroke="currentcolor"
-            stroke-width="2"
-            viewBox="0 0 32 32"
-            width="128"
+          <div
+            class="css-1s8zxab"
           >
-            <circle
-              cx="16"
-              cy="16"
-              opacity="0.125"
-              r="14"
-            />
-            <circle
-              cx="16"
-              cy="16"
-              r="14"
-              stroke-dasharray="87.96459430051421"
-              stroke-dashoffset="43.982297150257104"
-              transform="rotate(-90 16 16)"
-            />
-          </svg>
+            <div
+              class="css-1j909cg"
+            >
+              <svg
+                aria-valuemax="1"
+                aria-valuemin="0"
+                aria-valuenow="0.5"
+                class="css-14d2907"
+                fill="none"
+                height="128"
+                role="img"
+                stroke="currentcolor"
+                stroke-width="2"
+                viewBox="0 0 32 32"
+                width="128"
+              >
+                <circle
+                  cx="16"
+                  cy="16"
+                  opacity="0.125"
+                  r="14"
+                />
+                <circle
+                  cx="16"
+                  cy="16"
+                  r="14"
+                  stroke-dasharray="87.96459430051421"
+                  stroke-dashoffset="43.982297150257104"
+                  transform="rotate(-90 16 16)"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
     </div>

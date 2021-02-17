@@ -6,6 +6,7 @@ import { HoverBox } from '.';
 export default {
   title: 'Components/HoverBox',
   component: HoverBox,
+  category: 'Containers',
 } as Document;
 
 export const overview: Example = () => (

@@ -14,7 +14,7 @@ const iconSize: Record<string, { size: number; level: number }> = {
 };
 export type LinkHeadingProps = HeadingProps;
 /**
- * h1-h6 heading component that generates automatically a github-style anchor to navigate to a section
+ * h1-h6 heading component that generates automatically a github-style anchor to navigate to a section on hover.
  */
 export const LinkHeading: FC<LinkHeadingProps> = ({
   as = 'h3',

@@ -7,6 +7,7 @@ import { makeDecorators } from '../test/MockContext';
 export default {
   title: 'Blocks/PropsTable',
   component: PropsTable,
+  category: 'Component',
 } as Document;
 
 export const overview: Example = () => <PropsTable />;

@@ -8,6 +8,7 @@ export default {
   title: 'Application/DocumentsList',
   component: DocumentsList,
   decorators: mockDecorators,
+  category: 'Documents',
 } as Document;
 
 export const overview: Example = () => {

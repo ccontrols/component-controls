@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import { Label } from 'theme-ui';
+import { Label, Themed } from 'theme-ui';
 import { Search } from '@component-controls/blocks';
-import { Title, Subtitle } from '@component-controls/components';
+import { Subtitle } from '@component-controls/components';
 import { Layout } from '../components/Layout';
 
 const ErrorPage: FC = () => {
@@ -18,7 +18,7 @@ const ErrorPage: FC = () => {
         }}
       >
         <div style={{ maxWidth: 800 }}>
-          <Title>Page not found</Title>
+          <Themed.h1>Page not found</Themed.h1>
           <Subtitle>
             Oops! The page you are looking for has been removed or relocated
           </Subtitle>

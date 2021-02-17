@@ -7,6 +7,7 @@ export default {
   title: 'Blocks/Stories',
   component: Stories,
   decorators: mockDecorators,
+  category: 'Stories',
 } as Document;
 
 export const overview: Example = () => <Stories id="." />;

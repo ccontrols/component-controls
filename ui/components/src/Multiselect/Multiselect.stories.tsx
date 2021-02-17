@@ -6,6 +6,7 @@ import { Multiselect, MultiselectItem } from './Multiselect';
 export default {
   title: 'Components/Multiselect',
   component: Multiselect,
+  category: 'Input',
 } as Document;
 
 export const overview: Example = () => {

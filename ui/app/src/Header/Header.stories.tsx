@@ -10,6 +10,7 @@ export default {
   title: 'Application/Header',
   component: Header,
   decorators: mockDecorators,
+  category: 'Application',
 } as Document;
 
 export const overview: Example = () => <Header />;

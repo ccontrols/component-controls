@@ -47,7 +47,7 @@ export interface PanelContainerOwnProps {
 export type PanelContainerProps = PanelContainerOwnProps & ActionContainerProps;
 
 /**
- * an action container with built-in collapsible panels
+ * Action container with built-in collapsible panels
  *
  */
 export const PanelContainer: FC<PanelContainerProps> = ({

@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Box } from 'theme-ui';
+import { jsx, Box, Themed } from 'theme-ui';
 import { DocType } from '@component-controls/core';
-import { Title } from '@component-controls/components';
 import { useDocPropCount, useConfig } from '@component-controls/store';
 import { PageContainer } from '../PageContainer';
 import { CategoryListItem } from './CategoryListItem';
@@ -27,7 +26,7 @@ export const CategoryList: FC<CategoryListProps> = ({ type }) => {
       variant="categorylist.pagecontainer"
       id="content"
     >
-      <Title>{pageConfig.label}</Title>
+      <Themed.h1>{pageConfig.label}</Themed.h1>
       <Box variant="categorylist.list">
         <ul>
           {Object.keys(categories).map(key => (

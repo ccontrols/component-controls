@@ -7,13 +7,13 @@ import { OctofaceIcon } from '@primer/octicons-react';
 const categories = [
   'ESM',
   'MDX',
-  'Application',
-  'Controls',
+  'Components',
   'Blocks',
   'Design Tokens',
-  'Editors',
-  'Components',
   'Plugins',
+  'Controls',
+  'Editors',
+  'Application',
 ];
 
 const config: RunOnlyConfiguration = {

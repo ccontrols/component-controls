@@ -47,7 +47,7 @@ export const Container: FC<ContainerProps> = ({
         <Box variant="blockpagecontainer.secondrow">{secondRow}</Box>
       )}
       <Box variant="blockpagecontainer.titlerow">
-        <Title sx={{ paddingBottom: 0 }} />
+        <Title sx={{ pb: 0 }} />
       </Box>
       <Subtitle />
 

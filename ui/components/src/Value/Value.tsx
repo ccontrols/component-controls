@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { Box, Text } from 'theme-ui';
+import { Box, BoxProps, Text } from 'theme-ui';
 
 export interface ValueProps {
   /**
@@ -14,13 +14,13 @@ export interface ValueProps {
 
 /**
  *
- * Displays a label and value styled
+ * Displays a value with a small label
  */
-export const Value: FC<ValueProps> = ({ label, value }) => {
+export const Value: FC<ValueProps & BoxProps> = ({ label, value, ...rest }) => {
   return (
-    <Box variant="value.container">
+    <Box variant="value.container" {...rest}>
       <Text variant="value.label">{label}</Text>
-      <Text variant="value.value">{value}</Text>
+      {!!value && <Text variant="value.value">{value}</Text>}
     </Box>
   );
 };

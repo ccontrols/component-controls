@@ -6,6 +6,7 @@ import { FigmaEmbedBlock } from '../index';
 export default {
   title: 'Plugins/FigmaEmbedBlock',
   component: FigmaEmbedBlock,
+  category: 'Design',
 } as Document;
 
 export const overview: Example = () => {

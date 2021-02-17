@@ -7,6 +7,7 @@ export default {
   title: 'Blocks/EditPage',
   component: EditPage,
   decorators: mockDecorators,
+  category: 'Page',
 } as Document;
 
 export const overview: Example = () => <EditPage />;

@@ -5,6 +5,7 @@ import { Link } from '.';
 export default {
   title: 'Components/Link',
   component: Link,
+  category: 'Navigation',
 } as Document;
 
 export const overview: Example = () => <Link href="/">link to home</Link>;

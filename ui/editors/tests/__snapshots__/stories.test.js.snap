@@ -169,7 +169,7 @@ exports[`Editors/ArrayEditor Overview 1`] = `
     </li>
   </ul>
   <div
-    class="css-12hibeq"
+    style="display: inline-block;"
   >
     <button
       aria-label="edit the properties of the array"
@@ -255,7 +255,7 @@ exports[`Editors/ButtonEditor Overview 1`] = `
 exports[`Editors/ColorEditor Hsl 1`] = `
 <DocumentFragment>
   <div
-    class="css-12hibeq"
+    style="display: inline-block;"
   >
     <button
       aria-label="edit the selected color"
@@ -276,7 +276,7 @@ exports[`Editors/ColorEditor Hsl 1`] = `
 exports[`Editors/ColorEditor Hsla 1`] = `
 <DocumentFragment>
   <div
-    class="css-12hibeq"
+    style="display: inline-block;"
   >
     <button
       aria-label="edit the selected color"
@@ -297,7 +297,7 @@ exports[`Editors/ColorEditor Hsla 1`] = `
 exports[`Editors/ColorEditor Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-12hibeq"
+    style="display: inline-block;"
   >
     <button
       aria-label="edit the selected color"
@@ -318,7 +318,7 @@ exports[`Editors/ColorEditor Overview 1`] = `
 exports[`Editors/ColorEditor Rgb 1`] = `
 <DocumentFragment>
   <div
-    class="css-12hibeq"
+    style="display: inline-block;"
   >
     <button
       aria-label="edit the selected color"
@@ -339,7 +339,7 @@ exports[`Editors/ColorEditor Rgb 1`] = `
 exports[`Editors/ColorEditor Rgba 1`] = `
 <DocumentFragment>
   <div
-    class="css-12hibeq"
+    style="display: inline-block;"
   >
     <button
       aria-label="edit the selected color"
@@ -492,7 +492,7 @@ exports[`Editors/NumberEditor Step 1`] = `
 exports[`Editors/ObjectEditor Edit Label 1`] = `
 <DocumentFragment>
   <div
-    class="css-12hibeq"
+    style="display: inline-block;"
   >
     <button
       aria-label="edit the properties of the object"
@@ -561,7 +561,7 @@ exports[`Editors/ObjectEditor Inline 1`] = `
 exports[`Editors/ObjectEditor Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-12hibeq"
+    style="display: inline-block;"
   >
     <button
       aria-label="edit the properties of the object"

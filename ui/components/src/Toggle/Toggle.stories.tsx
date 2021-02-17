@@ -7,6 +7,7 @@ import { Toggle } from './Toggle';
 export default {
   title: 'Components/Toggle',
   component: Toggle,
+  category: 'Input',
 } as Document;
 
 export const overview: Example = () => {

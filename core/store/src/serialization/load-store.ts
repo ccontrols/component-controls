@@ -47,6 +47,7 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
         subcomponents: globalStore.config.subcomponents,
         controls: globalStore.config.controls,
         smartControls: globalStore.config.smartControls,
+        category: globalStore.config.category,
         decorators: Array.isArray(globalStore.config.decorators)
           ? globalStore.config.decorators.filter(d => typeof d === 'function')
           : undefined,
@@ -77,6 +78,7 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
             subcomponents: doc.subcomponents,
             controls: doc.controls,
             smartControls: doc.smartControls,
+            category: doc.category,
             decorators: Array.isArray(doc.decorators)
               ? doc.decorators.filter(d => typeof d === 'function')
               : undefined,

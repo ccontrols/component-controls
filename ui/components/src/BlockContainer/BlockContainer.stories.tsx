@@ -7,6 +7,7 @@ import { BlockContainer, BlockContainerProps } from './BlockContainer';
 export default {
   title: 'Components/BlockContainer',
   component: BlockContainer,
+  category: 'Containers',
 } as Document;
 
 export const overview: Example = ({ title }: BlockContainerProps) => {

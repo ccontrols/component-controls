@@ -5,6 +5,7 @@ import { Description } from '.';
 export default {
   title: 'Components/Description',
   component: Description,
+  category: 'Typography',
 } as Document;
 
 export const overview: Example = () => (

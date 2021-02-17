@@ -21,7 +21,7 @@ import designTokensImg from './media/design-tokens.jpg';
 
 
 export const BoxItem = ({ children, title, action, ...rest }) => (
-  <Card sx={{ overflow: 'hidden', pt: 4, my: 4, mx: [1, 1, 4], height: [ 'auto', 360], justifyContent: 'space-between', bg: 'gray', ...rest }}>
+  <Card sx={{  alignItems: 'center', pt: 4, my: 4, mx: [1, 1, 4], height: [ 'auto', 360], justifyContent: 'space-between', bg: 'gray', ...rest }}>
     <Box>
       <Heading sx={{ textAlign: 'center' }} as="h2">{title}</Heading>
       <p>{children}</p>

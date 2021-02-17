@@ -10,7 +10,7 @@ image: /static/external-component-source.jpg
 ---
 import { Button } from 'theme-ui';
 import { ControlTypes } from '@component-controls/core';
-import { PropsTable, ComponentExternalDependencies, ComponentSource, Playground, Story } from '@component-controls/blocks';
+import { PropsTable, ExternalDependencies, ComponentSource, Playground, Story } from '@component-controls/blocks';
 import noSetupImg from './media/external-component-no-setup.jpg';
 import sourceCodeImg from './media/external-component-source.jpg';
 
@@ -166,7 +166,7 @@ As a result, we should now see a full PropsTable for the `Button` component popu
 
 As well as the component's dependencies table:
 
-<ComponentExternalDependencies of={Button} />
+<ExternalDependencies of={Button} />
 
 
 ## Component playground

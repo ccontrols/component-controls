@@ -83,7 +83,7 @@ export interface SyntaxHighlighterProps {
 }
 
 /**
- * Syntax highlighter component. Uses [prism](https://prismjs.com) for the actual source display.
+ * Syntax highlighter component using [prism](https://prismjs.com) for the actual source display.
  */
 export const SyntaxHighlighter: FC<SyntaxHighlighterProps> = ({
   children = '',

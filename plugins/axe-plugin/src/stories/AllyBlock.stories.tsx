@@ -6,6 +6,7 @@ import { AllyBlock } from '../index';
 export default {
   title: 'Plugins/AllyBlock',
   component: AllyBlock,
+  category: 'Testing',
 } as Document;
 
 export const overview: Example = () => {

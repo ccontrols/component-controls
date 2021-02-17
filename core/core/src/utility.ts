@@ -87,6 +87,11 @@ export interface PackageInfo {
   peerDependencies?: PackageDependencies;
 
   /**
+   * if false, the package is not published to npm
+   */
+  privateNpm?: boolean;
+
+  /**
    * repository information extracted from the "repository" field in package.json.
    */
   repository: PackageRepository;

@@ -8,6 +8,7 @@ import { ExternalLink } from '../ExternalLink';
 export default {
   title: 'Components/ActionBar',
   component: ActionBar,
+  category: 'Navigation',
 } as Document;
 
 const Container: FC = ({ children }) => (
@@ -15,6 +16,7 @@ const Container: FC = ({ children }) => (
     <Box
       style={{
         height: 100,
+        width: '100%',
         backgroundColor: 'rgb(250, 248, 245)',
       }}
     >

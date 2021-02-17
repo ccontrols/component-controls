@@ -51,7 +51,14 @@ export const PackageLink: FC<PackageLinkProps> = ({
   }
   const baseVersion = packageVersion.replace(/[\^=~]/, '');
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        my: 1,
+      }}
+    >
       <ExternalLink
         href={`https://npmjs.com/package/${packageName}/v/${baseVersion}`}
       >

@@ -10,7 +10,7 @@ export type HoverBoxProps = {
 } & BoxProps;
 
 /**
- * Box component that will fade/outline a label at the bottom
+ * Container component that will fade/outline a label at the bottom
  *
  */
 export const HoverBox: FC<HoverBoxProps> = ({ label, children, ...rest }) => {

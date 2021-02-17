@@ -1,4 +1,3 @@
-import * as fs from 'fs';
 import mdx from '@mdx-js/mdx';
 import matter from 'gray-matter';
 import { File } from '@babel/types';
@@ -20,6 +19,7 @@ import { extractStoryExports } from './misc/mdx-exports';
 import { prettify } from './misc/prettify';
 import { parseFile } from './misc/ast_store';
 import { readSourceFile } from './misc/source-options';
+import { getFileIinfo } from './misc/file-info';
 import {
   LoadingDocStore,
   InstrumentOptions,
@@ -96,9 +96,9 @@ const parseSource = async (
       store.packages[storyPackage.fileHash] = storyPackage;
       doc.package = storyPackage.fileHash;
     }
-    const stats = fs.statSync(filePath);
-    doc.dateModified = doc.dateModified || stats.mtime;
-    doc.date = doc.date || stats.birthtime;
+    const fileInfo = await getFileIinfo(filePath);
+    doc.dateModified = doc.dateModified || fileInfo.dateModified;
+    doc.date = doc.date || fileInfo.dateCreated;
   }
   for (const key of Object.keys(store.stories)) {
     const story: Story = store.stories[key];

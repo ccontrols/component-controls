@@ -7,6 +7,7 @@ export default {
   title: 'Blocks/Subtitle',
   component: Subtitle,
   decorators: mockDecorators,
+  category: 'Page',
 } as Document;
 
 export const overview: Example = () => <Subtitle />;

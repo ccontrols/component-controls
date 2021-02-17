@@ -5,6 +5,7 @@ import { ExternalLink, ExternalLinkProps } from './ExternalLink';
 export default {
   title: 'Components/ExternalLink',
   component: ExternalLink,
+  category: 'Navigation',
 } as Document;
 
 export const overview: Example = ({ href }: ExternalLinkProps) => {

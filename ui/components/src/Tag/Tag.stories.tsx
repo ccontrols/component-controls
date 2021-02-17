@@ -5,6 +5,7 @@ import { Tag, TagProps } from './Tag';
 export default {
   title: 'Components/Tag',
   component: Tag,
+  category: 'Display',
 } as Document;
 
 export const overview: Example<TagProps> = ({ color }) => {

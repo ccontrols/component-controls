@@ -1,0 +1,16 @@
+import { Meta } from './Meta';
+import { Catalog } from '@component-controls/addon-catalog';
+
+<Meta title="Plugins/index" />
+
+# Overview
+
+`component-controls` has a very flexible api that allows creating and installing various plugins. The following are the
+official plaugins, please refer to each plugin's own documetation for installation and usage.
+
+# Components
+
+<Catalog
+  filter={({ doc }) => doc.title.startsWith('Plugins')}
+  group={({ story }) => story.category}
+/>
