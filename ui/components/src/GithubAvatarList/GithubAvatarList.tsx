@@ -43,7 +43,7 @@ export const GithubAvatarList: FC<GithubAvatarListProps> = ({
   const lastIndex = Math.min(maxItems, users.length) - 1;
   return (
     <Box
-      aria-label={`avatars of ${users.join(', ')}`}
+      aria-label={`avatars of ${users.map(user => user.username).join(', ')}`}
       sx={{
         display: 'flex',
         alignItems: 'center',
