@@ -627,7 +627,7 @@ Object {
     "externalDependencies": Object {},
     "fileInfo": Object {
       "dateCreated": "2020-04-04T08:48:22.000Z",
-      "dateModified": "2021-02-18T02:08:06.450Z",
+      "dateModified": "2021-02-18T02:24:44.406Z",
     },
     "fileName": "index.js",
     "from": "@component-controls/components",
