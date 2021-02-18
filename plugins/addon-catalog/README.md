@@ -6,14 +6,17 @@
     -   [Install](#install)
     -   [Usage](#usage)
 -   [API](#api)
-    -   [<ins>useComponentUsageAggregate</ins>](#insusecomponentusageaggregateins)
-    -   [<ins>useAttributesUsageAggregate</ins>](#insuseattributesusageaggregateins)
-    -   [<ins>AttributeUsage</ins>](#insattributeusageins)
-    -   [<ins>AttributesUsageDetails</ins>](#insattributesusagedetailsins)
-    -   [<ins>AttributesUsageList</ins>](#insattributesusagelistins)
-    -   [<ins>ComponentUsage</ins>](#inscomponentusageins)
-    -   [<ins>ComponentUsageDetails</ins>](#inscomponentusagedetailsins)
-    -   [<ins>ComponentUsageList</ins>](#inscomponentusagelistins)
+    -   [<ins>Catalog</ins>](#inscatalogins)
+    -   [<ins>ComponentCard</ins>](#inscomponentcardins)
+    -   [<ins>ComponentFilter</ins>](#inscomponentfilterins)
+    -   [<ins>ComponentList</ins>](#inscomponentlistins)
+    -   [<ins>ComponentsCatalog</ins>](#inscomponentscatalogins)
+    -   [<ins>ComponentCatalogContextProvider</ins>](#inscomponentcatalogcontextproviderins)
+    -   [<ins>overview</ins>](#insoverviewins)
+    -   [<ins>overview</ins>](#insoverviewins-1)
+    -   [<ins>overview</ins>](#insoverviewins-2)
+    -   [<ins>overview</ins>](#insoverviewins-3)
+    -   [<ins>overview</ins>](#insoverviewins-4)
 
 # In action
 
@@ -32,7 +35,6 @@ yarn add @component-controls/addon-stats --dev
 ```
 
 ## Usage
-
 
 ```
 import { ComponentUsage, AttributeUsage, ComponentUsageList, AttributesUsageList } from '@component-controls/addon-stats';
@@ -64,132 +66,103 @@ How many times an attribute is being used on a component, with a list of those c
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
 
-## <ins>useComponentUsageAggregate</ins>
+## <ins>Catalog</ins>
 
-_useComponentUsageAggregate [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/viewport-plugin/src/hooks/components.ts)_
-
-### properties
-
-| Name      | Type          | Description |
-| --------- | ------------- | ----------- |
-| `filter*` | _StatsFilter_ |             |
-
-## <ins>useAttributesUsageAggregate</ins>
-
-_useAttributesUsageAggregate [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/viewport-plugin/src/hooks/components.ts)_
+_Catalog [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-catalog/src/Catalog/Catalog.tsx)_
 
 ### properties
 
-| Name      | Type          | Description |
-| --------- | ------------- | ----------- |
-| `filter*` | _StatsFilter_ |             |
+| Name        | Type                                                                   | Description              |
+| ----------- | ---------------------------------------------------------------------- | ------------------------ |
+| `filter`    | _(props: FilterProps) => boolean_                                      | filter stories/documents |
+| `group`     | _(props: FilterProps) => string_                                       | grouping function        |
+| `groupSort` | _(groups: string\[]) => string\[]_                                     | group/category sorting   |
+| `sx`        | _ThemeUIStyleObject_                                                   |                          |
+| `ref`       | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                          |
 
-## <ins>AttributeUsage</ins>
+## <ins>ComponentCard</ins>
 
-_AttributeUsage [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/viewport-plugin/src/ui/AttributeUsage/AttributeUsage.tsx)_
+Table to display the components usage, with a % progress indicator
 
-### properties
-
-| Name          | Type                                                                   | Description                                                                                                     |
-| ------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `filter*`     | _StatsFilter_                                                          |                                                                                                                 |
-| `title`       | _string_                                                               | optional section title for the block.                                                                           |
-| `description` | _string_                                                               | optional markdown description.                                                                                  |
-| `id`          | _string_                                                               | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
-| `collapsible` | _boolean_                                                              | if false, will nothave a collapsible frame.                                                                     |
-| `data-testid` | _string_                                                               | testing id                                                                                                      |
-| `plain`       | _boolean_                                                              | inner container variant. default to 'inner' to display a border and shadow                                      |
-| `sx`          | _ThemeUIStyleObject_                                                   |                                                                                                                 |
-| `ref`         | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                                                                                                                 |
-
-## <ins>AttributesUsageDetails</ins>
-
-_AttributesUsageDetails [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/viewport-plugin/src/ui/AttributesUsageDetails/AttributesUsageDetails.tsx)_
+_ComponentCard [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-catalog/src/ComponentCard/ComponentCard.tsx)_
 
 ### properties
 
-| Name          | Type                                                                   | Description                                                                                                     |
-| ------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `stats*`      | _AttributeAggregateRow_                                                |                                                                                                                 |
-| `title`       | _string_                                                               | optional section title for the block.                                                                           |
-| `description` | _string_                                                               | optional markdown description.                                                                                  |
-| `id`          | _string_                                                               | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
-| `collapsible` | _boolean_                                                              | if false, will nothave a collapsible frame.                                                                     |
-| `data-testid` | _string_                                                               | testing id                                                                                                      |
-| `plain`       | _boolean_                                                              | inner container variant. default to 'inner' to display a border and shadow                                      |
-| `sx`          | _ThemeUIStyleObject_                                                   |                                                                                                                 |
-| `ref`         | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                                                                                                                 |
+| Name  | Type                                                                   | Description |
+| ----- | ---------------------------------------------------------------------- | ----------- |
+| `id`  | _string_                                                               | story id    |
+| `sx`  | _ThemeUIStyleObject_                                                   |             |
+| `ref` | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |             |
 
-## <ins>AttributesUsageList</ins>
+## <ins>ComponentFilter</ins>
 
-_AttributesUsageList [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/viewport-plugin/src/ui/AttributesUsageList/AttributesUsageList.tsx)_
+_ComponentFilter [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-catalog/src/ComponentFilter/ComponentFilter.tsx)_
 
 ### properties
 
-| Name          | Type                                                                   | Description                                                                                                     |
-| ------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `filter*`     | _StatsFilter_                                                          |                                                                                                                 |
-| `title`       | _string_                                                               | optional section title for the block.                                                                           |
-| `description` | _string_                                                               | optional markdown description.                                                                                  |
-| `id`          | _string_                                                               | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
-| `collapsible` | _boolean_                                                              | if false, will nothave a collapsible frame.                                                                     |
-| `data-testid` | _string_                                                               | testing id                                                                                                      |
-| `plain`       | _boolean_                                                              | inner container variant. default to 'inner' to display a border and shadow                                      |
-| `sx`          | _ThemeUIStyleObject_                                                   |                                                                                                                 |
-| `ref`         | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                                                                                                                 |
+| Name  | Type                                                                   | Description |
+| ----- | ---------------------------------------------------------------------- | ----------- |
+| `sx`  | _ThemeUIStyleObject_                                                   |             |
+| `ref` | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |             |
 
-## <ins>ComponentUsage</ins>
+## <ins>ComponentList</ins>
 
-_ComponentUsage [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/viewport-plugin/src/ui/ComponentUsage/ComponentUsage.tsx)_
+Grid display of component cards
+
+_ComponentList [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-catalog/src/ComponentList/ComponentList.tsx)_
 
 ### properties
 
-| Name          | Type                                                                   | Description                                                                                                     |
-| ------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `filter*`     | _StatsFilter_                                                          |                                                                                                                 |
-| `title`       | _string_                                                               | optional section title for the block.                                                                           |
-| `description` | _string_                                                               | optional markdown description.                                                                                  |
-| `id`          | _string_                                                               | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
-| `collapsible` | _boolean_                                                              | if false, will nothave a collapsible frame.                                                                     |
-| `data-testid` | _string_                                                               | testing id                                                                                                      |
-| `plain`       | _boolean_                                                              | inner container variant. default to 'inner' to display a border and shadow                                      |
-| `sx`          | _ThemeUIStyleObject_                                                   |                                                                                                                 |
-| `ref`         | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                                                                                                                 |
+| Name       | Type                                                                   | Description                                     |
+| ---------- | ---------------------------------------------------------------------- | ----------------------------------------------- |
+| `minWidth` | _number_                                                               | minimum card width in pixels. defaults to 420px |
+| `stories*` | _string\[]_                                                            | story ids                                       |
+| `sx`       | _ThemeUIStyleObject_                                                   |                                                 |
+| `ref`      | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                                                 |
 
-## <ins>ComponentUsageDetails</ins>
+## <ins>ComponentsCatalog</ins>
 
-_ComponentUsageDetails [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/viewport-plugin/src/ui/ComponentUsageDetails/ComponentUsageDetails.tsx)_
+Selection of components from stories, to be displayed in a ComponentList
+
+_ComponentsCatalog [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-catalog/src/ComponentsCatalog/ComponentsCatalog.tsx)_
 
 ### properties
 
-| Name          | Type                                                                   | Description                                                                                                     |
-| ------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `stats*`      | _ComponentStats_                                                       |                                                                                                                 |
-| `title`       | _string_                                                               | optional section title for the block.                                                                           |
-| `description` | _string_                                                               | optional markdown description.                                                                                  |
-| `id`          | _string_                                                               | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
-| `collapsible` | _boolean_                                                              | if false, will nothave a collapsible frame.                                                                     |
-| `data-testid` | _string_                                                               | testing id                                                                                                      |
-| `plain`       | _boolean_                                                              | inner container variant. default to 'inner' to display a border and shadow                                      |
-| `sx`          | _ThemeUIStyleObject_                                                   |                                                                                                                 |
-| `ref`         | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                                                                                                                 |
+| Name        | Type                               | Description              |
+| ----------- | ---------------------------------- | ------------------------ |
+| `filter`    | _(props: FilterProps) => boolean_  | filter stories/documents |
+| `group`     | _(props: FilterProps) => string_   | grouping function        |
+| `groupSort` | _(groups: string\[]) => string\[]_ | group/category sorting   |
 
-## <ins>ComponentUsageList</ins>
+## <ins>ComponentCatalogContextProvider</ins>
 
-_ComponentUsageList [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/viewport-plugin/src/ui/ComponentUsageList/ComponentUsageList.tsx)_
+_ComponentCatalogContextProvider [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-catalog/src/context/ComponentCatalogContext.tsx)_
 
 ### properties
 
-| Name          | Type                                                                   | Description                                                                                                     |
-| ------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `filter*`     | _StatsFilter_                                                          |                                                                                                                 |
-| `title`       | _string_                                                               | optional section title for the block.                                                                           |
-| `description` | _string_                                                               | optional markdown description.                                                                                  |
-| `id`          | _string_                                                               | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
-| `collapsible` | _boolean_                                                              | if false, will nothave a collapsible frame.                                                                     |
-| `data-testid` | _string_                                                               | testing id                                                                                                      |
-| `plain`       | _boolean_                                                              | inner container variant. default to 'inner' to display a border and shadow                                      |
-| `sx`          | _ThemeUIStyleObject_                                                   |                                                                                                                 |
-| `ref`         | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                                                                                                                 |
+| Name     | Type                    | Description |
+| -------- | ----------------------- | ----------- |
+| `sort`   | _ComponentCatalogOrder_ |             |
+| `search` | _string_                |             |
+
+## <ins>overview</ins>
+
+_overview [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-catalog/src/stories/Catalog.stories.tsx)_
+
+## <ins>overview</ins>
+
+_overview [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-catalog/src/stories/ComponentCard.stories.tsx)_
+
+## <ins>overview</ins>
+
+_overview [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-catalog/src/stories/ComponentFilter.stories.tsx)_
+
+## <ins>overview</ins>
+
+_overview [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-catalog/src/stories/ComponentList.stories.tsx)_
+
+## <ins>overview</ins>
+
+_overview [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-catalog/src/stories/ComponentsCatalog.stories.tsx)_
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

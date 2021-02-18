@@ -6,12 +6,10 @@
 -   [Documentation](#documentation)
 -   [API](#api)
     -   [<ins>AllyBlock</ins>](#insallyblockins)
-    -   [<ins>AllyPage</ins>](#insallypageins)
     -   [<ins>AllyBlock</ins>](#insallyblockins-1)
     -   [<ins>AllyBlock</ins>](#insallyblockins-2)
-    -   [<ins>AllyPage</ins>](#insallypageins-1)
-    -   [<ins>AllyPage</ins>](#insallypageins-2)
     -   [<ins>AxeContextProvider</ins>](#insaxecontextproviderins)
+    -   [<ins>trimNode</ins>](#instrimnodeins)
     -   [<ins>SelectionContextProvider</ins>](#insselectioncontextproviderins)
     -   [<ins>useIsTagSelected</ins>](#insuseistagselectedins)
     -   [<ins>isSelected</ins>](#insisselectedins)
@@ -61,20 +59,18 @@ _AllyBlock [source code](https://github.com/ccontrols/component-controls/tree/ma
 
 ### properties
 
-| Name          | Type                 | Description                                                                                                     |
-| ------------- | -------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `axeOptions`  | _Spec_               |                                                                                                                 |
-| `id`          | _string_             | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
-| `name`        | _string_             |                                                                                                                 |
-| `title`       | _string_             | optional section title for the block.                                                                           |
-| `description` | _string_             | optional markdown description.                                                                                  |
-| `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                     |
-| `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                           |
-| `data-testid` | _string_             | testing id                                                                                                      |
-
-## <ins>AllyPage</ins>
-
-_AllyPage [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/index.tsx)_
+| Name          | Type                                                                   | Description                                                                                                     |
+| ------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `axeOptions`  | _Spec_                                                                 |                                                                                                                 |
+| `id`          | _string_                                                               | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
+| `name`        | _string_                                                               |                                                                                                                 |
+| `title`       | _string_                                                               | optional section title for the block.                                                                           |
+| `description` | _string_                                                               | optional markdown description.                                                                                  |
+| `collapsible` | _boolean_                                                              | if false, will nothave a collapsible frame.                                                                     |
+| `data-testid` | _string_                                                               | testing id                                                                                                      |
+| `plain`       | _boolean_                                                              | inner container variant or plain                                                                                |
+| `sx`          | _ThemeUIStyleObject_                                                   |                                                                                                                 |
+| `ref`         | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                                                                                                                 |
 
 ## <ins>AllyBlock</ins>
 
@@ -84,16 +80,18 @@ _AllyBlock [source code](https://github.com/ccontrols/component-controls/tree/ma
 
 ### properties
 
-| Name          | Type                 | Description                                                                                                     |
-| ------------- | -------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `axeOptions`  | _Spec_               |                                                                                                                 |
-| `id`          | _string_             | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
-| `name`        | _string_             |                                                                                                                 |
-| `title`       | _string_             | optional section title for the block.                                                                           |
-| `description` | _string_             | optional markdown description.                                                                                  |
-| `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                     |
-| `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                           |
-| `data-testid` | _string_             | testing id                                                                                                      |
+| Name          | Type                                                                   | Description                                                                                                     |
+| ------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `axeOptions`  | _Spec_                                                                 |                                                                                                                 |
+| `id`          | _string_                                                               | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
+| `name`        | _string_                                                               |                                                                                                                 |
+| `title`       | _string_                                                               | optional section title for the block.                                                                           |
+| `description` | _string_                                                               | optional markdown description.                                                                                  |
+| `collapsible` | _boolean_                                                              | if false, will nothave a collapsible frame.                                                                     |
+| `data-testid` | _string_                                                               | testing id                                                                                                      |
+| `plain`       | _boolean_                                                              | inner container variant or plain                                                                                |
+| `sx`          | _ThemeUIStyleObject_                                                   |                                                                                                                 |
+| `ref`         | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                                                                                                                 |
 
 ## <ins>AllyBlock</ins>
 
@@ -103,28 +101,26 @@ _AllyBlock [source code](https://github.com/ccontrols/component-controls/tree/ma
 
 ### properties
 
-| Name          | Type                 | Description                                                                                                     |
-| ------------- | -------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `axeOptions`  | _Spec_               |                                                                                                                 |
-| `id`          | _string_             | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
-| `name`        | _string_             |                                                                                                                 |
-| `title`       | _string_             | optional section title for the block.                                                                           |
-| `description` | _string_             | optional markdown description.                                                                                  |
-| `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                     |
-| `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                           |
-| `data-testid` | _string_             | testing id                                                                                                      |
-
-## <ins>AllyPage</ins>
-
-_AllyPage [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/AllyPage/AllyPage.tsx)_
-
-## <ins>AllyPage</ins>
-
-_AllyPage [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/AllyPage/index.ts)_
+| Name          | Type                                                                   | Description                                                                                                     |
+| ------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `axeOptions`  | _Spec_                                                                 |                                                                                                                 |
+| `id`          | _string_                                                               | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
+| `name`        | _string_                                                               |                                                                                                                 |
+| `title`       | _string_                                                               | optional section title for the block.                                                                           |
+| `description` | _string_                                                               | optional markdown description.                                                                                  |
+| `collapsible` | _boolean_                                                              | if false, will nothave a collapsible frame.                                                                     |
+| `data-testid` | _string_                                                               | testing id                                                                                                      |
+| `plain`       | _boolean_                                                              | inner container variant or plain                                                                                |
+| `sx`          | _ThemeUIStyleObject_                                                   |                                                                                                                 |
+| `ref`         | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                                                                                                                 |
 
 ## <ins>AxeContextProvider</ins>
 
 _AxeContextProvider [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/state/context.tsx)_
+
+## <ins>trimNode</ins>
+
+_trimNode [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/state/context.tsx)_
 
 ## <ins>SelectionContextProvider</ins>
 

@@ -1,20 +1,20 @@
 # Table of contents
 
-- [In action](#in-action)
-- [Overview](#overview)
-- [Getting Started](#getting-started)
-  - [Install](#install)
-  - [Add to a document](#add-to-a-document)
-  - [Add to a story](#add-to-a-story)
-  - [Insert into an MDX document](#insert-into-an-mdx-document)
-  - [Configure props globally](#configure-props-globally)
-- [API](#api)
-  - [<ins>FigmaEmbedBlock</ins>](#insfigmaembedblockins)
-  - [<ins>overview</ins>](#insoverviewins)
-  - [<ins>customURLS</ins>](#inscustomurlsins)
-  - [<ins>noFullScreen</ins>](#insnofullscreenins)
-  - [<ins>customIFrameProps</ins>](#inscustomiframepropsins)
-  - [<ins>customConfigProps</ins>](#inscustomconfigpropsins)
+-   [In action](#in-action)
+-   [Overview](#overview)
+-   [Getting Started](#getting-started)
+    -   [Install](#install)
+    -   [Add to a document](#add-to-a-document)
+    -   [Add to a story](#add-to-a-story)
+    -   [Insert into an MDX document](#insert-into-an-mdx-document)
+    -   [Configure props globally](#configure-props-globally)
+-   [API](#api)
+    -   [<ins>FigmaEmbedBlock</ins>](#insfigmaembedblockins)
+    -   [<ins>overview</ins>](#insoverviewins)
+    -   [<ins>customURLS</ins>](#inscustomurlsins)
+    -   [<ins>noFullScreen</ins>](#insnofullscreenins)
+    -   [<ins>customIFrameProps</ins>](#inscustomiframepropsins)
+    -   [<ins>customConfigProps</ins>](#inscustomconfigpropsins)
 
 # In action
 
@@ -58,47 +58,43 @@ The figma file will be assigned only to a specific story. This allows multiple s
 
 in `mystory.stories.tsx`
 
-```
-import React from 'react';
-import { Document, Example, ControlTypes } from '@component-controls/core';
-import { Button, ButtonProps } from './Button';
+    import React from 'react';
+    import { Document, Example, ControlTypes } from '@component-controls/core';
+    import { Button, ButtonProps } from './Button';
 
-export default {
-  title: 'MyStory',
-} as Document;
+    export default {
+      title: 'MyStory',
+    } as Document;
 
-export const story: Example<ButtonProps> = () => <Button>click me</Button>;
+    export const story: Example<ButtonProps> = () => <Button>click me</Button>;
 
-story.design = plugins: {
-  figma: [
-    'https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1',
-  ],
-};
-```
+    story.design = plugins: {
+      figma: [
+        'https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1',
+      ],
+    };
 
 ## Insert into an MDX document
 
 in `mystory.mdx`
 
-```
----
-title: MyStory
----
-import { FigmaEmbedBlock } from '@component-controls/figma-plugin';
+    ---
+    title: MyStory
+    ---
+    import { FigmaEmbedBlock } from '@component-controls/figma-plugin';
 
-<FigmaEmbedBlock
-  items={[
-    {
-      url:
-        'https://www.figma.com/file/hS1sLjYq49vjnKXhwGgHwg/Navigation-UI-design-components-Community?node-id=1%3A2309',
-    },
-    {
-      url:
-        'https://www.figma.com/file/LtgbR2mbVPbQTNDfDQxbKL/Atanas-Stoyanov-s-Team-Colors?node-id=0%3A1',
-    },
-  ]}
-/>
-```
+    <FigmaEmbedBlock
+      items={[
+        {
+          url:
+            'https://www.figma.com/file/hS1sLjYq49vjnKXhwGgHwg/Navigation-UI-design-components-Community?node-id=1%3A2309',
+        },
+        {
+          url:
+            'https://www.figma.com/file/LtgbR2mbVPbQTNDfDQxbKL/Atanas-Stoyanov-s-Team-Colors?node-id=0%3A1',
+        },
+      ]}
+    />
 
 ## Configure props globally
 
@@ -106,20 +102,18 @@ You can globally change the iframe options for the FigmaEmbedBlock component
 
 in `.config/runtime.tsx`
 
-```
-import { RunOnlyConfiguration } from "@component-controls/core";
+    import { RunOnlyConfiguration } from "@component-controls/core";
 
-const config: RunOnlyConfiguration = {
-  ...
-  components: {
-    figma: {
-      width: '200'
-    }
-  },
-};
+    const config: RunOnlyConfiguration = {
+      ...
+      components: {
+        figma: {
+          width: '200'
+        }
+      },
+    };
 
-export default config;
-```
+    export default config;
 
 # API
 

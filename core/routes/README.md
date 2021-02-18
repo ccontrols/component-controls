@@ -1,5 +1,8 @@
 # Table of contents
 
+-   [Overview](#overview)
+-   [Installation](#installation)
+
 # Overview
 
 Route-related utility functions for component-controls

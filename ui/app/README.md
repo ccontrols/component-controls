@@ -194,6 +194,7 @@ _DocLink [source code](https://github.com/ccontrols/component-controls/tree/mast
 | ----- | ---------------------------------------------------------------------------- | ----------- |
 | `id`  | _string_                                                                     |             |
 | `ref` | _((instance: HTMLAnchorElement) => void) \| RefObject&lt;HTMLAnchorElement>_ |             |
+| `sx`  | _ThemeUIStyleObject_                                                         |             |
 
 ## <ins>DocsLink</ins>
 
@@ -206,6 +207,7 @@ _DocsLink [source code](https://github.com/ccontrols/component-controls/tree/mas
 | Name  | Type                                                                         | Description |
 | ----- | ---------------------------------------------------------------------------- | ----------- |
 | `ref` | _((instance: HTMLAnchorElement) => void) \| RefObject&lt;HTMLAnchorElement>_ |             |
+| `sx`  | _ThemeUIStyleObject_                                                         |             |
 
 ## <ins>StoryLink</ins>
 
@@ -219,6 +221,7 @@ _StoryLink [source code](https://github.com/ccontrols/component-controls/tree/ma
 | ----- | ---------------------------------------------------------------------------- | ----------- |
 | `id`  | _string_                                                                     |             |
 | `ref` | _((instance: HTMLAnchorElement) => void) \| RefObject&lt;HTMLAnchorElement>_ |             |
+| `sx`  | _ThemeUIStyleObject_                                                         |             |
 
 ## <ins>PageContainer</ins>
 
@@ -231,8 +234,10 @@ _PageContainer [source code](https://github.com/ccontrols/component-controls/tre
 | Name      | Type                     | Description                         |
 | --------- | ------------------------ | ----------------------------------- |
 | `type*`   | _string_                 | document type                       |
-| `variant` | _string_                 | theme variant                       |
 | `ref`     | _Ref&lt;HTMLDivElement>_ | ref to the page container component |
+| `variant` | _string_                 | theme variant                       |
+| `wrapper` | _ComponentType&lt;{}>_   | inner wrapper container             |
+| `sx`      | _ThemeUIStyleObject_     |                                     |
 
 ## <ins>SEO</ins>
 
@@ -240,11 +245,11 @@ _SEO [source code](https://github.com/ccontrols/component-controls/tree/master/u
 
 ### properties
 
-| Name     | Type                              | Description |
-| -------- | --------------------------------- | ----------- |
-| `Helmet` | _FC&lt;{ children: ReactNode; }>_ |             |
-| `doc`    | _Document&lt;unknown>_            |             |
-| `config` | _RunConfiguration_                |             |
+| Name     | Type                                                                                                                                                                                                                                                                      | Description |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `Helmet` | _FC&lt;{ children: ReactNode; }>_                                                                                                                                                                                                                                         |             |
+| `doc`    | _{ title: string; type?: string; route?: string; date?: Date; dateModified?: Date; draft?: boolean; tags?: string\[]; keywords?: string\[]; description?: string \| Element; image?: string; ... 11 more ...; parameters?: any; } & StoryProps&lt;...> & PageLayoutProps_ |             |
+| `config` | _{ renderFn?: FrameworkRenderFn; title?: string; logo?: ReactNode; app?: FC&lt;{}>; description?: string; copyright?: string; language?: string; author?: string; image?: string; ... 10 more ...; analytics?: any; } & StoryProps&lt;...> & Pick&lt;...>_                |             |
 
 ## <ins>SideContext</ins>
 
@@ -277,10 +282,10 @@ _SidebarsMDXPage [source code](https://github.com/ccontrols/component-controls/t
 
 ### properties
 
-| Name    | Type                   | Description     |
-| ------- | ---------------------- | --------------- |
-| `type*` | _string_               | document type   |
-| `doc*`  | _Document&lt;unknown>_ | document object |
+| Name    | Type                                                                                                                                                                                                                                                                      | Description     |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| `type*` | _string_                                                                                                                                                                                                                                                                  | document type   |
+| `doc*`  | _{ title: string; type?: string; route?: string; date?: Date; dateModified?: Date; draft?: boolean; tags?: string\[]; keywords?: string\[]; description?: string \| Element; image?: string; ... 11 more ...; parameters?: any; } & StoryProps&lt;...> & PageLayoutProps_ | document object |
 
 ## <ins>SidebarsPage</ins>
 
@@ -300,9 +305,9 @@ _SidebarsStoryPage [source code](https://github.com/ccontrols/component-controls
 
 ### properties
 
-| Name    | Type                   | Description     |
-| ------- | ---------------------- | --------------- |
-| `type*` | _string_               | document type   |
-| `doc*`  | _Document&lt;unknown>_ | document object |
+| Name    | Type                                                                                                                                                                                                                                                                      | Description     |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| `type*` | _string_                                                                                                                                                                                                                                                                  | document type   |
+| `doc*`  | _{ title: string; type?: string; route?: string; date?: Date; dateModified?: Date; draft?: boolean; tags?: string\[]; keywords?: string\[]; description?: string \| Element; image?: string; ... 11 more ...; parameters?: any; } & StoryProps&lt;...> & PageLayoutProps_ | document object |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

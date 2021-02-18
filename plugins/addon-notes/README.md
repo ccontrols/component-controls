@@ -1,19 +1,19 @@
 # Table of contents
 
-- [In action](#in-action)
-- [Overview](#overview)
-- [Getting Started](#getting-started)
-  - [Install](#install)
-  - [Add to a document](#add-to-a-document)
-  - [Add to a story](#add-to-a-story)
-  - [Insert into an MDX document](#insert-into-an-mdx-document)
-  - [Configure props globally](#configure-props-globally)
-- [API](#api)
-  - [<ins>NotesBlock</ins>](#insnotesblockins)
-  - [<ins>overview</ins>](#insoverviewins)
-  - [<ins>customItems</ins>](#inscustomitemsins)
-  - [<ins>customConfigProps</ins>](#inscustomconfigpropsins)
-  - [<ins>markdownFile</ins>](#insmarkdownfileins)
+-   [In action](#in-action)
+-   [Overview](#overview)
+-   [Getting Started](#getting-started)
+    -   [Install](#install)
+    -   [Add to a document](#add-to-a-document)
+    -   [Add to a story](#add-to-a-story)
+    -   [Insert into an MDX document](#insert-into-an-mdx-document)
+    -   [Configure props globally](#configure-props-globally)
+-   [API](#api)
+    -   [<ins>NotesBlock</ins>](#insnotesblockins)
+    -   [<ins>overview</ins>](#insoverviewins)
+    -   [<ins>customItems</ins>](#inscustomitemsins)
+    -   [<ins>customConfigProps</ins>](#inscustomconfigpropsins)
+    -   [<ins>markdownFile</ins>](#insmarkdownfileins)
 
 # In action
 
@@ -59,45 +59,41 @@ The notes will be assigned only to a specific story. This allows multiple storie
 
 in `mystory.stories.tsx`
 
-```
-import React from 'react';
-import { Document, Example } from '@component-controls/core';
+    import React from 'react';
+    import { Document, Example } from '@component-controls/core';
 
-export default {
-  title: 'MyStory',
-} as Document;
+    export default {
+      title: 'MyStory',
+    } as Document;
 
-export const story: Example = () => <Button>click me</Button>;
+    export const story: Example = () => <Button>click me</Button>;
 
-story.design = {
-  plugins: {
-    notes: [
-      # Introduction
-      some **markdown**
-    ],
-  },
-};
-```
+    story.design = {
+      plugins: {
+        notes: [
+          # Introduction
+          some **markdown**
+        ],
+      },
+    };
 
 ## Insert into an MDX document
 
 in `mystory.mdx`
 
-```
----
-title: MyStory
----
-import { NotesBlock } from '@component-controls/addon-notes';
+    ---
+    title: MyStory
+    ---
+    import { NotesBlock } from '@component-controls/addon-notes';
 
-<NotesBlock
-  items={[
-      `
-# Introduction
-some **markdown**
-`,
-  ]}
-/>
-```
+    <NotesBlock
+      items={[
+          `
+    # Introduction
+    some **markdown**
+    `,
+      ]}
+    />
 
 ## Configure props globally
 
@@ -105,20 +101,18 @@ You can globally change the default options of the NotesBlock component
 
 in `.config/runtime.tsx`
 
-```
-import { RunOnlyConfiguration } from "@component-controls/core";
+    import { RunOnlyConfiguration } from "@component-controls/core";
 
-const config: RunOnlyConfiguration = {
-  ...
-  components: {
-    notes: {
-      title: 'Design files'
-    }
-  },
-};
+    const config: RunOnlyConfiguration = {
+      ...
+      components: {
+        notes: {
+          title: 'Design files'
+        }
+      },
+    };
 
-export default config;
-```
+    export default config;
 
 # API
 
@@ -134,7 +128,7 @@ _NotesBlock [source code](https://github.com/ccontrols/component-controls/tree/m
 
 | Name          | Type                                                                   | Description                                                                                                     |
 | ------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `items`       | _(string \| { \[key: string]: any; url: string; })\[]_                 |                                                                                                                 |
+| `items`       | _(string \| { \[key: string]: any; text: string; })\[]_                |                                                                                                                 |
 | `title`       | _string_                                                               | optional section title for the block.                                                                           |
 | `description` | _string_                                                               | optional markdown description.                                                                                  |
 | `id`          | _string_                                                               | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
