@@ -10,6 +10,7 @@ describe('extract-component', () => {
         resolver: defaultResolveOptions,
         components: {
           sourceFiles: false,
+          fileInfo: false,
           package: {
             browseLink: true,
             docsLink: true,

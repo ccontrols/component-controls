@@ -160,6 +160,11 @@ export interface ComponentOptions {
   sourceFiles?: ComponentFileOption;
 
   /**
+   * If set to false, will not save file info for the component
+   */
+  fileInfo?: boolean;
+
+  /**
    * options for extracting repository information from the component's package,json file
    */
   package?: PackageInfoOptions | false;

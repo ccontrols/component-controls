@@ -36,6 +36,7 @@ export const extractComponent = async (
   }
   const follow = followImports(componentName, filePath, source, options);
   const { components, resolver: resolveOptions } = options || {};
+
   let component: Component;
   let componentPackage: PackageInfo | undefined;
   if (follow) {
@@ -120,7 +121,10 @@ export const extractComponent = async (
         component.source = saveSource;
         component.loc = follow.loc;
       }
-      component.fileInfo = await getFileIinfo(follow.filePath, saveSource);
+      const { fileInfo = true } = components || {};
+      if (fileInfo) {
+        component.fileInfo = await getFileIinfo(follow.filePath, saveSource);
+      }
       if (components && typeof components.resolvePropsFile === 'function') {
         const propsFile = components.resolvePropsFile(
           componentName,
