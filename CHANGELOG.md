@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.8.0](https://github.com/ccontrols/component-controls/compare/v2.7.0...v2.8.0) (2021-02-18)
+
+
+### Bug Fixes
+
+* aria-label for avatar list ([3af645c](https://github.com/ccontrols/component-controls/commit/3af645c6893d2356f4982f8f9eaf18a16eba72e9))
+
+
+### Features
+
+* add github access token settings ([166ad8a](https://github.com/ccontrols/component-controls/commit/166ad8ad62c90e679aefda8004f5b14fdefc903c))
+
+
+
+
+
 # [2.7.0](https://github.com/ccontrols/component-controls/compare/v2.6.5...v2.7.0) (2021-02-18)
 
 
