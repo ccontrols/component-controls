@@ -68,6 +68,7 @@ Array [
   "/Users/atanasster/component-controls/ui/blocks/src/TagsList/TagsList.stories.tsx",
   "/Users/atanasster/component-controls/ui/blocks/src/Title/Title.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories_native/dynamic-stories.stories.tsx",
+  "/Users/atanasster/component-controls/examples/stories/src/stories_native/template-doc.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors-starter.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.jsx",
@@ -75,7 +76,6 @@ Array [
   "/Users/atanasster/component-controls/examples/stories/src/stories/stories-async.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/stories-esm.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/template-bind.stories.tsx",
-  "/Users/atanasster/component-controls/examples/stories/src/stories/template-doc.stories.tsx",
 ]
 `;
 
@@ -147,6 +147,7 @@ Array [
   "/Users/atanasster/component-controls/ui/blocks/src/TagsList/TagsList.stories.tsx",
   "/Users/atanasster/component-controls/ui/blocks/src/Title/Title.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories_native/dynamic-stories.stories.tsx",
+  "/Users/atanasster/component-controls/examples/stories/src/stories_native/template-doc.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors-starter.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.jsx",
@@ -154,6 +155,5 @@ Array [
   "/Users/atanasster/component-controls/examples/stories/src/stories/stories-async.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/stories-esm.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/template-bind.stories.tsx",
-  "/Users/atanasster/component-controls/examples/stories/src/stories/template-doc.stories.tsx",
 ]
 `;
