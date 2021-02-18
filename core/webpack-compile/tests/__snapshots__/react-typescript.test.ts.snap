@@ -681,7 +681,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "theme-ui": "^0.6.0-alpha.6",
       },
       "devDependencies": Object {
-        "@component-controls/jest-snapshots": "^2.6.5",
+        "@component-controls/jest-snapshots": "^2.7.0",
         "@component-controls/ts-markdown-docs": "^2.6.0",
         "@theme-ui/css": "^0.6.0-alpha.6",
         "@types/markdown-to-jsx": "^6.11.0",
@@ -707,7 +707,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.6.5",
+      "version": "2.7.0",
     },
     "fded7dbaa855ea6869a794f877eab680": Object {
       "dependencies": Object {
@@ -729,7 +729,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "theme-ui": "^0.6.0-alpha.6",
       },
       "devDependencies": Object {
-        "@component-controls/jest-snapshots": "^2.6.5",
+        "@component-controls/jest-snapshots": "^2.7.0",
         "@component-controls/ts-markdown-docs": "^2.6.0",
         "@theme-ui/css": "^0.6.0-alpha.6",
         "@types/markdown-to-jsx": "^6.11.0",
@@ -755,7 +755,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.6.5",
+      "version": "2.7.0",
     },
   },
   "search": [Function],
