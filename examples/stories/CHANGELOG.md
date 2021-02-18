@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.7.0](https://github.com/ccontrols/component-controls/compare/v2.6.5...v2.7.0) (2021-02-18)
+
+
+### Bug Fixes
+
+* spelling fix ([d369821](https://github.com/ccontrols/component-controls/commit/d369821c17ee9e208ff240fbeae2aa02fc287028))
+
+
+### Features
+
+* components history and catalog ([5e76046](https://github.com/ccontrols/component-controls/commit/5e7604605569664a90212a48a6037c6b50a34264))
+
+
+
+
+
 ## [2.6.2](https://github.com/ccontrols/component-controls/compare/v2.6.1...v2.6.2) (2021-01-12)
 
 **Note:** Version bump only for package component-controls-stories

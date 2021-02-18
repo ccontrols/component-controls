@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.7.0](https://github.com/ccontrols/component-controls/compare/v2.6.5...v2.7.0) (2021-02-18)
+
+
+### Features
+
+* components history and catalog ([5e76046](https://github.com/ccontrols/component-controls/commit/5e7604605569664a90212a48a6037c6b50a34264))
+
+
+
+
+
 ## [2.6.5](https://github.com/ccontrols/component-controls/compare/v2.6.4...v2.6.5) (2021-01-25)
 
 **Note:** Version bump only for package @component-controls/design-tokens
