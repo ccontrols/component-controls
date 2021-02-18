@@ -1024,7 +1024,7 @@ exports[`Components/ExternalLink Overview 1`] = `
 exports[`Components/GithubAvatarList Max Items 1`] = `
 <DocumentFragment>
   <div
-    aria-label="avatars of [object Object], [object Object], [object Object]"
+    aria-label="avatars of hasparus, lachlanjc, atanasster"
     class="css-i07oab-GithubAvatarList"
   >
     <a
@@ -1067,7 +1067,7 @@ exports[`Components/GithubAvatarList Max Items 1`] = `
 exports[`Components/GithubAvatarList Overview 1`] = `
 <DocumentFragment>
   <div
-    aria-label="avatars of [object Object], [object Object], [object Object]"
+    aria-label="avatars of hasparus, lachlanjc, atanasster"
     class="css-i07oab-GithubAvatarList"
   >
     <a

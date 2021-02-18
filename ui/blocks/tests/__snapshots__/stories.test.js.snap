@@ -11,7 +11,7 @@ exports[`Blocks/ComponentContributors Caption 1`] = `
       contributors
     </div>
     <div
-      aria-label="avatars of [object Object], [object Object], [object Object]"
+      aria-label="avatars of hasparus, lachlanjc, atanasster"
       class="css-1wxrz40-GithubAvatarList"
     >
       <a
@@ -67,7 +67,7 @@ exports[`Blocks/ComponentContributors Overview 1`] = `
     class="css-6582y1-ComponentContributors"
   >
     <div
-      aria-label="avatars of [object Object], [object Object], [object Object]"
+      aria-label="avatars of hasparus, lachlanjc, atanasster"
       class="css-1wxrz40-GithubAvatarList"
     >
       <a
