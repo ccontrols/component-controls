@@ -33,6 +33,7 @@ export const GithubAvatarList: FC<GithubAvatarListProps> = ({
   size = 32,
   overlap = 0.4,
   maxItems = 7,
+  githubAccessToken,
   ...rest
 }) => {
   const width = useMemo(() => {
@@ -55,6 +56,7 @@ export const GithubAvatarList: FC<GithubAvatarListProps> = ({
         <GithubAvatarItem
           key={`avatar_item${user.username}`}
           size={size}
+          githubAccessToken={githubAccessToken}
           username={user.username}
           useremail={user.useremail}
           overlap={overlap}

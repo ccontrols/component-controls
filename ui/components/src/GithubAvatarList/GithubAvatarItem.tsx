@@ -33,6 +33,10 @@ export interface GithubAvatarItemProps {
    * whether to freeze the size of the avataro on hover
    */
   freeze?: boolean;
+  /**
+   * to increase access rate for github user profile info
+   */
+  githubAccessToken?: string;
 }
 
 /**
@@ -44,8 +48,9 @@ export const GithubAvatarItem: FC<GithubAvatarItemProps> = ({
   size = 48,
   overlap = 0.4,
   freeze = false,
+  githubAccessToken,
 }) => {
-  const profile = useGithubProfile(username, useremail);
+  const profile = useGithubProfile(username, useremail, githubAccessToken);
   const profileBox = (
     <div sx={{ p: 2 }}>
       <div sx={{ fontSize: 4, fontWeight: 'bold' }}>

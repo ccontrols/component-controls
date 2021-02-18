@@ -8,6 +8,7 @@ import {
   GithubAvatarUser,
 } from '@component-controls/components';
 import { useCustomProps } from '../context';
+import { useConfig } from '@component-controls/store';
 
 export interface ComponentContributorsProps {
   caption?: string;
@@ -20,7 +21,8 @@ export const ComponentContributors: FC<ComponentContributorsProps &
     'component_contributors',
     rest,
   );
-
+  const config = useConfig();
+  const { tokens } = config;
   const contributors = useMemo(() => {
     if (!component?.fileInfo?.commits?.length) {
       return [];
@@ -51,7 +53,12 @@ export const ComponentContributors: FC<ComponentContributorsProps &
   return !!contributors.length ? (
     <div sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
       {caption && <div sx={{ mr: 1 }}>{caption}</div>}
-      <GithubAvatarList users={contributors} size={24} {...props} />
+      <GithubAvatarList
+        githubAccessToken={tokens?.githubAccessToken}
+        users={contributors}
+        size={24}
+        {...props}
+      />
     </div>
   ) : null;
 };

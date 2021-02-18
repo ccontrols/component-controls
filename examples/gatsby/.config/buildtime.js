@@ -79,7 +79,9 @@ module.exports = {
       adminAPIKey: process.env.ALGOLIA_SEARCH_ADMIN_KEY,
     },
   },
-
+  tokens: {
+    githubAccessToken: process.env.GITHUB_AUTH_TOKEN,
+  },
   webpack: (config = {}, options = {}) => {
     return {
       ...config,

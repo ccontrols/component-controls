@@ -1,3 +1,4 @@
 export interface TokenOptions {
-  figmaAccessToken: string;
+  figmaAccessToken?: string;
+  githubAccessToken?: string;
 }

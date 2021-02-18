@@ -68,6 +68,9 @@ module.exports = {
       isCaseSensitive: true,
     },
   },
+  tokens: {
+    githubAccessToken: process.env.GITHUB_AUTH_TOKEN,
+  },
   webpack: (config = {}, options = {}) => {
     return {
       ...config,

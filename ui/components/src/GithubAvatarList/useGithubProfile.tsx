@@ -41,6 +41,7 @@ const profilesCache: Record<string, GithubProfile> = {};
 export const useGithubProfile = (
   username: string,
   useremail?: string,
+  githubToken?: string,
 ): GithubProfile => {
   const [profile, setProfile] = useState<GithubProfile>(
     profilesCache[username] || {
@@ -54,8 +55,15 @@ export const useGithubProfile = (
     },
   );
   useEffect(() => {
+    const headers = githubToken
+      ? {
+          Authorization: `token ${githubToken}`,
+        }
+      : undefined;
     const fetchData = async () => {
-      fetch(`https://api.github.com/users/${username}`)
+      fetch(`https://api.github.com/users/${username}`, {
+        headers,
+      })
         .then(res => res.json())
         .then(result => {
           profilesCache[username] = result;
