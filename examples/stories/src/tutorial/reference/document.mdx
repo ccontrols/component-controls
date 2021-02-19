@@ -22,7 +22,6 @@ import subcomponentsImg from './media/doc-subcomponents.jpg';
 import controlsImg from './media/doc-controls.jpg';
 import decoratorsImg from './media/doc-decorators.jpg';
 
-
 ## Overview
 
 Document is a single file containing documentation in [mdx](/tutorial/mdx-stories) or [esm](/tutorial/esmodules-stories) format.
@@ -36,6 +35,7 @@ type: `string`
 Title of the document, also used as the document unique identifier. If no [route](#route) parameter is specified, the title is used to generate the document url. This is the only required field, as it is used to show the document in the menu structures.
 
 [MDX](/tutorial/mdx-documentation)
+
 ```
 ---
 title: Library/Components/Button
@@ -43,10 +43,11 @@ title: Library/Components/Button
 ```
 
 [ESM](/tutorial/esmodules-stories)
+
 ```
 export default {
   title: 'Library/Components/Button',
-}  
+}
 ```
 
 <img alt="hierarchical document title" title="document title" src={titleImg} />
@@ -114,11 +115,12 @@ order: 1
 
 ### route
 
-type:  `string`
+type: `string`
 
 If provided, will be used as the route for the document page. By default, the title in lowercase will be used as the route.
 
 [MDX](/tutorial/mdx-documentation)
+
 ```
 ---
 title: Library/Components/Spinner
@@ -127,6 +129,7 @@ route: /library/my-route
 ```
 
 [ESM](/tutorial/esmodules-stories)
+
 ```
 export default {
   title: 'Library/Components/Button',
@@ -136,14 +139,14 @@ export default {
 
 <img alt="custom document route" title="document route" src={routeImg} />
 
-
 ### description
 
-type:  `string`
+type: `string`
 
 Short description of the documentation page - can be an excerpt for blog posts or keywords for the full-text search. If the description is set, it will also be used for SEO purposes as the description meta tag of the page.
 
 [MDX](/tutorial/mdx-documentation)
+
 ```
 ---
 title: Library/Components/Spinner
@@ -152,6 +155,7 @@ description: this is a spinner documentation page
 ```
 
 [ESM](/tutorial/esmodules-stories)
+
 ```
 export default {
   title: 'Library/Components/Button',
@@ -159,15 +163,20 @@ export default {
 };
 ```
 
-<img alt="assign document description" title="document description" src={descriptionImg} />
+<img
+  alt="assign document description"
+  title="document description"
+  src={descriptionImg}
+/>
 
 ### date
 
-type:  `Date`
+type: `Date`
 
 Optional date when the document was created. If not assigned, the instrumentation process will use [birthtime](https://nodejs.org/api/fs.html#fs_stats_birthtimems) from the filesystem.
 
 [MDX](/tutorial/mdx-documentation)
+
 ```
 ---
 title: Library/Components/Spinner
@@ -176,6 +185,7 @@ date: 01/01/2020
 ```
 
 [ESM](/tutorial/esmodules-stories)
+
 ```
 export default {
   title: 'Library/Components/Button',
@@ -185,11 +195,12 @@ export default {
 
 ### dateModified
 
-type:  `Date`
+type: `Date`
 
 Optional date when the document was last modified. If not assigned, the instrumentation process will use [mtime](https://nodejs.org/api/fs.html#fs_stats_mtime) from the filesystem.
 
 [MDX](/tutorial/mdx-documentation)
+
 ```
 ---
 title: Library/Components/Spinner
@@ -198,6 +209,7 @@ dateModified: 01/01/2020
 ```
 
 [ESM](/tutorial/esmodules-stories)
+
 ```
 export default {
   title: 'Library/Components/Button',
@@ -205,14 +217,14 @@ export default {
 };
 ```
 
- 
 ### draft
 
-type:  `boolean`
+type: `boolean`
 
 If set to true, the document will be hidden in production builds. This allows you to work on the draft version of a document without publishing it.
 
 [MDX](/tutorial/mdx-documentation)
+
 ```
 ---
 title: Library/Components/Spinner
@@ -221,6 +233,7 @@ draft: true
 ```
 
 [ESM](/tutorial/esmodules-stories)
+
 ```
 export default {
   title: 'Library/Components/Button',
@@ -235,6 +248,7 @@ type: `string[]`
 List of document tags, used for cross-linking documents and the full-text search.
 
 [MDX](/tutorial/mdx-documentation)
+
 ```
 ---
 title: Library/Components/Spinner
@@ -245,6 +259,7 @@ tags:
 ```
 
 [ESM](/tutorial/esmodules-stories)
+
 ```
 export default {
   title: 'Library/Components/Button',
@@ -256,11 +271,12 @@ export default {
 
 ### author
 
-type: `string` 
+type: `string`
 
 Document author. Allows categorizing documents by author and also creating custom author's home page.
 
 [MDX](/tutorial/mdx-documentation)
+
 ```
 ---
 title: Library/Components/Spinner
@@ -269,10 +285,35 @@ author: atanasster
 ```
 
 [ESM](/tutorial/esmodules-stories)
+
 ```
 export default {
   title: 'Library/Components/Button',
   author: 'atanasster',
+};
+```
+
+### category
+
+type: `string`
+
+Category for the document, for example used by the [addon-catalog](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-catalog) to display components by category ie 'Display', 'Input' etc.
+
+[MDX](/tutorial/mdx-documentation)
+
+```
+---
+title: Library/Components/Spinner
+category: Display
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+
+```
+export default {
+  title: 'Library/Components/Button',
+  category: 'Display',
 };
 ```
 
@@ -283,6 +324,7 @@ type: `boolean`
 Whether to add a sidebar to navigate all the documents from the same document type. The default value is from the document type configuration but can also be changed at the document level.
 
 [MDX](/tutorial/mdx-documentation)
+
 ```
 ---
 title: Library/Components/Spinner
@@ -291,6 +333,7 @@ navSidebar: false
 ```
 
 [ESM](/tutorial/esmodules-stories)
+
 ```
 export default {
   title: 'Library/Components/Button',
@@ -298,16 +341,20 @@ export default {
 };
 ```
 
-<img alt="document navigation sidebar" title="document navSidebar" src={sidebarImg} />
-
+<img
+  alt="document navigation sidebar"
+  title="document navSidebar"
+  src={sidebarImg}
+/>
 
 ### contextSidebar
 
 type: `boolean`
-  
-Whether to add a context sidebar to access the sections on the current page. The default value is from the document type configuration  but can also be changed at the document level.
+
+Whether to add a context sidebar to access the sections on the current page. The default value is from the document type configuration but can also be changed at the document level.
 
 [MDX](/tutorial/mdx-documentation)
+
 ```
 ---
 title: Library/Components/Spinner
@@ -316,6 +363,7 @@ contextSidebar: false
 ```
 
 [ESM](/tutorial/esmodules-stories)
+
 ```
 export default {
   title: 'Library/Components/Button',
@@ -323,8 +371,11 @@ export default {
 };
 ```
 
-<img alt="document context sidebar" title="document context sidebar" src={contextImg} />
-
+<img
+  alt="document context sidebar"
+  title="document context sidebar"
+  src={contextImg}
+/>
 
 ### layout.fullPage
 
@@ -333,6 +384,7 @@ type: `boolean
 Whether the page to use the full-page theme styling (pagecontainer.full theme variant can be customized). The default value is from the document type configuration but can also be changed at the document level.
 
 [MDX](/tutorial/mdx-documentation)
+
 ```
 ---
 title: Library/Components/Spinner
@@ -341,6 +393,7 @@ fullPage: true
 ```
 
 [ESM](/tutorial/esmodules-stories)
+
 ```
 export default {
   title: 'Library/Components/Button',
@@ -354,9 +407,10 @@ export default {
 
 type: `string | object`
 
-The component associated with the documentation page. 
+The component associated with the documentation page.
 
 [MDX](/tutorial/mdx-documentation)
+
 ```
 ---
 title: Library/Components/Spinner
@@ -373,6 +427,7 @@ import { PropsTable,  ComponentSource  } from '@component-controls/blocks';
 ```
 
 [ESM](/tutorial/esmodules-stories)
+
 ```
 import { Button } from '../components/Button';
 
@@ -384,7 +439,6 @@ export default {
 
 <img alt="document component" title="document component" src={componentImg} />
 
-
 ### subcomponents
 
 type: `string[] | object[]
@@ -392,6 +446,7 @@ type: `string[] | object[]
 Multiple components option.
 
 [MDX](/tutorial/mdx-documentation)
+
 ```
 ---
 title: Library/Components/Spinner
@@ -411,6 +466,7 @@ import { PropsTable,  ComponentSource  } from '@component-controls/blocks';
 ```
 
 [ESM](/tutorial/esmodules-stories)
+
 ```
 import { Button } from '../components/Button';
 import { Spinner } from '../components/Spinner';
@@ -422,7 +478,11 @@ export default {
 };
 ```
 
-<img alt="document subcomponents" title="document subcomponents" src={subcomponentsImg} />
+<img
+  alt="document subcomponents"
+  title="document subcomponents"
+  src={subcomponentsImg}
+/>
 
 ### controls
 
@@ -431,6 +491,7 @@ type: [ComponentControls](/tutorial/reference/controls#componentcontrols)
 An object of key/value pairs specifying the controls for the stories file will apply to all the stories in the file.
 
 [MDX](/tutorial/mdx-documentation)
+
 ```
 ---
 title: Library/Components/Spinner
@@ -450,6 +511,7 @@ import { Playground,  Story, PropsTable  } from '@component-controls/blocks';
 ```
 
 [ESM](/tutorial/esmodules-stories)
+
 ```
 import React from 'react';
 export default {
@@ -464,7 +526,6 @@ export const textControls = ({ text }) => <div>{text}</div>;
 
 <img alt="document controls" title="document controls" src={controlsImg} />
 
-
 ### decorators
 
 type [StoryRenderFn[]](/tutorial/reference/configuration#storyrenderfn)
@@ -472,6 +533,7 @@ type [StoryRenderFn[]](/tutorial/reference/configuration#storyrenderfn)
 An array of wrapper functions (decorators) that will be called when rendering each story.
 
 [ESM](/tutorial/esmodules-stories)
+
 ```
 import React from 'react';
 export default {
@@ -491,4 +553,8 @@ export default {
 export const overview = () => <div>decorator test</div>;
 ```
 
-<img alt="document decorators" title="document decorators" src={decoratorsImg} />
+<img
+  alt="document decorators"
+  title="document decorators"
+  src={decoratorsImg}
+/>
