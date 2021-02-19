@@ -230,48 +230,54 @@ exports[`Plugins/AddonCatalog/ComponentCard Overview 1`] = `
             aria-label="avatars of hasparus, lachlanjc, atanasster"
             class="css-1wxrz40-GithubAvatarList"
           >
-            <a
-              aria-label="visit profile of hasparus"
-              class="css-1l46c3u-GithubAvatarItem"
-              href=""
+            <div
+              class="css-dam4fv-GithubAvatar"
+              style="display: inline-block;"
             >
-              <img
-                alt="hasparus"
-                class="css-1y16e88"
-                height="24"
-                src="https://github.com/hasparus"
-                title="hasparus"
-                width="24"
-              />
-            </a>
-            <a
-              aria-label="visit profile of lachlanjc"
-              class="css-1l46c3u-GithubAvatarItem"
-              href=""
+              <div
+                class="css-1en2h0i-GithubAvatar"
+              >
+                <img
+                  class="css-1y16e88"
+                  height="24"
+                  src="//github.com/hasparus"
+                  title="hasparus"
+                  width="24"
+                />
+              </div>
+            </div>
+            <div
+              class="css-dam4fv-GithubAvatar"
+              style="display: inline-block;"
             >
-              <img
-                alt="lachlanjc"
-                class="css-1y16e88"
-                height="24"
-                src="https://github.com/lachlanjc"
-                title="lachlanjc"
-                width="24"
-              />
-            </a>
-            <a
-              aria-label="visit profile of atanasster"
-              class="css-1l46c3u-GithubAvatarItem"
-              href=""
+              <div
+                class="css-1en2h0i-GithubAvatar"
+              >
+                <img
+                  class="css-1y16e88"
+                  height="24"
+                  src="//github.com/lachlanjc"
+                  title="lachlanjc"
+                  width="24"
+                />
+              </div>
+            </div>
+            <div
+              class="css-9cbusc-GithubAvatar"
+              style="display: inline-block;"
             >
-              <img
-                alt="atanasster"
-                class="css-1y16e88"
-                height="24"
-                src="https://github.com/atanasster"
-                title="atanasster"
-                width="24"
-              />
-            </a>
+              <div
+                class="css-1en2h0i-GithubAvatar"
+              >
+                <img
+                  class="css-1y16e88"
+                  height="24"
+                  src="//github.com/atanasster"
+                  title="atanasster"
+                  width="24"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -481,48 +487,54 @@ exports[`Plugins/AddonCatalog/ComponentList Overview 1`] = `
               aria-label="avatars of hasparus, lachlanjc, atanasster"
               class="css-1wxrz40-GithubAvatarList"
             >
-              <a
-                aria-label="visit profile of hasparus"
-                class="css-1l46c3u-GithubAvatarItem"
-                href=""
+              <div
+                class="css-dam4fv-GithubAvatar"
+                style="display: inline-block;"
               >
-                <img
-                  alt="hasparus"
-                  class="css-1y16e88"
-                  height="24"
-                  src="https://github.com/hasparus"
-                  title="hasparus"
-                  width="24"
-                />
-              </a>
-              <a
-                aria-label="visit profile of lachlanjc"
-                class="css-1l46c3u-GithubAvatarItem"
-                href=""
+                <div
+                  class="css-1en2h0i-GithubAvatar"
+                >
+                  <img
+                    class="css-1y16e88"
+                    height="24"
+                    src="//github.com/hasparus"
+                    title="hasparus"
+                    width="24"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-dam4fv-GithubAvatar"
+                style="display: inline-block;"
               >
-                <img
-                  alt="lachlanjc"
-                  class="css-1y16e88"
-                  height="24"
-                  src="https://github.com/lachlanjc"
-                  title="lachlanjc"
-                  width="24"
-                />
-              </a>
-              <a
-                aria-label="visit profile of atanasster"
-                class="css-1l46c3u-GithubAvatarItem"
-                href=""
+                <div
+                  class="css-1en2h0i-GithubAvatar"
+                >
+                  <img
+                    class="css-1y16e88"
+                    height="24"
+                    src="//github.com/lachlanjc"
+                    title="lachlanjc"
+                    width="24"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-9cbusc-GithubAvatar"
+                style="display: inline-block;"
               >
-                <img
-                  alt="atanasster"
-                  class="css-1y16e88"
-                  height="24"
-                  src="https://github.com/atanasster"
-                  title="atanasster"
-                  width="24"
-                />
-              </a>
+                <div
+                  class="css-1en2h0i-GithubAvatar"
+                >
+                  <img
+                    class="css-1y16e88"
+                    height="24"
+                    src="//github.com/atanasster"
+                    title="atanasster"
+                    width="24"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -644,48 +656,54 @@ with a
               aria-label="avatars of hasparus, lachlanjc, atanasster"
               class="css-1wxrz40-GithubAvatarList"
             >
-              <a
-                aria-label="visit profile of hasparus"
-                class="css-1l46c3u-GithubAvatarItem"
-                href=""
+              <div
+                class="css-dam4fv-GithubAvatar"
+                style="display: inline-block;"
               >
-                <img
-                  alt="hasparus"
-                  class="css-1y16e88"
-                  height="24"
-                  src="https://github.com/hasparus"
-                  title="hasparus"
-                  width="24"
-                />
-              </a>
-              <a
-                aria-label="visit profile of lachlanjc"
-                class="css-1l46c3u-GithubAvatarItem"
-                href=""
+                <div
+                  class="css-1en2h0i-GithubAvatar"
+                >
+                  <img
+                    class="css-1y16e88"
+                    height="24"
+                    src="//github.com/hasparus"
+                    title="hasparus"
+                    width="24"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-dam4fv-GithubAvatar"
+                style="display: inline-block;"
               >
-                <img
-                  alt="lachlanjc"
-                  class="css-1y16e88"
-                  height="24"
-                  src="https://github.com/lachlanjc"
-                  title="lachlanjc"
-                  width="24"
-                />
-              </a>
-              <a
-                aria-label="visit profile of atanasster"
-                class="css-1l46c3u-GithubAvatarItem"
-                href=""
+                <div
+                  class="css-1en2h0i-GithubAvatar"
+                >
+                  <img
+                    class="css-1y16e88"
+                    height="24"
+                    src="//github.com/lachlanjc"
+                    title="lachlanjc"
+                    width="24"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-9cbusc-GithubAvatar"
+                style="display: inline-block;"
               >
-                <img
-                  alt="atanasster"
-                  class="css-1y16e88"
-                  height="24"
-                  src="https://github.com/atanasster"
-                  title="atanasster"
-                  width="24"
-                />
-              </a>
+                <div
+                  class="css-1en2h0i-GithubAvatar"
+                >
+                  <img
+                    class="css-1y16e88"
+                    height="24"
+                    src="//github.com/atanasster"
+                    title="atanasster"
+                    width="24"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -807,48 +825,54 @@ with a
               aria-label="avatars of hasparus, lachlanjc, atanasster"
               class="css-1wxrz40-GithubAvatarList"
             >
-              <a
-                aria-label="visit profile of hasparus"
-                class="css-1l46c3u-GithubAvatarItem"
-                href=""
+              <div
+                class="css-dam4fv-GithubAvatar"
+                style="display: inline-block;"
               >
-                <img
-                  alt="hasparus"
-                  class="css-1y16e88"
-                  height="24"
-                  src="https://github.com/hasparus"
-                  title="hasparus"
-                  width="24"
-                />
-              </a>
-              <a
-                aria-label="visit profile of lachlanjc"
-                class="css-1l46c3u-GithubAvatarItem"
-                href=""
+                <div
+                  class="css-1en2h0i-GithubAvatar"
+                >
+                  <img
+                    class="css-1y16e88"
+                    height="24"
+                    src="//github.com/hasparus"
+                    title="hasparus"
+                    width="24"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-dam4fv-GithubAvatar"
+                style="display: inline-block;"
               >
-                <img
-                  alt="lachlanjc"
-                  class="css-1y16e88"
-                  height="24"
-                  src="https://github.com/lachlanjc"
-                  title="lachlanjc"
-                  width="24"
-                />
-              </a>
-              <a
-                aria-label="visit profile of atanasster"
-                class="css-1l46c3u-GithubAvatarItem"
-                href=""
+                <div
+                  class="css-1en2h0i-GithubAvatar"
+                >
+                  <img
+                    class="css-1y16e88"
+                    height="24"
+                    src="//github.com/lachlanjc"
+                    title="lachlanjc"
+                    width="24"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-9cbusc-GithubAvatar"
+                style="display: inline-block;"
               >
-                <img
-                  alt="atanasster"
-                  class="css-1y16e88"
-                  height="24"
-                  src="https://github.com/atanasster"
-                  title="atanasster"
-                  width="24"
-                />
-              </a>
+                <div
+                  class="css-1en2h0i-GithubAvatar"
+                >
+                  <img
+                    class="css-1y16e88"
+                    height="24"
+                    src="//github.com/atanasster"
+                    title="atanasster"
+                    width="24"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -970,48 +994,54 @@ with a
               aria-label="avatars of hasparus, lachlanjc, atanasster"
               class="css-1wxrz40-GithubAvatarList"
             >
-              <a
-                aria-label="visit profile of hasparus"
-                class="css-1l46c3u-GithubAvatarItem"
-                href=""
+              <div
+                class="css-dam4fv-GithubAvatar"
+                style="display: inline-block;"
               >
-                <img
-                  alt="hasparus"
-                  class="css-1y16e88"
-                  height="24"
-                  src="https://github.com/hasparus"
-                  title="hasparus"
-                  width="24"
-                />
-              </a>
-              <a
-                aria-label="visit profile of lachlanjc"
-                class="css-1l46c3u-GithubAvatarItem"
-                href=""
+                <div
+                  class="css-1en2h0i-GithubAvatar"
+                >
+                  <img
+                    class="css-1y16e88"
+                    height="24"
+                    src="//github.com/hasparus"
+                    title="hasparus"
+                    width="24"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-dam4fv-GithubAvatar"
+                style="display: inline-block;"
               >
-                <img
-                  alt="lachlanjc"
-                  class="css-1y16e88"
-                  height="24"
-                  src="https://github.com/lachlanjc"
-                  title="lachlanjc"
-                  width="24"
-                />
-              </a>
-              <a
-                aria-label="visit profile of atanasster"
-                class="css-1l46c3u-GithubAvatarItem"
-                href=""
+                <div
+                  class="css-1en2h0i-GithubAvatar"
+                >
+                  <img
+                    class="css-1y16e88"
+                    height="24"
+                    src="//github.com/lachlanjc"
+                    title="lachlanjc"
+                    width="24"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-9cbusc-GithubAvatar"
+                style="display: inline-block;"
               >
-                <img
-                  alt="atanasster"
-                  class="css-1y16e88"
-                  height="24"
-                  src="https://github.com/atanasster"
-                  title="atanasster"
-                  width="24"
-                />
-              </a>
+                <div
+                  class="css-1en2h0i-GithubAvatar"
+                >
+                  <img
+                    class="css-1y16e88"
+                    height="24"
+                    src="//github.com/atanasster"
+                    title="atanasster"
+                    width="24"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>

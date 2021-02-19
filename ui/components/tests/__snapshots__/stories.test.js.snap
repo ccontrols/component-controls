@@ -1021,40 +1021,65 @@ exports[`Components/ExternalLink Overview 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Components/GithubAvatar Overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-9cbusc-GithubAvatar"
+    style="display: inline-block;"
+  >
+    <div
+      class="css-db5lk0-GithubAvatar"
+    >
+      <img
+        class="css-1y16e88"
+        height="48"
+        src="//www.gravatar.com/avatar/9b9913091795a48655ec0b10dcd62a95?s=128"
+        title="Atanas Stoyanov"
+        width="48"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Components/GithubAvatarList Max Items 1`] = `
 <DocumentFragment>
   <div
     aria-label="avatars of hasparus, lachlanjc, atanasster"
     class="css-i07oab-GithubAvatarList"
   >
-    <a
-      aria-label="visit profile of hasparus"
-      class="css-zypmzx-GithubAvatarItem"
-      href=""
+    <div
+      class="css-pncdcn-GithubAvatar"
+      style="display: inline-block;"
     >
-      <img
-        alt="hasparus"
-        class="css-1y16e88"
-        height="32"
-        src="https://github.com/hasparus"
-        title="hasparus"
-        width="32"
-      />
-    </a>
-    <a
-      aria-label="visit profile of lachlanjc"
-      class="css-zypmzx-GithubAvatarItem"
-      href=""
+      <div
+        class="css-1b0uybw-GithubAvatar"
+      >
+        <img
+          class="css-1y16e88"
+          height="32"
+          src="//github.com/hasparus"
+          title="hasparus"
+          width="32"
+        />
+      </div>
+    </div>
+    <div
+      class="css-9cbusc-GithubAvatar"
+      style="display: inline-block;"
     >
-      <img
-        alt="lachlanjc"
-        class="css-1y16e88"
-        height="32"
-        src="https://github.com/lachlanjc"
-        title="lachlanjc"
-        width="32"
-      />
-    </a>
+      <div
+        class="css-1b0uybw-GithubAvatar"
+      >
+        <img
+          class="css-1y16e88"
+          height="32"
+          src="//github.com/lachlanjc"
+          title="lachlanjc"
+          width="32"
+        />
+      </div>
+    </div>
     <div
       class="css-1tdzql8-GithubAvatarList"
     >
@@ -1070,48 +1095,54 @@ exports[`Components/GithubAvatarList Overview 1`] = `
     aria-label="avatars of hasparus, lachlanjc, atanasster"
     class="css-i07oab-GithubAvatarList"
   >
-    <a
-      aria-label="visit profile of hasparus"
-      class="css-zypmzx-GithubAvatarItem"
-      href=""
+    <div
+      class="css-pncdcn-GithubAvatar"
+      style="display: inline-block;"
     >
-      <img
-        alt="hasparus"
-        class="css-1y16e88"
-        height="32"
-        src="https://github.com/hasparus"
-        title="hasparus"
-        width="32"
-      />
-    </a>
-    <a
-      aria-label="visit profile of lachlanjc"
-      class="css-zypmzx-GithubAvatarItem"
-      href=""
+      <div
+        class="css-1b0uybw-GithubAvatar"
+      >
+        <img
+          class="css-1y16e88"
+          height="32"
+          src="//github.com/hasparus"
+          title="hasparus"
+          width="32"
+        />
+      </div>
+    </div>
+    <div
+      class="css-pncdcn-GithubAvatar"
+      style="display: inline-block;"
     >
-      <img
-        alt="lachlanjc"
-        class="css-1y16e88"
-        height="32"
-        src="https://github.com/lachlanjc"
-        title="lachlanjc"
-        width="32"
-      />
-    </a>
-    <a
-      aria-label="visit profile of atanasster"
-      class="css-zypmzx-GithubAvatarItem"
-      href=""
+      <div
+        class="css-1b0uybw-GithubAvatar"
+      >
+        <img
+          class="css-1y16e88"
+          height="32"
+          src="//github.com/lachlanjc"
+          title="lachlanjc"
+          width="32"
+        />
+      </div>
+    </div>
+    <div
+      class="css-9cbusc-GithubAvatar"
+      style="display: inline-block;"
     >
-      <img
-        alt="atanasster"
-        class="css-1y16e88"
-        height="32"
-        src="https://github.com/atanasster"
-        title="atanasster"
-        width="32"
-      />
-    </a>
+      <div
+        class="css-1b0uybw-GithubAvatar"
+      >
+        <img
+          class="css-1y16e88"
+          height="32"
+          src="//github.com/atanasster"
+          title="atanasster"
+          width="32"
+        />
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
