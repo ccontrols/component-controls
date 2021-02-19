@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC, useMemo } from 'react';
 import { jsx, Box, BoxProps } from 'theme-ui';
-import { GithubAvatarItem, GithubAvatarItemProps } from './GithubAvatarItem';
+import { GithubAvatar, GithubAvatarProps } from './GithubAvatar';
 
 export interface GithubAvatarUser {
   username: string;
@@ -21,7 +21,7 @@ export interface GithubAvatarListOwnProps {
 }
 
 export type GithubAvatarListProps = GithubAvatarListOwnProps &
-  Omit<GithubAvatarItemProps, 'username' | 'useremail'> &
+  Omit<GithubAvatarProps, 'username' | 'useremail'> &
   BoxProps;
 
 /**
@@ -53,14 +53,14 @@ export const GithubAvatarList: FC<GithubAvatarListProps> = ({
       {...rest}
     >
       {users.slice(0, maxItems).map((user, index) => (
-        <GithubAvatarItem
+        <GithubAvatar
           key={`avatar_item${user.username}`}
           size={size}
           githubAccessToken={githubAccessToken}
           username={user.username}
           useremail={user.useremail}
           overlap={overlap}
-          freeze={index === lastIndex}
+          fixedSize={index === lastIndex}
         />
       ))}
       {users.length > maxItems && (

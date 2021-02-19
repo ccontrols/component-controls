@@ -45,7 +45,9 @@ export const Title: FC<TitleProps> = ({
       {...rest}
     >
       <Themed.h1>{title}</Themed.h1>
-      {contributors && <ComponentContributors component={component} />}
+      {component?.info?.displayName === title && contributors && (
+        <ComponentContributors component={component} />
+      )}
     </div>
   ) : null;
 };

@@ -1,4 +1,3 @@
-import {} from 'react';
 import { ThemeUIStyleObject } from 'theme-ui';
 
 declare module 'react' {

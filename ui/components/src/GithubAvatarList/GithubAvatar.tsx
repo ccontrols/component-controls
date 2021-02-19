@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import { FC, ReactNode } from 'react';
-import { jsx, Avatar } from 'theme-ui';
+import { jsx, Avatar, BoxProps } from 'theme-ui';
 import { LocationIcon } from '@primer/octicons-react';
 import { Value } from '../Value';
 import { Link } from '../Link';
 import { Popover } from '../Popover';
 import { useGithubProfile } from './useGithubProfile';
 
-export interface GithubAvatarItemProps {
+export interface GithubAvatarProps {
   /**
    * user name
    */
@@ -30,9 +30,9 @@ export interface GithubAvatarItemProps {
    */
   size?: number;
   /**
-   * whether to freeze the size of the avataro on hover
+   * whether to fix the size of the avataro on hover
    */
-  freeze?: boolean;
+  fixedSize?: boolean;
   /**
    * to increase access rate for github user profile info
    */
@@ -42,15 +42,15 @@ export interface GithubAvatarItemProps {
 /**
  * avatar to be used in an AvatarList container
  */
-export const GithubAvatarItem: FC<GithubAvatarItemProps> = ({
+export const GithubAvatar: FC<GithubAvatarProps> = ({
   username,
   useremail,
   size = 48,
   overlap = 0.4,
-  freeze = false,
+  fixedSize = true,
   githubAccessToken,
 }) => {
-  const profile = useGithubProfile(username, useremail, githubAccessToken);
+  const profile = useGithubProfile({ username, useremail, githubAccessToken });
   const profileBox = (
     <div sx={{ p: 2 }}>
       <div sx={{ fontSize: 4, fontWeight: 'bold' }}>
@@ -76,6 +76,9 @@ export const GithubAvatarItem: FC<GithubAvatarItemProps> = ({
             justifyContent: 'space-between',
           }}
         >
+          {profile.name && (
+            <div sx={{ textWeight: 'bold', fontSize: 2 }}>{profile.login}</div>
+          )}
           <p sx={{ maxWidth: 400, py: 0 }}>{profile.bio}</p>
           {profile.location && (
             <div
@@ -110,37 +113,38 @@ export const GithubAvatarItem: FC<GithubAvatarItemProps> = ({
       )}
     </div>
   );
-  const link = (
+  const avatar = (
+    <Avatar size={size} src={profile.avatar_url || ''} title={username} />
+  );
+  const imgSx: BoxProps['sx'] = {
+    maxWidth: 'unset',
+    display: 'block',
+    overflow: 'hidden',
+    lineHeight: 1,
+    width: size,
+    height: size,
+    verticalAlign: 'middle',
+  };
+  const link = profile.html_url ? (
     <Link
       aria-label={`visit profile of ${username}`}
-      href={profile.html_url || ''}
-      sx={{
-        maxWidth: 'unset',
-        display: 'block',
-        overflow: 'hidden',
-        lineHeight: 1,
-        width: size,
-        height: size,
-        verticalAlign: 'middle',
-      }}
+      href={profile.html_url}
+      sx={imgSx}
     >
-      <Avatar
-        alt={username}
-        size={size}
-        src={profile.avatar_url || ''}
-        title={username}
-      />
+      {avatar}
     </Link>
+  ) : (
+    <div sx={imgSx}>{avatar}</div>
   );
-  return profile.id ? (
+  return (
     <Popover
       trigger="hover"
       placement="bottom-start"
       tooltip={() => profileBox}
       sx={{
-        maxWidth: Math.round(size * (1 - overlap)),
+        maxWidth: fixedSize ? undefined : Math.round(size * (1 - overlap)),
         transition: '0.2s ease',
-        ':hover': !freeze
+        ':hover': !fixedSize
           ? {
               maxWidth: size,
             }
@@ -149,7 +153,5 @@ export const GithubAvatarItem: FC<GithubAvatarItemProps> = ({
     >
       {link}
     </Popover>
-  ) : (
-    link
   );
 };

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import md5 from 'md5';
-
 export interface GithubProfile {
   login: string | null;
   id: number;
@@ -38,36 +37,90 @@ export interface GithubProfile {
 
 const profilesCache: Record<string, GithubProfile> = {};
 
-export const useGithubProfile = (
-  username: string,
-  useremail?: string,
-  githubToken?: string,
-): GithubProfile => {
+export const useGithubProfile = ({
+  username,
+  useremail,
+  githubAccessToken,
+  size = 128,
+}: {
+  username: string;
+  useremail?: string;
+  githubAccessToken?: string;
+  size?: number;
+}): GithubProfile => {
   const [profile, setProfile] = useState<GithubProfile>(
     profilesCache[username] || {
       login: username,
       email: useremail,
       avatar_url: useremail
-        ? `https://www.gravatar.com/avatar/${md5(
-            useremail.trim().toLowerCase(),
-          )}`
-        : `https://github.com/${username}`,
+        ? `//www.gravatar.com/avatar/${md5(useremail)}?s=${size}`
+        : `//github.com/${username}`,
     },
   );
   useEffect(() => {
-    const headers = githubToken
+    const headers = githubAccessToken
       ? {
-          Authorization: `token ${githubToken}`,
+          Authorization: `token ${githubAccessToken}`,
         }
       : undefined;
     const fetchData = async () => {
-      fetch(`https://api.github.com/users/${username}`, {
+      fetch(`https://api.github.com/users/${encodeURIComponent(username)}`, {
         headers,
       })
         .then(res => res.json())
         .then(result => {
-          profilesCache[username] = result;
-          setProfile(result);
+          if (!result.message) {
+            profilesCache[username] = result;
+            setProfile(profilesCache[username]);
+          } else {
+            // could not find
+            profilesCache[username] = profile;
+            fetch(
+              `https://api.github.com/search/users?q=${encodeURIComponent(
+                `${username} in:name`,
+              )}`,
+              {
+                headers,
+              },
+            )
+              .then(res => res.json())
+              .then(result => {
+                if (result.items) {
+                  // if only one user with this user name is found, attach it
+                  if (result.items.length === 1) {
+                    profilesCache[username] = result.items[0];
+                    setProfile(profilesCache[username]);
+                  } else if (useremail) {
+                    // search for email matching the github login
+                    const lcEmail = useremail.toLowerCase();
+                    const match = result.items.find(
+                      (item: { login: string; email: string | null }) =>
+                        item.email?.toLowerCase() === lcEmail ||
+                        lcEmail.includes(item.login),
+                    );
+                    if (match) {
+                      fetch(
+                        `https://api.github.com/users/${encodeURIComponent(
+                          match.login,
+                        )}`,
+                        {
+                          headers,
+                        },
+                      )
+                        .then(res => res.json())
+                        .then(result => {
+                          console.log('MATCH', result);
+                          profilesCache[username] = result;
+                          setProfile(profilesCache[username]);
+                        });
+                    }
+                  }
+                }
+              });
+          }
+        })
+        .catch(() => {
+          profilesCache[username] = profile;
         });
     };
     if (!profile.id && typeof fetch !== 'undefined') {
