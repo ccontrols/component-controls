@@ -10,11 +10,6 @@
     -   [Configure props globally](#configure-props-globally)
 -   [API](#api)
     -   [<ins>FigmaEmbedBlock</ins>](#insfigmaembedblockins)
-    -   [<ins>overview</ins>](#insoverviewins)
-    -   [<ins>customURLS</ins>](#inscustomurlsins)
-    -   [<ins>noFullScreen</ins>](#insnofullscreenins)
-    -   [<ins>customIFrameProps</ins>](#inscustomiframepropsins)
-    -   [<ins>customConfigProps</ins>](#inscustomconfigpropsins)
 
 # In action
 
@@ -117,7 +112,7 @@ in `.config/runtime.tsx`
 
 # API
 
-<react-docgen-typescript path="./src" />
+<react-docgen-typescript path="./src" exclude=".stories.tsx$,index.ts" />
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
 
@@ -139,25 +134,5 @@ _FigmaEmbedBlock [source code](https://github.com/ccontrols/component-controls/t
 | `sx`          | _ThemeUIStyleObject_                                                   |                                                                                                                 |
 | `ref`         | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                                                                                                                 |
 | `name`        | _string_                                                               |                                                                                                                 |
-
-## <ins>overview</ins>
-
-_overview [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/figma-embed/src/stories/FigmaEmbedBlock.stories.tsx)_
-
-## <ins>customURLS</ins>
-
-_customURLS [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/figma-embed/src/stories/FigmaEmbedBlock.stories.tsx)_
-
-## <ins>noFullScreen</ins>
-
-_noFullScreen [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/figma-embed/src/stories/FigmaEmbedBlock.stories.tsx)_
-
-## <ins>customIFrameProps</ins>
-
-_customIFrameProps [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/figma-embed/src/stories/FigmaEmbedBlock.stories.tsx)_
-
-## <ins>customConfigProps</ins>
-
-_customConfigProps [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/figma-embed/src/stories/FigmaEmbedBlock.stories.tsx)_
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

@@ -12,57 +12,41 @@
     -   [<ins>ComponentList</ins>](#inscomponentlistins)
     -   [<ins>ComponentsCatalog</ins>](#inscomponentscatalogins)
     -   [<ins>ComponentCatalogContextProvider</ins>](#inscomponentcatalogcontextproviderins)
-    -   [<ins>overview</ins>](#insoverviewins)
-    -   [<ins>overview</ins>](#insoverviewins-1)
-    -   [<ins>overview</ins>](#insoverviewins-2)
-    -   [<ins>overview</ins>](#insoverviewins-3)
-    -   [<ins>overview</ins>](#insoverviewins-4)
 
 # In action
 
-[Example site](https://component-controls.com/api/components-actioncontainer--overview/viewport)
+[Example site](https://component-controls.com/api/components-index)
 
 # Overview
 
-Addon to collect and display statistics for component-controls
+Addon to collect and display a grid-like list of components cards. The cards alwas display a preview of the first story in the components' document [ESM](https://component-controls.com/tutorial/esmodules-stories) or [MDX](https://component-controls.com/tutorial/esmodules-stories) file.
 
 # Getting Started
 
 ## Install
 
 ```sh
-yarn add @component-controls/addon-stats --dev
+yarn add @component-controls/addon-catalog --dev
 ```
 
 ## Usage
 
-```
-import { ComponentUsage, AttributeUsage, ComponentUsageList, AttributesUsageList } from '@component-controls/addon-stats';
+    ---
+    title: Components/index
+    ---
+    import { Catalog } from '@component-controls/addon-catalog';
 
 
-## Attributes usage summary
+    # Components
 
-Attributes usage - how many times an attribute is being set on a component, and on which component it is being set
-
-<AttributeUsage />
-
-## Components usage details
-
-How many times a component is being used from another component, with a list of the components using it
-
-<ComponentUsageList />
-
-## Attributes usage details
-
-How many times an attribute is being used on a component, with a list of those components
-
-<AttributesUsageList />
-
-```
+    <Catalog
+      filter={({ doc }) => doc.title.startsWith('Components')} <-- filter which components to display
+      group={({ story }) => story.category} <- grouping of the filtered components by the category field of the document
+    />
 
 # API
 
-<react-docgen-typescript path="./src" />
+<react-docgen-typescript path="./src" exclude=".stories.tsx$,index.ts"/>
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
 
@@ -145,24 +129,8 @@ _ComponentCatalogContextProvider [source code](https://github.com/ccontrols/comp
 | `sort`   | _ComponentCatalogOrder_ |             |
 | `search` | _string_                |             |
 
-## <ins>overview</ins>
-
-_overview [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-catalog/src/stories/Catalog.stories.tsx)_
-
-## <ins>overview</ins>
-
-_overview [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-catalog/src/stories/ComponentCard.stories.tsx)_
-
-## <ins>overview</ins>
-
-_overview [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-catalog/src/stories/ComponentFilter.stories.tsx)_
-
-## <ins>overview</ins>
-
-_overview [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-catalog/src/stories/ComponentList.stories.tsx)_
-
-## <ins>overview</ins>
-
-_overview [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-catalog/src/stories/ComponentsCatalog.stories.tsx)_
-
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->
+
+```
+
+```

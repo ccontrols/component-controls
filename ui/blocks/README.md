@@ -129,7 +129,7 @@ _ComponentContributors [source code](https://github.com/ccontrols/component-cont
 | `tooltip`           | _ReactNode_                                                            | on hover profile box                                 |
 | `overlap`           | _number_                                                               | overlap % of the avatars in a list                   |
 | `size`              | _number_                                                               | size in pixels                                       |
-| `freeze`            | _boolean_                                                              | whether to freeze the size of the avataro on hover   |
+| `fixedSize`         | _boolean_                                                              | whether to fix the size of the avataro on hover      |
 | `githubAccessToken` | _string_                                                               | to increase access rate for github user profile info |
 | `ref`               | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                                                      |
 | `sx`                | _ThemeUIStyleObject_                                                   |                                                      |

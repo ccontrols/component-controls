@@ -9,8 +9,6 @@
 -   [API](#api)
     -   [<ins>ViewportBlock</ins>](#insviewportblockins)
     -   [<ins>ViewportBox</ins>](#insviewportboxins)
-    -   [<ins>overview</ins>](#insoverviewins)
-    -   [<ins>sizes</ins>](#inssizesins)
 
 # In action
 
@@ -46,7 +44,7 @@ in `.config/buildtime.js`
               ],
             },
           },
-        }  
+        }
 
 ## Configure page display
 
@@ -72,7 +70,7 @@ in `.config/runtime.tsx`
 
 # API
 
-<react-docgen-typescript path="./src" />
+<react-docgen-typescript path="./src" exclude=".stories.tsx$,index.ts" />
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
 
@@ -107,13 +105,5 @@ _ViewportBox [source code](https://github.com/ccontrols/component-controls/tree/
 | `storyId`    | _string_ |             |
 | `size*`      | _number_ |             |
 | `sizeLabel*` | _string_ |             |
-
-## <ins>overview</ins>
-
-_overview [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-stats/src/stories/ViewportBlock.stories.tsx)_
-
-## <ins>sizes</ins>
-
-_sizes [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-stats/src/stories/ViewportBlock.stories.tsx)_
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

@@ -10,10 +10,6 @@
     -   [Configure props globally](#configure-props-globally)
 -   [API](#api)
     -   [<ins>NotesBlock</ins>](#insnotesblockins)
-    -   [<ins>overview</ins>](#insoverviewins)
-    -   [<ins>customItems</ins>](#inscustomitemsins)
-    -   [<ins>customConfigProps</ins>](#inscustomconfigpropsins)
-    -   [<ins>markdownFile</ins>](#insmarkdownfileins)
 
 # In action
 
@@ -116,7 +112,7 @@ in `.config/runtime.tsx`
 
 # API
 
-<react-docgen-typescript path="./src" />
+<react-docgen-typescript path="./src" exclude=".stories.tsx$,index.ts"/>
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
 
@@ -138,21 +134,5 @@ _NotesBlock [source code](https://github.com/ccontrols/component-controls/tree/m
 | `sx`          | _ThemeUIStyleObject_                                                   |                                                                                                                 |
 | `ref`         | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                                                                                                                 |
 | `name`        | _string_                                                               |                                                                                                                 |
-
-## <ins>overview</ins>
-
-_overview [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-notes/src/stories/NotesBlock.stories.tsx)_
-
-## <ins>customItems</ins>
-
-_customItems [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-notes/src/stories/NotesBlock.stories.tsx)_
-
-## <ins>customConfigProps</ins>
-
-_customConfigProps [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-notes/src/stories/NotesBlock.stories.tsx)_
-
-## <ins>markdownFile</ins>
-
-_markdownFile [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-notes/src/stories/NotesBlock.stories.tsx)_
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

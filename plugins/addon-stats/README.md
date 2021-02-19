@@ -8,12 +8,6 @@
 -   [API](#api)
     -   [<ins>useComponentUsageAggregate</ins>](#insusecomponentusageaggregateins)
     -   [<ins>useAttributesUsageAggregate</ins>](#insuseattributesusageaggregateins)
-    -   [<ins>overview</ins>](#insoverviewins)
-    -   [<ins>overview</ins>](#insoverviewins-1)
-    -   [<ins>overview</ins>](#insoverviewins-2)
-    -   [<ins>overview</ins>](#insoverviewins-3)
-    -   [<ins>overview</ins>](#insoverviewins-4)
-    -   [<ins>overview</ins>](#insoverviewins-5)
     -   [<ins>AttributeUsage</ins>](#insattributeusageins)
     -   [<ins>AttributesUsageDetails</ins>](#insattributesusagedetailsins)
     -   [<ins>AttributesUsageList</ins>](#insattributesusagelistins)
@@ -23,7 +17,7 @@
 
 # In action
 
-[Example site](https://component-controls.com/api/components-actioncontainer--overview/viewport)
+[Example site](https://component-controls.com/api/components-internal-usage)
 
 # Overview
 
@@ -65,7 +59,7 @@ How many times an attribute is being used on a component, with a list of those c
 
 # API
 
-<react-docgen-typescript path="./src" />
+<react-docgen-typescript path="./src" exclude=".stories.tsx$,index.ts" />
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
 
@@ -88,30 +82,6 @@ _useAttributesUsageAggregate [source code](https://github.com/ccontrols/componen
 | Name     | Type          | Description |
 | -------- | ------------- | ----------- |
 | `filter` | _StatsFilter_ |             |
-
-## <ins>overview</ins>
-
-_overview [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-stats/src/stories/AttributeUsage.stories.tsx)_
-
-## <ins>overview</ins>
-
-_overview [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-stats/src/stories/AttributesUsageDetails.stories.tsx)_
-
-## <ins>overview</ins>
-
-_overview [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-stats/src/stories/AttributesUsageList.stories.tsx)_
-
-## <ins>overview</ins>
-
-_overview [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-stats/src/stories/ComponentUsage.stories.tsx)_
-
-## <ins>overview</ins>
-
-_overview [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-stats/src/stories/ComponentUsageDetails.stories.tsx)_
-
-## <ins>overview</ins>
-
-_overview [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-stats/src/stories/ComponentUsageList.stories.tsx)_
 
 ## <ins>AttributeUsage</ins>
 

@@ -12,8 +12,9 @@
     -   [<ins>CopyContainer</ins>](#inscopycontainerins)
     -   [<ins>Description</ins>](#insdescriptionins)
     -   [<ins>ExternalLink</ins>](#insexternallinkins)
-    -   [<ins>GithubAvatarItem</ins>](#insgithubavataritemins)
+    -   [<ins>GithubAvatar</ins>](#insgithubavatarins)
     -   [<ins>GithubAvatarList</ins>](#insgithubavatarlistins)
+    -   [<ins>useGithubProfile</ins>](#insusegithubprofileins)
     -   [<ins>Header</ins>](#insheaderins)
     -   [<ins>HoverBox</ins>](#inshoverboxins)
     -   [<ins>Keyboard</ins>](#inskeyboardins)
@@ -211,11 +212,11 @@ _ExternalLink [source code](https://github.com/ccontrols/component-controls/tree
 | `css`     | _Interpolation&lt;any>_                                                      |             |
 | `sx`      | _ThemeUIStyleObject_                                                         |             |
 
-## <ins>GithubAvatarItem</ins>
+## <ins>GithubAvatar</ins>
 
 avatar to be used in an AvatarList container
 
-_GithubAvatarItem [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/GithubAvatarList/GithubAvatarItem.tsx)_
+_GithubAvatar [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/GithubAvatarList/GithubAvatar.tsx)_
 
 ### properties
 
@@ -226,7 +227,7 @@ _GithubAvatarItem [source code](https://github.com/ccontrols/component-controls/
 | `tooltip`           | _ReactNode_ | on hover profile box                                 |
 | `overlap`           | _number_    | overlap % of the avatars in a list                   |
 | `size`              | _number_    | size in pixels                                       |
-| `freeze`            | _boolean_   | whether to freeze the size of the avataro on hover   |
+| `fixedSize`         | _boolean_   | whether to fix the size of the avataro on hover      |
 | `githubAccessToken` | _string_    | to increase access rate for github user profile info |
 
 ## <ins>GithubAvatarList</ins>
@@ -244,13 +245,26 @@ _GithubAvatarList [source code](https://github.com/ccontrols/component-controls/
 | `tooltip`           | _ReactNode_                                                            | on hover profile box                                 |
 | `overlap`           | _number_                                                               | overlap % of the avatars in a list                   |
 | `size`              | _number_                                                               | size in pixels                                       |
-| `freeze`            | _boolean_                                                              | whether to freeze the size of the avataro on hover   |
+| `fixedSize`         | _boolean_                                                              | whether to fix the size of the avataro on hover      |
 | `githubAccessToken` | _string_                                                               | to increase access rate for github user profile info |
 | `ref`               | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                                                      |
 | `as`                | _ElementType&lt;any>_                                                  |                                                      |
 | `variant`           | _string_                                                               |                                                      |
 | `css`               | _Interpolation&lt;any>_                                                |                                                      |
 | `sx`                | _ThemeUIStyleObject_                                                   |                                                      |
+
+## <ins>useGithubProfile</ins>
+
+_useGithubProfile [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/GithubAvatarList/useGithubProfile.tsx)_
+
+### properties
+
+| Name                | Type     | Description |
+| ------------------- | -------- | ----------- |
+| `username*`         | _string_ |             |
+| `useremail`         | _string_ |             |
+| `githubAccessToken` | _string_ |             |
+| `size`              | _number_ |             |
 
 ## <ins>Header</ins>
 

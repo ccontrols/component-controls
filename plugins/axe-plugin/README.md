@@ -6,15 +6,12 @@
 -   [Documentation](#documentation)
 -   [API](#api)
     -   [<ins>AllyBlock</ins>](#insallyblockins)
-    -   [<ins>AllyBlock</ins>](#insallyblockins-1)
-    -   [<ins>AllyBlock</ins>](#insallyblockins-2)
     -   [<ins>AxeContextProvider</ins>](#insaxecontextproviderins)
     -   [<ins>trimNode</ins>](#instrimnodeins)
     -   [<ins>SelectionContextProvider</ins>](#insselectioncontextproviderins)
     -   [<ins>useIsTagSelected</ins>](#insuseistagselectedins)
     -   [<ins>isSelected</ins>](#insisselectedins)
     -   [<ins>useIsTagSelected</ins>](#insuseistagselectedins-1)
-    -   [<ins>overview</ins>](#insoverviewins)
 
 # In action
 
@@ -47,7 +44,7 @@ yarn add @component-controls/axe-plugin --dev
 
 # API
 
-<react-docgen-typescript path="./src" exclude="AllyDashboard.tsx,BaseAllyBlock.tsx,HighlightSelector.tsx,NodesTable.tsx,ResultsTable.tsx,SelectionContext.tsx" />
+<react-docgen-typescript path="./src" exclude="AllyDashboard.tsx,BaseAllyBlock.tsx,HighlightSelector.tsx,NodesTable.tsx,ResultsTable.tsx,SelectionContext.tsx,.stories.tsx$,index.ts" />
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
 
@@ -55,49 +52,7 @@ yarn add @component-controls/axe-plugin --dev
 
 Story block container that displays displays the [axe](https://github.com/dequelabs/axe-core) ally test results
 
-_AllyBlock [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/index.tsx)_
-
-### properties
-
-| Name          | Type                                                                   | Description                                                                                                     |
-| ------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `axeOptions`  | _Spec_                                                                 |                                                                                                                 |
-| `id`          | _string_                                                               | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
-| `name`        | _string_                                                               |                                                                                                                 |
-| `title`       | _string_                                                               | optional section title for the block.                                                                           |
-| `description` | _string_                                                               | optional markdown description.                                                                                  |
-| `collapsible` | _boolean_                                                              | if false, will nothave a collapsible frame.                                                                     |
-| `data-testid` | _string_                                                               | testing id                                                                                                      |
-| `plain`       | _boolean_                                                              | inner container variant or plain                                                                                |
-| `sx`          | _ThemeUIStyleObject_                                                   |                                                                                                                 |
-| `ref`         | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                                                                                                                 |
-
-## <ins>AllyBlock</ins>
-
-Story block container that displays displays the [axe](https://github.com/dequelabs/axe-core) ally test results
-
 _AllyBlock [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/AllyBlock/AllyBlock.tsx)_
-
-### properties
-
-| Name          | Type                                                                   | Description                                                                                                     |
-| ------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `axeOptions`  | _Spec_                                                                 |                                                                                                                 |
-| `id`          | _string_                                                               | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
-| `name`        | _string_                                                               |                                                                                                                 |
-| `title`       | _string_                                                               | optional section title for the block.                                                                           |
-| `description` | _string_                                                               | optional markdown description.                                                                                  |
-| `collapsible` | _boolean_                                                              | if false, will nothave a collapsible frame.                                                                     |
-| `data-testid` | _string_                                                               | testing id                                                                                                      |
-| `plain`       | _boolean_                                                              | inner container variant or plain                                                                                |
-| `sx`          | _ThemeUIStyleObject_                                                   |                                                                                                                 |
-| `ref`         | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                                                                                                                 |
-
-## <ins>AllyBlock</ins>
-
-Story block container that displays displays the [axe](https://github.com/dequelabs/axe-core) ally test results
-
-_AllyBlock [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/AllyBlock/index.ts)_
 
 ### properties
 
@@ -137,9 +92,5 @@ _isSelected [source code](https://github.com/ccontrols/component-controls/tree/m
 ## <ins>useIsTagSelected</ins>
 
 _useIsTagSelected [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/state/recoil.tsx)_
-
-## <ins>overview</ins>
-
-_overview [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/stories/AllyBlock.stories.tsx)_
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->
