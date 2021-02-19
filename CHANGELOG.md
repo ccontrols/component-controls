@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.8.1](https://github.com/ccontrols/component-controls/compare/v2.8.0...v2.8.1) (2021-02-19)
+
+
+### Bug Fixes
+
+* avatar search lookup ([3392ef4](https://github.com/ccontrols/component-controls/commit/3392ef4071417805a1cd5f42d877cfac3a2ce0a6))
+
+
+
+
+
 # [2.8.0](https://github.com/ccontrols/component-controls/compare/v2.7.0...v2.8.0) (2021-02-18)
 
 
