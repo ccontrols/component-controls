@@ -1,17 +1,17 @@
 # Table of contents
 
--   [In action](#in-action)
--   [Overview](#overview)
--   [Getting Started](#getting-started)
-    -   [Install](#install)
-    -   [Usage](#usage)
--   [API](#api)
-    -   [<ins>Catalog</ins>](#inscatalogins)
-    -   [<ins>ComponentCard</ins>](#inscomponentcardins)
-    -   [<ins>ComponentFilter</ins>](#inscomponentfilterins)
-    -   [<ins>ComponentList</ins>](#inscomponentlistins)
-    -   [<ins>ComponentsCatalog</ins>](#inscomponentscatalogins)
-    -   [<ins>ComponentCatalogContextProvider</ins>](#inscomponentcatalogcontextproviderins)
+- [In action](#in-action)
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+  - [Install](#install)
+  - [Usage](#usage)
+- [API](#api)
+  - [<ins>Catalog</ins>](#inscatalogins)
+  - [<ins>ComponentCard</ins>](#inscomponentcardins)
+  - [<ins>ComponentFilter</ins>](#inscomponentfilterins)
+  - [<ins>ComponentList</ins>](#inscomponentlistins)
+  - [<ins>ComponentsCatalog</ins>](#inscomponentscatalogins)
+  - [<ins>ComponentCatalogContextProvider</ins>](#inscomponentcatalogcontextproviderins)
 
 # In action
 
@@ -19,7 +19,7 @@
 
 # Overview
 
-Addon to collect and display a grid-like list of components cards. The cards alwas display a preview of the first story in the components' document [ESM](https://component-controls.com/tutorial/esmodules-stories) or [MDX](https://component-controls.com/tutorial/esmodules-stories) file.
+Addon to collect and display a grid-like list of component cards. Each card displays some component statistics - like the dates the component file was created and last committed, the number of commits as well as the component contributors, the number of lines and comments as well as a preview of the first story in the components' document [ESM](https://component-controls.com/tutorial/esmodules-stories) or [MDX](https://component-controls.com/tutorial/esmodules-stories) file.
 
 # Getting Started
 
