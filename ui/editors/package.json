@@ -36,7 +36,7 @@
     "@component-controls/store": "^2.8.1",
     "global": "^4.3.2",
     "polished": "^3.4.4",
-    "react-colorful": "^4.4.1"
+    "react-colorful": "^5.0.0"
   },
   "devDependencies": {
     "@component-controls/jest-snapshots": "^2.8.1",
