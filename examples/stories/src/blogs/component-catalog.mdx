@@ -1,0 +1,80 @@
+---
+title: Introducing Component Catalogs
+type: blog
+date: 2021-02-19
+author: atanasster
+route: /blogs/components-catalog
+description: Introducing the addon-catalog - a powerful way to automatically create catalog pages from your existing components story examples.
+tags:
+  - components
+image: /static/components-catalog.jpg
+---
+
+import { Playground } from '@component-controls/blocks';
+import { ComponentCard, Catalog } from '@component-controls/addon-catalog';
+import componentCatalogImg from './media/components-catalog.jpg';
+
+export const filter = ({ doc, component }) =>
+  component && doc.title.startsWith('Components');
+
+# Addon stats
+
+Fresh off the oven, the [addon-catalog](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-catalog) is meant to collect and display a grid-like list of component cards.
+
+You can include the new component catalogs in your [MDX](https://component-controls.com/tutorial/esmodules-stories) documentation files, along with other general information about your components library.
+
+# Live example
+
+For a quick preview, you can check this [live example](/api/components-index) of our library of [theme-ui](https://theme-ui.com) based components:
+
+# Installation
+
+The `addon-catalog` is not installed by default when using `component-controls`, and you will need to add it to your project
+
+```
+yarn add @component-controls/addon-catalog
+```
+
+# Catalog usage
+
+```mdx:title=Components/index.mdx
+import { Catalog } from '@component-controls/addon-catalog';
+
+# Components
+
+<Catalog
+  filter={({ doc }) => doc.title.startsWith('Components')} <!-- filter which components to display -->
+  group={({ story }) => story.category} <!-- grouping of the filtered components by the category field of the document  -->
+/>
+```
+
+The `<Catalog />` component comes with search and filter features and allows for custom grouping of the selected components:
+
+<Catalog
+  filter={({ doc }) => {
+    const titleParts = doc.title.split('/');
+    return ['BlockContainer', 'Popover', 'GithubAvatar', 'Tag'].includes(
+      titleParts[titleParts.length - 1],
+    );
+  }}
+  group={({ story }) => story.category}
+/>
+
+# Single Card
+
+You can also include single component cards in your documentation by specifying the story-id to use. Each card displays some component statistics -
+
+- component name and description
+- the component package name and version
+- preview of the first story in the components' document [ESM](https://component-controls.com/tutorial/esmodules-stories) or [MDX](https://component-controls.com/tutorial/esmodules-stories) file.
+- the dates the component file was created and last committed
+- the number of commits as well
+- the component contributors
+- the number of commits in the component history
+- file stats such as the number of lines and comments
+
+<Playground>
+  <ComponentCard id="components-githubavatarlist--overview" />
+</Playground>
+
+Enjoy and let us know what you think!
