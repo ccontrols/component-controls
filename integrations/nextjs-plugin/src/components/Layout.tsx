@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { AppContext } from '@component-controls/app';
+import { AppContext, AppContextProps } from '@component-controls/app';
 import Helmet from 'next/head';
 import { store } from '../store';
 import { NextLink } from './NextLink';
@@ -18,7 +18,7 @@ export const Layout: FC<LayoutProps> = ({
 }) => {
   return (
     <AppContext
-      Helmet={Helmet}
+      Helmet={Helmet as AppContextProps['Helmet']}
       docId={docId}
       storyId={storyId}
       store={store}

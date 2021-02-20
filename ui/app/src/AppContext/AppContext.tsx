@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FC, ReactNode } from 'react';
+import { FC, ComponentType } from 'react';
 import { jsx } from 'theme-ui';
 import queryString from 'query-string';
 import { Store, docStoryToId } from '@component-controls/core';
@@ -17,7 +17,7 @@ export interface AppContextProps {
   storyId?: string;
   store: Store;
   linkClass: LinkContextProviderProps['linkClass'];
-  Helmet?: FC<{ children: ReactNode }>;
+  Helmet?: ComponentType;
   activeTab?: string;
 }
 

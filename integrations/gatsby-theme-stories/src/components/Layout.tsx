@@ -23,7 +23,7 @@ export const Layout: FC<LayoutProps> = ({
       storyId={storyId}
       store={store}
       linkClass={GatsbyLink}
-      Helmet={Helmet}
+      Helmet={Helmet as any}
       activeTab={activeTab}
     >
       {children}

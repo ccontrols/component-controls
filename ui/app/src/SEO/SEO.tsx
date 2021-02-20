@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC, ComponentType } from 'react';
 import {
   ensureTrailingSlash,
   removeStartingSlash,
@@ -16,7 +16,7 @@ import { useIsLocalLink, useTheme } from '@component-controls/components';
 import { defaultLinks } from './defaultLinks';
 
 export interface SEOProps {
-  Helmet?: FC<{ children: ReactNode }>;
+  Helmet?: ComponentType;
   doc?: Document;
   config?: RunConfiguration;
 }
