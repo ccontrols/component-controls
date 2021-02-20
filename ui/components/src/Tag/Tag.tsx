@@ -1,8 +1,8 @@
 /** @jsx jsx */
 /* eslint react/jsx-key: 0 */
-import { jsx, Box, BoxProps, Text } from 'theme-ui';
+import { jsx, Box, BoxProps, Theme, Text } from 'theme-ui';
+import { getColor, transparentize } from '@theme-ui/color';
 import { FC, ReactText } from 'react';
-import { transparentize } from 'polished';
 import { get } from '@theme-ui/css';
 import { useTheme } from '../ThemeContext';
 export interface TagProps {
@@ -43,15 +43,16 @@ export const Tag: FC<TagProps & Omit<BoxProps, 'variant'>> = ({
   variant,
   ...rest
 }) => {
-  const theme = useTheme();
+  const theme = useTheme() as Theme;
+  const resolvedColor = getColor(theme, color);
   return (
     <Box
       as="span"
       variant="tag.default"
       {...rest}
       sx={{
-        backgroundColor: transparentize(transparentAmount, color),
-        border: `${borderSize}px solid ${color}`,
+        backgroundColor: transparentize(resolvedColor, transparentAmount),
+        border: `${borderSize}px solid ${resolvedColor}`,
         ...get(theme, variant as ReactText),
       }}
     >

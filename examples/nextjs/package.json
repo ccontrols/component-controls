@@ -21,7 +21,7 @@
     "@component-controls/core": "^2.8.0",
     "@component-controls/nextjs-plugin": "^2.8.1",
     "@component-controls/pages": "^2.8.1",
-    "@theme-ui/presets": "^0.6.0-alpha.6",
+    "@theme-ui/presets": "^0.6.0-alpha.7",
     "next": "^10.0.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"

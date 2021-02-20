@@ -115,11 +115,11 @@ export const PanelContainer: FC<PanelContainerProps> = ({
   const style: CSSProperties = {
     direction,
   };
-  if (background) {
-    style.backgroundColor =
-      background === 'light'
-        ? theme.colors?.background
-        : theme.colors?.modes?.dark?.background;
+  if (background && theme.colors) {
+    style.backgroundColor = (background === 'light'
+      ? theme.colors.background
+      : theme.colors.modes?.dark
+          ?.background) as CSSProperties['backgroundColor'];
     style.backgroundImage =
       'linear-gradient(rgba(232,234,232,.3) 2px, transparent 2px), linear-gradient(90deg, rgba(232,234,232,.3) 2px, transparent 2px), linear-gradient(rgba(232,234,232,.3) 1px, transparent 0px), linear-gradient(90deg, rgba(232,234,232,.3) 1px, transparent 1px)';
     style.backgroundSize = '20px 20px';

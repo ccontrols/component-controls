@@ -37,7 +37,7 @@
     "@component-controls/render": "^2.8.0",
     "@component-controls/search-algolia": "^2.8.0",
     "@component-controls/store": "^2.8.1",
-    "@theme-ui/css": "^0.6.0-alpha.6",
+    "@theme-ui/css": "^0.6.0-alpha.7",
     "copy-to-clipboard": "^3.2.1",
     "global": "^4.3.2",
     "js-string-escape": "^1.0.1",
@@ -46,13 +46,13 @@
     "react-resize-detector": "^5.0.6",
     "recoil": "^0.0.10",
     "stringify-object": "^3.3.0",
-    "theme-ui": "^0.6.0-alpha.6"
+    "theme-ui": "^0.6.0-alpha.7"
   },
   "devDependencies": {
     "@component-controls/jest-snapshots": "^2.8.1",
     "@component-controls/ts-markdown-docs": "^2.6.0",
     "@primer/octicons-react": "^10.0.0",
-    "@theme-ui/presets": "^0.6.0-alpha.6",
+    "@theme-ui/presets": "^0.6.0-alpha.7",
     "@types/mdx-js__react": "^1.5.1",
     "@types/query-string": "^6.3.0",
     "@types/react": "^16.9.34",

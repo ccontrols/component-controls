@@ -87,9 +87,13 @@ export const SEO: FC<SEOProps> = ({ Helmet, doc, config }) => {
       <meta name="twitter:creator" content={author} />
       {links &&
         links.map((link, idx) => <link key={`meta_key${idx}`} {...link} />)}
-      <meta name="msapplication-TileColor" content={theme.colors?.primary} />
+      {typeof theme.colors?.primary === 'string' && (
+        <meta name="msapplication-TileColor" content={theme.colors.primary} />
+      )}
       <meta name="application-name" content={title} />
-      <meta name="theme-color" content={theme.colors?.background} />
+      {typeof theme.colors?.background === 'string' && (
+        <meta name="theme-color" content={theme.colors.background} />
+      )}
     </Helmet>
   ) : null;
 };
