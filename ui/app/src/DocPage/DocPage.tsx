@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC } from 'react';
 import { jsx } from 'theme-ui';
-import { useCurrentDocument } from '@component-controls/store';
+import { useCurrentDocument, useTheme } from '@component-controls/store';
 import { PageContainer } from '../PageContainer';
 import { SidebarsPage, DocPageProps } from '../SidebarsPage';
 import { CategoryPage } from '../CategoryPage';
@@ -16,16 +16,20 @@ export const DocPage: FC<Omit<DocPageProps, 'doc'> & { category?: string }> = ({
   ...props
 }) => {
   const doc = useCurrentDocument();
+  const theme = useTheme();
   if (category) {
     return <CategoryPage type={type} category={category} />;
   }
   const hasNoSideBars = !doc?.navSidebar && !doc?.contextSidebar;
   const isFullPage = doc?.fullPage;
   if (hasNoSideBars || isFullPage) {
+    const variant = isFullPage
+      ? 'full'
+      : theme?.pagecontainer?.[type] || 'default';
     return (
       <PageContainer
         type={type}
-        variant={`pagecontainer.${isFullPage ? 'full' : type}`}
+        variant={`pagecontainer.${variant}`}
         id="content"
       />
     );
