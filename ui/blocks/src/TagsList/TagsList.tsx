@@ -12,15 +12,20 @@ export interface TagsListProps {
   tags?: string[];
 
   /**
-   * raw string values, usefule for highlighting search results
+   * raw string values, useful for highlighting search results
    */
   raw?: string[];
+
+  /**
+   * limit the number of tags to display
+   */
+  limit?: number;
 }
 
 /**
  * displays a row of tags assigned to the current document, with links to their pages
  */
-export const TagsList: FC<TagsListProps> = ({ tags, raw }) => {
+export const TagsList: FC<TagsListProps> = ({ tags, raw, limit = -1 }) => {
   const [tagColors, setTagColors] = useState<{ [tag: string]: string }>({});
   const tagCounts = useDocPropCount('tags');
   const store = useStore();
@@ -36,14 +41,23 @@ export const TagsList: FC<TagsListProps> = ({ tags, raw }) => {
     );
   }, [tagCounts]);
 
-  return tags ? (
-    <Box variant="taglist.container">
-      {tags.map((tag, index) => {
+  if (!tags) {
+    return null;
+  }
+  const largerThanLimit = limit !== -1 && tags.length > limit;
+  return (
+    <Box
+      variant="taglist.container"
+      sx={{
+        maxWidth: largerThanLimit ? 'unset' : undefined,
+      }}
+    >
+      {tags.slice(0, limit).map((tag, index) => {
         const rawTag = raw ? raw[index] : undefined;
         return (
           <Link key={tag} href={getDocPath('tags', undefined, store, tag)}>
             <Tag
-              color={tagColors[tag] || '#dddddd'}
+              color={tagColors[tag] || 'muted'}
               variant="tag.leftmargin"
               raw={rawTag}
             >
@@ -52,6 +66,11 @@ export const TagsList: FC<TagsListProps> = ({ tags, raw }) => {
           </Link>
         );
       })}
+      {largerThanLimit && (
+        <Tag color="muted" variant="tag.leftmargin">
+          ...more
+        </Tag>
+      )}
     </Box>
-  ) : null;
+  );
 };
