@@ -2,12 +2,7 @@ import {
   toId,
   storyNameFromExport as csfStoryNameFromExport,
 } from '@storybook/csf';
-import {
-  PagesOnlyRoutes,
-  DocType,
-  PageConfiguration,
-  BuildConfiguration,
-} from './configuration';
+import { PagesOnlyRoutes, DocType, BuildConfiguration } from './configuration';
 import { Document, Story, defDocType, Store } from './document';
 
 export const storyNameFromExport = csfStoryNameFromExport;
@@ -93,12 +88,10 @@ export const getStoryPath = (
 
 export const getDocTypePath = (
   store: Store,
-  type: PageConfiguration,
+  basePath: string | undefined,
 ): string | undefined => {
   const { siteRoot = '/' } = (store?.config as BuildConfiguration) || {};
-  return type.basePath
-    ? `${siteRoot}${removeTrailingSlash(type.basePath)}`
-    : undefined;
+  return basePath ? `${siteRoot}${removeTrailingSlash(basePath)}` : undefined;
 };
 
 export const getHomePath = (store: Store): string => {

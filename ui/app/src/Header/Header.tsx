@@ -98,7 +98,7 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
         .map(({ page }) => ({
           id: page.label?.toLowerCase(),
           'aria-label': `go to page ${page.label}`,
-          href: getDocTypePath(store, page),
+          href: getDocTypePath(store, page.basePath),
           node: page.label,
         }));
       if (pageItems.length) {
