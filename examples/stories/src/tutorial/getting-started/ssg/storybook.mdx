@@ -10,11 +10,11 @@ tags:
 
 Below, we go over how to add a `component-controls` documentation addon to both [new](#new-project) and [existing](#existing-storybook-project) storybook projects.
 
-[storybook 5 git repo](https://github.com/atanasster/storybook-5-controls-starter) and a [live storybook 5 site](https://storybook-5-controls-starter.netlify.app/).
+[storybook 5 git repo](https://github.com/ccontrols/storybook-5-controls-starter) and a [live storybook 5 site](https://storybook-5-controls-starter.netlify.app/).
 
-[storybook 6 git repo](https://github.com/atanasster/storybook-6-controls-starter) and a [live storybook 6 site](https://storybook-6-controls-starter.netlify.app/).
+[storybook 6 git repo](https://github.com/ccontrols/storybook-6-controls-starter) and a [live storybook 6 site](https://storybook-6-controls-starter.netlify.app/).
 
-## New project 
+## New project
 
 Create a new folder:
 
@@ -75,7 +75,6 @@ The remaining steps are the same as for an existing storybook project.
 yarn add @component-controls/storybook
 ```
 
-
 ### Configure
 
 **without @storybook/addon-docs**
@@ -119,22 +118,16 @@ For storybook-6, decorators are picked up automatically by component-controls. F
 
 ```js:title=.storybook/preview.js
 import { addDecorator } from '@storybook/react';
-addDecorator(
-  withTheme({ theme })
-);
-
+addDecorator(withTheme({ theme }));
 ```
 
 for storybook-5 **only**:
 
 ```js:title=.storybook/runtime.js
 export default {
-  decorators: [
-    withTheme({ theme }),
-  ]
-}
+  decorators: [withTheme({ theme })],
+};
 ```
-
 
 ### Options
 
@@ -151,5 +144,5 @@ module.exports = {
       storyConfigPanel: true,
     }
   }],
-}  
+}
 ```

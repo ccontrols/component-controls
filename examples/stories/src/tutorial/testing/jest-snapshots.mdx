@@ -16,14 +16,16 @@ author: atanasster
 The [jest-snapshots](https://github.com/ccontrols/component-controls/tree/master/plugins/jest-snapshots) package automatically creates snapshot tests for your component based on the already created documentation stories.
 
 3 levels from ease of use to full control:
--   Easy to use [cli](#cli) with "zero" configuration.
--   More advanced [custom tests](#custom-tests) level using compiler cli and jest cli.
--   Full control [cusom scripts](/blogs/custom-test-runners) to launch the compiler and jest.
 
-Supports a variety of test renderers: 
--   [react-test-renderer](https://reactjs.org/docs/test-renderer.html)
--   [react-testing-library](https://testing-library.com/docs/react-testing-library/intro)
--   [enzyme](https://enzymejs.github.io/enzyme/)
+- Easy to use [cli](#cli) with "zero" configuration.
+- More advanced [custom tests](#custom-tests) level using compiler cli and jest cli.
+- Full control [cusom scripts](/blogs/custom-test-runners) to launch the compiler and jest.
+
+Supports a variety of test renderers:
+
+- [react-test-renderer](https://reactjs.org/docs/test-renderer.html)
+- [react-testing-library](https://testing-library.com/docs/react-testing-library/intro)
+- [enzyme](https://enzymejs.github.io/enzyme/)
 
 ## Install
 
@@ -35,10 +37,10 @@ yarn add @component-controls/jest-snapshots --dev
 
 The starter projects are set up to demonstrate no-code jest snapshots:
 
-- [gatsby](https://github.com/atanasster/gatsby-controls-starter/blob/e177388e990479d6b7b098beb6cc0aa4789c1ea1/package.json#L9)
-- [nextjs](https://github.com/atanasster/nextjs-controls-starter/blob/cb24475032f69b3f45cfdd54ace8dce7b1896f6e/package.json#L29)
-- [storybook 5](https://github.com/atanasster/storybook-5-controls-starter/blob/efed8a95c2a5986990e85805d35a5d753cf5fa85/package.json#L9)
-- [storybook 6](https://github.com/atanasster/storybook-6-controls-starter/blob/6798935d712a38b66a99650d9002dd4b7394b581/package.json#L9)
+- [gatsby](https://github.com/ccontrols/gatsby-controls-starter/blob/e177388e990479d6b7b098beb6cc0aa4789c1ea1/package.json#L9)
+- [nextjs](https://github.com/ccontrols/nextjs-controls-starter/blob/cb24475032f69b3f45cfdd54ace8dce7b1896f6e/package.json#L29)
+- [storybook 5](https://github.com/ccontrols/storybook-5-controls-starter/blob/efed8a95c2a5986990e85805d35a5d753cf5fa85/package.json#L9)
+- [storybook 6](https://github.com/ccontrols/storybook-6-controls-starter/blob/6798935d712a38b66a99650d9002dd4b7394b581/package.json#L9)
 
 ## CLI
 
@@ -52,20 +54,22 @@ Using this approach will generate a temporary test file in `tests/stories.test.j
   "test": "cc-jest"
 },
 ```
+
 ### CLI Parameters
 
 All of the [compiler cli parameters](/tutorial/reference/cli#parameters) are valid and a few additional parameters can be used:
 
-| Parameter    |  Explanation   |   Input type   |   Default value   |
-| ----------- | -------- | -------- | -------- | -------- | -------- |
-| `--renderer`<br/>`-r`    | jest framework rendere | 'react' \| 'rtr' \| 'enzyme'  |  `react`  |
-| `--test`<br/>`-t`    | tests output folder | string  |  `tests`  |
+| Parameter             | Explanation            | Input type                   | Default value |
+| --------------------- | ---------------------- | ---------------------------- | ------------- |
+| `--renderer`<br/>`-r` | jest framework rendere | 'react' \| 'rtr' \| 'enzyme' | `react`       |
+| `--test`<br/>`-t`     | tests output folder    | string                       | `tests`       |
 
 Additionally, all [jest cli parameters](https://jestjs.io/docs/en/cli) apply. If a `jest` parameter name conflicts with a `cc-jest` parameter (for example the `-c` config path parameter), you can prefix the `jest` parameter with `jest-` prefix
 
 ```sh
 yarn cc-jest -c .storybook --coverage
 ```
+
 or
 
 ```sh
@@ -74,14 +78,17 @@ yarn cc-jest -c .storybook jest---coverage true
 
 ## Custom tests
 
-Using this approach, you will create a custom test file and use directly jest to run your test suite. Before launching the jest tests, you will need to compile the stories using the [compiler cli](/tutorial/reference/cli) 
+Using this approach, you will create a custom test file and use directly jest to run your test suite. Before launching the jest tests, you will need to compile the stories using the [compiler cli](/tutorial/reference/cli)
 
 ```js:title=stories.test.js
 const path = require('path');
 const { renderers } = require('@component-controls/jest-snapshots/renderers');
 const { runJestSnapshots } = require('@component-controls/jest-snapshots');
 
-runJestSnapshots(renderers.enzyme, path.resolve(process.cwd(), 'output', 'component-controls.js'));
+runJestSnapshots(
+  renderers.enzyme,
+  path.resolve(process.cwd(), 'output', 'component-controls.js'),
+);
 ```
 
 and in `package.json` configure a `test` script to compile the stories and then launch `jest` with the bundle in the `output` folder.
@@ -96,6 +103,7 @@ and in `package.json` configure a `test` script to compile the stories and then 
 A full list of the [compiler cli parameters](/tutorial/reference/cli#parameters).
 
 If the output folder is not specified, the bundle is located in the `public` folder
+
 ```js:title=stories.test.js
 const { renderers } = require('@component-controls/jest-snapshots/renderers');
 const { runJestSnapshots } = require('@component-controls/jest-snapshots');
@@ -109,9 +117,9 @@ runJestSnapshots(renderers.enzyme);
     "test": "ccc -c .config && yarn jest && rm -rf public"
   },
 ```
+
 ## Custom scripts
 
 Using this approach, you will have full control over the stories bundle to select which stories to test.
 
 A more detailed article on creating custom test scripts can be found [here](/blogs/custom-test-runners)
-

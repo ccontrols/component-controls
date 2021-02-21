@@ -21,7 +21,7 @@ export const getHomePages = (store: Store): DocHomePagesPath[] => {
     const paths: DocHomePagesPath[] = Object.keys(pages)
       .map((type: DocType) => {
         const page = pages[type];
-        const path = getDocTypePath(store, page) as string;
+        const path = getDocTypePath(store, page.basePath) as string;
         const typeDocs = docs.filter(
           key => type === (store.docs[key].type || defDocType),
         );

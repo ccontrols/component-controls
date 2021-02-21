@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC, ComponentType } from 'react';
 import {
   ensureTrailingSlash,
   removeStartingSlash,
@@ -16,7 +16,7 @@ import { useIsLocalLink, useTheme } from '@component-controls/components';
 import { defaultLinks } from './defaultLinks';
 
 export interface SEOProps {
-  Helmet?: FC<{ children: ReactNode }>;
+  Helmet?: ComponentType;
   doc?: Document;
   config?: RunConfiguration;
 }
@@ -87,9 +87,13 @@ export const SEO: FC<SEOProps> = ({ Helmet, doc, config }) => {
       <meta name="twitter:creator" content={author} />
       {links &&
         links.map((link, idx) => <link key={`meta_key${idx}`} {...link} />)}
-      <meta name="msapplication-TileColor" content={theme.colors?.primary} />
+      {typeof theme.colors?.primary === 'string' && (
+        <meta name="msapplication-TileColor" content={theme.colors.primary} />
+      )}
       <meta name="application-name" content={title} />
-      <meta name="theme-color" content={theme.colors?.background} />
+      {typeof theme.colors?.background === 'string' && (
+        <meta name="theme-color" content={theme.colors.background} />
+      )}
     </Helmet>
   ) : null;
 };

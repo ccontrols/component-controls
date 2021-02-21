@@ -653,6 +653,7 @@ export const theme: ControlsTheme = {
     },
     leftmargin: {
       ml: 1,
+      mb: 1,
       display: 'inline-block',
       px: 1,
       whiteSpace: 'nowrap',
@@ -1126,7 +1127,14 @@ export const theme: ControlsTheme = {
     },
   },
   taglist: {
-    container: { display: 'flex', flexDirection: 'row', alignItems: 'center' },
+    container: {
+      maxWidth: '400px',
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      flexWrap: 'wrap',
+      justifyContent: 'flex-end',
+    },
   },
   appsidebarpage: {
     allsidebar: {

@@ -42,19 +42,19 @@ This site shows how to create documentation for a custom react UI component libr
 
 This site showcases creating documentation sites for [third-party libraries](https://component-controls.com/tutorial/getting-started/external-libraries), that are installed in the `node_modules` folder of your project
 
-[theme-ui design system](https://theme-ui-design-system.netlify.app) - [source](https://github.com/atanasster/theme-ui-design-system)
+[theme-ui design system](https://theme-ui-design-system.netlify.app) - [source](https://github.com/ccontrols/theme-ui-design-system)
 
 ## 4. starter projects
 
 A collection of simple starter projects, showcasing how to create an MDX pure documentation page, and MDX custom documentation page with a component interactive `story` and an ESM javascript page that automatically creates component documentation.
 
-[built with gatsby](https://gatsby-controls-starter.netlify.app) - [source](https://github.com/atanasster/gatsby-controls-starter)
+[built with gatsby](https://gatsby-controls-starter.netlify.app) - [source](https://github.com/ccontrols/gatsby-controls-starter)
 
-[built with nextjs](https://nextjs-controls-starter.netlify.app) - [source](https://github.com/atanasster/nextjs-controls-starter)
+[built with nextjs](https://nextjs-controls-starter.netlify.app) - [source](https://github.com/ccontrols/nextjs-controls-starter)
 
-[built with storybook 5](https://storybook-5-controls-starter.netlify.app/?path=/story/first-page--page) - [source](https://github.com/atanasster/storybook-5-controls-starter)
+[built with storybook 5](https://storybook-5-controls-starter.netlify.app/?path=/story/first-page--page) - [source](https://github.com/ccontrols/storybook-5-controls-starter)
 
-[built with storybook 6](https://storybook-6-controls-starter.netlify.app) - [source](https://github.com/atanasster/storybook-6-controls-starter)
+[built with storybook 6](https://storybook-6-controls-starter.netlify.app) - [source](https://github.com/ccontrols/storybook-6-controls-starter)
 
 # Motivation
 
@@ -96,7 +96,7 @@ Many developments have contributed to the creation of `component-controls`, a fe
 -   [x] Gatsby standalone app/static app builder
 -   [x] Nextjs standalone app/static app builder
 -   [x] Integrated testing facilites
--   [x] Design tokens componnets to document design systems 
+-   [x] Design tokens componnets to document design systems
 -   [x] Support frontmatter MDX declarations
 -   [ ] Multiple frameworks support (Vue, Angular, tbd)
 -   [ ] Coverage and perfoamnce profiling instrumentation

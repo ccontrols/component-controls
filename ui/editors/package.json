@@ -35,7 +35,6 @@
     "@component-controls/core": "^2.8.0",
     "@component-controls/store": "^2.8.1",
     "global": "^4.3.2",
-    "polished": "^3.4.4",
     "react-colorful": "^5.0.0"
   },
   "devDependencies": {

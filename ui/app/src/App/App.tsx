@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FC, ReactNode, Fragment } from 'react';
+import { FC, ComponentType, Fragment } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { SkipLinks, SkipLinksItemProps } from '@component-controls/components';
 import {
@@ -13,7 +13,7 @@ import { Footer } from '../Footer';
 import { useAnalytics } from './useAnalytics';
 import { AppError } from '../AppError';
 export interface AppProps {
-  Helmet?: FC<{ children: ReactNode }>;
+  Helmet?: ComponentType;
 }
 
 /**

@@ -716,10 +716,14 @@ _TagsList [source code](https://github.com/ccontrols/component-controls/tree/mas
 
 ### properties
 
-| Name   | Type        | Description                                                |
-| ------ | ----------- | ---------------------------------------------------------- |
-| `tags` | _string\[]_ | string list of tag names                                   |
-| `raw`  | _string\[]_ | raw string values, usefule for highlighting search results |
+| Name                | Type        | Description                                               |
+| ------------------- | ----------- | --------------------------------------------------------- |
+| `tags`              | _string\[]_ | string list of tag names                                  |
+| `raw`               | _string\[]_ | raw string values, useful for highlighting search results |
+| `limit`             | _number_    | limit the number of tags to display                       |
+| `transparentAmount` | _number_    | transparent amount - 0 to 1                               |
+| `borderSize`        | _number_    | borderSize in pixels                                      |
+| `variant`           | _string_    | theme variant additional                                  |
 
 ## <ins>ThemeProvider</ins>
 

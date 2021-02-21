@@ -60,7 +60,9 @@ export const DocumentItem: FC<DocumentItemProps & BoxProps> = ({
       )}
     </Box>
   ) : null;
-  const tagsNode = tags.length ? <TagsList tags={tags} raw={rawTags} /> : null;
+  const tagsNode = tags.length ? (
+    <TagsList tags={tags} raw={rawTags} limit={4} />
+  ) : null;
   return (
     <Box variant="documentitem.container" {...rest}>
       <Box variant="documentitem.titlerow">

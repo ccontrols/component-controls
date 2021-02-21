@@ -1,17 +1,17 @@
 # Table of contents
 
-- [In action](#in-action)
-- [Overview](#overview)
-- [Getting Started](#getting-started)
-  - [Install](#install)
-  - [Usage](#usage)
-- [API](#api)
-  - [<ins>Catalog</ins>](#inscatalogins)
-  - [<ins>ComponentCard</ins>](#inscomponentcardins)
-  - [<ins>ComponentFilter</ins>](#inscomponentfilterins)
-  - [<ins>ComponentList</ins>](#inscomponentlistins)
-  - [<ins>ComponentsCatalog</ins>](#inscomponentscatalogins)
-  - [<ins>ComponentCatalogContextProvider</ins>](#inscomponentcatalogcontextproviderins)
+-   [In action](#in-action)
+-   [Overview](#overview)
+-   [Getting Started](#getting-started)
+    -   [Install](#install)
+    -   [Usage](#usage)
+-   [API](#api)
+    -   [<ins>Catalog</ins>](#inscatalogins)
+    -   [<ins>ComponentCard</ins>](#inscomponentcardins)
+    -   [<ins>ComponentFilter</ins>](#inscomponentfilterins)
+    -   [<ins>ComponentList</ins>](#inscomponentlistins)
+    -   [<ins>ComponentsCatalog</ins>](#inscomponentscatalogins)
+    -   [<ins>ComponentCatalogContextProvider</ins>](#inscomponentcatalogcontextproviderins)
 
 # In action
 
