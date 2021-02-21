@@ -62,7 +62,7 @@ export const TagsList: FC<TagsListProps & Omit<TagProps, 'color' | 'raw'>> = ({
         maxWidth: largerThanLimit ? 'unset' : undefined,
       }}
     >
-      {tags.slice(0, limit).map((tag, index) => {
+      {tags.slice(0, limit > 0 ? limit : undefined).map((tag, index) => {
         const rawTag = raw ? raw[index] : undefined;
         return (
           <Link key={tag} href={getDocPath('tags', undefined, store, tag)}>
