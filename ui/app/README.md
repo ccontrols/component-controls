@@ -51,9 +51,9 @@ _App [source code](https://github.com/ccontrols/component-controls/tree/master/u
 
 ### properties
 
-| Name     | Type                              | Description |
-| -------- | --------------------------------- | ----------- |
-| `Helmet` | _FC&lt;{ children: ReactNode; }>_ |             |
+| Name     | Type                   | Description |
+| -------- | ---------------------- | ----------- |
+| `Helmet` | _ComponentType&lt;{}>_ |             |
 
 ## <ins>AppContext</ins>
 
@@ -61,14 +61,14 @@ _AppContext [source code](https://github.com/ccontrols/component-controls/tree/m
 
 ### properties
 
-| Name         | Type                              | Description |
-| ------------ | --------------------------------- | ----------- |
-| `docId`      | _string_                          |             |
-| `storyId`    | _string_                          |             |
-| `store*`     | _Store_                           |             |
-| `linkClass*` | _FC&lt;LinkProps>_                |             |
-| `Helmet`     | _FC&lt;{ children: ReactNode; }>_ |             |
-| `activeTab`  | _string_                          |             |
+| Name         | Type                   | Description |
+| ------------ | ---------------------- | ----------- |
+| `docId`      | _string_               |             |
+| `storyId`    | _string_               |             |
+| `store*`     | _Store_                |             |
+| `linkClass*` | _FC&lt;LinkProps>_     |             |
+| `Helmet`     | _ComponentType&lt;{}>_ |             |
+| `activeTab`  | _string_               |             |
 
 ## <ins>AppError</ins>
 
@@ -245,11 +245,11 @@ _SEO [source code](https://github.com/ccontrols/component-controls/tree/master/u
 
 ### properties
 
-| Name     | Type                                                                                                                                                                                                                                                                      | Description |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `Helmet` | _FC&lt;{ children: ReactNode; }>_                                                                                                                                                                                                                                         |             |
-| `doc`    | _{ title: string; type?: string; route?: string; date?: Date; dateModified?: Date; draft?: boolean; tags?: string\[]; keywords?: string\[]; description?: string \| Element; image?: string; ... 11 more ...; parameters?: any; } & StoryProps&lt;...> & PageLayoutProps_ |             |
-| `config` | _{ renderFn?: FrameworkRenderFn; title?: string; logo?: ReactNode; app?: FC&lt;{}>; description?: string; copyright?: string; language?: string; author?: string; image?: string; ... 10 more ...; analytics?: any; } & StoryProps&lt;...> & Pick&lt;...>_                |             |
+| Name     | Type                                                                                                                                                                                                                                                                           | Description |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| `Helmet` | _ComponentType&lt;{}>_                                                                                                                                                                                                                                                         |             |
+| `doc`    | _{ \[key: string]: any; title: string; type?: string; route?: string; date?: Date; dateModified?: Date; draft?: boolean; tags?: string\[]; keywords?: string\[]; description?: string \| Element; ... 12 more ...; parameters?: any; } & StoryProps&lt;...> & PageLayoutProps_ |             |
+| `config` | _{ renderFn?: FrameworkRenderFn; title?: string; logo?: ReactNode; app?: FC&lt;{}>; description?: string; copyright?: string; language?: string; author?: string; image?: string; ... 10 more ...; analytics?: any; } & StoryProps&lt;...> & Pick&lt;...>_                     |             |
 
 ## <ins>SideContext</ins>
 
@@ -282,10 +282,10 @@ _SidebarsMDXPage [source code](https://github.com/ccontrols/component-controls/t
 
 ### properties
 
-| Name    | Type                                                                                                                                                                                                                                                                      | Description     |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
-| `type*` | _string_                                                                                                                                                                                                                                                                  | document type   |
-| `doc*`  | _{ title: string; type?: string; route?: string; date?: Date; dateModified?: Date; draft?: boolean; tags?: string\[]; keywords?: string\[]; description?: string \| Element; image?: string; ... 11 more ...; parameters?: any; } & StoryProps&lt;...> & PageLayoutProps_ | document object |
+| Name    | Type                                                                                                                                                                                                                                                                           | Description     |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------- |
+| `type*` | _string_                                                                                                                                                                                                                                                                       | document type   |
+| `doc*`  | _{ \[key: string]: any; title: string; type?: string; route?: string; date?: Date; dateModified?: Date; draft?: boolean; tags?: string\[]; keywords?: string\[]; description?: string \| Element; ... 12 more ...; parameters?: any; } & StoryProps&lt;...> & PageLayoutProps_ | document object |
 
 ## <ins>SidebarsPage</ins>
 
@@ -305,9 +305,9 @@ _SidebarsStoryPage [source code](https://github.com/ccontrols/component-controls
 
 ### properties
 
-| Name    | Type                                                                                                                                                                                                                                                                      | Description     |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
-| `type*` | _string_                                                                                                                                                                                                                                                                  | document type   |
-| `doc*`  | _{ title: string; type?: string; route?: string; date?: Date; dateModified?: Date; draft?: boolean; tags?: string\[]; keywords?: string\[]; description?: string \| Element; image?: string; ... 11 more ...; parameters?: any; } & StoryProps&lt;...> & PageLayoutProps_ | document object |
+| Name    | Type                                                                                                                                                                                                                                                                           | Description     |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------- |
+| `type*` | _string_                                                                                                                                                                                                                                                                       | document type   |
+| `doc*`  | _{ \[key: string]: any; title: string; type?: string; route?: string; date?: Date; dateModified?: Date; draft?: boolean; tags?: string\[]; keywords?: string\[]; description?: string \| Element; ... 12 more ...; parameters?: any; } & StoryProps&lt;...> & PageLayoutProps_ | document object |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->
