@@ -276,6 +276,10 @@ export type Document<Props = unknown> = {
    * storybook compatibility field
    */
   parameters?: any;
+  /**
+   * custom document props
+   */
+  [key: string]: any;
 } & StoryProps<Props> &
   PageLayoutProps;
 export const dateToLocalString = (date?: Date): string =>
