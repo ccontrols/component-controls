@@ -38,6 +38,11 @@ const config: RunOnlyConfiguration = {
       contextSidebar: true,
     },
   },
+  components: {
+    commits: {
+      title: 'Contributors',
+    },
+  },
   storySort: (a, b) => {
     const aDoc = a.split('/')[0];
     const aIndex = categories.findIndex(c => c === aDoc);

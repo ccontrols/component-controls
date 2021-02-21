@@ -10,6 +10,7 @@ import {
   LocalDependencies,
   ComponentJSX,
   ComponentSource,
+  ComponentCommits,
   PropsTable,
   PackageVersion,
 } from '@component-controls/blocks';
@@ -33,6 +34,7 @@ const ClassicPage: FC<TabConfiguration> = ({ controlsThreshold = 10 }) => {
     <Fragment>
       <PackageVersion />
       <Description />
+      <ComponentCommits id="." title="Commits" />
       <ComponentSource id="." title="Component" />
       <Playground title=".">
         <Story id="." />
