@@ -2,7 +2,12 @@
 import { FC, useState, useEffect } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { getDocPath } from '@component-controls/core';
-import { Tag, Link, getPaletteColor } from '@component-controls/components';
+import {
+  Tag,
+  TagProps,
+  Link,
+  getPaletteColor,
+} from '@component-controls/components';
 import { useStore, useDocPropCount } from '@component-controls/store';
 
 export interface TagsListProps {
@@ -25,7 +30,12 @@ export interface TagsListProps {
 /**
  * displays a row of tags assigned to the current document, with links to their pages
  */
-export const TagsList: FC<TagsListProps> = ({ tags, raw, limit = -1 }) => {
+export const TagsList: FC<TagsListProps & Omit<TagProps, 'color' | 'raw'>> = ({
+  tags,
+  raw,
+  limit = 0,
+  ...rest
+}) => {
   const [tagColors, setTagColors] = useState<{ [tag: string]: string }>({});
   const tagCounts = useDocPropCount('tags');
   const store = useStore();
@@ -44,7 +54,7 @@ export const TagsList: FC<TagsListProps> = ({ tags, raw, limit = -1 }) => {
   if (!tags) {
     return null;
   }
-  const largerThanLimit = limit !== -1 && tags.length > limit;
+  const largerThanLimit = limit !== 0 && tags.length > limit;
   return (
     <Box
       variant="taglist.container"
@@ -60,14 +70,15 @@ export const TagsList: FC<TagsListProps> = ({ tags, raw, limit = -1 }) => {
               color={tagColors[tag] || 'muted'}
               variant="tag.leftmargin"
               raw={rawTag}
+              {...rest}
             >
               {tag}
             </Tag>
           </Link>
         );
       })}
-      {largerThanLimit && (
-        <Tag color="muted" variant="tag.leftmargin">
+      {limit > 0 && largerThanLimit && (
+        <Tag color="muted" variant="tag.leftmargin" {...rest}>
           ...more
         </Tag>
       )}
