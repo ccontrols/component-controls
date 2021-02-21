@@ -10,18 +10,15 @@ tags:
   - esm
 ---
 
-
-In this tutorial, we assume you have already selected and set up a static site generator (SSG) for your documentation site 
+In this tutorial, we assume you have already selected and set up a static site generator (SSG) for your documentation site
 
 - [Getting started with gatsby](/tutorial/getting-started/gatsby)
 - [Getting started with nextjs](/tutorial/getting-started/nextjs)
 - [Getting started with storybook](/tutorial/getting-started/storybook)
 
-
 ## Configuration folder
 
 Create a new folder called `.config` (or any other name that you used in the SSG setup above) inside your project's home directory:
-
 
 ### Build-time configuration
 
@@ -31,12 +28,11 @@ In this file, enter the paths (e.g. .mdx and/or .tsx) we want to search for the 
 
 ```js:title=.config/buildtime.js
 module.exports = {
-  stories: [
-    '../src/docs/*.@(mdx|tsx)',
-  ],
+  stories: ['../src/docs/*.@(mdx|tsx)'],
   siteUrl: `https://component-controls-gatsby.netlify.app`,
 };
 ```
+
 more: [run-time configuration](/configuration/buildtime)
 
 ### Run-time configuration
@@ -47,16 +43,16 @@ In `.config`, create a `runtime.js` file and change some of the site's meta info
 module.exports = {
   title: `awLib`,
   description: `Some description meta.`,
-  author: 'my name'
+  author: 'my name',
 };
 ```
 
 more: [run-time configuration](/configuration/runtime)
 
-
 ## Documentation folder
 
 Create a folder to store your documentation files (the same as specified in the `.config/buildtime.js` file above):
+
 ```sh
 mkdir src && mkdir src/docs
 ```
@@ -75,34 +71,35 @@ other markdown
 
 more: [writing mdx documentation](/tutorial/mdx-documentation)
 
-
 ### MDX "story" file
 
 Assuming you have a `Button` component, you can write stories(examples) for it.
 
-(If you don't have a `Button` component, we built a simple one you can copy [here](https://github.com/atanasster/gatsby-controls-starter/blob/master/src/components/Button.tsx).)
+(If you don't have a `Button` component, we built a simple one you can copy [here](https://github.com/ccontrols/gatsby-controls-starter/blob/master/src/components/Button.tsx).)
 
 ```mdx:title=src/docs/first-story.mdx
 ---
 title: First Story
 ---
+
 import { Button } from '../components/Button';
-import { Playground, Story, PropsTable,  ComponentSource, StorySource  } from '@component-controls/blocks';
+import {
+  Playground,
+  Story,
+  PropsTable,
+  ComponentSource,
+  StorySource,
+} from '@component-controls/blocks';
 
 # My first doc story
 
-<ComponentSource of={Button} title='Component source' />
-
+<ComponentSource of={Button} title="Component source" />
 <Playground description="Button story">
   <Story name="simple">
-    <Button>
-      click me
-  </Button>
+    <Button>click me</Button>
   </Story>
 </Playground>
-
 <StorySource id="." />
-
 <PropsTable of={Button} />
 ```
 
@@ -112,8 +109,7 @@ more: [writing mdx stories](/tutorial/mdx-stories)
 
 Assuming you have a `Button` component, you can write stories(examples) for it.
 
-(If you don't have a `Button` component, we built a simple one you can copy [here](https://github.com/atanasster/gatsby-controls-starter/blob/master/src/components/Button.tsx).)
-
+(If you don't have a `Button` component, we built a simple one you can copy [here](https://github.com/ccontrols/gatsby-controls-starter/blob/master/src/components/Button.tsx).)
 
 ```jsx:title=src/docs/first-story.stories.tsx
 import React from 'react';
@@ -122,14 +118,12 @@ import { Button } from '../components/Button';
 export default {
   title: 'ES Story',
   component: Button,
-}
+};
 
 export const overview = () => <Button>click me</Button>;
- 
 ```
 
 more: [writing esm stories](/tutorial/esmodules-stories)
-
 
 ### Project repository
 
@@ -141,7 +135,7 @@ Displaying the git link is simple. Just add the repository's information in `pac
 ...
 "repository": {
   "type": "git",
-  "url": "https://github.com/atanasster/gatsby-controls-starter.git"
+  "url": "https://github.com/ccontrols/gatsby-controls-starter.git"
 },
 ...
 ```
