@@ -5,7 +5,7 @@ export interface Commit {
   commitHash?: string;
   subject?: string;
   authorName?: string;
-  authorData?: string;
+  authorDate?: string;
   authorEmail?: string;
   committerName?: string;
   committerDate?: string;
