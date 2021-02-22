@@ -1002,7 +1002,7 @@ exports[`Application/Container Overview 1`] = `
 exports[`Application/DocPage Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-vurnku"
+    class="css-1hkyity"
     id="content"
   >
     <div
@@ -1191,7 +1191,7 @@ exports[`Application/DocPage Overview 1`] = `
 exports[`Application/DocumentHomePage Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-vurnku"
+    class="css-1hkyity"
     id="content"
   >
     <div

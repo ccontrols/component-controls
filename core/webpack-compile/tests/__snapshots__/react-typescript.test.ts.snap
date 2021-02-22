@@ -664,6 +664,8 @@ export const ActionBar: FC<ActionBarProps> = ({
     "8c5a495b6c81e803332610dad9861480": Object {
       "dependencies": Object {
         "@primer/octicons-react": "^10.0.0",
+        "@theme-ui/color": "^0.6.0-alpha.7",
+        "@theme-ui/css": "^0.6.0-alpha.7",
         "@theme-ui/match-media": "^0.6.0-alpha.7",
         "@theme-ui/presets": "^0.6.0-alpha.7",
         "copy-to-clipboard": "^3.2.1",
@@ -712,6 +714,8 @@ export const ActionBar: FC<ActionBarProps> = ({
     "fded7dbaa855ea6869a794f877eab680": Object {
       "dependencies": Object {
         "@primer/octicons-react": "^10.0.0",
+        "@theme-ui/color": "^0.6.0-alpha.7",
+        "@theme-ui/css": "^0.6.0-alpha.7",
         "@theme-ui/match-media": "^0.6.0-alpha.7",
         "@theme-ui/presets": "^0.6.0-alpha.7",
         "copy-to-clipboard": "^3.2.1",
