@@ -6,6 +6,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
 module.exports = {
   stories: [
     '../../stories/src/blogs/*.mdx',
+    '../../stories/src/showcase/*.mdx',
     '../../stories/src/authors/*.mdx',
     '../../stories/src/pages/*.mdx',
     '../../stories/src/tutorial/getting-started/ssg/*.mdx',
@@ -35,9 +36,6 @@ module.exports = {
     '../../../plugins/addon-notes/src/stories/**/*.stories.@(js|jsx|tsx|mdx)',
     '../../../plugins/addon-images/src/stories/**/*.stories.@(js|jsx|tsx|mdx)',
     '../../../ui/app/src/**/*.stories.@(js|jsx|tsx|mdx)',
-    //'../../stories/src/blogs/introduction-to-controls.mdx',
-    //'../../stories/src/stories/controls-editors-starter.stories.tsx',
-    //'../../stories/src/blogs/gatsby-nextjs-storybook.mdx',
   ],
   siteUrl:
     process.env.NODE_ENV === 'development'
@@ -54,6 +52,9 @@ module.exports = {
     },
     tutorial: {
       basePath: 'tutorial/',
+    },
+    showcase: {
+      basePath: 'showcase/',
     },
   },
   search: {

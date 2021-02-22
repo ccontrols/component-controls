@@ -37,6 +37,10 @@ const config: RunOnlyConfiguration = {
       navSidebar: true,
       contextSidebar: true,
     },
+    showcase: {
+      label: 'Showcase',
+      topMenu: true,
+    },
   },
   components: {
     commits: {

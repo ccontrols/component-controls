@@ -14,6 +14,7 @@ export * from './ColorMode';
 export * from './CopyContainer';
 export * from './Description';
 export * from './ExternalLink';
+export * from './GithubAvatar';
 export * from './GithubAvatarList';
 export * from './Header';
 export * from './HoverBox';

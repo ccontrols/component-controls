@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC, useMemo } from 'react';
 import { jsx, Box, BoxProps } from 'theme-ui';
-import { GithubAvatar, GithubAvatarProps } from './GithubAvatar';
+import { GithubAvatar, GithubAvatarProps } from '../GithubAvatar';
 
 export interface GithubAvatarUser {
   username: string;

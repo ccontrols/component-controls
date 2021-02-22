@@ -8,9 +8,11 @@ import {
   PackageLink,
   ComponentContributors,
   ComponentStats,
+  getStoryTitle,
 } from '@component-controls/blocks';
 import {
   useStore,
+  useStory,
   useStoryComponent,
   useStoryPath,
 } from '@component-controls/store';
@@ -32,14 +34,18 @@ export const ComponentCard: FC<ComponentCardProps & BoxProps> = ({
 }) => {
   const href = useStoryPath(id);
   const store = useStore();
+  const story = useStory({ id });
   const component = useStoryComponent({ id });
   if (!component) {
     return null;
   }
+  const doc = story?.doc ? store.docs[story.doc] : undefined;
   const pckg = component.package
     ? store.packages[component.package]
     : undefined;
   const { browse } = pckg?.repository || {};
+  const title = getStoryTitle(doc, component);
+  const description = component.info?.description || story?.description;
   return (
     <Card {...rest}>
       <div
@@ -50,9 +56,7 @@ export const ComponentCard: FC<ComponentCardProps & BoxProps> = ({
         }}
       >
         <Link href={href}>
-          <div sx={{ fontSize: 4, fontWeight: 'bold' }}>
-            {component.info?.displayName}
-          </div>
+          <div sx={{ fontSize: 4, fontWeight: 'bold' }}>{title}</div>
         </Link>
         <div
           sx={{
@@ -69,9 +73,7 @@ export const ComponentCard: FC<ComponentCardProps & BoxProps> = ({
       )}
 
       <div sx={{ borderBottom: '1px solid rgba(0, 0, 0, 0.125)', my: 2 }} />
-      {component.info?.description && (
-        <Markdown>{component.info.description}</Markdown>
-      )}
+      {description && <Markdown>{description}</Markdown>}
       {store.stories[id] && (
         <div sx={{ flex: 1 }}>
           <StoryRender
