@@ -2,13 +2,14 @@
 /** @jsx jsx */
 import { FC, useMemo } from 'react';
 import { jsx } from 'theme-ui';
+import { Column } from 'react-table';
 import {
   BlockContainer,
   BlockContainerProps,
   Table,
 } from '@component-controls/components';
-import { dateToLocalString } from '@component-controls/core';
 import { StoryInputProps, useStoryComponent } from '@component-controls/store';
+import { Commit, dateToLocalString } from '@component-controls/core';
 import { useCustomProps } from '../context';
 
 export type ComponentCommitsProps = BlockContainerProps & StoryInputProps;
@@ -24,37 +25,48 @@ export const ComponentCommits: FC<ComponentCommitsProps> = ({
   const props = useCustomProps<ComponentCommitsProps>('commits', rest);
   const component = useStoryComponent({ id, name });
 
-  const data = useMemo(
-    () =>
-      component?.fileInfo?.commits?.map(i => {
-        return {
-          date: i.committerDate
-            ? dateToLocalString(new Date(i.committerDate))
-            : 'N/A',
-          username: i.authorName,
-        };
-      }),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [],
-  );
+  console.log(component);
 
   const columns = useMemo(
     () =>
       [
         {
-          Header: 'Datee',
-          accessor: 'date',
+          Header: 'Date',
+          accessor: 'authorData',
+          Cell: ({
+            row: {
+              original: { authorData },
+            },
+          }) => (
+            <span>
+              {authorData ? dateToLocalString(new Date(authorData)) : 'N/A'}
+            </span>
+          ),
         },
         {
-          Header: 'User Name',
-          accessor: 'username',
+          Header: 'Author',
+          accessor: 'authorName',
         },
-      ] as any[],
+        {
+          Header: 'Commit Message',
+          accessor: 'subject',
+          Cell: ({
+            row: {
+              original: { subject },
+            },
+          }) => <p>{subject}</p>,
+        },
+      ] as Column<Commit>[],
     [],
   );
+
+  if (!component?.fileInfo?.commits) {
+    return null;
+  }
+
   return (
     <BlockContainer {...props}>
-      <Table data={data} columns={columns} />
+      <Table<Commit> data={component.fileInfo.commits} columns={columns} />
     </BlockContainer>
   );
 };
