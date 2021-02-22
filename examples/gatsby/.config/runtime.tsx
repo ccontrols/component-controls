@@ -37,6 +37,10 @@ const config: RunOnlyConfiguration = {
       navSidebar: true,
       contextSidebar: true,
     },
+    showcase: {
+      label: 'Showcase',
+      topMenu: true,
+    },
   },
   storySort: (a, b) => {
     const aDoc = a.split('/')[0];

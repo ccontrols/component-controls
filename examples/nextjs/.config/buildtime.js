@@ -5,6 +5,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
 module.exports = {
   stories: [
     '../../stories/src/blogs/*.mdx',
+    '../../stories/src/showcase/*.mdx',
     '../../stories/src/authors/*.mdx',
     '../../stories/src/pages/*.mdx',
     '../../stories/src/tutorial/getting-started/ssg/*.mdx',
