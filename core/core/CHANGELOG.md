@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.9.0](https://github.com/ccontrols/component-controls/compare/v2.8.1...v2.9.0) (2021-02-22)
+
+
+### Bug Fixes
+
+* spelling authorDate ([6c98c63](https://github.com/ccontrols/component-controls/commit/6c98c6355b11ff4b9a92e8f5a4db92b84b6517a9))
+
+
+
+
+
 # [2.8.0](https://github.com/ccontrols/component-controls/compare/v2.7.0...v2.8.0) (2021-02-18)
 
 

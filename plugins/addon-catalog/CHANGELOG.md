@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.9.0](https://github.com/ccontrols/component-controls/compare/v2.8.1...v2.9.0) (2021-02-22)
+
+
+### Bug Fixes
+
+* component info from story/doc ([51bd3ae](https://github.com/ccontrols/component-controls/commit/51bd3ae2cb225e96cc41de99a28ffe639a18092d))
+
+
+
+
+
 ## [2.8.1](https://github.com/ccontrols/component-controls/compare/v2.8.0...v2.8.1) (2021-02-19)
 
 **Note:** Version bump only for package @component-controls/addon-catalog

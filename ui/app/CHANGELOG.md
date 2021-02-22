@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.9.0](https://github.com/ccontrols/component-controls/compare/v2.8.1...v2.9.0) (2021-02-22)
+
+
+### Bug Fixes
+
+* page type nogt existing in theme ([6ff6122](https://github.com/ccontrols/component-controls/commit/6ff61226d37e9703dde221fcd9e3246ec4d6d15f))
+
+
+
+
+
 ## [2.8.1](https://github.com/ccontrols/component-controls/compare/v2.8.0...v2.8.1) (2021-02-19)
 
 **Note:** Version bump only for package @component-controls/app

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.9.0](https://github.com/ccontrols/component-controls/compare/v2.8.1...v2.9.0) (2021-02-22)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
 ## [2.8.1](https://github.com/ccontrols/component-controls/compare/v2.8.0...v2.8.1) (2021-02-19)
 
 
