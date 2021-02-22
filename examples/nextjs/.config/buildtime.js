@@ -53,6 +53,9 @@ module.exports = {
     tutorial: {
       basePath: 'tutorial/',
     },
+    showcase: {
+      basePath: 'showcase/',
+    },
   },
   search: {
     fields: ['title', 'description', 'source', 'tags', 'components'],
