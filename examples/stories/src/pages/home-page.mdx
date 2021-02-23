@@ -18,6 +18,10 @@ import cmsImg from './media/cms.jpg';
 import configurationImg from './media/configuration.jpg';
 import testingImg from './media/testing.jpg';
 import designTokensImg from './media/design-tokens.jpg';
+import designAssets from './media/design-assets-badge.jpg';
+import componentCatalog from './media/component-catalog-badge.jpg';
+
+
 
 
 export const BoxItem = ({ children, title, action, ...rest }) => (
@@ -132,5 +136,24 @@ export const BoxItem = ({ children, title, action, ...rest }) => (
     >
       Component controls provides a fully customisable experience with <Link aria-label="custom configurations" href="/configuration/overview/">configuration</Link> files. Customize the user-interface, the meta information and create custom webpack settings.      
     </BoxItem>
+    <BoxItem
+      height="500px"
+      bg="background"
+      title="Design assets included"
+      action={<Image src={designAssets} alt="design assets" />}
+    >
+      Attach <Link aria-label="design assets" href="/tutorial/design/design-assets">design assets</Link> to your components, such as figma files, images and markdown design briefs.
+    </BoxItem>
+    <BoxItem
+      height="500px"
+      bg="background"
+      title="Components catalogs"
+      action={<Image src={componentCatalog} alt="components catalog" />}
+    >
+      Automatically create <Link aria-label="components catalogs" href="/blogs/components-catalog">components catalogs</Link> with search, sort and grouping to showcase your components libraries at a glance.
+    </BoxItem>
+
+
+    
   </Grid>
 </Box>  
