@@ -1,7 +1,6 @@
 const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin;
-const { defaultBuildConfig } = require('@component-controls/core');
 
 module.exports = {
   siteRoot: '/root/',
@@ -14,14 +13,6 @@ module.exports = {
         // new BundleAnalyzerPlugin()
       ],
     };
-  },
-  pages: {
-    story: {
-      tabs: {
-        page: '@component-controls/pages/ClassicPage',
-        test: '@component-controls/pages/TestingPage',
-      },
-    },
   },
   instrument: {
     components: {

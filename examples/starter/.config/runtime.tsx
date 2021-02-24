@@ -1,9 +1,4 @@
-import React from 'react';
-import {
-  RunOnlyConfiguration,
-  defaultRunConfig,
-} from '@component-controls/core';
-import { TestingPage } from './TestingPage';
+import { RunOnlyConfiguration } from '@component-controls/core';
 
 const config: RunOnlyConfiguration = {
   title: `awLib`,
