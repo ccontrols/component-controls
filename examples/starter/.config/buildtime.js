@@ -1,27 +1,26 @@
 const path = require('path');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin;
 const { defaultBuildConfig } = require('@component-controls/core');
 
 module.exports = {
   siteRoot: '/root/',
-  stories: [
-    '../src/docs/*.@(mdx|tsx)',
-  ],
+  stories: ['../src/docs/*.@(mdx|tsx)'],
   webpack: (config = {}, options = {}) => {
     return {
       ...config,
       plugins: [
         ...config.plugins,
         // new BundleAnalyzerPlugin()
-      ]
+      ],
     };
   },
   pages: {
     story: {
-      tabs: [
-        ...defaultBuildConfig.pages.story.tabs,
-        { route: 'test' },
-      ],
+      tabs: {
+        page: '@component-controls/pages/ClassicPage',
+        test: '@component-controls/pages/TestingPage',
+      },
     },
   },
   instrument: {
@@ -50,5 +49,5 @@ module.exports = {
         return filePath;
       },
     },
-  }
+  },
 };
