@@ -90,7 +90,17 @@ export const ComponentCommits: FC<ComponentCommitsProps> = ({
 
   return (
     <BlockContainer {...props}>
-      <Table<Commit> data={component.fileInfo.commits} columns={columns} />
+      <Table<Commit>
+        sorting={true}
+        data={component.fileInfo.commits}
+        columns={columns}
+        sortBy={[
+          {
+            id: 'authorDate',
+            desc: true,
+          },
+        ]}
+      />
     </BlockContainer>
   );
 };
