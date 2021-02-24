@@ -8,8 +8,13 @@ import {
   BlockContainerProps,
   Table,
 } from '@component-controls/components';
-import { StoryInputProps, useStoryComponent } from '@component-controls/store';
+import {
+  StoryInputProps,
+  useConfig,
+  useStoryComponent,
+} from '@component-controls/store';
 import { Commit, dateToLocalString } from '@component-controls/core';
+import { GithubAvatar } from '@component-controls/components';
 import { useCustomProps } from '../context';
 
 export type ComponentCommitsProps = BlockContainerProps & StoryInputProps;
@@ -25,6 +30,9 @@ export const ComponentCommits: FC<ComponentCommitsProps> = ({
   const props = useCustomProps<ComponentCommitsProps>('commits', rest);
   const component = useStoryComponent({ id, name });
 
+  const config = useConfig();
+  const { tokens } = config;
+
   console.log(component);
 
   const columns = useMemo(
@@ -32,20 +40,36 @@ export const ComponentCommits: FC<ComponentCommitsProps> = ({
       [
         {
           Header: 'Date',
-          accessor: 'authorData',
+          accessor: 'authorDate',
           Cell: ({
             row: {
-              original: { authorData },
+              original: { authorDate },
             },
           }) => (
             <span>
-              {authorData ? dateToLocalString(new Date(authorData)) : 'N/A'}
+              {authorDate ? dateToLocalString(new Date(authorDate)) : 'N/A'}
             </span>
           ),
         },
         {
           Header: 'Author',
           accessor: 'authorName',
+          Cell: ({
+            row: {
+              original: { authorName },
+            },
+          }) => {
+            return authorName ? (
+              <div style={{ display: 'flex' }}>
+                <p style={{ paddingRight: '10px' }}>{authorName}</p>
+                <GithubAvatar
+                  username={authorName}
+                  size={22}
+                  githubAccessToken={tokens?.githubAccessToken}
+                />
+              </div>
+            ) : null;
+          },
         },
         {
           Header: 'Commit Message',
