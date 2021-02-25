@@ -34,7 +34,6 @@ const ClassicPage: FC<TabConfiguration> = ({ controlsThreshold = 10 }) => {
     <Fragment>
       <PackageVersion />
       <Description />
-      <ComponentCommits id="." title="Commits" />
       <ComponentSource id="." title="Component" />
       <Playground title=".">
         <Story id="." />
@@ -55,6 +54,7 @@ const ClassicPage: FC<TabConfiguration> = ({ controlsThreshold = 10 }) => {
           visibility={splitControls ? 'info' : 'all'}
         />
       )}
+      <ComponentCommits id="." title="Commits" />
       <ExternalDependencies id="." title="External dependencies" />
       <LocalDependencies id="." title="Internal dependencies" />
       <ComponentJSX id="." title="Component JSX" />
