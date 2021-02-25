@@ -13,7 +13,6 @@
     "@component-controls/webpack-compile": "^2.9.1",
     "@component-controls/webpack-configs": "^2.9.1",
     "react": "^17.0.1",
-    "react-app-rewired": "^2.1.8",
     "react-dom": "^17.0.1",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
@@ -31,9 +30,9 @@
     "webpack-bundle-analyzer": "^3.7.0"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "browserslist": {
