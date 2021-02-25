@@ -325,15 +325,20 @@ and a [link](https://google.com)
           {
             committerName: 'hasparus',
             authorName: 'hasparus',
+            authorDate: '2021-02-23T22:48:26.000Z',
+            subject: 'third commit',
           },
           {
             committerName: 'hasparus',
             authorName: 'lachlanjc',
+            authorDate: '2021-02-22T22:48:26.000Z',
+            subject: '(งツ)ว',
           },
           {
-            committerName: 'lachlanjc',
-
+            committerName: 'atanasster',
             authorName: 'atanasster',
+            authorDate: '2021-02-21T22:48:26.000Z',
+            subject: 'first commit!',
           },
         ],
       },

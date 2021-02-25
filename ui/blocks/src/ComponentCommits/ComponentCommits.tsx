@@ -13,11 +13,12 @@ import {
   useConfig,
   useStoryComponent,
 } from '@component-controls/store';
-import { Commit, dateToLocalString } from '@component-controls/core';
+import { Commit, Component, dateToLocalString } from '@component-controls/core';
 import { GithubAvatar } from '@component-controls/components';
 import { useCustomProps } from '../context';
 
-export type ComponentCommitsProps = BlockContainerProps & StoryInputProps;
+export type ComponentCommitsProps = BlockContainerProps &
+  StoryInputProps & { storeComponent?: Component };
 
 /**
  * Displays commit history for a component
@@ -25,10 +26,13 @@ export type ComponentCommitsProps = BlockContainerProps & StoryInputProps;
 export const ComponentCommits: FC<ComponentCommitsProps> = ({
   id,
   name,
+  storeComponent,
   ...rest
 }) => {
   const props = useCustomProps<ComponentCommitsProps>('commits', rest);
-  const component = useStoryComponent({ id, name });
+  const component = storeComponent
+    ? storeComponent
+    : useStoryComponent({ id, name });
 
   const config = useConfig();
   const { tokens } = config;
