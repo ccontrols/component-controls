@@ -39,8 +39,8 @@ module.exports = {
   ],
   siteUrl:
     process.env.NODE_ENV === 'development'
-      ? 'http://localhost:9020'
-      : 'https://component-controls.com',
+      ? 'http://localhost:3000'
+      : 'https://webpack.component-controls.com',
   pages: {
     story: {
       basePath: 'api/',
