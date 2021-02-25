@@ -44,6 +44,7 @@ export const createPagesStatefully = async (
     ...defaultCompileProps,
     ...options,
   };
+  console.log(config);
   const onBundle: CompilerCallbackFn = async ({ store: loadingStore }) => {
     if (loadingStore) {
       const store: Store = loadStore(loadingStore, true);
