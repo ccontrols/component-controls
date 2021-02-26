@@ -52,6 +52,7 @@ export type ControlsTheme = {
   syntaxhighlight: Record<string, ThemeUIStyleObject>;
   tabs: Record<string, ThemeUIStyleObject>;
   tag: Record<string, ThemeUIStyleObject>;
+  table: Record<string, ThemeUIStyleObject>;
   titledimage: Record<string, ThemeUIStyleObject>;
   value: Record<string, ThemeUIStyleObject>;
   zoom: ThemeUIStyleObject;
@@ -153,6 +154,9 @@ export const theme: ControlsTheme = {
       backgroundColor: '#f3f3f3',
       borderRadius: '5px',
       boxShadow: 'rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset',
+      ':disabled': {
+        color: '#aaa',
+      },
     },
     secondary: {
       backgroundColor: 'action',
@@ -635,6 +639,45 @@ export const theme: ControlsTheme = {
     },
     '.react-tabs__tab-panel--selected': {
       display: 'block',
+    },
+  },
+  table: {
+    pagination: {
+      container: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+        backgroundColor: 'background',
+        pt: 2,
+      },
+      navigation: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        px: 2,
+        button: {
+          width: '50px',
+          mx: '2px',
+        },
+      },
+      page: {
+        px: 2,
+      },
+      pagesize: {
+        px: 2,
+        width: '140px',
+      },
+      interactive: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        px: 2,
+        input: {
+          ml: 1,
+          width: '100px',
+        },
+      },
     },
   },
   tag: {
