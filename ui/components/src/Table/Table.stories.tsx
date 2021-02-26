@@ -2,6 +2,7 @@
 import React, { useMemo, useState, useEffect } from 'react';
 import { Document, Example, faker } from '@component-controls/core';
 import { Table, Column } from './Table';
+import { TablePaginationProps } from './TablePagination';
 import { ThemeProvider } from '../ThemeContext';
 
 export default {
@@ -47,11 +48,11 @@ const columns: Column<DataType>[] = [
     accessor: 'address.zipcode' as any,
   },
 ];
-const mockData = (): DataType[] => {
+const mockDataGenerator = (count = 20): DataType[] => {
   let i = 10;
   faker.seed(123);
   // eslint-disable-next-line prefer-spread
-  return Array.apply(null, Array(20)).map(() => ({
+  return Array.apply(null, Array(count)).map(() => ({
     id: i++,
     ...faker.helpers.userCard(),
     age: faker.random.number({ min: 21, max: 25 }),
@@ -59,6 +60,7 @@ const mockData = (): DataType[] => {
   }));
 };
 
+const mockData = () => mockDataGenerator(5);
 export const overview: Example = () => {
   const data = useMemo(mockData, []);
   return (
@@ -169,4 +171,24 @@ export const rowSelect: Example = () => {
       <Table<DataType> rowSelect={true} columns={columns} data={data} />
     </ThemeProvider>
   );
+};
+
+export const pagination: Example<TablePaginationProps> = props => {
+  const data = useMemo(mockDataGenerator, []);
+  return (
+    <ThemeProvider>
+      <Table<DataType> pagination={props} columns={columns} data={data} />
+    </ThemeProvider>
+  );
+};
+
+pagination.controls = {
+  pageIndex: 0,
+  pageSize: 10,
+  pageTemplate: 'Page ${pageIndex} of ${pageLength}',
+  pageVisible: false,
+  pageSizeTemplate: '${pageSize} rows',
+  pageSizeVisible: false,
+  goToPageVisible: false,
+  goToPageTemplate: 'Go to page:',
 };

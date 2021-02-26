@@ -283,7 +283,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
   );
 
   const table = (
-    <Table
+    <Table<PropRow>
       {...groupProps}
       {...tableProps}
       columns={columns}

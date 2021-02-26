@@ -31,20 +31,24 @@ export interface TagProps {
   raw?: string;
 }
 
+const defColor = 'white';
 /**
  * A container component to display text in a colored box, with a semi-transparent background.
  */
 export const Tag: FC<TagProps & Omit<BoxProps, 'variant'>> = ({
   children,
   raw,
-  color = 'white',
+  color = defColor,
   borderSize = 2,
   transparentAmount = 0.85,
   variant,
   ...rest
 }) => {
   const theme = useTheme() as Theme;
-  const resolvedColor = getColor(theme, color);
+  let resolvedColor = getColor(theme, color);
+  if (typeof resolvedColor !== 'string') {
+    resolvedColor = defColor;
+  }
   return (
     <Box
       as="span"

@@ -664,6 +664,8 @@ export const ActionBar: FC<ActionBarProps> = ({
     "8c5a495b6c81e803332610dad9861480": Object {
       "dependencies": Object {
         "@primer/octicons-react": "^10.0.0",
+        "@theme-ui/color": "^0.6.0-alpha.7",
+        "@theme-ui/css": "^0.6.0-alpha.7",
         "@theme-ui/match-media": "^0.6.0-alpha.7",
         "@theme-ui/presets": "^0.6.0-alpha.7",
         "copy-to-clipboard": "^3.2.1",
@@ -681,7 +683,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "theme-ui": "^0.6.0-alpha.7",
       },
       "devDependencies": Object {
-        "@component-controls/jest-snapshots": "^2.8.1",
+        "@component-controls/jest-snapshots": "^2.9.1",
         "@component-controls/ts-markdown-docs": "^2.6.0",
         "@theme-ui/css": "^0.6.0-alpha.7",
         "@types/markdown-to-jsx": "^6.11.0",
@@ -707,11 +709,13 @@ export const ActionBar: FC<ActionBarProps> = ({
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.8.1",
+      "version": "2.9.1",
     },
     "fded7dbaa855ea6869a794f877eab680": Object {
       "dependencies": Object {
         "@primer/octicons-react": "^10.0.0",
+        "@theme-ui/color": "^0.6.0-alpha.7",
+        "@theme-ui/css": "^0.6.0-alpha.7",
         "@theme-ui/match-media": "^0.6.0-alpha.7",
         "@theme-ui/presets": "^0.6.0-alpha.7",
         "copy-to-clipboard": "^3.2.1",
@@ -729,7 +733,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "theme-ui": "^0.6.0-alpha.7",
       },
       "devDependencies": Object {
-        "@component-controls/jest-snapshots": "^2.8.1",
+        "@component-controls/jest-snapshots": "^2.9.1",
         "@component-controls/ts-markdown-docs": "^2.6.0",
         "@theme-ui/css": "^0.6.0-alpha.7",
         "@types/markdown-to-jsx": "^6.11.0",
@@ -755,7 +759,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.8.1",
+      "version": "2.9.1",
     },
   },
   "search": [Function],

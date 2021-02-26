@@ -74,7 +74,7 @@ export const ComponentUsageDetails: FC<ComponentUsageDetailsProps> = ({
   );
   return (
     <BlockContainer title={stats.name} id={`attribute-${stats.name}`} {...rest}>
-      <Table
+      <Table<DataType>
         sorting={true}
         data={data}
         sortBy={[{ id: 'usedCount', desc: true }]}

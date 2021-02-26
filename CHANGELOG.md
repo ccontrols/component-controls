@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.9.1](https://github.com/ccontrols/component-controls/compare/v2.9.0...v2.9.1) (2021-02-23)
+
+
+### Bug Fixes
+
+* rray colors handling ([50ad9e1](https://github.com/ccontrols/component-controls/commit/50ad9e1ad5ca74ec0844c84674ec3ff64085f071))
+
+
+
+
+
+# [2.9.0](https://github.com/ccontrols/component-controls/compare/v2.8.1...v2.9.0) (2021-02-22)
+
+
+### Bug Fixes
+
+* component info from story/doc ([51bd3ae](https://github.com/ccontrols/component-controls/commit/51bd3ae2cb225e96cc41de99a28ffe639a18092d))
+* doc index page remove from doc pages ([f4ccf7b](https://github.com/ccontrols/component-controls/commit/f4ccf7bd3f907568b63b02dbb973bccfabdbe208))
+* missing last item ([e5a32ff](https://github.com/ccontrols/component-controls/commit/e5a32ffea14d2fd9a2a2442033b619699ddcebd9))
+* page type nogt existing in theme ([6ff6122](https://github.com/ccontrols/component-controls/commit/6ff61226d37e9703dde221fcd9e3246ec4d6d15f))
+* smaller size tags on doc item ([3041b27](https://github.com/ccontrols/component-controls/commit/3041b2752987aa991a48c0463ed4f608974270b1))
+* spelling authorDate ([6c98c63](https://github.com/ccontrols/component-controls/commit/6c98c6355b11ff4b9a92e8f5a4db92b84b6517a9))
+* tagslist limit of items ([fd9f766](https://github.com/ccontrols/component-controls/commit/fd9f766237e8b87e75c8e09f41b8d23bb75cfc96))
+
+
+### Features
+
+* taglist customize tags ([c5fbd18](https://github.com/ccontrols/component-controls/commit/c5fbd180855fd9484e67765cd47cbcd49d2cb3fc))
+
+
+
+
+
 ## [2.8.1](https://github.com/ccontrols/component-controls/compare/v2.8.0...v2.8.1) (2021-02-19)
 
 

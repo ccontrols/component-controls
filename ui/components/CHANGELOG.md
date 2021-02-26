@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.9.1](https://github.com/ccontrols/component-controls/compare/v2.9.0...v2.9.1) (2021-02-23)
+
+
+### Bug Fixes
+
+* rray colors handling ([50ad9e1](https://github.com/ccontrols/component-controls/commit/50ad9e1ad5ca74ec0844c84674ec3ff64085f071))
+
+
+
+
+
+# [2.9.0](https://github.com/ccontrols/component-controls/compare/v2.8.1...v2.9.0) (2021-02-22)
+
+
+### Bug Fixes
+
+* tagslist limit of items ([fd9f766](https://github.com/ccontrols/component-controls/commit/fd9f766237e8b87e75c8e09f41b8d23bb75cfc96))
+
+
+
+
+
 ## [2.8.1](https://github.com/ccontrols/component-controls/compare/v2.8.0...v2.8.1) (2021-02-19)
 
 

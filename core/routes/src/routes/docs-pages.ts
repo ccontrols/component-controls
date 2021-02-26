@@ -4,6 +4,7 @@ import {
   defDocType,
   DocType,
   getHomePath,
+  getDocTypePath,
   getRoutePath,
   Pages,
   getDocPath,
@@ -76,12 +77,14 @@ export const getDocPages = (store: Store): DocPagesPath[] => {
     if (!categories.includes(type as DocType)) {
       const page = pages[type as DocType];
       const docType = type as DocType;
+      const docHomePath = getDocTypePath(store, page.basePath) as string;
       const docs: Pages = getPageList(store, docType);
       const tabs = getPageTabs(page);
       tabs.forEach((tab, tabIndex) => {
         const route = tabIndex > 0 ? tab : undefined;
         docs.forEach(doc => {
-          if (getRoutePath(store, doc.route) !== homePath) {
+          const pagePath = getRoutePath(store, doc.route);
+          if (pagePath !== homePath && pagePath !== docHomePath) {
             const stories =
               page.sideNav?.storyPaths && doc.stories?.length
                 ? doc.stories

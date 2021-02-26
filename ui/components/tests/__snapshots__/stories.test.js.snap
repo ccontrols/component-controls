@@ -10949,6 +10949,20 @@ exports[`Components/Tag Overview 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Components/Tag Twilwind Array Colors 1`] = `
+<DocumentFragment>
+  <span
+    class="css-1t9ofat-Tag"
+  >
+    <span
+      class="css-vurnku"
+    >
+      some text
+    </span>
+  </span>
+</DocumentFragment>
+`;
+
 exports[`Components/TitledImage Overview 1`] = `
 <DocumentFragment>
   <div

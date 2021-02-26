@@ -141,7 +141,9 @@ exports[`Plugins/AddonCatalog/Catalog Overview 1`] = `
               >
                 <div
                   class="css-kbmfeb-ComponentCard"
-                />
+                >
+                  Story
+                </div>
               </a>
               <div
                 class="css-10zcph3-ComponentCard"
@@ -175,6 +177,9 @@ exports[`Plugins/AddonCatalog/Catalog Overview 1`] = `
             <div
               class="css-1akfoys-ComponentCard"
             />
+            <p>
+              description of story
+            </p>
             <div
               class="css-k8h5so-ComponentCard"
             >
@@ -217,7 +222,7 @@ exports[`Plugins/AddonCatalog/ComponentCard Overview 1`] = `
         <div
           class="css-kbmfeb-ComponentCard"
         >
-          Control
+          Story
         </div>
       </a>
       <div
@@ -474,7 +479,7 @@ exports[`Plugins/AddonCatalog/ComponentList Overview 1`] = `
           <div
             class="css-kbmfeb-ComponentCard"
           >
-            Control
+            Story
           </div>
         </a>
         <div
@@ -643,7 +648,7 @@ with a
           <div
             class="css-kbmfeb-ComponentCard"
           >
-            Control
+            Story
           </div>
         </a>
         <div
@@ -812,7 +817,7 @@ with a
           <div
             class="css-kbmfeb-ComponentCard"
           >
-            Control
+            Story
           </div>
         </a>
         <div
@@ -981,7 +986,7 @@ with a
           <div
             class="css-kbmfeb-ComponentCard"
           >
-            Control
+            Story
           </div>
         </a>
         <div
@@ -1162,7 +1167,9 @@ exports[`Plugins/AddonCatalog/ComponentsCatalog Overview 1`] = `
             >
               <div
                 class="css-kbmfeb-ComponentCard"
-              />
+              >
+                Story
+              </div>
             </a>
             <div
               class="css-10zcph3-ComponentCard"
@@ -1196,6 +1203,9 @@ exports[`Plugins/AddonCatalog/ComponentsCatalog Overview 1`] = `
           <div
             class="css-1akfoys-ComponentCard"
           />
+          <p>
+            description of story
+          </p>
           <div
             class="css-k8h5so-ComponentCard"
           >
