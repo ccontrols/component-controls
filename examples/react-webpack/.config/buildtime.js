@@ -58,10 +58,6 @@ module.exports = {
     },
   },
   search: {
-    indexingModule: require.resolve(
-      '@component-controls/search-algolia/indexing',
-    ),
-    searchingModule: require.resolve('@component-controls/search-algolia'),
     fields: ['title', 'description', 'source', 'tags', 'components'],
     emptySearchDocuments: [
       'Getting started/Site generators/Gatsby',
@@ -73,11 +69,7 @@ module.exports = {
       'Writing Documentation/MDX Stories',
     ],
     options: {
-      saveIndex: true, // turn to false when no more needed to re-index algolia search
-      indexName: process.env.ALGOLIA_SEARCH_INDEX_NAME,
-      appID: process.env.ALGOLIA_SEARCH_APP_ID,
-      searchAPIKey: process.env.ALGOLIA_SEARCH_SEARCH_KEY,
-      adminAPIKey: process.env.ALGOLIA_SEARCH_ADMIN_KEY,
+      isCaseSensitive: true,
     },
   },
   tokens: {

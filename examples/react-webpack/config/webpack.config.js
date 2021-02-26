@@ -32,6 +32,9 @@ const { mergeBuildConfiguration } = require('@component-controls/config');
 const { compile, watch } = require('@component-controls/webpack-compile');
 
 const { StorePlugin } = require('@component-controls/store/plugin');
+const {
+  postBuild,
+} = require('@component-controls/react-router-integration/post-build');
 
 const postcssNormalize = require('postcss-normalize');
 
@@ -168,9 +171,17 @@ module.exports = async function(webpackEnv) {
     ...defaultCompileProps,
     configPath: '.config',
     ...env,
+    ...{
+      distFolder: env.distFolder || path.resolve(__dirname),
+      staticFolder:
+        env.staticFolder || path.join(process.cwd(), 'public', 'static'),
+    },
   };
   const run = process.env.NODE_ENV === 'development' ? watch : compile;
-  await run(buildOptions);
+  const onBundle = async ({ store }) => {
+    await postBuild(buildOptions.staticFolder, store);
+  };
+  await run(buildOptions, onBundle);
 
   return {
     mode: isEnvProduction ? 'production' : isEnvDevelopment && 'development',
