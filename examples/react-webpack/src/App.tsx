@@ -1,10 +1,10 @@
-import React, { FC } from 'react';
+import React, { FC, Fragment } from 'react';
 import { store } from '@component-controls/store/controls-store';
-import { Layout } from '@component-controls/nextjs-plugin';
+import { useRoutes } from '@component-controls/react-router-integration';
 
 const App: FC = () => {
-  console.log(store);
-  return <Layout />;
+  const routes = useRoutes(store);
+  return <Fragment>{routes}</Fragment>;
 };
 
 export default App;

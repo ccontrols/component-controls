@@ -4,10 +4,8 @@
   "version": "2.9.1",
   "dependencies": {
     "@babel/core": "7.12.3",
-    "@component-controls/app": "^2.9.1",
     "@component-controls/core": "^2.9.0",
-    "@component-controls/pages": "^2.9.1",
-    "@component-controls/routes": "^2.9.0",
+    "@component-controls/react-router-integration": "^2.9.1",
     "@component-controls/search-algolia": "^2.9.0",
     "@component-controls/search-fusejs": "^2.9.0",
     "@component-controls/store": "^2.9.1",
