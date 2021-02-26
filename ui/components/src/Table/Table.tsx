@@ -9,6 +9,7 @@ import {
   useGlobalFilter,
   useGroupBy,
   useExpanded,
+  usePagination,
   useRowSelect,
   Column,
   Cell,
@@ -27,6 +28,7 @@ import {
   UseExpandedState,
   UseRowSelectState,
   UseSortByState,
+  UsePaginationState,
   SortingRule,
   UseGroupByState,
   TableState,
@@ -36,6 +38,7 @@ import { GlobalFilter } from './TableFilter';
 import { useExpanderColumn } from './TableGrouping';
 import { useRowSelectionColumn } from './TableRowSelection';
 import { useTableLayout } from './useTableLayout';
+import { TablePagination, TablePaginationProps } from './TablePagination';
 const defaultColumn = memoize(() => ({
   subRows: undefined,
   accessor: '',
@@ -112,6 +115,11 @@ interface TableOwnProps<D extends { [key: string]: any }> {
    * initial sorting
    */
   sortBy?: Array<SortingRule<any>>;
+
+  /**
+   * enable pagination
+   */
+  pagination?: TablePaginationProps | boolean;
 }
 
 export type TableProps<D extends { [key: string]: any }> = TableOwnProps<D> &
@@ -137,6 +145,7 @@ export function Table<D extends { [key: string]: any }>({
   onSelectRowsChange,
   rowSelect,
   sortBy,
+  pagination,
   ...rest
 }: TableProps<D>): ReactElement<any, any> | null {
   const plugins: PluginHook<D>[] = [
@@ -145,14 +154,12 @@ export function Table<D extends { [key: string]: any }>({
     useGroupBy,
     useSortBy,
     useExpanded,
-    useRowSelect,
+
     useExpanderColumn(itemsLabel),
   ];
-  if (rowSelect) {
-    plugins.push(useRowSelectionColumn);
-  }
   const initialState: Partial<TableState<D>> &
     Partial<UseExpandedState<Record<number, boolean>>> &
+    Partial<UsePaginationState<D>> &
     Partial<UseGroupByState<D>> &
     Partial<UseSortByState<D>> &
     Partial<UseRowSelectState<Record<number, boolean>>> = {};
@@ -167,6 +174,21 @@ export function Table<D extends { [key: string]: any }>({
   }
   if (typeof expanded === 'object') {
     initialState.expanded = expanded;
+  }
+  if (pagination) {
+    plugins.push(usePagination);
+    if (typeof pagination === 'object') {
+      if (typeof pagination.pageIndex === 'number') {
+        initialState.pageIndex = pagination.pageIndex;
+      }
+      if (typeof pagination.pageSize === 'number') {
+        initialState.pageSize = pagination.pageSize;
+      }
+    }
+  }
+  if (rowSelect) {
+    plugins.push(useRowSelect);
+    plugins.push(useRowSelectionColumn);
   }
   initialState.selectedRowIds = initialSelected;
   const options: TableOptions<D> &
@@ -195,12 +217,14 @@ export function Table<D extends { [key: string]: any }>({
     getTableProps,
     getTableBodyProps,
     headerGroups,
-    rows,
     prepareRow,
     visibleColumns,
     preGlobalFilteredRows,
     setGlobalFilter,
     state,
+    rows,
+    page, // Instead of using 'rows', when using pagination
+    state: { pageIndex: statePageIndex, pageSize: statePageSize },
   } = tableOptions;
   const { selectedRowIds } = state;
   useEffect(() => {
@@ -209,104 +233,114 @@ export function Table<D extends { [key: string]: any }>({
     }
   }, [selectedRowIds, onSelectRowsChange]);
   return (
-    <Box as="table" variant="styles.table" {...getTableProps()} {...rest}>
-      {header && (
-        <Box as="thead" variant="styles.thead">
-          {headerGroups.map((headerGroup: any) => (
-            <Box as="tr" {...headerGroup.getHeaderGroupProps()}>
-              {headerGroup.headers.map((column: any) => (
+    <Fragment>
+      <Box as="table" variant="styles.table" {...getTableProps()} {...rest}>
+        {header && (
+          <Box as="thead" variant="styles.thead">
+            {headerGroups.map((headerGroup: any) => (
+              <Box as="tr" {...headerGroup.getHeaderGroupProps()}>
+                {headerGroup.headers.map((column: any) => (
+                  <Box
+                    as="th"
+                    variant="styles.th"
+                    {...column.getHeaderProps(
+                      sorting ? column.getSortByToggleProps() : undefined,
+                    )}
+                  >
+                    <Flex
+                      sx={{
+                        flexDirection: 'row',
+                        alignItems: 'center ',
+                      }}
+                    >
+                      <Box sx={{ mr: 1 }}>{column.render('Header')}</Box>
+                      {sorting &&
+                        column.isSorted &&
+                        (column.isSortedDesc ? (
+                          <TriangleDownIcon />
+                        ) : (
+                          <TriangleUpIcon />
+                        ))}
+                    </Flex>
+                  </Box>
+                ))}
+              </Box>
+            ))}
+            {filtering && (
+              <Box as="tr" variant="styles.thead.tr">
                 <Box
                   as="th"
                   variant="styles.th"
-                  {...column.getHeaderProps(
-                    sorting ? column.getSortByToggleProps() : undefined,
-                  )}
+                  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                  //@ts-ignore
+                  colSpan={visibleColumns.length}
+                  sx={{
+                    textAlign: 'left',
+                  }}
                 >
-                  <Flex
-                    sx={{
-                      flexDirection: 'row',
-                      alignItems: 'center ',
-                    }}
-                  >
-                    <Box sx={{ mr: 1 }}>{column.render('Header')}</Box>
-                    {sorting &&
-                      column.isSorted &&
-                      (column.isSortedDesc ? (
-                        <TriangleDownIcon />
-                      ) : (
-                        <TriangleUpIcon />
-                      ))}
-                  </Flex>
+                  <GlobalFilter
+                    itemsLabel={itemsLabel}
+                    preGlobalFilteredRows={preGlobalFilteredRows}
+                    globalFilter={state.globalFilter}
+                    setGlobalFilter={setGlobalFilter}
+                  />
                 </Box>
-              ))}
-            </Box>
-          ))}
-          {filtering && (
-            <Box as="tr" variant="styles.thead.tr">
-              <Box
-                as="th"
-                variant="styles.th"
-                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                //@ts-ignore
-                colSpan={visibleColumns.length}
-                sx={{
-                  textAlign: 'left',
-                }}
-              >
-                <GlobalFilter
-                  itemsLabel={itemsLabel}
-                  preGlobalFilteredRows={preGlobalFilteredRows}
-                  globalFilter={state.globalFilter}
-                  setGlobalFilter={setGlobalFilter}
-                />
               </Box>
-            </Box>
+            )}
+          </Box>
+        )}
+        <Box as="tbody" variant="styles.tbody" {...getTableBodyProps()}>
+          {(page || rows).map(
+            (
+              row: Row &
+                UseGroupByRowProps<D> & {
+                  isExpanded?: boolean;
+                },
+            ) => {
+              prepareRow(row);
+              const { key, ...rowProps } = row.getRowProps();
+              return (
+                <Fragment key={key}>
+                  <Box variant="styles.tr" as="tr" {...rowProps}>
+                    {row.isGrouped
+                      ? row.cells[0].render('Aggregated')
+                      : row.cells.map(
+                          (cell: Cell & Partial<UseGroupByCellProps<D>>) => {
+                            return (
+                              <Box
+                                as="td"
+                                variant="styles.td"
+                                {...cell.getCellProps()}
+                              >
+                                {cell.render('Cell')}
+                              </Box>
+                            );
+                          },
+                        )}
+                  </Box>
+                  {row.isExpanded && (
+                    <tr>
+                      <td colSpan={visibleColumns.length}>
+                        {renderRowSubComponent
+                          ? renderRowSubComponent({ row })
+                          : null}
+                      </td>
+                    </tr>
+                  )}
+                </Fragment>
+              );
+            },
           )}
         </Box>
-      )}
-      <Box as="tbody" variant="styles.tbody" {...getTableBodyProps()}>
-        {rows.map(
-          (
-            row: Row &
-              UseGroupByRowProps<D> & {
-                isExpanded?: boolean;
-              },
-          ) => {
-            prepareRow(row);
-            const { key, ...rowProps } = row.getRowProps();
-            return (
-              <Fragment key={key}>
-                <Box variant="styles.tr" as="tr" {...rowProps}>
-                  {row.isGrouped
-                    ? row.cells[0].render('Aggregated')
-                    : row.cells.map(
-                        (cell: Cell & Partial<UseGroupByCellProps<D>>) => {
-                          return (
-                            <Box
-                              as="td"
-                              variant="styles.td"
-                              {...cell.getCellProps()}
-                            >
-                              {cell.render('Cell')}
-                            </Box>
-                          );
-                        },
-                      )}
-                </Box>
-                {row.isExpanded && (
-                  <tr>
-                    <td colSpan={visibleColumns.length}>
-                      {renderRowSubComponent
-                        ? renderRowSubComponent({ row })
-                        : null}
-                    </td>
-                  </tr>
-                )}
-              </Fragment>
-            );
-          },
-        )}
       </Box>
-    </Box>
+      {pagination && (
+        <TablePagination
+          {...pagination}
+          pageIndex={statePageIndex}
+          pageSize={statePageSize}
+          {...tableOptions}
+        />
+      )}
+    </Fragment>
   );
 }
