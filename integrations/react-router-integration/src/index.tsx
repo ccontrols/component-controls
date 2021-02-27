@@ -1,5 +1,5 @@
 import React, { ReactElement, useMemo } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 import { Store } from '@component-controls/core';
 import {
@@ -12,7 +12,7 @@ import {
 import { DocPageTemplate } from './templates/DocPage';
 import { DocHomeTemplate } from './templates/DocHome';
 
-export const useRoutes = (store: Store): ReactElement => {
+export const useRoutes = (store: Store): ReactElement[] => {
   const routes = useMemo(() => {
     const routes = [];
     //home page
@@ -63,5 +63,5 @@ export const useRoutes = (store: Store): ReactElement => {
     );
     return routes;
   }, [store]);
-  return <Router>{routes}</Router>;
+  return routes;
 };
