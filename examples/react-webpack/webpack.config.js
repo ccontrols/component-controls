@@ -15,16 +15,15 @@ const {
 
 const isProd = process.env.NODE_ENV === 'production';
 
-const outFolder = 'build';
+const outFolder = process.env.BUILD_PATH || 'build';
 
 const buildOptions = {
   ...defaultCompileProps,
   configPath: '.config',
-  ...process.senv,
   ...{
-    distFolder: process.env.distFolder || path.join(process.cwd(), outFolder),
+    distFolder: process.env.DIST_PATH || path.join(process.cwd(), outFolder),
     staticFolder:
-      process.env.staticFolder || path.join(process.cwd(), outFolder, 'static'),
+      process.env.STATIC_PATH || path.join(process.cwd(), outFolder, 'static'),
   },
 };
 const config = {
