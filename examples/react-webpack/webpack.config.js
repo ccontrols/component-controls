@@ -58,6 +58,10 @@ const config = {
       bundleFileName: getBundleName(buildOptions),
     }),
   ],
+  performance: {
+    maxEntrypointSize: 8000000,
+    maxAssetSize: 8000000,
+  },
 };
 
 if (isProd) {
