@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/routes",
-  "version": "2.9.0",
+  "version": "2.10.0",
   "description": "component-controls routes utilities",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

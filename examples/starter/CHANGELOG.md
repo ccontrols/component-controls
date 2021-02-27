@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.10.0](https://github.com/atanasster/gatsby-controls-starter/compare/v2.9.1...v2.10.0) (2021-02-27)
+
+
+### Bug Fixes
+
+* fix confi tabs ([966324a](https://github.com/atanasster/gatsby-controls-starter/commit/966324a2cb271c264c64824446f87397c3d178aa))
+* fix pages tabs ([8fdeb25](https://github.com/atanasster/gatsby-controls-starter/commit/8fdeb258787be56aaf8ea4fc52ecc1f7f36b4f81))
+* remove testing page ([f2eb346](https://github.com/atanasster/gatsby-controls-starter/commit/f2eb3465f45a6c0def10b07df80ac45f25be554a))
+
+
+
+
+
 ## [2.9.1](https://github.com/atanasster/gatsby-controls-starter/compare/v2.9.0...v2.9.1) (2021-02-23)
 
 **Note:** Version bump only for package component-controls-starter

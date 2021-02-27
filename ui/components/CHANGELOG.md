@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.10.0](https://github.com/ccontrols/component-controls/compare/v2.9.1...v2.10.0) (2021-02-27)
+
+
+### Features
+
+* add react-table pagination ([3797719](https://github.com/ccontrols/component-controls/commit/37977197c44600fd5fc4372b5aac5c1cb94d4770))
+
+
+
+
+
 ## [2.9.1](https://github.com/ccontrols/component-controls/compare/v2.9.0...v2.9.1) (2021-02-23)
 
 

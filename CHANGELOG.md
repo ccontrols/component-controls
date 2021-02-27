@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.10.0](https://github.com/ccontrols/component-controls/compare/v2.9.1...v2.10.0) (2021-02-27)
+
+
+### Bug Fixes
+
+* avoid mdx duplicated paths on missing tabs ([cb2b94b](https://github.com/ccontrols/component-controls/commit/cb2b94b0bce92c198747bcfce42fa509132a18cc))
+* fix confi tabs ([966324a](https://github.com/ccontrols/component-controls/commit/966324a2cb271c264c64824446f87397c3d178aa))
+* fix pages tabs ([8fdeb25](https://github.com/ccontrols/component-controls/commit/8fdeb258787be56aaf8ea4fc52ecc1f7f36b4f81))
+* remove bundle ([f953d96](https://github.com/ccontrols/component-controls/commit/f953d965d5cd1558817b3efb74ad4474e53fa339))
+* remove bundle size limit ([ab8c474](https://github.com/ccontrols/component-controls/commit/ab8c4746025395e65db893ae177ac4e2c70d25ce))
+* remove testing page ([f2eb346](https://github.com/ccontrols/component-controls/commit/f2eb3465f45a6c0def10b07df80ac45f25be554a))
+
+
+### Features
+
+* add react-table pagination ([3797719](https://github.com/ccontrols/component-controls/commit/37977197c44600fd5fc4372b5aac5c1cb94d4770))
+* added post-build handling ([c9e339d](https://github.com/ccontrols/component-controls/commit/c9e339d1215a032d88299023832562dc727ff0a8))
+* initial commit ([5436b37](https://github.com/ccontrols/component-controls/commit/5436b3745f259a35723dfcebd9b4602a9601c809))
+* react router integration ([631541f](https://github.com/ccontrols/component-controls/commit/631541f918a3d84162e5cd564bc2fa08086d838c))
+
+
+
+
+
 ## [2.9.1](https://github.com/ccontrols/component-controls/compare/v2.9.0...v2.9.1) (2021-02-23)
 
 
