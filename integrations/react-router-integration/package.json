@@ -1,0 +1,63 @@
+{
+  "name": "@component-controls/react-router-integration",
+  "version": "2.9.1",
+  "description": "react-router integration to create stories documentation sites",
+  "keywords": [
+    "story",
+    "nextjs"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "package.json",
+    "README.md",
+    "post-build.js"
+  ],
+  "scripts": {
+    "build": "yarn cross-env NODE_ENV=production rollup -c",
+    "dev": "yarn cross-env NODE_ENV=development rollup -cw",
+    "docs": "ts-md",
+    "fix": "yarn lint --fix",
+    "lint": "yarn eslint . --ext mdx,ts,tsx",
+    "prepare": "yarn build",
+    "test": "yarn jest --passWithNoTests"
+  },
+  "homepage": "https://github.com/ccontrols/component-controls",
+  "bugs": {
+    "url": "https://github.com/ccontrols/component-controls/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccontrols/component-controls.git",
+    "directory": "integrations/react-router-integration"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@component-controls/app": "^2.9.1",
+    "@component-controls/pages": "^2.9.1",
+    "@component-controls/routes": "^2.9.0",
+    "@component-controls/store": "^2.9.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@component-controls/ts-markdown-docs": "^2.6.0",
+    "@component-controls/logger": "^2.8.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-router": "^5.1.11",
+    "@types/react-router-dom": "^5.1.7",
+    "typescript": "^4.0.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": [
+    "Atanas Stoyanov"
+  ],
+  "gitHead": "e30d62f101e104711a16261fce04785d58cac1eb"
+}

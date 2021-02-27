@@ -54,10 +54,10 @@ export interface DocPagesPath {
   type: DocType;
   path: string;
   lastModified?: string;
-  docId?: string | null;
-  storyId?: string | null;
-  category?: string | null;
-  activeTab?: string | null;
+  docId?: string;
+  storyId?: string;
+  category?: string;
+  activeTab?: string;
 }
 
 export const getPageTabs = (

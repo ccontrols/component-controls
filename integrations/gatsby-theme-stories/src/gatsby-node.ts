@@ -59,8 +59,7 @@ export const createPagesStatefully = async (
         createPage(props);
       };
       //home page
-      const { path, docId = null, type = null, storyId = null } =
-        getIndexPage(store) || {};
+      const { path, docId, type, storyId } = getIndexPage(store) || {};
       createGatsbyPage({
         path,
         component: require.resolve(`../src/templates/DocPage.tsx`),
@@ -85,14 +84,7 @@ export const createPagesStatefully = async (
 
       const docPages = getDocPages(store);
       docPages.forEach(
-        ({
-          path,
-          type,
-          docId = null,
-          storyId = null,
-          category = null,
-          activeTab = null,
-        }: DocPagesPath) => {
+        ({ path, type, docId, storyId, category, activeTab }: DocPagesPath) => {
           createGatsbyPage({
             path,
             component: require.resolve(`../src/templates/DocPage.tsx`),
