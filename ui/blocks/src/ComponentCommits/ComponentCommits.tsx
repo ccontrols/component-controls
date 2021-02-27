@@ -92,6 +92,17 @@ export const ComponentCommits: FC<ComponentCommitsProps> = ({
     return null;
   }
 
+  const paginationProps = {
+    pageIndex: 0,
+    pageSize: 10,
+    pageTemplate: 'Page ${pageIndex} of ${pageLength}',
+    pageVisible: true,
+    pageSizeTemplate: '${pageSize} rows',
+    pageSizeVisible: true,
+    goToPageVisible: true,
+    goToPageTemplate: 'Go to page:',
+  };
+
   return (
     <BlockContainer {...props}>
       <Table<Commit>
@@ -104,6 +115,7 @@ export const ComponentCommits: FC<ComponentCommitsProps> = ({
             desc: true,
           },
         ]}
+        pagination={paginationProps}
       />
     </BlockContainer>
   );
