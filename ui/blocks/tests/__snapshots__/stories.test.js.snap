@@ -2621,7 +2621,7 @@ exports[`Blocks/Playground/ESM Child 1`] = `
               >
                 <button
                   aria-label="reset zoom"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -2646,7 +2646,7 @@ exports[`Blocks/Playground/ESM Child 1`] = `
               >
                 <button
                   aria-label="zoom out"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -2671,7 +2671,7 @@ exports[`Blocks/Playground/ESM Child 1`] = `
               >
                 <button
                   aria-label="zoom in"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -2866,7 +2866,7 @@ exports[`Blocks/Playground/ESM Custom Title 1`] = `
               >
                 <button
                   aria-label="reset zoom"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -2891,7 +2891,7 @@ exports[`Blocks/Playground/ESM Custom Title 1`] = `
               >
                 <button
                   aria-label="zoom out"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -2916,7 +2916,7 @@ exports[`Blocks/Playground/ESM Custom Title 1`] = `
               >
                 <button
                   aria-label="zoom in"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -3108,7 +3108,7 @@ exports[`Blocks/Playground/ESM Dark Theme 1`] = `
               >
                 <button
                   aria-label="reset zoom"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -3133,7 +3133,7 @@ exports[`Blocks/Playground/ESM Dark Theme 1`] = `
               >
                 <button
                   aria-label="zoom out"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -3158,7 +3158,7 @@ exports[`Blocks/Playground/ESM Dark Theme 1`] = `
               >
                 <button
                   aria-label="zoom in"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -3350,7 +3350,7 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
               >
                 <button
                   aria-label="reset zoom"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -3375,7 +3375,7 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
               >
                 <button
                   aria-label="zoom out"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -3400,7 +3400,7 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
               >
                 <button
                   aria-label="zoom in"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -4145,7 +4145,7 @@ exports[`Blocks/Playground/ESM Extra Panel 1`] = `
               >
                 <button
                   aria-label="reset zoom"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -4170,7 +4170,7 @@ exports[`Blocks/Playground/ESM Extra Panel 1`] = `
               >
                 <button
                   aria-label="zoom out"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -4195,7 +4195,7 @@ exports[`Blocks/Playground/ESM Extra Panel 1`] = `
               >
                 <button
                   aria-label="zoom in"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -4544,7 +4544,7 @@ exports[`Blocks/Playground/ESM Multi Child 1`] = `
               >
                 <button
                   aria-label="reset zoom"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -4569,7 +4569,7 @@ exports[`Blocks/Playground/ESM Multi Child 1`] = `
               >
                 <button
                   aria-label="zoom out"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -4594,7 +4594,7 @@ exports[`Blocks/Playground/ESM Multi Child 1`] = `
               >
                 <button
                   aria-label="zoom in"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -4792,7 +4792,7 @@ exports[`Blocks/Playground/ESM Multi Stories 1`] = `
               >
                 <button
                   aria-label="reset zoom"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -4817,7 +4817,7 @@ exports[`Blocks/Playground/ESM Multi Stories 1`] = `
               >
                 <button
                   aria-label="zoom out"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -4842,7 +4842,7 @@ exports[`Blocks/Playground/ESM Multi Stories 1`] = `
               >
                 <button
                   aria-label="zoom in"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -5076,7 +5076,7 @@ exports[`Blocks/Playground/ESM Not Collapsible 1`] = `
           >
             <button
               aria-label="reset zoom"
-              class="css-j69xip"
+              class="css-97huhz"
               style="padding-top: 3px; padding-bottom: 3px;"
             >
               <svg
@@ -5101,7 +5101,7 @@ exports[`Blocks/Playground/ESM Not Collapsible 1`] = `
           >
             <button
               aria-label="zoom out"
-              class="css-j69xip"
+              class="css-97huhz"
               style="padding-top: 3px; padding-bottom: 3px;"
             >
               <svg
@@ -5126,7 +5126,7 @@ exports[`Blocks/Playground/ESM Not Collapsible 1`] = `
           >
             <button
               aria-label="zoom in"
-              class="css-j69xip"
+              class="css-97huhz"
               style="padding-top: 3px; padding-bottom: 3px;"
             >
               <svg
@@ -5316,7 +5316,7 @@ exports[`Blocks/Playground/ESM Overview 1`] = `
               >
                 <button
                   aria-label="reset zoom"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -5341,7 +5341,7 @@ exports[`Blocks/Playground/ESM Overview 1`] = `
               >
                 <button
                   aria-label="zoom out"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -5366,7 +5366,7 @@ exports[`Blocks/Playground/ESM Overview 1`] = `
               >
                 <button
                   aria-label="zoom in"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -5558,7 +5558,7 @@ exports[`Blocks/Playground/ESM Scale 1`] = `
               >
                 <button
                   aria-label="reset zoom"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -5583,7 +5583,7 @@ exports[`Blocks/Playground/ESM Scale 1`] = `
               >
                 <button
                   aria-label="zoom out"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -5608,7 +5608,7 @@ exports[`Blocks/Playground/ESM Scale 1`] = `
               >
                 <button
                   aria-label="zoom in"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -5858,7 +5858,7 @@ exports[`Blocks/Playground/ESM Title 1`] = `
               >
                 <button
                   aria-label="reset zoom"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -5883,7 +5883,7 @@ exports[`Blocks/Playground/ESM Title 1`] = `
               >
                 <button
                   aria-label="zoom out"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -5908,7 +5908,7 @@ exports[`Blocks/Playground/ESM Title 1`] = `
               >
                 <button
                   aria-label="zoom in"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -6077,7 +6077,7 @@ exports[`Blocks/Playground/ESM Visible Tabs 1`] = `
               >
                 <button
                   aria-label="reset zoom"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -6102,7 +6102,7 @@ exports[`Blocks/Playground/ESM Visible Tabs 1`] = `
               >
                 <button
                   aria-label="zoom out"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -6127,7 +6127,7 @@ exports[`Blocks/Playground/ESM Visible Tabs 1`] = `
               >
                 <button
                   aria-label="zoom in"
-                  class="css-j69xip"
+                  class="css-97huhz"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -10131,7 +10131,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                 >
                   <button
                     aria-label="reset zoom"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -10156,7 +10156,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                 >
                   <button
                     aria-label="zoom out"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -10181,7 +10181,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                 >
                   <button
                     aria-label="zoom in"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -10362,7 +10362,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                 >
                   <button
                     aria-label="reset zoom"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -10387,7 +10387,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                 >
                   <button
                     aria-label="zoom out"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -10412,7 +10412,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                 >
                   <button
                     aria-label="zoom in"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -10496,7 +10496,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                               class="story-render-container css-dhmrnb"
                             >
                               <button
-                                class="css-j69xip"
+                                class="css-97huhz"
                               >
                                 test
                               </button>
@@ -10593,7 +10593,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                 >
                   <button
                     aria-label="reset zoom"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -10618,7 +10618,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                 >
                   <button
                     aria-label="zoom out"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -10643,7 +10643,7 @@ exports[`Blocks/Stories Custom Title 1`] = `
                 >
                   <button
                     aria-label="zoom in"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -10929,7 +10929,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                 >
                   <button
                     aria-label="reset zoom"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -10954,7 +10954,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                 >
                   <button
                     aria-label="zoom out"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -10979,7 +10979,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                 >
                   <button
                     aria-label="zoom in"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -11160,7 +11160,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                 >
                   <button
                     aria-label="reset zoom"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -11185,7 +11185,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                 >
                   <button
                     aria-label="zoom out"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -11210,7 +11210,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                 >
                   <button
                     aria-label="zoom in"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -11294,7 +11294,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                               class="story-render-container css-dhmrnb"
                             >
                               <button
-                                class="css-j69xip"
+                                class="css-97huhz"
                               >
                                 test
                               </button>
@@ -11391,7 +11391,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                 >
                   <button
                     aria-label="reset zoom"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -11416,7 +11416,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                 >
                   <button
                     aria-label="zoom out"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -11441,7 +11441,7 @@ exports[`Blocks/Stories Dark Theme 1`] = `
                 >
                   <button
                     aria-label="zoom in"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -11693,7 +11693,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
             >
               <button
                 aria-label="reset zoom"
-                class="css-j69xip"
+                class="css-97huhz"
                 style="padding-top: 3px; padding-bottom: 3px;"
               >
                 <svg
@@ -11718,7 +11718,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
             >
               <button
                 aria-label="zoom out"
-                class="css-j69xip"
+                class="css-97huhz"
                 style="padding-top: 3px; padding-bottom: 3px;"
               >
                 <svg
@@ -11743,7 +11743,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
             >
               <button
                 aria-label="zoom in"
-                class="css-j69xip"
+                class="css-97huhz"
                 style="padding-top: 3px; padding-bottom: 3px;"
               >
                 <svg
@@ -11924,7 +11924,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
             >
               <button
                 aria-label="reset zoom"
-                class="css-j69xip"
+                class="css-97huhz"
                 style="padding-top: 3px; padding-bottom: 3px;"
               >
                 <svg
@@ -11949,7 +11949,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
             >
               <button
                 aria-label="zoom out"
-                class="css-j69xip"
+                class="css-97huhz"
                 style="padding-top: 3px; padding-bottom: 3px;"
               >
                 <svg
@@ -11974,7 +11974,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
             >
               <button
                 aria-label="zoom in"
-                class="css-j69xip"
+                class="css-97huhz"
                 style="padding-top: 3px; padding-bottom: 3px;"
               >
                 <svg
@@ -12058,7 +12058,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
                           class="story-render-container css-dhmrnb"
                         >
                           <button
-                            class="css-j69xip"
+                            class="css-97huhz"
                           >
                             test
                           </button>
@@ -12155,7 +12155,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
             >
               <button
                 aria-label="reset zoom"
-                class="css-j69xip"
+                class="css-97huhz"
                 style="padding-top: 3px; padding-bottom: 3px;"
               >
                 <svg
@@ -12180,7 +12180,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
             >
               <button
                 aria-label="zoom out"
-                class="css-j69xip"
+                class="css-97huhz"
                 style="padding-top: 3px; padding-bottom: 3px;"
               >
                 <svg
@@ -12205,7 +12205,7 @@ exports[`Blocks/Stories Not Collapsible 1`] = `
             >
               <button
                 aria-label="zoom in"
-                class="css-j69xip"
+                class="css-97huhz"
                 style="padding-top: 3px; padding-bottom: 3px;"
               >
                 <svg
@@ -12489,7 +12489,7 @@ exports[`Blocks/Stories Overview 1`] = `
                 >
                   <button
                     aria-label="reset zoom"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -12514,7 +12514,7 @@ exports[`Blocks/Stories Overview 1`] = `
                 >
                   <button
                     aria-label="zoom out"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -12539,7 +12539,7 @@ exports[`Blocks/Stories Overview 1`] = `
                 >
                   <button
                     aria-label="zoom in"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -12720,7 +12720,7 @@ exports[`Blocks/Stories Overview 1`] = `
                 >
                   <button
                     aria-label="reset zoom"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -12745,7 +12745,7 @@ exports[`Blocks/Stories Overview 1`] = `
                 >
                   <button
                     aria-label="zoom out"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -12770,7 +12770,7 @@ exports[`Blocks/Stories Overview 1`] = `
                 >
                   <button
                     aria-label="zoom in"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -12854,7 +12854,7 @@ exports[`Blocks/Stories Overview 1`] = `
                               class="story-render-container css-dhmrnb"
                             >
                               <button
-                                class="css-j69xip"
+                                class="css-97huhz"
                               >
                                 test
                               </button>
@@ -12951,7 +12951,7 @@ exports[`Blocks/Stories Overview 1`] = `
                 >
                   <button
                     aria-label="reset zoom"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -12976,7 +12976,7 @@ exports[`Blocks/Stories Overview 1`] = `
                 >
                   <button
                     aria-label="zoom out"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -13001,7 +13001,7 @@ exports[`Blocks/Stories Overview 1`] = `
                 >
                   <button
                     aria-label="zoom in"
-                    class="css-j69xip"
+                    class="css-97huhz"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg

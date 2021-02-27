@@ -3077,7 +3077,7 @@ exports[`Application/SidebarsPage Overview 1`] = `
                             >
                               <button
                                 aria-label="reset zoom"
-                                class="css-j69xip"
+                                class="css-97huhz"
                                 style="padding-top: 3px; padding-bottom: 3px;"
                               >
                                 <svg
@@ -3102,7 +3102,7 @@ exports[`Application/SidebarsPage Overview 1`] = `
                             >
                               <button
                                 aria-label="zoom out"
-                                class="css-j69xip"
+                                class="css-97huhz"
                                 style="padding-top: 3px; padding-bottom: 3px;"
                               >
                                 <svg
@@ -3127,7 +3127,7 @@ exports[`Application/SidebarsPage Overview 1`] = `
                             >
                               <button
                                 aria-label="zoom in"
-                                class="css-j69xip"
+                                class="css-97huhz"
                                 style="padding-top: 3px; padding-bottom: 3px;"
                               >
                                 <svg
@@ -4259,7 +4259,7 @@ exports[`Application/SidebarsPage Overview 1`] = `
                               >
                                 <button
                                   aria-label="reset zoom"
-                                  class="css-j69xip"
+                                  class="css-97huhz"
                                   style="padding-top: 3px; padding-bottom: 3px;"
                                 >
                                   <svg
@@ -4284,7 +4284,7 @@ exports[`Application/SidebarsPage Overview 1`] = `
                               >
                                 <button
                                   aria-label="zoom out"
-                                  class="css-j69xip"
+                                  class="css-97huhz"
                                   style="padding-top: 3px; padding-bottom: 3px;"
                                 >
                                   <svg
@@ -4309,7 +4309,7 @@ exports[`Application/SidebarsPage Overview 1`] = `
                               >
                                 <button
                                   aria-label="zoom in"
-                                  class="css-j69xip"
+                                  class="css-97huhz"
                                   style="padding-top: 3px; padding-bottom: 3px;"
                                 >
                                   <svg
@@ -4490,7 +4490,7 @@ exports[`Application/SidebarsPage Overview 1`] = `
                               >
                                 <button
                                   aria-label="reset zoom"
-                                  class="css-j69xip"
+                                  class="css-97huhz"
                                   style="padding-top: 3px; padding-bottom: 3px;"
                                 >
                                   <svg
@@ -4515,7 +4515,7 @@ exports[`Application/SidebarsPage Overview 1`] = `
                               >
                                 <button
                                   aria-label="zoom out"
-                                  class="css-j69xip"
+                                  class="css-97huhz"
                                   style="padding-top: 3px; padding-bottom: 3px;"
                                 >
                                   <svg
@@ -4540,7 +4540,7 @@ exports[`Application/SidebarsPage Overview 1`] = `
                               >
                                 <button
                                   aria-label="zoom in"
-                                  class="css-j69xip"
+                                  class="css-97huhz"
                                   style="padding-top: 3px; padding-bottom: 3px;"
                                 >
                                   <svg
@@ -4624,7 +4624,7 @@ exports[`Application/SidebarsPage Overview 1`] = `
                                             class="story-render-container css-dhmrnb"
                                           >
                                             <button
-                                              class="css-j69xip"
+                                              class="css-97huhz"
                                             >
                                               test
                                             </button>
@@ -4721,7 +4721,7 @@ exports[`Application/SidebarsPage Overview 1`] = `
                               >
                                 <button
                                   aria-label="reset zoom"
-                                  class="css-j69xip"
+                                  class="css-97huhz"
                                   style="padding-top: 3px; padding-bottom: 3px;"
                                 >
                                   <svg
@@ -4746,7 +4746,7 @@ exports[`Application/SidebarsPage Overview 1`] = `
                               >
                                 <button
                                   aria-label="zoom out"
-                                  class="css-j69xip"
+                                  class="css-97huhz"
                                   style="padding-top: 3px; padding-bottom: 3px;"
                                 >
                                   <svg
@@ -4771,7 +4771,7 @@ exports[`Application/SidebarsPage Overview 1`] = `
                               >
                                 <button
                                   aria-label="zoom in"
-                                  class="css-j69xip"
+                                  class="css-97huhz"
                                   style="padding-top: 3px; padding-bottom: 3px;"
                                 >
                                   <svg
