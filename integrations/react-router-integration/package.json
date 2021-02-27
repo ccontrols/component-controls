@@ -39,6 +39,7 @@
     "@component-controls/pages": "^2.9.1",
     "@component-controls/routes": "^2.9.0",
     "@component-controls/store": "^2.9.1",
+    "@component-controls/webpack-compile": "^2.9.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router": "^5.2.0",

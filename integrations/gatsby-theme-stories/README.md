@@ -9,7 +9,6 @@
     -   [<ins>GatsbyLink</ins>](#insgatsbylinkins)
     -   [<ins>Layout</ins>](#inslayoutins)
     -   [<ins>DefaultName</ins>](#insdefaultnameins)
-    -   [<ins>CategoryPage</ins>](#inscategorypageins)
     -   [<ins>DocHome</ins>](#insdochomeins)
     -   [<ins>DocPage</ins>](#insdocpageins)
 
@@ -72,16 +71,6 @@ _Layout [source code](https://github.com/ccontrols/component-controls/tree/maste
 ## <ins>DefaultName</ins>
 
 _DefaultName [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/pages/404.tsx)_
-
-## <ins>CategoryPage</ins>
-
-_CategoryPage [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/templates/CategoryPage.tsx)_
-
-### properties
-
-| Name           | Type                                                  | Description |
-| -------------- | ----------------------------------------------------- | ----------- |
-| `pageContext*` | _{ type: string; category: string; docId?: string; }_ |             |
 
 ## <ins>DocHome</ins>
 

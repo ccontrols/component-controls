@@ -13,8 +13,8 @@
     -   [<ins>Description</ins>](#insdescriptionins)
     -   [<ins>ExternalLink</ins>](#insexternallinkins)
     -   [<ins>GithubAvatar</ins>](#insgithubavatarins)
-    -   [<ins>GithubAvatarList</ins>](#insgithubavatarlistins)
     -   [<ins>useGithubProfile</ins>](#insusegithubprofileins)
+    -   [<ins>GithubAvatarList</ins>](#insgithubavatarlistins)
     -   [<ins>Header</ins>](#insheaderins)
     -   [<ins>HoverBox</ins>](#inshoverboxins)
     -   [<ins>Keyboard</ins>](#inskeyboardins)
@@ -38,6 +38,7 @@
     -   [<ins>Subtitle</ins>](#inssubtitleins)
     -   [<ins>SyntaxHighlighter</ins>](#inssyntaxhighlighterins)
     -   [<ins>Table</ins>](#instableins)
+    -   [<ins>TablePagination</ins>](#instablepaginationins)
     -   [<ins>Tab</ins>](#instabins)
     -   [<ins>TabList</ins>](#instablistins)
     -   [<ins>TabPanel</ins>](#instabpanelins)
@@ -216,7 +217,7 @@ _ExternalLink [source code](https://github.com/ccontrols/component-controls/tree
 
 avatar to be used in an AvatarList container
 
-_GithubAvatar [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/GithubAvatarList/GithubAvatar.tsx)_
+_GithubAvatar [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/GithubAvatar/GithubAvatar.tsx)_
 
 ### properties
 
@@ -229,6 +230,19 @@ _GithubAvatar [source code](https://github.com/ccontrols/component-controls/tree
 | `size`              | _number_    | size in pixels                                       |
 | `fixedSize`         | _boolean_   | whether to fix the size of the avataro on hover      |
 | `githubAccessToken` | _string_    | to increase access rate for github user profile info |
+
+## <ins>useGithubProfile</ins>
+
+_useGithubProfile [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/GithubAvatar/useGithubProfile.tsx)_
+
+### properties
+
+| Name                | Type     | Description |
+| ------------------- | -------- | ----------- |
+| `username*`         | _string_ |             |
+| `useremail`         | _string_ |             |
+| `githubAccessToken` | _string_ |             |
+| `size`              | _number_ |             |
 
 ## <ins>GithubAvatarList</ins>
 
@@ -252,19 +266,6 @@ _GithubAvatarList [source code](https://github.com/ccontrols/component-controls/
 | `variant`           | _string_                                                               |                                                      |
 | `css`               | _Interpolation&lt;any>_                                                |                                                      |
 | `sx`                | _ThemeUIStyleObject_                                                   |                                                      |
-
-## <ins>useGithubProfile</ins>
-
-_useGithubProfile [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/GithubAvatarList/useGithubProfile.tsx)_
-
-### properties
-
-| Name                | Type     | Description |
-| ------------------- | -------- | ----------- |
-| `username*`         | _string_ |             |
-| `useremail`         | _string_ |             |
-| `githubAccessToken` | _string_ |             |
-| `size`              | _number_ |             |
 
 ## <ins>Header</ins>
 
@@ -623,11 +624,29 @@ _Table [source code](https://github.com/ccontrols/component-controls/tree/master
 | `skipPageReset`         | _boolean_                                                              | reset state update while update table data                                     |
 | `renderRowSubComponent` | _(props: { row: Row&lt;{}>; }) => ReactNode_                           | callback to render a SubComponent row                                          |
 | `sortBy`                | _SortingRule&lt;any>\[]_                                               | initial sorting                                                                |
+| `pagination`            | _boolean \| TablePaginationProps_                                      | enable pagination                                                              |
 | `ref`                   | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                                                                                |
 | `as`                    | _ElementType&lt;any>_                                                  |                                                                                |
 | `variant`               | _string_                                                               |                                                                                |
 | `css`                   | _Interpolation&lt;any>_                                                |                                                                                |
 | `sx`                    | _ThemeUIStyleObject_                                                   |                                                                                |
+
+## <ins>TablePagination</ins>
+
+_TablePagination [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Table/TablePagination.tsx)_
+
+### properties
+
+| Name               | Type      | Description                                                     |
+| ------------------ | --------- | --------------------------------------------------------------- |
+| `pageTemplate`     | _string_  | 'Page ${pageIndex} of ${pageLength}' template                   |
+| `pageVisible`      | _boolean_ | ability to hide the page xx of yy block                         |
+| `pageSizeTemplate` | _string_  | string template for the page size selection '${pageSize} rows', |
+| `pageSizeVisible`  | _boolean_ | ability to hide the page size selector                          |
+| `goToPageTemplate` | _string_  | string for the go to page label 'Go to page:'                   |
+| `goToPageVisible`  | _boolean_ | ability to hide the go to page block                            |
+| `pageIndex`        | _number_  | initial page index when pagination is enabled                   |
+| `pageSize`         | _number_  | initial page size when pagination is enabled                    |
 
 ## <ins>Tab</ins>
 
