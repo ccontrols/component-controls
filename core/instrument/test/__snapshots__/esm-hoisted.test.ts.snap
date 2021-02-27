@@ -64,7 +64,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.9.1",
+      "version": "2.10.0",
     },
     "f287f1a0ceeea6cbbc4c37123d236d06": Object {
       "dependencies": Object {
@@ -111,7 +111,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.9.1",
+      "version": "2.10.0",
     },
   },
   "stories": Object {
@@ -204,7 +204,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.9.1",
+      "version": "2.10.0",
     },
   },
   "stories": Object {
@@ -311,7 +311,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.9.1",
+      "version": "2.10.0",
     },
   },
   "stories": Object {
