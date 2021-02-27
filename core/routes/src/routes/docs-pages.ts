@@ -91,16 +91,18 @@ export const getDocPages = (store: Store): DocPagesPath[] => {
                 : [undefined];
             stories.forEach((storyId?: string) => {
               const path = getStoryPath(storyId, doc, store, route);
-              docPaths.push({
-                lastModified: doc.dateModified
-                  ? new Date(doc.dateModified).toISOString()
-                  : undefined,
-                path,
-                type: docType,
-                activeTab: route,
-                docId: doc.title,
-                storyId,
-              });
+              if (!docPaths.find(p => p.path === path)) {
+                docPaths.push({
+                  lastModified: doc.dateModified
+                    ? new Date(doc.dateModified).toISOString()
+                    : undefined,
+                  path,
+                  type: docType,
+                  activeTab: route,
+                  docId: doc.title,
+                  storyId,
+                });
+              }
             });
           }
         });
