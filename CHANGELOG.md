@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.10.3](https://github.com/ccontrols/component-controls/compare/v2.10.2...v2.10.3) (2021-02-28)
+
+
+### Bug Fixes
+
+* remove unused parameter ([0e873ea](https://github.com/ccontrols/component-controls/commit/0e873ea7a7c3429a7159e68bacd2a66f96f96b63))
+
+
+
+
+
 ## [2.10.2](https://github.com/ccontrols/component-controls/compare/v2.10.1...v2.10.2) (2021-02-28)
 
 
