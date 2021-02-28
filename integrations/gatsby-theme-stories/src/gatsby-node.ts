@@ -35,8 +35,6 @@ import {
   getSiteMap,
 } from '@component-controls/routes';
 
-const { StorePlugin } = require('@component-controls/store/plugin');
-
 export const createPagesStatefully = async (
   { actions, store: gatsbyStore }: CreatePagesArgs,
   options: BuildProps,
@@ -132,10 +130,18 @@ export const onCreateWebpackConfig = (
 ): void => {
   //inject store bundle name
   actions.setWebpackConfig({
-    plugins: [
-      new StorePlugin({
-        bundleFileName: getBundleName(mergeBuildConfiguration(options)),
-      }),
-    ],
+    module: {
+      rules: [
+        {
+          test: require.resolve('@component-controls/store/controls-store'),
+          use: {
+            loader: require.resolve('@component-controls/store/loader.js'),
+            options: {
+              bundleFileName: getBundleName(mergeBuildConfiguration(options)),
+            },
+          },
+        },
+      ],
+    },
   });
 };

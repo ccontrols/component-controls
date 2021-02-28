@@ -6,6 +6,5 @@ export default config({
     './src/live_store.ts',
     './src/static_store.ts',
     './src/webpack/loader.ts',
-    './src/webpack/plugin.ts',
   ],
 });
