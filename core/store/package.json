@@ -44,6 +44,7 @@
     "@component-controls/render": "^2.9.0",
     "analytics": "^0.5.2",
     "broadcast-channel": "^3.1.0",
+    "path": "^0.12.7",
     "recoil": "^0.0.10",
     "typescript": "^4.0.5"
   },
