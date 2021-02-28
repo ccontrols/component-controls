@@ -9,7 +9,7 @@
     "search/**/*",
     "ui/**/*"
   ],
-  "version": "2.10.1",
+  "version": "2.10.2",
   "npmClient": "yarn",
   "useWorkspaces": true
 }

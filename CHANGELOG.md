@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.10.2](https://github.com/ccontrols/component-controls/compare/v2.10.1...v2.10.2) (2021-02-28)
+
+
+### Bug Fixes
+
+* add types for post-build ([97566e1](https://github.com/ccontrols/component-controls/commit/97566e1ab1db7707b2a0132a3d4f76d05c1c0961))
+* plugin types export ([8c0798b](https://github.com/ccontrols/component-controls/commit/8c0798b168ed6aa670fd5e0f0fd04d61f75944fe))
+
+
+
+
+
 ## [2.10.1](https://github.com/ccontrols/component-controls/compare/v2.10.0...v2.10.1) (2021-02-28)
 
 
