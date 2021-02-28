@@ -11,8 +11,8 @@ import {
   BuildProps,
   RuleOptions,
   defaultCompileProps,
-  getCSSBundleName,
 } from '@component-controls/core';
+import { getCSSBundleName } from '@component-controls/core/node-utils';
 import { Store } from '@component-controls/core';
 import { loadStore } from '@component-controls/store';
 import { getSiteMap } from '@component-controls/routes';

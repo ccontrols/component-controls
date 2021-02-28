@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { BuildProps, defBundleName, defCssFileName } from './build';
 
 export const findUpFile = (
   filePath: string,
@@ -17,3 +18,14 @@ export const findUpFile = (
   }
   return findUpFile(path.resolve(filePath, '..'), fileName, levels - 1);
 };
+
+export const getDistName = (options: BuildProps): string => {
+  const dist = options.distFolder || path.join(process.cwd(), 'public');
+  return dist;
+};
+
+export const getBundleName = (options: BuildProps): string =>
+  path.join(getDistName(options), options.bundleName || defBundleName);
+
+export const getCSSBundleName = (options: BuildProps): string =>
+  path.join(getDistName(options), options.cssFileName || defCssFileName);

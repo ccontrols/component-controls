@@ -9,11 +9,14 @@ import {
 } from '@component-controls/webpack-compile';
 import {
   BuildProps,
+  Store,
   defaultCompileProps,
+} from '@component-controls/core';
+import {
   getBundleName,
   getCSSBundleName,
-  Store,
-} from '@component-controls/core';
+} from '@component-controls/core/node-utils';
+
 import { mergeBuildConfiguration } from '@component-controls/config';
 
 import {
