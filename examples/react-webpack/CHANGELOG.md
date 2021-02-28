@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.10.4](https://github.com/ccontrols/component-controls/compare/v2.10.3...v2.10.4) (2021-02-28)
+
+
+### Bug Fixes
+
+* node_utils spelling ([c14ab40](https://github.com/ccontrols/component-controls/commit/c14ab40914e74c4e1b8ff3f706ee1803516a6e8f))
+* update  getBundleName import ([fa5142c](https://github.com/ccontrols/component-controls/commit/fa5142c2726bc06bd249ebe17305c6e204836d24))
+
+
+
+
+
 ## [2.10.3](https://github.com/ccontrols/component-controls/compare/v2.10.2...v2.10.3) (2021-02-28)
 
 **Note:** Version bump only for package component-controls-react-webpack-starter

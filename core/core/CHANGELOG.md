@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.10.4](https://github.com/ccontrols/component-controls/compare/v2.10.3...v2.10.4) (2021-02-28)
+
+
+### Bug Fixes
+
+* move path related to core/node_utils ([8d9986a](https://github.com/ccontrols/component-controls/commit/8d9986a644c4fc4fdb02d3704056fe6a2f56fb45))
+
+
+
+
+
 # [2.9.0](https://github.com/ccontrols/component-controls/compare/v2.8.1...v2.9.0) (2021-02-22)
 
 

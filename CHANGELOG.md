@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.10.4](https://github.com/ccontrols/component-controls/compare/v2.10.3...v2.10.4) (2021-02-28)
+
+
+### Bug Fixes
+
+* add react-router dependency ([0775b3b](https://github.com/ccontrols/component-controls/commit/0775b3be2e36eace7bebcfecdb7adbd369c040a7))
+* move path related to core/node_utils ([8d9986a](https://github.com/ccontrols/component-controls/commit/8d9986a644c4fc4fdb02d3704056fe6a2f56fb45))
+* node_utils spelling ([c14ab40](https://github.com/ccontrols/component-controls/commit/c14ab40914e74c4e1b8ff3f706ee1803516a6e8f))
+* react-router types for end-users ([2e23862](https://github.com/ccontrols/component-controls/commit/2e2386238c3df9985a5e7722ec6a91fe17699187))
+* update  getBundleName import ([fa5142c](https://github.com/ccontrols/component-controls/commit/fa5142c2726bc06bd249ebe17305c6e204836d24))
+
+
+
+
+
 ## [2.10.3](https://github.com/ccontrols/component-controls/compare/v2.10.2...v2.10.3) (2021-02-28)
 
 

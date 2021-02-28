@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/logger",
-  "version": "2.8.0",
+  "version": "2.10.4",
   "description": "compilation logging utilities",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

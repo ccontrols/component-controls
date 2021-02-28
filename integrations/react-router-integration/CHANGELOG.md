@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.10.4](https://github.com/ccontrols/component-controls/compare/v2.10.3...v2.10.4) (2021-02-28)
+
+
+### Bug Fixes
+
+* add react-router dependency ([0775b3b](https://github.com/ccontrols/component-controls/commit/0775b3be2e36eace7bebcfecdb7adbd369c040a7))
+* react-router types for end-users ([2e23862](https://github.com/ccontrols/component-controls/commit/2e2386238c3df9985a5e7722ec6a91fe17699187))
+
+
+
+
+
 ## [2.10.3](https://github.com/ccontrols/component-controls/compare/v2.10.2...v2.10.3) (2021-02-28)
 
 **Note:** Version bump only for package @component-controls/react-router-integration
