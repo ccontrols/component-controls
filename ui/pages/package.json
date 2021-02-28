@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/pages",
-  "version": "2.10.4",
+  "version": "2.10.5",
   "description": "Component controls pre-built documentation page templates.",
   "sideEffects": false,
   "main": "dist/index.js",
@@ -45,12 +45,12 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/addon-images": "^2.10.4",
-    "@component-controls/addon-notes": "^2.10.4",
-    "@component-controls/axe-plugin": "^2.10.4",
-    "@component-controls/blocks": "^2.10.4",
-    "@component-controls/figma-embed": "^2.10.4",
-    "@component-controls/viewport-plugin": "^2.10.4"
+    "@component-controls/addon-images": "^2.10.5",
+    "@component-controls/addon-notes": "^2.10.5",
+    "@component-controls/axe-plugin": "^2.10.5",
+    "@component-controls/blocks": "^2.10.5",
+    "@component-controls/figma-embed": "^2.10.5",
+    "@component-controls/viewport-plugin": "^2.10.5"
   },
   "devDependencies": {
     "@component-controls/ts-markdown-docs": "^2.6.0",
