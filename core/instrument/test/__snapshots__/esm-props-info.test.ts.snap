@@ -395,12 +395,12 @@ Object {
   "packages": Object {
     "5633741e98073052cbece6fcd32011e3": Object {
       "dependencies": Object {
-        "@component-controls/components": "^2.10.3",
-        "@component-controls/core": "^2.9.0",
-        "@component-controls/editors": "^2.10.3",
-        "@component-controls/render": "^2.9.0",
-        "@component-controls/search-algolia": "^2.9.0",
-        "@component-controls/store": "^2.10.3",
+        "@component-controls/components": "^2.10.4",
+        "@component-controls/core": "^2.10.4",
+        "@component-controls/editors": "^2.10.4",
+        "@component-controls/render": "^2.10.4",
+        "@component-controls/search-algolia": "^2.10.4",
+        "@component-controls/store": "^2.10.4",
         "@theme-ui/css": "^0.6.0-alpha.7",
         "copy-to-clipboard": "^3.2.1",
         "global": "^4.3.2",
@@ -413,7 +413,7 @@ Object {
         "theme-ui": "^0.6.0-alpha.7",
       },
       "devDependencies": Object {
-        "@component-controls/jest-snapshots": "^2.10.3",
+        "@component-controls/jest-snapshots": "^2.10.4",
         "@component-controls/ts-markdown-docs": "^2.6.0",
         "@primer/octicons-react": "^10.0.0",
         "@theme-ui/presets": "^0.6.0-alpha.7",
@@ -444,14 +444,14 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.10.3",
+      "version": "2.10.4",
     },
     "942f7c3f19d9e197f86041eed5e46838": Object {
       "dependencies": Object {
         "@babel/generator": "^7.12.5",
         "@babel/parser": "^7.12.5",
         "@babel/traverse": "^7.12.5",
-        "@component-controls/core": "^2.9.0",
+        "@component-controls/core": "^2.10.4",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -492,7 +492,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.10.3",
+      "version": "2.10.4",
     },
   },
   "stories": Object {},
