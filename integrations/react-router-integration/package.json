@@ -37,6 +37,8 @@
   "license": "MIT",
   "dependencies": {
     "@component-controls/app": "^2.10.5",
+    "@component-controls/search-algolia": "^2.10.4",
+    "@component-controls/search-fusejs": "^2.10.4",
     "@component-controls/pages": "^2.10.5",
     "@component-controls/routes": "^2.10.4",
     "@component-controls/store": "^2.10.5",
