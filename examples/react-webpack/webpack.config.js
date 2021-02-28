@@ -1,28 +1,14 @@
-const path = require('path');
-const { defaultCompileProps } = require('@component-controls/core');
-const { getBundleName } = require('@component-controls/core/node-utils');
-const { compile, watch } = require('@component-controls/webpack-compile');
-
 const { resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const {
-  postBuild,
-} = require('@component-controls/react-router-integration/post-build');
+  withComponentControls,
+} = require('@component-controls/react-router-integration/webpack-build');
 
 const isProd = process.env.NODE_ENV === 'production';
 
 const outFolder = process.env.BUILD_PATH || 'build';
 
-const buildOptions = {
-  ...defaultCompileProps,
-  configPath: '.config',
-  ...{
-    distFolder: process.env.DIST_PATH || path.join(process.cwd(), outFolder),
-    staticFolder:
-      process.env.STATIC_PATH || path.join(process.cwd(), outFolder, 'static'),
-  },
-};
 const config = {
   mode: isProd ? 'production' : 'development',
   entry: {
@@ -41,16 +27,7 @@ const config = {
       {
         test: /\.tsx?$/,
         use: 'babel-loader',
-        exclude: /node_modules/,
-      },
-      {
-        test: require.resolve('@component-controls/store/controls-store'),
-        use: {
-          loader: require.resolve('@component-controls/store/loader.js'),
-          options: {
-            bundleFileName: getBundleName(buildOptions),
-          },
-        },
+        include: /src/,
       },
     ],
   },
@@ -83,11 +60,8 @@ if (isProd) {
   };
 }
 
-module.exports = async function() {
-  const onBundle = async ({ store }) => {
-    await postBuild(buildOptions.staticFolder, store);
-  };
-  const run = process.env.NODE_ENV === 'development' ? watch : compile;
-  await run(buildOptions, onBundle);
-  return config;
-};
+module.exports = withComponentControls({
+  config,
+  development: !isProd,
+  options: { distFolder: resolve(__dirname, outFolder) },
+});

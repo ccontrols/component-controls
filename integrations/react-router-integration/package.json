@@ -13,8 +13,8 @@
     "dist/",
     "package.json",
     "README.md",
-    "post-build.js",
-    "post-build.d.ts"
+    "webpack-build.js",
+    "webpack-build.d.ts"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
@@ -37,6 +37,8 @@
   "license": "MIT",
   "dependencies": {
     "@component-controls/app": "^2.10.5",
+    "@component-controls/core": "^2.10.4",
+    "@component-controls/logger": "^2.10.4",
     "@component-controls/search-algolia": "^2.10.4",
     "@component-controls/search-fusejs": "^2.10.4",
     "@component-controls/pages": "^2.10.5",
