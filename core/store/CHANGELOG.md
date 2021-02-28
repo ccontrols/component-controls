@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.11.0](https://github.com/ccontrols/component-controls/compare/v2.10.5...v2.11.0) (2021-02-28)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
 ## [2.10.5](https://github.com/ccontrols/component-controls/compare/v2.10.4...v2.10.5) (2021-02-28)
 
 **Note:** Version bump only for package @component-controls/store
