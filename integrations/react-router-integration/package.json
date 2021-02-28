@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/react-router-integration",
-  "version": "2.10.0",
+  "version": "2.10.1",
   "description": "react-router integration to create stories documentation sites",
   "keywords": [
     "story",
@@ -35,11 +35,11 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/app": "^2.10.0",
-    "@component-controls/pages": "^2.10.0",
+    "@component-controls/app": "^2.10.1",
+    "@component-controls/pages": "^2.10.1",
     "@component-controls/routes": "^2.10.0",
-    "@component-controls/store": "^2.10.0",
-    "@component-controls/webpack-compile": "^2.10.0",
+    "@component-controls/store": "^2.10.1",
+    "@component-controls/webpack-compile": "^2.10.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router": "^5.2.0",
