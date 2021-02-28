@@ -36,6 +36,7 @@ Object {
         "hosted-git-info": "^3.0.4",
         "isomorphic-git": "^1.8.0",
         "js-string-escape": "^1.0.1",
+        "path": "^0.12.7",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "remark-emoji": "^2.1.0",
@@ -64,7 +65,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.10.2",
+      "version": "2.10.3",
     },
     "f287f1a0ceeea6cbbc4c37123d236d06": Object {
       "dependencies": Object {
@@ -83,6 +84,7 @@ Object {
         "hosted-git-info": "^3.0.4",
         "isomorphic-git": "^1.8.0",
         "js-string-escape": "^1.0.1",
+        "path": "^0.12.7",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "remark-emoji": "^2.1.0",
@@ -111,7 +113,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.10.2",
+      "version": "2.10.3",
     },
   },
   "stories": Object {
@@ -176,6 +178,7 @@ Object {
         "hosted-git-info": "^3.0.4",
         "isomorphic-git": "^1.8.0",
         "js-string-escape": "^1.0.1",
+        "path": "^0.12.7",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "remark-emoji": "^2.1.0",
@@ -204,7 +207,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.10.2",
+      "version": "2.10.3",
     },
   },
   "stories": Object {
@@ -283,6 +286,7 @@ Object {
         "hosted-git-info": "^3.0.4",
         "isomorphic-git": "^1.8.0",
         "js-string-escape": "^1.0.1",
+        "path": "^0.12.7",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "remark-emoji": "^2.1.0",
@@ -311,7 +315,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.10.2",
+      "version": "2.10.3",
     },
   },
   "stories": Object {
