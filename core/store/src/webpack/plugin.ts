@@ -4,7 +4,6 @@ import { normalizePath } from '@component-controls/core';
 
 export interface StorePluginOptions {
   bundleFileName: string;
-  isServer: boolean;
 }
 export class StorePlugin {
   public static pluginName = 'component-controls-store-plugin';
