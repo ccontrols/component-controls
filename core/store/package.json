@@ -15,6 +15,8 @@
     "static_store.d.ts",
     "controls-store.js",
     "controls-store.d.ts",
+    "loader.js",
+    "loader.d.ts",
     "plugin.js",
     "plugin.d.ts"
   ],
