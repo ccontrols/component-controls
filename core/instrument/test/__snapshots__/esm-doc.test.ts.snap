@@ -69,7 +69,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.11.1",
+      "version": "2.11.2",
     },
     "73cac298d983c71aec166657453a64fe": Object {
       "dependencies": Object {
@@ -117,7 +117,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.11.1",
+      "version": "2.11.2",
     },
   },
   "stories": Object {},
@@ -206,7 +206,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.11.1",
+      "version": "2.11.2",
     },
     "eef0b4fe04a3c49402964c3c8dbe5bc8": Object {
       "dependencies": Object {
@@ -254,7 +254,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.11.1",
+      "version": "2.11.2",
     },
   },
   "stories": Object {},
@@ -332,7 +332,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.11.1",
+      "version": "2.11.2",
     },
   },
   "stories": Object {},
@@ -403,7 +403,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.11.1",
+      "version": "2.11.2",
     },
   },
   "stories": Object {},
