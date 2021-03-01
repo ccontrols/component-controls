@@ -1,0 +1,20 @@
+---
+title: First Story
+---
+import { Button } from '../components/Button';
+import { Playground, Story, PropsTable,  ComponentSource  } from '@component-controls/blocks';
+
+# My first doc story
+
+## Component source
+<ComponentSource of="." title='Component source' />
+
+## Playground
+<Playground description="Button story">
+  <Story name="simple" component={Button}>
+    {({ backgroundColor }) => <Button backgroundColor={backgroundColor}>click me</Button>}
+  </Story>
+</Playground>
+
+## Component Props
+<PropsTable of="." visibility="controls"/>
