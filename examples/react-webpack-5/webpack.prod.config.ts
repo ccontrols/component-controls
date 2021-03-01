@@ -1,10 +1,13 @@
 import path from 'path';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+const CopyPlugin = require('copy-webpack-plugin');
+
 import { withComponentControls } from '@component-controls/react-router-integration/webpack-build';
 
-const outFolder = process.env.BUILD_PATH || 'build';
-const distFolder = path.join(__dirname, outFolder);
+const publicFolder = path.join(__dirname, process.env.PUBLIC_PATH || 'public');
+const distFolder = path.join(__dirname, process.env.BUILD_PATH || 'dist');
 
 const config: webpack.Configuration = {
   mode: 'production',
@@ -39,6 +42,10 @@ const config: webpack.Configuration = {
     new HtmlWebpackPlugin({
       template: 'src/index.html',
     }),
+    new CopyPlugin({
+      patterns: [{ from: 'public', to: 'dist' }],
+    }),
+    new CleanWebpackPlugin(),
   ],
   performance: {
     maxEntrypointSize: 8000000,
@@ -49,5 +56,5 @@ const config: webpack.Configuration = {
 module.exports = withComponentControls({
   config,
   development: false,
-  options: { distFolder },
+  options: { distFolder: publicFolder },
 });

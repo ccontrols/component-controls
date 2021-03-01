@@ -1,12 +1,14 @@
 import path from 'path';
 import webpack from 'webpack';
+import webpackDevServer from 'webpack-dev-server';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { withComponentControls } from '@component-controls/react-router-integration/webpack-build';
 
-const outFolder = process.env.BUILD_PATH || 'build';
-const distFolder = path.join(__dirname, outFolder);
+const publicFolder = path.join(__dirname, process.env.PUBLIC_PATH || 'public');
 
-const config: webpack.Configuration = {
+const config: webpack.Configuration & {
+  devServer: webpackDevServer.Configuration;
+} = {
   mode: 'development',
   output: {
     publicPath: '/',
@@ -41,7 +43,7 @@ const config: webpack.Configuration = {
   ],
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: distFolder,
+    contentBase: publicFolder,
     historyApiFallback: true,
     port: 4000,
     open: true,
@@ -52,5 +54,5 @@ const config: webpack.Configuration = {
 module.exports = withComponentControls({
   config,
   development: true,
-  options: { distFolder },
+  options: { distFolder: publicFolder },
 });
