@@ -1,7 +1,7 @@
 import React, { ReactElement, useMemo } from 'react';
 import { Route } from 'react-router-dom';
+import { store } from '@component-controls/store/controls-store';
 
-import { Store } from '@component-controls/core';
 import {
   DocHomePagesPath,
   DocPagesPath,
@@ -12,7 +12,7 @@ import {
 import { DocPageTemplate } from './templates/DocPage';
 import { DocHomeTemplate } from './templates/DocHome';
 
-export const useRoutes = (store: Store): ReactElement[] => {
+export const useRoutes = (): ReactElement[] => {
   const routes = useMemo(() => {
     const routes = [];
     //home page
