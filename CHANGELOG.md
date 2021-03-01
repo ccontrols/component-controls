@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.11.1](https://github.com/ccontrols/component-controls/compare/v2.11.0...v2.11.1) (2021-03-01)
+
+
+### Bug Fixes
+
+* static folder ([b55a69d](https://github.com/ccontrols/component-controls/commit/b55a69d4e343c374e29ea1c2bc4e8349235077e8))
+
+
+
+
+
 # [2.11.0](https://github.com/ccontrols/component-controls/compare/v2.10.5...v2.11.0) (2021-02-28)
 
 
