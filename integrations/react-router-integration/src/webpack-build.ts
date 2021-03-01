@@ -52,7 +52,7 @@ export const withComponentControls = ({
       ...defaultCompileProps,
       configPath: '.config',
       distFolder,
-      staticFolder: path.join(distFolder, 'static'),
+      staticFolder: path.join(options?.distFolder || distFolder, 'static'),
       ...options,
     };
     const onBundle: CompilerCallbackFn = async ({ store }) => {
