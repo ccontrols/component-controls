@@ -6,12 +6,11 @@
   "license": "MIT",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --config webpack.dev.config.ts --progress",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.prod.config.ts --progress"
+    "build-sample": "cross-env NODE_ENV=production webpack --config webpack.prod.config.ts --progress"
   },
   "dependencies": {
     "@component-controls/react-router-integration": "^2.11.2",
     "react": "^17.0.1",
-    "react-router-dom": "^5.2.0",
     "react-dom": "^17.0.1"
   },
   "devDependencies": {

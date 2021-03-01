@@ -47,12 +47,13 @@ export const withComponentControls = ({
   options?: BuildProps;
 }) =>
   async function(): Promise<any> {
-    const distFolder = path.join(process.cwd(), 'dist');
+    const distFolder = options?.distFolder || path.join(process.cwd(), 'dist');
+    const staticFolder = path.join(options?.distFolder || distFolder, 'static');
     const buildOptions: BuildProps = {
       ...defaultCompileProps,
       configPath: '.config',
       distFolder,
-      staticFolder: path.join(options?.distFolder || distFolder, 'static'),
+      staticFolder,
       ...options,
     };
     const onBundle: CompilerCallbackFn = async ({ store }) => {

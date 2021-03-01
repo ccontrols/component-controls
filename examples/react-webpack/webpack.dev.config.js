@@ -1,17 +1,16 @@
-import path from 'path';
-import webpack from 'webpack';
-import webpackDevServer from 'webpack-dev-server';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import { withComponentControls } from '@component-controls/react-router-integration/webpack-build';
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const {
+  withComponentControls,
+} = require('@component-controls/react-router-integration/webpack-build');
 
 const publicFolder = process.env.PUBLIC_PATH || 'public';
 const publicPath = path.join(__dirname, publicFolder);
 const distFolder = process.env.BUILD_PATH || 'build';
 const distPath = path.join(__dirname, distFolder);
 
-const config: webpack.Configuration & {
-  devServer: webpackDevServer.Configuration;
-} = {
+const config = {
   mode: 'development',
   output: {
     path: distPath,
@@ -49,7 +48,7 @@ const config: webpack.Configuration & {
   devServer: {
     contentBase: publicPath,
     historyApiFallback: true,
-    port: 9026,
+    port: 9025,
     open: true,
     hot: true,
   },

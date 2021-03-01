@@ -1,5 +1,4 @@
 {
-  "extends": "../../tsconfig.json",
   "compilerOptions": {
     "module": "esnext",
     "target": "esnext",
@@ -16,6 +15,6 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true
   },
-  "exclude": ["node_modules", "public"],
+  "exclude": ["node_modules", "public", "build"],
   "include": ["src"]
 }

@@ -1,16 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter as Router } from "react-router-dom";
-import { useRoutes } from "@component-controls/react-router-integration";
-
-const App = () => {
-  const routes = useRoutes();
-  return <Router>{routes}</Router>;
-};
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { App } from './App';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root'),
 );

@@ -6,14 +6,16 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 import { withComponentControls } from '@component-controls/react-router-integration/webpack-build';
 
-const publicFolder = path.join(__dirname, process.env.PUBLIC_PATH || 'public');
-const distFolder = path.join(__dirname, process.env.BUILD_PATH || 'dist');
+const publicFolder = process.env.PUBLIC_PATH || 'public';
+const publicPath = path.join(__dirname, publicFolder);
+const distFolder = process.env.BUILD_PATH || 'build';
+const distPath = path.join(__dirname, distFolder);
 
 const config: webpack.Configuration = {
   mode: 'production',
   entry: './src/index.tsx',
   output: {
-    path: distFolder,
+    path: distPath,
     filename: '[name].[contenthash].js',
     publicPath: '',
   },
@@ -43,7 +45,7 @@ const config: webpack.Configuration = {
       template: 'src/index.html',
     }),
     new CopyPlugin({
-      patterns: [{ from: 'public', to: 'dist' }],
+      patterns: [{ from: publicFolder }],
     }),
     new CleanWebpackPlugin(),
   ],
@@ -56,5 +58,5 @@ const config: webpack.Configuration = {
 module.exports = withComponentControls({
   config,
   development: false,
-  options: { distFolder: publicFolder },
+  options: { configPath: '.config', distFolder: publicPath },
 });

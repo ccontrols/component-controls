@@ -1,23 +1,25 @@
-import path from 'path';
-import webpack from 'webpack';
-import webpackDevServer from 'webpack-dev-server';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import { withComponentControls } from '@component-controls/react-router-integration/webpack-build';
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+
+const {
+  withComponentControls,
+} = require('@component-controls/react-router-integration/webpack-build');
 
 const publicFolder = process.env.PUBLIC_PATH || 'public';
 const publicPath = path.join(__dirname, publicFolder);
 const distFolder = process.env.BUILD_PATH || 'build';
 const distPath = path.join(__dirname, distFolder);
 
-const config: webpack.Configuration & {
-  devServer: webpackDevServer.Configuration;
-} = {
-  mode: 'development',
+const config = {
+  mode: 'production',
+  entry: './src/index.tsx',
   output: {
     path: distPath,
-    publicPath: '/',
+    filename: '[name].[contenthash].js',
+    publicPath: '',
   },
-  entry: './src/index.tsx',
   module: {
     rules: [
       {
@@ -43,20 +45,19 @@ const config: webpack.Configuration & {
     new HtmlWebpackPlugin({
       template: 'src/index.html',
     }),
-    new webpack.HotModuleReplacementPlugin(),
+    new CopyPlugin({
+      patterns: [{ from: publicFolder }],
+    }),
+    new CleanWebpackPlugin(),
   ],
-  devtool: 'inline-source-map',
-  devServer: {
-    contentBase: publicPath,
-    historyApiFallback: true,
-    port: 9026,
-    open: true,
-    hot: true,
+  performance: {
+    maxEntrypointSize: 8000000,
+    maxAssetSize: 8000000,
   },
 };
 
 module.exports = withComponentControls({
   config,
-  development: true,
+  development: false,
   options: { configPath: '.config', distFolder: publicPath },
 });

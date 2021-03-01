@@ -13,5 +13,6 @@
     "noEmit": true,
     "jsx": "react"
   },
+  "exclude": ["node_modules", "public", "build"],
   "include": ["src"]
 }
