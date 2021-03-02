@@ -252,26 +252,10 @@ Object {
           "name": "button",
         },
       ],
-      "loc": Object {
-        "end": Object {
-          "column": 65,
-          "line": 3,
-        },
-        "start": Object {
-          "column": 15,
-          "line": 3,
-        },
-      },
       "localDependencies": Object {},
       "name": "Button",
       "package": "ceea0565a65f75c8c7b6b355d6d335ac",
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
-      "source": "import React from 'react';
-
-const Button = props => <button>{\`Hello, \${props.name}\`}</button>;
-
-export default Button;
-",
     },
   },
   "doc": Object {

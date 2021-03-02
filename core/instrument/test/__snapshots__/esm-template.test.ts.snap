@@ -69,30 +69,10 @@ Object {
           "name": "button",
         },
       ],
-      "loc": Object {
-        "end": Object {
-          "column": 1,
-          "line": 9,
-        },
-        "start": Object {
-          "column": 39,
-          "line": 7,
-        },
-      },
       "localDependencies": Object {},
       "name": "Button",
       "package": "fbea66d4bd64ea2b935855efa5d522a1",
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-props.tsx",
-      "source": "import React, { FC, MouseEventHandler } from 'react';
-
-export interface ButtonProps {
-  name: string;
-  onClick?: MouseEventHandler<HTMLButtonElement>;
-}
-export const Button: FC<ButtonProps> = props => (
-  <button onClick={props.onClick}>{\`Hello, \${props.name}\`}</button>
-);
-",
     },
   },
   "doc": Object {
