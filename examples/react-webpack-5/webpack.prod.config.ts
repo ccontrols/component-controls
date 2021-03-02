@@ -55,7 +55,7 @@ const config: webpack.Configuration = {
   },
 };
 
-module.exports = withComponentControls({
+export default withComponentControls({
   config,
   development: false,
   options: { configPath: '.config', distFolder: publicPath },
