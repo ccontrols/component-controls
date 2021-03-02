@@ -1,0 +1,151 @@
+---
+title: Getting started/Site generators/Webpack
+type: tutorial
+order: 2
+route: /tutorial/getting-started/webpack
+description: getting started creating a documentation site with webpack/react-router and component-controls
+tags:
+  - webpack
+---
+
+Below, we go over how to add a `component-controls` documentation site to [new Webpack projects](#clone-starter) and [existing Webpack projects](#existing-webpack-project).
+
+You can find sample projects
+
+- webpack 4 [git repo](https://github.com/ccontrols/webpack-controls-starter) and a [live site](https://webpack-controls-starter.netlify.app/).
+- webpack 5 [git repo](https://github.com/ccontrols/webpack-5-controls-starter) and a [live site](https://webpack-5-controls-starter.netlify.app/).
+
+## Clone starter
+
+The easiest way to get started is to clone the webpack-5-controls-starter project
+
+**webpack 5:**
+
+```sh
+git clone git@github.com:ccontrols/webpack-5-controls-starter.git my-webpack-project
+```
+
+**webpack 4:**
+
+```
+git clone git@github.com:ccontrols/webpack-controls-starter.git my-webpack-project
+```
+
+You can also start your project from scratch, or using one of the webpack starter tutorials (for example [this article](https://www.carlrippon.com/creating-react-app-with-typescript-eslint-with-webpack5/))
+
+## Existing Webpack project
+
+### Add component-controls
+
+```sh
+yarn add @component-controls/react-router-integration
+```
+
+### Enable component-controls
+
+You will need to make a few changes to your webpack.config.(js|ts) files:
+
+```js:title=webpack.dev.config.js
+const {
+  withComponentControls,
+} = require('@component-controls/react-router-integration/webpack-build');
+
+const publicFolder = process.env.PUBLIC_PATH || 'public';
+const publicPath = path.join(__dirname, publicFolder);
+
+const config = {
+  mode: 'development',
+  entry: './src/index.tsx',
+  ...
+}
+
+// the following will compile your documentation files before launching the webpack proces to compile the documentation site itself:
+module.exports = withComponentControls({
+  config,
+  development: true,
+  options: { configPath: '.config', distFolder: publicPath },
+});
+```
+
+or if you are using ts-node and typescript webpack configuration files
+
+```js:title=webpack.dev.config.ts
+import webpack from 'webpack';
+import { withComponentControls } from '@component-controls/react-router-integration/webpack-build';
+
+const publicFolder = process.env.PUBLIC_PATH || 'public';
+const publicPath = path.join(__dirname, publicFolder);
+
+const config: webpack.Configuration = {
+  mode: 'development',
+  entry: './src/index.tsx',
+  ...
+}
+
+// the following will compile your documentation files before launching the webpack proces to compile the documentation site itself:
+module.exports = withComponentControls({
+  config,
+  development: true,
+  options: { configPath: '.config', distFolder: publicPath },
+});
+```
+
+## Create documentation site
+
+### Create a src folder
+
+```sh
+mkdir src
+```
+
+### React index file
+
+Create a new or edit `index.tsx` or `index.js` file in the src folder:
+
+```jsx:title=src/index.tsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { App } from './App';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root'),
+);
+```
+
+### HTML template file
+
+Create a new or edit `index.html` file in the src folder:
+
+```html:title=src/index.html
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
+```
+
+### Application home
+
+Create a new or edit `App.tsx` or `App.js` file in the src folder and import the `useRoutes` hook from `@component-controls/react-router-integration`.
+This will return a list of all the routes and corresponding pages for the documentation site that you can include in your `<Router>` component, alongside any other custom routes as needed.
+
+```jsx:title=src/App.tsx
+import React, { FC } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { useRoutes } from '@component-controls/react-router-integration';
+
+export const App: FC = () => {
+  const routes = useRoutes();
+  return <Router>{routes}</Router>;
+};
+```
+
+## Create your documentation site
+
+Check our [create a documentation site](/tutorial/getting-started/documentation-site) tutorial
