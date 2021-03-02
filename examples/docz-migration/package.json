@@ -20,7 +20,7 @@
   "dependencies": {
     "@component-controls/gatsby-theme-stories": "^2.11.3",
     "docz": "latest",
-    "gatsby": "^2.27.4",
+    "gatsby": "^2.32.9",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"

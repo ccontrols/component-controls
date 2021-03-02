@@ -45,7 +45,7 @@
     "@component-controls/webpack-compile": "^2.11.3",
     "@component-controls/webpack-configs": "^2.11.3",
     "@emotion/babel-plugin": "^11.0.0",
-    "next": "^10.0.3"
+    "next": "^10.0.7"
   },
   "devDependencies": {
     "@component-controls/logger": "^2.10.4",
