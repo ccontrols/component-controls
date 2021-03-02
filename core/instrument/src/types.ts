@@ -88,7 +88,7 @@ export const defaultPackageOptions: PackageInfoOptions = {
 };
 
 export const defaultComponentOptions: ComponentOptions = {
-  sourceFiles: true,
+  sourceFiles: false,
   package: defaultPackageOptions,
 };
 
