@@ -2,7 +2,8 @@
 import { FC } from 'react';
 import { jsx, BoxProps } from 'theme-ui';
 import { Component } from '@component-controls/core';
-import { Value } from '@component-controls/components';
+import { Popover, Value } from '@component-controls/components';
+import { BaseComponentCommits } from '../ComponentCommits';
 
 export const ComponentStats: FC<{ component?: Component } & BoxProps> = ({
   component,
@@ -25,7 +26,18 @@ export const ComponentStats: FC<{ component?: Component } & BoxProps> = ({
       {...rest}
     >
       {!!component.fileInfo?.commits?.length && (
-        <Value label="commits:" value={component.fileInfo?.commits?.length} />
+        <Popover
+          trigger="hover"
+          placement="auto"
+          tooltip={() => (
+            <BaseComponentCommits
+              component={component}
+              pagination={{ pageSize: 3 }}
+            />
+          )}
+        >
+          <Value label="commits:" value={component.fileInfo?.commits?.length} />
+        </Popover>
       )}
       <Value sx={{ mx: 1 }} label="source lines:" value={stats.source} />
       <Value
