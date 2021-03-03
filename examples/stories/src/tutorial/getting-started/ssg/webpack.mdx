@@ -88,7 +88,7 @@ module.exports = withComponentControls({
 });
 ```
 
-> Be aware that react/webpack/react-router applications are single page applications (SPA), where all pages are running from the same index.html file. To address this issue of [client-side routing](https://create-react-app.dev/docs/deployment#netlify) and depending on your server provider, you might need to use something ie [create-file-webpack](https://github.com/Appius/create-file-webpack) to create a `_redirects` file
+> Be aware that react/webpack/react-router applications are single page applications (SPA), where all pages are running from the same index.html file. To address this issue of [client-side routing](https://create-react-app.dev/docs/deployment#netlify) and depending on your server provider, you might need to use [create-file-webpack](https://github.com/Appius/create-file-webpack) for [example](https://github.com/ccontrols/component-controls/blob/0718357401dacd3304e230636de612a645e9d9c8/examples/react-webpack/webpack.prod.config.js#L53) to create a `_redirects` file
 
 ## Create documentation site
 
