@@ -179,7 +179,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.11.3",
+      "version": "2.12.0",
     },
     "fbea66d4bd64ea2b935855efa5d522a1": Object {
       "dependencies": Object {
@@ -227,7 +227,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "2.11.3",
+      "version": "2.12.0",
     },
   },
   "stories": Object {
