@@ -1,7 +1,7 @@
 {
   "name": "component-controls-react-webpack-5-starter",
   "private": true,
-  "version": "2.11.3",
+  "version": "2.12.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -9,7 +9,7 @@
     "build-sample": "rm -rf public && webpack --config webpack.prod.config.ts --progress"
   },
   "dependencies": {
-    "@component-controls/react-router-integration": "^2.11.3",
+    "@component-controls/react-router-integration": "^2.12.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
@@ -28,8 +28,8 @@
     "@types/webpack-dev-server": "^3.11.1",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
-    "create-file-webpack": "^1.0.2",
     "copy-webpack-plugin": "^7.0.0",
+    "create-file-webpack": "^1.0.2",
     "html-webpack-plugin": "^5.2.0",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.3",

@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/config",
-  "version": "2.10.4",
+  "version": "2.12.0",
   "description": "Component controls configuration reading utilities",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

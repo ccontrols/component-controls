@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.12.0](https://github.com/ccontrols/component-controls/compare/v2.11.3...v2.12.0) (2021-03-03)
+
+
+### Bug Fixes
+
+* code font familiy monospace ([2b40cc6](https://github.com/ccontrols/component-controls/commit/2b40cc65ae156f02a8802f1d02e6ea6e18ced942))
+* webpack client-side routing ([0718357](https://github.com/ccontrols/component-controls/commit/0718357401dacd3304e230636de612a645e9d9c8))
+
+
+### Features
+
+* add InfoTip component ([6e4fbcc](https://github.com/ccontrols/component-controls/commit/6e4fbcc394f9062cd01022b6304bd57b3ed239c6))
+
+
+
+
+
 ## [2.11.3](https://github.com/ccontrols/component-controls/compare/v2.11.2...v2.11.3) (2021-03-01)
 
 **Note:** Version bump only for package component-controls
