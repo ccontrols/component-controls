@@ -12,14 +12,14 @@ export interface InfoTipProps {
   size?: number;
 
   /**
-   * custom ico
+   * custom icon
    */
   icon?: ReactNode;
 }
 
 /**
  *
- * Displays a value with a small label
+ * Displays an information icon with markdown-enabled popup on hover
  */
 export const InfoTip: FC<InfoTipProps & PopoverProps> = ({
   size = 18,
