@@ -18,6 +18,7 @@ export * from './GithubAvatar';
 export * from './GithubAvatarList';
 export * from './Header';
 export * from './HoverBox';
+export * from './InfoTip';
 export * from './Keyboard';
 export * from './Link';
 export * from './LinkHeading';

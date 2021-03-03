@@ -64,6 +64,7 @@ export type ControlsTheme = {
   colormode: Record<string, ThemeUIStyleObject>;
   header: ThemeUIStyleObject;
   hoverbox: Record<string, ThemeUIStyleObject>;
+  infotip: Record<string, ThemeUIStyleObject>;
   tree: Record<string, ThemeUIStyleObject>;
   pagination: Record<string, ThemeUIStyleObject>;
   sidebar: Record<string, ThemeUIStyleObject>;
@@ -149,6 +150,12 @@ export const theme: ControlsTheme = {
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   buttons: {
+    plain: {
+      p: 0,
+      lineHeight: 'normal',
+      backgroundColor: 'transparent',
+      color: 'primary',
+    },
     primary: {
       color: '#333',
       backgroundColor: '#f3f3f3',
@@ -850,6 +857,14 @@ export const theme: ControlsTheme = {
       boxShadow: (t: Theme): string => `0px 2px 6px 0px ${t.colors?.shadow}`,
     },
     text: { color: 'muted', fontWeight: 'bold' },
+  },
+  infotip: {
+    container: {
+      maxHeight: '500px',
+      maxWidth: '400px',
+      overflow: 'auto',
+      p: 2,
+    },
   },
   tree: {
     itemcontainer: {
