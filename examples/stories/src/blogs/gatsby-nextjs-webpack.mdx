@@ -2,15 +2,15 @@
 title: Gatsby vs Nextjs vs Webpack
 type: blog
 author: atanasster
-draft: true
 description: Gatsby vs Nextjs vs Webpack - analysis of the pros and cons to help us find the best solution for building your documentation sites.
 tags:
   - gatsby
   - nextjs
   - webpack
 ---
+import { InfoTip } from '@component-controls/components';
 
-## Overview
+# Overview
 
 `component-controls` allows using several static site generators (SSG) as well as raw webpack builds to create the production version of your documentation sites.
 
@@ -19,19 +19,19 @@ tags:
 - [webpack](https://webpack.js.org) - you can also build your site directly with webpack, which is used by both gatsby and nextjs under the hood.
 
 In this blog post, we will research which solution offers the best development and production experience. 
-For webpack, only one set of results will be displayed as webpack 4 and webpack 5 are very similar in performance - the one difference to keep in mind is that ts-node andtypescript webpack configuratiopn files add about 5-10s starting the webpack project.
+For webpack, only one set of results will be displayed as webpack 4 and webpack 5 are very similar in performance - the one difference to keep in mind is that ts-node and typescript webpack configuration files add about 5-10s starting the webpack project.
 
 ## Performance Tools
 
 The web tests are conducted with [WebPageTest](https://www.webpagetest.org) and [PageSpeed](https://developers.google.com/speed/pagespeed/insights/).
 
-## Large sites
+# Large sites
 
 The following measurements are for this live documentation site, which has several hundreds of pages and stories.
 
-### Examples Source Code
+## Examples Source Code
 
-The documentation sites used throughout this post are essentially the same for the purpose of comparison. We would truly appreciate any feedback to additionally optimize our examples for the researched SSGs.
+The documentation sites used throughout this post are essentially the same for comparison. We would truly appreciate any feedback to additionally optimize our examples for the researched SSGs.
 
 |           | source code                                                                                       |
 | --------- | ------------------------------------------------------------------------------------------------- |
@@ -40,7 +40,7 @@ The documentation sites used throughout this post are essentially the same for t
 | webpack 5 | [webpack 5](https://github.com/ccontrols/component-controls/tree/master/examples/react-webpack-5) |
 | webpack 4 | [webpack 4](https://github.com/ccontrols/component-controls/tree/master/examples/react-webpack)   |
 
-### Live Sites
+## Live Sites
 
 All the sites are hosted on a free tier at [netlify](https://www.netlify.com). The tests are conducted on the same simple documentation page.
 
@@ -51,12 +51,12 @@ All the sites are hosted on a free tier at [netlify](https://www.netlify.com). T
 | webpack 5 | [https://webpack5.component-controls.com](https://webpack5.component-controls.com/api/esm-starter--overview) |
 | webpack 4 | [https://webpack.component-controls.com](https://webpack.component-controls.com/api/esm-starter--overview)   |
 
-### Performance - large sites
+## Performance
 
 <table>
   <thead>
     <tr>
-      <th>test</th>
+      <th></th>
       <th colSpan="2">gatsby</th>
       <th colSpan="2">nextjs</th>
       <th colSpan="2">webpack</th>
@@ -74,147 +74,159 @@ All the sites are hosted on a free tier at [netlify](https://www.netlify.com). T
   <tbody>
     <tr>
       <td>
-        <details>
-          <summary>Development Mode Startup Time</summary>
-          Measuring the time to
-          start up in development mode. For this test, the projects were already
-          run once upfront, to make sure all possible caches are created.
-        </details>
+         <strong>Development Mode Startup Time</strong>
+         <InfoTip>
+Measuring the time to
+start up in development mode. For this test, the projects were already
+run once upfront, to make sure all possible caches are created.
+
+<div>source: <strong>WebPageTest</strong></div>
+        </InfoTip>
       </td>
       <td>38s</td>
-      <td>+</td>
+      <td>+8%</td>
       <td>35s</td>
       <td style={{ color: 'green'}}>best</td>
       <td>36s</td>
-      <td></td>
+      <td>+3%</td>
     </tr>
     <tr>
       <td>
-        <details>
-          <summary>Production Mode Build</summary>
-          Measuring the time to build the site. Prior to launching this test, all the caches are deleted to create a level testing field.
-        </details>
+        <strong>Production Mode build</strong>
+        <InfoTip>
+Measuring the time to build the site. Prior to launching this test, all the caches are deleted to create a level testing field.
+          <div>source: <strong>WebPageTest</strong></div>
+        </InfoTip>
       </td>
-      <td>14:35m</td>
-      <td>+</td>
+      <td style={{ color: 'red'}}>14:35m</td>
+      <td>+1435</td>
       <td>2:00m</td>
-      <td ></td>
+      <td>+110%</td>
       <td>57s</td>
       <td style={{ color: 'green'}}>best</td>
     </tr>
     <tr>
       <td>
-        <details>
-          <summary>Largest Contentful Paint</summary>
+        <strong>Largest Contentful Paint</strong>
+        <InfoTip>
           An important, user-centric metric for measuring perceived load speed because it marks the point in the page load timeline when the page's main content has likely loaded—a fast LCP helps reassure the user that the page is useful.
-        </details>
+          <div>source: <strong>WebPageTest</strong></div>
+        </InfoTip>
       </td>
-      <td>1:02s</td>
-      <td>+</td>
-      <td>23s</td>
-      <td style={{ color: 'green'}}></td>
-      <td>32s</td>
+      <td>0,66s</td>
+      <td>+43%</td>
+      <td style={{ color: 'green'}}>0,46s</td>
+      <td>best</td>
+      <td style={{ color: 'red'}}>7,54s</td>
+      <td>+1539%</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Total Blocking Time</strong>
+        <InfoTip>
+          An important lab metric for measuring load responsiveness because it helps quantify the severity of how non-interactive a page is before it becoming reliably interactive—a low TBT helps ensure that the page is usable.
+          <div>source: <strong>WebPageTest</strong></div>
+        </InfoTip>
+      </td>
+      <td>1,66s</td>
+      <td>n/a</td>
+      <td>1,99s</td>
+      <td>n/a</td>
+      <td style={{ color: 'green'}}>0,00s</td>
+      <td>best</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Document Complete Time</strong>
+        <InfoTip>
+          The time is takes to fully load all the content referenced in the HTML.
+          <div>source: <strong>WebPageTest</strong></div>
+        </InfoTip>
+      </td>
+      <td>4,11s</td>
+      <td>+108%</td>
+      <td style={{ color: 'green'}}>1,99s</td>
+      <td>best</td>
+      <td style={{ color: 'red'}}>7,82s</td>
+      <td>+297%</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Document Complete Size</strong>
+        <InfoTip>
+          The size in kilobytes at the Document Complete Time.
+          <div>source: <strong>WebPageTest</strong></div>
+        </InfoTip>
+      </td>
+      <td>1,376kB</td>
+      <td>+10%</td>
+      <td>2,597kB</td>
+      <td>+107%</td>
+      <td style={{ color: 'green'}}>1,255kB</td>
+      <td>best</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Fully Loaded Time</strong>
+        <InfoTip>
+          The time when a page completely stops loading content, including ads and below the fold elements.
+          <div>source: <strong>WebPageTest</strong></div>
+        </InfoTip>
+      </td>
+      <td style={{ color: 'green'}}>5,15s</td>
+      <td>best</td>
+      <td>7,55s</td>
+      <td>+47%</td>
+      <td>7,82s</td>
+      <td>+52%</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Fully Loaded Size</strong>
+        <InfoTip>
+          The size in kilobytes at the Fully Loaded Time.
+          <div>source: <strong>WebPageTest</strong></div>
+        </InfoTip>
+      </td>
+      <td>1,397kB</td>
+      <td>+11%</td>
+      <td>2,598kB</td>
+      <td>+107%</td>
+      <td style={{ color: 'green'}}>1,255kB</td>
+      <td>best</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Mobile Speed Score</strong>
+        <InfoTip>
+          The speed score is based on the lab data analyzed by <strong>Lighthouse</strong>. The results of this test vary to some extent on each run.
+          <div>source: <strong>PageSpeed</strong></div>
+        </InfoTip>
+      </td>
+      <td>42</td>
+      <td>-12%</td>
+      <td style={{ color: 'green'}}>48</td>
+      <td>best</td>
+      <td>24</td>
+      <td>-50%</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Desktop Speed Score</strong>
+        <InfoTip>
+          The speed score is based on the lab data analyzed by <strong>Lighthouse</strong>. The results of this test vary to some extent on each run.
+          <div>source: <strong>PageSpeed</strong></div>
+        </InfoTip>
+      </td>
+      <td>67</td>
+      <td>-13%</td>
+      <td style={{ color: 'green'}}>77</td>
       <td></td>
+      <td>25</td>
+      <td>-55%</td>
     </tr>
   </tbody>
 </table>
 
 
-## WebPageTest results
-
-|           | time                                                                                      |
-| --------- | ----------------------------------------------------------------------------------------- |
-| gatsby    | [results](https://www.webpagetest.org/result/200715_YT_6da8f397c707688a7c096567769337f8/) |
-| nextjs    | [results](https://www.webpagetest.org/result/200715_79_1d41cd9a7cacbbf60bf81b132896853f/) |
-| webpack 5 | [results](https://www.webpagetest.org/result/200715_NH_bd8d8178abccfc4181e4463ffbe19e88/) |
-| webpack 4 | [results](https://www.webpagetest.org/result/200715_NH_bd8d8178abccfc4181e4463ffbe19e88/) |
-
-## Largest Contentful Paint
-
-An important, user-centric metric for measuring perceived load speed because it marks the point in the page load timeline when the page's main content has likely loaded—a fast LCP helps reassure the user that the page is useful.
-
-|           | time    | +/-%      |
-| --------- | ------- | --------- |
-| gatsby    | 0.591s  | +14%      |
-| nextjs    | 0.519s  | best      |
-| webpack 5 | 11.182s | +2054.53% |
-
-## Total Blocking Time
-
-An important lab metric for measuring load responsiveness because it helps quantify the severity of how non-interactive a page is before it becoming reliably interactive—a low TBT helps ensure that the page is usable.
-
-|           | time   | +/-%  |
-| --------- | ------ | ----- |
-| gatsby    | 1.057s | +5%   |
-| nextjs    | 1.004s | best  |
-| storybook | 2.448s | +143% |
-
-## Document Complete Time
-
-The time is takes to fully load all the content referenced in the HTML.
-
-|           | time   | +/-%  |
-| --------- | ------ | ----- |
-| gatsby    | 2.206s | best  |
-| nextjs    | 3.012s | +36%  |
-| storybook | 6.075s | +175% |
-
-## Document Complete Size
-
-The size in kilobytes at the Document Complete Time.
-
-|           | kb      | +/-%  |
-| --------- | ------- | ----- |
-| gatsby    | 755kb   | best  |
-| nextjs    | 1,452kb | +92%  |
-| storybook | 2,126kb | +181% |
-
-## Fully Loaded Time
-
-The time when a page completely stops loading content, including ads and below the fold elements.
-
-|           | time   | +/-%  |
-| --------- | ------ | ----- |
-| gatsby    | 3.209s | best  |
-| nextjs    | 3.122s | best  |
-| storybook | 8.253s | +164% |
-
-## Fully Loaded Size
-
-The size in kilobytes at the Fully Loaded Time.
-
-|           | kb      | +/-%  |
-| --------- | ------- | ----- |
-| gatsby    | 781kb   | best  |
-| nextjs    | 1,453kb | +86%  |
-| storybook | 3,014kb | +285% |
-
-## Cost Of Site
-
-Measures how much it [costs](https://whatdoesmysitecost.com/) for someone to use your site on mobile networks around the world. For this comparison, we will use the USA location. This measure is mostly linked to the fully loaded size.
-
-|           | USD    | +/-%  |
-| --------- | ------ | ----- |
-| gatsby    | \$0.05 | best  |
-| nextjs    | \$0.09 | +80%  |
-| storybook | \$0.19 | +280% |
-
-## PageSpeed Mobile Speed Score
-
-The speed score is based on the lab data analyzed by [Lighthouse](https://developers.google.com/web/tools/lighthouse/). The results of this test vary to some extent on each run.
-
-|           | results                                                                                                                                                                               | score | +/-% |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- | ---- |
-| gatsby    | [results](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fcomponent-controls.com%2Fapi&tab=mobile)                                                          | 29    | -29% |
-| nextjs    | [results](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fnextjs.component-controls.com%2Fapi&tab=mobile)                                                   | 41    | best |
-| storybook | [results](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fstorybook.component-controls.com%2F%3Fpath%3D%2Fpage%2Fintroduction-starter--overview&tab=mobile) | 5     | -87% |
-
-## PageSpeed Desktop Speed Score
-
-The speed score is based on the lab data analyzed by [Lighthouse](https://developers.google.com/web/tools/lighthouse/). The results of this test vary to some extent on each run.
-
-|           | results                                                                                                                                                                                | score | +/-% |
-| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- | ---- |
-| gatsby    | [results](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fcomponent-controls.com%2Fapi&tab=desktop)                                                          | 75    | -7%  |
-| nextjs    | [results](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fnextjs.component-controls.com%2Fapi&tab=desktop)                                                   | 81    | best |
-| storybook | [results](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fstorybook.component-controls.com%2F%3Fpath%3D%2Fpage%2Fintroduction-starter--overview&tab=desktop) | 57    | -29% |
+> gatsby and nextjs create much faster and better-optimized sites - as expected since they use code-splitting and create separate bundles for each page. On the other hand, webpack provides a somewhat better development experience with faster builds and smaller bundle sizes.
