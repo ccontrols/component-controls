@@ -274,7 +274,6 @@ export const theme: ControlsTheme = {
       },
     },
     code: {
-      fontFamily: 'monospace',
       fontSize: 'inherit',
       color: 'accent',
     },
