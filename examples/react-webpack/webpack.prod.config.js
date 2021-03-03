@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CreateFilePlugin = require('create-file-webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 
 const {
@@ -49,6 +50,13 @@ const config = {
       patterns: [{ from: publicFolder }],
     }),
     new CleanWebpackPlugin(),
+    new CreateFilePlugin({
+      path: distFolder,
+      fileName: '_redirects',
+      content: `
+      /*  /index.html  200
+`,
+    }),
   ],
   performance: {
     maxEntrypointSize: 8000000,
@@ -58,6 +66,5 @@ const config = {
 
 module.exports = withComponentControls({
   config,
-  development: false,
   options: { configPath: '.config', distFolder: publicPath },
 });

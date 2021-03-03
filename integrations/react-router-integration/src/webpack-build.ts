@@ -39,14 +39,18 @@ export const postBuild = async (
 
 export const withComponentControls = ({
   config,
-  development,
+  mode: userMode,
   options,
 }: {
   config: any;
-  development?: boolean;
+  mode?: string;
   options?: BuildProps;
 }) =>
   async function(): Promise<any> {
+    const mode = userMode || process.env.NODE_ENV || config.mode;
+    if (typeof process.env.NODE_ENV === 'undefined') {
+      process.env.NODE_ENV = mode;
+    }
     const distFolder = options?.distFolder || path.join(process.cwd(), 'dist');
     const staticFolder = path.join(options?.distFolder || distFolder, 'static');
     const buildOptions: BuildProps = {
@@ -60,7 +64,7 @@ export const withComponentControls = ({
       await postBuild(buildOptions.staticFolder as string, store);
     };
 
-    const run = development ? watch : compile;
+    const run = mode === 'production' ? compile : watch;
     await run(buildOptions, onBundle);
     return {
       ...config,

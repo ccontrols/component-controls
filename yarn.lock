@@ -9476,6 +9476,14 @@ create-ecdh@^4.0.0:
     bn.js "^4.1.0"
     elliptic "^6.5.3"
 
+create-file-webpack@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/create-file-webpack/-/create-file-webpack-1.0.2.tgz#c206474fe15a6aab12e2a278a7798d244befff0b"
+  integrity sha512-+J6kQTE+Wcobc6gHP8E2zmoeIC+J+p6IXqjFrzoxCl1VYlimWoincPUABAhODuXAJGrZcNZ/Up0PTqq1ISiwvA==
+  dependencies:
+    path "^0.12.7"
+    write "^1.0.3"
+
 create-gatsby@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/create-gatsby/-/create-gatsby-0.5.1.tgz#a99519416c1a73ae27562b9035b6357f22748319"
@@ -26307,7 +26315,7 @@ write-pkg@^3.1.0:
     sort-keys "^2.0.0"
     write-json-file "^2.2.0"
 
-write@1.0.3:
+write@1.0.3, write@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/write/-/write-1.0.3.tgz#0800e14523b923a387e415123c865616aae0f5c3"
   integrity sha512-/lg70HAjtkUgWPVZhZcm+T4hkL8Zbtp1nFNOn3lRrxnlv50SRBv7cR7RqR+GMsd3hUXy9hWBo4CHTbFTcOYwig==

@@ -2,6 +2,7 @@ import path from 'path';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+const CreateFilePlugin = require('create-file-webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 
 import { withComponentControls } from '@component-controls/react-router-integration/webpack-build';
@@ -48,6 +49,13 @@ const config: webpack.Configuration = {
       patterns: [{ from: publicFolder }],
     }),
     new CleanWebpackPlugin(),
+    new CreateFilePlugin({
+      path: distFolder,
+      fileName: '_redirects',
+      content: `
+      /*  /index.html  200
+`,
+    }),
   ],
   performance: {
     maxEntrypointSize: 8000000,
@@ -57,6 +65,5 @@ const config: webpack.Configuration = {
 
 export default withComponentControls({
   config,
-  development: false,
   options: { configPath: '.config', distFolder: publicPath },
 });

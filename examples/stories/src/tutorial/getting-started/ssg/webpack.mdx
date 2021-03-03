@@ -62,7 +62,6 @@ const config = {
 // the following will compile your documentation files before launching the webpack proces to compile the documentation site itself:
 module.exports = withComponentControls({
   config,
-  development: true,
   options: { configPath: '.config', distFolder: publicPath },
 });
 ```
@@ -85,10 +84,11 @@ const config: webpack.Configuration = {
 // the following will compile your documentation files before launching the webpack proces to compile the documentation site itself:
 module.exports = withComponentControls({
   config,
-  development: true,
   options: { configPath: '.config', distFolder: publicPath },
 });
 ```
+
+> Be aware that react/webpack/react-router applications are single page applications (SPA), where all pages are running from the same index.html file. To address this issue of [client-side routing](https://create-react-app.dev/docs/deployment#netlify) and depending on your server provider, you might need to use something ie [create-file-webpack](https://github.com/Appius/create-file-webpack) to create a `_redirects` file
 
 ## Create documentation site
 
@@ -117,12 +117,14 @@ ReactDOM.render(
 
 ### HTML template file
 
-Create a new or edit `index.html` file in the src folder:
+Create a new or edit `index.html` file in the src folder. PLease note that you might need to update a standard `index.html` file with the `<base href= />` tag to [account for dynamic routes](https://stackoverflow.com/questions/28253162/react-router-dynamic-segments-crash-when-accessed):
 
 ```html:title=src/index.html
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+    <base href="/" />
+  </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
