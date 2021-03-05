@@ -1,12 +1,13 @@
-import { loader } from 'webpack';
 import { getOptions } from 'loader-utils';
 import { normalizePath } from '@component-controls/core';
-
-module.exports = function(content: string) {
-  const context = (this as unknown) as loader.LoaderContext;
-  const options = getOptions(context) || {};
+import {
+  WebpackLoaderContext,
+  LoaderOptions,
+} from '@component-controls/core/node-utils';
+function loader(this: WebpackLoaderContext, content: string): string {
+  const options = getOptions(this) || {};
   const { bundleFileName } = options;
-  const bundleNormalized = normalizePath(bundleFileName);
+  const bundleNormalized = normalizePath(bundleFileName as string);
   content = `
   import { loadStore } from './dist/load-store';
   export let store = loadStore(require('${bundleNormalized}'));
@@ -20,4 +21,15 @@ module.exports = function(content: string) {
   }  
   `;
   return content;
-};
+}
+
+export default loader;
+
+/**
+ * expose public types via declaration merging
+ */
+// eslint-disable-next-line @typescript-eslint/no-namespace
+namespace loader {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  export interface Options extends LoaderOptions {}
+}

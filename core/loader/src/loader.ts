@@ -1,7 +1,10 @@
 import * as fs from 'fs';
 import * as path from 'path';
+import {
+  WebpackLoaderContext,
+  LoaderOptions,
+} from '@component-controls/core/node-utils';
 import { getOptions } from 'loader-utils';
-import { loader } from 'webpack';
 import { log } from '@component-controls/logger';
 import { deepmerge } from '@component-controls/core';
 import {
@@ -11,10 +14,9 @@ import {
 
 import { addStoriesDoc, removeStoriesDoc, store as globalStore } from './store';
 
-module.exports = async function() {
-  const context = (this as unknown) as loader.LoaderContext;
-  const filePath = context.resource;
-  const loaderOptions: InstrumentOptions = getOptions(context) || {};
+async function loader(this: WebpackLoaderContext): Promise<string> {
+  const filePath = this.resource;
+  const loaderOptions: InstrumentOptions = getOptions(this) || {};
   const configOptions = globalStore?.buildConfig?.instrument || {};
 
   const ignore = globalStore?.buildConfig?.ignore || [];
@@ -31,7 +33,7 @@ module.exports = async function() {
     if (store?.doc) {
       log('loaded: ', filePath);
       if (store.stories && store.components && store.packages) {
-        addStoriesDoc(options, filePath, context._compilation.records.hash, {
+        addStoriesDoc(options, filePath, this._compilation.records.hash, {
           stories: store.stories,
           components: store.components,
           packages: store.packages,
@@ -47,4 +49,15 @@ module.exports = async function() {
     return transformed;
   }
   return source;
-};
+}
+
+export default loader;
+
+/**
+ * expose public types via declaration merging
+ */
+// eslint-disable-next-line @typescript-eslint/no-namespace
+namespace loader {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  export interface Options extends LoaderOptions {}
+}

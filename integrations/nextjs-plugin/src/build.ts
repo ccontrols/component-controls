@@ -78,8 +78,8 @@ module.exports = ({
       return [];
     },
     webpack: (config: RuleOptions['config']) => {
-      const loader = config.module?.rules?.find(
-        r => (r?.use as any)?.loader === 'next-babel-loader',
+      const loader: any = config.module?.rules?.find(
+        (r: any) => (r?.use as any)?.loader === 'next-babel-loader',
       );
       if (loader?.options) {
         (loader.options as any).babelPresetPlugins.push(

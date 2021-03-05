@@ -1,14 +1,16 @@
 import {
+  WebpackLoaderContext,
+  LoaderOptions,
+} from '@component-controls/core/node-utils';
+import {
   configRequireContext,
   extractDocuments,
 } from '@component-controls/config';
-import { loader } from 'webpack';
 import { replaceSource } from './replaceSource';
 import { store, reserveStories, config } from './store';
 
-module.exports = function(content: string) {
-  const context = (this as unknown) as loader.LoaderContext;
-  const params = JSON.parse(context.query.slice(1));
+function loader(this: WebpackLoaderContext, content: string): string {
+  const params = JSON.parse(this.query.slice(1));
   const contexts = config ? configRequireContext(config) || [] : [];
   const stories: string[] = config ? extractDocuments(config) || [] : [];
   reserveStories(stories);
@@ -19,4 +21,15 @@ module.exports = function(content: string) {
     `__COMPILATION_HASH__${params.compilationHash}`,
   );
   return content;
-};
+}
+
+export default loader;
+
+/**
+ * expose public types via declaration merging
+ */
+// eslint-disable-next-line @typescript-eslint/no-namespace
+namespace loader {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  export interface Options extends LoaderOptions {}
+}

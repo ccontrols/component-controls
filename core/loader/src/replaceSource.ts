@@ -126,7 +126,7 @@ ${contexts
   const exports = `module.exports = store;\n`;
   const newContent = `
 
-const path = require('path');
+const path = require('path-browserify');
 const { loadPageTab } = require('@component-controls/core')
 ${imports}
 ${storeConst}

@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { BuildProps, defBundleName, defCssFileName } from './build';
-
+export * from './webpack-interfaces';
 export const findUpFile = (
   filePath: string,
   fileName: string | string[],

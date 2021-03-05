@@ -23,7 +23,7 @@
     "@component-controls/gatsby-theme-stories": "^2.12.0",
     "@component-controls/nextjs-plugin": "^2.12.0",
     "@component-controls/viewport-plugin": "^2.12.0",
-    "gatsby": "^2.27.4",
+    "gatsby": "^3.0.0",
     "next": "^10.0.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

@@ -103,14 +103,14 @@ module.exports = {
     if (newConfig.module) {
       newConfig.module = {
         ...newConfig.module,
-        rules: newConfig.module.rules.map(r => {
+        rules: newConfig.module.rules?.map((r: any) => {
           return Array.isArray(r.use)
             ? {
                 ...r,
-                use: r.use.map(use =>
-                  (use as RuleSetRule).options && (use as RuleSetRule).options
+                use: r.use.map((use: any) =>
+                  use.options && (use as RuleSetRule).options
                     ? {
-                        ...(use as RuleSetRule),
+                        ...use,
                         options: {
                           ...(use as any).options,
                           presets: Array.isArray((use as any).options?.presets)

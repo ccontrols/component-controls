@@ -1,4 +1,4 @@
-import { Compiler, Configuration, RuleSetQuery } from 'webpack';
+import { Compiler, Configuration, RuleSetUseItem } from 'webpack';
 import { LogOptions } from '@component-controls/logger';
 
 type WebpackConfigFn = (config: Configuration, options?: any) => Configuration;
@@ -68,14 +68,14 @@ export interface BuildProps {
    * loaders custom options shortcut.
    * This can be used for quick options setup instead of using the webpack hook
    */
-  loaders?: { [_ in WebpackLoader]?: RuleSetQuery };
+  loaders?: { [_ in WebpackLoader]?: RuleSetUseItem };
 }
 
 export const customLoaderOptions = (
   config: BuildProps,
   loader: WebpackLoader,
-  defaultOptions: RuleSetQuery,
-): RuleSetQuery => {
+  defaultOptions: string | { [index: string]: any },
+): RuleSetUseItem => {
   const customOptions = config.loaders?.[loader];
   return typeof defaultOptions === 'object' && typeof customOptions === 'object'
     ? { ...defaultOptions, ...customOptions }

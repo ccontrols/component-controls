@@ -1,19 +1,21 @@
 import path from 'path';
-import { RuleSetLoader } from 'webpack';
-import ExtractCssPlugin from 'extract-css-chunks-webpack-plugin';
+import { Configuration, RuleSetUseItem, WebpackPluginInstance } from 'webpack';
 import OptimizeCssAssetsWebpackPlugin from 'optimize-css-assets-webpack-plugin';
-
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import {
-  PresetType,
+  PresetCallback,
   BuildProps,
+  //TODO webpack compatible version:
+  /*
   defCssFileName,
+   */
   customLoaderOptions,
 } from '@component-controls/core';
 import { findUpFile } from '@component-controls/core/node-utils';
 
-export const react: PresetType = (options: BuildProps) => {
+export const react: PresetCallback = (options: BuildProps) => {
   const isProd = process.env.NODE_ENV === 'production';
-  const cssLoaders: RuleSetLoader[] = [];
+  const cssLoaders: RuleSetUseItem[] = [];
   const postcssOptions = customLoaderOptions(options, 'postcss-loader', {});
   const postCssOptionsFile = findUpFile(process.cwd(), 'postcss.config.js');
   const hasPostCss = Object.keys(postcssOptions).length || postCssOptionsFile;
@@ -29,11 +31,14 @@ export const react: PresetType = (options: BuildProps) => {
       },
     });
   }
-  const result: PresetType = {
+  const result: Configuration = {
     plugins: [
+      //TODO webpack compatible version:
+      /*
       new ExtractCssPlugin({
         filename: options.cssFileName || defCssFileName,
       }),
+       */
     ],
     optimization: { minimizer: [] },
     performance: { hints: false },
@@ -91,6 +96,7 @@ export const react: PresetType = (options: BuildProps) => {
                     node: 'current',
                   },
                   modules: 'commonjs',
+                  bugfixes: true,
                   useBuiltIns: 'usage',
                   corejs: 3,
                 },
@@ -132,8 +138,12 @@ export const react: PresetType = (options: BuildProps) => {
           test: /\.(css|sass|scss|less)$/i,
           use: [
             // Creates `style` nodes from JS strings
-            // will export to a consolidated css file
-            ExtractCssPlugin.loader,
+            {
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                publicPath: '',
+              },
+            },
             {
               // Translates CSS into CommonJS
               loader: 'css-loader',
@@ -200,14 +210,15 @@ export const react: PresetType = (options: BuildProps) => {
     },
   };
   if (isProd) {
+    const optimizeCss: WebpackPluginInstance = new (OptimizeCssAssetsWebpackPlugin as any)(
+      {
+        cssProcessorOptions: {
+          discardComments: { removeAll: true },
+        },
+      },
+    );
     result.optimization = {
-      minimizer: [
-        new OptimizeCssAssetsWebpackPlugin({
-          cssProcessorOptions: {
-            discardComments: { removeAll: true },
-          },
-        }),
-      ],
+      minimizer: [optimizeCss],
     };
   }
   return result;
