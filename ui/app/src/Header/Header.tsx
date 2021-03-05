@@ -20,6 +20,20 @@ import {
 import { Search } from '@component-controls/blocks';
 import * as logoImg from './media/logo.png';
 
+const LogoLink: FC<{ href: string; title?: string }> = ({
+  children,
+  href,
+  title,
+}) => (
+  <Link
+    variant="appheader.title"
+    href={href}
+    aria-label={title}
+    sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}
+  >
+    {children}
+  </Link>
+);
 export interface HeaderProps {
   toolbar?: {
     left?: ActionItems;
@@ -39,16 +53,6 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
   const doc = useCurrentDocument();
   const { pages, title, logo, description } = config || {};
   const leftActions: ActionItems = useMemo(() => {
-    const LogoLink: FC = ({ children }) => (
-      <Link
-        variant="appheader.title"
-        href={homePath}
-        aria-label={title}
-        sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}
-      >
-        {children}
-      </Link>
-    );
     const LogoImage: FC<{ src: string }> = ({ src }) => (
       <Image alt={description} variant="appheader.logo" src={src} />
     );
@@ -56,7 +60,7 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
     if (logo) {
       logoNode =
         typeof logo === 'string' ? (
-          <LogoLink>
+          <LogoLink href={homePath} title={title}>
             <LogoImage src={logo} />
           </LogoLink>
         ) : (
@@ -67,7 +71,7 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
         logo === null ? (
           'Home'
         ) : (
-          <LogoLink>
+          <LogoLink href={homePath} title={title}>
             <LogoImage src={logoImg.default} />
           </LogoLink>
         );
@@ -104,11 +108,14 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
       if (pageItems.length) {
         actions.push(...pageItems);
       } else {
-        actions[0].node = (
-          <LogoLink>
-            {logo === null ? <Heading as="h2">{title}</Heading> : logoNode}
-          </LogoLink>
-        );
+        actions[0].node =
+          logo === null ? (
+            <LogoLink href={homePath} title={title}>
+              <Heading as="h2">{title}</Heading>
+            </LogoLink>
+          ) : (
+            logoNode
+          );
       }
     }
     return toolbar.left ? [...actions, ...toolbar.left] : actions;
