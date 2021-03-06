@@ -72,7 +72,7 @@ function loader(this: WebpackLoaderContext): any {
   return '';
 }
 
-export default loader;
+module.exports.default = loader;
 
 /**
  * expose public types via declaration merging
