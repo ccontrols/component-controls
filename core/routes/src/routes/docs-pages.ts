@@ -70,61 +70,68 @@ export const getPageTabs = (
   return [undefined];
 };
 
-export const getDocPages = (store: Store): DocPagesPath[] => {
+export const getDocPages = (store?: Store): DocPagesPath[] => {
   const { pages = {}, categories = [] } = store?.config || {};
   const docPaths: DocPagesPath[] = [];
-  const homePath = getHomePath(store);
-  Object.keys(pages).forEach(type => {
-    if (!categories.includes(type as DocType)) {
-      const page = pages[type as DocType];
-      const docType = type as DocType;
-      const docHomePath = getDocTypePath(store, page.basePath) as string;
-      const docs: Pages = getPageList(store, docType);
-      const tabs = getPageTabs(page);
-      tabs.forEach((tab, tabIndex) => {
-        const route = tabIndex > 0 ? tab : undefined;
-        docs.forEach(doc => {
-          const pagePath = getRoutePath(store, doc.route);
-          if (pagePath !== homePath && pagePath !== docHomePath) {
-            const stories =
-              page.sideNav?.storyPaths && doc.stories?.length
-                ? doc.stories
-                : [undefined];
-            stories.forEach((storyId?: string) => {
-              const { path, query } = getStoryPath(storyId, doc, store, route);
-              if (!docPaths.find(p => p.path === path)) {
-                docPaths.push({
-                  lastModified: doc.dateModified
-                    ? new Date(doc.dateModified).toISOString()
-                    : undefined,
-                  path,
-                  query,
-                  type: docType,
-                  activeTab: route,
-                  docId: doc.title,
+  if (store) {
+    const homePath = getHomePath(store);
+    Object.keys(pages).forEach(type => {
+      if (!categories.includes(type as DocType)) {
+        const page = pages[type as DocType];
+        const docType = type as DocType;
+        const docHomePath = getDocTypePath(store, page.basePath) as string;
+        const docs: Pages = getPageList(store, docType);
+        const tabs = getPageTabs(page);
+        tabs.forEach((tab, tabIndex) => {
+          const route = tabIndex > 0 ? tab : undefined;
+          docs.forEach(doc => {
+            const pagePath = getRoutePath(store, doc.route);
+            if (pagePath !== homePath && pagePath !== docHomePath) {
+              const stories =
+                page.sideNav?.storyPaths && doc.stories?.length
+                  ? doc.stories
+                  : [undefined];
+              stories.forEach((storyId?: string) => {
+                const { path, query } = getStoryPath(
                   storyId,
-                });
-              }
-            });
-          }
+                  doc,
+                  store,
+                  route,
+                );
+                if (!docPaths.find(p => p.path === path)) {
+                  docPaths.push({
+                    lastModified: doc.dateModified
+                      ? new Date(doc.dateModified).toISOString()
+                      : undefined,
+                    path,
+                    query,
+                    type: docType,
+                    activeTab: route,
+                    docId: doc.title,
+                    storyId,
+                  });
+                }
+              });
+            }
+          });
         });
-      });
-    } else {
-      const cats = getUniquesByField(store, type);
-      const catKeys = Object.keys(cats);
-      catKeys.forEach(tag => {
-        const path = getDocPath(
-          type as DocType,
-          { title: tag, componentsLookup: {} },
-          store,
-        );
-        docPaths.push({
-          path,
-          type,
-          category: tag,
+      } else {
+        const cats = getUniquesByField(store, type);
+        const catKeys = Object.keys(cats);
+        catKeys.forEach(tag => {
+          const path = getDocPath(
+            type as DocType,
+            { title: tag, componentsLookup: {} },
+            store,
+          );
+          docPaths.push({
+            path,
+            type,
+            category: tag,
+          });
         });
-      });
-    }
-  });
+      }
+    });
+  }
   return docPaths;
 };

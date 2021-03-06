@@ -14,9 +14,9 @@ export interface DocHomePagesPath {
   storyId?: string;
   lastModified?: string;
 }
-export const getHomePages = (store: Store): DocHomePagesPath[] => {
+export const getHomePages = (store?: Store): DocHomePagesPath[] => {
   const { pages = {} } = store?.config || {};
-  if (pages) {
+  if (pages && store) {
     const docs = Object.keys(store.docs);
     const paths: DocHomePagesPath[] = Object.keys(pages)
       .map((type: DocType) => {
