@@ -62,6 +62,6 @@ export const useRoutes = (): ReactElement[] => {
       },
     );
     return routes;
-  }, [store]);
+  }, []);
   return routes;
 };
