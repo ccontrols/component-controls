@@ -12,12 +12,8 @@ import {
   RuleOptions,
   defaultCompileProps,
 } from '@component-controls/core';
-import {
-  getBundleName,
-  getCSSBundleName,
-} from '@component-controls/core/node-utils';
+import { getCSSBundleName } from '@component-controls/core/node-utils';
 import { Store } from '@component-controls/core';
-import { mergeBuildConfiguration } from '@component-controls/config';
 import { loadStore } from '@component-controls/store';
 import { getSiteMap } from '@component-controls/routes';
 
