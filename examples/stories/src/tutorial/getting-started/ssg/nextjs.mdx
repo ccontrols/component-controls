@@ -84,7 +84,13 @@ The default options will configure `component-controls` to work with react apps,
 ```js:title=next.config.js
 const withStories = require('@component-controls/nextjs-plugin/build');
 
-module.exports = withStories({ configPath: '.config', ....other options });
+module.exports = withStories({ 
+  future: {
+    webpack5: true, //use webpack 5 for nextjs
+  },
+  configPath: '.config', 
+  ....other options 
+});
 ```
 
 ## Create content pages

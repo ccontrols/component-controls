@@ -58,7 +58,12 @@ By default, the Storybook configuration file is kept in a folder name `.storyboo
 
 ```js:title=next.config.js
 const withStories = require('@component-controls/nextjs-plugin/build');
-module.exports = withStories({ configPath: '.storybook' });
+module.exports = withStories({
+  future: {
+    webpack5: true, //use webpack 5 for nextjs
+  },
+  configPath: '.storybook',
+});
 ```
 
 ## Create page templates
