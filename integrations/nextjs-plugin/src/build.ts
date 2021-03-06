@@ -39,7 +39,7 @@ module.exports = ({
   const buildConfig: BuildProps = {
     ...defaultCompileProps,
     ...{
-      distFolder,
+      distFolder: path.resolve(__dirname),
       staticFolder: staticFolder || path.join(distFolder, 'static'),
     },
     ...userProps,
@@ -91,26 +91,7 @@ module.exports = ({
           '@emotion/babel-plugin',
         );
       }
-      return {
-        ...config,
-        module: {
-          ...config.module,
-          rules: [
-            ...(config.module?.rules || []),
-            {
-              test: require.resolve('@component-controls/store/controls-store'),
-              use: {
-                loader: require.resolve('@component-controls/store/loader.js'),
-                options: {
-                  bundleFileName: getBundleName(
-                    mergeBuildConfiguration(buildConfig),
-                  ),
-                },
-              },
-            },
-          ],
-        },
-      };
+      return config;
     },
 
     ...rest,
