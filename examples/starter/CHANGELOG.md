@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/atanasster/gatsby-controls-starter/compare/v3.1.0...v3.1.1) (2021-03-06)
+
+
+### Bug Fixes
+
+* nextjs plugin dist folder ([afd9751](https://github.com/atanasster/gatsby-controls-starter/commit/afd975151da32f3e51cb6f2afa0d2cef2f0f7214))
+
+
+
+
+
 # [3.1.0](https://github.com/atanasster/gatsby-controls-starter/compare/v2.13.0...v3.1.0) (2021-03-06)
 
 

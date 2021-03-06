@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/ccontrols/component-controls/compare/v3.1.0...v3.1.1) (2021-03-06)
+
+
+### Bug Fixes
+
+* remove unneeded dependency ([8489eca](https://github.com/ccontrols/component-controls/commit/8489eca22006892c808d2d6dc6ba42451d3e1d0d))
+
+
+
+
+
 # [3.1.0](https://github.com/ccontrols/component-controls/compare/v2.13.0...v3.1.0) (2021-03-06)
 
 **Note:** Version bump only for package @component-controls/react-router-integration
