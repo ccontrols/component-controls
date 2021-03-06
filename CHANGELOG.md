@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.2](https://github.com/ccontrols/component-controls/compare/v3.1.1...v3.1.2) (2021-03-06)
+
+
+### Bug Fixes
+
+* remove unused imports ([d7e1fb8](https://github.com/ccontrols/component-controls/commit/d7e1fb80c76d478ec6ddb3ee900af9accead6226))
+* revert nextjs bundle location ([aa10bb3](https://github.com/ccontrols/component-controls/commit/aa10bb3b9e302b8229a210d4cf538a68d76c7fff))
+
+
+
+
+
 ## [3.1.1](https://github.com/ccontrols/component-controls/compare/v3.1.0...v3.1.1) (2021-03-06)
 
 
