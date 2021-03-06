@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/ccontrols/component-controls/compare/v2.13.0...v3.1.0) (2021-03-06)
+
+
+### Bug Fixes
+
+* remove console.logs ([3f4f0ad](https://github.com/ccontrols/component-controls/commit/3f4f0adcba13d84eaa7922d99921af0d92f68ee9))
+
+
+
+
+
 # [2.13.0](https://github.com/ccontrols/component-controls/compare/v2.12.0...v2.13.0) (2021-03-06)
 
 

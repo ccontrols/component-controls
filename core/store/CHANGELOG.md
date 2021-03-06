@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/ccontrols/component-controls/compare/v2.13.0...v3.1.0) (2021-03-06)
+
+
+### Bug Fixes
+
+* dynamic stories paths ([4f3c73c](https://github.com/ccontrols/component-controls/commit/4f3c73c7950b60f5587c0147b120a7cbc845c5b2))
+
+
+### Features
+
+* webpack-5 and gatsby-3 ([b1fb2f1](https://github.com/ccontrols/component-controls/commit/b1fb2f1cea1d9548d97fa768adaa953dd006587a))
+
+
+
+
+
 # [2.13.0](https://github.com/ccontrols/component-controls/compare/v2.12.0...v2.13.0) (2021-03-06)
 
 **Note:** Version bump only for package @component-controls/store

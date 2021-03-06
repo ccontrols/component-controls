@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/ccontrols/component-controls/compare/v2.13.0...v3.1.0) (2021-03-06)
+
+
+### Bug Fixes
+
+* fixes to webpack upgrade ([6417166](https://github.com/ccontrols/component-controls/commit/64171662b32c31e9b19b3965fa6903913198ae60))
+
+
+
+
+
 # [2.8.0](https://github.com/ccontrols/component-controls/compare/v2.7.0...v2.8.0) (2021-02-18)
 
 **Note:** Version bump only for package @component-controls/storybook-custom-docs

@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/ccontrols/component-controls/compare/v2.13.0...v3.1.0) (2021-03-06)
+
+
+### Bug Fixes
+
+* automatic publicPath is not supported ([44be012](https://github.com/ccontrols/component-controls/commit/44be01245fb3d9d6dd53ae492fea85f752edc1a9))
+* dynamic stories paths ([4f3c73c](https://github.com/ccontrols/component-controls/commit/4f3c73c7950b60f5587c0147b120a7cbc845c5b2))
+* fixes to webpack upgrade ([6417166](https://github.com/ccontrols/component-controls/commit/64171662b32c31e9b19b3965fa6903913198ae60))
+* logger version ([9c762da](https://github.com/ccontrols/component-controls/commit/9c762da17425a722c5075cfbf89e5fec9080fb1e))
+* remove console.logs ([3f4f0ad](https://github.com/ccontrols/component-controls/commit/3f4f0adcba13d84eaa7922d99921af0d92f68ee9))
+
+
+### Features
+
+* webpack-5 and gatsby-3 ([b1fb2f1](https://github.com/ccontrols/component-controls/commit/b1fb2f1cea1d9548d97fa768adaa953dd006587a))
+
+
+
+
+
 # [2.13.0](https://github.com/ccontrols/component-controls/compare/v2.12.0...v2.13.0) (2021-03-06)
 
 
