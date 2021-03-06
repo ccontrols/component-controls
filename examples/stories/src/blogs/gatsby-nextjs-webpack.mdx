@@ -25,9 +25,11 @@ For webpack, only one set of results will be displayed as webpack 4 and webpack 
 
 The web tests are conducted with [WebPageTest](https://www.webpagetest.org) and [PageSpeed](https://developers.google.com/speed/pagespeed/insights/).
 
+> it nust be noted that most tests will give different results each time they are taken.
+
 # Large sites
 
-The following measurements are for this live documentation site, which has several hundreds of pages and stories.
+The following measurements are for this live documentation site, which has ~1400 standalone pages.
 
 ## Examples Source Code
 
@@ -35,7 +37,7 @@ The documentation sites used throughout this post are essentially the same for c
 
 |           | source code                                                                                       |
 | --------- | ------------------------------------------------------------------------------------------------- |
-| gatsby    | [gatsby 2+](https://github.com/ccontrols/component-controls/tree/master/examples/gatsby)          |
+| gatsby    | [gatsby 3+](https://github.com/ccontrols/component-controls/tree/master/examples/gatsby)          |
 | nextjs    | [nextjs 10+](https://github.com/ccontrols/component-controls/tree/master/examples/nextjs)         |
 | webpack 5 | [webpack 5](https://github.com/ccontrols/component-controls/tree/master/examples/react-webpack-5) |
 | webpack 4 | [webpack 4](https://github.com/ccontrols/component-controls/tree/master/examples/react-webpack)   |
@@ -57,7 +59,7 @@ All the sites are hosted on a free tier at [netlify](https://www.netlify.com). T
   <thead>
     <tr>
       <th></th>
-      <th colSpan="2">gatsby</th>
+      <th colSpan="2">gatsby-3</th>
       <th colSpan="2">nextjs</th>
       <th colSpan="2">webpack</th>
     </tr>
@@ -83,12 +85,12 @@ run once upfront, to make sure all possible caches are created.
 <div>source: <strong>WebPageTest</strong></div>
         </InfoTip>
       </td>
-      <td>38s</td>
-      <td>+8%</td>
-      <td>35s</td>
-      <td style={{ color: 'green'}}>best</td>
-      <td>36s</td>
-      <td>+3%</td>
+      <td>50s</td>
+      <td>best</td>
+      <td>50s</td>
+      <td>best</td>
+      <td>50s</td>
+      <td>best</td>
     </tr>
     <tr>
       <td>
@@ -98,12 +100,12 @@ Measuring the time to build the site. Prior to launching this test, all the cach
           <div>source: <strong>WebPageTest</strong></div>
         </InfoTip>
       </td>
-      <td style={{ color: 'red'}}>14:35m</td>
-      <td>+1435%</td>
-      <td>2:00m</td>
-      <td>+110%</td>
-      <td>57s</td>
-      <td style={{ color: 'green'}}>best</td>
+      <td>3:30m</td>
+      <td>+180%</td>
+      <td>2:55m</td>
+      <td>+130%</td>
+      <td style={{ color: 'green'}}>1:15m</td>
+      <td>best</td>
     </tr>
     <tr>
       <td>
@@ -112,11 +114,11 @@ Measuring the time to build the site. Prior to launching this test, all the cach
 The size of all files and assets to be uploaded on a deployment server after build.
         </InfoTip>
       </td>
-      <td style={{ color: 'red'}}>387.9MB</td>
-      <td>+2117%</td>
-      <td style={{ color: 'red'}}>375.3MB</td>
-      <td>+2045%</td>
-      <td>17.5MB</td>
+      <td style={{ color: 'red'}}>377.9MB</td>
+      <td>+2072%</td>
+      <td style={{ color: 'red'}}>378.6MB</td>
+      <td>+2076%</td>
+      <td>17.4MB</td>
       <td style={{ color: 'green'}}>best</td>
     </tr>
     <tr>
@@ -127,12 +129,12 @@ The size of all files and assets to be uploaded on a deployment server after bui
           <div>source: <strong>WebPageTest</strong></div>
         </InfoTip>
       </td>
-      <td>0,66s</td>
-      <td>+43%</td>
-      <td style={{ color: 'green'}}>0,46s</td>
+      <td>0.69s</td>
+      <td>+47%</td>
+      <td style={{ color: 'green'}}>0.47s</td>
       <td>best</td>
-      <td style={{ color: 'red'}}>7,54s</td>
-      <td>+1539%</td>
+      <td style={{ color: 'red'}}>8.09s</td>
+      <td>+1621%</td>
     </tr>
     <tr>
       <td>
@@ -142,9 +144,9 @@ The size of all files and assets to be uploaded on a deployment server after bui
           <div>source: <strong>WebPageTest</strong></div>
         </InfoTip>
       </td>
-      <td>1,66s</td>
+      <td>1,71s</td>
       <td>n/a</td>
-      <td>1,99s</td>
+      <td>1,97s</td>
       <td>n/a</td>
       <td style={{ color: 'green'}}>0,00s</td>
       <td>best</td>
@@ -157,12 +159,12 @@ The size of all files and assets to be uploaded on a deployment server after bui
           <div>source: <strong>WebPageTest</strong></div>
         </InfoTip>
       </td>
-      <td>4,11s</td>
-      <td>+108%</td>
-      <td style={{ color: 'green'}}>1,99s</td>
+      <td style={{ color: 'green'}}>5.72s</td>
       <td>best</td>
-      <td style={{ color: 'red'}}>7,82s</td>
-      <td>+297%</td>
+      <td>7.46s</td>
+      <td>+30%</td>
+      <td>8.33s</td>
+      <td>+46%</td>
     </tr>
     <tr>
       <td>
@@ -172,11 +174,11 @@ The size of all files and assets to be uploaded on a deployment server after bui
           <div>source: <strong>WebPageTest</strong></div>
         </InfoTip>
       </td>
-      <td>1,376KB</td>
-      <td>+10%</td>
-      <td>2,597KB</td>
-      <td>+107%</td>
-      <td style={{ color: 'green'}}>1,255KB</td>
+      <td>1,345KB</td>
+      <td>+7%</td>
+      <td>2,555KB</td>
+      <td>+105%</td>
+      <td style={{ color: 'green'}}>1,249KB</td>
       <td>best</td>
     </tr>
     <tr>
@@ -187,12 +189,12 @@ The size of all files and assets to be uploaded on a deployment server after bui
           <div>source: <strong>WebPageTest</strong></div>
         </InfoTip>
       </td>
-      <td style={{ color: 'green'}}>5,15s</td>
+      <td style={{ color: 'green'}}>6.74s</td>
       <td>best</td>
-      <td>7,55s</td>
-      <td>+47%</td>
-      <td>7,82s</td>
-      <td>+52%</td>
+      <td>7.58s</td>
+      <td>+12%</td>
+      <td>8.40s</td>
+      <td>+25%</td>
     </tr>
     <tr>
       <td>
@@ -202,11 +204,11 @@ The size of all files and assets to be uploaded on a deployment server after bui
           <div>source: <strong>WebPageTest</strong></div>
         </InfoTip>
       </td>
-      <td>1,397KB</td>
-      <td>+11%</td>
-      <td>2,598KB</td>
-      <td>+107%</td>
-      <td style={{ color: 'green'}}>1,255KB</td>
+      <td>1,366KB</td>
+      <td>+9%</td>
+      <td>2,556KB</td>
+      <td>+105%</td>
+      <td style={{ color: 'green'}}>1,249KB</td>
       <td>best</td>
     </tr>
     <tr>
@@ -217,12 +219,12 @@ The size of all files and assets to be uploaded on a deployment server after bui
           <div>source: <strong>PageSpeed</strong></div>
         </InfoTip>
       </td>
-      <td>42</td>
-      <td>-12%</td>
-      <td style={{ color: 'green'}}>48</td>
+      <td>49</td>
+      <td>-23%</td>
+      <td style={{ color: 'green'}}>64</td>
       <td>best</td>
-      <td>24</td>
-      <td>-50%</td>
+      <td>21</td>
+      <td>-67%</td>
     </tr>
     <tr>
       <td>
@@ -232,15 +234,17 @@ The size of all files and assets to be uploaded on a deployment server after bui
           <div>source: <strong>PageSpeed</strong></div>
         </InfoTip>
       </td>
-      <td>67</td>
-      <td>-13%</td>
-      <td style={{ color: 'green'}}>77</td>
+      <td>68</td>
+      <td>-11%</td>
+      <td style={{ color: 'green'}}>76</td>
       <td></td>
-      <td>25</td>
-      <td>-55%</td>
+      <td>53</td>
+      <td>-30%</td>
     </tr>
   </tbody>
 </table>
 
 
-> gatsby and nextjs create much faster and better-optimized sites - as expected since they use code-splitting and create separate bundles for each page. On the other hand, webpack provides a somewhat better development experience with faster builds and smaller bundle sizes.
+> gatsby and nextjs create much faster and better-optimized sites - as expected since they use code-splitting and create pre-rendered bundles for each page. On the other hand, webpack provides a somewhat better development experience with faster builds and smaller bundle sizes.
+
+> gatsby 3 vastly improves on build times over gatsby 2 - the gatsby builds for this app of over 1400 pages came down from over 14 minutes down to just over 3 minutes.
