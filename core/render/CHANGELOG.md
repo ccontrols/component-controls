@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.13.0](https://github.com/ccontrols/component-controls/compare/v2.12.0...v2.13.0) (2021-03-06)
+
+**Note:** Version bump only for package @component-controls/render
+
+
+
+
+
 ## [2.10.4](https://github.com/ccontrols/component-controls/compare/v2.10.3...v2.10.4) (2021-02-28)
 
 **Note:** Version bump only for package @component-controls/render

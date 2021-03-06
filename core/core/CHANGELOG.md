@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.13.0](https://github.com/ccontrols/component-controls/compare/v2.12.0...v2.13.0) (2021-03-06)
+
+
+### Bug Fixes
+
+* change commitHash field to hash ([c3a88a8](https://github.com/ccontrols/component-controls/commit/c3a88a8fbdec6efa1c081ba6d64360ba2ffaa75a))
+
+
+
+
+
 ## [2.10.4](https://github.com/ccontrols/component-controls/compare/v2.10.3...v2.10.4) (2021-02-28)
 
 
