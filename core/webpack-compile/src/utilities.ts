@@ -95,6 +95,7 @@ const createConfig = (options: BuildProps): webpack.Configuration => {
       },
       output: {
         path: distFolder,
+        publicPath: staticFolder,
         filename: bundleName,
         libraryTarget: 'umd',
         globalObject: 'this',
