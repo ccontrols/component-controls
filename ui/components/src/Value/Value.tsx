@@ -19,7 +19,11 @@ export interface ValueProps {
 export const Value: FC<ValueProps & BoxProps> = ({ label, value, ...rest }) => {
   return (
     <Box variant="value.container" {...rest}>
-      <Text variant="value.label">{label}</Text>
+      {typeof label === 'string' ? (
+        <Text variant="value.label">{label}</Text>
+      ) : (
+        label
+      )}
       {!!value && <Text variant="value.value">{value}</Text>}
     </Box>
   );
