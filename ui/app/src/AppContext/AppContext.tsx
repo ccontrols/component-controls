@@ -35,16 +35,14 @@ export const AppContext: FC<AppContextProps> = ({
       ? queryString.parse(window.location.search)
       : undefined;
   let dynStoryId: string | undefined;
-  if (query && docId && storyId && !store.stories[storyId]) {
-    if (typeof query.story === 'string') {
-      dynStoryId = docStoryToId(docId, query.story);
-    } else {
-      //if dynamic stories - the storyId could be wrong
-      if (store.docs[docId] && store.docs[docId].stories) {
-        const stories = store.docs[docId].stories as string[];
-        if (stories.length) {
-          dynStoryId = stories[0];
-        }
+  if (query && docId && storyId && typeof query.story === 'string') {
+    dynStoryId = docStoryToId(docId, query.story);
+  } else if (docId && storyId && !store.stories[storyId]) {
+    //if dynamic stories - the storyId could be wrong
+    if (store.docs[docId] && store.docs[docId].stories) {
+      const stories = store.docs[docId].stories as string[];
+      if (stories.length) {
+        dynStoryId = stories[0];
       }
     }
   } else {

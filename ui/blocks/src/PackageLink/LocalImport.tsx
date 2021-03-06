@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { FC, useMemo } from 'react';
 import { jsx } from 'theme-ui';
-import { getStoryPath } from '@component-controls/core';
+import { getStoryPath, formatStoryPath } from '@component-controls/core';
 import { Tag, Link } from '@component-controls/components';
 import { useStore } from '@component-controls/store';
 
@@ -39,7 +39,9 @@ export const LocalImport: FC<LocalImportProps> = ({ componentHash, name }) => {
       if (doc?.stories?.length) {
         storyId = doc?.stories[0];
       }
-      return (storyId || doc) && getStoryPath(storyId, doc, store);
+      return (
+        (storyId || doc) && formatStoryPath(getStoryPath(storyId, doc, store))
+      );
     }
     return undefined;
   }, [store, componentHash, name]);

@@ -50,7 +50,7 @@ export const SEO: FC<SEOProps> = ({ Helmet, doc, config }) => {
     description) as string | undefined;
   const url =
     typeof window === 'undefined'
-      ? getStoryPath(story?.id, doc, store, tab)
+      ? getStoryPath(story?.id, doc, store, tab).path
       : window.location.href;
   const author = doc?.author || siteAuthor;
 

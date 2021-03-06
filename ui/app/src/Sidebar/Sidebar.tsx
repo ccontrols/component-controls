@@ -27,6 +27,7 @@ import {
   defDocType,
   Store,
   getStoryPath,
+  formatStoryPath,
   getDocPath,
   PageConfiguration,
   StaticMenuItems,
@@ -64,7 +65,7 @@ const createMenuItem = (
       return '';
     }
     const doc = story.doc ? store.docs[story.doc] : undefined;
-    return getStoryPath(story.id, doc, store, activeTab);
+    return formatStoryPath(getStoryPath(story.id, doc, store, activeTab));
   };
 
   const documentPath = (

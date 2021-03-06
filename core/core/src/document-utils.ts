@@ -47,7 +47,8 @@ export const getDocPath = (
   const { storyPaths } = sideNav;
   const activeTab = doc?.MDXPage ? undefined : tab;
   if (storyPaths && doc && doc.stories && doc.stories.length > 0 && store) {
-    return getStoryPath(doc.stories[0], doc, store, activeTab);
+    const { path } = getStoryPath(doc.stories[0], doc, store, activeTab);
+    return path;
   }
   const route = doc
     ? doc.route ||
@@ -65,7 +66,7 @@ export const getStoryPath = (
   doc?: Document,
   store?: Store,
   tab?: string,
-): string => {
+): { path: string; query?: string } => {
   const pagesConfig: PagesOnlyRoutes | undefined = store
     ? (store.config.pages as PagesOnlyRoutes)
     : undefined;
@@ -73,7 +74,7 @@ export const getStoryPath = (
   const docType = doc?.type || defDocType;
   const activeTab = doc?.MDXPage ? undefined : tab;
   if (!storyId) {
-    return getDocPath(docType, doc, store, undefined, activeTab);
+    return { path: getDocPath(docType, doc, store, undefined, activeTab) };
   }
   const { basePath = '' } = pagesConfig?.[docType] || {};
   const docRoute = removeTrailingSlash(doc?.route || basePath);
@@ -82,9 +83,16 @@ export const getStoryPath = (
   const id = dynamicId || storyId;
   const route = `${docRoute}${id ? ensureStartingSlash(id) : ''}${
     activeTab ? ensureStartingSlash(activeTab) : ''
-  }${dynamicId ? `?story=${name}` : ''}`;
-  return encodeURI(`${siteRoot}${route}`);
+  }`;
+  return {
+    path: encodeURI(`${siteRoot}${route}`),
+    query: dynamicId ? `story=${name}` : undefined,
+  };
 };
+
+export const formatStoryPath = (
+  storyPath: ReturnType<typeof getStoryPath>,
+): string => `${storyPath.path}${storyPath.query ? `?${storyPath.query}` : ''}`;
 
 export const getDocTypePath = (
   store: Store,

@@ -53,6 +53,7 @@ const getUniquesByField = (
 export interface DocPagesPath {
   type: DocType;
   path: string;
+  query?: string;
   lastModified?: string;
   docId?: string;
   storyId?: string;
@@ -90,13 +91,14 @@ export const getDocPages = (store: Store): DocPagesPath[] => {
                 ? doc.stories
                 : [undefined];
             stories.forEach((storyId?: string) => {
-              const path = getStoryPath(storyId, doc, store, route);
+              const { path, query } = getStoryPath(storyId, doc, store, route);
               if (!docPaths.find(p => p.path === path)) {
                 docPaths.push({
                   lastModified: doc.dateModified
                     ? new Date(doc.dateModified).toISOString()
                     : undefined,
                   path,
+                  query,
                   type: docType,
                   activeTab: route,
                   docId: doc.title,

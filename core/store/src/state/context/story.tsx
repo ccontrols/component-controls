@@ -9,6 +9,7 @@ import React, {
 import {
   Story,
   getStoryPath,
+  formatStoryPath,
   CURRENT_STORY,
   docStoryToId,
   getComponentName,
@@ -196,7 +197,7 @@ export const useStoryPath = (storyId: string): string => {
     return '';
   }
   const doc = store.docs[story?.doc || ''];
-  return getStoryPath(story.id, doc, store, activeTab);
+  return formatStoryPath(getStoryPath(story.id, doc, store, activeTab));
 };
 
 export const useGetStoryPath = (): ((
@@ -207,6 +208,6 @@ export const useGetStoryPath = (): ((
   return (storyId: string, activeTab?: string): string => {
     const story = store.stories[storyId];
     const doc = story && story.doc ? store.docs[story.doc] : undefined;
-    return getStoryPath(storyId, doc, store, activeTab);
+    return formatStoryPath(getStoryPath(storyId, doc, store, activeTab));
   };
 };

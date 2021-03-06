@@ -107,7 +107,7 @@ describe('paths', () => {
         undefined,
         storeDefault,
         'test',
-      ),
+      ).path,
     ).toEqual('/docs/api-introducetion--story-mame/test');
   });
   it('story route with title with root "/root/"', () => {
@@ -117,17 +117,17 @@ describe('paths', () => {
         undefined,
         storeSiteRoot2,
         'test',
-      ),
+      ).path,
     ).toEqual('/root/docs/api-introducetion--story-mame/test');
   });
   it('story route with dynmic id with root "/root/"', () => {
-    expect(
-      getStoryPath(
-        'api-introducetion--dynamic',
-        undefined,
-        storeSiteRoot2,
-        'test',
-      ),
-    ).toEqual('/root/docs/api-introducetion--story-mame/test?story=Dynamic');
+    const { path, query } = getStoryPath(
+      'api-introducetion--dynamic',
+      undefined,
+      storeSiteRoot2,
+      'test',
+    );
+    expect(path).toEqual('/root/docs/api-introducetion--story-mame/test');
+    expect(query).toEqual('story=Dynamic');
   });
 });
