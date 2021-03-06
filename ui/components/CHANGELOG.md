@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.13.0](https://github.com/ccontrols/component-controls/compare/v2.12.0...v2.13.0) (2021-03-06)
+
+
+### Bug Fixes
+
+* update description ([eb3650d](https://github.com/ccontrols/component-controls/commit/eb3650d1c807a3d54c13a955a66053629469b3a0))
+
+
+### Features
+
+* hide next/previous page buttons when all rows can fit on one page ([9f3b882](https://github.com/ccontrols/component-controls/commit/9f3b88262e7cf3c991d7fd3a5cb5ce232078b131))
+
+
+
+
+
 # [2.12.0](https://github.com/ccontrols/component-controls/compare/v2.11.3...v2.12.0) (2021-03-03)
 
 

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.13.0](https://github.com/ccontrols/component-controls/compare/v2.12.0...v2.13.0) (2021-03-06)
+
+
+### Features
+
+* add commit message column ([d4499a6](https://github.com/ccontrols/component-controls/commit/d4499a61fcc1198133ba20bd6c76a9d27cb93089))
+* add Github avatar to author columnn ([caf3dd7](https://github.com/ccontrols/component-controls/commit/caf3dd7f775de25c0d42a3b655e1663f349778c0))
+* add pagination to commits table ([fa9d15d](https://github.com/ccontrols/component-controls/commit/fa9d15dbab71f8d157749f7d9da3d26872ff4fec))
+* add sorting to Committers table ([16c8753](https://github.com/ccontrols/component-controls/commit/16c875366e3140fc70df02a3b4529163df724dd9))
+* create BaseComponentCommits component and display it when user hovers over commits ([65fce22](https://github.com/ccontrols/component-controls/commit/65fce229c2836a59222dd0110ca75a92639bd24b))
+* create story for ComponentCommits ([4e9e3fa](https://github.com/ccontrols/component-controls/commit/4e9e3fa960eeeb34fe85215a1edf81b43801343c))
+* display commit date and author in table ([f6a7369](https://github.com/ccontrols/component-controls/commit/f6a73692e9358c0246a0ed7d333e1687447c28d2))
+* use commit hash to link to commit ([4c1f2c9](https://github.com/ccontrols/component-controls/commit/4c1f2c926adeb71292200366052998cba910a465))
+
+
+
+
+
 # [2.12.0](https://github.com/ccontrols/component-controls/compare/v2.11.3...v2.12.0) (2021-03-03)
 
 **Note:** Version bump only for package @component-controls/blocks

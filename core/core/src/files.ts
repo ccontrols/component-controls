@@ -2,7 +2,7 @@
  * git commits fields
  */
 export interface Commit {
-  commitHash?: string;
+  hash?: string;
   subject?: string;
   authorName?: string;
   authorDate?: string;

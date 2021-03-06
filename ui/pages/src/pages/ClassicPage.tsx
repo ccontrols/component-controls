@@ -10,6 +10,7 @@ import {
   LocalDependencies,
   ComponentJSX,
   ComponentSource,
+  ComponentCommits,
   PropsTable,
   PackageVersion,
 } from '@component-controls/blocks';
@@ -53,6 +54,7 @@ const ClassicPage: FC<TabConfiguration> = ({ controlsThreshold = 10 }) => {
           visibility={splitControls ? 'info' : 'all'}
         />
       )}
+      <ComponentCommits id="." title="Commits" />
       <ExternalDependencies id="." title="External dependencies" />
       <LocalDependencies id="." title="Internal dependencies" />
       <ComponentJSX id="." title="Component JSX" />

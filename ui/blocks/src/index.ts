@@ -2,6 +2,7 @@ export * from './BlockContainer';
 export * from './context';
 export * from './ComponentContributors';
 export * from './ComponentDependencies';
+export * from './ComponentCommits';
 export * from './ComponentJSX';
 export * from './ComponentSource';
 export * from './ComponentStats';
