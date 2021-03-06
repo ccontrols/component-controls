@@ -29,8 +29,6 @@ export const ComponentCommits: FC<ComponentCommitsProps> = ({
   const props = useCustomProps<ComponentCommitsProps>('commits', rest);
   const component = useStoryComponent({ id, name });
 
-  console.log(component);
-
   if (!component?.fileInfo?.commits) {
     return null;
   }

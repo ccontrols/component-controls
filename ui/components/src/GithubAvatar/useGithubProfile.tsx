@@ -109,7 +109,6 @@ export const useGithubProfile = ({
                       )
                         .then(res => res.json())
                         .then(result => {
-                          console.log('MATCH', result);
                           profilesCache[username] = result;
                           setProfile(profilesCache[username]);
                         });
