@@ -7,6 +7,7 @@ import {
   Playground,
   Description,
   ExternalDependencies,
+  ComponentCommits,
   LocalDependencies,
   ComponentJSX,
   ComponentSource,
@@ -24,6 +25,7 @@ const ComponentPage: FC = () => {
       </Playground>
       <ComponentSource id="." title="Component" />
       <PropsTable of="." title={'Properties'} visibility={'info'} />
+      <ComponentCommits id="." title="Commits" />
       <ExternalDependencies id="." title="External dependencies" />
       <LocalDependencies id="." title="Internal dependencies" />
       <ComponentJSX id="." title="Component JSX" />
