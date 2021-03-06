@@ -12,8 +12,12 @@ import {
   RuleOptions,
   defaultCompileProps,
 } from '@component-controls/core';
-import { getCSSBundleName } from '@component-controls/core/node-utils';
+import {
+  getBundleName,
+  getCSSBundleName,
+} from '@component-controls/core/node-utils';
 import { Store } from '@component-controls/core';
+import { mergeBuildConfiguration } from '@component-controls/config';
 import { loadStore } from '@component-controls/store';
 import { getSiteMap } from '@component-controls/routes';
 
@@ -22,31 +26,31 @@ module.exports = ({
   configPath,
   presets,
   staticFolder,
+  distFolder,
   webpack,
   ...rest
 }: BuildProps) => () => {
+  const userProps: BuildProps = {
+    bundleName,
+    configPath,
+    webpack,
+  };
+  const buildConfig: BuildProps = {
+    ...defaultCompileProps,
+    ...{
+      distFolder: distFolder || path.join(process.cwd(), 'public'),
+      staticFolder: staticFolder || path.join(process.cwd(), 'dist', 'static'),
+    },
+    ...userProps,
+  };
+  if (presets) {
+    buildConfig.presets = presets;
+  }
   return {
     /**
      * we need some async function, to make sure the compilation process is completed
      */
     async headers() {
-      const userProps: BuildProps = {
-        bundleName,
-        configPath,
-        webpack,
-      };
-      const config: BuildProps = {
-        ...defaultCompileProps,
-        ...{
-          distFolder: path.resolve(__dirname),
-          staticFolder:
-            staticFolder || path.join(process.cwd(), 'public', 'static'),
-          ...userProps,
-        },
-      };
-      if (presets) {
-        config.presets = presets;
-      }
       const onBundle: CompilerCallbackFn = async ({ store: loadingStore }) => {
         if (loadingStore) {
           const store: Store = loadStore(loadingStore, true);
@@ -54,7 +58,7 @@ module.exports = ({
             if (store.config.siteMap) {
               const sitemap = getSiteMap(store);
               const sitemapfolder = path.resolve(
-                config.staticFolder as string,
+                buildConfig.staticFolder as string,
                 '..',
               );
               if (!fs.existsSync(sitemapfolder)) {
@@ -71,8 +75,8 @@ module.exports = ({
       };
       const compiler =
         process.env.NODE_ENV === 'development'
-          ? watch(config, onBundle)
-          : compile(config, onBundle);
+          ? watch(buildConfig, onBundle)
+          : compile(buildConfig, onBundle);
       await compiler;
 
       return [];
@@ -86,7 +90,26 @@ module.exports = ({
           '@emotion/babel-plugin',
         );
       }
-      return config;
+      return {
+        ...config,
+        module: {
+          ...config.module,
+          rules: [
+            ...(config.module?.rules || []),
+            {
+              test: require.resolve('@component-controls/store/controls-store'),
+              use: {
+                loader: require.resolve('@component-controls/store/loader.js'),
+                options: {
+                  bundleFileName: getBundleName(
+                    mergeBuildConfiguration(buildConfig),
+                  ),
+                },
+              },
+            },
+          ],
+        },
+      };
     },
 
     ...rest,

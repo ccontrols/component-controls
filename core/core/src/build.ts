@@ -16,6 +16,7 @@ export type PresetCallback = (options: BuildProps) => Configuration;
 export type PresetType = Configuration | PresetCallback;
 
 export type WebpackLoader =
+  | 'mini-css-extract-plugin'
   | 'css-loader'
   | 'postcss-loader'
   | 'sass-loader'

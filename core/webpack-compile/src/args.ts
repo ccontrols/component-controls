@@ -1,3 +1,4 @@
+import path from 'path';
 import yargs, { Options, Argv } from 'yargs';
 
 export interface CliArgTypes {
@@ -65,7 +66,7 @@ export const defaultCliArgs: ArgOptions = [
       alias: 's',
       description: 'static assets folder',
       type: 'string',
-      default: 'dist/static',
+      default: path.join('dist', 'static'),
     },
   },
   {

@@ -1,22 +1,28 @@
+import {
+  WebpackLoaderContext,
+  LoaderOptions,
+} from '@component-controls/core/node-utils';
 import { getOptions } from 'loader-utils';
 
 interface DocsOptions {
-  pages: string[];
+  pages?: string[];
 }
 
-module.exports.default = async function() {
-  const options: DocsOptions = (getOptions(this) as DocsOptions) || {
-    pages: [],
-  };
+function loader(this: WebpackLoaderContext): any {
+  const options: DocsOptions = getOptions(this) || {};
   const { pages } = options;
   const callback = this.async();
   const code = ` 
 const React = require('react');
 const ReactDOM = require('react-dom');
 import addons from '@storybook/addons';
-${pages
-  .map((file, index) => `const pageConfig_${index} = require("${file}");`)
-  .join('\n')}
+${
+  pages
+    ? pages
+        .map((file, index) => `const pageConfig_${index} = require("${file}");`)
+        .join('\n')
+    : ''
+}
 
 
 const activePages = [];
@@ -71,12 +77,16 @@ const attachPages = (pageConfigs, viewMode) => {
   });  
 };
 const pageConfigs = [];
-${pages
-  .map(
-    (file, index) =>
-      `pageConfigs.push(pageConfig_${index}.default || pageConfig_${index});`,
-  )
-  .join('\n')}
+${
+  pages
+    ? pages
+        .map(
+          (file, index) =>
+            `pageConfigs.push(pageConfig_${index}.default || pageConfig_${index});`,
+        )
+        .join('\n')
+    : ''
+}
 
   window.addEventListener('load', () => {
     
@@ -91,5 +101,19 @@ ${pages
     attachPages(pageConfigs, viewMode);
   });
 `;
-  return callback(null, code);
-};
+  if (callback) {
+    return callback(null, code);
+  }
+  return '';
+}
+
+export default loader;
+
+/**
+ * expose public types via declaration merging
+ */
+// eslint-disable-next-line @typescript-eslint/no-namespace
+namespace loader {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  export interface Options extends LoaderOptions {}
+}

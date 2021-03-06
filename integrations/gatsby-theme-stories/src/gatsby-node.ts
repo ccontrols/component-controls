@@ -115,7 +115,11 @@ export const createPagesStatefully = async (
         }
         await searchIndexing(store);
       }
-      process.env.GATSBY_CC_CSS_FILENAME = getCSSBundleName(store.config);
+      const cssBundle = getCSSBundleName(store.config);
+      if (fs.existsSync(cssBundle)) {
+        const cssStyles = fs.readFileSync(cssBundle, 'utf8');
+        process.env.GATSBY_CC_CSS = JSON.stringify(cssStyles);
+      }
     }
 
     doneCb(null, null);

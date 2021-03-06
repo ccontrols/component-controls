@@ -1,14 +1,11 @@
 import path from 'path';
-import { Configuration, RuleSetUseItem, WebpackPluginInstance } from 'webpack';
-import OptimizeCssAssetsWebpackPlugin from 'optimize-css-assets-webpack-plugin';
+import { Configuration, RuleSetUseItem } from 'webpack';
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import {
   PresetCallback,
   BuildProps,
-  //TODO webpack compatible version:
-  /*
   defCssFileName,
-   */
   customLoaderOptions,
 } from '@component-controls/core';
 import { findUpFile } from '@component-controls/core/node-utils';
@@ -33,12 +30,9 @@ export const react: PresetCallback = (options: BuildProps) => {
   }
   const result: Configuration = {
     plugins: [
-      //TODO webpack compatible version:
-      /*
-      new ExtractCssPlugin({
+      new MiniCssExtractPlugin({
         filename: options.cssFileName || defCssFileName,
       }),
-       */
     ],
     optimization: { minimizer: [] },
     performance: { hints: false },
@@ -110,7 +104,7 @@ export const react: PresetCallback = (options: BuildProps) => {
           exclude: [/node_modules/],
           loader: 'url-loader',
           options: customLoaderOptions(options, 'url-loader', {
-            limit: 25000,
+            limit: 1024 * 24,
             name: '[name].[ext]',
             publicPath: '/static',
             outputPath: path.relative(
@@ -140,9 +134,9 @@ export const react: PresetCallback = (options: BuildProps) => {
             // Creates `style` nodes from JS strings
             {
               loader: MiniCssExtractPlugin.loader,
-              options: {
+              options: customLoaderOptions(options, 'mini-css-extract-plugin', {
                 publicPath: '',
-              },
+              }),
             },
             {
               // Translates CSS into CommonJS
@@ -210,15 +204,8 @@ export const react: PresetCallback = (options: BuildProps) => {
     },
   };
   if (isProd) {
-    const optimizeCss: WebpackPluginInstance = new (OptimizeCssAssetsWebpackPlugin as any)(
-      {
-        cssProcessorOptions: {
-          discardComments: { removeAll: true },
-        },
-      },
-    );
     result.optimization = {
-      minimizer: [optimizeCss],
+      minimizer: [new CssMinimizerPlugin()],
     };
   }
   return result;

@@ -1,4 +1,3 @@
-import fs from 'fs';
 import React from 'react';
 import { PreRenderHTMLArgs, RenderBodyArgs } from 'gatsby';
 import { Helmet } from 'react-helmet';
@@ -27,9 +26,8 @@ export const onPreRenderHTML = ({
   replaceHeadComponents,
 }: PreRenderHTMLArgs): void => {
   const headComponents = getHeadComponents();
-  const cssBundle = process.env.GATSBY_CC_CSS_FILENAME;
-  if (cssBundle && fs.existsSync(cssBundle)) {
-    const cssStyles = fs.readFileSync(cssBundle, 'utf8');
+  if (typeof process.env.GATSBY_CC_CSS === 'string') {
+    const cssStyles = JSON.parse(process.env.GATSBY_CC_CSS);
     headComponents.push(<style key="controls-styles">{cssStyles}</style>);
   }
   //fix issue with facebook ignoring the helmet tags
