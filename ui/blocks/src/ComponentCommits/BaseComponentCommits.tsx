@@ -1,10 +1,15 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
-import { FC, useMemo } from 'react';
+import { FC, Fragment, useMemo } from 'react';
 import { jsx } from 'theme-ui';
 import { Column } from 'react-table';
-import { Table, TableProps } from '@component-controls/components';
-import { useConfig } from '@component-controls/store';
+import { GitCommitIcon } from '@primer/octicons-react';
+import {
+  ExternalLink,
+  Table,
+  TableProps,
+} from '@component-controls/components';
+import { useConfig, usePackage } from '@component-controls/store';
 import { Commit, Component, dateToLocalString } from '@component-controls/core';
 import { GithubAvatar } from '@component-controls/components';
 
@@ -23,7 +28,11 @@ export const BaseComponentCommits: FC<BaseComponentCommitsProps> = ({
   const config = useConfig();
   const { tokens } = config;
 
-  console.log(component);
+  const componentPackage = usePackage(component?.package);
+  const baseGitURL = componentPackage?.repository?.issues?.replace(
+    'issues',
+    'commit',
+  );
 
   const columns = useMemo(
     () =>
@@ -66,12 +75,26 @@ export const BaseComponentCommits: FC<BaseComponentCommitsProps> = ({
           accessor: 'subject',
           Cell: ({
             row: {
-              original: { subject },
+              original: { subject, hash },
             },
-          }) => <p>{subject}</p>,
+          }) => (
+            <Fragment>
+              <span sx={{ mr: 1 }}>{subject}</span>
+              {baseGitURL && hash && (
+                <span>
+                  <ExternalLink
+                    href={`${baseGitURL}/${hash}`}
+                    aria-label="View commit on GitHub"
+                  >
+                    <GitCommitIcon size={16} />
+                  </ExternalLink>
+                </span>
+              )}
+            </Fragment>
+          ),
         },
       ] as Column<Commit>[],
-    [],
+    [baseGitURL, tokens?.githubAccessToken],
   );
 
   if (!component?.fileInfo?.commits) {
