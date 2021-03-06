@@ -26,7 +26,7 @@ module.exports = ({
   configPath,
   presets,
   staticFolder,
-  distFolder,
+  distFolder: userDistFolder,
   webpack,
   ...rest
 }: BuildProps) => () => {
@@ -35,11 +35,12 @@ module.exports = ({
     configPath,
     webpack,
   };
+  const distFolder = userDistFolder || path.join(process.cwd(), 'public');
   const buildConfig: BuildProps = {
     ...defaultCompileProps,
     ...{
-      distFolder: distFolder || path.join(process.cwd(), 'public'),
-      staticFolder: staticFolder || path.join(process.cwd(), 'dist', 'static'),
+      distFolder,
+      staticFolder: staticFolder || path.join(distFolder, 'static'),
     },
     ...userProps,
   };
