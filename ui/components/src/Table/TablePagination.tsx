@@ -74,31 +74,33 @@ export const TablePagination: FC<UsePaginationInstanceProps<{
 
   return (
     <Box variant="table.pagination.container">
-      <Box variant="table.pagination.navigation">
-        <Box variant="table.pagination.navigation.button">
-          <Button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
-            {'<<'}
-          </Button>
+      {(canPreviousPage || canNextPage) && (
+        <Box variant="table.pagination.navigation">
+          <Box variant="table.pagination.navigation.button">
+            <Button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
+              {'<<'}
+            </Button>
+          </Box>
+          <Box variant="table.pagination.navigation.button">
+            <Button onClick={() => previousPage()} disabled={!canPreviousPage}>
+              {'<'}
+            </Button>
+          </Box>
+          <Box variant="table.pagination.navigation.button">
+            <Button onClick={() => nextPage()} disabled={!canNextPage}>
+              {'>'}
+            </Button>
+          </Box>
+          <Box variant="table.pagination.navigation.button">
+            <Button
+              onClick={() => gotoPage(pageCount - 1)}
+              disabled={!canNextPage}
+            >
+              {'>>'}
+            </Button>
+          </Box>
         </Box>
-        <Box variant="table.pagination.navigation.button">
-          <Button onClick={() => previousPage()} disabled={!canPreviousPage}>
-            {'<'}
-          </Button>
-        </Box>
-        <Box variant="table.pagination.navigation.button">
-          <Button onClick={() => nextPage()} disabled={!canNextPage}>
-            {'>'}
-          </Button>
-        </Box>
-        <Box variant="table.pagination.navigation.button">
-          <Button
-            onClick={() => gotoPage(pageCount - 1)}
-            disabled={!canNextPage}
-          >
-            {'>>'}
-          </Button>
-        </Box>
-      </Box>
+      )}
       {pageVisible && (
         <Box variant="table.pagination.page">{pageResolvedTemplate}</Box>
       )}
