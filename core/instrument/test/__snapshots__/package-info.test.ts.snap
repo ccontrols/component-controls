@@ -94,7 +94,7 @@ Object {
     "autoprefixer": "^9.7.4",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
-    "babel-preset-react-app": "^9.1.2",
+    "babel-preset-react-app": "^10.0.0",
     "commitizen": "^3.1.2",
     "cross-env": "^5.2.0",
     "eslint": "^6.8.0",

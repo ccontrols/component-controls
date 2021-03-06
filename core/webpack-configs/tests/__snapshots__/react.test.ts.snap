@@ -72,6 +72,7 @@ Object {
             Array [
               "@babel/preset-env",
               Object {
+                "bugfixes": true,
                 "corejs": 3,
                 "modules": "commonjs",
                 "targets": Object {
@@ -95,7 +96,7 @@ Object {
         ],
         "loader": "url-loader",
         "options": Object {
-          "limit": 25000,
+          "limit": 24576,
           "name": "[name].[ext]",
           "outputPath": "",
           "publicPath": "/static",
@@ -117,7 +118,12 @@ Object {
       Object {
         "test": /\\\\\\.\\(css\\|sass\\|scss\\|less\\)\\$/i,
         "use": Array [
-          "/Users/atanasster/component-controls/node_modules/extract-css-chunks-webpack-plugin/dist/loader.js",
+          Object {
+            "loader": "/Users/atanasster/component-controls/node_modules/mini-css-extract-plugin/dist/loader.js",
+            "options": Object {
+              "publicPath": "",
+            },
+          },
           Object {
             "loader": "css-loader",
             "options": Object {
@@ -210,13 +216,17 @@ Object {
     "hints": false,
   },
   "plugins": Array [
-    ExtractCssChunksPlugin {
+    MiniCssExtractPlugin {
+      "_sortedModulesCache": WeakMap {},
       "options": Object {
         "chunkFilename": "[id].component-controls.css",
         "filename": "component-controls.css",
         "ignoreOrder": false,
-        "insert": null,
-        "moduleFilename": [Function],
+      },
+      "runtimeOptions": Object {
+        "attributes": undefined,
+        "insert": undefined,
+        "linkType": "text/css",
       },
     },
   ],

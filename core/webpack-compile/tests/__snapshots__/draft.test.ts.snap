@@ -14,6 +14,15 @@ Object {
       "contributing.md",
       "license.md",
     ],
+    "instrument": Object {
+      "components": Object {
+        "package": Object {
+          "browseLink": true,
+        },
+        "resolveFile": [Function],
+        "sourceFiles": [Function],
+      },
+    },
     "pages": Object {
       "author": Object {
         "basePath": "authors/",
@@ -31,11 +40,7 @@ Object {
           "storyPaths": true,
         },
         "tabs": Object {
-          "page": Object {
-            "component": [Function],
-            "controlsThreshold": 10,
-            "title": "Documentation",
-          },
+          "page": "/Users/atanasster/component-controls/ui/pages/ClassicPage.js",
         },
       },
       "tags": Object {
@@ -58,15 +63,4298 @@ Object {
         },
       },
     },
-    "siteRoot": "/",
+    "siteRoot": "/root/",
     "stories": Array [
-      "./*.stories.(js|jsx|tsx|mdx)",
+      "../src/docs/*.@(mdx|tsx)",
     ],
+    "webpack": [Function],
   },
-  "components": Object {},
-  "config": undefined,
-  "packages": Object {},
+  "components": Object {
+    "5a3b7658720a0f4b8c0fd61ba5fb8c34": Object {
+      "externalDependencies": Object {
+        "react": Array [
+          Object {
+            "importedName": "default",
+            "name": "React",
+          },
+          Object {
+            "importedName": "FC",
+            "name": "FC",
+          },
+        ],
+      },
+      "fileInfo": Object {
+        "commits": Array [
+          Object {
+            "authorDate": "2020-07-20T04:41:19.000Z",
+            "authorEmail": "atanasster@gmail.com",
+            "authorName": "atanasster",
+            "committerDate": "2020-07-20T04:41:19.000Z",
+            "committerEmail": "atanasster@gmail.com",
+            "committerName": "atanasster",
+            "hash": "e9fc88d90f6f9541d8744530b49c8c595fbe7b99",
+            "subject": "docs: update tutorial stories",
+          },
+          Object {
+            "authorDate": "2020-07-19T04:05:43.000Z",
+            "authorEmail": "atanasster@gmail.com",
+            "authorName": "atanasster",
+            "committerDate": "2020-07-19T04:05:43.000Z",
+            "committerEmail": "atanasster@gmail.com",
+            "committerName": "atanasster",
+            "hash": "3e9724f3d740da33bd277b03f8a83017159be114",
+            "subject": "docs: added starter example",
+          },
+        ],
+        "dateCreated": "2020-07-19T04:05:43.000Z",
+        "dateModified": "2020-07-20T04:41:19.000Z",
+        "sloc": Object {
+          "block": 27,
+          "blockEmpty": 0,
+          "comment": 27,
+          "empty": 9,
+          "mixed": 0,
+          "single": 0,
+          "source": 45,
+          "todo": 0,
+          "total": 81,
+        },
+      },
+      "fileName": "Button.tsx",
+      "from": "../components/Button",
+      "importedName": "Button",
+      "info": Object {
+        "description": "Button with react Typescript properties",
+        "displayName": "Button",
+        "methods": Array [],
+        "props": Object {
+          "backgroundColor": Object {
+            "defaultValue": "#fefefe",
+            "description": "Background color",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "children": Object {
+            "defaultValue": "default",
+            "description": "button label",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "function",
+              "raw": "string | (string & {}) | (string & ReactElement<any, string | ((props: any) => ReactElement<any, any> | null) | (new (props: any) => Component<any, any, any>)>) | (string & ReactNodeArray) | (string & ReactPortal)",
+            },
+          },
+          "color": Object {
+            "defaultValue": "black",
+            "description": "Text color, default black",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "disabled": Object {
+            "defaultValue": false,
+            "description": "Boolean indicating whether the button should render as disabled",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "boolean",
+              "raw": "boolean",
+            },
+          },
+          "onClick": Object {
+            "defaultValue": "() => {}",
+            "description": "onClick handler",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "function",
+              "raw": "(() => void)",
+            },
+          },
+          "padding": Object {
+            "defaultValue": 5,
+            "description": "Numeric  field type",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "number",
+              "raw": "number",
+            },
+          },
+          "style": Object {
+            "defaultValue": "{}",
+            "description": "Custom styles",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "object",
+              "raw": "object",
+            },
+          },
+          "type": Object {
+            "defaultValue": "button",
+            "description": "Button type",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "union",
+              "raw": "\\"button\\" | \\"reset\\" | \\"submit\\"",
+              "value": Array [
+                Object {
+                  "name": "button",
+                },
+                Object {
+                  "name": "reset",
+                },
+                Object {
+                  "name": "submit",
+                },
+              ],
+            },
+          },
+        },
+        "tags": Object {},
+      },
+      "jsx": Array [
+        Object {
+          "attributes": Array [
+            "type",
+            "disabled",
+            "onClick",
+            "style",
+          ],
+          "children": Array [],
+          "name": "button",
+        },
+      ],
+      "loc": Object {
+        "end": Object {
+          "column": 1,
+          "line": 70,
+        },
+        "start": Object {
+          "column": 39,
+          "line": 47,
+        },
+      },
+      "localDependencies": Object {},
+      "name": "Button",
+      "package": "5a3b7658720a0f4b8c0fd61ba5fb8c34",
+      "request": "/Users/atanasster/component-controls/examples/starter/src/components/Button.tsx",
+      "source": "import React, { FC } from 'react';
+
+export interface ButtonProps {
+  /**
+   *  Boolean indicating whether the button should render as disabled
+   */
+  disabled?: boolean;
+
+  /**
+   * Background color
+   */
+  backgroundColor?: string;
+
+  /**
+   * Text color, default black
+   */
+  color?: string;
+
+  /**
+   * Numeric  field type
+   */
+  padding?: number;
+
+  /**
+   * Button type
+   */
+  type?: 'button' | 'reset' | 'submit';
+
+  /**
+   * Custom styles
+   */
+  style?: object;
+  /**
+   * button label
+   */
+  children?: string;
+
+  /**
+   * onClick handler
+   */
+  onClick?: () => void;
+}
+
+/**
+ * Button with react Typescript properties
+ */
+export const Button: FC<ButtonProps> = ({
+  disabled,
+  children,
+  onClick,
+  style,
+  backgroundColor,
+  color,
+  type,
+  padding,
+}) => (
+  <button
+    type={type}
+    disabled={disabled}
+    onClick={onClick}
+    style={{
+      ...style,
+      backgroundColor,
+      color,
+      padding,
+    }}
+  >
+    {children}
+  </button>
+);
+
+Button.defaultProps = {
+  disabled: false,
+  children: 'default',
+  onClick: () => {},
+  style: {},
+  backgroundColor: '#fefefe',
+  color: 'black',
+  type: 'button',
+  padding: 5,
+};
+",
+    },
+    "98b2111b08fbab8e38c938acaf3e129a": Object {
+      "externalDependencies": Object {
+        "@emotion/react": Array [
+          Object {
+            "importedName": "Interpolation",
+            "name": "Interpolation",
+          },
+        ],
+        "@emotion/styled": Array [
+          Object {
+            "importedName": "StyledComponent",
+            "name": "StyledComponent",
+          },
+        ],
+        "@theme-ui/css": Array [
+          Object {
+            "importedName": "ResponsiveStyleValue",
+            "name": "ResponsiveStyleValue",
+          },
+          Object {
+            "importedName": "ThemeUIStyleObject",
+            "name": "ThemeUIStyleObject",
+          },
+        ],
+        "react": Array [
+          Object {
+            "importedName": "namespace",
+            "name": "React",
+          },
+        ],
+        "styled-system": Array [
+          Object {
+            "importedName": "SpaceProps",
+            "name": "SpaceProps",
+          },
+          Object {
+            "importedName": "ColorProps",
+            "name": "ColorProps",
+          },
+          Object {
+            "importedName": "MarginProps",
+            "name": "MarginProps",
+          },
+        ],
+      },
+      "fileInfo": Object {
+        "dateCreated": "2021-02-18T04:44:00.719Z",
+        "dateModified": "2021-02-18T04:44:00.719Z",
+        "sloc": Object {
+          "block": 191,
+          "blockEmpty": 0,
+          "comment": 193,
+          "empty": 40,
+          "mixed": 0,
+          "single": 2,
+          "source": 162,
+          "todo": 0,
+          "total": 395,
+        },
+      },
+      "fileName": "index.d.ts",
+      "from": "theme-ui",
+      "importedName": "Button",
+      "info": Object {
+        "description": "Primitive button component with variants",
+        "displayName": "Button",
+        "methods": Array [],
+        "props": Object {
+          "about": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "accessKey": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "aria-activedescendant": Object {
+            "description": "Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "aria-atomic": Object {
+            "description": "Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "Booleanish",
+              "raw": "Booleanish",
+            },
+          },
+          "aria-autocomplete": Object {
+            "description": "Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be
+presented if they are made.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "enum",
+              "raw": "\\"none\\" | \\"list\\" | \\"inline\\" | \\"both\\"",
+              "value": Array [
+                Object {
+                  "name": "string",
+                  "value": "none",
+                },
+                Object {
+                  "name": "string",
+                  "value": "list",
+                },
+                Object {
+                  "name": "string",
+                  "value": "inline",
+                },
+                Object {
+                  "name": "string",
+                  "value": "both",
+                },
+              ],
+            },
+          },
+          "aria-busy": Object {
+            "description": "Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "Booleanish",
+              "raw": "Booleanish",
+            },
+          },
+          "aria-checked": Object {
+            "description": "Indicates the current \\"checked\\" state of checkboxes, radio buttons, and other widgets.
+@see aria-pressed
+@see aria-selected.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "union",
+              "raw": "boolean | \\"true\\" | \\"false\\" | \\"mixed\\"",
+              "value": Array [
+                Object {
+                  "name": "boolean",
+                },
+                Object {
+                  "name": "true",
+                },
+                Object {
+                  "name": "false",
+                },
+                Object {
+                  "name": "mixed",
+                },
+              ],
+            },
+          },
+          "aria-colcount": Object {
+            "description": "Defines the total number of columns in a table, grid, or treegrid.
+@see aria-colindex.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "number",
+              "raw": "number",
+            },
+          },
+          "aria-colindex": Object {
+            "description": "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.
+@see aria-colcount
+@see aria-colspan.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "number",
+              "raw": "number",
+            },
+          },
+          "aria-colspan": Object {
+            "description": "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
+@see aria-colindex
+@see aria-rowspan.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "number",
+              "raw": "number",
+            },
+          },
+          "aria-controls": Object {
+            "description": "Identifies the element (or elements) whose contents or presence are controlled by the current element.
+@see aria-owns.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "aria-current": Object {
+            "description": "Indicates the element that represents the current item within a container or set of related elements.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "union",
+              "raw": "boolean | \\"time\\" | \\"true\\" | \\"false\\" | \\"step\\" | \\"page\\" | \\"location\\" | \\"date\\"",
+              "value": Array [
+                Object {
+                  "name": "boolean",
+                },
+                Object {
+                  "name": "time",
+                },
+                Object {
+                  "name": "true",
+                },
+                Object {
+                  "name": "false",
+                },
+                Object {
+                  "name": "step",
+                },
+                Object {
+                  "name": "page",
+                },
+                Object {
+                  "name": "location",
+                },
+                Object {
+                  "name": "date",
+                },
+              ],
+            },
+          },
+          "aria-describedby": Object {
+            "description": "Identifies the element (or elements) that describes the object.
+@see aria-labelledby",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "aria-details": Object {
+            "description": "Identifies the element that provides a detailed, extended description for the object.
+@see aria-describedby.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "aria-disabled": Object {
+            "description": "Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
+@see aria-hidden
+@see aria-readonly.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "Booleanish",
+              "raw": "Booleanish",
+            },
+          },
+          "aria-dropeffect": Object {
+            "description": "Indicates what functions can be performed when a dragged object is released on the drop target.
+@deprecated in ARIA 1.1",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "enum",
+              "raw": "\\"link\\" | \\"none\\" | \\"copy\\" | \\"execute\\" | \\"move\\" | \\"popup\\"",
+              "value": Array [
+                Object {
+                  "name": "string",
+                  "value": "link",
+                },
+                Object {
+                  "name": "string",
+                  "value": "none",
+                },
+                Object {
+                  "name": "string",
+                  "value": "copy",
+                },
+                Object {
+                  "name": "string",
+                  "value": "execute",
+                },
+                Object {
+                  "name": "string",
+                  "value": "move",
+                },
+                Object {
+                  "name": "string",
+                  "value": "popup",
+                },
+              ],
+            },
+          },
+          "aria-errormessage": Object {
+            "description": "Identifies the element that provides an error message for the object.
+@see aria-invalid
+@see aria-describedby.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "aria-expanded": Object {
+            "description": "Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "Booleanish",
+              "raw": "Booleanish",
+            },
+          },
+          "aria-flowto": Object {
+            "description": "Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,
+allows assistive technology to override the general default of reading in document source order.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "aria-grabbed": Object {
+            "description": "Indicates an element's \\"grabbed\\" state in a drag-and-drop operation.
+@deprecated in ARIA 1.1",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "Booleanish",
+              "raw": "Booleanish",
+            },
+          },
+          "aria-haspopup": Object {
+            "description": "Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "union",
+              "raw": "boolean | \\"dialog\\" | \\"menu\\" | \\"true\\" | \\"false\\" | \\"listbox\\" | \\"tree\\" | \\"grid\\"",
+              "value": Array [
+                Object {
+                  "name": "boolean",
+                },
+                Object {
+                  "name": "dialog",
+                },
+                Object {
+                  "name": "menu",
+                },
+                Object {
+                  "name": "true",
+                },
+                Object {
+                  "name": "false",
+                },
+                Object {
+                  "name": "listbox",
+                },
+                Object {
+                  "name": "tree",
+                },
+                Object {
+                  "name": "grid",
+                },
+              ],
+            },
+          },
+          "aria-hidden": Object {
+            "description": "Indicates whether the element is exposed to an accessibility API.
+@see aria-disabled.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "Booleanish",
+              "raw": "Booleanish",
+            },
+          },
+          "aria-invalid": Object {
+            "description": "Indicates the entered value does not conform to the format expected by the application.
+@see aria-errormessage.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "union",
+              "raw": "boolean | \\"true\\" | \\"false\\" | \\"grammar\\" | \\"spelling\\"",
+              "value": Array [
+                Object {
+                  "name": "boolean",
+                },
+                Object {
+                  "name": "true",
+                },
+                Object {
+                  "name": "false",
+                },
+                Object {
+                  "name": "grammar",
+                },
+                Object {
+                  "name": "spelling",
+                },
+              ],
+            },
+          },
+          "aria-keyshortcuts": Object {
+            "description": "Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "aria-label": Object {
+            "description": "Defines a string value that labels the current element.
+@see aria-labelledby.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "aria-labelledby": Object {
+            "description": "Identifies the element (or elements) that labels the current element.
+@see aria-describedby.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "aria-level": Object {
+            "description": "Defines the hierarchical level of an element within a structure.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "number",
+              "raw": "number",
+            },
+          },
+          "aria-live": Object {
+            "description": "Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "enum",
+              "raw": "\\"off\\" | \\"assertive\\" | \\"polite\\"",
+              "value": Array [
+                Object {
+                  "name": "string",
+                  "value": "off",
+                },
+                Object {
+                  "name": "string",
+                  "value": "assertive",
+                },
+                Object {
+                  "name": "string",
+                  "value": "polite",
+                },
+              ],
+            },
+          },
+          "aria-modal": Object {
+            "description": "Indicates whether an element is modal when displayed.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "Booleanish",
+              "raw": "Booleanish",
+            },
+          },
+          "aria-multiline": Object {
+            "description": "Indicates whether a text box accepts multiple lines of input or only a single line.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "Booleanish",
+              "raw": "Booleanish",
+            },
+          },
+          "aria-multiselectable": Object {
+            "description": "Indicates that the user may select more than one item from the current selectable descendants.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "Booleanish",
+              "raw": "Booleanish",
+            },
+          },
+          "aria-orientation": Object {
+            "description": "Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "enum",
+              "raw": "\\"horizontal\\" | \\"vertical\\"",
+              "value": Array [
+                Object {
+                  "name": "string",
+                  "value": "horizontal",
+                },
+                Object {
+                  "name": "string",
+                  "value": "vertical",
+                },
+              ],
+            },
+          },
+          "aria-owns": Object {
+            "description": "Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship
+between DOM elements where the DOM hierarchy cannot be used to represent the relationship.
+@see aria-controls.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "aria-placeholder": Object {
+            "description": "Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.
+A hint could be a sample value or a brief description of the expected format.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "aria-posinset": Object {
+            "description": "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.
+@see aria-setsize.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "number",
+              "raw": "number",
+            },
+          },
+          "aria-pressed": Object {
+            "description": "Indicates the current \\"pressed\\" state of toggle buttons.
+@see aria-checked
+@see aria-selected.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "union",
+              "raw": "boolean | \\"true\\" | \\"false\\" | \\"mixed\\"",
+              "value": Array [
+                Object {
+                  "name": "boolean",
+                },
+                Object {
+                  "name": "true",
+                },
+                Object {
+                  "name": "false",
+                },
+                Object {
+                  "name": "mixed",
+                },
+              ],
+            },
+          },
+          "aria-readonly": Object {
+            "description": "Indicates that the element is not editable, but is otherwise operable.
+@see aria-disabled.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "Booleanish",
+              "raw": "Booleanish",
+            },
+          },
+          "aria-relevant": Object {
+            "description": "Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.
+@see aria-atomic.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "enum",
+              "raw": "\\"text\\" | \\"additions\\" | \\"additions removals\\" | \\"additions text\\" | \\"all\\" | \\"removals\\" | \\"removals additions\\" | \\"removals text\\" | \\"text additions\\" | \\"text removals\\"",
+              "value": Array [
+                Object {
+                  "name": "string",
+                  "value": "text",
+                },
+                Object {
+                  "name": "string",
+                  "value": "additions",
+                },
+                Object {
+                  "name": "string",
+                  "value": "additions removals",
+                },
+                Object {
+                  "name": "string",
+                  "value": "additions text",
+                },
+                Object {
+                  "name": "string",
+                  "value": "all",
+                },
+                Object {
+                  "name": "string",
+                  "value": "removals",
+                },
+                Object {
+                  "name": "string",
+                  "value": "removals additions",
+                },
+                Object {
+                  "name": "string",
+                  "value": "removals text",
+                },
+                Object {
+                  "name": "string",
+                  "value": "text additions",
+                },
+                Object {
+                  "name": "string",
+                  "value": "text removals",
+                },
+              ],
+            },
+          },
+          "aria-required": Object {
+            "description": "Indicates that user input is required on the element before a form may be submitted.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "Booleanish",
+              "raw": "Booleanish",
+            },
+          },
+          "aria-roledescription": Object {
+            "description": "Defines a human-readable, author-localized description for the role of an element.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "aria-rowcount": Object {
+            "description": "Defines the total number of rows in a table, grid, or treegrid.
+@see aria-rowindex.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "number",
+              "raw": "number",
+            },
+          },
+          "aria-rowindex": Object {
+            "description": "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.
+@see aria-rowcount
+@see aria-rowspan.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "number",
+              "raw": "number",
+            },
+          },
+          "aria-rowspan": Object {
+            "description": "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.
+@see aria-rowindex
+@see aria-colspan.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "number",
+              "raw": "number",
+            },
+          },
+          "aria-selected": Object {
+            "description": "Indicates the current \\"selected\\" state of various widgets.
+@see aria-checked
+@see aria-pressed.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "Booleanish",
+              "raw": "Booleanish",
+            },
+          },
+          "aria-setsize": Object {
+            "description": "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.
+@see aria-posinset.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "number",
+              "raw": "number",
+            },
+          },
+          "aria-sort": Object {
+            "description": "Indicates if items in a table or grid are sorted in ascending or descending order.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "enum",
+              "raw": "\\"none\\" | \\"ascending\\" | \\"descending\\" | \\"other\\"",
+              "value": Array [
+                Object {
+                  "name": "string",
+                  "value": "none",
+                },
+                Object {
+                  "name": "string",
+                  "value": "ascending",
+                },
+                Object {
+                  "name": "string",
+                  "value": "descending",
+                },
+                Object {
+                  "name": "string",
+                  "value": "other",
+                },
+              ],
+            },
+          },
+          "aria-valuemax": Object {
+            "description": "Defines the maximum allowed value for a range widget.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "number",
+              "raw": "number",
+            },
+          },
+          "aria-valuemin": Object {
+            "description": "Defines the minimum allowed value for a range widget.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "number",
+              "raw": "number",
+            },
+          },
+          "aria-valuenow": Object {
+            "description": "Defines the current value for a range widget.
+@see aria-valuetext.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "number",
+              "raw": "number",
+            },
+          },
+          "aria-valuetext": Object {
+            "description": "Defines the human readable text alternative of aria-valuenow for a range widget.",
+            "parentName": "AriaAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "as": Object {
+            "parentName": "BoxOwnProps",
+            "type": Object {
+              "name": "ElementType<any>",
+              "raw": "ElementType<any>",
+            },
+          },
+          "autoCapitalize": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "autoCorrect": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "autoFocus": Object {
+            "parentName": "ButtonHTMLAttributes",
+            "type": Object {
+              "name": "boolean",
+              "raw": "boolean",
+            },
+          },
+          "autoSave": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "backgroundColor": Object {
+            "parentName": "BackgroundColorProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "bg": Object {
+            "description": "The color utility parses a component's \`color\` and \`bg\` props and converts them into CSS declarations.
+By default the raw value of the prop is returned.
+
+Color palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation.
+Array values are converted into responsive values.
+
+[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color)",
+            "parentName": "BackgroundColorProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "className": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "color": Object {
+            "description": "The color utility parses a component's \`color\` and \`bg\` props and converts them into CSS declarations.
+By default the raw value of the prop is returned.
+
+Color palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation.
+Array values are converted into responsive values.
+
+[MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/color)",
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "contentEditable": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "union",
+              "raw": "boolean | \\"inherit\\" | \\"true\\" | \\"false\\"",
+              "value": Array [
+                Object {
+                  "name": "boolean",
+                },
+                Object {
+                  "name": "inherit",
+                },
+                Object {
+                  "name": "true",
+                },
+                Object {
+                  "name": "false",
+                },
+              ],
+            },
+          },
+          "contextMenu": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "css": Object {
+            "parentName": "BoxOwnProps",
+            "type": Object {
+              "name": "Interpolation<any>",
+              "raw": "Interpolation<any>",
+            },
+          },
+          "dangerouslySetInnerHTML": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "object",
+              "raw": "{ __html: string; }",
+            },
+          },
+          "datatype": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "defaultChecked": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "boolean",
+              "raw": "boolean",
+            },
+          },
+          "defaultValue": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "array",
+              "raw": "string | number | readonly string[]",
+              "value": Array [
+                Object {
+                  "name": "string | number | readonly string",
+                },
+              ],
+            },
+          },
+          "dir": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "disabled": Object {
+            "parentName": "ButtonHTMLAttributes",
+            "type": Object {
+              "name": "boolean",
+              "raw": "boolean",
+            },
+          },
+          "draggable": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "Booleanish",
+              "raw": "Booleanish",
+            },
+          },
+          "form": Object {
+            "parentName": "ButtonHTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "formAction": Object {
+            "parentName": "ButtonHTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "formEncType": Object {
+            "parentName": "ButtonHTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "formMethod": Object {
+            "parentName": "ButtonHTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "formNoValidate": Object {
+            "parentName": "ButtonHTMLAttributes",
+            "type": Object {
+              "name": "boolean",
+              "raw": "boolean",
+            },
+          },
+          "formTarget": Object {
+            "parentName": "ButtonHTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "hidden": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "boolean",
+              "raw": "boolean",
+            },
+          },
+          "id": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "inlist": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "any",
+              "raw": "any",
+            },
+          },
+          "inputMode": Object {
+            "description": "Hints at the type of data that might be entered by the user while editing the element or its contents
+@see https ://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute",
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "enum",
+              "raw": "\\"text\\" | \\"none\\" | \\"tel\\" | \\"url\\" | \\"email\\" | \\"numeric\\" | \\"decimal\\" | \\"search\\"",
+              "value": Array [
+                Object {
+                  "name": "string",
+                  "value": "text",
+                },
+                Object {
+                  "name": "string",
+                  "value": "none",
+                },
+                Object {
+                  "name": "string",
+                  "value": "tel",
+                },
+                Object {
+                  "name": "string",
+                  "value": "url",
+                },
+                Object {
+                  "name": "string",
+                  "value": "email",
+                },
+                Object {
+                  "name": "string",
+                  "value": "numeric",
+                },
+                Object {
+                  "name": "string",
+                  "value": "decimal",
+                },
+                Object {
+                  "name": "string",
+                  "value": "search",
+                },
+              ],
+            },
+          },
+          "is": Object {
+            "description": "Specify that a standard HTML element should behave like a defined custom built-in element
+@see https ://html.spec.whatwg.org/multipage/custom-elements.html#attr-is",
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "itemID": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "itemProp": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "itemRef": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "itemScope": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "boolean",
+              "raw": "boolean",
+            },
+          },
+          "itemType": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "key": Object {
+            "parentName": "Attributes",
+            "type": Object {
+              "name": "TLengthStyledSystem",
+              "raw": "TLengthStyledSystem",
+            },
+          },
+          "lang": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "m": Object {
+            "description": "Margin on top, left, bottom and right",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "margin": Object {
+            "description": "Margin on top, left, bottom and right",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "marginBottom": Object {
+            "description": "Margin on bottom",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "marginLeft": Object {
+            "description": "Margin on left",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "marginRight": Object {
+            "description": "Margin on right",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "marginTop": Object {
+            "description": "Margin on top",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "marginX": Object {
+            "description": "Margin on left and right",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "marginY": Object {
+            "description": "Margin on top and bottom",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "mb": Object {
+            "description": "Margin on bottom",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "ml": Object {
+            "description": "Margin on left",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "mr": Object {
+            "description": "Margin on right",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "mt": Object {
+            "description": "Margin on top",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "mx": Object {
+            "description": "Margin on left and right",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "my": Object {
+            "description": "Margin on top and bottom",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "name": Object {
+            "parentName": "ButtonHTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "onAbort": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onAbortCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onAnimationEnd": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: AnimationEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onAnimationEndCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: AnimationEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onAnimationIteration": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: AnimationEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onAnimationIterationCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: AnimationEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onAnimationStart": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: AnimationEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onAnimationStartCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: AnimationEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onAuxClick": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+            },
+          },
+          "onAuxClickCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+            },
+          },
+          "onBeforeInput": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onBeforeInputCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onBlur": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: FocusEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onBlurCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: FocusEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onCanPlay": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onCanPlayCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onCanPlayThrough": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onCanPlayThroughCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onChange": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onChangeCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onClick": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+            },
+          },
+          "onClickCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+            },
+          },
+          "onCompositionEnd": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: CompositionEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onCompositionEndCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: CompositionEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onCompositionStart": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: CompositionEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onCompositionStartCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: CompositionEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onCompositionUpdate": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: CompositionEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onCompositionUpdateCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: CompositionEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onContextMenu": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+            },
+          },
+          "onContextMenuCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+            },
+          },
+          "onCopy": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: ClipboardEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onCopyCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: ClipboardEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onCut": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: ClipboardEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onCutCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: ClipboardEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onDoubleClick": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+            },
+          },
+          "onDoubleClickCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+            },
+          },
+          "onDrag": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onDragCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onDragEnd": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onDragEndCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onDragEnter": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onDragEnterCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onDragExit": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onDragExitCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onDragLeave": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onDragLeaveCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onDragOver": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onDragOverCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onDragStart": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onDragStartCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onDrop": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onDropCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: DragEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onDurationChange": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onDurationChangeCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onEmptied": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onEmptiedCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onEncrypted": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onEncryptedCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onEnded": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onEndedCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onError": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onErrorCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onFocus": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: FocusEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onFocusCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: FocusEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onGotPointerCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onGotPointerCaptureCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onInput": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onInputCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onInvalid": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onInvalidCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onKeyDown": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: KeyboardEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onKeyDownCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: KeyboardEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onKeyPress": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: KeyboardEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onKeyPressCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: KeyboardEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onKeyUp": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: KeyboardEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onKeyUpCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: KeyboardEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onLoad": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onLoadCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onLoadStart": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onLoadStartCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onLoadedData": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onLoadedDataCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onLoadedMetadata": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onLoadedMetadataCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onLostPointerCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onLostPointerCaptureCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onMouseDown": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+            },
+          },
+          "onMouseDownCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+            },
+          },
+          "onMouseEnter": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+            },
+          },
+          "onMouseLeave": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+            },
+          },
+          "onMouseMove": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+            },
+          },
+          "onMouseMoveCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+            },
+          },
+          "onMouseOut": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+            },
+          },
+          "onMouseOutCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+            },
+          },
+          "onMouseOver": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+            },
+          },
+          "onMouseOverCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+            },
+          },
+          "onMouseUp": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+            },
+          },
+          "onMouseUpCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+            },
+          },
+          "onPaste": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: ClipboardEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onPasteCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: ClipboardEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onPause": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onPauseCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onPlay": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onPlayCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onPlaying": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onPlayingCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onPointerCancel": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onPointerCancelCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onPointerDown": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onPointerDownCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onPointerEnter": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onPointerEnterCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onPointerLeave": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onPointerLeaveCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onPointerMove": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onPointerMoveCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onPointerOut": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onPointerOutCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onPointerOver": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onPointerOverCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onPointerUp": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onPointerUpCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: PointerEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onProgress": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onProgressCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onRateChange": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onRateChangeCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onReset": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onResetCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onScroll": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: UIEvent<HTMLButtonElement, UIEvent>) => void",
+            },
+          },
+          "onScrollCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: UIEvent<HTMLButtonElement, UIEvent>) => void",
+            },
+          },
+          "onSeeked": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onSeekedCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onSeeking": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onSeekingCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onSelect": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onSelectCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onStalled": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onStalledCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onSubmit": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onSubmitCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: FormEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onSuspend": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onSuspendCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onTimeUpdate": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onTimeUpdateCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onTouchCancel": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: TouchEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onTouchCancelCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: TouchEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onTouchEnd": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: TouchEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onTouchEndCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: TouchEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onTouchMove": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: TouchEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onTouchMoveCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: TouchEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onTouchStart": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: TouchEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onTouchStartCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: TouchEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onTransitionEnd": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: TransitionEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onTransitionEndCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: TransitionEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onVolumeChange": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onVolumeChangeCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onWaiting": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onWaitingCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: SyntheticEvent<HTMLButtonElement, Event>) => void",
+            },
+          },
+          "onWheel": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: WheelEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "onWheelCapture": Object {
+            "parentName": "DOMAttributes",
+            "type": Object {
+              "name": "function",
+              "raw": "(event: WheelEvent<HTMLButtonElement>) => void",
+            },
+          },
+          "opacity": Object {
+            "description": "The opacity CSS property sets the transparency of an element or the degree to which content
+behind an element is visible.
+
+[MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)",
+            "parentName": "OpacityProps",
+            "type": Object {
+              "name": "ResponsiveValue<Opacity, Required<Theme<TLengthStyledSystem>>>",
+              "raw": "ResponsiveValue<Opacity, Required<Theme<TLengthStyledSystem>>>",
+            },
+          },
+          "p": Object {
+            "description": "Padding on top, left, bottom and right",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "padding": Object {
+            "description": "Padding on top, left, bottom and right",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "paddingBottom": Object {
+            "description": "Padding on bottom",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "paddingLeft": Object {
+            "description": "Padding on left",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "paddingRight": Object {
+            "description": "Padding on right",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "paddingTop": Object {
+            "description": "Padding on top",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "paddingX": Object {
+            "description": "Padding on left and right",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "paddingY": Object {
+            "description": "Padding on top and bottom",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "pb": Object {
+            "description": "Padding on bottom",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "pl": Object {
+            "description": "Padding on left",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "placeholder": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "pr": Object {
+            "description": "Padding on right",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "prefix": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "property": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "pt": Object {
+            "description": "Padding on top",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "px": Object {
+            "description": "Padding on left and right",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "py": Object {
+            "description": "Padding on top and bottom",
+            "parentName": "SpaceProps",
+            "type": Object {
+              "name": "union",
+              "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+              "value": Array [
+                Object {
+                  "name": "ResponsiveValue<string",
+                },
+                Object {
+                  "name": "number",
+                },
+                Object {
+                  "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+                },
+              ],
+            },
+          },
+          "radioGroup": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "ref": Object {
+            "parentName": "RefAttributes",
+            "type": Object {
+              "name": "Ref<HTMLButtonElement>",
+              "raw": "Ref<HTMLButtonElement>",
+            },
+          },
+          "resource": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "results": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "number",
+              "raw": "number",
+            },
+          },
+          "role": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "security": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "slot": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "spellCheck": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "Booleanish",
+              "raw": "Booleanish",
+            },
+          },
+          "style": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "CSSProperties",
+              "raw": "CSSProperties",
+            },
+          },
+          "suppressContentEditableWarning": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "boolean",
+              "raw": "boolean",
+            },
+          },
+          "suppressHydrationWarning": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "boolean",
+              "raw": "boolean",
+            },
+          },
+          "sx": Object {
+            "parentName": "BoxOwnProps",
+            "type": Object {
+              "name": "ThemeUIStyleObject",
+              "raw": "ThemeUIStyleObject",
+            },
+          },
+          "tabIndex": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "number",
+              "raw": "number",
+            },
+          },
+          "title": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "translate": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "enum",
+              "raw": "\\"no\\" | \\"yes\\"",
+              "value": Array [
+                Object {
+                  "name": "string",
+                  "value": "no",
+                },
+                Object {
+                  "name": "string",
+                  "value": "yes",
+                },
+              ],
+            },
+          },
+          "type": Object {
+            "parentName": "ButtonHTMLAttributes",
+            "type": Object {
+              "name": "enum",
+              "raw": "\\"button\\" | \\"submit\\" | \\"reset\\"",
+              "value": Array [
+                Object {
+                  "name": "string",
+                  "value": "button",
+                },
+                Object {
+                  "name": "string",
+                  "value": "submit",
+                },
+                Object {
+                  "name": "string",
+                  "value": "reset",
+                },
+              ],
+            },
+          },
+          "typeof": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "unselectable": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "enum",
+              "raw": "\\"on\\" | \\"off\\"",
+              "value": Array [
+                Object {
+                  "name": "string",
+                  "value": "on",
+                },
+                Object {
+                  "name": "string",
+                  "value": "off",
+                },
+              ],
+            },
+          },
+          "value": Object {
+            "parentName": "ButtonHTMLAttributes",
+            "type": Object {
+              "name": "array",
+              "raw": "string | number | readonly string[]",
+              "value": Array [
+                Object {
+                  "name": "string | number | readonly string",
+                },
+              ],
+            },
+          },
+          "variant": Object {
+            "parentName": "BoxOwnProps",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "vocab": Object {
+            "parentName": "HTMLAttributes",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+        },
+        "tags": Object {
+          "see": "https ://theme-ui.com/components/button",
+        },
+      },
+      "jsx": Array [],
+      "loc": undefined,
+      "localDependencies": Object {},
+      "name": "Button",
+      "package": "8f6835169f285fcd3ad5425d9268a8f1",
+      "request": "/Users/atanasster/component-controls/node_modules/@theme-ui/components/index.d.ts",
+      "source": "import * as React from 'react'
+import { StyledComponent } from '@emotion/styled'
+import { Interpolation } from '@emotion/react'
+import { SpaceProps, ColorProps, MarginProps } from 'styled-system'
+import { ResponsiveStyleValue, ThemeUIStyleObject } from '@theme-ui/css'
+
+type Omit<T, K> = Pick<T, Exclude<keyof T, K>>
+
+type Assign<T, U> = {
+  [P in keyof (T & U)]: P extends keyof T
+    ? T[P]
+    : P extends keyof U
+    ? U[P]
+    : never
+}
+
+type ForwardRef<T, P> = React.ForwardRefExoticComponent<
+  React.PropsWithoutRef<P> & React.RefAttributes<T>
+>
+
+export interface BoxOwnProps extends SpaceProps, ColorProps {
+  as?: React.ElementType
+  variant?: string
+  css?: Interpolation<any>
+  sx?: ThemeUIStyleObject
+}
+export interface BoxProps
+  extends Assign<React.ComponentPropsWithRef<'div'>, BoxOwnProps> {}
+/**
+ * Use the Box component as a layout primitive to add margin, padding, and colors to content.
+ * @see https://theme-ui.com/components/box
+ */
+export const Box: StyledComponent<BoxOwnProps, BoxProps>
+
+export type FlexOwnProps = BoxOwnProps
+export type FlexProps = BoxProps
+/**
+ * Use the Flex component to create flexbox layouts.
+ * @see https://theme-ui.com/components/flex
+ */
+export const Flex: StyledComponent<FlexOwnProps, FlexProps>
+
+export interface GridProps extends BoxProps {
+  /**
+   * Minimum width of child elements
+   */
+  width?: ResponsiveStyleValue<string | number>
+  /**
+   * 	Number of columns to use for the layout (cannot be used in conjunction with the width prop)
+   */
+  columns?: ResponsiveStyleValue<string | number>
+  /**
+   * Space between child elements
+   */
+  gap?: ResponsiveStyleValue<string | number>
+}
+/**
+ * CSS grid layout component to arrange direct child elements in a tiled grid layout.
+ * @see https://theme-ui.com/components/grid
+ */
+export const Grid: ForwardRef<HTMLDivElement, GridProps>
+
+export interface ButtonProps
+  extends Assign<React.ComponentPropsWithRef<'button'>, BoxOwnProps> {}
+/**
+ * Primitive button component with variants
+ * @see https://theme-ui.com/components/button
+ */
+export const Button: ForwardRef<HTMLButtonElement, ButtonProps>
+
+export interface LinkProps
+  extends Assign<React.ComponentPropsWithRef<'a'>, BoxOwnProps> {}
+/**
+ * Link variants can be defined in the \`theme.links\` object.
+ * By default the Link component will use styles defined in \`theme.styles.a\`.
+ * @see https://theme-ui.com/components/link
+ */
+export const Link: ForwardRef<HTMLAnchorElement, LinkProps>
+
+export type TextProps = BoxProps
+/**
+ * Primitive typographic component.
+ *
+ * Text style variants can be defined in the theme.text object.
+ * @see https://theme-ui.com/components/text
+ */
+export const Text: ForwardRef<HTMLDivElement, BoxProps>
+
+export interface ParagraphProps
+  extends Assign<React.ComponentPropsWithRef<'p'>, BoxOwnProps> {}
+/**
+ * Primitive typographic component.
+ *
+ * Text style variants can be defined in the theme.text object.
+ * The Paragraph component uses theme.text.default as its default variant style.
+ * @see https://theme-ui.com/components/paragraph
+ */
+export const Paragraph: ForwardRef<HTMLParagraphElement, ParagraphProps>
+
+export interface HeadingProps
+  extends Assign<React.ComponentPropsWithRef<'h2'>, BoxOwnProps> {}
+/**
+ * Primitive heading component, defaults to <h2>.
+ *
+ * Text style variants can be defined in the theme.text object.
+ * The Heading component uses theme.text.heading as its default variant style.
+ * @see https://theme-ui.com/components/heading
+ */
+export const Heading: ForwardRef<HTMLHeadingElement, HeadingProps>
+
+export interface ImageProps
+  extends Assign<React.ComponentPropsWithRef<'img'>, BoxOwnProps> {}
+/**
+ * Image style variants can be defined in the theme.images object.
+ * @see https://theme-ui.com/components/image/
+ */
+export const Image: ForwardRef<HTMLImageElement, ImageProps>
+
+export type CardProps = BoxProps
+/**
+ * Card style variants can be defined in the \`theme.cards\` object.
+ * By default the Card component uses the \`theme.cards.primary\` variant.
+ * @see https://theme-ui.com/components/card
+ */
+export const Card: ForwardRef<HTMLDivElement, CardProps>
+
+export interface LabelProps
+  extends Assign<React.ComponentPropsWithRef<'label'>, BoxOwnProps> {}
+/**
+ * Label variants can be defined in \`theme.forms\`
+ * and the component uses the \`theme.forms.label\` variant by default.
+ * @see https://theme-ui.com/components/label/
+ */
+export const Label: ForwardRef<HTMLLabelElement, LabelProps>
+
+export interface InputProps
+  extends Assign<React.ComponentPropsWithRef<'input'>, BoxOwnProps> {}
+/**
+ * Input variants can be defined in \`theme.forms\`
+ * and the component uses the \`theme.forms.input\` variant by default.
+ * @see https://theme-ui.com/components/input/
+ */
+export const Input: ForwardRef<HTMLInputElement, InputProps>
+
+export interface SelectProps
+  extends Assign<React.ComponentPropsWithRef<'select'>, BoxOwnProps> {
+  arrow?: React.ReactElement
+}
+/**
+ * Select variants can be defined in \`theme.forms\`
+ * and the component uses the \`theme.forms.select\` variant by default.
+ * @see https://theme-ui.com/components/select/
+ */
+export const Select: ForwardRef<HTMLSelectElement, SelectProps>
+
+export interface TextareaProps
+  extends Assign<React.ComponentPropsWithRef<'textarea'>, BoxOwnProps> {}
+/**
+ * Form textarea component
+ *
+ * Textarea variants can be defined in \`theme.forms\`
+ * and the component uses the \`theme.forms.textarea\` variant by default.
+ * @see https://theme-ui.com/components/textarea/
+ */
+export const Textarea: ForwardRef<HTMLTextAreaElement, TextareaProps>
+
+export interface RadioProps
+  extends Assign<React.ComponentPropsWithRef<'input'>, BoxOwnProps> {}
+/**
+ * Form radio input component
+ *
+ * Radio variants can be defined in \`theme.forms\` and the
+ * component uses the \`theme.forms.radio variant\` by default.
+ * @see https://theme-ui.com/components/radio/
+ */
+export const Radio: ForwardRef<HTMLInputElement, RadioProps>
+
+export interface CheckboxProps
+  extends Assign<React.ComponentPropsWithRef<'input'>, BoxOwnProps> {}
+/**
+ * Form checkbox input component
+ *
+ * Checkbox variants can be defined in \`theme.forms\` and the
+ * component uses the \`theme.forms.checkbox\` variant by default.
+ * @see https://theme-ui.com/components/checkbox/
+ */
+export const Checkbox: ForwardRef<HTMLInputElement, CheckboxProps>
+
+export interface SliderProps
+  extends Assign<React.ComponentPropsWithRef<'input'>, BoxOwnProps> {}
+/**
+ * Range input element
+ *
+ * Slider variants can be defined in the \`theme.forms\` object.
+ * The Slider component uses \`theme.forms.slider\` as its default variant style.
+ * @see https://theme-ui.com/components/slider/
+ */
+export const Slider: ForwardRef<HTMLInputElement, SliderProps>
+
+export interface FieldOwnProps extends MarginProps {
+  /**
+   * Text for Label component
+   */
+  label: string
+  /**
+   * Used for the for, id, and name attributes
+   */
+  name: string
+}
+export type FieldProps<T extends React.ElementType> = FieldOwnProps &
+  Omit<React.ComponentPropsWithRef<T>, 'as' | keyof FieldOwnProps> & {
+    /**
+     * form control to render, default Input
+     */
+    as?: T
+  }
+
+// \`T\` is far from unnecessary. We derive component props from it.
+// tslint:disable-next-line no-unnecessary-generics
+export function Field<
+  T extends React.ElementType = React.ComponentType<InputProps>
+>(props: FieldProps<T>): JSX.Element
+
+export interface ProgressProps
+  extends Assign<React.ComponentPropsWithRef<'progress'>, BoxOwnProps> {}
+/**
+ * @see https://theme-ui.com/components/progress/
+ */
+export const Progress: ForwardRef<HTMLProgressElement, ProgressProps>
+
+export interface DonutProps
+  extends Assign<
+    Omit<
+      React.ComponentPropsWithRef<'svg'>,
+      'opacity' | 'color' | 'css' | 'sx' | 'max' | 'min'
+    >,
+    BoxOwnProps
+  > {
+  value: number
+  min?: number
+  max?: number
+  title?: string
+  size?: string | number
+}
+/**
+ * Single value SVG donut chart
+ * @see https://theme-ui.com/components/donut/
+ */
+export const Donut: ForwardRef<SVGSVGElement, DonutProps>
+
+export interface SpinnerProps
+  extends Assign<
+    Omit<
+      React.ComponentPropsWithRef<'svg'>,
+      'opacity' | 'color' | 'css' | 'sx'
+    >,
+    BoxOwnProps
+  > {
+  size?: number | string
+}
+export const Spinner: ForwardRef<SVGSVGElement, SpinnerProps>
+
+export interface AvatarProps extends ImageProps {
+  size?: number | string
+}
+export const Avatar: ForwardRef<HTMLImageElement, AvatarProps>
+
+export type BadgeProps = BoxProps
+export const Badge: ForwardRef<HTMLDivElement, BadgeProps>
+
+export interface CloseProps extends Omit<IconButtonProps, 'children'> {}
+/**
+ * Button with close (×) icon.
+ *
+ * The Close component renders as a <button> element by default.
+ * Pass any button attributes as props to the component.
+ *
+ * Close component variants can be defined in the theme.buttons object.
+ * The Close component uses theme.buttons.close as its default variant style.
+ */
+export const Close: ForwardRef<HTMLButtonElement, CloseProps>
+
+export type AlertProps = BoxProps
+/**
+ * Component for displaying messages, notifications, or other application state.
+ *
+ * Alert variants can be defined in \`theme.alerts\`.
+ * The Alert component uses \`theme.alerts.primary\` as its default variant.
+ */
+export const Alert: ForwardRef<HTMLDivElement, AlertProps>
+
+export type DividerProps = BoxProps
+/**
+ * The Divider component reuses styles from \`theme.styles.hr\` as its default variant.
+ */
+export const Divider: ForwardRef<HTMLDivElement, DividerProps>
+
+export interface EmbedProps
+  extends Assign<React.ComponentPropsWithRef<'iframe'>, BoxOwnProps> {
+  variant?: string
+  ratio?: number
+  src?: React.IframeHTMLAttributes<any>['src']
+  frameBorder?: React.IframeHTMLAttributes<any>['frameBorder']
+  allowFullScreen?: React.IframeHTMLAttributes<any>['allowFullScreen']
+  allow?: React.IframeHTMLAttributes<any>['allow']
+}
+/**
+ * Responsive iframe for video embeds.
+ *
+ * Embed variants can be defined anywhere in the theme object.
+ *
+ * @see https://theme-ui.com/components/embed
+ */
+export const Embed: ForwardRef<HTMLIFrameElement, EmbedProps>
+
+export interface AspectRatioProps extends BoxProps {
+  ratio?: number
+}
+/**
+ * Component for maintaining a fluid-width aspect ratio
+ * @see https://theme-ui.com/components/aspect-ratio
+ */
+export const AspectRatio: ForwardRef<HTMLDivElement, AspectRatioProps>
+
+export interface AspectImageProps extends ImageProps {
+  ratio?: number
+}
+/**
+ * Image component constrained by as aspect ratio.
+ * @see https://theme-ui.com/components/aspect-image
+ */
+export const AspectImage: ForwardRef<HTMLImageElement, AspectImageProps>
+
+export type ContainerProps = BoxProps
+/**
+ * Centered, max-width layout component
+ *
+ * Container variants can be defined in the \`theme.layout\` object.
+ * The Container component uses \`theme.layout.container\` as its default variant style.
+ * @see https://theme-ui.com/components/container
+ */
+export const Container: ForwardRef<HTMLDivElement, ContainerProps>
+
+export type NavLinkProps = LinkProps
+/**
+ * Link component for use in navigation
+ *
+ * NavLink variants can be defined in the \`theme.links\` object.
+ * By default the NavLink component will use styles defined in \`theme.links.nav\`.
+ * @see https://theme-ui.com/components/nav-link
+ */
+export const NavLink: ForwardRef<HTMLAnchorElement, NavLinkProps>
+
+export type MessageProps = BoxProps
+/**
+ * Styled Box component for callouts and inline messages
+ *
+ * Message variants can be defined in the theme.messages object.
+ * @see https://theme-ui.com/components/message
+ */
+export const Message: ForwardRef<HTMLDivElement, MessageProps>
+
+export interface IconButtonProps
+  extends Assign<React.ComponentPropsWithRef<'button'>, BoxOwnProps> {}
+/**
+ * Transparent button for SVG icons
+ *
+ * IconButton variants can be defined in the \`theme.buttons\` object.
+ * By default the IconButton component will use styles defined in \`theme.buttons.icon\`.
+ *
+ * @see https://theme-ui.com/components/icon-button
+ */
+export const IconButton: ForwardRef<HTMLButtonElement, IconButtonProps>
+
+export type MenuButtonProps = IconButtonProps
+/**
+ * MenuButton variants can be defined in the \`theme.buttons\` object.
+ * By default the MenuButton component will use styles defined in \`theme.buttons.menu\`.
+ *
+ * @see https://theme-ui.com/components/menu-button
+ */
+export const MenuButton: ForwardRef<HTMLButtonElement, MenuButtonProps>
+
+/**
+ * Form switch component
+ *
+ * Switch variants can be defined in \`theme.forms\`
+ * and the component uses the \`theme.forms.switch\` variant by default.
+ */
+export const Switch: ForwardRef<HTMLInputElement, SwitchProps>
+
+export interface SwitchProps
+  extends Assign<React.ComponentProps<'input'>, BoxOwnProps> {
+  label?: string
+}
+",
+    },
+    "ef6966a6426a2258b8bb2a8cd8daf14e": Object {
+      "externalDependencies": Object {
+        "polished": Array [
+          Object {
+            "importedName": "lighten",
+            "name": "lighten",
+          },
+        ],
+        "prop-types": Array [
+          Object {
+            "importedName": "default",
+            "name": "PropTypes",
+          },
+        ],
+        "react": Array [
+          Object {
+            "importedName": "default",
+            "name": "React",
+          },
+        ],
+      },
+      "fileInfo": Object {
+        "commits": Array [
+          Object {
+            "authorDate": "2020-07-19T04:05:43.000Z",
+            "authorEmail": "atanasster@gmail.com",
+            "authorName": "atanasster",
+            "committerDate": "2020-07-19T04:05:43.000Z",
+            "committerEmail": "atanasster@gmail.com",
+            "committerName": "atanasster",
+            "hash": "3e9724f3d740da33bd277b03f8a83017159be114",
+            "subject": "docs: added starter example",
+          },
+        ],
+        "dateCreated": "2020-07-19T04:05:43.000Z",
+        "dateModified": "2020-07-19T04:05:43.000Z",
+        "sloc": Object {
+          "block": 27,
+          "blockEmpty": 0,
+          "comment": 27,
+          "empty": 10,
+          "mixed": 0,
+          "single": 0,
+          "source": 47,
+          "todo": 0,
+          "total": 84,
+        },
+      },
+      "fileName": "Spinner.js",
+      "from": "../components/Spinner",
+      "importedName": "Spinner",
+      "info": Object {
+        "description": "Spinner with react PropTypes",
+        "displayName": "Spinner",
+        "methods": Array [],
+        "props": Object {
+          "backgroundColor": Object {
+            "defaultValue": "'#fefefe'",
+            "description": "Background color",
+            "type": Object {
+              "name": "string",
+              "required": false,
+            },
+          },
+          "children": Object {
+            "defaultValue": "'default'",
+            "description": "button label",
+            "type": Object {
+              "name": "string",
+              "required": false,
+            },
+          },
+          "color": Object {
+            "defaultValue": "'black'",
+            "description": "Text color, default black",
+            "type": Object {
+              "name": "string",
+              "required": false,
+            },
+          },
+          "disabled": Object {
+            "defaultValue": "false",
+            "description": "Boolean indicating whether the button should render as disabled",
+            "type": Object {
+              "name": "boolean",
+            },
+          },
+          "onClick": Object {
+            "defaultValue": "() => {}",
+            "description": "onClick handler",
+            "type": Object {
+              "name": "function",
+              "required": false,
+            },
+          },
+          "padding": Object {
+            "defaultValue": "5",
+            "description": "Numeric  field type",
+            "type": Object {
+              "name": "number",
+              "required": false,
+            },
+          },
+          "style": Object {
+            "defaultValue": "{}",
+            "description": "Custom styles",
+            "type": Object {
+              "name": "object",
+              "value": Array [],
+            },
+          },
+          "type": Object {
+            "defaultValue": "'button'",
+            "description": "Button type",
+            "type": Object {
+              "name": "enum",
+              "value": Array [
+                Object {
+                  "name": "string",
+                  "value": "'button'",
+                },
+                Object {
+                  "name": "string",
+                  "value": "'reset'",
+                },
+                Object {
+                  "name": "string",
+                  "value": "'submit'",
+                },
+              ],
+            },
+          },
+        },
+      },
+      "jsx": Array [
+        Object {
+          "attributes": Array [
+            "type",
+            "disabled",
+            "onClick",
+            "style",
+          ],
+          "children": Array [],
+          "name": "button",
+        },
+      ],
+      "loc": Object {
+        "end": Object {
+          "column": 1,
+          "line": 31,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 8,
+        },
+      },
+      "localDependencies": Object {},
+      "name": "Spinner",
+      "package": "ef6966a6426a2258b8bb2a8cd8daf14e",
+      "request": "/Users/atanasster/component-controls/examples/starter/src/components/Spinner.js",
+      "source": "import React from 'react';
+import { lighten } from 'polished';
+import PropTypes from 'prop-types';
+
+/**
+ * Spinner with react PropTypes
+ */
+export const Spinner = ({
+  disabled,
+  children,
+  onClick,
+  style,
+  backgroundColor,
+  color,
+  type,
+  padding,
+}) => (
+  <button
+    type={type}
+    disabled={disabled}
+    onClick={onClick}
+    style={{
+      ...style,
+      backgroundColor,
+      color: lighten(disabled ? 0.4 : 0, color),
+      padding,
+    }}
+  >
+    {children}
+  </button>
+);
+
+Spinner.defaultProps = {
+  disabled: false,
+  children: 'default',
+  onClick: () => {},
+  style: {},
+  backgroundColor: '#fefefe',
+  color: 'black',
+  type: 'button',
+  padding: 5,
+};
+
+Spinner.propTypes = {
+  /**
+   * Boolean indicating whether the button should render as disabled
+   */
+  disabled: PropTypes.bool,
+
+  /**
+   * button label
+   */
+  children: PropTypes.string,
+
+  /**
+   * onClick handler
+   */
+  onClick: PropTypes.func,
+
+  /**
+   * Custom styles
+   */
+  style: PropTypes.shape({}),
+
+  /**
+   * Background color
+   */
+  backgroundColor: PropTypes.string,
+
+  /**
+   * Text color, default black
+   */
+  color: PropTypes.string,
+
+  /**
+   * Button type
+   */
+  type: PropTypes.oneOf(['button', 'reset', 'submit']),
+
+  /**
+   * Numeric  field type
+   */
+  padding: PropTypes.number,
+};
+",
+    },
+  },
+  "config": Object {},
+  "packages": Object {
+    "5a3b7658720a0f4b8c0fd61ba5fb8c34": Object {
+      "dependencies": Object {
+        "@component-controls/axe-plugin": "^2.12.0",
+        "@component-controls/blocks": "^2.12.0",
+        "@component-controls/core": "^2.10.4",
+        "@component-controls/gatsby-theme-stories": "^2.12.0",
+        "@component-controls/nextjs-plugin": "^2.12.0",
+        "@component-controls/viewport-plugin": "^2.12.0",
+        "gatsby": "^3.0.0",
+        "next": "^10.0.7",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "webpack-bundle-analyzer": "^3.8.0",
+      },
+      "devDependencies": undefined,
+      "fileHash": "5a3b7658720a0f4b8c0fd61ba5fb8c34",
+      "name": "component-controls-starter",
+      "peerDependencies": undefined,
+      "privateNpm": true,
+      "repository": Object {
+        "browse": "https://github.com/atanasster/gatsby-controls-starter/tree/master/src/components/Button.tsx",
+        "docs": "https://github.com/atanasster/gatsby-controls-starter/tree/master#readme",
+        "issues": "https://github.com/atanasster/gatsby-controls-starter/issues",
+      },
+      "version": "2.12.0",
+    },
+    "5fadd3d2dabe409c1f576f3a874cff56": Object {
+      "dependencies": Object {
+        "@component-controls/axe-plugin": "^2.12.0",
+        "@component-controls/blocks": "^2.12.0",
+        "@component-controls/core": "^2.10.4",
+        "@component-controls/gatsby-theme-stories": "^2.12.0",
+        "@component-controls/nextjs-plugin": "^2.12.0",
+        "@component-controls/viewport-plugin": "^2.12.0",
+        "gatsby": "^3.0.0",
+        "next": "^10.0.7",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "webpack-bundle-analyzer": "^3.8.0",
+      },
+      "devDependencies": undefined,
+      "fileHash": "5fadd3d2dabe409c1f576f3a874cff56",
+      "name": "component-controls-starter",
+      "peerDependencies": undefined,
+      "privateNpm": true,
+      "repository": Object {
+        "browse": "https://github.com/atanasster/gatsby-controls-starter/tree/master/src/docs/external-component.stories.tsx",
+        "docs": "https://github.com/atanasster/gatsby-controls-starter/tree/master#readme",
+        "issues": "https://github.com/atanasster/gatsby-controls-starter/issues",
+      },
+      "version": "2.12.0",
+    },
+    "6ab83c111c83e75f68683ad8a7dd7415": Object {
+      "dependencies": Object {
+        "@component-controls/axe-plugin": "^2.12.0",
+        "@component-controls/blocks": "^2.12.0",
+        "@component-controls/core": "^2.10.4",
+        "@component-controls/gatsby-theme-stories": "^2.12.0",
+        "@component-controls/nextjs-plugin": "^2.12.0",
+        "@component-controls/viewport-plugin": "^2.12.0",
+        "gatsby": "^3.0.0",
+        "next": "^10.0.7",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "webpack-bundle-analyzer": "^3.8.0",
+      },
+      "devDependencies": undefined,
+      "fileHash": "6ab83c111c83e75f68683ad8a7dd7415",
+      "name": "component-controls-starter",
+      "peerDependencies": undefined,
+      "privateNpm": true,
+      "repository": Object {
+        "browse": "https://github.com/atanasster/gatsby-controls-starter/tree/master/src/docs/first-story.stories.tsx",
+        "docs": "https://github.com/atanasster/gatsby-controls-starter/tree/master#readme",
+        "issues": "https://github.com/atanasster/gatsby-controls-starter/issues",
+      },
+      "version": "2.12.0",
+    },
+    "7412d5e040122380ea1d1d370d45a0e6": Object {
+      "dependencies": Object {
+        "@component-controls/axe-plugin": "^2.12.0",
+        "@component-controls/blocks": "^2.12.0",
+        "@component-controls/core": "^2.10.4",
+        "@component-controls/gatsby-theme-stories": "^2.12.0",
+        "@component-controls/nextjs-plugin": "^2.12.0",
+        "@component-controls/viewport-plugin": "^2.12.0",
+        "gatsby": "^3.0.0",
+        "next": "^10.0.7",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "webpack-bundle-analyzer": "^3.8.0",
+      },
+      "devDependencies": undefined,
+      "fileHash": "7412d5e040122380ea1d1d370d45a0e6",
+      "name": "component-controls-starter",
+      "peerDependencies": undefined,
+      "privateNpm": true,
+      "repository": Object {
+        "browse": "https://github.com/atanasster/gatsby-controls-starter/tree/master/src/docs/first-story.stories.mdx",
+        "docs": "https://github.com/atanasster/gatsby-controls-starter/tree/master#readme",
+        "issues": "https://github.com/atanasster/gatsby-controls-starter/issues",
+      },
+      "version": "2.12.0",
+    },
+    "8f6835169f285fcd3ad5425d9268a8f1": Object {
+      "dependencies": Object {
+        "@theme-ui/color-modes": "0.6.0-alpha.7",
+        "@theme-ui/components": "0.6.0-alpha.7",
+        "@theme-ui/core": "0.6.0-alpha.7",
+        "@theme-ui/css": "0.6.0-alpha.7",
+        "@theme-ui/mdx": "0.6.0-alpha.7",
+        "@theme-ui/theme-provider": "0.6.0-alpha.7",
+      },
+      "devDependencies": undefined,
+      "fileHash": "8f6835169f285fcd3ad5425d9268a8f1",
+      "name": "theme-ui",
+      "peerDependencies": Object {
+        "react": "^16.14.0 || ^17.0.0",
+      },
+      "repository": Object {
+        "browse": "https://github.com/system-ui/theme-ui/tree/master/dist/index.js",
+        "docs": "https://github.com/system-ui/theme-ui/tree/master#readme",
+        "issues": "https://github.com/system-ui/theme-ui/issues",
+      },
+      "version": "0.6.0-alpha.7",
+    },
+    "dbf44eba5452898c136530dc9e52623f": Object {
+      "dependencies": Object {
+        "@component-controls/axe-plugin": "^2.12.0",
+        "@component-controls/blocks": "^2.12.0",
+        "@component-controls/core": "^2.10.4",
+        "@component-controls/gatsby-theme-stories": "^2.12.0",
+        "@component-controls/nextjs-plugin": "^2.12.0",
+        "@component-controls/viewport-plugin": "^2.12.0",
+        "gatsby": "^3.0.0",
+        "next": "^10.0.7",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "webpack-bundle-analyzer": "^3.8.0",
+      },
+      "devDependencies": undefined,
+      "fileHash": "dbf44eba5452898c136530dc9e52623f",
+      "name": "component-controls-starter",
+      "peerDependencies": undefined,
+      "privateNpm": true,
+      "repository": Object {
+        "browse": "https://github.com/atanasster/gatsby-controls-starter/tree/master/src/docs/first-blog.mdx",
+        "docs": "https://github.com/atanasster/gatsby-controls-starter/tree/master#readme",
+        "issues": "https://github.com/atanasster/gatsby-controls-starter/issues",
+      },
+      "version": "2.12.0",
+    },
+    "dec691716068a3772ef5564ec8fe3390": Object {
+      "dependencies": Object {
+        "@component-controls/axe-plugin": "^2.12.0",
+        "@component-controls/blocks": "^2.12.0",
+        "@component-controls/core": "^2.10.4",
+        "@component-controls/gatsby-theme-stories": "^2.12.0",
+        "@component-controls/nextjs-plugin": "^2.12.0",
+        "@component-controls/viewport-plugin": "^2.12.0",
+        "gatsby": "^3.0.0",
+        "next": "^10.0.7",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "webpack-bundle-analyzer": "^3.8.0",
+      },
+      "devDependencies": undefined,
+      "fileHash": "dec691716068a3772ef5564ec8fe3390",
+      "name": "component-controls-starter",
+      "peerDependencies": undefined,
+      "privateNpm": true,
+      "repository": Object {
+        "browse": "https://github.com/atanasster/gatsby-controls-starter/tree/master/src/docs/first-page.mdx",
+        "docs": "https://github.com/atanasster/gatsby-controls-starter/tree/master#readme",
+        "issues": "https://github.com/atanasster/gatsby-controls-starter/issues",
+      },
+      "version": "2.12.0",
+    },
+    "ef6966a6426a2258b8bb2a8cd8daf14e": Object {
+      "dependencies": Object {
+        "@component-controls/axe-plugin": "^2.12.0",
+        "@component-controls/blocks": "^2.12.0",
+        "@component-controls/core": "^2.10.4",
+        "@component-controls/gatsby-theme-stories": "^2.12.0",
+        "@component-controls/nextjs-plugin": "^2.12.0",
+        "@component-controls/viewport-plugin": "^2.12.0",
+        "gatsby": "^3.0.0",
+        "next": "^10.0.7",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "webpack-bundle-analyzer": "^3.8.0",
+      },
+      "devDependencies": undefined,
+      "fileHash": "ef6966a6426a2258b8bb2a8cd8daf14e",
+      "name": "component-controls-starter",
+      "peerDependencies": undefined,
+      "privateNpm": true,
+      "repository": Object {
+        "browse": "https://github.com/atanasster/gatsby-controls-starter/tree/master/src/components/Spinner.js",
+        "docs": "https://github.com/atanasster/gatsby-controls-starter/tree/master#readme",
+        "issues": "https://github.com/atanasster/gatsby-controls-starter/issues",
+      },
+      "version": "2.12.0",
+    },
+  },
   "search": [Function],
-  "stores": Array [],
+  "stores": Array [
+    Object {
+      "doc": Object {
+        "component": "Button",
+        "components": Object {},
+        "componentsLookup": Object {
+          "Button": "98b2111b08fbab8e38c938acaf3e129a",
+        },
+        "date": "2020-08-06T05:33:12.000Z",
+        "dateModified": "2020-08-06T05:33:12.000Z",
+        "fileName": "/Users/atanasster/component-controls/examples/starter/src/docs/external-component.stories.tsx",
+        "order": 2,
+        "package": "5fadd3d2dabe409c1f576f3a874cff56",
+        "title": "Library/Components/Button",
+      },
+      "filePath": "/Users/atanasster/component-controls/examples/starter/src/docs/external-component.stories.tsx",
+      "hash": undefined,
+      "stories": Object {
+        "overview": Object {
+          "arguments": Array [],
+          "id": "overview",
+          "loc": Object {
+            "end": Object {
+              "column": 55,
+              "line": 10,
+            },
+            "start": Object {
+              "column": 24,
+              "line": 10,
+            },
+          },
+          "name": "overview",
+          "source": "() => <Button>theme-ui</Button>",
+        },
+      },
+    },
+    Object {
+      "doc": Object {
+        "componentsLookup": Object {},
+        "date": "2020-10-10T05:28:09.000Z",
+        "dateModified": "2020-10-10T05:28:09.000Z",
+        "fileName": "/Users/atanasster/component-controls/examples/starter/src/docs/first-blog.mdx",
+        "package": "dbf44eba5452898c136530dc9e52623f",
+        "title": "First blog",
+        "type": "blog",
+      },
+      "filePath": "/Users/atanasster/component-controls/examples/starter/src/docs/first-blog.mdx",
+      "hash": undefined,
+      "stories": Object {},
+    },
+    Object {
+      "doc": Object {
+        "componentsLookup": Object {},
+        "date": "2020-07-19T04:05:43.000Z",
+        "dateModified": "2020-10-05T16:05:04.000Z",
+        "fileName": "/Users/atanasster/component-controls/examples/starter/src/docs/first-page.mdx",
+        "package": "dec691716068a3772ef5564ec8fe3390",
+        "title": "First Page",
+      },
+      "filePath": "/Users/atanasster/component-controls/examples/starter/src/docs/first-page.mdx",
+      "hash": undefined,
+      "stories": Object {},
+    },
+    Object {
+      "doc": Object {
+        "componentsLookup": Object {
+          "Spinner": "ef6966a6426a2258b8bb2a8cd8daf14e",
+        },
+        "date": "2020-07-19T04:05:43.000Z",
+        "dateModified": "2020-09-07T16:05:15.000Z",
+        "fileName": "/Users/atanasster/component-controls/examples/starter/src/docs/first-story.stories.mdx",
+        "order": 0,
+        "package": "7412d5e040122380ea1d1d370d45a0e6",
+        "title": "Library/Components/MDX",
+      },
+      "filePath": "/Users/atanasster/component-controls/examples/starter/src/docs/first-story.stories.mdx",
+      "hash": undefined,
+      "stories": Object {
+        "overview": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 10,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 0,
+                },
+              },
+              "name": undefined,
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 8,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 3,
+                      "line": 0,
+                    },
+                  },
+                  "name": "color",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 36,
+                          "line": 0,
+                        },
+                        "start": Object {
+                          "column": 31,
+                          "line": 0,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "color",
+                },
+              ],
+            },
+          ],
+          "component": "Spinner",
+          "id": "overview",
+          "loc": Object {
+            "end": Object {
+              "column": 65,
+              "line": 13,
+            },
+            "start": Object {
+              "column": 9,
+              "line": 13,
+            },
+          },
+          "name": "overview",
+          "source": "({ color }) => <Spinner color={color}>click me</Spinner>",
+        },
+      },
+    },
+    Object {
+      "doc": Object {
+        "components": Object {},
+        "componentsLookup": Object {
+          "Button": "5a3b7658720a0f4b8c0fd61ba5fb8c34",
+        },
+        "date": "2020-07-19T04:05:43.000Z",
+        "dateModified": "2020-11-05T01:07:08.000Z",
+        "fileName": "/Users/atanasster/component-controls/examples/starter/src/docs/first-story.stories.tsx",
+        "order": 1,
+        "package": "6ab83c111c83e75f68683ad8a7dd7415",
+        "title": "Library/Components/ESM",
+      },
+      "filePath": "/Users/atanasster/component-controls/examples/starter/src/docs/first-story.stories.tsx",
+      "hash": undefined,
+      "stories": Object {
+        "overview": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 19,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 0,
+                },
+              },
+              "name": "props",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 26,
+                      "line": 2,
+                    },
+                    "start": Object {
+                      "column": 21,
+                      "line": 2,
+                    },
+                  },
+                  "shorthand": undefined,
+                },
+              ],
+              "value": "props",
+            },
+          ],
+          "component": "Button",
+          "id": "overview",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 13,
+            },
+            "start": Object {
+              "column": 24,
+              "line": 10,
+            },
+          },
+          "name": "overview",
+          "source": "(props: ButtonProps) => {
+  const store = useStore();
+  return <Button {...props}>{store.config.title}</Button>;
+}",
+        },
+      },
+    },
+  ],
 }
 `;

@@ -59,11 +59,6 @@ exports[`Application/App Overview 1`] = `
                 aria-label="Component controls"
                 class="css-1vsogol-LogoLink"
                 href="/"
-              />
-              <a
-                aria-label="Component controls"
-                class="css-1vsogol-LogoLink"
-                href="/"
               >
                 <img
                   alt="Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site."
@@ -1501,11 +1496,6 @@ exports[`Application/Header Custom Left 1`] = `
               aria-label="Component controls"
               class="css-1vsogol-LogoLink"
               href="/"
-            />
-            <a
-              aria-label="Component controls"
-              class="css-1vsogol-LogoLink"
-              href="/"
             >
               <img
                 alt="Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site."
@@ -1644,11 +1634,6 @@ exports[`Application/Header Custom Right 1`] = `
           <div
             class="css-1rw838x"
           >
-            <a
-              aria-label="Component controls"
-              class="css-1vsogol-LogoLink"
-              href="/"
-            />
             <a
               aria-label="Component controls"
               class="css-1vsogol-LogoLink"
@@ -1795,11 +1780,6 @@ exports[`Application/Header Customized 1`] = `
           <div
             class="css-1rw838x"
           >
-            <a
-              aria-label="Component controls"
-              class="css-1vsogol-LogoLink"
-              href="/"
-            />
             <a
               aria-label="Component controls"
               class="css-1vsogol-LogoLink"
@@ -2012,11 +1992,6 @@ exports[`Application/Header Overview 1`] = `
           <div
             class="css-1rw838x"
           >
-            <a
-              aria-label="Component controls"
-              class="css-1vsogol-LogoLink"
-              href="/"
-            />
             <a
               aria-label="Component controls"
               class="css-1vsogol-LogoLink"
