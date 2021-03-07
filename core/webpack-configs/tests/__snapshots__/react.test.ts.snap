@@ -120,9 +120,7 @@ Object {
         "use": Array [
           Object {
             "loader": "/Users/atanasster/component-controls/node_modules/mini-css-extract-plugin/dist/loader.js",
-            "options": Object {
-              "publicPath": "",
-            },
+            "options": Object {},
           },
           Object {
             "loader": "css-loader",
