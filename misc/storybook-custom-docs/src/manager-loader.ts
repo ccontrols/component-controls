@@ -1,7 +1,4 @@
-import {
-  WebpackLoaderContext,
-  LoaderOptions,
-} from '@component-controls/core/node-utils';
+import { WebpackLoaderContext } from '@component-controls/core/node-utils';
 import { getOptions } from 'loader-utils';
 
 interface DocsOptions {
@@ -73,12 +70,3 @@ function loader(this: WebpackLoaderContext): any {
 }
 
 module.exports.default = loader;
-
-/**
- * expose public types via declaration merging
- */
-// eslint-disable-next-line @typescript-eslint/no-namespace
-namespace loader {
-  // eslint-disable-next-line @typescript-eslint/no-empty-interface
-  export interface Options extends LoaderOptions {}
-}
