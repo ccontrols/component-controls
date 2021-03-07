@@ -28,13 +28,15 @@ export const react: PresetCallback = (options: BuildProps) => {
       },
     });
   }
-  const result: Configuration = {
+  const result = {
     plugins: [
       new MiniCssExtractPlugin({
         filename: options.cssFileName || defCssFileName,
       }),
-    ],
-    optimization: { minimizer: [] },
+    ].filter(Boolean),
+    optimization: {
+      minimizer: [isProd && new CssMinimizerPlugin()].filter(Boolean),
+    },
     performance: { hints: false },
     module: {
       rules: [
@@ -134,9 +136,11 @@ export const react: PresetCallback = (options: BuildProps) => {
             // Creates `style` nodes from JS strings
             {
               loader: MiniCssExtractPlugin.loader,
-              options: customLoaderOptions(options, 'mini-css-extract-plugin', {
-                publicPath: '',
-              }),
+              options: customLoaderOptions(
+                options,
+                'mini-css-extract-plugin',
+                {},
+              ),
             },
             {
               // Translates CSS into CommonJS
@@ -202,11 +206,6 @@ export const react: PresetCallback = (options: BuildProps) => {
     resolve: {
       extensions: ['.ts', '.tsx', '.js', '.jsx'],
     },
-  };
-  if (isProd) {
-    result.optimization = {
-      minimizer: [new CssMinimizerPlugin()],
-    };
-  }
+  } as Configuration;
   return result;
 };
