@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.3](https://github.com/ccontrols/component-controls/compare/v3.1.2...v3.1.3) (2021-03-07)
+
+
+### Bug Fixes
+
+* style loader ([bed16c7](https://github.com/ccontrols/component-controls/commit/bed16c7e298f6957e7817e05cf3c339e369e766c))
+
+
+
+
+
 ## [3.1.2](https://github.com/ccontrols/component-controls/compare/v3.1.1...v3.1.2) (2021-03-06)
 
 **Note:** Version bump only for package @component-controls/webpack-configs
