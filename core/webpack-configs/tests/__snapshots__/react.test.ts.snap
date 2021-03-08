@@ -125,6 +125,7 @@ Object {
           Object {
             "loader": "css-loader",
             "options": Object {
+              "modules": true,
               "sourceMap": true,
             },
           },
