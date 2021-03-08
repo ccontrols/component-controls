@@ -147,7 +147,6 @@ export const react: PresetCallback = (options: BuildProps) => {
               loader: 'css-loader',
               options: customLoaderOptions(options, 'css-loader', {
                 sourceMap: true,
-                modules: true,
               }),
             },
             ...cssLoaders,
