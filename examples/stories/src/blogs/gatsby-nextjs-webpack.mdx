@@ -25,7 +25,7 @@ For webpack, only one set of results will be displayed as webpack 4 and webpack 
 
 The web tests are conducted with [WebPageTest](https://www.webpagetest.org) and [PageSpeed](https://developers.google.com/speed/pagespeed/insights/).
 
-> it nust be noted that most tests will give different results each time they are taken.
+> it must be noted that most tests will give different results each time they are taken.
 
 # Large sites
 
@@ -79,8 +79,6 @@ All the sites are hosted on a free tier at [netlify](https://www.netlify.com). T
 Measuring the time to
 start up in development mode. For this test, the projects were already
 run once upfront, to make sure all possible caches are created.
-
-<div>source: <strong>WebPageTest</strong></div>
         </InfoTip>
       </td>
       <td>50s</td>
@@ -94,8 +92,7 @@ run once upfront, to make sure all possible caches are created.
       <td>
         <strong>Production Mode build</strong>
         <InfoTip>
-Measuring the time to build the site. Prior to launching this test, all the caches are deleted to create a level testing field.
-          <div>source: <strong>WebPageTest</strong></div>
+Measuring the time to build the site. Before launching this test, all the caches are deleted to create a level testing field.
         </InfoTip>
       </td>
       <td>3:30m</td>
@@ -109,7 +106,7 @@ Measuring the time to build the site. Prior to launching this test, all the cach
       <td>
         <strong>Deployment size</strong>
         <InfoTip>
-The size of all files and assets to be uploaded on a deployment server after build.
+The size of all files and assets to be uploaded on a deployment server after a build.
         </InfoTip>
       </td>
       <td style={{ color: 'red'}}>377.9MB</td>
@@ -246,3 +243,219 @@ The size of all files and assets to be uploaded on a deployment server after bui
 > gatsby and nextjs create much faster and better-optimized sites - as expected since they use code-splitting and create pre-rendered bundles for each page. On the other hand, webpack provides a somewhat better development experience with faster builds and smaller bundle sizes.
 
 > gatsby 3 vastly improves on build times over gatsby 2 - the gatsby builds for this app of over 1400 pages came down from over 14 minutes to just over 3 minutes.
+
+# Small sites
+
+The following measurements are for the component-controls starter sites, which have separate 8 pages.
+
+## Examples Source Code
+
+|           | source code                                                                                       |
+| --------- | ------------------------------------------------------------------------------------------------- |
+| gatsby    | [gatsby 3+](https://github.com/ccontrols/gatsby-controls-starter)          |
+| nextjs    | [nextjs 10+](https://github.com/ccontrols/nextjs-controls-starter)         |
+| webpack   | [webpack 5+](https://github.com/ccontrols/webpack-5-controls-starter) |
+
+## Live Sites
+
+All the sites are hosted on a free tier at [netlify](https://www.netlify.com). The tests are conducted on the same simple documentation page.
+
+|           | test page                                                                                                    |
+| --------- | ------------------------------------------------------------------------------------------------------------ |
+| gatsby    | [https://gatsby-controls-starter.netlify.app](https://gatsby-controls-starter.netlify.app)                   |
+| nextjs    | [https://nextjs-controls-starter.netlify.app](https://nextjs-controls-starter.netlify.app)     |
+| webpack   | [https://webpack-5-controls-starter.netlify.app]https://webpack-5-controls-starter.netlify.app) |
+
+## Performance
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th colSpan="2">gatsby-3</th>
+      <th colSpan="2">nextjs</th>
+      <th colSpan="2">webpack</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>score</th>
+      <th>%</th>
+      <th>score</th>
+      <th>%</th>
+      <th>score</th>
+      <th>%</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+         <strong>Development Mode Startup Time</strong>
+         <InfoTip>
+Measuring the time to
+start up in development mode. For this test, the projects were already
+run once upfront, to make sure all possible caches are created.
+        </InfoTip>
+      </td>
+      <td>13s</td>
+      <td>+86%</td>
+      <td style={{ color: 'green'}}>7s</td>
+      <td>best</td>
+      <td>10s</td>
+      <td>+42%</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Production Mode build</strong>
+        <InfoTip>
+Measuring the time to build the site. Caches are not cleared to measure the best performance.
+        </InfoTip>
+      </td>
+      <td>24s</td>
+      <td>+84%</td>
+      <td style={{ color: 'green'}}>13s</td>
+      <td>best</td>
+      <td>18s</td>
+      <td>+39%</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Deployment size</strong>
+        <InfoTip>
+The size of all files and assets to be uploaded on a deployment server after a build.
+        </InfoTip>
+      </td>
+      <td style={{ color: 'red'}}>10.3MB</td>
+      <td>+415%</td>
+      <td style={{ color: 'red'}}>26.3MB</td>
+      <td>+1215%</td>
+      <td>2MB</td>
+      <td style={{ color: 'green'}}>best</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Largest Contentful Paint</strong>
+        <InfoTip>
+          An important, user-centric metric for measuring perceived load speed because it marks the point in the page load timeline when the page's main content has likely loaded—a fast LCP helps reassure the user that the page is useful.
+          <div>source: <strong>WebPageTest</strong></div>
+        </InfoTip>
+      </td>
+      <td>0.50s</td>
+      <td>+28%</td>
+      <td style={{ color: 'green'}}>0.39s</td>
+      <td>best</td>
+      <td style={{ color: 'red'}}>2.54s</td>
+      <td>+551%</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Total Blocking Time</strong>
+        <InfoTip>
+          An important lab metric for measuring load responsiveness because it helps quantify the severity of how non-interactive a page is before it becoming reliably interactive—a low TBT helps ensure that the page is usable.
+          <div>source: <strong>WebPageTest</strong></div>
+        </InfoTip>
+      </td>
+      <td>0,48s</td>
+      <td>n/a</td>
+      <td>0,41s</td>
+      <td>n/a</td>
+      <td style={{ color: 'green'}}>0,00s</td>
+      <td>best</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Document Complete Time</strong>
+        <InfoTip>
+          The time is takes to fully load all the content referenced in the HTML.
+          <div>source: <strong>WebPageTest</strong></div>
+        </InfoTip>
+      </td>
+      <td style={{ color: 'green'}}>1.91s</td>
+      <td>best</td>
+      <td style={{ color: 'green'}}>1.95s</td>
+      <td>best</td>
+      <td>2.65s</td>
+      <td>+39%</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Document Complete Size</strong>
+        <InfoTip>
+          The size in kilobytes at the Document Complete Time.
+          <div>source: <strong>WebPageTest</strong></div>
+        </InfoTip>
+      </td>
+      <td>745KB</td>
+      <td>+16%</td>
+      <td>676KB</td>
+      <td>+5%</td>
+      <td style={{ color: 'green'}}>643KB</td>
+      <td>best</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Fully Loaded Time</strong>
+        <InfoTip>
+          The time when a page completely stops loading content, including ads and below the fold elements.
+          <div>source: <strong>WebPageTest</strong></div>
+        </InfoTip>
+      </td>
+      <td>2.35s</td>
+      <td>+12%</td>
+      <td style={{ color: 'green'}}>2.09s</td>
+      <td>best</td>
+      <td>2.65s</td>
+      <td>+27%</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Fully Loaded Size</strong>
+        <InfoTip>
+          The size in kilobytes at the Fully Loaded Time.
+          <div>source: <strong>WebPageTest</strong></div>
+        </InfoTip>
+      </td>
+      <td>766KB</td>
+      <td>+19%</td>
+      <td>1,181KB</td>
+      <td>+84%</td>
+      <td style={{ color: 'green'}}>643KB</td>
+      <td>best</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Mobile Speed Score</strong>
+        <InfoTip>
+          The speed score is based on the lab data analyzed by <strong>Lighthouse</strong>. The results of this test vary to some extent on each run.
+          <div>source: <strong>PageSpeed</strong></div>
+        </InfoTip>
+      </td>
+      <td>70</td>
+      <td>-18%</td>
+      <td style={{ color: 'green'}}>85</td>
+      <td>best</td>
+      <td>43</td>
+      <td>-49%</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Desktop Speed Score</strong>
+        <InfoTip>
+          The speed score is based on the lab data analyzed by <strong>Lighthouse</strong>. The results of this test vary to some extent on each run.
+          <div>source: <strong>PageSpeed</strong></div>
+        </InfoTip>
+      </td>
+      <td style={{ color: 'green'}}>93</td>
+      <td>best</td>
+      <td style={{ color: 'green'}}>90</td>
+      <td>best</td>
+      <td>76</td>
+      <td>-18%</td>
+    </tr>
+  </tbody>
+</table>
+
+# Conclusion
+
+- Gatsby and Nextjs produce the faster sites, which is especially valid for larger sites. 
+- Webpack/react-router SPA apps have faster build times and smaller deployment sizes. 
+- The differences are more clear for larger sites. 
