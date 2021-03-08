@@ -1,4 +1,4 @@
-import { ComponentType } from 'react';
+import { ElementType } from 'react';
 import { StoryRenderFn } from './utility';
 import { ComponentControls } from './controls';
 
@@ -26,14 +26,14 @@ export interface StoryProps<Props = unknown> {
   /**
    * id for component associated with the story
    */
-  component?: string | Record<string, unknown> | ComponentType<Props>;
+  component?: string | Record<string, unknown> | ElementType<Props>;
 
   /**
    * multiple components option
    */
   subcomponents?: Record<
     string,
-    string | Record<string, unknown> | ComponentType<Props>
+    string | Record<string, unknown> | ElementType<Props>
   >;
 
   /**
