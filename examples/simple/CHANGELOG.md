@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.5](https://github.com/atanasster/component-controls/compare/v3.1.4...v3.1.5) (2021-03-08)
+
+
+### Bug Fixes
+
+* revert default modules css-loader ([7ef3de5](https://github.com/atanasster/component-controls/commit/7ef3de51fbd866652f8e096d21e350b00dcaa6c5))
+
+
+
+
+
 ## [3.1.4](https://github.com/atanasster/component-controls/compare/v3.1.3...v3.1.4) (2021-03-08)
 
 

@@ -1,7 +1,7 @@
 {
   "name": "component-controls-nextjs-starter",
   "private": true,
-  "version": "3.1.4",
+  "version": "3.1.5",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -16,11 +16,11 @@
     "directory": "examples/nextjs"
   },
   "dependencies": {
-    "@component-controls/addon-catalog": "^3.1.4",
-    "@component-controls/blocks": "^3.1.4",
-    "@component-controls/core": "^3.1.0",
-    "@component-controls/nextjs-plugin": "^3.1.4",
-    "@component-controls/pages": "^3.1.4",
+    "@component-controls/addon-catalog": "^3.1.5",
+    "@component-controls/blocks": "^3.1.5",
+    "@component-controls/core": "^3.1.5",
+    "@component-controls/nextjs-plugin": "^3.1.5",
+    "@component-controls/pages": "^3.1.5",
     "@theme-ui/presets": "^0.6.0-alpha.7",
     "next": "^10.0.7",
     "react": "^17.0.1",

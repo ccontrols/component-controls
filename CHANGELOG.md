@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.5](https://github.com/ccontrols/component-controls/compare/v3.1.4...v3.1.5) (2021-03-08)
+
+
+### Bug Fixes
+
+* broaden component type definition ([96113f2](https://github.com/ccontrols/component-controls/commit/96113f29c1ca8121e806b1a5c7a565b5ae84a87a))
+* revert default modules css-loader ([7ef3de5](https://github.com/ccontrols/component-controls/commit/7ef3de51fbd866652f8e096d21e350b00dcaa6c5))
+
+
+
+
+
 ## [3.1.4](https://github.com/ccontrols/component-controls/compare/v3.1.3...v3.1.4) (2021-03-08)
 
 
