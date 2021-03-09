@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/ccontrols/component-controls/compare/v3.1.6...v3.2.0) (2021-03-09)
+
+
+### Bug Fixes
+
+* index path for category type pages ([91d4540](https://github.com/ccontrols/component-controls/commit/91d454042d6ff87cdd9c8808ac9f17bba56d2e02))
+
+
+### Features
+
+* enable react-fast-refresh ([50dab81](https://github.com/ccontrols/component-controls/commit/50dab81e8f8e2a254c57a6024d343b45f27aad8b))
+
+
+
+
+
 ## [3.1.5](https://github.com/ccontrols/component-controls/compare/v3.1.4...v3.1.5) (2021-03-08)
 
 

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/ccontrols/component-controls/compare/v3.1.6...v3.2.0) (2021-03-09)
+
+
+### Bug Fixes
+
+* index path for category type pages ([91d4540](https://github.com/ccontrols/component-controls/commit/91d454042d6ff87cdd9c8808ac9f17bba56d2e02))
+* tags url path and nextjs template pages ([ca1c6c0](https://github.com/ccontrols/component-controls/commit/ca1c6c0b0d9a5db4b06c32728eb5401610303cff))
+
+
+
+
+
 ## [3.1.6](https://github.com/ccontrols/component-controls/compare/v3.1.5...v3.1.6) (2021-03-09)
 
 **Note:** Version bump only for package @component-controls/app
