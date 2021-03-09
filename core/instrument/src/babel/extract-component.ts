@@ -122,8 +122,9 @@ export const extractComponent = async (
         component.loc = follow.loc;
       }
       const { fileInfo = true } = components || {};
+
       if (fileInfo) {
-        component.fileInfo = await getFileIinfo(follow.filePath, saveSource);
+        component.fileInfo = await getFileIinfo(follow.filePath, follow.source);
       }
       if (components && typeof components.resolvePropsFile === 'function') {
         const propsFile = components.resolvePropsFile(

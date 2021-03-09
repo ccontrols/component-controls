@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import gitlog, { GitlogOptions } from 'gitlog';
 import slocAPI from 'sloc';
+import { createHash } from 'crypto';
 import { findUpFile } from '@component-controls/core/node-utils';
 import { FileInfo } from '@component-controls/core';
 import { CachedFileResource } from './chached-file';
@@ -9,9 +10,13 @@ export const getFileIinfo = async (
   filePath: string,
   source?: string,
 ): Promise<FileInfo> => {
+  const fileHash = createHash('md5')
+    .update(source || '')
+    .digest('hex');
+
   const cached = new CachedFileResource<FileInfo>(
     'file-stats',
-    filePath,
+    `${filePath}-${fileHash}`,
     filePath,
   );
   let result: FileInfo | undefined;
