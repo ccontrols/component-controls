@@ -27,7 +27,7 @@ const getPageList = (store: Store, type: DocType = defDocType): Pages => {
   return [];
 };
 
-const getUniquesByField = (
+export const getUniquesByField = (
   store: Store,
   field: string,
 ): { [key: string]: number } => {

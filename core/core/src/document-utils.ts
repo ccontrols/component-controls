@@ -102,6 +102,11 @@ export const getDocTypePath = (
   return basePath ? `${siteRoot}${removeTrailingSlash(basePath)}` : undefined;
 };
 
+export const getCategoryPath = (store: Store, category: string): string => {
+  const { siteRoot = '/' } = (store?.config as BuildConfiguration) || {};
+  return `${siteRoot}${removeTrailingSlash(category.toLowerCase())}`;
+};
+
 export const getHomePath = (store: Store): string => {
   const { siteRoot = '/' } = (store?.config as BuildConfiguration) || {};
   return siteRoot.length > 1 ? removeTrailingSlash(siteRoot) : siteRoot;
