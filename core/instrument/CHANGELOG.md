@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.6](https://github.com/ccontrols/component-controls/compare/v3.1.5...v3.1.6) (2021-03-09)
+
+
+### Bug Fixes
+
+* extract sloc info if component.sources false ([c06c9b6](https://github.com/ccontrols/component-controls/commit/c06c9b6fb877550fb58a45f398d524d9fc5f2113))
+
+
+
+
+
 ## [3.1.5](https://github.com/ccontrols/component-controls/compare/v3.1.4...v3.1.5) (2021-03-08)
 
 **Note:** Version bump only for package @component-controls/instrument

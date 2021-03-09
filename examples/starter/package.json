@@ -2,7 +2,7 @@
   "name": "component-controls-starter",
   "description": "component-controls starter - works with gatsby and nextjs",
   "private": true,
-  "version": "3.1.5",
+  "version": "3.1.6",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -17,12 +17,12 @@
     "url": "https://github.com/atanasster/gatsby-controls-starter.git"
   },
   "dependencies": {
-    "@component-controls/axe-plugin": "^3.1.5",
-    "@component-controls/blocks": "^3.1.5",
+    "@component-controls/axe-plugin": "^3.1.6",
+    "@component-controls/blocks": "^3.1.6",
     "@component-controls/core": "^3.1.5",
-    "@component-controls/gatsby-theme-stories": "^3.1.5",
-    "@component-controls/nextjs-plugin": "^3.1.5",
-    "@component-controls/viewport-plugin": "^3.1.5",
+    "@component-controls/gatsby-theme-stories": "^3.1.6",
+    "@component-controls/nextjs-plugin": "^3.1.6",
+    "@component-controls/viewport-plugin": "^3.1.6",
     "gatsby": "^3.0.0",
     "next": "^10.0.7",
     "react": "^17.0.1",
