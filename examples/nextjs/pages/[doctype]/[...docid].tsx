@@ -1,35 +1,13 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
-import { DocPage } from '@component-controls/app';
-import { DocType } from '@component-controls/core';
 import {
-  Layout,
+  DocPageTemplate,
   store,
   getDocPagesPaths,
   getDocPage,
 } from '@component-controls/nextjs-plugin';
 
-interface DocPageProps {
-  docId?: string;
-  storyId?: string;
-  type: DocType;
-  activeTab?: string;
-  category?: string;
-}
-
-const DocPageTemplate: FC<DocPageProps> = ({
-  docId,
-  storyId,
-  type,
-  category,
-  activeTab,
-}) => {
-  return (
-    <Layout docId={docId} storyId={storyId} activeTab={activeTab}>
-      <DocPage type={type} category={category} />
-    </Layout>
-  );
-};
+const DocPage: typeof DocPageTemplate = props => <DocPageTemplate {...props} />;
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return { paths: getDocPagesPaths(store), fallback: false };
@@ -48,4 +26,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return { props: { docId, type, storyId, category, activeTab } };
 };
 
-export default DocPageTemplate;
+export default DocPage;

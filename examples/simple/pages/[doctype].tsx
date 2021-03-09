@@ -1,31 +1,13 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
-import { DocType, defDocType } from '@component-controls/core';
-import { DocumentHomePage } from '@component-controls/app';
 import {
-  Layout,
+  DocHomeTemplate,
   store,
   getHomePagesPaths,
   getDocHomePage,
 } from '@component-controls/nextjs-plugin';
 
-interface PageListProps {
-  type: DocType;
-  docId?: string;
-  storyId?: string;
-}
-
-const DocHomeTemplate: FC<PageListProps> = ({
-  type = defDocType,
-  docId,
-  storyId,
-}) => {
-  return (
-    <Layout docId={docId} storyId={storyId}>
-      <DocumentHomePage type={type} />
-    </Layout>
-  );
-};
+const DocHome: typeof DocHomeTemplate = props => <DocHomeTemplate {...props} />;
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return { paths: getHomePagesPaths(store), fallback: false };
@@ -38,4 +20,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return { props: { docId, storyId, type } };
 };
 
-export default DocHomeTemplate;
+export default DocHome;

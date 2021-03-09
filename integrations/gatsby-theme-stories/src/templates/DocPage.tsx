@@ -17,7 +17,12 @@ const DocPageTemplate: FC<DocPageProps> = ({
   pageContext: { docId, storyId, type, activeTab, category },
 }) => {
   return (
-    <Layout docId={docId} storyId={storyId} activeTab={activeTab}>
+    <Layout
+      docId={docId}
+      storyId={storyId}
+      activeTab={activeTab}
+      type={category}
+    >
       <DocPage type={type} category={category} />
     </Layout>
   );

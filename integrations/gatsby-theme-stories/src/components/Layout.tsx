@@ -9,6 +9,7 @@ interface LayoutProps {
   docId?: string;
   storyId?: string;
   activeTab?: string;
+  type?: string;
 }
 
 export const Layout: FC<LayoutProps> = ({
@@ -16,12 +17,14 @@ export const Layout: FC<LayoutProps> = ({
   storyId,
   children,
   activeTab,
+  type,
 }) => {
   return (
     <AppContext
       docId={docId}
       storyId={storyId}
       store={store}
+      type={type}
       linkClass={GatsbyLink}
       Helmet={Helmet as any}
       activeTab={activeTab}

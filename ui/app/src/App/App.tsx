@@ -14,13 +14,14 @@ import { useAnalytics } from './useAnalytics';
 import { AppError } from '../AppError';
 export interface AppProps {
   Helmet?: ComponentType;
+  type?: string;
 }
 
 /**
  * application container component. adds SEO, SkipLinks, Header and Footer.
  *
  */
-export const App: FC<AppProps> = ({ children, Helmet }) => {
+export const App: FC<AppProps> = ({ children, Helmet, type = '' }) => {
   const store = useStore();
   const doc = useCurrentDocument();
   const config = useConfig();
@@ -42,7 +43,7 @@ export const App: FC<AppProps> = ({ children, Helmet }) => {
     });
   }
   useAnalytics();
-  const titleParts = doc?.title ? doc.title.split('/') : [''];
+  const titleParts = doc?.title ? doc.title.split('/') : [type];
   const docTitle = titleParts[titleParts.length - 1];
   const { title, language, siteMap, seo, app } = config || {};
   const Wrapper = app || Fragment;
@@ -57,7 +58,7 @@ export const App: FC<AppProps> = ({ children, Helmet }) => {
           )}
         </Helmet>
       )}
-      {seo || <SEO Helmet={Helmet} doc={doc} config={config} />}
+      {seo || <SEO Helmet={Helmet} doc={doc} config={config} title={type} />}
       <SkipLinks items={items} />
       <Wrapper>
         <Box variant="app">
