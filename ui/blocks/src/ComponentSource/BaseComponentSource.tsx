@@ -28,11 +28,11 @@ const getNextState = (current: ShowType, component: Component): ShowType => {
     case 'import':
       return component.source
         ? 'source'
-        : component.fileInfo
+        : component.fileInfo?.sloc
         ? 'stats'
         : 'import';
     case 'source':
-      return component.fileInfo ? 'stats' : 'import';
+      return component.fileInfo?.sloc ? 'stats' : 'import';
     case 'stats':
     default:
       return 'import';
@@ -65,7 +65,7 @@ export const BaseComponentSource: FC<BaseComponentSourceProps> = props => {
   };
   const allActions: ActionItem[] = [];
 
-  if (component.source || component.fileInfo) {
+  if (component.source || component.fileInfo?.sloc) {
     allActions.push({
       node: getNextState(showType, component),
       'aria-label': `view ${component.name} ${getNextState(
