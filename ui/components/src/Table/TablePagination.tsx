@@ -8,6 +8,19 @@ const runtimeTemplate = (str: string, obj: Record<string, any>) =>
 
 export interface TablePaginationProps {
   /**
+   * array of data records
+   */
+  data?: any[];
+  /**
+   * whether to make totlal countfield visible
+   */
+  totalCountVisible?: boolean;
+
+  /**
+   * total count label text
+   */
+  totalCountTemplate?: string;
+  /**
    * 'Page ${pageIndex} of ${pageLength}' template
    */
   pageTemplate?: string;
@@ -50,6 +63,9 @@ export const TablePagination: FC<UsePaginationInstanceProps<{
 }> &
   TablePaginationProps> = props => {
   const {
+    totalCountVisible = true,
+    totalCountTemplate = 'Total: ${totalData} records',
+    data = [],
     gotoPage,
     canPreviousPage,
     previousPage,
@@ -71,70 +87,80 @@ export const TablePagination: FC<UsePaginationInstanceProps<{
     pageIndex: pageIndex + 1,
     pageLength: pageOptions.length,
   });
-
+  const totalCountResolvedTemplate = runtimeTemplate(totalCountTemplate, {
+    totalData: data.length,
+  });
   return (
     <Box variant="table.pagination.container">
-      {(canPreviousPage || canNextPage) && (
-        <Box variant="table.pagination.navigation">
-          <Box variant="table.pagination.navigation.button">
-            <Button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
-              {'<<'}
-            </Button>
+      <Box variant="table.pagination.total">
+        {totalCountVisible && totalCountResolvedTemplate}
+      </Box>
+      <Box variant="table.pagination.navigationContainer">
+        {(canPreviousPage || canNextPage) && (
+          <Box variant="table.pagination.navigation">
+            <Box variant="table.pagination.navigation.button">
+              <Button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
+                {'<<'}
+              </Button>
+            </Box>
+            <Box variant="table.pagination.navigation.button">
+              <Button
+                onClick={() => previousPage()}
+                disabled={!canPreviousPage}
+              >
+                {'<'}
+              </Button>
+            </Box>
+            <Box variant="table.pagination.navigation.button">
+              <Button onClick={() => nextPage()} disabled={!canNextPage}>
+                {'>'}
+              </Button>
+            </Box>
+            <Box variant="table.pagination.navigation.button">
+              <Button
+                onClick={() => gotoPage(pageCount - 1)}
+                disabled={!canNextPage}
+              >
+                {'>>'}
+              </Button>
+            </Box>
           </Box>
-          <Box variant="table.pagination.navigation.button">
-            <Button onClick={() => previousPage()} disabled={!canPreviousPage}>
-              {'<'}
-            </Button>
+        )}
+        {pageVisible && (
+          <Box variant="table.pagination.page">{pageResolvedTemplate}</Box>
+        )}
+        {goToPageVisible && (
+          <Box variant="table.pagination.interactive">
+            {goToPageTemplate}
+            <Input
+              type="number"
+              defaultValue={pageIndex + 1}
+              onChange={e => {
+                const page = e.target.value ? Number(e.target.value) - 1 : 0;
+                gotoPage(page);
+              }}
+            />
           </Box>
-          <Box variant="table.pagination.navigation.button">
-            <Button onClick={() => nextPage()} disabled={!canNextPage}>
-              {'>'}
-            </Button>
-          </Box>
-          <Box variant="table.pagination.navigation.button">
-            <Button
-              onClick={() => gotoPage(pageCount - 1)}
-              disabled={!canNextPage}
+        )}
+        {pageSizeVisible && (
+          <Box variant="table.pagination.pagesize">
+            <Select
+              value={pageSize}
+              onChange={e => {
+                setPageSize(Number(e.target.value));
+              }}
             >
-              {'>>'}
-            </Button>
+              {[10, 20, 30, 40, 50].map(pageSize => (
+                <option key={pageSize} value={pageSize}>
+                  {runtimeTemplate(pageSizeTemplate, {
+                    pageSize,
+                  })}
+                </option>
+              ))}
+            </Select>
           </Box>
-        </Box>
-      )}
-      {pageVisible && (
-        <Box variant="table.pagination.page">{pageResolvedTemplate}</Box>
-      )}
-      {goToPageVisible && (
-        <Box variant="table.pagination.interactive">
-          {goToPageTemplate}
-          <Input
-            type="number"
-            defaultValue={pageIndex + 1}
-            onChange={e => {
-              const page = e.target.value ? Number(e.target.value) - 1 : 0;
-              gotoPage(page);
-            }}
-          />
-        </Box>
-      )}
-      {pageSizeVisible && (
-        <Box variant="table.pagination.pagesize">
-          <Select
-            value={pageSize}
-            onChange={e => {
-              setPageSize(Number(e.target.value));
-            }}
-          >
-            {[10, 20, 30, 40, 50].map(pageSize => (
-              <option key={pageSize} value={pageSize}>
-                {runtimeTemplate(pageSizeTemplate, {
-                  pageSize,
-                })}
-              </option>
-            ))}
-          </Select>
-        </Box>
-      )}
+        )}
+      </Box>
     </Box>
   );
 };

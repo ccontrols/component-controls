@@ -652,10 +652,21 @@ export const theme: ControlsTheme = {
       container: {
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'flex-end',
+        justifyContent: 'space-between',
         alignItems: 'center',
         backgroundColor: 'background',
-        pt: 2,
+        py: 2,
+      },
+      total: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        px: 3,
+      },
+      navigationContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
       },
       navigation: {
         display: 'flex',
