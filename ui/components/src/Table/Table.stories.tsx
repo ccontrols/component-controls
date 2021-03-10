@@ -183,6 +183,8 @@ export const pagination: Example<TablePaginationProps> = props => {
 };
 
 pagination.controls = {
+  totalCountVisible: true,
+  totalCountTemplate: 'Total: ${totalData} records',
   pageIndex: 0,
   pageSize: 10,
   pageTemplate: 'Page ${pageIndex} of ${pageLength}',
