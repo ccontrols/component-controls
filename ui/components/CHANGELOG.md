@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/ccontrols/component-controls/compare/v3.2.0...v3.3.0) (2021-03-10)
+
+
+### Features
+
+* add table tagination totals option ([85bc3da](https://github.com/ccontrols/component-controls/commit/85bc3da3deca9db8f00d51c34e9b3732e4cef3d7))
+
+
+
+
+
 # [3.2.0](https://github.com/ccontrols/component-controls/compare/v3.1.6...v3.2.0) (2021-03-09)
 
 **Note:** Version bump only for package @component-controls/components

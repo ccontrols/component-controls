@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/ccontrols/component-controls/compare/v3.2.0...v3.3.0) (2021-03-10)
+
+
+### Bug Fixes
+
+* change ComponentCommits section name back to default ([63f26c9](https://github.com/ccontrols/component-controls/commit/63f26c9bae7869d6b7b8107bd855188e9461d6a0))
+* disable fast-refresh for webpack 4 ([15d7e77](https://github.com/ccontrols/component-controls/commit/15d7e77b5e20d662b46064c34d16bea17999caec))
+* react-helmet html attributes ([c241445](https://github.com/ccontrols/component-controls/commit/c2414450ee653e6d890ce37bdb50777df6a5ba47))
+
+
+### Features
+
+* add table tagination totals option ([85bc3da](https://github.com/ccontrols/component-controls/commit/85bc3da3deca9db8f00d51c34e9b3732e4cef3d7))
+* block component CommitsPopover ([11b3f91](https://github.com/ccontrols/component-controls/commit/11b3f91d77eb3e0fda829dc6d592b3f6a8ecb7d0))
+
+
+
+
+
 # [3.2.0](https://github.com/ccontrols/component-controls/compare/v3.1.6...v3.2.0) (2021-03-09)
 
 

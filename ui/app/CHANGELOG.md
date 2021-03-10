@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/ccontrols/component-controls/compare/v3.2.0...v3.3.0) (2021-03-10)
+
+
+### Bug Fixes
+
+* react-helmet html attributes ([c241445](https://github.com/ccontrols/component-controls/commit/c2414450ee653e6d890ce37bdb50777df6a5ba47))
+
+
+
+
+
 # [3.2.0](https://github.com/ccontrols/component-controls/compare/v3.1.6...v3.2.0) (2021-03-09)
 
 

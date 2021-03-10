@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/routes",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "description": "component-controls routes utilities",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,7 +30,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/core": "^3.2.0"
+    "@component-controls/core": "^3.3.0"
   },
   "devDependencies": {
     "@component-controls/ts-markdown-docs": "^2.6.0",
