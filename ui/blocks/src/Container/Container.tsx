@@ -1,12 +1,16 @@
 /** @jsx jsx */
 import { jsx, Box, Text } from 'theme-ui';
 import { FC, ReactNode, Fragment } from 'react';
-import { dateToLocalString } from '@component-controls/core';
+import { dateToLocalString, CURRENT_STORY } from '@component-controls/core';
 import { Value } from '@component-controls/components';
-import { useCurrentDocument } from '@component-controls/store';
+import {
+  useCurrentDocument,
+  useStoryComponent,
+} from '@component-controls/store';
 import { Title } from '../Title';
 import { Subtitle } from '../Subtitle';
 import { EditPage } from '../EditPage';
+import { ComponentStats } from '../ComponentStats';
 
 export interface ContainerProps {
   author?: ReactNode;
@@ -21,27 +25,39 @@ export const Container: FC<ContainerProps> = ({
   secondRow,
 }) => {
   const doc = useCurrentDocument();
+  const component = useStoryComponent({ id: CURRENT_STORY });
   return (
     <Box variant="blockpagecontainer.container">
       <Box variant="blockpagecontainer.inforow">
         <EditPage />
-        <Box variant="blockpagecontainer.createdbox.container">
-          {doc?.date && (
-            <Fragment>
-              <Value label="created:" value={dateToLocalString(doc.date)} />
-              {doc?.dateModified && (
-                <Text variant="blockpagecontainer.createdbox.separator">,</Text>
-              )}
-            </Fragment>
-          )}
-          {doc?.dateModified && (
-            <Value
-              label="updated:"
-              value={dateToLocalString(doc.dateModified)}
-            />
-          )}
-          {author}
-        </Box>
+        <div
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            my: 1,
+          }}
+        >
+          <Box variant="blockpagecontainer.createdbox.container">
+            {doc?.date && (
+              <Fragment>
+                <Value label="created:" value={dateToLocalString(doc.date)} />
+                {doc?.dateModified && (
+                  <Text variant="blockpagecontainer.createdbox.separator">
+                    ,
+                  </Text>
+                )}
+              </Fragment>
+            )}
+            {doc?.dateModified && (
+              <Value
+                label="updated:"
+                value={dateToLocalString(doc.dateModified)}
+              />
+            )}
+            {author}
+          </Box>
+          <ComponentStats component={component} />
+        </div>
       </Box>
       {secondRow && (
         <Box variant="blockpagecontainer.secondrow">{secondRow}</Box>
