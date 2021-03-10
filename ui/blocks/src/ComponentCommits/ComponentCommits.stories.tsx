@@ -7,6 +7,7 @@ export default {
   title: 'Blocks/ComponentCommits',
   component: ComponentCommits,
   category: ' Component',
+  author: 'martin-stoyanov',
   decorators: makeDecorators('blocks-core-story-plain--controls'),
 } as Document;
 
