@@ -150,29 +150,33 @@ exports[`Plugins/AddonCatalog/Catalog Overview 1`] = `
               />
             </div>
             <div
-              class="css-14a8v30-PackageLink"
+              class="css-nj7jql-ComponentCard"
             >
-              <a
-                class="css-1t54e2w"
-                href="https://npmjs.com/package/@component-controls/blocks/v/1.0.3"
-                rel="noopener noreferrer"
-                target="_blank"
+              <div
+                class="css-14a8v30-PackageLink"
               >
-                <div
-                  class="css-13b120i-PackageLink"
+                <a
+                  class="css-1t54e2w"
+                  href="https://npmjs.com/package/@component-controls/blocks/v/1.0.3"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
-                  @component-controls/blocks
-                </div>
-              </a>
-              <span
-                class="css-n8ts03-PackageLink"
-              >
+                  <div
+                    class="css-13b120i-PackageLink"
+                  >
+                    @component-controls/blocks
+                  </div>
+                </a>
                 <span
-                  class="css-vurnku"
+                  class="css-n8ts03-PackageLink"
                 >
-                  1.0.3
+                  <span
+                    class="css-vurnku"
+                  >
+                    1.0.3
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
             <div
               class="css-1akfoys-ComponentCard"
@@ -285,6 +289,33 @@ exports[`Plugins/AddonCatalog/ComponentCard Overview 1`] = `
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div
+      class="css-nj7jql-ComponentCard"
+    >
+      <div />
+      <div
+        style="display: inline-block;"
+      >
+        <a
+          class="css-1yxfg47-CommitsPopover"
+        >
+          <div
+            class="css-zf8zhj"
+          >
+            <div
+              class="css-1vu7ggh-CommitsPopover"
+            >
+              commits:
+            </div>
+            <span
+              class="css-uv6qe8"
+            >
+              12
+            </span>
+          </div>
+        </a>
       </div>
     </div>
     <div
@@ -545,6 +576,33 @@ exports[`Plugins/AddonCatalog/ComponentList Overview 1`] = `
         </div>
       </div>
       <div
+        class="css-nj7jql-ComponentCard"
+      >
+        <div />
+        <div
+          style="display: inline-block;"
+        >
+          <a
+            class="css-1yxfg47-CommitsPopover"
+          >
+            <div
+              class="css-zf8zhj"
+            >
+              <div
+                class="css-1vu7ggh-CommitsPopover"
+              >
+                commits:
+              </div>
+              <span
+                class="css-uv6qe8"
+              >
+                12
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
         class="css-1akfoys-ComponentCard"
       />
       <p>
@@ -714,6 +772,33 @@ with a
         </div>
       </div>
       <div
+        class="css-nj7jql-ComponentCard"
+      >
+        <div />
+        <div
+          style="display: inline-block;"
+        >
+          <a
+            class="css-1yxfg47-CommitsPopover"
+          >
+            <div
+              class="css-zf8zhj"
+            >
+              <div
+                class="css-1vu7ggh-CommitsPopover"
+              >
+                commits:
+              </div>
+              <span
+                class="css-uv6qe8"
+              >
+                12
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
         class="css-1akfoys-ComponentCard"
       />
       <p>
@@ -883,6 +968,33 @@ with a
         </div>
       </div>
       <div
+        class="css-nj7jql-ComponentCard"
+      >
+        <div />
+        <div
+          style="display: inline-block;"
+        >
+          <a
+            class="css-1yxfg47-CommitsPopover"
+          >
+            <div
+              class="css-zf8zhj"
+            >
+              <div
+                class="css-1vu7ggh-CommitsPopover"
+              >
+                commits:
+              </div>
+              <span
+                class="css-uv6qe8"
+              >
+                12
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
         class="css-1akfoys-ComponentCard"
       />
       <p>
@@ -1049,6 +1161,33 @@ with a
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div
+        class="css-nj7jql-ComponentCard"
+      >
+        <div />
+        <div
+          style="display: inline-block;"
+        >
+          <a
+            class="css-1yxfg47-CommitsPopover"
+          >
+            <div
+              class="css-zf8zhj"
+            >
+              <div
+                class="css-1vu7ggh-CommitsPopover"
+              >
+                commits:
+              </div>
+              <span
+                class="css-uv6qe8"
+              >
+                12
+              </span>
+            </div>
+          </a>
         </div>
       </div>
       <div
@@ -1176,29 +1315,33 @@ exports[`Plugins/AddonCatalog/ComponentsCatalog Overview 1`] = `
             />
           </div>
           <div
-            class="css-14a8v30-PackageLink"
+            class="css-nj7jql-ComponentCard"
           >
-            <a
-              class="css-1t54e2w"
-              href="https://npmjs.com/package/@component-controls/blocks/v/1.0.3"
-              rel="noopener noreferrer"
-              target="_blank"
+            <div
+              class="css-14a8v30-PackageLink"
             >
-              <div
-                class="css-13b120i-PackageLink"
+              <a
+                class="css-1t54e2w"
+                href="https://npmjs.com/package/@component-controls/blocks/v/1.0.3"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                @component-controls/blocks
-              </div>
-            </a>
-            <span
-              class="css-n8ts03-PackageLink"
-            >
+                <div
+                  class="css-13b120i-PackageLink"
+                >
+                  @component-controls/blocks
+                </div>
+              </a>
               <span
-                class="css-vurnku"
+                class="css-n8ts03-PackageLink"
               >
-                1.0.3
+                <span
+                  class="css-vurnku"
+                >
+                  1.0.3
+                </span>
               </span>
-            </span>
+            </div>
           </div>
           <div
             class="css-1akfoys-ComponentCard"

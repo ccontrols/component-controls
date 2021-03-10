@@ -6149,48 +6149,57 @@ exports[`Components/Table Pagination 1`] = `
     </tbody>
   </table>
   <div
-    class="css-1hqheys"
+    class="css-43hdi9"
   >
     <div
-      class="css-wzqkm9"
+      class="css-v7kut1"
+    >
+      Total: 20 records
+    </div>
+    <div
+      class="css-f5h6sg"
     >
       <div
-        class="css-1c1rsqy"
+        class="css-wzqkm9"
       >
-        <button
-          class="css-97huhz"
-          disabled=""
+        <div
+          class="css-1c1rsqy"
         >
-          &lt;&lt;
-        </button>
-      </div>
-      <div
-        class="css-1c1rsqy"
-      >
-        <button
-          class="css-97huhz"
-          disabled=""
+          <button
+            class="css-97huhz"
+            disabled=""
+          >
+            &lt;&lt;
+          </button>
+        </div>
+        <div
+          class="css-1c1rsqy"
         >
-          &lt;
-        </button>
-      </div>
-      <div
-        class="css-1c1rsqy"
-      >
-        <button
-          class="css-97huhz"
+          <button
+            class="css-97huhz"
+            disabled=""
+          >
+            &lt;
+          </button>
+        </div>
+        <div
+          class="css-1c1rsqy"
         >
-          &gt;
-        </button>
-      </div>
-      <div
-        class="css-1c1rsqy"
-      >
-        <button
-          class="css-97huhz"
+          <button
+            class="css-97huhz"
+          >
+            &gt;
+          </button>
+        </div>
+        <div
+          class="css-1c1rsqy"
         >
-          &gt;&gt;
-        </button>
+          <button
+            class="css-97huhz"
+          >
+            &gt;&gt;
+          </button>
+        </div>
       </div>
     </div>
   </div>

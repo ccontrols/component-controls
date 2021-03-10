@@ -1,5 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Blocks/CommitsPopover Overview 1`] = `
+<DocumentFragment>
+  <div
+    style="display: inline-block;"
+  >
+    <a
+      class="css-1fukkpf-CommitsPopover"
+    >
+      <div
+        class="css-vurnku"
+      >
+        <div
+          class="css-x25fu2-CommitsPopover"
+        >
+          commits:
+        </div>
+        <span
+          class="css-vurnku"
+        >
+          12
+        </span>
+      </div>
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Blocks/ComponentCommits Overview 1`] = `
 <DocumentFragment>
   <div
@@ -671,48 +698,57 @@ exports[`Blocks/ComponentCommits Overview 1`] = `
             </tbody>
           </table>
           <div
-            class="css-1hqheys"
+            class="css-43hdi9"
           >
             <div
-              class="css-wzqkm9"
+              class="css-v7kut1"
+            >
+              12 commits
+            </div>
+            <div
+              class="css-f5h6sg"
             >
               <div
-                class="css-1c1rsqy"
+                class="css-wzqkm9"
               >
-                <button
-                  class="css-97huhz"
-                  disabled=""
+                <div
+                  class="css-1c1rsqy"
                 >
-                  &lt;&lt;
-                </button>
-              </div>
-              <div
-                class="css-1c1rsqy"
-              >
-                <button
-                  class="css-97huhz"
-                  disabled=""
+                  <button
+                    class="css-97huhz"
+                    disabled=""
+                  >
+                    &lt;&lt;
+                  </button>
+                </div>
+                <div
+                  class="css-1c1rsqy"
                 >
-                  &lt;
-                </button>
-              </div>
-              <div
-                class="css-1c1rsqy"
-              >
-                <button
-                  class="css-97huhz"
+                  <button
+                    class="css-97huhz"
+                    disabled=""
+                  >
+                    &lt;
+                  </button>
+                </div>
+                <div
+                  class="css-1c1rsqy"
                 >
-                  &gt;
-                </button>
-              </div>
-              <div
-                class="css-1c1rsqy"
-              >
-                <button
-                  class="css-97huhz"
+                  <button
+                    class="css-97huhz"
+                  >
+                    &gt;
+                  </button>
+                </div>
+                <div
+                  class="css-1c1rsqy"
                 >
-                  &gt;&gt;
-                </button>
+                  <button
+                    class="css-97huhz"
+                  >
+                    &gt;&gt;
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -1394,54 +1430,63 @@ exports[`Blocks/ComponentCommits Pagination 1`] = `
             </tbody>
           </table>
           <div
-            class="css-1hqheys"
+            class="css-43hdi9"
           >
             <div
-              class="css-wzqkm9"
+              class="css-v7kut1"
             >
-              <div
-                class="css-1c1rsqy"
-              >
-                <button
-                  class="css-97huhz"
-                  disabled=""
-                >
-                  &lt;&lt;
-                </button>
-              </div>
-              <div
-                class="css-1c1rsqy"
-              >
-                <button
-                  class="css-97huhz"
-                  disabled=""
-                >
-                  &lt;
-                </button>
-              </div>
-              <div
-                class="css-1c1rsqy"
-              >
-                <button
-                  class="css-97huhz"
-                >
-                  &gt;
-                </button>
-              </div>
-              <div
-                class="css-1c1rsqy"
-              >
-                <button
-                  class="css-97huhz"
-                >
-                  &gt;&gt;
-                </button>
-              </div>
+              Total: 12 records
             </div>
             <div
-              class="css-1f9rp2t"
+              class="css-f5h6sg"
             >
-              Page 1 of 2
+              <div
+                class="css-wzqkm9"
+              >
+                <div
+                  class="css-1c1rsqy"
+                >
+                  <button
+                    class="css-97huhz"
+                    disabled=""
+                  >
+                    &lt;&lt;
+                  </button>
+                </div>
+                <div
+                  class="css-1c1rsqy"
+                >
+                  <button
+                    class="css-97huhz"
+                    disabled=""
+                  >
+                    &lt;
+                  </button>
+                </div>
+                <div
+                  class="css-1c1rsqy"
+                >
+                  <button
+                    class="css-97huhz"
+                  >
+                    &gt;
+                  </button>
+                </div>
+                <div
+                  class="css-1c1rsqy"
+                >
+                  <button
+                    class="css-97huhz"
+                  >
+                    &gt;&gt;
+                  </button>
+                </div>
+              </div>
+              <div
+                class="css-1f9rp2t"
+              >
+                Page 1 of 2
+              </div>
             </div>
           </div>
         </div>
