@@ -8,6 +8,7 @@ import {
   PackageLink,
   ComponentContributors,
   ComponentStats,
+  CommitsPopover,
   getStoryTitle,
 } from '@component-controls/blocks';
 import {
@@ -68,9 +69,20 @@ export const ComponentCard: FC<ComponentCardProps & BoxProps> = ({
           <ComponentContributors component={component} />
         </div>
       </div>
-      {pckg && pckg.privateNpm !== true && (
-        <PackageLink name={pckg.name as string} version={pckg.version} />
-      )}
+      <div
+        sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+        }}
+      >
+        {pckg && pckg.privateNpm !== true ? (
+          <PackageLink name={pckg.name as string} version={pckg.version} />
+        ) : (
+          <div />
+        )}
+        <CommitsPopover component={component} />
+      </div>
 
       <div sx={{ borderBottom: '1px solid rgba(0, 0, 0, 0.125)', my: 2 }} />
       {description && <Markdown>{description}</Markdown>}
