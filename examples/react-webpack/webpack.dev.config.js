@@ -56,5 +56,9 @@ const config = {
 
 module.exports = withComponentControls({
   config,
-  options: { configPath: '.config', distFolder: publicPath },
+  options: {
+    configPath: '.config',
+    distFolder: publicPath,
+    fastRefresh: false,
+  },
 });

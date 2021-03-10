@@ -84,7 +84,12 @@ const config: webpack.Configuration = {
 // the following will compile your documentation files before launching the webpack proces to compile the documentation site itself:
 module.exports = withComponentControls({
   config,
-  options: { configPath: '.config', distFolder: publicPath },
+  options: {
+    configPath: '.config',
+    distFolder: publicPath,
+    // for webpack 4 you will need to disable react fast-refresh:
+    // fastRefresh: false,
+  },
 });
 ```
 
