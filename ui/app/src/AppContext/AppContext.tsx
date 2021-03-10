@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FC, ComponentType } from 'react';
+import { FC } from 'react';
 import { jsx } from 'theme-ui';
 import queryString from 'query-string';
 import { Store, docStoryToId } from '@component-controls/core';
@@ -9,7 +9,7 @@ import {
   LinkContextProviderProps,
 } from '@component-controls/components';
 import { BlockContextProvider } from '@component-controls/blocks';
-import { App } from '../App';
+import { App, AppProps } from '../App';
 import { mdxComponents } from './mdxComponents';
 
 export interface AppContextProps {
@@ -18,7 +18,7 @@ export interface AppContextProps {
   type?: string;
   store: Store;
   linkClass: LinkContextProviderProps['linkClass'];
-  Helmet?: ComponentType;
+  Helmet?: AppProps['Helmet'];
   activeTab?: string;
 }
 

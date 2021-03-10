@@ -16,7 +16,7 @@ import { useIsLocalLink, useTheme } from '@component-controls/components';
 import { defaultLinks } from './defaultLinks';
 
 export interface SEOProps {
-  Helmet?: ComponentType;
+  Helmet?: ComponentType<{ htmlAttributes?: Record<string, unknown> }>;
   doc?: Document;
   config?: RunConfiguration;
   title?: string;
@@ -36,6 +36,9 @@ export const SEO: FC<SEOProps> = ({
   const keywords = doc?.keywords || doc?.tags;
   const {
     title,
+    language,
+    siteMap,
+    seo,
     siteUrl = '',
     description,
     image,
@@ -60,45 +63,62 @@ export const SEO: FC<SEOProps> = ({
       : window.location.href;
   const author = doc?.author || siteAuthor;
   return Helmet ? (
-    <Helmet>
-      {Array.isArray(keywords) && (
-        <meta name="keywords" content={keywords.join(',')} />
-      )}
-      {pageDescription && <meta name="description" content={pageDescription} />}
-      {imageUrl && <meta name="image" content={imageUrl} />}
-      <meta property="og:title" content={docTitle} />
-      <meta property="og:url" content={url} />
-      {pageDescription && (
-        <meta property="og:description" content={pageDescription} />
-      )}
-      {imageUrl && <meta property="og:image" content={imageUrl} />}
-      {pageDescription && (
-        <meta property="og:image:alt" content={pageDescription} />
-      )}
-      <meta property="og:type" content="website" />
+    <>
+      <Helmet htmlAttributes={{ lang: language }}>
+        <title>{`${docTitle} | ${title}`}</title>
+        {siteMap && (
+          <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+        )}
+      </Helmet>
+      {seo ? (
+        <Helmet>{seo}</Helmet>
+      ) : (
+        <Helmet>
+          {Array.isArray(keywords) && (
+            <meta name="keywords" content={keywords.join(',')} />
+          )}
+          {pageDescription && (
+            <meta name="description" content={pageDescription} />
+          )}
+          {imageUrl && <meta name="image" content={imageUrl} />}
+          <meta property="og:title" content={docTitle} />
+          <meta property="og:url" content={url} />
+          {pageDescription && (
+            <meta property="og:description" content={pageDescription} />
+          )}
+          {imageUrl && <meta property="og:image" content={imageUrl} />}
+          {pageDescription && (
+            <meta property="og:image:alt" content={pageDescription} />
+          )}
+          <meta property="og:type" content="website" />
 
-      <meta name="twitter:card" content="summary" />
+          <meta name="twitter:card" content="summary" />
 
-      <meta name="twitter:site" content={siteAuthor} />
-      <meta name="twitter:title" content={docTitle} />
-      <meta name="twitter:url" content={url} />
-      {pageDescription && (
-        <meta name="twitter:description" content={pageDescription} />
+          <meta name="twitter:site" content={siteAuthor} />
+          <meta name="twitter:title" content={docTitle} />
+          <meta name="twitter:url" content={url} />
+          {pageDescription && (
+            <meta name="twitter:description" content={pageDescription} />
+          )}
+          {imageUrl && <meta name="twitter:image" content={imageUrl} />}
+          {pageDescription && (
+            <meta name="twitter:image:alt" content={pageDescription} />
+          )}
+          <meta name="twitter:creator" content={author} />
+          {links &&
+            links.map((link, idx) => <link key={`meta_key${idx}`} {...link} />)}
+          {typeof theme.colors?.primary === 'string' && (
+            <meta
+              name="msapplication-TileColor"
+              content={theme.colors.primary}
+            />
+          )}
+          <meta name="application-name" content={title} />
+          {typeof theme.colors?.background === 'string' && (
+            <meta name="theme-color" content={theme.colors.background} />
+          )}
+        </Helmet>
       )}
-      {imageUrl && <meta name="twitter:image" content={imageUrl} />}
-      {pageDescription && (
-        <meta name="twitter:image:alt" content={pageDescription} />
-      )}
-      <meta name="twitter:creator" content={author} />
-      {links &&
-        links.map((link, idx) => <link key={`meta_key${idx}`} {...link} />)}
-      {typeof theme.colors?.primary === 'string' && (
-        <meta name="msapplication-TileColor" content={theme.colors.primary} />
-      )}
-      <meta name="application-name" content={title} />
-      {typeof theme.colors?.background === 'string' && (
-        <meta name="theme-color" content={theme.colors.background} />
-      )}
-    </Helmet>
+    </>
   ) : null;
 };

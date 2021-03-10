@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FC, ComponentType, Fragment } from 'react';
+import { FC, Fragment } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { SkipLinks, SkipLinksItemProps } from '@component-controls/components';
 import {
@@ -7,13 +7,13 @@ import {
   useCurrentDocument,
   useConfig,
 } from '@component-controls/store';
-import { SEO } from '../SEO';
+import { SEO, SEOProps } from '../SEO';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useAnalytics } from './useAnalytics';
 import { AppError } from '../AppError';
 export interface AppProps {
-  Helmet?: ComponentType;
+  Helmet?: SEOProps['Helmet'];
   type?: string;
 }
 
@@ -43,22 +43,11 @@ export const App: FC<AppProps> = ({ children, Helmet, type = '' }) => {
     });
   }
   useAnalytics();
-  const titleParts = doc?.title ? doc.title.split('/') : [type];
-  const docTitle = titleParts[titleParts.length - 1];
-  const { title, language, siteMap, seo, app } = config || {};
+  const { app } = config || {};
   const Wrapper = app || Fragment;
   return (
     <Fragment>
-      {Helmet && (
-        <Helmet>
-          <title>{`${docTitle} | ${title}`}</title>
-          <html lang={language} />
-          {siteMap && (
-            <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-          )}
-        </Helmet>
-      )}
-      {seo || <SEO Helmet={Helmet} doc={doc} config={config} title={type} />}
+      <SEO doc={doc} config={config} title={type} Helmet={Helmet} />
       <SkipLinks items={items} />
       <Wrapper>
         <Box variant="app">
