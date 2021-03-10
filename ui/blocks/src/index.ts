@@ -1,5 +1,6 @@
 export * from './BlockContainer';
 export * from './context';
+export * from './CommitsPopover';
 export * from './ComponentContributors';
 export * from './ComponentDependencies';
 export * from './ComponentCommits';

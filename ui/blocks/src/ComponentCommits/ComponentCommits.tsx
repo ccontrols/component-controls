@@ -23,7 +23,7 @@ export type ComponentCommitsProps = BlockContainerProps &
 export const ComponentCommits: FC<ComponentCommitsProps> = ({
   id,
   name,
-  pagination,
+  pagination = { totalCountTemplate: '${totalData} commits' },
   ...rest
 }) => {
   const props = useCustomProps<ComponentCommitsProps>('commits', rest);
