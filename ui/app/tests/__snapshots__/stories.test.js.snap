@@ -579,7 +579,7 @@ exports[`Application/CategoryPage Overview 1`] = `
           </h1>
           <a
             class="css-1t54e2w"
-            href="/authors/"
+            href="/author"
           >
             All undefined
           </a>

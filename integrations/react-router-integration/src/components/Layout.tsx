@@ -8,6 +8,7 @@ interface LayoutProps {
   docId?: string;
   storyId?: string;
   activeTab?: string;
+  type?: string;
 }
 
 export const Layout: FC<LayoutProps> = ({
@@ -15,12 +16,14 @@ export const Layout: FC<LayoutProps> = ({
   storyId,
   children,
   activeTab,
+  type,
 }) => {
   return (
     <AppContext
       Helmet={Helmet as AppContextProps['Helmet']}
       docId={docId}
       storyId={storyId}
+      type={type}
       store={store}
       linkClass={ReactRouterLink}
       activeTab={activeTab}

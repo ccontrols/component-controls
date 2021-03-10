@@ -3,10 +3,11 @@ import {
   defDocType,
   DocType,
   getDocTypePath,
+  getCategoryPath,
   removeTrailingSlash,
   ensureStartingSlash,
 } from '@component-controls/core';
-
+import { getUniquesByField } from './docs-pages';
 export interface DocHomePagesPath {
   type: DocType;
   path: string;
@@ -14,8 +15,9 @@ export interface DocHomePagesPath {
   storyId?: string;
   lastModified?: string;
 }
+
 export const getHomePages = (store?: Store): DocHomePagesPath[] => {
-  const { pages = {} } = store?.config || {};
+  const { pages = {}, categories = [] } = store?.config || {};
   if (pages && store) {
     const docs = Object.keys(store.docs);
     const paths: DocHomePagesPath[] = Object.keys(pages)
@@ -54,7 +56,21 @@ export const getHomePages = (store?: Store): DocHomePagesPath[] => {
         };
       })
       .filter(({ path }) => path);
-    return paths;
+    const categoryPaths: DocHomePagesPath[] = categories
+      .map(category => {
+        const uniques = getUniquesByField(store, category);
+        return {
+          lastModified: undefined,
+          type: category,
+          docId: undefined,
+          storyId: undefined,
+          path: Object.keys(uniques).length
+            ? getCategoryPath(store, category)
+            : '',
+        };
+      })
+      .filter(({ path }) => path);
+    return [...paths, ...categoryPaths];
   }
   return [];
 };

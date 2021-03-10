@@ -4,21 +4,18 @@ import { DocType, defDocType } from '@component-controls/core';
 import { DocumentHomePage } from '@component-controls/app';
 import { Layout } from '../components/Layout';
 
-interface DocHomeProps {
+export interface DocHomeTemplateProps {
   type: DocType;
   docId?: string;
   storyId?: string;
 }
 
-export const DocHomeTemplate = ({
+export const DocHomeTemplate: FC<DocHomeTemplateProps> = ({
   type = defDocType,
   docId,
   storyId,
-}: DocHomeProps): FC => {
-  const DocHome: FC = () => (
-    <Layout docId={docId} storyId={storyId} type={type}>
-      <DocumentHomePage type={type} />
-    </Layout>
-  );
-  return DocHome;
-};
+}) => (
+  <Layout docId={docId} storyId={storyId} type={type}>
+    <DocumentHomePage type={type} />
+  </Layout>
+);

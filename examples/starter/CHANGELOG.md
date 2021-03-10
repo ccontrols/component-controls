@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/atanasster/gatsby-controls-starter/compare/v3.1.6...v3.2.0) (2021-03-09)
+
+
+### Bug Fixes
+
+* tags url path and nextjs template pages ([ca1c6c0](https://github.com/atanasster/gatsby-controls-starter/commit/ca1c6c0b0d9a5db4b06c32728eb5401610303cff))
+
+
+
+
+
 ## [3.1.6](https://github.com/atanasster/gatsby-controls-starter/compare/v3.1.5...v3.1.6) (2021-03-09)
 
 **Note:** Version bump only for package component-controls-starter

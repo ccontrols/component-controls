@@ -66,6 +66,10 @@ export interface BuildProps {
    */
   mode?: Configuration['mode'];
   /**
+   * enable react fast-refresh, default true
+   */
+  fastRefresh?: boolean;
+  /**
    * loaders custom options shortcut.
    * This can be used for quick options setup instead of using the webpack hook
    */

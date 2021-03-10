@@ -109,25 +109,17 @@ Create a new or edit `index.tsx` or `index.js` file in the pages folder:
   <summary>view source...</summary>
 
 ```jsx:title=pages/index.tsx
-import React, { FC } from 'react';
+import React from 'react';
 import { GetStaticProps } from 'next';
-import { DocType, defDocType } from '@component-controls/core';
-import { DocPage } from '@component-controls/app';
-import { Layout, store, getIndexPage } from '@component-controls/nextjs-plugin';
+import {
+  DocPageTemplate,
+  store,
+  getIndexPage,
+} from '@component-controls/nextjs-plugin';
 
-interface PageListProps {
-  type: DocType;
-  docId?: string;
-  storyId?: string;
-}
-
-const HomePage: FC<PageListProps> = ({ type = defDocType, docId, storyId }) => {
-  return (
-    <Layout docId={docId} storyId={storyId}>
-      <DocPage type={type} />
-    </Layout>
-  );
-};
+const HomePage: typeof DocPageTemplate = props => (
+  <DocPageTemplate {...props} />
+);
 
 export const getStaticProps: GetStaticProps = async () => {
   const homePage = getIndexPage(store);
@@ -148,34 +140,16 @@ Create a new `[doctype].tsx` or `[doctype].js` file in the pages folder:
   <summary>view source...</summary>
 
 ```jsx:title=pages/[doctype].tsx
-import React, { FC } from 'react';
+import React from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
-import { DocType, defDocType } from '@component-controls/core';
-import { DocumentHomePage } from '@component-controls/app';
 import {
-  Layout,
+  DocHomeTemplate,
   store,
   getHomePagesPaths,
   getDocHomePage,
 } from '@component-controls/nextjs-plugin';
 
-interface PageListProps {
-  type: DocType;
-  docId?: string;
-  storyId?: string;
-}
-
-const DocHomeTemplate: FC<PageListProps> = ({
-  type = defDocType,
-  docId,
-  storyId,
-}) => {
-  return (
-    <Layout docId={docId} storyId={storyId}>
-      <DocumentHomePage type={type} />
-    </Layout>
-  );
-};
+const DocHome: typeof DocHomeTemplate = props => <DocHomeTemplate {...props} />;
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return { paths: getHomePagesPaths(store), fallback: false };
@@ -188,7 +162,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return { props: { docId, storyId, type } };
 };
 
-export default DocHomeTemplate;
+export default DocHome;
 ```
 </details>
 
@@ -206,38 +180,16 @@ mkdir pages/[doctype]
   <summary>view source...</summary>
 
 ```jsx:title=pages/[doctype]/[...docid].tsx
-import React, { FC } from 'react';
+import React from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
-import { DocPage } from '@component-controls/app';
-import { DocType } from '@component-controls/core';
 import {
-  Layout,
+  DocPageTemplate,
   store,
   getDocPagesPaths,
   getDocPage,
 } from '@component-controls/nextjs-plugin';
 
-interface DocPageProps {
-  docId?: string;
-  storyId?: string;
-  type: DocType;
-  activeTab?: string;
-  category?: string;
-}
-
-const DocPageTemplate: FC<DocPageProps> = ({
-  docId,
-  storyId,
-  type,
-  category,
-  activeTab,
-}) => {
-  return (
-    <Layout docId={docId} storyId={storyId} activeTab={activeTab}>
-      <DocPage type={type} category={category} />
-    </Layout>
-  );
-};
+const DocPage: typeof DocPageTemplate = props => <DocPageTemplate {...props} />;
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return { paths: getDocPagesPaths(store), fallback: false };
@@ -256,7 +208,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return { props: { docId, type, storyId, category, activeTab } };
 };
 
-export default DocPageTemplate;
+export default DocPage;
 ```
 </details>
 

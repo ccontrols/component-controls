@@ -19,12 +19,18 @@ export interface SEOProps {
   Helmet?: ComponentType;
   doc?: Document;
   config?: RunConfiguration;
+  title?: string;
 }
-export const SEO: FC<SEOProps> = ({ Helmet, doc, config }) => {
+export const SEO: FC<SEOProps> = ({
+  Helmet,
+  doc,
+  config,
+  title: docType = '',
+}) => {
   const story = useCurrentStory();
   const store = useStore();
   const tab = useActiveTab();
-  const titleParts = doc?.title ? doc.title.split('/') : [''];
+  const titleParts = doc?.title ? doc.title.split('/') : [docType];
   const docTitle = titleParts[titleParts.length - 1];
   const docDescription = useDocDescription(doc);
   const keywords = doc?.keywords || doc?.tags;
@@ -53,7 +59,6 @@ export const SEO: FC<SEOProps> = ({ Helmet, doc, config }) => {
       ? getStoryPath(story?.id, doc, store, tab).path
       : window.location.href;
   const author = doc?.author || siteAuthor;
-
   return Helmet ? (
     <Helmet>
       {Array.isArray(keywords) && (

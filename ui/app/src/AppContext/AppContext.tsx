@@ -15,6 +15,7 @@ import { mdxComponents } from './mdxComponents';
 export interface AppContextProps {
   docId?: string;
   storyId?: string;
+  type?: string;
   store: Store;
   linkClass: LinkContextProviderProps['linkClass'];
   Helmet?: ComponentType;
@@ -24,6 +25,7 @@ export interface AppContextProps {
 export const AppContext: FC<AppContextProps> = ({
   docId,
   storyId,
+  type,
   children,
   store,
   linkClass,
@@ -58,7 +60,9 @@ export const AppContext: FC<AppContextProps> = ({
     >
       <SidebarContextProvider>
         <LinkContextProvider linkClass={linkClass}>
-          <App Helmet={Helmet}>{children}</App>
+          <App Helmet={Helmet} type={type}>
+            {children}
+          </App>
         </LinkContextProvider>
       </SidebarContextProvider>
     </BlockContextProvider>
