@@ -8,10 +8,8 @@ import {
   ArrowUpIcon,
 } from '@primer/octicons-react';
 
-/**
- * @todo Write the documentation.
- * @todo Add variant for spinner.
- */
+// TODO: Write the documentation
+// TODO: Add variant for spinner
 
 type ButtonVariant =
   | 'primary'

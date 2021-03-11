@@ -158,7 +158,7 @@ export const ComponentCard: FC<ComponentCardProps & BoxProps> = ({
               }
             />
           </div>
-          <ComponentStats component={component} />
+          <ComponentStats component={component} variant="fixed" />
         </div>
       )}
     </Card>
