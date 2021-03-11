@@ -64,7 +64,7 @@ export const useGithubProfile = ({
         }
       : undefined;
     const fetchData = async () => {
-      fetch(`https://api.github.com/users/${encodeURIComponent(username)}`, {
+      fetch(`//api.github.com/users/${encodeURIComponent(username)}`, {
         headers,
       })
         .then(res => res.json())
@@ -76,7 +76,7 @@ export const useGithubProfile = ({
             // could not find
             profilesCache[username] = profile;
             fetch(
-              `https://api.github.com/search/users?q=${encodeURIComponent(
+              `//api.github.com/search/users?q=${encodeURIComponent(
                 `${username} in:name`,
               )}`,
               {
@@ -100,7 +100,7 @@ export const useGithubProfile = ({
                     );
                     if (match) {
                       fetch(
-                        `https://api.github.com/users/${encodeURIComponent(
+                        `//api.github.com/users/${encodeURIComponent(
                           match.login,
                         )}`,
                         {
