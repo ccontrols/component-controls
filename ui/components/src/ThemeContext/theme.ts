@@ -67,6 +67,7 @@ export type ControlsTheme = {
   infotip: Record<string, ThemeUIStyleObject>;
   tree: Record<string, ThemeUIStyleObject>;
   pagination: Record<string, ThemeUIStyleObject>;
+  componentstats: Record<string, ThemeUIStyleObject>;
   sidebar: Record<string, ThemeUIStyleObject>;
   skiplinks: Record<string, ThemeUIStyleObject>;
   app: ThemeUIStyleObject;
@@ -490,11 +491,6 @@ export const theme: ControlsTheme = {
         display: 'flex',
         flexDirection: ['column', 'row'],
         alignItems: ['flex-end', 'baseline'],
-      },
-      separator: {
-        visibility: ['hidden', 'visible'],
-        height: [0],
-        mr: [0, 1],
       },
     },
   },
@@ -959,6 +955,22 @@ export const theme: ControlsTheme = {
       textOverflow: 'ellipsis',
       overflow: 'hidden',
       maxWidth: '300px',
+    },
+  },
+  componentstats: {
+    responsive: {
+      display: 'flex',
+      flexDirection: ['column', 'row'],
+      alignItems: ['flex-end', 'baseline'],
+      justifyContent: 'space-between',
+      my: 1,
+    },
+    fixed: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'baseline',
+      justifyContent: 'space-between',
+      my: 1,
     },
   },
   sidebar: {

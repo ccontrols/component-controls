@@ -321,6 +321,17 @@ and a [link](https://google.com)
       request:
         '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js',
       fileInfo: {
+        sloc: {
+          total: 28,
+          source: 25,
+          comment: 1,
+          single: 0,
+          block: 1,
+          mixed: 0,
+          empty: 2,
+          todo: 5,
+          blockEmpty: 0,
+        },
         commits: [
           {
             committerName: 'hasparus',

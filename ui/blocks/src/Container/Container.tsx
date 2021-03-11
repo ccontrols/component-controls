@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx, Box, Text } from 'theme-ui';
-import { FC, ReactNode, Fragment } from 'react';
+import { jsx, Box } from 'theme-ui';
+import { FC, ReactNode } from 'react';
 import { dateToLocalString, CURRENT_STORY } from '@component-controls/core';
 import { Value } from '@component-controls/components';
 import {
@@ -39,19 +39,13 @@ export const Container: FC<ContainerProps> = ({
         >
           <Box variant="blockpagecontainer.createdbox.container">
             {doc?.date && (
-              <Fragment>
-                <Value label="created:" value={dateToLocalString(doc.date)} />
-                {doc?.dateModified && (
-                  <Text variant="blockpagecontainer.createdbox.separator">
-                    ,
-                  </Text>
-                )}
-              </Fragment>
+              <Value label="created:" value={dateToLocalString(doc.date)} />
             )}
             {doc?.dateModified && (
               <Value
                 label="updated:"
                 value={dateToLocalString(doc.dateModified)}
+                sx={{ ml: 2 }}
               />
             )}
             {author}

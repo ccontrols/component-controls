@@ -1,29 +1,20 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, BoxProps } from 'theme-ui';
+import { jsx, BoxProps, Box } from 'theme-ui';
 import { Component } from '@component-controls/core';
 import { Value } from '@component-controls/components';
 
-export const ComponentStats: FC<{ component?: Component } & BoxProps> = ({
-  component,
-  ...rest
-}) => {
+export const ComponentStats: FC<{
+  component?: Component;
+  variant?: 'responsive' | 'fixed';
+} & BoxProps> = ({ component, variant = 'responsive', ...rest }) => {
   if (!component) {
     return null;
   }
 
   const stats = component.fileInfo?.sloc;
   return stats ? (
-    <div
-      sx={{
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        flexWrap: 'wrap',
-        my: 1,
-      }}
-      {...rest}
-    >
+    <Box variant={`componentstats.${variant}`} {...rest}>
       <Value sx={{ mx: 1 }} label="source lines:" value={stats.source} />
       <Value
         label="comments %:"
@@ -32,6 +23,6 @@ export const ComponentStats: FC<{ component?: Component } & BoxProps> = ({
         }
       />
       {!!stats.todo && <Value label="todo lines:" value={stats.todo} />}
-    </div>
+    </Box>
   ) : null;
 };
