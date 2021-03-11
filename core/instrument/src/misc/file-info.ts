@@ -6,10 +6,21 @@ import { createHash } from 'crypto';
 import { findUpFile } from '@component-controls/core/node-utils';
 import { FileInfo } from '@component-controls/core';
 import { CachedFileResource } from './chached-file';
+
+export const getFileDates = async (
+  filePath: string,
+): Promise<Pick<FileInfo, 'dateCreated' | 'dateModified'>> => {
+  const stats = fs.statSync(filePath);
+  return {
+    dateCreated: stats.birthtime,
+    dateModified: stats.mtime,
+  };
+};
 export const getFileIinfo = async (
   filePath: string,
-  source?: string,
+  sourceCode?: string,
 ): Promise<FileInfo> => {
+  const source = sourceCode || fs.readFileSync(filePath, 'utf8');
   const fileHash = createHash('md5')
     .update(source || '')
     .digest('hex');
@@ -89,10 +100,9 @@ export const getFileIinfo = async (
       }
     } catch (e) {}
   }
-  const stats = fs.statSync(filePath);
+  const dates = await getFileDates(filePath);
   result = {
-    dateCreated: stats.birthtime,
-    dateModified: stats.mtime,
+    ...dates,
     sloc,
   };
   cached.set(result);

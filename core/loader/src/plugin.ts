@@ -36,7 +36,7 @@ export class LoaderPlugin {
         compilation.hooks.processAssets.tapPromise(
           {
             name: LoaderPlugin.pluginName,
-            stage: webpack.Compilation.PROCESS_ASSETS_STAGE_OPTIMIZE,
+            stage: webpack.Compilation.PROCESS_ASSETS_STAGE_ADDITIONS,
           },
           async assets => {
             const jsFiles: string[] = [];

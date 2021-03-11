@@ -80,6 +80,7 @@ ${contexts
     }
   }
   for (let i = 0; i < store.stores.length; i+= 1) {
+    debugger;
     const s =  store.stores[i];
     const doc = s.doc;
     if (doc) {
