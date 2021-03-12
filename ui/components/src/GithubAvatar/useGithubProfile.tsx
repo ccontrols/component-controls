@@ -53,8 +53,8 @@ export const useGithubProfile = ({
       login: username,
       email: useremail,
       avatar_url: useremail
-        ? `//www.gravatar.com/avatar/${md5(useremail)}?s=${size}`
-        : `//github.com/${username}`,
+        ? `https://www.gravatar.com/avatar/${md5(useremail)}?s=${size}`
+        : `https://github.com/${username}`,
     },
   );
   useEffect(() => {
@@ -64,7 +64,7 @@ export const useGithubProfile = ({
         }
       : undefined;
     const fetchData = async () => {
-      fetch(`//api.github.com/users/${encodeURIComponent(username)}`, {
+      fetch(`https://api.github.com/users/${encodeURIComponent(username)}`, {
         headers,
       })
         .then(res => res.json())
@@ -76,7 +76,7 @@ export const useGithubProfile = ({
             // could not find
             profilesCache[username] = profile;
             fetch(
-              `//api.github.com/search/users?q=${encodeURIComponent(
+              `https://api.github.com/search/users?q=${encodeURIComponent(
                 `${username} in:name`,
               )}`,
               {
@@ -100,7 +100,7 @@ export const useGithubProfile = ({
                     );
                     if (match) {
                       fetch(
-                        `//api.github.com/users/${encodeURIComponent(
+                        `https://api.github.com/users/${encodeURIComponent(
                           match.login,
                         )}`,
                         {
