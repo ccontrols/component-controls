@@ -48,10 +48,8 @@ const config = {
   devServer: {
     contentBase: publicPath,
     historyApiFallback: true,
-    watchContentBase: true,
     port: 9025,
     open: true,
-    hot: true,
   },
 };
 

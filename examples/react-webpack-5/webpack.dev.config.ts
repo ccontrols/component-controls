@@ -51,11 +51,9 @@ const config: webpack.Configuration & {
   devtool: 'inline-source-map',
   devServer: {
     contentBase: publicPath,
-    watchContentBase: true,
     historyApiFallback: true,
     port: 9026,
     open: true,
-    hot: true,
   },
 };
 
