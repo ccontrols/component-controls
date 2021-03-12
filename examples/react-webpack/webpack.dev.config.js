@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const {
   withComponentControls,
 } = require('@component-controls/react-router-integration/webpack-build');
@@ -26,7 +25,6 @@ const config = {
         use: {
           loader: 'babel-loader',
           options: {
-            plugins: [require.resolve('react-refresh/babel')],
             presets: [
               '@babel/preset-env',
               '@babel/preset-react',
@@ -45,7 +43,6 @@ const config = {
       template: 'src/index.html',
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new ReactRefreshWebpackPlugin(),
   ],
   devtool: 'inline-source-map',
   devServer: {
