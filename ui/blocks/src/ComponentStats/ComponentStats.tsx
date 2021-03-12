@@ -15,14 +15,18 @@ export const ComponentStats: FC<{
   const stats = component.fileInfo?.sloc;
   return stats ? (
     <Box variant={`componentstats.${variant}`} {...rest}>
-      <Value sx={{ mx: 1 }} label="source lines:" value={stats.source} />
+      <Value label="source lines:" value={stats.source} />
       <Value
         label="comments %:"
-        value={
-          stats.source ? Math.round((100 * stats.comment) / stats.source) : 0
-        }
+        value={(stats.source
+          ? Math.round((100 * stats.comment) / stats.source)
+          : 0
+        ).toString()}
+        sx={{ ml: 2 }}
       />
-      {!!stats.todo && <Value label="todo lines:" value={stats.todo} />}
+      {!!stats.todo && (
+        <Value label="todo lines:" value={stats.todo} sx={{ ml: 2 }} />
+      )}
     </Box>
   ) : null;
 };

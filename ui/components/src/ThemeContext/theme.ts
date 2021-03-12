@@ -491,6 +491,7 @@ export const theme: ControlsTheme = {
         display: 'flex',
         flexDirection: ['column', 'row'],
         alignItems: ['flex-end', 'baseline'],
+        justifyContent: 'space-between',
       },
     },
   },
