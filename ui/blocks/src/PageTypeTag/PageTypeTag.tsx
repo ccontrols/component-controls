@@ -1,11 +1,11 @@
 import React, { FC, useState, useEffect } from 'react';
-import { DocType } from '@component-controls/core';
+import { DocType, getDocTypePath } from '@component-controls/core';
 import {
   Tag,
   Link,
   getAccentPaletteColor,
 } from '@component-controls/components';
-import { useDocPropCount, useConfig } from '@component-controls/store';
+import { useDocPropCount, useStore } from '@component-controls/store';
 
 export interface PageTypeTagProps {
   /**
@@ -18,7 +18,8 @@ export interface PageTypeTagProps {
   raw?: string;
 }
 export const PageTypeTag: FC<PageTypeTagProps> = ({ type, raw }) => {
-  const config = useConfig();
+  const store = useStore();
+  const { config } = store;
   const tags = useDocPropCount('type');
   const [colors, setColors] = useState<{ [key: string]: string }>({});
 
@@ -34,7 +35,7 @@ export const PageTypeTag: FC<PageTypeTagProps> = ({ type, raw }) => {
     );
   }, [tags]);
   return (
-    <Link href={`/${config.pages?.[type].basePath}`}>
+    <Link href={getDocTypePath(store, config.pages?.[type].basePath)}>
       <Tag color={colors[type] || '#f49342'} raw={raw}>
         {type}
       </Tag>
