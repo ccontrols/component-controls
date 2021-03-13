@@ -93,7 +93,7 @@ export const webpackConfig = ({
   options,
 }: {
   config?: any;
-  options: BuildProps;
+  options?: BuildProps;
 }): any => {
   const buildOptions = createOptions(options);
   const bundleFilePath = getBundleName(buildOptions);
@@ -109,13 +109,11 @@ export const webpackConfig = ({
   };
 };
 
-export const asyncWebpackConfig = async ({
-  config,
-  options,
-}: {
+export const asyncWebpackConfig = async (props: {
   config: any;
   options?: BuildProps;
 }): Promise<any> => {
+  const { config, options } = props;
   const mode = config.mode;
   if (typeof process.env.NODE_ENV === 'undefined') {
     process.env.NODE_ENV = mode;
@@ -124,5 +122,5 @@ export const asyncWebpackConfig = async ({
   await buildBundle({
     options,
   });
-  return webpackConfig(config);
+  return webpackConfig(props);
 };
