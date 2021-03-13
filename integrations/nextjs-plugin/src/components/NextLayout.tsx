@@ -5,7 +5,6 @@ import { NextLink } from './NextLink';
 
 export const NextLayout: FC<Omit<LayoutProps, 'Helmet' | 'Link'>> = props => {
   let head;
-  console.log('process.env.NEXT_PUBLIC_CC_CSS', process.env.NEXT_PUBLIC_CC_CSS);
   if (typeof process.env.NEXT_PUBLIC_CC_CSS === 'string') {
     head = (
       <Helmet>
