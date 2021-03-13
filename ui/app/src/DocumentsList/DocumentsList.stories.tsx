@@ -1,5 +1,5 @@
 import React from 'react';
-import { Document, Example } from '@component-controls/core';
+import { defDocType, Document, Example } from '@component-controls/core';
 import { mockDecorators } from '@component-controls/blocks';
 import { useDocByType } from '@component-controls/store';
 import { DocumentsList } from './DocumentsList';
@@ -12,6 +12,6 @@ export default {
 } as Document;
 
 export const overview: Example = () => {
-  const pages = useDocByType('story');
+  const pages = useDocByType(defDocType);
   return <DocumentsList pages={pages} type="story" />;
 };

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC } from 'react';
 import { jsx, Themed } from 'theme-ui';
-import { DocType } from '@component-controls/core';
+import { defDocType, DocType } from '@component-controls/core';
 import { useConfig, useSortedDocByType } from '@component-controls/store';
 import { PageContainer } from '../PageContainer';
 import { DocumentsList } from '../DocumentsList';
@@ -9,13 +9,15 @@ import { DocPage } from '../DocPage';
 import { CategoryList } from '../CategoryList';
 
 export interface DocumentHomePageProps {
-  type: DocType;
+  type?: DocType;
 }
 
 /**
  * list of documents for a specific document type
  */
-export const DocumentHomePage: FC<DocumentHomePageProps> = ({ type }) => {
+export const DocumentHomePage: FC<DocumentHomePageProps> = ({
+  type = defDocType,
+}) => {
   const config = useConfig();
   const { categories } = config || {};
   const isCategory = categories?.includes(type);

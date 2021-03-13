@@ -6,6 +6,7 @@ import {
   TabConfiguration,
   Document,
   PageTab,
+  defDocType,
 } from '@component-controls/core';
 import {
   useActiveTab,
@@ -30,7 +31,7 @@ export interface DocPageProps {
   /**
    * document type
    */
-  type: DocType;
+  type?: DocType;
   /**
    * document object
    */
@@ -40,7 +41,10 @@ export interface DocPageProps {
 /**
  * document page - rendering with sidebars and tabs for multiple document views
  */
-export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
+export const SidebarsStoryPage: FC<DocPageProps> = ({
+  type = defDocType,
+  doc,
+}) => {
   const docId = doc.title;
   const story = useCurrentStory();
   const config = useConfig();

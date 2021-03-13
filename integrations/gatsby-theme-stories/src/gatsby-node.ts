@@ -1,39 +1,17 @@
 import fs from 'fs';
-import sysPath from 'path';
-import { log } from '@component-controls/logger';
+import { BuildProps } from '@component-controls/core';
+import { getCSSBundleName } from '@component-controls/core/node-utils';
 import {
-  compile,
-  watch,
-  CompilerCallbackFn,
-  searchIndexing,
-} from '@component-controls/webpack-compile';
-import {
-  BuildProps,
-  Store,
-  defaultCompileProps,
-} from '@component-controls/core';
-import {
-  getBundleName,
-  getCSSBundleName,
-} from '@component-controls/core/node-utils';
-
-import { mergeBuildConfiguration } from '@component-controls/config';
-
+  buildBundle,
+  webpackConfig,
+} from '@component-controls/base-integration/webpack-build';
 import {
   CreatePagesArgs,
   CreateWebpackConfigArgs,
   PluginCallback,
   Page,
 } from 'gatsby';
-import { loadStore } from '@component-controls/store';
-import {
-  getIndexPage,
-  getHomePages,
-  DocHomePagesPath,
-  getDocPages,
-  DocPagesPath,
-  getSiteMap,
-} from '@component-controls/routes';
+import { getRoutes } from '@component-controls/routes';
 
 export const createPagesStatefully = async (
   { actions, store: gatsbyStore }: CreatePagesArgs,
@@ -41,91 +19,36 @@ export const createPagesStatefully = async (
   doneCb: PluginCallback,
 ): Promise<void> => {
   const { createPage, deletePage } = actions;
-  const config: BuildProps = {
-    ...defaultCompileProps,
-    ...options,
-  };
-  const onBundle: CompilerCallbackFn = async ({ store: loadingStore }) => {
-    if (loadingStore) {
-      const store: Store = loadStore(loadingStore, true);
-      const createGatsbyPage: CreatePagesArgs['actions']['createPage'] = props => {
-        gatsbyStore.getState().pages.forEach((page: Page) => {
-          if (page.path === props.path && page.component === props.component) {
-            deletePage({
-              path: page.path,
-              component: props.component,
-            });
-          }
+  const createGatsbyPage: CreatePagesArgs['actions']['createPage'] = props => {
+    gatsbyStore.getState().pages.forEach((page: Page) => {
+      if (page.path === props.path && page.component === props.component) {
+        deletePage({
+          path: page.path,
+          component: props.component,
         });
-        createPage(props);
-      };
-      //home page
-      const { path, docId, type, storyId } = getIndexPage(store) || {};
-      createGatsbyPage({
-        path,
-        component: require.resolve(`../src/templates/DocPage.tsx`),
-        context: {
-          docId,
-          type,
-          storyId,
-        },
-      });
-      const homePages = getHomePages(store);
-      homePages.forEach(({ path, docId, storyId, type }: DocHomePagesPath) => {
+      }
+    });
+    createPage(props);
+  };
+  await buildBundle({
+    options,
+    onEndBuild: ({ store }) => {
+      const routes = getRoutes(store);
+      routes.forEach(({ path, ...route }) => {
         createGatsbyPage({
           path,
-          component: require.resolve(`../src/templates/DocHome.tsx`),
-          context: {
-            type,
-            docId,
-            storyId,
-          },
+          component: require.resolve(`../src/templates/DocPage.tsx`),
+          context: route,
         });
       });
-
-      const docPages = getDocPages(store);
-      docPages.forEach(
-        ({ path, type, docId, storyId, category, activeTab }: DocPagesPath) => {
-          createGatsbyPage({
-            path,
-            component: require.resolve(`../src/templates/DocPage.tsx`),
-            context: {
-              type,
-              docId,
-              storyId,
-              category,
-              activeTab,
-            },
-          });
-        },
-      );
-      if (process.env.NODE_ENV === 'production') {
-        if (store.config.siteMap) {
-          const sitemap = getSiteMap(store);
-          const staticFolder =
-            config.staticFolder ||
-            sysPath.join(process.cwd(), 'public', 'static');
-          const sitemapfolder = sysPath.resolve(staticFolder as string, '..');
-          if (!fs.existsSync(sitemapfolder)) {
-            fs.mkdirSync(sitemapfolder, { recursive: true });
-          }
-          const sitemapname = sysPath.resolve(sitemapfolder, 'sitemap.xml');
-          log('creating sitemap', sitemapname);
-          fs.writeFileSync(sitemapname, sitemap, 'utf8');
-        }
-        await searchIndexing(store);
-      }
       const cssBundle = getCSSBundleName(store.config);
       if (fs.existsSync(cssBundle)) {
         const cssStyles = fs.readFileSync(cssBundle, 'utf8');
         process.env.GATSBY_CC_CSS = JSON.stringify(cssStyles);
       }
-    }
-
-    doneCb(null, null);
-  };
-  const run = process.env.NODE_ENV === 'development' ? watch : compile;
-  await run(config, onBundle);
+    },
+  });
+  doneCb(null, null);
 };
 
 export const onCreateWebpackConfig = (
@@ -133,19 +56,5 @@ export const onCreateWebpackConfig = (
   options: BuildProps,
 ): void => {
   //inject store bundle name
-  actions.setWebpackConfig({
-    module: {
-      rules: [
-        {
-          test: require.resolve('@component-controls/store/controls-store'),
-          use: {
-            loader: require.resolve('@component-controls/store/loader.js'),
-            options: {
-              bundleFileName: getBundleName(mergeBuildConfiguration(options)),
-            },
-          },
-        },
-      ],
-    },
-  });
+  actions.setWebpackConfig(webpackConfig({ options }));
 };

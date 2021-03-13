@@ -6,7 +6,7 @@ import {
 } from '@component-controls/core';
 
 export interface HomePageInfo {
-  type: string;
+  type?: string;
   docId?: string;
   storyId?: string;
   path: string;
@@ -29,18 +29,26 @@ export const getIndexPage = (store?: Store): HomePageInfo => {
     const docId = homePage?.title;
     const docStories: string[] =
       docId && store.docs[docId] ? store.docs[docId].stories || [] : [];
+    const result: HomePageInfo = {
+      path: homePath,
+      type: homePage?.type || defDocType,
+    };
+    const lastModified = homePage?.dateModified
+      ? new Date(homePage?.dateModified).toISOString()
+      : undefined;
+    if (lastModified) {
+      result.lastModified = lastModified;
+    }
     const storyId: string | undefined = docStories.length
       ? docStories[0]
       : undefined;
-    return {
-      lastModified: homePage?.dateModified
-        ? new Date(homePage?.dateModified).toISOString()
-        : undefined,
-      path: homePath,
-      storyId,
-      docId,
-      type: homePage?.type || defDocType,
-    };
+    if (storyId) {
+      result.storyId = storyId;
+    }
+    if (docId) {
+      result.docId = docId;
+    }
+    return result;
   }
   return {
     type: defDocType,

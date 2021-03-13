@@ -51,7 +51,7 @@ export const getUniquesByField = (
 };
 
 export interface DocPagesPath {
-  type: DocType;
+  type?: DocType;
   path: string;
   query?: string;
   lastModified?: string;
@@ -99,17 +99,27 @@ export const getDocPages = (store?: Store): DocPagesPath[] => {
                   route,
                 );
                 if (!docPaths.find(p => p.path === path)) {
-                  docPaths.push({
-                    lastModified: doc.dateModified
-                      ? new Date(doc.dateModified).toISOString()
-                      : undefined,
+                  const result: DocPagesPath = {
                     path,
-                    query,
                     type: docType,
-                    activeTab: route,
                     docId: doc.title,
-                    storyId,
-                  });
+                  };
+                  if (storyId) {
+                    result.storyId = storyId;
+                  }
+                  if (route) {
+                    result.activeTab = route;
+                  }
+                  const lastModified = doc.dateModified
+                    ? new Date(doc.dateModified).toISOString()
+                    : undefined;
+                  if (lastModified) {
+                    result.lastModified = lastModified;
+                  }
+                  if (query) {
+                    result.query = query;
+                  }
+                  docPaths.push(result);
                 }
               });
             }

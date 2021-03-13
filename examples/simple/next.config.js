@@ -5,5 +5,4 @@ module.exports = withStories({
     webpack5: true,
   },
   configPath: 'docs',
-  distDir: 'dist',
 });
