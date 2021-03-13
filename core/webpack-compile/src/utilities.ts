@@ -4,6 +4,7 @@ import fs from 'fs';
 import { log, error } from '@component-controls/logger';
 import { mergeBuildConfiguration } from '@component-controls/config';
 import { BuildProps, defBundleName } from '@component-controls/core';
+import { defaultDistFolder } from '@component-controls/core/node-utils';
 import { LoadingStore } from '@component-controls/store';
 import LoaderPlugin from '@component-controls/loader/plugin';
 import {
@@ -39,7 +40,8 @@ export interface CompileResults {
  */
 export const getBundleName = (): string => {
   const args = cliArgs().parse();
-  let distFolder = args.dist || `${path.join(process.cwd(), 'public')}`;
+  let distFolder =
+    args.dist || `${path.join(process.cwd(), defaultDistFolder)}`;
   if (!path.isAbsolute(distFolder)) {
     distFolder = path.resolve(process.cwd(), distFolder);
   }
@@ -64,7 +66,8 @@ const createConfig = (options: BuildProps): webpack.Configuration => {
     distFolder: propDistFolder,
     bundleName = defBundleName,
   } = options;
-  let distFolder = propDistFolder || `${path.join(process.cwd(), 'public')}`;
+  let distFolder =
+    propDistFolder || `${path.join(process.cwd(), defaultDistFolder)}`;
   if (!path.isAbsolute(distFolder)) {
     distFolder = path.resolve(process.cwd(), distFolder);
   }

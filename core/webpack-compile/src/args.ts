@@ -1,4 +1,5 @@
 import path from 'path';
+import { defaultDistFolder } from '@component-controls/core/node-utils';
 import yargs, { Options, Argv } from 'yargs';
 
 export interface CliArgTypes {
@@ -57,7 +58,7 @@ export const defaultCliArgs: ArgOptions = [
       alias: 'd',
       description: 'distribution (bundle output) folder',
       type: 'string',
-      default: 'public',
+      default: defaultDistFolder,
     },
   },
   {
@@ -66,7 +67,7 @@ export const defaultCliArgs: ArgOptions = [
       alias: 's',
       description: 'static assets folder',
       type: 'string',
-      default: path.join('dist', 'static'),
+      default: path.join(defaultDistFolder, 'static'),
     },
   },
   {

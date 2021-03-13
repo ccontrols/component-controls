@@ -19,8 +19,11 @@ export const findUpFile = (
   return findUpFile(path.resolve(filePath, '..'), fileName, levels - 1);
 };
 
+export const defaultDistFolder = 'dist';
+
 export const getDistName = (options: BuildProps): string => {
-  const dist = options.distFolder || path.join(process.cwd(), 'public');
+  const dist =
+    options.distFolder || path.join(process.cwd(), defaultDistFolder);
   return dist;
 };
 

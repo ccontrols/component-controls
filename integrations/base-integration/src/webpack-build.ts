@@ -7,7 +7,10 @@ import {
   defaultCompileProps,
 } from '@component-controls/core';
 import { getSiteMap } from '@component-controls/routes';
-import { getBundleName } from '@component-controls/core/node-utils';
+import {
+  getBundleName,
+  defaultDistFolder,
+} from '@component-controls/core/node-utils';
 import { LoadingStore, loadStore } from '@component-controls/store';
 import { log } from '@component-controls/logger';
 import {
@@ -54,7 +57,8 @@ const createOptions = (buildOptions?: BuildProps): BuildProps => {
     return acc;
   }, {});
 
-  const distFolder = options.distFolder || path.join(process.cwd(), 'dist');
+  const distFolder =
+    options.distFolder || path.join(process.cwd(), defaultDistFolder);
   const staticFolder = path.join(options.distFolder || distFolder, 'static');
   return mergeConfig<BuildProps>(
     mergeConfig(defaultCompileProps, {
