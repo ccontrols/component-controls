@@ -1,3 +1,4 @@
+import fs from 'fs';
 import { BuildProps, RuleOptions } from '@component-controls/core';
 import { getCSSBundleName } from '@component-controls/core/node-utils';
 import {
@@ -29,8 +30,13 @@ module.exports = ({
     async headers() {
       await buildBundle({
         options: buildOptions,
-        onEndBuild: ({ store }) =>
-          (process.env.NEXT_CC_CSS_FILENAME = getCSSBundleName(store.config)),
+        onEndBuild: ({ store }) => {
+          const cssBundle = getCSSBundleName(store.config);
+          if (fs.existsSync(cssBundle)) {
+            const cssStyles = fs.readFileSync(cssBundle, 'utf8');
+            process.env.NEXT_PUBLIC_CC_CSS = JSON.stringify(cssStyles);
+          }
+        },
       });
       return [];
     },

@@ -4,11 +4,26 @@ import { Layout, LayoutProps } from '@component-controls/base-integration';
 import { NextLink } from './NextLink';
 
 export const NextLayout: FC<Omit<LayoutProps, 'Helmet' | 'Link'>> = props => {
+  let head;
+  console.log('process.env.NEXT_PUBLIC_CC_CSS', process.env.NEXT_PUBLIC_CC_CSS);
+  if (typeof process.env.NEXT_PUBLIC_CC_CSS === 'string') {
+    head = (
+      <Helmet>
+        <style key="controls-styles">
+          {JSON.parse(process.env.NEXT_PUBLIC_CC_CSS)}
+        </style>
+      </Helmet>
+    );
+  }
+
   return (
-    <Layout
-      {...props}
-      Helmet={Helmet as LayoutProps['Helmet']}
-      Link={NextLink}
-    />
+    <>
+      {head}
+      <Layout
+        {...props}
+        Helmet={Helmet as LayoutProps['Helmet']}
+        Link={NextLink}
+      />
+    </>
   );
 };
