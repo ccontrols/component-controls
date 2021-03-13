@@ -4,14 +4,12 @@ import { jsx } from 'theme-ui';
 import { Component } from '@component-controls/core';
 import { usePackage } from '@component-controls/store';
 import {
-  ActionContainer,
   ActionItem,
   Source,
   SourceProps,
 } from '@component-controls/components';
 import { useCustomProps } from '../context';
 import { repositoryActions } from '../utils/repositoryActions';
-import { ComponentStats } from '../ComponentStats';
 
 export interface BaseComponentSourceOwnProps {
   component: Component;
@@ -21,19 +19,14 @@ const NAME = 'componentsource';
 export type BaseComponentSourceProps = BaseComponentSourceOwnProps &
   SourceProps;
 
-type ShowType = 'import' | 'source' | 'stats';
+type ShowType = 'import' | 'source';
 
 const getNextState = (current: ShowType, component: Component): ShowType => {
   switch (current) {
     case 'import':
-      return component.source
-        ? 'source'
-        : component.fileInfo?.sloc
-        ? 'stats'
-        : 'import';
+      return component.source ? 'source' : 'import';
     case 'source':
-      return component.fileInfo?.sloc ? 'stats' : 'import';
-    case 'stats':
+      return 'import';
     default:
       return 'import';
   }
@@ -65,7 +58,7 @@ export const BaseComponentSource: FC<BaseComponentSourceProps> = props => {
   };
   const allActions: ActionItem[] = [];
 
-  if (component.source || component.fileInfo?.sloc) {
+  if (component.source) {
     allActions.push({
       node: getNextState(showType, component),
       'aria-label': `view ${component.name} ${getNextState(
@@ -82,11 +75,7 @@ export const BaseComponentSource: FC<BaseComponentSourceProps> = props => {
   if (actions) {
     allActions.push(...actions);
   }
-  return showType === 'stats' ? (
-    <ActionContainer actions={allActions}>
-      <ComponentStats sx={{ mt: 4, p: 2 }} component={component} />
-    </ActionContainer>
-  ) : (
+  return (
     <Source data-testid={NAME} {...rest} actions={allActions}>
       {showType === 'source' ? component?.source ?? '' : source}
     </Source>
