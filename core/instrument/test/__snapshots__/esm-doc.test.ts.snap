@@ -14,8 +14,8 @@ Object {
     "componentsLookup": Object {
       "ControlsTable": "73cac298d983c71aec166657453a64fe",
     },
-    "date": "2020-07-06T20:55:12.000Z",
-    "dateModified": "2020-07-06T20:55:12.000Z",
+    "date": 2020-10-21T01:23:26.428Z,
+    "dateModified": 2020-10-21T01:23:26.428Z,
     "package": "66a23e9fdf3e9e6ca71ed416ae8a58d5",
     "smartControls": Object {
       "smart": false,
@@ -154,8 +154,8 @@ Object {
         "value": "Mark",
       },
     },
-    "date": "2020-07-06T20:55:12.000Z",
-    "dateModified": "2020-07-06T20:55:12.000Z",
+    "date": 2020-10-21T01:23:26.428Z,
+    "dateModified": 2020-10-21T01:23:26.428Z,
     "package": "e194529ece324f1590bfbf7aaec14410",
     "title": "Storybook/Kind",
   },
@@ -280,8 +280,8 @@ Object {
   "doc": Object {
     "components": Object {},
     "componentsLookup": Object {},
-    "date": "2020-11-15T16:00:39.000Z",
-    "dateModified": "2020-11-15T16:00:39.000Z",
+    "date": 2020-12-30T06:22:19.020Z,
+    "dateModified": 2020-12-30T06:22:19.020Z,
     "package": "847a998ed4a715ed09a24acd70b0c848",
     "title": "Story",
   },
@@ -351,8 +351,8 @@ Object {
   "doc": Object {
     "components": Object {},
     "componentsLookup": Object {},
-    "date": "2020-07-06T20:55:12.000Z",
-    "dateModified": "2020-07-06T20:55:12.000Z",
+    "date": 2020-10-21T01:23:26.428Z,
+    "dateModified": 2020-10-21T01:23:26.428Z,
     "package": "7eb653b10808310c21c23cba95a76b32",
     "title": "Storybook/Blocks/ControlsTable",
   },

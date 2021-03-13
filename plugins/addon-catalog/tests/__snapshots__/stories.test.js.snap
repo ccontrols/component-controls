@@ -249,7 +249,7 @@ exports[`Plugins/AddonCatalog/ComponentCard Overview 1`] = `
                 <img
                   class="css-1y16e88"
                   height="24"
-                  src="//github.com/hasparus"
+                  src="https://github.com/hasparus"
                   title="hasparus"
                   width="24"
                 />
@@ -265,7 +265,7 @@ exports[`Plugins/AddonCatalog/ComponentCard Overview 1`] = `
                 <img
                   class="css-1y16e88"
                   height="24"
-                  src="//github.com/lachlanjc"
+                  src="https://github.com/lachlanjc"
                   title="lachlanjc"
                   width="24"
                 />
@@ -281,7 +281,7 @@ exports[`Plugins/AddonCatalog/ComponentCard Overview 1`] = `
                 <img
                   class="css-1y16e88"
                   height="24"
-                  src="//github.com/atanasster"
+                  src="https://github.com/atanasster"
                   title="atanasster"
                   width="24"
                 />
@@ -362,6 +362,52 @@ with a
             class="css-uv6qe8"
           >
             N/A
+          </span>
+        </div>
+      </div>
+      <div
+        class="css-1xa7s2f"
+      >
+        <div
+          class="css-i60bak-ComponentStats"
+        >
+          <span
+            class="css-13o2efz"
+          >
+            source lines:
+          </span>
+          <span
+            class="css-uv6qe8"
+          >
+            25
+          </span>
+        </div>
+        <div
+          class="css-zf8zhj"
+        >
+          <span
+            class="css-13o2efz"
+          >
+            comments %:
+          </span>
+          <span
+            class="css-uv6qe8"
+          >
+            4
+          </span>
+        </div>
+        <div
+          class="css-zf8zhj"
+        >
+          <span
+            class="css-13o2efz"
+          >
+            todo lines:
+          </span>
+          <span
+            class="css-uv6qe8"
+          >
+            5
           </span>
         </div>
       </div>
@@ -533,7 +579,7 @@ exports[`Plugins/AddonCatalog/ComponentList Overview 1`] = `
                   <img
                     class="css-1y16e88"
                     height="24"
-                    src="//github.com/hasparus"
+                    src="https://github.com/hasparus"
                     title="hasparus"
                     width="24"
                   />
@@ -549,7 +595,7 @@ exports[`Plugins/AddonCatalog/ComponentList Overview 1`] = `
                   <img
                     class="css-1y16e88"
                     height="24"
-                    src="//github.com/lachlanjc"
+                    src="https://github.com/lachlanjc"
                     title="lachlanjc"
                     width="24"
                   />
@@ -565,7 +611,7 @@ exports[`Plugins/AddonCatalog/ComponentList Overview 1`] = `
                   <img
                     class="css-1y16e88"
                     height="24"
-                    src="//github.com/atanasster"
+                    src="https://github.com/atanasster"
                     title="atanasster"
                     width="24"
                   />
@@ -688,6 +734,52 @@ with a
               class="css-uv6qe8"
             >
               N/A
+            </span>
+          </div>
+        </div>
+        <div
+          class="css-1xa7s2f"
+        >
+          <div
+            class="css-i60bak-ComponentStats"
+          >
+            <span
+              class="css-13o2efz"
+            >
+              source lines:
+            </span>
+            <span
+              class="css-uv6qe8"
+            >
+              25
+            </span>
+          </div>
+          <div
+            class="css-zf8zhj"
+          >
+            <span
+              class="css-13o2efz"
+            >
+              comments %:
+            </span>
+            <span
+              class="css-uv6qe8"
+            >
+              4
+            </span>
+          </div>
+          <div
+            class="css-zf8zhj"
+          >
+            <span
+              class="css-13o2efz"
+            >
+              todo lines:
+            </span>
+            <span
+              class="css-uv6qe8"
+            >
+              5
             </span>
           </div>
         </div>
@@ -729,7 +821,7 @@ with a
                   <img
                     class="css-1y16e88"
                     height="24"
-                    src="//github.com/hasparus"
+                    src="https://github.com/hasparus"
                     title="hasparus"
                     width="24"
                   />
@@ -745,7 +837,7 @@ with a
                   <img
                     class="css-1y16e88"
                     height="24"
-                    src="//github.com/lachlanjc"
+                    src="https://github.com/lachlanjc"
                     title="lachlanjc"
                     width="24"
                   />
@@ -761,7 +853,7 @@ with a
                   <img
                     class="css-1y16e88"
                     height="24"
-                    src="//github.com/atanasster"
+                    src="https://github.com/atanasster"
                     title="atanasster"
                     width="24"
                   />
@@ -884,6 +976,52 @@ with a
               class="css-uv6qe8"
             >
               N/A
+            </span>
+          </div>
+        </div>
+        <div
+          class="css-1xa7s2f"
+        >
+          <div
+            class="css-i60bak-ComponentStats"
+          >
+            <span
+              class="css-13o2efz"
+            >
+              source lines:
+            </span>
+            <span
+              class="css-uv6qe8"
+            >
+              25
+            </span>
+          </div>
+          <div
+            class="css-zf8zhj"
+          >
+            <span
+              class="css-13o2efz"
+            >
+              comments %:
+            </span>
+            <span
+              class="css-uv6qe8"
+            >
+              4
+            </span>
+          </div>
+          <div
+            class="css-zf8zhj"
+          >
+            <span
+              class="css-13o2efz"
+            >
+              todo lines:
+            </span>
+            <span
+              class="css-uv6qe8"
+            >
+              5
             </span>
           </div>
         </div>
@@ -925,7 +1063,7 @@ with a
                   <img
                     class="css-1y16e88"
                     height="24"
-                    src="//github.com/hasparus"
+                    src="https://github.com/hasparus"
                     title="hasparus"
                     width="24"
                   />
@@ -941,7 +1079,7 @@ with a
                   <img
                     class="css-1y16e88"
                     height="24"
-                    src="//github.com/lachlanjc"
+                    src="https://github.com/lachlanjc"
                     title="lachlanjc"
                     width="24"
                   />
@@ -957,7 +1095,7 @@ with a
                   <img
                     class="css-1y16e88"
                     height="24"
-                    src="//github.com/atanasster"
+                    src="https://github.com/atanasster"
                     title="atanasster"
                     width="24"
                   />
@@ -1080,6 +1218,52 @@ with a
               class="css-uv6qe8"
             >
               N/A
+            </span>
+          </div>
+        </div>
+        <div
+          class="css-1xa7s2f"
+        >
+          <div
+            class="css-i60bak-ComponentStats"
+          >
+            <span
+              class="css-13o2efz"
+            >
+              source lines:
+            </span>
+            <span
+              class="css-uv6qe8"
+            >
+              25
+            </span>
+          </div>
+          <div
+            class="css-zf8zhj"
+          >
+            <span
+              class="css-13o2efz"
+            >
+              comments %:
+            </span>
+            <span
+              class="css-uv6qe8"
+            >
+              4
+            </span>
+          </div>
+          <div
+            class="css-zf8zhj"
+          >
+            <span
+              class="css-13o2efz"
+            >
+              todo lines:
+            </span>
+            <span
+              class="css-uv6qe8"
+            >
+              5
             </span>
           </div>
         </div>
@@ -1121,7 +1305,7 @@ with a
                   <img
                     class="css-1y16e88"
                     height="24"
-                    src="//github.com/hasparus"
+                    src="https://github.com/hasparus"
                     title="hasparus"
                     width="24"
                   />
@@ -1137,7 +1321,7 @@ with a
                   <img
                     class="css-1y16e88"
                     height="24"
-                    src="//github.com/lachlanjc"
+                    src="https://github.com/lachlanjc"
                     title="lachlanjc"
                     width="24"
                   />
@@ -1153,7 +1337,7 @@ with a
                   <img
                     class="css-1y16e88"
                     height="24"
-                    src="//github.com/atanasster"
+                    src="https://github.com/atanasster"
                     title="atanasster"
                     width="24"
                   />
@@ -1276,6 +1460,52 @@ with a
               class="css-uv6qe8"
             >
               N/A
+            </span>
+          </div>
+        </div>
+        <div
+          class="css-1xa7s2f"
+        >
+          <div
+            class="css-i60bak-ComponentStats"
+          >
+            <span
+              class="css-13o2efz"
+            >
+              source lines:
+            </span>
+            <span
+              class="css-uv6qe8"
+            >
+              25
+            </span>
+          </div>
+          <div
+            class="css-zf8zhj"
+          >
+            <span
+              class="css-13o2efz"
+            >
+              comments %:
+            </span>
+            <span
+              class="css-uv6qe8"
+            >
+              4
+            </span>
+          </div>
+          <div
+            class="css-zf8zhj"
+          >
+            <span
+              class="css-13o2efz"
+            >
+              todo lines:
+            </span>
+            <span
+              class="css-uv6qe8"
+            >
+              5
             </span>
           </div>
         </div>
