@@ -4,10 +4,7 @@
     "module": "esnext",
     "target": "esnext",
     "jsx": "preserve",
-    "lib": [
-      "dom",
-      "esnext"
-    ],
+    "lib": ["dom", "esnext"],
     "strict": true,
     "noEmit": true,
     "isolatedModules": true,
@@ -18,14 +15,6 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true
   },
-  "exclude": [
-    "node_modules",
-    "public",
-    ".cache"
-  ],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ]
+  "exclude": ["node_modules", "public", ".cache"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }

@@ -1,0 +1,67 @@
+{
+  "name": "@component-controls/base-integration",
+  "version": "3.3.0",
+  "description": "base integration routines and components",
+  "keywords": [
+    "story",
+    "nextjs"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "package.json",
+    "README.md",
+    "webpack-build.js",
+    "webpack-build.d.ts"
+  ],
+  "scripts": {
+    "build": "yarn cross-env NODE_ENV=production rollup -c",
+    "dev": "yarn cross-env NODE_ENV=development rollup -cw",
+    "docs": "ts-md",
+    "fix": "yarn lint --fix",
+    "lint": "yarn eslint . --ext mdx,ts,tsx",
+    "prepare": "yarn build",
+    "test": "yarn jest --passWithNoTests"
+  },
+  "homepage": "https://github.com/ccontrols/component-controls",
+  "bugs": {
+    "url": "https://github.com/ccontrols/component-controls/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccontrols/component-controls.git",
+    "directory": "integrations/base-integration"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@component-controls/app": "^3.3.0",
+    "@component-controls/core": "^3.3.0",
+    "@component-controls/logger": "^2.10.4",
+    "@component-controls/pages": "^3.3.0",
+    "@component-controls/routes": "^3.3.0",
+    "@component-controls/search-algolia": "^3.3.0",
+    "@component-controls/search-fusejs": "^3.3.0",
+    "@component-controls/store": "^3.3.0",
+    "@component-controls/webpack-compile": "^3.3.0",
+    "@types/react-router": "^5.1.11",
+    "@types/react-router-dom": "^5.1.7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@component-controls/logger": "^2.10.4",
+    "@component-controls/ts-markdown-docs": "^2.6.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "typescript": "^4.0.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": [
+    "Atanas Stoyanov"
+  ],
+  "gitHead": "e30d62f101e104711a16261fce04785d58cac1eb"
+}

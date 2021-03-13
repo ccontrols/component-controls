@@ -37,7 +37,7 @@ export const compile = async (
  * returns the stories store object
  */
 export const watch = async (
-  { watchOptions, logOptions, ...rest }: WatchProps,
+  { watchOptions = { aggregateTimeout: 600 }, logOptions, ...rest }: WatchProps,
   callback?: CompilerCallbackFn,
 ): Promise<CompileResults> => {
   setLogOptions(logOptions);

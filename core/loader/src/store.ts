@@ -13,6 +13,7 @@ import {
   LoadingDocStore,
   InstrumentOptions,
   getComponentProps,
+  getFileIinfo,
 } from '@component-controls/instrument';
 
 import {
@@ -110,7 +111,8 @@ export const addStoriesDoc = (
 };
 
 export const getSerializedStore = async (): Promise<string> => {
-  const { propsLoaders = [] } = instrumentOptions;
+  const { propsLoaders = [], components } = instrumentOptions;
+  const { fileInfo = true } = components || {};
   for (const name in store.components) {
     const component = store.components[name];
     const propsFile = component.propsInfoFile || component.request;
@@ -124,6 +126,12 @@ export const getSerializedStore = async (): Promise<string> => {
       if (propsInfo) {
         component.info = propsInfo;
       }
+    }
+    if (fileInfo && component.request) {
+      component.fileInfo = await getFileIinfo(
+        component.request,
+        component.source,
+      );
     }
   }
   return JSON.stringify(store);

@@ -1033,7 +1033,7 @@ exports[`Components/GithubAvatar Overview 1`] = `
       <img
         class="css-1y16e88"
         height="48"
-        src="//www.gravatar.com/avatar/9b9913091795a48655ec0b10dcd62a95?s=128"
+        src="https://www.gravatar.com/avatar/9b9913091795a48655ec0b10dcd62a95?s=128"
         title="Atanas Stoyanov"
         width="48"
       />
@@ -1058,7 +1058,7 @@ exports[`Components/GithubAvatarList Max Items 1`] = `
         <img
           class="css-1y16e88"
           height="32"
-          src="//github.com/hasparus"
+          src="https://github.com/hasparus"
           title="hasparus"
           width="32"
         />
@@ -1074,7 +1074,7 @@ exports[`Components/GithubAvatarList Max Items 1`] = `
         <img
           class="css-1y16e88"
           height="32"
-          src="//github.com/lachlanjc"
+          src="https://github.com/lachlanjc"
           title="lachlanjc"
           width="32"
         />
@@ -1105,7 +1105,7 @@ exports[`Components/GithubAvatarList Overview 1`] = `
         <img
           class="css-1y16e88"
           height="32"
-          src="//github.com/hasparus"
+          src="https://github.com/hasparus"
           title="hasparus"
           width="32"
         />
@@ -1121,7 +1121,7 @@ exports[`Components/GithubAvatarList Overview 1`] = `
         <img
           class="css-1y16e88"
           height="32"
-          src="//github.com/lachlanjc"
+          src="https://github.com/lachlanjc"
           title="lachlanjc"
           width="32"
         />
@@ -1137,7 +1137,7 @@ exports[`Components/GithubAvatarList Overview 1`] = `
         <img
           class="css-1y16e88"
           height="32"
-          src="//github.com/atanasster"
+          src="https://github.com/atanasster"
           title="atanasster"
           width="32"
         />

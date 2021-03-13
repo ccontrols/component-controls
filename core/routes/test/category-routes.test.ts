@@ -37,9 +37,7 @@ describe('category-routes', () => {
       type: 'story',
     });
     expect(paths[1]).toMatchObject({
-      docId: undefined,
       path: '/tags',
-      storyId: undefined,
       type: 'tags',
     });
   });
@@ -56,9 +54,7 @@ describe('category-routes', () => {
       type: 'story',
     });
     expect(paths[1]).toMatchObject({
-      docId: undefined,
       path: '/root/tags',
-      storyId: undefined,
       type: 'tags',
     });
   });

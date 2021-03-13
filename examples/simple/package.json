@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@component-controls/gatsby-theme-stories": "^3.3.0",
+    "@component-controls/nextjs-plugin": "^3.3.0",
     "gatsby": "^3.0.0",
     "next": "^10.0.7",
     "react": "^17.0.1",

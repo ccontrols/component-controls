@@ -2,7 +2,6 @@ import path from 'path';
 import { Configuration, RuleSetUseItem } from 'webpack';
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import {
   PresetCallback,
   BuildProps,
@@ -18,9 +17,7 @@ import { findUpFile } from '@component-controls/core/node-utils';
 
 export const react: PresetCallback = (options: BuildProps) => {
   const isProd = process.env.NODE_ENV === 'production';
-  const isDev = process.env.NODE_ENV === 'development';
   const cssLoaders: RuleSetUseItem[] = [];
-  const { fastRefresh = true } = options;
   const postcssOptions = customLoaderOptions(options, 'postcss-loader', {});
   const postCssOptionsFile = findUpFile(process.cwd(), 'postcss.config.js');
   const hasPostCss = Object.keys(postcssOptions).length || postCssOptionsFile;
@@ -41,7 +38,6 @@ export const react: PresetCallback = (options: BuildProps) => {
       new MiniCssExtractPlugin({
         filename: options.cssFileName || defCssFileName,
       }),
-      isDev && fastRefresh && new ReactRefreshWebpackPlugin(),
     ].filter(Boolean),
     optimization: {
       minimizer: [isProd && new CssMinimizerPlugin()].filter(Boolean),

@@ -19,7 +19,9 @@ describe('file-info', () => {
     const info = await getFileInfoResults(
       path.resolve(__dirname, '../src/index.ts'),
     );
-    expect(info.dateCreated.toString()).toBe('2020-02-13T13:10:53.000Z');
+    expect(new Date(info.dateCreated).toISOString().slice(0, 10)).toBe(
+      '2020-02-13',
+    );
   });
 
   it('actionbar', async () => {
@@ -29,6 +31,8 @@ describe('file-info', () => {
         '../../../ui/components/src/ActionBar/ActionBar.tsx',
       ),
     );
-    expect(info.dateCreated.toString()).toBe('2020-02-28T18:14:04.000Z');
+    expect(new Date(info.dateCreated).toISOString().slice(0, 10)).toBe(
+      '2020-02-28',
+    );
   });
 });

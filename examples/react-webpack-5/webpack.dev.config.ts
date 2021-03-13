@@ -2,6 +2,7 @@ import path from 'path';
 import webpack from 'webpack';
 import webpackDevServer from 'webpack-dev-server';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import { withComponentControls } from '@component-controls/react-router-integration/webpack-build';
 
 const publicFolder = process.env.PUBLIC_PATH || 'public';
@@ -26,6 +27,7 @@ const config: webpack.Configuration & {
         use: {
           loader: 'babel-loader',
           options: {
+            plugins: [require.resolve('react-refresh/babel')],
             presets: [
               '@babel/preset-env',
               '@babel/preset-react',
@@ -44,6 +46,7 @@ const config: webpack.Configuration & {
       template: 'src/index.html',
     }),
     new webpack.HotModuleReplacementPlugin(),
+    new ReactRefreshWebpackPlugin(),
   ],
   devtool: 'inline-source-map',
   devServer: {
@@ -51,7 +54,6 @@ const config: webpack.Configuration & {
     historyApiFallback: true,
     port: 9026,
     open: true,
-    hot: true,
   },
 };
 

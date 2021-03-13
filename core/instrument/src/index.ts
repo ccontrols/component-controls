@@ -19,7 +19,7 @@ import { extractStoryExports } from './misc/mdx-exports';
 import { prettify } from './misc/prettify';
 import { parseFile } from './misc/ast_store';
 import { readSourceFile } from './misc/source-options';
-import { getFileIinfo } from './misc/file-info';
+import { getFileDates } from './misc/file-info';
 import {
   LoadingDocStore,
   InstrumentOptions,
@@ -38,6 +38,7 @@ import {
 
 export * from './types';
 export { getComponentProps } from './misc/props-info';
+export { getFileIinfo } from './misc/file-info';
 
 type TraverseFn = (
   ast: File,
@@ -96,9 +97,9 @@ const parseSource = async (
       store.packages[storyPackage.fileHash] = storyPackage;
       doc.package = storyPackage.fileHash;
     }
-    const fileInfo = await getFileIinfo(filePath);
-    doc.dateModified = doc.dateModified || fileInfo.dateModified;
-    doc.date = doc.date || fileInfo.dateCreated;
+    const dates = await getFileDates(filePath);
+    doc.dateModified = doc.dateModified || dates.dateModified;
+    doc.date = doc.date || dates.dateCreated;
   }
   for (const key of Object.keys(store.stories)) {
     const story: Story = store.stories[key];

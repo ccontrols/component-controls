@@ -72,7 +72,6 @@ describe('docs-routes', () => {
     expect(pages[0]).toMatchObject({
       docId: 'index',
       path: '/docs',
-      storyId: undefined,
     });
   });
   it('doc story pages custom home route', () => {

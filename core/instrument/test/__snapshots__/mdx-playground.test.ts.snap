@@ -5,16 +5,16 @@ Object {
   "components": Object {},
   "doc": Object {
     "componentsLookup": Object {},
-    "date": "2020-11-13T00:59:52.000Z",
-    "dateModified": "2020-11-13T17:34:06.000Z",
+    "date": 2020-12-30T06:22:19.025Z,
+    "dateModified": 2020-12-30T06:22:19.025Z,
     "title": "MDX",
   },
   "exports": Object {
     "default": Object {
       "story": Object {
         "componentsLookup": Object {},
-        "date": "2020-11-13T00:59:52.000Z",
-        "dateModified": "2020-11-13T17:34:06.000Z",
+        "date": 2020-12-30T06:22:19.025Z,
+        "dateModified": 2020-12-30T06:22:19.025Z,
         "title": "MDX",
       },
     },
@@ -75,7 +75,15 @@ MDXContent.isMDXComponent = true;
         {
         
         }
-        ,\\"dateModified\\": \\"2020-11-13T17:34:06.000Z\\",\\"date\\": \\"2020-11-13T00:59:52.000Z\\"
+        ,\\"dateModified\\": 
+        {
+        
+        }
+        ,\\"date\\": 
+        {
+        
+        }
+        
         }
         );
         export default mdxDefaultExport;
@@ -88,16 +96,16 @@ Object {
   "components": Object {},
   "doc": Object {
     "componentsLookup": Object {},
-    "date": "2020-11-13T00:59:52.000Z",
-    "dateModified": "2020-11-13T00:59:52.000Z",
+    "date": 2020-12-30T06:22:19.025Z,
+    "dateModified": 2020-12-30T06:22:19.026Z,
     "title": "MDX",
   },
   "exports": Object {
     "default": Object {
       "story": Object {
         "componentsLookup": Object {},
-        "date": "2020-11-13T00:59:52.000Z",
-        "dateModified": "2020-11-13T00:59:52.000Z",
+        "date": 2020-12-30T06:22:19.025Z,
+        "dateModified": 2020-12-30T06:22:19.026Z,
         "title": "MDX",
       },
     },
@@ -138,7 +146,15 @@ MDXContent.isMDXComponent = true;
         {
         
         }
-        ,\\"dateModified\\": \\"2020-11-13T00:59:52.000Z\\",\\"date\\": \\"2020-11-13T00:59:52.000Z\\"
+        ,\\"dateModified\\": 
+        {
+        
+        }
+        ,\\"date\\": 
+        {
+        
+        }
+        
         }
         );
         export default mdxDefaultExport;

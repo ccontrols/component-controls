@@ -112,19 +112,15 @@ Create a new or edit `index.tsx` or `index.js` file in the pages folder:
 import React from 'react';
 import { GetStaticProps } from 'next';
 import {
-  DocPageTemplate,
+  NextLayout,
   store,
   getIndexPage,
 } from '@component-controls/nextjs-plugin';
 
-const HomePage: typeof DocPageTemplate = props => (
-  <DocPageTemplate {...props} />
-);
+const HomePage: typeof NextLayout = props => <NextLayout {...props} />;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const homePage = getIndexPage(store);
-  const { docId = null, type = null, storyId = null } = homePage;
-  return { props: { docId, type, storyId } };
+  return { props: getIndexPage(store) };
 };
 
 export default HomePage;
@@ -143,13 +139,13 @@ Create a new `[doctype].tsx` or `[doctype].js` file in the pages folder:
 import React from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import {
-  DocHomeTemplate,
+  NextLayout,
   store,
   getHomePagesPaths,
   getDocHomePage,
 } from '@component-controls/nextjs-plugin';
 
-const DocHome: typeof DocHomeTemplate = props => <DocHomeTemplate {...props} />;
+const DocHome: typeof NextLayout = props => <NextLayout {...props} />;
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return { paths: getHomePagesPaths(store), fallback: false };
@@ -157,9 +153,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { doctype: basepath } = params as { doctype: string };
-  const page = getDocHomePage(store, basepath);
-  const { type = null, docId = null, storyId = null } = page || {};
-  return { props: { docId, storyId, type } };
+  return { props: getDocHomePage(store, basepath) };
 };
 
 export default DocHome;
@@ -183,13 +177,13 @@ mkdir pages/[doctype]
 import React from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import {
-  DocPageTemplate,
+  NextLayout,
   store,
   getDocPagesPaths,
   getDocPage,
 } from '@component-controls/nextjs-plugin';
 
-const DocPage: typeof DocPageTemplate = props => <DocPageTemplate {...props} />;
+const DocPage: typeof NextLayout = props => <NextLayout {...props} />;
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return { paths: getDocPagesPaths(store), fallback: false };
@@ -197,15 +191,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { doctype, docid } = params as { doctype: string; docid: string[] };
-  const page = getDocPage(store, doctype, docid);
-  const {
-    type = null,
-    docId = null,
-    storyId = null,
-    category = null,
-    activeTab = null,
-  } = page || {};
-  return { props: { docId, type, storyId, category, activeTab } };
+  return { props: getDocPage(store, doctype, docid) };
 };
 
 export default DocPage;

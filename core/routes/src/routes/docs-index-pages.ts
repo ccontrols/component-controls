@@ -9,11 +9,12 @@ import {
 } from '@component-controls/core';
 import { getUniquesByField } from './docs-pages';
 export interface DocHomePagesPath {
-  type: DocType;
+  type?: DocType;
   path: string;
   docId?: string;
   storyId?: string;
   lastModified?: string;
+  docIndex?: boolean;
 }
 
 export const getHomePages = (store?: Store): DocHomePagesPath[] => {
@@ -45,25 +46,32 @@ export const getHomePages = (store?: Store): DocHomePagesPath[] => {
         const storyId: string | undefined = docStories.length
           ? docStories[0]
           : undefined;
-        return {
-          lastModified: doc?.dateModified
-            ? new Date(doc?.dateModified).toISOString()
-            : undefined,
+        const result: DocHomePagesPath = {
           type,
           path,
-          docId,
-          storyId,
+          docIndex: true,
         };
+        if (docId) {
+          result.docId = docId;
+        }
+        if (storyId) {
+          result.storyId = storyId;
+        }
+        const lastModified = doc?.dateModified
+          ? new Date(doc?.dateModified).toISOString()
+          : undefined;
+        if (lastModified) {
+          result.lastModified = lastModified;
+        }
+        return result;
       })
       .filter(({ path }) => path);
     const categoryPaths: DocHomePagesPath[] = categories
       .map(category => {
         const uniques = getUniquesByField(store, category);
         return {
-          lastModified: undefined,
           type: category,
-          docId: undefined,
-          storyId: undefined,
+          docIndex: true,
           path: Object.keys(uniques).length
             ? getCategoryPath(store, category)
             : '',

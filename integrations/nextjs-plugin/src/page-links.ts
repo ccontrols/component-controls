@@ -22,11 +22,11 @@ export const getHomePagesPaths = (store: Store): string[] => {
 export const getDocHomePage = (
   store: Store,
   path: string,
-): DocHomePagesPath | undefined => {
+): DocHomePagesPath => {
   const pages = getHomePages(store);
   const resolvedPath = getRoutePath(store, path);
   const page = pages.find(page => page.path === resolvedPath);
-  return page;
+  return page || { path };
 };
 
 export const getDocPagesPaths = (store: Store): string[] => {
@@ -36,12 +36,12 @@ export const getDocPagesPaths = (store: Store): string[] => {
 
 export const getDocPage = (
   store: Store,
-  docTyoe: DocType,
+  docType: DocType,
   docId: string[],
-): DocPagesPath | undefined => {
+): DocPagesPath => {
   const homePath = getHomePath(store);
-  const path = `${ensureTrailingSlash(homePath)}${docTyoe}/${docId.join('/')}`;
+  const path = `${ensureTrailingSlash(homePath)}${docType}/${docId.join('/')}`;
   const pages = getDocPages(store);
   const page = pages.find(page => page.path === path);
-  return page;
+  return page || { path };
 };

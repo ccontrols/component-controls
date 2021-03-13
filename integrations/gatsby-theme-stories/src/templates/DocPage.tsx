@@ -1,31 +1,11 @@
 import React, { FC } from 'react';
-import { DocType } from '@component-controls/core';
-import { DocPage } from '@component-controls/app';
-import { Layout } from '../components/Layout';
+import { GatsbyLayout, GatsbyLayoutProps } from '../components/GatsbyLayout';
 
 interface DocPageProps {
-  pageContext: {
-    docId?: string;
-    storyId?: string;
-    type: DocType;
-    activeTab?: string;
-    category?: string;
-  };
+  pageContext: GatsbyLayoutProps;
 }
 
-const DocPageTemplate: FC<DocPageProps> = ({
-  pageContext: { docId, storyId, type, activeTab, category },
-}) => {
-  return (
-    <Layout
-      docId={docId}
-      storyId={storyId}
-      activeTab={activeTab}
-      type={category}
-    >
-      <DocPage type={type} category={category} />
-    </Layout>
-  );
-};
-
-export default DocPageTemplate;
+const DocPage: FC<DocPageProps> = ({ pageContext }) => (
+  <GatsbyLayout {...pageContext} />
+);
+export default DocPage;

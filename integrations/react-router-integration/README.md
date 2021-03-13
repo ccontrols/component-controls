@@ -1,23 +1,23 @@
 # Table of contents
 
--   [In action](#in-action)
--   [Overview](#overview)
--   [API](#api)
-    -   [<ins>Layout</ins>](#inslayoutins)
-    -   [<ins>ReactRouterLink</ins>](#insreactrouterlinkins)
-    -   [<ins>DocHomeTemplate</ins>](#insdochometemplateins)
-    -   [<ins>DocPageTemplate</ins>](#insdocpagetemplateins)
+- [In action](#in-action)
+- [Overview](#overview)
+- [API](#api)
+  - [<ins>Layout</ins>](#inslayoutins)
+  - [<ins>ReactRouterLink</ins>](#insreactrouterlinkins)
+  - [<ins>DocHomeTemplate</ins>](#insdochometemplateins)
+  - [<ins>DocPageTemplate</ins>](#insdocpagetemplateins)
 
 # In action
 
-[Live site](https://nextjs.component-controls.com)
+[Live site](https://webpack5.component-controls.com)
 
 # Overview
 
 react-router integration plugin for webpack sites documenting your projects with component controls
 
--   Exports list of routes with their components.
--   Exports post-build routine to generate sitemaps and search indexes.
+- Exports list of routes with their components.
+- Exports post-build routine to generate sitemaps and search indexes.
 
 [Getting started with webpack](https://component-controls.com/tutorial/getting-started/webpack)
 

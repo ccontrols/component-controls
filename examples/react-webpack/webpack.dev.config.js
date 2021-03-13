@@ -50,7 +50,6 @@ const config = {
     historyApiFallback: true,
     port: 9025,
     open: true,
-    hot: true,
   },
 };
 
@@ -59,6 +58,5 @@ module.exports = withComponentControls({
   options: {
     configPath: '.config',
     distFolder: publicPath,
-    fastRefresh: false,
   },
 });

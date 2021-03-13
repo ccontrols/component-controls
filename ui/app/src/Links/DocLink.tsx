@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import { LinkProps } from 'theme-ui';
 import { Link } from '@component-controls/components';
 import { useDocumentPath } from '@component-controls/store';
+import { defDocType } from '@component-controls/core';
 
 export interface DocLinkProps {
   id: string;
@@ -14,7 +15,7 @@ export const DocLink: FC<DocLinkProps & Omit<LinkProps, 'href'>> = ({
   id,
   ...props
 }) => {
-  const href = useDocumentPath('story', id);
+  const href = useDocumentPath(defDocType, id);
   return (
     <Link href={href} {...props}>
       {children}

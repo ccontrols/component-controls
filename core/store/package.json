@@ -14,9 +14,7 @@
     "static_store.js",
     "static_store.d.ts",
     "controls-store.js",
-    "controls-store.d.ts",
-    "loader.js",
-    "loader.d.ts"
+    "controls-store.d.ts"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",

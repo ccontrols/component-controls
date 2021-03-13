@@ -36,14 +36,11 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/app": "^3.3.0",
+    "@component-controls/base-integration": "^3.3.0",
     "@component-controls/pages": "^3.3.0",
     "@component-controls/routes": "^3.3.0",
     "@component-controls/search-algolia": "^3.3.0",
     "@component-controls/search-fusejs": "^3.3.0",
-    "@component-controls/store": "^3.3.0",
-    "@component-controls/webpack-compile": "^3.3.0",
-    "@component-controls/webpack-configs": "^3.3.0",
     "@emotion/babel-plugin": "^11.0.0",
     "next": "^10.0.7"
   },

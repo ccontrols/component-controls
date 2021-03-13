@@ -5,13 +5,14 @@ import { useCurrentDocument, useTheme } from '@component-controls/store';
 import { PageContainer } from '../PageContainer';
 import { SidebarsPage, DocPageProps } from '../SidebarsPage';
 import { CategoryPage } from '../CategoryPage';
+import { defDocType } from '@component-controls/core';
 
 /**
  * documentation page for current document.
  * will check if the page has a layout with sidebars or if the page is standalone.
  */
 export const DocPage: FC<Omit<DocPageProps, 'doc'> & { category?: string }> = ({
-  type = 'story',
+  type = defDocType,
   category,
   ...props
 }) => {

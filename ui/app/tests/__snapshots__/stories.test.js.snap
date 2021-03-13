@@ -277,43 +277,10 @@ exports[`Application/CategoryList Overview 1`] = `
             </a>
           </div>
           <div
-            class="css-1hu569t"
+            class="css-1v8m970-Container"
           >
             <div
-              class="css-zf8zhj"
-            >
-              <span
-                class="css-13o2efz"
-              >
-                created:
-              </span>
-              <span
-                class="css-uv6qe8"
-              >
-                1/1/2020
-              </span>
-            </div>
-            <span
-              class="css-15qy1uq"
-            >
-              ,
-            </span>
-            <div
-              class="css-zf8zhj"
-            >
-              <span
-                class="css-13o2efz"
-              >
-                updated:
-              </span>
-              <span
-                class="css-uv6qe8"
-              >
-                3/31/2020
-              </span>
-            </div>
-            <div
-              class="css-lllzso"
+              class="css-1hu569t"
             >
               <div
                 class="css-zf8zhj"
@@ -321,18 +288,50 @@ exports[`Application/CategoryList Overview 1`] = `
                 <span
                   class="css-13o2efz"
                 >
-                  by
+                  created:
                 </span>
                 <span
                   class="css-uv6qe8"
                 >
-                  <a
-                    class="css-1t54e2w"
-                    href="/authors/atanasster"
-                  >
-                    atanasster
-                  </a>
+                  1/1/2020
                 </span>
+              </div>
+              <div
+                class="css-tk62ho-Container"
+              >
+                <span
+                  class="css-13o2efz"
+                >
+                  updated:
+                </span>
+                <span
+                  class="css-uv6qe8"
+                >
+                  3/31/2020
+                </span>
+              </div>
+              <div
+                class="css-lllzso"
+              >
+                <div
+                  class="css-zf8zhj"
+                >
+                  <span
+                    class="css-13o2efz"
+                  >
+                    by
+                  </span>
+                  <span
+                    class="css-uv6qe8"
+                  >
+                    <a
+                      class="css-1t54e2w"
+                      href="/authors/atanasster"
+                    >
+                      atanasster
+                    </a>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -491,43 +490,10 @@ exports[`Application/CategoryPage Overview 1`] = `
             </a>
           </div>
           <div
-            class="css-1hu569t"
+            class="css-1v8m970-Container"
           >
             <div
-              class="css-zf8zhj"
-            >
-              <span
-                class="css-13o2efz"
-              >
-                created:
-              </span>
-              <span
-                class="css-uv6qe8"
-              >
-                1/1/2020
-              </span>
-            </div>
-            <span
-              class="css-15qy1uq"
-            >
-              ,
-            </span>
-            <div
-              class="css-zf8zhj"
-            >
-              <span
-                class="css-13o2efz"
-              >
-                updated:
-              </span>
-              <span
-                class="css-uv6qe8"
-              >
-                3/31/2020
-              </span>
-            </div>
-            <div
-              class="css-lllzso"
+              class="css-1hu569t"
             >
               <div
                 class="css-zf8zhj"
@@ -535,18 +501,50 @@ exports[`Application/CategoryPage Overview 1`] = `
                 <span
                   class="css-13o2efz"
                 >
-                  by
+                  created:
                 </span>
                 <span
                   class="css-uv6qe8"
                 >
-                  <a
-                    class="css-1t54e2w"
-                    href="/authors/atanasster"
-                  >
-                    atanasster
-                  </a>
+                  1/1/2020
                 </span>
+              </div>
+              <div
+                class="css-tk62ho-Container"
+              >
+                <span
+                  class="css-13o2efz"
+                >
+                  updated:
+                </span>
+                <span
+                  class="css-uv6qe8"
+                >
+                  3/31/2020
+                </span>
+              </div>
+              <div
+                class="css-lllzso"
+              >
+                <div
+                  class="css-zf8zhj"
+                >
+                  <span
+                    class="css-13o2efz"
+                  >
+                    by
+                  </span>
+                  <span
+                    class="css-uv6qe8"
+                  >
+                    <a
+                      class="css-1t54e2w"
+                      href="/authors/atanasster"
+                    >
+                      atanasster
+                    </a>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -660,7 +658,7 @@ exports[`Application/CategoryPage Overview 1`] = `
                     </a>
                     <a
                       class="css-1t54e2w"
-                      href="/docs/"
+                      href="/docs"
                     >
                       <span
                         class="css-pqmwqh-Tag"
@@ -733,7 +731,7 @@ exports[`Application/CategoryPage Overview 1`] = `
                     </a>
                     <a
                       class="css-1t54e2w"
-                      href="/docs/"
+                      href="/docs"
                     >
                       <span
                         class="css-pqmwqh-Tag"
@@ -858,43 +856,10 @@ exports[`Application/Container Overview 1`] = `
           </a>
         </div>
         <div
-          class="css-1hu569t"
+          class="css-1v8m970-Container"
         >
           <div
-            class="css-zf8zhj"
-          >
-            <span
-              class="css-13o2efz"
-            >
-              created:
-            </span>
-            <span
-              class="css-uv6qe8"
-            >
-              1/1/2020
-            </span>
-          </div>
-          <span
-            class="css-15qy1uq"
-          >
-            ,
-          </span>
-          <div
-            class="css-zf8zhj"
-          >
-            <span
-              class="css-13o2efz"
-            >
-              updated:
-            </span>
-            <span
-              class="css-uv6qe8"
-            >
-              3/31/2020
-            </span>
-          </div>
-          <div
-            class="css-lllzso"
+            class="css-1hu569t"
           >
             <div
               class="css-zf8zhj"
@@ -902,18 +867,50 @@ exports[`Application/Container Overview 1`] = `
               <span
                 class="css-13o2efz"
               >
-                by
+                created:
               </span>
               <span
                 class="css-uv6qe8"
               >
-                <a
-                  class="css-1t54e2w"
-                  href="/authors/atanasster"
-                >
-                  atanasster
-                </a>
+                1/1/2020
               </span>
+            </div>
+            <div
+              class="css-tk62ho-Container"
+            >
+              <span
+                class="css-13o2efz"
+              >
+                updated:
+              </span>
+              <span
+                class="css-uv6qe8"
+              >
+                3/31/2020
+              </span>
+            </div>
+            <div
+              class="css-lllzso"
+            >
+              <div
+                class="css-zf8zhj"
+              >
+                <span
+                  class="css-13o2efz"
+                >
+                  by
+                </span>
+                <span
+                  class="css-uv6qe8"
+                >
+                  <a
+                    class="css-1t54e2w"
+                    href="/authors/atanasster"
+                  >
+                    atanasster
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -1046,43 +1043,10 @@ exports[`Application/DocPage Overview 1`] = `
             </a>
           </div>
           <div
-            class="css-1hu569t"
+            class="css-1v8m970-Container"
           >
             <div
-              class="css-zf8zhj"
-            >
-              <span
-                class="css-13o2efz"
-              >
-                created:
-              </span>
-              <span
-                class="css-uv6qe8"
-              >
-                1/1/2020
-              </span>
-            </div>
-            <span
-              class="css-15qy1uq"
-            >
-              ,
-            </span>
-            <div
-              class="css-zf8zhj"
-            >
-              <span
-                class="css-13o2efz"
-              >
-                updated:
-              </span>
-              <span
-                class="css-uv6qe8"
-              >
-                3/31/2020
-              </span>
-            </div>
-            <div
-              class="css-lllzso"
+              class="css-1hu569t"
             >
               <div
                 class="css-zf8zhj"
@@ -1090,18 +1054,50 @@ exports[`Application/DocPage Overview 1`] = `
                 <span
                   class="css-13o2efz"
                 >
-                  by
+                  created:
                 </span>
                 <span
                   class="css-uv6qe8"
                 >
-                  <a
-                    class="css-1t54e2w"
-                    href="/authors/atanasster"
-                  >
-                    atanasster
-                  </a>
+                  1/1/2020
                 </span>
+              </div>
+              <div
+                class="css-tk62ho-Container"
+              >
+                <span
+                  class="css-13o2efz"
+                >
+                  updated:
+                </span>
+                <span
+                  class="css-uv6qe8"
+                >
+                  3/31/2020
+                </span>
+              </div>
+              <div
+                class="css-lllzso"
+              >
+                <div
+                  class="css-zf8zhj"
+                >
+                  <span
+                    class="css-13o2efz"
+                  >
+                    by
+                  </span>
+                  <span
+                    class="css-uv6qe8"
+                  >
+                    <a
+                      class="css-1t54e2w"
+                      href="/authors/atanasster"
+                    >
+                      atanasster
+                    </a>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -1235,43 +1231,10 @@ exports[`Application/DocumentHomePage Overview 1`] = `
             </a>
           </div>
           <div
-            class="css-1hu569t"
+            class="css-1v8m970-Container"
           >
             <div
-              class="css-zf8zhj"
-            >
-              <span
-                class="css-13o2efz"
-              >
-                created:
-              </span>
-              <span
-                class="css-uv6qe8"
-              >
-                1/1/2020
-              </span>
-            </div>
-            <span
-              class="css-15qy1uq"
-            >
-              ,
-            </span>
-            <div
-              class="css-zf8zhj"
-            >
-              <span
-                class="css-13o2efz"
-              >
-                updated:
-              </span>
-              <span
-                class="css-uv6qe8"
-              >
-                3/31/2020
-              </span>
-            </div>
-            <div
-              class="css-lllzso"
+              class="css-1hu569t"
             >
               <div
                 class="css-zf8zhj"
@@ -1279,18 +1242,50 @@ exports[`Application/DocumentHomePage Overview 1`] = `
                 <span
                   class="css-13o2efz"
                 >
-                  by
+                  created:
                 </span>
                 <span
                   class="css-uv6qe8"
                 >
-                  <a
-                    class="css-1t54e2w"
-                    href="/authors/atanasster"
-                  >
-                    atanasster
-                  </a>
+                  1/1/2020
                 </span>
+              </div>
+              <div
+                class="css-tk62ho-Container"
+              >
+                <span
+                  class="css-13o2efz"
+                >
+                  updated:
+                </span>
+                <span
+                  class="css-uv6qe8"
+                >
+                  3/31/2020
+                </span>
+              </div>
+              <div
+                class="css-lllzso"
+              >
+                <div
+                  class="css-zf8zhj"
+                >
+                  <span
+                    class="css-13o2efz"
+                  >
+                    by
+                  </span>
+                  <span
+                    class="css-uv6qe8"
+                  >
+                    <a
+                      class="css-1t54e2w"
+                      href="/authors/atanasster"
+                    >
+                      atanasster
+                    </a>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -2554,43 +2549,10 @@ exports[`Application/SidebarsPage Overview 1`] = `
                     </a>
                   </div>
                   <div
-                    class="css-1hu569t"
+                    class="css-1v8m970-Container"
                   >
                     <div
-                      class="css-zf8zhj"
-                    >
-                      <span
-                        class="css-13o2efz"
-                      >
-                        created:
-                      </span>
-                      <span
-                        class="css-uv6qe8"
-                      >
-                        1/1/2020
-                      </span>
-                    </div>
-                    <span
-                      class="css-15qy1uq"
-                    >
-                      ,
-                    </span>
-                    <div
-                      class="css-zf8zhj"
-                    >
-                      <span
-                        class="css-13o2efz"
-                      >
-                        updated:
-                      </span>
-                      <span
-                        class="css-uv6qe8"
-                      >
-                        3/31/2020
-                      </span>
-                    </div>
-                    <div
-                      class="css-lllzso"
+                      class="css-1hu569t"
                     >
                       <div
                         class="css-zf8zhj"
@@ -2598,18 +2560,50 @@ exports[`Application/SidebarsPage Overview 1`] = `
                         <span
                           class="css-13o2efz"
                         >
-                          by
+                          created:
                         </span>
                         <span
                           class="css-uv6qe8"
                         >
-                          <a
-                            class="css-1t54e2w"
-                            href="/authors/atanasster"
-                          >
-                            atanasster
-                          </a>
+                          1/1/2020
                         </span>
+                      </div>
+                      <div
+                        class="css-tk62ho-Container"
+                      >
+                        <span
+                          class="css-13o2efz"
+                        >
+                          updated:
+                        </span>
+                        <span
+                          class="css-uv6qe8"
+                        >
+                          3/31/2020
+                        </span>
+                      </div>
+                      <div
+                        class="css-lllzso"
+                      >
+                        <div
+                          class="css-zf8zhj"
+                        >
+                          <span
+                            class="css-13o2efz"
+                          >
+                            by
+                          </span>
+                          <span
+                            class="css-uv6qe8"
+                          >
+                            <a
+                              class="css-1t54e2w"
+                              href="/authors/atanasster"
+                            >
+                              atanasster
+                            </a>
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>

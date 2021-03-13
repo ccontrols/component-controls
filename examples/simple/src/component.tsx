@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
 import styles from './styles.css';
 
+// TODO: some todos
+
 export type ComponentProps = {
   title: string;
 };

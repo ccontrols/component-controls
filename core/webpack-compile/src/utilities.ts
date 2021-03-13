@@ -1,9 +1,4 @@
-import webpack, {
-  Compiler,
-  Stats,
-  HotModuleReplacementPlugin,
-  BannerPlugin,
-} from 'webpack';
+import webpack, { Compiler, Stats, BannerPlugin } from 'webpack';
 import path from 'path';
 import fs from 'fs';
 import { log, error } from '@component-controls/logger';
@@ -83,7 +78,6 @@ const createConfig = (options: BuildProps): webpack.Configuration => {
       raw: true,
       banner: '/* eslint-disable */',
     }),
-    mode === 'development' && new HotModuleReplacementPlugin({}),
   ].filter(Boolean);
   const webpackConfig = mergeWebpackConfig(
     {

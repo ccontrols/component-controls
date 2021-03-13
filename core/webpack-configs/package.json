@@ -35,7 +35,6 @@
     "@component-controls/react-docgen-info": "^3.3.0",
     "@component-controls/react-docgen-typescript-info": "^3.3.0",
     "@component-controls/store": "^3.3.0",
-    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
     "babel-loader": "^8.2.2",
     "babel-preset-react-app": "^10.0.0",
     "core-js": "^3.9.1",
