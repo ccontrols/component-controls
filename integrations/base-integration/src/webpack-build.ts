@@ -74,9 +74,6 @@ export const buildBundle = async ({
   onEndBuild?: OnEndBuild;
 }): Promise<any> => {
   const mode = options?.mode || process.env.NODE_ENV;
-  if (typeof process.env.NODE_ENV === 'undefined') {
-    process.env.NODE_ENV = mode;
-  }
   const buildOptions = createOptions(options);
   const onBundle: CompilerCallbackFn = async ({ store }) => {
     await postBuild(
@@ -119,6 +116,11 @@ export const asyncWebpackConfig = async ({
   config: any;
   options?: BuildProps;
 }): Promise<any> => {
+  const mode = config.mode;
+  if (typeof process.env.NODE_ENV === 'undefined') {
+    process.env.NODE_ENV = mode;
+    process.env.BABEL_ENV = mode;
+  }
   await buildBundle({
     options,
   });
