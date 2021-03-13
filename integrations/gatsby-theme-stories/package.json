@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/gatsby-theme-stories",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "description": "Gatsby theme to create stories documentation sites",
   "keywords": [
     "story",
@@ -38,11 +38,11 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/base-integration": "^3.3.0",
-    "@component-controls/pages": "^3.3.0",
-    "@component-controls/routes": "^3.3.0",
-    "@component-controls/search-algolia": "^3.3.0",
-    "@component-controls/search-fusejs": "^3.3.0",
+    "@component-controls/base-integration": "^3.4.0",
+    "@component-controls/pages": "^3.4.0",
+    "@component-controls/routes": "^3.4.0",
+    "@component-controls/search-algolia": "^3.4.0",
+    "@component-controls/search-fusejs": "^3.4.0",
     "gatsby-plugin-typescript": "^2.4.24",
     "react-helmet": "^6.0.0",
     "theme-ui": "^0.6.0-alpha.7"

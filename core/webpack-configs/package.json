@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/webpack-configs",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "description": "Webpack preset configurations",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,11 +30,11 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/instrument": "^3.3.0",
+    "@component-controls/instrument": "^3.4.0",
     "@component-controls/logger": "^2.10.4",
-    "@component-controls/react-docgen-info": "^3.3.0",
-    "@component-controls/react-docgen-typescript-info": "^3.3.0",
-    "@component-controls/store": "^3.3.0",
+    "@component-controls/react-docgen-info": "^3.4.0",
+    "@component-controls/react-docgen-typescript-info": "^3.4.0",
+    "@component-controls/store": "^3.4.0",
     "babel-loader": "^8.2.2",
     "babel-preset-react-app": "^10.0.0",
     "core-js": "^3.9.1",

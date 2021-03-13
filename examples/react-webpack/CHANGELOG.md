@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/ccontrols/component-controls/compare/v3.3.0...v3.4.0) (2021-03-13)
+
+
+### Bug Fixes
+
+* remove fast refresh for webpack 4 ([c1e1f49](https://github.com/ccontrols/component-controls/commit/c1e1f4926a34edc078772a297b318475b10c1340))
+* remove watch content base ([ce6c06c](https://github.com/ccontrols/component-controls/commit/ce6c06ccc5f6bf3801491c1cabb53d0df30e26f7))
+
+
+### Features
+
+* ceate base-integration package ([965c83c](https://github.com/ccontrols/component-controls/commit/965c83cd2309f1ffc96a9a8aba810f7cc2e840ba))
+
+
+
+
+
 # [3.3.0](https://github.com/ccontrols/component-controls/compare/v3.2.0...v3.3.0) (2021-03-10)
 
 

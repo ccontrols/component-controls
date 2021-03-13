@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/ccontrols/component-controls/compare/v3.3.0...v3.4.0) (2021-03-13)
+
+
+### Bug Fixes
+
+* fix spacing in page header ([3a78933](https://github.com/ccontrols/component-controls/commit/3a789331a154e6c739e317f5957ae85f245e845c))
+* page type account for site root ([de2faf1](https://github.com/ccontrols/component-controls/commit/de2faf1b4c4bf8ba2c4d24b80e25632d91dc8e04))
+
+
+### Features
+
+* add source lines and %comments to story Container ([c253062](https://github.com/ccontrols/component-controls/commit/c2530624d1fa7a2bfb7f7e4d285d6d438cfd08da))
+* extract ComponentStats into its own component and create story ([8ee3390](https://github.com/ccontrols/component-controls/commit/8ee3390de0f2648521e0a70ef17daa6bc7fea6ef))
+
+
+
+
+
 # [3.3.0](https://github.com/ccontrols/component-controls/compare/v3.2.0...v3.3.0) (2021-03-10)
 
 

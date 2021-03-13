@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/ccontrols/component-controls/compare/v3.3.0...v3.4.0) (2021-03-13)
+
+
+### Bug Fixes
+
+* fix spacing in page header ([3a78933](https://github.com/ccontrols/component-controls/commit/3a789331a154e6c739e317f5957ae85f245e845c))
+* remove https protocol ([e48994a](https://github.com/ccontrols/component-controls/commit/e48994ad8225d89262c6504b3b2864b573a7569a))
+* revert https protocol, http not available ([fe9dee9](https://github.com/ccontrols/component-controls/commit/fe9dee99432b52833be9b3ac3d3e1efc20b74ef4))
+
+
+### Features
+
+* extract ComponentStats into its own component and create story ([8ee3390](https://github.com/ccontrols/component-controls/commit/8ee3390de0f2648521e0a70ef17daa6bc7fea6ef))
+
+
+
+
+
 # [3.3.0](https://github.com/ccontrols/component-controls/compare/v3.2.0...v3.3.0) (2021-03-10)
 
 

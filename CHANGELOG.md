@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/ccontrols/component-controls/compare/v3.3.0...v3.4.0) (2021-03-13)
+
+
+### Bug Fixes
+
+* fix spacing in page header ([3a78933](https://github.com/ccontrols/component-controls/commit/3a789331a154e6c739e317f5957ae85f245e845c))
+* nextjs inject css styles ([f997c9c](https://github.com/ccontrols/component-controls/commit/f997c9cccc00584123128d42a1bacfb09f75b6c2))
+* page type account for site root ([de2faf1](https://github.com/ccontrols/component-controls/commit/de2faf1b4c4bf8ba2c4d24b80e25632d91dc8e04))
+* pass props to webpackConfig ([22b5034](https://github.com/ccontrols/component-controls/commit/22b5034f026dd8b35f2bb2bb48412abad55401d3))
+* remove console.log ([b69c8c7](https://github.com/ccontrols/component-controls/commit/b69c8c7cb59a47a2e743d6427a21ce6fdd95f943))
+* remove fast refresh for webpack 4 ([c1e1f49](https://github.com/ccontrols/component-controls/commit/c1e1f4926a34edc078772a297b318475b10c1340))
+* remove https protocol ([e48994a](https://github.com/ccontrols/component-controls/commit/e48994ad8225d89262c6504b3b2864b573a7569a))
+* remove loader from rollup ([b3f2144](https://github.com/ccontrols/component-controls/commit/b3f21440e34d532ee2b2fb1f029448c3d861051e))
+* remove watch content base ([ce6c06c](https://github.com/ccontrols/component-controls/commit/ce6c06ccc5f6bf3801491c1cabb53d0df30e26f7))
+* revert https protocol, http not available ([fe9dee9](https://github.com/ccontrols/component-controls/commit/fe9dee99432b52833be9b3ac3d3e1efc20b74ef4))
+* set NODE_ENV if missing ([101c687](https://github.com/ccontrols/component-controls/commit/101c687ca7038abca02849483939a0f7bd249e1b))
+
+
+### Features
+
+* add source lines and %comments to story Container ([c253062](https://github.com/ccontrols/component-controls/commit/c2530624d1fa7a2bfb7f7e4d285d6d438cfd08da))
+* ceate base-integration package ([965c83c](https://github.com/ccontrols/component-controls/commit/965c83cd2309f1ffc96a9a8aba810f7cc2e840ba))
+* extract ComponentStats into its own component and create story ([8ee3390](https://github.com/ccontrols/component-controls/commit/8ee3390de0f2648521e0a70ef17daa6bc7fea6ef))
+
+
+
+
+
 # [3.3.0](https://github.com/ccontrols/component-controls/compare/v3.2.0...v3.3.0) (2021-03-10)
 
 
