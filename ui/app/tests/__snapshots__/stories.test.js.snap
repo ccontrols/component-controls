@@ -280,7 +280,7 @@ exports[`Application/CategoryList Overview 1`] = `
             class="css-1v8m970-Container"
           >
             <div
-              class="css-1hu569t"
+              class="css-crmp15"
             >
               <div
                 class="css-zf8zhj"
@@ -493,7 +493,7 @@ exports[`Application/CategoryPage Overview 1`] = `
             class="css-1v8m970-Container"
           >
             <div
-              class="css-1hu569t"
+              class="css-crmp15"
             >
               <div
                 class="css-zf8zhj"
@@ -859,7 +859,7 @@ exports[`Application/Container Overview 1`] = `
           class="css-1v8m970-Container"
         >
           <div
-            class="css-1hu569t"
+            class="css-crmp15"
           >
             <div
               class="css-zf8zhj"
@@ -1046,7 +1046,7 @@ exports[`Application/DocPage Overview 1`] = `
             class="css-1v8m970-Container"
           >
             <div
-              class="css-1hu569t"
+              class="css-crmp15"
             >
               <div
                 class="css-zf8zhj"
@@ -1234,7 +1234,7 @@ exports[`Application/DocumentHomePage Overview 1`] = `
             class="css-1v8m970-Container"
           >
             <div
-              class="css-1hu569t"
+              class="css-crmp15"
             >
               <div
                 class="css-zf8zhj"
@@ -2552,7 +2552,7 @@ exports[`Application/SidebarsPage Overview 1`] = `
                     class="css-1v8m970-Container"
                   >
                     <div
-                      class="css-1hu569t"
+                      class="css-crmp15"
                     >
                       <div
                         class="css-zf8zhj"

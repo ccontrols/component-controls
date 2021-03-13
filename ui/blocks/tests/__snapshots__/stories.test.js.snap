@@ -2778,16 +2778,6 @@ exports[`Blocks/ComponentSource Theme 1`] = `
                     copy
                   </button>
                 </div>
-                <div
-                  class="css-7d11p2"
-                >
-                  <button
-                    aria-label="view Button stats"
-                    class="css-1tf4h46"
-                  >
-                    stats
-                  </button>
-                </div>
               </div>
             </div>
             <div
@@ -3115,7 +3105,7 @@ exports[`Blocks/ComponentStats Overview 1`] = `
     class="css-vurnku"
   >
     <div
-      class="css-1oxrnje-ComponentStats"
+      class="css-vurnku"
     >
       <span
         class="css-vurnku"
@@ -3129,7 +3119,7 @@ exports[`Blocks/ComponentStats Overview 1`] = `
       </span>
     </div>
     <div
-      class="css-vurnku"
+      class="css-1pc5rs1-ComponentStats"
     >
       <span
         class="css-vurnku"
@@ -3143,7 +3133,7 @@ exports[`Blocks/ComponentStats Overview 1`] = `
       </span>
     </div>
     <div
-      class="css-vurnku"
+      class="css-1pc5rs1-ComponentStats"
     >
       <span
         class="css-vurnku"
@@ -3208,7 +3198,7 @@ exports[`Blocks/Container Overview 1`] = `
         class="css-1v8m970-Container"
       >
         <div
-          class="css-1hu569t"
+          class="css-crmp15"
         >
           <div
             class="css-zf8zhj"
