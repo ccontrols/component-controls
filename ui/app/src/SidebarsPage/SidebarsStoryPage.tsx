@@ -156,7 +156,7 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({
           </PageContainer>
         </Tabs>
       </Box>
-      {doc.contextSidebar && <SideContext pageRef={pageRef} />}
+      {doc.contextSidebar && <SideContext pageRef={pageRef} tab={activeTab} />}
     </Box>
   );
 };

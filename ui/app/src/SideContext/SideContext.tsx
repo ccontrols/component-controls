@@ -10,6 +10,7 @@ import {
 
 export interface SideContext {
   pageRef?: RefObject<HTMLDivElement>;
+  tab?: string;
 }
 interface ScrollElement {
   href: string;
@@ -19,7 +20,7 @@ interface ScrollElement {
   offset: number;
 }
 
-export const SideContext: FC<SideContext> = ({ pageRef }) => {
+export const SideContext: FC<SideContext> = ({ pageRef, tab }) => {
   const [items, setItems] = useState<ScrollElement[]>([]);
   const [activeItem, setActiveItem] = useState<number>(-1);
   const windRef = pageRef?.current;
@@ -80,7 +81,7 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
     } else {
       setItems([]);
     }
-  }, [windRef]);
+  }, [windRef, tab]);
 
   useEffect(() => {
     if (typeof window !== 'undefined' && window) {
