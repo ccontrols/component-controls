@@ -5,6 +5,9 @@
     -   [<ins>ComponentsBlockContainer</ins>](#inscomponentsblockcontainerins)
     -   [<ins>ComponentsContainer</ins>](#inscomponentscontainerins)
     -   [<ins>StoryBlockContainer</ins>](#insstoryblockcontainerins)
+    -   [<ins>CommitsPopover</ins>](#inscommitspopoverins)
+    -   [<ins>BaseComponentCommits</ins>](#insbasecomponentcommitsins)
+    -   [<ins>ComponentCommits</ins>](#inscomponentcommitsins)
     -   [<ins>ComponentContributors</ins>](#inscomponentcontributorsins)
     -   [<ins>ComponentExternalDependencies</ins>](#inscomponentexternaldependenciesins)
     -   [<ins>ComponentLocalDependencies</ins>](#inscomponentlocaldependenciesins)
@@ -115,6 +118,53 @@ _StoryBlockContainer [source code](https://github.com/ccontrols/component-contro
 | `plain`               | _boolean_                                                                                                                                                                                                                                                          | inner container variant or plain                                                                                |
 | `sx`                  | _ThemeUIStyleObject_                                                                                                                                                                                                                                               |                                                                                                                 |
 | `ref`                 | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_                                                                                                                                                                                             |                                                                                                                 |
+
+## <ins>CommitsPopover</ins>
+
+link displaying the total commits on a component
+with a popover on click that will display the list of commits
+
+_CommitsPopover [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/CommitsPopover/CommitsPopover.tsx)_
+
+### properties
+
+| Name        | Type        | Description                                  |
+| ----------- | ----------- | -------------------------------------------- |
+| `component` | _Component_ | component that will be displayed the commits |
+
+## <ins>BaseComponentCommits</ins>
+
+Displays commit history for a component
+
+_BaseComponentCommits [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ComponentCommits/BaseComponentCommits.tsx)_
+
+### properties
+
+| Name         | Type                              | Description |
+| ------------ | --------------------------------- | ----------- |
+| `component`  | _Component_                       |             |
+| `pagination` | _boolean \| TablePaginationProps_ |             |
+
+## <ins>ComponentCommits</ins>
+
+Displays commit history for a component
+
+_ComponentCommits [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ComponentCommits/ComponentCommits.tsx)_
+
+### properties
+
+| Name          | Type                                                                   | Description                                                                                                     |
+| ------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `title`       | _string_                                                               | optional section title for the block.                                                                           |
+| `description` | _string_                                                               | optional markdown description.                                                                                  |
+| `id`          | _string_                                                               | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
+| `collapsible` | _boolean_                                                              | if false, will nothave a collapsible frame.                                                                     |
+| `data-testid` | _string_                                                               | testing id                                                                                                      |
+| `plain`       | _boolean_                                                              | inner container variant or plain                                                                                |
+| `sx`          | _ThemeUIStyleObject_                                                   |                                                                                                                 |
+| `ref`         | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                                                                                                                 |
+| `name`        | _string_                                                               |                                                                                                                 |
+| `pagination`  | _boolean \| TablePaginationProps_                                      |                                                                                                                 |
 
 ## <ins>ComponentContributors</ins>
 
@@ -321,6 +371,7 @@ _ComponentStats [source code](https://github.com/ccontrols/component-controls/tr
 | Name        | Type                                                                   | Description |
 | ----------- | ---------------------------------------------------------------------- | ----------- |
 | `component` | _Component_                                                            |             |
+| `variant`   | _"responsive" \| "fixed"_                                              |             |
 | `sx`        | _ThemeUIStyleObject_                                                   |             |
 | `ref`       | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |             |
 

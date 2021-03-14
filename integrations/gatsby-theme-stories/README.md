@@ -6,10 +6,9 @@
     -   [<ins>onRenderBody</ins>](#insonrenderbodyins)
     -   [<ins>onPreRenderHTML</ins>](#insonprerenderhtmlins)
     -   [<ins>Helmet</ins>](#inshelmetins)
+    -   [<ins>GatsbyLayout</ins>](#insgatsbylayoutins)
     -   [<ins>GatsbyLink</ins>](#insgatsbylinkins)
-    -   [<ins>Layout</ins>](#inslayoutins)
     -   [<ins>DefaultName</ins>](#insdefaultnameins)
-    -   [<ins>DocHome</ins>](#insdochomeins)
     -   [<ins>DocPage</ins>](#insdocpageins)
 
 # In action
@@ -45,6 +44,23 @@ _onPreRenderHTML [source code](https://github.com/ccontrols/component-controls/t
 
 _Helmet [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/index.ts)_
 
+## <ins>GatsbyLayout</ins>
+
+_GatsbyLayout [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/components/GatsbyLayout.tsx)_
+
+### properties
+
+| Name           | Type      | Description |
+| -------------- | --------- | ----------- |
+| `type`         | _string_  |             |
+| `docId`        | _string_  |             |
+| `storyId`      | _string_  |             |
+| `lastModified` | _string_  |             |
+| `docIndex`     | _boolean_ |             |
+| `query`        | _string_  |             |
+| `category`     | _string_  |             |
+| `activeTab`    | _string_  |             |
+
 ## <ins>GatsbyLink</ins>
 
 _GatsbyLink [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/components/GatsbyLink.tsx)_
@@ -56,31 +72,9 @@ _GatsbyLink [source code](https://github.com/ccontrols/component-controls/tree/m
 | `ref` | _((instance: HTMLAnchorElement) => void) \| RefObject&lt;HTMLAnchorElement>_ |             |
 | `to`  | _string_                                                                     |             |
 
-## <ins>Layout</ins>
-
-_Layout [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/components/Layout.tsx)_
-
-### properties
-
-| Name        | Type     | Description |
-| ----------- | -------- | ----------- |
-| `docId`     | _string_ |             |
-| `storyId`   | _string_ |             |
-| `activeTab` | _string_ |             |
-
 ## <ins>DefaultName</ins>
 
 _DefaultName [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/pages/404.tsx)_
-
-## <ins>DocHome</ins>
-
-_DocHome [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/templates/DocHome.tsx)_
-
-### properties
-
-| Name           | Type                                                  | Description |
-| -------------- | ----------------------------------------------------- | ----------- |
-| `pageContext*` | _{ type: string; docId?: string; storyId?: string; }_ |             |
 
 ## <ins>DocPage</ins>
 
@@ -88,8 +82,8 @@ _DocPage [source code](https://github.com/ccontrols/component-controls/tree/mast
 
 ### properties
 
-| Name           | Type                                                                                         | Description |
-| -------------- | -------------------------------------------------------------------------------------------- | ----------- |
-| `pageContext*` | _{ docId?: string; storyId?: string; type: string; activeTab?: string; category?: string; }_ |             |
+| Name           | Type                                                                                                                           | Description |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| `pageContext*` | _Pick&lt;LayoutProps, "type" \| "docId" \| "storyId" \| "lastModified" \| "docIndex" \| "query" \| "category" \| "activeTab">_ |             |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

@@ -5,7 +5,7 @@
 -   [API](#api)
     -   [<ins>getHomePagesPaths</ins>](#insgethomepagespathsins)
     -   [<ins>getDocPagesPaths</ins>](#insgetdocpagespathsins)
-    -   [<ins>Layout</ins>](#inslayoutins)
+    -   [<ins>NextLayout</ins>](#insnextlayoutins)
     -   [<ins>NextLink</ins>](#insnextlinkins)
 
 # In action
@@ -65,17 +65,22 @@ _getDocPagesPaths [source code](https://github.com/ccontrols/component-controls/
 | `updateStory*`    | _(story: Story&lt;unknown>) => void_                                                                                                                                                                                                                       | update store, for example controls or state                                                     |
 | `search`          | _(store: Store) => SearchResult_                                                                                                                                                                                                                           |                                                                                                 |
 
-## <ins>Layout</ins>
+## <ins>NextLayout</ins>
 
-_Layout [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/nextjs-plugin/src/components/Layout.tsx)_
+_NextLayout [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/nextjs-plugin/src/components/NextLayout.tsx)_
 
 ### properties
 
-| Name        | Type     | Description |
-| ----------- | -------- | ----------- |
-| `docId`     | _string_ |             |
-| `storyId`   | _string_ |             |
-| `activeTab` | _string_ |             |
+| Name           | Type      | Description |
+| -------------- | --------- | ----------- |
+| `type`         | _string_  |             |
+| `docId`        | _string_  |             |
+| `storyId`      | _string_  |             |
+| `lastModified` | _string_  |             |
+| `docIndex`     | _boolean_ |             |
+| `query`        | _string_  |             |
+| `category`     | _string_  |             |
+| `activeTab`    | _string_  |             |
 
 ## <ins>NextLink</ins>
 

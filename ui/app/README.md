@@ -51,9 +51,10 @@ _App [source code](https://github.com/ccontrols/component-controls/tree/master/u
 
 ### properties
 
-| Name     | Type                   | Description |
-| -------- | ---------------------- | ----------- |
-| `Helmet` | _ComponentType&lt;{}>_ |             |
+| Name     | Type                                                                 | Description |
+| -------- | -------------------------------------------------------------------- | ----------- |
+| `Helmet` | _ComponentType&lt;{ htmlAttributes?: Record&lt;string, unknown>; }>_ |             |
+| `type`   | _string_                                                             |             |
 
 ## <ins>AppContext</ins>
 
@@ -61,14 +62,15 @@ _AppContext [source code](https://github.com/ccontrols/component-controls/tree/m
 
 ### properties
 
-| Name         | Type                   | Description |
-| ------------ | ---------------------- | ----------- |
-| `docId`      | _string_               |             |
-| `storyId`    | _string_               |             |
-| `store*`     | _Store_                |             |
-| `linkClass*` | _FC&lt;LinkProps>_     |             |
-| `Helmet`     | _ComponentType&lt;{}>_ |             |
-| `activeTab`  | _string_               |             |
+| Name         | Type                                                                 | Description |
+| ------------ | -------------------------------------------------------------------- | ----------- |
+| `docId`      | _string_                                                             |             |
+| `storyId`    | _string_                                                             |             |
+| `type`       | _string_                                                             |             |
+| `store*`     | _Store_                                                              |             |
+| `linkClass*` | _FC&lt;LinkProps>_                                                   |             |
+| `Helmet`     | _ComponentType&lt;{ htmlAttributes?: Record&lt;string, unknown>; }>_ |             |
+| `activeTab`  | _string_                                                             |             |
 
 ## <ins>AppError</ins>
 
@@ -147,9 +149,9 @@ _DocumentHomePage [source code](https://github.com/ccontrols/component-controls/
 
 ### properties
 
-| Name    | Type     | Description |
-| ------- | -------- | ----------- |
-| `type*` | _string_ |             |
+| Name   | Type     | Description |
+| ------ | -------- | ----------- |
+| `type` | _string_ |             |
 
 ## <ins>DocumentsList</ins>
 
@@ -247,9 +249,10 @@ _SEO [source code](https://github.com/ccontrols/component-controls/tree/master/u
 
 | Name     | Type                                                                                                                                                                                                                                                                           | Description |
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
-| `Helmet` | _ComponentType&lt;{}>_                                                                                                                                                                                                                                                         |             |
+| `Helmet` | _ComponentType&lt;{ htmlAttributes?: Record&lt;string, unknown>; }>_                                                                                                                                                                                                           |             |
 | `doc`    | _{ \[key: string]: any; title: string; type?: string; route?: string; date?: Date; dateModified?: Date; draft?: boolean; tags?: string\[]; keywords?: string\[]; description?: string \| Element; ... 12 more ...; parameters?: any; } & StoryProps&lt;...> & PageLayoutProps_ |             |
 | `config` | _{ renderFn?: FrameworkRenderFn; title?: string; logo?: ReactNode; app?: FC&lt;{}>; description?: string; copyright?: string; language?: string; author?: string; image?: string; ... 10 more ...; analytics?: any; } & StoryProps&lt;...> & Pick&lt;...>_                     |             |
+| `title`  | _string_                                                                                                                                                                                                                                                                       |             |
 
 ## <ins>SideContext</ins>
 
@@ -260,6 +263,7 @@ _SideContext [source code](https://github.com/ccontrols/component-controls/tree/
 | Name      | Type                           | Description |
 | --------- | ------------------------------ | ----------- |
 | `pageRef` | _RefObject&lt;HTMLDivElement>_ |             |
+| `tab`     | _string_                       |             |
 
 ## <ins>Sidebar</ins>
 
@@ -282,10 +286,10 @@ _SidebarsMDXPage [source code](https://github.com/ccontrols/component-controls/t
 
 ### properties
 
-| Name    | Type                                                                                                                                                                                                                                                                           | Description     |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------- |
-| `type*` | _string_                                                                                                                                                                                                                                                                       | document type   |
-| `doc*`  | _{ \[key: string]: any; title: string; type?: string; route?: string; date?: Date; dateModified?: Date; draft?: boolean; tags?: string\[]; keywords?: string\[]; description?: string \| Element; ... 12 more ...; parameters?: any; } & StoryProps&lt;...> & PageLayoutProps_ | document object |
+| Name   | Type                                                                                                                                                                                                                                                                           | Description     |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------- |
+| `type` | _string_                                                                                                                                                                                                                                                                       | document type   |
+| `doc*` | _{ \[key: string]: any; title: string; type?: string; route?: string; date?: Date; dateModified?: Date; draft?: boolean; tags?: string\[]; keywords?: string\[]; description?: string \| Element; ... 12 more ...; parameters?: any; } & StoryProps&lt;...> & PageLayoutProps_ | document object |
 
 ## <ins>SidebarsPage</ins>
 
@@ -293,9 +297,9 @@ _SidebarsPage [source code](https://github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name    | Type     | Description   |
-| ------- | -------- | ------------- |
-| `type*` | _string_ | document type |
+| Name   | Type     | Description   |
+| ------ | -------- | ------------- |
+| `type` | _string_ | document type |
 
 ## <ins>SidebarsStoryPage</ins>
 
@@ -305,9 +309,9 @@ _SidebarsStoryPage [source code](https://github.com/ccontrols/component-controls
 
 ### properties
 
-| Name    | Type                                                                                                                                                                                                                                                                           | Description     |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------- |
-| `type*` | _string_                                                                                                                                                                                                                                                                       | document type   |
-| `doc*`  | _{ \[key: string]: any; title: string; type?: string; route?: string; date?: Date; dateModified?: Date; draft?: boolean; tags?: string\[]; keywords?: string\[]; description?: string \| Element; ... 12 more ...; parameters?: any; } & StoryProps&lt;...> & PageLayoutProps_ | document object |
+| Name   | Type                                                                                                                                                                                                                                                                           | Description     |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------- |
+| `type` | _string_                                                                                                                                                                                                                                                                       | document type   |
+| `doc*` | _{ \[key: string]: any; title: string; type?: string; route?: string; date?: Date; dateModified?: Date; draft?: boolean; tags?: string\[]; keywords?: string\[]; description?: string \| Element; ... 12 more ...; parameters?: any; } & StoryProps&lt;...> & PageLayoutProps_ | document object |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

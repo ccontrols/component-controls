@@ -17,6 +17,7 @@
     -   [<ins>GithubAvatarList</ins>](#insgithubavatarlistins)
     -   [<ins>Header</ins>](#insheaderins)
     -   [<ins>HoverBox</ins>](#inshoverboxins)
+    -   [<ins>InfoTip</ins>](#insinfotipins)
     -   [<ins>Keyboard</ins>](#inskeyboardins)
     -   [<ins>Link</ins>](#inslinkins)
     -   [<ins>LinkContextProvider</ins>](#inslinkcontextproviderins)
@@ -299,6 +300,20 @@ _HoverBox [source code](https://github.com/ccontrols/component-controls/tree/mas
 | `variant` | _string_                                                               |                                                |
 | `css`     | _Interpolation&lt;any>_                                                |                                                |
 | `sx`      | _ThemeUIStyleObject_                                                   |                                                |
+
+## <ins>InfoTip</ins>
+
+Displays an information icon with markdown-enabled popup on hover
+
+_InfoTip [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/InfoTip/InfoTip.tsx)_
+
+### properties
+
+| Name           | Type        | Description                    |
+| -------------- | ----------- | ------------------------------ |
+| `size`         | _number_    | size of the icon in pixels     |
+| `icon`         | _ReactNode_ | custom icon                    |
+| `arrowVisible` | _boolean_   | set to false to hide the arrow |
 
 ## <ins>Keyboard</ins>
 
@@ -637,16 +652,19 @@ _TablePagination [source code](https://github.com/ccontrols/component-controls/t
 
 ### properties
 
-| Name               | Type      | Description                                                     |
-| ------------------ | --------- | --------------------------------------------------------------- |
-| `pageTemplate`     | _string_  | 'Page ${pageIndex} of ${pageLength}' template                   |
-| `pageVisible`      | _boolean_ | ability to hide the page xx of yy block                         |
-| `pageSizeTemplate` | _string_  | string template for the page size selection '${pageSize} rows', |
-| `pageSizeVisible`  | _boolean_ | ability to hide the page size selector                          |
-| `goToPageTemplate` | _string_  | string for the go to page label 'Go to page:'                   |
-| `goToPageVisible`  | _boolean_ | ability to hide the go to page block                            |
-| `pageIndex`        | _number_  | initial page index when pagination is enabled                   |
-| `pageSize`         | _number_  | initial page size when pagination is enabled                    |
+| Name                 | Type      | Description                                                     |
+| -------------------- | --------- | --------------------------------------------------------------- |
+| `data`               | _any\[]_  | array of data records                                           |
+| `totalCountVisible`  | _boolean_ | whether to make totlal countfield visible                       |
+| `totalCountTemplate` | _string_  | total count label text                                          |
+| `pageTemplate`       | _string_  | 'Page ${pageIndex} of ${pageLength}' template                   |
+| `pageVisible`        | _boolean_ | ability to hide the page xx of yy block                         |
+| `pageSizeTemplate`   | _string_  | string template for the page size selection '${pageSize} rows', |
+| `pageSizeVisible`    | _boolean_ | ability to hide the page size selector                          |
+| `goToPageTemplate`   | _string_  | string for the go to page label 'Go to page:'                   |
+| `goToPageVisible`    | _boolean_ | ability to hide the go to page block                            |
+| `pageIndex`          | _number_  | initial page index when pagination is enabled                   |
+| `pageSize`           | _number_  | initial page size when pagination is enabled                    |
 
 ## <ins>Tab</ins>
 
