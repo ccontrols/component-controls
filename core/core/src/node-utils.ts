@@ -22,8 +22,10 @@ export const findUpFile = (
 export const defaultDistFolder = 'dist';
 
 export const getDistName = (options: BuildProps): string => {
-  const dist =
-    options.distFolder || path.join(process.cwd(), defaultDistFolder);
+  const dist = path.join(
+    process.cwd(),
+    options.distFolder || defaultDistFolder,
+  );
   return dist;
 };
 

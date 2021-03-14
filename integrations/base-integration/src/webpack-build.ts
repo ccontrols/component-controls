@@ -57,8 +57,7 @@ const createOptions = (buildOptions?: BuildProps): BuildProps => {
     return acc;
   }, {});
 
-  const distFolder =
-    options.distFolder || path.join(process.cwd(), defaultDistFolder);
+  const distFolder = options.distFolder || defaultDistFolder;
   const staticFolder = path.join(options.distFolder || distFolder, 'static');
   return mergeConfig<BuildProps>(
     mergeConfig(defaultCompileProps, {
@@ -100,7 +99,10 @@ export const webpackConfig = ({
   options?: BuildProps;
 }): any => {
   const buildOptions = createOptions(options);
-  const bundleFilePath = getBundleName(buildOptions);
+  const bundleFilePath = path.resolve(
+    process.cwd(),
+    getBundleName(buildOptions),
+  );
   return {
     ...config,
     resolve: {

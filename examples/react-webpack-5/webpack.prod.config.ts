@@ -8,7 +8,6 @@ const CopyPlugin = require('copy-webpack-plugin');
 import { withComponentControls } from '@component-controls/react-router-integration/webpack-build';
 
 const publicFolder = process.env.PUBLIC_PATH || 'public';
-const publicPath = path.join(__dirname, publicFolder);
 const distFolder = process.env.BUILD_PATH || 'build';
 const distPath = path.join(__dirname, distFolder);
 
@@ -65,5 +64,5 @@ const config: webpack.Configuration = {
 
 export default withComponentControls({
   config,
-  options: { configPath: '.config', distFolder: publicPath },
+  options: { configPath: '.config', distFolder: publicFolder },
 });

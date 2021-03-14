@@ -59,5 +59,5 @@ const config: webpack.Configuration & {
 
 export default withComponentControls({
   config,
-  options: { configPath: '.config', distFolder: publicPath },
+  options: { configPath: '.config', distFolder: publicFolder },
 });

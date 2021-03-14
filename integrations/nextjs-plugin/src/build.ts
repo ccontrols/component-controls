@@ -1,6 +1,10 @@
 import fs from 'fs';
+import path from 'path';
 import { BuildProps, RuleOptions } from '@component-controls/core';
-import { getCSSBundleName } from '@component-controls/core/node-utils';
+import {
+  getCSSBundleName,
+  defaultDistFolder,
+} from '@component-controls/core/node-utils';
 import {
   buildBundle,
   webpackConfig,
@@ -11,7 +15,7 @@ module.exports = ({
   configPath,
   presets,
   staticFolder,
-  distFolder,
+  distFolder = defaultDistFolder,
   webpack,
   ...rest
 }: BuildProps) => () => {
@@ -26,6 +30,7 @@ module.exports = ({
   return {
     /**
      * we need some async function, to make sure the compilation process is completed
+     * headers is the first called from async redirects() amd async rewrites()
      */
     async headers() {
       await buildBundle({
@@ -44,6 +49,9 @@ module.exports = ({
       const loader: any = config.module?.rules?.find(
         (r: any) => (r?.use as any)?.loader === 'next-babel-loader',
       );
+      if (loader) {
+        loader.exclude = [path.join(process.cwd(), distFolder)];
+      }
       if (loader?.options) {
         (loader.options as any).babelPresetPlugins.push(
           '@emotion/babel-plugin',
