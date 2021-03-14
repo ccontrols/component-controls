@@ -3,10 +3,14 @@
 exports[`test draft compile 1`] = `
 Object {
   "buildConfig": Object {
+    "bundleName": "component-controls.js",
     "categories": Array [
       "author",
       "tags",
     ],
+    "configPath": "/Users/atanasster/component-controls/examples/starter/.config",
+    "cssFileName": undefined,
+    "distFolder": "/Users/atanasster/component-controls/core/webpack-compile/public",
     "ignore": Array [
       "readme.md",
       "changelog.md",
@@ -64,6 +68,7 @@ Object {
       },
     },
     "siteRoot": "/root/",
+    "staticFolder": "/Users/atanasster/component-controls/core/webpack-compile/public/static",
     "stories": Array [
       "../src/docs/*.@(mdx|tsx)",
     ],

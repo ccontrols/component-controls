@@ -5,7 +5,7 @@ export * from './webpack-interfaces';
 export const findUpFile = (
   filePath: string,
   fileName: string | string[],
-  levels: number = 10,
+  levels = 10,
 ): string | null => {
   const files = fs.readdirSync(filePath);
   if (levels === 0) {
@@ -19,18 +19,20 @@ export const findUpFile = (
   return findUpFile(path.resolve(filePath, '..'), fileName, levels - 1);
 };
 
-export const defaultDistFolder = 'dist';
+export const defaultDistFolder = 'public';
 
-export const getDistName = (options: BuildProps): string => {
-  const dist = path.join(
-    process.cwd(),
-    options.distFolder || defaultDistFolder,
-  );
-  return dist;
+export const getDistFolder = (options: BuildProps): string => {
+  const distFolder = options.distFolder || defaultDistFolder;
+  return path.isAbsolute(distFolder)
+    ? distFolder
+    : path.join(process.cwd(), distFolder);
 };
 
 export const getBundleName = (options: BuildProps): string =>
-  path.join(getDistName(options), options.bundleName || defBundleName);
+  path.join(getDistFolder(options), options.bundleName || defBundleName);
 
 export const getCSSBundleName = (options: BuildProps): string =>
-  path.join(getDistName(options), options.cssFileName || defCssFileName);
+  options.cssFileName || defCssFileName;
+
+export const getCSSFilePath = (options: BuildProps): string =>
+  path.join(getDistFolder(options), options.cssFileName || defCssFileName);

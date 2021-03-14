@@ -3,10 +3,13 @@
 exports[`test typescript react settings compile 1`] = `
 Object {
   "buildConfig": Object {
+    "bundleName": "component-controls.js",
     "categories": Array [
       "author",
       "tags",
     ],
+    "configPath": "/Users/atanasster/component-controls/core/webpack-compile/tests/fixtures",
+    "distFolder": "/Users/atanasster/component-controls/core/webpack-compile/public",
     "ignore": Array [
       "readme.md",
       "changelog.md",
@@ -59,6 +62,7 @@ Object {
       },
     },
     "siteRoot": "/",
+    "staticFolder": "/Users/atanasster/component-controls/core/webpack-compile/public/static",
     "stories": Array [
       "../../../../ui/components/src/ActionBar/*.stories.(js|jsx|tsx|mdx)",
     ],

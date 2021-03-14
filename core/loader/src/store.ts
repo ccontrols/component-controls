@@ -143,6 +143,7 @@ export const initializeBuildOptions = (
   rootPath: string,
   configPath?: string,
   defaultConfigPath?: string,
+  userBuildConfig?: BuildConfiguration,
 ): void => {
   config = loadConfiguration(
     rootPath,
@@ -150,8 +151,11 @@ export const initializeBuildOptions = (
     undefined,
     defaultConfigPath,
   );
+  const buildConfig: BuildConfiguration = userBuildConfig
+    ? mergeConfig(defaultBuildConfig, userBuildConfig)
+    : defaultBuildConfig;
   if (config && config.config) {
-    config.config = mergeConfig(defaultBuildConfig, config.config);
+    config.config = mergeConfig(buildConfig, config.config);
   }
-  store.buildConfig = config?.config || defaultBuildConfig;
+  store.buildConfig = config?.config || buildConfig;
 };

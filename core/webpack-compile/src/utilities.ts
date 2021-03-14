@@ -65,6 +65,7 @@ const createConfig = (options: BuildProps): webpack.Configuration => {
     staticFolder: propStaticFolder,
     distFolder: propDistFolder,
     bundleName = defBundleName,
+    cssFileName,
   } = options;
   let distFolder =
     propDistFolder || `${path.join(process.cwd(), defaultDistFolder)}`;
@@ -75,6 +76,13 @@ const createConfig = (options: BuildProps): webpack.Configuration => {
   const plugins = [
     new LoaderPlugin({
       config: configPath,
+      buildConfig: {
+        configPath,
+        distFolder,
+        bundleName,
+        staticFolder,
+        cssFileName,
+      },
       escapeOutput: mode === 'development',
     }),
     new BannerPlugin({

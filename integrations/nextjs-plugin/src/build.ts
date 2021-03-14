@@ -1,9 +1,8 @@
 import fs from 'fs';
-import path from 'path';
 import { BuildProps, RuleOptions } from '@component-controls/core';
 import {
-  getCSSBundleName,
-  defaultDistFolder,
+  getCSSFilePath,
+  getDistFolder,
 } from '@component-controls/core/node-utils';
 import {
   buildBundle,
@@ -15,7 +14,7 @@ module.exports = ({
   configPath,
   presets,
   staticFolder,
-  distFolder = defaultDistFolder,
+  distFolder,
   webpack,
   ...rest
 }: BuildProps) => () => {
@@ -36,10 +35,10 @@ module.exports = ({
       await buildBundle({
         options: buildOptions,
         onEndBuild: ({ store }) => {
-          const cssBundle = getCSSBundleName(store.config);
+          const cssBundle = getCSSFilePath(store.config);
           if (fs.existsSync(cssBundle)) {
-            const cssStyles = fs.readFileSync(cssBundle, 'utf8');
-            process.env.NEXT_PUBLIC_CC_CSS = JSON.stringify(cssStyles);
+            const styles = fs.readFileSync(cssBundle, 'utf8');
+            process.env.NEXT_PUBLIC_CC_CSS = JSON.stringify(styles);
           }
         },
       });
@@ -50,7 +49,7 @@ module.exports = ({
         (r: any) => (r?.use as any)?.loader === 'next-babel-loader',
       );
       if (loader) {
-        loader.exclude = [path.join(process.cwd(), distFolder)];
+        loader.exclude = [getDistFolder(buildOptions)];
       }
       if (loader?.options) {
         (loader.options as any).babelPresetPlugins.push(

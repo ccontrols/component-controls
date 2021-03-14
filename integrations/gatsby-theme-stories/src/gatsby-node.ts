@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { BuildProps } from '@component-controls/core';
-import { getCSSBundleName } from '@component-controls/core/node-utils';
+import { getCSSFilePath } from '@component-controls/core/node-utils';
 import {
   buildBundle,
   webpackConfig,
@@ -19,6 +19,7 @@ export const createPagesStatefully = async (
   doneCb: PluginCallback,
 ): Promise<void> => {
   const { createPage, deletePage } = actions;
+
   const createGatsbyPage: CreatePagesArgs['actions']['createPage'] = props => {
     gatsbyStore.getState().pages.forEach((page: Page) => {
       if (page.path === props.path && page.component === props.component) {
@@ -41,10 +42,10 @@ export const createPagesStatefully = async (
           context: route,
         });
       });
-      const cssBundle = getCSSBundleName(store.config);
+      const cssBundle = getCSSFilePath(store.config);
       if (fs.existsSync(cssBundle)) {
-        const cssStyles = fs.readFileSync(cssBundle, 'utf8');
-        process.env.GATSBY_CC_CSS = JSON.stringify(cssStyles);
+        const styles = fs.readFileSync(cssBundle, 'utf8');
+        process.env.GATSBY_CC_CSS = JSON.stringify(styles);
       }
     },
   });

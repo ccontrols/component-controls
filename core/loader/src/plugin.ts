@@ -3,9 +3,11 @@ import * as webpack from 'webpack';
 import { createHash } from 'crypto';
 import jsStringEscape from 'js-string-escape';
 import { getSerializedStore, initializeBuildOptions } from './store';
+import { BuildConfiguration } from '@component-controls/core';
 
 export interface LoaderPluginOptions {
   config?: string;
+  buildConfig?: BuildConfiguration;
   escapeOutput?: boolean;
   defaultConfigPath?: string;
 }
@@ -29,6 +31,7 @@ export class LoaderPlugin {
       compiler.context,
       this.options.config,
       this.options.defaultConfigPath,
+      this.options.buildConfig,
     );
     this.replaceRuntimeModule(compiler);
     compiler.hooks.compilation.tap(LoaderPlugin.pluginName, compilation => {

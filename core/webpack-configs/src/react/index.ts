@@ -5,10 +5,12 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import {
   PresetCallback,
   BuildProps,
-  defCssFileName,
   customLoaderOptions,
 } from '@component-controls/core';
-import { findUpFile } from '@component-controls/core/node-utils';
+import {
+  findUpFile,
+  getCSSBundleName,
+} from '@component-controls/core/node-utils';
 
 /**
  portions of the code taken from react-scripts:
@@ -36,7 +38,7 @@ export const react: PresetCallback = (options: BuildProps) => {
   const result = {
     plugins: [
       new MiniCssExtractPlugin({
-        filename: options.cssFileName || defCssFileName,
+        filename: getCSSBundleName(options),
       }),
     ].filter(Boolean),
     optimization: {
