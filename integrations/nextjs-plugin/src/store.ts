@@ -1,4 +1,5 @@
-export { store } from '@component-controls/base-integration/store';
-// import { Store, getDefaultStore } from '@component-controls/core';
+import { Store } from '@component-controls/core';
+import { loadStore } from '@component-controls/store';
 
-// export const store: Store = getDefaultStore();
+const bundle = require('./component-controls');
+export const store: Store = loadStore(bundle, true);

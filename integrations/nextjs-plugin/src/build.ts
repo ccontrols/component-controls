@@ -1,29 +1,28 @@
+import path from 'path';
 import fs from 'fs';
 import { BuildProps, RuleOptions } from '@component-controls/core';
 import {
   getCSSFilePath,
   getDistFolder,
 } from '@component-controls/core/node-utils';
-import {
-  buildBundle,
-  webpackConfig,
-} from '@component-controls/base-integration/webpack-build';
+import { buildBundle } from '@component-controls/base-integration/webpack-build';
 
 module.exports = ({
   bundleName,
   configPath,
   presets,
   staticFolder,
-  distFolder,
+  distFolder: userDistFolder,
   webpack,
   ...rest
 }: BuildProps) => () => {
+  const distFolder = getDistFolder({ distFolder: userDistFolder });
   const buildOptions: BuildProps = {
     bundleName,
     configPath,
     presets,
-    staticFolder,
-    distFolder,
+    distFolder: path.resolve(__dirname),
+    staticFolder: staticFolder || path.join(distFolder, 'static'),
     webpack,
   };
   return {
@@ -48,15 +47,12 @@ module.exports = ({
       const loader: any = config.module?.rules?.find(
         (r: any) => (r?.use as any)?.loader === 'next-babel-loader',
       );
-      if (loader) {
-        loader.exclude = [getDistFolder(buildOptions)];
-      }
       if (loader?.options) {
         (loader.options as any).babelPresetPlugins.push(
           '@emotion/babel-plugin',
         );
       }
-      return webpackConfig({ config, options: buildOptions });
+      return config;
     },
 
     ...rest,
