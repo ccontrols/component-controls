@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/react-router-integration",
-  "version": "3.4.3",
+  "version": "3.4.4",
   "description": "react-router integration to create stories documentation sites",
   "keywords": [
     "story",
@@ -36,8 +36,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/base-integration": "^3.4.3",
-    "@component-controls/pages": "^3.4.3",
+    "@component-controls/base-integration": "^3.4.4",
+    "@component-controls/pages": "^3.4.4",
     "@component-controls/routes": "^3.4.2",
     "@component-controls/search-algolia": "^3.4.2",
     "@component-controls/search-fusejs": "^3.4.2",
