@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/viewport-plugin",
-  "version": "3.4.2",
+  "version": "3.4.3",
   "description": "Viewport plugin",
   "keywords": [
     "addon",
@@ -36,11 +36,11 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/blocks": "^3.4.2",
-    "@component-controls/components": "^3.4.2"
+    "@component-controls/blocks": "^3.4.3",
+    "@component-controls/components": "^3.4.3"
   },
   "devDependencies": {
-    "@component-controls/jest-snapshots": "^3.4.2",
+    "@component-controls/jest-snapshots": "^3.4.3",
     "@types/react": "^16.9.34",
     "react": "^17.0.1",
     "theme-ui": "^0.6.0-alpha.7",
