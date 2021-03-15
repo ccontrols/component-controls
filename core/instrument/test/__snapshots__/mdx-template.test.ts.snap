@@ -41,7 +41,7 @@ Object {
         "@babel/generator": "^7.12.5",
         "@babel/parser": "^7.12.5",
         "@babel/traverse": "^7.12.5",
-        "@component-controls/core": "^3.4.1",
+        "@component-controls/core": "^3.4.2",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -82,7 +82,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "3.4.1",
+      "version": "3.4.2",
     },
   },
   "stories": Object {
