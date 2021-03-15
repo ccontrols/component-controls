@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import Helmet from 'next/head';
 import { Layout, LayoutProps } from '@component-controls/base-integration';
 import { NextLink } from './NextLink';
+import { store } from '../store';
 
 export const NextLayout: FC<Omit<LayoutProps, 'Helmet' | 'Link'>> = props => {
   let head;
@@ -20,6 +21,7 @@ export const NextLayout: FC<Omit<LayoutProps, 'Helmet' | 'Link'>> = props => {
       {head}
       <Layout
         {...props}
+        store={store}
         Helmet={Helmet as LayoutProps['Helmet']}
         Link={NextLink}
       />

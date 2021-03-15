@@ -1,21 +1,19 @@
 import React, { FC, ReactElement, useMemo } from 'react';
 import { Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import {
-  store,
-  Layout,
-  LayoutProps,
-} from '@component-controls/base-integration';
+import { Layout, LayoutProps } from '@component-controls/base-integration';
+import { store } from '@component-controls/base-integration/store';
 
 import { getRoutes } from '@component-controls/routes';
 import { ReactRouterLink } from './components/ReactRouterLink';
 
 export const ControlsPage = (
-  props: Omit<LayoutProps, 'Helmet' | 'Link'>,
+  props: Omit<LayoutProps, 'Helmet' | 'Link' | 'store'>,
 ): FC => {
   const DocHome: FC = () => (
     <Layout
       {...props}
+      store={store}
       Helmet={Helmet as LayoutProps['Helmet']}
       Link={ReactRouterLink}
     />

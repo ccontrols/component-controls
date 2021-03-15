@@ -6,9 +6,10 @@ import {
   DocPage,
 } from '@component-controls/app';
 import { RoutePath } from '@component-controls/routes';
-import { store } from '../store';
+import { Store } from '@component-controls/core';
 
 export type LayoutProps = Omit<RoutePath, 'path'> & {
+  store: Store;
   Link: AppContextProps['linkClass'];
   Helmet: AppContextProps['Helmet'];
 };
@@ -22,6 +23,7 @@ export const Layout: FC<LayoutProps> = ({
   docIndex,
   Link,
   Helmet,
+  store,
   children,
 }) => (
   <AppContext
