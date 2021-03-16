@@ -62,7 +62,6 @@ export const extractCSFStories = (
         const doc: Document = {
           ...attributes,
           title,
-          components: {},
         };
         if (attrComponents.length > 0) {
           doc.component = attrComponents[0];
