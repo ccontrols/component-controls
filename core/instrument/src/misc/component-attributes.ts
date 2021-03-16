@@ -20,6 +20,8 @@ export const componentsFromParams = (
   const { component } = element;
   const name = componentName(component as string);
   if (name) {
+    // transform to string
+    element.component = name;
     result.push(name);
   }
   const { of: componentShorthand } = element;
@@ -32,8 +34,15 @@ export const componentsFromParams = (
     result.push(subcomponents);
   }
   if (typeof subcomponents === 'object') {
-    Object.keys(subcomponents).forEach(key =>
-      result.push((subcomponents as any)[key]),
+    element.subcomponents = Object.keys(subcomponents).reduce(
+      (acc, key) => ({
+        ...acc,
+        [key]: componentName(subcomponents[key] as string),
+      }),
+      {},
+    );
+    Object.keys(element.subcomponents).forEach(key =>
+      result.push((element.subcomponents as any)[key]),
     );
   }
   return result;
