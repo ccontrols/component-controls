@@ -1,0 +1,93 @@
+---
+title: Introducing Component Commits
+type: blog
+date: 2021-03-16
+author: martin-stoyanov
+route: /blogs/component-commits
+description: Introducing component stats and Git commit history to your stories
+tags:
+  - components
+  - stories
+image: /static/component-commits.jpg
+---
+
+import {
+  Playground,
+  ComponentCommits,
+  ComponentStats,
+  store,
+} from '@component-controls/blocks';
+import { GitCommitIcon } from '@primer/octicons-react';
+import componentCommitsImg from './media/component-commits.jpg';
+
+# Introducing Commits and Stats
+
+There are many advantages that come from using [stories](/tutorial/esmodules-stories), or live examples, in your
+component development process. Some of them are:
+
+- You're forced to write components in isolation (considered
+  good practice and is necessary for your components to be displayed as stories)
+- You're given a platform to display your components in all their different states.
+  This makes sharing your components with teammates or designers easier.
+- Additional data is automaticaly extracted from your components and displayed in the story,
+  creating a cohesive story of what your component does, its status, and its development history.
+
+One of the ways component-controls differentiates itself from other story-creating libraries is
+in the amount of data we extract from a component, thus creating a more detailed story of
+it.<br /><br />
+
+---
+
+<br />
+<br />
+
+Our most recent update adds two additional sections to the story page, each containing additional
+data about the component:
+
+1. First, a small section at the top of the story displays some "stats" about the component such
+   as the number of source lines, comment coverage, and number of TODOs.
+2. Second, we've added a `Commits` table, showing the [git](https://git-scm.com) commit history of the component.
+
+[Here](/api/esm-starter--overview) is an example story, where you can see now these two new sections.
+Additionally, we've added examples of these two sections below.
+
+_Keep in mind these stats are specific to the component file, NOT the story file where you document that component._
+
+## Component Stats
+
+<Playground openTab="none">
+  <ComponentStats component={store.components['Control']} />
+</Playground>
+
+This stats section is found on the top right of a story. It shows:
+
+1. The number of source code lines (i.e. non-comment/empty lines) in the component's file
+1. The comment coverage for that file (calculated as **# comment lines / # code lines**)
+1. The number of "TODOs" in the file, if any
+
+While the number of source-lines and comment coverage are nice to know, having the number of TODOs
+gives developers a deeper understanding of their components' statuses.
+
+## Component Commits
+
+<ComponentCommits id="esm-starter--overview" title="Commits" />
+
+This `Commits` section contains a table where:
+
+- Each row is a git commit
+- The columns are the commit date, commit author, and the commit message
+
+One helpful thing about knowing those who's worked on a component, when they worked on it, and
+what they did, is that the time it takes for you to find who you should ask your component-related
+questions to is reduced.
+
+By the way, the commit icon, <GitCommitIcon />, at the end of each commit message links
+to that exact commit on Github. Try clicking one of the <GitCommitIcon />'s in the table above to
+view that commit on Github.<br /><br />
+
+---
+
+<br />
+<br />
+
+Let us know what other component data you'd like to see on its story page!
