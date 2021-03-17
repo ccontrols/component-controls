@@ -5,6 +5,9 @@ interface StoryAttribute {
   value: any;
 }
 
+export const getAttribueValue = (value: any): string =>
+  value instanceof String ? value.toString() : value;
+
 const nodeToValue = (node: any): any => {
   if (node) {
     switch (node.type) {
@@ -76,8 +79,8 @@ export const extractAttributes = (
             const name: string = propNode.key
               ? propNode.key.name ?? propNode.key.value
               : propNode.property?.name || propNode.name;
-
-            return { ...acc, [name]: attribute.value };
+            const value = getAttribueValue(attribute.value);
+            return { ...acc, [name]: value };
           } else {
             return acc;
           }
@@ -88,7 +91,7 @@ export const extractAttributes = (
     }
     const attribute = nodeToAttribute(node);
     if (attribute) {
-      return attribute.value;
+      return getAttribueValue(attribute.value);
     }
   }
   return undefined;
@@ -100,9 +103,10 @@ export const collectAttributes = (node: any): Record<string, string> => {
       if (!attribute.value) {
         //console.log(attribute);
       } else if (attribute.value.type === 'StringLiteral') {
+        const value = getAttribueValue(attribute.value.value);
         return {
           ...acc,
-          [attribute.name.name]: attribute.value.value,
+          [attribute.name.name]: value,
         };
       } else if (attribute.value.type === 'JSXExpressionContainer') {
         return {
