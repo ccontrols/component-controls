@@ -32,7 +32,7 @@ export const addArgumentUsage = (
   story: Story,
   args: StoryArguments,
   node: any,
-  shorthand: boolean,
+  shorthand?: boolean,
 ): ArgUsageLocation | undefined => {
   const param = findArguments(args, node.name);
 
@@ -48,7 +48,10 @@ export const addArgumentUsage = (
         p.loc.end.line === loc.end.line &&
         p.loc.end.column === loc.end.column,
     );
-    const usage: ArgUsageLocation = { loc, shorthand };
+    const usage: ArgUsageLocation = { loc };
+    if (shorthand) {
+      usage.shorthand = shorthand;
+    }
     if (!existing) {
       param.usage.push(usage);
       return usage;
