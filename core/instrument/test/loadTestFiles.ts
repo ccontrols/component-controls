@@ -1,8 +1,11 @@
 import * as path from 'path';
 import * as fs from 'fs';
 import jsStringEscape from 'js-string-escape';
-import { InstrumentOptions, parseStories } from '../src/index';
-import { getComponentProps } from '../src/misc/props-info';
+import {
+  InstrumentOptions,
+  parseStories,
+  ParseStoriesReturnType,
+} from '../src/index';
 
 expect.addSnapshotSerializer({
   test: val => typeof val === 'object' && val instanceof String,
@@ -49,26 +52,18 @@ export const loadStoriesTests = (
   );
 };
 
-export const extractComponentProps = (
-  componentName: string,
+export type TestCallback = (parsed: ParseStoriesReturnType) => void;
+export const fixtureToTest = (
+  filePaths: string[],
   fileName: string,
+  callback: TestCallback,
+  options?: InstrumentOptions,
 ): void => {
-  it(componentName, async () => {
-    expect(
-      await getComponentProps(
-        [
-          {
-            name: '@component-controls/react-docgen-info',
-            test: /\.(js|jsx)$/,
-          },
-          {
-            name: '@component-controls/react-docgen-typescript-info',
-            test: /\.(ts|tsx)$/,
-          },
-        ],
-        fileName,
-        componentName,
-      ),
-    ).toMatchSnapshot();
+  const folderName = path.join(__dirname, 'fixtures', ...filePaths);
+  const filePathName = path.join(folderName, fileName);
+  const content = fs.readFileSync(filePathName, 'utf8');
+  it(fileName, async () => {
+    const parsed = await parseStories(content, filePathName, options);
+    await callback(parsed);
   });
 };

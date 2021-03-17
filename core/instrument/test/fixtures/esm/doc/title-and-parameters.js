@@ -1,5 +1,5 @@
 export default {
-  title: 'Storybook/Blocks/ControlsTable',
+  title: 'Docs/Blocks/ControlsTable',
   component: ControlsTable,
   smartControls: {
     smart: false,

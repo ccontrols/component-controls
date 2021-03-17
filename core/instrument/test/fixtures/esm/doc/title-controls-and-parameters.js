@@ -1,9 +1,9 @@
 export default {
-  title: 'Storybook/Kind',
+  title: 'Docs/Kind',
   component: ControlsTable,
   controls: {
     name: {
-      type: ControlTypes.TEXT,
+      type: 'text',
       label: 'Name',
       value: 'Mark',
       order: 9999,

@@ -4,7 +4,7 @@ myStory.story = {
   name: 'Custom story name',
   controls: {
     name: {
-      type: ControlTypes.TEXT,
+      type: 'text',
       label: 'Name',
       value: 'Mark',
       order: 9999,
