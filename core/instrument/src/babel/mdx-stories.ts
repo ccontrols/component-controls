@@ -76,12 +76,12 @@ export const extractMDXStories: (
     packages: {},
   };
 
-  if (props) {
+  const { transformMDX } = _options.mdx;
+  if (transformMDX && props) {
     store.exports.default = {
       story: doc,
     };
   }
-  const { transformMDX } = _options.mdx;
   traverse(ast as any, {
     JSXElement: (path: any) => {
       const node = path.node.openingElement;
