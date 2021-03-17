@@ -14,44 +14,6 @@ expect.addSnapshotSerializer({
   },
 });
 
-export type LoadTestCallbackFn = (fileName: string) => any;
-
-export const loadTestFiles = (
-  callback: LoadTestCallbackFn,
-  filePaths: string[],
-  include?: string[],
-): void => {
-  const folderName = path.join(__dirname, 'fixtures', ...filePaths);
-  const fileNames = fs.readdirSync(folderName);
-  //.filter(name => name === 'format-source.mdx');
-
-  fileNames
-    .filter(
-      fName => !include || include.length === 0 || include.indexOf(fName) > -1,
-    )
-    .forEach(file => {
-      const fileName = path.join(folderName, file);
-      it(file, async () => {
-        expect(await callback(fileName)).toMatchSnapshot();
-      });
-    });
-};
-
-export const loadStoriesTests = (
-  options: InstrumentOptions,
-  filePaths: string[],
-  include?: string[],
-): void => {
-  loadTestFiles(
-    async fileName => {
-      const content = fs.readFileSync(fileName, 'utf8');
-      return await parseStories(content, fileName, options);
-    },
-    filePaths,
-    include,
-  );
-};
-
 export type TestCallback = (parsed: ParseStoriesReturnType) => void;
 export const fixtureToTest = (
   filePaths: string[],
