@@ -16,7 +16,7 @@ import { readSourceFile } from '../misc/source-options';
 
 import { LoadingDocStore, InstrumentOptions } from '../types';
 
-interface ComponentParseData {
+export interface ComponentParseData {
   component?: Component;
   componentPackage?: PackageInfo;
 }
