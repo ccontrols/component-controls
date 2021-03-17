@@ -1,4 +1,4 @@
-import { Story, Document, Stories } from '@component-controls/core';
+import { Document, Stories } from '@component-controls/core';
 import { File } from '@babel/types';
 import traverse, { NodePath } from '@babel/traverse';
 import { extractAttributes } from './extract-attributes';
@@ -29,7 +29,6 @@ export const extractCSFStories = (
   };
   const extractFunction = (path: NodePath, declaration: any, name: string) =>
     extractFunctionTemplate(
-      ast,
       _options,
       { source, filePath },
       path,
@@ -78,12 +77,15 @@ export const extractCSFStories = (
     },
     AssignmentExpression: (path: any) => {
       const node = path.node;
-      const storyExport = node.left?.object?.name;
       if (
         node.left.type === 'MemberExpression' &&
-        node.left.property.type === 'Identifier' &&
-        store.stories[storyExport]
+        node.left.property.type === 'Identifier'
       ) {
+        const storyExport = node.left?.object?.name;
+        let story = store.stories[storyExport] || {
+          name: storyExport,
+          id: storyExport,
+        };
         const extractedValue = extractAttributes(node.right);
         const extractedProps =
           node.left.property.name === 'story'
@@ -92,21 +94,23 @@ export const extractCSFStories = (
         const { name, storyName, ...attributes } = extractedProps;
 
         const nameAttr = storyName || name;
+        const attrComponents = componentsFromParams(attributes);
+        components = attrComponents.reduce(
+          (acc, componentName) => ({ ...acc, [componentName]: undefined }),
+          components,
+        );
+        story = {
+          ...story,
+          ...attributes,
+        };
+        if (nameAttr) {
+          story.name = nameAttr;
+        }
         if (store.stories[storyExport]) {
-          const attrComponents = componentsFromParams(attributes);
-          components = attrComponents.reduce(
-            (acc, componentName) => ({ ...acc, [componentName]: undefined }),
-            components,
-          );
-          const story: Story = {
-            ...attributes,
-            ...store.stories[storyExport],
-          };
-          if (nameAttr) {
-            story.name = nameAttr;
-          }
           store.stories[storyExport] = story;
           globals[storyExport] = story;
+        } else {
+          locals[storyExport] = story;
         }
       }
     },
@@ -167,6 +171,20 @@ export const extractCSFStories = (
             }
           }
         }
+      } else if (Array.isArray(path.node.specifiers)) {
+        path.node.specifiers.forEach((item: any) => {
+          if (
+            item.type === 'ExportSpecifier' &&
+            item.exported?.type === 'Identifier'
+          ) {
+            const localName = item.local.name;
+            const exportedName = item.exported.name;
+            const story = locals[localName];
+            if (story) {
+              store.stories[exportedName] = story;
+            }
+          }
+        });
       }
     },
   });

@@ -7,7 +7,6 @@ import { sourceLocation } from '../misc/source-location';
 import { InstrumentOptions } from '../types';
 
 export const extractFunction = (
-  ast: File,
   _options: InstrumentOptions,
   { source, filePath }: { source: string; filePath: string },
   path: NodePath,
@@ -96,7 +95,6 @@ export const extractVarFunction = (
       const name = declaration.id.name;
 
       const story = extractFunction(
-        ast,
         _options,
         { source, filePath },
         path,
