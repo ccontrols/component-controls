@@ -1,7 +1,7 @@
 {
   "name": "@component-controls/jest-snapshots",
   "version": "3.4.5",
-  "description": "Viewport plugin",
+  "description": "Component controls automatic jest snapshot testing",
   "keywords": [
     "addon",
     "viewport"
