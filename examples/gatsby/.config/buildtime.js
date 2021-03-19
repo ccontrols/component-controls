@@ -66,6 +66,7 @@ module.exports = {
     emptySearchDocuments: [
       'Getting started/Site generators/Gatsby',
       'Getting started/Site generators/Nextjs',
+      'Getting started/Site generators/Webpack',
       'Getting started/Documentation site',
       'Writing Documentation/ESM Stories',
       'Getting started/UI customization',
