@@ -3,8 +3,10 @@
   "version": "3.4.5",
   "description": "Component controls automatic jest snapshot testing",
   "keywords": [
-    "addon",
-    "viewport"
+    "jest",
+    "enzyme",
+    "react-testing-library",
+    "snapshot-testing"
   ],
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
