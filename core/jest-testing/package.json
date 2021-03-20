@@ -1,7 +1,7 @@
 {
-  "name": "@component-controls/jest-collector",
+  "name": "@component-controls/jest-testing",
   "version": "3.4.5",
-  "description": "Given a file, gets the associated jest tests and their results",
+  "description": "Given a test file, extracts the tests, test results and coverage data",
   "keywords": [
     "jest",
     "testing"
@@ -30,13 +30,12 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ccontrols/component-controls.git",
-    "directory": "core/jest-collector"
+    "directory": "core/jest-testing"
   },
   "license": "MIT",
   "dependencies": {
     "jest-cli": "^26.4.2",
     "babel-jest": "^26.4.4",
-    "istanbul-lib-coverage": "^3.0.0",
     "ts-jest": "^26.4.4"
   },
   "devDependencies": {
