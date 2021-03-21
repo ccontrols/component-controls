@@ -3,7 +3,7 @@ import path from 'path';
 import { runCLI } from 'jest';
 import { Config } from '@jest/types';
 import { AssertionResult, AggregatedResult } from '@jest/test-result';
-import { FileCoverage, CoverageSummary } from 'istanbul-lib-coverage';
+import { FileCoverage, CoverageSummaryData } from 'istanbul-lib-coverage';
 
 export const getUniqueFolder = (folder: string): string => {
   let fnId = 1;
@@ -23,21 +23,22 @@ export interface JestResults {
   /**
    * coverage summary data, by file
    */
-  coverage: Record<string, CoverageSummary>;
+  coverage: Record<string, CoverageSummaryData>;
 }
 export const run = async (
   testFilePath: string,
-  jestConfig?: Partial<Config.Argv>,
+  jestConfig: Partial<Config.Argv> = {},
 ): Promise<JestResults | undefined> => {
   const testFolder = path.dirname(testFilePath);
   const testFile = path.basename(testFilePath);
   const configFolder = getUniqueFolder(testFolder);
   const configFile = path.resolve(configFolder, 'jest.config.js');
+  const { rootDir = '..', ...config } = jestConfig;
   fs.writeFileSync(
     configFile,
     `module.exports = ${JSON.stringify(
       {
-        rootDir: jestConfig?.rootDir || '..',
+        rootDir,
         preset: 'ts-jest',
         transform: {
           '^.+\\.(ts|tsx)?$': 'ts-jest',
@@ -69,7 +70,7 @@ export const run = async (
         coverage: true,
         coverageReporters: ['none'],
         watchman: false,
-        ...jestConfig,
+        ...config,
       } as Config.Argv,
       [configFolder],
     );
@@ -91,7 +92,14 @@ export const run = async (
   if (cov) {
     Object.keys(cov.data).forEach(file => {
       const fc = cov.data[file] as FileCoverage;
-      result.coverage[path.relative(testFolder, file)] = fc.toSummary();
+      const summary = fc.toSummary().toJSON();
+      const totals = Object.values(summary).reduce(
+        (total, value) => total + value.covered + value.skipped,
+        0,
+      );
+      if (totals) {
+        result.coverage[path.relative(testFolder, file)] = summary;
+      }
     });
   }
 

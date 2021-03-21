@@ -24,6 +24,33 @@ describe('react link related tests', () => {
     const result = results.find(
       ({ testFileName }) => testFileName === '__tests__/some_more_tests.js',
     );
-    expect(result?.coverage).toMatchObject({});
+    expect(result?.coverage).toMatchObject({
+      '../Link.react.js': {
+        lines: {
+          total: 8,
+          covered: 6,
+          skipped: 0,
+          pct: 75,
+        },
+        functions: {
+          total: 4,
+          covered: 2,
+          skipped: 0,
+          pct: 50,
+        },
+        statements: {
+          total: 8,
+          covered: 6,
+          skipped: 0,
+          pct: 75,
+        },
+        branches: {
+          total: 2,
+          covered: 1,
+          skipped: 0,
+          pct: 50,
+        },
+      },
+    });
   });
 });
