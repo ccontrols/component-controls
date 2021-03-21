@@ -56,7 +56,7 @@
     "testEnvironment": "node",
     "preset": "ts-jest",
     "roots": [
-      "./test"
+      "./test/tests"
     ]
   },
   "gitHead": "e30d62f101e104711a16261fce04785d58cac1eb"

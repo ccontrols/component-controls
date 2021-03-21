@@ -1,11 +1,13 @@
 import path from 'path';
-import { run } from '../src';
+import { run } from '../../src';
 
 type Await<T> = T extends PromiseLike<infer U> ? U : T;
 
 let results: Await<ReturnType<typeof run>>;
 beforeAll(async () => {
-  results = await run(path.resolve(__dirname, '../.fixtures/sum.test.js'));
+  results = await run(
+    path.resolve(__dirname, '../fixtures/simple/sum.test.js'),
+  );
 }, 50000);
 
 describe('small test', () => {
