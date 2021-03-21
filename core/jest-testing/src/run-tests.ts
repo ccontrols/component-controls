@@ -37,7 +37,7 @@ export const run = async (
     configFile,
     `module.exports = ${JSON.stringify(
       {
-        rootDir: '..',
+        rootDir: jestConfig?.rootDir || '..',
         preset: 'ts-jest',
         transform: {
           '^.+\\.(ts|tsx)?$': 'ts-jest',
@@ -46,7 +46,7 @@ export const run = async (
         collectCoverageFrom: [
           '**/*.{js,jsx,tsx,ts}',
           '!**/jest.config.js',
-          '!**/*.{test,spec}.{js,ts}',
+          '!**/*.{test,spec}.{js,jsx,tsx,ts}',
         ],
       },
       null,
@@ -62,7 +62,7 @@ export const run = async (
   try {
     runResults = await runCLI(
       {
-        $0: testFile,
+        testRegex: testFile,
         silent: true,
         verbose: false,
         reporters: [],
@@ -81,6 +81,9 @@ export const run = async (
     fs.rmdirSync(configFolder, { recursive: true });
   }
   const cov = runResults.results.coverageMap;
+  if (runResults.results.testResults.length !== 1) {
+    throw `More than one test results returned ${runResults.results.testResults.length}`;
+  }
   const result: JestResults = {
     testResults: runResults.results.testResults[0].testResults,
     coverage: {},
