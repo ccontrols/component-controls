@@ -35,6 +35,7 @@
     "@component-controls/core": "^3.4.2"
   },
   "devDependencies": {
+    "@component-controls/render": "^3.4.2",
     "@component-controls/ts-markdown-docs": "^2.6.0",
     "@types/jest": "^26.0.10",
     "@types/react": "^16.9.34",

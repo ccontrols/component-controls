@@ -103,7 +103,7 @@ export interface PackageInfo {
  * @param context context parameters passed as second parameter
  */
 export type StoryRenderFn = (
-  controlValues: { [key: string]: any },
+  controlValues?: { [key: string]: any },
   context?: any,
 ) => Promise<() => any> | any;
 

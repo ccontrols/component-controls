@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rtl render small component 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="test-component"
+    style="background-color: red;"
+  >
+    jazmine
+  </div>
+</DocumentFragment>
+`;

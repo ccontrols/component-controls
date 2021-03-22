@@ -1,10 +1,11 @@
 import { render as rtlRender, RenderResult } from '@testing-library/react';
-import { RendererFn, RendererFnResult } from '../types';
+import '@testing-library/jest-dom';
+import { RendererFn } from '../types';
 
-export const render: RendererFn = async (
+export const render: RendererFn<RenderResult> = async (
   { story, doc, config },
   options?: any,
-): Promise<(RendererFnResult & RenderResult) | undefined> => {
+) => {
   const renderFn = config.renderFn;
   if (renderFn) {
     const rendered = renderFn(story, doc, config);

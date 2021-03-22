@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-const { act } = require('react-dom/test-utils');
 const { loadStore } = require('@component-controls/store');
 const { getBundleName } = require('@component-controls/webpack-compile');
 const { cliArgs } = require('@component-controls/webpack-compile/cli');
@@ -44,11 +43,9 @@ Object.keys(store.docs).forEach(docId => {
 
       stories.forEach(storyId => {
         const story = store.stories[storyId];
-        act(() => {
-          it(story.name, async () => {
-            const { toJson } = (await renderer({ story, doc, config })) || {};
-            expect(toJson ? toJson() : undefined).toMatchSnapshot();
-          });
+        it(story.name, async () => {
+          const { toJson } = (await renderer({ story, doc, config })) || {};
+          expect(toJson ? toJson() : undefined).toMatchSnapshot();
         });
       });
     });

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rtr render small component 1`] = `
+<div
+  data-testid="test-component"
+  style={
+    Object {
+      "backgroundColor": "red",
+    }
+  }
+>
+  jazmine
+</div>
+`;

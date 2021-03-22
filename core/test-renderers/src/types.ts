@@ -12,7 +12,7 @@ export type RendererFnResult = {
   toJson: () => Json | null;
 };
 
-export type RendererFn = (
+export type RendererFn<T extends unknown> = (
   props: { story: Story; doc: Document; config: RunConfiguration },
   options?: any,
-) => Promise<RendererFnResult | undefined>;
+) => Promise<(RendererFnResult & T) | undefined>;
