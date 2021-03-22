@@ -64,6 +64,7 @@ export const run = async (
     runResults = await runCLI(
       {
         testRegex: testFile,
+        testPathIgnorePatterns: ['/node_modules/', '/__snapshots__/'],
         silent: true,
         verbose: false,
         reporters: [],
