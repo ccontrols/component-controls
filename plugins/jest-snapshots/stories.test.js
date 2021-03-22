@@ -5,7 +5,7 @@ const { getBundleName } = require('@component-controls/webpack-compile');
 const { cliArgs } = require('@component-controls/webpack-compile/cli');
 
 const { jestCliArgs } = require('@component-controls/jest-snapshots/args');
-const { renderers } = require('@component-controls/jest-snapshots/renderers');
+const { renderers } = require('@component-controls/test-renderers');
 
 const bundle = getBundleName();
 const store = loadStore(require(bundle));
@@ -14,7 +14,7 @@ const args = cliArgs(jestCliArgs);
 const rendererName = args.parse().renderer;
 
 const renderer = renderers[rendererName];
-
+const config = store.config;
 Object.keys(store.docs).forEach(docId => {
   const doc = store.docs[docId];
 
@@ -46,8 +46,8 @@ Object.keys(store.docs).forEach(docId => {
         const story = store.stories[storyId];
         act(() => {
           it(story.name, async () => {
-            const tree = await renderer(storyId, store);
-            expect(tree).toMatchSnapshot();
+            const { toJson } = (await renderer({ story, doc, config })) || {};
+            expect(toJson ? toJson() : undefined).toMatchSnapshot();
           });
         });
       });

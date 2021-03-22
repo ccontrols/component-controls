@@ -1,14 +1,8 @@
 import { loadStore } from '@component-controls/store';
+import { RendererFn } from '@component-controls/test-renderers';
 import { getBundleName } from '@component-controls/webpack-compile';
-import { Store } from '@component-controls/core';
 
 export type RendererFnResult = Promise<any> | any;
-
-export type RendererFn = (
-  storyId: string,
-  store: Store,
-  options?: any,
-) => Promise<RendererFnResult>;
 
 export const runJestSnapshots = (
   renderer: RendererFn,
@@ -16,6 +10,7 @@ export const runJestSnapshots = (
 ): void => {
   const bundle = bundleName || getBundleName();
   const store = loadStore(require(bundle));
+  const config = store.config;
   Object.keys(store.docs).forEach(docId => {
     const doc = store.docs[docId];
 
@@ -25,8 +20,8 @@ export const runJestSnapshots = (
         stories.forEach(storyId => {
           const story = store.stories[storyId];
           it(story.name, async () => {
-            const tree = await renderer(storyId, store);
-            expect(tree).toMatchSnapshot();
+            const { toJson } = (await renderer({ story, doc, config })) || {};
+            expect(toJson ? toJson() : undefined).toMatchSnapshot();
           });
         });
       });

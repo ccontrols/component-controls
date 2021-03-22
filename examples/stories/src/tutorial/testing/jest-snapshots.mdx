@@ -82,7 +82,7 @@ Using this approach, you will create a custom test file and use directly jest to
 
 ```js:title=stories.test.js
 const path = require('path');
-const { renderers } = require('@component-controls/jest-snapshots/renderers');
+const { renderers } = require('@component-controls/test-renderers');
 const { runJestSnapshots } = require('@component-controls/jest-snapshots');
 
 runJestSnapshots(
@@ -105,7 +105,7 @@ A full list of the [compiler cli parameters](/tutorial/reference/cli#parameters)
 If the output folder is not specified, the bundle is located in the `public` folder
 
 ```js:title=stories.test.js
-const { renderers } = require('@component-controls/jest-snapshots/renderers');
+const { renderers } = require('@component-controls/test-renderers');
 const { runJestSnapshots } = require('@component-controls/jest-snapshots');
 
 runJestSnapshots(renderers.enzyme);

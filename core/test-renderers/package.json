@@ -1,24 +1,21 @@
 {
-  "name": "@component-controls/jest-snapshots",
+  "name": "@component-controls/test-renderers",
   "version": "3.4.5",
-  "description": "Component controls automatic jest snapshot testing",
+  "description": "React test renderers: rtl, rtr and enzyme",
   "keywords": [
-    "jest",
-    "enzyme",
+    "react",
     "react-testing-library",
-    "snapshot-testing"
+    "react-test-renderer",
+    "enzyme",
+    "testing"
   ],
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist/",
-    "bin/",
     "package.json",
-    "args.js",
-    "args.d.ts",
-    "README.md",
-    "stories.test.js"
+    "README.md"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
@@ -27,7 +24,7 @@
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "prepare": "yarn build",
-    "test": "ccc -c test/.config && yarn jest && rm -rf public"
+    "test": "yarn jest --passWithNoTests"
   },
   "homepage": "https://github.com/ccontrols/component-controls",
   "bugs": {
@@ -36,23 +33,24 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ccontrols/component-controls.git",
-    "directory": "plugins/jest-snapshots"
+    "directory": "core/test-renderers"
   },
   "license": "MIT",
-  "bin": {
-    "cc-jest": "./bin/index.js"
-  },
   "dependencies": {
-    "@component-controls/test-renderers": "^3.4.5",
-    "@component-controls/store": "^3.4.5",
-    "@component-controls/webpack-compile": "^3.4.5",
-    "@component-controls/webpack-configs": "^3.4.5",
-    "jest-cli": "^26.4.2",
-    "ts-jest": "^26.4.4"
+    "@component-controls/core": "^3.4.2",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^10.4.9",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.3.1",
+    "enzyme": "^3.11.0",
+    "enzyme-to-json": "^3.5.0",
+    "rc-util": "^5.0.7",
+    "react-test-renderer": "^16.13.1"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.10",
+    "@types/enzyme": "^3.10.5",
     "@types/react-dom": "^16.9.8",
+    "@types/react-test-renderer": "^16.9.3",
+    "@types/testing-library__jest-dom": "^5.9.2",
     "jest": "^26.4.2",
     "react-dom": "^16.13.1",
     "typescript": "^4.0.5"
@@ -64,6 +62,7 @@
     "Atanas Stoyanov"
   ],
   "jest": {
+    "testEnvironment": "node",
     "preset": "ts-jest",
     "roots": [
       "./test"
