@@ -145,7 +145,7 @@ export const VariantButton: FC<VariantButtonProps> = ({
           <Icon size={iconSize} />
         </div>
       )}
-      <div role="label" style={{ padding: '0 10px' }}>
+      <div data-testid="label" style={{ padding: '0 10px' }}>
         {text}
       </div>
     </button>

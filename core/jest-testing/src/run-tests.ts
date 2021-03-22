@@ -67,7 +67,7 @@ export const run = async (
         testPathIgnorePatterns: ['/node_modules/', '/__snapshots__/'],
         silent: true,
         verbose: false,
-        reporters: [],
+        // reporters: [],
         coverage: true,
         coverageReporters: ['none'],
         watchman: false,
