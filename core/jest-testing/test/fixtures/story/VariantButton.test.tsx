@@ -1,12 +1,12 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { primary as Primary, disabled as Disabled } from './VariantButton.docs';
 
 describe('VariantButton', () => {
   test('primary', async () => {
-    const { getByText, asFragment, getByTestId } = render(<Primary />);
-    fireEvent.click(getByText('Primary'));
+    const { asFragment } = render(<Primary />);
+    fireEvent.click(screen.getByText('Primary'));
     expect(asFragment()).toMatchInlineSnapshot(`
 <DocumentFragment>
   <button
@@ -21,13 +21,13 @@ describe('VariantButton', () => {
   </button>
 </DocumentFragment>
 `);
-    expect(getByTestId('label')).toHaveTextContent('Primary');
+    expect(screen.getByTestId('label')).toHaveTextContent('Primary');
   });
 
   test('disabled', async () => {
-    const { getByRole, getByTestId } = render(<Disabled />);
-    expect(getByTestId('label')).toHaveTextContent('Disabled');
-    expect(getByRole('button')).toHaveStyle('background-color: #E0E0E0');
-    expect(getByRole('button')).toHaveAttribute('disabled');
+    render(<Disabled />);
+    expect(screen.getByTestId('label')).toHaveTextContent('Disabled');
+    expect(screen.getByRole('button')).toHaveStyle('background-color: #E0E0E0');
+    expect(screen.getByRole('button')).toHaveAttribute('disabled');
   });
 });
