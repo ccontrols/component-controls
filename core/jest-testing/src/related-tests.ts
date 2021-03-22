@@ -22,10 +22,14 @@ export const runRelatedTests = async (
     `${fileDir}${path.sep}${name}*.@(test|spec).@(j|t)s?(x)`,
     `${fileDir}${path.sep}__tests__${path.sep}**${path.sep}*.@(j|t)s?(x)`,
   ];
-  const testFiles = globs.reduce(
-    (acc: string[], match) => [...acc, ...globSync(match, { nocase: true })],
-    [],
-  );
+  const testFiles = globs.reduce((acc: string[], match) => {
+    const files = globSync(match, { nocase: true });
+    const newFiles = files.filter(file => {
+      return path.basename(file) !== 'jest.config.js';
+    });
+    return [...acc, ...newFiles];
+  }, []);
+
   const results: RelatedTests = await Promise.all(
     testFiles.map(async testFile => {
       const rootDir = path.relative(
