@@ -15,4 +15,4 @@ export type RendererFnResult = {
 export type RendererFn<T extends unknown = unknown> = (
   props: { story: Story; doc: Document; config: RunConfiguration },
   options?: any,
-) => Promise<(RendererFnResult & T) | undefined>;
+) => Promise<RendererFnResult & T>;

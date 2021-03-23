@@ -89,3 +89,8 @@ export const mergeStoryProps = (
   const destProps = extractStoryProps(dest);
   return deepMerge(destProps, src);
 };
+
+/**
+ * unwrap a promise
+ */
+export type Await<T> = T extends PromiseLike<infer U> ? U : T;

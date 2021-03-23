@@ -9,24 +9,21 @@ const Test = () => (
 );
 describe('jazmine', () => {
   test('render small component', async () => {
-    const { toJson, component } =
-      (await render({
-        story: {
-          name: 'test',
-          renderFn: Test,
-        },
-        doc: {
-          title: 'test',
-        },
-        config: {
-          renderFn: renderReact,
-        },
-      })) || {};
-    expect(toJson ? toJson() : undefined).toMatchSnapshot();
-    if (component) {
-      expect(
-        component.find('div[data-testid="test-component"]').prop('style'),
-      ).toHaveProperty('backgroundColor', 'red');
-    }
+    const { toJson, component } = await render({
+      story: {
+        name: 'test',
+        renderFn: Test,
+      },
+      doc: {
+        title: 'test',
+      },
+      config: {
+        renderFn: renderReact,
+      },
+    });
+    expect(toJson()).toMatchSnapshot();
+    expect(
+      component.find('div[data-testid="test-component"]').prop('style'),
+    ).toHaveProperty('backgroundColor', 'red');
   });
 });

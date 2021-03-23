@@ -1,7 +1,6 @@
 import path from 'path';
+import { Await } from '@component-controls/core';
 import { runRelatedTests } from '../../../src';
-
-type Await<T> = T extends PromiseLike<infer U> ? U : T;
 
 let results: Await<ReturnType<typeof runRelatedTests>>;
 beforeAll(async () => {

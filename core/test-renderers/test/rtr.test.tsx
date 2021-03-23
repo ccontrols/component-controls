@@ -9,25 +9,23 @@ const Test = () => (
 );
 describe('rtr', () => {
   test('render small component', async () => {
-    const { toJson, root } =
-      (await render({
-        story: {
-          name: 'test',
-          renderFn: Test,
-        },
-        doc: {
-          title: 'test',
-        },
-        config: {
-          renderFn: renderReact,
-        },
-      })) || {};
-    expect(toJson ? toJson() : undefined).toMatchSnapshot();
-    if (root) {
-      const component = root.find(
-        r => r.props['data-testid'] === 'test-component',
-      );
-      expect(component.props['style']).toHaveProperty('backgroundColor', 'red');
-    }
+    const { toJson, root } = await render({
+      story: {
+        name: 'test',
+        renderFn: Test,
+      },
+      doc: {
+        title: 'test',
+      },
+      config: {
+        renderFn: renderReact,
+      },
+    });
+    expect(toJson()).toMatchSnapshot();
+
+    const component = root.find(
+      r => r.props['data-testid'] === 'test-component',
+    );
+    expect(component.props['style']).toHaveProperty('backgroundColor', 'red');
   });
 });

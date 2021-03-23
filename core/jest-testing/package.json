@@ -34,6 +34,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@component-controls/core": "^3.4.2",
     "jest-cli": "^26.4.2",
     "babel-jest": "^26.4.4",
     "ts-jest": "^26.4.4",

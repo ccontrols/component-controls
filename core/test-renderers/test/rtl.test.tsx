@@ -11,25 +11,21 @@ const Test = () => (
 );
 describe('rtl', () => {
   test('render small component', async () => {
-    const { toJson, getByTestId } =
-      (await render({
-        story: {
-          name: 'test',
-          renderFn: Test,
-        },
-        doc: {
-          title: 'test',
-        },
-        config: {
-          renderFn: renderReact,
-        },
-      })) || {};
-    expect(toJson ? toJson() : undefined).toMatchSnapshot();
-    if (getByTestId) {
-      expect(getByTestId('test-component')).toHaveStyle(
-        'background-color: red',
-      );
-    }
+    const { toJson, getByTestId } = await render({
+      story: {
+        name: 'test',
+        renderFn: Test,
+      },
+      doc: {
+        title: 'test',
+      },
+      config: {
+        renderFn: renderReact,
+      },
+    });
+    expect(toJson()).toMatchSnapshot();
+
+    expect(getByTestId('test-component')).toHaveStyle('background-color: red');
     expect(screen.getByTestId('test-component')).toHaveStyle(
       'background-color: red',
     );

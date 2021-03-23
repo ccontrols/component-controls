@@ -5,6 +5,10 @@ import {
   mergeStoryProps,
   transformControls,
   StoryRenderFn,
+  ComponentControls,
+  ExampleControls,
+  mergeControlValues,
+  getControlValues,
 } from '@component-controls/core';
 import { loadConfigurations } from '@component-controls/config';
 import { render as reactRender } from '@component-controls/render/react';
@@ -28,6 +32,7 @@ export async function renderExample(
     projectFolder: string;
     configFolder?: string;
     renderer: 'react';
+    controls?: ExampleControls;
   },
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   options?: any,
@@ -39,6 +44,7 @@ export async function renderExample<Props = unknown>(
     doc: Document;
     projectFolder: string;
     configFolder?: string;
+    controls?: ExampleControls;
   },
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   options?: any,
@@ -51,6 +57,7 @@ export async function renderExample<Props = unknown>(
     projectFolder: string;
     configFolder?: string;
     renderer: 'rtr';
+    controls?: ExampleControls;
   },
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   options?: any,
@@ -63,6 +70,7 @@ export async function renderExample<Props = unknown>(
     projectFolder: string;
     configFolder?: string;
     renderer: 'enzyme';
+    controls?: ExampleControls;
   },
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   options?: any,
@@ -72,7 +80,7 @@ export async function renderExample<Props = unknown>(
  * render an example using a test framework.
  *
  * @param param0 inputs as example, doc, project folder and a selcted test rendering framework
- * @param options optional to bepassed to the render function of the selected testing framework
+ * @param options optional to be passed to the render function of the selected testing framework
  * @returns a toJson function to use in snapshots, in addition all the props returned by the selected test frameowrk
  */
 export async function renderExample<Props = unknown>(
@@ -82,12 +90,14 @@ export async function renderExample<Props = unknown>(
     projectFolder,
     configFolder,
     renderer = 'react',
+    controls,
   }: {
     example: Example<Props>;
     doc: Document;
     projectFolder: string;
     configFolder?: string;
     renderer?: rendererTypes;
+    controls?: ExampleControls;
   },
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   options?: any,
@@ -102,6 +112,13 @@ export async function renderExample<Props = unknown>(
   }
   Object.assign(story, mergeStoryProps(mergeStoryProps(config, doc), story));
   story.controls = transformControls(story.controls);
+  if (controls && story.controls) {
+    story.controls = mergeControlValues(
+      story.controls,
+      undefined,
+      getControlValues(transformControls(controls as ComponentControls)),
+    );
+  }
   const rendererFn = renderers[renderer];
   return await rendererFn({ story, doc, config }, options);
 }

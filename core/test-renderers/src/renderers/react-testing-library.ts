@@ -1,4 +1,5 @@
 import { render as rtlRender, RenderResult } from '@testing-library/react';
+import { Await } from '@component-controls/core';
 import { RendererFn } from '../types';
 
 export const render: RendererFn<RenderResult> = async (
@@ -14,5 +15,7 @@ export const render: RendererFn<RenderResult> = async (
       ...results,
     };
   }
-  return undefined;
+  return {
+    toJson: () => null,
+  } as Await<ReturnType<typeof render>>;
 };
