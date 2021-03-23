@@ -36,7 +36,8 @@
   "dependencies": {
     "jest-cli": "^26.4.2",
     "babel-jest": "^26.4.4",
-    "ts-jest": "^26.4.4"
+    "ts-jest": "^26.4.4",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.13.10",

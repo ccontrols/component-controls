@@ -1,5 +1,6 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import { render as renderReact } from '@component-controls/render/react';
 import { render } from '../src/renderers/react-testing-library';
 

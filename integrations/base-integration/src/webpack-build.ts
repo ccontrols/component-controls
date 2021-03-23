@@ -11,6 +11,7 @@ import { getSiteMap } from '@component-controls/routes';
 import {
   getBundleName,
   defaultDistFolder,
+  defaultConfigFolder,
 } from '@component-controls/core/node-utils';
 import { LoadingStore, loadStore } from '@component-controls/store';
 import { log } from '@component-controls/logger';
@@ -62,7 +63,7 @@ const createOptions = (buildOptions?: BuildProps): BuildProps => {
   const staticFolder = options.staticFolder || path.join(distFolder, 'static');
   return mergeConfig<BuildProps>(
     mergeConfig(defaultCompileProps, {
-      configPath: '.config',
+      configPath: defaultConfigFolder,
       distFolder,
       staticFolder,
     }),

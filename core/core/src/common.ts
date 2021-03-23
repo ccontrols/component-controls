@@ -1,4 +1,5 @@
 import { ElementType } from 'react';
+import { deepMerge } from './deepMerge';
 import { StoryRenderFn } from './utility';
 import { ComponentControls } from './controls';
 
@@ -60,3 +61,31 @@ export interface StoryProps<Props = unknown> {
    */
   category?: string;
 }
+
+export const extractStoryProps = (src: StoryProps): StoryProps => {
+  return {
+    component: src.component,
+    subcomponents: src.subcomponents,
+    controls: src.controls,
+    smartControls: src.smartControls,
+    category: src.category,
+    decorators: Array.isArray(src.decorators)
+      ? src.decorators.filter(d => typeof d === 'function')
+      : undefined,
+    plugins: src.plugins,
+  };
+};
+
+/**
+ * merge commont story props - from config, document and story
+ * @param dest the props to be overwritten
+ * @param src the props to keep, unless they are undefined
+ * @returns the merged props
+ */
+export const mergeStoryProps = (
+  dest: StoryProps | undefined = {},
+  src: StoryProps | undefined = {},
+): StoryProps => {
+  const destProps = extractStoryProps(dest);
+  return deepMerge(destProps, src);
+};

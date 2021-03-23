@@ -1,7 +1,6 @@
 import {
   Store,
   getDefaultStore,
-  StoryProps,
   Story,
   Document,
   mergeConfig,
@@ -15,6 +14,7 @@ import {
   Pages,
   PageLayoutProps,
   mapDynamicStories,
+  mergeStoryProps,
 } from '@component-controls/core';
 import { LoadingStore } from '@component-controls/loader';
 import { render as reactRender } from '@component-controls/render/react';
@@ -42,17 +42,7 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
         globalStore.config.renderFn = reactRender;
       }
       globalStore.search = store.search;
-      const storeStoryProps: StoryProps = {
-        component: globalStore.config.component,
-        subcomponents: globalStore.config.subcomponents,
-        controls: globalStore.config.controls,
-        smartControls: globalStore.config.smartControls,
-        category: globalStore.config.category,
-        decorators: Array.isArray(globalStore.config.decorators)
-          ? globalStore.config.decorators.filter(d => typeof d === 'function')
-          : undefined,
-        plugins: globalStore.config.plugins,
-      };
+
       stores.forEach(s => {
         const storeDoc = s.doc;
         const storeStories = s.stories;
@@ -70,20 +60,8 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
           storeDoc.controls = storeDoc.controls || (storeDoc as any).args;
           const doc: Document = deepMerge<Document>(
             pageLayout,
-            deepMerge(storeStoryProps, storeDoc),
+            mergeStoryProps(store.config, storeDoc),
           );
-          //props shared by document and story, extract so story gets default values from doc
-          const docStoryProps: StoryProps = {
-            component: doc.component,
-            subcomponents: doc.subcomponents,
-            controls: doc.controls,
-            smartControls: doc.smartControls,
-            category: doc.category,
-            decorators: Array.isArray(doc.decorators)
-              ? doc.decorators.filter(d => typeof d === 'function')
-              : undefined,
-            plugins: doc.plugins,
-          };
           globalStore.docs[doc.title] = doc;
           Object.keys(storeStories).forEach((storyName: string) => {
             const exportedStory: Story = storeStories[storyName];
@@ -103,7 +81,7 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
                 };
                 //storybook compat
                 story.controls = story.controls || (story as any).args;
-                Object.assign(story, deepMerge(docStoryProps, story));
+                Object.assign(story, mergeStoryProps(doc, story));
                 story.controls = getControls(story, doc, loadedComponents);
                 if (!doc.stories) {
                   doc.stories = [];
@@ -122,7 +100,6 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
       let pages: Pages = Object.keys(globalStore.docs).map(
         key => globalStore.docs[key],
       );
-
       if (storySort) {
         pages = pages.sort((a: Document, b: Document) => {
           const sort = storySort(a.title, b.title);

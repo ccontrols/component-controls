@@ -1,5 +1,4 @@
 import { render as rtlRender, RenderResult } from '@testing-library/react';
-import '@testing-library/jest-dom';
 import { RendererFn } from '../types';
 
 export const render: RendererFn<RenderResult> = async (

@@ -6,7 +6,15 @@ import globBase from 'glob-base';
 import { makeRe } from 'micromatch';
 
 import yargs from 'yargs';
-import { BuildConfiguration } from '@component-controls/core';
+import {
+  BuildConfiguration,
+  RunConfiguration,
+  defaultBuildConfig,
+  mergeConfig,
+  defaultRunConfig,
+  convertConfig,
+} from '@component-controls/core';
+import { defaultConfigFolder } from '@component-controls/core/node-utils';
 
 export const buildConfigFileNames = [
   'buildtime.js',
@@ -161,6 +169,38 @@ export const configRequireContext = ({
       }, [])
     : undefined;
   return contexts;
+};
+
+/**
+ * loads bot the build time and run time configurations
+ * @param rootPath the roo path of the project
+ * @param configFilePath the config folder - relative to the root path
+ * @returns merged configuration
+ */
+export const loadConfigurations = (
+  rootPath: string,
+  configFilePath?: string,
+): RunConfiguration | undefined => {
+  const config = loadConfiguration(
+    rootPath,
+    configFilePath,
+    undefined,
+    defaultConfigFolder,
+  );
+  const buildConfig: BuildConfiguration = config
+    ? mergeConfig(defaultBuildConfig, config.config)
+    : defaultBuildConfig;
+  let runtimeConfig = {};
+  if (config?.optionsFilePath) {
+    const req = require(config?.optionsFilePath);
+    runtimeConfig = req.default || req;
+  }
+  const runConfig = mergeConfig(defaultRunConfig, runtimeConfig);
+
+  return mergeConfig(
+    defaultRunConfig,
+    convertConfig(mergeConfig(buildConfig, runConfig)),
+  );
 };
 
 /**
