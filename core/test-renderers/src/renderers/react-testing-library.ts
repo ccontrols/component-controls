@@ -7,7 +7,7 @@ export const render: RendererFn<RenderResult> = async (
 ) => {
   const renderFn = config.renderFn;
   if (renderFn) {
-    const rendered = renderFn(story, doc, config);
+    const rendered = renderFn(story, doc);
     const results = rtlRender(rendered, options);
     return {
       toJson: () => results.asFragment(),

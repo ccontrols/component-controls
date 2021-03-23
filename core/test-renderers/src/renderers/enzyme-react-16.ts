@@ -10,7 +10,7 @@ export const render: RendererFn<{
 }> = async ({ story, doc, config }, options?: any) => {
   const renderFn = config.renderFn;
   if (renderFn) {
-    const rendered = renderFn(story, doc, config);
+    const rendered = renderFn(story, doc);
     const component = mount(rendered, options);
     return {
       toJson: () => toJson(component, { mode: 'deep' }),

@@ -7,7 +7,7 @@ export const render: RendererFn<renderer.ReactTestRenderer> = async (
 ) => {
   const renderFn = config.renderFn;
   if (renderFn) {
-    const rendered = renderFn(story, doc, config);
+    const rendered = renderFn(story, doc);
     let component: ReactTestRenderer | undefined;
     act(() => {
       component = renderer.create(rendered, options) as ReactTestRenderer;
