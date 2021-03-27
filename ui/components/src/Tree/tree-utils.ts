@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 type NavLabelFn = (props: TreeItem & { isExpanded: boolean }) => ReactNode;
 
@@ -202,6 +202,11 @@ export type TreeOwnProps = {
    * indentation in pixels for each elevel, By default 6 pixels
    */
   indentPixels?: number;
+
+  /**
+   * row link class - to avoid anchor in anchor warning
+   */
+  rowLinkClass?: React.ElementType;
 };
 
 export interface TreeState {

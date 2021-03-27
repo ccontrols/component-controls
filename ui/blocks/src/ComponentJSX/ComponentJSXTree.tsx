@@ -1,5 +1,6 @@
 /* eslint-disable react/display-name */
 import React, { FC, useMemo, useEffect, useReducer } from 'react';
+import { Box } from 'theme-ui';
 import { TriangleDownIcon } from '@primer/octicons-react';
 import { Component, JSXTree, isLocalImport } from '@component-controls/core';
 import { usePackage } from '@component-controls/store';
@@ -94,8 +95,8 @@ export const ComponentJSXTree: FC<ComponentJSXTreeProps> = ({ component }) => {
     const { dependencies, devDependencies } = componentPackage || {};
     const treeToItems = (
       tree: JSXTree,
-      level: number = 0,
-      parentIndex: number = 0,
+      level = 0,
+      parentIndex = 0,
     ): TreeItems | undefined => {
       return tree.length
         ? tree.map((item, index) => ({
@@ -176,6 +177,7 @@ export const ComponentJSXTree: FC<ComponentJSXTreeProps> = ({ component }) => {
         items={rows}
         chevronIcon={<TriangleDownIcon />}
         indentPixels={16}
+        rowLinkClass={Box}
       />
     </ActionContainer>
   ) : null;

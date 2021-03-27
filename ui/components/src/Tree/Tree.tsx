@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FC, useEffect, useState } from 'react';
+import { FC, ElementType, useEffect, useState } from 'react';
 import { jsx, Box, Flex, Text, Button, BoxProps, ButtonProps } from 'theme-ui';
 import { ChevronDownIcon } from '@primer/octicons-react';
 import {
@@ -35,6 +35,7 @@ export const Tree: FC<TreeProps> = ({
   onExpandCollapse,
   arrowPosition = 'end',
   chevronIcon = <ChevronDownIcon />,
+  rowLinkClass,
   indentPixels = 8,
   ...rest
 }) => {
@@ -93,9 +94,8 @@ export const Tree: FC<TreeProps> = ({
     const itemId = id || label;
     const isExpanded: boolean =
       expandedItems && itemId ? expandedItems.includes(item) : false;
-    const LinkClass: LinkClassType | FC<ButtonProps> = itemItems
-      ? Button
-      : Link;
+    const LinkClass: LinkClassType | FC<ButtonProps> | ElementType =
+      rowLinkClass || (itemItems ? Button : Link);
     const itemKey = `item_${itemId}_${level}`;
 
     const isActiveItem = activeItem && activeItem.id === id;
