@@ -1,8 +1,11 @@
+import path from 'path';
 import { loadConfigurations } from '../src';
 
 describe('load both configurations', () => {
   test('load', () => {
-    const config = loadConfigurations(__dirname, 'fixtures/.config');
+    const config = loadConfigurations(
+      path.resolve(__dirname, 'fixtures/.config'),
+    );
     expect(config).toMatchObject({
       title: 'Component controls',
       description:

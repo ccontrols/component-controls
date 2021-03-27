@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rtr ts 1`] = `
+"import { loadConfigurations, extractDocuments } from '@component-controls/config';
+import { renderExample } from '@component-controls/test-renderers';
+import { render as reactRender } from '@component-controls/render/react';
+
+import renderer, { act } from 'react-test-renderer';
+
+describe('component-controls generated', () => {
+  beforeAll(async done => {
+    jest.mock('rc-util/lib/Portal');
+    global.MutationObserver = class {
+      constructor() {}
+      disconnect() {}
+      observe() {}
+      takeRecords() {
+        return [];
+      }
+    };
+
+    Object.defineProperty(window, 'matchMedia', {
+      writable: true,
+      value: jest.fn().mockImplementation(query => ({
+        matches: false,
+        media: query,
+        onchange: null,
+        addEventListener: jest.fn(),
+        removeEventListener: jest.fn(),
+        dispatchEvent: jest.fn(),
+      })),
+    });
+    done();
+  });
+  const configPath = '/Users/atanasster/component-controls/plugins/jest-snapshots/test/.config';
+  const config = loadConfigurations(configPath);
+  if (!config.renderFn) {
+    config.renderFn = reactRender;
+  }
+  const documents = extractDocuments({ config, configPath });
+  if (documents) {
+    documents.forEach((file: string) => {
+      const exports = require(file);
+      const doc = exports.default;
+      const examples = Object.keys(exports)
+        .filter(key => key !== 'default')
+        .map(key => exports[key]);
+
+      if (examples.length) {
+        describe(doc.title, () => {
+          examples.forEach(example => {
+            it(example.name, async () => {
+              let rendered;
+              act(() => {
+                rendered = renderExample({
+                  example,
+                  doc,
+                  config,
+                });
+              });
+              const component = rendered ? renderer.create(rendered) : undefined;
+              const serialize = component ? component.toJSON : () => undefined;
+
+              expect(serialize()).toMatchSnapshot();
+            });
+          });
+        });
+      }
+    });
+  }
+});
+"
+`;

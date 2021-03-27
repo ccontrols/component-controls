@@ -1,8 +1,8 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
+import { render as rtlRender } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { render as renderReact } from '@component-controls/render/react';
-import { render } from '../src/renderers/react-testing-library';
 
 const Test = () => (
   <div data-testid="test-component" style={{ backgroundColor: 'red' }}>
@@ -11,19 +11,12 @@ const Test = () => (
 );
 describe('rtl', () => {
   test('render small component', async () => {
-    const { toJson, getByTestId } = await render({
-      story: {
-        name: 'test',
-        renderFn: Test,
-      },
-      doc: {
-        title: 'test',
-      },
-      config: {
-        renderFn: renderReact,
-      },
+    const rendered = renderReact({
+      name: 'test',
+      renderFn: Test,
     });
-    expect(toJson()).toMatchSnapshot();
+    const { asFragment, getByTestId } = rtlRender(rendered);
+    expect(asFragment()).toMatchSnapshot();
 
     expect(getByTestId('test-component')).toHaveStyle('background-color: red');
     expect(screen.getByTestId('test-component')).toHaveStyle(

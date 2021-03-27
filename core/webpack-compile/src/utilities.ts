@@ -11,7 +11,7 @@ import {
   mergeWebpackConfig,
   deepMergeWebpackConfig,
 } from '@component-controls/webpack-configs';
-import { cliArgs } from './args';
+import { cliArgs, defaultCliArgs } from './args';
 import { ResolveExternals, ResolveExternalsConfig } from './resolve_externals';
 import { defaultExternals } from './externals-config';
 
@@ -39,7 +39,7 @@ export interface CompileResults {
  *  ./public/component-controls.js
  */
 export const getBundleName = (): string => {
-  const args = cliArgs().parse();
+  const args = cliArgs(defaultCliArgs).parse();
   let distFolder =
     args.dist || `${path.join(process.cwd(), defaultDistFolder)}`;
   if (!path.isAbsolute(distFolder)) {

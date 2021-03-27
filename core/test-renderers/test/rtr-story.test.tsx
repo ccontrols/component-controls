@@ -1,4 +1,5 @@
 import path from 'path';
+import renderer from 'react-test-renderer';
 import { renderExample } from '../src';
 import { VariantButtonProps } from './fixtures/VariantButton';
 import doc, {
@@ -9,39 +10,39 @@ import doc, {
 
 describe('VariantButton', () => {
   test('controls', async () => {
-    const { root } = await renderExample<VariantButtonProps>({
+    const rendered = renderExample<VariantButtonProps>({
       example: overview,
       doc,
-      projectFolder: path.join(__dirname, 'fixtures'),
-      renderer: 'rtr',
+      config: path.join(__dirname, 'fixtures/.config'),
     });
+    const { root } = renderer.create(rendered);
     expect(root.findByProps({ 'data-testid': 'label' }).children).toEqual([
       'Button',
     ]);
   });
   test('controls values', async () => {
-    const { root } = await renderExample<VariantButtonProps>({
+    const rendered = renderExample<VariantButtonProps>({
       example: overview,
       doc,
-      projectFolder: path.join(__dirname, 'fixtures'),
-      renderer: 'rtr',
+      config: path.join(__dirname, 'fixtures/.config'),
       controls: {
         text: 'New Text',
       },
     });
+
+    const { root } = renderer.create(rendered);
     expect(root.findByProps({ 'data-testid': 'label' }).children).toEqual([
       'New Text',
     ]);
   });
   test('primary', async () => {
-    const { toJson, root } = await renderExample({
+    const rendered = renderExample({
       example: primary,
       doc,
-      projectFolder: path.join(__dirname, 'fixtures'),
-      renderer: 'rtr',
+      config: path.join(__dirname, 'fixtures/.config'),
     });
-
-    expect(toJson()).toMatchSnapshot();
+    const { root, toJSON } = renderer.create(rendered);
+    expect(toJSON()).toMatchSnapshot();
 
     const label = root.findByProps({ 'data-testid': 'label' });
     expect(label.children).toEqual(['Primary']);
@@ -52,13 +53,13 @@ describe('VariantButton', () => {
   });
 
   test('disabled', async () => {
-    const { toJson, root } = await renderExample({
+    const rendered = renderExample({
       example: disabled,
       doc,
-      projectFolder: path.join(__dirname, 'fixtures'),
-      renderer: 'rtr',
+      config: path.join(__dirname, 'fixtures/.config'),
     });
-    expect(toJson()).toMatchSnapshot();
+    const { toJSON, root } = renderer.create(rendered);
+    expect(toJSON()).toMatchSnapshot();
 
     expect(root.findByType('button').props.disabled).toBe(true);
   });

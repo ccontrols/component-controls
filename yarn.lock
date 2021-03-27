@@ -5614,6 +5614,11 @@
   resolved "https://registry.yarnpkg.com/@types/debug/-/debug-4.1.5.tgz#b14efa8852b7768d898906613c23f688713e02cd"
   integrity sha512-Q1y515GcOdTHgagaVFhHnIFQ38ygs/kmxdNpvpou+raI9UO3YZcHDngBSYKQklcKlvA7iuQlmIKbzvmxcOE9CQ==
 
+"@types/dot@^1.1.4":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@types/dot/-/dot-1.1.4.tgz#388c98e074ee2408c3cdf78305196fc661485fab"
+  integrity sha512-6LxXGSIrpkgR6431F4zkc6aoEOijFmqiI201cS72nF/k55mYiR9c85nkICQYHIGsQyzfP5pRXZrcoNQmo49Dxg==
+
 "@types/enzyme@^3.10.5":
   version "3.10.8"
   resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-3.10.8.tgz#ad7ac9d3af3de6fd0673773123fafbc63db50d42"
@@ -11393,6 +11398,11 @@ dot-prop@^5.1.0, dot-prop@^5.2.0:
   dependencies:
     is-obj "^2.0.0"
 
+dot@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/dot/-/dot-1.1.3.tgz#351360e00a748bce9a1f8f27c00c394a7e4e1e9f"
+  integrity sha512-/nt74Rm+PcfnirXGEdhZleTwGC2LMnuKTeeTIlI82xb5loBBoXNYzr2ezCroPSMtilK8EZIfcNZwOcHN+ib1Lg==
+
 dotenv-defaults@^1.0.2:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/dotenv-defaults/-/dotenv-defaults-1.1.1.tgz#032c024f4b5906d9990eb06d722dc74cc60ec1bd"
@@ -17096,6 +17106,13 @@ jest-snapshot@^26.6.2:
     natural-compare "^1.4.0"
     pretty-format "^26.6.2"
     semver "^7.3.2"
+
+jest-url-loader@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/jest-url-loader/-/jest-url-loader-0.1.0.tgz#8c508f26ae8e0140b24e323604f6ba35364ba983"
+  integrity sha512-XbYYGUuejpKe7bnAwIcNqy3lBFn2Ml7dtBCnZk0qOgAOBgsU4/M0hcq5mgW+l9gRjT6QAH/2eCtRN135Y6pcKw==
+  dependencies:
+    mime "^2.4.4"
 
 jest-util@^24.9.0:
   version "24.9.0"

@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component-controls generated Plugins/FigmaEmbedBlock customConfigProps 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <iframe
+          allowfullscreen=""
+          class="css-6u5w61"
+          height="450"
+          src="https://www.figma.com/embed?embed_host=component-controls&url=https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1"
+          width="100%"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`component-controls generated Plugins/FigmaEmbedBlock customIFrameProps 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <iframe
+          allowfullscreen=""
+          class="css-6u5w61"
+          height="300"
+          src="https://www.figma.com/embed?embed_host=component-controls&url=https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1"
+          width="100%"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`component-controls generated Plugins/FigmaEmbedBlock customURLS 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <iframe
+          allowfullscreen=""
+          class="css-6u5w61"
+          height="450"
+          src="https://www.figma.com/embed?embed_host=component-controls&url=https://www.figma.com/file/hS1sLjYq49vjnKXhwGgHwg/Navigation-UI-design-components-Community?node-id=1%3A2309"
+          width="100%"
+        />
+        <iframe
+          allowfullscreen=""
+          class="css-6u5w61"
+          height="450"
+          src="https://www.figma.com/embed?embed_host=component-controls&url=https://www.figma.com/file/LtgbR2mbVPbQTNDfDQxbKL/Atanas-Stoyanov-s-Team-Colors?node-id=0%3A1"
+          width="100%"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`component-controls generated Plugins/FigmaEmbedBlock noFullScreen 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <iframe
+          class="css-6u5w61"
+          height="450"
+          src="https://www.figma.com/embed?embed_host=component-controls&url=https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1"
+          width="100%"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`component-controls generated Plugins/FigmaEmbedBlock overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <iframe
+          allowfullscreen=""
+          class="css-6u5w61"
+          height="450"
+          src="https://www.figma.com/embed?embed_host=component-controls&url=https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1"
+          width="100%"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

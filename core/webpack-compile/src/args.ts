@@ -94,7 +94,7 @@ export const defaultCliArgs: ArgOptions = [
 ];
 
 export const cliArgs = (options: ArgOptions = []): Argv<CliArgTypes> => {
-  return [...defaultCliArgs, ...options].reduce(
+  return options.reduce(
     (acc, option) => acc.option(option.name, option.options),
     yargs(process.argv),
   ) as Argv<CliArgTypes>;

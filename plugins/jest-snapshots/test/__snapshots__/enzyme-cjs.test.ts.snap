@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`enzyme cjs 1`] = `
+"const {
+  loadConfigurations,
+  extractDocuments,
+} = require('@component-controls/config');
+const { renderExample } = require('@component-controls/test-renderers');
+const { render: reactRender } = require('@component-controls/render/react');
+
+const { mount, configure } = require('enzyme');
+const toJson = require('enzyme-to-json').default;
+const Adapter = require('@wojtekmaj/enzyme-adapter-react-17');
+
+configure({ adapter: new Adapter() });
+
+describe('component-controls generated', () => {
+  beforeAll(async done => {
+    jest.mock('rc-util/lib/Portal');
+    global.MutationObserver = class {
+      constructor() {}
+      disconnect() {}
+      observe() {}
+      takeRecords() {
+        return [];
+      }
+    };
+
+    Object.defineProperty(window, 'matchMedia', {
+      writable: true,
+      value: jest.fn().mockImplementation(query => ({
+        matches: false,
+        media: query,
+        onchange: null,
+        addEventListener: jest.fn(),
+        removeEventListener: jest.fn(),
+        dispatchEvent: jest.fn(),
+      })),
+    });
+    done();
+  });
+  const configPath = '/Users/atanasster/component-controls/plugins/jest-snapshots/test/.config';
+  const config = loadConfigurations(configPath);
+  if (!config.renderFn) {
+    config.renderFn = reactRender;
+  }
+  const documents = extractDocuments({ config, configPath });
+  if (documents) {
+    documents.forEach(file => {
+      const exports = require(file);
+      const doc = exports.default;
+      const examples = Object.keys(exports)
+        .filter(key => key !== 'default')
+        .map(key => exports[key]);
+
+      if (examples.length) {
+        describe(doc.title, () => {
+          examples.forEach(example => {
+            it(example.name, async () => {
+              const rendered = renderExample({
+                example,
+                doc,
+                config,
+              });
+              const component = mount(rendered);
+              const serialize = () => toJson(component, { mode: 'deep' });
+
+              expect(serialize()).toMatchSnapshot();
+            });
+          });
+        });
+      }
+    });
+  }
+});
+"
+`;

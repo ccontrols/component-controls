@@ -23,6 +23,7 @@
     "startup": "yarn bootstrap && yarn build && yarn dev",
     "lint": "lerna run --parallel lint",
     "build": "lerna run build",
+    "test:create": "lerna run test:create --stream",
     "test": "lerna run test --stream",
     "prerelease": "yarn run packages",
     "release": "lerna publish --conventional-commits --yes",

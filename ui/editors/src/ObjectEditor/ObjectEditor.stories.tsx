@@ -23,7 +23,7 @@ export const overview: Example = () => {
     <ControlsStateProvider
       onChange={(_name, newVal) => setState(newVal)}
       controls={{
-        prop: { type: ControlTypes.OBJECT, value: state },
+        prop: { type: ControlTypes.OBJECT, value: state as any },
       }}
     >
       <ObjectEditor name="prop" />
@@ -42,7 +42,7 @@ export const editLabel: Example = () => {
     <ControlsStateProvider
       onChange={(_name, newVal) => setState(newVal)}
       controls={{
-        prop: { type: ControlTypes.OBJECT, value: state },
+        prop: { type: ControlTypes.OBJECT, value: state as any },
       }}
     >
       <ObjectEditor name="prop" editLabel="Click to edit" />
@@ -61,7 +61,11 @@ export const inline: Example = () => {
     <ControlsStateProvider
       onChange={(_name, newVal) => setState(newVal)}
       controls={{
-        prop: { type: ControlTypes.OBJECT, value: state, inline: true },
+        prop: {
+          type: ControlTypes.OBJECT,
+          value: state as any,
+          inline: true,
+        },
       }}
     >
       <ObjectEditor name="prop" />

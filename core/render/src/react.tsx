@@ -11,9 +11,6 @@ export const render: FrameworkRenderFn = (story, doc, options: any = {}) => {
   if (!story) {
     throw new Error(`Invalid story`);
   }
-  if (!doc) {
-    throw new Error(`Invalid doc`);
-  }
   const controls = story.controls;
   const values = getControlValues(controls);
   //parameters added to avoid bug in SB6 rc that assumes parameters exist

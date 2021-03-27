@@ -1,6 +1,6 @@
 import React from 'react';
 import { render as renderReact } from '@component-controls/render/react';
-import { render } from '../src/renderers/react-test-renderer';
+import renderer from 'react-test-renderer';
 
 const Test = () => (
   <div data-testid="test-component" style={{ backgroundColor: 'red' }}>
@@ -9,19 +9,12 @@ const Test = () => (
 );
 describe('rtr', () => {
   test('render small component', async () => {
-    const { toJson, root } = await render({
-      story: {
-        name: 'test',
-        renderFn: Test,
-      },
-      doc: {
-        title: 'test',
-      },
-      config: {
-        renderFn: renderReact,
-      },
+    const rendered = renderReact({
+      name: 'test',
+      renderFn: Test,
     });
-    expect(toJson()).toMatchSnapshot();
+    const { toJSON, root } = renderer.create(rendered);
+    expect(toJSON()).toMatchSnapshot();
 
     const component = root.find(
       r => r.props['data-testid'] === 'test-component',

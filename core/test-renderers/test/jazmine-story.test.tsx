@@ -1,6 +1,12 @@
 import path from 'path';
+import { mount, configure } from 'enzyme';
+import toJson from 'enzyme-to-json';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+
 import { renderExample } from '../src';
 import { VariantButtonProps } from './fixtures/VariantButton';
+
+configure({ adapter: new Adapter() });
 
 import doc, {
   primary,
@@ -10,35 +16,35 @@ import doc, {
 
 describe('VariantButton', () => {
   test('controls', async () => {
-    const { component } = await renderExample<VariantButtonProps>({
+    const rendered = renderExample<VariantButtonProps>({
       example: overview,
       doc,
-      projectFolder: path.join(__dirname, 'fixtures'),
-      renderer: 'enzyme',
+      config: path.join(__dirname, 'fixtures/.config'),
     });
+    const component = mount(rendered);
     expect(component.find('div[data-testid="label"]').text()).toBe('Button');
   });
   test('controls values', async () => {
-    const { component } = await renderExample<VariantButtonProps>({
+    const rendered = renderExample<VariantButtonProps>({
       example: overview,
       doc,
-      projectFolder: path.join(__dirname, 'fixtures'),
-      renderer: 'enzyme',
+      config: path.join(__dirname, 'fixtures/.config'),
       controls: {
         text: 'New Text',
       },
     });
+    const component = mount(rendered);
     expect(component.find('div[data-testid="label"]').text()).toBe('New Text');
   });
   test('primary', async () => {
-    const { toJson, component } = await renderExample({
+    const rendered = renderExample({
       example: primary,
       doc,
-      projectFolder: path.join(__dirname, 'fixtures'),
-      renderer: 'enzyme',
+      config: path.join(__dirname, 'fixtures/.config'),
     });
+    const component = mount(rendered);
 
-    expect(toJson()).toMatchSnapshot();
+    expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
     const label = component.find('div[data-testid="label"]');
     expect(label.text()).toBe('Primary');
 
@@ -51,13 +57,13 @@ describe('VariantButton', () => {
     ).toHaveProperty('background', 'lightblue');
   });
   test('disabled', async () => {
-    const { toJson, component } = await renderExample({
+    const rendered = renderExample({
       example: disabled,
       doc,
-      projectFolder: path.join(__dirname, 'fixtures'),
-      renderer: 'enzyme',
+      config: path.join(__dirname, 'fixtures/.config'),
     });
-    expect(toJson()).toMatchSnapshot();
+    const component = mount(rendered);
+    expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
     expect(component.find('button').prop('disabled')).toBe(true);
   });
 });

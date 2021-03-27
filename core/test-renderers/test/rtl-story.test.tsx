@@ -1,5 +1,6 @@
 import path from 'path';
 import '@testing-library/jest-dom';
+import { render as rtlRender } from '@testing-library/react';
 import { VariantButtonProps } from './fixtures/VariantButton';
 import { renderExample } from '../src';
 
@@ -11,34 +12,38 @@ import doc, {
 
 describe('VariantButton', () => {
   test('controls', async () => {
-    const { getByTestId } = await renderExample<VariantButtonProps>({
+    const rendered = renderExample<VariantButtonProps>({
       example: overview,
       doc,
-      projectFolder: path.join(__dirname, 'fixtures'),
+      config: path.join(__dirname, 'fixtures/.config'),
     });
+    const { getByTestId } = rtlRender(rendered);
     expect(getByTestId('label')).toHaveTextContent('Button');
   });
 
   test('controls values', async () => {
-    const { getByTestId } = await renderExample<VariantButtonProps>({
+    const rendered = renderExample<VariantButtonProps>({
       example: overview,
       doc,
-      projectFolder: path.join(__dirname, 'fixtures'),
+      config: path.join(__dirname, 'fixtures/.config'),
       controls: {
         text: 'New Text',
       },
     });
 
+    const { getByTestId } = rtlRender(rendered);
+
     expect(getByTestId('label')).toHaveTextContent('New Text');
   });
   test('primary', async () => {
-    const { toJson, getByTestId, container } = await renderExample({
+    const rendered = renderExample({
       example: primary,
       doc,
-      projectFolder: path.join(__dirname, 'fixtures'),
+      config: path.join(__dirname, 'fixtures/.config'),
     });
+    const { asFragment, getByTestId, container } = rtlRender(rendered);
 
-    expect(toJson()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
     const label = getByTestId('label');
     expect(label).toHaveTextContent('Primary');
     //global decorator in config file
@@ -46,12 +51,13 @@ describe('VariantButton', () => {
   });
 
   test('disabled', async () => {
-    const { toJson, getByRole } = await renderExample({
+    const rendered = renderExample({
       example: disabled,
       doc,
-      projectFolder: path.join(__dirname, 'fixtures'),
+      config: path.join(__dirname, 'fixtures/.config'),
     });
-    expect(toJson()).toMatchSnapshot();
+    const { asFragment, getByRole } = rtlRender(rendered);
+    expect(asFragment()).toMatchSnapshot();
 
     expect(getByRole('button')).toHaveAttribute('disabled');
   });
