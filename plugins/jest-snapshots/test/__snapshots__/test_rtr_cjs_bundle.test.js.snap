@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component-controls generated Components/Header Overview 1`] = `
+<header
+  className="css-4cffwv"
+>
+  header
+</header>
+`;

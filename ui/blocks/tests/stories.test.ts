@@ -1,34 +1,21 @@
 import path from 'path';
+import MatchMediaMock from 'jest-matchmedia-mock';
 import { loadConfigurations, extractDocuments } from '@component-controls/config';
 import { renderExample } from '@component-controls/test-renderers';
 import { render as reactRender } from '@component-controls/render/react';
 
 import { render, act } from '@testing-library/react';
 
-describe('blocks', () => {
-  beforeAll(async done => {
-    jest.mock('rc-util/lib/Portal');
-    global.MutationObserver = class {
-      constructor() {}
-      disconnect() {}
-      observe() {}
-      takeRecords() {
-        return [];
-      }
-    };
 
-    Object.defineProperty(window, 'matchMedia', {
-      writable: true,
-      value: jest.fn().mockImplementation(query => ({
-        matches: false,
-        media: query,
-        onchange: null,
-        addEventListener: jest.fn(),
-        removeEventListener: jest.fn(),
-        dispatchEvent: jest.fn(),
-      })),
-    });
-    done();
+let matchMedia: MatchMediaMock;
+
+describe('blocks', () => {
+  beforeAll(() => {
+    jest.mock('rc-util/lib/Portal');
+    matchMedia = new MatchMediaMock();
+  });
+  afterEach(() => {
+    matchMedia.clear();
   });
   const configPath = path.resolve(__dirname, '../.config');
   const config = loadConfigurations(configPath);
