@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`rtr bundle ts 1`] = `
-"import { loadStore } from '@component-controls/store';
+"import path from 'path';
+import { loadStore } from '@component-controls/store';
 const { render: reactRender } = require('@component-controls/render/react');
 
 import renderer, { act } from 'react-test-renderer';
@@ -31,7 +32,7 @@ describe('component-controls generated', () => {
     });
     done();
   });
-const store = loadStore(require('/Users/atanasster/component-controls/plugins/jest-snapshots/test/bundle/component-controls.js'));
+const store = loadStore(require(path.resolve(__dirname, './bundle/component-controls.js')));
 const renderFn = store.config.renderFn || reactRender;
 Object.keys(store.docs).forEach(docId => {
   const doc = store.docs[docId];

@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`enzyme ts 1`] = `
-"import { loadConfigurations, extractDocuments } from '@component-controls/config';
+exports[`enzyme  ts 1`] = `
+"import path from 'path';
+import { loadConfigurations, extractDocuments } from '@component-controls/config';
 import { renderExample } from '@component-controls/test-renderers';
 import { render as reactRender } from '@component-controls/render/react';
 
@@ -36,7 +37,7 @@ describe('component-controls generated', () => {
     });
     done();
   });
-  const configPath = '/Users/atanasster/component-controls/plugins/jest-snapshots/test/.config';
+  const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
   if (!config.renderFn) {
     config.renderFn = reactRender;
@@ -54,7 +55,8 @@ describe('component-controls generated', () => {
         describe(doc.title, () => {
           examples.forEach(example => {
             it(example.name, async () => {
-              const rendered = renderExample({
+              let rendered;
+              rendered = renderExample({
                 example,
                 doc,
                 config,

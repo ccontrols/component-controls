@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`enzyme cjs 1`] = `
-"const {
+exports[`enzyme  cjs 1`] = `
+"const path = require('path');
+const {
   loadConfigurations,
   extractDocuments,
 } = require('@component-controls/config');
@@ -39,7 +40,7 @@ describe('component-controls generated', () => {
     });
     done();
   });
-  const configPath = '/Users/atanasster/component-controls/plugins/jest-snapshots/test/.config';
+  const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
   if (!config.renderFn) {
     config.renderFn = reactRender;
@@ -57,11 +58,12 @@ describe('component-controls generated', () => {
         describe(doc.title, () => {
           examples.forEach(example => {
             it(example.name, async () => {
-              const rendered = renderExample({
+              let rendered;
+              rendered = renderExample({
                 example,
                 doc,
                 config,
-              });              
+              });
               const component = mount(rendered);
               const serialize = () => toJson(component, { mode: 'deep' });
 

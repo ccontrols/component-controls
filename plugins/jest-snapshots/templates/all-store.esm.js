@@ -1,3 +1,4 @@
+import * as path from 'path';
 {{=it.storeImports}}
 
 {{=it.imports}}

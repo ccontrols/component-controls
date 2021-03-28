@@ -1,4 +1,4 @@
-  const store = loadStore(require('{{=it.bundlePath}}'));
+  const store = loadStore(require(path.resolve(__dirname, '{{=it.bundlePath}}')));
   const renderFn = store.config.renderFn || reactRender;
   Object.keys(store.docs).forEach(docId => {
     const doc = store.docs[docId];

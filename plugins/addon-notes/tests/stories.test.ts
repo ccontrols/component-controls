@@ -1,3 +1,4 @@
+import path from 'path';
 import { loadConfigurations, extractDocuments } from '@component-controls/config';
 import { renderExample } from '@component-controls/test-renderers';
 import { render as reactRender } from '@component-controls/render/react';
@@ -29,7 +30,7 @@ describe('component-controls generated', () => {
     });
     done();
   });
-  const configPath = './.config';
+  const configPath = path.resolve(__dirname, '../.config');
   const config = loadConfigurations(configPath);
   if (!config.renderFn) {
     config.renderFn = reactRender;
@@ -49,11 +50,11 @@ describe('component-controls generated', () => {
             it(example.name, async () => {
               let rendered;
               act(() => {
-                rendered = renderExample({
-                  example,
-                  doc,
-                  config,
-                });
+              rendered = renderExample({
+                example,
+                doc,
+                config,
+              });
               });
               let serialize;
               if (rendered) {
@@ -68,5 +69,5 @@ describe('component-controls generated', () => {
         });
       }
     });
-  }
+  } 
 });

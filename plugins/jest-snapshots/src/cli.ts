@@ -40,6 +40,7 @@ export const run = async (): Promise<void> => {
     configPath: config,
     name,
     bundle,
+    out: testFolder,
   });
   fs.writeFileSync(testFilePath, content, 'utf8');
 };

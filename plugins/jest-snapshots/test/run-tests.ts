@@ -2,29 +2,47 @@ import fs from 'fs';
 import path from 'path';
 import { runCLI } from 'jest';
 import { Config } from '@jest/types';
-import { TeplateFormats } from '../src/types';
+import { createTemplate, TemplateOptions } from '../src/templates';
 
-export const runTests = async (
-  format: TeplateFormats,
-  test: string,
-): Promise<void> => {
+export const runTests = (props: TemplateOptions): void => {
+  const { renderer, format, configPath, bundle } = props;
   const extension = format === 'ts' ? 'ts' : 'js';
-  const testFileName = path.resolve(
-    __dirname,
-    `test_example_run.test.${extension}`,
-  );
+  const testName = `test_${renderer}_${format}${bundle ? '_bundle' : ''}`;
+  const testFileName = path.resolve(__dirname, `${testName}.test.${extension}`);
   const snapshotFileName = path.resolve(
     __dirname,
-    `__snapshots__/test_example_run.test.${extension}.snap`,
+    `__snapshots__/${testName}.test.${extension}.snap`,
   );
-  try {
-    fs.writeFileSync(testFileName, test);
+  let renderedFile = '';
+  beforeAll(() => {
+    renderedFile = createTemplate({
+      format,
+      renderer,
+      bundle,
+      configPath,
+      out: __dirname,
+    });
+
+    fs.writeFileSync(testFileName, renderedFile);
     if (fs.existsSync(snapshotFileName)) {
       fs.unlinkSync(snapshotFileName);
     }
+  });
+
+  afterAll(() => {
+    if (fs.existsSync(testFileName)) {
+      fs.unlinkSync(testFileName);
+    }
+    if (fs.existsSync(snapshotFileName)) {
+      fs.unlinkSync(snapshotFileName);
+    }
+  });
+  it(`${renderer} ${bundle ? 'bundle' : ''} ${format}`, async () => {
+    expect(renderedFile).toMatchSnapshot();
+
     await runCLI(
       {
-        testRegex: 'test_example_run',
+        testRegex: testName,
         testPathIgnorePatterns: ['/node_modules/', '/__snapshots__/'],
         silent: true,
         verbose: false,
@@ -32,12 +50,5 @@ export const runTests = async (
       } as Config.Argv,
       [__dirname],
     );
-  } finally {
-    if (fs.existsSync(testFileName)) {
-      fs.unlinkSync(testFileName);
-    }
-    if (fs.existsSync(snapshotFileName)) {
-      fs.unlinkSync(snapshotFileName);
-    }
-  }
+  }, 1000000);
 };

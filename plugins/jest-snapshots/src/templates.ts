@@ -12,14 +12,16 @@ export type TemplateOptions = {
   format?: TeplateFormats;
   configPath?: string;
   bundle?: string;
+  out?: string;
   name?: string;
 };
 export const createTemplate = (options?: TemplateOptions): string => {
   const {
     renderer = 'rtl',
     format = 'cjs',
-    configPath = path.resolve(process.cwd(), defaultConfigFolder),
+    configPath: config = path.resolve(process.cwd(), defaultConfigFolder),
     name = 'component-controls generated',
+    out,
     bundle,
   } = options || {};
   const filePath = path.resolve(
@@ -52,17 +54,19 @@ export const createTemplate = (options?: TemplateOptions): string => {
   const render = dot.template(fs.readFileSync(renderPath, 'utf8'))({
     storeRender,
   });
-
+  const bundlePath =
+    out && bundle ? `.${path.sep}${path.relative(out, bundle)}` : bundle;
+  const configPath = out ? path.relative(out, config) : config;
   const vars = {
     imports: fs.readFileSync(importsPath, 'utf8'),
     render,
     configPath,
     storeRender,
     storeImports: fs.readFileSync(storeImportPath, 'utf8'),
-    bundlePath: bundle,
+    bundlePath,
     storeLoop: dot.template(fs.readFileSync(storeLoopPath, 'utf8'))({
       render,
-      bundlePath: bundle,
+      bundlePath,
       configPath,
     }),
     name,

@@ -1,3 +1,4 @@
+const path = require('path');
 {{=it.storeImports}}
 
 {{=it.imports}}
