@@ -23,6 +23,7 @@ export const run = async (): Promise<void> => {
     overwrite,
     config,
     test = 'stories.test.js',
+    bundle,
     name,
   } = parsedArgs;
   const testFilePath = path.resolve(testFolder, test);
@@ -38,6 +39,7 @@ export const run = async (): Promise<void> => {
     format,
     configPath: config,
     name,
+    bundle,
   });
   fs.writeFileSync(testFilePath, content, 'utf8');
 };

@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rtr bundle esm 1`] = `
+"import { loadStore } from '@component-controls/store';
+const { render: reactRender } = require('@component-controls/render/react');
+
+import renderer, { act } from 'react-test-renderer';
+
+describe('component-controls generated', () => {
+  beforeAll(async done => {
+    jest.mock('rc-util/lib/Portal');
+    global.MutationObserver = class {
+      constructor() {}
+      disconnect() {}
+      observe() {}
+      takeRecords() {
+        return [];
+      }
+    };
+
+    Object.defineProperty(window, 'matchMedia', {
+      writable: true,
+      value: jest.fn().mockImplementation(query => ({
+        matches: false,
+        media: query,
+        onchange: null,
+        addEventListener: jest.fn(),
+        removeEventListener: jest.fn(),
+        dispatchEvent: jest.fn(),
+      })),
+    });
+    done();
+  });
+const store = loadStore(require('/Users/atanasster/component-controls/plugins/jest-snapshots/test/bundle/component-controls.js'));
+const renderFn = store.config.renderFn || reactRender;
+Object.keys(store.docs).forEach(docId => {
+  const doc = store.docs[docId];
+  if (doc.stories && doc.stories.length) {
+    const stories = doc.stories;
+    describe(doc.title, () => {
+      stories.forEach(storyId => {
+        const story = store.stories[storyId];
+        it(story.name, async () => {
+              let rendered;
+              act(() => {
+              rendered = renderFn(story, doc);                
+              });
+              const component = rendered ? renderer.create(rendered) : undefined;
+              const serialize = component ? component.toJSON : () => undefined;
+
+          expect(serialize()).toMatchSnapshot();
+        });
+      });
+    });
+  }
+});  
+});
+"
+`;

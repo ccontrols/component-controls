@@ -36,6 +36,14 @@ export const jestCliArgs: ArgOptions = [
     },
   },
   {
+    name: 'bundle',
+    options: {
+      alias: 'b',
+      description: 'bundle path, if store loaded ffrom bundle',
+      type: 'string',
+    },
+  },
+  {
     name: 'output',
     options: {
       alias: 'o',

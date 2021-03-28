@@ -11,6 +11,7 @@ export type TemplateOptions = {
   renderer?: Renderers;
   format?: TeplateFormats;
   configPath?: string;
+  bundle?: string;
   name?: string;
 };
 export const createTemplate = (options?: TemplateOptions): string => {
@@ -19,6 +20,7 @@ export const createTemplate = (options?: TemplateOptions): string => {
     format = 'cjs',
     configPath = path.resolve(process.cwd(), defaultConfigFolder),
     name = 'component-controls generated',
+    bundle,
   } = options || {};
   const filePath = path.resolve(
     __dirname,
@@ -29,15 +31,40 @@ export const createTemplate = (options?: TemplateOptions): string => {
     __dirname,
     `../templates/imports/${renderers[renderer]}.${format}.js`,
   );
+  const store = bundle ? 'bundle' : 'imports';
+  const storeImportPath = path.resolve(
+    __dirname,
+    `../templates/store-import/${store}.${format}.js`,
+  );
+  const storeLoopPath = path.resolve(
+    __dirname,
+    `../templates/store-loop/${store}.${format}.js`,
+  );
+  const storeRenderPath = path.resolve(
+    __dirname,
+    `../templates/store-render/${store}.${format}.js`,
+  );
+  const storeRender = fs.readFileSync(storeRenderPath, 'utf8');
   const renderPath = path.resolve(
     __dirname,
     `../templates/render/${renderers[renderer]}.${format}.js`,
   );
+  const render = dot.template(fs.readFileSync(renderPath, 'utf8'))({
+    storeRender,
+  });
 
   const vars = {
     imports: fs.readFileSync(importsPath, 'utf8'),
-    render: fs.readFileSync(renderPath, 'utf8'),
+    render,
     configPath,
+    storeRender,
+    storeImports: fs.readFileSync(storeImportPath, 'utf8'),
+    bundlePath: bundle,
+    storeLoop: dot.template(fs.readFileSync(storeLoopPath, 'utf8'))({
+      render,
+      bundlePath: bundle,
+      configPath,
+    }),
     name,
   };
   const content = fs.readFileSync(filePath, 'utf8');

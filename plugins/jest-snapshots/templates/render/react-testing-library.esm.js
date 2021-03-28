@@ -1,10 +1,6 @@
               let rendered;
               act(() => {
-                rendered = renderExample({
-                  example,
-                  doc,
-                  config,
-                });
+{{=it.storeRender}}
               });
               let serialize;
               if (rendered) {

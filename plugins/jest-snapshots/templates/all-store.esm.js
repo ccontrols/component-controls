@@ -1,6 +1,4 @@
-import { loadConfigurations, extractDocuments } from '@component-controls/config';
-import { renderExample } from '@component-controls/test-renderers';
-import { render as reactRender } from '@component-controls/render/react';
+{{=it.storeImports}}
 
 {{=it.imports}}
 describe('{{=it.name}}', () => {
@@ -28,30 +26,5 @@ describe('{{=it.name}}', () => {
     });
     done();
   });
-  const configPath = '{{=it.configPath}}';
-  const config = loadConfigurations(configPath);
-  if (!config.renderFn) {
-    config.renderFn = reactRender;
-  }
-  const documents = extractDocuments({ config, configPath });
-  if (documents) {
-    documents.forEach(file => {
-      const exports = require(file);
-      const doc = exports.default;
-      const examples = Object.keys(exports)
-        .filter(key => key !== 'default')
-        .map(key => exports[key]);
-
-      if (examples.length) {
-        describe(doc.title, () => {
-          examples.forEach(example => {
-            it(example.name, async () => {
-{{=it.render}}
-              expect(serialize()).toMatchSnapshot();
-            });
-          });
-        });
-      }
-    });
-  }
+{{=it.storeLoop}}  
 });

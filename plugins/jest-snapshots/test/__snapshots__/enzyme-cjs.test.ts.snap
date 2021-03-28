@@ -61,7 +61,7 @@ describe('component-controls generated', () => {
                 example,
                 doc,
                 config,
-              });
+              });              
               const component = mount(rendered);
               const serialize = () => toJson(component, { mode: 'deep' });
 
@@ -72,6 +72,7 @@ describe('component-controls generated', () => {
       }
     });
   }
+  
 });
 "
 `;

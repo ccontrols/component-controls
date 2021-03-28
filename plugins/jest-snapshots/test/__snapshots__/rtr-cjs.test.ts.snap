@@ -71,6 +71,7 @@ describe('component-controls generated', () => {
       }
     });
   }
+  
 });
 "
 `;

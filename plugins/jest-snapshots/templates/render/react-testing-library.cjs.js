@@ -1,9 +1,5 @@
               let rendered;
               act(() => {
-                rendered = renderExample({
-                  example,
-                  doc,
-                  config,
-                });
+{{=it.storeRender}}
               });
               const { asFragment: serialize } = render(rendered);
