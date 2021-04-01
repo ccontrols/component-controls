@@ -2,16 +2,16 @@ import prettier from 'prettier';
 import parserBabel from 'prettier/parser-babylon';
 import { PrettierOptions } from '../types';
 
-export const prettify = async (
+export const prettify = (
   code: string,
   options: PrettierOptions | false,
   filePath?: string,
-): Promise<string> => {
+): string => {
   if (options !== false) {
     const { resolveConfigOptions, ...otherOptions } = options || {};
     let allPrettierOptions: prettier.Options | undefined = otherOptions as any;
     if (filePath) {
-      const userOptions = await prettier.resolveConfig(
+      const userOptions = prettier.resolveConfig.sync(
         filePath,
         resolveConfigOptions,
       );

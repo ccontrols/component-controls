@@ -1,1 +1,0 @@
-              rendered = renderFn(story, doc);

@@ -39,6 +39,7 @@ import {
 export * from './types';
 export { getComponentProps } from './misc/props-info';
 export { getFileIinfo } from './misc/file-info';
+export { prettify };
 
 type TraverseFn = (
   ast: File,
@@ -61,7 +62,7 @@ const parseSource = async (
   filePath: string,
   options: Required<InstrumentOptions>,
 ): Promise<ParseStorieReturnType | undefined> => {
-  const source = await prettify(code, options.prettier, filePath);
+  const source = prettify(code, options.prettier, filePath);
   const { ast } = parseFile(filePath, options.parser, source);
 
   const store = traverseFn(ast, options, { source, filePath });

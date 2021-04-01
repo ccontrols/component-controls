@@ -166,17 +166,17 @@ The new Testing Page should now be visible
 
 ## Add jest snapshot tests
 
-The `@component-controls/jest-snapshots` package is automatically creating jest [snapshot tests](/tutorial/testing/jest-snapshots) from your existing stories. It has an easy to use command-line interface that we will use in this example but also offers a [fully customizable API](/blogs/custom-test-runners).
+The `@component-controls/cc-cli` package is automatically creating jest [snapshot tests](/tutorial/testing/jest-snapshots) from your existing stories. It has an easy to use command-line interface that we will use in this example but also offers a [fully customizable API](/blogs/custom-test-runners).
 
-### Install the jest-snapshots package
+### Install the cc-cli package
 
 ```sh
-yarn add @component-controls/jest-snapshots -D
+yarn add @component-controls/cc-cli -D
 ```
 
-### Configure test script
+### Configure test:create script
 
-We will launch the `cc-jest` command-line with the -c parameter pointing to the folder storing your configuration files. You can also add other parameters such as `--coverage`.
+We will launch the `cc-cli` command-line tool to create automatically tests for all our existing stories.
 
 ```js:title=package.json {7}
 {
@@ -185,7 +185,8 @@ We will launch the `cc-jest` command-line with the -c parameter pointing to the 
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "cc-jest -c .storybook",
+    "test:create": "cc-cli -c ./.config -o tests -t stories.test.ts -n components -f ts",
+    "test": "yarn jest"
     "eject": "react-scripts eject",
     ...
   },
@@ -199,7 +200,7 @@ We will launch the `cc-jest` command-line with the -c parameter pointing to the 
 yarn test
 ```
 
-Running the `jest-snapshots` test will execute any existing tests (ie `src/lib/components/button/button.spec.tsx`) as well as snapshot tests automatically created for all your stories.
+Running the `test:create` script test will a tests file `stories.test.ts` (typecript format) in the `tests` folder.
 
 After running the tests, you should have a file `tests/__snapshots__/stories.test.js.snap`, with snapshots like this one:
 

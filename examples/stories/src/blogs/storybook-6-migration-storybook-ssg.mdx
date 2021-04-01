@@ -8,15 +8,16 @@ description: Migrate a documentation site from Storybook 6 to component-controls
 tags:
   - storybook
   - tailwind
-image: /static/docs-and-page.jpg  
+image: /static/docs-and-page.jpg
 ---
-import { Button } from '../components/Button'
+
+import { Button } from '../components/Button';
 import docsAndPageImg from './media/docs-and-page.jpg';
 import testingPageImg from './media/testing-page.jpg';
 
 # Storybook as a static site generator
 
-The starting sample project was cloned from 
+The starting sample project was cloned from
 
 [tw-sb-rtl-starter](https://github.com/ssengalanto/tw-sb-rtl-starter)
 
@@ -26,14 +27,13 @@ The final project can be found here:
 
 [live site](https://tailwind-storybook-controls-starter.netlify.app/?path=/docs-page/components-button--primary)
 
-
 ## Install `@component-controls/storybook`
 
 ```sh
 yarn add @component-controls/storybook -D
 ```
 
-component-controls has two [configuration](/configuration/overview/) files - one is used during build-time in a nodejs environment, the other is used during run-time in a browser environment. 
+component-controls has two [configuration](/configuration/overview/) files - one is used during build-time in a nodejs environment, the other is used during run-time in a browser environment.
 
 The rough equivalents of Storybook for those two configuration files are `main.js` and `preview.(js|ts)`
 
@@ -47,12 +47,12 @@ module.exports = {
   addons: [
     '@storybook/addon-essentials',
     '@storybook/preset-create-react-app',
-    '@component-controls/storybook'
+    '@component-controls/storybook',
   ],
 };
 ```
 
-At his point, you can start your documentation site 
+At his point, you can start your documentation site
 
 ```sh
  yarn storybook
@@ -64,7 +64,7 @@ And a new documentation Page tab will be visible
 
 ## Add testing page
 
-component-controls allows adding fully customizable documentation pages to your documentation site. 
+component-controls allows adding fully customizable documentation pages to your documentation site.
 
 ### Install testing packages
 
@@ -102,13 +102,13 @@ const TestingPage = () => {
             <Story id="." />
           </Playground>
           <PropsTable of="." title="Controls" visibility="controls" />
-        </>  
+        </>
       )}
       <AllyBlock title="A11y tests" />
       <ViewportBlock title="Viewport" />
-    </>  
+    </>
   );
-}
+};
 
 export default {
   key: 'docs-test',
@@ -140,8 +140,8 @@ module.exports = {
           require.resolve('@component-controls/storybook/full-page'), // this is the default documentation page
           require.resolve('./testing-page'),
         ],
-      }
-    }
+      },
+    },
   ],
 };
 ```
@@ -150,20 +150,19 @@ The new Testing Page should now be visible
 
 <img alt="testing page" title="testing page" src={testingPageImg} />
 
-
 ## Add jest snapshot tests
 
-The `@component-controls/jest-snapshots` package is automatically creating jest [snapshot tests](/tutorial/testing/jest-snapshots) from your existing stories. It has an easy to use command-line interface that we will use in this example but also offers a [fully customizable API](/blogs/custom-test-runners).
+The `@component-controls/cc-cli` package is automatically creating jest [snapshot tests](/tutorial/testing/jest-snapshots) from your existing stories. It has an easy to use command-line interface that we will use in this example but also offers a [fully customizable API](/blogs/custom-test-runners).
 
-### Install the jest-snapshots package
+### Install the cc-cli package
 
 ```sh
-yarn add @component-controls/jest-snapshots -D
+yarn add @component-controls/cc-cli -D
 ```
 
-### Configure test script
+### Configure test:create script
 
-We will launch the `cc-jest` command-line with the -c parameter pointing to the folder storing your configuration files. You can also add other parameters such as `--coverage`.
+We will launch the `cc-cli` command-line tool to create automatically tests for all our existing stories.
 
 ```js:title=package.json {7}
 {
@@ -172,12 +171,13 @@ We will launch the `cc-jest` command-line with the -c parameter pointing to the 
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "cc-jest -c .storybook",
+    "test:create": "cc-cli -c ./.config -o tests -t stories.test.ts -n components -f ts",
+    "test": "yarn jest"
     "eject": "react-scripts eject",
     ...
   },
   ...
-}  
+}
 ```
 
 ### Run the tests
@@ -186,7 +186,7 @@ We will launch the `cc-jest` command-line with the -c parameter pointing to the 
 yarn test
 ```
 
-Running the `jest-snapshots` test will execute any existing tests (ie `src/lib/components/button/button.spec.tsx`) as well as snapshot tests automatically created for all your stories.
+Running the `test:create` script test will a tests file `stories.test.ts` (typecript format) in the `tests` folder.
 
 After running the tests, you should have a file `tests/__snapshots__/stories.test.js.snap`, with snapshots like this one:
 
@@ -223,15 +223,15 @@ module.exports = {
           require.resolve('@component-controls/storybook/full-page'), // this is the default documentation oage
           require.resolve('./testing-page'),
         ],
-      }
-    }
+      },
+    },
   ],
 };
 ```
 
 ### Add MDX instrumenting
 
-If you have MDX documents in your documentation,  we will need to add a custom `webpack` configration to `@component-controls/storybook`
+If you have MDX documents in your documentation, we will need to add a custom `webpack` configration to `@component-controls/storybook`
 
 ```js:title=.storybook/main.js
 module.exports = {
@@ -245,8 +245,8 @@ module.exports = {
           require.resolve('./testing-page'),
         ],
         webpack: ['instrument', 'react-docgen-typescript'],
-      }  
-    }
+      },
+    },
   ],
 };
 ```

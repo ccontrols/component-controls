@@ -23,7 +23,7 @@
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "prepare": "yarn build",
-    "test:create": "cc-jest -c ./.config -o tests -t stories.test.ts -f ts",
+    "test:create": "cc-cli -c ./.config -o tests -t stories.test.ts -f ts",
     "test": "yarn jest"
   },
   "homepage": "https://github.com/ccontrols/component-controls",
@@ -46,7 +46,7 @@
     "react-google-charts": "^3.0.15"
   },
   "devDependencies": {
-    "@component-controls/jest-snapshots": "^3.4.5",
+    "@component-controls/cc-cli": "^3.4.5",
     "@component-controls/ts-markdown-docs": "^2.6.0",
     "@types/react": "^16.9.34",
     "@types/recoil": "^0.0.1",
