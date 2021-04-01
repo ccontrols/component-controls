@@ -20,6 +20,9 @@ import testingImg from './media/testing.jpg';
 import designTokensImg from './media/design-tokens.jpg';
 import designAssets from './media/design-assets-badge.jpg';
 import componentCatalog from './media/component-catalog-badge.jpg';
+import { WebpackLogo } from './media/webpack-logo';
+import { NextjsLogo } from './media/nextjs-logo';
+import { GatsbyLogo } from './media/gatsby-logo';
 
 
 
@@ -59,22 +62,19 @@ export const BoxItem = ({ children, title, action, ...rest }) => (
 <Divider sx={{ my: 4 }}/>
 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
   <Heading as="h1" sx={{ px: 1, textAlign: 'center' }}>Choose your favorite <Link aria-label="gatsby vs nextjs vs webpack" href="/blogs/gatsby-vs-nextjs-vs-webpack">site builder</Link></Heading>
-  <Grid
+  <Box
     sx={{
-      m: 4,
-      gridTemplateColumns: ['1fr', '1fr', '33.3% 33.3% 33.3%'],
+      display: 'flex',
+      flexDirection: ['column', 'row'],
+      justifyContent: 'space-between',
+      marginTop: 20,
+      padding: [0, 20, 40],
     }}
   >
-    <BoxItem title="Start with gatsby" action={<Button aria-label="start with gatsby" as={Link} href='/tutorial/getting-started/gatsby'>get started...</Button>}>
-      Go beyond static sites: build blogs, e-commerce sites, full-blown apps, and more with Gatsby.
-    </BoxItem>
-    <BoxItem title="Start with next.js" action={<Button aria-label="start with nextjs" as={Link} href='/tutorial/getting-started/nextjs'>get started...</Button>}>
-      Production grade react applications: build static and dynamic websites and web applications that scale.
-    </BoxItem>
-    <BoxItem title="Start with webpack" action={<Button aria-label="start with webpack" as={Link} href='/tutorial/getting-started/webpack'>get started...</Button>}>
-      Build your documentation sites using traditional react technologies such as webpack, react-router, and react-helmet.
-    </BoxItem>
-  </Grid>
+    <WebpackLogo />
+    <NextjsLogo />
+    <GatsbyLogo />
+  </Box>
 </Box>  
 
 <Divider sx={{ my: 4 }}/>
