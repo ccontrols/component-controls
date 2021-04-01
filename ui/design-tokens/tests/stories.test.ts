@@ -1,15 +1,19 @@
 import path from 'path';
 import MatchMediaMock from 'jest-matchmedia-mock';
-import { loadConfigurations, extractDocuments } from '@component-controls/config';
+import {
+  loadConfigurations,
+  extractDocuments,
+} from '@component-controls/config';
 import { renderExample } from '@component-controls/test-renderers';
 import { render as reactRender } from '@component-controls/render/react';
-
 import { render, act } from '@testing-library/react';
 
-
-let matchMedia: MatchMediaMock;
+const renderErr = () => {
+  throw new Error('Could not render the story');
+};
 
 describe('design-tokens', () => {
+  let matchMedia: MatchMediaMock;
   beforeAll(() => {
     jest.mock('rc-util/lib/Portal');
     matchMedia = new MatchMediaMock();
@@ -37,24 +41,22 @@ describe('design-tokens', () => {
             it(example.name, async () => {
               let rendered;
               act(() => {
-              rendered = renderExample({
-                example,
-                doc,
-                config,
+                rendered = renderExample({
+                  example,
+                  doc,
+                  config,
+                });
               });
-              });
-              let serialize;
-              if (rendered) {
-                ({ asFragment: serialize } = render(rendered));
-              } else {
-                serialize = () => 'error';
+              if (!rendered) {
+                renderErr();
+                return;
               }
-
-              expect(serialize()).toMatchSnapshot();
+              const { asFragment } = render(rendered);
+              expect(asFragment()).toMatchSnapshot();
             });
           });
         });
       }
     });
-  } 
+  }
 });
