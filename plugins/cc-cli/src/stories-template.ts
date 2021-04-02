@@ -1,6 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import dot from 'dot';
+import { parseStories } from '@component-controls/instrument';
+
 import { Document } from '@component-controls/core';
 import { loadStore } from '@component-controls/store';
 import { createTemplate } from './template';
@@ -9,11 +11,11 @@ import { StoryTemplateOptions, renderers, TemplateFunction } from './types';
 dot.templateSettings.strip = false;
 (dot as any).log = false;
 
-export const createStoriesTemplate: TemplateFunction<StoryTemplateOptions> = (
+export const createStoriesTemplate: TemplateFunction<StoryTemplateOptions> = async (
   options: StoryTemplateOptions,
-): string => {
+): Promise<string> => {
   const {
-    storyPath,
+    storyPath = '',
     renderer = 'rtl',
     format = 'cjs',
     name,
@@ -44,11 +46,18 @@ export const createStoriesTemplate: TemplateFunction<StoryTemplateOptions> = (
       });
     }
   } else {
-    const docExports = require(storyPath);
-    stories = Object.keys(docExports)
-      .filter(key => key !== 'default')
-      .map(key => ({ name: key }));
-    doc = docExports['default'];
+    const { doc: storeDoc, stories: storeStories } = await parseStories(
+      storyPath,
+    );
+    if (storeDoc) {
+      doc = storeDoc;
+    }
+    if (storeStories) {
+      stories = Object.keys(storeStories).map(key => ({
+        name: storeStories[key].name,
+        id: key,
+      }));
+    }
   }
   const store = bundle ? 'bundle' : 'imports';
   const storeRender = fs.readFileSync(

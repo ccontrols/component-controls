@@ -40,7 +40,7 @@ export const jestCliArgs: ArgOptions = [
     options: {
       alias: 'w',
       description: 'force overwrite test file',
-      default: true,
+      default: false,
       type: 'boolean',
     },
   },
@@ -66,7 +66,6 @@ export const jestCliArgs: ArgOptions = [
       alias: 't',
       description: 'tests file name',
       type: 'string',
-      default: 'stories.test.js',
     },
   },
   {
@@ -75,7 +74,6 @@ export const jestCliArgs: ArgOptions = [
       alias: 'n',
       description: 'name of the test group (describe)',
       type: 'string',
-      default: 'component-controls generated',
     },
   },
 ];

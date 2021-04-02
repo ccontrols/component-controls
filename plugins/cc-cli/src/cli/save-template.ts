@@ -3,10 +3,10 @@ import fs from 'fs';
 import { CliOptions } from './types';
 import { TemplateFunction, TemplateOptions } from '../types';
 
-export const saveTemplate = <P extends TemplateOptions>(
+export const saveTemplate = async <P extends TemplateOptions>(
   options: CliOptions<P>,
   templateFn: TemplateFunction<P>,
-): void => {
+): Promise<void> => {
   const { test, overwrite, output, ...rest } = options;
 
   let testFolder = output as string;
@@ -27,7 +27,7 @@ export const saveTemplate = <P extends TemplateOptions>(
     );
     return;
   }
-  const content = templateFn(({
+  const content = await templateFn(({
     output: testFolder,
     ...rest,
   } as unknown) as P);

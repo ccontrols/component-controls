@@ -25,7 +25,7 @@ export const fixtureToTest = (
   const filePathName = path.join(folderName, fileName);
   const content = fs.readFileSync(filePathName, 'utf8');
   it(fileName, async () => {
-    const parsed = await parseStories(content, filePathName, options);
+    const parsed = await parseStories(filePathName, content, options);
     await callback(parsed);
   });
 };

@@ -7,7 +7,7 @@ import { createTemplate } from './template';
 dot.templateSettings.strip = false;
 (dot as any).log = false;
 
-export const createStoreTemplate: TemplateFunction = (
+export const createStoreTemplate: TemplateFunction = async (
   options: TemplateOptions,
 ) => {
   const {

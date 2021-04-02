@@ -19,7 +19,7 @@ export const run = async (): Promise<void> => {
   } = parsedArgs;
   switch (parsedArgs.generate) {
     case 'store':
-      return cliStore({
+      return await cliStore({
         renderer,
         format,
         overwrite,
@@ -30,7 +30,7 @@ export const run = async (): Promise<void> => {
         output,
       } as CliOptions);
     case 'story':
-      return cliStory({
+      return await cliStory({
         renderer,
         format,
         overwrite,

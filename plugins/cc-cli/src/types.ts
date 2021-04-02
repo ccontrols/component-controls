@@ -18,9 +18,9 @@ export type TemplateOptions = {
 };
 
 export interface StoryTemplateOptions extends TemplateOptions {
-  storyPath: string;
+  storyPath?: string;
 }
 
 export type TemplateFunction<P extends TemplateOptions = TemplateOptions> = (
   options: P,
-) => string;
+) => Promise<string>;

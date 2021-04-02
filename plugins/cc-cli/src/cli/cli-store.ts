@@ -2,7 +2,7 @@ import { CliOptions } from './types';
 import { saveTemplate } from './save-template';
 import { createStoreTemplate } from '../store-template';
 
-export const cliStore = (options: CliOptions): void => {
+export const cliStore = async (options: CliOptions): Promise<void> => {
   const {
     renderer,
     format,
@@ -10,10 +10,10 @@ export const cliStore = (options: CliOptions): void => {
     config,
     test = 'stories.test.js',
     bundle,
-    name,
+    name = 'component-controls generated',
     output = 'tests',
   } = options;
-  return saveTemplate(
+  return await saveTemplate(
     {
       renderer,
       format,

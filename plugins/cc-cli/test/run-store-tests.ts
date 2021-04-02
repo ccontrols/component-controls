@@ -5,7 +5,7 @@ import { Config } from '@jest/types';
 import { createStoreTemplate } from '../src/store-template';
 import { TemplateOptions } from '../src/types';
 
-export const runTests = (props: TemplateOptions): void => {
+export const runTests = async (props: TemplateOptions): Promise<void> => {
   const { renderer, format, config, bundle } = props;
   const extension = format === 'ts' ? 'ts' : 'js';
   const testName = `test_${renderer}_${format}${bundle ? '_bundle' : ''}`;
@@ -14,24 +14,25 @@ export const runTests = (props: TemplateOptions): void => {
     __dirname,
     `__snapshots__/${testName}.test.${extension}.snap`,
   );
-  let renderedFile = '';
-
-  renderedFile = createStoreTemplate({
-    format,
-    renderer,
-    bundle,
-    config,
-    output: __dirname,
-  });
-
-  fs.writeFileSync(testFileName, renderedFile);
-  if (fs.existsSync(snapshotFileName)) {
-    fs.unlinkSync(snapshotFileName);
-  }
-
   it(`${renderer} ${bundle ? 'bundle' : ''} ${format}`, async () => {
-    expect(renderedFile).toMatchSnapshot();
     try {
+      let renderedFile = '';
+
+      renderedFile = await createStoreTemplate({
+        format,
+        renderer,
+        bundle,
+        config,
+        output: __dirname,
+      });
+
+      fs.writeFileSync(testFileName, renderedFile);
+      if (fs.existsSync(snapshotFileName)) {
+        fs.unlinkSync(snapshotFileName);
+      }
+
+      expect(renderedFile).toMatchSnapshot();
+
       await runCLI(
         {
           testRegex: testName,

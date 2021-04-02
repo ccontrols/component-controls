@@ -1,3 +1,4 @@
+import fs from 'fs';
 import mdx from '@mdx-js/mdx';
 import matter from 'gray-matter';
 import { File } from '@babel/types';
@@ -123,10 +124,11 @@ export type ParseStoriesReturnType = { transformed: string } & Partial<
  */
 
 export const parseStories = async (
-  source: string,
   filePath: string,
+  fileSource?: string,
   options?: InstrumentOptions,
 ): Promise<ParseStoriesReturnType> => {
+  const source = fileSource || fs.readFileSync(filePath, 'utf8');
   const {
     parser: parserOptions = {},
     prettier: prettierOptions = {},
