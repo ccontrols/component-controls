@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { ControlTypes, Example } from '@component-controls/core';
+import { ControlTypes, Document, Example } from '@component-controls/core';
 import { ControlsStateProvider } from '@component-controls/store';
 import { BooleanEditor } from './BooleanEditor';
 
 export default {
   title: 'Editors/BooleanEditor',
   component: BooleanEditor,
-};
+} as Document;
 
 export const overview: Example = () => {
   const [state, setState] = useState(false);

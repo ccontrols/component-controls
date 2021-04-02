@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { ControlTypes, Example } from '@component-controls/core';
+import { ControlTypes, Example, Document } from '@component-controls/core';
 import { ControlsStateProvider } from '@component-controls/store';
 import { ArrayEditor } from './ArrayEditor';
 
 export default {
   title: 'Editors/ArrayEditor',
   component: ArrayEditor,
-};
+} as Document;
 
 export const overview: Example = () => {
   const [state, setState] = useState([

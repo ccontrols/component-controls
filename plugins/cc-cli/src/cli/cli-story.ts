@@ -55,7 +55,7 @@ export const cliStory = async (options: CliOptions): Promise<void> => {
     await saveTemplate<StoryTemplateOptions>(
       {
         renderer,
-        format,
+        format: fileFormat,
         overwrite,
         config,
         test: testName,

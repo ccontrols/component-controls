@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonEditor overview 1`] = `
+<DocumentFragment>
+  <button
+    class="css-vhv7r1"
+    name="Check in console"
+  >
+    Check in console
+  </button>
+</DocumentFragment>
+`;

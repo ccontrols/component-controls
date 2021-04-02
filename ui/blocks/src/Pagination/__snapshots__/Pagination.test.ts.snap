@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-8r2q2l"
+  >
+    <div
+      class="css-vurnku"
+    />
+    <div
+      class="css-vurnku"
+    >
+      <a
+        class="css-10zwoio"
+        href="/docs/mdx-story"
+      >
+        <div
+          class="css-1my6hv5"
+        >
+          <span
+            class="css-c3r86m"
+          >
+            Next
+          </span>
+          <div
+            class="css-9tifnv"
+          >
+            <span
+              class="css-1s8umv4"
+            >
+              MDX Story
+            </span>
+            <svg
+              aria-hidden="true"
+              class="octicon"
+              fill="currentColor"
+              height="16"
+              role="img"
+              style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;

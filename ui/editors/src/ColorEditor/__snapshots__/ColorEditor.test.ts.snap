@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorEditor hsl 1`] = `
+<DocumentFragment>
+  <div
+    style="display: inline-block;"
+  >
+    <button
+      aria-label="edit the selected color"
+      class="css-rzf2n6-ColorEditor"
+    >
+      <div
+        class="css-rh3qt1-ColorEditor"
+      />
+      hsl(213, 50%, 16%)
+      <div
+        class="css-vurnku"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ColorEditor hsla 1`] = `
+<DocumentFragment>
+  <div
+    style="display: inline-block;"
+  >
+    <button
+      aria-label="edit the selected color"
+      class="css-rzf2n6-ColorEditor"
+    >
+      <div
+        class="css-1748e51-ColorEditor"
+      />
+      hsla(213, 50%, 16%, 0.5)
+      <div
+        class="css-vurnku"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ColorEditor overview 1`] = `
+<DocumentFragment>
+  <div
+    style="display: inline-block;"
+  >
+    <button
+      aria-label="edit the selected color"
+      class="css-rzf2n6-ColorEditor"
+    >
+      <div
+        class="css-whxk4e-ColorEditor"
+      />
+      #dedede
+      <div
+        class="css-vurnku"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ColorEditor rgb 1`] = `
+<DocumentFragment>
+  <div
+    style="display: inline-block;"
+  >
+    <button
+      aria-label="edit the selected color"
+      class="css-rzf2n6-ColorEditor"
+    >
+      <div
+        class="css-jcbfff-ColorEditor"
+      />
+      rgb(192, 0, 0)
+      <div
+        class="css-vurnku"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ColorEditor rgba 1`] = `
+<DocumentFragment>
+  <div
+    style="display: inline-block;"
+  >
+    <button
+      aria-label="edit the selected color"
+      class="css-rzf2n6-ColorEditor"
+    >
+      <div
+        class="css-1cnoj9w-ColorEditor"
+      />
+      rgba(0, 192, 0, 0.5)
+      <div
+        class="css-vurnku"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;

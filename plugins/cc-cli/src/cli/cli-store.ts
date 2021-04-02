@@ -5,7 +5,7 @@ import { createStoreTemplate } from '../store-template';
 export const cliStore = async (options: CliOptions): Promise<void> => {
   const {
     renderer,
-    format,
+    format = 'cjs',
     overwrite,
     config,
     test = 'stories.test.js',

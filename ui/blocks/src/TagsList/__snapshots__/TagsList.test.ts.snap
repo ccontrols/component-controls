@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TagsList overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1sjta5i-TagsList"
+  >
+    <a
+      class="css-1t54e2w"
+      href="/tags/atanasster"
+    >
+      <span
+        class="css-sih56k-Tag"
+      >
+        <span
+          class="css-vurnku"
+        >
+          atanasster
+        </span>
+      </span>
+    </a>
+  </div>
+</DocumentFragment>
+`;

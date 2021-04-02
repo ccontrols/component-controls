@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComponentStats overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-vurnku"
+  >
+    <div
+      class="css-vurnku"
+    >
+      <span
+        class="css-vurnku"
+      >
+        source lines:
+      </span>
+      <span
+        class="css-vurnku"
+      >
+        25
+      </span>
+    </div>
+    <div
+      class="css-1pc5rs1-ComponentStats"
+    >
+      <span
+        class="css-vurnku"
+      >
+        comments %:
+      </span>
+      <span
+        class="css-vurnku"
+      >
+        4
+      </span>
+    </div>
+    <div
+      class="css-1pc5rs1-ComponentStats"
+    >
+      <span
+        class="css-vurnku"
+      >
+        todo lines:
+      </span>
+      <span
+        class="css-vurnku"
+      >
+        5
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

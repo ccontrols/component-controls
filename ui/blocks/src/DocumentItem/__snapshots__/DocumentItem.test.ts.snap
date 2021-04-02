@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DocumentItem overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-127g8mg"
+  >
+    <div
+      class="css-4136op"
+    >
+      <a
+        class="css-1t54e2w"
+        href="/docs/id-of-story"
+      >
+        <h2
+          class="css-cmp44e-DocumentItem"
+        >
+          Story
+        </h2>
+      </a>
+      <a
+        class="css-1t54e2w"
+        href="/docs"
+      >
+        <span
+          class="css-pqmwqh-Tag"
+        >
+          <span
+            class="css-vurnku"
+          >
+            story
+          </span>
+        </span>
+      </a>
+    </div>
+    <div
+      class="css-1jbmnp7"
+    >
+      <div
+        class="css-f5h6sg"
+      >
+        <div
+          class="css-z4eqsg"
+        >
+          created: 1/1/2020
+        </div>
+        <div
+          class="css-f5h6sg"
+        >
+          <span
+            class="css-9cwl6c"
+          >
+            ,
+          </span>
+          <span
+            class="css-12cl38p"
+          >
+            by
+          </span>
+          <a
+            class="css-1t54e2w"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="css-vurnku"
+            >
+              atanasster
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

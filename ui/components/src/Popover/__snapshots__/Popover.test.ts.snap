@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Popover overview 1`] = `
+<DocumentFragment>
+  <div
+    style="display: inline-block;"
+  >
+    <button
+      class="css-gnc703"
+    >
+      Click to open
+    </button>
+  </div>
+</DocumentFragment>
+`;

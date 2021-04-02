@@ -1,0 +1,1470 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComponentCommits overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="css-1d6wxci"
+        >
+          <table
+            class="css-11y77l0"
+            role="table"
+          >
+            <thead
+              class="css-14kw1rx"
+            >
+              <tr
+                class="css-vurnku"
+                role="row"
+              >
+                <th
+                  class="css-9hyy6f"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="css-wwqljn"
+                  >
+                    <div
+                      class="css-206mi5"
+                    >
+                      Date
+                    </div>
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M4.427 7.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 7H4.604a.25.25 0 00-.177.427z"
+                      />
+                    </svg>
+                  </div>
+                </th>
+                <th
+                  class="css-9hyy6f"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="css-wwqljn"
+                  >
+                    <div
+                      class="css-206mi5"
+                    >
+                      Author
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="css-9hyy6f"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="css-wwqljn"
+                  >
+                    <div
+                      class="css-206mi5"
+                    >
+                      Commit Message
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              class="css-tuhk50"
+              role="rowgroup"
+            >
+              <tr
+                class="css-ijvt85"
+                role="row"
+              >
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span>
+                    2/23/2021
+                  </span>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    style="display: flex;"
+                  >
+                    <p
+                      style="padding-right: 10px;"
+                    >
+                      hasparus
+                    </p>
+                    <div
+                      class="css-9cbusc-GithubAvatar"
+                      style="display: inline-block;"
+                    >
+                      <div
+                        class="css-bwynl2-GithubAvatar"
+                      >
+                        <img
+                          class="css-1y16e88"
+                          height="22"
+                          src="https://github.com/hasparus"
+                          title="hasparus"
+                          width="22"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span
+                    class="css-1borfr-Cell"
+                  >
+                    third commit
+                  </span>
+                </td>
+              </tr>
+              <tr
+                class="css-ijvt85"
+                role="row"
+              >
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span>
+                    2/22/2021
+                  </span>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    style="display: flex;"
+                  >
+                    <p
+                      style="padding-right: 10px;"
+                    >
+                      lachlanjc
+                    </p>
+                    <div
+                      class="css-9cbusc-GithubAvatar"
+                      style="display: inline-block;"
+                    >
+                      <div
+                        class="css-bwynl2-GithubAvatar"
+                      >
+                        <img
+                          class="css-1y16e88"
+                          height="22"
+                          src="https://github.com/lachlanjc"
+                          title="lachlanjc"
+                          width="22"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span
+                    class="css-1borfr-Cell"
+                  >
+                    (งツ)ว
+                  </span>
+                </td>
+              </tr>
+              <tr
+                class="css-ijvt85"
+                role="row"
+              >
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span>
+                    2/21/2021
+                  </span>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    style="display: flex;"
+                  >
+                    <p
+                      style="padding-right: 10px;"
+                    >
+                      atanasster
+                    </p>
+                    <div
+                      class="css-9cbusc-GithubAvatar"
+                      style="display: inline-block;"
+                    >
+                      <div
+                        class="css-bwynl2-GithubAvatar"
+                      >
+                        <img
+                          class="css-1y16e88"
+                          height="22"
+                          src="https://github.com/atanasster"
+                          title="atanasster"
+                          width="22"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span
+                    class="css-1borfr-Cell"
+                  >
+                    first commit!
+                  </span>
+                </td>
+              </tr>
+              <tr
+                class="css-ijvt85"
+                role="row"
+              >
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span>
+                    2/21/2021
+                  </span>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    style="display: flex;"
+                  >
+                    <p
+                      style="padding-right: 10px;"
+                    >
+                      atanasster
+                    </p>
+                    <div
+                      class="css-9cbusc-GithubAvatar"
+                      style="display: inline-block;"
+                    >
+                      <div
+                        class="css-bwynl2-GithubAvatar"
+                      >
+                        <img
+                          class="css-1y16e88"
+                          height="22"
+                          src="https://github.com/atanasster"
+                          title="atanasster"
+                          width="22"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span
+                    class="css-1borfr-Cell"
+                  >
+                    first commit!
+                  </span>
+                </td>
+              </tr>
+              <tr
+                class="css-ijvt85"
+                role="row"
+              >
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span>
+                    2/21/2021
+                  </span>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    style="display: flex;"
+                  >
+                    <p
+                      style="padding-right: 10px;"
+                    >
+                      atanasster
+                    </p>
+                    <div
+                      class="css-9cbusc-GithubAvatar"
+                      style="display: inline-block;"
+                    >
+                      <div
+                        class="css-bwynl2-GithubAvatar"
+                      >
+                        <img
+                          class="css-1y16e88"
+                          height="22"
+                          src="https://github.com/atanasster"
+                          title="atanasster"
+                          width="22"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span
+                    class="css-1borfr-Cell"
+                  >
+                    first commit!
+                  </span>
+                </td>
+              </tr>
+              <tr
+                class="css-ijvt85"
+                role="row"
+              >
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span>
+                    2/21/2021
+                  </span>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    style="display: flex;"
+                  >
+                    <p
+                      style="padding-right: 10px;"
+                    >
+                      atanasster
+                    </p>
+                    <div
+                      class="css-9cbusc-GithubAvatar"
+                      style="display: inline-block;"
+                    >
+                      <div
+                        class="css-bwynl2-GithubAvatar"
+                      >
+                        <img
+                          class="css-1y16e88"
+                          height="22"
+                          src="https://github.com/atanasster"
+                          title="atanasster"
+                          width="22"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span
+                    class="css-1borfr-Cell"
+                  >
+                    first commit!
+                  </span>
+                </td>
+              </tr>
+              <tr
+                class="css-ijvt85"
+                role="row"
+              >
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span>
+                    2/21/2021
+                  </span>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    style="display: flex;"
+                  >
+                    <p
+                      style="padding-right: 10px;"
+                    >
+                      atanasster
+                    </p>
+                    <div
+                      class="css-9cbusc-GithubAvatar"
+                      style="display: inline-block;"
+                    >
+                      <div
+                        class="css-bwynl2-GithubAvatar"
+                      >
+                        <img
+                          class="css-1y16e88"
+                          height="22"
+                          src="https://github.com/atanasster"
+                          title="atanasster"
+                          width="22"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span
+                    class="css-1borfr-Cell"
+                  >
+                    first commit!
+                  </span>
+                </td>
+              </tr>
+              <tr
+                class="css-ijvt85"
+                role="row"
+              >
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span>
+                    2/21/2021
+                  </span>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    style="display: flex;"
+                  >
+                    <p
+                      style="padding-right: 10px;"
+                    >
+                      atanasster
+                    </p>
+                    <div
+                      class="css-9cbusc-GithubAvatar"
+                      style="display: inline-block;"
+                    >
+                      <div
+                        class="css-bwynl2-GithubAvatar"
+                      >
+                        <img
+                          class="css-1y16e88"
+                          height="22"
+                          src="https://github.com/atanasster"
+                          title="atanasster"
+                          width="22"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span
+                    class="css-1borfr-Cell"
+                  >
+                    first commit!
+                  </span>
+                </td>
+              </tr>
+              <tr
+                class="css-ijvt85"
+                role="row"
+              >
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span>
+                    2/21/2021
+                  </span>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    style="display: flex;"
+                  >
+                    <p
+                      style="padding-right: 10px;"
+                    >
+                      atanasster
+                    </p>
+                    <div
+                      class="css-9cbusc-GithubAvatar"
+                      style="display: inline-block;"
+                    >
+                      <div
+                        class="css-bwynl2-GithubAvatar"
+                      >
+                        <img
+                          class="css-1y16e88"
+                          height="22"
+                          src="https://github.com/atanasster"
+                          title="atanasster"
+                          width="22"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span
+                    class="css-1borfr-Cell"
+                  >
+                    first commit!
+                  </span>
+                </td>
+              </tr>
+              <tr
+                class="css-ijvt85"
+                role="row"
+              >
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span>
+                    2/21/2021
+                  </span>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    style="display: flex;"
+                  >
+                    <p
+                      style="padding-right: 10px;"
+                    >
+                      atanasster
+                    </p>
+                    <div
+                      class="css-9cbusc-GithubAvatar"
+                      style="display: inline-block;"
+                    >
+                      <div
+                        class="css-bwynl2-GithubAvatar"
+                      >
+                        <img
+                          class="css-1y16e88"
+                          height="22"
+                          src="https://github.com/atanasster"
+                          title="atanasster"
+                          width="22"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span
+                    class="css-1borfr-Cell"
+                  >
+                    first commit!
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div
+            class="css-43hdi9"
+          >
+            <div
+              class="css-v7kut1"
+            >
+              12 commits
+            </div>
+            <div
+              class="css-f5h6sg"
+            >
+              <div
+                class="css-wzqkm9"
+              >
+                <div
+                  class="css-1c1rsqy"
+                >
+                  <button
+                    class="css-97huhz"
+                    disabled=""
+                  >
+                    &lt;&lt;
+                  </button>
+                </div>
+                <div
+                  class="css-1c1rsqy"
+                >
+                  <button
+                    class="css-97huhz"
+                    disabled=""
+                  >
+                    &lt;
+                  </button>
+                </div>
+                <div
+                  class="css-1c1rsqy"
+                >
+                  <button
+                    class="css-97huhz"
+                  >
+                    &gt;
+                  </button>
+                </div>
+                <div
+                  class="css-1c1rsqy"
+                >
+                  <button
+                    class="css-97huhz"
+                  >
+                    &gt;&gt;
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ComponentCommits pagination 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="css-1d6wxci"
+        >
+          <table
+            class="css-11y77l0"
+            role="table"
+          >
+            <thead
+              class="css-14kw1rx"
+            >
+              <tr
+                class="css-vurnku"
+                role="row"
+              >
+                <th
+                  class="css-9hyy6f"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="css-wwqljn"
+                  >
+                    <div
+                      class="css-206mi5"
+                    >
+                      Date
+                    </div>
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M4.427 7.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 7H4.604a.25.25 0 00-.177.427z"
+                      />
+                    </svg>
+                  </div>
+                </th>
+                <th
+                  class="css-9hyy6f"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="css-wwqljn"
+                  >
+                    <div
+                      class="css-206mi5"
+                    >
+                      Author
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="css-9hyy6f"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="css-wwqljn"
+                  >
+                    <div
+                      class="css-206mi5"
+                    >
+                      Commit Message
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              class="css-tuhk50"
+              role="rowgroup"
+            >
+              <tr
+                class="css-ijvt85"
+                role="row"
+              >
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span>
+                    2/23/2021
+                  </span>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    style="display: flex;"
+                  >
+                    <p
+                      style="padding-right: 10px;"
+                    >
+                      hasparus
+                    </p>
+                    <div
+                      class="css-9cbusc-GithubAvatar"
+                      style="display: inline-block;"
+                    >
+                      <div
+                        class="css-bwynl2-GithubAvatar"
+                      >
+                        <img
+                          class="css-1y16e88"
+                          height="22"
+                          src="https://github.com/hasparus"
+                          title="hasparus"
+                          width="22"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span
+                    class="css-1borfr-Cell"
+                  >
+                    third commit
+                  </span>
+                </td>
+              </tr>
+              <tr
+                class="css-ijvt85"
+                role="row"
+              >
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span>
+                    2/22/2021
+                  </span>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    style="display: flex;"
+                  >
+                    <p
+                      style="padding-right: 10px;"
+                    >
+                      lachlanjc
+                    </p>
+                    <div
+                      class="css-9cbusc-GithubAvatar"
+                      style="display: inline-block;"
+                    >
+                      <div
+                        class="css-bwynl2-GithubAvatar"
+                      >
+                        <img
+                          class="css-1y16e88"
+                          height="22"
+                          src="https://github.com/lachlanjc"
+                          title="lachlanjc"
+                          width="22"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span
+                    class="css-1borfr-Cell"
+                  >
+                    (งツ)ว
+                  </span>
+                </td>
+              </tr>
+              <tr
+                class="css-ijvt85"
+                role="row"
+              >
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span>
+                    2/21/2021
+                  </span>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    style="display: flex;"
+                  >
+                    <p
+                      style="padding-right: 10px;"
+                    >
+                      atanasster
+                    </p>
+                    <div
+                      class="css-9cbusc-GithubAvatar"
+                      style="display: inline-block;"
+                    >
+                      <div
+                        class="css-bwynl2-GithubAvatar"
+                      >
+                        <img
+                          class="css-1y16e88"
+                          height="22"
+                          src="https://github.com/atanasster"
+                          title="atanasster"
+                          width="22"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span
+                    class="css-1borfr-Cell"
+                  >
+                    first commit!
+                  </span>
+                </td>
+              </tr>
+              <tr
+                class="css-ijvt85"
+                role="row"
+              >
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span>
+                    2/21/2021
+                  </span>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    style="display: flex;"
+                  >
+                    <p
+                      style="padding-right: 10px;"
+                    >
+                      atanasster
+                    </p>
+                    <div
+                      class="css-9cbusc-GithubAvatar"
+                      style="display: inline-block;"
+                    >
+                      <div
+                        class="css-bwynl2-GithubAvatar"
+                      >
+                        <img
+                          class="css-1y16e88"
+                          height="22"
+                          src="https://github.com/atanasster"
+                          title="atanasster"
+                          width="22"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span
+                    class="css-1borfr-Cell"
+                  >
+                    first commit!
+                  </span>
+                </td>
+              </tr>
+              <tr
+                class="css-ijvt85"
+                role="row"
+              >
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span>
+                    2/21/2021
+                  </span>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    style="display: flex;"
+                  >
+                    <p
+                      style="padding-right: 10px;"
+                    >
+                      atanasster
+                    </p>
+                    <div
+                      class="css-9cbusc-GithubAvatar"
+                      style="display: inline-block;"
+                    >
+                      <div
+                        class="css-bwynl2-GithubAvatar"
+                      >
+                        <img
+                          class="css-1y16e88"
+                          height="22"
+                          src="https://github.com/atanasster"
+                          title="atanasster"
+                          width="22"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span
+                    class="css-1borfr-Cell"
+                  >
+                    first commit!
+                  </span>
+                </td>
+              </tr>
+              <tr
+                class="css-ijvt85"
+                role="row"
+              >
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span>
+                    2/21/2021
+                  </span>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    style="display: flex;"
+                  >
+                    <p
+                      style="padding-right: 10px;"
+                    >
+                      atanasster
+                    </p>
+                    <div
+                      class="css-9cbusc-GithubAvatar"
+                      style="display: inline-block;"
+                    >
+                      <div
+                        class="css-bwynl2-GithubAvatar"
+                      >
+                        <img
+                          class="css-1y16e88"
+                          height="22"
+                          src="https://github.com/atanasster"
+                          title="atanasster"
+                          width="22"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span
+                    class="css-1borfr-Cell"
+                  >
+                    first commit!
+                  </span>
+                </td>
+              </tr>
+              <tr
+                class="css-ijvt85"
+                role="row"
+              >
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span>
+                    2/21/2021
+                  </span>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    style="display: flex;"
+                  >
+                    <p
+                      style="padding-right: 10px;"
+                    >
+                      atanasster
+                    </p>
+                    <div
+                      class="css-9cbusc-GithubAvatar"
+                      style="display: inline-block;"
+                    >
+                      <div
+                        class="css-bwynl2-GithubAvatar"
+                      >
+                        <img
+                          class="css-1y16e88"
+                          height="22"
+                          src="https://github.com/atanasster"
+                          title="atanasster"
+                          width="22"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span
+                    class="css-1borfr-Cell"
+                  >
+                    first commit!
+                  </span>
+                </td>
+              </tr>
+              <tr
+                class="css-ijvt85"
+                role="row"
+              >
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span>
+                    2/21/2021
+                  </span>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    style="display: flex;"
+                  >
+                    <p
+                      style="padding-right: 10px;"
+                    >
+                      atanasster
+                    </p>
+                    <div
+                      class="css-9cbusc-GithubAvatar"
+                      style="display: inline-block;"
+                    >
+                      <div
+                        class="css-bwynl2-GithubAvatar"
+                      >
+                        <img
+                          class="css-1y16e88"
+                          height="22"
+                          src="https://github.com/atanasster"
+                          title="atanasster"
+                          width="22"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span
+                    class="css-1borfr-Cell"
+                  >
+                    first commit!
+                  </span>
+                </td>
+              </tr>
+              <tr
+                class="css-ijvt85"
+                role="row"
+              >
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span>
+                    2/21/2021
+                  </span>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    style="display: flex;"
+                  >
+                    <p
+                      style="padding-right: 10px;"
+                    >
+                      atanasster
+                    </p>
+                    <div
+                      class="css-9cbusc-GithubAvatar"
+                      style="display: inline-block;"
+                    >
+                      <div
+                        class="css-bwynl2-GithubAvatar"
+                      >
+                        <img
+                          class="css-1y16e88"
+                          height="22"
+                          src="https://github.com/atanasster"
+                          title="atanasster"
+                          width="22"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span
+                    class="css-1borfr-Cell"
+                  >
+                    first commit!
+                  </span>
+                </td>
+              </tr>
+              <tr
+                class="css-ijvt85"
+                role="row"
+              >
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span>
+                    2/21/2021
+                  </span>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    style="display: flex;"
+                  >
+                    <p
+                      style="padding-right: 10px;"
+                    >
+                      atanasster
+                    </p>
+                    <div
+                      class="css-9cbusc-GithubAvatar"
+                      style="display: inline-block;"
+                    >
+                      <div
+                        class="css-bwynl2-GithubAvatar"
+                      >
+                        <img
+                          class="css-1y16e88"
+                          height="22"
+                          src="https://github.com/atanasster"
+                          title="atanasster"
+                          width="22"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="css-l4u9co"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <span
+                    class="css-1borfr-Cell"
+                  >
+                    first commit!
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div
+            class="css-43hdi9"
+          >
+            <div
+              class="css-v7kut1"
+            >
+              Total: 12 records
+            </div>
+            <div
+              class="css-f5h6sg"
+            >
+              <div
+                class="css-wzqkm9"
+              >
+                <div
+                  class="css-1c1rsqy"
+                >
+                  <button
+                    class="css-97huhz"
+                    disabled=""
+                  >
+                    &lt;&lt;
+                  </button>
+                </div>
+                <div
+                  class="css-1c1rsqy"
+                >
+                  <button
+                    class="css-97huhz"
+                    disabled=""
+                  >
+                    &lt;
+                  </button>
+                </div>
+                <div
+                  class="css-1c1rsqy"
+                >
+                  <button
+                    class="css-97huhz"
+                  >
+                    &gt;
+                  </button>
+                </div>
+                <div
+                  class="css-1c1rsqy"
+                >
+                  <button
+                    class="css-97huhz"
+                  >
+                    &gt;&gt;
+                  </button>
+                </div>
+              </div>
+              <div
+                class="css-1f9rp2t"
+              >
+                Page 1 of 2
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

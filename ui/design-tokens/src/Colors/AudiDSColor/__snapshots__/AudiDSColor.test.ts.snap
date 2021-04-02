@@ -1,0 +1,592 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AudiDSColor hsl 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1wbnvp4-AudiDSColor"
+  >
+    <div
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-qtikz3-AudiDSColor"
+      />
+    </div>
+    <div
+      class="css-gs6q72-AudiDSColor"
+    >
+      <div
+        class="css-oemta0-AudiDSColor"
+      >
+        <div
+          class="css-73wsrq-AudiDSColor"
+        >
+          accent
+        </div>
+      </div>
+      <div
+        class="css-1wmbckn-AudiDSColor"
+      >
+        <div>
+          RGB: 140/120/115
+        </div>
+        <div>
+          HEX: #8c7873
+        </div>
+        <div>
+          CMYK: 0/14/18/45
+        </div>
+        <div
+          class="css-1n5h10w-AudiDSColor"
+        >
+          Pantone 409C
+        </div>
+        <div>
+          RAL: 7048
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AudiDSColor hsla 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1wbnvp4-AudiDSColor"
+  >
+    <div
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-yxx48s-AudiDSColor"
+      />
+    </div>
+    <div
+      class="css-gs6q72-AudiDSColor"
+    >
+      <div
+        class="css-oemta0-AudiDSColor"
+      >
+        <div
+          class="css-73wsrq-AudiDSColor"
+        >
+          accent
+        </div>
+      </div>
+      <div
+        class="css-1wmbckn-AudiDSColor"
+      >
+        <div>
+          RGB: 140/120/115
+        </div>
+        <div>
+          HEX: #8c7873
+        </div>
+        <div>
+          CMYK: 0/14/18/45
+        </div>
+        <div
+          class="css-1n5h10w-AudiDSColor"
+        >
+          Pantone 409C
+        </div>
+        <div>
+          RAL: 7048
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AudiDSColor name 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1wbnvp4-AudiDSColor"
+  >
+    <div
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-8sksre-AudiDSColor"
+      />
+    </div>
+    <div
+      class="css-gs6q72-AudiDSColor"
+    >
+      <div
+        class="css-oemta0-AudiDSColor"
+      >
+        <div
+          class="css-73wsrq-AudiDSColor"
+        >
+          Critical
+        </div>
+      </div>
+      <div
+        class="css-1wmbckn-AudiDSColor"
+      >
+        <div>
+          RGB: 249/77/50
+        </div>
+        <div>
+          HEX: #f94d32
+        </div>
+        <div>
+          CMYK: 0/69/80/2
+        </div>
+        <div
+          class="css-1n5h10w-AudiDSColor"
+        >
+          Pantone 171C
+        </div>
+        <div>
+          RAL: 3028
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AudiDSColor overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1wbnvp4-AudiDSColor"
+  >
+    <div
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-1fk6wm6-AudiDSColor"
+      />
+    </div>
+    <div
+      class="css-gs6q72-AudiDSColor"
+    >
+      <div
+        class="css-oemta0-AudiDSColor"
+      >
+        <div
+          class="css-73wsrq-AudiDSColor"
+        >
+          Brand
+        </div>
+      </div>
+      <div
+        class="css-1wmbckn-AudiDSColor"
+      >
+        <div>
+          RGB: 34/112/238
+        </div>
+        <div>
+          HEX: #2270ee
+        </div>
+        <div>
+          CMYK: 86/53/0/7
+        </div>
+        <div
+          class="css-1n5h10w-AudiDSColor"
+        >
+          Pantone 2726C
+        </div>
+        <div>
+          RAL: 5002
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AudiDSColor palette 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1mhhg7b"
+  >
+    <div
+      class="css-1wbnvp4-AudiDSColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1jg5rfj-AudiDSColor"
+        />
+      </div>
+      <div
+        class="css-gs6q72-AudiDSColor"
+      >
+        <div
+          class="css-oemta0-AudiDSColor"
+        >
+          <div
+            class="css-73wsrq-AudiDSColor"
+          >
+            Poppy surprise
+          </div>
+        </div>
+        <div
+          class="css-1wmbckn-AudiDSColor"
+        >
+          <div>
+            RGB: 255/86/48
+          </div>
+          <div>
+            HEX: #ff5630
+          </div>
+          <div>
+            CMYK: 0/66/81/0
+          </div>
+          <div
+            class="css-1n5h10w-AudiDSColor"
+          >
+            Pantone 171C
+          </div>
+          <div>
+            RAL: 2004
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1wbnvp4-AudiDSColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1ugg3zs-AudiDSColor"
+        />
+      </div>
+      <div
+        class="css-gs6q72-AudiDSColor"
+      >
+        <div
+          class="css-oemta0-AudiDSColor"
+        >
+          <div
+            class="css-73wsrq-AudiDSColor"
+          >
+            Golden state
+          </div>
+        </div>
+        <div
+          class="css-1wmbckn-AudiDSColor"
+        >
+          <div>
+            RGB: 255/171/0
+          </div>
+          <div>
+            HEX: #ffab00
+          </div>
+          <div>
+            CMYK: 0/33/100/0
+          </div>
+          <div
+            class="css-1n5h10w-AudiDSColor"
+          >
+            Pantone 137C
+          </div>
+          <div>
+            RAL: 1003
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1wbnvp4-AudiDSColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-fk8tzu-AudiDSColor"
+        />
+      </div>
+      <div
+        class="css-gs6q72-AudiDSColor"
+      >
+        <div
+          class="css-oemta0-AudiDSColor"
+        >
+          <div
+            class="css-73wsrq-AudiDSColor"
+          >
+            Fine pine
+          </div>
+        </div>
+        <div
+          class="css-1wmbckn-AudiDSColor"
+        >
+          <div>
+            RGB: 54/179/126
+          </div>
+          <div>
+            HEX: #36b37e
+          </div>
+          <div>
+            CMYK: 70/0/30/30
+          </div>
+          <div
+            class="css-1n5h10w-AudiDSColor"
+          >
+            Pantone 339C
+          </div>
+          <div>
+            RAL: 6024
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1wbnvp4-AudiDSColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1yzyoiv-AudiDSColor"
+        />
+      </div>
+      <div
+        class="css-gs6q72-AudiDSColor"
+      >
+        <div
+          class="css-oemta0-AudiDSColor"
+        >
+          <div
+            class="css-73wsrq-AudiDSColor"
+          >
+            Tamarama
+          </div>
+        </div>
+        <div
+          class="css-1wmbckn-AudiDSColor"
+        >
+          <div>
+            RGB: 0/184/217
+          </div>
+          <div>
+            HEX: #00b8d9
+          </div>
+          <div>
+            CMYK: 100/15/0/15
+          </div>
+          <div
+            class="css-1n5h10w-AudiDSColor"
+          >
+            Pantone 3125C
+          </div>
+          <div>
+            RAL: 5012
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1wbnvp4-AudiDSColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-jgf7au-AudiDSColor"
+        />
+      </div>
+      <div
+        class="css-gs6q72-AudiDSColor"
+      >
+        <div
+          class="css-oemta0-AudiDSColor"
+        >
+          <div
+            class="css-73wsrq-AudiDSColor"
+          >
+            Da' juice
+          </div>
+        </div>
+        <div
+          class="css-1wmbckn-AudiDSColor"
+        >
+          <div>
+            RGB: 101/84/192
+          </div>
+          <div>
+            HEX: #6554c0
+          </div>
+          <div>
+            CMYK: 47/56/0/25
+          </div>
+          <div
+            class="css-1n5h10w-AudiDSColor"
+          >
+            Pantone 2725C
+          </div>
+          <div>
+            RAL: 5002
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1wbnvp4-AudiDSColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-8sksre-AudiDSColor"
+        />
+      </div>
+      <div
+        class="css-gs6q72-AudiDSColor"
+      >
+        <div
+          class="css-oemta0-AudiDSColor"
+        >
+          <div
+            class="css-73wsrq-AudiDSColor"
+          >
+            Critical
+          </div>
+        </div>
+        <div
+          class="css-1wmbckn-AudiDSColor"
+        >
+          <div>
+            RGB: 249/77/50
+          </div>
+          <div>
+            HEX: #f94d32
+          </div>
+          <div>
+            CMYK: 0/69/80/2
+          </div>
+          <div
+            class="css-1n5h10w-AudiDSColor"
+          >
+            Pantone 171C
+          </div>
+          <div>
+            RAL: 3028
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AudiDSColor rgb 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1wbnvp4-AudiDSColor"
+  >
+    <div
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-19z0v0h-AudiDSColor"
+      />
+    </div>
+    <div
+      class="css-gs6q72-AudiDSColor"
+    >
+      <div
+        class="css-oemta0-AudiDSColor"
+      >
+        <div
+          class="css-73wsrq-AudiDSColor"
+        >
+          text
+        </div>
+      </div>
+      <div
+        class="css-1wmbckn-AudiDSColor"
+      >
+        <div>
+          RGB: 0/0/0
+        </div>
+        <div>
+          HEX: #000000
+        </div>
+        <div>
+          CMYK: 0/0/0/100
+        </div>
+        <div
+          class="css-1n5h10w-AudiDSColor"
+        >
+          Pantone 419C
+        </div>
+        <div>
+          RAL: 9005
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AudiDSColor rgba 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1wbnvp4-AudiDSColor"
+  >
+    <div
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-1iyq71j-AudiDSColor"
+      />
+    </div>
+    <div
+      class="css-gs6q72-AudiDSColor"
+    >
+      <div
+        class="css-oemta0-AudiDSColor"
+      >
+        <div
+          class="css-73wsrq-AudiDSColor"
+        >
+          shadow
+        </div>
+      </div>
+      <div
+        class="css-1wmbckn-AudiDSColor"
+      >
+        <div>
+          RGB: 0/0/0/0.1
+        </div>
+        <div>
+          HEX: #000000
+        </div>
+        <div>
+          CMYK: 0/0/0/100
+        </div>
+        <div
+          class="css-1n5h10w-AudiDSColor"
+        >
+          Pantone 419C
+        </div>
+        <div>
+          RAL: 9005
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

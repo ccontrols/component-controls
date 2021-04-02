@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComponentContributors caption 1`] = `
+<DocumentFragment>
+  <div
+    class="css-6582y1-ComponentContributors"
+  >
+    <div
+      class="css-1nwo78o-ComponentContributors"
+    >
+      contributors
+    </div>
+    <div
+      aria-label="avatars of hasparus, lachlanjc, atanasster"
+      class="css-1wxrz40-GithubAvatarList"
+    >
+      <div
+        class="css-dam4fv-GithubAvatar"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1en2h0i-GithubAvatar"
+        >
+          <img
+            class="css-1y16e88"
+            height="24"
+            src="https://github.com/hasparus"
+            title="hasparus"
+            width="24"
+          />
+        </div>
+      </div>
+      <div
+        class="css-dam4fv-GithubAvatar"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1en2h0i-GithubAvatar"
+        >
+          <img
+            class="css-1y16e88"
+            height="24"
+            src="https://github.com/lachlanjc"
+            title="lachlanjc"
+            width="24"
+          />
+        </div>
+      </div>
+      <div
+        class="css-9cbusc-GithubAvatar"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1en2h0i-GithubAvatar"
+        >
+          <img
+            class="css-1y16e88"
+            height="24"
+            src="https://github.com/atanasster"
+            title="atanasster"
+            width="24"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ComponentContributors overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-6582y1-ComponentContributors"
+  >
+    <div
+      aria-label="avatars of hasparus, lachlanjc, atanasster"
+      class="css-1wxrz40-GithubAvatarList"
+    >
+      <div
+        class="css-dam4fv-GithubAvatar"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1en2h0i-GithubAvatar"
+        >
+          <img
+            class="css-1y16e88"
+            height="24"
+            src="https://github.com/hasparus"
+            title="hasparus"
+            width="24"
+          />
+        </div>
+      </div>
+      <div
+        class="css-dam4fv-GithubAvatar"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1en2h0i-GithubAvatar"
+        >
+          <img
+            class="css-1y16e88"
+            height="24"
+            src="https://github.com/lachlanjc"
+            title="lachlanjc"
+            width="24"
+          />
+        </div>
+      </div>
+      <div
+        class="css-9cbusc-GithubAvatar"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1en2h0i-GithubAvatar"
+        >
+          <img
+            class="css-1y16e88"
+            height="24"
+            src="https://github.com/atanasster"
+            title="atanasster"
+            width="24"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

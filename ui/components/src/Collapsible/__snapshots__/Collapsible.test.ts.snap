@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Collapsible overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-vurnku"
+  >
+    <button
+      class="css-97huhz"
+    >
+      open
+    </button>
+    <div
+      aria-hidden="true"
+      class="rah-static rah-static--height-zero"
+      style="height: 0px; overflow: hidden;"
+    >
+      <div
+        style="display: none;"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

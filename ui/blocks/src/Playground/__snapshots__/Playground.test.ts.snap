@@ -1,0 +1,3919 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Playground child 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+    data-testid="playground"
+  >
+    <div
+      class="css-jxxswp"
+      id="my-donut-example-"
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <a
+          class="css-walqom-LinkHeading"
+          data-id="my-donut-example-"
+          data-level="3"
+          data-title="My donut example "
+          href="http://localhost/#my-donut-example-"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="18"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h3
+          class="css-16ist9v-BlockContainer"
+        >
+          <div
+            class="css-tmrrvx"
+          >
+            My donut example 
+            <a
+              aria-label="Collapse this block"
+              class="css-1t48u3b-BlockContainer"
+            >
+              <span
+                class="css-1ibxxpj"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div>
+          <div
+            class="css-15owl46"
+          >
+            <div
+              class="css-x60p33"
+            >
+              <div
+                class="css-rkyxeq"
+              >
+                <button
+                  aria-label="switch light and dark background"
+                  class="css-1tf4h46"
+                >
+                  dark
+                </button>
+              </div>
+              <div
+                class="css-7d11p2"
+              >
+                <button
+                  aria-label="switch left to right/right to left"
+                  class="css-1tf4h46"
+                >
+                  RTL
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="reset zoom"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="zoom out"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="zoom in"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-eqxzio"
+          >
+            <div
+              style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+            >
+              <div
+                class="css-1s8zxab"
+              >
+                <div
+                  class="css-1j909cg"
+                >
+                  <div
+                    class="css-t5jv09"
+                  >
+                    <svg
+                      aria-valuemax="1"
+                      aria-valuemin="0"
+                      aria-valuenow="0.5"
+                      class="css-14d2907"
+                      fill="none"
+                      height="128"
+                      role="img"
+                      stroke="currentcolor"
+                      stroke-width="2"
+                      viewBox="0 0 32 32"
+                      width="128"
+                    >
+                      <circle
+                        cx="16"
+                        cy="16"
+                        opacity="0.125"
+                        r="14"
+                      />
+                      <circle
+                        cx="16"
+                        cy="16"
+                        r="14"
+                        stroke-dasharray="87.96459430051421"
+                        stroke-dashoffset="43.982297150257104"
+                        transform="rotate(-90 16 16)"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="rah-static rah-static--height-zero"
+              style="height: 0px; overflow: hidden;"
+            >
+              <div
+                style="display: none;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Playground customTitle 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+    data-testid="playground"
+  >
+    <div
+      class="css-jxxswp"
+      id="custom-playground-title"
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <a
+          class="css-walqom-LinkHeading"
+          data-id="custom-playground-title"
+          data-level="3"
+          data-title="Custom playground title"
+          href="http://localhost/#custom-playground-title"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="18"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h3
+          class="css-16ist9v-BlockContainer"
+        >
+          <div
+            class="css-tmrrvx"
+          >
+            Custom playground title
+            <a
+              aria-label="Collapse this block"
+              class="css-1t48u3b-BlockContainer"
+            >
+              <span
+                class="css-1ibxxpj"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div>
+          <div
+            class="css-15owl46"
+          >
+            <div
+              class="css-x60p33"
+            >
+              <div
+                class="css-rkyxeq"
+              >
+                <button
+                  aria-label="switch light and dark background"
+                  class="css-1tf4h46"
+                >
+                  dark
+                </button>
+              </div>
+              <div
+                class="css-7d11p2"
+              >
+                <button
+                  aria-label="switch left to right/right to left"
+                  class="css-1tf4h46"
+                >
+                  RTL
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="reset zoom"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="zoom out"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-7d11p2"
+              >
+                <button
+                  aria-label="zoom in"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="display story source code"
+                  class="css-1tf4h46"
+                >
+                  open source
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="display story configuration object"
+                  class="css-1tf4h46"
+                >
+                  open config
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-eqxzio"
+          >
+            <div
+              style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+            >
+              <div
+                class="css-1s8zxab"
+              >
+                <div
+                  class="css-1j909cg"
+                >
+                  <div
+                    class="css-1xkyebe"
+                  >
+                    <div
+                      class="css-jxxswp"
+                      id=""
+                    >
+                      <div
+                        class="css-xhp9da"
+                      >
+                        <h3
+                          class="css-16ist9v-BlockContainer"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      aria-hidden="false"
+                      class="rah-static rah-static--height-auto"
+                      style="height: auto; overflow: visible;"
+                    >
+                      <div>
+                        <div
+                          class="css-154oin1"
+                          data-testid="story"
+                          id="blocks-core-story-plain--controls"
+                        >
+                          <div
+                            class="story-render-container css-dhmrnb"
+                          >
+                            <svg
+                              aria-valuemax="1"
+                              aria-valuemin="0"
+                              aria-valuenow="0.5"
+                              class="css-14d2907"
+                              fill="none"
+                              height="128"
+                              role="img"
+                              stroke="currentcolor"
+                              stroke-width="2"
+                              viewBox="0 0 32 32"
+                              width="128"
+                            >
+                              <circle
+                                cx="16"
+                                cy="16"
+                                opacity="0.125"
+                                r="14"
+                              />
+                              <circle
+                                cx="16"
+                                cy="16"
+                                r="14"
+                                stroke-dasharray="87.96459430051421"
+                                stroke-dashoffset="43.982297150257104"
+                                transform="rotate(-90 16 16)"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="rah-static rah-static--height-zero"
+              style="height: 0px; overflow: hidden;"
+            >
+              <div
+                style="display: none;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Playground darkTheme 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+    data-testid="playground"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div>
+          <div
+            class="css-15owl46"
+          >
+            <div
+              class="css-x60p33"
+            >
+              <div
+                class="css-rkyxeq"
+              >
+                <button
+                  aria-label="switch light and dark background"
+                  class="css-1tf4h46"
+                >
+                  dark
+                </button>
+              </div>
+              <div
+                class="css-7d11p2"
+              >
+                <button
+                  aria-label="switch left to right/right to left"
+                  class="css-1tf4h46"
+                >
+                  RTL
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="reset zoom"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="zoom out"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-7d11p2"
+              >
+                <button
+                  aria-label="zoom in"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="display story source code"
+                  class="css-1tf4h46"
+                >
+                  open source
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="display story configuration object"
+                  class="css-1tf4h46"
+                >
+                  open config
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-eqxzio"
+          >
+            <div
+              style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+            >
+              <div
+                class="css-1s8zxab"
+              >
+                <div
+                  class="css-1j909cg"
+                >
+                  <div
+                    class="css-1xkyebe"
+                  >
+                    <div
+                      class="css-jxxswp"
+                      id=""
+                    >
+                      <div
+                        class="css-xhp9da"
+                      >
+                        <h3
+                          class="css-16ist9v-BlockContainer"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      aria-hidden="false"
+                      class="rah-static rah-static--height-auto"
+                      style="height: auto; overflow: visible;"
+                    >
+                      <div>
+                        <div
+                          class="css-154oin1"
+                          data-testid="story"
+                          id="blocks-core-story-plain--controls"
+                        >
+                          <div
+                            class="story-render-container css-dhmrnb"
+                          >
+                            <svg
+                              aria-valuemax="1"
+                              aria-valuemin="0"
+                              aria-valuenow="0.5"
+                              class="css-14d2907"
+                              fill="none"
+                              height="128"
+                              role="img"
+                              stroke="currentcolor"
+                              stroke-width="2"
+                              viewBox="0 0 32 32"
+                              width="128"
+                            >
+                              <circle
+                                cx="16"
+                                cy="16"
+                                opacity="0.125"
+                                r="14"
+                              />
+                              <circle
+                                cx="16"
+                                cy="16"
+                                r="14"
+                                stroke-dasharray="87.96459430051421"
+                                stroke-dashoffset="43.982297150257104"
+                                transform="rotate(-90 16 16)"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="rah-static rah-static--height-zero"
+              style="height: 0px; overflow: hidden;"
+            >
+              <div
+                style="display: none;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Playground defaultOpenSource 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+    data-testid="playground"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div>
+          <div
+            class="css-15owl46"
+          >
+            <div
+              class="css-x60p33"
+            >
+              <div
+                class="css-rkyxeq"
+              >
+                <button
+                  aria-label="switch light and dark background"
+                  class="css-1tf4h46"
+                >
+                  dark
+                </button>
+              </div>
+              <div
+                class="css-7d11p2"
+              >
+                <button
+                  aria-label="switch left to right/right to left"
+                  class="css-1tf4h46"
+                >
+                  RTL
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="reset zoom"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="zoom out"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-7d11p2"
+              >
+                <button
+                  aria-label="zoom in"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="display story source code"
+                  class="css-1tf4h46"
+                >
+                  close source
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="display story configuration object"
+                  class="css-1tf4h46"
+                >
+                  open config
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-eqxzio"
+          >
+            <div
+              style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+            >
+              <div
+                class="css-1s8zxab"
+              >
+                <div
+                  class="css-1j909cg"
+                >
+                  <div
+                    class="css-1xkyebe"
+                  >
+                    <div
+                      class="css-jxxswp"
+                      id=""
+                    >
+                      <div
+                        class="css-xhp9da"
+                      >
+                        <h3
+                          class="css-16ist9v-BlockContainer"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      aria-hidden="false"
+                      class="rah-static rah-static--height-auto"
+                      style="height: auto; overflow: visible;"
+                    >
+                      <div>
+                        <div
+                          class="css-154oin1"
+                          data-testid="story"
+                          id="blocks-core-story-plain--controls"
+                        >
+                          <div
+                            class="story-render-container css-dhmrnb"
+                          >
+                            <svg
+                              aria-valuemax="1"
+                              aria-valuemin="0"
+                              aria-valuenow="0.5"
+                              class="css-14d2907"
+                              fill="none"
+                              height="128"
+                              role="img"
+                              stroke="currentcolor"
+                              stroke-width="2"
+                              viewBox="0 0 32 32"
+                              width="128"
+                            >
+                              <circle
+                                cx="16"
+                                cy="16"
+                                opacity="0.125"
+                                r="14"
+                              />
+                              <circle
+                                cx="16"
+                                cy="16"
+                                r="14"
+                                stroke-dasharray="87.96459430051421"
+                                stroke-dashoffset="43.982297150257104"
+                                transform="rotate(-90 16 16)"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="rah-animating rah-animating--down rah-animating--to-height-auto"
+              style="height: 0px; overflow: hidden; transition: height 250ms ease 0ms;"
+            >
+              <div
+                style=""
+              >
+                <div
+                  class="css-nm5f2c-Tabs"
+                >
+                  <div
+                    class="react-tabs"
+                    data-tabs="true"
+                  >
+                    <ul
+                      class="react-tabs__tab-list"
+                      hidden=""
+                      role="tablist"
+                      style="text-align: right;"
+                    >
+                      <li
+                        aria-controls="react-tabs-1"
+                        aria-disabled="false"
+                        aria-selected="false"
+                        class="react-tabs__tab"
+                        id="react-tabs-0"
+                        role="tab"
+                      >
+                        config
+                      </li>
+                      <li
+                        aria-controls="react-tabs-3"
+                        aria-disabled="false"
+                        aria-selected="true"
+                        class="react-tabs__tab react-tabs__tab--selected"
+                        id="react-tabs-2"
+                        role="tab"
+                        tabindex="0"
+                      >
+                        source
+                      </li>
+                    </ul>
+                    <div
+                      aria-labelledby="react-tabs-0"
+                      class="react-tabs__tab-panel"
+                      id="react-tabs-1"
+                      role="tabpanel"
+                    />
+                    <div
+                      aria-labelledby="react-tabs-2"
+                      class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                      id="react-tabs-3"
+                      role="tabpanel"
+                    >
+                      <div
+                        class="css-7wa6r1-StoryBlockContainer"
+                      >
+                        <div
+                          class="css-jxxswp"
+                          id=""
+                        >
+                          <div
+                            class="css-xhp9da"
+                          >
+                            <h3
+                              class="css-16ist9v-BlockContainer"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          aria-hidden="false"
+                          class="rah-static rah-static--height-auto"
+                          style="height: auto; overflow: visible;"
+                        >
+                          <div>
+                            <div>
+                              <div
+                                class="css-15owl46"
+                              >
+                                <div
+                                  class="css-x60p33"
+                                >
+                                  <div
+                                    class="css-1vga9oy"
+                                  >
+                                    <button
+                                      aria-label="copy the displayed source code"
+                                      class="css-1tf4h46"
+                                    >
+                                      copy
+                                    </button>
+                                  </div>
+                                  <div
+                                    class="css-q7w4rh"
+                                  >
+                                    <a
+                                      aria-label="browse repository"
+                                      class="css-1t54e2w"
+                                      href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
+                                      rel="noopener noreferrer"
+                                      target="_blank"
+                                    >
+                                      browse
+                                    </a>
+                                  </div>
+                                  <div
+                                    class="css-q7w4rh"
+                                  >
+                                    <a
+                                      aria-label="browse readme documentation"
+                                      class="css-1t54e2w"
+                                      href="https://github.com/ccontrols/component-controls/tree/master#readme"
+                                      rel="noopener noreferrer"
+                                      target="_blank"
+                                    >
+                                      docs
+                                    </a>
+                                  </div>
+                                  <div
+                                    class="css-7d11p2"
+                                  >
+                                    <a
+                                      aria-label="browse filed issues"
+                                      class="css-1t54e2w"
+                                      href="https://github.com/ccontrols/component-controls/issues"
+                                      rel="noopener noreferrer"
+                                      target="_blank"
+                                    >
+                                      issues
+                                    </a>
+                                  </div>
+                                  <div
+                                    class="css-7d11p2"
+                                  >
+                                    <button
+                                      class="css-1tf4h46"
+                                    >
+                                      values
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="css-eqxzio"
+                              >
+                                <pre
+                                  class="prism-code language-jsx css-3y8hb3"
+                                  style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; margin: 0px;"
+                                >
+                                  <div
+                                    class="token-line"
+                                    style="color: rgb(114, 143, 203);"
+                                  >
+                                    <span
+                                      class="token punctuation css-13aqjzy"
+                                      style="color: rgb(182, 173, 154);"
+                                    >
+                                      (
+                                    </span>
+                                    <span
+                                      class="token parameter punctuation css-13aqjzy"
+                                      style="color: rgb(182, 173, 154);"
+                                    >
+                                      {
+                                    </span>
+                                     
+                                    <span
+                                      class="token parameter css-ldhfal-Tag"
+                                    >
+                                      <span
+                                        class="css-vurnku"
+                                      >
+                                        name
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="token parameter punctuation css-13aqjzy"
+                                      style="color: rgb(182, 173, 154);"
+                                    >
+                                      ,
+                                    </span>
+                                     
+                                    <span
+                                      class="token parameter css-u2xcrg-Tag"
+                                    >
+                                      <span
+                                        class="css-vurnku"
+                                      >
+                                        age
+                                      </span>
+                                    </span>
+                                     
+                                    <span
+                                      class="token parameter punctuation css-13aqjzy"
+                                      style="color: rgb(182, 173, 154);"
+                                    >
+                                      }
+                                    </span>
+                                    <span
+                                      class="token punctuation css-13aqjzy"
+                                      style="color: rgb(182, 173, 154);"
+                                    >
+                                      )
+                                    </span>
+                                    <span
+                                      class="token plain css-13aqjzy"
+                                    >
+                                       
+                                    </span>
+                                    <span
+                                      class="token operator css-13aqjzy"
+                                      style="color: rgb(6, 50, 137);"
+                                    >
+                                      =&gt;
+                                    </span>
+                                    <span
+                                      class="token plain css-13aqjzy"
+                                    >
+                                       
+                                    </span>
+                                    <span
+                                      class="token punctuation css-13aqjzy"
+                                      style="color: rgb(182, 173, 154);"
+                                    >
+                                      (
+                                    </span>
+                                    <span
+                                      class="token plain css-13aqjzy"
+                                    />
+                                  </div>
+                                  <div
+                                    class="token-line"
+                                    style="color: rgb(114, 143, 203);"
+                                  >
+                                    <span
+                                      class="token plain css-13aqjzy"
+                                    >
+                                        
+                                    </span>
+                                    <span
+                                      class="token tag punctuation css-13aqjzy"
+                                      style="color: rgb(182, 173, 154);"
+                                    >
+                                      &lt;
+                                    </span>
+                                    <span
+                                      class="token tag css-13aqjzy"
+                                      style="color: rgb(6, 50, 137);"
+                                    >
+                                      h2
+                                    </span>
+                                    <span
+                                      class="token tag punctuation css-13aqjzy"
+                                      style="color: rgb(182, 173, 154);"
+                                    >
+                                      &gt;
+                                    </span>
+                                    <span
+                                      class="token punctuation css-13aqjzy"
+                                      style="color: rgb(182, 173, 154);"
+                                    >
+                                      {
+                                    </span>
+                                    <span
+                                      class="token template-string template-punctuation string css-13aqjzy"
+                                      style="color: rgb(114, 143, 203);"
+                                    >
+                                      \`
+                                    </span>
+                                    <span
+                                      class="token template-string string css-13aqjzy"
+                                      style="color: rgb(114, 143, 203);"
+                                    >
+                                      Hello, my name is 
+                                    </span>
+                                    <span
+                                      class="token template-string interpolation interpolation-punctuation punctuation css-13aqjzy"
+                                      style="color: rgb(182, 173, 154);"
+                                    >
+                                      \${
+                                    </span>
+                                    <span
+                                      class="token template-string interpolation css-ldhfal-Tag"
+                                    >
+                                      <span
+                                        class="css-vurnku"
+                                      >
+                                        name
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="token template-string interpolation interpolation-punctuation punctuation css-13aqjzy"
+                                      style="color: rgb(182, 173, 154);"
+                                    >
+                                      }
+                                    </span>
+                                    <span
+                                      class="token template-string string css-13aqjzy"
+                                      style="color: rgb(114, 143, 203);"
+                                    >
+                                      , and I am 
+                                    </span>
+                                    <span
+                                      class="token template-string interpolation interpolation-punctuation punctuation css-13aqjzy"
+                                      style="color: rgb(182, 173, 154);"
+                                    >
+                                      \${
+                                    </span>
+                                    <span
+                                      class="token template-string interpolation css-u2xcrg-Tag"
+                                    >
+                                      <span
+                                        class="css-vurnku"
+                                      >
+                                        age
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="token template-string interpolation interpolation-punctuation punctuation css-13aqjzy"
+                                      style="color: rgb(182, 173, 154);"
+                                    >
+                                      }
+                                    </span>
+                                    <span
+                                      class="token template-string string css-13aqjzy"
+                                      style="color: rgb(114, 143, 203);"
+                                    >
+                                       years old.
+                                    </span>
+                                    <span
+                                      class="token template-string template-punctuation string css-13aqjzy"
+                                      style="color: rgb(114, 143, 203);"
+                                    >
+                                      \`
+                                    </span>
+                                    <span
+                                      class="token punctuation css-13aqjzy"
+                                      style="color: rgb(182, 173, 154);"
+                                    >
+                                      }
+                                    </span>
+                                    <span
+                                      class="token tag punctuation css-13aqjzy"
+                                      style="color: rgb(182, 173, 154);"
+                                    >
+                                      &lt;/
+                                    </span>
+                                    <span
+                                      class="token tag css-13aqjzy"
+                                      style="color: rgb(6, 50, 137);"
+                                    >
+                                      h2
+                                    </span>
+                                    <span
+                                      class="token tag punctuation css-13aqjzy"
+                                      style="color: rgb(182, 173, 154);"
+                                    >
+                                      &gt;
+                                    </span>
+                                    <span
+                                      class="token plain css-13aqjzy"
+                                    />
+                                  </div>
+                                  <div
+                                    class="token-line"
+                                    style="color: rgb(114, 143, 203);"
+                                  >
+                                    <span
+                                      class="token plain css-13aqjzy"
+                                    />
+                                    <span
+                                      class="token punctuation css-13aqjzy"
+                                      style="color: rgb(182, 173, 154);"
+                                    >
+                                      )
+                                    </span>
+                                    <span
+                                      class="token punctuation css-13aqjzy"
+                                      style="color: rgb(182, 173, 154);"
+                                    >
+                                      ;
+                                    </span>
+                                  </div>
+                                </pre>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Playground disableZoomPan 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+    data-testid="playground"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div>
+          <div
+            class="css-15owl46"
+          >
+            <div
+              class="css-x60p33"
+            >
+              <div
+                class="css-rkyxeq"
+              >
+                <button
+                  aria-label="switch light and dark background"
+                  class="css-1tf4h46"
+                >
+                  dark
+                </button>
+              </div>
+              <div
+                class="css-7d11p2"
+              >
+                <button
+                  aria-label="switch left to right/right to left"
+                  class="css-1tf4h46"
+                >
+                  RTL
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="display story source code"
+                  class="css-1tf4h46"
+                >
+                  open source
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="display story configuration object"
+                  class="css-1tf4h46"
+                >
+                  open config
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-eqxzio"
+          >
+            <div
+              style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+            >
+              <div
+                class="css-1s8zxab"
+              >
+                <div
+                  class="css-1j909cg"
+                >
+                  <div
+                    class="css-1xkyebe"
+                  >
+                    <div
+                      class="css-jxxswp"
+                      id=""
+                    >
+                      <div
+                        class="css-xhp9da"
+                      >
+                        <h3
+                          class="css-16ist9v-BlockContainer"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      aria-hidden="false"
+                      class="rah-static rah-static--height-auto"
+                      style="height: auto; overflow: visible;"
+                    >
+                      <div>
+                        <div
+                          class="css-154oin1"
+                          data-testid="story"
+                          id="blocks-core-story-plain--controls"
+                        >
+                          <div
+                            class="story-render-container css-dhmrnb"
+                          >
+                            <svg
+                              aria-valuemax="1"
+                              aria-valuemin="0"
+                              aria-valuenow="0.5"
+                              class="css-14d2907"
+                              fill="none"
+                              height="128"
+                              role="img"
+                              stroke="currentcolor"
+                              stroke-width="2"
+                              viewBox="0 0 32 32"
+                              width="128"
+                            >
+                              <circle
+                                cx="16"
+                                cy="16"
+                                opacity="0.125"
+                                r="14"
+                              />
+                              <circle
+                                cx="16"
+                                cy="16"
+                                r="14"
+                                stroke-dasharray="87.96459430051421"
+                                stroke-dashoffset="43.982297150257104"
+                                transform="rotate(-90 16 16)"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="rah-static rah-static--height-zero"
+              style="height: 0px; overflow: hidden;"
+            >
+              <div
+                style="display: none;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Playground extraPanel 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+    data-testid="playground"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div>
+          <div
+            class="css-15owl46"
+          >
+            <div
+              class="css-x60p33"
+            >
+              <div
+                class="css-rkyxeq"
+              >
+                <button
+                  aria-label="switch light and dark background"
+                  class="css-1tf4h46"
+                >
+                  dark
+                </button>
+              </div>
+              <div
+                class="css-7d11p2"
+              >
+                <button
+                  aria-label="switch left to right/right to left"
+                  class="css-1tf4h46"
+                >
+                  RTL
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="reset zoom"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="zoom out"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-7d11p2"
+              >
+                <button
+                  aria-label="zoom in"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-7d11p2"
+              >
+                <button
+                  class="css-1tf4h46"
+                >
+                  close custom panel
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="display story source code"
+                  class="css-1tf4h46"
+                >
+                  open source
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="display story configuration object"
+                  class="css-1tf4h46"
+                >
+                  open config
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-eqxzio"
+          >
+            <div
+              style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+            >
+              <div
+                class="css-1s8zxab"
+              >
+                <div
+                  class="css-1j909cg"
+                >
+                  <div
+                    class="css-1xkyebe"
+                  >
+                    <div
+                      class="css-jxxswp"
+                      id=""
+                    >
+                      <div
+                        class="css-xhp9da"
+                      >
+                        <h3
+                          class="css-16ist9v-BlockContainer"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      aria-hidden="false"
+                      class="rah-static rah-static--height-auto"
+                      style="height: auto; overflow: visible;"
+                    >
+                      <div>
+                        <div
+                          class="css-154oin1"
+                          data-testid="story"
+                          id="blocks-core-story-plain--controls"
+                        >
+                          <div
+                            class="story-render-container css-dhmrnb"
+                          >
+                            <svg
+                              aria-valuemax="1"
+                              aria-valuemin="0"
+                              aria-valuenow="0.5"
+                              class="css-14d2907"
+                              fill="none"
+                              height="128"
+                              role="img"
+                              stroke="currentcolor"
+                              stroke-width="2"
+                              viewBox="0 0 32 32"
+                              width="128"
+                            >
+                              <circle
+                                cx="16"
+                                cy="16"
+                                opacity="0.125"
+                                r="14"
+                              />
+                              <circle
+                                cx="16"
+                                cy="16"
+                                r="14"
+                                stroke-dasharray="87.96459430051421"
+                                stroke-dashoffset="43.982297150257104"
+                                transform="rotate(-90 16 16)"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="rah-animating rah-animating--down rah-animating--to-height-auto"
+              style="height: 0px; overflow: hidden; transition: height 250ms ease 0ms;"
+            >
+              <div
+                style=""
+              >
+                <div
+                  class="css-nm5f2c-Tabs"
+                >
+                  <div
+                    class="react-tabs"
+                    data-tabs="true"
+                  >
+                    <ul
+                      class="react-tabs__tab-list"
+                      hidden=""
+                      role="tablist"
+                      style="text-align: right;"
+                    >
+                      <li
+                        aria-controls="react-tabs-5"
+                        aria-disabled="false"
+                        aria-selected="false"
+                        class="react-tabs__tab"
+                        id="react-tabs-4"
+                        role="tab"
+                      >
+                        config
+                      </li>
+                      <li
+                        aria-controls="react-tabs-7"
+                        aria-disabled="false"
+                        aria-selected="false"
+                        class="react-tabs__tab"
+                        id="react-tabs-6"
+                        role="tab"
+                      >
+                        source
+                      </li>
+                      <li
+                        aria-controls="react-tabs-9"
+                        aria-disabled="false"
+                        aria-selected="true"
+                        class="react-tabs__tab react-tabs__tab--selected"
+                        id="react-tabs-8"
+                        role="tab"
+                        tabindex="0"
+                      >
+                        custom panel
+                      </li>
+                    </ul>
+                    <div
+                      aria-labelledby="react-tabs-4"
+                      class="react-tabs__tab-panel"
+                      id="react-tabs-5"
+                      role="tabpanel"
+                    />
+                    <div
+                      aria-labelledby="react-tabs-6"
+                      class="react-tabs__tab-panel"
+                      id="react-tabs-7"
+                      role="tabpanel"
+                    />
+                    <div
+                      aria-labelledby="react-tabs-8"
+                      class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                      id="react-tabs-9"
+                      role="tabpanel"
+                    >
+                      <svg
+                        aria-valuemax="1"
+                        aria-valuemin="0"
+                        aria-valuenow="0.5"
+                        class="css-14d2907"
+                        fill="none"
+                        height="128"
+                        role="img"
+                        stroke="currentcolor"
+                        stroke-width="2"
+                        viewBox="0 0 32 32"
+                        width="128"
+                      >
+                        <circle
+                          cx="16"
+                          cy="16"
+                          opacity="0.125"
+                          r="14"
+                        />
+                        <circle
+                          cx="16"
+                          cy="16"
+                          r="14"
+                          stroke-dasharray="87.96459430051421"
+                          stroke-dashoffset="43.982297150257104"
+                          transform="rotate(-90 16 16)"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Playground multiChild 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+    data-testid="playground"
+  >
+    <div
+      class="css-jxxswp"
+      id="multiple-donuts"
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <a
+          class="css-walqom-LinkHeading"
+          data-id="multiple-donuts"
+          data-level="3"
+          data-title="Multiple donuts"
+          href="http://localhost/#multiple-donuts"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="18"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h3
+          class="css-16ist9v-BlockContainer"
+        >
+          <div
+            class="css-tmrrvx"
+          >
+            Multiple donuts
+            <a
+              aria-label="Collapse this block"
+              class="css-1t48u3b-BlockContainer"
+            >
+              <span
+                class="css-1ibxxpj"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div>
+          <div
+            class="css-15owl46"
+          >
+            <div
+              class="css-x60p33"
+            >
+              <div
+                class="css-rkyxeq"
+              >
+                <button
+                  aria-label="switch light and dark background"
+                  class="css-1tf4h46"
+                >
+                  dark
+                </button>
+              </div>
+              <div
+                class="css-7d11p2"
+              >
+                <button
+                  aria-label="switch left to right/right to left"
+                  class="css-1tf4h46"
+                >
+                  RTL
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="reset zoom"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="zoom out"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="zoom in"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-eqxzio"
+          >
+            <div
+              style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+            >
+              <div
+                class="css-1s8zxab"
+              >
+                <div
+                  class="css-1j909cg"
+                >
+                  <div
+                    class="css-t5jv09"
+                  >
+                    <svg
+                      aria-valuemax="1"
+                      aria-valuemin="0"
+                      aria-valuenow="0.5"
+                      class="css-14d2907"
+                      fill="none"
+                      height="128"
+                      role="img"
+                      stroke="currentcolor"
+                      stroke-width="2"
+                      viewBox="0 0 32 32"
+                      width="128"
+                    >
+                      <circle
+                        cx="16"
+                        cy="16"
+                        opacity="0.125"
+                        r="14"
+                      />
+                      <circle
+                        cx="16"
+                        cy="16"
+                        r="14"
+                        stroke-dasharray="87.96459430051421"
+                        stroke-dashoffset="43.982297150257104"
+                        transform="rotate(-90 16 16)"
+                      />
+                    </svg>
+                    <svg
+                      aria-valuemax="1"
+                      aria-valuemin="0"
+                      aria-valuenow="0.5"
+                      class="css-14d2907"
+                      fill="none"
+                      height="128"
+                      role="img"
+                      stroke="currentcolor"
+                      stroke-width="2"
+                      viewBox="0 0 32 32"
+                      width="128"
+                    >
+                      <circle
+                        cx="16"
+                        cy="16"
+                        opacity="0.125"
+                        r="14"
+                      />
+                      <circle
+                        cx="16"
+                        cy="16"
+                        r="14"
+                        stroke-dasharray="87.96459430051421"
+                        stroke-dashoffset="43.982297150257104"
+                        transform="rotate(-90 16 16)"
+                      />
+                    </svg>
+                    <svg
+                      aria-valuemax="1"
+                      aria-valuemin="0"
+                      aria-valuenow="0.5"
+                      class="css-14d2907"
+                      fill="none"
+                      height="128"
+                      role="img"
+                      stroke="currentcolor"
+                      stroke-width="2"
+                      viewBox="0 0 32 32"
+                      width="128"
+                    >
+                      <circle
+                        cx="16"
+                        cy="16"
+                        opacity="0.125"
+                        r="14"
+                      />
+                      <circle
+                        cx="16"
+                        cy="16"
+                        r="14"
+                        stroke-dasharray="87.96459430051421"
+                        stroke-dashoffset="43.982297150257104"
+                        transform="rotate(-90 16 16)"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="rah-static rah-static--height-zero"
+              style="height: 0px; overflow: hidden;"
+            >
+              <div
+                style="display: none;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Playground multiStories 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+    data-testid="playground"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div>
+          <div
+            class="css-15owl46"
+          >
+            <div
+              class="css-x60p33"
+            >
+              <div
+                class="css-rkyxeq"
+              >
+                <button
+                  aria-label="switch light and dark background"
+                  class="css-1tf4h46"
+                >
+                  dark
+                </button>
+              </div>
+              <div
+                class="css-7d11p2"
+              >
+                <button
+                  aria-label="switch left to right/right to left"
+                  class="css-1tf4h46"
+                >
+                  RTL
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="reset zoom"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="zoom out"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="zoom in"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-eqxzio"
+          >
+            <div
+              style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+            >
+              <div
+                class="css-1s8zxab"
+              >
+                <div
+                  class="css-1j909cg"
+                >
+                  <div
+                    class="css-t5jv09"
+                  >
+                    <div
+                      class="css-1xkyebe"
+                    >
+                      <div
+                        class="css-jxxswp"
+                        id=""
+                      >
+                        <div
+                          class="css-xhp9da"
+                        >
+                          <h3
+                            class="css-16ist9v-BlockContainer"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        aria-hidden="false"
+                        class="rah-static rah-static--height-auto"
+                        style="height: auto; overflow: visible;"
+                      >
+                        <div>
+                          <div
+                            class="css-154oin1"
+                            data-testid="story"
+                            id="id-of-single"
+                          >
+                            <div
+                              class="story-render-container css-dhmrnb"
+                            >
+                              <h2
+                                class="css-229nmx"
+                              >
+                                Components
+                              </h2>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="css-1xkyebe"
+                    >
+                      <div
+                        class="css-jxxswp"
+                        id=""
+                      >
+                        <div
+                          class="css-xhp9da"
+                        >
+                          <h3
+                            class="css-16ist9v-BlockContainer"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        aria-hidden="false"
+                        class="rah-static rah-static--height-auto"
+                        style="height: auto; overflow: visible;"
+                      >
+                        <div>
+                          <div
+                            class="css-154oin1"
+                            data-testid="story"
+                            id="blocks-core-story-plain--controls"
+                          >
+                            <div
+                              class="story-render-container css-dhmrnb"
+                            >
+                              <svg
+                                aria-valuemax="1"
+                                aria-valuemin="0"
+                                aria-valuenow="0.5"
+                                class="css-14d2907"
+                                fill="none"
+                                height="128"
+                                role="img"
+                                stroke="currentcolor"
+                                stroke-width="2"
+                                viewBox="0 0 32 32"
+                                width="128"
+                              >
+                                <circle
+                                  cx="16"
+                                  cy="16"
+                                  opacity="0.125"
+                                  r="14"
+                                />
+                                <circle
+                                  cx="16"
+                                  cy="16"
+                                  r="14"
+                                  stroke-dasharray="87.96459430051421"
+                                  stroke-dashoffset="43.982297150257104"
+                                  transform="rotate(-90 16 16)"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="rah-static rah-static--height-zero"
+              style="height: 0px; overflow: hidden;"
+            >
+              <div
+                style="display: none;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Playground notCollapsible 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+    data-testid="playground"
+  >
+    <div
+      class="css-jxxswp"
+      id="blocks-core-story-plain--controls"
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <a
+          class="css-1ptrway-LinkHeading"
+          data-id="blocks-core-story-plain--controls"
+          data-level="4"
+          data-title="controls"
+          href="http://localhost/#blocks-core-story-plain--controls"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="16"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h4
+          class="css-vsfm4-BlockContainer"
+        >
+          controls
+        </h4>
+      </div>
+    </div>
+    <div>
+      <div
+        class="css-15owl46"
+      >
+        <div
+          class="css-x60p33"
+        >
+          <div
+            class="css-rkyxeq"
+          >
+            <button
+              aria-label="switch light and dark background"
+              class="css-1tf4h46"
+            >
+              dark
+            </button>
+          </div>
+          <div
+            class="css-7d11p2"
+          >
+            <button
+              aria-label="switch left to right/right to left"
+              class="css-1tf4h46"
+            >
+              RTL
+            </button>
+          </div>
+          <div
+            class="css-q7w4rh"
+          >
+            <button
+              aria-label="reset zoom"
+              class="css-97huhz"
+              style="padding-top: 3px; padding-bottom: 3px;"
+            >
+              <svg
+                aria-hidden="true"
+                class="octicon"
+                fill="currentColor"
+                height="16"
+                role="img"
+                style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="css-q7w4rh"
+          >
+            <button
+              aria-label="zoom out"
+              class="css-97huhz"
+              style="padding-top: 3px; padding-bottom: 3px;"
+            >
+              <svg
+                aria-hidden="true"
+                class="octicon"
+                fill="currentColor"
+                height="16"
+                role="img"
+                style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="css-7d11p2"
+          >
+            <button
+              aria-label="zoom in"
+              class="css-97huhz"
+              style="padding-top: 3px; padding-bottom: 3px;"
+            >
+              <svg
+                aria-hidden="true"
+                class="octicon"
+                fill="currentColor"
+                height="16"
+                role="img"
+                style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="css-q7w4rh"
+          >
+            <button
+              aria-label="display story source code"
+              class="css-1tf4h46"
+            >
+              open source
+            </button>
+          </div>
+          <div
+            class="css-q7w4rh"
+          >
+            <button
+              aria-label="display story configuration object"
+              class="css-1tf4h46"
+            >
+              open config
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-eqxzio"
+      >
+        <div
+          style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+        >
+          <div
+            class="css-1s8zxab"
+          >
+            <div
+              class="css-1j909cg"
+            >
+              <div
+                class="css-1xkyebe"
+              >
+                <div
+                  class="css-jxxswp"
+                  id=""
+                >
+                  <div
+                    class="css-xhp9da"
+                  >
+                    <h3
+                      class="css-16ist9v-BlockContainer"
+                    />
+                  </div>
+                </div>
+                <div
+                  aria-hidden="false"
+                  class="rah-static rah-static--height-auto"
+                  style="height: auto; overflow: visible;"
+                >
+                  <div>
+                    <div
+                      class="css-154oin1"
+                      data-testid="story"
+                      id="blocks-core-story-plain--controls"
+                    >
+                      <div
+                        class="story-render-container css-dhmrnb"
+                      >
+                        <svg
+                          aria-valuemax="1"
+                          aria-valuemin="0"
+                          aria-valuenow="0.5"
+                          class="css-14d2907"
+                          fill="none"
+                          height="128"
+                          role="img"
+                          stroke="currentcolor"
+                          stroke-width="2"
+                          viewBox="0 0 32 32"
+                          width="128"
+                        >
+                          <circle
+                            cx="16"
+                            cy="16"
+                            opacity="0.125"
+                            r="14"
+                          />
+                          <circle
+                            cx="16"
+                            cy="16"
+                            r="14"
+                            stroke-dasharray="87.96459430051421"
+                            stroke-dashoffset="43.982297150257104"
+                            transform="rotate(-90 16 16)"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="rah-static rah-static--height-zero"
+          style="height: 0px; overflow: hidden;"
+        >
+          <div
+            style="display: none;"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Playground overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+    data-testid="playground"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div>
+          <div
+            class="css-15owl46"
+          >
+            <div
+              class="css-x60p33"
+            >
+              <div
+                class="css-rkyxeq"
+              >
+                <button
+                  aria-label="switch light and dark background"
+                  class="css-1tf4h46"
+                >
+                  dark
+                </button>
+              </div>
+              <div
+                class="css-7d11p2"
+              >
+                <button
+                  aria-label="switch left to right/right to left"
+                  class="css-1tf4h46"
+                >
+                  RTL
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="reset zoom"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="zoom out"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-7d11p2"
+              >
+                <button
+                  aria-label="zoom in"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="display story source code"
+                  class="css-1tf4h46"
+                >
+                  open source
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="display story configuration object"
+                  class="css-1tf4h46"
+                >
+                  open config
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-eqxzio"
+          >
+            <div
+              style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+            >
+              <div
+                class="css-1s8zxab"
+              >
+                <div
+                  class="css-1j909cg"
+                >
+                  <div
+                    class="css-1xkyebe"
+                  >
+                    <div
+                      class="css-jxxswp"
+                      id=""
+                    >
+                      <div
+                        class="css-xhp9da"
+                      >
+                        <h3
+                          class="css-16ist9v-BlockContainer"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      aria-hidden="false"
+                      class="rah-static rah-static--height-auto"
+                      style="height: auto; overflow: visible;"
+                    >
+                      <div>
+                        <div
+                          class="css-154oin1"
+                          data-testid="story"
+                          id="blocks-core-story-plain--controls"
+                        >
+                          <div
+                            class="story-render-container css-dhmrnb"
+                          >
+                            <svg
+                              aria-valuemax="1"
+                              aria-valuemin="0"
+                              aria-valuenow="0.5"
+                              class="css-14d2907"
+                              fill="none"
+                              height="128"
+                              role="img"
+                              stroke="currentcolor"
+                              stroke-width="2"
+                              viewBox="0 0 32 32"
+                              width="128"
+                            >
+                              <circle
+                                cx="16"
+                                cy="16"
+                                opacity="0.125"
+                                r="14"
+                              />
+                              <circle
+                                cx="16"
+                                cy="16"
+                                r="14"
+                                stroke-dasharray="87.96459430051421"
+                                stroke-dashoffset="43.982297150257104"
+                                transform="rotate(-90 16 16)"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="rah-static rah-static--height-zero"
+              style="height: 0px; overflow: hidden;"
+            >
+              <div
+                style="display: none;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Playground scale 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+    data-testid="playground"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div>
+          <div
+            class="css-15owl46"
+          >
+            <div
+              class="css-x60p33"
+            >
+              <div
+                class="css-rkyxeq"
+              >
+                <button
+                  aria-label="switch light and dark background"
+                  class="css-1tf4h46"
+                >
+                  dark
+                </button>
+              </div>
+              <div
+                class="css-7d11p2"
+              >
+                <button
+                  aria-label="switch left to right/right to left"
+                  class="css-1tf4h46"
+                >
+                  RTL
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="reset zoom"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="zoom out"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-7d11p2"
+              >
+                <button
+                  aria-label="zoom in"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="display story source code"
+                  class="css-1tf4h46"
+                >
+                  open source
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="display story configuration object"
+                  class="css-1tf4h46"
+                >
+                  open config
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-eqxzio"
+          >
+            <div
+              style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+            >
+              <div
+                class="css-18v1cju"
+              >
+                <div
+                  class="css-1idkk08"
+                >
+                  <div
+                    class="css-1xkyebe"
+                  >
+                    <div
+                      class="css-jxxswp"
+                      id=""
+                    >
+                      <div
+                        class="css-xhp9da"
+                      >
+                        <h3
+                          class="css-16ist9v-BlockContainer"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      aria-hidden="false"
+                      class="rah-static rah-static--height-auto"
+                      style="height: auto; overflow: visible;"
+                    >
+                      <div>
+                        <div
+                          class="css-154oin1"
+                          data-testid="story"
+                          id="blocks-core-story-plain--controls"
+                        >
+                          <div
+                            class="story-render-container css-dhmrnb"
+                          >
+                            <svg
+                              aria-valuemax="1"
+                              aria-valuemin="0"
+                              aria-valuenow="0.5"
+                              class="css-14d2907"
+                              fill="none"
+                              height="128"
+                              role="img"
+                              stroke="currentcolor"
+                              stroke-width="2"
+                              viewBox="0 0 32 32"
+                              width="128"
+                            >
+                              <circle
+                                cx="16"
+                                cy="16"
+                                opacity="0.125"
+                                r="14"
+                              />
+                              <circle
+                                cx="16"
+                                cy="16"
+                                r="14"
+                                stroke-dasharray="87.96459430051421"
+                                stroke-dashoffset="43.982297150257104"
+                                transform="rotate(-90 16 16)"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="rah-static rah-static--height-zero"
+              style="height: 0px; overflow: hidden;"
+            >
+              <div
+                style="display: none;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Playground title 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+    data-testid="playground"
+  >
+    <div
+      class="css-jxxswp"
+      id="id-of-story"
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <a
+          class="css-walqom-LinkHeading"
+          data-id="id-of-story"
+          data-level="3"
+          data-title="story"
+          href="http://localhost/#id-of-story"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="18"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h3
+          class="css-16ist9v-BlockContainer"
+        >
+          <div
+            class="css-tmrrvx"
+          >
+            story
+            <a
+              aria-label="Collapse this block"
+              class="css-1t48u3b-BlockContainer"
+            >
+              <span
+                class="css-1ibxxpj"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
+    <p
+      class="css-p7s6cm"
+    >
+      description of story
+    </p>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div>
+          <div
+            class="css-15owl46"
+          >
+            <div
+              class="css-x60p33"
+            >
+              <div
+                class="css-rkyxeq"
+              >
+                <button
+                  aria-label="switch light and dark background"
+                  class="css-1tf4h46"
+                >
+                  dark
+                </button>
+              </div>
+              <div
+                class="css-7d11p2"
+              >
+                <button
+                  aria-label="switch left to right/right to left"
+                  class="css-1tf4h46"
+                >
+                  RTL
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="reset zoom"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="zoom out"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-7d11p2"
+              >
+                <button
+                  aria-label="zoom in"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="display story source code"
+                  class="css-1tf4h46"
+                >
+                  open source
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="display story configuration object"
+                  class="css-1tf4h46"
+                >
+                  open config
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-eqxzio"
+          >
+            <div
+              style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+            >
+              <div
+                class="css-1s8zxab"
+              >
+                <div
+                  class="css-1j909cg"
+                >
+                  <div
+                    class="css-1xkyebe"
+                  >
+                    <div
+                      class="css-jxxswp"
+                      id=""
+                    >
+                      <div
+                        class="css-xhp9da"
+                      >
+                        <h3
+                          class="css-16ist9v-BlockContainer"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      aria-hidden="false"
+                      class="rah-static rah-static--height-auto"
+                      style="height: auto; overflow: visible;"
+                    >
+                      <div>
+                        <div
+                          class="css-154oin1"
+                          data-testid="story"
+                          id="id-of-story"
+                        >
+                          <div
+                            class="story-render-container css-dhmrnb"
+                          >
+                            <h2
+                              class="css-229nmx"
+                            >
+                              Components
+                            </h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="rah-static rah-static--height-zero"
+              style="height: 0px; overflow: hidden;"
+            >
+              <div
+                style="display: none;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Playground visibleTabs 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+    data-testid="playground"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div>
+          <div
+            class="css-15owl46"
+          >
+            <div
+              class="css-x60p33"
+            >
+              <div
+                class="css-rkyxeq"
+              >
+                <button
+                  aria-label="switch light and dark background"
+                  class="css-1tf4h46"
+                >
+                  dark
+                </button>
+              </div>
+              <div
+                class="css-7d11p2"
+              >
+                <button
+                  aria-label="switch left to right/right to left"
+                  class="css-1tf4h46"
+                >
+                  RTL
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="reset zoom"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="zoom out"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-7d11p2"
+              >
+                <button
+                  aria-label="zoom in"
+                  class="css-97huhz"
+                  style="padding-top: 3px; padding-bottom: 3px;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="octicon"
+                    fill="currentColor"
+                    height="16"
+                    role="img"
+                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="display story source code"
+                  class="css-1tf4h46"
+                >
+                  open source
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="display story configuration object"
+                  class="css-1tf4h46"
+                >
+                  open config
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-eqxzio"
+          >
+            <div
+              style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+            >
+              <div
+                class="css-1s8zxab"
+              >
+                <div
+                  class="css-1j909cg"
+                >
+                  <div
+                    class="css-1xkyebe"
+                  >
+                    <div
+                      class="css-jxxswp"
+                      id=""
+                    >
+                      <div
+                        class="css-xhp9da"
+                      >
+                        <h3
+                          class="css-16ist9v-BlockContainer"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      aria-hidden="false"
+                      class="rah-static rah-static--height-auto"
+                      style="height: auto; overflow: visible;"
+                    >
+                      <div>
+                        <div
+                          class="css-154oin1"
+                          data-testid="story"
+                          id="blocks-core-story-plain--controls"
+                        >
+                          <div
+                            class="story-render-container css-dhmrnb"
+                          >
+                            <svg
+                              aria-valuemax="1"
+                              aria-valuemin="0"
+                              aria-valuenow="0.5"
+                              class="css-14d2907"
+                              fill="none"
+                              height="128"
+                              role="img"
+                              stroke="currentcolor"
+                              stroke-width="2"
+                              viewBox="0 0 32 32"
+                              width="128"
+                            >
+                              <circle
+                                cx="16"
+                                cy="16"
+                                opacity="0.125"
+                                r="14"
+                              />
+                              <circle
+                                cx="16"
+                                cy="16"
+                                r="14"
+                                stroke-dasharray="87.96459430051421"
+                                stroke-dashoffset="43.982297150257104"
+                                transform="rotate(-90 16 16)"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="rah-static rah-static--height-zero"
+              style="height: 0px; overflow: hidden;"
+            >
+              <div
+                style="display: none;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Playground zoomDisabled 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+    data-testid="playground"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div>
+          <div
+            class="css-15owl46"
+          >
+            <div
+              class="css-x60p33"
+            >
+              <div
+                class="css-rkyxeq"
+              >
+                <button
+                  aria-label="switch light and dark background"
+                  class="css-1tf4h46"
+                >
+                  dark
+                </button>
+              </div>
+              <div
+                class="css-7d11p2"
+              >
+                <button
+                  aria-label="switch left to right/right to left"
+                  class="css-1tf4h46"
+                >
+                  RTL
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="display story source code"
+                  class="css-1tf4h46"
+                >
+                  open source
+                </button>
+              </div>
+              <div
+                class="css-q7w4rh"
+              >
+                <button
+                  aria-label="display story configuration object"
+                  class="css-1tf4h46"
+                >
+                  open config
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-eqxzio"
+          >
+            <div
+              style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+            >
+              <div
+                class="css-1s8zxab"
+              >
+                <div
+                  class="css-1j909cg"
+                >
+                  <div
+                    class="css-1xkyebe"
+                  >
+                    <div
+                      class="css-jxxswp"
+                      id=""
+                    >
+                      <div
+                        class="css-xhp9da"
+                      >
+                        <h3
+                          class="css-16ist9v-BlockContainer"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      aria-hidden="false"
+                      class="rah-static rah-static--height-auto"
+                      style="height: auto; overflow: visible;"
+                    >
+                      <div>
+                        <div
+                          class="css-154oin1"
+                          data-testid="story"
+                          id="blocks-core-story-plain--controls"
+                        >
+                          <div
+                            class="story-render-container css-dhmrnb"
+                          >
+                            <svg
+                              aria-valuemax="1"
+                              aria-valuemin="0"
+                              aria-valuenow="0.5"
+                              class="css-14d2907"
+                              fill="none"
+                              height="128"
+                              role="img"
+                              stroke="currentcolor"
+                              stroke-width="2"
+                              viewBox="0 0 32 32"
+                              width="128"
+                            >
+                              <circle
+                                cx="16"
+                                cy="16"
+                                opacity="0.125"
+                                r="14"
+                              />
+                              <circle
+                                cx="16"
+                                cy="16"
+                                r="14"
+                                stroke-dasharray="87.96459430051421"
+                                stroke-dashoffset="43.982297150257104"
+                                transform="rotate(-90 16 16)"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="rah-static rah-static--height-zero"
+              style="height: 0px; overflow: hidden;"
+            >
+              <div
+                style="display: none;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

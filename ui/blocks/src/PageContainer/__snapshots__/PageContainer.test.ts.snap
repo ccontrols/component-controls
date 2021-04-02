@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageContainer components 1`] = `
+<DocumentFragment>
+  <div
+    class="css-cwbyoi-Title"
+  >
+    <h1
+      class="css-ymxumn"
+    >
+      MDX Story
+    </h1>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PageContainer overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-cwbyoi-Title"
+  >
+    <h1
+      class="css-ymxumn"
+    >
+      Story
+    </h1>
+  </div>
+</DocumentFragment>
+`;

@@ -8,7 +8,7 @@ import { StoryTemplateOptions } from '../src/types';
 export const runTests = async (
   props: Omit<StoryTemplateOptions, 'storyPath'>,
 ): Promise<void> => {
-  const { renderer, format, config, bundle } = props;
+  const { renderer, format, config, bundle, name } = props;
   const extension = format === 'ts' ? 'ts' : 'js';
   const testName = `story_test_${renderer}_${format}${bundle ? '_bundle' : ''}`;
   const testFileName = path.resolve(__dirname, `${testName}.test.${extension}`);
@@ -34,16 +34,18 @@ export const runTests = async (
     }
     try {
       expect(renderedFile).toMatchSnapshot();
-      await runCLI(
-        {
-          testRegex: testName,
-          testPathIgnorePatterns: ['/node_modules/', '/__snapshots__/'],
-          silent: true,
-          verbose: false,
-          watchman: false,
-        } as Config.Argv,
-        [__dirname],
-      );
+      if (name) {
+        await runCLI(
+          {
+            testRegex: testName,
+            testPathIgnorePatterns: ['/node_modules/', '/__snapshots__/'],
+            silent: true,
+            verbose: false,
+            watchman: false,
+          } as Config.Argv,
+          [__dirname],
+        );
+      }
     } finally {
       if (fs.existsSync(testFileName)) {
         fs.unlinkSync(testFileName);

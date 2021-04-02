@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressIndicator overview 1`] = `
+<DocumentFragment>
+  <div
+    style="width: 100%;"
+  >
+    <div
+      class="css-iapobn-ProgressIndicator"
+    >
+      <progress
+        class="css-1fssii9"
+        max="10"
+        value="3"
+      />
+      <span
+        class="css-cagqfd-ProgressIndicator"
+      >
+        3
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

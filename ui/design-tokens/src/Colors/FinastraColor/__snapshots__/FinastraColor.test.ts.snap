@@ -1,0 +1,339 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FinastraColor overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1bwszv8-FinastraColor"
+  >
+    <div
+      class="css-1f7br22-FinastraColor"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-19r5wv0-FinastraColor"
+      >
+        <div
+          class="css-1uhycp6-FinastraColor"
+        >
+          V
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-k29aus-FinastraColor"
+    >
+      <div>
+        V 100
+      </div>
+      <div
+        class="css-13dugvw-FinastraColor"
+      >
+        #cf1322
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FinastraColor palette 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1lec54j-FinastraColorPalette"
+  >
+    <div
+      class="css-1bwszv8-FinastraColor"
+    >
+      <div
+        class="css-vzao1u-FinastraColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1aeak5z-FinastraColor"
+        >
+          <div
+            class="css-1uhycp6-FinastraColor"
+          >
+            <svg
+              aria-hidden="true"
+              class="octicon"
+              fill="currentColor"
+              height="16"
+              role="img"
+              style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-k29aus-FinastraColor"
+      >
+        <div>
+          C 100 - dark
+        </div>
+        <div
+          class="css-13dugvw-FinastraColor"
+        >
+          #2d2d2d
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1bwszv8-FinastraColor"
+    >
+      <div
+        class="css-1f7br22-FinastraColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-deiode-FinastraColor"
+        >
+          <div
+            class="css-1uhycp6-FinastraColor"
+          >
+            C
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-k29aus-FinastraColor"
+      >
+        <div>
+          C 100
+        </div>
+        <div
+          class="css-13dugvw-FinastraColor"
+        >
+          #414141
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1bwszv8-FinastraColor"
+    >
+      <div
+        class="css-vzao1u-FinastraColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1a3ay15-FinastraColor"
+        >
+          <div
+            class="css-1uhycp6-FinastraColor"
+          >
+            <svg
+              aria-hidden="true"
+              class="octicon"
+              fill="currentColor"
+              height="16"
+              role="img"
+              style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-k29aus-FinastraColor"
+      >
+        <div>
+          C 75
+        </div>
+        <div
+          class="css-13dugvw-FinastraColor"
+        >
+          #707070
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1bwszv8-FinastraColor"
+    >
+      <div
+        class="css-vzao1u-FinastraColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-b34uw7-FinastraColor"
+        >
+          <div
+            class="css-1uhycp6-FinastraColor"
+          >
+            <svg
+              aria-hidden="true"
+              class="octicon"
+              fill="currentColor"
+              height="16"
+              role="img"
+              style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-k29aus-FinastraColor"
+      >
+        <div>
+          C 50
+        </div>
+        <div
+          class="css-13dugvw-FinastraColor"
+        >
+          #9f9f9f
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1bwszv8-FinastraColor"
+    >
+      <div
+        class="css-vzao1u-FinastraColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1na11rk-FinastraColor"
+        >
+          <div
+            class="css-1uhycp6-FinastraColor"
+          >
+            <svg
+              aria-hidden="true"
+              class="octicon"
+              fill="currentColor"
+              height="16"
+              role="img"
+              style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-k29aus-FinastraColor"
+      >
+        <div>
+          C 25
+        </div>
+        <div
+          class="css-13dugvw-FinastraColor"
+        >
+          #cecece
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1bwszv8-FinastraColor"
+    >
+      <div
+        class="css-vzao1u-FinastraColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1q0spo5-FinastraColor"
+        >
+          <div
+            class="css-1uhycp6-FinastraColor"
+          >
+            <svg
+              aria-hidden="true"
+              class="octicon"
+              fill="currentColor"
+              height="16"
+              role="img"
+              style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-k29aus-FinastraColor"
+      >
+        <div>
+          C 10
+        </div>
+        <div
+          class="css-13dugvw-FinastraColor"
+        >
+          #eaeaea
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1bwszv8-FinastraColor"
+    >
+      <div
+        class="css-vzao1u-FinastraColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-ena3j9-FinastraColor"
+        >
+          <div
+            class="css-1uhycp6-FinastraColor"
+          >
+            <svg
+              aria-hidden="true"
+              class="octicon"
+              fill="currentColor"
+              height="16"
+              role="img"
+              style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-k29aus-FinastraColor"
+      >
+        <div>
+          C 2
+        </div>
+        <div
+          class="css-13dugvw-FinastraColor"
+        >
+          #fafafa
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

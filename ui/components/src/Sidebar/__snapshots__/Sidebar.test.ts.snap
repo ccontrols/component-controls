@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar buttonProps 1`] = `
+<DocumentFragment>
+  <div
+    style="border: 1px solid black;"
+  >
+    <div
+      class="css-ob37n5"
+    >
+      <button
+        aria-label="click to expand/collapse"
+        class="css-1ozx2qa"
+      >
+        <svg
+          aria-hidden="true"
+          class="octicon"
+          fill="currentColor"
+          height="32"
+          role="img"
+          style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+          viewBox="0 0 16 16"
+          width="32"
+        >
+          <path
+            d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Sidebar icon 1`] = `
+<DocumentFragment>
+  <div
+    style="border: 1px solid black;"
+  >
+    <div
+      class="css-ob37n5"
+    >
+      <button
+        aria-label="Expand side bar"
+        class="css-1ozx2qa"
+      >
+        <svg
+          aria-hidden="true"
+          class="octicon"
+          fill="currentColor"
+          height="16"
+          role="img"
+          style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            d="M1.75 0A1.75 1.75 0 000 1.75v12.5C0 15.216.784 16 1.75 16h12.5A1.75 1.75 0 0016 14.25V1.75A1.75 1.75 0 0014.25 0H1.75zM1.5 1.75a.25.25 0 01.25-.25h12.5a.25.25 0 01.25.25v12.5a.25.25 0 01-.25.25H1.75a.25.25 0 01-.25-.25V1.75zM11.75 3a.75.75 0 00-.75.75v7.5a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75zm-8.25.75a.75.75 0 011.5 0v5.5a.75.75 0 01-1.5 0v-5.5zM8 3a.75.75 0 00-.75.75v3.5a.75.75 0 001.5 0v-3.5A.75.75 0 008 3z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Sidebar overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-ob37n5"
+  >
+    <button
+      aria-label="Expand side bar"
+      class="css-1ozx2qa"
+    >
+      <svg
+        aria-hidden="true"
+        class="octicon"
+        fill="currentColor"
+        height="32"
+        role="img"
+        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+        viewBox="0 0 16 16"
+        width="32"
+      >
+        <path
+          d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Sidebar title 1`] = `
+<DocumentFragment>
+  <div
+    style="border: 1px solid black;"
+  >
+    <div
+      class="css-ob37n5"
+    >
+      <button
+        aria-label="Expand side bar"
+        class="css-1ozx2qa"
+      >
+        <svg
+          aria-hidden="true"
+          class="octicon"
+          fill="currentColor"
+          height="32"
+          role="img"
+          style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+          viewBox="0 0 16 16"
+          width="32"
+        >
+          <path
+            d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

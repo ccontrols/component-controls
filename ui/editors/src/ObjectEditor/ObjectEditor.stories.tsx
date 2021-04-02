@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {
   ControlTypes,
   ComponentControls,
+  Document,
   Example,
 } from '@component-controls/core';
 import { ControlsStateProvider } from '@component-controls/store';
@@ -10,7 +11,7 @@ import { ObjectEditor } from './ObjectEditor';
 export default {
   title: 'Editors/ObjectEditor',
   component: ObjectEditor,
-};
+} as Document;
 
 export const overview: Example = () => {
   const [state, setState] = useState<ComponentControls>({

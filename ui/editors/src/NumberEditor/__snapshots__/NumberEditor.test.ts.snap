@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NumberEditor overview 1`] = `
+<DocumentFragment>
+  <input
+    class="css-iyqgnx"
+    max="22"
+    min="3"
+    name="prop"
+    type="number"
+    value="10"
+  />
+</DocumentFragment>
+`;
+
+exports[`NumberEditor range 1`] = `
+<DocumentFragment>
+  <div
+    class="css-vurnku"
+  >
+    <span
+      class="css-vurnku"
+    >
+      3
+    </span>
+    <input
+      class="css-mo64tj"
+      max="22"
+      min="3"
+      name="prop"
+      type="range"
+      value="10"
+    />
+    <span
+      class="css-vurnku"
+    >
+      10 / 22
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`NumberEditor step 1`] = `
+<DocumentFragment>
+  <input
+    class="css-iyqgnx"
+    max="22"
+    min="3"
+    name="prop"
+    step="0.5"
+    type="number"
+    value="10"
+  />
+</DocumentFragment>
+`;

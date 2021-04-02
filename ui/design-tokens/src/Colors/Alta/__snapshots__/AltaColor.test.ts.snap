@@ -1,0 +1,364 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AltaColor hsl 1`] = `
+<DocumentFragment>
+  <div
+    class="css-439ki4-AltaColor"
+  >
+    <div
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-yx90az-AltaColor"
+      />
+    </div>
+    <div
+      class="css-1ufifq0-AltaColor"
+    >
+      <div
+        class="css-1sa7c4h-AltaColor"
+      >
+        accent
+      </div>
+      <div>
+        HEX: #8c7873
+      </div>
+      <div>
+        RGB: 140, 120, 115
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AltaColor hsla 1`] = `
+<DocumentFragment>
+  <div
+    class="css-439ki4-AltaColor"
+  >
+    <div
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-ckbm8u-AltaColor"
+      />
+    </div>
+    <div
+      class="css-1ufifq0-AltaColor"
+    >
+      <div
+        class="css-1sa7c4h-AltaColor"
+      >
+        accent
+      </div>
+      <div>
+        HEX: #8c7873
+      </div>
+      <div>
+        RGB: 140, 120, 115
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AltaColor name 1`] = `
+<DocumentFragment>
+  <div
+    class="css-439ki4-AltaColor"
+  >
+    <div
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-1iwjbaz-AltaColor"
+      />
+    </div>
+    <div
+      class="css-1ufifq0-AltaColor"
+    >
+      <div
+        class="css-1sa7c4h-AltaColor"
+      >
+        brand
+      </div>
+      <div>
+        HEX: #e95b54
+      </div>
+      <div>
+        RGB: 233, 91, 84
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AltaColor overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-439ki4-AltaColor"
+  >
+    <div
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-1hla3tt-AltaColor"
+      />
+    </div>
+    <div
+      class="css-1ufifq0-AltaColor"
+    >
+      <div
+        class="css-1sa7c4h-AltaColor"
+      >
+        #fbce4a
+      </div>
+      <div>
+        HEX: #fbce4a
+      </div>
+      <div>
+        RGB: 251, 206, 74
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AltaColor palette 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1mhhg7b"
+  >
+    <div
+      class="css-439ki4-AltaColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1hla3tt-AltaColor"
+        />
+      </div>
+      <div
+        class="css-1ufifq0-AltaColor"
+      >
+        <div
+          class="css-1sa7c4h-AltaColor"
+        >
+          color-1
+        </div>
+        <div>
+          HEX: #fbce4a
+        </div>
+        <div>
+          RGB: 251, 206, 74
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-439ki4-AltaColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1sn3c0w-AltaColor"
+        />
+      </div>
+      <div
+        class="css-1ufifq0-AltaColor"
+      >
+        <div
+          class="css-1sa7c4h-AltaColor"
+        >
+          color-2
+        </div>
+        <div>
+          HEX: #fcfbe8
+        </div>
+        <div>
+          RGB: 252, 251, 232
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-439ki4-AltaColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1er29gs-AltaColor"
+        />
+      </div>
+      <div
+        class="css-1ufifq0-AltaColor"
+      >
+        <div
+          class="css-1sa7c4h-AltaColor"
+        >
+          color-3
+        </div>
+        <div>
+          HEX: #fff4d5
+        </div>
+        <div>
+          RGB: 255, 244, 213
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-439ki4-AltaColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-12wouqw-AltaColor"
+        />
+      </div>
+      <div
+        class="css-1ufifq0-AltaColor"
+      >
+        <div
+          class="css-1sa7c4h-AltaColor"
+        >
+          color-4
+        </div>
+        <div>
+          HEX: #f6cab7
+        </div>
+        <div>
+          RGB: 246, 202, 183
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-439ki4-AltaColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1optur2-AltaColor"
+        />
+      </div>
+      <div
+        class="css-1ufifq0-AltaColor"
+      >
+        <div
+          class="css-1sa7c4h-AltaColor"
+        >
+          color-5
+        </div>
+        <div>
+          HEX: #ec96ad
+        </div>
+        <div>
+          RGB: 236, 150, 173
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-439ki4-AltaColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1x2f4zp-AltaColor"
+        />
+      </div>
+      <div
+        class="css-1ufifq0-AltaColor"
+      >
+        <div
+          class="css-1sa7c4h-AltaColor"
+        >
+          color-6
+        </div>
+        <div>
+          HEX: #ca589d
+        </div>
+        <div>
+          RGB: 202, 88, 157
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AltaColor rgb 1`] = `
+<DocumentFragment>
+  <div
+    class="css-439ki4-AltaColor"
+  >
+    <div
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-y9kc04-AltaColor"
+      />
+    </div>
+    <div
+      class="css-1ufifq0-AltaColor"
+    >
+      <div
+        class="css-1sa7c4h-AltaColor"
+      >
+        text
+      </div>
+      <div>
+        HEX: #000000
+      </div>
+      <div>
+        RGB: 0, 0, 0
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AltaColor rgba 1`] = `
+<DocumentFragment>
+  <div
+    class="css-439ki4-AltaColor"
+  >
+    <div
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-1pb5h4r-AltaColor"
+      />
+    </div>
+    <div
+      class="css-1ufifq0-AltaColor"
+    >
+      <div
+        class="css-1sa7c4h-AltaColor"
+      >
+        shadow
+      </div>
+      <div>
+        HEX: #000000
+      </div>
+      <div>
+        RGB: 0, 0, 0, 0.1
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

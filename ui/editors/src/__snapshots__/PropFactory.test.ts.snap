@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PropFactory overview 1`] = `
+<DocumentFragment>
+  <input
+    id="prop"
+    type="checkbox"
+  />
+</DocumentFragment>
+`;

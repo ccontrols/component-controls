@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { ControlTypes, Example } from '@component-controls/core';
+import { ControlTypes, Document, Example } from '@component-controls/core';
 import { ControlsStateProvider } from '@component-controls/store';
 import { OptionsEditor } from './OptionsEditor';
 
 export default {
   title: 'Editors/OptionsEditor',
   component: OptionsEditor,
-};
+} as Document;
 
 export const overview: Example = () => {
   const [state, setState] = useState('one');

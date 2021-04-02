@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PatternFlyColor overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-kqqymz-PatternFlyColor"
+  >
+    <div
+      class="css-1mrhukl-PatternFlyColor"
+    >
+      <div
+        class="css-1ghb3ac-PatternFlyColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1m2lfh5-PatternFlyColor"
+        />
+      </div>
+      <div
+        class="css-lknyoa-PatternFlyColor"
+      >
+        <div
+          class="css-1duh6dd-PatternFlyColor"
+        >
+          #1d70b8
+        </div>
+        <div
+          class="css-rfxx0s-PatternFlyColor"
+        >
+          --pf-global--link--Color
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PatternFlyColor palette 1`] = `
+<DocumentFragment>
+  <div
+    class="css-217inb-FlexContainer"
+  >
+    <div
+      class="css-kqqymz-PatternFlyColor"
+    >
+      <div
+        class="css-1mrhukl-PatternFlyColor"
+      >
+        <div
+          class="css-1ghb3ac-PatternFlyColor"
+          style="display: inline-block;"
+        >
+          <div
+            class="css-17vda4n-PatternFlyColor"
+          />
+        </div>
+        <div
+          class="css-lknyoa-PatternFlyColor"
+        >
+          <div
+            class="css-1duh6dd-PatternFlyColor"
+          >
+            #004080 (Hover)
+          </div>
+          <div
+            class="css-rfxx0s-PatternFlyColor"
+          >
+            --pf-global--primary-color--200
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-kqqymz-PatternFlyColor"
+    >
+      <div
+        class="css-1mrhukl-PatternFlyColor"
+      >
+        <div
+          class="css-1ghb3ac-PatternFlyColor"
+          style="display: inline-block;"
+        >
+          <div
+            class="css-1n55f48-PatternFlyColor"
+          />
+        </div>
+        <div
+          class="css-lknyoa-PatternFlyColor"
+        >
+          <div
+            class="css-1duh6dd-PatternFlyColor"
+          >
+            #0066cc
+          </div>
+          <div
+            class="css-rfxx0s-PatternFlyColor"
+          >
+            --pf-global--primary-color--100
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-kqqymz-PatternFlyColor"
+    >
+      <div
+        class="css-1mrhukl-PatternFlyColor"
+      >
+        <div
+          class="css-1ghb3ac-PatternFlyColor"
+          style="display: inline-block;"
+        >
+          <div
+            class="css-kukgae-PatternFlyColor"
+          />
+        </div>
+        <div
+          class="css-lknyoa-PatternFlyColor"
+        >
+          <div
+            class="css-1duh6dd-PatternFlyColor"
+          >
+            #470000 (alert icon)
+          </div>
+          <div
+            class="css-rfxx0s-PatternFlyColor"
+          >
+            --pf-global--primary-color--100
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-kqqymz-PatternFlyColor"
+    >
+      <div
+        class="css-1mrhukl-PatternFlyColor"
+      >
+        <div
+          class="css-1ghb3ac-PatternFlyColor"
+          style="display: inline-block;"
+        >
+          <div
+            class="css-ihczjm-PatternFlyColor"
+          />
+        </div>
+        <div
+          class="css-lknyoa-PatternFlyColor"
+        >
+          <div
+            class="css-1duh6dd-PatternFlyColor"
+          >
+            #a30000 (alert title)
+          </div>
+          <div
+            class="css-rfxx0s-PatternFlyColor"
+          >
+            --pf-global--danger-color--200
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-kqqymz-PatternFlyColor"
+    >
+      <div
+        class="css-1mrhukl-PatternFlyColor"
+      >
+        <div
+          class="css-1ghb3ac-PatternFlyColor"
+          style="display: inline-block;"
+        >
+          <div
+            class="css-f5tfy2-PatternFlyColor"
+          />
+        </div>
+        <div
+          class="css-lknyoa-PatternFlyColor"
+        >
+          <div
+            class="css-1duh6dd-PatternFlyColor"
+          >
+            #c9190b (alert icon background)
+          </div>
+          <div
+            class="css-rfxx0s-PatternFlyColor"
+          >
+            --pf-global--danger-color--100
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComponentsCatalog overview 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="css-vc9b9i"
+    >
+      <div
+        class="css-fo5v1-ComponentList"
+      >
+        <div
+          class="css-wh7vml"
+        >
+          <div
+            class="css-nj7jql-ComponentCard"
+          >
+            <a
+              class="css-1t54e2w"
+              href="/docs/id-of-story"
+            >
+              <div
+                class="css-kbmfeb-ComponentCard"
+              >
+                Story
+              </div>
+            </a>
+            <div
+              class="css-10zcph3-ComponentCard"
+            />
+          </div>
+          <div
+            class="css-nj7jql-ComponentCard"
+          >
+            <div
+              class="css-14a8v30-PackageLink"
+            >
+              <a
+                class="css-1t54e2w"
+                href="https://npmjs.com/package/@component-controls/blocks/v/1.0.3"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <div
+                  class="css-13b120i-PackageLink"
+                >
+                  @component-controls/blocks
+                </div>
+              </a>
+              <span
+                class="css-n8ts03-PackageLink"
+              >
+                <span
+                  class="css-vurnku"
+                >
+                  1.0.3
+                </span>
+              </span>
+            </div>
+          </div>
+          <div
+            class="css-1akfoys-ComponentCard"
+          />
+          <p>
+            description of story
+          </p>
+          <div
+            class="css-k8h5so-ComponentCard"
+          >
+            <div
+              class="css-nxqmcg-ComponentCard"
+              data-testid="story"
+              id="id-of-story"
+            >
+              <div
+                class="story-render-container css-dhmrnb"
+              >
+                <h2
+                  class="css-229nmx"
+                >
+                  Components
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

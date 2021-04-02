@@ -1,0 +1,238 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionBar groupEnd 1`] = `
+<DocumentFragment>
+  <div
+    class="css-vurnku"
+    style="height: 100px; width: 100%; background-color: rgb(250, 248, 245);"
+  >
+    <div
+      class="css-15owl46"
+    >
+      <div
+        class="css-x60p33"
+      >
+        <div
+          class="css-1vga9oy"
+        >
+          <button
+            class="css-1tf4h46"
+          >
+            item 1
+          </button>
+        </div>
+        <div
+          class="css-q7w4rh"
+        >
+          <button
+            class="css-1tf4h46"
+          >
+            item 2
+          </button>
+        </div>
+        <div
+          class="css-q7w4rh"
+        >
+          <button
+            class="css-1tf4h46"
+          >
+            item 3
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ActionBar groupStart 1`] = `
+<DocumentFragment>
+  <div
+    class="css-vurnku"
+    style="height: 100px; width: 100%; background-color: rgb(250, 248, 245);"
+  >
+    <div
+      class="css-15owl46"
+    >
+      <div
+        class="css-x60p33"
+      >
+        <div
+          class="css-rkyxeq"
+        >
+          <button
+            class="css-1tf4h46"
+          >
+            item 1
+          </button>
+        </div>
+        <div
+          class="css-7d11p2"
+        >
+          <button
+            class="css-1tf4h46"
+          >
+            item 2
+          </button>
+        </div>
+        <div
+          class="css-7d11p2"
+        >
+          <button
+            class="css-1tf4h46"
+          >
+            item 3
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ActionBar link 1`] = `
+<DocumentFragment>
+  <div
+    class="css-vurnku"
+    style="height: 100px; width: 100%; background-color: rgb(250, 248, 245);"
+  >
+    <div
+      class="css-15owl46"
+    >
+      <div
+        class="css-x60p33"
+      >
+        <div
+          class="css-1vga9oy"
+        >
+          <a
+            class="css-1t54e2w"
+            href="https://google.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            google
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ActionBar order 1`] = `
+<DocumentFragment>
+  <div
+    class="css-vurnku"
+    style="height: 100px; width: 100%; background-color: rgb(250, 248, 245);"
+  >
+    <div
+      class="css-15owl46"
+    >
+      <div
+        class="css-x60p33"
+      >
+        <div
+          class="css-1vga9oy"
+        >
+          <a
+            class="css-1t54e2w"
+            href="https://google.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            google
+          </a>
+        </div>
+        <div
+          class="css-7d11p2"
+        >
+          <button
+            class="css-1tf4h46"
+          >
+            action 1
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ActionBar override 1`] = `
+<DocumentFragment>
+  <div
+    class="css-vurnku"
+    style="height: 100px; width: 100%; background-color: rgb(250, 248, 245);"
+  >
+    <div
+      class="css-15owl46"
+    >
+      <div
+        class="css-x60p33"
+      >
+        <div
+          class="css-1vga9oy"
+        >
+          <button
+            class="css-1tf4h46"
+          >
+            Copy
+          </button>
+        </div>
+        <div
+          class="css-7d11p2"
+        >
+          <a
+            class="css-1t54e2w"
+            href="https://google.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            google
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ActionBar overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-vurnku"
+    style="height: 100px; width: 100%; background-color: rgb(250, 248, 245);"
+  >
+    <div
+      class="css-15owl46"
+    >
+      <div
+        class="css-x60p33"
+      >
+        <div
+          class="css-1vga9oy"
+        >
+          <button
+            class="css-1tf4h46"
+          >
+            action 1
+          </button>
+        </div>
+        <div
+          class="css-7d11p2"
+        >
+          <a
+            class="css-1t54e2w"
+            href="https://google.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            google
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

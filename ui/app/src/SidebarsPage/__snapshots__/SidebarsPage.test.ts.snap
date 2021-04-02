@@ -1,0 +1,2432 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SidebarsPage overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-100p3zm"
+  >
+    <div
+      class="css-1mistll-SidebarsStoryPage"
+      id="content"
+    >
+      <div
+        class="css-3pyqel-Tabs"
+      >
+        <div
+          class="react-tabs"
+          data-tabs="true"
+        >
+          <div
+            class="css-1hkyity"
+          >
+            <div
+              class="css-vurnku"
+            >
+              <div
+                class="css-vurnku"
+              >
+                <div
+                  class="css-1nu2k4w"
+                >
+                  <div
+                    class="css-1h9kuou"
+                  >
+                    <a
+                      aria-label="edit this page"
+                      class="css-1t54e2w"
+                      href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <div
+                        class="css-f5h6sg"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="octicon"
+                          fill="currentColor"
+                          height="16"
+                          role="img"
+                          style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                          viewBox="0 0 16 16"
+                          width="16"
+                        >
+                          <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                        <span
+                          class="css-6amu4j"
+                        >
+                          Edit this page
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    class="css-1v8m970-Container"
+                  >
+                    <div
+                      class="css-crmp15"
+                    >
+                      <div
+                        class="css-zf8zhj"
+                      >
+                        <span
+                          class="css-13o2efz"
+                        >
+                          created:
+                        </span>
+                        <span
+                          class="css-uv6qe8"
+                        >
+                          1/1/2020
+                        </span>
+                      </div>
+                      <div
+                        class="css-tk62ho-Container"
+                      >
+                        <span
+                          class="css-13o2efz"
+                        >
+                          updated:
+                        </span>
+                        <span
+                          class="css-uv6qe8"
+                        >
+                          3/31/2020
+                        </span>
+                      </div>
+                      <div
+                        class="css-lllzso"
+                      >
+                        <div
+                          class="css-zf8zhj"
+                        >
+                          <span
+                            class="css-13o2efz"
+                          >
+                            by
+                          </span>
+                          <span
+                            class="css-uv6qe8"
+                          >
+                            <a
+                              class="css-1t54e2w"
+                              href="/authors/atanasster"
+                            >
+                              atanasster
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-i0y2du"
+                >
+                  <div
+                    class="css-1k9l6xu-Container"
+                  >
+                    <h1
+                      class="css-ymxumn"
+                    >
+                      Story
+                    </h1>
+                  </div>
+                </div>
+                <h2
+                  class="css-1uqrmoi"
+                >
+                  story subtitle
+                </h2>
+                <div
+                  class="css-14a8v30-PackageLink"
+                >
+                  <a
+                    class="css-1t54e2w"
+                    href="https://npmjs.com/package/@component-controls/blocks/v/1.0.3"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <div
+                      class="css-13b120i-PackageLink"
+                    >
+                      @component-controls/blocks
+                    </div>
+                  </a>
+                  <span
+                    class="css-n8ts03-PackageLink"
+                  >
+                    <span
+                      class="css-vurnku"
+                    >
+                      1.0.3
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="css-nm5f2c-Tabs"
+                >
+                  <div
+                    class="react-tabs"
+                    data-tabs="true"
+                  >
+                    <ul
+                      class="react-tabs__tab-list"
+                      role="tablist"
+                    >
+                      <li
+                        aria-controls="react-tabs-1"
+                        aria-disabled="false"
+                        aria-selected="true"
+                        class="react-tabs__tab react-tabs__tab--selected"
+                        id="react-tabs-0"
+                        role="tab"
+                        tabindex="0"
+                      >
+                        ArrowButton
+                      </li>
+                      <li
+                        aria-controls="react-tabs-3"
+                        aria-disabled="false"
+                        aria-selected="false"
+                        class="react-tabs__tab"
+                        id="react-tabs-2"
+                        role="tab"
+                      >
+                        My Button Tab
+                      </li>
+                    </ul>
+                    <div
+                      aria-labelledby="react-tabs-0"
+                      class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                      id="react-tabs-1"
+                      role="tabpanel"
+                    />
+                    <div
+                      aria-labelledby="react-tabs-2"
+                      class="react-tabs__tab-panel"
+                      id="react-tabs-3"
+                      role="tabpanel"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="css-1xkyebe"
+                >
+                  <div
+                    class="css-jxxswp"
+                    id="component"
+                  >
+                    <div
+                      class="css-xhp9da"
+                    >
+                      <a
+                        class="css-walqom-LinkHeading"
+                        data-id="component"
+                        data-level="3"
+                        data-title="Component"
+                        href="http://localhost/#component"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="octicon"
+                          fill="currentColor"
+                          height="18"
+                          role="img"
+                          style="display: inline-block; user-select: none; vertical-align: middle;"
+                          viewBox="0 0 16 16"
+                          width="18"
+                        >
+                          <path
+                            d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                      <h3
+                        class="css-16ist9v-BlockContainer"
+                      >
+                        <div
+                          class="css-tmrrvx"
+                        >
+                          Component
+                          <a
+                            aria-label="Collapse this block"
+                            class="css-1t48u3b-BlockContainer"
+                          >
+                            <span
+                              class="css-1ibxxpj"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="octicon"
+                                fill="currentColor"
+                                height="16"
+                                role="img"
+                                style="display: inline-block; user-select: none; vertical-align: middle;"
+                                viewBox="0 0 16 16"
+                                width="16"
+                              >
+                                <path
+                                  d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                          </a>
+                        </div>
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="false"
+                    class="rah-static rah-static--height-auto"
+                    style="height: auto; overflow: visible;"
+                  >
+                    <div>
+                      <div
+                        class="css-1d6wxci"
+                      >
+                        <div
+                          class="css-nm5f2c-Tabs"
+                        >
+                          <div
+                            class="react-tabs"
+                            data-tabs="true"
+                          >
+                            <ul
+                              class="react-tabs__tab-list"
+                              role="tablist"
+                            >
+                              <li
+                                aria-controls="react-tabs-5"
+                                aria-disabled="false"
+                                aria-selected="true"
+                                class="react-tabs__tab react-tabs__tab--selected"
+                                id="react-tabs-4"
+                                role="tab"
+                                tabindex="0"
+                              >
+                                ArrowButton
+                              </li>
+                              <li
+                                aria-controls="react-tabs-7"
+                                aria-disabled="false"
+                                aria-selected="false"
+                                class="react-tabs__tab"
+                                id="react-tabs-6"
+                                role="tab"
+                              >
+                                My Button Tab
+                              </li>
+                            </ul>
+                            <div
+                              aria-labelledby="react-tabs-4"
+                              class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                              id="react-tabs-5"
+                              role="tabpanel"
+                            >
+                              <div>
+                                <div
+                                  class="css-15owl46"
+                                >
+                                  <div
+                                    class="css-x60p33"
+                                  >
+                                    <div
+                                      class="css-1vga9oy"
+                                    >
+                                      <button
+                                        aria-label="copy the displayed source code"
+                                        class="css-1tf4h46"
+                                      >
+                                        copy
+                                      </button>
+                                    </div>
+                                    <div
+                                      class="css-q7w4rh"
+                                    >
+                                      <a
+                                        aria-label="browse repository"
+                                        class="css-1t54e2w"
+                                        href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                      >
+                                        browse
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="css-q7w4rh"
+                                    >
+                                      <a
+                                        aria-label="browse readme documentation"
+                                        class="css-1t54e2w"
+                                        href="https://github.com/ccontrols/component-controls/tree/master#readme"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                      >
+                                        docs
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="css-q7w4rh"
+                                    >
+                                      <a
+                                        aria-label="browse filed issues"
+                                        class="css-1t54e2w"
+                                        href="https://github.com/ccontrols/component-controls/issues"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                      >
+                                        issues
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="css-eqxzio"
+                                >
+                                  <pre
+                                    class="prism-code language-jsx css-3y8hb3"
+                                    style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; display: block; margin: 0px;"
+                                  >
+                                    <div
+                                      class="token-line css-vurnku"
+                                      style="color: rgb(114, 143, 203);"
+                                    >
+                                      <span
+                                        class="token keyword css-13aqjzy"
+                                        style="color: rgb(114, 143, 203);"
+                                      >
+                                        import
+                                      </span>
+                                      <span
+                                        class="token plain css-13aqjzy"
+                                      >
+                                         ArrowButton 
+                                      </span>
+                                      <span
+                                        class="token keyword css-13aqjzy"
+                                        style="color: rgb(114, 143, 203);"
+                                      >
+                                        from
+                                      </span>
+                                      <span
+                                        class="token plain css-13aqjzy"
+                                      >
+                                         
+                                      </span>
+                                      <span
+                                        class="token string css-13aqjzy"
+                                        style="color: rgb(114, 143, 203);"
+                                      >
+                                        '@component-controls/blocks'
+                                      </span>
+                                      <span
+                                        class="token punctuation css-13aqjzy"
+                                        style="color: rgb(182, 173, 154);"
+                                      >
+                                        ;
+                                      </span>
+                                    </div>
+                                  </pre>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              aria-labelledby="react-tabs-6"
+                              class="react-tabs__tab-panel"
+                              id="react-tabs-7"
+                              role="tabpanel"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1xkyebe"
+                  data-testid="playground"
+                >
+                  <div
+                    class="css-jxxswp"
+                    id="id-of-story"
+                  >
+                    <div
+                      class="css-xhp9da"
+                    >
+                      <a
+                        class="css-walqom-LinkHeading"
+                        data-id="id-of-story"
+                        data-level="3"
+                        data-title="story"
+                        href="http://localhost/#id-of-story"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="octicon"
+                          fill="currentColor"
+                          height="18"
+                          role="img"
+                          style="display: inline-block; user-select: none; vertical-align: middle;"
+                          viewBox="0 0 16 16"
+                          width="18"
+                        >
+                          <path
+                            d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                      <h3
+                        class="css-16ist9v-BlockContainer"
+                      >
+                        <div
+                          class="css-tmrrvx"
+                        >
+                          story
+                          <a
+                            aria-label="Collapse this block"
+                            class="css-1t48u3b-BlockContainer"
+                          >
+                            <span
+                              class="css-1ibxxpj"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="octicon"
+                                fill="currentColor"
+                                height="16"
+                                role="img"
+                                style="display: inline-block; user-select: none; vertical-align: middle;"
+                                viewBox="0 0 16 16"
+                                width="16"
+                              >
+                                <path
+                                  d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                          </a>
+                        </div>
+                      </h3>
+                    </div>
+                  </div>
+                  <p
+                    class="css-p7s6cm"
+                  >
+                    description of story
+                  </p>
+                  <div
+                    aria-hidden="false"
+                    class="rah-static rah-static--height-auto"
+                    style="height: auto; overflow: visible;"
+                  >
+                    <div>
+                      <div>
+                        <div
+                          class="css-15owl46"
+                        >
+                          <div
+                            class="css-x60p33"
+                          >
+                            <div
+                              class="css-rkyxeq"
+                            >
+                              <button
+                                aria-label="switch light and dark background"
+                                class="css-1tf4h46"
+                              >
+                                dark
+                              </button>
+                            </div>
+                            <div
+                              class="css-7d11p2"
+                            >
+                              <button
+                                aria-label="switch left to right/right to left"
+                                class="css-1tf4h46"
+                              >
+                                RTL
+                              </button>
+                            </div>
+                            <div
+                              class="css-q7w4rh"
+                            >
+                              <button
+                                aria-label="reset zoom"
+                                class="css-97huhz"
+                                style="padding-top: 3px; padding-bottom: 3px;"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="octicon"
+                                  fill="currentColor"
+                                  height="16"
+                                  role="img"
+                                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                  viewBox="0 0 16 16"
+                                  width="16"
+                                >
+                                  <path
+                                    d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                            <div
+                              class="css-q7w4rh"
+                            >
+                              <button
+                                aria-label="zoom out"
+                                class="css-97huhz"
+                                style="padding-top: 3px; padding-bottom: 3px;"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="octicon"
+                                  fill="currentColor"
+                                  height="16"
+                                  role="img"
+                                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                  viewBox="0 0 16 16"
+                                  width="16"
+                                >
+                                  <path
+                                    d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                            <div
+                              class="css-7d11p2"
+                            >
+                              <button
+                                aria-label="zoom in"
+                                class="css-97huhz"
+                                style="padding-top: 3px; padding-bottom: 3px;"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="octicon"
+                                  fill="currentColor"
+                                  height="16"
+                                  role="img"
+                                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                  viewBox="0 0 16 16"
+                                  width="16"
+                                >
+                                  <path
+                                    d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                            <div
+                              class="css-q7w4rh"
+                            >
+                              <button
+                                aria-label="display story source code"
+                                class="css-1tf4h46"
+                              >
+                                open source
+                              </button>
+                            </div>
+                            <div
+                              class="css-q7w4rh"
+                            >
+                              <button
+                                aria-label="display story configuration object"
+                                class="css-1tf4h46"
+                              >
+                                open config
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="css-eqxzio"
+                        >
+                          <div
+                            style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+                          >
+                            <div
+                              class="css-1s8zxab"
+                            >
+                              <div
+                                class="css-1j909cg"
+                              >
+                                <div
+                                  class="css-1xkyebe"
+                                >
+                                  <div
+                                    class="css-jxxswp"
+                                    id=""
+                                  >
+                                    <div
+                                      class="css-xhp9da"
+                                    >
+                                      <h3
+                                        class="css-16ist9v-BlockContainer"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div
+                                    aria-hidden="false"
+                                    class="rah-static rah-static--height-auto"
+                                    style="height: auto; overflow: visible;"
+                                  >
+                                    <div>
+                                      <div
+                                        class="css-154oin1"
+                                        data-testid="story"
+                                        id="id-of-story"
+                                      >
+                                        <div
+                                          class="story-render-container css-dhmrnb"
+                                        >
+                                          <h2
+                                            class="css-229nmx"
+                                          >
+                                            Components
+                                          </h2>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            class="rah-static rah-static--height-zero"
+                            style="height: 0px; overflow: hidden;"
+                          >
+                            <div
+                              style="display: none;"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1xkyebe"
+                >
+                  <div
+                    class="css-jxxswp"
+                    id="external-dependencies"
+                  >
+                    <div
+                      class="css-xhp9da"
+                    >
+                      <a
+                        class="css-walqom-LinkHeading"
+                        data-id="external-dependencies"
+                        data-level="3"
+                        data-title="External dependencies"
+                        href="http://localhost/#external-dependencies"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="octicon"
+                          fill="currentColor"
+                          height="18"
+                          role="img"
+                          style="display: inline-block; user-select: none; vertical-align: middle;"
+                          viewBox="0 0 16 16"
+                          width="18"
+                        >
+                          <path
+                            d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                      <h3
+                        class="css-16ist9v-BlockContainer"
+                      >
+                        <div
+                          class="css-tmrrvx"
+                        >
+                          External dependencies
+                          <a
+                            aria-label="Collapse this block"
+                            class="css-1t48u3b-BlockContainer"
+                          >
+                            <span
+                              class="css-1ibxxpj"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="octicon"
+                                fill="currentColor"
+                                height="16"
+                                role="img"
+                                style="display: inline-block; user-select: none; vertical-align: middle;"
+                                viewBox="0 0 16 16"
+                                width="16"
+                              >
+                                <path
+                                  d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                          </a>
+                        </div>
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="false"
+                    class="rah-static rah-static--height-auto"
+                    style="height: auto; overflow: visible;"
+                  >
+                    <div>
+                      <div
+                        class="css-1d6wxci"
+                      >
+                        <div
+                          class="css-nm5f2c-Tabs"
+                        >
+                          <div
+                            class="react-tabs"
+                            data-tabs="true"
+                          >
+                            <ul
+                              class="react-tabs__tab-list"
+                              role="tablist"
+                            >
+                              <li
+                                aria-controls="react-tabs-9"
+                                aria-disabled="false"
+                                aria-selected="true"
+                                class="react-tabs__tab react-tabs__tab--selected"
+                                id="react-tabs-8"
+                                role="tab"
+                                tabindex="0"
+                              >
+                                ArrowButton
+                              </li>
+                              <li
+                                aria-controls="react-tabs-11"
+                                aria-disabled="false"
+                                aria-selected="false"
+                                class="react-tabs__tab"
+                                id="react-tabs-10"
+                                role="tab"
+                              >
+                                My Button Tab
+                              </li>
+                            </ul>
+                            <div
+                              aria-labelledby="react-tabs-8"
+                              class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                              id="react-tabs-9"
+                              role="tabpanel"
+                            >
+                              <table
+                                class="css-11y77l0"
+                                role="table"
+                              >
+                                <thead
+                                  class="css-14kw1rx"
+                                >
+                                  <tr
+                                    class="css-vurnku"
+                                    role="row"
+                                  >
+                                    <th
+                                      class="css-9hyy6f"
+                                      colspan="1"
+                                      role="columnheader"
+                                      style="width: 150px;"
+                                    >
+                                      <div
+                                        class="css-wwqljn"
+                                      >
+                                        <div
+                                          class="css-206mi5"
+                                        >
+                                          package
+                                        </div>
+                                      </div>
+                                    </th>
+                                    <th
+                                      class="css-9hyy6f"
+                                      colspan="1"
+                                      role="columnheader"
+                                      style="width: 70%;"
+                                    >
+                                      <div
+                                        class="css-wwqljn"
+                                      >
+                                        <div
+                                          class="css-206mi5"
+                                        >
+                                          imports
+                                        </div>
+                                      </div>
+                                    </th>
+                                    <th
+                                      class="css-9hyy6f"
+                                      colspan="1"
+                                      role="columnheader"
+                                      style="width: 150px;"
+                                    >
+                                      <div
+                                        class="css-wwqljn"
+                                      >
+                                        <div
+                                          class="css-206mi5"
+                                        >
+                                          peer
+                                        </div>
+                                      </div>
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody
+                                  class="css-tuhk50"
+                                  role="rowgroup"
+                                >
+                                  <tr
+                                    class="css-ijvt85"
+                                    role="row"
+                                  >
+                                    <td
+                                      class="css-l4u9co"
+                                      role="cell"
+                                      style="width: 150px;"
+                                    >
+                                      <div
+                                        class="css-14a8v30-PackageLink"
+                                      >
+                                        <a
+                                          class="css-1t54e2w"
+                                          href="https://npmjs.com/package/@component-controls/components/v/1.0.1"
+                                          rel="noopener noreferrer"
+                                          target="_blank"
+                                        >
+                                          <div
+                                            class="css-13b120i-PackageLink"
+                                          >
+                                            @component-controls/components
+                                          </div>
+                                        </a>
+                                        <span
+                                          class="css-n8ts03-PackageLink"
+                                        >
+                                          <span
+                                            class="css-vurnku"
+                                          >
+                                            ^1.0.1
+                                          </span>
+                                        </span>
+                                      </div>
+                                    </td>
+                                    <td
+                                      class="css-l4u9co"
+                                      role="cell"
+                                      style="width: 70%;"
+                                    >
+                                      <div
+                                        class="css-zivbkl-Cell"
+                                      >
+                                        <span
+                                          class="css-hpa617-Tag"
+                                        >
+                                          <span
+                                            class="css-vurnku"
+                                          >
+                                            Table
+                                          </span>
+                                        </span>
+                                      </div>
+                                    </td>
+                                    <td
+                                      class="css-l4u9co"
+                                      role="cell"
+                                      style="width: 150px;"
+                                    />
+                                  </tr>
+                                  <tr
+                                    class="css-ijvt85"
+                                    role="row"
+                                  >
+                                    <td
+                                      class="css-l4u9co"
+                                      role="cell"
+                                      style="width: 150px;"
+                                    >
+                                      <div
+                                        class="css-14a8v30-PackageLink"
+                                      >
+                                        <a
+                                          class="css-1t54e2w"
+                                          href="https://npmjs.com/package/react/v/16.13.1"
+                                          rel="noopener noreferrer"
+                                          target="_blank"
+                                        >
+                                          <div
+                                            class="css-13b120i-PackageLink"
+                                          >
+                                            react
+                                          </div>
+                                        </a>
+                                        <span
+                                          class="css-n8ts03-PackageLink"
+                                        >
+                                          <span
+                                            class="css-vurnku"
+                                          >
+                                            ^16.13.1
+                                          </span>
+                                        </span>
+                                      </div>
+                                    </td>
+                                    <td
+                                      class="css-l4u9co"
+                                      role="cell"
+                                      style="width: 70%;"
+                                    >
+                                      <div
+                                        class="css-zivbkl-Cell"
+                                      >
+                                        <span
+                                          class="css-1j59y6j-Tag"
+                                        >
+                                          <span
+                                            class="css-vurnku"
+                                          >
+                                            React
+                                          </span>
+                                        </span>
+                                        <span
+                                          class="css-hpa617-Tag"
+                                        >
+                                          <span
+                                            class="css-vurnku"
+                                          >
+                                            FC
+                                          </span>
+                                        </span>
+                                      </div>
+                                    </td>
+                                    <td
+                                      class="css-l4u9co"
+                                      role="cell"
+                                      style="width: 150px;"
+                                    >
+                                      *
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <div
+                              aria-labelledby="react-tabs-10"
+                              class="react-tabs__tab-panel"
+                              id="react-tabs-11"
+                              role="tabpanel"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1xkyebe"
+                >
+                  <div
+                    class="css-jxxswp"
+                    id="internal-dependencies"
+                  >
+                    <div
+                      class="css-xhp9da"
+                    >
+                      <a
+                        class="css-walqom-LinkHeading"
+                        data-id="internal-dependencies"
+                        data-level="3"
+                        data-title="Internal dependencies"
+                        href="http://localhost/#internal-dependencies"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="octicon"
+                          fill="currentColor"
+                          height="18"
+                          role="img"
+                          style="display: inline-block; user-select: none; vertical-align: middle;"
+                          viewBox="0 0 16 16"
+                          width="18"
+                        >
+                          <path
+                            d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                      <h3
+                        class="css-16ist9v-BlockContainer"
+                      >
+                        <div
+                          class="css-tmrrvx"
+                        >
+                          Internal dependencies
+                          <a
+                            aria-label="Collapse this block"
+                            class="css-1t48u3b-BlockContainer"
+                          >
+                            <span
+                              class="css-1ibxxpj"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="octicon"
+                                fill="currentColor"
+                                height="16"
+                                role="img"
+                                style="display: inline-block; user-select: none; vertical-align: middle;"
+                                viewBox="0 0 16 16"
+                                width="16"
+                              >
+                                <path
+                                  d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                          </a>
+                        </div>
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="false"
+                    class="rah-static rah-static--height-auto"
+                    style="height: auto; overflow: visible;"
+                  >
+                    <div>
+                      <div
+                        class="css-1d6wxci"
+                      >
+                        <div
+                          class="css-nm5f2c-Tabs"
+                        >
+                          <div
+                            class="react-tabs"
+                            data-tabs="true"
+                          >
+                            <ul
+                              class="react-tabs__tab-list"
+                              role="tablist"
+                            >
+                              <li
+                                aria-controls="react-tabs-13"
+                                aria-disabled="false"
+                                aria-selected="true"
+                                class="react-tabs__tab react-tabs__tab--selected"
+                                id="react-tabs-12"
+                                role="tab"
+                                tabindex="0"
+                              >
+                                ArrowButton
+                              </li>
+                              <li
+                                aria-controls="react-tabs-15"
+                                aria-disabled="false"
+                                aria-selected="false"
+                                class="react-tabs__tab"
+                                id="react-tabs-14"
+                                role="tab"
+                              >
+                                My Button Tab
+                              </li>
+                            </ul>
+                            <div
+                              aria-labelledby="react-tabs-12"
+                              class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                              id="react-tabs-13"
+                              role="tabpanel"
+                            >
+                              <table
+                                class="css-11y77l0"
+                                data-testid="local-dependencies"
+                                role="table"
+                              >
+                                <thead
+                                  class="css-14kw1rx"
+                                >
+                                  <tr
+                                    class="css-vurnku"
+                                    role="row"
+                                  >
+                                    <th
+                                      class="css-9hyy6f"
+                                      colspan="1"
+                                      role="columnheader"
+                                      style="width: 150px;"
+                                    >
+                                      <div
+                                        class="css-wwqljn"
+                                      >
+                                        <div
+                                          class="css-206mi5"
+                                        >
+                                          file
+                                        </div>
+                                      </div>
+                                    </th>
+                                    <th
+                                      class="css-9hyy6f"
+                                      colspan="1"
+                                      role="columnheader"
+                                      style="width: 150px;"
+                                    >
+                                      <div
+                                        class="css-wwqljn"
+                                      >
+                                        <div
+                                          class="css-206mi5"
+                                        >
+                                          imports
+                                        </div>
+                                      </div>
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody
+                                  class="css-tuhk50"
+                                  role="rowgroup"
+                                >
+                                  <tr
+                                    class="css-ijvt85"
+                                    role="row"
+                                  >
+                                    <td
+                                      class="css-l4u9co"
+                                      role="cell"
+                                      style="width: 150px;"
+                                    >
+                                      <span
+                                        class="css-b7g03d-Cell"
+                                      >
+                                        "./Button"
+                                      </span>
+                                    </td>
+                                    <td
+                                      class="css-l4u9co"
+                                      role="cell"
+                                      style="width: 150px;"
+                                    >
+                                      <div
+                                        class="css-zivbkl-Cell"
+                                      >
+                                        <span
+                                          class="css-1ver5lo-LocalImport"
+                                        >
+                                          <span
+                                            class="css-vurnku"
+                                          >
+                                            <a
+                                              class="css-1t54e2w"
+                                              href="/docs/id-of-story"
+                                            >
+                                              Button
+                                            </a>
+                                          </span>
+                                        </span>
+                                        <span
+                                          class="css-9c8bof-LocalImport"
+                                        >
+                                          <span
+                                            class="css-vurnku"
+                                          >
+                                            ButtonProps
+                                          </span>
+                                        </span>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr
+                                    class="css-ijvt85"
+                                    role="row"
+                                  >
+                                    <td
+                                      class="css-l4u9co"
+                                      role="cell"
+                                      style="width: 150px;"
+                                    >
+                                      <span
+                                        class="css-b7g03d-Cell"
+                                      >
+                                        "@component-controls/components"
+                                      </span>
+                                    </td>
+                                    <td
+                                      class="css-l4u9co"
+                                      role="cell"
+                                      style="width: 150px;"
+                                    >
+                                      <div
+                                        class="css-zivbkl-Cell"
+                                      >
+                                        <span
+                                          class="css-9c8bof-LocalImport"
+                                        >
+                                          <span
+                                            class="css-vurnku"
+                                          >
+                                            Table
+                                          </span>
+                                        </span>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <div
+                              aria-labelledby="react-tabs-14"
+                              class="react-tabs__tab-panel"
+                              id="react-tabs-15"
+                              role="tabpanel"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1xkyebe"
+                >
+                  <div
+                    class="css-jxxswp"
+                    id="component-jsx"
+                  >
+                    <div
+                      class="css-xhp9da"
+                    >
+                      <a
+                        class="css-walqom-LinkHeading"
+                        data-id="component-jsx"
+                        data-level="3"
+                        data-title="Component JSX"
+                        href="http://localhost/#component-jsx"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="octicon"
+                          fill="currentColor"
+                          height="18"
+                          role="img"
+                          style="display: inline-block; user-select: none; vertical-align: middle;"
+                          viewBox="0 0 16 16"
+                          width="18"
+                        >
+                          <path
+                            d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                      <h3
+                        class="css-16ist9v-BlockContainer"
+                      >
+                        <div
+                          class="css-tmrrvx"
+                        >
+                          Component JSX
+                          <a
+                            aria-label="Collapse this block"
+                            class="css-1t48u3b-BlockContainer"
+                          >
+                            <span
+                              class="css-1ibxxpj"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="octicon"
+                                fill="currentColor"
+                                height="16"
+                                role="img"
+                                style="display: inline-block; user-select: none; vertical-align: middle;"
+                                viewBox="0 0 16 16"
+                                width="16"
+                              >
+                                <path
+                                  d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                          </a>
+                        </div>
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="false"
+                    class="rah-static rah-static--height-auto"
+                    style="height: auto; overflow: visible;"
+                  >
+                    <div>
+                      <div
+                        class="css-1d6wxci"
+                      >
+                        <div
+                          class="css-nm5f2c-Tabs"
+                        >
+                          <div
+                            class="react-tabs"
+                            data-tabs="true"
+                          >
+                            <ul
+                              class="react-tabs__tab-list"
+                              role="tablist"
+                            >
+                              <li
+                                aria-controls="react-tabs-17"
+                                aria-disabled="false"
+                                aria-selected="true"
+                                class="react-tabs__tab react-tabs__tab--selected"
+                                id="react-tabs-16"
+                                role="tab"
+                                tabindex="0"
+                              >
+                                ArrowButton
+                              </li>
+                              <li
+                                aria-controls="react-tabs-19"
+                                aria-disabled="false"
+                                aria-selected="false"
+                                class="react-tabs__tab"
+                                id="react-tabs-18"
+                                role="tab"
+                              >
+                                My Button Tab
+                              </li>
+                            </ul>
+                            <div
+                              aria-labelledby="react-tabs-16"
+                              class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                              id="react-tabs-17"
+                              role="tabpanel"
+                            >
+                              <div>
+                                <div
+                                  class="css-15owl46"
+                                >
+                                  <div
+                                    class="css-x60p33"
+                                  >
+                                    <div
+                                      class="css-1vga9oy"
+                                    >
+                                      <button
+                                        class="css-1tf4h46"
+                                      >
+                                        collapse all
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="css-eqxzio"
+                                >
+                                  <div
+                                    class="css-aroec7-Tree"
+                                    data-testid="component-jsx"
+                                  >
+                                    <div
+                                      class="css-vurnku"
+                                    >
+                                      <div
+                                        class="css-15ej8gm"
+                                      >
+                                        <div
+                                          class="css-tizfsr"
+                                        >
+                                          <div
+                                            class="css-162ewbd"
+                                          >
+                                            <div
+                                              class="css-p1dwhj"
+                                            >
+                                              <div
+                                                class="css-dcq909"
+                                              >
+                                                <div
+                                                  class="css-f5h6sg"
+                                                >
+                                                  <div
+                                                    class="css-1ujq37u-JSXTreeNode"
+                                                  >
+                                                    <span
+                                                      class="css-kde9kw-JSXTreeNode"
+                                                    >
+                                                      &lt;Button
+                                                    </span>
+                                                    <div
+                                                      class="css-1j19kj1-JSXTreeNode"
+                                                    >
+                                                      <span
+                                                        class="css-19j54vt-Tag"
+                                                      >
+                                                        <span
+                                                          class="css-vurnku"
+                                                        >
+                                                          ref
+                                                        </span>
+                                                      </span>
+                                                      <span
+                                                        class="css-19j54vt-Tag"
+                                                      >
+                                                        <span
+                                                          class="css-vurnku"
+                                                        >
+                                                          id
+                                                        </span>
+                                                      </span>
+                                                    </div>
+                                                    <span
+                                                      class="css-kde9kw-JSXTreeNode"
+                                                    >
+                                                      /&gt;
+                                                    </span>
+                                                  </div>
+                                                </div>
+                                                <div
+                                                  class="css-vthntz"
+                                                >
+                                                  <div
+                                                    class="css-vurnku"
+                                                  >
+                                                    <div
+                                                      class="css-u91vyr-ImportLabel"
+                                                    >
+                                                      <span
+                                                        class="css-1ver5lo-LocalImport"
+                                                      >
+                                                        <span
+                                                          class="css-vurnku"
+                                                        >
+                                                          <a
+                                                            class="css-1t54e2w"
+                                                            href="/docs/id-of-story"
+                                                          >
+                                                            Button
+                                                          </a>
+                                                        </span>
+                                                      </span>
+                                                      <div
+                                                        class="css-10stqcc-ImportLabel"
+                                                      >
+                                                        <span
+                                                          class="css-1tf5k16-ImportLabel"
+                                                        >
+                                                          from
+                                                        </span>
+                                                        <span
+                                                          class="css-tfsmtt-ImportLabel"
+                                                        >
+                                                          "./Button"
+                                                        </span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              aria-labelledby="react-tabs-18"
+                              class="react-tabs__tab-panel"
+                              id="react-tabs-19"
+                              role="tabpanel"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1xkyebe"
+                >
+                  <div
+                    class="css-jxxswp"
+                    id="stories"
+                  >
+                    <div
+                      class="css-xhp9da"
+                    >
+                      <a
+                        class="css-walqom-LinkHeading"
+                        data-id="stories"
+                        data-level="3"
+                        data-title="Stories"
+                        href="http://localhost/#stories"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="octicon"
+                          fill="currentColor"
+                          height="18"
+                          role="img"
+                          style="display: inline-block; user-select: none; vertical-align: middle;"
+                          viewBox="0 0 16 16"
+                          width="18"
+                        >
+                          <path
+                            d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                      <h3
+                        class="css-16ist9v-BlockContainer"
+                      >
+                        <div
+                          class="css-tmrrvx"
+                        >
+                          Stories
+                          <a
+                            aria-label="Collapse this block"
+                            class="css-1t48u3b-BlockContainer"
+                          >
+                            <span
+                              class="css-1ibxxpj"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="octicon"
+                                fill="currentColor"
+                                height="16"
+                                role="img"
+                                style="display: inline-block; user-select: none; vertical-align: middle;"
+                                viewBox="0 0 16 16"
+                                width="16"
+                              >
+                                <path
+                                  d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                          </a>
+                        </div>
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="false"
+                    class="rah-static rah-static--height-auto"
+                    style="height: auto; overflow: visible;"
+                  >
+                    <div>
+                      <div
+                        class="css-1xkyebe"
+                        data-testid="playground"
+                      >
+                        <div
+                          class="css-jxxswp"
+                          id="story"
+                        >
+                          <div
+                            class="css-xhp9da"
+                          >
+                            <a
+                              class="css-1ptrway-LinkHeading"
+                              data-id="story"
+                              data-level="4"
+                              data-title="story"
+                              href="http://localhost/#story"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="octicon"
+                                fill="currentColor"
+                                height="16"
+                                role="img"
+                                style="display: inline-block; user-select: none; vertical-align: middle;"
+                                viewBox="0 0 16 16"
+                                width="16"
+                              >
+                                <path
+                                  d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </a>
+                            <h4
+                              class="css-vsfm4-BlockContainer"
+                            >
+                              story
+                            </h4>
+                          </div>
+                        </div>
+                        <div>
+                          <div
+                            class="css-15owl46"
+                          >
+                            <div
+                              class="css-x60p33"
+                            >
+                              <div
+                                class="css-rkyxeq"
+                              >
+                                <button
+                                  aria-label="switch light and dark background"
+                                  class="css-1tf4h46"
+                                >
+                                  dark
+                                </button>
+                              </div>
+                              <div
+                                class="css-7d11p2"
+                              >
+                                <button
+                                  aria-label="switch left to right/right to left"
+                                  class="css-1tf4h46"
+                                >
+                                  RTL
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="reset zoom"
+                                  class="css-97huhz"
+                                  style="padding-top: 3px; padding-bottom: 3px;"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="octicon"
+                                    fill="currentColor"
+                                    height="16"
+                                    role="img"
+                                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                    viewBox="0 0 16 16"
+                                    width="16"
+                                  >
+                                    <path
+                                      d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                                      fill-rule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="zoom out"
+                                  class="css-97huhz"
+                                  style="padding-top: 3px; padding-bottom: 3px;"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="octicon"
+                                    fill="currentColor"
+                                    height="16"
+                                    role="img"
+                                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                    viewBox="0 0 16 16"
+                                    width="16"
+                                  >
+                                    <path
+                                      d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                                      fill-rule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                              <div
+                                class="css-7d11p2"
+                              >
+                                <button
+                                  aria-label="zoom in"
+                                  class="css-97huhz"
+                                  style="padding-top: 3px; padding-bottom: 3px;"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="octicon"
+                                    fill="currentColor"
+                                    height="16"
+                                    role="img"
+                                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                    viewBox="0 0 16 16"
+                                    width="16"
+                                  >
+                                    <path
+                                      d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                                      fill-rule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="display story source code"
+                                  class="css-1tf4h46"
+                                >
+                                  open source
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="display story configuration object"
+                                  class="css-1tf4h46"
+                                >
+                                  open config
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="css-eqxzio"
+                          >
+                            <div
+                              style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+                            >
+                              <div
+                                class="css-1s8zxab"
+                              >
+                                <div
+                                  class="css-1j909cg"
+                                >
+                                  <div
+                                    class="css-1xkyebe"
+                                  >
+                                    <div
+                                      class="css-jxxswp"
+                                      id=""
+                                    >
+                                      <div
+                                        class="css-xhp9da"
+                                      >
+                                        <h3
+                                          class="css-16ist9v-BlockContainer"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div
+                                      aria-hidden="false"
+                                      class="rah-static rah-static--height-auto"
+                                      style="height: auto; overflow: visible;"
+                                    >
+                                      <div>
+                                        <div
+                                          class="css-154oin1"
+                                          data-testid="story"
+                                          id="id-of-single"
+                                        >
+                                          <div
+                                            class="story-render-container css-dhmrnb"
+                                          >
+                                            <h2
+                                              class="css-229nmx"
+                                            >
+                                              Components
+                                            </h2>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              aria-hidden="true"
+                              class="rah-static rah-static--height-zero"
+                              style="height: 0px; overflow: hidden;"
+                            >
+                              <div
+                                style="display: none;"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="css-1xkyebe"
+                        data-testid="playground"
+                      >
+                        <div
+                          class="css-jxxswp"
+                          id="button"
+                        >
+                          <div
+                            class="css-xhp9da"
+                          >
+                            <a
+                              class="css-1ptrway-LinkHeading"
+                              data-id="button"
+                              data-level="4"
+                              data-title="button"
+                              href="http://localhost/#button"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="octicon"
+                                fill="currentColor"
+                                height="16"
+                                role="img"
+                                style="display: inline-block; user-select: none; vertical-align: middle;"
+                                viewBox="0 0 16 16"
+                                width="16"
+                              >
+                                <path
+                                  d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </a>
+                            <h4
+                              class="css-vsfm4-BlockContainer"
+                            >
+                              button
+                            </h4>
+                          </div>
+                        </div>
+                        <div>
+                          <div
+                            class="css-15owl46"
+                          >
+                            <div
+                              class="css-x60p33"
+                            >
+                              <div
+                                class="css-rkyxeq"
+                              >
+                                <button
+                                  aria-label="switch light and dark background"
+                                  class="css-1tf4h46"
+                                >
+                                  dark
+                                </button>
+                              </div>
+                              <div
+                                class="css-7d11p2"
+                              >
+                                <button
+                                  aria-label="switch left to right/right to left"
+                                  class="css-1tf4h46"
+                                >
+                                  RTL
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="reset zoom"
+                                  class="css-97huhz"
+                                  style="padding-top: 3px; padding-bottom: 3px;"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="octicon"
+                                    fill="currentColor"
+                                    height="16"
+                                    role="img"
+                                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                    viewBox="0 0 16 16"
+                                    width="16"
+                                  >
+                                    <path
+                                      d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                                      fill-rule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="zoom out"
+                                  class="css-97huhz"
+                                  style="padding-top: 3px; padding-bottom: 3px;"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="octicon"
+                                    fill="currentColor"
+                                    height="16"
+                                    role="img"
+                                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                    viewBox="0 0 16 16"
+                                    width="16"
+                                  >
+                                    <path
+                                      d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                                      fill-rule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                              <div
+                                class="css-7d11p2"
+                              >
+                                <button
+                                  aria-label="zoom in"
+                                  class="css-97huhz"
+                                  style="padding-top: 3px; padding-bottom: 3px;"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="octicon"
+                                    fill="currentColor"
+                                    height="16"
+                                    role="img"
+                                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                    viewBox="0 0 16 16"
+                                    width="16"
+                                  >
+                                    <path
+                                      d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                                      fill-rule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="display story source code"
+                                  class="css-1tf4h46"
+                                >
+                                  open source
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="display story configuration object"
+                                  class="css-1tf4h46"
+                                >
+                                  open config
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="css-eqxzio"
+                          >
+                            <div
+                              style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+                            >
+                              <div
+                                class="css-1s8zxab"
+                              >
+                                <div
+                                  class="css-1j909cg"
+                                >
+                                  <div
+                                    class="css-1xkyebe"
+                                  >
+                                    <div
+                                      class="css-jxxswp"
+                                      id=""
+                                    >
+                                      <div
+                                        class="css-xhp9da"
+                                      >
+                                        <h3
+                                          class="css-16ist9v-BlockContainer"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div
+                                      aria-hidden="false"
+                                      class="rah-static rah-static--height-auto"
+                                      style="height: auto; overflow: visible;"
+                                    >
+                                      <div>
+                                        <div
+                                          class="css-154oin1"
+                                          data-testid="story"
+                                          id="id-of-button-story"
+                                        >
+                                          <div
+                                            class="story-render-container css-dhmrnb"
+                                          >
+                                            <button
+                                              class="css-97huhz"
+                                            >
+                                              test
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              aria-hidden="true"
+                              class="rah-static rah-static--height-zero"
+                              style="height: 0px; overflow: hidden;"
+                            >
+                              <div
+                                style="display: none;"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="css-1xkyebe"
+                        data-testid="playground"
+                      >
+                        <div
+                          class="css-jxxswp"
+                          id="controls"
+                        >
+                          <div
+                            class="css-xhp9da"
+                          >
+                            <a
+                              class="css-1ptrway-LinkHeading"
+                              data-id="controls"
+                              data-level="4"
+                              data-title="controls"
+                              href="http://localhost/#controls"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="octicon"
+                                fill="currentColor"
+                                height="16"
+                                role="img"
+                                style="display: inline-block; user-select: none; vertical-align: middle;"
+                                viewBox="0 0 16 16"
+                                width="16"
+                              >
+                                <path
+                                  d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </a>
+                            <h4
+                              class="css-vsfm4-BlockContainer"
+                            >
+                              controls
+                            </h4>
+                          </div>
+                        </div>
+                        <div>
+                          <div
+                            class="css-15owl46"
+                          >
+                            <div
+                              class="css-x60p33"
+                            >
+                              <div
+                                class="css-rkyxeq"
+                              >
+                                <button
+                                  aria-label="switch light and dark background"
+                                  class="css-1tf4h46"
+                                >
+                                  dark
+                                </button>
+                              </div>
+                              <div
+                                class="css-7d11p2"
+                              >
+                                <button
+                                  aria-label="switch left to right/right to left"
+                                  class="css-1tf4h46"
+                                >
+                                  RTL
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="reset zoom"
+                                  class="css-97huhz"
+                                  style="padding-top: 3px; padding-bottom: 3px;"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="octicon"
+                                    fill="currentColor"
+                                    height="16"
+                                    role="img"
+                                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                    viewBox="0 0 16 16"
+                                    width="16"
+                                  >
+                                    <path
+                                      d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                                      fill-rule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="zoom out"
+                                  class="css-97huhz"
+                                  style="padding-top: 3px; padding-bottom: 3px;"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="octicon"
+                                    fill="currentColor"
+                                    height="16"
+                                    role="img"
+                                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                    viewBox="0 0 16 16"
+                                    width="16"
+                                  >
+                                    <path
+                                      d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                                      fill-rule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                              <div
+                                class="css-7d11p2"
+                              >
+                                <button
+                                  aria-label="zoom in"
+                                  class="css-97huhz"
+                                  style="padding-top: 3px; padding-bottom: 3px;"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="octicon"
+                                    fill="currentColor"
+                                    height="16"
+                                    role="img"
+                                    style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                                    viewBox="0 0 16 16"
+                                    width="16"
+                                  >
+                                    <path
+                                      d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                                      fill-rule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="display story source code"
+                                  class="css-1tf4h46"
+                                >
+                                  open source
+                                </button>
+                              </div>
+                              <div
+                                class="css-q7w4rh"
+                              >
+                                <button
+                                  aria-label="display story configuration object"
+                                  class="css-1tf4h46"
+                                >
+                                  open config
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="css-eqxzio"
+                          >
+                            <div
+                              style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+                            >
+                              <div
+                                class="css-1s8zxab"
+                              >
+                                <div
+                                  class="css-1j909cg"
+                                >
+                                  <div
+                                    class="css-1xkyebe"
+                                  >
+                                    <div
+                                      class="css-jxxswp"
+                                      id=""
+                                    >
+                                      <div
+                                        class="css-xhp9da"
+                                      >
+                                        <h3
+                                          class="css-16ist9v-BlockContainer"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div
+                                      aria-hidden="false"
+                                      class="rah-static rah-static--height-auto"
+                                      style="height: auto; overflow: visible;"
+                                    >
+                                      <div>
+                                        <div
+                                          class="css-154oin1"
+                                          data-testid="story"
+                                          id="blocks-core-story-plain--controls"
+                                        >
+                                          <div
+                                            class="story-render-container css-dhmrnb"
+                                          >
+                                            <svg
+                                              aria-valuemax="1"
+                                              aria-valuemin="0"
+                                              aria-valuenow="0.5"
+                                              class="css-14d2907"
+                                              fill="none"
+                                              height="128"
+                                              role="img"
+                                              stroke="currentcolor"
+                                              stroke-width="2"
+                                              viewBox="0 0 32 32"
+                                              width="128"
+                                            >
+                                              <circle
+                                                cx="16"
+                                                cy="16"
+                                                opacity="0.125"
+                                                r="14"
+                                              />
+                                              <circle
+                                                cx="16"
+                                                cy="16"
+                                                r="14"
+                                                stroke-dasharray="87.96459430051421"
+                                                stroke-dashoffset="43.982297150257104"
+                                                transform="rotate(-90 16 16)"
+                                              />
+                                            </svg>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              aria-hidden="true"
+                              class="rah-static rah-static--height-zero"
+                              style="height: 0px; overflow: hidden;"
+                            >
+                              <div
+                                style="display: none;"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-5qse13"
+                >
+                  <div
+                    class="css-8r2q2l"
+                  >
+                    <div
+                      class="css-vurnku"
+                    />
+                    <div
+                      class="css-vurnku"
+                    >
+                      <a
+                        class="css-10zwoio"
+                        href="/docs/mdx-story"
+                      >
+                        <div
+                          class="css-1my6hv5"
+                        >
+                          <span
+                            class="css-c3r86m"
+                          >
+                            Next
+                          </span>
+                          <div
+                            class="css-9tifnv"
+                          >
+                            <span
+                              class="css-1s8umv4"
+                            >
+                              MDX Story
+                            </span>
+                            <svg
+                              aria-hidden="true"
+                              class="octicon"
+                              fill="currentColor"
+                              height="16"
+                              role="img"
+                              style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                              viewBox="0 0 16 16"
+                              width="16"
+                            >
+                              <path
+                                d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

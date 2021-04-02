@@ -31,7 +31,6 @@ export const jestCliArgs: ArgOptions = [
       alias: 'f',
       description: 'test file output format',
       choices: ['cjs', 'esm', 'ts'],
-      default: 'cjs',
     },
   },
 

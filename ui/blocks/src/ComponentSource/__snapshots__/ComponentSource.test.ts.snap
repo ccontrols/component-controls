@@ -1,0 +1,1240 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComponentSource customTitle 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id="my-story-title"
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <a
+          class="css-walqom-LinkHeading"
+          data-id="my-story-title"
+          data-level="3"
+          data-title="My Story Title"
+          href="http://localhost/#my-story-title"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="18"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h3
+          class="css-16ist9v-BlockContainer"
+        >
+          <div
+            class="css-tmrrvx"
+          >
+            My Story Title
+            <a
+              aria-label="Collapse this block"
+              class="css-1t48u3b-BlockContainer"
+            >
+              <span
+                class="css-1ibxxpj"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="css-1d6wxci"
+        >
+          <div
+            class="css-nm5f2c-Tabs"
+          >
+            <div
+              class="react-tabs"
+              data-tabs="true"
+            >
+              <ul
+                class="react-tabs__tab-list"
+                role="tablist"
+              >
+                <li
+                  aria-controls="react-tabs-9"
+                  aria-disabled="false"
+                  aria-selected="true"
+                  class="react-tabs__tab react-tabs__tab--selected"
+                  id="react-tabs-8"
+                  role="tab"
+                  tabindex="0"
+                >
+                  ArrowButton
+                </li>
+                <li
+                  aria-controls="react-tabs-11"
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="react-tabs__tab"
+                  id="react-tabs-10"
+                  role="tab"
+                >
+                  My Button Tab
+                </li>
+              </ul>
+              <div
+                aria-labelledby="react-tabs-8"
+                class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                id="react-tabs-9"
+                role="tabpanel"
+              >
+                <div>
+                  <div
+                    class="css-15owl46"
+                  >
+                    <div
+                      class="css-x60p33"
+                    >
+                      <div
+                        class="css-1vga9oy"
+                      >
+                        <button
+                          aria-label="copy the displayed source code"
+                          class="css-1tf4h46"
+                        >
+                          copy
+                        </button>
+                      </div>
+                      <div
+                        class="css-q7w4rh"
+                      >
+                        <a
+                          aria-label="browse repository"
+                          class="css-1t54e2w"
+                          href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          browse
+                        </a>
+                      </div>
+                      <div
+                        class="css-q7w4rh"
+                      >
+                        <a
+                          aria-label="browse readme documentation"
+                          class="css-1t54e2w"
+                          href="https://github.com/ccontrols/component-controls/tree/master#readme"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          docs
+                        </a>
+                      </div>
+                      <div
+                        class="css-q7w4rh"
+                      >
+                        <a
+                          aria-label="browse filed issues"
+                          class="css-1t54e2w"
+                          href="https://github.com/ccontrols/component-controls/issues"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          issues
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="css-eqxzio"
+                  >
+                    <pre
+                      class="prism-code language-jsx css-3y8hb3"
+                      style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; display: block; margin: 0px;"
+                    >
+                      <div
+                        class="token-line css-vurnku"
+                        style="color: rgb(114, 143, 203);"
+                      >
+                        <span
+                          class="token keyword css-13aqjzy"
+                          style="color: rgb(114, 143, 203);"
+                        >
+                          import
+                        </span>
+                        <span
+                          class="token plain css-13aqjzy"
+                        >
+                           ArrowButton 
+                        </span>
+                        <span
+                          class="token keyword css-13aqjzy"
+                          style="color: rgb(114, 143, 203);"
+                        >
+                          from
+                        </span>
+                        <span
+                          class="token plain css-13aqjzy"
+                        >
+                           
+                        </span>
+                        <span
+                          class="token string css-13aqjzy"
+                          style="color: rgb(114, 143, 203);"
+                        >
+                          '@component-controls/blocks'
+                        </span>
+                        <span
+                          class="token punctuation css-13aqjzy"
+                          style="color: rgb(182, 173, 154);"
+                        >
+                          ;
+                        </span>
+                      </div>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-labelledby="react-tabs-10"
+                class="react-tabs__tab-panel"
+                id="react-tabs-11"
+                role="tabpanel"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ComponentSource noComponent 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id="component"
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <a
+          class="css-walqom-LinkHeading"
+          data-id="component"
+          data-level="3"
+          data-title="Component"
+          href="http://localhost/#component"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="18"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h3
+          class="css-16ist9v-BlockContainer"
+        >
+          <div
+            class="css-tmrrvx"
+          >
+            Component
+            <a
+              aria-label="Collapse this block"
+              class="css-1t48u3b-BlockContainer"
+            >
+              <span
+                class="css-1ibxxpj"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="css-1d6wxci"
+        >
+          <div
+            class="css-nm5f2c-Tabs"
+          >
+            <div
+              class="react-tabs"
+              data-tabs="true"
+            >
+              <ul
+                class="react-tabs__tab-list"
+                role="tablist"
+              >
+                <li
+                  aria-controls="react-tabs-17"
+                  aria-disabled="false"
+                  aria-selected="true"
+                  class="react-tabs__tab react-tabs__tab--selected"
+                  id="react-tabs-16"
+                  role="tab"
+                  tabindex="0"
+                >
+                  ArrowButton
+                </li>
+                <li
+                  aria-controls="react-tabs-19"
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="react-tabs__tab"
+                  id="react-tabs-18"
+                  role="tab"
+                >
+                  My Button Tab
+                </li>
+              </ul>
+              <div
+                aria-labelledby="react-tabs-16"
+                class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                id="react-tabs-17"
+                role="tabpanel"
+              >
+                <div>
+                  <div
+                    class="css-15owl46"
+                  >
+                    <div
+                      class="css-x60p33"
+                    >
+                      <div
+                        class="css-1vga9oy"
+                      >
+                        <button
+                          aria-label="copy the displayed source code"
+                          class="css-1tf4h46"
+                        >
+                          copy
+                        </button>
+                      </div>
+                      <div
+                        class="css-q7w4rh"
+                      >
+                        <a
+                          aria-label="browse repository"
+                          class="css-1t54e2w"
+                          href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          browse
+                        </a>
+                      </div>
+                      <div
+                        class="css-q7w4rh"
+                      >
+                        <a
+                          aria-label="browse readme documentation"
+                          class="css-1t54e2w"
+                          href="https://github.com/ccontrols/component-controls/tree/master#readme"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          docs
+                        </a>
+                      </div>
+                      <div
+                        class="css-q7w4rh"
+                      >
+                        <a
+                          aria-label="browse filed issues"
+                          class="css-1t54e2w"
+                          href="https://github.com/ccontrols/component-controls/issues"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          issues
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="css-eqxzio"
+                  >
+                    <pre
+                      class="prism-code language-jsx css-3y8hb3"
+                      style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; display: block; margin: 0px;"
+                    >
+                      <div
+                        class="token-line css-vurnku"
+                        style="color: rgb(114, 143, 203);"
+                      >
+                        <span
+                          class="token keyword css-13aqjzy"
+                          style="color: rgb(114, 143, 203);"
+                        >
+                          import
+                        </span>
+                        <span
+                          class="token plain css-13aqjzy"
+                        >
+                           ArrowButton 
+                        </span>
+                        <span
+                          class="token keyword css-13aqjzy"
+                          style="color: rgb(114, 143, 203);"
+                        >
+                          from
+                        </span>
+                        <span
+                          class="token plain css-13aqjzy"
+                        >
+                           
+                        </span>
+                        <span
+                          class="token string css-13aqjzy"
+                          style="color: rgb(114, 143, 203);"
+                        >
+                          '@component-controls/blocks'
+                        </span>
+                        <span
+                          class="token punctuation css-13aqjzy"
+                          style="color: rgb(182, 173, 154);"
+                        >
+                          ;
+                        </span>
+                      </div>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-labelledby="react-tabs-18"
+                class="react-tabs__tab-panel"
+                id="react-tabs-19"
+                role="tabpanel"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ComponentSource notCollapsible 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id="arrowbutton"
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <a
+          class="css-1ptrway-LinkHeading"
+          data-id="arrowbutton"
+          data-level="4"
+          data-title="ArrowButton"
+          href="http://localhost/#arrowbutton"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="16"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h4
+          class="css-vsfm4-BlockContainer"
+        >
+          ArrowButton
+        </h4>
+      </div>
+    </div>
+    <div
+      class="css-1d6wxci"
+    >
+      <div
+        class="css-nm5f2c-Tabs"
+      >
+        <div
+          class="react-tabs"
+          data-tabs="true"
+        >
+          <ul
+            class="react-tabs__tab-list"
+            role="tablist"
+          >
+            <li
+              aria-controls="react-tabs-13"
+              aria-disabled="false"
+              aria-selected="true"
+              class="react-tabs__tab react-tabs__tab--selected"
+              id="react-tabs-12"
+              role="tab"
+              tabindex="0"
+            >
+              ArrowButton
+            </li>
+            <li
+              aria-controls="react-tabs-15"
+              aria-disabled="false"
+              aria-selected="false"
+              class="react-tabs__tab"
+              id="react-tabs-14"
+              role="tab"
+            >
+              My Button Tab
+            </li>
+          </ul>
+          <div
+            aria-labelledby="react-tabs-12"
+            class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+            id="react-tabs-13"
+            role="tabpanel"
+          >
+            <div>
+              <div
+                class="css-15owl46"
+              >
+                <div
+                  class="css-x60p33"
+                >
+                  <div
+                    class="css-1vga9oy"
+                  >
+                    <button
+                      aria-label="copy the displayed source code"
+                      class="css-1tf4h46"
+                    >
+                      copy
+                    </button>
+                  </div>
+                  <div
+                    class="css-q7w4rh"
+                  >
+                    <a
+                      aria-label="browse repository"
+                      class="css-1t54e2w"
+                      href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      browse
+                    </a>
+                  </div>
+                  <div
+                    class="css-q7w4rh"
+                  >
+                    <a
+                      aria-label="browse readme documentation"
+                      class="css-1t54e2w"
+                      href="https://github.com/ccontrols/component-controls/tree/master#readme"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      docs
+                    </a>
+                  </div>
+                  <div
+                    class="css-q7w4rh"
+                  >
+                    <a
+                      aria-label="browse filed issues"
+                      class="css-1t54e2w"
+                      href="https://github.com/ccontrols/component-controls/issues"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      issues
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="css-eqxzio"
+              >
+                <pre
+                  class="prism-code language-jsx css-3y8hb3"
+                  style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; display: block; margin: 0px;"
+                >
+                  <div
+                    class="token-line css-vurnku"
+                    style="color: rgb(114, 143, 203);"
+                  >
+                    <span
+                      class="token keyword css-13aqjzy"
+                      style="color: rgb(114, 143, 203);"
+                    >
+                      import
+                    </span>
+                    <span
+                      class="token plain css-13aqjzy"
+                    >
+                       ArrowButton 
+                    </span>
+                    <span
+                      class="token keyword css-13aqjzy"
+                      style="color: rgb(114, 143, 203);"
+                    >
+                      from
+                    </span>
+                    <span
+                      class="token plain css-13aqjzy"
+                    >
+                       
+                    </span>
+                    <span
+                      class="token string css-13aqjzy"
+                      style="color: rgb(114, 143, 203);"
+                    >
+                      '@component-controls/blocks'
+                    </span>
+                    <span
+                      class="token punctuation css-13aqjzy"
+                      style="color: rgb(182, 173, 154);"
+                    >
+                      ;
+                    </span>
+                  </div>
+                </pre>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-labelledby="react-tabs-14"
+            class="react-tabs__tab-panel"
+            id="react-tabs-15"
+            role="tabpanel"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ComponentSource overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="css-1d6wxci"
+        >
+          <div
+            class="css-nm5f2c-Tabs"
+          >
+            <div
+              class="react-tabs"
+              data-tabs="true"
+            >
+              <ul
+                class="react-tabs__tab-list"
+                role="tablist"
+              >
+                <li
+                  aria-controls="react-tabs-1"
+                  aria-disabled="false"
+                  aria-selected="true"
+                  class="react-tabs__tab react-tabs__tab--selected"
+                  id="react-tabs-0"
+                  role="tab"
+                  tabindex="0"
+                >
+                  ArrowButton
+                </li>
+                <li
+                  aria-controls="react-tabs-3"
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="react-tabs__tab"
+                  id="react-tabs-2"
+                  role="tab"
+                >
+                  My Button Tab
+                </li>
+              </ul>
+              <div
+                aria-labelledby="react-tabs-0"
+                class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                id="react-tabs-1"
+                role="tabpanel"
+              >
+                <div>
+                  <div
+                    class="css-15owl46"
+                  >
+                    <div
+                      class="css-x60p33"
+                    >
+                      <div
+                        class="css-1vga9oy"
+                      >
+                        <button
+                          aria-label="copy the displayed source code"
+                          class="css-1tf4h46"
+                        >
+                          copy
+                        </button>
+                      </div>
+                      <div
+                        class="css-q7w4rh"
+                      >
+                        <a
+                          aria-label="browse repository"
+                          class="css-1t54e2w"
+                          href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          browse
+                        </a>
+                      </div>
+                      <div
+                        class="css-q7w4rh"
+                      >
+                        <a
+                          aria-label="browse readme documentation"
+                          class="css-1t54e2w"
+                          href="https://github.com/ccontrols/component-controls/tree/master#readme"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          docs
+                        </a>
+                      </div>
+                      <div
+                        class="css-q7w4rh"
+                      >
+                        <a
+                          aria-label="browse filed issues"
+                          class="css-1t54e2w"
+                          href="https://github.com/ccontrols/component-controls/issues"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          issues
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="css-eqxzio"
+                  >
+                    <pre
+                      class="prism-code language-jsx css-3y8hb3"
+                      style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; display: block; margin: 0px;"
+                    >
+                      <div
+                        class="token-line css-vurnku"
+                        style="color: rgb(114, 143, 203);"
+                      >
+                        <span
+                          class="token keyword css-13aqjzy"
+                          style="color: rgb(114, 143, 203);"
+                        >
+                          import
+                        </span>
+                        <span
+                          class="token plain css-13aqjzy"
+                        >
+                           ArrowButton 
+                        </span>
+                        <span
+                          class="token keyword css-13aqjzy"
+                          style="color: rgb(114, 143, 203);"
+                        >
+                          from
+                        </span>
+                        <span
+                          class="token plain css-13aqjzy"
+                        >
+                           
+                        </span>
+                        <span
+                          class="token string css-13aqjzy"
+                          style="color: rgb(114, 143, 203);"
+                        >
+                          '@component-controls/blocks'
+                        </span>
+                        <span
+                          class="token punctuation css-13aqjzy"
+                          style="color: rgb(182, 173, 154);"
+                        >
+                          ;
+                        </span>
+                      </div>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-labelledby="react-tabs-2"
+                class="react-tabs__tab-panel"
+                id="react-tabs-3"
+                role="tabpanel"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ComponentSource theme 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="css-1d6wxci"
+        >
+          <div>
+            <div
+              class="css-15owl46"
+            >
+              <div
+                class="css-x60p33"
+              >
+                <div
+                  class="css-1vga9oy"
+                >
+                  <button
+                    aria-label="copy the displayed source code"
+                    class="css-1tf4h46"
+                  >
+                    copy
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="css-eqxzio"
+            >
+              <pre
+                class="prism-code language-jsx css-3y8hb3"
+                style="color: rgb(158, 254, 255); background-color: rgb(45, 42, 85); padding: 25px 10px 10px; display: block; margin: 0px;"
+              >
+                <div
+                  class="token-line css-vurnku"
+                  style="color: rgb(158, 254, 255);"
+                >
+                  <span
+                    class="token keyword css-13aqjzy"
+                    style="color: rgb(255, 157, 0);"
+                  >
+                    import
+                  </span>
+                  <span
+                    class="token plain css-13aqjzy"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token punctuation css-13aqjzy"
+                    style="color: rgb(255, 255, 255);"
+                  >
+                    {
+                  </span>
+                  <span
+                    class="token plain css-13aqjzy"
+                  >
+                     Button 
+                  </span>
+                  <span
+                    class="token punctuation css-13aqjzy"
+                    style="color: rgb(255, 255, 255);"
+                  >
+                    }
+                  </span>
+                  <span
+                    class="token plain css-13aqjzy"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token keyword css-13aqjzy"
+                    style="color: rgb(255, 157, 0);"
+                  >
+                    from
+                  </span>
+                  <span
+                    class="token plain css-13aqjzy"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token string css-13aqjzy"
+                    style="color: rgb(165, 255, 144);"
+                  >
+                    '../../components/button-named-arrow-func'
+                  </span>
+                  <span
+                    class="token punctuation css-13aqjzy"
+                    style="color: rgb(255, 255, 255);"
+                  >
+                    ;
+                  </span>
+                </div>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ComponentSource title 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id="arrowbutton"
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <a
+          class="css-walqom-LinkHeading"
+          data-id="arrowbutton"
+          data-level="3"
+          data-title="ArrowButton"
+          href="http://localhost/#arrowbutton"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="18"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h3
+          class="css-16ist9v-BlockContainer"
+        >
+          <div
+            class="css-tmrrvx"
+          >
+            ArrowButton
+            <a
+              aria-label="Collapse this block"
+              class="css-1t48u3b-BlockContainer"
+            >
+              <span
+                class="css-1ibxxpj"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="css-1d6wxci"
+        >
+          <div
+            class="css-nm5f2c-Tabs"
+          >
+            <div
+              class="react-tabs"
+              data-tabs="true"
+            >
+              <ul
+                class="react-tabs__tab-list"
+                role="tablist"
+              >
+                <li
+                  aria-controls="react-tabs-5"
+                  aria-disabled="false"
+                  aria-selected="true"
+                  class="react-tabs__tab react-tabs__tab--selected"
+                  id="react-tabs-4"
+                  role="tab"
+                  tabindex="0"
+                >
+                  ArrowButton
+                </li>
+                <li
+                  aria-controls="react-tabs-7"
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="react-tabs__tab"
+                  id="react-tabs-6"
+                  role="tab"
+                >
+                  My Button Tab
+                </li>
+              </ul>
+              <div
+                aria-labelledby="react-tabs-4"
+                class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                id="react-tabs-5"
+                role="tabpanel"
+              >
+                <div>
+                  <div
+                    class="css-15owl46"
+                  >
+                    <div
+                      class="css-x60p33"
+                    >
+                      <div
+                        class="css-1vga9oy"
+                      >
+                        <button
+                          aria-label="copy the displayed source code"
+                          class="css-1tf4h46"
+                        >
+                          copy
+                        </button>
+                      </div>
+                      <div
+                        class="css-q7w4rh"
+                      >
+                        <a
+                          aria-label="browse repository"
+                          class="css-1t54e2w"
+                          href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          browse
+                        </a>
+                      </div>
+                      <div
+                        class="css-q7w4rh"
+                      >
+                        <a
+                          aria-label="browse readme documentation"
+                          class="css-1t54e2w"
+                          href="https://github.com/ccontrols/component-controls/tree/master#readme"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          docs
+                        </a>
+                      </div>
+                      <div
+                        class="css-q7w4rh"
+                      >
+                        <a
+                          aria-label="browse filed issues"
+                          class="css-1t54e2w"
+                          href="https://github.com/ccontrols/component-controls/issues"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          issues
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="css-eqxzio"
+                  >
+                    <pre
+                      class="prism-code language-jsx css-3y8hb3"
+                      style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; display: block; margin: 0px;"
+                    >
+                      <div
+                        class="token-line css-vurnku"
+                        style="color: rgb(114, 143, 203);"
+                      >
+                        <span
+                          class="token keyword css-13aqjzy"
+                          style="color: rgb(114, 143, 203);"
+                        >
+                          import
+                        </span>
+                        <span
+                          class="token plain css-13aqjzy"
+                        >
+                           ArrowButton 
+                        </span>
+                        <span
+                          class="token keyword css-13aqjzy"
+                          style="color: rgb(114, 143, 203);"
+                        >
+                          from
+                        </span>
+                        <span
+                          class="token plain css-13aqjzy"
+                        >
+                           
+                        </span>
+                        <span
+                          class="token string css-13aqjzy"
+                          style="color: rgb(114, 143, 203);"
+                        >
+                          '@component-controls/blocks'
+                        </span>
+                        <span
+                          class="token punctuation css-13aqjzy"
+                          style="color: rgb(182, 173, 154);"
+                        >
+                          ;
+                        </span>
+                      </div>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-labelledby="react-tabs-6"
+                class="react-tabs__tab-panel"
+                id="react-tabs-7"
+                role="tabpanel"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

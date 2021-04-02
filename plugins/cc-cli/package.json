@@ -25,7 +25,7 @@
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "prepare": "yarn build",
-    "test:create-bundle": "ccc -c test/.config -d test/bundle",
+    "test:create": "cc-cli -g story -c ./.config -w",
     "test": "yarn jest -i"
   },
   "homepage": "https://github.com/ccontrols/component-controls",
