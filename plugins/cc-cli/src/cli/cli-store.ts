@@ -2,6 +2,10 @@ import { CliOptions } from './types';
 import { saveTemplate } from './save-template';
 import { createStoreTemplate } from '../store-template';
 
+/**
+ * cli function to create a test file with dynamic tests for the entre store
+ * @param options file and rendering options
+ */
 export const cliStore = async (options: CliOptions): Promise<void> => {
   const {
     renderer,

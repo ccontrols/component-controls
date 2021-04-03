@@ -11,6 +11,11 @@ import { StoryTemplateOptions, renderers, TemplateFunction } from './types';
 dot.templateSettings.strip = false;
 (dot as any).log = false;
 
+/**
+ * create tests on a stories base (a test file for each document and inside, a test for each story)
+ * @param options - rendering options
+ * @returns a string with the rendered template
+ */
 export const createStoriesTemplate: TemplateFunction<StoryTemplateOptions> = async (
   options: StoryTemplateOptions,
 ): Promise<string> => {
@@ -60,34 +65,39 @@ export const createStoriesTemplate: TemplateFunction<StoryTemplateOptions> = asy
     }
   }
   const store = bundle ? 'bundle' : 'imports';
-  const storeRender = fs.readFileSync(
-    path.resolve(__dirname, `../templates/story/render/${store}.js`),
-    'utf8',
-  );
   const renderPath = path.resolve(
     __dirname,
     `../templates/framework-render/${renderers[renderer]}.js`,
   );
   const render = dot.template(fs.readFileSync(renderPath, 'utf8'))({
-    storeRender,
+    bundle: !!bundle,
   });
+  const importPath = `.${path.sep}${(output
+    ? path.relative(output, storyPath)
+    : path.basename(storyPath)
+  )
+    .split('.')
+    .slice(0, -1)
+    .join('.')}`;
   const storiesFileImports = bundle
     ? ''
+    : format === 'cjs'
+    ? `
+const doc = require('${importPath}');
+const { ${stories
+        .map(story =>
+          story.name === 'example' ? 'example as example_story' : story.name,
+        )
+        .join(', ')} } = require('${importPath}');
+    `
     : `import doc, { ${stories
         .map(story =>
           story.name === 'example' ? 'example as example_story' : story.name,
         )
-        .join(', ')} } from '.${path.sep}${(output
-        ? path.relative(output, storyPath)
-        : path.basename(storyPath)
-      )
-        .split('.')
-        .slice(0, -1)
-        .join('.')}';`;
+        .join(', ')} } from '${importPath}';`;
   const vars = {
     stories,
     render,
-    storeRender,
     doc: bundle ? `const doc = store.docs['${doc.title}'];` : '',
     utilityImports: fs.readFileSync(
       path.resolve(__dirname, `../templates/setups/imports.${format}.js`),
@@ -136,7 +146,6 @@ describe('{{=it.name}}', () => {
     name,
     bundle,
     template,
-    storeRender,
     vars,
     ...rest,
   });

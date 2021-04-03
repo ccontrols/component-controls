@@ -12,7 +12,8 @@ const Adapter = require('@wojtekmaj/enzyme-adapter-react-17');
 
 configure({ adapter: new Adapter() });
 
-import doc, {
+const doc = require('./fixtures/VariantButton.docs');
+const {
   overview,
   primary,
   accent,
@@ -20,7 +21,7 @@ import doc, {
   success,
   error,
   warning,
-} from './fixtures/VariantButton.docs';
+} = require('./fixtures/VariantButton.docs');
 
 describe('VariantButton', () => {
   let matchMedia;
@@ -40,12 +41,12 @@ describe('VariantButton', () => {
   test('overview', () => {
     const example = overview;
 
-    let rendered;
-    rendered = renderExample({
+    const rendered = renderExample({
       example,
       doc,
       config,
     });
+
     const component = mount(rendered);
     expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
   });
@@ -53,12 +54,12 @@ describe('VariantButton', () => {
   test('primary', () => {
     const example = primary;
 
-    let rendered;
-    rendered = renderExample({
+    const rendered = renderExample({
       example,
       doc,
       config,
     });
+
     const component = mount(rendered);
     expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
   });
@@ -66,12 +67,12 @@ describe('VariantButton', () => {
   test('accent', () => {
     const example = accent;
 
-    let rendered;
-    rendered = renderExample({
+    const rendered = renderExample({
       example,
       doc,
       config,
     });
+
     const component = mount(rendered);
     expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
   });
@@ -79,12 +80,12 @@ describe('VariantButton', () => {
   test('disabled', () => {
     const example = disabled;
 
-    let rendered;
-    rendered = renderExample({
+    const rendered = renderExample({
       example,
       doc,
       config,
     });
+
     const component = mount(rendered);
     expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
   });
@@ -92,12 +93,12 @@ describe('VariantButton', () => {
   test('success', () => {
     const example = success;
 
-    let rendered;
-    rendered = renderExample({
+    const rendered = renderExample({
       example,
       doc,
       config,
     });
+
     const component = mount(rendered);
     expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
   });
@@ -105,12 +106,12 @@ describe('VariantButton', () => {
   test('error', () => {
     const example = error;
 
-    let rendered;
-    rendered = renderExample({
+    const rendered = renderExample({
       example,
       doc,
       config,
     });
+
     const component = mount(rendered);
     expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
   });
@@ -118,12 +119,12 @@ describe('VariantButton', () => {
   test('warning', () => {
     const example = warning;
 
-    let rendered;
-    rendered = renderExample({
+    const rendered = renderExample({
       example,
       doc,
       config,
     });
+
     const component = mount(rendered);
     expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
   });

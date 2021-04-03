@@ -23,7 +23,7 @@ export interface SmartControls {
  * story properties that can be inherited from the document, or each story can have its properties
  */
 
-export interface StoryProps<Props = unknown> {
+export interface StoryProps<Props = any> {
   /**
    * id for component associated with the story
    */
@@ -62,7 +62,9 @@ export interface StoryProps<Props = unknown> {
   category?: string;
 }
 
-export const extractStoryProps = (src: StoryProps): StoryProps => {
+export const extractStoryProps = <Props = any>(
+  src: StoryProps<Props>,
+): StoryProps<Props> => {
   return {
     component: src.component,
     subcomponents: src.subcomponents,
@@ -82,9 +84,9 @@ export const extractStoryProps = (src: StoryProps): StoryProps => {
  * @param src the props to keep, unless they are undefined
  * @returns the merged props
  */
-export const mergeStoryProps = (
-  dest: StoryProps | undefined = {},
-  src: StoryProps | undefined = {},
+export const mergeStoryProps = <Props = any>(
+  dest: StoryProps<Props> | undefined = {},
+  src: StoryProps<Props> | undefined = {},
 ): StoryProps => {
   const destProps = extractStoryProps(dest);
   return deepMerge(destProps, src);

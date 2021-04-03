@@ -12,7 +12,7 @@ export const jestCliArgs: ArgOptions = [
     options: {
       alias: 'g',
       description: 'generate tests level type',
-      choices: ['store', 'story'],
+      choices: ['store', 'doc', 'story'],
       default: 'store',
     },
   },
@@ -47,7 +47,7 @@ export const jestCliArgs: ArgOptions = [
     name: 'bundle',
     options: {
       alias: 'b',
-      description: 'bundle path, if store loaded ffrom bundle',
+      description: 'bundle path, if store loaded from bundle',
       type: 'string',
     },
   },

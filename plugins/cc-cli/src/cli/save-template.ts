@@ -3,6 +3,12 @@ import fs from 'fs';
 import { CliOptions } from './types';
 import { TemplateFunction, TemplateOptions } from '../types';
 
+/**
+ * save a template file based on options
+ * @param options - the rendering and file options
+ * @param templateFn - a selected templating function
+ * @returns a promise, since the function is async
+ */
 export const saveTemplate = async <P extends TemplateOptions>(
   options: CliOptions<P>,
   templateFn: TemplateFunction<P>,

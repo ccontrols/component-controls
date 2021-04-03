@@ -9,11 +9,29 @@ export type Renderers = keyof typeof renderers;
 export type TeplateFormats = 'cjs' | 'esm' | 'ts';
 
 export type TemplateOptions = {
+  /**
+   * which renderer to use for generating the tests
+   */
   renderer?: Renderers;
+  /**
+   * files format - default common js
+   */
   format?: TeplateFormats;
+  /**
+   * configuration files folder
+   */
   config?: string;
+  /**
+   * if specified, will get stories from the bundle instead of directly importing
+   */
   bundle?: string;
+  /**
+   * tests output folder - where to create them
+   */
   output?: string;
+  /**
+   * describe section label
+   */
   name?: string;
 };
 

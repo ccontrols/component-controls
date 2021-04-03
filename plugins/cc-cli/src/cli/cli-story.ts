@@ -5,6 +5,7 @@ import { StoryTemplateOptions, TeplateFormats } from '../types';
 import { CliOptions } from './types';
 import { saveTemplate } from './save-template';
 import { createStoriesTemplate } from '../stories-template';
+import { createDocumentTemplate } from '../document-template';
 
 const formatExtensions: { [key in TeplateFormats]: string } = {
   cjs: '.js',
@@ -21,7 +22,15 @@ export const formatExtension = (
   return path.join(path.dirname(fileName), basename + extension);
 };
 
-export const cliStory = async (options: CliOptions): Promise<void> => {
+/**
+ * cli function to create tests on a story by story basis
+ * @param options file and rendering options
+ * @param generateDoc - if true will generate document-level template. Default is to generate tests for each story in the document
+ */
+export const cliStory = async (
+  options: CliOptions,
+  generateDoc: boolean,
+): Promise<void> => {
   const {
     renderer,
     format,
@@ -52,6 +61,9 @@ export const cliStory = async (options: CliOptions): Promise<void> => {
       format || path.extname(name).startsWith('.ts') ? 'ts' : 'esm';
     const testName =
       test || formatExtension(`${componentName}.test.js`, fileFormat);
+    const templateFn = generateDoc
+      ? createDocumentTemplate
+      : createStoriesTemplate;
     await saveTemplate<StoryTemplateOptions>(
       {
         renderer,
@@ -68,7 +80,7 @@ export const cliStory = async (options: CliOptions): Promise<void> => {
           ? path.dirname(bundle)
           : path.dirname(name),
       },
-      createStoriesTemplate,
+      templateFn,
     );
   }
 };

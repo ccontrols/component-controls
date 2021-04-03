@@ -4,6 +4,10 @@ import { cliStore } from './cli-store';
 import { cliStory } from './cli-story';
 import { CliOptions } from './types';
 
+/**
+ * cc-cli central function. based on the selected g/generate option will call the specific
+ * cli function - store, stories
+ */
 export const run = async (): Promise<void> => {
   const args = cliArgs(jestCliArgs);
   const parsedArgs = args.parse();
@@ -30,15 +34,19 @@ export const run = async (): Promise<void> => {
         output,
       } as CliOptions);
     case 'story':
-      return await cliStory({
-        renderer,
-        format,
-        overwrite,
-        config,
-        test,
-        bundle,
-        name,
-        output,
-      } as CliOptions);
+    case 'doc':
+      return await cliStory(
+        {
+          renderer,
+          format,
+          overwrite,
+          config,
+          test,
+          bundle,
+          name,
+          output,
+        } as CliOptions,
+        parsedArgs.generate === 'doc',
+      );
   }
 };

@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`enzyme  cjs 1`] = `
+"const path = require('path');
+const MatchMediaMock = require('jest-matchmedia-mock').default;
+const { loadConfigurations } = require('@component-controls/config');
+const { renderDocument } = require('@component-controls/test-renderers');
+const { render: reactRender } = require('@component-controls/render/react');
+const { mount, configure } = require('enzyme');
+const toJson = require('enzyme-to-json').default;
+const Adapter = require('@wojtekmaj/enzyme-adapter-react-17');
+
+configure({ adapter: new Adapter() });
+
+const examples = require('./fixtures/VariantButton.docs');
+
+describe('VariantButton', () => {
+  let matchMedia;
+  beforeAll(() => {
+    jest.mock('rc-util/lib/Portal');
+    matchMedia = new MatchMediaMock();
+  });
+  afterEach(() => {
+    matchMedia.clear();
+  });
+  const configPath = path.resolve(__dirname, '.config');
+  const config = loadConfigurations(configPath);
+  if (!config.renderFn) {
+    config.renderFn = reactRender;
+  }
+  const renderedExamples = renderDocument(examples, config);
+  renderedExamples.forEach(({ name, rendered }) => {
+    it(name, async () => {
+      const component = mount(rendered);
+      expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    });
+  });
+});
+"
+`;

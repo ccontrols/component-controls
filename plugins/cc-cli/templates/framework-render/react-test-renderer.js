@@ -1,6 +1,14 @@
 let rendered;
 act(() => {
-  {{=it.storeRender}}
+  {{? it.bundle }}
+  rendered = renderFn(story, doc);
+  {{?? true }}
+  rendered = renderExample({
+    example,
+    doc,
+    config,
+  });
+  {{?}}
 })
 if (!rendered) {
   renderErr();

@@ -1,5 +1,5 @@
-              rendered = renderExample({
-                example,
-                doc,
-                config,
-              });
+rendered = renderExample({
+  example,
+  doc,
+  config,
+});

@@ -16,7 +16,8 @@ const componentErr = () => {
   throw new Error('Error rendering component with react-test-renderer');
 };
 
-import doc, {
+const doc = require('./fixtures/VariantButton.docs');
+const {
   overview,
   primary,
   accent,
@@ -24,7 +25,7 @@ import doc, {
   success,
   error,
   warning,
-} from './fixtures/VariantButton.docs';
+} = require('./fixtures/VariantButton.docs');
 
 describe('VariantButton', () => {
   let matchMedia;

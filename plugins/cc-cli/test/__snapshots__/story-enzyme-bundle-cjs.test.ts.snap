@@ -29,8 +29,8 @@ describe('Components/Header', () => {
   test('Overview', () => {
     const story = store.stories['components-header--overview'];
 
-    let rendered;
-    rendered = renderFn(story, doc);
+    const rendered = renderFn(story, doc);
+
     const component = mount(rendered);
     expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
   });

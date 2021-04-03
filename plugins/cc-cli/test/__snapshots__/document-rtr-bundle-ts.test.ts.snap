@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rtr bundle ts 1`] = `
+"import path from 'path';
+import MatchMediaMock from 'jest-matchmedia-mock';
+import { loadStore } from '@component-controls/store';
+const { render: reactRender } = require('@component-controls/render/react');
+import renderer, { act } from 'react-test-renderer';
+
+const renderErr = () => {
+  throw new Error('Could not render the story');
+};
+const componentErr = () => {
+  throw new Error('Error rendering component with react-test-renderer');
+};
+
+describe('Components/Header', () => {
+  let matchMedia: MatchMediaMock;
+  beforeAll(() => {
+    jest.mock('rc-util/lib/Portal');
+    matchMedia = new MatchMediaMock();
+  });
+  afterEach(() => {
+    matchMedia.clear();
+  });
+  const store = loadStore(
+    require(path.resolve(__dirname, './bundle/component-controls.js')),
+  );
+  const renderFn = store.config.renderFn || reactRender;
+  Object.keys(store.docs).forEach(docId => {
+    const doc = store.docs[docId];
+    if (doc.stories && doc.stories.length) {
+      const stories = doc.stories;
+      describe(doc.title, () => {
+        stories.forEach(storyId => {
+          const story = store.stories[storyId];
+          it(story.name, async () => {
+            let rendered;
+            act(() => {
+              rendered = renderFn(story, doc);
+            });
+            if (!rendered) {
+              renderErr();
+              return;
+            }
+            const component = renderer.create(rendered);
+            if (!component) {
+              componentErr();
+              return;
+            }
+            expect(component.toJSON()).toMatchSnapshot();
+          });
+        });
+      });
+    }
+  });
+});
+"
+`;

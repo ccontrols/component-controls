@@ -13,7 +13,7 @@ author: atanasster
 
 ## Overview
 
-The [cc-cli](https://github.com/ccontrols/component-controls/tree/master/plugins/cc-cli) package automatically creates snapshot tests for your component based on the already created documentation stories.
+The [cc-cli](https://github.com/ccontrols/component-controls/tree/master/plugins/cc-cli) package automatically creates snapshot tests for your components based on the already created documentation stories.
 
 3 levels from ease of use to full control:
 
@@ -57,10 +57,17 @@ Using this approach will generate a test file in `tests/stories.test.js` that wi
 
 ### CLI Parameters
 
-| Parameter             | Explanation            | Input type                   | Default value |
-| --------------------- | ---------------------- | ---------------------------- | ------------- |
-| `--renderer`<br/>`-r` | jest framework rendere | 'react' \| 'rtr' \| 'enzyme' | `react`       |
-| `--test`<br/>`-t`     | tests output folder    | string                       | `tests`       |
+| Parameter              | Explanation                                                 | Input type                 | Default value                  |
+| ---------------------- | ----------------------------------------------------------- | -------------------------- | ------------------------------ |
+| `--config`<br/>`-c`    | configuration files folder                                  | string                     | `.config`                      |
+| `--generate`<br/>`-g`  | generate test files for whole store or story/by story files | 'store' \| 'story'         | `store`                        |
+| `--renderer`<br/>`-r`  | jest framework renderer                                     | 'rtl' \| 'rtr' \| 'enzyme' | `rtl`                          |
+| `--output`<br/>`-o`    | generated tests output folder                               | string                     | `tests`                        |
+| `--test`<br/>`-t`      | generated tests file name                                   | string                     | `stories.test.js`              |
+| `--format`<br/>`-f`    | generated test files format                                 | 'cjs' \| 'esm' \| 'ts'     | `cjs`                          |
+| `--overwrite`<br/>`-w` | force ovewrite existing test files                          | boolean                    | `false`                        |
+| `--bundle`<br/>`-b`    | bundle path, if store loaded from bundle                    | string                     |                                |
+| `--name`<br/>`-n`      | name of the test group/describe section                     | string                     | `component-controls generated` |
 
 Examples:
 

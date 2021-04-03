@@ -12,7 +12,8 @@ const renderErr = () => {
   throw new Error('Could not render the story');
 };
 
-import doc, {
+const doc = require('./fixtures/VariantButton.docs');
+const {
   overview,
   primary,
   accent,
@@ -20,7 +21,7 @@ import doc, {
   success,
   error,
   warning,
-} from './fixtures/VariantButton.docs';
+} = require('./fixtures/VariantButton.docs');
 
 describe('VariantButton', () => {
   let matchMedia;

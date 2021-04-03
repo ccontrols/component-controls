@@ -66,7 +66,7 @@ export type StoryArguments = StoryArgument[];
 /**
  * Story interface - usually extracted by the AST instrumenting loader
  */
-export type Story<Props = unknown> = {
+export type Story<Props = any> = {
   /**
    * name of the Story.
    */
@@ -140,7 +140,7 @@ export type ExampleControls = {
 /**
  * es named export function, excapsulates a contained example code.
  */
-export type Example<Props = unknown> = {
+export type Example<Props = any> = {
   (props: PropsWithChildren<Props>, context?: any): ReactElement<
     any,
     any
@@ -162,7 +162,7 @@ export const defDocType: DocType = 'story';
  * For MDX files, fromtmatter is used to declare the document properties.
  * For ESM (ES Modules) documentation files, the default export is used.
  */
-export type Document<Props = unknown> = {
+export type Document<Props = any> = {
   /**
    * title of the document. If no 'route' parameter is specifified, the title is used to generate the document url.
    * This is the only required field, to show the document in the menu structures.

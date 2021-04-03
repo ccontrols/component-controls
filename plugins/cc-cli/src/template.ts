@@ -8,9 +8,13 @@ import { TemplateOptions, renderers } from './types';
 dot.templateSettings.strip = false;
 (dot as any).log = false;
 
+/**
+ * from a template, render all variables
+ * @param options - rendering options
+ * @returns a string with the rendered template
+ */
 export const createTemplate = (
   options: TemplateOptions & {
-    storeRender: string;
     template: string;
     vars: Record<string, any>;
   },

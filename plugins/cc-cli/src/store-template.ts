@@ -7,6 +7,11 @@ import { createTemplate } from './template';
 dot.templateSettings.strip = false;
 (dot as any).log = false;
 
+/**
+ * create one large dynamic test for all the stories in the configuration/bundle
+ * @param options - rendering options
+ * @returns a string with the rendered template
+ */
 export const createStoreTemplate: TemplateFunction = async (
   options: TemplateOptions,
 ) => {
@@ -19,11 +24,6 @@ export const createStoreTemplate: TemplateFunction = async (
   } = options;
 
   const store = bundle ? 'bundle' : 'imports';
-  const storeRenderPath = path.resolve(
-    __dirname,
-    `../templates/store/render/${store}.js`,
-  );
-  const storeRender = fs.readFileSync(storeRenderPath, 'utf8');
   const storeImportPath = path.resolve(
     __dirname,
     `../templates/store/import/${store}.${format}.js`,
@@ -37,11 +37,10 @@ export const createStoreTemplate: TemplateFunction = async (
     `../templates/framework-render/${renderers[renderer]}.js`,
   );
   const render = dot.template(fs.readFileSync(renderPath, 'utf8'))({
-    storeRender,
+    bundle: !!bundle,
   });
   const vars = {
     render,
-    storeRender,
     storeImports: fs.readFileSync(storeImportPath, 'utf8'),
     storeLoop: dot.template(fs.readFileSync(storeLoopPath, 'utf8'))({
       render,
@@ -67,7 +66,6 @@ describe('{{=it.name}}', () => {
     name,
     bundle,
     template,
-    storeRender,
     vars,
     ...rest,
   });

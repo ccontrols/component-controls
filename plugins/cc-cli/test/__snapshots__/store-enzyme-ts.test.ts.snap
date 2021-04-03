@@ -42,12 +42,12 @@ describe('component-controls generated', () => {
         describe(doc.title, () => {
           examples.forEach(example => {
             it(example.name, async () => {
-              let rendered;
-              rendered = renderExample({
+              const rendered = renderExample({
                 example,
                 doc,
                 config,
               });
+
               const component = mount(rendered);
               expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
             });
