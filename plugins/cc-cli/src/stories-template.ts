@@ -64,6 +64,9 @@ export const createStoriesTemplate: TemplateFunction<StoryTemplateOptions> = asy
       }));
     }
   }
+  if (stories.length <= 0 || doc.MDXPage) {
+    return '';
+  }
   const store = bundle ? 'bundle' : 'imports';
   const renderPath = path.resolve(
     __dirname,

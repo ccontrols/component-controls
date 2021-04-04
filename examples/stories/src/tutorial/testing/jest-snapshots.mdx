@@ -32,6 +32,54 @@ Supports a variety of test renderers:
 ```sh
 yarn add @component-controls/cc-cli --dev
 ```
+## Pre-requisites
+
+If you haven't already, you will need to first install jest and related depenencies:
+
+### jest
+
+```sh
+yarn add jest babel-jest jest-matchmedia-mock rc-util --dev
+```
+### typescript
+
+```sh
+yarn add ts-jest @types/jest --dev
+```
+
+```js:title=package.json
+"scripts": {
+  ...
+ "jest": {
+    "preset": "ts-jest",
+    "transform": {
+      "^.+\\.(ts|tsx)?$": "ts-jest",
+      "^.+\\.(js|jsx)$": "babel-jest"
+    },
+  },
+},
+```
+
+### renderers
+
+Depending on your choice for jest rendering, you will need to install one of the following dependecnies:
+
+**react-testing-library**
+```sh
+yarn add @testing-library/jest-dom @testing-library/react @types/testing-library__jest-dom --dev
+```
+
+**enzyme**
+
+```sh
+yarn add enzyme enzyme-to-json @wojtekmaj/enzyme-adapter-react-17 @types/enzyme @types/testing-library__jest-dom --dev
+```
+
+**react-test-renderer**
+
+```sh
+yarn add react-test-renderer @types/react-test-renderer --dev
+```
 
 ## Examples
 

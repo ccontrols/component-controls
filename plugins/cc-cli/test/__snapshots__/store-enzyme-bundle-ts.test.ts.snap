@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`enzyme bundle ts 1`] = `
-"import path from 'path';
+"import * as path from 'path';
 import MatchMediaMock from 'jest-matchmedia-mock';
 import { loadStore } from '@component-controls/store';
 import { render as reactRender } from '@component-controls/render/react';

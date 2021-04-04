@@ -21,10 +21,6 @@ export const saveTemplate = async <P extends TemplateOptions>(
     testFolder = path.resolve(process.cwd(), testFolder);
   }
 
-  if (!fs.existsSync(testFolder)) {
-    fs.mkdirSync(testFolder);
-  }
-
   const testFilePath = path.resolve(testFolder, test);
 
   if (!overwrite && fs.existsSync(testFilePath)) {
@@ -37,5 +33,10 @@ export const saveTemplate = async <P extends TemplateOptions>(
     output: testFolder,
     ...rest,
   } as unknown) as P);
-  fs.writeFileSync(testFilePath, content, 'utf8');
+  if (content) {
+    if (!fs.existsSync(testFolder)) {
+      fs.mkdirSync(testFolder);
+    }
+    fs.writeFileSync(testFilePath, content, 'utf8');
+  }
 };

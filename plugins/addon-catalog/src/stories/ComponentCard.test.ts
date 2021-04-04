@@ -1,4 +1,4 @@
-import path from 'path';
+import * as path from 'path';
 import MatchMediaMock from 'jest-matchmedia-mock';
 import { loadConfigurations } from '@component-controls/config';
 import { renderDocument } from '@component-controls/test-renderers';

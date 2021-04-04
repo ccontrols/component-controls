@@ -64,6 +64,9 @@ export const createDocumentTemplate: TemplateFunction<StoryTemplateOptions> = as
       }));
     }
   }
+  if (stories.length <= 0 || doc.MDXPage) {
+    return '';
+  }
   const store = bundle ? 'bundle' : 'imports';
   const documentLoopPath = path.resolve(
     __dirname,
