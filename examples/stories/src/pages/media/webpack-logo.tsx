@@ -60,7 +60,7 @@ export const WebpackLogo: FC = () => {
   return (
     <div sx={{ margin: ['10px auto', 'auto 30px', 'auto 50px', 'auto 80px'] }}>
       <a href="/tutorial/getting-started/webpack">
-        {colorMode === 'light' ? <LightLogo /> : <DarkLogo />}
+        {colorMode === 'dark' ? <DarkLogo /> : <LightLogo />}
       </a>
     </div>
   );
