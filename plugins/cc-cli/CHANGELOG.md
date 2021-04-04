@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.2](https://github.com/ccontrols/component-controls/compare/v3.5.1...v3.5.2) (2021-04-04)
+
+
+### Bug Fixes
+
+* add isMDXComponent check ([324d190](https://github.com/ccontrols/component-controls/commit/324d19080e59f0ec56aaa4f3eb04e6f99371fcaa))
+
+
+
+
+
 ## [3.5.1](https://github.com/ccontrols/component-controls/compare/v3.5.0...v3.5.1) (2021-04-04)
 
 
