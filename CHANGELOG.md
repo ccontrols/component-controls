@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.5](https://github.com/ccontrols/component-controls/compare/v3.5.4...v3.5.5) (2021-04-04)
+
+
+### Bug Fixes
+
+* eslint errors fix ([47e02f6](https://github.com/ccontrols/component-controls/commit/47e02f64db26092de3c412cb08e6bccbcd3e6f76))
+
+
+
+
+
 ## [3.5.4](https://github.com/ccontrols/component-controls/compare/v3.5.3...v3.5.4) (2021-04-04)
 
 
