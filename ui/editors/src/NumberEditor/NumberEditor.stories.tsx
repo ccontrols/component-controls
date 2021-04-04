@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { ControlTypes, Example } from '@component-controls/core';
+import { ControlTypes, Document, Example } from '@component-controls/core';
 import { ControlsStateProvider } from '@component-controls/store';
 import { NumberEditor } from './NumberEditor';
 
 export default {
   title: 'Editors/NumberEditor',
   component: NumberEditor,
-};
+} as Document;
 
 export const overview: Example = () => {
   const [value, setValue] = useState(10);

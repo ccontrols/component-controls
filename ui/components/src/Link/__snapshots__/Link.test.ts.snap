@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link overview 1`] = `
+<DocumentFragment>
+  <a
+    class="css-1t54e2w"
+    href="/"
+  >
+    link to home
+  </a>
+</DocumentFragment>
+`;

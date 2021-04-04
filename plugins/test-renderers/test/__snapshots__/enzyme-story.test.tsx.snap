@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VariantButton disabled 1`] = `
+<div
+  style={
+    Object {
+      "background": "lightblue",
+    }
+  }
+>
+  <button
+    disabled={true}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#E0E0E0",
+        "border": "1px solid #000000",
+        "borderRadius": 8,
+        "color": "#828282",
+        "display": "flex",
+      }
+    }
+  >
+    <div
+      data-testid="label"
+      style={
+        Object {
+          "padding": "0 10px",
+        }
+      }
+    >
+      Disabled
+    </div>
+  </button>
+</div>
+`;
+
+exports[`VariantButton primary 1`] = `
+<div
+  style={
+    Object {
+      "background": "lightblue",
+    }
+  }
+>
+  <button
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#2F80ED",
+        "border": "1px solid #000000",
+        "borderRadius": 8,
+        "color": "#F2F2F2",
+        "display": "flex",
+      }
+    }
+  >
+    <div
+      data-testid="label"
+      style={
+        Object {
+          "padding": "0 10px",
+        }
+      }
+    >
+      Primary
+    </div>
+  </button>
+</div>
+`;

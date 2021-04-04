@@ -19,7 +19,8 @@
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "prepare": "yarn build",
-    "test": "cc-jest -c ./.config"
+    "test:create": "cc-cli -g doc -c ./.config -w",
+    "test": "yarn jest"
   },
   "homepage": "https://github.com/ccontrols/component-controls",
   "bugs": {
@@ -52,7 +53,7 @@
     "theme-ui": "^0.6.0-alpha.7"
   },
   "devDependencies": {
-    "@component-controls/jest-snapshots": "^3.4.5",
+    "@component-controls/cc-cli": "^3.4.5",
     "@component-controls/ts-markdown-docs": "^2.6.0",
     "@theme-ui/css": "^0.6.0-alpha.7",
     "@types/markdown-to-jsx": "^6.11.0",
@@ -77,5 +78,23 @@
   "authors": [
     "Atanas Stoyanov"
   ],
+  "jest": {
+    "preset": "ts-jest",
+    "transform": {
+      "^.+\\.(ts|tsx)?$": "ts-jest",
+      "^.+\\.(js|jsx)$": "babel-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "roots": [
+      "./src"
+    ]
+  },
   "gitHead": "e30d62f101e104711a16261fce04785d58cac1eb"
 }

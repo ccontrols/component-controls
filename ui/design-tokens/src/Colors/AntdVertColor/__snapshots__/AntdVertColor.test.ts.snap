@@ -1,0 +1,408 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AntdVertColor hsl 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1svx4hl-AntdVertColor"
+  >
+    <div
+      class="css-or38fy-AntdVertColor"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-r1mi8q-AntdVertColor"
+      >
+        <div
+          class="css-17ybgas-AntdVertColor"
+        >
+          accent
+        </div>
+        <div
+          class="css-cjorvp-AntdVertColor"
+        >
+          #8c7873
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AntdVertColor hsla 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1svx4hl-AntdVertColor"
+  >
+    <div
+      class="css-or38fy-AntdVertColor"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-1epbkhy-AntdVertColor"
+      >
+        <div
+          class="css-17ybgas-AntdVertColor"
+        >
+          accent
+        </div>
+        <div
+          class="css-cjorvp-AntdVertColor"
+        >
+          #8c7873
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AntdVertColor name 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1svx4hl-AntdVertColor"
+  >
+    <div
+      class="css-or38fy-AntdVertColor"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-5fo7n4-AntdVertColor"
+      >
+        <div
+          class="css-17ybgas-AntdVertColor"
+        >
+          brand
+        </div>
+        <div
+          class="css-cjorvp-AntdVertColor"
+        >
+          #e95b54
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AntdVertColor overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1svx4hl-AntdVertColor"
+  >
+    <div
+      class="css-or38fy-AntdVertColor"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-1431yxi-AntdVertColor"
+      >
+        <div
+          class="css-17ybgas-AntdVertColor"
+        >
+          #cf1322
+        </div>
+        <div
+          class="css-cjorvp-AntdVertColor"
+        >
+          207, 19, 34
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AntdVertColor palette 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1tdyhq5-AntdVertColorPalette"
+  >
+    <div
+      class="css-1svx4hl-AntdVertColor"
+    >
+      <div
+        class="css-or38fy-AntdVertColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-13gy2oz-AntdVertColor"
+        >
+          <div
+            class="css-17ybgas-AntdVertColor"
+          >
+            green-1
+          </div>
+          <div
+            class="css-cjorvp-AntdVertColor"
+          >
+            #f6ffed
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1svx4hl-AntdVertColor"
+    >
+      <div
+        class="css-or38fy-AntdVertColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-bcjsha-AntdVertColor"
+        >
+          <div
+            class="css-17ybgas-AntdVertColor"
+          >
+            green-2
+          </div>
+          <div
+            class="css-cjorvp-AntdVertColor"
+          >
+            #d9f7be
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1svx4hl-AntdVertColor"
+    >
+      <div
+        class="css-or38fy-AntdVertColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-xou29f-AntdVertColor"
+        >
+          <div
+            class="css-17ybgas-AntdVertColor"
+          >
+            green-3
+          </div>
+          <div
+            class="css-cjorvp-AntdVertColor"
+          >
+            #b7eb8f
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1svx4hl-AntdVertColor"
+    >
+      <div
+        class="css-or38fy-AntdVertColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1w9kufw-AntdVertColor"
+        >
+          <div
+            class="css-17ybgas-AntdVertColor"
+          >
+            green-4
+          </div>
+          <div
+            class="css-cjorvp-AntdVertColor"
+          >
+            #95de64
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1svx4hl-AntdVertColor"
+    >
+      <div
+        class="css-or38fy-AntdVertColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-jcuyny-AntdVertColor"
+        >
+          <div
+            class="css-17ybgas-AntdVertColor"
+          >
+            green-5
+          </div>
+          <div
+            class="css-cjorvp-AntdVertColor"
+          >
+            #73d13d
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1svx4hl-AntdVertColor"
+    >
+      <div
+        class="css-or38fy-AntdVertColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-qgtbv7-AntdVertColor"
+        >
+          <div
+            class="css-17ybgas-AntdVertColor"
+          >
+            green-6
+          </div>
+          <div
+            class="css-cjorvp-AntdVertColor"
+          >
+            #52c41a
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1svx4hl-AntdVertColor"
+    >
+      <div
+        class="css-or38fy-AntdVertColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1xxgoop-AntdVertColor"
+        >
+          <div
+            class="css-17ybgas-AntdVertColor"
+          >
+            green-7
+          </div>
+          <div
+            class="css-cjorvp-AntdVertColor"
+          >
+            #389e0d
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1svx4hl-AntdVertColor"
+    >
+      <div
+        class="css-or38fy-AntdVertColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-yhijth-AntdVertColor"
+        >
+          <div
+            class="css-17ybgas-AntdVertColor"
+          >
+            green-8
+          </div>
+          <div
+            class="css-cjorvp-AntdVertColor"
+          >
+            #237804
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1svx4hl-AntdVertColor"
+    >
+      <div
+        class="css-or38fy-AntdVertColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1ajjka7-AntdVertColor"
+        >
+          <div
+            class="css-17ybgas-AntdVertColor"
+          >
+            green-9
+          </div>
+          <div
+            class="css-cjorvp-AntdVertColor"
+          >
+            #135200
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1svx4hl-AntdVertColor"
+    >
+      <div
+        class="css-or38fy-AntdVertColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-16e13mz-AntdVertColor"
+        >
+          <div
+            class="css-17ybgas-AntdVertColor"
+          >
+            green-10
+          </div>
+          <div
+            class="css-cjorvp-AntdVertColor"
+          >
+            #092b00
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AntdVertColor rgb 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1svx4hl-AntdVertColor"
+  >
+    <div
+      class="css-or38fy-AntdVertColor"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-1av4rc2-AntdVertColor"
+      >
+        <div
+          class="css-17ybgas-AntdVertColor"
+        >
+          text
+        </div>
+        <div
+          class="css-cjorvp-AntdVertColor"
+        >
+          #000000
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AntdVertColor rgba 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1svx4hl-AntdVertColor"
+  >
+    <div
+      class="css-or38fy-AntdVertColor"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-11g6osm-AntdVertColor"
+      >
+        <div
+          class="css-17ybgas-AntdVertColor"
+        >
+          shadow
+        </div>
+        <div
+          class="css-cjorvp-AntdVertColor"
+        >
+          #000000
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GithubAvatar overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-9cbusc-GithubAvatar"
+    style="display: inline-block;"
+  >
+    <div
+      class="css-db5lk0-GithubAvatar"
+    >
+      <img
+        class="css-1y16e88"
+        height="48"
+        src="https://www.gravatar.com/avatar/9b9913091795a48655ec0b10dcd62a95?s=128"
+        title="Atanas Stoyanov"
+        width="48"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

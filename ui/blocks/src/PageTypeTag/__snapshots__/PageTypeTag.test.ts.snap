@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageTypeTag overview 1`] = `
+<DocumentFragment>
+  <a
+    class="css-1t54e2w"
+    href="/docs"
+  >
+    <span
+      class="css-pqmwqh-Tag"
+    >
+      <span
+        class="css-vurnku"
+      >
+        story
+      </span>
+    </span>
+  </a>
+</DocumentFragment>
+`;

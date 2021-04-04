@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SyntaxHighlighter overview 1`] = `
+<DocumentFragment>
+  <pre
+    class="prism-code language-jsx css-3y8hb3"
+    style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 3px 5px; display: inline; margin: 0px;"
+  >
+    <span
+      class="token-line css-vurnku"
+      style="color: rgb(114, 143, 203);"
+    >
+      <span
+        class="token keyword css-13aqjzy"
+        style="color: rgb(114, 143, 203);"
+      >
+        import
+      </span>
+      <span
+        class="token plain css-13aqjzy"
+      >
+         
+      </span>
+      <span
+        class="token punctuation css-13aqjzy"
+        style="color: rgb(182, 173, 154);"
+      >
+        {
+      </span>
+      <span
+        class="token plain css-13aqjzy"
+      >
+         Button 
+      </span>
+      <span
+        class="token punctuation css-13aqjzy"
+        style="color: rgb(182, 173, 154);"
+      >
+        }
+      </span>
+      <span
+        class="token plain css-13aqjzy"
+      >
+         
+      </span>
+      <span
+        class="token keyword css-13aqjzy"
+        style="color: rgb(114, 143, 203);"
+      >
+        from
+      </span>
+      <span
+        class="token plain css-13aqjzy"
+      >
+         
+      </span>
+      <span
+        class="token string css-13aqjzy"
+        style="color: rgb(114, 143, 203);"
+      >
+        'theme-ui'
+      </span>
+      <span
+        class="token punctuation css-13aqjzy"
+        style="color: rgb(182, 173, 154);"
+      >
+        ;
+      </span>
+    </span>
+  </pre>
+</DocumentFragment>
+`;
+
+exports[`SyntaxHighlighter theme 1`] = `
+<DocumentFragment>
+  <pre
+    class="prism-code language-jsx css-3y8hb3"
+    style="color: rgb(158, 254, 255); background-color: rgb(45, 42, 85); padding: 3px 5px; display: inline; margin: 0px;"
+  >
+    <span
+      class="token-line css-vurnku"
+      style="color: rgb(158, 254, 255);"
+    >
+      <span
+        class="token keyword css-13aqjzy"
+        style="color: rgb(255, 157, 0);"
+      >
+        import
+      </span>
+      <span
+        class="token plain css-13aqjzy"
+      >
+         
+      </span>
+      <span
+        class="token punctuation css-13aqjzy"
+        style="color: rgb(255, 255, 255);"
+      >
+        {
+      </span>
+      <span
+        class="token plain css-13aqjzy"
+      >
+         Button 
+      </span>
+      <span
+        class="token punctuation css-13aqjzy"
+        style="color: rgb(255, 255, 255);"
+      >
+        }
+      </span>
+      <span
+        class="token plain css-13aqjzy"
+      >
+         
+      </span>
+      <span
+        class="token keyword css-13aqjzy"
+        style="color: rgb(255, 157, 0);"
+      >
+        from
+      </span>
+      <span
+        class="token plain css-13aqjzy"
+      >
+         
+      </span>
+      <span
+        class="token string css-13aqjzy"
+        style="color: rgb(165, 255, 144);"
+      >
+        'theme-ui'
+      </span>
+      <span
+        class="token punctuation css-13aqjzy"
+        style="color: rgb(255, 255, 255);"
+      >
+        ;
+      </span>
+    </span>
+  </pre>
+</DocumentFragment>
+`;

@@ -1,7 +1,5 @@
 import {
   ComponentControls,
-  ComponentControl,
-  ControlTypes,
   Story,
   deepMergeReplaceArrays,
   Document,
@@ -9,75 +7,9 @@ import {
   getComponentName,
   controlsFromProps,
   SmartControls,
-  getControlValue,
+  transformControls,
 } from '@component-controls/core';
 
-const controlShortcuts = (
-  name: string,
-  controls: ComponentControls,
-  propControls?: ComponentControls,
-): ComponentControl => {
-  const control: ComponentControl | any = controls[name];
-  const propControl = propControls?.[name] || {};
-  const valueType = typeof control;
-  switch (valueType) {
-    case 'boolean':
-      return {
-        type: ControlTypes.BOOLEAN,
-        ...propControl,
-        value: control,
-      };
-    case 'string':
-      return { type: ControlTypes.TEXT, ...propControl, value: control };
-    case 'number':
-      return { type: ControlTypes.NUMBER, ...propControl, value: control };
-    case 'object': {
-      if (control instanceof Date) {
-        return { type: ControlTypes.DATE, ...propControl, value: control };
-      }
-      if (Array.isArray(control)) {
-        return { type: ControlTypes.OPTIONS, ...propControl, options: control };
-      }
-      if (
-        control.type === ControlTypes.OBJECT &&
-        typeof control.value === 'object'
-      ) {
-        return {
-          ...control,
-          ...propControl,
-          value: Object.keys(control.value).reduce(
-            (acc, name) => ({
-              ...acc,
-              [name]: controlShortcuts(name, control.value, propControl),
-            }),
-            {},
-          ),
-        };
-      }
-      return { ...propControl, ...control };
-    }
-    default:
-      return { ...propControl, ...control };
-  }
-};
-
-const transformControls = (
-  controls?: ComponentControls,
-  propControls?: ComponentControls,
-) => {
-  return controls
-    ? Object.keys(controls).reduce((acc, key) => {
-        const control = controlShortcuts(key, controls, propControls);
-        if (control.defaultValue === undefined) {
-          const defaultValue = getControlValue(control);
-          if (typeof defaultValue !== 'function') {
-            control.defaultValue = defaultValue;
-          }
-        }
-        return { ...acc, [key]: control };
-      }, {})
-    : undefined;
-};
 export const getControls = (
   story: Story,
   doc: Document,

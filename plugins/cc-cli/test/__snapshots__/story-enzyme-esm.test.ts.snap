@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`enzyme  esm 1`] = `
+"import * as path from 'path';
+import MatchMediaMock from 'jest-matchmedia-mock';
+import { loadConfigurations } from '@component-controls/config';
+import { renderExample } from '@component-controls/test-renderers';
+import { render as reactRender } from '@component-controls/render/react';
+import { mount, configure } from 'enzyme';
+import toJson from 'enzyme-to-json';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+
+configure({ adapter: new Adapter() });
+
+import doc, {
+  overview,
+  primary,
+  accent,
+  disabled,
+  success,
+  error,
+  warning,
+} from './fixtures/VariantButton.docs';
+
+describe('VariantButton', () => {
+  let matchMedia;
+  beforeAll(() => {
+    jest.mock('rc-util/lib/Portal');
+    matchMedia = new MatchMediaMock();
+  });
+  afterEach(() => {
+    matchMedia.clear();
+  });
+  const configPath = path.resolve(__dirname, '.config');
+  const config = loadConfigurations(configPath);
+  if (!config.renderFn) {
+    config.renderFn = reactRender;
+  }
+
+  test('overview', () => {
+    const example = overview;
+
+    const rendered = renderExample({
+      example,
+      doc,
+      config,
+    });
+
+    const component = mount(rendered);
+    expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+  });
+
+  test('primary', () => {
+    const example = primary;
+
+    const rendered = renderExample({
+      example,
+      doc,
+      config,
+    });
+
+    const component = mount(rendered);
+    expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+  });
+
+  test('accent', () => {
+    const example = accent;
+
+    const rendered = renderExample({
+      example,
+      doc,
+      config,
+    });
+
+    const component = mount(rendered);
+    expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+  });
+
+  test('disabled', () => {
+    const example = disabled;
+
+    const rendered = renderExample({
+      example,
+      doc,
+      config,
+    });
+
+    const component = mount(rendered);
+    expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+  });
+
+  test('success', () => {
+    const example = success;
+
+    const rendered = renderExample({
+      example,
+      doc,
+      config,
+    });
+
+    const component = mount(rendered);
+    expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+  });
+
+  test('error', () => {
+    const example = error;
+
+    const rendered = renderExample({
+      example,
+      doc,
+      config,
+    });
+
+    const component = mount(rendered);
+    expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+  });
+
+  test('warning', () => {
+    const example = warning;
+
+    const rendered = renderExample({
+      example,
+      doc,
+      config,
+    });
+
+    const component = mount(rendered);
+    expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+  });
+});
+"
+`;

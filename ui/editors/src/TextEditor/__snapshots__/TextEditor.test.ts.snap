@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextEditor overview 1`] = `
+<DocumentFragment>
+  <input
+    class="css-iyqgnx"
+    id="prop"
+    name="prop"
+    value="Hello"
+  />
+</DocumentFragment>
+`;
+
+exports[`TextEditor placeholder 1`] = `
+<DocumentFragment>
+  <input
+    class="css-iyqgnx"
+    id="prop"
+    name="prop"
+    placeholder="Enter some text"
+    value=""
+  />
+</DocumentFragment>
+`;
+
+exports[`TextEditor textArea 1`] = `
+<DocumentFragment>
+  <textarea
+    class="css-iyqgnx"
+    id="prop"
+    name="prop"
+    placeholder="Enter multiple lines of text"
+    rows="4"
+  />
+</DocumentFragment>
+`;

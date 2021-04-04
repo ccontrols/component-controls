@@ -1,0 +1,511 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LiquidColor overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1qywpve-LiquidColor"
+  >
+    <div
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-5jzeib-LiquidColor"
+      >
+        <div
+          class="css-xxrk4v-LiquidColor"
+        >
+          #503291
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1h05woe-LiquidColor"
+    >
+      <div
+        class="css-1qqfxu1-CopyContainer"
+        style="display: inline-block;"
+      />
+      <div
+        class="css-1rsqsro-CopyContainer"
+        style="display: inline-block;"
+      />
+      <div
+        class="css-51xuxg-CopyContainer"
+        style="display: inline-block;"
+      />
+      <div
+        class="css-ojdeb1-CopyContainer"
+        style="display: inline-block;"
+      />
+      <div
+        class="css-4o7nwh-CopyContainer"
+        style="display: inline-block;"
+      />
+      <div
+        class="css-tf2xu5-CopyContainer"
+        style="display: inline-block;"
+      />
+      <div
+        class="css-1hnhnat-CopyContainer"
+        style="display: inline-block;"
+      />
+    </div>
+    <div
+      class="css-70j1qk-LiquidColor"
+    >
+      <div
+        class="css-178titl-LiquidColor"
+      >
+        Rich Purple
+      </div>
+      <div>
+        RGB (80,50,145)
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`LiquidColor palette 1`] = `
+<DocumentFragment>
+  <div
+    class="css-114r159"
+  >
+    <div
+      class="css-1qywpve-LiquidColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1gfzkeu-LiquidColor"
+        >
+          <div
+            class="css-13bg2ls-LiquidColor"
+          >
+            #EB3C96
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1h05woe-LiquidColor"
+      >
+        <div
+          class="css-1jbp0cf-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-1d7y41e-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-1iho6iw-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-80tv0e-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-1r32100-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-1ri77cm-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-1bwdeew-CopyContainer"
+          style="display: inline-block;"
+        />
+      </div>
+      <div
+        class="css-70j1qk-LiquidColor"
+      >
+        <div
+          class="css-178titl-LiquidColor"
+        >
+          Vibrant Magenta
+        </div>
+        <div>
+          RGB (235,60,150)
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1qywpve-LiquidColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1x702yq-LiquidColor"
+        >
+          <div
+            class="css-xxrk4v-LiquidColor"
+          >
+            #0F69AF
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1h05woe-LiquidColor"
+      >
+        <div
+          class="css-13lw946-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-1svo3tx-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-1f9le0k-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-18x6war-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-1n3x6b4-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-1jf6vjp-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-1vg8irb-CopyContainer"
+          style="display: inline-block;"
+        />
+      </div>
+      <div
+        class="css-70j1qk-LiquidColor"
+      >
+        <div
+          class="css-178titl-LiquidColor"
+        >
+          Rich Blue
+        </div>
+        <div>
+          RGB (15,105,175)
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1qywpve-LiquidColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1rfv0fv-LiquidColor"
+        >
+          <div
+            class="css-13bg2ls-LiquidColor"
+          >
+            #2DBECD
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1h05woe-LiquidColor"
+      >
+        <div
+          class="css-1w1gfed-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-1r4mfkk-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-om9fmo-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-qz2ty0-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-1ez4y7x-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-oysset-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-10w5nih-CopyContainer"
+          style="display: inline-block;"
+        />
+      </div>
+      <div
+        class="css-70j1qk-LiquidColor"
+      >
+        <div
+          class="css-178titl-LiquidColor"
+        >
+          Vibrant Cyan
+        </div>
+        <div>
+          RGB (45,190,205)
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1qywpve-LiquidColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-6ahcgq-LiquidColor"
+        >
+          <div
+            class="css-13bg2ls-LiquidColor"
+          >
+            #A5CD50
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1h05woe-LiquidColor"
+      >
+        <div
+          class="css-1w5efpd-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-1vrvuir-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-u5vecu-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-3f9ejt-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-1iz1cke-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-iih37k-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-lgifqo-CopyContainer"
+          style="display: inline-block;"
+        />
+      </div>
+      <div
+        class="css-70j1qk-LiquidColor"
+      >
+        <div
+          class="css-178titl-LiquidColor"
+        >
+          Vibrant Green
+        </div>
+        <div>
+          RGB (165,205,80)
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1qywpve-LiquidColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1fzs3x0-LiquidColor"
+        >
+          <div
+            class="css-13bg2ls-LiquidColor"
+          >
+            #E61E50
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1h05woe-LiquidColor"
+      >
+        <div
+          class="css-zdd1c2-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-1sff2c3-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-bhchk9-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-12jhmfg-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-5e1izp-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-117hznk-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-d6v9od-CopyContainer"
+          style="display: inline-block;"
+        />
+      </div>
+      <div
+        class="css-70j1qk-LiquidColor"
+      >
+        <div
+          class="css-178titl-LiquidColor"
+        >
+          Rich Red
+        </div>
+        <div>
+          RGB (230,30,80)
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1qywpve-LiquidColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-8mgb18-LiquidColor"
+        >
+          <div
+            class="css-13bg2ls-LiquidColor"
+          >
+            #FFC832
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1h05woe-LiquidColor"
+      >
+        <div
+          class="css-qo9tro-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-3znhhg-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-176r0ns-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-1o7nmb2-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-nazygl-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-qjfr6q-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-xf9xlw-CopyContainer"
+          style="display: inline-block;"
+        />
+      </div>
+      <div
+        class="css-70j1qk-LiquidColor"
+      >
+        <div
+          class="css-178titl-LiquidColor"
+        >
+          Vibrant Yellow
+        </div>
+        <div>
+          RGB (255,200,50)
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1qywpve-LiquidColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-uzmout-LiquidColor"
+        >
+          <div
+            class="css-13bg2ls-LiquidColor"
+          >
+            #149B5F
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1h05woe-LiquidColor"
+      >
+        <div
+          class="css-3gfwqi-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-1w2pei7-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-1r97ynz-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-1aokvha-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-17us36k-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-1ekqzu8-CopyContainer"
+          style="display: inline-block;"
+        />
+        <div
+          class="css-dpqt5-CopyContainer"
+          style="display: inline-block;"
+        />
+      </div>
+      <div
+        class="css-70j1qk-LiquidColor"
+      >
+        <div
+          class="css-178titl-LiquidColor"
+        >
+          Rich Green
+        </div>
+        <div>
+          RGB (20,155,95)
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

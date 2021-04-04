@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateEditor onlyDatePicker 1`] = `
+<DocumentFragment>
+  <div
+    class="css-uliqdc"
+  >
+    <input
+      class="css-1qqniy8"
+      id="propdate"
+      max="9999-12-31"
+      name="propdate"
+      type="date"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateEditor onlyTimePicker 1`] = `
+<DocumentFragment>
+  <div
+    class="css-uliqdc"
+  >
+    <input
+      class="css-1qqniy8"
+      id="proptime"
+      name="proptime"
+      type="time"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateEditor overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-uliqdc"
+  >
+    <input
+      class="css-1qqniy8"
+      id="propdate"
+      max="9999-12-31"
+      name="propdate"
+      type="date"
+    />
+    <input
+      class="css-1qqniy8"
+      id="proptime"
+      name="proptime"
+      type="time"
+    />
+  </div>
+</DocumentFragment>
+`;

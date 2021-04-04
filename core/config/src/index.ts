@@ -6,7 +6,14 @@ import globBase from 'glob-base';
 import { makeRe } from 'micromatch';
 
 import yargs from 'yargs';
-import { BuildConfiguration } from '@component-controls/core';
+import {
+  BuildConfiguration,
+  RunConfiguration,
+  defaultBuildConfig,
+  mergeConfig,
+  defaultRunConfig,
+  convertConfig,
+} from '@component-controls/core';
 
 export const buildConfigFileNames = [
   'buildtime.js',
@@ -48,21 +55,9 @@ export const getConfigurationArg = (
   return argv.config;
 };
 
-/**
- *  given a base project folder and a configuration folder, returns the configuration file
- *
- * @param baseFolder project folder to start the search with
- * @param configFolder folder where the configuration file is located
- * @param args optional arguments
- */
-export const loadConfiguration = (
-  baseFolder: string,
-  configFolder?: string,
-  args?: string[],
-  defaultConfigPath?: string,
+export const loadConfig = (
+  configPath: string,
 ): ConfigurationResult | undefined => {
-  const folder = configFolder ?? getConfigurationArg(args) ?? defaultConfigPath;
-  const configPath = folder ? path.resolve(baseFolder, folder) : baseFolder;
   const hasConfigFolder = fs.existsSync(configPath);
   if (!hasConfigFolder) {
     console.warn('configuration folder not found', configPath);
@@ -92,6 +87,24 @@ export const loadConfiguration = (
     };
   }
   return undefined;
+};
+
+/**
+ *  given a base project folder and a configuration folder, returns the configuration file
+ *
+ * @param baseFolder project folder to start the search with
+ * @param configFolder folder where the configuration file is located
+ * @param args optional arguments
+ */
+export const loadConfiguration = (
+  baseFolder: string,
+  configFolder?: string,
+  args?: string[],
+  defaultConfigPath?: string,
+): ConfigurationResult | undefined => {
+  const folder = configFolder ?? getConfigurationArg(args) ?? defaultConfigPath;
+  const configPath = folder ? path.resolve(baseFolder, folder) : baseFolder;
+  return loadConfig(configPath);
 };
 
 //fix for sb5 issue handling glob
@@ -161,6 +174,30 @@ export const configRequireContext = ({
       }, [])
     : undefined;
   return contexts;
+};
+
+/**
+ * loads bot the build time and run time configurations
+ * @param rootPath the roo path of the project
+ * @param configFilePath the config folder - relative to the root path
+ * @returns merged configuration
+ */
+export const loadConfigurations = (configPath: string): RunConfiguration => {
+  const config = loadConfig(configPath);
+  const buildConfig: BuildConfiguration = config
+    ? mergeConfig(defaultBuildConfig, config.config)
+    : defaultBuildConfig;
+
+  let runtimeConfig = {};
+  if (config?.optionsFilePath) {
+    const req = require(config?.optionsFilePath);
+    runtimeConfig = req.default || req;
+  }
+  const runConfig = mergeConfig(defaultRunConfig, runtimeConfig);
+  return mergeConfig(
+    defaultRunConfig,
+    convertConfig(mergeConfig(buildConfig, runConfig)),
+  );
 };
 
 /**

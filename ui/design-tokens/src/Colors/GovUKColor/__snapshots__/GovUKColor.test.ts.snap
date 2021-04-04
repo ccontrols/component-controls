@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GovUKColor overview 1`] = `
+<DocumentFragment>
+  <table
+    class="css-1ea51ic-TableRowContainer"
+  >
+    <tbody>
+      <tr>
+        <td
+          class="css-6czczp-BaseGovUKColor"
+        >
+          <div
+            class="css-1hbsp8d-BaseGovUKColor"
+            style="display: inline-block;"
+          >
+            <div
+              class="css-14nx74d-BaseGovUKColor"
+            />
+          </div>
+        </td>
+        <td>
+          <div>
+            $govuk-brand-colour
+          </div>
+        </td>
+        <td
+          class="css-1i12hy2-BaseGovUKColor"
+        >
+          <div>
+            #1d70b8
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`GovUKColor palette 1`] = `
+<DocumentFragment>
+  <table
+    class="css-i4wug4-GovUKColorPalette"
+  >
+    <colgroup>
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td
+          class="css-6czczp-BaseGovUKColor"
+        >
+          <div
+            class="css-1hbsp8d-BaseGovUKColor"
+            style="display: inline-block;"
+          >
+            <div
+              class="css-14nx74d-BaseGovUKColor"
+            />
+          </div>
+        </td>
+        <td>
+          <div>
+            $govuk-brand-colour
+          </div>
+        </td>
+        <td
+          class="css-1i12hy2-BaseGovUKColor"
+        >
+          <div>
+            #1d70b8
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="css-6czczp-BaseGovUKColor"
+        >
+          <div
+            class="css-1hbsp8d-BaseGovUKColor"
+            style="display: inline-block;"
+          >
+            <div
+              class="css-kxrznt-BaseGovUKColor"
+            />
+          </div>
+        </td>
+        <td>
+          <div>
+            $govuk-link-hover-colour
+          </div>
+        </td>
+        <td
+          class="css-1i12hy2-BaseGovUKColor"
+        >
+          <div>
+            #003078
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="css-6czczp-BaseGovUKColor"
+        >
+          <div
+            class="css-1hbsp8d-BaseGovUKColor"
+            style="display: inline-block;"
+          >
+            <div
+              class="css-wragvq-BaseGovUKColor"
+            />
+          </div>
+        </td>
+        <td>
+          <div>
+            $govuk-link-visited-colour
+          </div>
+        </td>
+        <td
+          class="css-1i12hy2-BaseGovUKColor"
+        >
+          <div>
+            #4c2c92
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="css-6czczp-BaseGovUKColor"
+        >
+          <div
+            class="css-1hbsp8d-BaseGovUKColor"
+            style="display: inline-block;"
+          >
+            <div
+              class="css-1d23rae-BaseGovUKColor"
+            />
+          </div>
+        </td>
+        <td>
+          <div>
+            govuk-colour("red")
+          </div>
+        </td>
+        <td
+          class="css-1i12hy2-BaseGovUKColor"
+        >
+          <div>
+            #d4351c
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;

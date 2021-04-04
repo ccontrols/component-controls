@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { ControlTypes, Example } from '@component-controls/core';
+import { ControlTypes, Document, Example } from '@component-controls/core';
 import { ControlsStateProvider } from '@component-controls/store';
 import { FilesEditor } from './FilesEditor';
 
 export default {
   title: 'Editors/FilesEditor',
   component: FilesEditor,
-};
+} as Document;
 
 export const overview: Example = () => {
   const [state, setState] = useState([

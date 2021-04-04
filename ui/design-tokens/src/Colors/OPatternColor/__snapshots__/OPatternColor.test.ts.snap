@@ -1,0 +1,233 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OPatternColor overview 1`] = `
+<DocumentFragment>
+  <table
+    class="css-1ea51ic-TableRowContainer"
+  >
+    <tbody>
+      <tr>
+        <td
+          class="css-1jam8bv-BaseOPatternColor"
+        >
+          <div
+            class="css-k4c39n-BaseOPatternColor"
+            style="display: inline-block;"
+          />
+        </td>
+        <td>
+          <code
+            class="css-32w1k1-BaseOPatternColor"
+          >
+            $weather-color
+          </code>
+        </td>
+        <td>
+          <div>
+            #990099
+          </div>
+        </td>
+        <td>
+          <div>
+            153, 0, 153
+          </div>
+        </td>
+        <td>
+          0, 100, 0, 40
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`OPatternColor palette 1`] = `
+<DocumentFragment>
+  <table
+    class="css-kyfym0-OPatternColorPalette"
+  >
+    <colgroup>
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+    </colgroup>
+    <thead>
+      <tr>
+        <th
+          class="css-1k1hrut"
+        >
+          Color
+        </th>
+        <th
+          class="css-cguqnl"
+        >
+          Variable
+        </th>
+        <th
+          class="css-x663n6"
+        >
+          Hex
+        </th>
+        <th
+          class="css-x663n6"
+        >
+          RGB
+        </th>
+        <th
+          class="css-x663n6"
+        >
+          CMYK
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td
+          class="css-1jam8bv-BaseOPatternColor"
+        >
+          <div
+            class="css-bz3e3j-BaseOPatternColor"
+            style="display: inline-block;"
+          />
+        </td>
+        <td>
+          <code
+            class="css-32w1k1-BaseOPatternColor"
+          >
+            $primary-color
+          </code>
+        </td>
+        <td>
+          <div>
+            #107CB2
+          </div>
+        </td>
+        <td>
+          <div>
+            16, 124, 178
+          </div>
+        </td>
+        <td>
+          91, 30, 0, 30
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="css-1jam8bv-BaseOPatternColor"
+        >
+          <div
+            class="css-mhbo0c-BaseOPatternColor"
+            style="display: inline-block;"
+          />
+        </td>
+        <td>
+          <code
+            class="css-32w1k1-BaseOPatternColor"
+          >
+            $primary-color-light
+          </code>
+        </td>
+        <td
+          colspan="3"
+        >
+          30% of $primary-color
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="css-1jam8bv-BaseOPatternColor"
+        >
+          <div
+            class="css-17z58b8-BaseOPatternColor"
+            style="display: inline-block;"
+          />
+        </td>
+        <td>
+          <code
+            class="css-32w1k1-BaseOPatternColor"
+          >
+            $alert-color
+          </code>
+        </td>
+        <td>
+          <div>
+            #D8400F
+          </div>
+        </td>
+        <td>
+          <div>
+            216, 64, 15
+          </div>
+        </td>
+        <td>
+          0, 70, 93, 15
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="css-1jam8bv-BaseOPatternColor"
+        >
+          <div
+            class="css-alwy4x-BaseOPatternColor"
+            style="display: inline-block;"
+          />
+        </td>
+        <td>
+          <code
+            class="css-32w1k1-BaseOPatternColor"
+          >
+            $alert-color-light
+          </code>
+        </td>
+        <td
+          colspan="3"
+        >
+          30% of $alert-color
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="css-1jam8bv-BaseOPatternColor"
+        >
+          <div
+            class="css-k4c39n-BaseOPatternColor"
+            style="display: inline-block;"
+          />
+        </td>
+        <td>
+          <code
+            class="css-32w1k1-BaseOPatternColor"
+          >
+            $weather-color
+          </code>
+        </td>
+        <td>
+          <div>
+            #990099
+          </div>
+        </td>
+        <td>
+          <div>
+            153, 0, 153
+          </div>
+        </td>
+        <td>
+          0, 100, 0, 40
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;

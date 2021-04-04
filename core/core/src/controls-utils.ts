@@ -283,3 +283,83 @@ export const newControlValues = (
     })
     .reduce((acc, f) => (f ? { ...acc, [f.name]: f.value } : acc), {});
 };
+
+/**
+ * transforms the control shortcuts ie controls: { text: 'VALUE'} to full controls
+ * @param name the name of the control
+ * @param controls all the story assigned controls
+ * @param propControls all the smart automatic controls
+ * @returns the fully induced ComponentControl
+ */
+const controlShortcuts = (
+  name: string,
+  controls: ComponentControls,
+  propControls?: ComponentControls,
+): ComponentControl => {
+  const control: ComponentControl | any = controls[name];
+  const propControl = propControls?.[name] || {};
+  const valueType = typeof control;
+  switch (valueType) {
+    case 'boolean':
+      return {
+        type: ControlTypes.BOOLEAN,
+        ...propControl,
+        value: control,
+      };
+    case 'string':
+      return { type: ControlTypes.TEXT, ...propControl, value: control };
+    case 'number':
+      return { type: ControlTypes.NUMBER, ...propControl, value: control };
+    case 'object': {
+      if (control instanceof Date) {
+        return { type: ControlTypes.DATE, ...propControl, value: control };
+      }
+      if (Array.isArray(control)) {
+        return { type: ControlTypes.OPTIONS, ...propControl, options: control };
+      }
+      if (
+        control.type === ControlTypes.OBJECT &&
+        typeof control.value === 'object'
+      ) {
+        return {
+          ...control,
+          ...propControl,
+          value: Object.keys(control.value).reduce(
+            (acc, name) => ({
+              ...acc,
+              [name]: controlShortcuts(name, control.value, propControl),
+            }),
+            {},
+          ),
+        };
+      }
+      return { ...propControl, ...control };
+    }
+    default:
+      return { ...propControl, ...control };
+  }
+};
+
+/**
+ *
+ * @param controls all the story controls
+ * @param propControls all the automatic prop controls
+ * @returns the transformed ComponentControls
+ */
+export const transformControls = (
+  controls?: ComponentControls,
+  propControls?: ComponentControls,
+): ComponentControls | undefined => {
+  return controls
+    ? Object.keys(controls).reduce((acc, key) => {
+        const control = controlShortcuts(key, controls, propControls);
+        if (control.defaultValue === undefined) {
+          const defaultValue = getControlValue(control);
+          if (typeof defaultValue !== 'function') {
+            control.defaultValue = defaultValue;
+          }
+        }
+        return { ...acc, [key]: control };
+      }, {})
+    : undefined;
+};

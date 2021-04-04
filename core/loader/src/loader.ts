@@ -26,8 +26,8 @@ async function loader(this: WebpackLoaderContext): Promise<string> {
     const options = deepmerge(configOptions, loaderOptions);
 
     const { transformed, ...store } = await parseStories(
-      source,
       filePath,
+      source,
       options,
     );
     if (store?.doc) {

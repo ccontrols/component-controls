@@ -1,0 +1,303 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toggle checkbox 1`] = `
+<DocumentFragment>
+  <label
+    class="css-knfhfe"
+  >
+    <div
+      class="css-x3crln"
+    >
+      <input
+        checked=""
+        class="css-p19g2b"
+        type="checkbox"
+      />
+      <svg
+        aria-hidden="true"
+        class="css-1dq90k0"
+        fill="currentcolor"
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="css-1b36guq"
+        fill="currentcolor"
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+        />
+      </svg>
+    </div>
+    theme-ui checkbox
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Toggle customIcons 1`] = `
+<DocumentFragment>
+  <div
+    style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 14px; transition: opacity 0.25s; user-select: none;"
+  >
+    <div
+      class="react-switch-bg"
+      style="height: 28px; width: 56px; margin: 0px; position: relative; background: rgb(136, 136, 136); border-radius: 14px; cursor: pointer; transition: background 0.25s;"
+    >
+      <div
+        style="height: 28px; width: 30px; position: relative; opacity: 0; pointer-events: none; transition: opacity 0.25s;"
+      >
+        <svg
+          fill="aqua"
+          height="100%"
+          viewBox="0 0 10 10"
+          width="100%"
+        >
+          <circle
+            cx="5"
+            cy="5"
+            r="3"
+          />
+        </svg>
+      </div>
+      <div
+        style="height: 28px; width: 30px; position: absolute; opacity: 1; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
+      >
+        <svg
+          fill="red"
+          height="100%"
+          viewBox="0 0 10 10"
+          width="100%"
+        >
+          <circle
+            cx="5"
+            cy="5"
+            r="3"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      class="react-switch-handle"
+      style="height: 26px; width: 26px; background: rgb(255, 255, 255); display: inline-block; cursor: pointer; border-radius: 50%; position: absolute; transform: translateX(1px); top: 1px; outline: 0; border: 0px; transition: background-color 0.25s, transform 0.25s, box-shadow 0.15s;"
+    />
+    <input
+      aria-checked="false"
+      role="switch"
+      style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"
+      type="checkbox"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Toggle label 1`] = `
+<DocumentFragment>
+  <label
+    class="css-knfhfe"
+    for="custom-toggle"
+  >
+    <span
+      class="css-1iu2cu0-Toggle"
+    >
+      with label
+    </span>
+    <div
+      style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 14px; transition: opacity 0.25s; user-select: none;"
+    >
+      <div
+        class="react-switch-bg"
+        style="height: 28px; width: 56px; margin: 0px; position: relative; background: rgb(136, 136, 136); border-radius: 14px; cursor: pointer; transition: background 0.25s;"
+      >
+        <div
+          style="height: 28px; width: 30px; position: relative; opacity: 0; pointer-events: none; transition: opacity 0.25s;"
+        >
+          <svg
+            height="100%"
+            style="position: absolute; top: 0px;"
+            viewBox="-2 -5 17 21"
+            width="100%"
+          >
+            <path
+              d="M11.264 0L5.26 6.004 2.103 2.847 0 4.95l5.26 5.26 8.108-8.107L11.264 0"
+              fill="#fff"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div
+          style="height: 28px; width: 30px; position: absolute; opacity: 1; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
+        >
+          <svg
+            height="100%"
+            style="position: absolute; top: 0px;"
+            viewBox="-2 -5 14 20"
+            width="100%"
+          >
+            <path
+              d="M9.9 2.12L7.78 0 4.95 2.828 2.12 0 0 2.12l2.83 2.83L0 7.776 2.123 9.9 4.95 7.07 7.78 9.9 9.9 7.776 7.072 4.95 9.9 2.12"
+              fill="#fff"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="react-switch-handle"
+        style="height: 26px; width: 26px; background: rgb(255, 255, 255); display: inline-block; cursor: pointer; border-radius: 50%; position: absolute; transform: translateX(1px); top: 1px; outline: 0; border: 0px; transition: background-color 0.25s, transform 0.25s, box-shadow 0.15s;"
+      />
+      <input
+        aria-checked="false"
+        id="custom-toggle"
+        role="switch"
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"
+        type="checkbox"
+      />
+    </div>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Toggle octicons 1`] = `
+<DocumentFragment>
+  <div
+    style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 10px; transition: opacity 0.25s; user-select: none;"
+  >
+    <div
+      class="react-switch-bg"
+      style="height: 20px; width: 40px; margin: 0px; position: relative; background: rgb(211, 211, 211); border-radius: 10px; cursor: pointer; transition: background 0.25s;"
+    >
+      <div
+        style="height: 20px; width: 24px; position: relative; opacity: 0; pointer-events: none; transition: opacity 0.25s;"
+      >
+        <div
+          class="css-7kjknt"
+        >
+          <div
+            class="css-r0wgrp"
+          >
+            <svg
+              aria-hidden="true"
+              class="octicon"
+              fill="currentColor"
+              height="16"
+              role="img"
+              style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M1.679 7.932c.412-.621 1.242-1.75 2.366-2.717C5.175 4.242 6.527 3.5 8 3.5c1.473 0 2.824.742 3.955 1.715 1.124.967 1.954 2.096 2.366 2.717a.119.119 0 010 .136c-.412.621-1.242 1.75-2.366 2.717C10.825 11.758 9.473 12.5 8 12.5c-1.473 0-2.824-.742-3.955-1.715C2.92 9.818 2.09 8.69 1.679 8.068a.119.119 0 010-.136zM8 2c-1.981 0-3.67.992-4.933 2.078C1.797 5.169.88 6.423.43 7.1a1.619 1.619 0 000 1.798c.45.678 1.367 1.932 2.637 3.024C4.329 13.008 6.019 14 8 14c1.981 0 3.67-.992 4.933-2.078 1.27-1.091 2.187-2.345 2.637-3.023a1.619 1.619 0 000-1.798c-.45-.678-1.367-1.932-2.637-3.023C11.671 2.992 9.981 2 8 2zm0 8a2 2 0 100-4 2 2 0 000 4z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div
+        style="height: 20px; width: 24px; position: absolute; opacity: 1; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
+      >
+        <div
+          class="css-1lbnzn6"
+        >
+          <div
+            class="css-1jfm6h9"
+          >
+            <svg
+              aria-hidden="true"
+              class="octicon"
+              fill="currentColor"
+              height="16"
+              role="img"
+              style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M.143 2.31a.75.75 0 011.047-.167l14.5 10.5a.75.75 0 11-.88 1.214l-2.248-1.628C11.346 13.19 9.792 14 8 14c-1.981 0-3.67-.992-4.933-2.078C1.797 10.832.88 9.577.43 8.9a1.618 1.618 0 010-1.797c.353-.533.995-1.42 1.868-2.305L.31 3.357A.75.75 0 01.143 2.31zm3.386 3.378a14.21 14.21 0 00-1.85 2.244.12.12 0 00-.022.068c0 .021.006.045.022.068.412.621 1.242 1.75 2.366 2.717C5.175 11.758 6.527 12.5 8 12.5c1.195 0 2.31-.488 3.29-1.191L9.063 9.695A2 2 0 016.058 7.52l-2.53-1.832zM8 3.5c-.516 0-1.017.09-1.499.251a.75.75 0 11-.473-1.423A6.23 6.23 0 018 2c1.981 0 3.67.992 4.933 2.078 1.27 1.091 2.187 2.345 2.637 3.023a1.619 1.619 0 010 1.798c-.11.166-.248.365-.41.587a.75.75 0 11-1.21-.887c.148-.201.272-.382.371-.53a.119.119 0 000-.137c-.412-.621-1.242-1.75-2.366-2.717C10.825 4.242 9.473 3.5 8 3.5z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="react-switch-handle"
+      style="height: 14px; width: 14px; background: rgb(255, 255, 255); display: inline-block; cursor: pointer; border-radius: 50%; position: absolute; transform: translateX(3px); top: 3px; outline: 0; border: 0px; transition: background-color 0.25s, transform 0.25s, box-shadow 0.15s;"
+    />
+    <input
+      aria-checked="false"
+      role="switch"
+      style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"
+      type="checkbox"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Toggle overview 1`] = `
+<DocumentFragment>
+  <div
+    style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 14px; transition: opacity 0.25s; user-select: none;"
+  >
+    <div
+      class="react-switch-bg"
+      style="height: 28px; width: 56px; margin: 0px; position: relative; background: rgb(136, 136, 136); border-radius: 14px; cursor: pointer; transition: background 0.25s;"
+    >
+      <div
+        style="height: 28px; width: 30px; position: relative; opacity: 0; pointer-events: none; transition: opacity 0.25s;"
+      >
+        <svg
+          height="100%"
+          style="position: absolute; top: 0px;"
+          viewBox="-2 -5 17 21"
+          width="100%"
+        >
+          <path
+            d="M11.264 0L5.26 6.004 2.103 2.847 0 4.95l5.26 5.26 8.108-8.107L11.264 0"
+            fill="#fff"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <div
+        style="height: 28px; width: 30px; position: absolute; opacity: 1; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
+      >
+        <svg
+          height="100%"
+          style="position: absolute; top: 0px;"
+          viewBox="-2 -5 14 20"
+          width="100%"
+        >
+          <path
+            d="M9.9 2.12L7.78 0 4.95 2.828 2.12 0 0 2.12l2.83 2.83L0 7.776 2.123 9.9 4.95 7.07 7.78 9.9 9.9 7.776 7.072 4.95 9.9 2.12"
+            fill="#fff"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      class="react-switch-handle"
+      style="height: 26px; width: 26px; background: rgb(255, 255, 255); display: inline-block; cursor: pointer; border-radius: 50%; position: absolute; transform: translateX(1px); top: 1px; outline: 0; border: 0px; transition: background-color 0.25s, transform 0.25s, box-shadow 0.15s;"
+    />
+    <input
+      aria-checked="false"
+      role="switch"
+      style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"
+      type="checkbox"
+    />
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rtl bundle cjs 1`] = `
+"const path = require('path');
+const MatchMediaMock = require('jest-matchmedia-mock').default;
+const { loadStore } = require('@component-controls/store');
+const { render: reactRender } = require('@component-controls/render/react');
+const { render, act } = require('@testing-library/react');
+
+const renderErr = () => {
+  throw new Error('Could not render the story');
+};
+
+describe('Components/Header', () => {
+  let matchMedia;
+  beforeAll(() => {
+    jest.mock('rc-util/lib/Portal');
+    matchMedia = new MatchMediaMock();
+  });
+  afterEach(() => {
+    matchMedia.clear();
+  });
+  const store = loadStore(
+    require(path.resolve(__dirname, './bundle/component-controls.js')),
+  );
+  const renderFn = store.config.renderFn || reactRender;
+  const doc = store.docs['Components/Header'];
+
+  test('Overview', () => {
+    const story = store.stories['components-header--overview'];
+
+    let rendered;
+    act(() => {
+      rendered = renderFn(story, doc);
+    });
+    if (!rendered) {
+      renderErr();
+      return;
+    }
+    const { asFragment } = render(rendered);
+    expect(asFragment()).toMatchSnapshot();
+  });
+});
+"
+`;

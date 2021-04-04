@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TitledImage overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-yyvsvt"
+  >
+    <img
+      alt="alt text"
+      class="css-9taffg"
+      src="https://github.com/ccontrols/component-controls/raw/master/misc/storybook-custom-docs/images/simple-page.jpg"
+      title="some image title"
+    />
+    <span
+      class="css-2t5mx4"
+    >
+      some image title
+    </span>
+  </div>
+</DocumentFragment>
+`;

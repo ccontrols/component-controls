@@ -21,6 +21,8 @@ export const findUpFile = (
 
 export const defaultDistFolder = 'public';
 
+export const defaultConfigFolder = '.config';
+
 export const getDistFolder = (options: BuildProps): string => {
   const distFolder = options.distFolder || defaultDistFolder;
   return path.isAbsolute(distFolder)

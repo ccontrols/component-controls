@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ObjectEditor editLabel 1`] = `
+<DocumentFragment>
+  <div
+    style="display: inline-block;"
+  >
+    <button
+      aria-label="edit the properties of the object"
+      class="css-9nq87t-EditButton"
+    >
+      Click to edit
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ObjectEditor inline 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="css-2qgnud"
+    >
+      <table>
+        <tbody />
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ObjectEditor overview 1`] = `
+<DocumentFragment>
+  <div
+    style="display: inline-block;"
+  >
+    <button
+      aria-label="edit the properties of the object"
+      class="css-9nq87t-EditButton"
+    >
+      edit...
+    </button>
+  </div>
+</DocumentFragment>
+`;

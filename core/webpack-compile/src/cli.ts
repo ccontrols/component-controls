@@ -1,11 +1,11 @@
 import { compile, watch } from './index';
-import { cliArgs, CliArgTypes, ArgOptions } from './args';
+import { cliArgs, CliArgTypes, ArgOptions, defaultCliArgs } from './args';
 import { LogLevel } from '@component-controls/logger';
 
 export { cliArgs, defaultCliArgs, ArgOptions } from './args';
 
 export const getArgs = (options?: ArgOptions): CliArgTypes => {
-  const argv = cliArgs(options);
+  const argv = cliArgs([...defaultCliArgs, ...(options || [])]);
   return argv.help().alias('help', 'h').argv;
 };
 export const run = async (options?: ArgOptions): Promise<void> => {

@@ -2,6 +2,7 @@ import React, { ChangeEvent, useState, SetStateAction } from 'react';
 import {
   ControlTypes,
   ComponentControlBoolean,
+  Document,
   Example,
 } from '@component-controls/core';
 import { useControl, ControlsStateProvider } from '@component-controls/store';
@@ -12,7 +13,7 @@ import { addPropertyEditor, getPropertyEditor } from './prop-factory';
 
 export default {
   title: 'Editors/Custom Control',
-};
+} as Document;
 
 const CheckboxEditor: PropertyEditor = ({ name }) => {
   const [control, onChange] = useControl<ComponentControlBoolean>(name);

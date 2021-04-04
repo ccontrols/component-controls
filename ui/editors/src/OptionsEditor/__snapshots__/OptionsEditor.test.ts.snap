@@ -1,0 +1,889 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OptionsEditor multiSelectNumeric 1`] = `
+<DocumentFragment>
+  <div
+    class="css-4cffwv"
+  >
+    <select
+      class="css-wczjro-OptionsSelect"
+    >
+      <option
+        value="1"
+      >
+        One
+      </option>
+      <option
+        value="2"
+      >
+        Two
+      </option>
+      <option
+        value="3"
+      >
+        Three
+      </option>
+    </select>
+    <svg
+      class="css-1swud1q"
+      fill="currentcolor"
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7 10l5 5 5-5z"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`OptionsEditor multiSelectObjects 1`] = `
+<DocumentFragment>
+  <div
+    class="css-4cffwv"
+  >
+    <select
+      class="css-wczjro-OptionsSelect"
+    >
+      <option
+        value="one"
+      >
+        One
+      </option>
+      <option
+        value="two"
+      >
+        Two
+      </option>
+      <option
+        value="three"
+      >
+        Three
+      </option>
+    </select>
+    <svg
+      class="css-1swud1q"
+      fill="currentcolor"
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7 10l5 5 5-5z"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`OptionsEditor multiSelectSimple 1`] = `
+<DocumentFragment>
+  <div
+    class="css-4cffwv"
+  >
+    <select
+      class="css-wczjro-OptionsSelect"
+    >
+      <option
+        value="one"
+      >
+        one
+      </option>
+      <option
+        value="two"
+      >
+        two
+      </option>
+      <option
+        value="three"
+      >
+        three
+      </option>
+    </select>
+    <svg
+      class="css-1swud1q"
+      fill="currentcolor"
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7 10l5 5 5-5z"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`OptionsEditor numeric 1`] = `
+<DocumentFragment>
+  <div
+    class="css-4cffwv"
+  >
+    <select
+      class="css-wczjro-OptionsSelect"
+    >
+      <option
+        value="1"
+      >
+        One
+      </option>
+      <option
+        value="2"
+      >
+        Two
+      </option>
+      <option
+        value="3"
+      >
+        Three
+      </option>
+    </select>
+    <svg
+      class="css-1swud1q"
+      fill="currentcolor"
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7 10l5 5 5-5z"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`OptionsEditor numericCheck 1`] = `
+<DocumentFragment>
+  <fieldset
+    class="css-xhmj93-CheckboxFieldset"
+  >
+    <div
+      class="css-vurnku"
+    >
+      <div>
+        <input
+          checked=""
+          id="One-1"
+          name="One"
+          type="checkbox"
+          value="1"
+        />
+        <label
+          class="css-16zyabg-CheckboxLabel"
+          for="One-1"
+        >
+          One
+        </label>
+      </div>
+      <div>
+        <input
+          id="Two-2"
+          name="Two"
+          type="checkbox"
+          value="2"
+        />
+        <label
+          class="css-16zyabg-CheckboxLabel"
+          for="Two-2"
+        >
+          Two
+        </label>
+      </div>
+      <div>
+        <input
+          id="Three-3"
+          name="Three"
+          type="checkbox"
+          value="3"
+        />
+        <label
+          class="css-16zyabg-CheckboxLabel"
+          for="Three-3"
+        >
+          Three
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</DocumentFragment>
+`;
+
+exports[`OptionsEditor numericCheckInline 1`] = `
+<DocumentFragment>
+  <fieldset
+    class="css-xhmj93-CheckboxFieldset"
+  >
+    <div
+      class="css-14k5yya-CheckboxesWrapper"
+    >
+      <div>
+        <input
+          checked=""
+          id="One-1"
+          name="One"
+          type="checkbox"
+          value="1"
+        />
+        <label
+          class="css-16zyabg-CheckboxLabel"
+          for="One-1"
+        >
+          One
+        </label>
+      </div>
+      <div>
+        <input
+          id="Two-2"
+          name="Two"
+          type="checkbox"
+          value="2"
+        />
+        <label
+          class="css-16zyabg-CheckboxLabel"
+          for="Two-2"
+        >
+          Two
+        </label>
+      </div>
+      <div>
+        <input
+          id="Three-3"
+          name="Three"
+          type="checkbox"
+          value="3"
+        />
+        <label
+          class="css-16zyabg-CheckboxLabel"
+          for="Three-3"
+        >
+          Three
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</DocumentFragment>
+`;
+
+exports[`OptionsEditor numericRadios 1`] = `
+<DocumentFragment>
+  <div
+    class="css-vurnku"
+  >
+    <div>
+      <input
+        checked=""
+        id="One-1"
+        name="prop"
+        type="radio"
+        value="1"
+      />
+      <label
+        class="css-hr46x5-RadioLabel"
+        for="One-1"
+      >
+        One
+      </label>
+    </div>
+    <div>
+      <input
+        id="Two-2"
+        name="prop"
+        type="radio"
+        value="2"
+      />
+      <label
+        class="css-hr46x5-RadioLabel"
+        for="Two-2"
+      >
+        Two
+      </label>
+    </div>
+    <div>
+      <input
+        id="Three-3"
+        name="prop"
+        type="radio"
+        value="3"
+      />
+      <label
+        class="css-hr46x5-RadioLabel"
+        for="Three-3"
+      >
+        Three
+      </label>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`OptionsEditor numericRadiosInline 1`] = `
+<DocumentFragment>
+  <div
+    class="css-3z2xr6-RadiosWrapper"
+  >
+    <div>
+      <input
+        checked=""
+        id="One-1"
+        name="prop"
+        type="radio"
+        value="1"
+      />
+      <label
+        class="css-hr46x5-RadioLabel"
+        for="One-1"
+      >
+        One
+      </label>
+    </div>
+    <div>
+      <input
+        id="Two-2"
+        name="prop"
+        type="radio"
+        value="2"
+      />
+      <label
+        class="css-hr46x5-RadioLabel"
+        for="Two-2"
+      >
+        Two
+      </label>
+    </div>
+    <div>
+      <input
+        id="Three-3"
+        name="prop"
+        type="radio"
+        value="3"
+      />
+      <label
+        class="css-hr46x5-RadioLabel"
+        for="Three-3"
+      >
+        Three
+      </label>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`OptionsEditor objects 1`] = `
+<DocumentFragment>
+  <div
+    class="css-4cffwv"
+  >
+    <select
+      class="css-wczjro-OptionsSelect"
+    >
+      <option
+        value="one"
+      >
+        One
+      </option>
+      <option
+        value="two"
+      >
+        Two
+      </option>
+      <option
+        value="three"
+      >
+        Three
+      </option>
+    </select>
+    <svg
+      class="css-1swud1q"
+      fill="currentcolor"
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7 10l5 5 5-5z"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`OptionsEditor objectsCheck 1`] = `
+<DocumentFragment>
+  <fieldset
+    class="css-xhmj93-CheckboxFieldset"
+  >
+    <div
+      class="css-vurnku"
+    >
+      <div>
+        <input
+          checked=""
+          id="One-one"
+          name="One"
+          type="checkbox"
+          value="one"
+        />
+        <label
+          class="css-16zyabg-CheckboxLabel"
+          for="One-one"
+        >
+          One
+        </label>
+      </div>
+      <div>
+        <input
+          id="Two-two"
+          name="Two"
+          type="checkbox"
+          value="two"
+        />
+        <label
+          class="css-16zyabg-CheckboxLabel"
+          for="Two-two"
+        >
+          Two
+        </label>
+      </div>
+      <div>
+        <input
+          id="Three-three"
+          name="Three"
+          type="checkbox"
+          value="three"
+        />
+        <label
+          class="css-16zyabg-CheckboxLabel"
+          for="Three-three"
+        >
+          Three
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</DocumentFragment>
+`;
+
+exports[`OptionsEditor objectsCheckInline 1`] = `
+<DocumentFragment>
+  <fieldset
+    class="css-xhmj93-CheckboxFieldset"
+  >
+    <div
+      class="css-14k5yya-CheckboxesWrapper"
+    >
+      <div>
+        <input
+          checked=""
+          id="One-one"
+          name="One"
+          type="checkbox"
+          value="one"
+        />
+        <label
+          class="css-16zyabg-CheckboxLabel"
+          for="One-one"
+        >
+          One
+        </label>
+      </div>
+      <div>
+        <input
+          id="Two-two"
+          name="Two"
+          type="checkbox"
+          value="two"
+        />
+        <label
+          class="css-16zyabg-CheckboxLabel"
+          for="Two-two"
+        >
+          Two
+        </label>
+      </div>
+      <div>
+        <input
+          id="Three-three"
+          name="Three"
+          type="checkbox"
+          value="three"
+        />
+        <label
+          class="css-16zyabg-CheckboxLabel"
+          for="Three-three"
+        >
+          Three
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</DocumentFragment>
+`;
+
+exports[`OptionsEditor objectsRadios 1`] = `
+<DocumentFragment>
+  <div
+    class="css-vurnku"
+  >
+    <div>
+      <input
+        checked=""
+        id="One-one"
+        name="prop"
+        type="radio"
+        value="one"
+      />
+      <label
+        class="css-hr46x5-RadioLabel"
+        for="One-one"
+      >
+        One
+      </label>
+    </div>
+    <div>
+      <input
+        id="Two-two"
+        name="prop"
+        type="radio"
+        value="two"
+      />
+      <label
+        class="css-hr46x5-RadioLabel"
+        for="Two-two"
+      >
+        Two
+      </label>
+    </div>
+    <div>
+      <input
+        id="Three-three"
+        name="prop"
+        type="radio"
+        value="three"
+      />
+      <label
+        class="css-hr46x5-RadioLabel"
+        for="Three-three"
+      >
+        Three
+      </label>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`OptionsEditor objectsRadiosInline 1`] = `
+<DocumentFragment>
+  <div
+    class="css-3z2xr6-RadiosWrapper"
+  >
+    <div>
+      <input
+        checked=""
+        id="One-one"
+        name="prop"
+        type="radio"
+        value="one"
+      />
+      <label
+        class="css-hr46x5-RadioLabel"
+        for="One-one"
+      >
+        One
+      </label>
+    </div>
+    <div>
+      <input
+        id="Two-two"
+        name="prop"
+        type="radio"
+        value="two"
+      />
+      <label
+        class="css-hr46x5-RadioLabel"
+        for="Two-two"
+      >
+        Two
+      </label>
+    </div>
+    <div>
+      <input
+        id="Three-three"
+        name="prop"
+        type="radio"
+        value="three"
+      />
+      <label
+        class="css-hr46x5-RadioLabel"
+        for="Three-three"
+      >
+        Three
+      </label>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`OptionsEditor overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-4cffwv"
+  >
+    <select
+      class="css-wczjro-OptionsSelect"
+    >
+      <option
+        value="one"
+      >
+        one
+      </option>
+      <option
+        value="two"
+      >
+        two
+      </option>
+      <option
+        value="three"
+      >
+        three
+      </option>
+    </select>
+    <svg
+      class="css-1swud1q"
+      fill="currentcolor"
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7 10l5 5 5-5z"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`OptionsEditor simpleCheck 1`] = `
+<DocumentFragment>
+  <fieldset
+    class="css-xhmj93-CheckboxFieldset"
+  >
+    <div
+      class="css-vurnku"
+    >
+      <div>
+        <input
+          checked=""
+          id="one-one"
+          name="one"
+          type="checkbox"
+          value="one"
+        />
+        <label
+          class="css-16zyabg-CheckboxLabel"
+          for="one-one"
+        >
+          one
+        </label>
+      </div>
+      <div>
+        <input
+          id="two-two"
+          name="two"
+          type="checkbox"
+          value="two"
+        />
+        <label
+          class="css-16zyabg-CheckboxLabel"
+          for="two-two"
+        >
+          two
+        </label>
+      </div>
+      <div>
+        <input
+          id="three-three"
+          name="three"
+          type="checkbox"
+          value="three"
+        />
+        <label
+          class="css-16zyabg-CheckboxLabel"
+          for="three-three"
+        >
+          three
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</DocumentFragment>
+`;
+
+exports[`OptionsEditor simpleCheckInline 1`] = `
+<DocumentFragment>
+  <fieldset
+    class="css-xhmj93-CheckboxFieldset"
+  >
+    <div
+      class="css-14k5yya-CheckboxesWrapper"
+    >
+      <div>
+        <input
+          checked=""
+          id="one-one"
+          name="one"
+          type="checkbox"
+          value="one"
+        />
+        <label
+          class="css-16zyabg-CheckboxLabel"
+          for="one-one"
+        >
+          one
+        </label>
+      </div>
+      <div>
+        <input
+          id="two-two"
+          name="two"
+          type="checkbox"
+          value="two"
+        />
+        <label
+          class="css-16zyabg-CheckboxLabel"
+          for="two-two"
+        >
+          two
+        </label>
+      </div>
+      <div>
+        <input
+          id="three-three"
+          name="three"
+          type="checkbox"
+          value="three"
+        />
+        <label
+          class="css-16zyabg-CheckboxLabel"
+          for="three-three"
+        >
+          three
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</DocumentFragment>
+`;
+
+exports[`OptionsEditor simpleRadios 1`] = `
+<DocumentFragment>
+  <div
+    class="css-vurnku"
+  >
+    <div>
+      <input
+        checked=""
+        id="one-one"
+        name="prop"
+        type="radio"
+        value="one"
+      />
+      <label
+        class="css-hr46x5-RadioLabel"
+        for="one-one"
+      >
+        one
+      </label>
+    </div>
+    <div>
+      <input
+        id="two-two"
+        name="prop"
+        type="radio"
+        value="two"
+      />
+      <label
+        class="css-hr46x5-RadioLabel"
+        for="two-two"
+      >
+        two
+      </label>
+    </div>
+    <div>
+      <input
+        id="three-three"
+        name="prop"
+        type="radio"
+        value="three"
+      />
+      <label
+        class="css-hr46x5-RadioLabel"
+        for="three-three"
+      >
+        three
+      </label>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`OptionsEditor simpleRadiosInline 1`] = `
+<DocumentFragment>
+  <div
+    class="css-3z2xr6-RadiosWrapper"
+  >
+    <div>
+      <input
+        checked=""
+        id="one-one"
+        name="prop"
+        type="radio"
+        value="one"
+      />
+      <label
+        class="css-hr46x5-RadioLabel"
+        for="one-one"
+      >
+        one
+      </label>
+    </div>
+    <div>
+      <input
+        id="two-two"
+        name="prop"
+        type="radio"
+        value="two"
+      />
+      <label
+        class="css-hr46x5-RadioLabel"
+        for="two-two"
+      >
+        two
+      </label>
+    </div>
+    <div>
+      <input
+        id="three-three"
+        name="prop"
+        type="radio"
+        value="three"
+      />
+      <label
+        class="css-hr46x5-RadioLabel"
+        for="three-three"
+      >
+        three
+      </label>
+    </div>
+  </div>
+</DocumentFragment>
+`;

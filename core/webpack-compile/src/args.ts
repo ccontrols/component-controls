@@ -1,5 +1,8 @@
 import path from 'path';
-import { defaultDistFolder } from '@component-controls/core/node-utils';
+import {
+  defaultDistFolder,
+  defaultConfigFolder,
+} from '@component-controls/core/node-utils';
 import yargs, { Options, Argv } from 'yargs';
 
 export interface CliArgTypes {
@@ -22,7 +25,7 @@ export const defaultCliArgs: ArgOptions = [
       alias: 'c',
       description: 'configuration folder',
       type: 'string',
-      default: '.config',
+      default: defaultConfigFolder,
     },
   },
   {
@@ -91,7 +94,7 @@ export const defaultCliArgs: ArgOptions = [
 ];
 
 export const cliArgs = (options: ArgOptions = []): Argv<CliArgTypes> => {
-  return [...defaultCliArgs, ...options].reduce(
+  return options.reduce(
     (acc, option) => acc.option(option.name, option.options),
     yargs(process.argv),
   ) as Argv<CliArgTypes>;

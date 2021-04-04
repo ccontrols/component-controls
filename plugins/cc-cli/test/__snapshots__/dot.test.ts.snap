@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dot library template 1`] = `
+"
+Core templating
+
+<h1>Just static text</h1>
+<p>Interpolation 4 </p>
+<div> JavaScript block evaluation
+
+<div>3</div>
+
+<div>3</div>
+
+</div>
+<div> Encoding &#60;a  href=&#34;http:&#47;&#47;github.com&#34;&#62;&#60;&#47;a&#62;</div>
+"
+`;

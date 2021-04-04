@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FishTankColor overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-342njo-FishTankColor"
+  >
+    <div
+      class="css-10l0wtq-FishTankColor"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-17dpkc6-FishTankColor"
+      >
+        <div>
+          $color-selected-darkest
+        </div>
+        <div
+          class="css-125zirl-FishTankColor"
+        >
+          #0A7DAF
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FishTankColor palette 1`] = `
+<DocumentFragment>
+  <div
+    class="css-a75irz-FishTankColorPalette"
+  >
+    <div
+      class="css-342njo-FishTankColor"
+    >
+      <div
+        class="css-10l0wtq-FishTankColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-n2kr0m-FishTankColor"
+        >
+          <div>
+            $color-highlight-1
+          </div>
+          <div
+            class="css-125zirl-FishTankColor"
+          >
+            #FFF8B0
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-342njo-FishTankColor"
+    >
+      <div
+        class="css-10l0wtq-FishTankColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-3qv04b-FishTankColor"
+        >
+          <div>
+            $color-highlight-2
+          </div>
+          <div
+            class="css-125zirl-FishTankColor"
+          >
+            #E3F7FF
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-342njo-FishTankColor"
+    >
+      <div
+        class="css-10l0wtq-FishTankColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-7q5pci-FishTankColor"
+        >
+          <div>
+            $color-highlight-3
+          </div>
+          <div
+            class="css-125zirl-FishTankColor"
+          >
+            #E0FFE0
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-342njo-FishTankColor"
+    >
+      <div
+        class="css-10l0wtq-FishTankColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-u6wdzn-FishTankColor"
+        >
+          <div>
+            $color-action
+          </div>
+          <div
+            class="css-125zirl-FishTankColor"
+          >
+            #3DA774
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-342njo-FishTankColor"
+    >
+      <div
+        class="css-10l0wtq-FishTankColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-g9kav8-FishTankColor"
+        >
+          <div>
+            $color-warning
+          </div>
+          <div
+            class="css-125zirl-FishTankColor"
+          >
+            #FFB511
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-342njo-FishTankColor"
+    >
+      <div
+        class="css-10l0wtq-FishTankColor"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-14ig1sy-FishTankColor"
+        >
+          <div>
+            $color-error
+          </div>
+          <div
+            class="css-125zirl-FishTankColor"
+          >
+            #E1483E
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

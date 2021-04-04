@@ -1,0 +1,68 @@
+{
+  "name": "@component-controls/jest-extract",
+  "version": "3.4.5",
+  "description": "Given a test file, extracts the tests, test results and coverage data",
+  "keywords": [
+    "jest",
+    "testing"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "yarn cross-env NODE_ENV=production rollup -c",
+    "dev": "yarn cross-env NODE_ENV=development rollup -cw",
+    "docs": "ts-md",
+    "fix": "yarn lint --fix",
+    "lint": "yarn eslint . --ext mdx,ts,tsx",
+    "prepare": "yarn build",
+    "test": "yarn jest"
+  },
+  "homepage": "https://github.com/ccontrols/component-controls",
+  "bugs": {
+    "url": "https://github.com/ccontrols/component-controls/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccontrols/component-controls.git",
+    "directory": "core/jest-extract"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@component-controls/core": "^3.4.2",
+    "jest-cli": "^26.4.2",
+    "babel-jest": "^26.4.4",
+    "ts-jest": "^26.4.4",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "@types/jest": "^26.0.10",
+    "@jest/reporters": "^26.0.10",
+    "@jest/test-result": "^26.0.10",
+    "@types/react-dom": "^16.9.8",
+    "react-dom": "^16.13.1",
+    "react-test-renderer": "^17.0.1",
+    "typescript": "^4.0.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": [
+    "Atanas Stoyanov"
+  ],
+  "jest": {
+    "testEnvironment": "node",
+    "preset": "ts-jest",
+    "roots": [
+      "./test/tests"
+    ]
+  },
+  "gitHead": "e30d62f101e104711a16261fce04785d58cac1eb"
+}

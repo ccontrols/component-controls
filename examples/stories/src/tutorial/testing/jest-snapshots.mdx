@@ -13,13 +13,13 @@ author: atanasster
 
 ## Overview
 
-The [jest-snapshots](https://github.com/ccontrols/component-controls/tree/master/plugins/jest-snapshots) package automatically creates snapshot tests for your component based on the already created documentation stories.
+The [cc-cli](https://github.com/ccontrols/component-controls/tree/master/plugins/cc-cli) package automatically creates snapshot tests for your components based on the already created documentation stories.
 
-3 levels from ease of use to full control:
+3 levels from easiest to maintain, to full control and adding custom tests:
 
-- Easy to use [cli](#cli) with "zero" configuration.
-- More advanced [custom tests](#custom-tests) level using compiler cli and jest cli.
-- Full control [cusom scripts](/blogs/custom-test-runners) to launch the compiler and jest.
+- `store`-level is one test file for all your stories.
+- `document`-level is one test file per documentation file and inside the stories' tests are dynamically created.
+- `story`-level is one test file per documentation file and inside the stories' tests are statically imported and created.
 
 Supports a variety of test renderers:
 
@@ -30,7 +30,7 @@ Supports a variety of test renderers:
 ## Install
 
 ```sh
-yarn add @component-controls/jest-snapshots --dev
+yarn add @component-controls/cc-cli --dev
 ```
 
 ## Examples
@@ -44,82 +44,338 @@ The starter projects are set up to demonstrate no-code jest snapshots:
 
 ## CLI
 
-The command-line interface for jest-snapshots allows for the quickest, zero-config setup. You can add a `test` script to your `package.json` file
+The command-line interface for cc-cli allows for the quickest, zero-config setup. You can add a `test:create` script to your `package.json` file and use it to automatically generate tests for your components based on the existing stories.
 
-Using this approach will generate a temporary test file in `tests/stories.test.js` that will be used by jest to generate the snapshots.
+quick start: the following command will generate a test file in `tests/stories.test.js` based on your component-controls configuration files in the `.config` folder.
 
 ```js:title=package.json
 "scripts": {
   ...
-  "test": "cc-jest"
+  "test:create": "cc-cli"
 },
 ```
 
 ### CLI Parameters
 
-All of the [compiler cli parameters](/tutorial/reference/cli#parameters) are valid and a few additional parameters can be used:
+| Parameter              | Explanation                                                 | Input type                  | Default value                  |
+| ---------------------- | ----------------------------------------------------------- | --------------------------- | ------------------------------ |
+| `--config`<br/>`-c`    | configuration files folder                                  | string                      | `.config`                      |
+| `--generate`<br/>`-g`  | generate test files for whole store or story/by story files | 'store' \| 'doc' \| 'story' | `store`                        |
+| `--renderer`<br/>`-r`  | jest framework renderer                                     | 'rtl' \| 'rtr' \| 'enzyme'  | `rtl`                          |
+| `--output`<br/>`-o`    | generated tests output folder                               | string                      | `tests`                        |
+| `--test`<br/>`-t`      | generated tests file name                                   | string                      | `stories.test.js`              |
+| `--format`<br/>`-f`    | generated test files format                                 | 'cjs' \| 'esm' \| 'ts'      | `cjs`                          |
+| `--overwrite`<br/>`-w` | force ovewrite existing test files                          | boolean                     | `false`                        |
+| `--bundle`<br/>`-b`    | bundle path, if store loaded from bundle                    | string                      |                                |
+| `--name`<br/>`-n`      | name of the test group/describe section                     | string                      | `component-controls generated` |
 
-| Parameter             | Explanation            | Input type                   | Default value |
-| --------------------- | ---------------------- | ---------------------------- | ------------- |
-| `--renderer`<br/>`-r` | jest framework rendere | 'react' \| 'rtr' \| 'enzyme' | `react`       |
-| `--test`<br/>`-t`     | tests output folder    | string                       | `tests`       |
+### Examples
 
-Additionally, all [jest cli parameters](https://jestjs.io/docs/en/cli) apply. If a `jest` parameter name conflicts with a `cc-jest` parameter (for example the `-c` config path parameter), you can prefix the `jest` parameter with `jest-` prefix
+**custom configuration folder**
 
 ```sh
-yarn cc-jest -c .storybook --coverage
+yarn cc-cli -c .storybook
 ```
 
-or
+**custom output folder**
 
 ```sh
-yarn cc-jest -c .storybook jest---coverage true
+yarn cc-cli -c .storybook -o testing
 ```
 
-## Custom tests
+**custom test renderer**
 
-Using this approach, you will create a custom test file and use directly jest to run your test suite. Before launching the jest tests, you will need to compile the stories using the [compiler cli](/tutorial/reference/cli)
-
-```js:title=stories.test.js
-const path = require('path');
-const { renderers } = require('@component-controls/jest-snapshots/renderers');
-const { runJestSnapshots } = require('@component-controls/jest-snapshots');
-
-runJestSnapshots(
-  renderers.enzyme,
-  path.resolve(process.cwd(), 'output', 'component-controls.js'),
-);
+```sh
+yarn cc-cli -r enzyme
 ```
 
-and in `package.json` configure a `test` script to compile the stories and then launch `jest` with the bundle in the `output` folder.
-
-```js:title=package.json
-  "scripts": {
-    ...
-    "test": "ccc -c .config -d output && yarn jest && rm -rf output"
-  },
+**custom test format (typescript)**
+```sh
+yarn cc-cli -f ts
 ```
 
-A full list of the [compiler cli parameters](/tutorial/reference/cli#parameters).
+# generate levels
 
-If the output folder is not specified, the bundle is located in the `public` folder
+## store
 
-```js:title=stories.test.js
-const { renderers } = require('@component-controls/jest-snapshots/renderers');
-const { runJestSnapshots } = require('@component-controls/jest-snapshots');
-
-runJestSnapshots(renderers.enzyme);
+```sh
+yarn cc-cli -g store -t component-controls.test.ts -f ts
 ```
 
-```js:title=package.json
-  "scripts": {
-    ...
-    "test": "ccc -c .config && yarn jest && rm -rf public"
-  },
+This will generate one single test file for all your documentation files. 
++ This approach is the easiest to maintain.
+- The tests are not associated with a specific component (and its documentation file).
+- The tests can not be extended with custom test conditions.
+
+<details>
+  <summary>test file source...</summary>
+
+```jsx:title=tests/component-controls.test.ts
+/* prettier-ignore-start */
+import path from 'path';
+import MatchMediaMock from 'jest-matchmedia-mock';
+import {
+  loadConfigurations,
+  extractDocuments,
+} from '@component-controls/config';
+import { renderExample } from '@component-controls/test-renderers';
+import { render as reactRender } from '@component-controls/render/react';
+import { render, act } from '@testing-library/react';
+
+const renderErr = () => {
+  throw new Error('Could not render the story');
+};
+
+describe('component-controls generated', () => {
+  let matchMedia: MatchMediaMock;
+  beforeAll(() => {
+    jest.mock('rc-util/lib/Portal');
+    matchMedia = new MatchMediaMock();
+  });
+  afterEach(() => {
+    matchMedia.clear();
+  });
+  const configPath = path.resolve(__dirname, '../.config');
+  const config = loadConfigurations(configPath);
+  if (!config.renderFn) {
+    config.renderFn = reactRender;
+  }
+  const documents = extractDocuments({ config, configPath });
+  if (documents) {
+    documents.forEach((file: string) => {
+      const exports = require(file);
+      const doc = exports.default;
+      const examples = Object.keys(exports)
+        .filter(key => key !== 'default')
+        .map(key => exports[key]);
+
+      if (examples.length) {
+        describe(doc.title, () => {
+          examples.forEach(example => {
+            it(example.name, async () => {
+              let rendered;
+              act(() => {
+                rendered = renderExample({
+                  example,
+                  doc,
+                  config,
+                });
+              });
+              if (!rendered) {
+                renderErr();
+                return;
+              }
+              const { asFragment } = render(rendered);
+              expect(asFragment()).toMatchSnapshot();
+            });
+          });
+        });
+      }
+    });
+  }
+});
+/* prettier-ignore-end */
+```
+</details>
+
+## document
+
+```sh
+yarn cc-cli -g doc -f ts -w
 ```
 
-## Custom scripts
+This will generate one test file per document, and inside will dynamically create tests for each story.
 
-Using this approach, you will have full control over the stories bundle to select which stories to test.
+- This approach is a bit harder to maintain - you will need to re-generate the tests when adding a new component or its documentation stories.
++ Each test file is associated with its corresponding component (and its documentation file).
+- The tests are difficult to extend with custom test conditions.
 
-A more detailed article on creating custom test scripts can be found [here](/blogs/custom-test-runners)
+
+<details>
+  <summary>test file source...</summary>
+
+```jsx:title=src/Header/Header.test.ts
+/* prettier-ignore-start */
+import path from 'path';
+import MatchMediaMock from 'jest-matchmedia-mock';
+import { loadConfigurations } from '@component-controls/config';
+import { renderDocument } from '@component-controls/test-renderers';
+import { render as reactRender } from '@component-controls/render/react';
+import { render, act } from '@testing-library/react';
+
+const renderErr = () => {
+  throw new Error('Could not render the story');
+};
+
+import * as examples from './Header.stories';
+
+describe('Header', () => {
+  let matchMedia: MatchMediaMock;
+  beforeAll(() => {
+    jest.mock('rc-util/lib/Portal');
+    matchMedia = new MatchMediaMock();
+  });
+  afterEach(() => {
+    matchMedia.clear();
+  });
+  const configPath = path.resolve(__dirname, '../../.config');
+  const config = loadConfigurations(configPath);
+  if (!config.renderFn) {
+    config.renderFn = reactRender;
+  }
+  let renderedExamples: ReturnType<typeof renderDocument> = [];
+  act(() => {
+    renderedExamples = renderDocument(examples, config);
+  });
+  if (!renderedExamples) {
+    renderErr();
+    return;
+  }
+  renderedExamples.forEach(({ name, rendered }) => {
+    it(name, async () => {
+      const { asFragment } = render(rendered);
+      expect(asFragment()).toMatchSnapshot();
+    });
+  });
+});
+/* prettier-ignore-end */
+```
+</details>
+
+## story
+
+```sh
+yarn cc-cli -g story -f ts -w
+```
+
+This will generate one test file per document, and inside will create static tests for each story. 
+
+-- This approach is the most difficult to maintain - you will need to re-generate the tests when adding a new component (or its documentation stories) and also when adding new stories to an existing documentation file.
++ Each test file is associated with its corresponding component (and its documentation file).
++ The tests can be extended with custom test conditions.
+
+This approach can lead to outdated test files (for example when you add a new story in an existing document - it will not be included in the tests).
+
+<details>
+  <summary>test file source...</summary>
+
+```jsx:title=src/Header/Header.test.ts
+/* prettier-ignore-start */
+import path from 'path';
+import MatchMediaMock from 'jest-matchmedia-mock';
+import { loadConfigurations } from '@component-controls/config';
+import { renderExample } from '@component-controls/test-renderers';
+import { render as reactRender } from '@component-controls/render/react';
+import { render, act } from '@testing-library/react';
+
+const renderErr = () => {
+  throw new Error('Could not render the story');
+};
+
+import doc, { overview } from './Header.stories';
+
+describe('Header', () => {
+  let matchMedia: MatchMediaMock;
+
+  beforeAll(() => {
+    jest.mock('rc-util/lib/Portal');
+    matchMedia = new MatchMediaMock();
+  });
+
+  afterEach(() => {
+    matchMedia.clear();
+  });
+
+  const configPath = path.resolve(__dirname, '.config');
+  const config = loadConfigurations(configPath);
+  
+  if (!config.renderFn) {
+    config.renderFn = reactRender;
+  }
+
+  test('overview', () => {
+    const example = overview;
+    let rendered;
+    act(() => {
+      rendered = renderExample({
+        example,
+        doc,
+        config,
+      });
+    });
+    if (!rendered) {
+      renderErr();
+      return;
+    }
+    const { asFragment } = render(rendered);
+    expect(asFragment()).toMatchSnapshot();
+  });
+});
+/* prettier-ignore-end */
+```
+</details>
+
+
+Here is an example of extending a test with some custom test conditions (removed to automatically generated snapshot test and replaced with a test for the label content and background style):
+
+<details>
+  <summary>test file source...</summary>
+
+```jsx:title=src/VariantButton/VariantButton.test.ts
+/* prettier-ignore-start */
+import path from 'path';
+import MatchMediaMock from 'jest-matchmedia-mock';
+import { loadConfigurations } from '@component-controls/config';
+import { renderExample } from '@component-controls/test-renderers';
+import { render as reactRender } from '@component-controls/render/react';
+import { render, act } from '@testing-library/react';
+
+const renderErr = () => {
+  throw new Error('Could not render the story');
+};
+
+import doc, { primary } from './VariantButton.stories';
+
+describe('VariantVutton', () => {
+  let matchMedia: MatchMediaMock;
+
+  beforeAll(() => {
+    jest.mock('rc-util/lib/Portal');
+    matchMedia = new MatchMediaMock();
+  });
+
+  afterEach(() => {
+    matchMedia.clear();
+  });
+
+  const configPath = path.resolve(__dirname, '.config');
+  const config = loadConfigurations(configPath);
+  
+  if (!config.renderFn) {
+    config.renderFn = reactRender;
+  }
+
+  test('primary', () => {
+    const example = overview;
+    let rendered;
+    act(() => {
+      rendered = renderExample({
+        example,
+        doc,
+        config,
+      });
+    });
+    if (!rendered) {
+      renderErr();
+      return;
+    }
+    const { getByTestId, container } = render(rendered);
+    // expect(asFragment()).toMatchSnapshot(); - remove auto-snapshots
+    // add specific custom tests for a label and a style
+    expect(getByTestId('label')).toHaveTextContent('Primary');
+    expect(container.children[0]).toHaveStyle('background: lightgrey');
+  });
+});
+/* prettier-ignore-end */
+```
+</details>

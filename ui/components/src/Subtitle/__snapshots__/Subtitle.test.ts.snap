@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Subtitle overview 1`] = `
+<DocumentFragment>
+  <h2
+    class="css-1uqrmoi"
+  >
+    Subtitle text
+  </h2>
+</DocumentFragment>
+`;

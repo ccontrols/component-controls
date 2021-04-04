@@ -165,6 +165,11 @@ export interface ComponentOptions {
   fileInfo?: boolean;
 
   /**
+   * If set to false, will not collect test data
+   */
+  tests?: boolean;
+
+  /**
    * options for extracting repository information from the component's package,json file
    */
   package?: PackageInfoOptions | false;

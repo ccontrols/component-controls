@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer overview 1`] = `
+<DocumentFragment>
+  <footer
+    class="css-gtql5a"
+  >
+    <div
+      class="css-vurnku"
+    >
+      <div
+        class="css-f5h6sg"
+      >
+        <div
+          class="css-1rw838x"
+        >
+          <span
+            class="css-vurnku"
+          >
+            Copyright © 2021 by @component-controls
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-vurnku"
+    >
+      <div
+        class="css-f5h6sg"
+      >
+        <div
+          class="css-1rw838x"
+        >
+          <a
+            aria-label="visit project home page"
+            class="css-1t54e2w"
+            href="/"
+          >
+            Component controls
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</DocumentFragment>
+`;

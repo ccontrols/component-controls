@@ -1,0 +1,534 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BackpackColor hsl 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1irte6g-BackpackColor"
+  >
+    <div
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-1x62ady-BackpackColor"
+      >
+        <div
+          class="css-19uneko-BackpackColor"
+        >
+          <div
+            class="css-15w5pcs-BackpackColor"
+          >
+            accent 
+          </div>
+          <div
+            class="css-j8uzyi-BackpackColor"
+          >
+            <div>
+              <div>
+                RGB 140, 120, 115
+              </div>
+              <div>
+                HEX #8c7873
+              </div>
+              <div>
+                CMYK: 0, 14, 18, 45
+              </div>
+              <div
+                class="css-1e7g9tr-BackpackColor"
+              >
+                PMS 409C
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`BackpackColor hsla 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1irte6g-BackpackColor"
+  >
+    <div
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-10kr13t-BackpackColor"
+      >
+        <div
+          class="css-19uneko-BackpackColor"
+        >
+          <div
+            class="css-15w5pcs-BackpackColor"
+          >
+            accent 
+          </div>
+          <div
+            class="css-j8uzyi-BackpackColor"
+          >
+            <div>
+              <div>
+                RGB 140, 120, 115
+              </div>
+              <div>
+                HEX #8c7873
+              </div>
+              <div>
+                CMYK: 0, 14, 18, 45
+              </div>
+              <div
+                class="css-1e7g9tr-BackpackColor"
+              >
+                PMS 409C
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`BackpackColor name 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1irte6g-BackpackColor"
+  >
+    <div
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-ia7qd9-BackpackColor"
+      >
+        <div
+          class="css-19uneko-BackpackColor"
+        >
+          <div
+            class="css-15w5pcs-BackpackColor"
+          >
+            Critical brand
+          </div>
+          <div
+            class="css-j8uzyi-BackpackColor"
+          >
+            <div>
+              <div>
+                RGB 249, 77, 50
+              </div>
+              <div>
+                HEX #f94d32
+              </div>
+              <div>
+                CMYK: 0, 69, 80, 2
+              </div>
+              <div
+                class="css-1e7g9tr-BackpackColor"
+              >
+                PMS 171C
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`BackpackColor overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1irte6g-BackpackColor"
+  >
+    <div
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-l1b4xb-BackpackColor"
+      >
+        <div
+          class="css-19uneko-BackpackColor"
+        >
+          <div
+            class="css-43j4ge-BackpackColor"
+          />
+          <div
+            class="css-15w5pcs-BackpackColor"
+          >
+            Brand 
+          </div>
+          <div
+            class="css-j8uzyi-BackpackColor"
+          >
+            <div>
+              <div>
+                light: Blue400
+              </div>
+              <div>
+                dark: Blue800
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`BackpackColor palette 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1mhhg7b"
+  >
+    <div
+      class="css-1irte6g-BackpackColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1scqe0m-BackpackColor"
+        >
+          <div
+            class="css-19uneko-BackpackColor"
+          >
+            <div
+              class="css-15w5pcs-BackpackColor"
+            >
+              Poppy surprise R300
+            </div>
+            <div
+              class="css-j8uzyi-BackpackColor"
+            >
+              <div>
+                <div>
+                  RGB 255, 86, 48
+                </div>
+                <div>
+                  HEX #ff5630
+                </div>
+                <div>
+                  CMYK: 0, 66, 81, 0
+                </div>
+                <div
+                  class="css-1e7g9tr-BackpackColor"
+                >
+                  PMS 171C
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1irte6g-BackpackColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-17wkblc-BackpackColor"
+        >
+          <div
+            class="css-19uneko-BackpackColor"
+          >
+            <div
+              class="css-15w5pcs-BackpackColor"
+            >
+              Golden state Y300
+            </div>
+            <div
+              class="css-j8uzyi-BackpackColor"
+            >
+              <div>
+                <div>
+                  RGB 255, 171, 0
+                </div>
+                <div>
+                  HEX #ffab00
+                </div>
+                <div>
+                  CMYK: 0, 33, 100, 0
+                </div>
+                <div
+                  class="css-1e7g9tr-BackpackColor"
+                >
+                  PMS 137C
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1irte6g-BackpackColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-14ztj62-BackpackColor"
+        >
+          <div
+            class="css-19uneko-BackpackColor"
+          >
+            <div
+              class="css-15w5pcs-BackpackColor"
+            >
+              Fine pine G300
+            </div>
+            <div
+              class="css-j8uzyi-BackpackColor"
+            >
+              <div>
+                <div>
+                  RGB 54, 179, 126
+                </div>
+                <div>
+                  HEX #36b37e
+                </div>
+                <div>
+                  CMYK: 70, 0, 30, 30
+                </div>
+                <div
+                  class="css-1e7g9tr-BackpackColor"
+                >
+                  PMS 339C
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1irte6g-BackpackColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-2n6ijs-BackpackColor"
+        >
+          <div
+            class="css-19uneko-BackpackColor"
+          >
+            <div
+              class="css-jfaaad-BackpackColor"
+            />
+            <div
+              class="css-15w5pcs-BackpackColor"
+            >
+              Tamarama 
+            </div>
+            <div
+              class="css-j8uzyi-BackpackColor"
+            >
+              <div>
+                <div>
+                  light: T300
+                </div>
+                <div>
+                  dark: #084eb2
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1irte6g-BackpackColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-1ua17l1-BackpackColor"
+        >
+          <div
+            class="css-19uneko-BackpackColor"
+          >
+            <div
+              class="css-15w5pcs-BackpackColor"
+            >
+              Da' juice P300
+            </div>
+            <div
+              class="css-j8uzyi-BackpackColor"
+            >
+              <div>
+                <div>
+                  RGB 101, 84, 192
+                </div>
+                <div>
+                  HEX #6554c0
+                </div>
+                <div>
+                  CMYK: 47, 56, 0, 25
+                </div>
+                <div
+                  class="css-1e7g9tr-BackpackColor"
+                >
+                  PMS 2725C
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1irte6g-BackpackColor"
+    >
+      <div
+        class="css-6bf4yd-CopyContainer"
+        style="display: inline-block;"
+      >
+        <div
+          class="css-ia7qd9-BackpackColor"
+        >
+          <div
+            class="css-19uneko-BackpackColor"
+          >
+            <div
+              class="css-15w5pcs-BackpackColor"
+            >
+              Critical Red400
+            </div>
+            <div
+              class="css-j8uzyi-BackpackColor"
+            >
+              <div>
+                <div>
+                  RGB 249, 77, 50
+                </div>
+                <div>
+                  HEX #f94d32
+                </div>
+                <div>
+                  CMYK: 0, 69, 80, 2
+                </div>
+                <div
+                  class="css-1e7g9tr-BackpackColor"
+                >
+                  PMS 171C
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`BackpackColor rgb 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1irte6g-BackpackColor"
+  >
+    <div
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-1q0vf7j-BackpackColor"
+      >
+        <div
+          class="css-19uneko-BackpackColor"
+        >
+          <div
+            class="css-15w5pcs-BackpackColor"
+          >
+            text 
+          </div>
+          <div
+            class="css-j8uzyi-BackpackColor"
+          >
+            <div>
+              <div>
+                RGB 0, 0, 0
+              </div>
+              <div>
+                HEX #000000
+              </div>
+              <div>
+                CMYK: 0, 0, 0, 100
+              </div>
+              <div
+                class="css-1e7g9tr-BackpackColor"
+              >
+                PMS 419C
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`BackpackColor rgba 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1irte6g-BackpackColor"
+  >
+    <div
+      class="css-6bf4yd-CopyContainer"
+      style="display: inline-block;"
+    >
+      <div
+        class="css-k62wz8-BackpackColor"
+      >
+        <div
+          class="css-19uneko-BackpackColor"
+        >
+          <div
+            class="css-15w5pcs-BackpackColor"
+          >
+            shadow 
+          </div>
+          <div
+            class="css-j8uzyi-BackpackColor"
+          >
+            <div>
+              <div>
+                RGB 0, 0, 0, 0.1
+              </div>
+              <div>
+                HEX #000000
+              </div>
+              <div>
+                CMYK: 0, 0, 0, 100
+              </div>
+              <div
+                class="css-1e7g9tr-BackpackColor"
+              >
+                PMS 419C
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

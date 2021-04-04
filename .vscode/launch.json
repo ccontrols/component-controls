@@ -84,7 +84,7 @@
       "name": "jest config",
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "cwd": "${workspaceFolder}/core/config",
-      "args": ["stories"],
+      "args": ["config"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "disableOptimisticBPs": true,
@@ -176,13 +176,56 @@
         "program": "${workspaceFolder}/node_modules/jest/bin/jest"
       }
     },
+
     {
       "type": "node",
       "request": "launch",
-      "name": "jest jest-addon",
+      "name": "jest extract",
       "program": "${workspaceFolder}/node_modules/.bin/jest",
-      "cwd": "${workspaceFolder}/plugins/jest-snapshots",
-      "args": ["stories"],
+      "cwd": "${workspaceFolder}/core/jest-extract",
+      "args": ["react-link"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "windows": {
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "test renderers",
+      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      "cwd": "${workspaceFolder}/plugins/test-renderers",
+      "args": ["rtr-story"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "windows": {
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "jest cc-cli",
+      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      "cwd": "${workspaceFolder}/plugins/cc-cli",
+      "args": ["story-enzyme-esm"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "windows": {
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "jest components",
+      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      "cwd": "${workspaceFolder}/ui/components",
+      "args": [""],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "disableOptimisticBPs": true,

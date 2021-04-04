@@ -96,7 +96,7 @@ export interface VariantButtonProps {
   /**
    * padding variants
    */
-  padding: SizeVariants;
+  padding?: SizeVariants;
 
   /**
    * boolean switch for primary variant

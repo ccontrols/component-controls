@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DocumentsList overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-vurnku"
+  >
+    <div
+      class="css-18xaazt"
+    >
+      <label
+        class="css-okr6fe"
+        for="sortorder"
+      >
+        Sort by:
+      </label>
+      <div
+        class="css-4cffwv"
+      >
+        <select
+          class="css-1lmm0mo"
+          name="sortorder"
+        >
+          <option
+            value="date"
+          >
+            By date created
+          </option>
+          <option
+            value="dateModified"
+          >
+            By last updated
+          </option>
+          <option
+            value="title"
+          >
+            By title
+          </option>
+        </select>
+        <svg
+          class="css-1swud1q"
+          fill="currentcolor"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+    </div>
+    <ul
+      class="css-da1yre"
+    />
+  </div>
+</DocumentFragment>
+`;

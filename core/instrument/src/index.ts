@@ -1,3 +1,4 @@
+import fs from 'fs';
 import mdx from '@mdx-js/mdx';
 import matter from 'gray-matter';
 import { File } from '@babel/types';
@@ -39,6 +40,7 @@ import {
 export * from './types';
 export { getComponentProps } from './misc/props-info';
 export { getFileIinfo } from './misc/file-info';
+export { prettify };
 
 type TraverseFn = (
   ast: File,
@@ -61,7 +63,7 @@ const parseSource = async (
   filePath: string,
   options: Required<InstrumentOptions>,
 ): Promise<ParseStorieReturnType | undefined> => {
-  const source = await prettify(code, options.prettier, filePath);
+  const source = prettify(code, options.prettier, filePath);
   const { ast } = parseFile(filePath, options.parser, source);
 
   const store = traverseFn(ast, options, { source, filePath });
@@ -122,10 +124,11 @@ export type ParseStoriesReturnType = { transformed: string } & Partial<
  */
 
 export const parseStories = async (
-  source: string,
   filePath: string,
+  fileSource?: string,
   options?: InstrumentOptions,
 ): Promise<ParseStoriesReturnType> => {
+  const source = fileSource || fs.readFileSync(filePath, 'utf8');
   const {
     parser: parserOptions = {},
     prettier: prettierOptions = {},

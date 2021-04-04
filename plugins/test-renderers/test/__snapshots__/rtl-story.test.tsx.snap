@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VariantButton disabled 1`] = `
+<DocumentFragment>
+  <div
+    style="background: lightblue;"
+  >
+    <button
+      disabled=""
+      style="color: rgb(130, 130, 130); background-color: rgb(224, 224, 224); border-radius: 8px; border: 1px solid #000000; display: flex; align-items: center;"
+    >
+      <div
+        data-testid="label"
+        style="padding: 0px 10px;"
+      >
+        Disabled
+      </div>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`VariantButton primary 1`] = `
+<DocumentFragment>
+  <div
+    style="background: lightblue;"
+  >
+    <button
+      style="color: rgb(242, 242, 242); background-color: rgb(47, 128, 237); border-radius: 8px; border: 1px solid #000000; display: flex; align-items: center;"
+    >
+      <div
+        data-testid="label"
+        style="padding: 0px 10px;"
+      >
+        Primary
+      </div>
+    </button>
+  </div>
+</DocumentFragment>
+`;

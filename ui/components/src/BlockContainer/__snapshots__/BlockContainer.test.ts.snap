@@ -1,0 +1,423 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlockContainer customId 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id="custom-id"
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <a
+          class="css-walqom-LinkHeading"
+          data-id="custom-id"
+          data-level="3"
+          data-title="BlockContainer"
+          href="http://localhost/#custom-id"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="18"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h3
+          class="css-16ist9v-BlockContainer"
+        >
+          <div
+            class="css-tmrrvx"
+          >
+            BlockContainer
+            <a
+              aria-label="Collapse this block"
+              class="css-1t48u3b-BlockContainer"
+            >
+              <span
+                class="css-1ibxxpj"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="css-1d6wxci"
+        >
+          <svg
+            aria-valuemax="1"
+            aria-valuemin="0"
+            aria-valuenow="0.5"
+            class="css-14d2907"
+            fill="none"
+            height="128"
+            role="img"
+            stroke="currentcolor"
+            stroke-width="2"
+            viewBox="0 0 32 32"
+            width="128"
+          >
+            <circle
+              cx="16"
+              cy="16"
+              opacity="0.125"
+              r="14"
+            />
+            <circle
+              cx="16"
+              cy="16"
+              r="14"
+              stroke-dasharray="87.96459430051421"
+              stroke-dashoffset="43.982297150257104"
+              transform="rotate(-90 16 16)"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`BlockContainer description 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-16ist9v-BlockContainer"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="css-jxxswp"
+        id="h3-title"
+      >
+        <div
+          class="css-xhp9da"
+        >
+          <a
+            class="css-walqom-LinkHeading"
+            data-id="h3-title"
+            data-level="3"
+            data-title="H3 title"
+            href="http://localhost/#h3-title"
+          >
+            <svg
+              aria-hidden="true"
+              class="octicon"
+              fill="currentColor"
+              height="18"
+              role="img"
+              style="display: inline-block; user-select: none; vertical-align: middle;"
+              viewBox="0 0 16 16"
+              width="18"
+            >
+              <path
+                d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </a>
+          <h3
+            class="css-1xpnkao"
+          >
+            H3 title
+          </h3>
+        </div>
+      </div>
+      <p
+        class="css-p7s6cm"
+      >
+        <em>
+          Markdown
+        </em>
+      </p>
+      <p
+        class="css-p7s6cm"
+      >
+        <a
+          href="https://www.google.com"
+        >
+          google
+        </a>
+      </p>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="css-1d6wxci"
+        >
+          <svg
+            aria-valuemax="1"
+            aria-valuemin="0"
+            aria-valuenow="0.5"
+            class="css-14d2907"
+            fill="none"
+            height="128"
+            role="img"
+            stroke="currentcolor"
+            stroke-width="2"
+            viewBox="0 0 32 32"
+            width="128"
+          >
+            <circle
+              cx="16"
+              cy="16"
+              opacity="0.125"
+              r="14"
+            />
+            <circle
+              cx="16"
+              cy="16"
+              r="14"
+              stroke-dasharray="87.96459430051421"
+              stroke-dashoffset="43.982297150257104"
+              transform="rotate(-90 16 16)"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`BlockContainer notCollapsible 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id="blockcontainer"
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <a
+          class="css-1ptrway-LinkHeading"
+          data-id="blockcontainer"
+          data-level="4"
+          data-title="BlockContainer"
+          href="http://localhost/#blockcontainer"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="16"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h4
+          class="css-vsfm4-BlockContainer"
+        >
+          BlockContainer
+        </h4>
+      </div>
+    </div>
+    <div
+      class="css-1d6wxci"
+    >
+      <svg
+        aria-valuemax="1"
+        aria-valuemin="0"
+        aria-valuenow="0.5"
+        class="css-14d2907"
+        fill="none"
+        height="128"
+        role="img"
+        stroke="currentcolor"
+        stroke-width="2"
+        viewBox="0 0 32 32"
+        width="128"
+      >
+        <circle
+          cx="16"
+          cy="16"
+          opacity="0.125"
+          r="14"
+        />
+        <circle
+          cx="16"
+          cy="16"
+          r="14"
+          stroke-dasharray="87.96459430051421"
+          stroke-dashoffset="43.982297150257104"
+          transform="rotate(-90 16 16)"
+        />
+      </svg>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`BlockContainer overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id="block-title"
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <a
+          class="css-walqom-LinkHeading"
+          data-id="block-title"
+          data-level="3"
+          data-title="Block title"
+          href="http://localhost/#block-title"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="18"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h3
+          class="css-16ist9v-BlockContainer"
+        >
+          <div
+            class="css-tmrrvx"
+          >
+            Block title
+            <a
+              aria-label="Collapse this block"
+              class="css-1t48u3b-BlockContainer"
+            >
+              <span
+                class="css-1ibxxpj"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="css-1d6wxci"
+        >
+          <svg
+            aria-valuemax="1"
+            aria-valuemin="0"
+            aria-valuenow="0.5"
+            class="css-14d2907"
+            fill="none"
+            height="128"
+            role="img"
+            stroke="currentcolor"
+            stroke-width="2"
+            viewBox="0 0 32 32"
+            width="128"
+          >
+            <circle
+              cx="16"
+              cy="16"
+              opacity="0.125"
+              r="14"
+            />
+            <circle
+              cx="16"
+              cy="16"
+              r="14"
+              stroke-dasharray="87.96459430051421"
+              stroke-dashoffset="43.982297150257104"
+              transform="rotate(-90 16 16)"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

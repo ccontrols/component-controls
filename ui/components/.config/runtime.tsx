@@ -1,4 +1,5 @@
 import React from 'react';
+import { RunConfiguration } from '@component-controls/core'
 import { ThemeProvider } from '../src/ThemeContext/ThemeContext'
 export default {
   decorators: [
@@ -11,4 +12,4 @@ export default {
     );
   },
   ]
-}
+} as RunConfiguration;
