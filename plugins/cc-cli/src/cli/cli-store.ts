@@ -12,11 +12,13 @@ export const cliStore = async (options: CliOptions): Promise<void> => {
     format = 'cjs',
     overwrite,
     config,
-    test = 'stories.test.js',
+    test: userTest,
     bundle,
     name = 'component-controls generated',
     output = 'tests',
   } = options;
+  const test =
+    userTest || `component-controls.test.${format === 'ts' ? 'ts' : 'js'}`;
   return await saveTemplate(
     {
       renderer,
