@@ -6,6 +6,7 @@ const MatchMediaMock = require('jest-matchmedia-mock').default;
 const {
   loadConfigurations,
   extractDocuments,
+  isMDXDocument,
 } = require('@component-controls/config');
 const { renderExample } = require('@component-controls/test-renderers');
 const { render: reactRender } = require('@component-controls/render/react');
@@ -35,40 +36,42 @@ describe('component-controls generated', () => {
   }
   const documents = extractDocuments({ config, configPath });
   if (documents) {
-    documents.forEach(file => {
-      const exports = require(file);
-      const doc = exports.default;
-      const examples = Object.keys(exports)
-        .filter(key => key !== 'default')
-        .map(key => exports[key]);
+    documents
+      .filter(file => !isMDXDocument(file, config.instrument))
+      .forEach(file => {
+        const exports = require(file);
+        const doc = exports.default;
+        const examples = Object.keys(exports)
+          .filter(key => key !== 'default')
+          .map(key => exports[key]);
 
-      if (examples.length) {
-        describe(doc.title, () => {
-          examples.forEach(example => {
-            it(example.name, async () => {
-              let rendered;
-              act(() => {
-                rendered = renderExample({
-                  example,
-                  doc,
-                  config,
+        if (examples.length) {
+          describe(doc.title, () => {
+            examples.forEach(example => {
+              it(example.name, async () => {
+                let rendered;
+                act(() => {
+                  rendered = renderExample({
+                    example,
+                    doc,
+                    config,
+                  });
                 });
+                if (!rendered) {
+                  renderErr();
+                  return;
+                }
+                const component = renderer.create(rendered);
+                if (!component) {
+                  componentErr();
+                  return;
+                }
+                expect(component.toJSON()).toMatchSnapshot();
               });
-              if (!rendered) {
-                renderErr();
-                return;
-              }
-              const component = renderer.create(rendered);
-              if (!component) {
-                componentErr();
-                return;
-              }
-              expect(component.toJSON()).toMatchSnapshot();
             });
           });
-        });
-      }
-    });
+        }
+      });
   }
 });
 "

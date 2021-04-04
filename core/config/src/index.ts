@@ -14,6 +14,10 @@ import {
   defaultRunConfig,
   convertConfig,
 } from '@component-controls/core';
+import {
+  defaultMDXOptions,
+  InstrumentOptions,
+} from '@component-controls/instrument';
 
 export const buildConfigFileNames = [
   'buildtime.js',
@@ -137,6 +141,16 @@ export const extractDocuments = ({
   return documents;
 };
 
+export const isMDXDocument = (
+  filePath: string,
+  options?: InstrumentOptions,
+): boolean => {
+  const test = options?.mdx?.test || defaultMDXOptions.test;
+  if (test) {
+    return filePath.match(test) !== null;
+  }
+  return false;
+};
 /**
  * from the glob list of documents, extract require.context array of props
  */

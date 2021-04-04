@@ -1,6 +1,6 @@
   const documents = extractDocuments({ config, configPath });
   if (documents) {
-    documents.forEach(file => {
+    documents.filter(file => !isMDXDocument(file, config.instrument)).forEach(file => {
       const exports = require(file);
       const doc = exports.default;
       const examples = Object.keys(exports)

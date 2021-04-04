@@ -81,6 +81,24 @@ yarn add enzyme enzyme-to-json @wojtekmaj/enzyme-adapter-react-17 @types/enzyme 
 yarn add react-test-renderer @types/react-test-renderer --dev
 ```
 
+### custom jest loaders
+
+If you are using images, css files etc - you might need to add some custom transforms for your jest tests
+
+```js:title=package.json
+  ...
+  "jest": {
+    "transform": {
+      ...
+      ".+\\.(jpg|jpeg|png|gif|svg)$": "jest-url-loader",
+      ".+\\.(css|styl|less|sass|scss)$": "jest-transform-css"
+    }
+  }
+}
+```    
+
+
+
 ## Examples
 
 The starter projects are set up to demonstrate no-code jest snapshots:
