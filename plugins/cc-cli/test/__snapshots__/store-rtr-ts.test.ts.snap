@@ -12,10 +12,10 @@ import { renderExample } from '@component-controls/test-renderers';
 import { render as reactRender } from '@component-controls/render/react';
 import renderer, { act } from 'react-test-renderer';
 
-const renderErr = () => {
+const renderErr = (): void => {
   throw new Error('Could not render the story');
 };
-const componentErr = () => {
+const componentErr = (): void => {
   throw new Error('Error rendering component with react-test-renderer');
 };
 
@@ -38,6 +38,7 @@ describe('component-controls generated', () => {
     documents
       .filter((file: string) => !isMDXDocument(file, config.instrument))
       .forEach((file: string) => {
+        // eslint-disable-next-line @typescript-eslint/no-var-requires, global-require, import/no-dynamic-require
         const exports = require(file);
         const doc = exports.default;
         const examples = Object.keys(exports)
