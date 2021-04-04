@@ -1,9 +1,12 @@
 {
-  "name": "@component-controls/jest-testing",
+  "name": "@component-controls/test-renderers",
   "version": "3.4.5",
-  "description": "Given a test file, extracts the tests, test results and coverage data",
+  "description": "React test renderers: rtl, rtr and enzyme",
   "keywords": [
-    "jest",
+    "react",
+    "react-testing-library",
+    "react-test-renderer",
+    "enzyme",
     "testing"
   ],
   "main": "dist/index.js",
@@ -30,25 +33,18 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ccontrols/component-controls.git",
-    "directory": "core/jest-testing"
+    "directory": "plugins/test-renderers"
   },
   "license": "MIT",
   "dependencies": {
+    "@component-controls/config": "^3.4.2",
     "@component-controls/core": "^3.4.2",
-    "jest-cli": "^26.4.2",
-    "babel-jest": "^26.4.4",
-    "ts-jest": "^26.4.4",
-    "path": "^0.12.7"
+    "@component-controls/render": "^3.4.2",
+    "jest": "^26.4.2",
+    "path": "^0.12.7",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.13.10",
-    "@babel/preset-react": "^7.12.13",
-    "@types/jest": "^26.0.10",
-    "@jest/reporters": "^26.0.10",
-    "@jest/test-result": "^26.0.10",
-    "@types/react-dom": "^16.9.8",
-    "react-dom": "^16.13.1",
-    "react-test-renderer": "^17.0.1",
     "typescript": "^4.0.5"
   },
   "publishConfig": {
@@ -58,10 +54,9 @@
     "Atanas Stoyanov"
   ],
   "jest": {
-    "testEnvironment": "node",
     "preset": "ts-jest",
     "roots": [
-      "./test/tests"
+      "./test"
     ]
   },
   "gitHead": "e30d62f101e104711a16261fce04785d58cac1eb"
