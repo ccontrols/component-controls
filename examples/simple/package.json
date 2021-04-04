@@ -2,7 +2,7 @@
   "name": "component-controls-simple",
   "description": "component-controls example with css styles",
   "private": true,
-  "version": "3.4.5",
+  "version": "3.5.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -14,9 +14,9 @@
     "build-webpack": "rm -rf public && webpack --config webpack.prod.config.ts --progress"
   },
   "dependencies": {
-    "@component-controls/gatsby-theme-stories": "^3.4.5",
-    "@component-controls/nextjs-plugin": "^3.4.5",
-    "@component-controls/react-router-integration": "^3.4.5",
+    "@component-controls/gatsby-theme-stories": "^3.5.0",
+    "@component-controls/nextjs-plugin": "^3.5.0",
+    "@component-controls/react-router-integration": "^3.5.0",
     "gatsby": "^3.0.0",
     "next": "^10.0.7",
     "react": "^17.0.1",

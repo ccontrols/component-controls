@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/addon-images",
-  "version": "3.4.5",
+  "version": "3.5.0",
   "description": "Embed images in your documentation sites",
   "keywords": [
     "figma",
@@ -37,12 +37,12 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/blocks": "^3.4.5",
-    "@component-controls/components": "^3.4.5",
-    "@component-controls/store": "^3.4.5"
+    "@component-controls/blocks": "^3.5.0",
+    "@component-controls/components": "^3.5.0",
+    "@component-controls/store": "^3.5.0"
   },
   "devDependencies": {
-    "@component-controls/cc-cli": "^3.4.5",
+    "@component-controls/cc-cli": "^3.5.0",
     "@types/react": "^16.9.34",
     "jest-url-loader": "^0.1.0",
     "react": "^17.0.1",

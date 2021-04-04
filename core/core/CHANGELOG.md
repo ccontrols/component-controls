@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://github.com/ccontrols/component-controls/compare/v3.4.5...v3.5.0) (2021-04-04)
+
+
+### Features
+
+* generate tests by document ([ad2f26f](https://github.com/ccontrols/component-controls/commit/ad2f26ff9fa3bb77a03ee6fab84520b24780ee52))
+* merge control values on render ([09d5f92](https://github.com/ccontrols/component-controls/commit/09d5f9243a7c56ddb4ed9cc85c0378b48243d6af))
+* renderExample with selected test framework ([7b1c2fd](https://github.com/ccontrols/component-controls/commit/7b1c2fdb0589b2e1c2cfb21474364e00598d4f7b))
+
+
+
+
+
 ## [3.4.2](https://github.com/ccontrols/component-controls/compare/v3.4.1...v3.4.2) (2021-03-14)
 
 **Note:** Version bump only for package @component-controls/core

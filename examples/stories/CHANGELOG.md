@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://github.com/ccontrols/component-controls/compare/v3.4.5...v3.5.0) (2021-04-04)
+
+
+### Bug Fixes
+
+* datetime error ([28b7430](https://github.com/ccontrols/component-controls/commit/28b74303decaf93cc92438144f7fd22a56a61fd7))
+* ssr render svg color mode ([abe5074](https://github.com/ccontrols/component-controls/commit/abe5074ae7525b937028e730adc2cb679745bdb5))
+
+
+### Features
+
+* cc-cli templating engine ([771a5fd](https://github.com/ccontrols/component-controls/commit/771a5fd5be1f526d1bc1a52f2f0f6e66ed8fb472))
+* generate tests by document ([ad2f26f](https://github.com/ccontrols/component-controls/commit/ad2f26ff9fa3bb77a03ee6fab84520b24780ee52))
+* move test-renderers to own package ([124a586](https://github.com/ccontrols/component-controls/commit/124a5863076aa4fecc69ebf613ea411709146aa4))
+* update styling of site builder homepage section ([b547175](https://github.com/ccontrols/component-controls/commit/b547175e6ea9ce424801a66ce3b631748bdb2b90))
+
+
+
+
+
 ## [3.4.4](https://github.com/ccontrols/component-controls/compare/v3.4.3...v3.4.4) (2021-03-15)
 
 **Note:** Version bump only for package component-controls-stories

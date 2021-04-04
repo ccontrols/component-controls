@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://github.com/ccontrols/component-controls/compare/v3.4.5...v3.5.0) (2021-04-04)
+
+
+### Features
+
+* generate jest tests from templates ([74d02f8](https://github.com/ccontrols/component-controls/commit/74d02f83a923da15c7ac6afb7f1d725b937947ea))
+* renderExample with selected test framework ([7b1c2fd](https://github.com/ccontrols/component-controls/commit/7b1c2fdb0589b2e1c2cfb21474364e00598d4f7b))
+
+
+
+
+
 ## [3.4.5](https://github.com/ccontrols/component-controls/compare/v3.4.4...v3.4.5) (2021-03-15)
 
 **Note:** Version bump only for package @component-controls/webpack-compile

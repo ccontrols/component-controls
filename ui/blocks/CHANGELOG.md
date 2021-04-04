@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://github.com/ccontrols/component-controls/compare/v3.4.5...v3.5.0) (2021-04-04)
+
+
+### Bug Fixes
+
+* row link class anchor in anchor ([1a20fc2](https://github.com/ccontrols/component-controls/commit/1a20fc24501df56c3565ab5a1db235c991568ea3))
+* support for relatve paths in templates ([7c245bc](https://github.com/ccontrols/component-controls/commit/7c245bcaeeb79d951f3e47aa6be1f24e6da8f9c3))
+
+
+### Features
+
+* cc-cli templating engine ([771a5fd](https://github.com/ccontrols/component-controls/commit/771a5fd5be1f526d1bc1a52f2f0f6e66ed8fb472))
+* generate jest tests from templates ([74d02f8](https://github.com/ccontrols/component-controls/commit/74d02f83a923da15c7ac6afb7f1d725b937947ea))
+* integrate jest-matchmedia-mock ([ea9f370](https://github.com/ccontrols/component-controls/commit/ea9f370825fa1952767b5a1dfac0022f5c8429d4))
+
+
+
+
+
 ## [3.4.5](https://github.com/ccontrols/component-controls/compare/v3.4.4...v3.4.5) (2021-03-15)
 
 **Note:** Version bump only for package @component-controls/blocks

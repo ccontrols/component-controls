@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://github.com/ccontrols/component-controls/compare/v3.4.5...v3.5.0) (2021-04-04)
+
+
+### Bug Fixes
+
+* add webpack search empty ([a954880](https://github.com/ccontrols/component-controls/commit/a9548804c68a4bb02bfd09c9b273eaf4aa80db86))
+
+
+
+
+
 ## [3.4.5](https://github.com/ccontrols/component-controls/compare/v3.4.4...v3.4.5) (2021-03-15)
 
 **Note:** Version bump only for package component-controls-gatsby-starter

@@ -1,7 +1,7 @@
 {
   "name": "component-controls-react-webpack-5-starter",
   "private": true,
-  "version": "3.4.5",
+  "version": "3.5.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -9,7 +9,7 @@
     "build-sample": "rm -rf public && webpack --config webpack.prod.config.ts --progress"
   },
   "dependencies": {
-    "@component-controls/react-router-integration": "^3.4.5",
+    "@component-controls/react-router-integration": "^3.5.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },

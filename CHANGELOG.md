@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://github.com/ccontrols/component-controls/compare/v3.4.5...v3.5.0) (2021-04-04)
+
+
+### Bug Fixes
+
+* add webpack search empty ([a954880](https://github.com/ccontrols/component-controls/commit/a9548804c68a4bb02bfd09c9b273eaf4aa80db86))
+* convert class Sring to string in attributes ([bd616e2](https://github.com/ccontrols/component-controls/commit/bd616e2b91d43eac93597d5429943ae6fd2a1ef4))
+* coverage from sub folders ([b9098fa](https://github.com/ccontrols/component-controls/commit/b9098fae4e246ea94dceb6787f1df0cbecfafc0e))
+* datetime error ([28b7430](https://github.com/ccontrols/component-controls/commit/28b74303decaf93cc92438144f7fd22a56a61fd7))
+* do not assign export default if not mdxTransform ([efbd562](https://github.com/ccontrols/component-controls/commit/efbd562852421e781407790fd0c979e78ccec863))
+* export interface ([5484b4a](https://github.com/ccontrols/component-controls/commit/5484b4a83fecc4f1a2bc5b3f1dcea50015354837))
+* extract imported function ([f029eae](https://github.com/ccontrols/component-controls/commit/f029eae0e64f0201b516c245b5d11cfbab86cf7b))
+* remove any jest config files ([01838a6](https://github.com/ccontrols/component-controls/commit/01838a6a4fc0d5c5811b0659a89a34de9e45c6d7))
+* remove shorthand prop if undefined ([e1234d8](https://github.com/ccontrols/component-controls/commit/e1234d87abd790089f486f51711a925eef22cae4))
+* remove unused components field ([0ed9d30](https://github.com/ccontrols/component-controls/commit/0ed9d30298e410accd7d8ef39b4dd1ec07895595))
+* row link class anchor in anchor ([1a20fc2](https://github.com/ccontrols/component-controls/commit/1a20fc24501df56c3565ab5a1db235c991568ea3))
+* ssr render svg color mode ([abe5074](https://github.com/ccontrols/component-controls/commit/abe5074ae7525b937028e730adc2cb679745bdb5))
+* support for relatve paths in templates ([7c245bc](https://github.com/ccontrols/component-controls/commit/7c245bcaeeb79d951f3e47aa6be1f24e6da8f9c3))
+* test renderers do not call with config params ([85c090e](https://github.com/ccontrols/component-controls/commit/85c090e1dec34bc3f82d0e17b7ff53ece24c6fc9))
+* transfor component names to string ([0ab793a](https://github.com/ccontrols/component-controls/commit/0ab793a9e8f6819a357ca6362038b9b23c73b06b))
+* update git repo directory ([f5d0378](https://github.com/ccontrols/component-controls/commit/f5d037821b5447a51ad9be73ac830fa7e772a14a))
+* update keywords ([efd6282](https://github.com/ccontrols/component-controls/commit/efd628234c2ed1806bbe8901e2ba4b86046912c6))
+* update package description ([3dca251](https://github.com/ccontrols/component-controls/commit/3dca251ac9e6d41f914b55e10ff706453a49a70e))
+
+
+### Features
+
+* add ability to load store from bundle ([9c7322e](https://github.com/ccontrols/component-controls/commit/9c7322ee1edf46bf4627e4258d2d4e2e4610baf6))
+* cc-cli templating engine ([771a5fd](https://github.com/ccontrols/component-controls/commit/771a5fd5be1f526d1bc1a52f2f0f6e66ed8fb472))
+* create jest config file ([1106e89](https://github.com/ccontrols/component-controls/commit/1106e89c2db1060c962c9ac0cccbeb10e145c6b7))
+* generate jest tests from templates ([74d02f8](https://github.com/ccontrols/component-controls/commit/74d02f83a923da15c7ac6afb7f1d725b937947ea))
+* generate tests by document ([ad2f26f](https://github.com/ccontrols/component-controls/commit/ad2f26ff9fa3bb77a03ee6fab84520b24780ee52))
+* generate tests by story ([5f799be](https://github.com/ccontrols/component-controls/commit/5f799be193d3aedf6c1e4429833aedb2ad03b3c0))
+* integrate jest-matchmedia-mock ([ea9f370](https://github.com/ccontrols/component-controls/commit/ea9f370825fa1952767b5a1dfac0022f5c8429d4))
+* jest tests collector initial ([0a13f25](https://github.com/ccontrols/component-controls/commit/0a13f259b6c206f46b3e05b317d30b6e9c79dc24))
+* merge control values on render ([09d5f92](https://github.com/ccontrols/component-controls/commit/09d5f9243a7c56ddb4ed9cc85c0378b48243d6af))
+* move test-renderers to own package ([124a586](https://github.com/ccontrols/component-controls/commit/124a5863076aa4fecc69ebf613ea411709146aa4))
+* renderExample with selected test framework ([7b1c2fd](https://github.com/ccontrols/component-controls/commit/7b1c2fdb0589b2e1c2cfb21474364e00598d4f7b))
+* run related tests to a file ([ca9daf3](https://github.com/ccontrols/component-controls/commit/ca9daf32a1dfb3ed126755bdb76f4e0c8e4153b6))
+* update styling of site builder homepage section ([b547175](https://github.com/ccontrols/component-controls/commit/b547175e6ea9ce424801a66ce3b631748bdb2b90))
+
+
+
+
+
 ## [3.4.5](https://github.com/ccontrols/component-controls/compare/v3.4.4...v3.4.5) (2021-03-15)
 
 

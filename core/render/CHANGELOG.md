@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://github.com/ccontrols/component-controls/compare/v3.4.5...v3.5.0) (2021-04-04)
+
+
+### Features
+
+* generate jest tests from templates ([74d02f8](https://github.com/ccontrols/component-controls/commit/74d02f83a923da15c7ac6afb7f1d725b937947ea))
+
+
+
+
+
 ## [3.4.2](https://github.com/ccontrols/component-controls/compare/v3.4.1...v3.4.2) (2021-03-14)
 
 **Note:** Version bump only for package @component-controls/render

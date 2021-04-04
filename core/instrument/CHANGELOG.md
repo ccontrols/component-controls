@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://github.com/ccontrols/component-controls/compare/v3.4.5...v3.5.0) (2021-04-04)
+
+
+### Bug Fixes
+
+* convert class Sring to string in attributes ([bd616e2](https://github.com/ccontrols/component-controls/commit/bd616e2b91d43eac93597d5429943ae6fd2a1ef4))
+* do not assign export default if not mdxTransform ([efbd562](https://github.com/ccontrols/component-controls/commit/efbd562852421e781407790fd0c979e78ccec863))
+* export interface ([5484b4a](https://github.com/ccontrols/component-controls/commit/5484b4a83fecc4f1a2bc5b3f1dcea50015354837))
+* extract imported function ([f029eae](https://github.com/ccontrols/component-controls/commit/f029eae0e64f0201b516c245b5d11cfbab86cf7b))
+* remove shorthand prop if undefined ([e1234d8](https://github.com/ccontrols/component-controls/commit/e1234d87abd790089f486f51711a925eef22cae4))
+* remove unused components field ([0ed9d30](https://github.com/ccontrols/component-controls/commit/0ed9d30298e410accd7d8ef39b4dd1ec07895595))
+* transfor component names to string ([0ab793a](https://github.com/ccontrols/component-controls/commit/0ab793a9e8f6819a357ca6362038b9b23c73b06b))
+
+
+### Features
+
+* cc-cli templating engine ([771a5fd](https://github.com/ccontrols/component-controls/commit/771a5fd5be1f526d1bc1a52f2f0f6e66ed8fb472))
+* generate tests by story ([5f799be](https://github.com/ccontrols/component-controls/commit/5f799be193d3aedf6c1e4429833aedb2ad03b3c0))
+* renderExample with selected test framework ([7b1c2fd](https://github.com/ccontrols/component-controls/commit/7b1c2fdb0589b2e1c2cfb21474364e00598d4f7b))
+
+
+
+
+
 ## [3.4.5](https://github.com/ccontrols/component-controls/compare/v3.4.4...v3.4.5) (2021-03-15)
 
 **Note:** Version bump only for package @component-controls/instrument
