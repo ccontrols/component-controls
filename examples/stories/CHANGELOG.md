@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.4](https://github.com/ccontrols/component-controls/compare/v3.5.3...v3.5.4) (2021-04-04)
+
+
+### Bug Fixes
+
+* test default extension ([545dc11](https://github.com/ccontrols/component-controls/commit/545dc11f6fffcff7c66827dd503f799e7b2d698c))
+
+
+
+
+
 ## [3.5.3](https://github.com/ccontrols/component-controls/compare/v3.5.2...v3.5.3) (2021-04-04)
 
 
