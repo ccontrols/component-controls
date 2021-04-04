@@ -173,7 +173,7 @@ all properties of [ControlType](/tutorial/reference/controls-api/#controltype) i
       timePicker: false,
     }}}>
     {({ date }) => (
-      <div>{date.toLocaleDateString()}</div>
+      <div>{new Date(date).toLocaleDateString()}</div>
     )}
   </Story>
 </Playground>  
