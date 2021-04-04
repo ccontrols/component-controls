@@ -1,7 +1,7 @@
 import path from 'path';
 import MatchMediaMock from 'jest-matchmedia-mock';
 import { loadConfigurations } from '@component-controls/config';
-import { renderExample } from '@component-controls/test-renderers';
+import { renderDocument } from '@component-controls/test-renderers';
 import { render as reactRender } from '@component-controls/render/react';
 import { render, act } from '@testing-library/react';
 
@@ -9,12 +9,7 @@ const renderErr = () => {
   throw new Error('Could not render the story');
 };
 
-import doc, {
-  overview,
-  defaultRender,
-  placeholder,
-  customize,
-} from './SearchInput.stories';
+import * as examples from './SearchInput.stories';
 
 describe('SearchInput', () => {
   let matchMedia: MatchMediaMock;
@@ -30,80 +25,18 @@ describe('SearchInput', () => {
   if (!config.renderFn) {
     config.renderFn = reactRender;
   }
-
-  test('overview', () => {
-    const example = overview;
-
-    let rendered;
-    act(() => {
-      rendered = renderExample({
-        example,
-        doc,
-        config,
-      });
-    });
-    if (!rendered) {
-      renderErr();
-      return;
-    }
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
+  let renderedExamples: ReturnType<typeof renderDocument> = [];
+  act(() => {
+    renderedExamples = renderDocument(examples, config);
   });
-
-  test('defaultRender', () => {
-    const example = defaultRender;
-
-    let rendered;
-    act(() => {
-      rendered = renderExample({
-        example,
-        doc,
-        config,
-      });
+  if (!renderedExamples) {
+    renderErr();
+    return;
+  }
+  renderedExamples.forEach(({ name, rendered }) => {
+    it(name, async () => {
+      const { asFragment } = render(rendered);
+      expect(asFragment()).toMatchSnapshot();
     });
-    if (!rendered) {
-      renderErr();
-      return;
-    }
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
-  });
-
-  test('placeholder', () => {
-    const example = placeholder;
-
-    let rendered;
-    act(() => {
-      rendered = renderExample({
-        example,
-        doc,
-        config,
-      });
-    });
-    if (!rendered) {
-      renderErr();
-      return;
-    }
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
-  });
-
-  test('customize', () => {
-    const example = customize;
-
-    let rendered;
-    act(() => {
-      rendered = renderExample({
-        example,
-        doc,
-        config,
-      });
-    });
-    if (!rendered) {
-      renderErr();
-      return;
-    }
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
   });
 });

@@ -1,7 +1,7 @@
 import path from 'path';
 import MatchMediaMock from 'jest-matchmedia-mock';
 import { loadConfigurations } from '@component-controls/config';
-import { renderExample } from '@component-controls/test-renderers';
+import { renderDocument } from '@component-controls/test-renderers';
 import { render as reactRender } from '@component-controls/render/react';
 import { render, act } from '@testing-library/react';
 
@@ -9,16 +9,7 @@ const renderErr = () => {
   throw new Error('Could not render the story');
 };
 
-import doc, {
-  overview,
-  noHeader,
-  sortable,
-  filterable,
-  grouping,
-  editing,
-  rowSelect,
-  pagination,
-} from './Table.stories';
+import * as examples from './Table.stories';
 
 describe('Table', () => {
   let matchMedia: MatchMediaMock;
@@ -34,156 +25,18 @@ describe('Table', () => {
   if (!config.renderFn) {
     config.renderFn = reactRender;
   }
-
-  test('overview', () => {
-    const example = overview;
-
-    let rendered;
-    act(() => {
-      rendered = renderExample({
-        example,
-        doc,
-        config,
-      });
-    });
-    if (!rendered) {
-      renderErr();
-      return;
-    }
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
+  let renderedExamples: ReturnType<typeof renderDocument> = [];
+  act(() => {
+    renderedExamples = renderDocument(examples, config);
   });
-
-  test('noHeader', () => {
-    const example = noHeader;
-
-    let rendered;
-    act(() => {
-      rendered = renderExample({
-        example,
-        doc,
-        config,
-      });
+  if (!renderedExamples) {
+    renderErr();
+    return;
+  }
+  renderedExamples.forEach(({ name, rendered }) => {
+    it(name, async () => {
+      const { asFragment } = render(rendered);
+      expect(asFragment()).toMatchSnapshot();
     });
-    if (!rendered) {
-      renderErr();
-      return;
-    }
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
-  });
-
-  test('sortable', () => {
-    const example = sortable;
-
-    let rendered;
-    act(() => {
-      rendered = renderExample({
-        example,
-        doc,
-        config,
-      });
-    });
-    if (!rendered) {
-      renderErr();
-      return;
-    }
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
-  });
-
-  test('filterable', () => {
-    const example = filterable;
-
-    let rendered;
-    act(() => {
-      rendered = renderExample({
-        example,
-        doc,
-        config,
-      });
-    });
-    if (!rendered) {
-      renderErr();
-      return;
-    }
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
-  });
-
-  test('grouping', () => {
-    const example = grouping;
-
-    let rendered;
-    act(() => {
-      rendered = renderExample({
-        example,
-        doc,
-        config,
-      });
-    });
-    if (!rendered) {
-      renderErr();
-      return;
-    }
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
-  });
-
-  test('editing', () => {
-    const example = editing;
-
-    let rendered;
-    act(() => {
-      rendered = renderExample({
-        example,
-        doc,
-        config,
-      });
-    });
-    if (!rendered) {
-      renderErr();
-      return;
-    }
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
-  });
-
-  test('rowSelect', () => {
-    const example = rowSelect;
-
-    let rendered;
-    act(() => {
-      rendered = renderExample({
-        example,
-        doc,
-        config,
-      });
-    });
-    if (!rendered) {
-      renderErr();
-      return;
-    }
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
-  });
-
-  test('pagination', () => {
-    const example = pagination;
-
-    let rendered;
-    act(() => {
-      rendered = renderExample({
-        example,
-        doc,
-        config,
-      });
-    });
-    if (!rendered) {
-      renderErr();
-      return;
-    }
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
   });
 });

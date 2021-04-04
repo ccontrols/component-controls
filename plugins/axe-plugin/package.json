@@ -23,7 +23,7 @@
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "prepare": "yarn build",
-    "test:create": "cc-cli -g story -c ./.config -w",
+    "test:create": "cc-cli -g doc -c ./.config -w",
     "test": "yarn jest"
   },
   "homepage": "https://github.com/ccontrols/component-controls",
