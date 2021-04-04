@@ -21,28 +21,27 @@ yarn add @component-controls/webpack-compile --dev
 
 ## Parameters
 
-| Parameter    |  Explanation   |   Input type   |   Default value   |
-| ----------- | -------- | -------- | -------- | -------- | -------- |
-| `--config`<br/>`-c`    | configuration folder |  string  |  `.config`  |
-| `--watch`<br/>`-w`    | enable watch mode |  boolean  |  `false`  |
-| `--presets`<br/>`-p`    | webpack presets |  string[]  |  [`react`, `react-docgen-typescript`]  |
-| `--bundle`<br/>`-b`    |  generated bundle name  |  string  |  `component-controls.js`  |
-| `--dist`<br/>`-d`    | distribution (bundle output) folder |  string  |  `public`  |
-| `--static`<br/>`-s`    | static assets (images, media) folder |  string  |  `dist/static`  |
-| `--loglevel`<br/>`-l`    | log level | 'all' \| 'errors' \| 'none' |  `all`  |
-
+| Parameter             | Explanation                          | Input type                  | Default value                        |
+| --------------------- | ------------------------------------ | --------------------------- | ------------------------------------ |
+| `--config`<br/>`-c`   | configuration folder                 | string                      | `.config`                            |
+| `--watch`<br/>`-w`    | enable watch mode                    | boolean                     | `false`                              |
+| `--presets`<br/>`-p`  | webpack presets                      | string[]                    | [`react`, `react-docgen-typescript`] |
+| `--bundle`<br/>`-b`   | generated bundle name                | string                      | `component-controls.js`              |
+| `--dist`<br/>`-d`     | distribution (bundle output) folder  | string                      | `public`                             |
+| `--static`<br/>`-s`   | static assets (images, media) folder | string                      | `dist/static`                        |
+| `--loglevel`<br/>`-l` | log level                            | 'all' \| 'errors' \| 'none' | `all`                                |
 
 ## Example
 
 ```sh
-yarn ccc -c .storybook
+yarn ccc -c .config
 ```
 
-The above example will use the build-time configuration from the `.storybook`  folder and generate a bundle of documentation stores (documents, stories, packages, components) in `public/component-controls.js`.
+The above example will use the build-time configuration from the `.storybook` folder and generate a bundle of documentation stores (documents, stories, packages, components) in `public/component-controls.js`.
 
 ## Static store
 
-The compiler creates a **static** bundle of stores containing the stories and documents before they are loaded into the browser. 
+The compiler creates a **static** bundle of stores containing the stories and documents before they are loaded into the browser.
 
 > Any dynamic document and story properties that are calculated at run-time, as well as the stories render functions are not available from the static store.
 
@@ -56,15 +55,17 @@ const store = require(bundleName);
 
 //filter only stores/documents that do have at least one story
 const stories = [];
-store.stores
-  .forEach(store => {
-    if (store.stories) {
-      Object.keys(store.stories).forEach(story => {
-        stories.push(store.stories[story]);
-      })
-    }  
-  });
-fs.writeFileSync(path.resolve(__dirname,'stories.json'), JSON.stringify(stories, null, 2));
+store.stores.forEach(store => {
+  if (store.stories) {
+    Object.keys(store.stories).forEach(story => {
+      stories.push(store.stories[story]);
+    });
+  }
+});
+fs.writeFileSync(
+  path.resolve(__dirname, 'stories.json'),
+  JSON.stringify(stories, null, 2),
+);
 ```
 
 You can run the above script from the command line:
@@ -78,66 +79,67 @@ Following is an example of `JSON` output from the static store
 ```js:title=stories/stories.json
 [
   {
-    "name": "simple",
-    "component": "Button",
-    "id": "simple",
-    "arguments": [
+    name: 'simple',
+    component: 'Button',
+    id: 'simple',
+    arguments: [
       {
-        "value": [
+        value: [
           {
-            "value": "backgroundColor",
-            "name": "backgroundColor",
-            "loc": {
-              "start": {
-                "line": 0,
-                "column": 3
+            value: 'backgroundColor',
+            name: 'backgroundColor',
+            loc: {
+              start: {
+                line: 0,
+                column: 3,
               },
-              "end": {
-                "line": 0,
-                "column": 18
-              }
+              end: {
+                line: 0,
+                column: 18,
+              },
             },
-            "usage": [
+            usage: [
               {
-                "loc": {
-                  "start": {
-                    "line": 1,
-                    "column": 27
+                loc: {
+                  start: {
+                    line: 1,
+                    column: 27,
                   },
-                  "end": {
-                    "line": 1,
-                    "column": 42
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "loc": {
-          "start": {
-            "line": 0,
-            "column": 1
+                  end: {
+                    line: 1,
+                    column: 42,
+                  },
+                },
+              },
+            ],
           },
-          "end": {
-            "line": 0,
-            "column": 20
-          }
-        }
-      }
-    ],
-    "loc": {
-      "start": {
-        "line": 32,
-        "column": 11
+        ],
+        loc: {
+          start: {
+            line: 0,
+            column: 1,
+          },
+          end: {
+            line: 0,
+            column: 20,
+          },
+        },
       },
-      "end": {
-        "line": 34,
-        "column": 11
-      }
+    ],
+    loc: {
+      start: {
+        line: 32,
+        column: 11,
+      },
+      end: {
+        line: 34,
+        column: 11,
+      },
     },
-    "source": "({ backgroundColor }) => (\n  <Button backgroundColor={backgroundColor}>click me</Button>\n)"
-  }
-]  
+    source:
+      '({ backgroundColor }) => (\n  <Button backgroundColor={backgroundColor}>click me</Button>\n)',
+  },
+];
 ```
 
 ## Dynamic store
@@ -161,9 +163,11 @@ const bundleName = path.resolve(__dirname, '../public/component-controls.js');
 const staticStore = require(bundleName);
 const store = loadStore(staticStore);
 
-fs.writeFileSync(path.resolve(__dirname,'stories.json'), JSON.stringify(store.stories, null, 2));
+fs.writeFileSync(
+  path.resolve(__dirname, 'stories.json'),
+  JSON.stringify(store.stories, null, 2),
+);
 ```
-
 
 Following is an example of `JSON` output from the dynamic store (most of the time, the output data is very similar to the static store)
 
@@ -237,5 +241,5 @@ Following is an example of `JSON` output from the dynamic store (most of the tim
     },
     "doc": "First Story"
   }
-}  
-```  
+}
+```
