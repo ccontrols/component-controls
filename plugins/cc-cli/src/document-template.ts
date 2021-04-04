@@ -64,7 +64,7 @@ export const createDocumentTemplate: TemplateFunction<StoryTemplateOptions> = as
       }));
     }
   }
-  if (stories.length <= 0 || doc.MDXPage) {
+  if (stories.length === 0 || doc.isMDXComponent) {
     return '';
   }
   const store = bundle ? 'bundle' : 'imports';

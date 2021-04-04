@@ -67,7 +67,9 @@ export const extractMDXStories: (
     return attrComponents.length > 0 ? attrComponents[0] : undefined;
   };
   const { title, name, ...rest } = props;
-  const doc = props ? { ...rest, title: title || name } : undefined;
+  const doc = props
+    ? { isMDXComponent: true, ...rest, title: title || name }
+    : undefined;
   const store: PartialStore = {
     stories: {},
     doc,
