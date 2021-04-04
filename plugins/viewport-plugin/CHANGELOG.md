@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.1](https://github.com/ccontrols/component-controls/compare/v3.5.0...v3.5.1) (2021-04-04)
+
+
+### Bug Fixes
+
+* import path and empty stories/mdx ([8ee3d8c](https://github.com/ccontrols/component-controls/commit/8ee3d8c72f2e262807aeb835d5015533b0011f15))
+
+
+
+
+
 # [3.5.0](https://github.com/ccontrols/component-controls/compare/v3.4.5...v3.5.0) (2021-04-04)
 
 
