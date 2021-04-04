@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.3](https://github.com/ccontrols/component-controls/compare/v3.5.2...v3.5.3) (2021-04-04)
+
+
+### Bug Fixes
+
+* remove isMDXDocument files from tests ([213cc90](https://github.com/ccontrols/component-controls/commit/213cc90555aefb2a28803b3f4c6fff8e21b381cd))
+
+
+
+
+
 ## [3.5.1](https://github.com/ccontrols/component-controls/compare/v3.5.0...v3.5.1) (2021-04-04)
 
 
