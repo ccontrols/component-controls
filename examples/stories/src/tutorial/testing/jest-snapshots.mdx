@@ -89,13 +89,12 @@ yarn cc-cli -c .storybook -o testing
 yarn cc-cli -r enzyme
 ```
 
+**custom test format (typescript)**
 ```sh
 yarn cc-cli -f ts
 ```
 
-## Generate
-
-The `cc-cli` tool allows generating several different "levels" of tests
+# generate levels
 
 ## store
 
@@ -109,7 +108,7 @@ This will generate one single test file for all your documentation files.
 - The tests can not be extended with custom test conditions.
 
 <details>
-  <summary>example test file...</summary>
+  <summary>test file source...</summary>
 
 ```jsx:title=tests/component-controls.test.ts
 /* prettier-ignore-start */
@@ -193,7 +192,7 @@ This will generate one test file per document, and inside will dynamically creat
 
 
 <details>
-  <summary>example test file...</summary>
+  <summary>test file source...</summary>
 
 ```jsx:title=src/Header/Header.test.ts
 /* prettier-ignore-start */
@@ -258,7 +257,7 @@ This will generate one test file per document, and inside will create static tes
 This approach can lead to outdated test files (for example when you add a new story in an existing document - it will not be included in the tests).
 
 <details>
-  <summary>example test file...</summary>
+  <summary>test file source...</summary>
 
 ```jsx:title=src/Header/Header.test.ts
 /* prettier-ignore-start */
@@ -320,7 +319,7 @@ describe('Header', () => {
 Here is an example of extending a test with some custom test conditions (removed to automatically generated snapshot test and replaced with a test for the label content and background style):
 
 <details>
-  <summary>example test file...</summary>
+  <summary>test file source...</summary>
 
 ```jsx:title=src/VariantButton/VariantButton.test.ts
 /* prettier-ignore-start */
