@@ -2,7 +2,6 @@
 
 exports[`rtl bundle esm 1`] = `
 "import * as path from 'path';
-import MatchMediaMock from 'jest-matchmedia-mock';
 import { loadStore } from '@component-controls/store';
 const { render: reactRender } = require('@component-controls/render/react');
 import { render, act } from '@testing-library/react';
@@ -12,13 +11,6 @@ const renderErr = () => {
 };
 
 describe('Components/Header', () => {
-  let matchMedia;
-  beforeAll(() => {
-    matchMedia = new MatchMediaMock();
-  });
-  afterEach(() => {
-    matchMedia.clear();
-  });
   const store = loadStore(
     require(path.resolve(__dirname, './bundle/component-controls.js')),
   );

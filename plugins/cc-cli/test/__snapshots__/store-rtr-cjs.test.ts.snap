@@ -2,7 +2,6 @@
 
 exports[`rtr  cjs 1`] = `
 "const path = require('path');
-const MatchMediaMock = require('jest-matchmedia-mock').default;
 const {
   loadConfigurations,
   extractDocuments,
@@ -21,13 +20,6 @@ const componentErr = () => {
 };
 
 describe('component-controls generated', () => {
-  let matchMedia;
-  beforeAll(() => {
-    matchMedia = new MatchMediaMock();
-  });
-  afterEach(() => {
-    matchMedia.clear();
-  });
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
   if (!config.renderFn) {

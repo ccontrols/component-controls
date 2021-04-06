@@ -2,7 +2,6 @@
 
 exports[`rtr bundle cjs 1`] = `
 "const path = require('path');
-const MatchMediaMock = require('jest-matchmedia-mock').default;
 const { loadStore } = require('@component-controls/store');
 const { render: reactRender } = require('@component-controls/render/react');
 const renderer = require('react-test-renderer');
@@ -16,13 +15,6 @@ const componentErr = () => {
 };
 
 describe('Components/Header', () => {
-  let matchMedia;
-  beforeAll(() => {
-    matchMedia = new MatchMediaMock();
-  });
-  afterEach(() => {
-    matchMedia.clear();
-  });
   const store = loadStore(
     require(path.resolve(__dirname, './bundle/component-controls.js')),
   );

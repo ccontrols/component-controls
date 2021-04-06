@@ -47,12 +47,6 @@ export const createTemplate = (
     topImports,
     imports: fs.readFileSync(importsPath, 'utf8'),
     configPath,
-    utilityImports: fs.readFileSync(
-      path.resolve(__dirname, `../templates/setups/imports.${format}.js`),
-    ),
-    setupTests: fs.readFileSync(
-      path.resolve(__dirname, `../templates/setups/setup.${format}.js`),
-    ),
     bundlePath,
     load: dot.template(fs.readFileSync(loadPath, 'utf8'))({
       bundlePath,

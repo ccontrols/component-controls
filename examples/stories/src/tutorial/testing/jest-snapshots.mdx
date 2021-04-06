@@ -39,7 +39,7 @@ If you haven't already, you will need to first install jest and related depenenc
 ### jest
 
 ```sh
-yarn add jest babel-jest jest-matchmedia-mock rc-util --dev
+yarn add jest babel-jest --dev
 ```
 ### typescript
 
@@ -84,6 +84,12 @@ yarn add react-test-renderer @types/react-test-renderer --dev
 ### custom jest loaders
 
 If you are using images, css files etc - you might need to add some custom transforms for your jest tests
+
+[jest-url-loader](https://github.com/hustcc/jest-url-loader)
+[jest-transform-css](https://github.com/dferber90/jest-transform-css)
+[jest-matchmedia-mock](https://github.com/dyakovk/jest-matchmedia-mock)
+
+example: 
 
 ```js:title=package.json
   ...
@@ -179,7 +185,6 @@ This will generate one single test file for all your documentation files.
 ```jsx:title=tests/component-controls.test.ts
 /* prettier-ignore-start */
 import path from 'path';
-import MatchMediaMock from 'jest-matchmedia-mock';
 import {
   loadConfigurations,
   extractDocuments,
@@ -193,13 +198,6 @@ const renderErr = () => {
 };
 
 describe('component-controls generated', () => {
-  let matchMedia: MatchMediaMock;
-  beforeAll(() => {
-    matchMedia = new MatchMediaMock();
-  });
-  afterEach(() => {
-    matchMedia.clear();
-  });
   const configPath = path.resolve(__dirname, '../.config');
   const config = loadConfigurations(configPath);
   if (!config.renderFn) {
@@ -262,7 +260,6 @@ This will generate one test file per document, and inside will dynamically creat
 ```jsx:title=src/Header/Header.test.ts
 /* prettier-ignore-start */
 import path from 'path';
-import MatchMediaMock from 'jest-matchmedia-mock';
 import { loadConfigurations } from '@component-controls/config';
 import { renderDocument } from '@component-controls/test-renderers';
 import { render as reactRender } from '@component-controls/render/react';
@@ -275,13 +272,6 @@ const renderErr = () => {
 import * as examples from './Header.stories';
 
 describe('Header', () => {
-  let matchMedia: MatchMediaMock;
-  beforeAll(() => {
-    matchMedia = new MatchMediaMock();
-  });
-  afterEach(() => {
-    matchMedia.clear();
-  });
   const configPath = path.resolve(__dirname, '../../.config');
   const config = loadConfigurations(configPath);
   if (!config.renderFn) {
@@ -326,7 +316,6 @@ This approach can lead to outdated test files (for example when you add a new st
 ```jsx:title=src/Header/Header.test.ts
 /* prettier-ignore-start */
 import path from 'path';
-import MatchMediaMock from 'jest-matchmedia-mock';
 import { loadConfigurations } from '@component-controls/config';
 import { renderExample } from '@component-controls/test-renderers';
 import { render as reactRender } from '@component-controls/render/react';
@@ -339,16 +328,6 @@ const renderErr = () => {
 import doc, { overview } from './Header.stories';
 
 describe('Header', () => {
-  let matchMedia: MatchMediaMock;
-
-  beforeAll(() => {
-    matchMedia = new MatchMediaMock();
-  });
-
-  afterEach(() => {
-    matchMedia.clear();
-  });
-
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
   
@@ -387,7 +366,6 @@ Here is an example of extending a test with some custom test conditions (removed
 ```jsx:title=src/VariantButton/VariantButton.test.ts
 /* prettier-ignore-start */
 import path from 'path';
-import MatchMediaMock from 'jest-matchmedia-mock';
 import { loadConfigurations } from '@component-controls/config';
 import { renderExample } from '@component-controls/test-renderers';
 import { render as reactRender } from '@component-controls/render/react';
@@ -400,16 +378,6 @@ const renderErr = () => {
 import doc, { primary } from './VariantButton.stories';
 
 describe('VariantVutton', () => {
-  let matchMedia: MatchMediaMock;
-
-  beforeAll(() => {
-    matchMedia = new MatchMediaMock();
-  });
-
-  afterEach(() => {
-    matchMedia.clear();
-  });
-
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
   

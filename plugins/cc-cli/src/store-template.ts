@@ -49,12 +49,10 @@ export const createStoreTemplate: TemplateFunction = async (
   };
   const template = `
 {{=it.topImports}}
-{{=it.utilityImports}}
 {{=it.storeImports}}
 {{=it.imports}}
 
 describe('{{=it.name}}', () => {
-{{=it.setupTests}}
 {{=it.load}}
 {{=it.storeLoop}}
   

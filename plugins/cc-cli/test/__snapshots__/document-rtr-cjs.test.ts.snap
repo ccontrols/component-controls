@@ -2,7 +2,6 @@
 
 exports[`rtr  cjs 1`] = `
 "const path = require('path');
-const MatchMediaMock = require('jest-matchmedia-mock').default;
 const { loadConfigurations } = require('@component-controls/config');
 const { renderDocument } = require('@component-controls/test-renderers');
 const { render: reactRender } = require('@component-controls/render/react');
@@ -19,13 +18,6 @@ const componentErr = () => {
 const examples = require('./fixtures/VariantButton.docs');
 
 describe('VariantButton', () => {
-  let matchMedia;
-  beforeAll(() => {
-    matchMedia = new MatchMediaMock();
-  });
-  afterEach(() => {
-    matchMedia.clear();
-  });
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
   if (!config.renderFn) {

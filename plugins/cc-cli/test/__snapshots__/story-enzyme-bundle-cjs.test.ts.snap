@@ -2,7 +2,6 @@
 
 exports[`enzyme bundle cjs 1`] = `
 "const path = require('path');
-const MatchMediaMock = require('jest-matchmedia-mock').default;
 const { loadStore } = require('@component-controls/store');
 const { render: reactRender } = require('@component-controls/render/react');
 const { mount, configure } = require('enzyme');
@@ -12,13 +11,6 @@ const Adapter = require('@wojtekmaj/enzyme-adapter-react-17');
 configure({ adapter: new Adapter() });
 
 describe('Components/Header', () => {
-  let matchMedia;
-  beforeAll(() => {
-    matchMedia = new MatchMediaMock();
-  });
-  afterEach(() => {
-    matchMedia.clear();
-  });
   const store = loadStore(
     require(path.resolve(__dirname, './bundle/component-controls.js')),
   );
