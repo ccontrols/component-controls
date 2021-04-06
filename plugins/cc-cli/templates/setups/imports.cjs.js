@@ -1,1 +1,0 @@
-const MatchMediaMock = require('jest-matchmedia-mock').default;

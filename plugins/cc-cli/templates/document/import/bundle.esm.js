@@ -1,2 +1,2 @@
 import { loadStore } from '@component-controls/store';
-const { render: reactRender } = require('@component-controls/render/react');
+import { render as reactRender } from '@component-controls/render/react';

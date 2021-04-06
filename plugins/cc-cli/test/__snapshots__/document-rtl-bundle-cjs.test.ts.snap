@@ -2,24 +2,12 @@
 
 exports[`rtl bundle cjs 1`] = `
 "const path = require('path');
-const MatchMediaMock = require('jest-matchmedia-mock').default;
 const { loadStore } = require('@component-controls/store');
 const { render: reactRender } = require('@component-controls/render/react');
 const { render, act } = require('@testing-library/react');
-
-const renderErr = () => {
-  throw new Error('Could not render the story');
-};
+const { renderErr } = require('@component-controls/test-renderers');
 
 describe('Components/Header', () => {
-  let matchMedia;
-  beforeAll(() => {
-    jest.mock('rc-util/lib/Portal');
-    matchMedia = new MatchMediaMock();
-  });
-  afterEach(() => {
-    matchMedia.clear();
-  });
   const store = loadStore(
     require(path.resolve(__dirname, './bundle/component-controls.js')),
   );

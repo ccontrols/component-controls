@@ -92,12 +92,6 @@ export const createDocumentTemplate: TemplateFunction<StoryTemplateOptions> = as
         format === 'ts' ? ': ReturnType<typeof renderDocument> = []' : ' = []',
     }),
     doc: bundle ? `const doc = store.docs['${doc.title}'];` : '',
-    utilityImports: fs.readFileSync(
-      path.resolve(__dirname, `../templates/setups/imports.${format}.js`),
-    ),
-    setupTests: fs.readFileSync(
-      path.resolve(__dirname, `../templates/setups/setup.${format}.js`),
-    ),
     storyImports: fs.readFileSync(
       path.resolve(
         __dirname,
@@ -111,13 +105,11 @@ export const createDocumentTemplate: TemplateFunction<StoryTemplateOptions> = as
   };
   const template = `
 {{=it.topImports}}
-{{=it.utilityImports}}
 {{=it.storyImports}}
 {{=it.imports}}
 {{=it.storiesFileImports}}
 
 describe('{{=it.name}}', () => {
-  {{=it.setupTests}}
   {{=it.load}}
   {{=it.documentLoop}}
 });

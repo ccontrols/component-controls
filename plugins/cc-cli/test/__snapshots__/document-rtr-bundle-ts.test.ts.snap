@@ -2,27 +2,12 @@
 
 exports[`rtr bundle ts 1`] = `
 "import * as path from 'path';
-import MatchMediaMock from 'jest-matchmedia-mock';
 import { loadStore } from '@component-controls/store';
-const { render: reactRender } = require('@component-controls/render/react');
+import { render as reactRender } from '@component-controls/render/react';
 import renderer, { act } from 'react-test-renderer';
-
-const renderErr = (): void => {
-  throw new Error('Could not render the story');
-};
-const componentErr = (): void => {
-  throw new Error('Error rendering component with react-test-renderer');
-};
+import { renderErr, componentErr } from '@component-controls/test-renderers';
 
 describe('Components/Header', () => {
-  let matchMedia: MatchMediaMock;
-  beforeAll(() => {
-    jest.mock('rc-util/lib/Portal');
-    matchMedia = new MatchMediaMock();
-  });
-  afterEach(() => {
-    matchMedia.clear();
-  });
   const store = loadStore(
     require(path.resolve(__dirname, './bundle/component-controls.js')),
   );

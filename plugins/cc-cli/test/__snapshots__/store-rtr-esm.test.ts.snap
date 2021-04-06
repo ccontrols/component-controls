@@ -2,7 +2,6 @@
 
 exports[`rtr  esm 1`] = `
 "import * as path from 'path';
-import MatchMediaMock from 'jest-matchmedia-mock';
 import {
   loadConfigurations,
   extractDocuments,
@@ -11,23 +10,9 @@ import {
 import { renderExample } from '@component-controls/test-renderers';
 import { render as reactRender } from '@component-controls/render/react';
 import renderer, { act } from 'react-test-renderer';
-
-const renderErr = () => {
-  throw new Error('Could not render the story');
-};
-const componentErr = () => {
-  throw new Error('Error rendering component with react-test-renderer');
-};
+import { renderErr, componentErr } from '@component-controls/test-renderers';
 
 describe('component-controls generated', () => {
-  let matchMedia;
-  beforeAll(() => {
-    jest.mock('rc-util/lib/Portal');
-    matchMedia = new MatchMediaMock();
-  });
-  afterEach(() => {
-    matchMedia.clear();
-  });
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
   if (!config.renderFn) {
