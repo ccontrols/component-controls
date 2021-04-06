@@ -3,7 +3,7 @@
 exports[`rtl bundle ts 1`] = `
 "import * as path from 'path';
 import { loadStore } from '@component-controls/store';
-const { render: reactRender } = require('@component-controls/render/react');
+import { render as reactRender } from '@component-controls/render/react';
 import { render, act } from '@testing-library/react';
 import { renderErr } from '@component-controls/test-renderers';
 

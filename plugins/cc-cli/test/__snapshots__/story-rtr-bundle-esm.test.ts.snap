@@ -3,7 +3,7 @@
 exports[`rtr bundle esm 1`] = `
 "import * as path from 'path';
 import { loadStore } from '@component-controls/store';
-const { render: reactRender } = require('@component-controls/render/react');
+import { render as reactRender } from '@component-controls/render/react';
 import renderer, { act } from 'react-test-renderer';
 import { renderErr, componentErr } from '@component-controls/test-renderers';
 

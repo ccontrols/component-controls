@@ -3,7 +3,7 @@
 exports[`enzyme bundle ts 1`] = `
 "import * as path from 'path';
 import { loadStore } from '@component-controls/store';
-const { render: reactRender } = require('@component-controls/render/react');
+import { render as reactRender } from '@component-controls/render/react';
 import { mount, configure } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
