@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.6.1](https://github.com/ccontrols/component-controls/compare/v3.6.0...v3.6.1) (2021-04-06)
+
+
+### Bug Fixes
+
+* ts/esm require imports ([86d61c1](https://github.com/ccontrols/component-controls/commit/86d61c12470d5ae398335e3cf816ad8434b76a67))
+
+
+
+
+
 # [3.6.0](https://github.com/ccontrols/component-controls/compare/v3.5.5...v3.6.0) (2021-04-06)
 
 
