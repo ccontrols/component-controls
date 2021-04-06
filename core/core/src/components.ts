@@ -62,6 +62,11 @@ export interface PropType {
    * name of the parent/inherited property
    */
   parentName?: string;
+
+  /**
+   * if the property is deprecated, contains a string
+   */
+  deprecated?: string;
 }
 
 /**

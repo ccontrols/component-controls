@@ -16,6 +16,10 @@ export const transformProps = (props: Props): PropTypes => {
     if (rdProp.description) {
       prop.description = rdProp.description;
     }
+    const { deprecated } = rdProp?.tags as { deprecated?: string };
+    if (deprecated) {
+      prop.deprecated = deprecated;
+    }
     if (rdProp.parent?.name) {
       prop.parentName = rdProp.parent?.name;
     }

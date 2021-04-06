@@ -52,20 +52,28 @@ Object {
 presented if they are made.",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "\\"none\\" | \\"inline\\" | \\"list\\" | \\"both\\"",
+        "name": "enum",
+        "raw": "\\"none\\" | \\"inline\\" | \\"list\\" | \\"both\\" | undefined",
         "value": Array [
           Object {
-            "name": "none",
+            "name": "string",
+            "value": "undefined",
           },
           Object {
-            "name": "inline",
+            "name": "string",
+            "value": "none",
           },
           Object {
-            "name": "list",
+            "name": "string",
+            "value": "inline",
           },
           Object {
-            "name": "both",
+            "name": "string",
+            "value": "list",
+          },
+          Object {
+            "name": "string",
+            "value": "both",
           },
         ],
       },
@@ -90,9 +98,7 @@ presented if they are made.",
       },
     },
     "aria-checked": Object {
-      "description": "Indicates the current \\"checked\\" state of checkboxes, radio buttons, and other widgets.
-@see aria-pressed
-@see aria-selected.",
+      "description": "Indicates the current \\"checked\\" state of checkboxes, radio buttons, and other widgets.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "union",
@@ -114,8 +120,7 @@ presented if they are made.",
       },
     },
     "aria-colcount": Object {
-      "description": "Defines the total number of columns in a table, grid, or treegrid.
-@see aria-colindex.",
+      "description": "Defines the total number of columns in a table, grid, or treegrid.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "number",
@@ -123,9 +128,7 @@ presented if they are made.",
       },
     },
     "aria-colindex": Object {
-      "description": "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.
-@see aria-colcount
-@see aria-colspan.",
+      "description": "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "number",
@@ -133,9 +136,7 @@ presented if they are made.",
       },
     },
     "aria-colspan": Object {
-      "description": "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
-@see aria-colindex
-@see aria-rowspan.",
+      "description": "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "number",
@@ -143,8 +144,7 @@ presented if they are made.",
       },
     },
     "aria-controls": Object {
-      "description": "Identifies the element (or elements) whose contents or presence are controlled by the current element.
-@see aria-owns.",
+      "description": "Identifies the element (or elements) whose contents or presence are controlled by the current element.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "string",
@@ -186,8 +186,7 @@ presented if they are made.",
       },
     },
     "aria-describedby": Object {
-      "description": "Identifies the element (or elements) that describes the object.
-@see aria-labelledby",
+      "description": "Identifies the element (or elements) that describes the object.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "string",
@@ -195,8 +194,7 @@ presented if they are made.",
       },
     },
     "aria-details": Object {
-      "description": "Identifies the element that provides a detailed, extended description for the object.
-@see aria-describedby.",
+      "description": "Identifies the element that provides a detailed, extended description for the object.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "string",
@@ -204,9 +202,7 @@ presented if they are made.",
       },
     },
     "aria-disabled": Object {
-      "description": "Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
-@see aria-hidden
-@see aria-readonly.",
+      "description": "Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "union",
@@ -225,38 +221,46 @@ presented if they are made.",
       },
     },
     "aria-dropeffect": Object {
-      "description": "Indicates what functions can be performed when a dragged object is released on the drop target.
-@deprecated in ARIA 1.1",
+      "deprecated": "in ARIA 1.1",
+      "description": "Indicates what functions can be performed when a dragged object is released on the drop target.",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "\\"link\\" | \\"none\\" | \\"copy\\" | \\"execute\\" | \\"move\\" | \\"popup\\"",
+        "name": "enum",
+        "raw": "\\"link\\" | \\"none\\" | \\"copy\\" | \\"execute\\" | \\"move\\" | \\"popup\\" | undefined",
         "value": Array [
           Object {
-            "name": "link",
+            "name": "string",
+            "value": "undefined",
           },
           Object {
-            "name": "none",
+            "name": "string",
+            "value": "link",
           },
           Object {
-            "name": "copy",
+            "name": "string",
+            "value": "none",
           },
           Object {
-            "name": "execute",
+            "name": "string",
+            "value": "copy",
           },
           Object {
-            "name": "move",
+            "name": "string",
+            "value": "execute",
           },
           Object {
-            "name": "popup",
+            "name": "string",
+            "value": "move",
+          },
+          Object {
+            "name": "string",
+            "value": "popup",
           },
         ],
       },
     },
     "aria-errormessage": Object {
-      "description": "Identifies the element that provides an error message for the object.
-@see aria-invalid
-@see aria-describedby.",
+      "description": "Identifies the element that provides an error message for the object.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "string",
@@ -292,8 +296,8 @@ allows assistive technology to override the general default of reading in docume
       },
     },
     "aria-grabbed": Object {
-      "description": "Indicates an element's \\"grabbed\\" state in a drag-and-drop operation.
-@deprecated in ARIA 1.1",
+      "deprecated": "in ARIA 1.1",
+      "description": "Indicates an element's \\"grabbed\\" state in a drag-and-drop operation.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "union",
@@ -346,8 +350,7 @@ allows assistive technology to override the general default of reading in docume
       },
     },
     "aria-hidden": Object {
-      "description": "Indicates whether the element is exposed to an accessibility API.
-@see aria-disabled.",
+      "description": "Indicates whether the element is exposed to an accessibility API.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "union",
@@ -366,8 +369,7 @@ allows assistive technology to override the general default of reading in docume
       },
     },
     "aria-invalid": Object {
-      "description": "Indicates the entered value does not conform to the format expected by the application.
-@see aria-errormessage.",
+      "description": "Indicates the entered value does not conform to the format expected by the application.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "union",
@@ -400,8 +402,7 @@ allows assistive technology to override the general default of reading in docume
       },
     },
     "aria-label": Object {
-      "description": "Defines a string value that labels the current element.
-@see aria-labelledby.",
+      "description": "Defines a string value that labels the current element.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "string",
@@ -409,8 +410,7 @@ allows assistive technology to override the general default of reading in docume
       },
     },
     "aria-labelledby": Object {
-      "description": "Identifies the element (or elements) that labels the current element.
-@see aria-describedby.",
+      "description": "Identifies the element (or elements) that labels the current element.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "string",
@@ -429,17 +429,24 @@ allows assistive technology to override the general default of reading in docume
       "description": "Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "\\"off\\" | \\"assertive\\" | \\"polite\\"",
+        "name": "enum",
+        "raw": "\\"off\\" | \\"assertive\\" | \\"polite\\" | undefined",
         "value": Array [
           Object {
-            "name": "off",
+            "name": "string",
+            "value": "undefined",
           },
           Object {
-            "name": "assertive",
+            "name": "string",
+            "value": "off",
           },
           Object {
-            "name": "polite",
+            "name": "string",
+            "value": "assertive",
+          },
+          Object {
+            "name": "string",
+            "value": "polite",
           },
         ],
       },
@@ -505,22 +512,27 @@ allows assistive technology to override the general default of reading in docume
       "description": "Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "\\"horizontal\\" | \\"vertical\\"",
+        "name": "enum",
+        "raw": "\\"horizontal\\" | \\"vertical\\" | undefined",
         "value": Array [
           Object {
-            "name": "horizontal",
+            "name": "string",
+            "value": "undefined",
           },
           Object {
-            "name": "vertical",
+            "name": "string",
+            "value": "horizontal",
+          },
+          Object {
+            "name": "string",
+            "value": "vertical",
           },
         ],
       },
     },
     "aria-owns": Object {
       "description": "Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship
-between DOM elements where the DOM hierarchy cannot be used to represent the relationship.
-@see aria-controls.",
+between DOM elements where the DOM hierarchy cannot be used to represent the relationship.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "string",
@@ -537,8 +549,7 @@ A hint could be a sample value or a brief description of the expected format.",
       },
     },
     "aria-posinset": Object {
-      "description": "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.
-@see aria-setsize.",
+      "description": "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "number",
@@ -546,9 +557,7 @@ A hint could be a sample value or a brief description of the expected format.",
       },
     },
     "aria-pressed": Object {
-      "description": "Indicates the current \\"pressed\\" state of toggle buttons.
-@see aria-checked
-@see aria-selected.",
+      "description": "Indicates the current \\"pressed\\" state of toggle buttons.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "union",
@@ -570,8 +579,7 @@ A hint could be a sample value or a brief description of the expected format.",
       },
     },
     "aria-readonly": Object {
-      "description": "Indicates that the element is not editable, but is otherwise operable.
-@see aria-disabled.",
+      "description": "Indicates that the element is not editable, but is otherwise operable.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "union",
@@ -590,42 +598,55 @@ A hint could be a sample value or a brief description of the expected format.",
       },
     },
     "aria-relevant": Object {
-      "description": "Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.
-@see aria-atomic.",
+      "description": "Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "\\"text\\" | \\"additions\\" | \\"additions removals\\" | \\"additions text\\" | \\"all\\" | \\"removals\\" | \\"removals additions\\" | \\"removals text\\" | \\"text additions\\" | \\"text removals\\"",
+        "name": "enum",
+        "raw": "\\"text\\" | \\"additions\\" | \\"additions removals\\" | \\"additions text\\" | \\"all\\" | \\"removals\\" | \\"removals additions\\" | \\"removals text\\" | \\"text additions\\" | \\"text removals\\" | undefined",
         "value": Array [
           Object {
-            "name": "text",
+            "name": "string",
+            "value": "undefined",
           },
           Object {
-            "name": "additions",
+            "name": "string",
+            "value": "text",
           },
           Object {
-            "name": "additions removals",
+            "name": "string",
+            "value": "additions",
           },
           Object {
-            "name": "additions text",
+            "name": "string",
+            "value": "additions removals",
           },
           Object {
-            "name": "all",
+            "name": "string",
+            "value": "additions text",
           },
           Object {
-            "name": "removals",
+            "name": "string",
+            "value": "all",
           },
           Object {
-            "name": "removals additions",
+            "name": "string",
+            "value": "removals",
           },
           Object {
-            "name": "removals text",
+            "name": "string",
+            "value": "removals additions",
           },
           Object {
-            "name": "text additions",
+            "name": "string",
+            "value": "removals text",
           },
           Object {
-            "name": "text removals",
+            "name": "string",
+            "value": "text additions",
+          },
+          Object {
+            "name": "string",
+            "value": "text removals",
           },
         ],
       },
@@ -658,8 +679,7 @@ A hint could be a sample value or a brief description of the expected format.",
       },
     },
     "aria-rowcount": Object {
-      "description": "Defines the total number of rows in a table, grid, or treegrid.
-@see aria-rowindex.",
+      "description": "Defines the total number of rows in a table, grid, or treegrid.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "number",
@@ -667,9 +687,7 @@ A hint could be a sample value or a brief description of the expected format.",
       },
     },
     "aria-rowindex": Object {
-      "description": "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.
-@see aria-rowcount
-@see aria-rowspan.",
+      "description": "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "number",
@@ -677,9 +695,7 @@ A hint could be a sample value or a brief description of the expected format.",
       },
     },
     "aria-rowspan": Object {
-      "description": "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.
-@see aria-rowindex
-@see aria-colspan.",
+      "description": "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "number",
@@ -687,9 +703,7 @@ A hint could be a sample value or a brief description of the expected format.",
       },
     },
     "aria-selected": Object {
-      "description": "Indicates the current \\"selected\\" state of various widgets.
-@see aria-checked
-@see aria-pressed.",
+      "description": "Indicates the current \\"selected\\" state of various widgets.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "union",
@@ -708,8 +722,7 @@ A hint could be a sample value or a brief description of the expected format.",
       },
     },
     "aria-setsize": Object {
-      "description": "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.
-@see aria-posinset.",
+      "description": "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "number",
@@ -720,20 +733,28 @@ A hint could be a sample value or a brief description of the expected format.",
       "description": "Indicates if items in a table or grid are sorted in ascending or descending order.",
       "parentName": "AriaAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "\\"none\\" | \\"ascending\\" | \\"descending\\" | \\"other\\"",
+        "name": "enum",
+        "raw": "\\"none\\" | \\"ascending\\" | \\"descending\\" | \\"other\\" | undefined",
         "value": Array [
           Object {
-            "name": "none",
+            "name": "string",
+            "value": "undefined",
           },
           Object {
-            "name": "ascending",
+            "name": "string",
+            "value": "none",
           },
           Object {
-            "name": "descending",
+            "name": "string",
+            "value": "ascending",
           },
           Object {
-            "name": "other",
+            "name": "string",
+            "value": "descending",
+          },
+          Object {
+            "name": "string",
+            "value": "other",
           },
         ],
       },
@@ -755,8 +776,7 @@ A hint could be a sample value or a brief description of the expected format.",
       },
     },
     "aria-valuenow": Object {
-      "description": "Defines the current value for a range widget.
-@see aria-valuetext.",
+      "description": "Defines the current value for a range widget.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "number",
@@ -1056,43 +1076,53 @@ from the title.",
       },
     },
     "inputMode": Object {
-      "description": "Hints at the type of data that might be entered by the user while editing the element or its contents
-@see https ://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute",
+      "description": "Hints at the type of data that might be entered by the user while editing the element or its contents",
       "parentName": "HTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "\\"text\\" | \\"none\\" | \\"tel\\" | \\"url\\" | \\"email\\" | \\"numeric\\" | \\"decimal\\" | \\"search\\"",
+        "name": "enum",
+        "raw": "\\"text\\" | \\"none\\" | \\"tel\\" | \\"url\\" | \\"email\\" | \\"numeric\\" | \\"decimal\\" | \\"search\\" | undefined",
         "value": Array [
           Object {
-            "name": "text",
+            "name": "string",
+            "value": "undefined",
           },
           Object {
-            "name": "none",
+            "name": "string",
+            "value": "text",
           },
           Object {
-            "name": "tel",
+            "name": "string",
+            "value": "none",
           },
           Object {
-            "name": "url",
+            "name": "string",
+            "value": "tel",
           },
           Object {
-            "name": "email",
+            "name": "string",
+            "value": "url",
           },
           Object {
-            "name": "numeric",
+            "name": "string",
+            "value": "email",
           },
           Object {
-            "name": "decimal",
+            "name": "string",
+            "value": "numeric",
           },
           Object {
-            "name": "search",
+            "name": "string",
+            "value": "decimal",
+          },
+          Object {
+            "name": "string",
+            "value": "search",
           },
         ],
       },
     },
     "is": Object {
-      "description": "Specify that a standard HTML element should behave like a defined custom built-in element
-@see https ://html.spec.whatwg.org/multipage/custom-elements.html#attr-is",
+      "description": "Specify that a standard HTML element should behave like a defined custom built-in element",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
@@ -2681,14 +2711,20 @@ behind an element is visible.
     "translate": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "\\"yes\\" | \\"no\\"",
+        "name": "enum",
+        "raw": "\\"yes\\" | \\"no\\" | undefined",
         "value": Array [
           Object {
-            "name": "yes",
+            "name": "string",
+            "value": "undefined",
           },
           Object {
-            "name": "no",
+            "name": "string",
+            "value": "yes",
+          },
+          Object {
+            "name": "string",
+            "value": "no",
           },
         ],
       },
@@ -2703,14 +2739,20 @@ behind an element is visible.
     "unselectable": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "\\"on\\" | \\"off\\"",
+        "name": "enum",
+        "raw": "\\"on\\" | \\"off\\" | undefined",
         "value": Array [
           Object {
-            "name": "on",
+            "name": "string",
+            "value": "undefined",
           },
           Object {
-            "name": "off",
+            "name": "string",
+            "value": "on",
+          },
+          Object {
+            "name": "string",
+            "value": "off",
           },
         ],
       },
@@ -2733,14 +2775,20 @@ behind an element is visible.
       "description": "wrapper type - can be an iframe or just regular react",
       "parentName": "StoryOwnProps",
       "type": Object {
-        "name": "union",
-        "raw": "\\"iframe\\" | \\"wrapper\\"",
+        "name": "enum",
+        "raw": "\\"iframe\\" | \\"wrapper\\" | undefined",
         "value": Array [
           Object {
-            "name": "iframe",
+            "name": "string",
+            "value": "undefined",
           },
           Object {
-            "name": "wrapper",
+            "name": "string",
+            "value": "iframe",
+          },
+          Object {
+            "name": "string",
+            "value": "wrapper",
           },
         ],
       },

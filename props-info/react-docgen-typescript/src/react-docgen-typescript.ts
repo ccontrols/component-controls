@@ -27,6 +27,7 @@ export const extractDocgenTypescriptInfo = (
     propFilter = {
       skipPropsWithoutDoc: false,
     },
+    shouldIncludePropTagMap = true,
     componentNameResolver = computeComponentName,
     shouldExtractLiteralValuesFromEnum = true,
     shouldRemoveUndefinedFromOptional = true,
@@ -34,6 +35,7 @@ export const extractDocgenTypescriptInfo = (
   } = reactDocGenTypescriptOptions || {};
   const parserOptions: ParserOptions = {
     propFilter,
+    shouldIncludePropTagMap,
     componentNameResolver,
     shouldExtractLiteralValuesFromEnum,
     shouldRemoveUndefinedFromOptional,

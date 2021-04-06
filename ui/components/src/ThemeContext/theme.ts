@@ -791,6 +791,13 @@ export const theme: ControlsTheme = {
       fontWeight: 'bold',
       textOverflow: 'ellipsis',
     },
+    'name-deprecated': {
+      fontWeight: 'bold',
+      textOverflow: 'ellipsis',
+      textDecoration: 'line-through',
+      color: 'mutedText',
+    },
+
     defaultvalue: {
       maxWidth: 400,
       whiteSpace: 'pre-wrap',

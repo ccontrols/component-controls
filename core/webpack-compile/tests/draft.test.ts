@@ -45,6 +45,7 @@ describe('test draft', () => {
     expect(store2).toMatchObject({
       stories: {},
       doc: {
+        isMDXComponent: true,
         type: 'blog',
         title: 'First blog',
       },
@@ -53,6 +54,7 @@ describe('test draft', () => {
     expect(store3).toMatchObject({
       stories: {},
       doc: {
+        isMDXComponent: true,
         title: 'First Page',
       },
     });
@@ -125,6 +127,7 @@ describe('test draft', () => {
         },
       },
       doc: {
+        isMDXComponent: true,
         order: 0,
         title: 'Library/Components/MDX',
       },
@@ -290,6 +293,7 @@ describe('test draft', () => {
             },
           ],
         },
+        localDependencies: {},
         importedName: 'Button',
         jsx: [
           {
@@ -349,19 +353,26 @@ describe('test draft', () => {
               parentName: 'ButtonProps',
               defaultValue: 'button',
               type: {
-                name: 'union',
+                name: 'enum',
                 value: [
                   {
-                    name: 'button',
+                    name: 'string',
+                    value: 'undefined',
                   },
                   {
-                    name: 'reset',
+                    name: 'string',
+                    value: 'button',
                   },
                   {
-                    name: 'submit',
+                    name: 'string',
+                    value: 'reset',
+                  },
+                  {
+                    name: 'string',
+                    value: 'submit',
                   },
                 ],
-                raw: '"button" | "reset" | "submit"',
+                raw: '"button" | "reset" | "submit" | undefined',
               },
             },
             style: {

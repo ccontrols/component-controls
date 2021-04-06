@@ -169,11 +169,17 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
               name,
               prop: {
                 type: { required },
+                deprecated,
               },
               control,
             } = original;
             const text = (
-              <Text variant="propstable.name">
+              <Text
+                title={deprecated ? `deprecated: ${deprecated}` : undefined}
+                variant={
+                  deprecated ? 'propstable.name-deprecated' : 'propstable.name'
+                }
+              >
                 {control ? control.label || name : name}
               </Text>
             );

@@ -7,8 +7,8 @@ Object {
   "methods": Array [],
   "props": Object {
     "isObsolete": Object {
-      "description": "boolean switch - obsolete depracated property
-@deprecated since version 1.0",
+      "deprecated": "since version 1.0",
+      "description": "boolean switch - obsolete depracated property",
       "parentName": "MyComponentProps",
       "type": Object {
         "name": "React.ReactElement",
@@ -63,14 +63,20 @@ Object {
     "optionalEnum": Object {
       "parentName": "MyComponentProps",
       "type": Object {
-        "name": "union",
-        "raw": "\\"News\\" | \\"Photos\\"",
+        "name": "enum",
+        "raw": "\\"News\\" | \\"Photos\\" | undefined",
         "value": Array [
           Object {
-            "name": "News",
+            "name": "string",
+            "value": "undefined",
           },
           Object {
-            "name": "Photos",
+            "name": "string",
+            "value": "News",
+          },
+          Object {
+            "name": "string",
+            "value": "Photos",
           },
         ],
       },

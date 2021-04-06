@@ -33,12 +33,12 @@ export const getComponentProps = async (
     console.error(`Multiple propsloaders found for file ${filePath}`);
   }
   const propsLoaderName = loaders.length === 1 ? loaders[0] : undefined;
-
+  const version = '1.05';
   const cached = new CachedFileResource<ComponentInfo>(
     'props-info',
-    `${filePath}-${componentName}-${
+    `x${filePath}-${componentName}-${
       propsLoaderName ? propsLoaderName.name : ''
-    }`,
+    }-${version}`,
     filePath,
   );
 

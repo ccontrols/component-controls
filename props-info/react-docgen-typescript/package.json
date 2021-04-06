@@ -31,7 +31,7 @@
   "license": "MIT",
   "dependencies": {
     "@component-controls/core": "^3.5.0",
-    "react-docgen-typescript": "^1.20.5"
+    "react-docgen-typescript": "^1.22.0"
   },
   "devDependencies": {
     "@component-controls/ts-markdown-docs": "^2.6.0",
