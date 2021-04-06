@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.6.0](https://github.com/ccontrols/component-controls/compare/v3.5.5...v3.6.0) (2021-04-06)
+
+
+### Features
+
+* deprecated props enabled ([e732f35](https://github.com/ccontrols/component-controls/commit/e732f35e0fd6fb7e57ad37de391e9d43c89114e0))
+
+
+
+
+
 ## [3.5.5](https://github.com/ccontrols/component-controls/compare/v3.5.4...v3.5.5) (2021-04-04)
 
 **Note:** Version bump only for package @component-controls/components
