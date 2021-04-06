@@ -189,13 +189,9 @@ import {
   loadConfigurations,
   extractDocuments,
 } from '@component-controls/config';
-import { renderExample } from '@component-controls/test-renderers';
+import { renderExample, renderErr } from '@component-controls/test-renderers';
 import { render as reactRender } from '@component-controls/render/react';
 import { render, act } from '@testing-library/react';
-
-const renderErr = () => {
-  throw new Error('Could not render the story');
-};
 
 describe('component-controls generated', () => {
   const configPath = path.resolve(__dirname, '../.config');
@@ -261,13 +257,9 @@ This will generate one test file per document, and inside will dynamically creat
 /* prettier-ignore-start */
 import path from 'path';
 import { loadConfigurations } from '@component-controls/config';
-import { renderDocument } from '@component-controls/test-renderers';
+import { renderDocument, renderErr } from '@component-controls/test-renderers';
 import { render as reactRender } from '@component-controls/render/react';
 import { render, act } from '@testing-library/react';
-
-const renderErr = () => {
-  throw new Error('Could not render the story');
-};
 
 import * as examples from './Header.stories';
 
@@ -317,13 +309,9 @@ This approach can lead to outdated test files (for example when you add a new st
 /* prettier-ignore-start */
 import path from 'path';
 import { loadConfigurations } from '@component-controls/config';
-import { renderExample } from '@component-controls/test-renderers';
+import { renderExample, renderErr } from '@component-controls/test-renderers';
 import { render as reactRender } from '@component-controls/render/react';
 import { render, act } from '@testing-library/react';
-
-const renderErr = () => {
-  throw new Error('Could not render the story');
-};
 
 import doc, { overview } from './Header.stories';
 
@@ -367,13 +355,9 @@ Here is an example of extending a test with some custom test conditions (removed
 /* prettier-ignore-start */
 import path from 'path';
 import { loadConfigurations } from '@component-controls/config';
-import { renderExample } from '@component-controls/test-renderers';
+import { renderExample, renderErr } from '@component-controls/test-renderers';
 import { render as reactRender } from '@component-controls/render/react';
 import { render, act } from '@testing-library/react';
-
-const renderErr = () => {
-  throw new Error('Could not render the story');
-};
 
 import doc, { primary } from './VariantButton.stories';
 
