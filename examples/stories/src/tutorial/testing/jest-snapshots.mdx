@@ -195,7 +195,6 @@ const renderErr = () => {
 describe('component-controls generated', () => {
   let matchMedia: MatchMediaMock;
   beforeAll(() => {
-    jest.mock('rc-util/lib/Portal');
     matchMedia = new MatchMediaMock();
   });
   afterEach(() => {
@@ -278,7 +277,6 @@ import * as examples from './Header.stories';
 describe('Header', () => {
   let matchMedia: MatchMediaMock;
   beforeAll(() => {
-    jest.mock('rc-util/lib/Portal');
     matchMedia = new MatchMediaMock();
   });
   afterEach(() => {
@@ -344,7 +342,6 @@ describe('Header', () => {
   let matchMedia: MatchMediaMock;
 
   beforeAll(() => {
-    jest.mock('rc-util/lib/Portal');
     matchMedia = new MatchMediaMock();
   });
 
@@ -406,7 +403,6 @@ describe('VariantVutton', () => {
   let matchMedia: MatchMediaMock;
 
   beforeAll(() => {
-    jest.mock('rc-util/lib/Portal');
     matchMedia = new MatchMediaMock();
   });
 

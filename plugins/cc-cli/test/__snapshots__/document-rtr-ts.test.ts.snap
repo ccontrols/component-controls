@@ -20,7 +20,6 @@ import * as examples from './fixtures/VariantButton.docs';
 describe('VariantButton', () => {
   let matchMedia: MatchMediaMock;
   beforeAll(() => {
-    jest.mock('rc-util/lib/Portal');
     matchMedia = new MatchMediaMock();
   });
   afterEach(() => {

@@ -17,7 +17,6 @@ const componentErr = () => {
 describe('component-controls generated', () => {
   let matchMedia;
   beforeAll(() => {
-    jest.mock('rc-util/lib/Portal');
     matchMedia = new MatchMediaMock();
   });
   afterEach(() => {

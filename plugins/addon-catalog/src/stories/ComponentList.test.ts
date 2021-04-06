@@ -5,7 +5,7 @@ import { renderDocument } from '@component-controls/test-renderers';
 import { render as reactRender } from '@component-controls/render/react';
 import { render, act } from '@testing-library/react';
 
-const renderErr = () => {
+const renderErr = (): void => {
   throw new Error('Could not render the story');
 };
 
@@ -14,7 +14,6 @@ import * as examples from './ComponentList.stories';
 describe('ComponentList', () => {
   let matchMedia: MatchMediaMock;
   beforeAll(() => {
-    jest.mock('rc-util/lib/Portal');
     matchMedia = new MatchMediaMock();
   });
   afterEach(() => {

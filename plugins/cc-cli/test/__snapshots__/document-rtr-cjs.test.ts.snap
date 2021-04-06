@@ -21,7 +21,6 @@ const examples = require('./fixtures/VariantButton.docs');
 describe('VariantButton', () => {
   let matchMedia;
   beforeAll(() => {
-    jest.mock('rc-util/lib/Portal');
     matchMedia = new MatchMediaMock();
   });
   afterEach(() => {

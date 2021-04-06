@@ -19,7 +19,6 @@ const renderErr = (): void => {
 describe('component-controls generated', () => {
   let matchMedia: MatchMediaMock;
   beforeAll(() => {
-    jest.mock('rc-util/lib/Portal');
     matchMedia = new MatchMediaMock();
   });
   afterEach(() => {
