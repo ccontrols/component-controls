@@ -5,10 +5,7 @@ exports[`rtl bundle cjs 1`] = `
 const { loadStore } = require('@component-controls/store');
 const { render: reactRender } = require('@component-controls/render/react');
 const { render, act } = require('@testing-library/react');
-
-const renderErr = () => {
-  throw new Error('Could not render the story');
-};
+const { renderErr } = require('@component-controls/test-renderers');
 
 describe('Components/Header', () => {
   const store = loadStore(

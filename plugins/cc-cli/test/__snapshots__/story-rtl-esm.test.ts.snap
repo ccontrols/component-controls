@@ -6,10 +6,7 @@ import { loadConfigurations } from '@component-controls/config';
 import { renderExample } from '@component-controls/test-renderers';
 import { render as reactRender } from '@component-controls/render/react';
 import { render, act } from '@testing-library/react';
-
-const renderErr = () => {
-  throw new Error('Could not render the story');
-};
+import { renderErr } from '@component-controls/test-renderers';
 
 import doc, {
   overview,

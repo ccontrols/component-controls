@@ -6,14 +6,11 @@ const { loadConfigurations } = require('@component-controls/config');
 const { renderExample } = require('@component-controls/test-renderers');
 const { render: reactRender } = require('@component-controls/render/react');
 const renderer = require('react-test-renderer');
+const {
+  renderErr,
+  componentErr,
+} = require('@component-controls/test-renderers');
 const act = renderer.act;
-
-const renderErr = () => {
-  throw new Error('Could not render the story');
-};
-const componentErr = () => {
-  throw new Error('Error rendering component with react-test-renderer');
-};
 
 const doc = require('./fixtures/VariantButton.docs');
 const {

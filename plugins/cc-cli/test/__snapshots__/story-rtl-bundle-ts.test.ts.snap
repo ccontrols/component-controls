@@ -5,10 +5,7 @@ exports[`rtl bundle ts 1`] = `
 import { loadStore } from '@component-controls/store';
 const { render: reactRender } = require('@component-controls/render/react');
 import { render, act } from '@testing-library/react';
-
-const renderErr = (): void => {
-  throw new Error('Could not render the story');
-};
+import { renderErr } from '@component-controls/test-renderers';
 
 describe('Components/Header', () => {
   const store = loadStore(
