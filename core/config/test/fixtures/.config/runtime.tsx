@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx, Box, Text } from 'theme-ui';
-import { RunOnlyConfiguration } from '@component-controls/core';
+import { RuntimeConfiguration } from '@component-controls/core';
 import { Link } from '@component-controls/components';
 
-const config: RunOnlyConfiguration = {
+const config: RuntimeConfiguration = {
   title: `Component controls`,
   description: `A next-generation tool to create blazing-fast documentation sites`,
   language: `en`,

@@ -252,11 +252,11 @@ export type StaticMenuItems = StaticMenuItem[];
  * global configuration used at build time
  * stored in a file named main.js/main.ts
  */
-export type RunOnlyConfiguration = {
+export type RuntimeConfiguration = {
   /**
    * framework-specific render function. By default react render
    */
-  renderFn: FrameworkRenderFn;
+  renderFn?: FrameworkRenderFn;
   /**
    * standalone site title. Default is "Component controls"
    */
@@ -357,7 +357,8 @@ export type RunOnlyConfiguration = {
   analytics?: any;
 } & StoryProps;
 
-export type RunConfiguration = RunOnlyConfiguration &
+export type RunConfiguration = Omit<RuntimeConfiguration, 'renderFn'> &
+  Required<Pick<RuntimeConfiguration, 'renderFn'>> &
   Omit<BuildConfiguration, 'pages'>;
 
 export const defaultBuildConfig: BuildConfiguration = {

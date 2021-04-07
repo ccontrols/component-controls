@@ -1,15 +1,15 @@
 # Table of contents
 
--   [In action](#in-action)
--   [Overview](#overview)
--   [Getting Started](#getting-started)
-    -   [Install](#install)
-    -   [Add to a document](#add-to-a-document)
-    -   [Add to a story](#add-to-a-story)
-    -   [Insert into an MDX document](#insert-into-an-mdx-document)
-    -   [Configure props globally](#configure-props-globally)
--   [API](#api)
-    -   [<ins>FigmaEmbedBlock</ins>](#insfigmaembedblockins)
+- [In action](#in-action)
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+  - [Install](#install)
+  - [Add to a document](#add-to-a-document)
+  - [Add to a story](#add-to-a-story)
+  - [Insert into an MDX document](#insert-into-an-mdx-document)
+  - [Configure props globally](#configure-props-globally)
+- [API](#api)
+  - [<ins>FigmaEmbedBlock</ins>](#insfigmaembedblockins)
 
 # In action
 
@@ -97,9 +97,9 @@ You can globally change the iframe options for the FigmaEmbedBlock component
 
 in `.config/runtime.tsx`
 
-    import { RunOnlyConfiguration } from "@component-controls/core";
+    import { RuntimeConfiguration } from "@component-controls/core";
 
-    const config: RunOnlyConfiguration = {
+    const config: RuntimeConfiguration = {
       ...
       components: {
         figma: {

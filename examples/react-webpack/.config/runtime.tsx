@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Box, Text } from 'theme-ui';
-import { RunOnlyConfiguration } from '@component-controls/core';
+import { RuntimeConfiguration } from '@component-controls/core';
 import { Link } from '@component-controls/components';
 import { OctofaceIcon } from '@primer/octicons-react';
 
@@ -16,7 +16,7 @@ const categories = [
   'Application',
 ];
 
-const config: RunOnlyConfiguration = {
+const config: RuntimeConfiguration = {
   analytics: 'UA-172446254-1',
   title: `Component controls`,
   description: `A next-generation tool to create blazing-fast documentation sites`,

@@ -108,9 +108,9 @@ module.exports = {
 
 ```js:title=.storybook/runtime.tsx {2-12}
 import '../src/tailwind.output.css';
-import { RunOnlyConfiguration } from '@component-controls/core';
+import { RuntimeConfiguration } from '@component-controls/core';
 
-const config: RunOnlyConfiguration = {
+const config: RuntimeConfiguration = {
   analytics: 'UA-XXXXXXXXX-X',
   title: `Tailwind component-controls`,
   description: `Tailwind project with typescript, react testing library and component-controls`,

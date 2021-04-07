@@ -152,8 +152,8 @@ import { FigmaEmbedBlock } from '@component-controls/figma-plugin';
 You can globally change the iframe options for the FigmaEmbedBlock component
 
 ```js:title=.config/runtime.tsx
-import { RunOnlyConfiguration } from '@component-controls/core';
-const config: RunOnlyConfiguration = {
+import { RuntimeConfiguration } from '@component-controls/core';
+const config: RuntimeConfiguration = {
   ...
   components: {
     'figma-embed': {
@@ -233,9 +233,9 @@ import { NotesBlock } from '@component-controls/addon-notes';
 You can globally change the default options of the NotesBlock component
 
 ```js:title=.config/runtime.tsx
-import { RunOnlyConfiguration } from "@component-controls/core";
+import { RuntimeConfiguration } from "@component-controls/core";
 
-const config: RunOnlyConfiguration = {
+const config: RuntimeConfiguration = {
   ...
   components: {
     notes: {
@@ -310,9 +310,9 @@ import logout_screen from './media/logout-screen.jpg';
 You can globally change the default options of the NotesBlock component
 
 ```js:title=.config/runtime.tsx
-import { RunOnlyConfiguration } from '@component-controls/core';
+import { RuntimeConfiguration } from '@component-controls/core';
 
-const config: RunOnlyConfiguration = {
+const config: RuntimeConfiguration = {
 ...
   components: {
     images: {

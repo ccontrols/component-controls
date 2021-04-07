@@ -1,7 +1,7 @@
 import React from 'react';
-import { RunOnlyConfiguration } from '@component-controls/core';
+import { RuntimeConfiguration } from '@component-controls/core';
 
-const config: RunOnlyConfiguration = {
+const config: RuntimeConfiguration = {
   logo: <div>hello</div>,
   title: 'Title',
 };

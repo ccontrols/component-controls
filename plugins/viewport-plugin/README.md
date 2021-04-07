@@ -1,14 +1,14 @@
 # Table of contents
 
--   [In action](#in-action)
--   [Overview](#overview)
--   [Getting Started](#getting-started)
-    -   [Install](#install)
-    -   [Configure route](#configure-route)
-    -   [Configure page display](#configure-page-display)
--   [API](#api)
-    -   [<ins>ViewportBlock</ins>](#insviewportblockins)
-    -   [<ins>ViewportBox</ins>](#insviewportboxins)
+- [In action](#in-action)
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+  - [Install](#install)
+  - [Configure route](#configure-route)
+  - [Configure page display](#configure-page-display)
+- [API](#api)
+  - [<ins>ViewportBlock</ins>](#insviewportblockins)
+  - [<ins>ViewportBox</ins>](#insviewportboxins)
 
 # In action
 
@@ -51,10 +51,10 @@ in `.config/buildtime.js`
 in `.config/runtime.tsx`
 
         import React from 'react';
-        import { RunOnlyConfiguration, defaultRunConfig } from "@component-controls/core";
+        import { RuntimeConfiguration, defaultRunConfig } from "@component-controls/core";
         import { ViewportPage } from "@component-controls/viewport-plugin";
 
-        const config: RunOnlyConfiguration = {
+        const config: RuntimeConfiguration = {
           pages: {
             story: {
               tabs: [

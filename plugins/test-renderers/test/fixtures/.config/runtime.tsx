@@ -1,7 +1,7 @@
 import React from 'react';
-import { RunOnlyConfiguration } from '@component-controls/core';
+import { RuntimeConfiguration } from '@component-controls/core';
 
-const config: RunOnlyConfiguration = {
+const config: RuntimeConfiguration = {
   analytics: 'UA-172446254-1',
   title: `Component controls`,
   description: `A next-generation tool to create blazing-fast documentation sites`,
