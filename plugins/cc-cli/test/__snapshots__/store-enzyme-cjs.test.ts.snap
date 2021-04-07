@@ -8,7 +8,6 @@ const {
   isMDXDocument,
 } = require('@component-controls/config');
 const { renderExample } = require('@component-controls/test-renderers');
-const { render: reactRender } = require('@component-controls/render/react');
 const { mount, configure } = require('enzyme');
 const toJson = require('enzyme-to-json').default;
 const Adapter = require('@wojtekmaj/enzyme-adapter-react-17');
@@ -18,9 +17,6 @@ configure({ adapter: new Adapter() });
 describe('component-controls generated', () => {
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
-  if (!config.renderFn) {
-    config.renderFn = reactRender;
-  }
   const documents = extractDocuments({ config, configPath });
   if (documents) {
     documents

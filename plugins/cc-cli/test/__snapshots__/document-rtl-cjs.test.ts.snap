@@ -4,7 +4,6 @@ exports[`rtl  cjs 1`] = `
 "const path = require('path');
 const { loadConfigurations } = require('@component-controls/config');
 const { renderDocument } = require('@component-controls/test-renderers');
-const { render: reactRender } = require('@component-controls/render/react');
 const { render, act } = require('@testing-library/react');
 const { renderErr } = require('@component-controls/test-renderers');
 
@@ -13,9 +12,6 @@ const examples = require('./fixtures/VariantButton.docs');
 describe('VariantButton', () => {
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
-  if (!config.renderFn) {
-    config.renderFn = reactRender;
-  }
   let renderedExamples = [];
   act(() => {
     renderedExamples = renderDocument(examples, config);

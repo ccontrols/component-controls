@@ -4,7 +4,6 @@ exports[`enzyme  cjs 1`] = `
 "const path = require('path');
 const { loadConfigurations } = require('@component-controls/config');
 const { renderExample } = require('@component-controls/test-renderers');
-const { render: reactRender } = require('@component-controls/render/react');
 const { mount, configure } = require('enzyme');
 const toJson = require('enzyme-to-json').default;
 const Adapter = require('@wojtekmaj/enzyme-adapter-react-17');
@@ -25,9 +24,6 @@ const {
 describe('VariantButton', () => {
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
-  if (!config.renderFn) {
-    config.renderFn = reactRender;
-  }
 
   test('overview', () => {
     const example = overview;

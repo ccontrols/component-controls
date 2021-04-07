@@ -8,7 +8,6 @@ const {
   isMDXDocument,
 } = require('@component-controls/config');
 const { renderExample } = require('@component-controls/test-renderers');
-const { render: reactRender } = require('@component-controls/render/react');
 const renderer = require('react-test-renderer');
 const {
   renderErr,
@@ -19,9 +18,6 @@ const act = renderer.act;
 describe('component-controls generated', () => {
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
-  if (!config.renderFn) {
-    config.renderFn = reactRender;
-  }
   const documents = extractDocuments({ config, configPath });
   if (documents) {
     documents

@@ -3,7 +3,6 @@
 exports[`rtl bundle ts 1`] = `
 "import * as path from 'path';
 import { loadStore } from '@component-controls/store';
-import { render as reactRender } from '@component-controls/render/react';
 import { render, act } from '@testing-library/react';
 import { renderErr } from '@component-controls/test-renderers';
 
@@ -11,7 +10,7 @@ describe('Components/Header', () => {
   const store = loadStore(
     require(path.resolve(__dirname, './bundle/component-controls.js')),
   );
-  const renderFn = store.config.renderFn || reactRender;
+  const renderFn = store.config.renderFn;
   Object.keys(store.docs).forEach(docId => {
     const doc = store.docs[docId];
     if (doc.stories && doc.stories.length) {

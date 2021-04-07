@@ -59,7 +59,7 @@ export const store: LoadingStore = {
   stores: [],
   components: {},
   packages: {},
-  config: {},
+  config: {} as RunConfiguration,
   buildConfig: {},
   search: () => {
     return {} as SearchResult;

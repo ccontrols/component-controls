@@ -374,7 +374,7 @@ export interface Store {
 
 class DefaultStore {
   private observers: StoreObserver[] = [];
-  config = {};
+  config = {} as RunConfiguration;
   components = {};
   docs = {};
   packages = {};

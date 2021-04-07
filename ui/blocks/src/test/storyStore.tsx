@@ -17,8 +17,8 @@ import img_example from './image_example.jpg';
 export const store: Store = {
   ...getDefaultStore(),
   config: {
-    renderFn: reactRender,
     ...deepMerge(defaultBuildConfig, defaultRunConfig),
+    renderFn: reactRender,
     pages: {
       ...defaultBuildConfig.pages,
       story: {

@@ -256,7 +256,7 @@ export type RunOnlyConfiguration = {
   /**
    * framework-specific render function. By default react render
    */
-  renderFn?: FrameworkRenderFn;
+  renderFn: FrameworkRenderFn;
   /**
    * standalone site title. Default is "Component controls"
    */
@@ -414,7 +414,8 @@ export const defaultBuildConfig: BuildConfiguration = {
     searchingModule: '@component-controls/search-fusejs',
   },
 };
-export const defaultRunConfig: RunConfiguration = {
+export const defaultRunConfig: Omit<RunConfiguration, 'renderFn'> &
+  Partial<Pick<RunConfiguration, 'renderFn'>> = {
   title: 'Component controls',
   description:
     'Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site.',

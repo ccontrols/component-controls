@@ -190,15 +190,11 @@ import {
   extractDocuments,
 } from '@component-controls/config';
 import { renderExample, renderErr } from '@component-controls/test-renderers';
-import { render as reactRender } from '@component-controls/render/react';
 import { render, act } from '@testing-library/react';
 
 describe('component-controls generated', () => {
   const configPath = path.resolve(__dirname, '../.config');
   const config = loadConfigurations(configPath);
-  if (!config.renderFn) {
-    config.renderFn = reactRender;
-  }
   const documents = extractDocuments({ config, configPath });
   if (documents) {
     documents.forEach((file: string) => {
@@ -258,7 +254,6 @@ This will generate one test file per document, and inside will dynamically creat
 import path from 'path';
 import { loadConfigurations } from '@component-controls/config';
 import { renderDocument, renderErr } from '@component-controls/test-renderers';
-import { render as reactRender } from '@component-controls/render/react';
 import { render, act } from '@testing-library/react';
 
 import * as examples from './Header.stories';
@@ -266,9 +261,6 @@ import * as examples from './Header.stories';
 describe('Header', () => {
   const configPath = path.resolve(__dirname, '../../.config');
   const config = loadConfigurations(configPath);
-  if (!config.renderFn) {
-    config.renderFn = reactRender;
-  }
   let renderedExamples: ReturnType<typeof renderDocument> = [];
   act(() => {
     renderedExamples = renderDocument(examples, config);
@@ -310,7 +302,6 @@ This approach can lead to outdated test files (for example when you add a new st
 import path from 'path';
 import { loadConfigurations } from '@component-controls/config';
 import { renderExample, renderErr } from '@component-controls/test-renderers';
-import { render as reactRender } from '@component-controls/render/react';
 import { render, act } from '@testing-library/react';
 
 import doc, { overview } from './Header.stories';
@@ -319,10 +310,6 @@ describe('Header', () => {
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
   
-  if (!config.renderFn) {
-    config.renderFn = reactRender;
-  }
-
   test('overview', () => {
     const example = overview;
     let rendered;
@@ -356,7 +343,6 @@ Here is an example of extending a test with some custom test conditions (removed
 import path from 'path';
 import { loadConfigurations } from '@component-controls/config';
 import { renderExample, renderErr } from '@component-controls/test-renderers';
-import { render as reactRender } from '@component-controls/render/react';
 import { render, act } from '@testing-library/react';
 
 import doc, { primary } from './VariantButton.stories';
@@ -364,10 +350,6 @@ import doc, { primary } from './VariantButton.stories';
 describe('VariantVutton', () => {
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
-  
-  if (!config.renderFn) {
-    config.renderFn = reactRender;
-  }
 
   test('primary', () => {
     const example = overview;

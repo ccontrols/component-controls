@@ -4,7 +4,6 @@ import * as fs from 'fs';
 import { sync as globSync } from 'glob';
 import globBase from 'glob-base';
 import { makeRe } from 'micromatch';
-
 import yargs from 'yargs';
 import {
   BuildConfiguration,
@@ -14,6 +13,7 @@ import {
   defaultRunConfig,
   convertConfig,
 } from '@component-controls/core';
+import { render as reactRender } from '@component-controls/render/react';
 import {
   defaultMDXOptions,
   InstrumentOptions,
@@ -208,10 +208,15 @@ export const loadConfigurations = (configPath: string): RunConfiguration => {
     runtimeConfig = req.default || req;
   }
   const runConfig = mergeConfig(defaultRunConfig, runtimeConfig);
-  return mergeConfig(
+  const final: ReturnType<typeof loadConfigurations> = mergeConfig(
     defaultRunConfig,
     convertConfig(mergeConfig(buildConfig, runConfig)),
   );
+  if (!final.renderFn) {
+    final.renderFn = reactRender;
+  }
+
+  return final;
 };
 
 /**

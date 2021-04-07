@@ -3,7 +3,6 @@
 exports[`enzyme bundle ts 1`] = `
 "import * as path from 'path';
 import { loadStore } from '@component-controls/store';
-import { render as reactRender } from '@component-controls/render/react';
 import { mount, configure } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
@@ -14,7 +13,7 @@ describe('component-controls generated', () => {
   const store = loadStore(
     require(path.resolve(__dirname, './bundle/component-controls.js')),
   );
-  const renderFn = store.config.renderFn || reactRender;
+  const renderFn = store.config.renderFn;
   Object.keys(store.docs).forEach(docId => {
     const doc = store.docs[docId];
     if (doc.stories && doc.stories.length) {

@@ -8,16 +8,12 @@ import {
   isMDXDocument,
 } from '@component-controls/config';
 import { renderExample } from '@component-controls/test-renderers';
-import { render as reactRender } from '@component-controls/render/react';
 import { render, act } from '@testing-library/react';
 import { renderErr } from '@component-controls/test-renderers';
 
 describe('component-controls generated', () => {
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
-  if (!config.renderFn) {
-    config.renderFn = reactRender;
-  }
   const documents = extractDocuments({ config, configPath });
   if (documents) {
     documents

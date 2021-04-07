@@ -1,7 +1,6 @@
 import * as path from 'path';
 import { loadConfigurations } from '@component-controls/config';
 import { renderExample } from '@component-controls/test-renderers';
-import { render as reactRender } from '@component-controls/render/react';
 import { render, act } from '@testing-library/react';
 import { renderErr } from '@component-controls/test-renderers';
 
@@ -12,9 +11,6 @@ import doc, {
 describe('Header', () => {
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
-  if (!config.renderFn) {
-    config.renderFn = reactRender;
-  }
 
   test('overview', () => {
     const example = overview;

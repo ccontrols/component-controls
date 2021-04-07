@@ -3,7 +3,6 @@
 exports[`rtr bundle cjs 1`] = `
 "const path = require('path');
 const { loadStore } = require('@component-controls/store');
-const { render: reactRender } = require('@component-controls/render/react');
 const renderer = require('react-test-renderer');
 const {
   renderErr,
@@ -15,7 +14,7 @@ describe('component-controls generated', () => {
   const store = loadStore(
     require(path.resolve(__dirname, './bundle/component-controls.js')),
   );
-  const renderFn = store.config.renderFn || reactRender;
+  const renderFn = store.config.renderFn;
   Object.keys(store.docs).forEach(docId => {
     const doc = store.docs[docId];
     if (doc.stories && doc.stories.length) {

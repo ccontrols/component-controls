@@ -5,7 +5,12 @@ import React, {
   useState,
   useEffect,
 } from 'react';
-import { Store, getDefaultStore, PackageInfo } from '@component-controls/core';
+import {
+  Store,
+  getDefaultStore,
+  PackageInfo,
+  RunConfiguration,
+} from '@component-controls/core';
 
 interface StoreContextProps {
   store: Store;
@@ -44,7 +49,7 @@ interface ConfigContextProps {
 }
 
 export const ConfigContext = createContext<ConfigContextProps>({
-  config: {},
+  config: {} as RunConfiguration,
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   setConfig: () => {},
 });
