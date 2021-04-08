@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/react-docgen-typescript-info",
-  "version": "3.6.2",
+  "version": "3.6.3",
   "description": "Component controls react-docgen-typescript props info loader",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,7 +30,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/core": "^3.6.2",
+    "@component-controls/core": "^3.6.3",
     "react-docgen-typescript": "^1.22.0"
   },
   "devDependencies": {
