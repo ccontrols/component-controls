@@ -21,7 +21,7 @@
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "prepare": "yarn build",
-    "test": "yarn jest"
+    "test": "yarn jest actual"
   },
   "homepage": "https://github.com/ccontrols/component-controls",
   "bugs": {
@@ -58,10 +58,13 @@
     "Atanas Stoyanov"
   ],
   "jest": {
-    "testEnvironment": "node",
     "preset": "ts-jest",
+    "transform": {
+      "^.+\\.(ts|tsx)?$": "ts-jest",
+      "^.+\\.(js|jsx)$": "babel-jest"
+    },
     "roots": [
-      "./test/tests"
+      "./test"
     ]
   },
   "gitHead": "e30d62f101e104711a16261fce04785d58cac1eb"

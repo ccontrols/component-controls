@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { runCLI } from 'jest';
 import { Config } from '@jest/types';
+import { findUpFile } from '@component-controls/core/node-utils';
 import { AssertionResult, AggregatedResult } from '@jest/test-result';
 import { FileCoverage, CoverageSummaryData } from 'istanbul-lib-coverage';
 
@@ -31,31 +32,8 @@ export const runTests = async (
 ): Promise<JestResults | undefined> => {
   const testFolder = path.dirname(testFilePath);
   const testFile = path.basename(testFilePath);
-  const configFolder = getUniqueFolder(testFolder);
-  const configFile = path.resolve(configFolder, 'jest.config.js');
-  const { rootDir = '..', ...config } = jestConfig;
-  fs.writeFileSync(
-    configFile,
-    `module.exports = ${JSON.stringify(
-      {
-        rootDir,
-        preset: 'ts-jest',
-        transform: {
-          '^.+\\.(ts|tsx)?$': 'ts-jest',
-          '^.+\\.(js|jsx)$': 'babel-jest',
-        },
-        collectCoverageFrom: [
-          '**/*.{js,jsx,tsx,ts}',
-          '!**/jest.config.js',
-          '!**/*.{test,spec}.{js,jsx,tsx,ts}',
-        ],
-      },
-      null,
-      2,
-    )}
-  `,
-    'utf8',
-  );
+  const configFolder =
+    findUpFile(testFolder, ['package.json', 'jest-config.js']) || testFolder;
   let runResults: {
     results: AggregatedResult;
     globalConfig: Config.GlobalConfig;
@@ -72,16 +50,18 @@ export const runTests = async (
         coverage: true,
         coverageReporters: ['none'],
         watchman: false,
-        ...config,
+        collectCoverageFrom: [
+          '**/*.{js,jsx,tsx,ts}',
+          '!**/jest.config.js',
+          '!**/*.{test,spec}.{js,jsx,tsx,ts}',
+        ],
+        ...jestConfig,
       } as Config.Argv,
       [configFolder],
     );
   } catch (err) {
     console.error(err);
     return undefined;
-  } finally {
-    fs.unlinkSync(configFile);
-    fs.rmdirSync(configFolder, { recursive: true });
   }
   const cov = runResults.results.coverageMap;
   if (runResults.results.testResults.length !== 1) {

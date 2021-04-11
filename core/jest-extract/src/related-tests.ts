@@ -49,12 +49,7 @@ export const runRelatedTests = async (
   const fileDir = path.dirname(filePath);
   const results: RelatedTests = await Promise.all(
     testFiles.map(async testFile => {
-      const rootDir = path.relative(
-        path.resolve(path.dirname(testFile), 'config'),
-        fileDir,
-      );
-      const result = await runTests(testFile, { rootDir, ...jestConfig });
-
+      const result = await runTests(testFile, { ...jestConfig });
       return {
         testFileName: path.relative(fileDir, testFile),
         ...result,
