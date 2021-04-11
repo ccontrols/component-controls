@@ -36,7 +36,7 @@
   "dependencies": {
     "@component-controls/core": "^3.6.3",
     "babel-jest": "^26.4.4",
-    "jest-cli": "^26.4.2",
+    "jest": "^26.4.2",
     "path": "^0.12.7",
     "ts-jest": "^26.4.4"
   },

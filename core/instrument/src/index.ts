@@ -137,6 +137,7 @@ export const parseStories = async (
     stories: storiesOptions = {},
     mdx: mdxOptions = {},
     propsLoaders,
+    jest: jestOptions = {},
   } = options || {};
 
   const mergedOptions: Required<InstrumentOptions> = {
@@ -150,6 +151,7 @@ export const parseStories = async (
     stories: deepmerge<StoriesOptions>(defaultStoriesOptions, storiesOptions),
     mdx: deepmerge<MDXOptions>(defaultMDXOptions, mdxOptions),
     propsLoaders: propsLoaders || [],
+    jest: jestOptions,
   };
   let code: string;
   const {

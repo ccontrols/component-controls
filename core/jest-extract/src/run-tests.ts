@@ -25,7 +25,7 @@ export interface JestResults {
    */
   coverage: Record<string, CoverageSummaryData>;
 }
-export const run = async (
+export const runTests = async (
   testFilePath: string,
   jestConfig: Partial<Config.Argv> = {},
 ): Promise<JestResults | undefined> => {
@@ -64,10 +64,11 @@ export const run = async (
     runResults = await runCLI(
       {
         testRegex: testFile,
+        maxWorkers: 1,
         testPathIgnorePatterns: ['/node_modules/', '/__snapshots__/'],
         silent: true,
         verbose: false,
-        // reporters: [],
+        reporters: [],
         coverage: true,
         coverageReporters: ['none'],
         watchman: false,

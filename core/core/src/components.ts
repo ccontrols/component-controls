@@ -1,5 +1,6 @@
 import { CodeLocation, ImportType, Imports } from './utility';
 import { FileInfo } from './files';
+import { JestTests } from './jest';
 
 export type TypeValue =
   | 'any'
@@ -181,6 +182,11 @@ export interface Component {
    * source file info
    */
   fileInfo?: FileInfo;
+
+  /**
+   * jest test and coverage results for the component
+   */
+  jest?: JestTests;
 }
 /**
  * given a component, return its name

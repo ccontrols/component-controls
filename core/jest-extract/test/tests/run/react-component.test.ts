@@ -1,10 +1,10 @@
 import path from 'path';
 import { Await } from '@component-controls/core';
-import { run } from '../../../src';
+import { runTests } from '../../../src';
 
-let results: Await<ReturnType<typeof run>>;
+let results: Await<ReturnType<typeof runTests>>;
 beforeAll(async () => {
-  results = await run(
+  results = await runTests(
     path.resolve(__dirname, '../../fixtures/component/Link.react.test.js'),
   );
 }, 50000);

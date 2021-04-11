@@ -126,7 +126,7 @@
       "name": "jest instrument",
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "cwd": "${workspaceFolder}/core/instrument",
-      "args": ["esm-props-info-external"],
+      "args": ["jest-tests"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "disableOptimisticBPs": true,
