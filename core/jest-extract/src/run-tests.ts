@@ -32,8 +32,9 @@ export const runTests = async (
 ): Promise<JestResults | undefined> => {
   const testFolder = path.dirname(testFilePath);
   const testFile = path.basename(testFilePath);
-  const configFolder =
-    findUpFile(testFolder, ['package.json', 'jest-config.js']) || testFolder;
+  const configFolder = path.dirname(
+    findUpFile(testFolder, ['package.json', 'jest-config.js']) || testFolder,
+  );
   let runResults: {
     results: AggregatedResult;
     globalConfig: Config.GlobalConfig;
@@ -41,12 +42,13 @@ export const runTests = async (
   try {
     runResults = await runCLI(
       {
+        rootDir: configFolder,
         testRegex: testFile,
         maxWorkers: 1,
         testPathIgnorePatterns: ['/node_modules/', '/__snapshots__/'],
         silent: true,
         verbose: false,
-        reporters: [],
+        // reporters: [],
         coverage: true,
         coverageReporters: ['none'],
         watchman: false,

@@ -39,11 +39,7 @@ export const extractJestTests = async (
           coverage: cachedTest.coverage,
         });
       }
-      const rootDir = path.relative(
-        path.resolve(path.dirname(testFile), 'config'),
-        fileDir,
-      );
-      const result = await runTests(testFile, { rootDir, ...options });
+      const result = await runTests(testFile, options);
       if (result) {
         cached.set(result);
         results.push({
