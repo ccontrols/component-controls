@@ -1,21 +1,12 @@
-import fs from 'fs';
 import path from 'path';
 import { runCLI } from 'jest';
 import { Config } from '@jest/types';
 import { findUpFile } from '@component-controls/core/node-utils';
+import { log } from '@component-controls/logger';
 import { AssertionResult, AggregatedResult } from '@jest/test-result';
 import { FileCoverage, CoverageSummaryData } from 'istanbul-lib-coverage';
+import fastq from 'fastq';
 
-export const getUniqueFolder = (folder: string): string => {
-  let fnId = 1;
-  const fName = () => path.resolve(folder, `__jest-tmp-${fnId}`);
-  while (fs.existsSync(fName())) {
-    fnId += 1;
-  }
-  const folderName = fName();
-  fs.mkdirSync(folderName);
-  return folderName;
-};
 export interface JestResults {
   /**
    * test results
@@ -26,10 +17,16 @@ export interface JestResults {
    */
   coverage: Record<string, CoverageSummaryData>;
 }
-export const runTests = async (
-  testFilePath: string,
-  jestConfig: Partial<Config.Argv> = {},
-): Promise<JestResults | undefined> => {
+
+interface TestWorkerInput {
+  testFilePath: string;
+  jestConfig: Partial<Config.Argv>;
+}
+const runTestsWorker: fastq.asyncWorker<
+  unknown,
+  TestWorkerInput,
+  JestResults | undefined
+> = async ({ testFilePath, jestConfig }: TestWorkerInput) => {
   const testFolder = path.dirname(testFilePath);
   const testFile = path.basename(testFilePath);
   const configFolder = path.dirname(
@@ -48,7 +45,8 @@ export const runTests = async (
         testPathIgnorePatterns: ['/node_modules/', '/__snapshots__/'],
         silent: true,
         verbose: false,
-        // reporters: [],
+        testTimeout: 100000,
+        reporters: [],
         coverage: true,
         coverageReporters: ['none'],
         watchman: false,
@@ -62,7 +60,6 @@ export const runTests = async (
       [configFolder],
     );
   } catch (err) {
-    console.error(err);
     return undefined;
   }
   const cov = runResults.results.coverageMap;
@@ -86,6 +83,22 @@ export const runTests = async (
       }
     });
   }
-
   return result;
+};
+
+let queue: fastq.queueAsPromised<
+  TestWorkerInput,
+  JestResults | undefined
+> | null = null;
+
+export const runTests = async (
+  testFilePath: string,
+  jestConfig: Partial<Config.Argv> = {},
+): Promise<JestResults> => {
+  if (!queue) {
+    queue = fastq.promise(runTestsWorker, 1);
+  }
+  const result = await queue.push({ testFilePath, jestConfig });
+  log(`tests results`, path.basename(testFilePath));
+  return (result as unknown) as JestResults;
 };
