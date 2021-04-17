@@ -85,19 +85,23 @@ export const extractTests = async (
           ...options,
         },
       );
-      Object.keys(testResults.coverage).forEach(covFile => {
-        const componentKey = files.coverageFiles[`.${path.sep}${covFile}`];
-        if (componentKey) {
-          results[componentKey].coverage[covFile] =
-            testResults.coverage[covFile];
-        }
-      });
-      testResults.results.forEach(r => {
-        const componentKey = files.testFiles[`.${path.sep}${r.testFilePath}`];
-        if (componentKey) {
-          results[componentKey].results.push(r);
-        }
-      });
+      if (testResults.coverage) {
+        Object.keys(testResults.coverage).forEach(covFile => {
+          const componentKey = files.coverageFiles[`.${path.sep}${covFile}`];
+          if (componentKey) {
+            results[componentKey].coverage[covFile] =
+              testResults.coverage[covFile];
+          }
+        });
+      }
+      if (testResults.results) {
+        testResults.results.forEach(r => {
+          const componentKey = files.testFiles[`.${path.sep}${r.testFilePath}`];
+          if (componentKey) {
+            results[componentKey].results.push(r);
+          }
+        });
+      }
     }
   }
   return results;
