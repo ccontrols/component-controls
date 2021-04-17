@@ -7,7 +7,7 @@ import { renderErr } from '@component-controls/test-renderers';
 import * as examples from './ComponentUsageList.stories';
 
 describe('ComponentUsageList', () => {
-  const configPath = path.resolve(__dirname, '../../.config');
+  const configPath = path.resolve(__dirname, '../../../.config');
   const config = loadConfigurations(configPath);
   let renderedExamples: ReturnType<typeof renderDocument> = [];
   act(() => {

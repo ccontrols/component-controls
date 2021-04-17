@@ -1,3 +1,4 @@
+import { TestResult } from '@jest/test-result';
 export interface JestTestResults {
   ancestorTitles: string[];
   failureDetails: unknown[];
@@ -21,10 +22,16 @@ export interface JestCoverage {
   branches: CoverageMetrics;
 }
 
-export interface JestTestFile {
-  testFileName: string;
-  testResults: JestTestResults[];
+export interface JestTests {
+  /**
+   * test results
+   */
+  results: Pick<
+    TestResult,
+    'leaks' | 'memoryUsage' | 'perfStats' | 'testFilePath' | 'testResults'
+  >[];
+  /**
+   * coverage summary data, by file
+   */
   coverage: Record<string, JestCoverage>;
 }
-
-export type JestTests = JestTestFile[];

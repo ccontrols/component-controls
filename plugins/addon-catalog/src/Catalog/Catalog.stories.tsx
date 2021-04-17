@@ -1,11 +1,11 @@
 import React from 'react';
 import { Document, Example } from '@component-controls/core';
 import { BlockContextProvider, store } from '@component-controls/blocks';
-import { ComponentUsage } from '../ui/ComponentUsage';
+import { Catalog } from '.';
 
 export default {
-  title: 'Plugins/AddonStats/ComponentUsage',
-  component: ComponentUsage,
+  title: 'Plugins/AddonCatalog/Catalog',
+  component: Catalog,
   category: 'Components',
 } as Document;
 
@@ -15,7 +15,7 @@ export const overview: Example = () => {
       storyId="blocks-core-story-plain--controls"
       store={store}
     >
-      <ComponentUsage />
+      <Catalog />
     </BlockContextProvider>
   );
 };

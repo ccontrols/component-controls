@@ -16,11 +16,11 @@ beforeAll(async () => {
       ],
     },
   );
-}, 50000);
+}, 100000);
 
 describe('react typescript component', () => {
   it('testResults ', () => {
-    expect(results?.testResults[0]).toMatchObject({
+    expect(results?.results[0].testResults[0]).toMatchObject({
       ancestorTitles: ['Popover'],
       fullName: 'Popover overview',
       status: 'passed',
@@ -30,7 +30,7 @@ describe('react typescript component', () => {
 
   it('coverage ', () => {
     expect(results?.coverage).toMatchObject({
-      'Popover.tsx': {
+      'src/Popover/Popover.tsx': {
         lines: {
           total: 15,
           covered: 12,
@@ -56,7 +56,7 @@ describe('react typescript component', () => {
           pct: 16.67,
         },
       },
-      'PopoverUtils.tsx': {
+      'src/Popover/PopoverUtils.tsx': {
         lines: {
           total: 14,
           covered: 7,

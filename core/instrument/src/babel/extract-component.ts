@@ -14,7 +14,6 @@ import { analyze_components } from './analyze-component';
 import { packageInfo } from '../misc/package-info';
 import { readSourceFile } from '../misc/source-options';
 import { LoadingDocStore, InstrumentOptions } from '../types';
-import { extractJestTests } from '../misc/jest-tests';
 
 export interface ComponentParseData {
   component?: Component;
@@ -34,7 +33,7 @@ export const extractComponent = async (
     return globalCache[cacheKey];
   }
   const follow = followImports(componentName, filePath, source, options);
-  const { components, resolver: resolveOptions, jest } = options || {};
+  const { components, resolver: resolveOptions } = options || {};
 
   let component: Component;
   let componentPackage: PackageInfo | undefined;
@@ -116,10 +115,6 @@ export const extractComponent = async (
         componentName,
         follow.filePath,
       );
-      if (jest !== false) {
-        const testResults = await extractJestTests(component.request, jest);
-        component.jest = testResults;
-      }
       if (saveSource) {
         component.source = saveSource;
         component.loc = follow.loc;

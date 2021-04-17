@@ -11,7 +11,7 @@ beforeAll(async () => {
 
 describe('small test', () => {
   it('testResults ', () => {
-    expect(results?.testResults[0]).toMatchObject({
+    expect(results?.results[0].testResults[0]).toMatchObject({
       ancestorTitles: ['testing sum'],
       failureDetails: [],
       failureMessages: [],
@@ -25,7 +25,7 @@ describe('small test', () => {
 
   it('coverage ', () => {
     expect(results?.coverage).toMatchObject({
-      'sum.js': {
+      'test/fixtures/simple/sum.js': {
         lines: {
           total: 1,
           covered: 1,

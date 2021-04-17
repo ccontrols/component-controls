@@ -9,6 +9,12 @@ export class CachedFileResource<T> {
   private fileKey: string;
   private filePath: string;
 
+  /**
+   *
+   * @param folderKey folder(category) name
+   * @param fileKey unique (hash) key for the file
+   * @param filePath full file path and name for the cached file
+   */
   constructor(folderKey: string, fileKey: string, filePath: string) {
     this.folderKey = folderKey;
     this.fileKey = fileKey;
@@ -34,6 +40,10 @@ export class CachedFileResource<T> {
         .digest('hex'),
     );
   };
+  /**
+   *
+   * @returns if the data is in the cache or undefined
+   */
   get = (): T | undefined => {
     const cachedFileName = this.getCachedFile();
     if (fs.existsSync(cachedFileName)) {
@@ -48,6 +58,10 @@ export class CachedFileResource<T> {
     return undefined;
   };
 
+  /**
+   *
+   * @param data the data to be saved into the cache
+   */
   set = (data: T | undefined): void => {
     const cachedFileName = this.getCachedFile();
     fs.writeFileSync(cachedFileName, JSON.stringify(data || {}));

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Document, Example } from '@component-controls/core';
 import { BlockContextProvider, store } from '@component-controls/blocks';
-import { ComponentCard } from '../ComponentCard';
+import { ComponentUsageList } from '.';
 
 export default {
-  title: 'Plugins/AddonCatalog/ComponentCard',
-  component: ComponentCard,
+  title: 'Plugins/AddonStats/ComponentUsageList',
+  component: ComponentUsageList,
   category: 'Components',
 } as Document;
 
@@ -15,7 +15,7 @@ export const overview: Example = () => {
       storyId="blocks-core-story-plain--controls"
       store={store}
     >
-      <ComponentCard id="." />
+      <ComponentUsageList />
     </BlockContextProvider>
   );
 };

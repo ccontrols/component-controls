@@ -14,6 +14,7 @@ import {
   InstrumentOptions,
   getComponentProps,
   getFileIinfo,
+  extractComponentTests,
 } from '@component-controls/instrument';
 
 import {
@@ -111,8 +112,11 @@ export const addStoriesDoc = (
 };
 
 export const getSerializedStore = async (): Promise<string> => {
-  const { propsLoaders = [], components } = instrumentOptions;
+  const { propsLoaders = [], components, jest } = instrumentOptions;
   const { fileInfo = true } = components || {};
+  if (jest !== false) {
+    extractComponentTests(store.components);
+  }
   for (const name in store.components) {
     const component = store.components[name];
     const propsFile = component.propsInfoFile || component.request;

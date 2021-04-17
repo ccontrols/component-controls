@@ -24,7 +24,7 @@ describe('react link related tests', () => {
       ({ testFileName }) => testFileName === '__tests__/some_more_tests.js',
     );
     expect(result?.coverage).toMatchObject({
-      '../Link.react.js': {
+      'test/fixtures/component/Link.react.js': {
         lines: {
           total: 8,
           covered: 6,

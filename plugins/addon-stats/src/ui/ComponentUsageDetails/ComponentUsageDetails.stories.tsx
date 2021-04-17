@@ -1,11 +1,11 @@
 import React from 'react';
 import { Document, Example } from '@component-controls/core';
 import { BlockContextProvider, store } from '@component-controls/blocks';
-import { AttributeUsage } from '../ui/AttributeUsage';
+import { ComponentUsageDetails } from '.';
 
 export default {
-  title: 'Plugins/AddonStats/AttributeUsage',
-  component: AttributeUsage,
+  title: 'Plugins/AddonStats/ComponentUsageDetails',
+  component: ComponentUsageDetails,
   category: 'Components',
 } as Document;
 
@@ -15,7 +15,14 @@ export const overview: Example = () => {
       storyId="blocks-core-story-plain--controls"
       store={store}
     >
-      <AttributeUsage />
+      <ComponentUsageDetails
+        stats={{
+          stories: [],
+          name: 'ArrowButton',
+          attributes: {},
+          usedBy: { Button: { count: 1, node: {} } },
+        }}
+      />
     </BlockContextProvider>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Document, Example } from '@component-controls/core';
 import { BlockContextProvider, store } from '@component-controls/blocks';
-import { AttributesUsageDetails } from '../ui/AttributesUsageDetails';
+import { AttributesUsageDetails } from '.';
 
 export default {
   title: 'Plugins/AddonStats/AttributesUsageDetails',

@@ -4,10 +4,10 @@ import { renderDocument } from '@component-controls/test-renderers';
 import { render, act } from '@testing-library/react';
 import { renderErr } from '@component-controls/test-renderers';
 
-import * as examples from './AttributesUsageDetails.stories';
+import * as examples from './AttributesUsageList.stories';
 
-describe('AttributesUsageDetails', () => {
-  const configPath = path.resolve(__dirname, '../../.config');
+describe('AttributesUsageList', () => {
+  const configPath = path.resolve(__dirname, '../../../.config');
   const config = loadConfigurations(configPath);
   let renderedExamples: ReturnType<typeof renderDocument> = [];
   act(() => {

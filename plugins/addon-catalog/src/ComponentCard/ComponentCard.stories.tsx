@@ -1,11 +1,11 @@
 import React from 'react';
 import { Document, Example } from '@component-controls/core';
 import { BlockContextProvider, store } from '@component-controls/blocks';
-import { ComponentUsageDetails } from '../ui/ComponentUsageDetails';
+import { ComponentCard } from '.';
 
 export default {
-  title: 'Plugins/AddonStats/ComponentUsageDetails',
-  component: ComponentUsageDetails,
+  title: 'Plugins/AddonCatalog/ComponentCard',
+  component: ComponentCard,
   category: 'Components',
 } as Document;
 
@@ -15,14 +15,7 @@ export const overview: Example = () => {
       storyId="blocks-core-story-plain--controls"
       store={store}
     >
-      <ComponentUsageDetails
-        stats={{
-          stories: [],
-          name: 'ArrowButton',
-          attributes: {},
-          usedBy: { Button: { count: 1, node: {} } },
-        }}
-      />
+      <ComponentCard id="." />
     </BlockContextProvider>
   );
 };

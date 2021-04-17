@@ -11,7 +11,7 @@ beforeAll(async () => {
 
 describe('react link component', () => {
   it('testResults ', () => {
-    expect(results?.testResults[0]).toMatchObject({
+    expect(results?.results[0].testResults[0]).toMatchObject({
       ancestorTitles: [],
       failureDetails: [],
       failureMessages: [],
@@ -25,7 +25,7 @@ describe('react link component', () => {
 
   it('coverage ', () => {
     expect(results?.coverage).toMatchObject({
-      'Link.react.js': {
+      'test/fixtures/component/Link.react.js': {
         lines: {
           total: 8,
           covered: 8,
