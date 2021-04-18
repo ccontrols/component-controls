@@ -53,7 +53,6 @@ const runTestsWorker: fastq.asyncWorker<
         forceExit: true,
         testPathIgnorePatterns: ['/node_modules/', '/__snapshots__/'],
         silent: true,
-        verbose: false,
         testTimeout: 100000,
         reporters: [],
         coverage: true,
