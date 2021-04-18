@@ -50,7 +50,7 @@ const runTestsWorker: fastq.asyncWorker<
       {
         rootDir: projectFolder,
         testRegex: testFiles,
-        maxWorkers: 1,
+        forceExit: true,
         testPathIgnorePatterns: ['/node_modules/', '/__snapshots__/'],
         silent: true,
         verbose: false,

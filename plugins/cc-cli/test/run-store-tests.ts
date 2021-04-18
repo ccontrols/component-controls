@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import { runCLI } from 'jest';
-import { Config } from '@jest/types';
 import { createStoreTemplate } from '../src/store-template';
 import { TemplateOptions } from '../src/types';
 
@@ -38,10 +37,12 @@ export const runTests = async (props: TemplateOptions): Promise<void> => {
           {
             testRegex: testName,
             testPathIgnorePatterns: ['/node_modules/', '/__snapshots__/'],
+            detectOpenHandles: true,
+            runInBand: true,
             silent: true,
             verbose: false,
             watchman: false,
-          } as Config.Argv,
+          } as any,
           [__dirname],
         );
       } finally {

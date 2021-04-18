@@ -51,10 +51,19 @@ yarn add ts-jest @types/jest --dev
 "scripts": {
   ...
  "jest": {
+    // you can use a ts-jest preset
     "preset": "ts-jest",
+    // or transforms for the used files
     "transform": {
       "^.+\\.(ts|tsx)?$": "ts-jest",
       "^.+\\.(js|jsx)$": "babel-jest"
+    },
+    "globals": {
+      // Temporary fix for memory leak in ts-jest, if your project is using typescript.
+      // https://github.com/kulshekhar/ts-jest/issues/1967.
+      "ts-jest": {
+        "isolatedModules": true
+      }
     },
   },
 },
