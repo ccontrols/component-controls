@@ -1,6 +1,6 @@
 import React from 'react';
 import { Document, Example } from '@component-controls/core';
-import { Component, ComponentProps } from './component';
+import { Component, ComponentProps } from './Component';
 
 export default {
   title: 'Main story',
