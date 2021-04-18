@@ -77,9 +77,9 @@ const runTestsWorker: fastq.asyncWorker<
       ({ leaks, memoryUsage, perfStats, testFilePath, testResults }) => ({
         leaks,
         memoryUsage,
-        perfStats,
+        perfStats: { ...perfStats },
         testFilePath: path.relative(projectFolder, testFilePath),
-        testResults,
+        testResults: [...testResults],
       }),
     ),
     coverage: {},
