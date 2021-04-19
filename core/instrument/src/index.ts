@@ -38,9 +38,6 @@ import {
 } from './types';
 
 export * from './types';
-export { getComponentProps } from './misc/props-info';
-export { getFileIinfo } from './misc/file-info';
-export { extractComponentTests } from './misc/jest-tests';
 
 export { prettify };
 

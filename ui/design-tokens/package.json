@@ -18,7 +18,7 @@
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "prepare": "yarn build",
-    "test:create": "cc-cli -g doc -c ./.config -w",
+    "test:create": "cc-cli -g store -c ./.config -w",
     "test": "yarn jest"
   },
   "homepage": "https://github.com/ccontrols/component-controls",
@@ -64,15 +64,7 @@
     "Atanas Stoyanov"
   ],
   "jest": {
-    "preset": "ts-jest",
-    "globals": {
-      "ts-jest": {
-        "isolatedModules": true
-      }
-    },
-    "roots": [
-      "./src"
-    ]
+    "preset": "ts-jest"
   },
   "gitHead": "e30d62f101e104711a16261fce04785d58cac1eb"
 }

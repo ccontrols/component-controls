@@ -5,7 +5,7 @@ import {
   findJestConfig,
   getRelatedTests,
 } from '@component-controls/jest-extract';
-import { Components, JestTests } from '@component-controls/core';
+import { JestTests } from '@component-controls/core';
 
 /**
  * Separates the files into projects and runs jest tests
@@ -14,46 +14,30 @@ import { Components, JestTests } from '@component-controls/core';
  * @returns return key/value pairs with test results and coverage associated with each file
  */
 export const extractTests = async (
-  files: Record<string, string>,
+  files: string[],
   options?: JestConfig,
-): Promise<Record<string, JestTests>> => {
-  const tests = Object.keys(files).reduce(
-    (acc: Record<string, { key: string; files: string[] }[]>, key) => {
-      const component = files[key];
-      const projectFolder = findJestConfig(component);
-      if (!acc[projectFolder]) {
-        acc[projectFolder] = [];
-      }
-      acc[projectFolder].push({ key, files: [component] });
-      return acc;
-    },
-
-    {},
-  );
-  const projects = Object.keys(tests);
-  const results: Record<string, JestTests> = {};
-  for (const project of projects) {
-    const files = tests[project].reduce(
-      (
-        acc: {
-          testFiles: Record<string, string>;
-          coverageFiles: Record<string, string>;
-        },
-        component,
-      ) => {
-        results[component.key] = { results: [], coverage: {} };
-        component.files.forEach(filePath =>
-          getRelatedTests(filePath).forEach(
-            f =>
-              (acc.testFiles[`.${path.sep}${path.relative(project, f)}`] =
-                component.key),
-          ),
-        );
-        component.files.forEach(filePath => {
-          acc.coverageFiles[`.${path.sep}${path.relative(project, filePath)}`] =
-            component.key;
-        });
-        /* const dateModified = fs.statSync(projectFolder).mtime;
+): Promise<JestTests | undefined> => {
+  if (!files.length) {
+    return undefined;
+  }
+  const projectFolder = findJestConfig(files[0]);
+  const tests = files.reduce(
+    (
+      acc: {
+        testFiles: string[];
+        coverageFiles: string[];
+      },
+      component,
+    ) => {
+      acc.testFiles.push(
+        ...getRelatedTests(component).map(
+          f => `.${path.sep}${path.relative(projectFolder, f)}`,
+        ),
+      );
+      acc.coverageFiles.push(
+        `.${path.sep}${path.relative(projectFolder, component)}`,
+      );
+      /* const dateModified = fs.statSync(projectFolder).mtime;
 
       const fileHash = createHash('md5')
         .update(dateModified.toString())
@@ -72,61 +56,16 @@ export const extractTests = async (
           coverage: cachedTest.coverage,
         });
       } */
-        return acc;
-      },
-      { testFiles: {}, coverageFiles: {} },
-    );
-    if (Object.keys(files.testFiles).length) {
-      const testResults = await runProjectTests(
-        Object.keys(files.testFiles),
-        project,
-        {
-          collectCoverageOnlyFrom: Object.keys(files.coverageFiles),
-          ...options,
-        },
-      );
-      if (testResults.coverage) {
-        Object.keys(testResults.coverage).forEach(covFile => {
-          const componentKey = files.coverageFiles[`.${path.sep}${covFile}`];
-          if (componentKey) {
-            results[componentKey].coverage[covFile] =
-              testResults.coverage[covFile];
-          }
-        });
-      }
-      if (testResults.results) {
-        testResults.results.forEach(r => {
-          const componentKey = files.testFiles[`.${path.sep}${r.testFilePath}`];
-          if (componentKey) {
-            results[componentKey].results.push(r);
-          }
-        });
-      }
-    }
-  }
-  return results;
-};
-
-/**
- * runs the tests associated with the components and assign to field "jest"
- * @param components key/Component list
- * @param options jest runCLI options
- */
-export const extractComponentTests = async (
-  components: Components,
-  options?: JestConfig,
-): Promise<void> => {
-  const mapped = Object.keys(components).reduce(
-    (acc: Record<string, string>, key) => ({
-      ...acc,
-      [key]: components[key].request as string,
-    }),
-    {},
+      return acc;
+    },
+    { testFiles: [], coverageFiles: [] },
   );
-  const extracted = await extractTests(mapped, options);
-  Object.keys(extracted).forEach(key => {
-    if (components[key]) {
-      components[key].jest = extracted[key];
-    }
-  });
+  if (tests.testFiles.length) {
+    const testResults = await runProjectTests(tests.testFiles, projectFolder, {
+      collectCoverageOnlyFrom: tests.coverageFiles,
+      ...options,
+    });
+    return testResults;
+  }
+  return undefined;
 };

@@ -18,7 +18,6 @@ async function loader(this: WebpackLoaderContext): Promise<string> {
   const filePath = this.resource;
   const loaderOptions: InstrumentOptions = getOptions(this) || {};
   const configOptions = globalStore?.buildConfig?.instrument || {};
-
   const ignore = globalStore?.buildConfig?.ignore || [];
   const basePath = path.basename(filePath).toLowerCase();
   const source = fs.readFileSync(filePath, 'utf8');
@@ -33,7 +32,12 @@ async function loader(this: WebpackLoaderContext): Promise<string> {
     if (store?.doc) {
       log('loaded: ', filePath);
       if (store.stories && store.components && store.packages) {
-        addStoriesDoc(options, filePath, this._compilation.records.hash, {
+        Object.keys(store.components).forEach(key => {
+          if (store.components?.[key]?.request) {
+            this.addDependency(store.components[key].request as string);
+          }
+        });
+        addStoriesDoc(filePath, this._compilation.records.hash, {
           stories: store.stories,
           components: store.components,
           packages: store.packages,
@@ -44,6 +48,7 @@ async function loader(this: WebpackLoaderContext): Promise<string> {
         });
       }
     } else {
+      log('removed: ', filePath);
       removeStoriesDoc(filePath);
     }
     return transformed;

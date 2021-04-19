@@ -14,26 +14,23 @@ import { analyze_components } from './analyze-component';
 import { packageInfo } from '../misc/package-info';
 import { readSourceFile } from '../misc/source-options';
 import { LoadingDocStore, InstrumentOptions } from '../types';
+import { getComponentProps } from '../misc/props-info';
+import { getFileIinfo } from '../misc/file-info';
+import { extractTests } from '../misc/jest-tests';
 
-export interface ComponentParseData {
+interface ComponentParseData {
   component?: Component;
   componentPackage?: PackageInfo;
 }
-const globalCache: {
-  [filePath: string]: ComponentParseData;
-} = {};
 export const extractComponent = async (
   componentName: string,
   filePath: string,
   source?: string,
   options?: InstrumentOptions,
 ): Promise<ComponentParseData> => {
-  const cacheKey = `${filePath}-${componentName}`;
-  if (globalCache[cacheKey]) {
-    return globalCache[cacheKey];
-  }
   const follow = followImports(componentName, filePath, source, options);
-  const { components, resolver: resolveOptions } = options || {};
+  const { components, resolver: resolveOptions, propsLoaders = [], jest } =
+    options || {};
 
   let component: Component;
   let componentPackage: PackageInfo | undefined;
@@ -109,6 +106,31 @@ export const extractComponent = async (
 
       component.request = follow.filePath;
       component.fileName = path.basename(follow.filePath);
+      const propsFile = component.propsInfoFile || component.request;
+      if (propsFile) {
+        const propsInfo = await getComponentProps(
+          propsLoaders,
+          propsFile,
+          component.name,
+          component.source,
+        );
+        if (propsInfo) {
+          component.info = propsInfo;
+        }
+      }
+      const { fileInfo = true } = components || {};
+      if (fileInfo && component.request) {
+        component.fileInfo = await getFileIinfo(
+          component.request,
+          component.source,
+        );
+      }
+      if (jest !== false) {
+        const testResults = await extractTests([component.request], jest);
+        if (testResults) {
+          component.jest = testResults;
+        }
+      }
       const saveSource = readSourceFile(
         components?.sourceFiles,
         follow.source,
@@ -140,8 +162,7 @@ export const extractComponent = async (
     };
   }
 
-  globalCache[cacheKey] = { component, componentPackage };
-  return globalCache[cacheKey];
+  return { component, componentPackage };
 };
 
 export const extractStoreComponent = async (

@@ -6,166 +6,169 @@ describe('component-tests', () => {
   beforeAll(() => {
     setLogOptions({ logLevel: 'none' });
   });
-  it('jest extract', async () => {
-    const tests = await extractTests({
-      '1': path.resolve(
+  it('Catalog', async () => {
+    const tests = await extractTests([
+      path.resolve(
         __dirname,
         '../../../plugins/addon-catalog/src/Catalog/Catalog.tsx',
       ),
-      '2': path.resolve(
+    ]);
+    expect(tests).toMatchObject({
+      results: [
+        {
+          leaks: false,
+          memoryUsage: undefined,
+          testFilePath: 'src/Catalog/Catalog.test.ts',
+          testResults: [
+            {
+              ancestorTitles: ['Catalog'],
+              failureDetails: [],
+              failureMessages: [],
+              fullName: 'Catalog overview',
+              location: null,
+              numPassingAsserts: 0,
+              status: 'passed',
+              title: 'overview',
+            },
+          ],
+        },
+      ],
+      coverage: {
+        'src/Catalog/Catalog.tsx': {
+          lines: {
+            total: 9,
+            covered: 9,
+            skipped: 0,
+            pct: 100,
+          },
+          functions: {
+            total: 1,
+            covered: 1,
+            skipped: 0,
+            pct: 100,
+          },
+          statements: {
+            total: 10,
+            covered: 10,
+            skipped: 0,
+            pct: 100,
+          },
+          branches: {
+            total: 0,
+            covered: 0,
+            skipped: 0,
+            pct: 100,
+          },
+        },
+      },
+    });
+  }, 100000);
+  it('ComponentCard', async () => {
+    const tests = await extractTests([
+      path.resolve(
         __dirname,
         '../../../plugins/addon-catalog/src/ComponentCard/ComponentCard.tsx',
       ),
-      '3': path.resolve(
-        __dirname,
-        '../../../ui/components/src/Header/Header.tsx',
-      ),
-    });
+    ]);
     expect(tests).toMatchObject({
-      '1': {
-        results: [
-          {
-            leaks: false,
-            memoryUsage: undefined,
-            testFilePath: 'src/Catalog/Catalog.test.ts',
-            testResults: [
-              {
-                ancestorTitles: ['Catalog'],
-                failureDetails: [],
-                failureMessages: [],
-                fullName: 'Catalog overview',
-                location: null,
-                numPassingAsserts: 0,
-                status: 'passed',
-                title: 'overview',
-              },
-            ],
+      results: [
+        {
+          leaks: false,
+          memoryUsage: undefined,
+          testFilePath: 'src/ComponentCard/ComponentCard.test.ts',
+          testResults: [
+            {
+              ancestorTitles: ['ComponentCard'],
+              failureDetails: [],
+              failureMessages: [],
+              fullName: 'ComponentCard overview',
+              location: null,
+              numPassingAsserts: 0,
+              status: 'passed',
+              title: 'overview',
+            },
+          ],
+        },
+      ],
+      coverage: {
+        'src/ComponentCard/ComponentCard.tsx': {
+          lines: {
+            total: 20,
+            covered: 19,
+            skipped: 0,
+            pct: 95,
           },
-        ],
-        coverage: {
-          'src/Catalog/Catalog.tsx': {
-            lines: {
-              total: 9,
-              covered: 9,
-              skipped: 0,
-              pct: 100,
-            },
-            functions: {
-              total: 1,
-              covered: 1,
-              skipped: 0,
-              pct: 100,
-            },
-            statements: {
-              total: 10,
-              covered: 10,
-              skipped: 0,
-              pct: 100,
-            },
-            branches: {
-              total: 0,
-              covered: 0,
-              skipped: 0,
-              pct: 100,
-            },
+          functions: {
+            total: 1,
+            covered: 1,
+            skipped: 0,
+            pct: 100,
+          },
+          statements: {
+            total: 21,
+            covered: 20,
+            skipped: 0,
+            pct: 95.24,
+          },
+          branches: {
+            total: 44,
+            covered: 25,
+            skipped: 0,
+            pct: 56.82,
           },
         },
       },
-      '2': {
-        results: [
-          {
-            leaks: false,
-            memoryUsage: undefined,
-            testFilePath: 'src/ComponentCard/ComponentCard.test.ts',
-            testResults: [
-              {
-                ancestorTitles: ['ComponentCard'],
-                failureDetails: [],
-                failureMessages: [],
-                fullName: 'ComponentCard overview',
-                location: null,
-                numPassingAsserts: 0,
-                status: 'passed',
-                title: 'overview',
-              },
-            ],
-          },
-        ],
-        coverage: {
-          'src/ComponentCard/ComponentCard.tsx': {
-            lines: {
-              total: 20,
-              covered: 19,
-              skipped: 0,
-              pct: 95,
+    });
+  }, 100000);
+  it('ComponentCard', async () => {
+    const tests = await extractTests([
+      path.resolve(__dirname, '../../../ui/components/src/Header/Header.tsx'),
+    ]);
+    expect(tests).toMatchObject({
+      results: [
+        {
+          leaks: false,
+          memoryUsage: undefined,
+          testFilePath: 'src/Header/Header.test.ts',
+          testResults: [
+            {
+              ancestorTitles: ['Header'],
+              failureDetails: [],
+              failureMessages: [],
+              fullName: 'Header overview',
+              location: null,
+              numPassingAsserts: 0,
+              status: 'passed',
+              title: 'overview',
             },
-            functions: {
-              total: 1,
-              covered: 1,
-              skipped: 0,
-              pct: 100,
-            },
-            statements: {
-              total: 21,
-              covered: 20,
-              skipped: 0,
-              pct: 95.24,
-            },
-            branches: {
-              total: 44,
-              covered: 35,
-              skipped: 0,
-              pct: 79.55,
-            },
-          },
+          ],
         },
-      },
-      '3': {
-        results: [
-          {
-            leaks: false,
-            memoryUsage: undefined,
-            testFilePath: 'src/Header/Header.test.ts',
-            testResults: [
-              {
-                ancestorTitles: ['Header'],
-                failureDetails: [],
-                failureMessages: [],
-                fullName: 'Header overview',
-                location: null,
-                numPassingAsserts: 0,
-                status: 'passed',
-                title: 'overview',
-              },
-            ],
+      ],
+      coverage: {
+        'src/Header/Header.tsx': {
+          lines: {
+            total: 2,
+            covered: 2,
+            skipped: 0,
+            pct: 100,
           },
-        ],
-        coverage: {
-          'src/Header/Header.tsx': {
-            lines: {
-              total: 2,
-              covered: 2,
-              skipped: 0,
-              pct: 100,
-            },
-            functions: {
-              total: 1,
-              covered: 1,
-              skipped: 0,
-              pct: 100,
-            },
-            statements: {
-              total: 6,
-              covered: 6,
-              skipped: 0,
-              pct: 100,
-            },
-            branches: {
-              total: 0,
-              covered: 0,
-              skipped: 0,
-              pct: 100,
-            },
+          functions: {
+            total: 1,
+            covered: 1,
+            skipped: 0,
+            pct: 100,
+          },
+          statements: {
+            total: 6,
+            covered: 6,
+            skipped: 0,
+            pct: 100,
+          },
+          branches: {
+            total: 0,
+            covered: 0,
+            skipped: 0,
+            pct: 100,
           },
         },
       },

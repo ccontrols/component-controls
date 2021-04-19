@@ -4,7 +4,7 @@ import { Layout, LayoutProps } from '@component-controls/base-integration';
 import { store } from '@component-controls/base-integration/store';
 import { GatsbyLink } from '../components/GatsbyLink';
 
-export type GatsbyLayoutProps = Omit<LayoutProps, 'Link' | 'Helmet'>;
+export type GatsbyLayoutProps = Omit<LayoutProps, 'Link' | 'Helmet' | 'store'>;
 
 export const GatsbyLayout: FC<GatsbyLayoutProps> = props => {
   return (

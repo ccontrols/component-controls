@@ -1,6 +1,6 @@
 import path from 'path';
 import { fixtureToTest, TestCallback } from './loadTestFiles';
-import { getComponentProps } from '../src/index';
+import { getComponentProps } from '../src/misc/props-info';
 
 const createTest = (fileName: string, callback: TestCallback) =>
   fixtureToTest(['esm', 'props-info-external'], fileName, callback, {

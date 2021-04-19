@@ -3,7 +3,7 @@ import { Document, Example } from '@component-controls/core';
 import { Component, ComponentProps } from './Component';
 
 export default {
-  title: 'Main story',
+  title: 'Component story',
   component: Component,
 } as Document;
 

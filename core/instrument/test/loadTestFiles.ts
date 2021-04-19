@@ -25,7 +25,10 @@ export const fixtureToTest = (
   const filePathName = path.join(folderName, fileName);
   const content = fs.readFileSync(filePathName, 'utf8');
   it(fileName, async () => {
-    const parsed = await parseStories(filePathName, content, options);
+    const parsed = await parseStories(filePathName, content, {
+      jest: false,
+      ...options,
+    });
     await callback(parsed);
   });
 };

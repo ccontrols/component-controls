@@ -2,7 +2,6 @@ import path from 'path';
 import { runCLI } from 'jest';
 import { Config } from '@jest/types';
 import { findUpFile } from '@component-controls/core/node-utils';
-import { log } from '@component-controls/logger';
 import { TestResult, AggregatedResult } from '@jest/test-result';
 import { FileCoverage, CoverageSummaryData } from 'istanbul-lib-coverage';
 import fastq from 'fastq';
@@ -136,11 +135,5 @@ export const runProjectTests = async (
     queue = fastq.promise(runTestsWorker, 1);
   }
   const result = await queue.push({ testFiles, projectFolder, options });
-  const maxFilesReport = 2;
-  const reportFiles = testFiles.slice(0, maxFilesReport);
-  if (testFiles.length > maxFilesReport) {
-    reportFiles.push(`...${testFiles.length - maxFilesReport} more`);
-  }
-  log(`tests ${projectFolder}`, reportFiles.join(', '));
   return (result as unknown) as JestResults;
 };
