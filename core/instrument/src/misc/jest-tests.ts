@@ -1,11 +1,13 @@
 import path from 'path';
-import { JestConfig } from '@component-controls/jest-extract';
 import {
+  JestConfig,
   runProjectTests,
   findJestConfig,
   getRelatedTests,
+  JestResults,
 } from '@component-controls/jest-extract';
 import { JestTests } from '@component-controls/core';
+import { CachedFileResource } from './chached-file';
 
 /**
  * Separates the files into projects and runs jest tests
@@ -27,44 +29,37 @@ export const extractTests = async (
         testFiles: string[];
         coverageFiles: string[];
       },
-      component,
+      file,
     ) => {
-      acc.testFiles.push(
-        ...getRelatedTests(component).map(
-          f => `.${path.sep}${path.relative(projectFolder, f)}`,
-        ),
-      );
-      acc.coverageFiles.push(
-        `.${path.sep}${path.relative(projectFolder, component)}`,
-      );
-      /* const dateModified = fs.statSync(projectFolder).mtime;
-
-      const fileHash = createHash('md5')
-        .update(dateModified.toString())
-        .update(projectFolder)
-        .digest('hex');
-      const cached = new CachedFileResource<JestResults>(
-        'jest-tests',
-        `${componentFilePath}-${fileHash}`,
-        componentFilePath,
-      );
-      const cachedTest = cached.get();
-      if (cachedTest) {
-        results.push({
-          testFileName: path.relative(fileDir, testFile),
-          testResults: cachedTest.testResults,
-          coverage: cachedTest.coverage,
-        });
-      } */
+      acc.testFiles.push(...getRelatedTests(file));
+      acc.coverageFiles.push(file);
       return acc;
     },
     { testFiles: [], coverageFiles: [] },
   );
   if (tests.testFiles.length) {
-    const testResults = await runProjectTests(tests.testFiles, projectFolder, {
-      collectCoverageOnlyFrom: tests.coverageFiles,
-      ...options,
+    const cached = new CachedFileResource<JestResults>('jest-tests', files[0], [
+      ...tests.testFiles,
+      ...tests.coverageFiles,
+    ]);
+    const cachedResults = cached.get();
+    if (cachedResults) {
+      return cachedResults;
+    }
+    const testResults = await runProjectTests({
+      testFiles: tests.testFiles.map(
+        f => `.${path.sep}${path.relative(projectFolder, f)}`,
+      ),
+      projectFolder,
+      relativeFolder: path.dirname(files[0]),
+      options: {
+        ...options,
+        collectCoverageOnlyFrom: tests.coverageFiles.map(
+          f => `.${path.sep}${path.relative(projectFolder, f)}`,
+        ),
+      },
     });
+    cached.set(testResults);
     return testResults;
   }
   return undefined;

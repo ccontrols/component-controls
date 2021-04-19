@@ -7,7 +7,7 @@ import findCacheDir from 'find-cache-dir';
 export class CachedFileResource<T> {
   private folderKey: string;
   private fileKey: string;
-  private filePath: string;
+  private filePath: string | string[];
 
   /**
    *
@@ -15,7 +15,7 @@ export class CachedFileResource<T> {
    * @param fileKey unique (hash) key for the file
    * @param filePath full file path and name for the cached file
    */
-  constructor(folderKey: string, fileKey: string, filePath: string) {
+  constructor(folderKey: string, fileKey: string, filePath: string | string[]) {
     this.folderKey = folderKey;
     this.fileKey = fileKey;
     this.filePath = filePath;
@@ -47,9 +47,13 @@ export class CachedFileResource<T> {
   get = (): T | undefined => {
     const cachedFileName = this.getCachedFile();
     if (fs.existsSync(cachedFileName)) {
-      const cacheStats = fs.statSync(cachedFileName);
-      const fileStats = fs.statSync(this.filePath);
-      if (cacheStats.mtime.getTime() >= fileStats.mtime.getTime()) {
+      const cacheModified = fs.statSync(cachedFileName).mtime.getTime();
+      const fileModified = Array.isArray(this.filePath)
+        ? this.filePath.reduce((m, f) => {
+            return Math.max(m, fs.statSync(f).mtime.getTime());
+          }, 0)
+        : fs.statSync(this.filePath).mtime.getTime();
+      if (cacheModified >= fileModified) {
         const fileData = fs.readFileSync(cachedFileName, 'utf8');
         const json = JSON.parse(fileData);
         return Object.keys(json).length ? json : undefined;

@@ -30,16 +30,35 @@ export interface JestResults {
   coverage: Record<string, CoverageSummaryData>;
 }
 
-interface TestWorkerInput {
+interface RunTestsInput {
+  /**
+   * related test files to execute
+   */
   testFiles: string[];
+  /**
+   * the folder with jest configuration or package.json
+   */
   projectFolder: string;
+  /**
+   * if supplied, this is the folder from which to report the file names relative to
+   * for example this could be the folder where the tested component resides
+   */
+  relativeFolder?: string;
+  /**
+   * jest options. Can provide collectCoverageOnlyFrom to limit the files coverage is collected from
+   */
   options: Partial<Config.Argv>;
 }
 const runTestsWorker: fastq.asyncWorker<
   unknown,
-  TestWorkerInput,
+  RunTestsInput,
   JestResults | undefined
-> = async ({ testFiles, projectFolder, options }: TestWorkerInput) => {
+> = async ({
+  testFiles,
+  projectFolder,
+  options,
+  relativeFolder,
+}: RunTestsInput) => {
   let runResults: {
     results: AggregatedResult;
     globalConfig: Config.GlobalConfig;
@@ -70,13 +89,14 @@ const runTestsWorker: fastq.asyncWorker<
     return undefined;
   }
   const { coverageMap, testResults } = runResults.results;
+  const relFolder = relativeFolder || projectFolder;
   const result: JestResults = {
     results: testResults.map(
       ({ leaks, memoryUsage, perfStats, testFilePath, testResults }) => ({
         leaks,
         memoryUsage,
         perfStats: { ...perfStats },
-        testFilePath: path.relative(projectFolder, testFilePath),
+        testFilePath: path.relative(relFolder, testFilePath),
         testResults: [...testResults],
       }),
     ),
@@ -91,7 +111,7 @@ const runTestsWorker: fastq.asyncWorker<
         0,
       );
       if (totals) {
-        result.coverage[path.relative(projectFolder, file)] = summary;
+        result.coverage[path.relative(relFolder, file)] = summary;
       }
     });
   }
@@ -99,7 +119,7 @@ const runTestsWorker: fastq.asyncWorker<
 };
 
 let queue: fastq.queueAsPromised<
-  TestWorkerInput,
+  RunTestsInput,
   JestResults | undefined
 > | null = null;
 
@@ -115,8 +135,9 @@ export const runTests = async (
 ): Promise<JestResults> => {
   const testFiles = [path.basename(testFilePath)];
   const projectFolder = findJestConfig(testFilePath);
+  const relativeFolder = path.dirname(testFilePath);
 
-  return runProjectTests(testFiles, projectFolder, options);
+  return runProjectTests({ testFiles, relativeFolder, projectFolder, options });
 };
 
 /**
@@ -127,13 +148,11 @@ export const runTests = async (
  * @returns jest test results and coverage
  */
 export const runProjectTests = async (
-  testFiles: string[],
-  projectFolder: string,
-  options: Partial<Config.Argv> = {},
+  props: RunTestsInput,
 ): Promise<JestResults> => {
   if (!queue) {
     queue = fastq.promise(runTestsWorker, 1);
   }
-  const result = await queue.push({ testFiles, projectFolder, options });
+  const result = await queue.push(props);
   return (result as unknown) as JestResults;
 };
