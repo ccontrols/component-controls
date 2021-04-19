@@ -3,7 +3,6 @@ import * as resolve from 'resolve';
 import {
   Component,
   Document,
-  PackageInfo,
   Imports,
   ImportTypes,
   isLocalImport,
@@ -17,23 +16,27 @@ import { LoadingDocStore, InstrumentOptions } from '../types';
 import { getComponentProps } from '../misc/props-info';
 import { getFileIinfo } from '../misc/file-info';
 import { extractTests } from '../misc/jest-tests';
+import { CachedFileResource } from '../misc/chached-file';
 
-interface ComponentParseData {
-  component?: Component;
-  componentPackage?: PackageInfo;
-}
 export const extractComponent = async (
   componentName: string,
   filePath: string,
   source?: string,
   options?: InstrumentOptions,
-): Promise<ComponentParseData> => {
+): Promise<Component> => {
+  const cached = new CachedFileResource<Component>(
+    'component-info',
+    `${filePath}-${componentName}`,
+    filePath,
+  );
+  const result = cached.get();
+  if (result) {
+    return result;
+  }
   const follow = followImports(componentName, filePath, source, options);
-  const { components, resolver: resolveOptions, propsLoaders = [], jest } =
-    options || {};
+  const { components, resolver: resolveOptions } = options || {};
 
   let component: Component;
-  let componentPackage: PackageInfo | undefined;
   if (follow) {
     component = {
       name: componentName,
@@ -106,31 +109,7 @@ export const extractComponent = async (
 
       component.request = follow.filePath;
       component.fileName = path.basename(follow.filePath);
-      const propsFile = component.propsInfoFile || component.request;
-      if (propsFile) {
-        const propsInfo = await getComponentProps(
-          propsLoaders,
-          propsFile,
-          component.name,
-          component.source,
-        );
-        if (propsInfo) {
-          component.info = propsInfo;
-        }
-      }
-      const { fileInfo = true } = components || {};
-      if (fileInfo && component.request) {
-        component.fileInfo = await getFileIinfo(
-          component.request,
-          component.source,
-        );
-      }
-      if (jest !== false) {
-        const testResults = await extractTests([component.request], jest);
-        if (testResults) {
-          component.jest = testResults;
-        }
-      }
+
       const saveSource = readSourceFile(
         components?.sourceFiles,
         follow.source,
@@ -151,18 +130,61 @@ export const extractComponent = async (
         }
       }
     }
-    componentPackage = await packageInfo(
-      componentName,
-      follow.originalFilePath,
-      options?.components?.package,
-    );
   } else {
     component = {
       name: componentName,
     };
   }
+  cached.set(component);
+  return component;
+};
 
-  return { component, componentPackage };
+/**
+ * instruemnt related metrics for the component
+ * @param component to be instrumented, will use component.request as the location
+ * @param options - instrumentaion options
+ */
+const componentRelatedMetrics = async (
+  store: LoadingDocStore,
+  component: Component,
+  options?: InstrumentOptions,
+) => {
+  const { components, propsLoaders = [], jest } = options || {};
+  const componentPackage = await packageInfo(
+    component.name,
+    component.request,
+    options?.components?.package,
+  );
+  if (componentPackage) {
+    store.packages[componentPackage.fileHash] = componentPackage;
+    component.package = componentPackage.fileHash;
+  }
+
+  const propsFile = component.propsInfoFile || component.request;
+  if (propsFile) {
+    const propsInfo = await getComponentProps(
+      propsLoaders,
+      propsFile,
+      component.name,
+      component.source,
+    );
+    if (propsInfo) {
+      component.info = propsInfo;
+    }
+  }
+  const { fileInfo = true } = components || {};
+  if (fileInfo && component.request) {
+    component.fileInfo = await getFileIinfo(
+      component.request,
+      component.source,
+    );
+  }
+  if (jest !== false && component.request) {
+    const testResults = await extractTests([component.request], jest);
+    if (testResults) {
+      component.jest = testResults;
+    }
+  }
 };
 
 export const extractStoreComponent = async (
@@ -184,17 +206,14 @@ export const extractStoreComponent = async (
       const componentNames = Object.keys(components);
       if (componentNames) {
         for (const componentName of componentNames) {
-          const { component, componentPackage } = await extractComponent(
+          const component = await extractComponent(
             componentName,
             filePath,
             source,
             options,
           );
           if (component) {
-            if (componentPackage) {
-              store.packages[componentPackage.fileHash] = componentPackage;
-              component.package = componentPackage.fileHash;
-            }
+            await componentRelatedMetrics(store, component, options);
             const key = componentKey(
               component.request ?? filePath,
               componentName,
