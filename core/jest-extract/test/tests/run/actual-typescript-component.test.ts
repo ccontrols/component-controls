@@ -30,7 +30,7 @@ describe('react typescript component', () => {
 
   it('coverage ', () => {
     expect(results?.coverage).toMatchObject({
-      'src/Popover/Popover.tsx': {
+      'Popover.tsx': {
         lines: {
           total: 15,
           covered: 12,
@@ -56,7 +56,7 @@ describe('react typescript component', () => {
           pct: 16.67,
         },
       },
-      'src/Popover/PopoverUtils.tsx': {
+      'PopoverUtils.tsx': {
         lines: {
           total: 14,
           covered: 7,

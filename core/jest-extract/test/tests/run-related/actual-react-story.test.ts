@@ -39,7 +39,7 @@ describe('react story tests', () => {
         },
       ],
       coverage: {
-        'test/fixtures/story/VariantButton.docs.tsx': {
+        'VariantButton.docs.tsx': {
           lines: {
             total: 19,
             covered: 14,
@@ -65,7 +65,7 @@ describe('react story tests', () => {
             pct: 100,
           },
         },
-        'test/fixtures/story/VariantButton.tsx': {
+        'VariantButton.tsx': {
           lines: {
             total: 10,
             covered: 10,

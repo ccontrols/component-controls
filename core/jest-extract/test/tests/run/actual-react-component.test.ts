@@ -25,7 +25,7 @@ describe('react link component', () => {
 
   it('coverage ', () => {
     expect(results?.coverage).toMatchObject({
-      'test/fixtures/component/Link.react.js': {
+      'Link.react.js': {
         lines: {
           total: 8,
           covered: 8,

@@ -25,7 +25,7 @@ describe('small test', () => {
 
   it('coverage ', () => {
     expect(results?.coverage).toMatchObject({
-      'test/fixtures/simple/sum.js': {
+      'sum.js': {
         lines: {
           total: 1,
           covered: 1,

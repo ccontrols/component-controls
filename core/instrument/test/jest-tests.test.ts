@@ -17,8 +17,7 @@ describe('component-tests', () => {
       results: [
         {
           leaks: false,
-          memoryUsage: undefined,
-          testFilePath: 'src/Catalog/Catalog.test.ts',
+          testFilePath: 'Catalog.test.ts',
           testResults: [
             {
               ancestorTitles: ['Catalog'],
@@ -34,7 +33,7 @@ describe('component-tests', () => {
         },
       ],
       coverage: {
-        'src/Catalog/Catalog.tsx': {
+        'Catalog.tsx': {
           lines: {
             total: 9,
             covered: 9,
@@ -74,8 +73,7 @@ describe('component-tests', () => {
       results: [
         {
           leaks: false,
-          memoryUsage: undefined,
-          testFilePath: 'src/ComponentCard/ComponentCard.test.ts',
+          testFilePath: 'ComponentCard.test.ts',
           testResults: [
             {
               ancestorTitles: ['ComponentCard'],
@@ -91,7 +89,7 @@ describe('component-tests', () => {
         },
       ],
       coverage: {
-        'src/ComponentCard/ComponentCard.tsx': {
+        'ComponentCard.tsx': {
           lines: {
             total: 20,
             covered: 19,
@@ -128,8 +126,7 @@ describe('component-tests', () => {
       results: [
         {
           leaks: false,
-          memoryUsage: undefined,
-          testFilePath: 'src/Header/Header.test.ts',
+          testFilePath: 'Header.test.ts',
           testResults: [
             {
               ancestorTitles: ['Header'],
@@ -145,7 +142,7 @@ describe('component-tests', () => {
         },
       ],
       coverage: {
-        'src/Header/Header.tsx': {
+        'Header.tsx': {
           lines: {
             total: 2,
             covered: 2,

@@ -83,7 +83,6 @@ describe('esm-props-info-external', () => {
       request:
         '/Users/atanasster/component-controls/node_modules/@theme-ui/components/index.d.ts',
       fileName: 'index.d.ts',
-      package: '8f6835169f285fcd3ad5425d9268a8f1',
     });
   });
 
