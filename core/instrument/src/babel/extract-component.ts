@@ -1,4 +1,5 @@
 import path from 'path';
+import fs from 'fs';
 import * as resolve from 'resolve';
 import {
   Component,
@@ -149,7 +150,8 @@ const componentRelatedMetrics = async (
   component: Component,
   options?: InstrumentOptions,
 ) => {
-  const { components, propsLoaders = [], jest } = options || {};
+  const { components, resolver: resolveOptions, propsLoaders = [], jest } =
+    options || {};
   const componentPackage = await packageInfo(
     component.name,
     component.request,
@@ -180,16 +182,23 @@ const componentRelatedMetrics = async (
     );
   }
   if (jest !== false && component.request) {
-    const componetFolder = path.dirname(component.request);
-    const dependents = component.localDependencies
-      ? Object.keys(component.localDependencies)
-          .filter(f => f.startsWith(`.${path.sep}`))
-          .map(f => require.resolve(f, { paths: [componetFolder] }))
-      : [];
-    const testResults = await extractTests(
-      [component.request, ...dependents],
-      jest,
-    );
+    const componentFolder = path.dirname(component.request);
+    const testFiles: string[] = [component.request];
+    //add local dependecnies from same folder to include in coverage.
+    if (component.localDependencies) {
+      Object.keys(component.localDependencies)
+        .filter(f => f.startsWith(`.${path.sep}`))
+        .forEach(f => {
+          const fileName = resolve.sync(f, {
+            ...resolveOptions,
+            basedir: componentFolder,
+          });
+          if (fs.existsSync(fileName)) {
+            testFiles.push(fileName);
+          }
+        });
+    }
+    const testResults = await extractTests(testFiles, jest);
     if (testResults) {
       component.jest = testResults;
     }
@@ -199,7 +208,7 @@ const componentRelatedMetrics = async (
 export const extractStoreComponent = async (
   store: LoadingDocStore,
   filePath: string,
-  source: string,
+  source?: string,
   options?: InstrumentOptions,
 ): Promise<void> => {
   if (store.doc) {
