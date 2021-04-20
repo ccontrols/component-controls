@@ -184,7 +184,7 @@ const componentRelatedMetrics = async (
     const dependents = component.localDependencies
       ? Object.keys(component.localDependencies)
           .filter(f => f.startsWith(`.${path.sep}`))
-          .map(f => path.resolve(componetFolder, f))
+          .map(f => require.resolve(f, { paths: [componetFolder] }))
       : [];
     const testResults = await extractTests(
       [component.request, ...dependents],
