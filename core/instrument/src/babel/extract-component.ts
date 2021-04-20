@@ -180,7 +180,17 @@ const componentRelatedMetrics = async (
     );
   }
   if (jest !== false && component.request) {
-    const testResults = await extractTests([component.request], jest);
+    const componetFolder = path.dirname(component.request);
+    const dependents = component.localDependencies
+      ? Object.keys(component.localDependencies)
+          .filter(f => f.startsWith(`.${path.sep}`))
+          .map(f => path.resolve(componetFolder, f))
+      : [];
+    console.log(dependents);
+    const testResults = await extractTests(
+      [component.request, ...dependents],
+      jest,
+    );
     if (testResults) {
       component.jest = testResults;
     }
