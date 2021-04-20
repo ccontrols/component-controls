@@ -186,7 +186,6 @@ const componentRelatedMetrics = async (
           .filter(f => f.startsWith(`.${path.sep}`))
           .map(f => path.resolve(componetFolder, f))
       : [];
-    console.log(dependents);
     const testResults = await extractTests(
       [component.request, ...dependents],
       jest,
