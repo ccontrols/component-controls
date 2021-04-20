@@ -9,10 +9,14 @@
     "directory": "examples/stories"
   },
   "scripts": {
-    "test:create": "cc-cli -g doc -i VariantButton -c ./.config -w"
+    "test:create": "cc-cli -g doc -i VariantButton -c ./.config -w",
+    "test": "yarn jest"
   },
   "jest": {
     "preset": "ts-jest",
+    "transform": {
+      "\\.(jpg|jpeg|png|gif|svg|md)$": "jest-url-loader"
+    },
     "globals": {
       "ts-jest": {
         "isolatedModules": true
