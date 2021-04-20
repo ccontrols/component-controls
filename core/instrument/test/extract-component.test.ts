@@ -1,7 +1,14 @@
 import path from 'path';
 import { Component } from '@component-controls/core';
-import { defaultParserOptions, defaultResolveOptions } from '../src/index';
-import { extractComponent } from '../src/babel/extract-component';
+import {
+  defaultParserOptions,
+  defaultResolveOptions,
+  LoadingDocStore,
+} from '../src/index';
+import {
+  extractComponent,
+  extractStoreComponent,
+} from '../src/babel/extract-component';
 
 export type ComponentCallback = (component: Component) => void;
 export const componentFixture = (
@@ -45,6 +52,353 @@ export const componentFixture = (
   });
 };
 describe('extract-component', () => {
+  it('Table', async () => {
+    const store: LoadingDocStore = {
+      stories: {},
+      packages: {},
+      components: {},
+      doc: {
+        title: '',
+        component: 'Table',
+        componentsLookup: {
+          Table: '../../../ui/components/src/Table/Table.tsx',
+        },
+      },
+    };
+    await extractStoreComponent(
+      store,
+      path.resolve(
+        __dirname,
+        '../../../ui/components/src/Table/Table.stories.tsx',
+      ),
+      undefined,
+      {
+        parser: defaultParserOptions,
+        resolver: defaultResolveOptions,
+        components: {
+          sourceFiles: false,
+          fileInfo: false,
+          package: {
+            browseLink: true,
+            docsLink: true,
+            issuesLink: true,
+          },
+        },
+      },
+    );
+    expect(store.components[store.doc.componentsLookup['Table']]).toMatchObject(
+      {
+        name: 'Table',
+        from: './Table',
+        externalDependencies: {
+          react: [
+            {
+              name: 'Fragment',
+              importedName: 'Fragment',
+            },
+            {
+              name: 'ReactNode',
+              importedName: 'ReactNode',
+            },
+            {
+              name: 'ReactElement',
+              importedName: 'ReactElement',
+            },
+            {
+              name: 'useEffect',
+              importedName: 'useEffect',
+            },
+          ],
+        },
+        localDependencies: {
+          './TableFilter': [
+            {
+              name: 'GlobalFilter',
+              importedName: 'GlobalFilter',
+            },
+          ],
+          './TableGrouping': [
+            {
+              name: 'useExpanderColumn',
+              importedName: 'useExpanderColumn',
+            },
+          ],
+          './TableRowSelection': [
+            {
+              name: 'useRowSelectionColumn',
+              importedName: 'useRowSelectionColumn',
+            },
+          ],
+          './useTableLayout': [
+            {
+              name: 'useTableLayout',
+              importedName: 'useTableLayout',
+            },
+          ],
+          './TablePagination': [
+            {
+              name: 'TablePagination',
+              importedName: 'TablePagination',
+            },
+            {
+              name: 'TablePaginationProps',
+              importedName: 'TablePaginationProps',
+            },
+          ],
+        },
+        importedName: 'Table',
+        fileName: 'Table.tsx',
+        jest: {
+          results: [
+            {
+              leaks: false,
+              testFilePath: 'Table.test.ts',
+              testResults: [
+                {
+                  ancestorTitles: ['Table'],
+                  failureDetails: [],
+                  failureMessages: [],
+                  fullName: 'Table overview',
+                  location: null,
+                  numPassingAsserts: 0,
+                  status: 'passed',
+                  title: 'overview',
+                },
+                {
+                  ancestorTitles: ['Table'],
+                  failureDetails: [],
+                  failureMessages: [],
+                  fullName: 'Table noHeader',
+                  location: null,
+                  numPassingAsserts: 0,
+                  status: 'passed',
+                  title: 'noHeader',
+                },
+                {
+                  ancestorTitles: ['Table'],
+                  failureDetails: [],
+                  failureMessages: [],
+                  fullName: 'Table sortable',
+                  location: null,
+                  numPassingAsserts: 0,
+                  status: 'passed',
+                  title: 'sortable',
+                },
+                {
+                  ancestorTitles: ['Table'],
+                  failureDetails: [],
+                  failureMessages: [],
+                  fullName: 'Table filterable',
+                  location: null,
+                  numPassingAsserts: 0,
+                  status: 'passed',
+                  title: 'filterable',
+                },
+                {
+                  ancestorTitles: ['Table'],
+                  failureDetails: [],
+                  failureMessages: [],
+                  fullName: 'Table grouping',
+                  location: null,
+                  numPassingAsserts: 0,
+                  status: 'passed',
+                  title: 'grouping',
+                },
+                {
+                  ancestorTitles: ['Table'],
+                  failureDetails: [],
+                  failureMessages: [],
+                  fullName: 'Table editing',
+                  location: null,
+                  numPassingAsserts: 0,
+                  status: 'passed',
+                  title: 'editing',
+                },
+                {
+                  ancestorTitles: ['Table'],
+                  failureDetails: [],
+                  failureMessages: [],
+                  fullName: 'Table rowSelect',
+                  location: null,
+                  numPassingAsserts: 0,
+                  status: 'passed',
+                  title: 'rowSelect',
+                },
+                {
+                  ancestorTitles: ['Table'],
+                  failureDetails: [],
+                  failureMessages: [],
+                  fullName: 'Table pagination',
+                  location: null,
+                  numPassingAsserts: 0,
+                  status: 'passed',
+                  title: 'pagination',
+                },
+              ],
+            },
+          ],
+          coverage: {
+            'Table.tsx': {
+              lines: {
+                total: 51,
+                covered: 50,
+                skipped: 0,
+                pct: 98.04,
+              },
+              functions: {
+                total: 10,
+                covered: 7,
+                skipped: 0,
+                pct: 70,
+              },
+              statements: {
+                total: 56,
+                covered: 55,
+                skipped: 0,
+                pct: 98.21,
+              },
+              branches: {
+                total: 49,
+                covered: 40,
+                skipped: 0,
+                pct: 81.63,
+              },
+            },
+            'TableFilter.tsx': {
+              lines: {
+                total: 6,
+                covered: 5,
+                skipped: 0,
+                pct: 83.33,
+              },
+              functions: {
+                total: 2,
+                covered: 1,
+                skipped: 0,
+                pct: 50,
+              },
+              statements: {
+                total: 6,
+                covered: 5,
+                skipped: 0,
+                pct: 83.33,
+              },
+              branches: {
+                total: 4,
+                covered: 1,
+                skipped: 0,
+                pct: 25,
+              },
+            },
+            'TableGrouping.tsx': {
+              lines: {
+                total: 20,
+                covered: 19,
+                skipped: 0,
+                pct: 95,
+              },
+              functions: {
+                total: 8,
+                covered: 8,
+                skipped: 0,
+                pct: 100,
+              },
+              statements: {
+                total: 21,
+                covered: 20,
+                skipped: 0,
+                pct: 95.24,
+              },
+              branches: {
+                total: 20,
+                covered: 15,
+                skipped: 0,
+                pct: 75,
+              },
+            },
+            'TableRowSelection.tsx': {
+              lines: {
+                total: 8,
+                covered: 8,
+                skipped: 0,
+                pct: 100,
+              },
+              functions: {
+                total: 5,
+                covered: 5,
+                skipped: 0,
+                pct: 100,
+              },
+              statements: {
+                total: 10,
+                covered: 10,
+                skipped: 0,
+                pct: 100,
+              },
+              branches: {
+                total: 0,
+                covered: 0,
+                skipped: 0,
+                pct: 100,
+              },
+            },
+            'useTableLayout.ts': {
+              lines: {
+                total: 7,
+                covered: 7,
+                skipped: 0,
+                pct: 100,
+              },
+              functions: {
+                total: 3,
+                covered: 3,
+                skipped: 0,
+                pct: 100,
+              },
+              statements: {
+                total: 8,
+                covered: 8,
+                skipped: 0,
+                pct: 100,
+              },
+              branches: {
+                total: 4,
+                covered: 4,
+                skipped: 0,
+                pct: 100,
+              },
+            },
+            'TablePagination.tsx': {
+              lines: {
+                total: 17,
+                covered: 9,
+                skipped: 0,
+                pct: 52.94,
+              },
+              functions: {
+                total: 10,
+                covered: 3,
+                skipped: 0,
+                pct: 30,
+              },
+              statements: {
+                total: 18,
+                covered: 10,
+                skipped: 0,
+                pct: 55.56,
+              },
+              branches: {
+                total: 24,
+                covered: 8,
+                skipped: 0,
+                pct: 33.33,
+              },
+            },
+          },
+        },
+      },
+    );
+  }, 50000);
   componentFixture('default-alias-import.js', component => {
     expect(component).toMatchObject({
       name: 'Button',
