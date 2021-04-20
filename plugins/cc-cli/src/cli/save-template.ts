@@ -13,7 +13,16 @@ export const saveTemplate = async <P extends TemplateOptions>(
   options: CliOptions<P>,
   templateFn: TemplateFunction<P>,
 ): Promise<void> => {
-  const { test, overwrite, output, ...rest } = options;
+  const { test, overwrite, output, include, exclude, ...rest } = options;
+
+  //check if the test file name is to be included.
+  const testName = test.split('.')[0];
+  if (include && !include.includes(testName)) {
+    return;
+  }
+  if (exclude && exclude.includes(testName)) {
+    return;
+  }
 
   let testFolder = output as string;
 

@@ -33,7 +33,6 @@ export const jestCliArgs: ArgOptions = [
       choices: ['cjs', 'esm', 'ts'],
     },
   },
-
   {
     name: 'overwrite',
     options: {
@@ -73,6 +72,22 @@ export const jestCliArgs: ArgOptions = [
       alias: 'n',
       description: 'name of the test group (describe)',
       type: 'string',
+    },
+  },
+  {
+    name: 'include',
+    options: {
+      alias: 'i',
+      description: 'component files to include',
+      type: 'array',
+    },
+  },
+  {
+    name: 'exclude',
+    options: {
+      alias: 'x',
+      description: 'component files to exclude',
+      type: 'array',
     },
   },
 ];
