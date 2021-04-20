@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.7.0](https://github.com/ccontrols/component-controls/compare/v3.6.3...v3.7.0) (2021-04-20)
+
+
+### Bug Fixes
+
+* add results check ([caecd15](https://github.com/ccontrols/component-controls/commit/caecd1596509155e693ceb2ea11d2a1f4948c9f2))
+* change path.resolve to require-resolve ([cc7b68c](https://github.com/ccontrols/component-controls/commit/cc7b68c2ec369a8a40d5de8ce3472f2be369dce2))
+* copy ref objects ([48423e7](https://github.com/ccontrols/component-controls/commit/48423e7b3ddc40e25ce309d8836d6bea841015fe))
+* display dependencies external package name ([b558ada](https://github.com/ccontrols/component-controls/commit/b558adabb249748e7c5839274e86ed512b0ed0c0))
+* keep singular for less than 2 documents ([4fa8cd3](https://github.com/ccontrols/component-controls/commit/4fa8cd3b0129e30b3d457393c5be6f6ea2f3a575))
+* local dependencies require ([506b974](https://github.com/ccontrols/component-controls/commit/506b9744429cd1354e6d2db7627ff635b837b632))
+* revert console.log ([3f472b1](https://github.com/ccontrols/component-controls/commit/3f472b173fc26e43c22584873f7c714e5b21d946))
+* rootfolder ([2397536](https://github.com/ccontrols/component-controls/commit/2397536a80f49d6e1dd2db920c3e7280bb0c03ab))
+* ts-jest memory leak ([71f714d](https://github.com/ccontrols/component-controls/commit/71f714d74e2cea3d9705c1149f8d7ab2196744fc))
+
+
+### Features
+
+* cache component info data ([a24f528](https://github.com/ccontrols/component-controls/commit/a24f528415a361da2f953b47fba9d4486255fff6))
+* cache component tests ([2489506](https://github.com/ccontrols/component-controls/commit/248950643be2c4441492d78832b1673b7d63594e))
+* cc-cli add include/exclude options ([4187433](https://github.com/ccontrols/component-controls/commit/4187433b4ea2f62d92a90d83a360758e546578f5))
+* inclide local dependenciies in test coverage ([6260392](https://github.com/ccontrols/component-controls/commit/6260392f8e1322378b4bdf3f108733ea4c2c59c9))
+* initial collect test results ([e6daeec](https://github.com/ccontrols/component-controls/commit/e6daeec8820a5edc35ff4aa56cf8bf189cfc1665))
+* move component instrumentation to loader ([9152498](https://github.com/ccontrols/component-controls/commit/91524988b8f37bd78955559025686ad23c58ebdb))
+* project-based test execution ([f9236bb](https://github.com/ccontrols/component-controls/commit/f9236bb15340716ad0489922cd4e6a81e7cb699b))
+
+
+
+
+
 ## [3.6.3](https://github.com/ccontrols/component-controls/compare/v3.6.2...v3.6.3) (2021-04-08)
 
 **Note:** Version bump only for package component-controls

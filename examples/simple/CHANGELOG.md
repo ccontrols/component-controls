@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.7.0](https://github.com/ccontrols/component-controls/compare/v3.6.3...v3.7.0) (2021-04-20)
+
+
+### Features
+
+* move component instrumentation to loader ([9152498](https://github.com/ccontrols/component-controls/commit/91524988b8f37bd78955559025686ad23c58ebdb))
+
+
+
+
+
 ## [3.6.3](https://github.com/ccontrols/component-controls/compare/v3.6.2...v3.6.3) (2021-04-08)
 
 **Note:** Version bump only for package component-controls-simple

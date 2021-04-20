@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.7.0](https://github.com/ccontrols/component-controls/compare/v3.6.3...v3.7.0) (2021-04-20)
+
+
+### Features
+
+* project-based test execution ([f9236bb](https://github.com/ccontrols/component-controls/commit/f9236bb15340716ad0489922cd4e6a81e7cb699b))
+
+
+
+
+
 ## [3.6.3](https://github.com/ccontrols/component-controls/compare/v3.6.2...v3.6.3) (2021-04-08)
 
 **Note:** Version bump only for package component-controls-react-webpack-5-starter

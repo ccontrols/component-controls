@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.7.0](https://github.com/ccontrols/component-controls/compare/v3.6.3...v3.7.0) (2021-04-20)
+
+
+### Bug Fixes
+
+* keep singular for less than 2 documents ([4fa8cd3](https://github.com/ccontrols/component-controls/commit/4fa8cd3b0129e30b3d457393c5be6f6ea2f3a575))
+
+
+
+
+
 ## [3.6.3](https://github.com/ccontrols/component-controls/compare/v3.6.2...v3.6.3) (2021-04-08)
 
 **Note:** Version bump only for package @component-controls/webpack-compile

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.7.0](https://github.com/ccontrols/component-controls/compare/v3.6.3...v3.7.0) (2021-04-20)
+
+
+### Bug Fixes
+
+* rootfolder ([2397536](https://github.com/ccontrols/component-controls/commit/2397536a80f49d6e1dd2db920c3e7280bb0c03ab))
+* ts-jest memory leak ([71f714d](https://github.com/ccontrols/component-controls/commit/71f714d74e2cea3d9705c1149f8d7ab2196744fc))
+
+
+
+
+
 ## [3.6.3](https://github.com/ccontrols/component-controls/compare/v3.6.2...v3.6.3) (2021-04-08)
 
 **Note:** Version bump only for package @component-controls/components

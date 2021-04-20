@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.7.0](https://github.com/ccontrols/component-controls/compare/v3.6.3...v3.7.0) (2021-04-20)
+
+
+### Bug Fixes
+
+* ts-jest memory leak ([71f714d](https://github.com/ccontrols/component-controls/commit/71f714d74e2cea3d9705c1149f8d7ab2196744fc))
+
+
+### Features
+
+* cc-cli add include/exclude options ([4187433](https://github.com/ccontrols/component-controls/commit/4187433b4ea2f62d92a90d83a360758e546578f5))
+
+
+
+
+
 ## [3.6.3](https://github.com/ccontrols/component-controls/compare/v3.6.2...v3.6.3) (2021-04-08)
 
 **Note:** Version bump only for package component-controls-stories
