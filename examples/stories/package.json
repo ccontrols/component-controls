@@ -7,5 +7,16 @@
     "type": "git",
     "url": "https://github.com/ccontrols/component-controls.git",
     "directory": "examples/stories"
+  },
+  "scripts": {
+    "test:create": "cc-cli -g doc -i VariantButton -c ./.config -w"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "globals": {
+      "ts-jest": {
+        "isolatedModules": true
+      }
+    }
   }
 }

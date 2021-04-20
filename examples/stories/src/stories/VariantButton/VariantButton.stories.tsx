@@ -1,7 +1,7 @@
 import React from 'react';
 import { Document, Example, ControlTypes } from '@component-controls/core';
-import { VariantButton, VariantButtonProps } from '../components/VariantButton';
-import design_notes from '../sections/design-notes.md';
+import { VariantButton, VariantButtonProps } from './VariantButton';
+import design_notes from '../../sections/design-notes.md';
 import image_screenshot from './media/image_screenshot.jpg';
 
 export default {
