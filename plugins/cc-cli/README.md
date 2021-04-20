@@ -3,6 +3,7 @@
 -   [Overview](#overview)
 -   [Install](#install)
 -   [API](#api)
+    -   [<ins>createDocumentTemplate</ins>](#inscreatedocumenttemplateins)
     -   [<ins>createStoreTemplate</ins>](#inscreatestoretemplateins)
     -   [<ins>createStoriesTemplate</ins>](#inscreatestoriestemplateins)
     -   [<ins>createTemplate</ins>](#inscreatetemplateins)
@@ -29,6 +30,24 @@ yarn add @component-controls/cc-cli --dev
 <react-docgen-typescript path="./src" />
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
+
+## <ins>createDocumentTemplate</ins>
+
+create tests on a document base (a test file for each document and inside, dynamic tests to iterate through the stories)
+
+_createDocumentTemplate [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/cc-cli/src/document-template.ts)_
+
+### properties
+
+| Name        | Type                         | Description                                                                  |
+| ----------- | ---------------------------- | ---------------------------------------------------------------------------- |
+| `storyPath` | _string_                     |                                                                              |
+| `renderer`  | _"rtl" \| "rtr" \| "enzyme"_ | which renderer to use for generating the tests                               |
+| `format`    | _TeplateFormats_             | files format - default common js                                             |
+| `config`    | _string_                     | configuration files folder                                                   |
+| `bundle`    | _string_                     | if specified, will get stories from the bundle instead of directly importing |
+| `output`    | _string_                     | tests output folder - where to create them                                   |
+| `name`      | _string_                     | describe section label                                                       |
 
 ## <ins>createStoreTemplate</ins>
 
@@ -73,17 +92,16 @@ _createTemplate [source code](https://github.com/ccontrols/component-controls/tr
 
 ### properties
 
-| Name           | Type                         | Description                                                                  |
-| -------------- | ---------------------------- | ---------------------------------------------------------------------------- |
-| `renderer`     | _"rtl" \| "rtr" \| "enzyme"_ | which renderer to use for generating the tests                               |
-| `format`       | _TeplateFormats_             | files format - default common js                                             |
-| `config`       | _string_                     | configuration files folder                                                   |
-| `bundle`       | _string_                     | if specified, will get stories from the bundle instead of directly importing |
-| `output`       | _string_                     | tests output folder - where to create them                                   |
-| `name`         | _string_                     | describe section label                                                       |
-| `storeRender*` | _string_                     |                                                                              |
-| `template*`    | _string_                     |                                                                              |
-| `vars*`        | _Record&lt;string, any>_     |                                                                              |
+| Name        | Type                         | Description                                                                  |
+| ----------- | ---------------------------- | ---------------------------------------------------------------------------- |
+| `renderer`  | _"rtl" \| "rtr" \| "enzyme"_ | which renderer to use for generating the tests                               |
+| `format`    | _TeplateFormats_             | files format - default common js                                             |
+| `config`    | _string_                     | configuration files folder                                                   |
+| `bundle`    | _string_                     | if specified, will get stories from the bundle instead of directly importing |
+| `output`    | _string_                     | tests output folder - where to create them                                   |
+| `name`      | _string_                     | describe section label                                                       |
+| `template*` | _string_                     |                                                                              |
+| `vars*`     | _Record&lt;string, any>_     |                                                                              |
 
 ## <ins>cliStore</ins>
 
@@ -97,6 +115,8 @@ _cliStore [source code](https://github.com/ccontrols/component-controls/tree/mas
 | ------------ | ---------------------------- | ---------------------------------------------------------------------------- |
 | `overwrite*` | _boolean_                    |                                                                              |
 | `test*`      | _string_                     |                                                                              |
+| `include`    | _string\[]_                  | components to include                                                        |
+| `exclude`    | _string\[]_                  | components to exclude                                                        |
 | `renderer`   | _"rtl" \| "rtr" \| "enzyme"_ | which renderer to use for generating the tests                               |
 | `format`     | _TeplateFormats_             | files format - default common js                                             |
 | `config`     | _string_                     | configuration files folder                                                   |
@@ -109,19 +129,6 @@ _cliStore [source code](https://github.com/ccontrols/component-controls/tree/mas
 cli function to create tests on a story by story basis
 
 _cliStory [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/cc-cli/src/cli/cli-story.ts)_
-
-### properties
-
-| Name         | Type                         | Description                                                                  |
-| ------------ | ---------------------------- | ---------------------------------------------------------------------------- |
-| `overwrite*` | _boolean_                    |                                                                              |
-| `test*`      | _string_                     |                                                                              |
-| `renderer`   | _"rtl" \| "rtr" \| "enzyme"_ | which renderer to use for generating the tests                               |
-| `format`     | _TeplateFormats_             | files format - default common js                                             |
-| `config`     | _string_                     | configuration files folder                                                   |
-| `bundle`     | _string_                     | if specified, will get stories from the bundle instead of directly importing |
-| `output`     | _string_                     | tests output folder - where to create them                                   |
-| `name`       | _string_                     | describe section label                                                       |
 
 ## <ins>run</ins>
 
