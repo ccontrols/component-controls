@@ -1,3 +1,4 @@
+import path from 'path';
 import { loadConfiguration } from '../src/index';
 
 describe('config-folder', () => {
@@ -9,7 +10,26 @@ describe('config-folder', () => {
         '-c',
         'fixtures',
       ]),
-    ).toMatchSnapshot();
+    ).toMatchObject({
+      config: {
+        addons: [
+          {
+            name: '@component-controls/storybook',
+            options: {
+              webpack: ['instrument', 'react-docgen-typescript'],
+            },
+          },
+        ],
+        stories: [
+          '../../../../ui/editors/src/**/*.stories.(js|jsx|tsx|mdx)',
+          '../../../../ui/components/src/**/*.stories.(js|jsx|tsx|mdx)',
+          '../../../../ui/blocks/src/**/*.stories.(js|jsx|tsx|mdx)',
+          '../../../../examples/stories/src/**/*.stories.(js|jsx|tsx|mdx)',
+        ],
+      },
+      configPath: path.resolve(__dirname, './fixtures'),
+      optionsFilePath: undefined,
+    });
   });
   it('config file long option', () => {
     expect(
@@ -19,6 +39,25 @@ describe('config-folder', () => {
         '--config',
         'fixtures',
       ]),
-    ).toMatchSnapshot();
+    ).toMatchObject({
+      config: {
+        addons: [
+          {
+            name: '@component-controls/storybook',
+            options: {
+              webpack: ['instrument', 'react-docgen-typescript'],
+            },
+          },
+        ],
+        stories: [
+          '../../../../ui/editors/src/**/*.stories.(js|jsx|tsx|mdx)',
+          '../../../../ui/components/src/**/*.stories.(js|jsx|tsx|mdx)',
+          '../../../../ui/blocks/src/**/*.stories.(js|jsx|tsx|mdx)',
+          '../../../../examples/stories/src/**/*.stories.(js|jsx|tsx|mdx)',
+        ],
+      },
+      configPath: path.resolve(__dirname, './fixtures'),
+      optionsFilePath: undefined,
+    });
   });
 });

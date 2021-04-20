@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import { runCLI } from 'jest';
-import { Config } from '@jest/types';
 import { createStoriesTemplate } from '../src/stories-template';
 import { StoryTemplateOptions } from '../src/types';
 
@@ -44,10 +43,13 @@ export const runTests = async (
           {
             testRegex: testName,
             testPathIgnorePatterns: ['/node_modules/', '/__snapshots__/'],
+            detectOpenHandles: true,
+            runInBand: true,
+            forceExit: true,
             silent: true,
             verbose: false,
             watchman: false,
-          } as Config.Argv,
+          } as any,
           [__dirname],
         );
       } finally {

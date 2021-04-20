@@ -1,61 +1,64 @@
-import fs from 'fs';
 import path from 'path';
 import { runCLI } from 'jest';
 import { Config } from '@jest/types';
-import { AssertionResult, AggregatedResult } from '@jest/test-result';
+import { findUpFile } from '@component-controls/core/node-utils';
+import { TestResult, AggregatedResult } from '@jest/test-result';
 import { FileCoverage, CoverageSummaryData } from 'istanbul-lib-coverage';
+import fastq from 'fastq';
 
-export const getUniqueFolder = (folder: string): string => {
-  let fnId = 1;
-  const fName = () => path.resolve(folder, `__jest-tmp-${fnId}`);
-  while (fs.existsSync(fName())) {
-    fnId += 1;
-  }
-  const folderName = fName();
-  fs.mkdirSync(folderName);
-  return folderName;
-};
+export const findJestConfig = (filePath: string): string =>
+  path.dirname(
+    findUpFile(path.dirname(filePath), [
+      'package.json',
+      'jest-config.js',
+      'jest-config.ts',
+    ]) || filePath,
+  );
+
 export interface JestResults {
   /**
    * test results
    */
-  testResults: AssertionResult[];
+  results: Pick<
+    TestResult,
+    'leaks' | 'memoryUsage' | 'perfStats' | 'testFilePath' | 'testResults'
+  >[];
+
   /**
    * coverage summary data, by file
    */
   coverage: Record<string, CoverageSummaryData>;
 }
-export const run = async (
-  testFilePath: string,
-  jestConfig: Partial<Config.Argv> = {},
-): Promise<JestResults | undefined> => {
-  const testFolder = path.dirname(testFilePath);
-  const testFile = path.basename(testFilePath);
-  const configFolder = getUniqueFolder(testFolder);
-  const configFile = path.resolve(configFolder, 'jest.config.js');
-  const { rootDir = '..', ...config } = jestConfig;
-  fs.writeFileSync(
-    configFile,
-    `module.exports = ${JSON.stringify(
-      {
-        rootDir,
-        preset: 'ts-jest',
-        transform: {
-          '^.+\\.(ts|tsx)?$': 'ts-jest',
-          '^.+\\.(js|jsx)$': 'babel-jest',
-        },
-        collectCoverageFrom: [
-          '**/*.{js,jsx,tsx,ts}',
-          '!**/jest.config.js',
-          '!**/*.{test,spec}.{js,jsx,tsx,ts}',
-        ],
-      },
-      null,
-      2,
-    )}
-  `,
-    'utf8',
-  );
+
+interface RunTestsInput {
+  /**
+   * related test files to execute
+   */
+  testFiles: string[];
+  /**
+   * the folder with jest configuration or package.json
+   */
+  projectFolder: string;
+  /**
+   * if supplied, this is the folder from which to report the file names relative to
+   * for example this could be the folder where the tested component resides
+   */
+  relativeFolder?: string;
+  /**
+   * jest options. Can provide collectCoverageOnlyFrom to limit the files coverage is collected from
+   */
+  options: Partial<Config.Argv>;
+}
+const runTestsWorker: fastq.asyncWorker<
+  unknown,
+  RunTestsInput,
+  JestResults | undefined
+> = async ({
+  testFiles,
+  projectFolder,
+  options,
+  relativeFolder,
+}: RunTestsInput) => {
   let runResults: {
     results: AggregatedResult;
     globalConfig: Config.GlobalConfig;
@@ -63,46 +66,93 @@ export const run = async (
   try {
     runResults = await runCLI(
       {
-        testRegex: testFile,
+        rootDir: projectFolder,
+        testRegex: testFiles,
+        forceExit: true,
         testPathIgnorePatterns: ['/node_modules/', '/__snapshots__/'],
         silent: true,
-        verbose: false,
-        // reporters: [],
+        testTimeout: 100000,
+        reporters: [],
         coverage: true,
         coverageReporters: ['none'],
         watchman: false,
-        ...config,
+        collectCoverageFrom: [
+          '**/*.{js,jsx,tsx,ts}',
+          '!**/jest.config.js',
+          '!**/*.{test,spec}.{js,jsx,tsx,ts}',
+        ],
+        ...options,
       } as Config.Argv,
-      [configFolder],
+      [projectFolder],
     );
   } catch (err) {
-    console.error(err);
     return undefined;
-  } finally {
-    fs.unlinkSync(configFile);
-    fs.rmdirSync(configFolder, { recursive: true });
   }
-  const cov = runResults.results.coverageMap;
-  if (runResults.results.testResults.length !== 1) {
-    throw `More than one test results returned ${runResults.results.testResults.length}`;
-  }
+  const { coverageMap, testResults } = runResults.results;
+  const relFolder = relativeFolder || projectFolder;
   const result: JestResults = {
-    testResults: runResults.results.testResults[0].testResults,
+    results: testResults.map(
+      ({ leaks, memoryUsage, perfStats, testFilePath, testResults }) => ({
+        leaks,
+        memoryUsage,
+        perfStats: { ...perfStats },
+        testFilePath: path.relative(relFolder, testFilePath),
+        testResults: [...testResults],
+      }),
+    ),
     coverage: {},
   };
-  if (cov) {
-    Object.keys(cov.data).forEach(file => {
-      const fc = cov.data[file] as FileCoverage;
+  if (coverageMap) {
+    Object.keys(coverageMap.data).forEach(file => {
+      const fc = coverageMap.data[file] as FileCoverage;
       const summary = fc.toSummary().toJSON();
       const totals = Object.values(summary).reduce(
         (total, value) => total + value.covered + value.skipped,
         0,
       );
       if (totals) {
-        result.coverage[path.relative(testFolder, file)] = summary;
+        result.coverage[path.relative(relFolder, file)] = summary;
       }
     });
   }
-
   return result;
+};
+
+let queue: fastq.queueAsPromised<
+  RunTestsInput,
+  JestResults | undefined
+> | null = null;
+
+/**
+ * single test file execution
+ * @param testFilePath test file full path
+ * @param options jest runCLI options
+ * @returns jest test results and coverage
+ */
+export const runTests = async (
+  testFilePath: string,
+  options: Partial<Config.Argv> = {},
+): Promise<JestResults> => {
+  const testFiles = [path.basename(testFilePath)];
+  const projectFolder = findJestConfig(testFilePath);
+  const relativeFolder = path.dirname(testFilePath);
+
+  return runProjectTests({ testFiles, relativeFolder, projectFolder, options });
+};
+
+/**
+ * run tests within the same project (jest config file)
+ * @param testFiles an array of test files to run
+ * @param projectFolder fle path where the jest config/package.json file resides
+ * @param options jest runCLI options
+ * @returns jest test results and coverage
+ */
+export const runProjectTests = async (
+  props: RunTestsInput,
+): Promise<JestResults> => {
+  if (!queue) {
+    queue = fastq.promise(runTestsWorker, 1);
+  }
+  const result = await queue.push(props);
+  return (result as unknown) as JestResults;
 };

@@ -1,5 +1,5 @@
 import * as path from 'path';
-import { getComponentProps } from '../src/index';
+import { getComponentProps } from '../src/misc/props-info';
 import { ComponentInfo } from '@component-controls/core';
 
 export type ComponentCallback = (component: ComponentInfo) => void;

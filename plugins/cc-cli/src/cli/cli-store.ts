@@ -16,6 +16,8 @@ export const cliStore = async (options: CliOptions): Promise<void> => {
     bundle,
     name = 'component-controls generated',
     output = 'tests',
+    include,
+    exclude,
   } = options;
   const test =
     userTest || `component-controls.test.${format === 'ts' ? 'ts' : 'js'}`;
@@ -29,6 +31,8 @@ export const cliStore = async (options: CliOptions): Promise<void> => {
       bundle,
       name,
       output,
+      include,
+      exclude,
     },
     createStoreTemplate,
   );

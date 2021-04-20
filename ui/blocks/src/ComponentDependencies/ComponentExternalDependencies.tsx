@@ -23,12 +23,8 @@ export const ComponentExternalDependencies: FC<ComponentExternalDependenciesProp
     peer: boolean;
   };
   const componentPackage = usePackage(component?.package);
-  const {
-    privateNpm,
-    dependencies = {},
-    devDependencies = {},
-    peerDependencies = {},
-  } = componentPackage || {};
+  const { dependencies = {}, devDependencies = {}, peerDependencies = {} } =
+    componentPackage || {};
   const { externalDependencies: imports = {} } = component || {};
   const columns = useMemo(
     () =>
@@ -40,14 +36,13 @@ export const ComponentExternalDependencies: FC<ComponentExternalDependenciesProp
             row: {
               original: { name },
             },
-          }: any) =>
-            privateNpm !== true ? (
-              <PackageLink
-                name={name}
-                dependencies={dependencies}
-                devDependencies={devDependencies}
-              />
-            ) : null,
+          }: any) => (
+            <PackageLink
+              name={name}
+              dependencies={dependencies}
+              devDependencies={devDependencies}
+            />
+          ),
         },
         {
           Header: 'imports',
@@ -80,7 +75,7 @@ export const ComponentExternalDependencies: FC<ComponentExternalDependenciesProp
           Cell: ({ value }: { value: boolean }) => (value ? '*' : ''),
         },
       ] as Column<DataType>[],
-    [privateNpm, dependencies, devDependencies],
+    [dependencies, devDependencies],
   );
   const rows: DataType[] = useMemo(() => {
     const dependenciesKeys = Object.keys(dependencies);

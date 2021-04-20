@@ -8,13 +8,7 @@ import {
   mergeConfig,
   defaultBuildConfig,
 } from '@component-controls/core';
-
-import {
-  LoadingDocStore,
-  InstrumentOptions,
-  getComponentProps,
-  getFileIinfo,
-} from '@component-controls/instrument';
+import { LoadingDocStore } from '@component-controls/instrument';
 
 import {
   loadConfiguration,
@@ -66,8 +60,6 @@ export const store: LoadingStore = {
   },
 };
 
-let instrumentOptions: InstrumentOptions = {};
-
 export const reserveStories = (filePaths: string[]): void => {
   if (store.stores.length === 0) {
     filePaths.forEach(filePath => store.stores.push({ filePath }));
@@ -77,12 +69,10 @@ export const removeStoriesDoc = (filePath: string): void => {
   store.stores = store.stores.filter(s => s.filePath !== filePath);
 };
 export const addStoriesDoc = (
-  options: InstrumentOptions,
   filePath: string,
   hash: string,
   added: LoadingDocStore,
 ): void => {
-  instrumentOptions = options;
   const { components, packages, stories, doc } = added;
   if (!doc) {
     throw new Error(`Invalid store with no document ${filePath}`);
@@ -111,29 +101,6 @@ export const addStoriesDoc = (
 };
 
 export const getSerializedStore = async (): Promise<string> => {
-  const { propsLoaders = [], components } = instrumentOptions;
-  const { fileInfo = true } = components || {};
-  for (const name in store.components) {
-    const component = store.components[name];
-    const propsFile = component.propsInfoFile || component.request;
-    if (propsFile) {
-      const propsInfo = await getComponentProps(
-        propsLoaders,
-        propsFile,
-        component.name,
-        component.source,
-      );
-      if (propsInfo) {
-        component.info = propsInfo;
-      }
-    }
-    if (fileInfo && component.request) {
-      component.fileInfo = await getFileIinfo(
-        component.request,
-        component.source,
-      );
-    }
-  }
   return JSON.stringify(store);
 };
 

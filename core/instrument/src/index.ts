@@ -38,8 +38,7 @@ import {
 } from './types';
 
 export * from './types';
-export { getComponentProps } from './misc/props-info';
-export { getFileIinfo } from './misc/file-info';
+
 export { prettify };
 
 type TraverseFn = (
@@ -137,6 +136,7 @@ export const parseStories = async (
     stories: storiesOptions = {},
     mdx: mdxOptions = {},
     propsLoaders,
+    jest: jestOptions = {},
   } = options || {};
 
   const mergedOptions: Required<InstrumentOptions> = {
@@ -150,6 +150,7 @@ export const parseStories = async (
     stories: deepmerge<StoriesOptions>(defaultStoriesOptions, storiesOptions),
     mdx: deepmerge<MDXOptions>(defaultMDXOptions, mdxOptions),
     propsLoaders: propsLoaders || [],
+    jest: jestOptions,
   };
   let code: string;
   const {

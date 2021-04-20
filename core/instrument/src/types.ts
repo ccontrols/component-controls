@@ -1,8 +1,10 @@
 import { ParserOptions } from '@babel/parser';
 import { Document, Store } from '@component-controls/core';
+import { JestConfig } from '@component-controls/jest-extract';
 import images from 'remark-images';
 import emoji from 'remark-emoji';
 import { SyncOpts as ResolveOptions } from 'resolve';
+
 import {
   Options,
   ResolveConfigOptions as ResolvePrettierConfigOptions,
@@ -279,6 +281,11 @@ export interface InstrumentOptions {
    * mdx-js parsing options
    */
   mdx?: MDXOptions;
+
+  /**
+   * jest instrumentation options
+   */
+  jest?: JestConfig | false;
 }
 
 export interface MDXExportType {

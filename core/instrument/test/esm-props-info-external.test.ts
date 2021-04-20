@@ -1,6 +1,6 @@
 import path from 'path';
 import { fixtureToTest, TestCallback } from './loadTestFiles';
-import { getComponentProps } from '../src/index';
+import { getComponentProps } from '../src/misc/props-info';
 
 const createTest = (fileName: string, callback: TestCallback) =>
   fixtureToTest(['esm', 'props-info-external'], fileName, callback, {
@@ -83,7 +83,6 @@ describe('esm-props-info-external', () => {
       request:
         '/Users/atanasster/component-controls/node_modules/@theme-ui/components/index.d.ts',
       fileName: 'index.d.ts',
-      package: '8f6835169f285fcd3ad5425d9268a8f1',
     });
   });
 

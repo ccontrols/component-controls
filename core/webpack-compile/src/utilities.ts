@@ -173,7 +173,12 @@ module.exports = ${JSON.stringify({
       }
       const { store } = require('@component-controls/loader/store');
       if (store) {
-        log(`compiled ${store.stores.length} documents`, bundleName);
+        log(
+          `compiled ${store.stores.length} document${
+            store.stores.length > 1 ? 's' : ''
+          }`,
+          bundleName,
+        );
       } else {
         error('error creating bundle', bundleName);
       }

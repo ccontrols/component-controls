@@ -39,6 +39,8 @@ export const cliStory = async (
     test,
     bundle,
     output,
+    include,
+    exclude,
   } = options;
   let documents: string[] = [];
 
@@ -68,6 +70,8 @@ export const cliStory = async (
       {
         renderer,
         format: fileFormat,
+        include,
+        exclude,
         overwrite,
         config,
         test: testName,
