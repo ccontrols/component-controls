@@ -4,7 +4,6 @@ import {
   runProjectTests,
   findJestConfig,
   getRelatedTests,
-  JestResults,
 } from '@component-controls/jest-extract';
 import { JestTests } from '@component-controls/core';
 import { CachedFileResource } from './chached-file';
@@ -38,7 +37,7 @@ export const extractTests = async (
     { testFiles: [], coverageFiles: [] },
   );
   if (tests.testFiles.length) {
-    const cached = new CachedFileResource<JestResults>('jest-tests', files[0], [
+    const cached = new CachedFileResource<JestTests>('jest-tests', files[0], [
       ...tests.testFiles,
       ...tests.coverageFiles,
     ]);

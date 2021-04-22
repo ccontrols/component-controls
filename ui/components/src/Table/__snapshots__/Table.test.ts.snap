@@ -45,7 +45,7 @@ exports[`Table editing 1`] = `
           style="width: 150px;"
         >
           <input
-            value="example"
+            value="sample"
           />
         </td>
       </tr>

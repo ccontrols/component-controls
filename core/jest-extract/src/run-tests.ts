@@ -1,9 +1,10 @@
 import path from 'path';
 import { runCLI } from 'jest';
 import { Config } from '@jest/types';
+import { JestTests } from '@component-controls/core';
 import { findUpFile } from '@component-controls/core/node-utils';
-import { TestResult, AggregatedResult } from '@jest/test-result';
-import { FileCoverage, CoverageSummaryData } from 'istanbul-lib-coverage';
+import { AggregatedResult } from '@jest/test-result';
+import { FileCoverage } from 'istanbul-lib-coverage';
 import fastq from 'fastq';
 
 export const findJestConfig = (filePath: string): string =>
@@ -14,21 +15,6 @@ export const findJestConfig = (filePath: string): string =>
       'jest-config.ts',
     ]) || filePath,
   );
-
-export interface JestResults {
-  /**
-   * test results
-   */
-  results: Pick<
-    TestResult,
-    'leaks' | 'memoryUsage' | 'perfStats' | 'testFilePath' | 'testResults'
-  >[];
-
-  /**
-   * coverage summary data, by file
-   */
-  coverage: Record<string, CoverageSummaryData>;
-}
 
 interface RunTestsInput {
   /**
@@ -52,7 +38,7 @@ interface RunTestsInput {
 const runTestsWorker: fastq.asyncWorker<
   unknown,
   RunTestsInput,
-  JestResults | undefined
+  JestTests | undefined
 > = async ({
   testFiles,
   projectFolder,
@@ -90,14 +76,35 @@ const runTestsWorker: fastq.asyncWorker<
   }
   const { coverageMap, testResults } = runResults.results;
   const relFolder = relativeFolder || projectFolder;
-  const result: JestResults = {
+  const result: JestTests = {
     results: testResults.map(
-      ({ leaks, memoryUsage, perfStats, testFilePath, testResults }) => ({
+      ({ leaks, perfStats, testFilePath, testResults }) => ({
         leaks,
-        memoryUsage,
-        perfStats: { ...perfStats },
+        perfStats,
         testFilePath: path.relative(relFolder, testFilePath),
-        testResults: [...testResults],
+        testResults: testResults.map(
+          ({
+            ancestorTitles,
+            duration,
+            fullName,
+            status,
+            title,
+            numPassingAsserts,
+            failureDetails,
+          }) => ({
+            ancestorTitles,
+            duration,
+            fullName,
+            status,
+            title,
+            numPassingAsserts,
+            failureDetails: (failureDetails as { message: string }[]).map(
+              failure => ({
+                message: failure.message,
+              }),
+            ),
+          }),
+        ),
       }),
     ),
     coverage: {},
@@ -120,7 +127,7 @@ const runTestsWorker: fastq.asyncWorker<
 
 let queue: fastq.queueAsPromised<
   RunTestsInput,
-  JestResults | undefined
+  JestTests | undefined
 > | null = null;
 
 /**
@@ -132,7 +139,7 @@ let queue: fastq.queueAsPromised<
 export const runTests = async (
   testFilePath: string,
   options: Partial<Config.Argv> = {},
-): Promise<JestResults> => {
+): Promise<JestTests> => {
   const testFiles = [path.basename(testFilePath)];
   const projectFolder = findJestConfig(testFilePath);
   const relativeFolder = path.dirname(testFilePath);
@@ -149,10 +156,10 @@ export const runTests = async (
  */
 export const runProjectTests = async (
   props: RunTestsInput,
-): Promise<JestResults> => {
+): Promise<JestTests> => {
   if (!queue) {
     queue = fastq.promise(runTestsWorker, 1);
   }
   const result = await queue.push(props);
-  return (result as unknown) as JestResults;
+  return (result as unknown) as JestTests;
 };

@@ -39,6 +39,7 @@
     "@component-controls/search-algolia": "^3.7.0",
     "@component-controls/store": "^3.7.0",
     "@theme-ui/css": "^0.6.0-alpha.7",
+    "ansi_up": "^5.0.1",
     "copy-to-clipboard": "^3.2.1",
     "global": "^4.3.2",
     "js-string-escape": "^1.0.1",
