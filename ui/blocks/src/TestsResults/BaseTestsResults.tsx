@@ -174,7 +174,6 @@ export const BaseTestsResults: FC<BaseTestsResultsProps> = ({
   }
   return (
     <Table<TestRow>
-      sx={{ td: { py: 2 } }}
       itemsLabel="tests"
       sorting={true}
       data={data}

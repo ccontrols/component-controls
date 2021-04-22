@@ -364,7 +364,7 @@ export const theme: ControlsTheme = {
     },
     th: {
       border: 'none',
-      py: 2,
+      py: 3,
       pr: 2,
       pl: 3,
     },
@@ -379,13 +379,13 @@ export const theme: ControlsTheme = {
       color: 'text',
     },
     td: {
-      py: 3,
+      py: 2,
       px: 3,
       borderBottom: 0,
     },
     tdgroup: {
       lineHeight: '24px',
-      background: '#fafbfc',
+      bg: 'gray',
       whiteSpace: 'nowrap',
       py: 3,
       fontWeight: 'bold',
