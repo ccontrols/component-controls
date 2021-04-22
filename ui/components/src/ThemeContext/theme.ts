@@ -115,6 +115,12 @@ export const theme: ControlsTheme = {
     palette3: '#f44336',
     palette4: '#dc004e',
     palette5: '#1976d2',
+    status_passed: '#4caf50',
+    status_failed: '#f44336',
+    status_skipped: '#fab305',
+    status_pending: '#fce83a',
+    status_todo: '#39ccff',
+    status_disabled: '#9ea7ad',
     modes: {
       dark: {
         primary: '#efefef',

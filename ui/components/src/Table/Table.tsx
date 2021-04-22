@@ -318,7 +318,7 @@ export function Table<D extends { [key: string]: any }>({
                           },
                         )}
                   </Box>
-                  {row.isExpanded && (
+                  {row.isExpanded && row.original && (
                     <tr>
                       <td colSpan={visibleColumns.length}>
                         {renderRowSubComponent

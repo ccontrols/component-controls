@@ -4,7 +4,7 @@ import { renderDocument } from '@component-controls/test-renderers';
 import { render, act } from '@testing-library/react';
 import { renderErr } from '@component-controls/test-renderers';
 
-import * as examples from './ComponentTests.stories';
+import * as examples from './TestsResults.stories';
 
 describe('ComponentTests', () => {
   const configPath = path.resolve(__dirname, '../../.config');

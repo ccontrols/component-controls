@@ -7,26 +7,23 @@ import {
   BlockContainerProps,
 } from '@component-controls/components';
 import { StoryInputProps, useStoryComponent } from '@component-controls/store';
-import {
-  BaseComponentTests,
-  BaseComponentTestsProps,
-} from './BaseComponentTests';
+import { BaseTestsResults, BaseTestsResultsProps } from './BaseTestsResults';
 import { useCustomProps } from '../context';
 
-export type ComponentTestsProps = BlockContainerProps &
+export type TestsResultsProps = BlockContainerProps &
   StoryInputProps &
-  Pick<BaseComponentTestsProps, 'pagination'>;
+  Pick<BaseTestsResultsProps, 'pagination'>;
 
 /**
- * Displays commit history for a component
+ * Displays test results details for a component
  */
-export const ComponentTests: FC<ComponentTestsProps> = ({
+export const TestsResults: FC<TestsResultsProps> = ({
   id,
   name,
-  pagination = { totalCountTemplate: '${totalData} tests' },
+  pagination = { totalCountTemplate: 'total ${totalData} tests' },
   ...rest
 }) => {
-  const props = useCustomProps<ComponentTestsProps>('tests', rest);
+  const props = useCustomProps<TestsResultsProps>('tests', rest);
   const component = useStoryComponent({ id, name });
 
   if (!component?.fileInfo?.commits) {
@@ -35,7 +32,7 @@ export const ComponentTests: FC<ComponentTestsProps> = ({
 
   return (
     <BlockContainer {...props}>
-      <BaseComponentTests component={component} pagination={pagination} />
+      <BaseTestsResults component={component} pagination={pagination} />
     </BlockContainer>
   );
 };
