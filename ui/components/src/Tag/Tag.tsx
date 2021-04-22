@@ -9,7 +9,7 @@ export interface TagProps {
   /**
    * color for the tag. The full color will be applied to the border and a transparentized color will be used as background
    */
-  color: string;
+  color?: string;
 
   /**
    * transparent amount - 0 to 1
