@@ -6,7 +6,6 @@ import { PanelContainer, ActionItems } from '@component-controls/components';
 import { ViolationsTable, PassesTable, IncompleteTable } from './ResultsTable';
 import { HighlightSelector } from './HighlightSelector';
 import { AxeContext } from '../state/context';
-import { AllyDashboard } from './AllyDashboard';
 
 /**
  * options
@@ -24,14 +23,7 @@ export const BaseAllyBlock: FC<BaseAllyBlockProps> = ({ children }) => {
   } = useContext(AxeContext);
 
   const actions: ActionItems = useMemo(() => {
-    const actions: ActionItems = [
-      {
-        node: `dashboard`,
-        id: 'dashboard',
-        'aria-label': 'display the accessibility overview dashboard',
-        panel: <AllyDashboard />,
-      },
-    ];
+    const actions: ActionItems = [];
     if (violations.length) {
       actions.push({
         node: `errors (${violations.length})`,
@@ -63,7 +55,11 @@ export const BaseAllyBlock: FC<BaseAllyBlockProps> = ({ children }) => {
     return actions;
   }, [incomplete.length, passes.length, violations.length]);
   return (
-    <PanelContainer actions={actions} openTab="dashboard" visibleTabs={true}>
+    <PanelContainer
+      actions={actions}
+      openTab={actions.length ? actions[0].id : undefined}
+      visibleTabs={true}
+    >
       <HighlightSelector>{children}</HighlightSelector>
     </PanelContainer>
   );

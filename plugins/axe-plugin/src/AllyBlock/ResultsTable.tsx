@@ -3,20 +3,20 @@
 import { FC, useMemo, useCallback, useContext } from 'react';
 import { jsx, Flex, Box, Text } from 'theme-ui';
 import {
-  ChevronRightIcon,
-  ChevronDownIcon,
-  TriangleRightIcon,
-  TriangleDownIcon,
   AlertIcon,
   StopIcon,
   Icon,
   InfoIcon,
   IssueOpenedIcon,
+  ChevronDownIcon,
+  ChevronRightIcon,
 } from '@primer/octicons-react';
 import { Result, ImpactValue } from 'axe-core';
 import {
   Table,
   Column,
+  UseExpandedRowProps,
+  Row,
   ExternalLink,
   Tag,
 } from '@component-controls/components';
@@ -30,22 +30,23 @@ const impactColors: {
   };
 } = {
   minor: {
-    color: '#2196f3',
+    color: 'status_disabled',
     icon: InfoIcon,
   },
   moderate: {
-    color: '#f57c00',
+    color: 'status_todo',
     icon: IssueOpenedIcon,
   },
   serious: {
-    color: '#e57373',
+    color: 'status_skipped',
     icon: AlertIcon,
   },
   critical: {
-    color: '#dc004e',
+    color: 'status_failed',
     icon: StopIcon,
   },
 };
+
 export interface ResultsTableProps {
   /**
    * array of scan results
@@ -55,9 +56,18 @@ export interface ResultsTableProps {
    * if true, will hide error columns such as impact
    */
   hideErrorColumns?: boolean;
+
+  /**
+   * default expanded rows, by id
+   */
+  expanded?: Record<string, boolean>;
 }
 
-const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
+const ResultsTable: FC<ResultsTableProps> = ({
+  results,
+  hideErrorColumns,
+  expanded,
+}) => {
   const renderRowSubComponent = useCallback(
     ({ row }) => (
       <NodesTable
@@ -70,15 +80,9 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
   const table = useMemo(() => {
     const columns: Column<Result>[] = [
       {
-        // Build our expander column
-        id: 'expander', // Make sure it has an ID
-        Header: ({ getToggleAllRowsExpandedProps, isAllRowsExpanded }: any) => (
-          <span {...getToggleAllRowsExpandedProps()}>
-            {isAllRowsExpanded ? <TriangleDownIcon /> : <TriangleRightIcon />}
-          </span>
-        ),
-        width: 50,
-        Cell: ({ row }: any) => (
+        id: 'selector',
+        accessor: 'id',
+        Cell: ({ row }: { row: UseExpandedRowProps<Result> & Row<Result> }) => (
           <Flex
             {...row.getToggleRowExpandedProps()}
             sx={{
@@ -91,12 +95,12 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
       },
       {
         Header: 'id',
-        accessor: 'id',
+        accessor: 'nodes',
         Cell: ({
           row: {
             original: { helpUrl, id },
           },
-        }: any) => {
+        }) => {
           const el = <Box css={{ whiteSpace: 'nowrap' }}>{id}</Box>;
           if (!helpUrl) {
             return el;
@@ -110,22 +114,18 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
         Cell: ({ value }: { value: ImpactValue }) => {
           const impact = value ? impactColors[value] : undefined;
           return (
-            <Flex
-              sx={{
-                alignItems: 'center',
-                flexDirection: 'row',
-                color: impact ? impact.color : undefined,
-              }}
-            >
-              {impact && <impact.icon />}
-              <Text
-                sx={{
-                  pl: impact ? 2 : 0,
-                }}
-              >
-                {value}
-              </Text>
-            </Flex>
+            impact && (
+              <Tag color={impact.color}>
+                <impact.icon />
+                <Text
+                  sx={{
+                    pl: impact ? 2 : 0,
+                  }}
+                >
+                  {value}
+                </Text>
+              </Tag>
+            )
           );
         },
       },
@@ -144,7 +144,7 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
           >
             {value &&
               value.map(tag => (
-                <Tag key={`${tag}`} color="lightgrey" variant="tag.rightmargin">
+                <Tag key={`${tag}`} color="gray" variant="tag.rightmargin">
                   {tag}
                 </Tag>
               ))}
@@ -154,7 +154,9 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
     ];
     return (
       <Table<Result>
+        itemsLabel="a11y tests"
         data={results || []}
+        expanded={expanded}
         columns={columns}
         hiddenColumns={hideErrorColumns ? ['impact'] : undefined}
         renderRowSubComponent={renderRowSubComponent}
@@ -170,8 +172,12 @@ export const ViolationsTable: FC = () => {
   const {
     results: { violations },
   } = useContext(AxeContext);
-
-  return <ResultsTable results={violations} />;
+  const expanded = violations.reduce(
+    (acc, _, index) => ({ ...acc, [`${index}`]: true }),
+    {},
+  );
+  // by default expand all to display all errors
+  return <ResultsTable results={violations} expanded={expanded} />;
 };
 
 export const PassesTable: FC = () => {

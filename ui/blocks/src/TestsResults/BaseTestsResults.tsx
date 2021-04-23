@@ -2,10 +2,16 @@
 /** @jsx jsx */
 import { FC, useMemo, useCallback } from 'react';
 import { jsx } from 'theme-ui';
-import { Column, UseExpandedRowProps, Row } from 'react-table';
 import AnsiUp from 'ansi_up';
 import { TriangleRightIcon, TriangleDownIcon } from '@primer/octicons-react';
-import { Table, TableProps, Tag } from '@component-controls/components';
+import {
+  Table,
+  TableProps,
+  Tag,
+  Column,
+  UseExpandedRowProps,
+  Row,
+} from '@component-controls/components';
 import { JestResult, Component } from '@component-controls/core';
 
 type TestRow = { id: number } & Pick<

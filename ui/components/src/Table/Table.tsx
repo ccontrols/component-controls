@@ -14,6 +14,7 @@ import {
   Column,
   Cell,
   Row,
+  UseExpandedRowProps,
   PluginHook,
   TableOptions,
   UseFiltersOptions,
@@ -44,7 +45,7 @@ const defaultColumn = memoize(() => ({
   accessor: '',
 }));
 
-export { Column, Cell, Row };
+export { Column, Cell, Row, UseExpandedRowProps };
 export type SelectedRowIds = Record<number, boolean>;
 interface TableOwnProps<D extends { [key: string]: any }> {
   /**

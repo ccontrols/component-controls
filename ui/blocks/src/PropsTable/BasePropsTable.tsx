@@ -17,6 +17,7 @@ import { useControl } from '@component-controls/store';
 
 import {
   Table,
+  Column,
   TableProps,
   Markdown,
   ActionContainer,
@@ -24,7 +25,6 @@ import {
   ActionItems,
 } from '@component-controls/components';
 import { getPropertyEditor, PropertyEditor } from '@component-controls/editors';
-import { Column } from 'react-table';
 import { useCurrentStory } from '@component-controls/store';
 import { ComponentVisibility } from '../BlockContainer/components/ComponentsBlockContainer';
 import { InvalidType } from '../notifications';

@@ -48,7 +48,8 @@ export const NodesTable: FC<NodesTableProps> = ({
     () => [
       {
         Header: '',
-        accessor: 'target',
+        accessor: 'impact',
+        id: 'node_target',
         width: 80,
         Cell: ({
           row: {
@@ -65,7 +66,7 @@ export const NodesTable: FC<NodesTableProps> = ({
       {
         Header: 'html',
         accessor: 'html',
-        Cell: ({ value }: { value: string }) => {
+        Cell: ({ value }) => {
           return (
             <Flex
               sx={{
@@ -82,7 +83,7 @@ export const NodesTable: FC<NodesTableProps> = ({
       {
         Header: 'target',
         accessor: 'target',
-        Cell: ({ value }: { value: string[] }) => {
+        Cell: ({ value }) => {
           return (
             <Flex
               css={{
@@ -115,9 +116,7 @@ export const NodesTable: FC<NodesTableProps> = ({
       <Table<NodeResult>
         data={nodes}
         columns={columns}
-        hiddenColumns={
-          hideErrorColumns ? ['failureSummary', 'targets'] : ['targets']
-        }
+        hiddenColumns={hideErrorColumns ? ['failureSummary'] : undefined}
       />
     </Box>
   );
