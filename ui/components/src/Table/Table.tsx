@@ -71,7 +71,7 @@ interface TableOwnProps<D extends { [key: string]: any }> {
   /**
    * string label for 'items' - used in the filter placeholder and grouping header.
    */
-  itemsLabel?: string;
+  itemsLabel?: string | null;
   /**
    * field to be grouped by.
    */

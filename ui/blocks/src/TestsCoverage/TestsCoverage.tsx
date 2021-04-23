@@ -7,32 +7,32 @@ import {
   BlockContainerProps,
 } from '@component-controls/components';
 import { StoryInputProps, useStoryComponent } from '@component-controls/store';
-import { BaseTestsResults, BaseTestsResultsProps } from './BaseTestsResults';
+import { BaseTestsCoverage, BaseTestsCoverageProps } from './BaseTestsCoverage';
 import { useCustomProps } from '../context';
 
-export type TestsResultsProps = BlockContainerProps &
+export type TestsCoverageProps = BlockContainerProps &
   StoryInputProps &
-  Pick<BaseTestsResultsProps, 'pagination'>;
+  Pick<BaseTestsCoverageProps, 'pagination'>;
 
 /**
- * Displays tests results details for a component, within a block
+ * Displays jest tests coverage for a component, within a block
  */
-export const TestsResults: FC<TestsResultsProps> = ({
+export const TestsCoverage: FC<TestsCoverageProps> = ({
   id,
   name,
-  pagination = { totalCountTemplate: 'total ${totalData} tests' },
+  pagination,
   ...rest
 }) => {
-  const props = useCustomProps<TestsResultsProps>('tests_results', rest);
+  const props = useCustomProps<TestsCoverageProps>('tests_coverage', rest);
   const component = useStoryComponent({ id, name });
-
+  console.log(component);
   if (!component?.jest) {
     return null;
   }
 
   return (
     <BlockContainer {...props}>
-      <BaseTestsResults component={component} pagination={pagination} />
+      <BaseTestsCoverage component={component} pagination={pagination} />
     </BlockContainer>
   );
 };

@@ -9,12 +9,9 @@ export interface CoverageMetrics {
   pct: number;
 }
 
-export interface JestCoverage {
-  lines: CoverageMetrics;
-  functions: CoverageMetrics;
-  statements: CoverageMetrics;
-  branches: CoverageMetrics;
-}
+export type CoverageKind = 'lines' | 'functions' | 'statements' | 'branches';
+
+export type JestCoverage = Record<CoverageKind, CoverageMetrics>;
 
 export type JestResult = Pick<
   JestTestResult,

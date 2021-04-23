@@ -77,7 +77,9 @@ export const GithubAvatar: FC<GithubAvatarProps> = ({
           }}
         >
           {profile.name && (
-            <div sx={{ textWeight: 'bold', fontSize: 2 }}>{profile.login}</div>
+            <div sx={{ fontWeight: 'heading', fontSize: 2 }}>
+              {profile.login}
+            </div>
           )}
           <p sx={{ maxWidth: 400, py: 0 }}>{profile.bio}</p>
           {profile.location && (
