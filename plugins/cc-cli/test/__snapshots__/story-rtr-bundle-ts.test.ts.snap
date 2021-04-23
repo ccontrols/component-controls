@@ -13,7 +13,7 @@ describe('Components/Header', () => {
   const renderFn = store.config.renderFn;
   const doc = store.docs['Components/Header'];
 
-  test('Overview', () => {
+  it('Overview', () => {
     const story = store.stories['components-header--overview'];
 
     let rendered;

@@ -24,7 +24,7 @@ describe('VariantButton', () => {
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
 
-  test('overview', () => {
+  it('overview', () => {
     const example = overview;
 
     const rendered = renderExample({
@@ -37,7 +37,7 @@ describe('VariantButton', () => {
     expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
   });
 
-  test('primary', () => {
+  it('primary', () => {
     const example = primary;
 
     const rendered = renderExample({
@@ -50,7 +50,7 @@ describe('VariantButton', () => {
     expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
   });
 
-  test('accent', () => {
+  it('accent', () => {
     const example = accent;
 
     const rendered = renderExample({
@@ -63,7 +63,7 @@ describe('VariantButton', () => {
     expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
   });
 
-  test('disabled', () => {
+  it('disabled', () => {
     const example = disabled;
 
     const rendered = renderExample({
@@ -76,7 +76,7 @@ describe('VariantButton', () => {
     expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
   });
 
-  test('success', () => {
+  it('success', () => {
     const example = success;
 
     const rendered = renderExample({
@@ -89,7 +89,7 @@ describe('VariantButton', () => {
     expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
   });
 
-  test('error', () => {
+  it('error', () => {
     const example = error;
 
     const rendered = renderExample({
@@ -102,7 +102,7 @@ describe('VariantButton', () => {
     expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
   });
 
-  test('warning', () => {
+  it('warning', () => {
     const example = warning;
 
     const rendered = renderExample({

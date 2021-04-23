@@ -12,7 +12,7 @@ describe('Header', () => {
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
 
-  test('overview', () => {
+  it('overview', () => {
     const example = overview;
 
     let rendered;

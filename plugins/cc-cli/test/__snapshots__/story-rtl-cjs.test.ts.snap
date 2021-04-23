@@ -22,7 +22,7 @@ describe('VariantButton', () => {
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
 
-  test('overview', () => {
+  it('overview', () => {
     const example = overview;
 
     let rendered;
@@ -41,7 +41,7 @@ describe('VariantButton', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  test('primary', () => {
+  it('primary', () => {
     const example = primary;
 
     let rendered;
@@ -60,7 +60,7 @@ describe('VariantButton', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  test('accent', () => {
+  it('accent', () => {
     const example = accent;
 
     let rendered;
@@ -79,7 +79,7 @@ describe('VariantButton', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  test('disabled', () => {
+  it('disabled', () => {
     const example = disabled;
 
     let rendered;
@@ -98,7 +98,7 @@ describe('VariantButton', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  test('success', () => {
+  it('success', () => {
     const example = success;
 
     let rendered;
@@ -117,7 +117,7 @@ describe('VariantButton', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  test('error', () => {
+  it('error', () => {
     const example = error;
 
     let rendered;
@@ -136,7 +136,7 @@ describe('VariantButton', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  test('warning', () => {
+  it('warning', () => {
     const example = warning;
 
     let rendered;

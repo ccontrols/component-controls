@@ -16,7 +16,7 @@ Core templating
 `;
 
 describe('dot library', () => {
-  test('template', () => {
+  it('template', () => {
     dot.templateSettings.strip = false;
     (dot as any).log = false;
     const rendered = dot.template(template)({

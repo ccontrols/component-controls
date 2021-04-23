@@ -123,7 +123,7 @@ describe('{{=it.name}}', () => {
 {{=it.load}}
 {{=it.doc}}
 {{~ it.stories :story }}
-  test('{{=story.name}}', () => {
+  it('{{=story.name}}', () => {
     {{? it.bundlePath }}
       const story = store.stories['{{=story.id}}'];
     {{?? true }}
