@@ -1,4 +1,5 @@
 import path from 'path';
+import fs from 'fs';
 import {
   JestConfig,
   runProjectTests,
@@ -27,19 +28,31 @@ export const extractTests = async (
       acc: {
         testFiles: string[];
         coverageFiles: string[];
+        snapshotFiles: string[];
       },
       file,
     ) => {
       acc.testFiles.push(...getRelatedTests(file));
-      acc.coverageFiles.push(file);
+      const snapshotFolder = path.join(path.dirname(file), '__snapshots__');
+      if (fs.existsSync(snapshotFolder)) {
+        acc.snapshotFiles.push(
+          ...fs
+            .readdirSync(snapshotFolder)
+            .map(f => path.resolve(snapshotFolder, f)),
+        );
+      }
+      if (!acc.coverageFiles.includes(file)) {
+        acc.coverageFiles.push(file);
+      }
       return acc;
     },
-    { testFiles: [], coverageFiles: [] },
+    { testFiles: [], coverageFiles: [], snapshotFiles: [] },
   );
   if (tests.testFiles.length) {
     const cached = new CachedFileResource<JestTests>('jest-tests', files[0], [
       ...tests.testFiles,
       ...tests.coverageFiles,
+      ...tests.snapshotFiles,
     ]);
     const cachedResults = cached.get();
     if (cachedResults) {

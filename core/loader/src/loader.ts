@@ -32,24 +32,31 @@ async function loader(this: WebpackLoaderContext): Promise<string> {
     if (store?.doc) {
       log('loaded: ', filePath);
       if (store.stories && store.components && store.packages) {
-        const dependencies: string[] = [];
+        const fileDependencies: string[] = [];
+        const folderDependencies: string[] = [];
         Object.values(store.components).forEach(component => {
           if (component.request) {
-            dependencies.push(component.request as string);
+            fileDependencies.push(component.request as string);
             if (component.jest) {
               const componentFolder = path.dirname(component.request);
               component.jest.results.forEach(r => {
-                dependencies.push(
-                  path.resolve(componentFolder, r.testFilePath),
+                const testFilePath = path.resolve(
+                  componentFolder,
+                  r.testFilePath,
+                );
+                fileDependencies.push(testFilePath);
+                folderDependencies.push(
+                  path.join(path.dirname(testFilePath), '__snapshots__'),
                 );
               });
               Object.keys(component.jest.coverage).forEach(f => {
-                dependencies.push(path.resolve(componentFolder, f));
+                fileDependencies.push(path.resolve(componentFolder, f));
               });
             }
           }
         });
-        new Set(dependencies).forEach(d => this.addDependency(d));
+        new Set(fileDependencies).forEach(d => this.addDependency(d));
+        new Set(folderDependencies).forEach(d => this.addContextDependency(d));
         addStoriesDoc(filePath, this._compilation.records.hash, {
           stories: store.stories,
           components: store.components,
