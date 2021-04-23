@@ -27,7 +27,7 @@ exports[`ComponentTests overview 1`] = `
           class="css-1d6wxci"
         >
           <table
-            class="css-bv1ekz-BaseTestsResults"
+            class="css-11y77l0"
             role="table"
           >
             <thead
@@ -38,7 +38,7 @@ exports[`ComponentTests overview 1`] = `
                 role="row"
               >
                 <th
-                  class="css-9hyy6f"
+                  class="css-n59tc9"
                   colspan="1"
                   role="columnheader"
                   style="width: 20px;"
@@ -52,7 +52,7 @@ exports[`ComponentTests overview 1`] = `
                   </div>
                 </th>
                 <th
-                  class="css-9hyy6f"
+                  class="css-n59tc9"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
@@ -69,7 +69,7 @@ exports[`ComponentTests overview 1`] = `
                   </div>
                 </th>
                 <th
-                  class="css-9hyy6f"
+                  class="css-n59tc9"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
@@ -86,7 +86,7 @@ exports[`ComponentTests overview 1`] = `
                   </div>
                 </th>
                 <th
-                  class="css-9hyy6f"
+                  class="css-n59tc9"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
@@ -103,7 +103,7 @@ exports[`ComponentTests overview 1`] = `
                   </div>
                 </th>
                 <th
-                  class="css-9hyy6f"
+                  class="css-n59tc9"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
@@ -133,7 +133,7 @@ exports[`ComponentTests overview 1`] = `
                   colspan="5"
                 >
                   <div
-                    class="css-10n5rku"
+                    class="css-fz9au7"
                     style="cursor: pointer;"
                     title="Toggle Row Expanded"
                   >
@@ -166,12 +166,12 @@ exports[`ComponentTests overview 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -188,7 +188,7 @@ exports[`ComponentTests overview 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -197,7 +197,7 @@ exports[`ComponentTests overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -208,7 +208,7 @@ exports[`ComponentTests overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -224,12 +224,12 @@ exports[`ComponentTests overview 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -246,7 +246,7 @@ exports[`ComponentTests overview 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -255,7 +255,7 @@ exports[`ComponentTests overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -266,7 +266,7 @@ exports[`ComponentTests overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -282,12 +282,12 @@ exports[`ComponentTests overview 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -304,7 +304,7 @@ exports[`ComponentTests overview 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -313,7 +313,7 @@ exports[`ComponentTests overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -324,7 +324,7 @@ exports[`ComponentTests overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -340,12 +340,12 @@ exports[`ComponentTests overview 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -362,7 +362,7 @@ exports[`ComponentTests overview 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -371,7 +371,7 @@ exports[`ComponentTests overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -382,7 +382,7 @@ exports[`ComponentTests overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -398,12 +398,12 @@ exports[`ComponentTests overview 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -420,7 +420,7 @@ exports[`ComponentTests overview 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -429,7 +429,7 @@ exports[`ComponentTests overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -440,7 +440,7 @@ exports[`ComponentTests overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -456,12 +456,12 @@ exports[`ComponentTests overview 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -500,7 +500,7 @@ exports[`ComponentTests overview 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -509,7 +509,7 @@ exports[`ComponentTests overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -520,7 +520,7 @@ exports[`ComponentTests overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -536,12 +536,12 @@ exports[`ComponentTests overview 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -558,7 +558,7 @@ exports[`ComponentTests overview 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -567,7 +567,7 @@ exports[`ComponentTests overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -578,7 +578,7 @@ exports[`ComponentTests overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -594,12 +594,12 @@ exports[`ComponentTests overview 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -616,7 +616,7 @@ exports[`ComponentTests overview 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -625,7 +625,7 @@ exports[`ComponentTests overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -636,7 +636,7 @@ exports[`ComponentTests overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -695,7 +695,7 @@ exports[`ComponentTests pagination 1`] = `
           class="css-1d6wxci"
         >
           <table
-            class="css-bv1ekz-BaseTestsResults"
+            class="css-11y77l0"
             role="table"
           >
             <thead
@@ -706,7 +706,7 @@ exports[`ComponentTests pagination 1`] = `
                 role="row"
               >
                 <th
-                  class="css-9hyy6f"
+                  class="css-n59tc9"
                   colspan="1"
                   role="columnheader"
                   style="width: 20px;"
@@ -720,7 +720,7 @@ exports[`ComponentTests pagination 1`] = `
                   </div>
                 </th>
                 <th
-                  class="css-9hyy6f"
+                  class="css-n59tc9"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
@@ -737,7 +737,7 @@ exports[`ComponentTests pagination 1`] = `
                   </div>
                 </th>
                 <th
-                  class="css-9hyy6f"
+                  class="css-n59tc9"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
@@ -754,7 +754,7 @@ exports[`ComponentTests pagination 1`] = `
                   </div>
                 </th>
                 <th
-                  class="css-9hyy6f"
+                  class="css-n59tc9"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
@@ -771,7 +771,7 @@ exports[`ComponentTests pagination 1`] = `
                   </div>
                 </th>
                 <th
-                  class="css-9hyy6f"
+                  class="css-n59tc9"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
@@ -801,7 +801,7 @@ exports[`ComponentTests pagination 1`] = `
                   colspan="5"
                 >
                   <div
-                    class="css-10n5rku"
+                    class="css-fz9au7"
                     style="cursor: pointer;"
                     title="Toggle Row Expanded"
                   >
@@ -834,12 +834,12 @@ exports[`ComponentTests pagination 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -856,7 +856,7 @@ exports[`ComponentTests pagination 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -865,7 +865,7 @@ exports[`ComponentTests pagination 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -876,7 +876,7 @@ exports[`ComponentTests pagination 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -892,12 +892,12 @@ exports[`ComponentTests pagination 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -914,7 +914,7 @@ exports[`ComponentTests pagination 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -923,7 +923,7 @@ exports[`ComponentTests pagination 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -934,7 +934,7 @@ exports[`ComponentTests pagination 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -950,12 +950,12 @@ exports[`ComponentTests pagination 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -972,7 +972,7 @@ exports[`ComponentTests pagination 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -981,7 +981,7 @@ exports[`ComponentTests pagination 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -992,7 +992,7 @@ exports[`ComponentTests pagination 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -1000,318 +1000,6 @@ exports[`ComponentTests pagination 1`] = `
                     class="css-1n5mntj-Cell"
                   >
                     115
-                  </div>
-                </td>
-              </tr>
-              <tr
-                class="css-ijvt85"
-                role="row"
-              >
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 20px;"
-                />
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <span
-                    class="css-x0l7ch-Tag"
-                  >
-                    <span
-                      class="css-vurnku"
-                    >
-                      <div>
-                        passed
-                      </div>
-                    </span>
-                  </span>
-                </td>
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div>
-                    Table filterable
-                  </div>
-                </td>
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="css-1e61pe6-Cell"
-                  >
-                    filterable
-                  </div>
-                </td>
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="css-1n5mntj-Cell"
-                  >
-                    115
-                  </div>
-                </td>
-              </tr>
-              <tr
-                class="css-ijvt85"
-                role="row"
-              >
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 20px;"
-                />
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <span
-                    class="css-x0l7ch-Tag"
-                  >
-                    <span
-                      class="css-vurnku"
-                    >
-                      <div>
-                        passed
-                      </div>
-                    </span>
-                  </span>
-                </td>
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div>
-                    Table grouping
-                  </div>
-                </td>
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="css-1e61pe6-Cell"
-                  >
-                    grouping
-                  </div>
-                </td>
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="css-1n5mntj-Cell"
-                  >
-                    89
-                  </div>
-                </td>
-              </tr>
-              <tr
-                class="css-ijvt85"
-                role="row"
-              >
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 20px;"
-                />
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <span
-                    class="css-1yajf8z-Tag"
-                  >
-                    <span
-                      class="css-vurnku"
-                    >
-                      <div
-                        class="css-1muvwk-Cell"
-                        style="cursor: pointer;"
-                        title="Toggle Row Expanded"
-                      >
-                        <div>
-                          failed
-                        </div>
-                        <div>
-                          <svg
-                            aria-hidden="true"
-                            class="octicon"
-                            fill="currentColor"
-                            height="24"
-                            role="img"
-                            style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                            viewBox="0 0 24 24"
-                            width="24"
-                          >
-                            <path
-                              d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </span>
-                  </span>
-                </td>
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div>
-                    Table editing
-                  </div>
-                </td>
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="css-1e61pe6-Cell"
-                  >
-                    editing
-                  </div>
-                </td>
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="css-1n5mntj-Cell"
-                  >
-                    33
-                  </div>
-                </td>
-              </tr>
-              <tr
-                class="css-ijvt85"
-                role="row"
-              >
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 20px;"
-                />
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <span
-                    class="css-x0l7ch-Tag"
-                  >
-                    <span
-                      class="css-vurnku"
-                    >
-                      <div>
-                        passed
-                      </div>
-                    </span>
-                  </span>
-                </td>
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div>
-                    Table rowSelect
-                  </div>
-                </td>
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="css-1e61pe6-Cell"
-                  >
-                    rowSelect
-                  </div>
-                </td>
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="css-1n5mntj-Cell"
-                  >
-                    144
-                  </div>
-                </td>
-              </tr>
-              <tr
-                class="css-ijvt85"
-                role="row"
-              >
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 20px;"
-                />
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <span
-                    class="css-x0l7ch-Tag"
-                  >
-                    <span
-                      class="css-vurnku"
-                    >
-                      <div>
-                        passed
-                      </div>
-                    </span>
-                  </span>
-                </td>
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div>
-                    Table pagination
-                  </div>
-                </td>
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="css-1e61pe6-Cell"
-                  >
-                    pagination
-                  </div>
-                </td>
-                <td
-                  class="css-l4u9co"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="css-1n5mntj-Cell"
-                  >
-                    169
                   </div>
                 </td>
               </tr>
@@ -1329,9 +1017,51 @@ exports[`ComponentTests pagination 1`] = `
               class="css-f5h6sg"
             >
               <div
+                class="css-wzqkm9"
+              >
+                <div
+                  class="css-1c1rsqy"
+                >
+                  <button
+                    class="css-97huhz"
+                    disabled=""
+                  >
+                    &lt;&lt;
+                  </button>
+                </div>
+                <div
+                  class="css-1c1rsqy"
+                >
+                  <button
+                    class="css-97huhz"
+                    disabled=""
+                  >
+                    &lt;
+                  </button>
+                </div>
+                <div
+                  class="css-1c1rsqy"
+                >
+                  <button
+                    class="css-97huhz"
+                  >
+                    &gt;
+                  </button>
+                </div>
+                <div
+                  class="css-1c1rsqy"
+                >
+                  <button
+                    class="css-97huhz"
+                  >
+                    &gt;&gt;
+                  </button>
+                </div>
+              </div>
+              <div
                 class="css-1f9rp2t"
               >
-                Page 1 of 1
+                Page 1 of 3
               </div>
             </div>
           </div>
