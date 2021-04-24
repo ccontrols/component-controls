@@ -50,7 +50,7 @@ export const NodesTable: FC<NodesTableProps> = ({
         Header: '',
         accessor: 'impact',
         id: 'node_target',
-        width: 80,
+        width: 20,
         Cell: ({
           row: {
             original: { target },
@@ -116,7 +116,7 @@ export const NodesTable: FC<NodesTableProps> = ({
       <Table<NodeResult>
         data={nodes}
         columns={columns}
-        hiddenColumns={hideErrorColumns ? ['failureSummary'] : undefined}
+        hiddenColumns={hideErrorColumns ? ['failureSummary', 'html'] : ['html']}
       />
     </Box>
   );

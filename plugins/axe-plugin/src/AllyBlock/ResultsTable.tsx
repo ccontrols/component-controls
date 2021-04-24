@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
 import { FC, useMemo, useCallback, useContext } from 'react';
-import { jsx, Flex, Box, Text } from 'theme-ui';
+import { jsx, Flex, Text } from 'theme-ui';
 import {
   AlertIcon,
   StopIcon,
@@ -82,6 +82,7 @@ const ResultsTable: FC<ResultsTableProps> = ({
       {
         id: 'selector',
         accessor: 'id',
+        width: 20,
         Cell: ({ row }: { row: UseExpandedRowProps<Result> & Row<Result> }) => (
           <Flex
             {...row.getToggleRowExpandedProps()}
@@ -94,23 +95,9 @@ const ResultsTable: FC<ResultsTableProps> = ({
         ),
       },
       {
-        Header: 'id',
-        accessor: 'nodes',
-        Cell: ({
-          row: {
-            original: { helpUrl, id },
-          },
-        }) => {
-          const el = <Box css={{ whiteSpace: 'nowrap' }}>{id}</Box>;
-          if (!helpUrl) {
-            return el;
-          }
-          return <ExternalLink href={helpUrl}>{el}</ExternalLink>;
-        },
-      },
-      {
         Header: 'impact',
         accessor: 'impact',
+        width: 80,
         Cell: ({ value }: { value: ImpactValue }) => {
           const impact = value ? impactColors[value] : undefined;
           return (
@@ -132,6 +119,23 @@ const ResultsTable: FC<ResultsTableProps> = ({
       {
         Header: 'description',
         accessor: 'description',
+        Cell: ({
+          value,
+          row: {
+            original: { helpUrl },
+          },
+        }) => (
+          <p>
+            {value}
+            <ExternalLink
+              sx={{ ml: 1 }}
+              href={helpUrl}
+              aria-label="view deque description of rule"
+            >
+              ...
+            </ExternalLink>
+          </p>
+        ),
       },
       {
         Header: 'tags',
@@ -158,7 +162,7 @@ const ResultsTable: FC<ResultsTableProps> = ({
         data={results || []}
         expanded={expanded}
         columns={columns}
-        hiddenColumns={hideErrorColumns ? ['impact'] : undefined}
+        hiddenColumns={hideErrorColumns ? ['impact', 'tags'] : ['tags']}
         renderRowSubComponent={renderRowSubComponent}
       />
     );
