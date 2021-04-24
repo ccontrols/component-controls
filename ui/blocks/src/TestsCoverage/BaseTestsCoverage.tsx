@@ -24,7 +24,7 @@ export type BaseTestsCoverageProps = {
 };
 
 /**
- * Displays commit history for a component
+ * Displays jest tests coverage for a component
  */
 export const BaseTestsCoverage: FC<BaseTestsCoverageProps> = ({
   component,

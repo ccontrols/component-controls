@@ -25,7 +25,7 @@ export type BaseTestsResultsProps = {
 };
 
 /**
- * Displays jest test results for a component
+ * Displays tests results details for a component
  */
 export const BaseTestsResults: FC<BaseTestsResultsProps> = ({
   component,
