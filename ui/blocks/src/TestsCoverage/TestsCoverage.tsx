@@ -25,7 +25,6 @@ export const TestsCoverage: FC<TestsCoverageProps> = ({
 }) => {
   const props = useCustomProps<TestsCoverageProps>('tests_coverage', rest);
   const component = useStoryComponent({ id, name });
-  console.log(component);
   if (!component?.jest) {
     return null;
   }
