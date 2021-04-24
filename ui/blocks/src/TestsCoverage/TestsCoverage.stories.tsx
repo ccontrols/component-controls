@@ -10,12 +10,10 @@ export default {
   decorators: makeDecorators('blocks-core-story-plain--controls'),
 } as Document;
 
-export const overview: Example = () => (
-  <TestsCoverage id="." name="Test results" />
-);
+export const overview: Example = () => <TestsCoverage id="." name="Coverage" />;
 
 export const pagination: Example<TestsCoverageProps['pagination']> = props => (
-  <TestsCoverage id="." name="Test results" pagination={props} />
+  <TestsCoverage id="." name="Coverage" pagination={props} />
 );
 
 pagination.smartControls = { smart: false };
