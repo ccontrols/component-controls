@@ -28,7 +28,7 @@ export type BaseTestsCoverageProps = {
  */
 export const BaseTestsCoverage: FC<BaseTestsCoverageProps> = ({
   component,
-  pagination = { totalCountVisible : false},
+  pagination = { totalCountVisible: false },
 }) => {
   const theme = useTheme();
   const columns = useMemo(() => {
@@ -78,7 +78,7 @@ export const BaseTestsCoverage: FC<BaseTestsCoverageProps> = ({
         ),
       },
       {
-        Header: 'Sipped',
+        Header: 'Skipped',
         accessor: 'skipped',
         Cell: ({ value }) => (
           <div
