@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`enzyme bundle ts 1`] = `
-"import * as path from 'path';
-const { run, AxeResults } = require('axe-core');
-const { reactRunDOM } = require('@component-controls/test-renderers');
+"
+import * as path from 'path';
+import { run, AxeResults } = require('axe-core');
+import { reactRunDOM } = require('@component-controls/test-renderers');
 import '@component-controls/jest-axe-matcher';
 import { loadStore } from '@component-controls/store';
 import { mount, configure } from 'enzyme';
@@ -12,12 +13,12 @@ import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 
 configure({ adapter: new Adapter() });
 
+
+
 describe('Components/Header', () => {
-  const store = loadStore(
-    require(path.resolve(__dirname, './bundle/component-controls.js')),
-  );
+    const store = loadStore(require(path.resolve(__dirname, './bundle/component-controls.js')));
   const renderFn = store.config.renderFn;
-  Object.keys(store.docs).forEach(docId => {
+    Object.keys(store.docs).forEach(docId => {
     const doc = store.docs[docId];
     if (doc.stories && doc.stories.length) {
       const stories = doc.stories;
@@ -31,10 +32,11 @@ describe('Components/Header', () => {
               expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
             });
             it('accessibility', async () => {
-              const axeResults = await reactRunDOM<AxeResults>(rendered, run);
-              expect(axeResults).toHaveNoAxeViolations();
-            });
-          });
+  const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+  expect(axeResults).toHaveNoAxeViolations();
+});  
+
+          });  
         });
       });
     }

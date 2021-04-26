@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`enzyme  ts 1`] = `
-"import * as path from 'path';
-const { run, AxeResults } = require('axe-core');
-const { reactRunDOM } = require('@component-controls/test-renderers');
+"
+import * as path from 'path';
+import { run, AxeResults } = require('axe-core');
+import { reactRunDOM } = require('@component-controls/test-renderers');
 import '@component-controls/jest-axe-matcher';
 import { loadConfigurations } from '@component-controls/config';
 import { renderDocument } from '@component-controls/test-renderers';
@@ -16,15 +17,16 @@ configure({ adapter: new Adapter() });
 import * as examples from './fixtures/VariantButton.docs';
 
 describe('VariantButton', () => {
-  const configPath = path.resolve(__dirname, '.config');
+    const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
   const renderedExamples = renderDocument(examples, config);
-  renderedExamples.forEach(({ name, rendered }) => {
-    it(name, async () => {
-      const component = mount(rendered);
-      expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
-    });
+renderedExamples.forEach(({ name, rendered}) => {
+  it(name, async () => {
+    const component = mount(rendered);
+    expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
   });
+});
+
 });
 "
 `;
