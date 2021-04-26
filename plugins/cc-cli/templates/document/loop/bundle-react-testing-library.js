@@ -5,7 +5,7 @@
       describe(doc.title, () => {
         stories.forEach(storyId => {
           const story = store.stories[storyId];
-          describe(story.name, async () => {
+          describe(story.name, () => {
             let rendered;
             act(() => {
               rendered = renderFn(story, doc);

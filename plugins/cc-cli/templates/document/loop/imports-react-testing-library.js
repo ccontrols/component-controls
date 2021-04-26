@@ -7,7 +7,7 @@ if (!renderedExamples) {
   return;
 }
 renderedExamples.forEach(({ name, rendered}) => {
-  describe(name, async () => {
+  describe(name, () => {
     it('snapshot', () => {
       const { asFragment } = render(rendered);
       expect(asFragment()).toMatchSnapshot();
