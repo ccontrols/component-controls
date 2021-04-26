@@ -7,12 +7,15 @@ if (!renderedExamples.length) {
   return;
 }
 renderedExamples.forEach(({ name, rendered}) => {
-  it(name, async () => {
-    const component = renderer.create(rendered);
-    if (!component) {
-      componentErr();
-      return;
-    }
-    expect(component.toJSON()).toMatchSnapshot();
+  describe(name, () => {
+    it('snapshot', () => {
+      const component = renderer.create(rendered);
+      if (!component) {
+        componentErr();
+        return;
+      }
+      expect(component.toJSON()).toMatchSnapshot();
+    });
+    {{=it.allytest}}
   });
 });

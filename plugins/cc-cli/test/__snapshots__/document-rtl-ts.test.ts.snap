@@ -24,9 +24,15 @@ describe('VariantButton', () => {
     return;
   }
   renderedExamples.forEach(({ name, rendered }) => {
-    it(name, async () => {
-      const { asFragment } = render(rendered);
-      expect(asFragment()).toMatchSnapshot();
+    describe(name, async () => {
+      it('snapshot', () => {
+        const { asFragment } = render(rendered);
+        expect(asFragment()).toMatchSnapshot();
+      });
+      it('accessibility', async () => {
+        const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+        expect(axeResults).toHaveNoAxeViolations();
+      });
     });
   });
 });

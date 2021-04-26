@@ -24,13 +24,19 @@ describe('VariantButton', () => {
     return;
   }
   renderedExamples.forEach(({ name, rendered }) => {
-    it(name, async () => {
-      const component = renderer.create(rendered);
-      if (!component) {
-        componentErr();
-        return;
-      }
-      expect(component.toJSON()).toMatchSnapshot();
+    describe(name, () => {
+      it('snapshot', () => {
+        const component = renderer.create(rendered);
+        if (!component) {
+          componentErr();
+          return;
+        }
+        expect(component.toJSON()).toMatchSnapshot();
+      });
+      it('accessibility', async () => {
+        const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+        expect(axeResults).toHaveNoAxeViolations();
+      });
     });
   });
 });
