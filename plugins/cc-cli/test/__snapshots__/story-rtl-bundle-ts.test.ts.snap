@@ -1,47 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`rtl bundle ts 1`] = `
-"
-import * as path from 'path';
-import { run, AxeResults } = require('axe-core');
-import { reactRunDOM } = require('@component-controls/test-renderers');
+"import * as path from 'path';
+import { run, AxeResults } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
 import '@component-controls/jest-axe-matcher';
 import { loadStore } from '@component-controls/store';
 import { render, act } from '@testing-library/react';
 import { renderErr } from '@component-controls/test-renderers';
 
-
-
 describe('Components/Header', () => {
-  const store = loadStore(require(path.resolve(__dirname, './bundle/component-controls.js')));
+  const store = loadStore(
+    require(path.resolve(__dirname, './bundle/component-controls.js')),
+  );
   const renderFn = store.config.renderFn;
-const doc = store.docs['Components/Header'];
+  const doc = store.docs['Components/Header'];
 
   describe('Overview', () => {
-    
-      const story = store.stories['components-header--overview'];
-    
-let rendered;
-act(() => {
-  
-  rendered = renderFn(story, doc);
-  
-});
-if (!rendered) {
-  renderErr();
-  return;
-}
-it('snapshot', () => {
-  const { asFragment } = render(rendered);
-  expect(asFragment()).toMatchSnapshot();
-});
-it('accessibility', async () => {
-  const axeResults = await reactRunDOM<AxeResults>(rendered, run);
-  expect(axeResults).toHaveNoAxeViolations();
-});  
+    const story = store.stories['components-header--overview'];
 
+    let rendered;
+    act(() => {
+      rendered = renderFn(story, doc);
+    });
+    if (!rendered) {
+      renderErr();
+      return;
+    }
+    it('snapshot', () => {
+      const { asFragment } = render(rendered);
+      expect(asFragment()).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
   });
-
 });
 "
 `;

@@ -1,10 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`rtl  ts 1`] = `
-"
-import * as path from 'path';
-import { run, AxeResults } = require('axe-core');
-import { reactRunDOM } = require('@component-controls/test-renderers');
+"import * as path from 'path';
+import { run, AxeResults } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
 import '@component-controls/jest-axe-matcher';
 import { loadConfigurations } from '@component-controls/config';
 import { renderDocument } from '@component-controls/test-renderers';
@@ -14,24 +13,22 @@ import { renderErr } from '@component-controls/test-renderers';
 import * as examples from './fixtures/VariantButton.docs';
 
 describe('VariantButton', () => {
-    const configPath = path.resolve(__dirname, '.config');
+  const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
-  let renderedExamples : ReturnType<typeof renderDocument> = [];
-act(() => {
-  renderedExamples = renderDocument(examples, config);
-});  
-if (!renderedExamples) {
-  renderErr();
-  return;
-}
-renderedExamples.forEach(({ name, rendered}) => {
-  it(name, async () => {
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
-
+  let renderedExamples: ReturnType<typeof renderDocument> = [];
+  act(() => {
+    renderedExamples = renderDocument(examples, config);
   });
-});
-
+  if (!renderedExamples) {
+    renderErr();
+    return;
+  }
+  renderedExamples.forEach(({ name, rendered }) => {
+    it(name, async () => {
+      const { asFragment } = render(rendered);
+      expect(asFragment()).toMatchSnapshot();
+    });
+  });
 });
 "
 `;

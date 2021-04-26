@@ -1,69 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`rtr  ts 1`] = `
-"
-import * as path from 'path';
-import { run, AxeResults } = require('axe-core');
-import { reactRunDOM } = require('@component-controls/test-renderers');
+"import * as path from 'path';
+import { run, AxeResults } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
 import '@component-controls/jest-axe-matcher';
-import { loadConfigurations, extractDocuments, isMDXDocument } from '@component-controls/config';
+import {
+  loadConfigurations,
+  extractDocuments,
+  isMDXDocument,
+} from '@component-controls/config';
 import { renderExample } from '@component-controls/test-renderers';
 import renderer, { act } from 'react-test-renderer';
 import { renderErr, componentErr } from '@component-controls/test-renderers';
-
 
 describe('component-controls generated', () => {
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
   const documents = extractDocuments({ config, configPath });
   if (documents) {
-    documents.filter((file: string) => !isMDXDocument(file, config.instrument)).forEach((file: string) => {
-      // eslint-disable-next-line @typescript-eslint/no-var-requires, global-require, import/no-dynamic-require
-      const exports = require(file);
-      const doc = exports.default;
-      const examples = Object.keys(exports)
-        .filter(key => key !== 'default')
-        .map(key => exports[key]);
+    documents
+      .filter((file: string) => !isMDXDocument(file, config.instrument))
+      .forEach((file: string) => {
+        // eslint-disable-next-line @typescript-eslint/no-var-requires, global-require, import/no-dynamic-require
+        const exports = require(file);
+        const doc = exports.default;
+        const examples = Object.keys(exports)
+          .filter(key => key !== 'default')
+          .map(key => exports[key]);
 
-      if (examples.length) {
-        describe(doc.title, () => {
-          examples.forEach(example => {
-            describe(example.name, () => {
-let rendered;
-act(() => {
-  
-  rendered = renderExample({
-    example,
-    doc,
-    config,
-  });
-  
-})
-if (!rendered) {
-  renderErr();
-  return;
-}
-it('snapshot', () => {
-  const component = renderer.create(rendered);
-  if (!component) {
-    componentErr();
-    return;
-  }
-  expect(component.toJSON()).toMatchSnapshot();
-});
-it('accessibility', async () => {
-  const axeResults = await reactRunDOM<AxeResults>(rendered, run);
-  expect(axeResults).toHaveNoAxeViolations();
-});  
-
-
+        if (examples.length) {
+          describe(doc.title, () => {
+            examples.forEach(example => {
+              describe(example.name, () => {
+                let rendered;
+                act(() => {
+                  rendered = renderExample({
+                    example,
+                    doc,
+                    config,
+                  });
+                });
+                if (!rendered) {
+                  renderErr();
+                  return;
+                }
+                it('snapshot', () => {
+                  const component = renderer.create(rendered);
+                  if (!component) {
+                    componentErr();
+                    return;
+                  }
+                  expect(component.toJSON()).toMatchSnapshot();
+                });
+                it('accessibility', async () => {
+                  const axeResults = await reactRunDOM<AxeResults>(
+                    rendered,
+                    run,
+                  );
+                  expect(axeResults).toHaveNoAxeViolations();
+                });
+              });
             });
           });
-        });
-      }
-    });
+        }
+      });
   }
-  
 });
 "
 `;
