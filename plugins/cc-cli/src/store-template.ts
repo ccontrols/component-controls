@@ -3,6 +3,7 @@ import path from 'path';
 import dot from 'dot';
 import { TemplateOptions, renderers, TemplateFunction } from './types';
 import { createTemplate } from './template';
+import { accessibilityTemplate } from './accessibily';
 
 dot.templateSettings.strip = false;
 (dot as any).log = false;
@@ -38,6 +39,7 @@ export const createStoreTemplate: TemplateFunction = async (
   );
   const render = dot.template(fs.readFileSync(renderPath, 'utf8'))({
     bundle: !!bundle,
+    ...accessibilityTemplate(format),
   });
   const vars = {
     render,

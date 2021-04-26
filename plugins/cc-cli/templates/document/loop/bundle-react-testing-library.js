@@ -5,7 +5,7 @@
       describe(doc.title, () => {
         stories.forEach(storyId => {
           const story = store.stories[storyId];
-          it(story.name, async () => {
+          describe(story.name, async () => {
             let rendered;
             act(() => {
               rendered = renderFn(story, doc);
@@ -14,8 +14,11 @@
               renderErr();
               return;
             }
-            const { asFragment } = render(rendered);
-            expect(asFragment()).toMatchSnapshot();
+            it('snapshot', () => {
+              const { asFragment } = render(rendered);
+              expect(asFragment()).toMatchSnapshot();
+            });  
+            {{=it.allytest}}
           });
         });
       });

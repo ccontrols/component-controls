@@ -2,6 +2,9 @@
 
 exports[`enzyme bundle esm 1`] = `
 "import * as path from 'path';
+import { run } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
 import { loadStore } from '@component-controls/store';
 import { mount, configure } from 'enzyme';
 import toJson from 'enzyme-to-json';
@@ -16,13 +19,19 @@ describe('Components/Header', () => {
   const renderFn = store.config.renderFn;
   const doc = store.docs['Components/Header'];
 
-  it('Overview', () => {
+  describe('Overview', () => {
     const story = store.stories['components-header--overview'];
 
     const rendered = renderFn(story, doc);
 
-    const component = mount(rendered);
-    expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    it('snapshot', () => {
+      const component = mount(rendered);
+      expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
   });
 });
 "

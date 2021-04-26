@@ -2,6 +2,10 @@
 
 exports[`enzyme  cjs 1`] = `
 "const path = require('path');
+const { run } = require('axe-core');
+const { reactRunDOM } = require('@component-controls/test-renderers');
+require('@component-controls/jest-axe-matcher');
+
 const { loadConfigurations } = require('@component-controls/config');
 const { renderDocument } = require('@component-controls/test-renderers');
 const { mount, configure } = require('enzyme');

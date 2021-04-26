@@ -2,6 +2,9 @@
 
 exports[`rtl  esm 1`] = `
 "import * as path from 'path';
+import { run } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
 import { loadConfigurations } from '@component-controls/config';
 import { renderExample } from '@component-controls/test-renderers';
 import { render, act } from '@testing-library/react';
@@ -21,7 +24,7 @@ describe('VariantButton', () => {
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
 
-  it('overview', () => {
+  describe('overview', () => {
     const example = overview;
 
     let rendered;
@@ -36,11 +39,17 @@ describe('VariantButton', () => {
       renderErr();
       return;
     }
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
+    it('snapshot', () => {
+      const { asFragment } = render(rendered);
+      expect(asFragment()).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
   });
 
-  it('primary', () => {
+  describe('primary', () => {
     const example = primary;
 
     let rendered;
@@ -55,11 +64,17 @@ describe('VariantButton', () => {
       renderErr();
       return;
     }
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
+    it('snapshot', () => {
+      const { asFragment } = render(rendered);
+      expect(asFragment()).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
   });
 
-  it('accent', () => {
+  describe('accent', () => {
     const example = accent;
 
     let rendered;
@@ -74,11 +89,17 @@ describe('VariantButton', () => {
       renderErr();
       return;
     }
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
+    it('snapshot', () => {
+      const { asFragment } = render(rendered);
+      expect(asFragment()).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
   });
 
-  it('disabled', () => {
+  describe('disabled', () => {
     const example = disabled;
 
     let rendered;
@@ -93,11 +114,17 @@ describe('VariantButton', () => {
       renderErr();
       return;
     }
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
+    it('snapshot', () => {
+      const { asFragment } = render(rendered);
+      expect(asFragment()).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
   });
 
-  it('success', () => {
+  describe('success', () => {
     const example = success;
 
     let rendered;
@@ -112,11 +139,17 @@ describe('VariantButton', () => {
       renderErr();
       return;
     }
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
+    it('snapshot', () => {
+      const { asFragment } = render(rendered);
+      expect(asFragment()).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
   });
 
-  it('error', () => {
+  describe('error', () => {
     const example = error;
 
     let rendered;
@@ -131,11 +164,17 @@ describe('VariantButton', () => {
       renderErr();
       return;
     }
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
+    it('snapshot', () => {
+      const { asFragment } = render(rendered);
+      expect(asFragment()).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
   });
 
-  it('warning', () => {
+  describe('warning', () => {
     const example = warning;
 
     let rendered;
@@ -150,8 +189,14 @@ describe('VariantButton', () => {
       renderErr();
       return;
     }
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
+    it('snapshot', () => {
+      const { asFragment } = render(rendered);
+      expect(asFragment()).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
   });
 });
 "

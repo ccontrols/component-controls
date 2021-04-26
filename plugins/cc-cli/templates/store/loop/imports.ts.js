@@ -11,7 +11,7 @@
       if (examples.length) {
         describe(doc.title, () => {
           examples.forEach(example => {
-            it(example.name, async () => {
+            describe(example.name, () => {
 {{=it.render}}
             });
           });

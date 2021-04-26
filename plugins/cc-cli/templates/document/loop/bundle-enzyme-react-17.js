@@ -5,11 +5,14 @@
       describe(doc.title, () => {
         stories.forEach(storyId => {
           const story = store.stories[storyId];
-          it(story.name, async () => {
+          describe(story.name, () => {
             const rendered = renderFn(story, doc);
-            const component = mount(rendered);
-            expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
-          });
+            it('snapshot', () => {
+              const component = mount(rendered);
+              expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+            });
+            {{=it.allytest}}
+          });  
         });
       });
     }

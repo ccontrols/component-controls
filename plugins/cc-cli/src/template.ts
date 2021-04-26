@@ -3,6 +3,7 @@ import path from 'path';
 import dot from 'dot';
 import { defaultConfigFolder } from '@component-controls/core/node-utils';
 import { prettify } from '@component-controls/instrument';
+import { accessibilityTemplate } from './accessibily';
 import { TemplateOptions, renderers } from './types';
 
 dot.templateSettings.strip = false;
@@ -29,10 +30,12 @@ export const createTemplate = (
     bundle,
     vars: customVars,
   } = options;
-  const topImports = fs.readFileSync(
-    path.resolve(__dirname, `../templates/top-imports/imports.${format}.js`),
-    'utf8',
-  );
+  const topImports = dot.template(
+    fs.readFileSync(
+      path.resolve(__dirname, `../templates/top-imports/imports.${format}.js`),
+      'utf8',
+    ),
+  )(accessibilityTemplate(format));
   const importsPath = path.resolve(
     __dirname,
     `../templates/imports/${renderers[renderer]}.${format}.js`,

@@ -2,6 +2,9 @@
 
 exports[`rtr  esm 1`] = `
 "import * as path from 'path';
+import { run } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
 import { loadConfigurations } from '@component-controls/config';
 import { renderDocument } from '@component-controls/test-renderers';
 import renderer, { act } from 'react-test-renderer';

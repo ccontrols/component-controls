@@ -2,6 +2,10 @@
 
 exports[`rtl bundle cjs 1`] = `
 "const path = require('path');
+const { run } = require('axe-core');
+const { reactRunDOM } = require('@component-controls/test-renderers');
+require('@component-controls/jest-axe-matcher');
+
 const { loadStore } = require('@component-controls/store');
 const { render, act } = require('@testing-library/react');
 const { renderErr } = require('@component-controls/test-renderers');
@@ -13,7 +17,7 @@ describe('Components/Header', () => {
   const renderFn = store.config.renderFn;
   const doc = store.docs['Components/Header'];
 
-  it('Overview', () => {
+  describe('Overview', () => {
     const story = store.stories['components-header--overview'];
 
     let rendered;
@@ -24,8 +28,14 @@ describe('Components/Header', () => {
       renderErr();
       return;
     }
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
+    it('snapshot', () => {
+      const { asFragment } = render(rendered);
+      expect(asFragment()).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
   });
 });
 "
