@@ -33,7 +33,6 @@ export const CopyContainer: FC<CopyContainerProps> = ({
       }}
       {...rest}
       trigger="click"
-      followCursor={true}
       tooltipShown={isOpen}
       arrowVisible={false}
       onVisibilityChange={isVisible => {
