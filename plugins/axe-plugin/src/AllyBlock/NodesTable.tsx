@@ -91,15 +91,26 @@ export const NodesTable: FC<NodesTableProps> = ({
               }}
             >
               {value &&
-                value.map(target => (
-                  <Tag
-                    key={`${target}`}
-                    color="lightgrey"
-                    variant="tag.rightmargin"
-                  >
-                    {trimNode(target)}
-                  </Tag>
-                ))}
+                value.map(target => {
+                  const selector = trimNode(target);
+                  return (
+                    <Tag
+                      key={`${target}`}
+                      color="lightgrey"
+                      variant="tag.rightmargin"
+                      title={selector}
+                      sx={{
+                        display: 'block',
+                        overflow: 'hidden',
+                        maxWidth: '400px',
+                        whiteSpace: 'nowrap',
+                        textOverflow: 'ellipsis',
+                      }}
+                    >
+                      {selector}
+                    </Tag>
+                  );
+                })}
             </Flex>
           );
         },
