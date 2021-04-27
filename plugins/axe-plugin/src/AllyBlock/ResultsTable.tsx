@@ -19,6 +19,7 @@ import {
   Row,
   ExternalLink,
   Tag,
+  CopyContainer,
 } from '@component-controls/components';
 import { AxeContext } from '../state/context';
 import { NodesTable } from './NodesTable';
@@ -115,6 +116,15 @@ const ResultsTable: FC<ResultsTableProps> = ({
             )
           );
         },
+      },
+      {
+        Header: 'id',
+        accessor: 'id',
+        Cell: ({ value }) => (
+          <CopyContainer value={value}>
+            <Tag color="primary">{value}</Tag>
+          </CopyContainer>
+        ),
       },
       {
         Header: 'description',
