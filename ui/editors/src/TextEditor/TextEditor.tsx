@@ -10,7 +10,7 @@ import { addPropertyEditor } from '../prop-factory';
  * Text control editor.
  */
 
-export const TextEditor: PropertyEditor = ({ name }) => {
+export const TextEditor: PropertyEditor = ({ name, ...rest }) => {
   const [control, onChange] = useControl<ComponentControlText>(name);
 
   const { rows = 1 } = control;
@@ -21,10 +21,12 @@ export const TextEditor: PropertyEditor = ({ name }) => {
       value={control.value}
       rows={rows}
       placeholder={control.placeholder}
+      aria-label={`enter a value for ${name}`}
       onChange={(event: ChangeEvent<HTMLTextAreaElement>) => {
         const { value } = event.target;
         onChange(value);
       }}
+      {...rest}
     />
   ) : (
     <Input
@@ -32,10 +34,12 @@ export const TextEditor: PropertyEditor = ({ name }) => {
       name={name}
       value={control.value}
       placeholder={control.placeholder}
+      aria-label={`enter a value for ${name}`}
       onChange={(event: ChangeEvent<HTMLInputElement>) => {
         const { value } = event.target;
         onChange(value);
       }}
+      {...rest}
     />
   );
 };

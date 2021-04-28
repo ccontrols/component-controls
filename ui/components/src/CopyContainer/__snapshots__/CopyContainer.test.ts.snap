@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CopyContainer overview 1`] = `
+exports[`CopyContainer overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-6bf4yd-CopyContainer"

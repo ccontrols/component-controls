@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Table editing 1`] = `
+exports[`Table editing snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-11y77l0"
@@ -45,6 +45,7 @@ exports[`Table editing 1`] = `
           style="width: 150px;"
         >
           <input
+            aria-label="edit table value"
             value="example"
           />
         </td>
@@ -54,7 +55,7 @@ exports[`Table editing 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Table filterable 1`] = `
+exports[`Table filterable snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-11y77l0"
@@ -432,7 +433,7 @@ exports[`Table filterable 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Table grouping 1`] = `
+exports[`Table grouping snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-11y77l0"
@@ -576,7 +577,7 @@ exports[`Table grouping 1`] = `
             <span
               class="css-15vncxw-Cell"
             >
-              22 (2 properties)
+              22(2 properties)
             </span>
           </div>
         </td>
@@ -612,7 +613,7 @@ exports[`Table grouping 1`] = `
             <span
               class="css-15vncxw-Cell"
             >
-              24 (1 properties)
+              24(1 properties)
             </span>
           </div>
         </td>
@@ -648,7 +649,7 @@ exports[`Table grouping 1`] = `
             <span
               class="css-15vncxw-Cell"
             >
-              25 (2 properties)
+              25(2 properties)
             </span>
           </div>
         </td>
@@ -658,7 +659,7 @@ exports[`Table grouping 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Table noHeader 1`] = `
+exports[`Table noHeader snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-11y77l0"
@@ -873,7 +874,7 @@ exports[`Table noHeader 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Table overview 1`] = `
+exports[`Table overview snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-11y77l0"
@@ -1177,7 +1178,7 @@ exports[`Table overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Table pagination 1`] = `
+exports[`Table pagination snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-11y77l0"
@@ -1822,7 +1823,7 @@ exports[`Table pagination 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Table rowSelect 1`] = `
+exports[`Table rowSelect snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-11y77l0"
@@ -1854,6 +1855,7 @@ exports[`Table rowSelect 1`] = `
                   class="css-x3crln"
                 >
                   <input
+                    aria-label="click to select row"
                     class="css-p19g2b"
                     type="checkbox"
                   />
@@ -2007,6 +2009,7 @@ exports[`Table rowSelect 1`] = `
                 class="css-x3crln"
               >
                 <input
+                  aria-label="click to select row"
                   class="css-p19g2b"
                   type="checkbox"
                 />
@@ -2100,6 +2103,7 @@ exports[`Table rowSelect 1`] = `
                 class="css-x3crln"
               >
                 <input
+                  aria-label="click to select row"
                   class="css-p19g2b"
                   type="checkbox"
                 />
@@ -2193,6 +2197,7 @@ exports[`Table rowSelect 1`] = `
                 class="css-x3crln"
               >
                 <input
+                  aria-label="click to select row"
                   class="css-p19g2b"
                   type="checkbox"
                 />
@@ -2286,6 +2291,7 @@ exports[`Table rowSelect 1`] = `
                 class="css-x3crln"
               >
                 <input
+                  aria-label="click to select row"
                   class="css-p19g2b"
                   type="checkbox"
                 />
@@ -2379,6 +2385,7 @@ exports[`Table rowSelect 1`] = `
                 class="css-x3crln"
               >
                 <input
+                  aria-label="click to select row"
                   class="css-p19g2b"
                   type="checkbox"
                 />
@@ -2460,7 +2467,7 @@ exports[`Table rowSelect 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Table sortable 1`] = `
+exports[`Table sortable snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-11y77l0"

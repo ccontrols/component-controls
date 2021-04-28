@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Popover overview 1`] = `
+exports[`Popover overview snapshot 1`] = `
 <DocumentFragment>
   <div
     style="display: inline-block;"

@@ -65,6 +65,9 @@
         "isolatedModules": true
       }
     },
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.ts"
+    ],
     "roots": [
       "./src"
     ]

@@ -14,9 +14,7 @@ describe('react link component', () => {
     expect(results?.results[0].testResults[0]).toMatchObject({
       ancestorTitles: [],
       failureDetails: [],
-      failureMessages: [],
       fullName: 'Link changes the class when hovered',
-      location: null,
       numPassingAsserts: 0,
       status: 'passed',
       title: 'Link changes the class when hovered',

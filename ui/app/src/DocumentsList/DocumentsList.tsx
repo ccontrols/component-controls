@@ -35,6 +35,7 @@ export const DocumentsList: FC<DocumentsListProps> = ({ pages, type }) => {
         </Label>
         <Select
           variant="documentslist.sortselect"
+          aria-label="select sort order"
           name="sortorder"
           onChange={e => setSortOrder(e.target.value as DocSortOrder)}
           value={sortOrder}

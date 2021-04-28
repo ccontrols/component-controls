@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BlockContainer customId 1`] = `
+exports[`BlockContainer customId snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -13,6 +13,7 @@ exports[`BlockContainer customId 1`] = `
         class="css-xhp9da"
       >
         <a
+          aria-label="BlockContainer"
           class="css-walqom-LinkHeading"
           data-id="custom-id"
           data-level="3"
@@ -80,9 +81,7 @@ exports[`BlockContainer customId 1`] = `
           class="css-1d6wxci"
         >
           <svg
-            aria-valuemax="1"
-            aria-valuemin="0"
-            aria-valuenow="0.5"
+            aria-label="donut graphic value 0.5 - from 0 tp 1"
             class="css-14d2907"
             fill="none"
             height="128"
@@ -114,7 +113,7 @@ exports[`BlockContainer customId 1`] = `
 </DocumentFragment>
 `;
 
-exports[`BlockContainer description 1`] = `
+exports[`BlockContainer description snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -125,11 +124,7 @@ exports[`BlockContainer description 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div>
       <div
@@ -140,6 +135,7 @@ exports[`BlockContainer description 1`] = `
           class="css-xhp9da"
         >
           <a
+            aria-label="H3 title"
             class="css-walqom-LinkHeading"
             data-id="h3-title"
             data-level="3"
@@ -196,9 +192,7 @@ exports[`BlockContainer description 1`] = `
           class="css-1d6wxci"
         >
           <svg
-            aria-valuemax="1"
-            aria-valuemin="0"
-            aria-valuenow="0.5"
+            aria-label="donut graphic value 0.5 - from 0 tp 1"
             class="css-14d2907"
             fill="none"
             height="128"
@@ -230,7 +224,7 @@ exports[`BlockContainer description 1`] = `
 </DocumentFragment>
 `;
 
-exports[`BlockContainer notCollapsible 1`] = `
+exports[`BlockContainer notCollapsible snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -243,6 +237,7 @@ exports[`BlockContainer notCollapsible 1`] = `
         class="css-xhp9da"
       >
         <a
+          aria-label="BlockContainer"
           class="css-1ptrway-LinkHeading"
           data-id="blockcontainer"
           data-level="4"
@@ -276,9 +271,7 @@ exports[`BlockContainer notCollapsible 1`] = `
       class="css-1d6wxci"
     >
       <svg
-        aria-valuemax="1"
-        aria-valuemin="0"
-        aria-valuenow="0.5"
+        aria-label="donut graphic value 0.5 - from 0 tp 1"
         class="css-14d2907"
         fill="none"
         height="128"
@@ -308,7 +301,7 @@ exports[`BlockContainer notCollapsible 1`] = `
 </DocumentFragment>
 `;
 
-exports[`BlockContainer overview 1`] = `
+exports[`BlockContainer overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -321,6 +314,7 @@ exports[`BlockContainer overview 1`] = `
         class="css-xhp9da"
       >
         <a
+          aria-label="Block title"
           class="css-walqom-LinkHeading"
           data-id="block-title"
           data-level="3"
@@ -388,9 +382,7 @@ exports[`BlockContainer overview 1`] = `
           class="css-1d6wxci"
         >
           <svg
-            aria-valuemax="1"
-            aria-valuemin="0"
-            aria-valuenow="0.5"
+            aria-label="donut graphic value 0.5 - from 0 tp 1"
             class="css-14d2907"
             fill="none"
             height="128"

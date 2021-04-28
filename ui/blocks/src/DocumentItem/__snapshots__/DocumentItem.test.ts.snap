@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DocumentItem overview 1`] = `
+exports[`DocumentItem overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-127g8mg"

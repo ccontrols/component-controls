@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Multiselect overview 1`] = `
+exports[`Multiselect overview snapshot 1`] = `
 <DocumentFragment>
   <div
     style="display: inline-block;"

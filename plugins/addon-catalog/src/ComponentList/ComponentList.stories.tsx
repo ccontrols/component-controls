@@ -18,9 +18,9 @@ export const overview: Example = () => {
       <ComponentList
         stories={[
           'blocks-core-story-plain--controls',
-          'blocks-core-story-plain--controls',
-          'blocks-core-story-plain--controls',
-          'blocks-core-story-plain--controls',
+          'id-of-button-story',
+          'id-of-single',
+          'id-of-story',
         ]}
       />
     </BlockContextProvider>

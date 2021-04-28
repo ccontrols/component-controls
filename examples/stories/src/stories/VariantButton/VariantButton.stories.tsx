@@ -10,14 +10,19 @@ export default {
   order: 0,
   component: VariantButton,
   plugins: {
-    figma: ['https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr'],
+    figma: [
+      {
+        url: 'https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr',
+        'aria-label': 'figma design file',
+      },
+    ],
     notes: {
       title: 'Design brief',
       items: [design_notes],
     },
     images: {
       title: 'Screenshots',
-      items: [image_screenshot],
+      items: [{ src: image_screenshot, 'aria-label': 'design resource image' }],
     },
   },
   description: `This example demonstrates documenting a hypothetical Button component that supports variants, icons, text, and padding`,

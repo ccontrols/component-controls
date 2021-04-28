@@ -3,6 +3,7 @@ import * as path from 'path';
 import {
   WebpackLoaderContext,
   LoaderOptions,
+  resolveSnapshotFile
 } from '@component-controls/core/node-utils';
 import { getOptions } from 'loader-utils';
 import { log } from '@component-controls/logger';
@@ -33,7 +34,6 @@ async function loader(this: WebpackLoaderContext): Promise<string> {
       log('loaded: ', filePath);
       if (store.stories && store.components && store.packages) {
         const fileDependencies: string[] = [];
-        const folderDependencies: string[] = [];
         Object.values(store.components).forEach(component => {
           if (component.request) {
             fileDependencies.push(component.request as string);
@@ -45,9 +45,8 @@ async function loader(this: WebpackLoaderContext): Promise<string> {
                   r.testFilePath,
                 );
                 fileDependencies.push(testFilePath);
-                folderDependencies.push(
-                  path.join(path.dirname(testFilePath), '__snapshots__'),
-                );
+                const snapshotFile = resolveSnapshotFile(testFilePath);
+                fileDependencies.push(snapshotFile);
               });
               Object.keys(component.jest.coverage).forEach(f => {
                 fileDependencies.push(path.resolve(componentFolder, f));
@@ -56,7 +55,6 @@ async function loader(this: WebpackLoaderContext): Promise<string> {
           }
         });
         new Set(fileDependencies).forEach(d => this.addDependency(d));
-        new Set(folderDependencies).forEach(d => this.addContextDependency(d));
         addStoriesDoc(filePath, this._compilation.records.hash, {
           stories: store.stories,
           components: store.components,

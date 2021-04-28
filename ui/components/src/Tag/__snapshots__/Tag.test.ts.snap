@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tag overview 1`] = `
+exports[`Tag overview snapshot 1`] = `
 <DocumentFragment>
   <span
     class="css-15dvo6t-Tag"
@@ -14,7 +14,7 @@ exports[`Tag overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Tag twilwindArrayColors 1`] = `
+exports[`Tag twilwindArrayColors snapshot 1`] = `
 <DocumentFragment>
   <span
     class="css-1t9ofat-Tag"

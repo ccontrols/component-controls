@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Story customTitle 1`] = `
+exports[`Story customTitle snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
+    data-testid="story"
   >
     <div
       class="css-jxxswp"
@@ -13,6 +14,7 @@ exports[`Story customTitle 1`] = `
         class="css-xhp9da"
       >
         <a
+          aria-label="My Story Title"
           class="css-walqom-LinkHeading"
           data-id="my-story-title"
           data-level="3"
@@ -85,9 +87,7 @@ exports[`Story customTitle 1`] = `
             class="story-render-container css-dhmrnb"
           >
             <svg
-              aria-valuemax="1"
-              aria-valuemin="0"
-              aria-valuenow="0.5"
+              aria-label="example donut graphic"
               class="css-14d2907"
               fill="none"
               height="128"
@@ -120,10 +120,11 @@ exports[`Story customTitle 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Story description 1`] = `
+exports[`Story description snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
+    data-testid="story"
   >
     <div
       class="css-jxxswp"
@@ -131,11 +132,7 @@ exports[`Story description 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -164,10 +161,11 @@ exports[`Story description 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Story iframe 1`] = `
+exports[`Story iframe snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
+    data-testid="story"
   >
     <div
       class="css-jxxswp"
@@ -175,11 +173,7 @@ exports[`Story iframe 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -194,6 +188,7 @@ exports[`Story iframe 1`] = `
         >
           <iframe
             style="border: 0px; width: 100%;"
+            title="controls"
           />
         </div>
       </div>
@@ -202,24 +197,26 @@ exports[`Story iframe 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Story notCollapsible 1`] = `
+exports[`Story notCollapsible snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
+    data-testid="story"
   >
     <div
       class="css-jxxswp"
-      id="blocks-core-story-plain--controls"
+      id="story-blocks-core-story-plain--controls"
     >
       <div
         class="css-xhp9da"
       >
         <a
+          aria-label="controls"
           class="css-1ptrway-LinkHeading"
-          data-id="blocks-core-story-plain--controls"
+          data-id="story-blocks-core-story-plain--controls"
           data-level="4"
           data-title="controls"
-          href="http://localhost/#blocks-core-story-plain--controls"
+          href="http://localhost/#story-blocks-core-story-plain--controls"
         >
           <svg
             aria-hidden="true"
@@ -253,9 +250,7 @@ exports[`Story notCollapsible 1`] = `
         class="story-render-container css-dhmrnb"
       >
         <svg
-          aria-valuemax="1"
-          aria-valuemin="0"
-          aria-valuenow="0.5"
+          aria-label="example donut graphic"
           class="css-14d2907"
           fill="none"
           height="128"
@@ -286,10 +281,11 @@ exports[`Story notCollapsible 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Story overview 1`] = `
+exports[`Story overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
+    data-testid="story"
   >
     <div
       class="css-jxxswp"
@@ -297,11 +293,7 @@ exports[`Story overview 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -318,9 +310,7 @@ exports[`Story overview 1`] = `
             class="story-render-container css-dhmrnb"
           >
             <svg
-              aria-valuemax="1"
-              aria-valuemin="0"
-              aria-valuenow="0.5"
+              aria-label="example donut graphic"
               class="css-14d2907"
               fill="none"
               height="128"
@@ -353,24 +343,26 @@ exports[`Story overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Story title 1`] = `
+exports[`Story title snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
+    data-testid="story"
   >
     <div
       class="css-jxxswp"
-      id="blocks-core-story-plain--controls"
+      id="story-blocks-core-story-plain--controls"
     >
       <div
         class="css-xhp9da"
       >
         <a
+          aria-label="controls"
           class="css-walqom-LinkHeading"
-          data-id="blocks-core-story-plain--controls"
+          data-id="story-blocks-core-story-plain--controls"
           data-level="3"
           data-title="controls"
-          href="http://localhost/#blocks-core-story-plain--controls"
+          href="http://localhost/#story-blocks-core-story-plain--controls"
         >
           <svg
             aria-hidden="true"
@@ -438,9 +430,7 @@ exports[`Story title 1`] = `
             class="story-render-container css-dhmrnb"
           >
             <svg
-              aria-valuemax="1"
-              aria-valuemin="0"
-              aria-valuenow="0.5"
+              aria-label="example donut graphic"
               class="css-14d2907"
               fill="none"
               height="128"

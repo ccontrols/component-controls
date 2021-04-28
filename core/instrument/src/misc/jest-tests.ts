@@ -6,6 +6,7 @@ import {
   findJestConfig,
   getRelatedTests,
 } from '@component-controls/jest-extract';
+import { resolveSnapshotFile } from '@component-controls/core/node-utils';
 import { JestTests } from '@component-controls/core';
 import { CachedFileResource } from './chached-file';
 
@@ -32,15 +33,14 @@ export const extractTests = async (
       },
       file,
     ) => {
-      acc.testFiles.push(...getRelatedTests(file));
-      const snapshotFolder = path.join(path.dirname(file), '__snapshots__');
-      if (fs.existsSync(snapshotFolder)) {
-        acc.snapshotFiles.push(
-          ...fs
-            .readdirSync(snapshotFolder)
-            .map(f => path.resolve(snapshotFolder, f)),
-        );
-      }
+      const testFiles = getRelatedTests(file);
+      acc.testFiles.push(...testFiles);
+      testFiles.forEach(f => {
+        const snapshotFile = resolveSnapshotFile(f);
+        if (fs.existsSync(snapshotFile)) {
+          acc.snapshotFiles.push(snapshotFile);
+        }
+      });
       if (!acc.coverageFiles.includes(file)) {
         acc.coverageFiles.push(file);
       }
@@ -53,6 +53,7 @@ export const extractTests = async (
       ...tests.testFiles,
       ...tests.coverageFiles,
       ...tests.snapshotFiles,
+      ...files,
     ]);
     const cachedResults = cached.get();
     if (cachedResults) {

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ViewportBlock overview 1`] = `
+exports[`ViewportBlock overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -11,11 +11,7 @@ exports[`ViewportBlock overview 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -59,6 +55,7 @@ exports[`ViewportBlock overview 1`] = `
                 >
                   <div
                     class="css-bff87g-Story"
+                    data-testid="story"
                   >
                     <div
                       class="css-jxxswp"
@@ -66,11 +63,7 @@ exports[`ViewportBlock overview 1`] = `
                     >
                       <div
                         class="css-xhp9da"
-                      >
-                        <h3
-                          class="css-16ist9v-BlockContainer"
-                        />
-                      </div>
+                      />
                     </div>
                     <div
                       aria-hidden="false"
@@ -87,9 +80,7 @@ exports[`ViewportBlock overview 1`] = `
                             class="story-render-container css-dhmrnb"
                           >
                             <svg
-                              aria-valuemax="1"
-                              aria-valuemin="0"
-                              aria-valuenow="0.5"
+                              aria-label="example donut graphic"
                               class="css-14d2907"
                               fill="none"
                               height="128"
@@ -134,6 +125,7 @@ exports[`ViewportBlock overview 1`] = `
                 >
                   <div
                     class="css-1xj1pl2-Story"
+                    data-testid="story"
                   >
                     <div
                       class="css-jxxswp"
@@ -141,11 +133,7 @@ exports[`ViewportBlock overview 1`] = `
                     >
                       <div
                         class="css-xhp9da"
-                      >
-                        <h3
-                          class="css-16ist9v-BlockContainer"
-                        />
-                      </div>
+                      />
                     </div>
                     <div
                       aria-hidden="false"
@@ -162,9 +150,7 @@ exports[`ViewportBlock overview 1`] = `
                             class="story-render-container css-dhmrnb"
                           >
                             <svg
-                              aria-valuemax="1"
-                              aria-valuemin="0"
-                              aria-valuenow="0.5"
+                              aria-label="example donut graphic"
                               class="css-14d2907"
                               fill="none"
                               height="128"
@@ -209,6 +195,7 @@ exports[`ViewportBlock overview 1`] = `
                 >
                   <div
                     class="css-1xpqjvh-Story"
+                    data-testid="story"
                   >
                     <div
                       class="css-jxxswp"
@@ -216,11 +203,7 @@ exports[`ViewportBlock overview 1`] = `
                     >
                       <div
                         class="css-xhp9da"
-                      >
-                        <h3
-                          class="css-16ist9v-BlockContainer"
-                        />
-                      </div>
+                      />
                     </div>
                     <div
                       aria-hidden="false"
@@ -237,9 +220,7 @@ exports[`ViewportBlock overview 1`] = `
                             class="story-render-container css-dhmrnb"
                           >
                             <svg
-                              aria-valuemax="1"
-                              aria-valuemin="0"
-                              aria-valuenow="0.5"
+                              aria-label="example donut graphic"
                               class="css-14d2907"
                               fill="none"
                               height="128"
@@ -284,6 +265,7 @@ exports[`ViewportBlock overview 1`] = `
                 >
                   <div
                     class="css-xxu1iu-Story"
+                    data-testid="story"
                   >
                     <div
                       class="css-jxxswp"
@@ -291,11 +273,7 @@ exports[`ViewportBlock overview 1`] = `
                     >
                       <div
                         class="css-xhp9da"
-                      >
-                        <h3
-                          class="css-16ist9v-BlockContainer"
-                        />
-                      </div>
+                      />
                     </div>
                     <div
                       aria-hidden="false"
@@ -312,9 +290,7 @@ exports[`ViewportBlock overview 1`] = `
                             class="story-render-container css-dhmrnb"
                           >
                             <svg
-                              aria-valuemax="1"
-                              aria-valuemin="0"
-                              aria-valuenow="0.5"
+                              aria-label="example donut graphic"
                               class="css-14d2907"
                               fill="none"
                               height="128"
@@ -360,7 +336,7 @@ exports[`ViewportBlock overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ViewportBlock sizes 1`] = `
+exports[`ViewportBlock sizes snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -371,11 +347,7 @@ exports[`ViewportBlock sizes 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -419,6 +391,7 @@ exports[`ViewportBlock sizes 1`] = `
                 >
                   <div
                     class="css-ks1xfj-Story"
+                    data-testid="story"
                   >
                     <div
                       class="css-jxxswp"
@@ -426,11 +399,7 @@ exports[`ViewportBlock sizes 1`] = `
                     >
                       <div
                         class="css-xhp9da"
-                      >
-                        <h3
-                          class="css-16ist9v-BlockContainer"
-                        />
-                      </div>
+                      />
                     </div>
                     <div
                       aria-hidden="false"
@@ -447,9 +416,7 @@ exports[`ViewportBlock sizes 1`] = `
                             class="story-render-container css-dhmrnb"
                           >
                             <svg
-                              aria-valuemax="1"
-                              aria-valuemin="0"
-                              aria-valuenow="0.5"
+                              aria-label="example donut graphic"
                               class="css-14d2907"
                               fill="none"
                               height="128"
@@ -494,6 +461,7 @@ exports[`ViewportBlock sizes 1`] = `
                 >
                   <div
                     class="css-1jzdp2u-Story"
+                    data-testid="story"
                   >
                     <div
                       class="css-jxxswp"
@@ -501,11 +469,7 @@ exports[`ViewportBlock sizes 1`] = `
                     >
                       <div
                         class="css-xhp9da"
-                      >
-                        <h3
-                          class="css-16ist9v-BlockContainer"
-                        />
-                      </div>
+                      />
                     </div>
                     <div
                       aria-hidden="false"
@@ -522,9 +486,7 @@ exports[`ViewportBlock sizes 1`] = `
                             class="story-render-container css-dhmrnb"
                           >
                             <svg
-                              aria-valuemax="1"
-                              aria-valuemin="0"
-                              aria-valuenow="0.5"
+                              aria-label="example donut graphic"
                               class="css-14d2907"
                               fill="none"
                               height="128"

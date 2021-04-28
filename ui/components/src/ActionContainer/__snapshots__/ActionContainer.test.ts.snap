@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ActionContainer order 1`] = `
+exports[`ActionContainer order snapshot 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -36,9 +36,7 @@ exports[`ActionContainer order 1`] = `
       class="css-eqxzio"
     >
       <svg
-        aria-valuemax="1"
-        aria-valuemin="0"
-        aria-valuenow="0.5"
+        aria-label="donut graphic value 0.5 - from 0 tp 1"
         class="css-14d2907"
         fill="none"
         height="128"
@@ -68,7 +66,7 @@ exports[`ActionContainer order 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ActionContainer override 1`] = `
+exports[`ActionContainer override snapshot 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -104,9 +102,7 @@ exports[`ActionContainer override 1`] = `
       class="css-eqxzio"
     >
       <svg
-        aria-valuemax="1"
-        aria-valuemin="0"
-        aria-valuenow="0.5"
+        aria-label="donut graphic value 0.5 - from 0 tp 1"
         class="css-14d2907"
         fill="none"
         height="128"
@@ -136,7 +132,7 @@ exports[`ActionContainer override 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ActionContainer overview 1`] = `
+exports[`ActionContainer overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-vurnku"
@@ -176,9 +172,7 @@ exports[`ActionContainer overview 1`] = `
         class="css-eqxzio"
       >
         <svg
-          aria-valuemax="1"
-          aria-valuemin="0"
-          aria-valuenow="0.5"
+          aria-label="donut graphic value 0.5 - from 0 tp 1"
           class="css-14d2907"
           fill="none"
           height="128"

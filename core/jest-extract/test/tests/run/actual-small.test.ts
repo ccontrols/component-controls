@@ -14,9 +14,7 @@ describe('small test', () => {
     expect(results?.results[0].testResults[0]).toMatchObject({
       ancestorTitles: ['testing sum'],
       failureDetails: [],
-      failureMessages: [],
       fullName: 'testing sum sum',
-      location: null,
       numPassingAsserts: 0,
       status: 'passed',
       title: 'sum',

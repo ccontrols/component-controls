@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`component-controls generated Design Tokens/Colors/AltaColor hsl 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AltaColor hsl snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-439ki4-AltaColor"
@@ -32,7 +32,7 @@ exports[`component-controls generated Design Tokens/Colors/AltaColor hsl 1`] = `
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AltaColor hsla 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AltaColor hsla snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-439ki4-AltaColor"
@@ -64,7 +64,7 @@ exports[`component-controls generated Design Tokens/Colors/AltaColor hsla 1`] = 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AltaColor name 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AltaColor name snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-439ki4-AltaColor"
@@ -96,7 +96,7 @@ exports[`component-controls generated Design Tokens/Colors/AltaColor name 1`] = 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AltaColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AltaColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-439ki4-AltaColor"
@@ -128,7 +128,7 @@ exports[`component-controls generated Design Tokens/Colors/AltaColor overview 1`
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AltaColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AltaColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1mhhg7b"
@@ -299,7 +299,7 @@ exports[`component-controls generated Design Tokens/Colors/AltaColor palette 1`]
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AltaColor rgb 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AltaColor rgb snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-439ki4-AltaColor"
@@ -331,7 +331,7 @@ exports[`component-controls generated Design Tokens/Colors/AltaColor rgb 1`] = `
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AltaColor rgba 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AltaColor rgba snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-439ki4-AltaColor"
@@ -363,7 +363,7 @@ exports[`component-controls generated Design Tokens/Colors/AltaColor rgba 1`] = 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AntdHorzColor hsl 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AntdHorzColor hsl snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-skiu9w-AntdHorzColor"
@@ -391,7 +391,7 @@ exports[`component-controls generated Design Tokens/Colors/AntdHorzColor hsl 1`]
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AntdHorzColor hsla 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AntdHorzColor hsla snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-skiu9w-AntdHorzColor"
@@ -419,7 +419,7 @@ exports[`component-controls generated Design Tokens/Colors/AntdHorzColor hsla 1`
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AntdHorzColor name 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AntdHorzColor name snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-skiu9w-AntdHorzColor"
@@ -447,7 +447,7 @@ exports[`component-controls generated Design Tokens/Colors/AntdHorzColor name 1`
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AntdHorzColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AntdHorzColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-skiu9w-AntdHorzColor"
@@ -475,7 +475,7 @@ exports[`component-controls generated Design Tokens/Colors/AntdHorzColor overvie
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AntdHorzColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AntdHorzColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1kw8sdp-FlexContainer"
@@ -668,7 +668,7 @@ exports[`component-controls generated Design Tokens/Colors/AntdHorzColor palette
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AntdHorzColor rgb 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AntdHorzColor rgb snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-skiu9w-AntdHorzColor"
@@ -696,7 +696,7 @@ exports[`component-controls generated Design Tokens/Colors/AntdHorzColor rgb 1`]
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AntdHorzColor rgba 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AntdHorzColor rgba snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-skiu9w-AntdHorzColor"
@@ -724,7 +724,7 @@ exports[`component-controls generated Design Tokens/Colors/AntdHorzColor rgba 1`
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AntdVertColor hsl 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AntdVertColor hsl snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1svx4hl-AntdVertColor"
@@ -752,7 +752,7 @@ exports[`component-controls generated Design Tokens/Colors/AntdVertColor hsl 1`]
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AntdVertColor hsla 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AntdVertColor hsla snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1svx4hl-AntdVertColor"
@@ -780,7 +780,7 @@ exports[`component-controls generated Design Tokens/Colors/AntdVertColor hsla 1`
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AntdVertColor name 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AntdVertColor name snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1svx4hl-AntdVertColor"
@@ -808,7 +808,7 @@ exports[`component-controls generated Design Tokens/Colors/AntdVertColor name 1`
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AntdVertColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AntdVertColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1svx4hl-AntdVertColor"
@@ -836,7 +836,7 @@ exports[`component-controls generated Design Tokens/Colors/AntdVertColor overvie
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AntdVertColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AntdVertColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1tdyhq5-AntdVertColorPalette"
@@ -1075,7 +1075,7 @@ exports[`component-controls generated Design Tokens/Colors/AntdVertColor palette
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AntdVertColor rgb 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AntdVertColor rgb snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1svx4hl-AntdVertColor"
@@ -1103,7 +1103,7 @@ exports[`component-controls generated Design Tokens/Colors/AntdVertColor rgb 1`]
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AntdVertColor rgba 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AntdVertColor rgba snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1svx4hl-AntdVertColor"
@@ -1131,7 +1131,7 @@ exports[`component-controls generated Design Tokens/Colors/AntdVertColor rgba 1`
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AnvilColor hsl 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AnvilColor hsl snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-r1a9t8-AnvilColor"
@@ -1166,7 +1166,7 @@ exports[`component-controls generated Design Tokens/Colors/AnvilColor hsl 1`] = 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AnvilColor hsla 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AnvilColor hsla snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-r1a9t8-AnvilColor"
@@ -1201,7 +1201,7 @@ exports[`component-controls generated Design Tokens/Colors/AnvilColor hsla 1`] =
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AnvilColor name 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AnvilColor name snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-r1a9t8-AnvilColor"
@@ -1236,7 +1236,7 @@ exports[`component-controls generated Design Tokens/Colors/AnvilColor name 1`] =
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AnvilColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AnvilColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-r1a9t8-AnvilColor"
@@ -1271,7 +1271,7 @@ exports[`component-controls generated Design Tokens/Colors/AnvilColor overview 1
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AnvilColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AnvilColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1mhhg7b"
@@ -1460,7 +1460,7 @@ exports[`component-controls generated Design Tokens/Colors/AnvilColor palette 1`
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AnvilColor rgb 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AnvilColor rgb snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-r1a9t8-AnvilColor"
@@ -1495,7 +1495,7 @@ exports[`component-controls generated Design Tokens/Colors/AnvilColor rgb 1`] = 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AnvilColor rgba 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AnvilColor rgba snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-r1a9t8-AnvilColor"
@@ -1530,7 +1530,7 @@ exports[`component-controls generated Design Tokens/Colors/AnvilColor rgba 1`] =
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AtlassianColor hsl 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AtlassianColor hsl snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-vpkdz5-AtlassianColor"
@@ -1648,7 +1648,7 @@ exports[`component-controls generated Design Tokens/Colors/AtlassianColor hsl 1`
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AtlassianColor hsla 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AtlassianColor hsla snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-vpkdz5-AtlassianColor"
@@ -1766,7 +1766,7 @@ exports[`component-controls generated Design Tokens/Colors/AtlassianColor hsla 1
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AtlassianColor name 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AtlassianColor name snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-vpkdz5-AtlassianColor"
@@ -1884,7 +1884,7 @@ exports[`component-controls generated Design Tokens/Colors/AtlassianColor name 1
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AtlassianColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AtlassianColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-vpkdz5-AtlassianColor"
@@ -2002,7 +2002,7 @@ exports[`component-controls generated Design Tokens/Colors/AtlassianColor overvi
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AtlassianColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AtlassianColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1mhhg7b"
@@ -2689,7 +2689,7 @@ exports[`component-controls generated Design Tokens/Colors/AtlassianColor palett
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AtlassianColor rgb 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AtlassianColor rgb snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-vpkdz5-AtlassianColor"
@@ -2807,7 +2807,7 @@ exports[`component-controls generated Design Tokens/Colors/AtlassianColor rgb 1`
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AtlassianColor rgba 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AtlassianColor rgba snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-vpkdz5-AtlassianColor"
@@ -2925,7 +2925,7 @@ exports[`component-controls generated Design Tokens/Colors/AtlassianColor rgba 1
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AudiDSColor hsl 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AudiDSColor hsl snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1wbnvp4-AudiDSColor"
@@ -2976,7 +2976,7 @@ exports[`component-controls generated Design Tokens/Colors/AudiDSColor hsl 1`] =
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AudiDSColor hsla 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AudiDSColor hsla snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1wbnvp4-AudiDSColor"
@@ -3027,7 +3027,7 @@ exports[`component-controls generated Design Tokens/Colors/AudiDSColor hsla 1`] 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AudiDSColor name 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AudiDSColor name snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1wbnvp4-AudiDSColor"
@@ -3078,7 +3078,7 @@ exports[`component-controls generated Design Tokens/Colors/AudiDSColor name 1`] 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AudiDSColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AudiDSColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1wbnvp4-AudiDSColor"
@@ -3129,7 +3129,7 @@ exports[`component-controls generated Design Tokens/Colors/AudiDSColor overview 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AudiDSColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AudiDSColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1mhhg7b"
@@ -3414,7 +3414,7 @@ exports[`component-controls generated Design Tokens/Colors/AudiDSColor palette 1
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AudiDSColor rgb 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AudiDSColor rgb snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1wbnvp4-AudiDSColor"
@@ -3465,7 +3465,7 @@ exports[`component-controls generated Design Tokens/Colors/AudiDSColor rgb 1`] =
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/AudiDSColor rgba 1`] = `
+exports[`component-controls generated Design Tokens/Colors/AudiDSColor rgba snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1wbnvp4-AudiDSColor"
@@ -3516,7 +3516,7 @@ exports[`component-controls generated Design Tokens/Colors/AudiDSColor rgba 1`] 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/BackpackColor hsl 1`] = `
+exports[`component-controls generated Design Tokens/Colors/BackpackColor hsl snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1irte6g-BackpackColor"
@@ -3563,7 +3563,7 @@ exports[`component-controls generated Design Tokens/Colors/BackpackColor hsl 1`]
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/BackpackColor hsla 1`] = `
+exports[`component-controls generated Design Tokens/Colors/BackpackColor hsla snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1irte6g-BackpackColor"
@@ -3610,7 +3610,7 @@ exports[`component-controls generated Design Tokens/Colors/BackpackColor hsla 1`
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/BackpackColor name 1`] = `
+exports[`component-controls generated Design Tokens/Colors/BackpackColor name snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1irte6g-BackpackColor"
@@ -3657,7 +3657,7 @@ exports[`component-controls generated Design Tokens/Colors/BackpackColor name 1`
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/BackpackColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/BackpackColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1irte6g-BackpackColor"
@@ -3699,7 +3699,7 @@ exports[`component-controls generated Design Tokens/Colors/BackpackColor overvie
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/BackpackColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/BackpackColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1mhhg7b"
@@ -3955,7 +3955,7 @@ exports[`component-controls generated Design Tokens/Colors/BackpackColor palette
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/BackpackColor rgb 1`] = `
+exports[`component-controls generated Design Tokens/Colors/BackpackColor rgb snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1irte6g-BackpackColor"
@@ -4002,7 +4002,7 @@ exports[`component-controls generated Design Tokens/Colors/BackpackColor rgb 1`]
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/BackpackColor rgba 1`] = `
+exports[`component-controls generated Design Tokens/Colors/BackpackColor rgba snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1irte6g-BackpackColor"
@@ -4049,7 +4049,7 @@ exports[`component-controls generated Design Tokens/Colors/BackpackColor rgba 1`
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/BaseWebColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/BaseWebColor overview snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-1ea51ic-TableRowContainer"
@@ -4092,7 +4092,7 @@ exports[`component-controls generated Design Tokens/Colors/BaseWebColor overview
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/BaseWebColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/BaseWebColor palette snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-1yvi9la-BaseWebColorPalette"
@@ -4370,7 +4370,7 @@ exports[`component-controls generated Design Tokens/Colors/BaseWebColor palette 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/BeelineColor hsl 1`] = `
+exports[`component-controls generated Design Tokens/Colors/BeelineColor hsl snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-8jebb7-BeelineColor"
@@ -4440,7 +4440,7 @@ exports[`component-controls generated Design Tokens/Colors/BeelineColor hsl 1`] 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/BeelineColor hsla 1`] = `
+exports[`component-controls generated Design Tokens/Colors/BeelineColor hsla snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-8jebb7-BeelineColor"
@@ -4510,7 +4510,7 @@ exports[`component-controls generated Design Tokens/Colors/BeelineColor hsla 1`]
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/BeelineColor name 1`] = `
+exports[`component-controls generated Design Tokens/Colors/BeelineColor name snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-8jebb7-BeelineColor"
@@ -4580,7 +4580,7 @@ exports[`component-controls generated Design Tokens/Colors/BeelineColor name 1`]
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/BeelineColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/BeelineColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-8jebb7-BeelineColor"
@@ -4650,7 +4650,7 @@ exports[`component-controls generated Design Tokens/Colors/BeelineColor overview
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/BeelineColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/BeelineColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-114r159"
@@ -5114,7 +5114,7 @@ exports[`component-controls generated Design Tokens/Colors/BeelineColor palette 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/BeelineColor rgb 1`] = `
+exports[`component-controls generated Design Tokens/Colors/BeelineColor rgb snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-8jebb7-BeelineColor"
@@ -5184,7 +5184,7 @@ exports[`component-controls generated Design Tokens/Colors/BeelineColor rgb 1`] 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/BeelineColor rgba 1`] = `
+exports[`component-controls generated Design Tokens/Colors/BeelineColor rgba snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-8jebb7-BeelineColor"
@@ -5254,7 +5254,7 @@ exports[`component-controls generated Design Tokens/Colors/BeelineColor rgba 1`]
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/BoltColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/BoltColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-4v5u4a-BoltColor"
@@ -5457,7 +5457,7 @@ exports[`component-controls generated Design Tokens/Colors/BoltColor overview 1`
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/BoltColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/BoltColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1mhhg7b"
@@ -7644,7 +7644,7 @@ exports[`component-controls generated Design Tokens/Colors/BoltColor palette 1`]
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/CanvasColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/CanvasColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-16yvvas-CanvasColor"
@@ -7690,7 +7690,7 @@ exports[`component-controls generated Design Tokens/Colors/CanvasColor overview 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/CanvasColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/CanvasColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-217inb-FlexContainer"
@@ -7863,7 +7863,7 @@ exports[`component-controls generated Design Tokens/Colors/CanvasColor palette 1
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/CedarColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/CedarColor overview snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-1ea51ic-TableRowContainer"
@@ -7917,7 +7917,7 @@ exports[`component-controls generated Design Tokens/Colors/CedarColor overview 1
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/CedarColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/CedarColor palette snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-1yw4z82-CedarColorPalette"
@@ -8283,7 +8283,7 @@ exports[`component-controls generated Design Tokens/Colors/CedarColor palette 1`
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/CometColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/CometColor overview snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-1ea51ic-TableRowContainer"
@@ -8333,7 +8333,7 @@ exports[`component-controls generated Design Tokens/Colors/CometColor overview 1
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/CometColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/CometColor palette snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-1w4ok02-CometColorPalette"
@@ -8748,7 +8748,7 @@ exports[`component-controls generated Design Tokens/Colors/CometColor palette 1`
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/DuetColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/DuetColor overview snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-1ea51ic-TableRowContainer"
@@ -8846,7 +8846,7 @@ exports[`component-controls generated Design Tokens/Colors/DuetColor overview 1`
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/DuetColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/DuetColor palette snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-1uqr26a-DuetColorPalette"
@@ -9512,7 +9512,7 @@ exports[`component-controls generated Design Tokens/Colors/DuetColor palette 1`]
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/ETradeColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/ETradeColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-dx0ghv-ETradeColor"
@@ -9557,7 +9557,7 @@ exports[`component-controls generated Design Tokens/Colors/ETradeColor overview 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/ETradeColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/ETradeColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1gc1jl3"
@@ -9786,7 +9786,7 @@ exports[`component-controls generated Design Tokens/Colors/ETradeColor palette 1
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/FinastraColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/FinastraColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1bwszv8-FinastraColor"
@@ -9821,7 +9821,7 @@ exports[`component-controls generated Design Tokens/Colors/FinastraColor overvie
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/FinastraColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/FinastraColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1lec54j-FinastraColorPalette"
@@ -10124,7 +10124,7 @@ exports[`component-controls generated Design Tokens/Colors/FinastraColor palette
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/FishTankColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/FishTankColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-342njo-FishTankColor"
@@ -10150,7 +10150,7 @@ exports[`component-controls generated Design Tokens/Colors/FishTankColor overvie
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/FishTankColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/FishTankColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-a75irz-FishTankColorPalette"
@@ -10285,7 +10285,7 @@ exports[`component-controls generated Design Tokens/Colors/FishTankColor palette
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/GovUKColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/GovUKColor overview snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-1ea51ic-TableRowContainer"
@@ -10322,7 +10322,7 @@ exports[`component-controls generated Design Tokens/Colors/GovUKColor overview 1
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/GovUKColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/GovUKColor palette snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-i4wug4-GovUKColorPalette"
@@ -10448,7 +10448,7 @@ exports[`component-controls generated Design Tokens/Colors/GovUKColor palette 1`
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/HelpScoutColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/HelpScoutColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1n1j3d6-HelpScoutColor"
@@ -10485,7 +10485,7 @@ exports[`component-controls generated Design Tokens/Colors/HelpScoutColor overvi
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/HelpScoutColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/HelpScoutColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1aetqh3-HelpScoutColorPalette"
@@ -10769,7 +10769,7 @@ exports[`component-controls generated Design Tokens/Colors/HelpScoutColor palett
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/IBMDLColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/IBMDLColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-fi4kcj-IBMDLColor"
@@ -10793,7 +10793,7 @@ exports[`component-controls generated Design Tokens/Colors/IBMDLColor overview 1
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/IBMDLColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/IBMDLColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-18t15ij-Tabs"
@@ -11071,7 +11071,7 @@ exports[`component-controls generated Design Tokens/Colors/IBMDLColor palette 1`
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/LightningColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/LightningColor overview snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-1ea51ic-TableRowContainer"
@@ -11154,7 +11154,7 @@ exports[`component-controls generated Design Tokens/Colors/LightningColor overvi
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/LightningColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/LightningColor palette snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-1x6c0w4-LightningColorPalette"
@@ -11571,7 +11571,7 @@ exports[`component-controls generated Design Tokens/Colors/LightningColor palett
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/LiquidColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/LiquidColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1qywpve-LiquidColor"
@@ -11638,7 +11638,7 @@ exports[`component-controls generated Design Tokens/Colors/LiquidColor overview 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/LiquidColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/LiquidColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-114r159"
@@ -12081,7 +12081,7 @@ exports[`component-controls generated Design Tokens/Colors/LiquidColor palette 1
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/MorningstarColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/MorningstarColor overview snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-1ea51ic-TableRowContainer"
@@ -12118,7 +12118,7 @@ exports[`component-controls generated Design Tokens/Colors/MorningstarColor over
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/MorningstarColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/MorningstarColor palette snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-1v5z0sk-MorningstarColorPalette"
@@ -12367,7 +12367,7 @@ exports[`component-controls generated Design Tokens/Colors/MorningstarColor pale
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/OPatternColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/OPatternColor overview snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-1ea51ic-TableRowContainer"
@@ -12408,7 +12408,7 @@ exports[`component-controls generated Design Tokens/Colors/OPatternColor overvie
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/OPatternColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/OPatternColor palette snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-kyfym0-OPatternColorPalette"
@@ -12599,7 +12599,7 @@ exports[`component-controls generated Design Tokens/Colors/OPatternColor palette
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/PajamasColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/PajamasColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1f0c25g-PajamasColor"
@@ -12631,7 +12631,7 @@ exports[`component-controls generated Design Tokens/Colors/PajamasColor overview
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/PajamasColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/PajamasColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-px08sw-PajamasColorPalette"
@@ -12937,7 +12937,7 @@ exports[`component-controls generated Design Tokens/Colors/PajamasColor palette 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/PatternFlyColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/PatternFlyColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-kqqymz-PatternFlyColor"
@@ -12972,7 +12972,7 @@ exports[`component-controls generated Design Tokens/Colors/PatternFlyColor overv
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/PatternFlyColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/PatternFlyColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-217inb-FlexContainer"
@@ -13131,7 +13131,7 @@ exports[`component-controls generated Design Tokens/Colors/PatternFlyColor palet
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/PhotonColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/PhotonColor overview snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-1ea51ic-TableRowContainer"
@@ -13191,7 +13191,7 @@ exports[`component-controls generated Design Tokens/Colors/PhotonColor overview 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/PhotonColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/PhotonColor palette snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-6vv4r4-PhotonColorPalette"
@@ -13461,7 +13461,7 @@ exports[`component-controls generated Design Tokens/Colors/PhotonColor palette 1
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/PrimerColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/PrimerColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-yv97k9-PrimerColor"
@@ -13496,7 +13496,7 @@ exports[`component-controls generated Design Tokens/Colors/PrimerColor overview 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/PrimerColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/PrimerColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1wilymo-PrimerColorPalette"
@@ -13785,7 +13785,7 @@ exports[`component-controls generated Design Tokens/Colors/PrimerColor palette 1
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/SeedsColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/SeedsColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-j1e95v-SeedsColor"
@@ -13862,7 +13862,7 @@ exports[`component-controls generated Design Tokens/Colors/SeedsColor overview 1
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/SeedsColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/SeedsColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1mhhg7b"
@@ -14192,7 +14192,7 @@ exports[`component-controls generated Design Tokens/Colors/SeedsColor palette 1`
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/SeekColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/SeekColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1fkk250-SeekColor"
@@ -14223,7 +14223,7 @@ exports[`component-controls generated Design Tokens/Colors/SeekColor overview 1`
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/SeekColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/SeekColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1cxowci"
@@ -14414,7 +14414,7 @@ exports[`component-controls generated Design Tokens/Colors/SeekColor palette 1`]
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/SkylineColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/SkylineColor overview snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-1ea51ic-TableRowContainer"
@@ -14512,7 +14512,7 @@ exports[`component-controls generated Design Tokens/Colors/SkylineColor overview
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/SkylineColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/SkylineColor palette snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-5x8c9x-SkylineColorPalette"
@@ -15178,7 +15178,7 @@ exports[`component-controls generated Design Tokens/Colors/SkylineColor palette 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/SolidColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/SolidColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1mgg0ls-SolidColor"
@@ -15210,7 +15210,7 @@ exports[`component-controls generated Design Tokens/Colors/SolidColor overview 1
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/SolidColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/SolidColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1mhhg7b"
@@ -15408,7 +15408,7 @@ exports[`component-controls generated Design Tokens/Colors/SolidColor palette 1`
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/TableColor legend 1`] = `
+exports[`component-controls generated Design Tokens/Colors/TableColor legend snapshot 1`] = `
 <DocumentFragment>
   <table>
     <thead>
@@ -15537,7 +15537,7 @@ exports[`component-controls generated Design Tokens/Colors/TableColor legend 1`]
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/TableColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/TableColor overview snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-1ea51ic-TableRowContainer"
@@ -15629,7 +15629,7 @@ exports[`component-controls generated Design Tokens/Colors/TableColor overview 1
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/TableColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/TableColor palette snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-1fnvysm-TableColorPalette"
@@ -16148,7 +16148,7 @@ exports[`component-controls generated Design Tokens/Colors/TableColor palette 1`
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/TableColor paletteDark 1`] = `
+exports[`component-controls generated Design Tokens/Colors/TableColor paletteDark snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-1fnvysm-TableColorPalette"
@@ -17337,7 +17337,7 @@ exports[`component-controls generated Design Tokens/Colors/TableColor paletteDar
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/UniformColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/UniformColor overview snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-1ea51ic-TableRowContainer"
@@ -17374,7 +17374,7 @@ exports[`component-controls generated Design Tokens/Colors/UniformColor overview
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/UniformColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/UniformColor palette snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-l3npis-UniformColorPalette"
@@ -17545,7 +17545,7 @@ exports[`component-controls generated Design Tokens/Colors/UniformColor palette 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/VanillaColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/VanillaColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1m19f2s-VanillaColor"
@@ -17568,7 +17568,7 @@ exports[`component-controls generated Design Tokens/Colors/VanillaColor overview
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/VanillaColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/VanillaColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1gy5qwa"
@@ -17703,7 +17703,7 @@ exports[`component-controls generated Design Tokens/Colors/VanillaColor palette 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/XColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/XColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1oqofgf-XColor"
@@ -17765,7 +17765,7 @@ exports[`component-controls generated Design Tokens/Colors/XColor overview 1`] =
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/XColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/XColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-v2z4xj"
@@ -18173,7 +18173,7 @@ exports[`component-controls generated Design Tokens/Colors/XColor palette 1`] = 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/ZendeskColor overview 1`] = `
+exports[`component-controls generated Design Tokens/Colors/ZendeskColor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1kjty3v-ZendeskColor"
@@ -18202,7 +18202,7 @@ exports[`component-controls generated Design Tokens/Colors/ZendeskColor overview
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Colors/ZendeskColor palette 1`] = `
+exports[`component-controls generated Design Tokens/Colors/ZendeskColor palette snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1e3ovlv"
@@ -18451,7 +18451,7 @@ exports[`component-controls generated Design Tokens/Colors/ZendeskColor palette 
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Fonts/LightningFont overview 1`] = `
+exports[`component-controls generated Design Tokens/Fonts/LightningFont overview snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-1ea51ic-TableRowContainer"
@@ -18516,7 +18516,7 @@ exports[`component-controls generated Design Tokens/Fonts/LightningFont overview
 </DocumentFragment>
 `;
 
-exports[`component-controls generated Design Tokens/Fonts/LightningFont palette 1`] = `
+exports[`component-controls generated Design Tokens/Fonts/LightningFont palette snapshot 1`] = `
 <DocumentFragment>
   <table
     class="css-6q9zp4-LightningFontTheme"

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Playground child 1`] = `
+exports[`Playground child snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -14,6 +14,7 @@ exports[`Playground child 1`] = `
         class="css-xhp9da"
       >
         <a
+          aria-label="My donut example "
           class="css-walqom-LinkHeading"
           data-id="my-donut-example-"
           data-level="3"
@@ -197,9 +198,7 @@ exports[`Playground child 1`] = `
                     class="css-t5jv09"
                   >
                     <svg
-                      aria-valuemax="1"
-                      aria-valuemin="0"
-                      aria-valuenow="0.5"
+                      aria-label="donut graphic value 0.5 - from 0 tp 1"
                       class="css-14d2907"
                       fill="none"
                       height="128"
@@ -245,7 +244,7 @@ exports[`Playground child 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Playground customTitle 1`] = `
+exports[`Playground customTitle snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -259,6 +258,7 @@ exports[`Playground customTitle 1`] = `
         class="css-xhp9da"
       >
         <a
+          aria-label="Custom playground title"
           class="css-walqom-LinkHeading"
           data-id="custom-playground-title"
           data-level="3"
@@ -460,6 +460,7 @@ exports[`Playground customTitle 1`] = `
                 >
                   <div
                     class="css-1xkyebe"
+                    data-testid="story"
                   >
                     <div
                       class="css-jxxswp"
@@ -467,11 +468,7 @@ exports[`Playground customTitle 1`] = `
                     >
                       <div
                         class="css-xhp9da"
-                      >
-                        <h3
-                          class="css-16ist9v-BlockContainer"
-                        />
-                      </div>
+                      />
                     </div>
                     <div
                       aria-hidden="false"
@@ -488,9 +485,7 @@ exports[`Playground customTitle 1`] = `
                             class="story-render-container css-dhmrnb"
                           >
                             <svg
-                              aria-valuemax="1"
-                              aria-valuemin="0"
-                              aria-valuenow="0.5"
+                              aria-label="example donut graphic"
                               class="css-14d2907"
                               fill="none"
                               height="128"
@@ -540,7 +535,7 @@ exports[`Playground customTitle 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Playground darkTheme 1`] = `
+exports[`Playground darkTheme snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -552,11 +547,7 @@ exports[`Playground darkTheme 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -702,6 +693,7 @@ exports[`Playground darkTheme 1`] = `
                 >
                   <div
                     class="css-1xkyebe"
+                    data-testid="story"
                   >
                     <div
                       class="css-jxxswp"
@@ -709,11 +701,7 @@ exports[`Playground darkTheme 1`] = `
                     >
                       <div
                         class="css-xhp9da"
-                      >
-                        <h3
-                          class="css-16ist9v-BlockContainer"
-                        />
-                      </div>
+                      />
                     </div>
                     <div
                       aria-hidden="false"
@@ -730,9 +718,7 @@ exports[`Playground darkTheme 1`] = `
                             class="story-render-container css-dhmrnb"
                           >
                             <svg
-                              aria-valuemax="1"
-                              aria-valuemin="0"
-                              aria-valuenow="0.5"
+                              aria-label="example donut graphic"
                               class="css-14d2907"
                               fill="none"
                               height="128"
@@ -782,7 +768,7 @@ exports[`Playground darkTheme 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Playground defaultOpenSource 1`] = `
+exports[`Playground defaultOpenSource snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -794,11 +780,7 @@ exports[`Playground defaultOpenSource 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -944,6 +926,7 @@ exports[`Playground defaultOpenSource 1`] = `
                 >
                   <div
                     class="css-1xkyebe"
+                    data-testid="story"
                   >
                     <div
                       class="css-jxxswp"
@@ -951,11 +934,7 @@ exports[`Playground defaultOpenSource 1`] = `
                     >
                       <div
                         class="css-xhp9da"
-                      >
-                        <h3
-                          class="css-16ist9v-BlockContainer"
-                        />
-                      </div>
+                      />
                     </div>
                     <div
                       aria-hidden="false"
@@ -972,9 +951,7 @@ exports[`Playground defaultOpenSource 1`] = `
                             class="story-render-container css-dhmrnb"
                           >
                             <svg
-                              aria-valuemax="1"
-                              aria-valuemin="0"
-                              aria-valuenow="0.5"
+                              aria-label="example donut graphic"
                               class="css-14d2907"
                               fill="none"
                               height="128"
@@ -1064,6 +1041,7 @@ exports[`Playground defaultOpenSource 1`] = `
                     >
                       <div
                         class="css-7wa6r1-StoryBlockContainer"
+                        data-testid="story-source"
                       >
                         <div
                           class="css-jxxswp"
@@ -1071,11 +1049,7 @@ exports[`Playground defaultOpenSource 1`] = `
                         >
                           <div
                             class="css-xhp9da"
-                          >
-                            <h3
-                              class="css-16ist9v-BlockContainer"
-                            />
-                          </div>
+                          />
                         </div>
                         <div
                           aria-hidden="false"
@@ -1410,7 +1384,7 @@ exports[`Playground defaultOpenSource 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Playground disableZoomPan 1`] = `
+exports[`Playground disableZoomPan snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -1422,11 +1396,7 @@ exports[`Playground disableZoomPan 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -1497,6 +1467,7 @@ exports[`Playground disableZoomPan 1`] = `
                 >
                   <div
                     class="css-1xkyebe"
+                    data-testid="story"
                   >
                     <div
                       class="css-jxxswp"
@@ -1504,11 +1475,7 @@ exports[`Playground disableZoomPan 1`] = `
                     >
                       <div
                         class="css-xhp9da"
-                      >
-                        <h3
-                          class="css-16ist9v-BlockContainer"
-                        />
-                      </div>
+                      />
                     </div>
                     <div
                       aria-hidden="false"
@@ -1525,9 +1492,7 @@ exports[`Playground disableZoomPan 1`] = `
                             class="story-render-container css-dhmrnb"
                           >
                             <svg
-                              aria-valuemax="1"
-                              aria-valuemin="0"
-                              aria-valuenow="0.5"
+                              aria-label="example donut graphic"
                               class="css-14d2907"
                               fill="none"
                               height="128"
@@ -1577,7 +1542,7 @@ exports[`Playground disableZoomPan 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Playground extraPanel 1`] = `
+exports[`Playground extraPanel snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -1589,11 +1554,7 @@ exports[`Playground extraPanel 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -1748,6 +1709,7 @@ exports[`Playground extraPanel 1`] = `
                 >
                   <div
                     class="css-1xkyebe"
+                    data-testid="story"
                   >
                     <div
                       class="css-jxxswp"
@@ -1755,11 +1717,7 @@ exports[`Playground extraPanel 1`] = `
                     >
                       <div
                         class="css-xhp9da"
-                      >
-                        <h3
-                          class="css-16ist9v-BlockContainer"
-                        />
-                      </div>
+                      />
                     </div>
                     <div
                       aria-hidden="false"
@@ -1776,9 +1734,7 @@ exports[`Playground extraPanel 1`] = `
                             class="story-render-container css-dhmrnb"
                           >
                             <svg
-                              aria-valuemax="1"
-                              aria-valuemin="0"
-                              aria-valuenow="0.5"
+                              aria-label="example donut graphic"
                               class="css-14d2907"
                               fill="none"
                               height="128"
@@ -1833,31 +1789,31 @@ exports[`Playground extraPanel 1`] = `
                       style="text-align: right;"
                     >
                       <li
-                        aria-controls="react-tabs-5"
+                        aria-controls="react-tabs-9"
                         aria-disabled="false"
                         aria-selected="false"
                         class="react-tabs__tab"
-                        id="react-tabs-4"
+                        id="react-tabs-8"
                         role="tab"
                       >
                         config
                       </li>
                       <li
-                        aria-controls="react-tabs-7"
+                        aria-controls="react-tabs-11"
                         aria-disabled="false"
                         aria-selected="false"
                         class="react-tabs__tab"
-                        id="react-tabs-6"
+                        id="react-tabs-10"
                         role="tab"
                       >
                         source
                       </li>
                       <li
-                        aria-controls="react-tabs-9"
+                        aria-controls="react-tabs-13"
                         aria-disabled="false"
                         aria-selected="true"
                         class="react-tabs__tab react-tabs__tab--selected"
-                        id="react-tabs-8"
+                        id="react-tabs-12"
                         role="tab"
                         tabindex="0"
                       >
@@ -1865,27 +1821,25 @@ exports[`Playground extraPanel 1`] = `
                       </li>
                     </ul>
                     <div
-                      aria-labelledby="react-tabs-4"
-                      class="react-tabs__tab-panel"
-                      id="react-tabs-5"
-                      role="tabpanel"
-                    />
-                    <div
-                      aria-labelledby="react-tabs-6"
-                      class="react-tabs__tab-panel"
-                      id="react-tabs-7"
-                      role="tabpanel"
-                    />
-                    <div
                       aria-labelledby="react-tabs-8"
-                      class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                      class="react-tabs__tab-panel"
                       id="react-tabs-9"
+                      role="tabpanel"
+                    />
+                    <div
+                      aria-labelledby="react-tabs-10"
+                      class="react-tabs__tab-panel"
+                      id="react-tabs-11"
+                      role="tabpanel"
+                    />
+                    <div
+                      aria-labelledby="react-tabs-12"
+                      class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                      id="react-tabs-13"
                       role="tabpanel"
                     >
                       <svg
-                        aria-valuemax="1"
-                        aria-valuemin="0"
-                        aria-valuenow="0.5"
+                        aria-label="donut graphic value 0.5 - from 0 tp 1"
                         class="css-14d2907"
                         fill="none"
                         height="128"
@@ -1923,7 +1877,7 @@ exports[`Playground extraPanel 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Playground multiChild 1`] = `
+exports[`Playground multiChild snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -1937,6 +1891,7 @@ exports[`Playground multiChild 1`] = `
         class="css-xhp9da"
       >
         <a
+          aria-label="Multiple donuts"
           class="css-walqom-LinkHeading"
           data-id="multiple-donuts"
           data-level="3"
@@ -2120,9 +2075,7 @@ exports[`Playground multiChild 1`] = `
                     class="css-t5jv09"
                   >
                     <svg
-                      aria-valuemax="1"
-                      aria-valuemin="0"
-                      aria-valuenow="0.5"
+                      aria-label="donut graphic value 0.5 - from 0 tp 1"
                       class="css-14d2907"
                       fill="none"
                       height="128"
@@ -2148,9 +2101,7 @@ exports[`Playground multiChild 1`] = `
                       />
                     </svg>
                     <svg
-                      aria-valuemax="1"
-                      aria-valuemin="0"
-                      aria-valuenow="0.5"
+                      aria-label="donut graphic value 0.5 - from 0 tp 1"
                       class="css-14d2907"
                       fill="none"
                       height="128"
@@ -2176,9 +2127,7 @@ exports[`Playground multiChild 1`] = `
                       />
                     </svg>
                     <svg
-                      aria-valuemax="1"
-                      aria-valuemin="0"
-                      aria-valuenow="0.5"
+                      aria-label="donut graphic value 0.5 - from 0 tp 1"
                       class="css-14d2907"
                       fill="none"
                       height="128"
@@ -2224,7 +2173,7 @@ exports[`Playground multiChild 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Playground multiStories 1`] = `
+exports[`Playground multiStories snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -2236,11 +2185,7 @@ exports[`Playground multiStories 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -2369,6 +2314,7 @@ exports[`Playground multiStories 1`] = `
                   >
                     <div
                       class="css-1xkyebe"
+                      data-testid="story"
                     >
                       <div
                         class="css-jxxswp"
@@ -2376,11 +2322,7 @@ exports[`Playground multiStories 1`] = `
                       >
                         <div
                           class="css-xhp9da"
-                        >
-                          <h3
-                            class="css-16ist9v-BlockContainer"
-                          />
-                        </div>
+                        />
                       </div>
                       <div
                         aria-hidden="false"
@@ -2408,6 +2350,7 @@ exports[`Playground multiStories 1`] = `
                     </div>
                     <div
                       class="css-1xkyebe"
+                      data-testid="story"
                     >
                       <div
                         class="css-jxxswp"
@@ -2415,11 +2358,7 @@ exports[`Playground multiStories 1`] = `
                       >
                         <div
                           class="css-xhp9da"
-                        >
-                          <h3
-                            class="css-16ist9v-BlockContainer"
-                          />
-                        </div>
+                        />
                       </div>
                       <div
                         aria-hidden="false"
@@ -2436,9 +2375,7 @@ exports[`Playground multiStories 1`] = `
                               class="story-render-container css-dhmrnb"
                             >
                               <svg
-                                aria-valuemax="1"
-                                aria-valuemin="0"
-                                aria-valuenow="0.5"
+                                aria-label="example donut graphic"
                                 class="css-14d2907"
                                 fill="none"
                                 height="128"
@@ -2489,49 +2426,12 @@ exports[`Playground multiStories 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Playground notCollapsible 1`] = `
+exports[`Playground notCollapsible snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
     data-testid="playground"
   >
-    <div
-      class="css-jxxswp"
-      id="blocks-core-story-plain--controls"
-    >
-      <div
-        class="css-xhp9da"
-      >
-        <a
-          class="css-1ptrway-LinkHeading"
-          data-id="blocks-core-story-plain--controls"
-          data-level="4"
-          data-title="controls"
-          href="http://localhost/#blocks-core-story-plain--controls"
-        >
-          <svg
-            aria-hidden="true"
-            class="octicon"
-            fill="currentColor"
-            height="16"
-            role="img"
-            style="display: inline-block; user-select: none; vertical-align: middle;"
-            viewBox="0 0 16 16"
-            width="16"
-          >
-            <path
-              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </a>
-        <h4
-          class="css-vsfm4-BlockContainer"
-        >
-          controls
-        </h4>
-      </div>
-    </div>
     <div>
       <div
         class="css-15owl46"
@@ -2670,6 +2570,7 @@ exports[`Playground notCollapsible 1`] = `
             >
               <div
                 class="css-1xkyebe"
+                data-testid="story"
               >
                 <div
                   class="css-jxxswp"
@@ -2677,11 +2578,7 @@ exports[`Playground notCollapsible 1`] = `
                 >
                   <div
                     class="css-xhp9da"
-                  >
-                    <h3
-                      class="css-16ist9v-BlockContainer"
-                    />
-                  </div>
+                  />
                 </div>
                 <div
                   aria-hidden="false"
@@ -2698,9 +2595,7 @@ exports[`Playground notCollapsible 1`] = `
                         class="story-render-container css-dhmrnb"
                       >
                         <svg
-                          aria-valuemax="1"
-                          aria-valuemin="0"
-                          aria-valuenow="0.5"
+                          aria-label="example donut graphic"
                           class="css-14d2907"
                           fill="none"
                           height="128"
@@ -2748,7 +2643,7 @@ exports[`Playground notCollapsible 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Playground overview 1`] = `
+exports[`Playground overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -2760,11 +2655,7 @@ exports[`Playground overview 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -2910,6 +2801,7 @@ exports[`Playground overview 1`] = `
                 >
                   <div
                     class="css-1xkyebe"
+                    data-testid="story"
                   >
                     <div
                       class="css-jxxswp"
@@ -2917,11 +2809,7 @@ exports[`Playground overview 1`] = `
                     >
                       <div
                         class="css-xhp9da"
-                      >
-                        <h3
-                          class="css-16ist9v-BlockContainer"
-                        />
-                      </div>
+                      />
                     </div>
                     <div
                       aria-hidden="false"
@@ -2938,9 +2826,7 @@ exports[`Playground overview 1`] = `
                             class="story-render-container css-dhmrnb"
                           >
                             <svg
-                              aria-valuemax="1"
-                              aria-valuemin="0"
-                              aria-valuenow="0.5"
+                              aria-label="example donut graphic"
                               class="css-14d2907"
                               fill="none"
                               height="128"
@@ -2990,7 +2876,7 @@ exports[`Playground overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Playground scale 1`] = `
+exports[`Playground scale snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -3002,11 +2888,7 @@ exports[`Playground scale 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -3152,6 +3034,7 @@ exports[`Playground scale 1`] = `
                 >
                   <div
                     class="css-1xkyebe"
+                    data-testid="story"
                   >
                     <div
                       class="css-jxxswp"
@@ -3159,11 +3042,7 @@ exports[`Playground scale 1`] = `
                     >
                       <div
                         class="css-xhp9da"
-                      >
-                        <h3
-                          class="css-16ist9v-BlockContainer"
-                        />
-                      </div>
+                      />
                     </div>
                     <div
                       aria-hidden="false"
@@ -3180,9 +3059,7 @@ exports[`Playground scale 1`] = `
                             class="story-render-container css-dhmrnb"
                           >
                             <svg
-                              aria-valuemax="1"
-                              aria-valuemin="0"
-                              aria-valuenow="0.5"
+                              aria-label="example donut graphic"
                               class="css-14d2907"
                               fill="none"
                               height="128"
@@ -3232,7 +3109,7 @@ exports[`Playground scale 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Playground title 1`] = `
+exports[`Playground title snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -3240,17 +3117,18 @@ exports[`Playground title 1`] = `
   >
     <div
       class="css-jxxswp"
-      id="id-of-story"
+      id="playground-id-of-story"
     >
       <div
         class="css-xhp9da"
       >
         <a
+          aria-label="story"
           class="css-walqom-LinkHeading"
-          data-id="id-of-story"
+          data-id="playground-id-of-story"
           data-level="3"
           data-title="story"
-          href="http://localhost/#id-of-story"
+          href="http://localhost/#playground-id-of-story"
         >
           <svg
             aria-hidden="true"
@@ -3452,6 +3330,7 @@ exports[`Playground title 1`] = `
                 >
                   <div
                     class="css-1xkyebe"
+                    data-testid="story"
                   >
                     <div
                       class="css-jxxswp"
@@ -3459,11 +3338,7 @@ exports[`Playground title 1`] = `
                     >
                       <div
                         class="css-xhp9da"
-                      >
-                        <h3
-                          class="css-16ist9v-BlockContainer"
-                        />
-                      </div>
+                      />
                     </div>
                     <div
                       aria-hidden="false"
@@ -3509,7 +3384,7 @@ exports[`Playground title 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Playground visibleTabs 1`] = `
+exports[`Playground visibleTabs snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -3521,11 +3396,7 @@ exports[`Playground visibleTabs 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -3671,6 +3542,7 @@ exports[`Playground visibleTabs 1`] = `
                 >
                   <div
                     class="css-1xkyebe"
+                    data-testid="story"
                   >
                     <div
                       class="css-jxxswp"
@@ -3678,11 +3550,7 @@ exports[`Playground visibleTabs 1`] = `
                     >
                       <div
                         class="css-xhp9da"
-                      >
-                        <h3
-                          class="css-16ist9v-BlockContainer"
-                        />
-                      </div>
+                      />
                     </div>
                     <div
                       aria-hidden="false"
@@ -3699,9 +3567,7 @@ exports[`Playground visibleTabs 1`] = `
                             class="story-render-container css-dhmrnb"
                           >
                             <svg
-                              aria-valuemax="1"
-                              aria-valuemin="0"
-                              aria-valuenow="0.5"
+                              aria-label="example donut graphic"
                               class="css-14d2907"
                               fill="none"
                               height="128"
@@ -3751,7 +3617,7 @@ exports[`Playground visibleTabs 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Playground zoomDisabled 1`] = `
+exports[`Playground zoomDisabled snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -3763,11 +3629,7 @@ exports[`Playground zoomDisabled 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -3838,6 +3700,7 @@ exports[`Playground zoomDisabled 1`] = `
                 >
                   <div
                     class="css-1xkyebe"
+                    data-testid="story"
                   >
                     <div
                       class="css-jxxswp"
@@ -3845,11 +3708,7 @@ exports[`Playground zoomDisabled 1`] = `
                     >
                       <div
                         class="css-xhp9da"
-                      >
-                        <h3
-                          class="css-16ist9v-BlockContainer"
-                        />
-                      </div>
+                      />
                     </div>
                     <div
                       aria-hidden="false"
@@ -3866,9 +3725,7 @@ exports[`Playground zoomDisabled 1`] = `
                             class="story-render-container css-dhmrnb"
                           >
                             <svg
-                              aria-valuemax="1"
-                              aria-valuemin="0"
-                              aria-valuenow="0.5"
+                              aria-label="example donut graphic"
                               class="css-14d2907"
                               fill="none"
                               height="128"

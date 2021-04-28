@@ -43,7 +43,13 @@ export const InfoTip: FC<InfoTipProps & PopoverProps> = ({
       )}
       {...rest}
     >
-      <Button variant="plain" sx={{ mx: 2 }}>
+      <Button
+        aria-label={
+          typeof children === 'string' ? children : 'click to display info'
+        }
+        variant="plain"
+        sx={{ mx: 2 }}
+      >
         {iconNode}
       </Button>
     </Popover>

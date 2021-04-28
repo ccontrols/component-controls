@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LocalDependencies overview 1`] = `
+exports[`LocalDependencies overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -11,11 +11,7 @@ exports[`LocalDependencies overview 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -78,7 +74,7 @@ exports[`LocalDependencies overview 1`] = `
                       role="row"
                     >
                       <th
-                        class="css-9hyy6f"
+                        class="css-n59tc9"
                         colspan="1"
                         role="columnheader"
                         style="width: 150px;"
@@ -94,7 +90,7 @@ exports[`LocalDependencies overview 1`] = `
                         </div>
                       </th>
                       <th
-                        class="css-9hyy6f"
+                        class="css-n59tc9"
                         colspan="1"
                         role="columnheader"
                         style="width: 150px;"
@@ -120,7 +116,7 @@ exports[`LocalDependencies overview 1`] = `
                       role="row"
                     >
                       <td
-                        class="css-l4u9co"
+                        class="css-1yjhfhu"
                         role="cell"
                         style="width: 150px;"
                       >
@@ -131,7 +127,7 @@ exports[`LocalDependencies overview 1`] = `
                         </span>
                       </td>
                       <td
-                        class="css-l4u9co"
+                        class="css-1yjhfhu"
                         role="cell"
                         style="width: 150px;"
                       >
@@ -169,7 +165,7 @@ exports[`LocalDependencies overview 1`] = `
                       role="row"
                     >
                       <td
-                        class="css-l4u9co"
+                        class="css-1yjhfhu"
                         role="cell"
                         style="width: 150px;"
                       >
@@ -180,7 +176,7 @@ exports[`LocalDependencies overview 1`] = `
                         </span>
                       </td>
                       <td
-                        class="css-l4u9co"
+                        class="css-1yjhfhu"
                         role="cell"
                         style="width: 150px;"
                       >

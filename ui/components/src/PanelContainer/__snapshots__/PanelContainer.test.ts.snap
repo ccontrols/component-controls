@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PanelContainer openTab 1`] = `
+exports[`PanelContainer openTab snapshot 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -46,9 +46,7 @@ exports[`PanelContainer openTab 1`] = `
     >
       <div>
         <svg
-          aria-valuemax="1"
-          aria-valuemin="0"
-          aria-valuenow="1"
+          aria-label="donut graphic value 1 - from 0 tp 1"
           class="css-14d2907"
           fill="none"
           height="128"
@@ -134,9 +132,7 @@ exports[`PanelContainer openTab 1`] = `
                     panel 1
                   </h2>
                   <svg
-                    aria-valuemax="1"
-                    aria-valuemin="0"
-                    aria-valuenow="0.5"
+                    aria-label="donut graphic value 0.5 - from 0 tp 1"
                     class="css-14d2907"
                     fill="none"
                     height="64"
@@ -172,7 +168,7 @@ exports[`PanelContainer openTab 1`] = `
 </DocumentFragment>
 `;
 
-exports[`PanelContainer overview 1`] = `
+exports[`PanelContainer overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-vurnku"
@@ -225,9 +221,7 @@ exports[`PanelContainer overview 1`] = `
             class="css-12y95y7"
           >
             <svg
-              aria-valuemax="1"
-              aria-valuemin="0"
-              aria-valuenow="1"
+              aria-label="donut graphic value 1 - from 0 tp 1"
               class="css-14d2907"
               fill="none"
               height="128"
@@ -269,7 +263,7 @@ exports[`PanelContainer overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`PanelContainer visibleTabs 1`] = `
+exports[`PanelContainer visibleTabs snapshot 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -315,9 +309,7 @@ exports[`PanelContainer visibleTabs 1`] = `
     >
       <div>
         <svg
-          aria-valuemax="1"
-          aria-valuemin="0"
-          aria-valuenow="1"
+          aria-label="donut graphic value 1 - from 0 tp 1"
           class="css-14d2907"
           fill="none"
           height="128"

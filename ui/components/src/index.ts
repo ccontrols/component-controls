@@ -13,6 +13,7 @@ export * from './Collapsible';
 export * from './ColorMode';
 export * from './CopyContainer';
 export * from './Description';
+export * from './Donut';
 export * from './ExternalLink';
 export * from './GithubAvatar';
 export * from './GithubAvatarList';

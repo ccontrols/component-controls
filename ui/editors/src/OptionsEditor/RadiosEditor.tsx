@@ -36,7 +36,7 @@ const RadioLabel: FC<LabelProps> = props => (
   />
 );
 
-export const RadiosEditor: PropertyEditor = ({ name }) => {
+export const RadiosEditor: PropertyEditor = ({ name, ...rest }) => {
   const [control, onChange] = useControl<ComponentControlOptions>(name);
 
   const renderRadioButton = (entry: NormalizedOption) => {
@@ -54,6 +54,7 @@ export const RadiosEditor: PropertyEditor = ({ name }) => {
             (typeof entry.value.toString === 'function' &&
               entry.value.toString() === control.value)
           }
+          {...rest}
         />
         <RadioLabel htmlFor={id}>{entry.label}</RadioLabel>
       </div>

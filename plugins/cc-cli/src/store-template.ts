@@ -21,6 +21,7 @@ export const createStoreTemplate: TemplateFunction = async (
     format = 'cjs',
     name = 'component-controls generated',
     bundle,
+    ally,
     ...rest
   } = options;
 
@@ -39,7 +40,7 @@ export const createStoreTemplate: TemplateFunction = async (
   );
   const render = dot.template(fs.readFileSync(renderPath, 'utf8'))({
     bundle: !!bundle,
-    ...accessibilityTemplate(format),
+    ...accessibilityTemplate(format, ally),
   });
   const vars = {
     render,

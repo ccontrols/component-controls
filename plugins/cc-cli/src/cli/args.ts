@@ -90,4 +90,13 @@ export const jestCliArgs: ArgOptions = [
       type: 'array',
     },
   },
+  {
+    name: 'ally',
+    options: {
+      alias: 'y',
+      description: 'include axe accessibility tests',
+      default: true,
+      type: 'boolean',
+    },
+  },
 ];

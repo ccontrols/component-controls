@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FilesEditor overview 1`] = `
+exports[`FilesEditor overview snapshot 1`] = `
 <DocumentFragment>
   <input
     accept="image/*"
+    aria-label="select files"
     class="css-iyqgnx"
     multiple=""
     name="prop"

@@ -151,6 +151,7 @@ quick start: the following command will generate a test file in `tests/stories.t
 | `--name`<br/>`-n`      | name of the test group/describe section                     | string                      | `component-controls generated` |
 | `--include`<br/>`-i`   | array of test file names to include (only for doc/story formats)| string[]             |                                |
 | `--exclude`<br/>`-x`   | array of test file names to exclude (only for doc/story formats)| string[]             |                                |
+| `--ally`<br/>`-y`       | whether to include axe accessibility tests                  | boolean                     | `true`                        |
 
 ### Examples
 
@@ -202,6 +203,10 @@ import {
 } from '@component-controls/config';
 import { renderExample, renderErr } from '@component-controls/test-renderers';
 import { render, act } from '@testing-library/react';
+import { run, AxeResults } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
+
 
 describe('component-controls generated', () => {
   const configPath = path.resolve(__dirname, '../.config');
@@ -218,7 +223,7 @@ describe('component-controls generated', () => {
       if (examples.length) {
         describe(doc.title, () => {
           examples.forEach(example => {
-            it(example.name, async () => {
+            describe(example.name, async () => {
               let rendered;
               act(() => {
                 rendered = renderExample({
@@ -231,8 +236,14 @@ describe('component-controls generated', () => {
                 renderErr();
                 return;
               }
-              const { asFragment } = render(rendered);
-              expect(asFragment()).toMatchSnapshot();
+              it('snapshot', () => {
+                  const { asFragment } = render(rendered);
+                  expect(asFragment()).toMatchSnapshot();
+                });
+              it('accessibility', async () => {
+                const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+                expect(axeResults).toHaveNoAxeViolations();
+              });
             });
           });
         });
@@ -263,6 +274,9 @@ This will generate one test file per document, and inside will dynamically creat
 ```jsx:title=src/Header/Header.test.ts
 /* prettier-ignore-start */
 import path from 'path';
+import { run, AxeResults } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
 import { loadConfigurations } from '@component-controls/config';
 import { renderDocument, renderErr } from '@component-controls/test-renderers';
 import { render, act } from '@testing-library/react';
@@ -281,9 +295,15 @@ describe('Header', () => {
     return;
   }
   renderedExamples.forEach(({ name, rendered }) => {
-    it(name, async () => {
-      const { asFragment } = render(rendered);
-      expect(asFragment()).toMatchSnapshot();
+    describe(name, async () => {
+      it('snapshot', () => {
+        const { asFragment } = render(rendered);
+        expect(asFragment()).toMatchSnapshot();
+      });
+      it('accessibility', async () => {
+        const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+        expect(axeResults).toHaveNoAxeViolations();
+      });
     });
   });
 });
@@ -311,6 +331,9 @@ This approach can lead to outdated test files (for example when you add a new st
 ```jsx:title=src/Header/Header.test.ts
 /* prettier-ignore-start */
 import path from 'path';
+import { run, AxeResults } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
 import { loadConfigurations } from '@component-controls/config';
 import { renderExample, renderErr } from '@component-controls/test-renderers';
 import { render, act } from '@testing-library/react';
@@ -321,7 +344,7 @@ describe('Header', () => {
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
   
-  test('overview', () => {
+  describe('overview', () => {
     const example = overview;
     let rendered;
     act(() => {
@@ -335,8 +358,14 @@ describe('Header', () => {
       renderErr();
       return;
     }
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
+    it('snapshot', () => {
+      const { asFragment } = render(rendered);
+      expect(asFragment()).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
   });
 });
 /* prettier-ignore-end */
@@ -352,6 +381,9 @@ Here is an example of extending a test with some custom test conditions (removed
 ```jsx:title=src/VariantButton/VariantButton.test.ts
 /* prettier-ignore-start */
 import path from 'path';
+import { run, AxeResults } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
 import { loadConfigurations } from '@component-controls/config';
 import { renderExample, renderErr } from '@component-controls/test-renderers';
 import { render, act } from '@testing-library/react';
@@ -362,7 +394,7 @@ describe('VariantVutton', () => {
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
 
-  test('primary', () => {
+  describe('primary', () => {
     const example = overview;
     let rendered;
     act(() => {
@@ -376,11 +408,17 @@ describe('VariantVutton', () => {
       renderErr();
       return;
     }
-    const { getByTestId, container } = render(rendered);
-    // expect(asFragment()).toMatchSnapshot(); - remove auto-snapshots
-    // add specific custom tests for a label and a style
-    expect(getByTestId('label')).toHaveTextContent('Primary');
-    expect(container.children[0]).toHaveStyle('background: lightgrey');
+    it('custom test', () => {
+      const { getByTestId, container } = render(rendered);
+      // expect(asFragment()).toMatchSnapshot(); - remove auto-snapshots
+      // add specific custom tests for a label and a style
+      expect(getByTestId('label')).toHaveTextContent('Primary');
+      expect(container.children[0]).toHaveStyle('background: lightgrey');
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
   });
 });
 /* prettier-ignore-end */

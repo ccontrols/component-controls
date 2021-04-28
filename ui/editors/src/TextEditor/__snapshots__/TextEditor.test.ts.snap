@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextEditor overview 1`] = `
+exports[`TextEditor overview snapshot 1`] = `
 <DocumentFragment>
   <input
+    aria-label="enter some text"
     class="css-iyqgnx"
     id="prop"
     name="prop"
@@ -11,9 +12,10 @@ exports[`TextEditor overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TextEditor placeholder 1`] = `
+exports[`TextEditor placeholder snapshot 1`] = `
 <DocumentFragment>
   <input
+    aria-label="enter a value for prop"
     class="css-iyqgnx"
     id="prop"
     name="prop"
@@ -23,9 +25,10 @@ exports[`TextEditor placeholder 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TextEditor textArea 1`] = `
+exports[`TextEditor textArea snapshot 1`] = `
 <DocumentFragment>
   <textarea
+    aria-label="enter a value for prop"
     class="css-iyqgnx"
     id="prop"
     name="prop"

@@ -12,13 +12,14 @@ import { addPropertyEditor } from '../prop-factory';
  * Boolean control editor. Uses the Toggle component.
  *
  */
-export const BooleanEditor: PropertyEditor = ({ name }) => {
+export const BooleanEditor: PropertyEditor = ({ name, ...rest }) => {
   const [control, onChange] = useControl<ComponentControlBoolean>(name);
   return (
     <Toggle
       id={name}
       onChange={checked => onChange(checked)}
       checked={control.value ?? false}
+      {...rest}
     />
   );
 };

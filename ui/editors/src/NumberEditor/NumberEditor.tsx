@@ -17,7 +17,7 @@ const RangeWrapper: FC<BoxProps> = props => (
 /**
  * Number control editor.
  */
-export const NumberEditor: PropertyEditor = ({ name }) => {
+export const NumberEditor: PropertyEditor = ({ name, ...rest }) => {
   const [control, onChange] = useControl<ComponentControlNumber>(name);
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
@@ -53,12 +53,17 @@ export const NumberEditor: PropertyEditor = ({ name }) => {
         break;
     }
   };
+  const hint = `a numeric value${
+    typeof control.min != 'undefined' && typeof control.max !== 'undefined'
+      ? ` between ${control.min} and ${control.max}`
+      : ''
+  }`;
 
   return (
     <Keyboard keys={[DOWN_ARROW, UP_ARROW]} onKeyDown={onKeyPressed}>
       {control.range ? (
         <RangeWrapper>
-          <RangeLabel>{control.min}</RangeLabel>
+          <RangeLabel aria-labelledby="">{control.min}</RangeLabel>
           <Slider
             value={control.value}
             name={name}
@@ -66,6 +71,7 @@ export const NumberEditor: PropertyEditor = ({ name }) => {
             max={control.max}
             step={control.step}
             onChange={handleChange}
+            aria-label={`select ${hint}`}
           />
           <RangeLabel>{`${control.value} / ${control.max}`}</RangeLabel>
         </RangeWrapper>
@@ -78,6 +84,8 @@ export const NumberEditor: PropertyEditor = ({ name }) => {
           max={control.max}
           step={control.step}
           onChange={handleChange}
+          aria-label={`enter ${hint}`}
+          {...rest}
         />
       )}
     </Keyboard>

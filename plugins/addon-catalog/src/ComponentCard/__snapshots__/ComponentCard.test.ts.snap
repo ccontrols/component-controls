@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ComponentCard overview 1`] = `
+exports[`ComponentCard overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-wh7vml"
@@ -25,8 +25,8 @@ exports[`ComponentCard overview 1`] = `
           class="css-6582y1-ComponentContributors"
         >
           <div
-            aria-label="avatars of hasparus, lachlanjc, atanasster"
-            class="css-1wxrz40-GithubAvatarList"
+            aria-label="avatars of martin-stoyanov, atanasster"
+            class="css-1yvvfp0-GithubAvatarList"
           >
             <div
               class="css-dam4fv-GithubAvatar"
@@ -36,26 +36,11 @@ exports[`ComponentCard overview 1`] = `
                 class="css-1en2h0i-GithubAvatar"
               >
                 <img
+                  alt="avatar of martin-stoyanov"
                   class="css-1y16e88"
                   height="24"
-                  src="https://github.com/hasparus"
-                  title="hasparus"
-                  width="24"
-                />
-              </div>
-            </div>
-            <div
-              class="css-dam4fv-GithubAvatar"
-              style="display: inline-block;"
-            >
-              <div
-                class="css-1en2h0i-GithubAvatar"
-              >
-                <img
-                  class="css-1y16e88"
-                  height="24"
-                  src="https://github.com/lachlanjc"
-                  title="lachlanjc"
+                  src="https://github.com/martin-stoyanov"
+                  title="martin-stoyanov"
                   width="24"
                 />
               </div>
@@ -68,6 +53,7 @@ exports[`ComponentCard overview 1`] = `
                 class="css-1en2h0i-GithubAvatar"
               >
                 <img
+                  alt="avatar of atanasster"
                   class="css-1y16e88"
                   height="24"
                   src="https://github.com/atanasster"
@@ -110,15 +96,19 @@ exports[`ComponentCard overview 1`] = `
     <div
       class="css-1akfoys-ComponentCard"
     />
-    <p>
-      Markdown descripton for component.
-with a 
-      <a
-        href="https://google.com"
-      >
-        link
-      </a>
-    </p>
+    <div
+      variant="styles.p"
+    >
+      Markdown 
+      <strong>
+        descripton
+      </strong>
+       for 
+      <em>
+        component
+      </em>
+      .
+    </div>
     <div
       class="css-pfgifj-ComponentCard"
     >

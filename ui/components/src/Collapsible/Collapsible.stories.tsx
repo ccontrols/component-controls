@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Box, Button, Donut } from 'theme-ui';
+import { Box, Button } from 'theme-ui';
 import { Document, Example, ControlTypes } from '@component-controls/core';
+import { Donut } from '../Donut';
 import { Collapsible, CollapsibleProps } from './Collapsible';
 
 export default {

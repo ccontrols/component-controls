@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Pagination onlyNext 1`] = `
+exports[`Pagination onlyNext snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-8r2q2l"
@@ -54,7 +54,7 @@ exports[`Pagination onlyNext 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Pagination onlyPrev 1`] = `
+exports[`Pagination onlyPrev snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-8r2q2l"
@@ -108,7 +108,7 @@ exports[`Pagination onlyPrev 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Pagination overview 1`] = `
+exports[`Pagination overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-vurnku"

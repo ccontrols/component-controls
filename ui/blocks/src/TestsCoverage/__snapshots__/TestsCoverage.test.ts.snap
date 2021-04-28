@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TestsCoverage overview 1`] = `
+exports[`TestsCoverage overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -11,11 +11,7 @@ exports[`TestsCoverage overview 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -115,7 +111,7 @@ exports[`TestsCoverage overview 1`] = `
                     <div
                       class="css-206mi5"
                     >
-                      Sipped
+                      Skipped
                     </div>
                   </div>
                 </th>
@@ -860,7 +856,7 @@ exports[`TestsCoverage overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TestsCoverage pagination 1`] = `
+exports[`TestsCoverage pagination snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -871,11 +867,7 @@ exports[`TestsCoverage pagination 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -975,7 +967,7 @@ exports[`TestsCoverage pagination 1`] = `
                     <div
                       class="css-206mi5"
                     >
-                      Sipped
+                      Skipped
                     </div>
                   </div>
                 </th>

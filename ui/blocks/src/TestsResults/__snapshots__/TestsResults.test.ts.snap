@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TestsResults overview 1`] = `
+exports[`TestsResults overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -11,11 +11,7 @@ exports[`TestsResults overview 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -156,7 +152,7 @@ exports[`TestsResults overview 1`] = `
                     <span
                       class="css-15vncxw-Cell"
                     >
-                      Table.test.ts (12 tests)
+                      Table.test.ts(12 tests)
                     </span>
                   </div>
                 </td>
@@ -769,7 +765,7 @@ exports[`TestsResults overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TestsResults pagination 1`] = `
+exports[`TestsResults pagination snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -780,11 +776,7 @@ exports[`TestsResults pagination 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -925,7 +917,7 @@ exports[`TestsResults pagination 1`] = `
                     <span
                       class="css-15vncxw-Cell"
                     >
-                      Table.test.ts (12 tests)
+                      Table.test.ts(12 tests)
                     </span>
                   </div>
                 </td>

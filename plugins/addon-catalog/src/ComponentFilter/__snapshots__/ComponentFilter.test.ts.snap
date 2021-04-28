@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ComponentFilter overview 1`] = `
+exports[`ComponentFilter overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-3bvl02-ComponentFilter"
@@ -46,6 +46,7 @@ exports[`ComponentFilter overview 1`] = `
         class="css-4cffwv"
       >
         <select
+          aria-label="select sorting order"
           class="css-e7xs09-ComponentFilter"
         >
           <option

@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`StorySource customTitle 1`] = `
+exports[`StorySource customTitle snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
+    data-testid="story-source"
   >
     <div
       class="css-jxxswp"
@@ -13,6 +14,7 @@ exports[`StorySource customTitle 1`] = `
         class="css-xhp9da"
       >
         <a
+          aria-label="Story source"
           class="css-walqom-LinkHeading"
           data-id="story-source"
           data-level="3"
@@ -189,10 +191,11 @@ exports[`StorySource customTitle 1`] = `
 </DocumentFragment>
 `;
 
-exports[`StorySource noMargin 1`] = `
+exports[`StorySource noMargin snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-7wa6r1-StoryBlockContainer"
+    data-testid="story-source"
   >
     <div
       class="css-jxxswp"
@@ -200,11 +203,7 @@ exports[`StorySource noMargin 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -325,24 +324,26 @@ exports[`StorySource noMargin 1`] = `
 </DocumentFragment>
 `;
 
-exports[`StorySource notCollapsible 1`] = `
+exports[`StorySource notCollapsible snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
+    data-testid="story-source"
   >
     <div
       class="css-jxxswp"
-      id="id-of-story"
+      id="story-source-id-of-story"
     >
       <div
         class="css-xhp9da"
       >
         <a
+          aria-label="story"
           class="css-1ptrway-LinkHeading"
-          data-id="id-of-story"
+          data-id="story-source-id-of-story"
           data-level="4"
           data-title="story"
-          href="http://localhost/#id-of-story"
+          href="http://localhost/#story-source-id-of-story"
         >
           <svg
             aria-hidden="true"
@@ -478,10 +479,11 @@ exports[`StorySource notCollapsible 1`] = `
 </DocumentFragment>
 `;
 
-exports[`StorySource overview 1`] = `
+exports[`StorySource overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
+    data-testid="story-source"
   >
     <div
       class="css-jxxswp"
@@ -489,11 +491,7 @@ exports[`StorySource overview 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -818,10 +816,11 @@ exports[`StorySource overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`StorySource theme 1`] = `
+exports[`StorySource theme snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
+    data-testid="story-source"
   >
     <div
       class="css-jxxswp"
@@ -829,11 +828,7 @@ exports[`StorySource theme 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -1158,7 +1153,7 @@ exports[`StorySource theme 1`] = `
 </DocumentFragment>
 `;
 
-exports[`StorySource themeSelector 1`] = `
+exports[`StorySource themeSelector snapshot 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -1183,6 +1178,7 @@ exports[`StorySource themeSelector 1`] = `
     >
       <div
         class="css-1xkyebe"
+        data-testid="story-source"
       >
         <div
           class="css-jxxswp"
@@ -1190,11 +1186,7 @@ exports[`StorySource themeSelector 1`] = `
         >
           <div
             class="css-xhp9da"
-          >
-            <h3
-              class="css-16ist9v-BlockContainer"
-            />
-          </div>
+          />
         </div>
         <div
           aria-hidden="false"

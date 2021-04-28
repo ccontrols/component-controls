@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CategoryPage overview 1`] = `
+exports[`CategoryPage overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1hkyity"
@@ -163,6 +163,7 @@ exports[`CategoryPage overview 1`] = `
                 class="css-4cffwv"
               >
                 <select
+                  aria-label="select sort order"
                   class="css-1lmm0mo"
                   name="sortorder"
                 >

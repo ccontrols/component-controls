@@ -37,6 +37,15 @@ export const LinkHeading: FC<LinkHeadingProps> = ({
         .filter(child => child)
     : children;
   const linkId = titleToId(id || childStrings);
+  const label =
+    title ||
+    (Array.isArray(childStrings)
+      ? childStrings
+          .map(c =>
+            typeof c === 'string' ? c : Array.isArray(c) ? c.join(' ') : '',
+          )
+          .join(' ')
+      : `navigate to ${linkId}`);
   return (
     <Box id={linkId} variant="linkheading.container">
       <Box variant="linkheading.inner">
@@ -45,16 +54,19 @@ export const LinkHeading: FC<LinkHeadingProps> = ({
             sx={{ paddingRight: `${padding}px`, left: -(size + padding) }}
             variant="linkheading.link"
             href={pageLink(linkId)}
-            data-title={title || childStrings}
+            aria-label={label}
+            data-title={label}
             data-id={linkId}
             data-level={level}
           >
             <LinkIcon size={size} verticalAlign="middle" />
           </Link>
         )}
-        <Heading as={as} variant={`styles.${as}`} {...rest}>
-          {children}
-        </Heading>
+        {children && (
+          <Heading as={as} variant={`styles.${as}`} {...rest}>
+            {children}
+          </Heading>
+        )}
       </Box>
     </Box>
   );

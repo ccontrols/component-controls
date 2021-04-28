@@ -4,10 +4,17 @@ import { TeplateFormats } from './types';
 
 export const accessibilityTemplate = (
   format: TeplateFormats,
+  ally: boolean = true,
 ): {
   allyimports: string;
   allytest: string;
 } => {
+  if (!ally) {
+    return {
+      allyimports: '',
+      allytest: '',
+    };
+  }
   const importPath = path.resolve(
     __dirname,
     `../templates/accessibility/import/import.${format}.js`,

@@ -42,6 +42,7 @@ export const ComponentFilter: FC<BoxProps> = props => {
       <div sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
         <div sx={{ mr: 1 }}>sort by:</div>
         <Select
+          aria-label="select sorting order"
           sx={{ width: '200px', py: '3px' }}
           onChange={e =>
             setState({

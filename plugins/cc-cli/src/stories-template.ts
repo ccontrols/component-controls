@@ -27,6 +27,7 @@ export const createStoriesTemplate: TemplateFunction<StoryTemplateOptions> = asy
     name,
     output,
     bundle,
+    ally,
     ...rest
   } = options;
   let stories: { id?: string; name: string }[] = [];
@@ -75,7 +76,7 @@ export const createStoriesTemplate: TemplateFunction<StoryTemplateOptions> = asy
   );
   const render = dot.template(fs.readFileSync(renderPath, 'utf8'))({
     bundle: !!bundle,
-    ...accessibilityTemplate(format),
+    ...accessibilityTemplate(format, ally),
   });
   const importPath = `.${path.sep}${(output
     ? path.relative(output, storyPath)

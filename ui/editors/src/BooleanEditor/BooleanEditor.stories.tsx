@@ -17,7 +17,7 @@ export const overview: Example = () => {
         prop: { type: ControlTypes.BOOLEAN, value: state },
       }}
     >
-      <BooleanEditor name="prop" />
+      <BooleanEditor name="prop" aria-label="click to select" />
     </ControlsStateProvider>
   );
 };

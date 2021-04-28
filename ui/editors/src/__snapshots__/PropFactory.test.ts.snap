@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PropFactory overview 1`] = `
+exports[`PropFactory overview snapshot 1`] = `
 <DocumentFragment>
   <input
+    aria-label="custom editor"
     id="prop"
     type="checkbox"
   />

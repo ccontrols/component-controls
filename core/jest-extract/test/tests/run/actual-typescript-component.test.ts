@@ -21,10 +21,10 @@ beforeAll(async () => {
 describe('react typescript component', () => {
   it('testResults ', () => {
     expect(results?.results[0].testResults[0]).toMatchObject({
-      ancestorTitles: ['Popover'],
-      fullName: 'Popover overview',
+      ancestorTitles: ['Popover', 'overview'],
+      fullName: 'Popover overview snapshot',
       status: 'passed',
-      title: 'overview',
+      title: 'snapshot',
     });
   });
 

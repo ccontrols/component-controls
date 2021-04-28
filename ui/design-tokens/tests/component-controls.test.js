@@ -1,4 +1,8 @@
 const path = require('path');
+const { run } = require('axe-core');
+const { reactRunDOM } = require('@component-controls/test-renderers');
+require('@component-controls/jest-axe-matcher');
+
 const {
   loadConfigurations,
   extractDocuments,
@@ -16,7 +20,7 @@ describe('component-controls generated', () => {
     documents
       .filter(file => !isMDXDocument(file, config.instrument))
       .forEach(file => {
-        // eslint-disable-next-line global-require
+        // eslint-disable-next-line global-require, import/no-dynamic-require
         const exports = require(file);
         const doc = exports.default;
         const examples = Object.keys(exports)
@@ -26,7 +30,7 @@ describe('component-controls generated', () => {
         if (examples.length) {
           describe(doc.title, () => {
             examples.forEach(example => {
-              it(example.name, async () => {
+              describe(example.name, () => {
                 let rendered;
                 act(() => {
                   rendered = renderExample({
@@ -39,8 +43,14 @@ describe('component-controls generated', () => {
                   renderErr();
                   return;
                 }
-                const { asFragment } = render(rendered);
-                expect(asFragment()).toMatchSnapshot();
+                it('snapshot', () => {
+                  const { asFragment } = render(rendered);
+                  expect(asFragment()).toMatchSnapshot();
+                });
+                it('accessibility', async () => {
+                  const axeResults = await reactRunDOM(rendered, run);
+                  expect(axeResults).toHaveNoAxeViolations();
+                });
               });
             });
           });

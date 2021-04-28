@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ComponentList overview 1`] = `
+exports[`ComponentList overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xm7kb8-ComponentList"
@@ -28,8 +28,8 @@ exports[`ComponentList overview 1`] = `
             class="css-6582y1-ComponentContributors"
           >
             <div
-              aria-label="avatars of hasparus, lachlanjc, atanasster"
-              class="css-1wxrz40-GithubAvatarList"
+              aria-label="avatars of martin-stoyanov, atanasster"
+              class="css-1yvvfp0-GithubAvatarList"
             >
               <div
                 class="css-dam4fv-GithubAvatar"
@@ -39,26 +39,11 @@ exports[`ComponentList overview 1`] = `
                   class="css-1en2h0i-GithubAvatar"
                 >
                   <img
+                    alt="avatar of martin-stoyanov"
                     class="css-1y16e88"
                     height="24"
-                    src="https://github.com/hasparus"
-                    title="hasparus"
-                    width="24"
-                  />
-                </div>
-              </div>
-              <div
-                class="css-dam4fv-GithubAvatar"
-                style="display: inline-block;"
-              >
-                <div
-                  class="css-1en2h0i-GithubAvatar"
-                >
-                  <img
-                    class="css-1y16e88"
-                    height="24"
-                    src="https://github.com/lachlanjc"
-                    title="lachlanjc"
+                    src="https://github.com/martin-stoyanov"
+                    title="martin-stoyanov"
                     width="24"
                   />
                 </div>
@@ -71,6 +56,7 @@ exports[`ComponentList overview 1`] = `
                   class="css-1en2h0i-GithubAvatar"
                 >
                   <img
+                    alt="avatar of atanasster"
                     class="css-1y16e88"
                     height="24"
                     src="https://github.com/atanasster"
@@ -113,15 +99,19 @@ exports[`ComponentList overview 1`] = `
       <div
         class="css-1akfoys-ComponentCard"
       />
-      <p>
-        Markdown descripton for component.
-with a 
-        <a
-          href="https://google.com"
-        >
-          link
-        </a>
-      </p>
+      <div
+        variant="styles.p"
+      >
+        Markdown 
+        <strong>
+          descripton
+        </strong>
+         for 
+        <em>
+          component
+        </em>
+        .
+      </div>
       <div
         class="css-k8h5so-ComponentCard"
       >
@@ -134,9 +124,7 @@ with a
             class="story-render-container css-dhmrnb"
           >
             <svg
-              aria-valuemax="1"
-              aria-valuemin="0"
-              aria-valuenow="0.5"
+              aria-label="example donut graphic"
               class="css-14d2907"
               fill="none"
               height="128"
@@ -255,7 +243,7 @@ with a
       >
         <a
           class="css-1t54e2w"
-          href="/docs/blocks-core-story-plain--controls"
+          href="/docs/id-of-button-story"
         >
           <div
             class="css-kbmfeb-ComponentCard"
@@ -265,226 +253,42 @@ with a
         </a>
         <div
           class="css-10zcph3-ComponentCard"
-        >
-          <div
-            class="css-6582y1-ComponentContributors"
-          >
-            <div
-              aria-label="avatars of hasparus, lachlanjc, atanasster"
-              class="css-1wxrz40-GithubAvatarList"
-            >
-              <div
-                class="css-dam4fv-GithubAvatar"
-                style="display: inline-block;"
-              >
-                <div
-                  class="css-1en2h0i-GithubAvatar"
-                >
-                  <img
-                    class="css-1y16e88"
-                    height="24"
-                    src="https://github.com/hasparus"
-                    title="hasparus"
-                    width="24"
-                  />
-                </div>
-              </div>
-              <div
-                class="css-dam4fv-GithubAvatar"
-                style="display: inline-block;"
-              >
-                <div
-                  class="css-1en2h0i-GithubAvatar"
-                >
-                  <img
-                    class="css-1y16e88"
-                    height="24"
-                    src="https://github.com/lachlanjc"
-                    title="lachlanjc"
-                    width="24"
-                  />
-                </div>
-              </div>
-              <div
-                class="css-9cbusc-GithubAvatar"
-                style="display: inline-block;"
-              >
-                <div
-                  class="css-1en2h0i-GithubAvatar"
-                >
-                  <img
-                    class="css-1y16e88"
-                    height="24"
-                    src="https://github.com/atanasster"
-                    title="atanasster"
-                    width="24"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        />
       </div>
       <div
         class="css-nj7jql-ComponentCard"
       >
         <div />
-        <div
-          style="display: inline-block;"
-        >
-          <a
-            class="css-1yxfg47-CommitsPopover"
-          >
-            <div
-              class="css-zf8zhj"
-            >
-              <div
-                class="css-1vu7ggh-CommitsPopover"
-              >
-                commits:
-              </div>
-              <span
-                class="css-uv6qe8"
-              >
-                12
-              </span>
-            </div>
-          </a>
-        </div>
       </div>
       <div
         class="css-1akfoys-ComponentCard"
       />
-      <p>
+      <div
+        variant="styles.p"
+      >
         Markdown descripton for component.
-with a 
-        <a
-          href="https://google.com"
-        >
-          link
-        </a>
-      </p>
+# With a heading
+and some bold 
+        <strong>
+          text
+        </strong>
+      </div>
       <div
         class="css-k8h5so-ComponentCard"
       >
         <div
           class="css-nxqmcg-ComponentCard"
           data-testid="story"
-          id="blocks-core-story-plain--controls"
+          id="id-of-button-story"
         >
           <div
             class="story-render-container css-dhmrnb"
           >
-            <svg
-              aria-valuemax="1"
-              aria-valuemin="0"
-              aria-valuenow="0.5"
-              class="css-14d2907"
-              fill="none"
-              height="128"
-              role="img"
-              stroke="currentcolor"
-              stroke-width="2"
-              viewBox="0 0 32 32"
-              width="128"
+            <button
+              class="css-97huhz"
             >
-              <circle
-                cx="16"
-                cy="16"
-                opacity="0.125"
-                r="14"
-              />
-              <circle
-                cx="16"
-                cy="16"
-                r="14"
-                stroke-dasharray="87.96459430051421"
-                stroke-dashoffset="43.982297150257104"
-                transform="rotate(-90 16 16)"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-      <div
-        class="css-pfgifj-ComponentCard"
-      >
-        <div
-          class="css-1lguarf-ComponentCard"
-        >
-          <div
-            class="css-zf8zhj"
-          >
-            <span
-              class="css-13o2efz"
-            >
-              created:
-            </span>
-            <span
-              class="css-uv6qe8"
-            >
-              N/A
-            </span>
-          </div>
-          <div
-            class="css-zf8zhj"
-          >
-            <span
-              class="css-13o2efz"
-            >
-              updated:
-            </span>
-            <span
-              class="css-uv6qe8"
-            >
-              N/A
-            </span>
-          </div>
-        </div>
-        <div
-          class="css-1xa7s2f"
-        >
-          <div
-            class="css-zf8zhj"
-          >
-            <span
-              class="css-13o2efz"
-            >
-              source lines:
-            </span>
-            <span
-              class="css-uv6qe8"
-            >
-              25
-            </span>
-          </div>
-          <div
-            class="css-loy9lz-ComponentStats"
-          >
-            <span
-              class="css-13o2efz"
-            >
-              comments %:
-            </span>
-            <span
-              class="css-uv6qe8"
-            >
-              4
-            </span>
-          </div>
-          <div
-            class="css-loy9lz-ComponentStats"
-          >
-            <span
-              class="css-13o2efz"
-            >
-              todo lines:
-            </span>
-            <span
-              class="css-uv6qe8"
-            >
-              5
-            </span>
+              test
+            </button>
           </div>
         </div>
       </div>
@@ -497,7 +301,7 @@ with a
       >
         <a
           class="css-1t54e2w"
-          href="/docs/blocks-core-story-plain--controls"
+          href="/docs/id-of-single"
         >
           <div
             class="css-kbmfeb-ComponentCard"
@@ -507,226 +311,56 @@ with a
         </a>
         <div
           class="css-10zcph3-ComponentCard"
-        >
-          <div
-            class="css-6582y1-ComponentContributors"
-          >
-            <div
-              aria-label="avatars of hasparus, lachlanjc, atanasster"
-              class="css-1wxrz40-GithubAvatarList"
-            >
-              <div
-                class="css-dam4fv-GithubAvatar"
-                style="display: inline-block;"
-              >
-                <div
-                  class="css-1en2h0i-GithubAvatar"
-                >
-                  <img
-                    class="css-1y16e88"
-                    height="24"
-                    src="https://github.com/hasparus"
-                    title="hasparus"
-                    width="24"
-                  />
-                </div>
-              </div>
-              <div
-                class="css-dam4fv-GithubAvatar"
-                style="display: inline-block;"
-              >
-                <div
-                  class="css-1en2h0i-GithubAvatar"
-                >
-                  <img
-                    class="css-1y16e88"
-                    height="24"
-                    src="https://github.com/lachlanjc"
-                    title="lachlanjc"
-                    width="24"
-                  />
-                </div>
-              </div>
-              <div
-                class="css-9cbusc-GithubAvatar"
-                style="display: inline-block;"
-              >
-                <div
-                  class="css-1en2h0i-GithubAvatar"
-                >
-                  <img
-                    class="css-1y16e88"
-                    height="24"
-                    src="https://github.com/atanasster"
-                    title="atanasster"
-                    width="24"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        />
       </div>
       <div
         class="css-nj7jql-ComponentCard"
       >
-        <div />
         <div
-          style="display: inline-block;"
+          class="css-14a8v30-PackageLink"
         >
           <a
-            class="css-1yxfg47-CommitsPopover"
+            class="css-1t54e2w"
+            href="https://npmjs.com/package/@component-controls/blocks/v/1.0.3"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             <div
-              class="css-zf8zhj"
+              class="css-13b120i-PackageLink"
             >
-              <div
-                class="css-1vu7ggh-CommitsPopover"
-              >
-                commits:
-              </div>
-              <span
-                class="css-uv6qe8"
-              >
-                12
-              </span>
+              @component-controls/blocks
             </div>
           </a>
+          <span
+            class="css-n8ts03-PackageLink"
+          >
+            <span
+              class="css-vurnku"
+            >
+              1.0.3
+            </span>
+          </span>
         </div>
       </div>
       <div
         class="css-1akfoys-ComponentCard"
       />
-      <p>
-        Markdown descripton for component.
-with a 
-        <a
-          href="https://google.com"
-        >
-          link
-        </a>
-      </p>
       <div
         class="css-k8h5so-ComponentCard"
       >
         <div
           class="css-nxqmcg-ComponentCard"
           data-testid="story"
-          id="blocks-core-story-plain--controls"
+          id="id-of-single"
         >
           <div
             class="story-render-container css-dhmrnb"
           >
-            <svg
-              aria-valuemax="1"
-              aria-valuemin="0"
-              aria-valuenow="0.5"
-              class="css-14d2907"
-              fill="none"
-              height="128"
-              role="img"
-              stroke="currentcolor"
-              stroke-width="2"
-              viewBox="0 0 32 32"
-              width="128"
+            <h2
+              class="css-229nmx"
             >
-              <circle
-                cx="16"
-                cy="16"
-                opacity="0.125"
-                r="14"
-              />
-              <circle
-                cx="16"
-                cy="16"
-                r="14"
-                stroke-dasharray="87.96459430051421"
-                stroke-dashoffset="43.982297150257104"
-                transform="rotate(-90 16 16)"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-      <div
-        class="css-pfgifj-ComponentCard"
-      >
-        <div
-          class="css-1lguarf-ComponentCard"
-        >
-          <div
-            class="css-zf8zhj"
-          >
-            <span
-              class="css-13o2efz"
-            >
-              created:
-            </span>
-            <span
-              class="css-uv6qe8"
-            >
-              N/A
-            </span>
-          </div>
-          <div
-            class="css-zf8zhj"
-          >
-            <span
-              class="css-13o2efz"
-            >
-              updated:
-            </span>
-            <span
-              class="css-uv6qe8"
-            >
-              N/A
-            </span>
-          </div>
-        </div>
-        <div
-          class="css-1xa7s2f"
-        >
-          <div
-            class="css-zf8zhj"
-          >
-            <span
-              class="css-13o2efz"
-            >
-              source lines:
-            </span>
-            <span
-              class="css-uv6qe8"
-            >
-              25
-            </span>
-          </div>
-          <div
-            class="css-loy9lz-ComponentStats"
-          >
-            <span
-              class="css-13o2efz"
-            >
-              comments %:
-            </span>
-            <span
-              class="css-uv6qe8"
-            >
-              4
-            </span>
-          </div>
-          <div
-            class="css-loy9lz-ComponentStats"
-          >
-            <span
-              class="css-13o2efz"
-            >
-              todo lines:
-            </span>
-            <span
-              class="css-uv6qe8"
-            >
-              5
-            </span>
+              Components
+            </h2>
           </div>
         </div>
       </div>
@@ -739,7 +373,7 @@ with a
       >
         <a
           class="css-1t54e2w"
-          href="/docs/blocks-core-story-plain--controls"
+          href="/docs/id-of-story"
         >
           <div
             class="css-kbmfeb-ComponentCard"
@@ -749,104 +383,42 @@ with a
         </a>
         <div
           class="css-10zcph3-ComponentCard"
-        >
-          <div
-            class="css-6582y1-ComponentContributors"
-          >
-            <div
-              aria-label="avatars of hasparus, lachlanjc, atanasster"
-              class="css-1wxrz40-GithubAvatarList"
-            >
-              <div
-                class="css-dam4fv-GithubAvatar"
-                style="display: inline-block;"
-              >
-                <div
-                  class="css-1en2h0i-GithubAvatar"
-                >
-                  <img
-                    class="css-1y16e88"
-                    height="24"
-                    src="https://github.com/hasparus"
-                    title="hasparus"
-                    width="24"
-                  />
-                </div>
-              </div>
-              <div
-                class="css-dam4fv-GithubAvatar"
-                style="display: inline-block;"
-              >
-                <div
-                  class="css-1en2h0i-GithubAvatar"
-                >
-                  <img
-                    class="css-1y16e88"
-                    height="24"
-                    src="https://github.com/lachlanjc"
-                    title="lachlanjc"
-                    width="24"
-                  />
-                </div>
-              </div>
-              <div
-                class="css-9cbusc-GithubAvatar"
-                style="display: inline-block;"
-              >
-                <div
-                  class="css-1en2h0i-GithubAvatar"
-                >
-                  <img
-                    class="css-1y16e88"
-                    height="24"
-                    src="https://github.com/atanasster"
-                    title="atanasster"
-                    width="24"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        />
       </div>
       <div
         class="css-nj7jql-ComponentCard"
       >
-        <div />
         <div
-          style="display: inline-block;"
+          class="css-14a8v30-PackageLink"
         >
           <a
-            class="css-1yxfg47-CommitsPopover"
+            class="css-1t54e2w"
+            href="https://npmjs.com/package/@component-controls/blocks/v/1.0.3"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             <div
-              class="css-zf8zhj"
+              class="css-13b120i-PackageLink"
             >
-              <div
-                class="css-1vu7ggh-CommitsPopover"
-              >
-                commits:
-              </div>
-              <span
-                class="css-uv6qe8"
-              >
-                12
-              </span>
+              @component-controls/blocks
             </div>
           </a>
+          <span
+            class="css-n8ts03-PackageLink"
+          >
+            <span
+              class="css-vurnku"
+            >
+              1.0.3
+            </span>
+          </span>
         </div>
       </div>
       <div
         class="css-1akfoys-ComponentCard"
       />
       <p>
-        Markdown descripton for component.
-with a 
-        <a
-          href="https://google.com"
-        >
-          link
-        </a>
+        description of story
       </p>
       <div
         class="css-k8h5so-ComponentCard"
@@ -854,121 +426,16 @@ with a
         <div
           class="css-nxqmcg-ComponentCard"
           data-testid="story"
-          id="blocks-core-story-plain--controls"
+          id="id-of-story"
         >
           <div
             class="story-render-container css-dhmrnb"
           >
-            <svg
-              aria-valuemax="1"
-              aria-valuemin="0"
-              aria-valuenow="0.5"
-              class="css-14d2907"
-              fill="none"
-              height="128"
-              role="img"
-              stroke="currentcolor"
-              stroke-width="2"
-              viewBox="0 0 32 32"
-              width="128"
+            <h2
+              class="css-229nmx"
             >
-              <circle
-                cx="16"
-                cy="16"
-                opacity="0.125"
-                r="14"
-              />
-              <circle
-                cx="16"
-                cy="16"
-                r="14"
-                stroke-dasharray="87.96459430051421"
-                stroke-dashoffset="43.982297150257104"
-                transform="rotate(-90 16 16)"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-      <div
-        class="css-pfgifj-ComponentCard"
-      >
-        <div
-          class="css-1lguarf-ComponentCard"
-        >
-          <div
-            class="css-zf8zhj"
-          >
-            <span
-              class="css-13o2efz"
-            >
-              created:
-            </span>
-            <span
-              class="css-uv6qe8"
-            >
-              N/A
-            </span>
-          </div>
-          <div
-            class="css-zf8zhj"
-          >
-            <span
-              class="css-13o2efz"
-            >
-              updated:
-            </span>
-            <span
-              class="css-uv6qe8"
-            >
-              N/A
-            </span>
-          </div>
-        </div>
-        <div
-          class="css-1xa7s2f"
-        >
-          <div
-            class="css-zf8zhj"
-          >
-            <span
-              class="css-13o2efz"
-            >
-              source lines:
-            </span>
-            <span
-              class="css-uv6qe8"
-            >
-              25
-            </span>
-          </div>
-          <div
-            class="css-loy9lz-ComponentStats"
-          >
-            <span
-              class="css-13o2efz"
-            >
-              comments %:
-            </span>
-            <span
-              class="css-uv6qe8"
-            >
-              4
-            </span>
-          </div>
-          <div
-            class="css-loy9lz-ComponentStats"
-          >
-            <span
-              class="css-13o2efz"
-            >
-              todo lines:
-            </span>
-            <span
-              class="css-uv6qe8"
-            >
-              5
-            </span>
+              Components
+            </h2>
           </div>
         </div>
       </div>

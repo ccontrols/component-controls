@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 import React, { ReactElement } from 'react';
-import { Donut, Button, Heading } from 'theme-ui';
+import { Button, Heading } from 'theme-ui';
 import {
   Store,
   getDefaultStore,
@@ -11,7 +11,9 @@ import {
 } from '@component-controls/core';
 import { render as reactRender } from '@component-controls/render/react';
 import ClassicPage from '@component-controls/pages/ClassicPage';
+import { Donut } from '@component-controls/components';
 import { MDXContent } from './MDXStory';
+
 import img_example from './image_example.jpg';
 
 export const store: Store = {
@@ -137,10 +139,8 @@ export const store: Store = {
       info: {
         description: `
 Markdown descripton for component.
-
 # With a heading
-
-and a [link](https://google.com)
+and some bold **text**
         `,
         displayName: 'typescript',
         props: {
@@ -696,8 +696,7 @@ and a [link](https://google.com)
       },
       info: {
         description: `
-Markdown descripton for component.
-with a [link](https://google.com)
+Markdown **descripton** for *component*.
         `,
         displayName: 'Control',
         props: {
@@ -731,9 +730,9 @@ with a [link](https://google.com)
       title: 'Story',
       stories: [
         'id-of-story',
-        'id-of-single',
         'id-of-button-story',
         'blocks-core-story-plain--controls',
+        'id-of-single',
       ],
     },
     mdxStory: {
@@ -809,7 +808,9 @@ with a [link](https://google.com)
       source: "() => 'hello'",
     },
     'blocks-core-story-plain--controls': {
-      renderFn: (): ReactElement => <Donut value={1 / 2} />,
+      renderFn: (): ReactElement => (
+        <Donut value={1 / 2} aria-label="example donut graphic" />
+      ),
       id: 'blocks-core-story-plain--controls',
       doc: 'Story',
       name: 'controls',
@@ -831,6 +832,7 @@ with a [link](https://google.com)
           {
             url:
               'https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1',
+            'aria-label': 'figma design file',
           },
         ],
         notes: [
@@ -844,7 +846,7 @@ with a [link](https://google.com)
             `,
           },
         ],
-        images: [img_example],
+        images: [{ src: img_example, 'aria-label': 'design resource image' }],
       },
       arguments: [
         {

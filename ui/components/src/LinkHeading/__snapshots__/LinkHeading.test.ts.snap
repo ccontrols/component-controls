@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LinkHeading overview 1`] = `
+exports[`LinkHeading overview snapshot 1`] = `
 <DocumentFragment>
   <div
     style="margin-left: 32px;"
@@ -13,10 +13,11 @@ exports[`LinkHeading overview 1`] = `
         class="css-xhp9da"
       >
         <a
+          aria-label="navigate to linkheading-text"
           class="css-6ugsdx-LinkHeading"
           data-id="linkheading-text"
           data-level="1"
-          data-title="LinkHeading text"
+          data-title="navigate to linkheading-text"
           href="http://localhost/#linkheading-text"
         >
           <svg

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tree arrowsStart 1`] = `
+exports[`Tree arrowsStart snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1w9pxwp"
@@ -624,7 +624,7 @@ exports[`Tree arrowsStart 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Tree customExpandIcons 1`] = `
+exports[`Tree customExpandIcons snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1w9pxwp"
@@ -1248,7 +1248,7 @@ exports[`Tree customExpandIcons 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Tree items 1`] = `
+exports[`Tree items snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1w9pxwp"
@@ -1873,7 +1873,7 @@ exports[`Tree items 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Tree largeIndentation 1`] = `
+exports[`Tree largeIndentation snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1w9pxwp"
@@ -2498,7 +2498,7 @@ exports[`Tree largeIndentation 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Tree overview 1`] = `
+exports[`Tree overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-w4m163"
@@ -2704,13 +2704,14 @@ exports[`Tree overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Tree search 1`] = `
+exports[`Tree search snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1w9pxwp"
   >
     <input
       class="css-1onaisy"
+      placeholder="search"
       type="search"
       value=""
     />

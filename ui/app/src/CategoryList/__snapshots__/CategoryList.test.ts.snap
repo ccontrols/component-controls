@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CategoryList overview 1`] = `
+exports[`CategoryList overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1hkyity"
@@ -129,9 +129,6 @@ exports[`CategoryList overview 1`] = `
         >
           story subtitle
         </h2>
-        <h1
-          class="css-ymxumn"
-        />
         <div
           class="css-vurnku"
         >

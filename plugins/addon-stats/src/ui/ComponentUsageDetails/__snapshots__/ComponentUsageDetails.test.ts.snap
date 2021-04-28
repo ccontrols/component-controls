@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ComponentUsageDetails overview 1`] = `
+exports[`ComponentUsageDetails overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -13,6 +13,7 @@ exports[`ComponentUsageDetails overview 1`] = `
         class="css-xhp9da"
       >
         <a
+          aria-label="ArrowButton"
           class="css-walqom-LinkHeading"
           data-id="attribute-arrowbutton"
           data-level="3"
@@ -91,7 +92,7 @@ exports[`ComponentUsageDetails overview 1`] = `
                 role="row"
               >
                 <th
-                  class="css-9hyy6f"
+                  class="css-n59tc9"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
@@ -108,7 +109,7 @@ exports[`ComponentUsageDetails overview 1`] = `
                   </div>
                 </th>
                 <th
-                  class="css-9hyy6f"
+                  class="css-n59tc9"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
@@ -149,7 +150,7 @@ exports[`ComponentUsageDetails overview 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -169,7 +170,7 @@ exports[`ComponentUsageDetails overview 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >

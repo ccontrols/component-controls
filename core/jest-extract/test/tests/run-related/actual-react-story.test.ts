@@ -20,18 +20,14 @@ describe('react story tests', () => {
             {
               ancestorTitles: ['VariantButton'],
               failureDetails: [],
-              failureMessages: [],
               fullName: 'VariantButton primary',
-              location: null,
               status: 'passed',
               title: 'primary',
             },
             {
               ancestorTitles: ['VariantButton'],
               failureDetails: [],
-              failureMessages: [],
               fullName: 'VariantButton disabled',
-              location: null,
               status: 'passed',
               title: 'disabled',
             },

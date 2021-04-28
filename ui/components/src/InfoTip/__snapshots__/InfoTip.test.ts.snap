@@ -1,11 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InfoTip overview 1`] = `
+exports[`InfoTip overview snapshot 1`] = `
 <DocumentFragment>
   <div
     style="display: inline-block;"
   >
     <button
+      aria-label="
+  # Header H1
+  ## Header H2
+  ### Header H3
+  #### Header H4
+  ##### Header H5
+  
+  some text  
+  "
       class="css-di2hg2-InfoTip"
     >
       <svg

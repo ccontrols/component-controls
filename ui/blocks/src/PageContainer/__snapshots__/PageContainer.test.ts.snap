@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PageContainer components 1`] = `
+exports[`PageContainer components snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-cwbyoi-Title"
@@ -14,7 +14,7 @@ exports[`PageContainer components 1`] = `
 </DocumentFragment>
 `;
 
-exports[`PageContainer overview 1`] = `
+exports[`PageContainer overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-cwbyoi-Title"

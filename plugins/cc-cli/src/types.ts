@@ -33,6 +33,10 @@ export type TemplateOptions = {
    * describe section label
    */
   name?: string;
+  /**
+   * if true, include axe accessibility tests
+   */
+  ally?: boolean;
 };
 
 export interface StoryTemplateOptions extends TemplateOptions {
