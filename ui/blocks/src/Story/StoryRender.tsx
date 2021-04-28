@@ -10,10 +10,12 @@ import { useStore, useExternalOptions } from '@component-controls/store';
 export interface IframeWrapperProps {
   initialIframeContent?: string;
   style?: CSSProperties;
+  title?: string;
 }
 
 const IframeWrapper: FC<IframeWrapperProps> = ({
   children,
+  title,
   style = { border: 0 },
   initialIframeContent = `
 <!DOCTYPE html>
@@ -38,6 +40,7 @@ const IframeWrapper: FC<IframeWrapperProps> = ({
   return (
     <Iframe
       initialContent={initialIframeContent}
+      title={title}
       style={{ ...style, height: size?.height, width: '100%' }}
     >
       <ReactResizeDetector
@@ -57,16 +60,22 @@ export type StoryWrapperType = 'wrapper' | 'iframe';
 export interface StoryWrapperProps {
   wrapper?: StoryWrapperType;
   iframeStyle?: CSSProperties;
+  title?: string;
 }
 
 const StoryWrapper: FC<StoryWrapperProps> = ({
   wrapper = 'wrapper',
   iframeStyle,
   children,
+  title,
 }) => {
   switch (wrapper) {
     case 'iframe':
-      return <IframeWrapper style={iframeStyle}>{children}</IframeWrapper>;
+      return (
+        <IframeWrapper title={title} style={iframeStyle}>
+          {children}
+        </IframeWrapper>
+      );
     default:
       return <Fragment>{children}</Fragment>;
   }
@@ -98,7 +107,11 @@ export const StoryRender: FC<StoryRenderProps & StoryWrapperProps> = forwardRef(
         variant={`${NAME}.container`}
         {...rest}
       >
-        <StoryWrapper iframeStyle={iframeStyle} wrapper={wrapper}>
+        <StoryWrapper
+          title={story.name}
+          iframeStyle={iframeStyle}
+          wrapper={wrapper}
+        >
           <Box
             className="story-render-container"
             variant={`${NAME}.wrapper`}
