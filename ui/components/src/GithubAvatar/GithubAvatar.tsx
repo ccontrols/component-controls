@@ -116,7 +116,12 @@ export const GithubAvatar: FC<GithubAvatarProps> = ({
     </div>
   );
   const avatar = (
-    <Avatar size={size} src={profile.avatar_url || ''} title={username} />
+    <Avatar
+      size={size}
+      src={profile.avatar_url || ''}
+      alt={`avatar of ${username}`}
+      title={username}
+    />
   );
   const imgSx: BoxProps['sx'] = {
     maxWidth: 'unset',
