@@ -33,7 +33,7 @@ export const StoryConfig: FC<StoryConfigProps> = ({
   const doc = useCurrentDocument();
   const docPackage = usePackage(doc?.package);
   return (
-    <StoryBlockContainer story={story} {...rest}>
+    <StoryBlockContainer data-testid="story-config" story={story} {...rest}>
       <BaseStoryConfig
         story={story}
         doc={doc}

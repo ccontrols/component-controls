@@ -34,7 +34,12 @@ export const Stories: FC<StoriesProps> = ({ id, name, title, ...rest }) => {
     return null;
   }
   return (
-    <StoryBlockContainer story={story} title={title} {...rest}>
+    <StoryBlockContainer
+      story={story}
+      title={title}
+      data-testid="stories"
+      {...rest}
+    >
       {stories.map((id: string) => {
         const story = store.stories[id];
         return (
