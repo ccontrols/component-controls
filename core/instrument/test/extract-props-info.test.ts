@@ -932,19 +932,13 @@ describe('extract-props-info', () => {
               name: 'union',
               value: [
                 {
-                  name: 'boolean',
-                },
-                {
-                  name: 'true',
-                },
-                {
-                  name: 'false',
+                  name: 'Booleanish',
                 },
                 {
                   name: 'inherit',
                 },
               ],
-              raw: 'boolean | "true" | "false" | "inherit"',
+              raw: 'Booleanish | "inherit"',
             },
           },
           contextMenu: {
@@ -964,19 +958,8 @@ describe('extract-props-info', () => {
           draggable: {
             parentName: 'HTMLAttributes',
             type: {
-              name: 'union',
-              value: [
-                {
-                  name: 'boolean',
-                },
-                {
-                  name: 'true',
-                },
-                {
-                  name: 'false',
-                },
-              ],
-              raw: 'boolean | "true" | "false"',
+              name: 'Booleanish',
+              raw: 'Booleanish',
             },
           },
           hidden: {
@@ -1010,19 +993,8 @@ describe('extract-props-info', () => {
           spellCheck: {
             parentName: 'HTMLAttributes',
             type: {
-              name: 'union',
-              value: [
-                {
-                  name: 'boolean',
-                },
-                {
-                  name: 'true',
-                },
-                {
-                  name: 'false',
-                },
-              ],
-              raw: 'boolean | "true" | "false"',
+              name: 'Booleanish',
+              raw: 'Booleanish',
             },
           },
           style: {
@@ -2113,1129 +2085,1128 @@ describe('extract-props-info', () => {
           onCopy: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLLIElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLLIElement>',
+              raw: 'ClipboardEventHandler<HTMLLIElement>',
             },
           },
           onCopyCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLLIElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLLIElement>',
+              raw: 'ClipboardEventHandler<HTMLLIElement>',
             },
           },
           onCut: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLLIElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLLIElement>',
+              raw: 'ClipboardEventHandler<HTMLLIElement>',
             },
           },
           onCutCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLLIElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLLIElement>',
+              raw: 'ClipboardEventHandler<HTMLLIElement>',
             },
           },
           onPaste: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLLIElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLLIElement>',
+              raw: 'ClipboardEventHandler<HTMLLIElement>',
             },
           },
           onPasteCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLLIElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLLIElement>',
+              raw: 'ClipboardEventHandler<HTMLLIElement>',
             },
           },
           onCompositionEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLLIElement>) => void)',
+              name: 'CompositionEventHandler<HTMLLIElement>',
+              raw: 'CompositionEventHandler<HTMLLIElement>',
             },
           },
           onCompositionEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLLIElement>) => void)',
+              name: 'CompositionEventHandler<HTMLLIElement>',
+              raw: 'CompositionEventHandler<HTMLLIElement>',
             },
           },
           onCompositionStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLLIElement>) => void)',
+              name: 'CompositionEventHandler<HTMLLIElement>',
+              raw: 'CompositionEventHandler<HTMLLIElement>',
             },
           },
           onCompositionStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLLIElement>) => void)',
+              name: 'CompositionEventHandler<HTMLLIElement>',
+              raw: 'CompositionEventHandler<HTMLLIElement>',
             },
           },
           onCompositionUpdate: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLLIElement>) => void)',
+              name: 'CompositionEventHandler<HTMLLIElement>',
+              raw: 'CompositionEventHandler<HTMLLIElement>',
             },
           },
           onCompositionUpdateCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLLIElement>) => void)',
+              name: 'CompositionEventHandler<HTMLLIElement>',
+              raw: 'CompositionEventHandler<HTMLLIElement>',
             },
           },
           onFocus: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FocusEvent<HTMLLIElement>) => void)',
+              name: 'FocusEventHandler<HTMLLIElement>',
+              raw: 'FocusEventHandler<HTMLLIElement>',
             },
           },
           onFocusCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FocusEvent<HTMLLIElement>) => void)',
+              name: 'FocusEventHandler<HTMLLIElement>',
+              raw: 'FocusEventHandler<HTMLLIElement>',
             },
           },
           onBlur: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FocusEvent<HTMLLIElement>) => void)',
+              name: 'FocusEventHandler<HTMLLIElement>',
+              raw: 'FocusEventHandler<HTMLLIElement>',
             },
           },
           onBlurCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FocusEvent<HTMLLIElement>) => void)',
+              name: 'FocusEventHandler<HTMLLIElement>',
+              raw: 'FocusEventHandler<HTMLLIElement>',
             },
           },
           onChange: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLLIElement>) => void)',
+              name: 'FormEventHandler<HTMLLIElement>',
+              raw: 'FormEventHandler<HTMLLIElement>',
             },
           },
           onChangeCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLLIElement>) => void)',
+              name: 'FormEventHandler<HTMLLIElement>',
+              raw: 'FormEventHandler<HTMLLIElement>',
             },
           },
           onBeforeInput: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLLIElement>) => void)',
+              name: 'FormEventHandler<HTMLLIElement>',
+              raw: 'FormEventHandler<HTMLLIElement>',
             },
           },
           onBeforeInputCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLLIElement>) => void)',
+              name: 'FormEventHandler<HTMLLIElement>',
+              raw: 'FormEventHandler<HTMLLIElement>',
             },
           },
           onInput: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLLIElement>) => void)',
+              name: 'FormEventHandler<HTMLLIElement>',
+              raw: 'FormEventHandler<HTMLLIElement>',
             },
           },
           onInputCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLLIElement>) => void)',
+              name: 'FormEventHandler<HTMLLIElement>',
+              raw: 'FormEventHandler<HTMLLIElement>',
             },
           },
           onReset: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLLIElement>) => void)',
+              name: 'FormEventHandler<HTMLLIElement>',
+              raw: 'FormEventHandler<HTMLLIElement>',
             },
           },
           onResetCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLLIElement>) => void)',
+              name: 'FormEventHandler<HTMLLIElement>',
+              raw: 'FormEventHandler<HTMLLIElement>',
             },
           },
           onSubmit: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLLIElement>) => void)',
+              name: 'FormEventHandler<HTMLLIElement>',
+              raw: 'FormEventHandler<HTMLLIElement>',
             },
           },
           onSubmitCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLLIElement>) => void)',
+              name: 'FormEventHandler<HTMLLIElement>',
+              raw: 'FormEventHandler<HTMLLIElement>',
             },
           },
           onInvalid: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLLIElement>) => void)',
+              name: 'FormEventHandler<HTMLLIElement>',
+              raw: 'FormEventHandler<HTMLLIElement>',
             },
           },
           onInvalidCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLLIElement>) => void)',
+              name: 'FormEventHandler<HTMLLIElement>',
+              raw: 'FormEventHandler<HTMLLIElement>',
             },
           },
           onLoad: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onLoadCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onError: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onErrorCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onKeyDown: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLLIElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLLIElement>',
+              raw: 'KeyboardEventHandler<HTMLLIElement>',
             },
           },
           onKeyDownCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLLIElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLLIElement>',
+              raw: 'KeyboardEventHandler<HTMLLIElement>',
             },
           },
           onKeyPress: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLLIElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLLIElement>',
+              raw: 'KeyboardEventHandler<HTMLLIElement>',
             },
           },
           onKeyPressCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLLIElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLLIElement>',
+              raw: 'KeyboardEventHandler<HTMLLIElement>',
             },
           },
           onKeyUp: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLLIElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLLIElement>',
+              raw: 'KeyboardEventHandler<HTMLLIElement>',
             },
           },
           onKeyUpCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLLIElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLLIElement>',
+              raw: 'KeyboardEventHandler<HTMLLIElement>',
             },
           },
           onAbort: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onAbortCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onCanPlay: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onCanPlayCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onCanPlayThrough: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onCanPlayThroughCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onDurationChange: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onDurationChangeCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onEmptied: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onEmptiedCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onEncrypted: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onEncryptedCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onEnded: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onEndedCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onLoadedData: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onLoadedDataCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onLoadedMetadata: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onLoadedMetadataCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onLoadStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onLoadStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onPause: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onPauseCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onPlay: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onPlayCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onPlaying: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onPlayingCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onProgress: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onProgressCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onRateChange: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onRateChangeCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onSeeked: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onSeekedCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onSeeking: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onSeekingCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onStalled: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onStalledCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onSuspend: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onSuspendCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onTimeUpdate: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onTimeUpdateCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onVolumeChange: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onVolumeChangeCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onWaiting: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onWaitingCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onAuxClick: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLLIElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLLIElement>',
+              raw: 'MouseEventHandler<HTMLLIElement>',
             },
           },
           onAuxClickCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLLIElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLLIElement>',
+              raw: 'MouseEventHandler<HTMLLIElement>',
             },
           },
           onClick: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLLIElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLLIElement>',
+              raw: 'MouseEventHandler<HTMLLIElement>',
             },
           },
           onClickCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLLIElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLLIElement>',
+              raw: 'MouseEventHandler<HTMLLIElement>',
             },
           },
           onContextMenu: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLLIElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLLIElement>',
+              raw: 'MouseEventHandler<HTMLLIElement>',
             },
           },
           onContextMenuCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLLIElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLLIElement>',
+              raw: 'MouseEventHandler<HTMLLIElement>',
             },
           },
           onDoubleClick: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLLIElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLLIElement>',
+              raw: 'MouseEventHandler<HTMLLIElement>',
             },
           },
           onDoubleClickCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLLIElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLLIElement>',
+              raw: 'MouseEventHandler<HTMLLIElement>',
             },
           },
           onDrag: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLLIElement>) => void)',
+              name: 'DragEventHandler<HTMLLIElement>',
+              raw: 'DragEventHandler<HTMLLIElement>',
             },
           },
           onDragCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLLIElement>) => void)',
+              name: 'DragEventHandler<HTMLLIElement>',
+              raw: 'DragEventHandler<HTMLLIElement>',
             },
           },
           onDragEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLLIElement>) => void)',
+              name: 'DragEventHandler<HTMLLIElement>',
+              raw: 'DragEventHandler<HTMLLIElement>',
             },
           },
           onDragEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLLIElement>) => void)',
+              name: 'DragEventHandler<HTMLLIElement>',
+              raw: 'DragEventHandler<HTMLLIElement>',
             },
           },
           onDragEnter: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLLIElement>) => void)',
+              name: 'DragEventHandler<HTMLLIElement>',
+              raw: 'DragEventHandler<HTMLLIElement>',
             },
           },
           onDragEnterCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLLIElement>) => void)',
+              name: 'DragEventHandler<HTMLLIElement>',
+              raw: 'DragEventHandler<HTMLLIElement>',
             },
           },
           onDragExit: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLLIElement>) => void)',
+              name: 'DragEventHandler<HTMLLIElement>',
+              raw: 'DragEventHandler<HTMLLIElement>',
             },
           },
           onDragExitCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLLIElement>) => void)',
+              name: 'DragEventHandler<HTMLLIElement>',
+              raw: 'DragEventHandler<HTMLLIElement>',
             },
           },
           onDragLeave: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLLIElement>) => void)',
+              name: 'DragEventHandler<HTMLLIElement>',
+              raw: 'DragEventHandler<HTMLLIElement>',
             },
           },
           onDragLeaveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLLIElement>) => void)',
+              name: 'DragEventHandler<HTMLLIElement>',
+              raw: 'DragEventHandler<HTMLLIElement>',
             },
           },
           onDragOver: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLLIElement>) => void)',
+              name: 'DragEventHandler<HTMLLIElement>',
+              raw: 'DragEventHandler<HTMLLIElement>',
             },
           },
           onDragOverCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLLIElement>) => void)',
+              name: 'DragEventHandler<HTMLLIElement>',
+              raw: 'DragEventHandler<HTMLLIElement>',
             },
           },
           onDragStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLLIElement>) => void)',
+              name: 'DragEventHandler<HTMLLIElement>',
+              raw: 'DragEventHandler<HTMLLIElement>',
             },
           },
           onDragStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLLIElement>) => void)',
+              name: 'DragEventHandler<HTMLLIElement>',
+              raw: 'DragEventHandler<HTMLLIElement>',
             },
           },
           onDrop: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLLIElement>) => void)',
+              name: 'DragEventHandler<HTMLLIElement>',
+              raw: 'DragEventHandler<HTMLLIElement>',
             },
           },
           onDropCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLLIElement>) => void)',
+              name: 'DragEventHandler<HTMLLIElement>',
+              raw: 'DragEventHandler<HTMLLIElement>',
             },
           },
           onMouseDown: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLLIElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLLIElement>',
+              raw: 'MouseEventHandler<HTMLLIElement>',
             },
           },
           onMouseDownCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLLIElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLLIElement>',
+              raw: 'MouseEventHandler<HTMLLIElement>',
             },
           },
           onMouseEnter: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLLIElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLLIElement>',
+              raw: 'MouseEventHandler<HTMLLIElement>',
             },
           },
           onMouseLeave: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLLIElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLLIElement>',
+              raw: 'MouseEventHandler<HTMLLIElement>',
             },
           },
           onMouseMove: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLLIElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLLIElement>',
+              raw: 'MouseEventHandler<HTMLLIElement>',
             },
           },
           onMouseMoveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLLIElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLLIElement>',
+              raw: 'MouseEventHandler<HTMLLIElement>',
             },
           },
           onMouseOut: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLLIElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLLIElement>',
+              raw: 'MouseEventHandler<HTMLLIElement>',
             },
           },
           onMouseOutCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLLIElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLLIElement>',
+              raw: 'MouseEventHandler<HTMLLIElement>',
             },
           },
           onMouseOver: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLLIElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLLIElement>',
+              raw: 'MouseEventHandler<HTMLLIElement>',
             },
           },
           onMouseOverCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLLIElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLLIElement>',
+              raw: 'MouseEventHandler<HTMLLIElement>',
             },
           },
           onMouseUp: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLLIElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLLIElement>',
+              raw: 'MouseEventHandler<HTMLLIElement>',
             },
           },
           onMouseUpCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLLIElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLLIElement>',
+              raw: 'MouseEventHandler<HTMLLIElement>',
             },
           },
           onSelect: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onSelectCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLLIElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLLIElement>',
+              raw: 'ReactEventHandler<HTMLLIElement>',
             },
           },
           onTouchCancel: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLLIElement>) => void)',
+              name: 'TouchEventHandler<HTMLLIElement>',
+              raw: 'TouchEventHandler<HTMLLIElement>',
             },
           },
           onTouchCancelCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLLIElement>) => void)',
+              name: 'TouchEventHandler<HTMLLIElement>',
+              raw: 'TouchEventHandler<HTMLLIElement>',
             },
           },
           onTouchEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLLIElement>) => void)',
+              name: 'TouchEventHandler<HTMLLIElement>',
+              raw: 'TouchEventHandler<HTMLLIElement>',
             },
           },
           onTouchEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLLIElement>) => void)',
+              name: 'TouchEventHandler<HTMLLIElement>',
+              raw: 'TouchEventHandler<HTMLLIElement>',
             },
           },
           onTouchMove: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLLIElement>) => void)',
+              name: 'TouchEventHandler<HTMLLIElement>',
+              raw: 'TouchEventHandler<HTMLLIElement>',
             },
           },
           onTouchMoveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLLIElement>) => void)',
+              name: 'TouchEventHandler<HTMLLIElement>',
+              raw: 'TouchEventHandler<HTMLLIElement>',
             },
           },
           onTouchStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLLIElement>) => void)',
+              name: 'TouchEventHandler<HTMLLIElement>',
+              raw: 'TouchEventHandler<HTMLLIElement>',
             },
           },
           onTouchStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLLIElement>) => void)',
+              name: 'TouchEventHandler<HTMLLIElement>',
+              raw: 'TouchEventHandler<HTMLLIElement>',
             },
           },
           onPointerDown: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLLIElement>) => void)',
+              name: 'PointerEventHandler<HTMLLIElement>',
+              raw: 'PointerEventHandler<HTMLLIElement>',
             },
           },
           onPointerDownCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLLIElement>) => void)',
+              name: 'PointerEventHandler<HTMLLIElement>',
+              raw: 'PointerEventHandler<HTMLLIElement>',
             },
           },
           onPointerMove: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLLIElement>) => void)',
+              name: 'PointerEventHandler<HTMLLIElement>',
+              raw: 'PointerEventHandler<HTMLLIElement>',
             },
           },
           onPointerMoveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLLIElement>) => void)',
+              name: 'PointerEventHandler<HTMLLIElement>',
+              raw: 'PointerEventHandler<HTMLLIElement>',
             },
           },
           onPointerUp: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLLIElement>) => void)',
+              name: 'PointerEventHandler<HTMLLIElement>',
+              raw: 'PointerEventHandler<HTMLLIElement>',
             },
           },
           onPointerUpCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLLIElement>) => void)',
+              name: 'PointerEventHandler<HTMLLIElement>',
+              raw: 'PointerEventHandler<HTMLLIElement>',
             },
           },
           onPointerCancel: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLLIElement>) => void)',
+              name: 'PointerEventHandler<HTMLLIElement>',
+              raw: 'PointerEventHandler<HTMLLIElement>',
             },
           },
           onPointerCancelCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLLIElement>) => void)',
+              name: 'PointerEventHandler<HTMLLIElement>',
+              raw: 'PointerEventHandler<HTMLLIElement>',
             },
           },
           onPointerEnter: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLLIElement>) => void)',
+              name: 'PointerEventHandler<HTMLLIElement>',
+              raw: 'PointerEventHandler<HTMLLIElement>',
             },
           },
           onPointerEnterCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLLIElement>) => void)',
+              name: 'PointerEventHandler<HTMLLIElement>',
+              raw: 'PointerEventHandler<HTMLLIElement>',
             },
           },
           onPointerLeave: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLLIElement>) => void)',
+              name: 'PointerEventHandler<HTMLLIElement>',
+              raw: 'PointerEventHandler<HTMLLIElement>',
             },
           },
           onPointerLeaveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLLIElement>) => void)',
+              name: 'PointerEventHandler<HTMLLIElement>',
+              raw: 'PointerEventHandler<HTMLLIElement>',
             },
           },
           onPointerOver: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLLIElement>) => void)',
+              name: 'PointerEventHandler<HTMLLIElement>',
+              raw: 'PointerEventHandler<HTMLLIElement>',
             },
           },
           onPointerOverCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLLIElement>) => void)',
+              name: 'PointerEventHandler<HTMLLIElement>',
+              raw: 'PointerEventHandler<HTMLLIElement>',
             },
           },
           onPointerOut: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLLIElement>) => void)',
+              name: 'PointerEventHandler<HTMLLIElement>',
+              raw: 'PointerEventHandler<HTMLLIElement>',
             },
           },
           onPointerOutCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLLIElement>) => void)',
+              name: 'PointerEventHandler<HTMLLIElement>',
+              raw: 'PointerEventHandler<HTMLLIElement>',
             },
           },
           onGotPointerCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLLIElement>) => void)',
+              name: 'PointerEventHandler<HTMLLIElement>',
+              raw: 'PointerEventHandler<HTMLLIElement>',
             },
           },
           onGotPointerCaptureCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLLIElement>) => void)',
+              name: 'PointerEventHandler<HTMLLIElement>',
+              raw: 'PointerEventHandler<HTMLLIElement>',
             },
           },
           onLostPointerCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLLIElement>) => void)',
+              name: 'PointerEventHandler<HTMLLIElement>',
+              raw: 'PointerEventHandler<HTMLLIElement>',
             },
           },
           onLostPointerCaptureCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLLIElement>) => void)',
+              name: 'PointerEventHandler<HTMLLIElement>',
+              raw: 'PointerEventHandler<HTMLLIElement>',
             },
           },
           onScroll: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: UIEvent<HTMLLIElement, UIEvent>) => void)',
+              name: 'UIEventHandler<HTMLLIElement>',
+              raw: 'UIEventHandler<HTMLLIElement>',
             },
           },
           onScrollCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: UIEvent<HTMLLIElement, UIEvent>) => void)',
+              name: 'UIEventHandler<HTMLLIElement>',
+              raw: 'UIEventHandler<HTMLLIElement>',
             },
           },
           onWheel: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: WheelEvent<HTMLLIElement>) => void)',
+              name: 'WheelEventHandler<HTMLLIElement>',
+              raw: 'WheelEventHandler<HTMLLIElement>',
             },
           },
           onWheelCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: WheelEvent<HTMLLIElement>) => void)',
+              name: 'WheelEventHandler<HTMLLIElement>',
+              raw: 'WheelEventHandler<HTMLLIElement>',
             },
           },
           onAnimationStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLLIElement>) => void)',
+              name: 'AnimationEventHandler<HTMLLIElement>',
+              raw: 'AnimationEventHandler<HTMLLIElement>',
             },
           },
           onAnimationStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLLIElement>) => void)',
+              name: 'AnimationEventHandler<HTMLLIElement>',
+              raw: 'AnimationEventHandler<HTMLLIElement>',
             },
           },
           onAnimationEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLLIElement>) => void)',
+              name: 'AnimationEventHandler<HTMLLIElement>',
+              raw: 'AnimationEventHandler<HTMLLIElement>',
             },
           },
           onAnimationEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLLIElement>) => void)',
+              name: 'AnimationEventHandler<HTMLLIElement>',
+              raw: 'AnimationEventHandler<HTMLLIElement>',
             },
           },
           onAnimationIteration: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLLIElement>) => void)',
+              name: 'AnimationEventHandler<HTMLLIElement>',
+              raw: 'AnimationEventHandler<HTMLLIElement>',
             },
           },
           onAnimationIterationCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLLIElement>) => void)',
+              name: 'AnimationEventHandler<HTMLLIElement>',
+              raw: 'AnimationEventHandler<HTMLLIElement>',
             },
           },
           onTransitionEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TransitionEvent<HTMLLIElement>) => void)',
+              name: 'TransitionEventHandler<HTMLLIElement>',
+              raw: 'TransitionEventHandler<HTMLLIElement>',
             },
           },
           onTransitionEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TransitionEvent<HTMLLIElement>) => void)',
+              name: 'TransitionEventHandler<HTMLLIElement>',
+              raw: 'TransitionEventHandler<HTMLLIElement>',
             },
           },
           ref: {
             parentName: 'ClassAttributes',
             type: {
-              name: 'function',
-              raw:
-                'string | ((instance: HTMLLIElement | null) => void) | RefObject<HTMLLIElement> | null',
+              name: 'LegacyRef<HTMLLIElement>',
+              raw: 'LegacyRef<HTMLLIElement>',
             },
           },
           key: {
@@ -3244,16 +3215,13 @@ describe('extract-props-info', () => {
               name: 'union',
               value: [
                 {
-                  name: 'string',
-                },
-                {
-                  name: 'number',
+                  name: 'Key',
                 },
                 {
                   name: 'null',
                 },
               ],
-              raw: 'string | number | null',
+              raw: 'Key | null',
             },
           },
         },
@@ -4166,19 +4134,13 @@ describe('extract-props-info', () => {
               name: 'union',
               value: [
                 {
-                  name: 'boolean',
-                },
-                {
-                  name: 'true',
-                },
-                {
-                  name: 'false',
+                  name: 'Booleanish',
                 },
                 {
                   name: 'inherit',
                 },
               ],
-              raw: 'boolean | "true" | "false" | "inherit"',
+              raw: 'Booleanish | "inherit"',
             },
           },
           contextMenu: {
@@ -4198,19 +4160,8 @@ describe('extract-props-info', () => {
           draggable: {
             parentName: 'HTMLAttributes',
             type: {
-              name: 'union',
-              value: [
-                {
-                  name: 'boolean',
-                },
-                {
-                  name: 'true',
-                },
-                {
-                  name: 'false',
-                },
-              ],
-              raw: 'boolean | "true" | "false"',
+              name: 'Booleanish',
+              raw: 'Booleanish',
             },
           },
           hidden: {
@@ -4244,19 +4195,8 @@ describe('extract-props-info', () => {
           spellCheck: {
             parentName: 'HTMLAttributes',
             type: {
-              name: 'union',
-              value: [
-                {
-                  name: 'boolean',
-                },
-                {
-                  name: 'true',
-                },
-                {
-                  name: 'false',
-                },
-              ],
-              raw: 'boolean | "true" | "false"',
+              name: 'Booleanish',
+              raw: 'Booleanish',
             },
           },
           style: {
@@ -5347,827 +5287,827 @@ describe('extract-props-info', () => {
           onCopy: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLDivElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLDivElement>',
+              raw: 'ClipboardEventHandler<HTMLDivElement>',
             },
           },
           onCopyCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLDivElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLDivElement>',
+              raw: 'ClipboardEventHandler<HTMLDivElement>',
             },
           },
           onCut: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLDivElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLDivElement>',
+              raw: 'ClipboardEventHandler<HTMLDivElement>',
             },
           },
           onCutCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLDivElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLDivElement>',
+              raw: 'ClipboardEventHandler<HTMLDivElement>',
             },
           },
           onPaste: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLDivElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLDivElement>',
+              raw: 'ClipboardEventHandler<HTMLDivElement>',
             },
           },
           onPasteCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLDivElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLDivElement>',
+              raw: 'ClipboardEventHandler<HTMLDivElement>',
             },
           },
           onCompositionEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLDivElement>) => void)',
+              name: 'CompositionEventHandler<HTMLDivElement>',
+              raw: 'CompositionEventHandler<HTMLDivElement>',
             },
           },
           onCompositionEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLDivElement>) => void)',
+              name: 'CompositionEventHandler<HTMLDivElement>',
+              raw: 'CompositionEventHandler<HTMLDivElement>',
             },
           },
           onCompositionStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLDivElement>) => void)',
+              name: 'CompositionEventHandler<HTMLDivElement>',
+              raw: 'CompositionEventHandler<HTMLDivElement>',
             },
           },
           onCompositionStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLDivElement>) => void)',
+              name: 'CompositionEventHandler<HTMLDivElement>',
+              raw: 'CompositionEventHandler<HTMLDivElement>',
             },
           },
           onCompositionUpdate: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLDivElement>) => void)',
+              name: 'CompositionEventHandler<HTMLDivElement>',
+              raw: 'CompositionEventHandler<HTMLDivElement>',
             },
           },
           onCompositionUpdateCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLDivElement>) => void)',
+              name: 'CompositionEventHandler<HTMLDivElement>',
+              raw: 'CompositionEventHandler<HTMLDivElement>',
             },
           },
           onFocus: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FocusEvent<HTMLDivElement>) => void)',
+              name: 'FocusEventHandler<HTMLDivElement>',
+              raw: 'FocusEventHandler<HTMLDivElement>',
             },
           },
           onFocusCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FocusEvent<HTMLDivElement>) => void)',
+              name: 'FocusEventHandler<HTMLDivElement>',
+              raw: 'FocusEventHandler<HTMLDivElement>',
             },
           },
           onBlur: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FocusEvent<HTMLDivElement>) => void)',
+              name: 'FocusEventHandler<HTMLDivElement>',
+              raw: 'FocusEventHandler<HTMLDivElement>',
             },
           },
           onBlurCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FocusEvent<HTMLDivElement>) => void)',
+              name: 'FocusEventHandler<HTMLDivElement>',
+              raw: 'FocusEventHandler<HTMLDivElement>',
             },
           },
           onChange: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onChangeCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onBeforeInput: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onBeforeInputCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onInput: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onInputCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onReset: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onResetCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onSubmit: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onSubmitCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onInvalid: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onInvalidCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onLoad: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onLoadCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onError: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onErrorCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onKeyDown: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLDivElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLDivElement>',
+              raw: 'KeyboardEventHandler<HTMLDivElement>',
             },
           },
           onKeyDownCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLDivElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLDivElement>',
+              raw: 'KeyboardEventHandler<HTMLDivElement>',
             },
           },
           onKeyPress: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLDivElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLDivElement>',
+              raw: 'KeyboardEventHandler<HTMLDivElement>',
             },
           },
           onKeyPressCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLDivElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLDivElement>',
+              raw: 'KeyboardEventHandler<HTMLDivElement>',
             },
           },
           onKeyUp: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLDivElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLDivElement>',
+              raw: 'KeyboardEventHandler<HTMLDivElement>',
             },
           },
           onKeyUpCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLDivElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLDivElement>',
+              raw: 'KeyboardEventHandler<HTMLDivElement>',
             },
           },
           onAbort: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onAbortCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onCanPlay: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onCanPlayCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onCanPlayThrough: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onCanPlayThroughCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onDurationChange: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onDurationChangeCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onEmptied: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onEmptiedCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onEncrypted: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onEncryptedCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onEnded: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onEndedCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onLoadedData: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onLoadedDataCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onLoadedMetadata: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onLoadedMetadataCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onLoadStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onLoadStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onPause: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onPauseCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onPlay: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onPlayCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onPlaying: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onPlayingCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onProgress: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onProgressCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onRateChange: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onRateChangeCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onSeeked: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onSeekedCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onSeeking: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onSeekingCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onStalled: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onStalledCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onSuspend: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onSuspendCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onTimeUpdate: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onTimeUpdateCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onVolumeChange: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onVolumeChangeCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onWaiting: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onWaitingCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onAuxClick: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onAuxClickCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onClick: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onClickCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onContextMenu: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onContextMenuCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onDoubleClick: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onDoubleClickCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onDrag: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragEnter: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragEnterCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragExit: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragExitCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragLeave: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragLeaveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragOver: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragOverCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDrop: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDropCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onMouseDown: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseDownCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseEnter: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseLeave: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseMove: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseMoveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseOut: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseOutCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseOver: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseOverCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseUp: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseUpCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onSelect: {
@@ -6181,288 +6121,288 @@ describe('extract-props-info', () => {
           onSelectCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onTouchCancel: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onTouchCancelCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onTouchEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onTouchEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onTouchMove: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onTouchMoveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onTouchStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onTouchStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onPointerDown: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerDownCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerMove: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerMoveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerUp: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerUpCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerCancel: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerCancelCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerEnter: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerEnterCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerLeave: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerLeaveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerOver: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerOverCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerOut: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerOutCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onGotPointerCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onGotPointerCaptureCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onLostPointerCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onLostPointerCaptureCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onScroll: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: UIEvent<HTMLDivElement, UIEvent>) => void)',
+              name: 'UIEventHandler<HTMLDivElement>',
+              raw: 'UIEventHandler<HTMLDivElement>',
             },
           },
           onScrollCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: UIEvent<HTMLDivElement, UIEvent>) => void)',
+              name: 'UIEventHandler<HTMLDivElement>',
+              raw: 'UIEventHandler<HTMLDivElement>',
             },
           },
           onWheel: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: WheelEvent<HTMLDivElement>) => void)',
+              name: 'WheelEventHandler<HTMLDivElement>',
+              raw: 'WheelEventHandler<HTMLDivElement>',
             },
           },
           onWheelCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: WheelEvent<HTMLDivElement>) => void)',
+              name: 'WheelEventHandler<HTMLDivElement>',
+              raw: 'WheelEventHandler<HTMLDivElement>',
             },
           },
           onAnimationStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLDivElement>) => void)',
+              name: 'AnimationEventHandler<HTMLDivElement>',
+              raw: 'AnimationEventHandler<HTMLDivElement>',
             },
           },
           onAnimationStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLDivElement>) => void)',
+              name: 'AnimationEventHandler<HTMLDivElement>',
+              raw: 'AnimationEventHandler<HTMLDivElement>',
             },
           },
           onAnimationEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLDivElement>) => void)',
+              name: 'AnimationEventHandler<HTMLDivElement>',
+              raw: 'AnimationEventHandler<HTMLDivElement>',
             },
           },
           onAnimationEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLDivElement>) => void)',
+              name: 'AnimationEventHandler<HTMLDivElement>',
+              raw: 'AnimationEventHandler<HTMLDivElement>',
             },
           },
           onAnimationIteration: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLDivElement>) => void)',
+              name: 'AnimationEventHandler<HTMLDivElement>',
+              raw: 'AnimationEventHandler<HTMLDivElement>',
             },
           },
           onAnimationIterationCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLDivElement>) => void)',
+              name: 'AnimationEventHandler<HTMLDivElement>',
+              raw: 'AnimationEventHandler<HTMLDivElement>',
             },
           },
           onTransitionEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TransitionEvent<HTMLDivElement>) => void)',
+              name: 'TransitionEventHandler<HTMLDivElement>',
+              raw: 'TransitionEventHandler<HTMLDivElement>',
             },
           },
           onTransitionEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TransitionEvent<HTMLDivElement>) => void)',
+              name: 'TransitionEventHandler<HTMLDivElement>',
+              raw: 'TransitionEventHandler<HTMLDivElement>',
             },
           },
           key: {
@@ -6471,16 +6411,13 @@ describe('extract-props-info', () => {
               name: 'union',
               value: [
                 {
-                  name: 'string',
-                },
-                {
-                  name: 'number',
+                  name: 'Key',
                 },
                 {
                   name: 'null',
                 },
               ],
-              raw: 'string | number | null',
+              raw: 'Key | null',
             },
           },
           defaultFocus: {
@@ -7434,19 +7371,13 @@ describe('extract-props-info', () => {
               name: 'union',
               value: [
                 {
-                  name: 'boolean',
-                },
-                {
-                  name: 'true',
-                },
-                {
-                  name: 'false',
+                  name: 'Booleanish',
                 },
                 {
                   name: 'inherit',
                 },
               ],
-              raw: 'boolean | "true" | "false" | "inherit"',
+              raw: 'Booleanish | "inherit"',
             },
           },
           contextMenu: {
@@ -7466,19 +7397,8 @@ describe('extract-props-info', () => {
           draggable: {
             parentName: 'HTMLAttributes',
             type: {
-              name: 'union',
-              value: [
-                {
-                  name: 'boolean',
-                },
-                {
-                  name: 'true',
-                },
-                {
-                  name: 'false',
-                },
-              ],
-              raw: 'boolean | "true" | "false"',
+              name: 'Booleanish',
+              raw: 'Booleanish',
             },
           },
           hidden: {
@@ -7512,19 +7432,8 @@ describe('extract-props-info', () => {
           spellCheck: {
             parentName: 'HTMLAttributes',
             type: {
-              name: 'union',
-              value: [
-                {
-                  name: 'boolean',
-                },
-                {
-                  name: 'true',
-                },
-                {
-                  name: 'false',
-                },
-              ],
-              raw: 'boolean | "true" | "false"',
+              name: 'Booleanish',
+              raw: 'Booleanish',
             },
           },
           style: {
@@ -8615,1149 +8524,1128 @@ describe('extract-props-info', () => {
           onCopy: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLUListElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLUListElement>',
+              raw: 'ClipboardEventHandler<HTMLUListElement>',
             },
           },
           onCopyCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLUListElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLUListElement>',
+              raw: 'ClipboardEventHandler<HTMLUListElement>',
             },
           },
           onCut: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLUListElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLUListElement>',
+              raw: 'ClipboardEventHandler<HTMLUListElement>',
             },
           },
           onCutCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLUListElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLUListElement>',
+              raw: 'ClipboardEventHandler<HTMLUListElement>',
             },
           },
           onPaste: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLUListElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLUListElement>',
+              raw: 'ClipboardEventHandler<HTMLUListElement>',
             },
           },
           onPasteCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLUListElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLUListElement>',
+              raw: 'ClipboardEventHandler<HTMLUListElement>',
             },
           },
           onCompositionEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLUListElement>) => void)',
+              name: 'CompositionEventHandler<HTMLUListElement>',
+              raw: 'CompositionEventHandler<HTMLUListElement>',
             },
           },
           onCompositionEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLUListElement>) => void)',
+              name: 'CompositionEventHandler<HTMLUListElement>',
+              raw: 'CompositionEventHandler<HTMLUListElement>',
             },
           },
           onCompositionStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLUListElement>) => void)',
+              name: 'CompositionEventHandler<HTMLUListElement>',
+              raw: 'CompositionEventHandler<HTMLUListElement>',
             },
           },
           onCompositionStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLUListElement>) => void)',
+              name: 'CompositionEventHandler<HTMLUListElement>',
+              raw: 'CompositionEventHandler<HTMLUListElement>',
             },
           },
           onCompositionUpdate: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLUListElement>) => void)',
+              name: 'CompositionEventHandler<HTMLUListElement>',
+              raw: 'CompositionEventHandler<HTMLUListElement>',
             },
           },
           onCompositionUpdateCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLUListElement>) => void)',
+              name: 'CompositionEventHandler<HTMLUListElement>',
+              raw: 'CompositionEventHandler<HTMLUListElement>',
             },
           },
           onFocus: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FocusEvent<HTMLUListElement>) => void)',
+              name: 'FocusEventHandler<HTMLUListElement>',
+              raw: 'FocusEventHandler<HTMLUListElement>',
             },
           },
           onFocusCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FocusEvent<HTMLUListElement>) => void)',
+              name: 'FocusEventHandler<HTMLUListElement>',
+              raw: 'FocusEventHandler<HTMLUListElement>',
             },
           },
           onBlur: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FocusEvent<HTMLUListElement>) => void)',
+              name: 'FocusEventHandler<HTMLUListElement>',
+              raw: 'FocusEventHandler<HTMLUListElement>',
             },
           },
           onBlurCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FocusEvent<HTMLUListElement>) => void)',
+              name: 'FocusEventHandler<HTMLUListElement>',
+              raw: 'FocusEventHandler<HTMLUListElement>',
             },
           },
           onChange: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLUListElement>) => void)',
+              name: 'FormEventHandler<HTMLUListElement>',
+              raw: 'FormEventHandler<HTMLUListElement>',
             },
           },
           onChangeCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLUListElement>) => void)',
+              name: 'FormEventHandler<HTMLUListElement>',
+              raw: 'FormEventHandler<HTMLUListElement>',
             },
           },
           onBeforeInput: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLUListElement>) => void)',
+              name: 'FormEventHandler<HTMLUListElement>',
+              raw: 'FormEventHandler<HTMLUListElement>',
             },
           },
           onBeforeInputCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLUListElement>) => void)',
+              name: 'FormEventHandler<HTMLUListElement>',
+              raw: 'FormEventHandler<HTMLUListElement>',
             },
           },
           onInput: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLUListElement>) => void)',
+              name: 'FormEventHandler<HTMLUListElement>',
+              raw: 'FormEventHandler<HTMLUListElement>',
             },
           },
           onInputCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLUListElement>) => void)',
+              name: 'FormEventHandler<HTMLUListElement>',
+              raw: 'FormEventHandler<HTMLUListElement>',
             },
           },
           onReset: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLUListElement>) => void)',
+              name: 'FormEventHandler<HTMLUListElement>',
+              raw: 'FormEventHandler<HTMLUListElement>',
             },
           },
           onResetCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLUListElement>) => void)',
+              name: 'FormEventHandler<HTMLUListElement>',
+              raw: 'FormEventHandler<HTMLUListElement>',
             },
           },
           onSubmit: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLUListElement>) => void)',
+              name: 'FormEventHandler<HTMLUListElement>',
+              raw: 'FormEventHandler<HTMLUListElement>',
             },
           },
           onSubmitCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLUListElement>) => void)',
+              name: 'FormEventHandler<HTMLUListElement>',
+              raw: 'FormEventHandler<HTMLUListElement>',
             },
           },
           onInvalid: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLUListElement>) => void)',
+              name: 'FormEventHandler<HTMLUListElement>',
+              raw: 'FormEventHandler<HTMLUListElement>',
             },
           },
           onInvalidCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLUListElement>) => void)',
+              name: 'FormEventHandler<HTMLUListElement>',
+              raw: 'FormEventHandler<HTMLUListElement>',
             },
           },
           onLoad: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onLoadCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onError: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onErrorCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onKeyDown: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLUListElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLUListElement>',
+              raw: 'KeyboardEventHandler<HTMLUListElement>',
             },
           },
           onKeyDownCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLUListElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLUListElement>',
+              raw: 'KeyboardEventHandler<HTMLUListElement>',
             },
           },
           onKeyPress: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLUListElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLUListElement>',
+              raw: 'KeyboardEventHandler<HTMLUListElement>',
             },
           },
           onKeyPressCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLUListElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLUListElement>',
+              raw: 'KeyboardEventHandler<HTMLUListElement>',
             },
           },
           onKeyUp: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLUListElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLUListElement>',
+              raw: 'KeyboardEventHandler<HTMLUListElement>',
             },
           },
           onKeyUpCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLUListElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLUListElement>',
+              raw: 'KeyboardEventHandler<HTMLUListElement>',
             },
           },
           onAbort: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onAbortCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onCanPlay: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onCanPlayCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onCanPlayThrough: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onCanPlayThroughCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onDurationChange: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onDurationChangeCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onEmptied: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onEmptiedCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onEncrypted: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onEncryptedCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onEnded: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onEndedCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onLoadedData: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onLoadedDataCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onLoadedMetadata: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onLoadedMetadataCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onLoadStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onLoadStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onPause: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onPauseCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onPlay: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onPlayCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onPlaying: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onPlayingCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onProgress: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onProgressCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onRateChange: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onRateChangeCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onSeeked: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onSeekedCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onSeeking: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onSeekingCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onStalled: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onStalledCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onSuspend: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onSuspendCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onTimeUpdate: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onTimeUpdateCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onVolumeChange: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onVolumeChangeCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onWaiting: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onWaitingCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onAuxClick: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw:
-                '((event: MouseEvent<HTMLUListElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLUListElement>',
+              raw: 'MouseEventHandler<HTMLUListElement>',
             },
           },
           onAuxClickCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw:
-                '((event: MouseEvent<HTMLUListElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLUListElement>',
+              raw: 'MouseEventHandler<HTMLUListElement>',
             },
           },
           onClick: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw:
-                '((event: MouseEvent<HTMLUListElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLUListElement>',
+              raw: 'MouseEventHandler<HTMLUListElement>',
             },
           },
           onClickCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw:
-                '((event: MouseEvent<HTMLUListElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLUListElement>',
+              raw: 'MouseEventHandler<HTMLUListElement>',
             },
           },
           onContextMenu: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw:
-                '((event: MouseEvent<HTMLUListElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLUListElement>',
+              raw: 'MouseEventHandler<HTMLUListElement>',
             },
           },
           onContextMenuCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw:
-                '((event: MouseEvent<HTMLUListElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLUListElement>',
+              raw: 'MouseEventHandler<HTMLUListElement>',
             },
           },
           onDoubleClick: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw:
-                '((event: MouseEvent<HTMLUListElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLUListElement>',
+              raw: 'MouseEventHandler<HTMLUListElement>',
             },
           },
           onDoubleClickCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw:
-                '((event: MouseEvent<HTMLUListElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLUListElement>',
+              raw: 'MouseEventHandler<HTMLUListElement>',
             },
           },
           onDrag: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLUListElement>) => void)',
+              name: 'DragEventHandler<HTMLUListElement>',
+              raw: 'DragEventHandler<HTMLUListElement>',
             },
           },
           onDragCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLUListElement>) => void)',
+              name: 'DragEventHandler<HTMLUListElement>',
+              raw: 'DragEventHandler<HTMLUListElement>',
             },
           },
           onDragEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLUListElement>) => void)',
+              name: 'DragEventHandler<HTMLUListElement>',
+              raw: 'DragEventHandler<HTMLUListElement>',
             },
           },
           onDragEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLUListElement>) => void)',
+              name: 'DragEventHandler<HTMLUListElement>',
+              raw: 'DragEventHandler<HTMLUListElement>',
             },
           },
           onDragEnter: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLUListElement>) => void)',
+              name: 'DragEventHandler<HTMLUListElement>',
+              raw: 'DragEventHandler<HTMLUListElement>',
             },
           },
           onDragEnterCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLUListElement>) => void)',
+              name: 'DragEventHandler<HTMLUListElement>',
+              raw: 'DragEventHandler<HTMLUListElement>',
             },
           },
           onDragExit: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLUListElement>) => void)',
+              name: 'DragEventHandler<HTMLUListElement>',
+              raw: 'DragEventHandler<HTMLUListElement>',
             },
           },
           onDragExitCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLUListElement>) => void)',
+              name: 'DragEventHandler<HTMLUListElement>',
+              raw: 'DragEventHandler<HTMLUListElement>',
             },
           },
           onDragLeave: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLUListElement>) => void)',
+              name: 'DragEventHandler<HTMLUListElement>',
+              raw: 'DragEventHandler<HTMLUListElement>',
             },
           },
           onDragLeaveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLUListElement>) => void)',
+              name: 'DragEventHandler<HTMLUListElement>',
+              raw: 'DragEventHandler<HTMLUListElement>',
             },
           },
           onDragOver: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLUListElement>) => void)',
+              name: 'DragEventHandler<HTMLUListElement>',
+              raw: 'DragEventHandler<HTMLUListElement>',
             },
           },
           onDragOverCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLUListElement>) => void)',
+              name: 'DragEventHandler<HTMLUListElement>',
+              raw: 'DragEventHandler<HTMLUListElement>',
             },
           },
           onDragStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLUListElement>) => void)',
+              name: 'DragEventHandler<HTMLUListElement>',
+              raw: 'DragEventHandler<HTMLUListElement>',
             },
           },
           onDragStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLUListElement>) => void)',
+              name: 'DragEventHandler<HTMLUListElement>',
+              raw: 'DragEventHandler<HTMLUListElement>',
             },
           },
           onDrop: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLUListElement>) => void)',
+              name: 'DragEventHandler<HTMLUListElement>',
+              raw: 'DragEventHandler<HTMLUListElement>',
             },
           },
           onDropCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLUListElement>) => void)',
+              name: 'DragEventHandler<HTMLUListElement>',
+              raw: 'DragEventHandler<HTMLUListElement>',
             },
           },
           onMouseDown: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw:
-                '((event: MouseEvent<HTMLUListElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLUListElement>',
+              raw: 'MouseEventHandler<HTMLUListElement>',
             },
           },
           onMouseDownCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw:
-                '((event: MouseEvent<HTMLUListElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLUListElement>',
+              raw: 'MouseEventHandler<HTMLUListElement>',
             },
           },
           onMouseEnter: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw:
-                '((event: MouseEvent<HTMLUListElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLUListElement>',
+              raw: 'MouseEventHandler<HTMLUListElement>',
             },
           },
           onMouseLeave: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw:
-                '((event: MouseEvent<HTMLUListElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLUListElement>',
+              raw: 'MouseEventHandler<HTMLUListElement>',
             },
           },
           onMouseMove: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw:
-                '((event: MouseEvent<HTMLUListElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLUListElement>',
+              raw: 'MouseEventHandler<HTMLUListElement>',
             },
           },
           onMouseMoveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw:
-                '((event: MouseEvent<HTMLUListElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLUListElement>',
+              raw: 'MouseEventHandler<HTMLUListElement>',
             },
           },
           onMouseOut: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw:
-                '((event: MouseEvent<HTMLUListElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLUListElement>',
+              raw: 'MouseEventHandler<HTMLUListElement>',
             },
           },
           onMouseOutCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw:
-                '((event: MouseEvent<HTMLUListElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLUListElement>',
+              raw: 'MouseEventHandler<HTMLUListElement>',
             },
           },
           onMouseOver: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw:
-                '((event: MouseEvent<HTMLUListElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLUListElement>',
+              raw: 'MouseEventHandler<HTMLUListElement>',
             },
           },
           onMouseOverCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw:
-                '((event: MouseEvent<HTMLUListElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLUListElement>',
+              raw: 'MouseEventHandler<HTMLUListElement>',
             },
           },
           onMouseUp: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw:
-                '((event: MouseEvent<HTMLUListElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLUListElement>',
+              raw: 'MouseEventHandler<HTMLUListElement>',
             },
           },
           onMouseUpCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw:
-                '((event: MouseEvent<HTMLUListElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLUListElement>',
+              raw: 'MouseEventHandler<HTMLUListElement>',
             },
           },
           onSelect: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onSelectCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLUListElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLUListElement>',
+              raw: 'ReactEventHandler<HTMLUListElement>',
             },
           },
           onTouchCancel: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLUListElement>) => void)',
+              name: 'TouchEventHandler<HTMLUListElement>',
+              raw: 'TouchEventHandler<HTMLUListElement>',
             },
           },
           onTouchCancelCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLUListElement>) => void)',
+              name: 'TouchEventHandler<HTMLUListElement>',
+              raw: 'TouchEventHandler<HTMLUListElement>',
             },
           },
           onTouchEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLUListElement>) => void)',
+              name: 'TouchEventHandler<HTMLUListElement>',
+              raw: 'TouchEventHandler<HTMLUListElement>',
             },
           },
           onTouchEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLUListElement>) => void)',
+              name: 'TouchEventHandler<HTMLUListElement>',
+              raw: 'TouchEventHandler<HTMLUListElement>',
             },
           },
           onTouchMove: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLUListElement>) => void)',
+              name: 'TouchEventHandler<HTMLUListElement>',
+              raw: 'TouchEventHandler<HTMLUListElement>',
             },
           },
           onTouchMoveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLUListElement>) => void)',
+              name: 'TouchEventHandler<HTMLUListElement>',
+              raw: 'TouchEventHandler<HTMLUListElement>',
             },
           },
           onTouchStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLUListElement>) => void)',
+              name: 'TouchEventHandler<HTMLUListElement>',
+              raw: 'TouchEventHandler<HTMLUListElement>',
             },
           },
           onTouchStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLUListElement>) => void)',
+              name: 'TouchEventHandler<HTMLUListElement>',
+              raw: 'TouchEventHandler<HTMLUListElement>',
             },
           },
           onPointerDown: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLUListElement>) => void)',
+              name: 'PointerEventHandler<HTMLUListElement>',
+              raw: 'PointerEventHandler<HTMLUListElement>',
             },
           },
           onPointerDownCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLUListElement>) => void)',
+              name: 'PointerEventHandler<HTMLUListElement>',
+              raw: 'PointerEventHandler<HTMLUListElement>',
             },
           },
           onPointerMove: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLUListElement>) => void)',
+              name: 'PointerEventHandler<HTMLUListElement>',
+              raw: 'PointerEventHandler<HTMLUListElement>',
             },
           },
           onPointerMoveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLUListElement>) => void)',
+              name: 'PointerEventHandler<HTMLUListElement>',
+              raw: 'PointerEventHandler<HTMLUListElement>',
             },
           },
           onPointerUp: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLUListElement>) => void)',
+              name: 'PointerEventHandler<HTMLUListElement>',
+              raw: 'PointerEventHandler<HTMLUListElement>',
             },
           },
           onPointerUpCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLUListElement>) => void)',
+              name: 'PointerEventHandler<HTMLUListElement>',
+              raw: 'PointerEventHandler<HTMLUListElement>',
             },
           },
           onPointerCancel: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLUListElement>) => void)',
+              name: 'PointerEventHandler<HTMLUListElement>',
+              raw: 'PointerEventHandler<HTMLUListElement>',
             },
           },
           onPointerCancelCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLUListElement>) => void)',
+              name: 'PointerEventHandler<HTMLUListElement>',
+              raw: 'PointerEventHandler<HTMLUListElement>',
             },
           },
           onPointerEnter: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLUListElement>) => void)',
+              name: 'PointerEventHandler<HTMLUListElement>',
+              raw: 'PointerEventHandler<HTMLUListElement>',
             },
           },
           onPointerEnterCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLUListElement>) => void)',
+              name: 'PointerEventHandler<HTMLUListElement>',
+              raw: 'PointerEventHandler<HTMLUListElement>',
             },
           },
           onPointerLeave: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLUListElement>) => void)',
+              name: 'PointerEventHandler<HTMLUListElement>',
+              raw: 'PointerEventHandler<HTMLUListElement>',
             },
           },
           onPointerLeaveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLUListElement>) => void)',
+              name: 'PointerEventHandler<HTMLUListElement>',
+              raw: 'PointerEventHandler<HTMLUListElement>',
             },
           },
           onPointerOver: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLUListElement>) => void)',
+              name: 'PointerEventHandler<HTMLUListElement>',
+              raw: 'PointerEventHandler<HTMLUListElement>',
             },
           },
           onPointerOverCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLUListElement>) => void)',
+              name: 'PointerEventHandler<HTMLUListElement>',
+              raw: 'PointerEventHandler<HTMLUListElement>',
             },
           },
           onPointerOut: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLUListElement>) => void)',
+              name: 'PointerEventHandler<HTMLUListElement>',
+              raw: 'PointerEventHandler<HTMLUListElement>',
             },
           },
           onPointerOutCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLUListElement>) => void)',
+              name: 'PointerEventHandler<HTMLUListElement>',
+              raw: 'PointerEventHandler<HTMLUListElement>',
             },
           },
           onGotPointerCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLUListElement>) => void)',
+              name: 'PointerEventHandler<HTMLUListElement>',
+              raw: 'PointerEventHandler<HTMLUListElement>',
             },
           },
           onGotPointerCaptureCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLUListElement>) => void)',
+              name: 'PointerEventHandler<HTMLUListElement>',
+              raw: 'PointerEventHandler<HTMLUListElement>',
             },
           },
           onLostPointerCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLUListElement>) => void)',
+              name: 'PointerEventHandler<HTMLUListElement>',
+              raw: 'PointerEventHandler<HTMLUListElement>',
             },
           },
           onLostPointerCaptureCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLUListElement>) => void)',
+              name: 'PointerEventHandler<HTMLUListElement>',
+              raw: 'PointerEventHandler<HTMLUListElement>',
             },
           },
           onScroll: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: UIEvent<HTMLUListElement, UIEvent>) => void)',
+              name: 'UIEventHandler<HTMLUListElement>',
+              raw: 'UIEventHandler<HTMLUListElement>',
             },
           },
           onScrollCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: UIEvent<HTMLUListElement, UIEvent>) => void)',
+              name: 'UIEventHandler<HTMLUListElement>',
+              raw: 'UIEventHandler<HTMLUListElement>',
             },
           },
           onWheel: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: WheelEvent<HTMLUListElement>) => void)',
+              name: 'WheelEventHandler<HTMLUListElement>',
+              raw: 'WheelEventHandler<HTMLUListElement>',
             },
           },
           onWheelCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: WheelEvent<HTMLUListElement>) => void)',
+              name: 'WheelEventHandler<HTMLUListElement>',
+              raw: 'WheelEventHandler<HTMLUListElement>',
             },
           },
           onAnimationStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLUListElement>) => void)',
+              name: 'AnimationEventHandler<HTMLUListElement>',
+              raw: 'AnimationEventHandler<HTMLUListElement>',
             },
           },
           onAnimationStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLUListElement>) => void)',
+              name: 'AnimationEventHandler<HTMLUListElement>',
+              raw: 'AnimationEventHandler<HTMLUListElement>',
             },
           },
           onAnimationEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLUListElement>) => void)',
+              name: 'AnimationEventHandler<HTMLUListElement>',
+              raw: 'AnimationEventHandler<HTMLUListElement>',
             },
           },
           onAnimationEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLUListElement>) => void)',
+              name: 'AnimationEventHandler<HTMLUListElement>',
+              raw: 'AnimationEventHandler<HTMLUListElement>',
             },
           },
           onAnimationIteration: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLUListElement>) => void)',
+              name: 'AnimationEventHandler<HTMLUListElement>',
+              raw: 'AnimationEventHandler<HTMLUListElement>',
             },
           },
           onAnimationIterationCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLUListElement>) => void)',
+              name: 'AnimationEventHandler<HTMLUListElement>',
+              raw: 'AnimationEventHandler<HTMLUListElement>',
             },
           },
           onTransitionEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TransitionEvent<HTMLUListElement>) => void)',
+              name: 'TransitionEventHandler<HTMLUListElement>',
+              raw: 'TransitionEventHandler<HTMLUListElement>',
             },
           },
           onTransitionEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TransitionEvent<HTMLUListElement>) => void)',
+              name: 'TransitionEventHandler<HTMLUListElement>',
+              raw: 'TransitionEventHandler<HTMLUListElement>',
             },
           },
           ref: {
             parentName: 'ClassAttributes',
             type: {
-              name: 'function',
-              raw:
-                'string | ((instance: HTMLUListElement | null) => void) | RefObject<HTMLUListElement> | null',
+              name: 'LegacyRef<HTMLUListElement>',
+              raw: 'LegacyRef<HTMLUListElement>',
             },
           },
           key: {
@@ -9766,16 +9654,13 @@ describe('extract-props-info', () => {
               name: 'union',
               value: [
                 {
-                  name: 'string',
-                },
-                {
-                  name: 'number',
+                  name: 'Key',
                 },
                 {
                   name: 'null',
                 },
               ],
-              raw: 'string | number | null',
+              raw: 'Key | null',
             },
           },
         },
@@ -10687,19 +10572,13 @@ describe('extract-props-info', () => {
               name: 'union',
               value: [
                 {
-                  name: 'boolean',
-                },
-                {
-                  name: 'true',
-                },
-                {
-                  name: 'false',
+                  name: 'Booleanish',
                 },
                 {
                   name: 'inherit',
                 },
               ],
-              raw: 'boolean | "true" | "false" | "inherit"',
+              raw: 'Booleanish | "inherit"',
             },
           },
           contextMenu: {
@@ -10719,19 +10598,8 @@ describe('extract-props-info', () => {
           draggable: {
             parentName: 'HTMLAttributes',
             type: {
-              name: 'union',
-              value: [
-                {
-                  name: 'boolean',
-                },
-                {
-                  name: 'true',
-                },
-                {
-                  name: 'false',
-                },
-              ],
-              raw: 'boolean | "true" | "false"',
+              name: 'Booleanish',
+              raw: 'Booleanish',
             },
           },
           hidden: {
@@ -10765,19 +10633,8 @@ describe('extract-props-info', () => {
           spellCheck: {
             parentName: 'HTMLAttributes',
             type: {
-              name: 'union',
-              value: [
-                {
-                  name: 'boolean',
-                },
-                {
-                  name: 'true',
-                },
-                {
-                  name: 'false',
-                },
-              ],
-              raw: 'boolean | "true" | "false"',
+              name: 'Booleanish',
+              raw: 'Booleanish',
             },
           },
           style: {
@@ -11868,1129 +11725,1128 @@ describe('extract-props-info', () => {
           onCopy: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLDivElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLDivElement>',
+              raw: 'ClipboardEventHandler<HTMLDivElement>',
             },
           },
           onCopyCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLDivElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLDivElement>',
+              raw: 'ClipboardEventHandler<HTMLDivElement>',
             },
           },
           onCut: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLDivElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLDivElement>',
+              raw: 'ClipboardEventHandler<HTMLDivElement>',
             },
           },
           onCutCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLDivElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLDivElement>',
+              raw: 'ClipboardEventHandler<HTMLDivElement>',
             },
           },
           onPaste: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLDivElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLDivElement>',
+              raw: 'ClipboardEventHandler<HTMLDivElement>',
             },
           },
           onPasteCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLDivElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLDivElement>',
+              raw: 'ClipboardEventHandler<HTMLDivElement>',
             },
           },
           onCompositionEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLDivElement>) => void)',
+              name: 'CompositionEventHandler<HTMLDivElement>',
+              raw: 'CompositionEventHandler<HTMLDivElement>',
             },
           },
           onCompositionEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLDivElement>) => void)',
+              name: 'CompositionEventHandler<HTMLDivElement>',
+              raw: 'CompositionEventHandler<HTMLDivElement>',
             },
           },
           onCompositionStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLDivElement>) => void)',
+              name: 'CompositionEventHandler<HTMLDivElement>',
+              raw: 'CompositionEventHandler<HTMLDivElement>',
             },
           },
           onCompositionStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLDivElement>) => void)',
+              name: 'CompositionEventHandler<HTMLDivElement>',
+              raw: 'CompositionEventHandler<HTMLDivElement>',
             },
           },
           onCompositionUpdate: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLDivElement>) => void)',
+              name: 'CompositionEventHandler<HTMLDivElement>',
+              raw: 'CompositionEventHandler<HTMLDivElement>',
             },
           },
           onCompositionUpdateCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLDivElement>) => void)',
+              name: 'CompositionEventHandler<HTMLDivElement>',
+              raw: 'CompositionEventHandler<HTMLDivElement>',
             },
           },
           onFocus: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FocusEvent<HTMLDivElement>) => void)',
+              name: 'FocusEventHandler<HTMLDivElement>',
+              raw: 'FocusEventHandler<HTMLDivElement>',
             },
           },
           onFocusCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FocusEvent<HTMLDivElement>) => void)',
+              name: 'FocusEventHandler<HTMLDivElement>',
+              raw: 'FocusEventHandler<HTMLDivElement>',
             },
           },
           onBlur: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FocusEvent<HTMLDivElement>) => void)',
+              name: 'FocusEventHandler<HTMLDivElement>',
+              raw: 'FocusEventHandler<HTMLDivElement>',
             },
           },
           onBlurCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FocusEvent<HTMLDivElement>) => void)',
+              name: 'FocusEventHandler<HTMLDivElement>',
+              raw: 'FocusEventHandler<HTMLDivElement>',
             },
           },
           onChange: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onChangeCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onBeforeInput: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onBeforeInputCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onInput: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onInputCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onReset: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onResetCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onSubmit: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onSubmitCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onInvalid: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onInvalidCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onLoad: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onLoadCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onError: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onErrorCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onKeyDown: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLDivElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLDivElement>',
+              raw: 'KeyboardEventHandler<HTMLDivElement>',
             },
           },
           onKeyDownCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLDivElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLDivElement>',
+              raw: 'KeyboardEventHandler<HTMLDivElement>',
             },
           },
           onKeyPress: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLDivElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLDivElement>',
+              raw: 'KeyboardEventHandler<HTMLDivElement>',
             },
           },
           onKeyPressCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLDivElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLDivElement>',
+              raw: 'KeyboardEventHandler<HTMLDivElement>',
             },
           },
           onKeyUp: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLDivElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLDivElement>',
+              raw: 'KeyboardEventHandler<HTMLDivElement>',
             },
           },
           onKeyUpCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLDivElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLDivElement>',
+              raw: 'KeyboardEventHandler<HTMLDivElement>',
             },
           },
           onAbort: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onAbortCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onCanPlay: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onCanPlayCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onCanPlayThrough: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onCanPlayThroughCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onDurationChange: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onDurationChangeCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onEmptied: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onEmptiedCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onEncrypted: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onEncryptedCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onEnded: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onEndedCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onLoadedData: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onLoadedDataCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onLoadedMetadata: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onLoadedMetadataCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onLoadStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onLoadStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onPause: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onPauseCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onPlay: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onPlayCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onPlaying: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onPlayingCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onProgress: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onProgressCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onRateChange: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onRateChangeCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onSeeked: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onSeekedCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onSeeking: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onSeekingCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onStalled: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onStalledCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onSuspend: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onSuspendCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onTimeUpdate: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onTimeUpdateCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onVolumeChange: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onVolumeChangeCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onWaiting: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onWaitingCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onAuxClick: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onAuxClickCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onClick: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onClickCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onContextMenu: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onContextMenuCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onDoubleClick: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onDoubleClickCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onDrag: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragEnter: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragEnterCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragExit: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragExitCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragLeave: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragLeaveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragOver: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragOverCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDrop: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDropCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onMouseDown: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseDownCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseEnter: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseLeave: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseMove: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseMoveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseOut: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseOutCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseOver: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseOverCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseUp: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseUpCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onSelect: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onSelectCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onTouchCancel: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onTouchCancelCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onTouchEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onTouchEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onTouchMove: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onTouchMoveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onTouchStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onTouchStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onPointerDown: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerDownCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerMove: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerMoveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerUp: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerUpCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerCancel: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerCancelCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerEnter: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerEnterCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerLeave: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerLeaveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerOver: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerOverCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerOut: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerOutCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onGotPointerCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onGotPointerCaptureCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onLostPointerCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onLostPointerCaptureCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onScroll: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: UIEvent<HTMLDivElement, UIEvent>) => void)',
+              name: 'UIEventHandler<HTMLDivElement>',
+              raw: 'UIEventHandler<HTMLDivElement>',
             },
           },
           onScrollCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: UIEvent<HTMLDivElement, UIEvent>) => void)',
+              name: 'UIEventHandler<HTMLDivElement>',
+              raw: 'UIEventHandler<HTMLDivElement>',
             },
           },
           onWheel: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: WheelEvent<HTMLDivElement>) => void)',
+              name: 'WheelEventHandler<HTMLDivElement>',
+              raw: 'WheelEventHandler<HTMLDivElement>',
             },
           },
           onWheelCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: WheelEvent<HTMLDivElement>) => void)',
+              name: 'WheelEventHandler<HTMLDivElement>',
+              raw: 'WheelEventHandler<HTMLDivElement>',
             },
           },
           onAnimationStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLDivElement>) => void)',
+              name: 'AnimationEventHandler<HTMLDivElement>',
+              raw: 'AnimationEventHandler<HTMLDivElement>',
             },
           },
           onAnimationStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLDivElement>) => void)',
+              name: 'AnimationEventHandler<HTMLDivElement>',
+              raw: 'AnimationEventHandler<HTMLDivElement>',
             },
           },
           onAnimationEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLDivElement>) => void)',
+              name: 'AnimationEventHandler<HTMLDivElement>',
+              raw: 'AnimationEventHandler<HTMLDivElement>',
             },
           },
           onAnimationEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLDivElement>) => void)',
+              name: 'AnimationEventHandler<HTMLDivElement>',
+              raw: 'AnimationEventHandler<HTMLDivElement>',
             },
           },
           onAnimationIteration: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLDivElement>) => void)',
+              name: 'AnimationEventHandler<HTMLDivElement>',
+              raw: 'AnimationEventHandler<HTMLDivElement>',
             },
           },
           onAnimationIterationCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLDivElement>) => void)',
+              name: 'AnimationEventHandler<HTMLDivElement>',
+              raw: 'AnimationEventHandler<HTMLDivElement>',
             },
           },
           onTransitionEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TransitionEvent<HTMLDivElement>) => void)',
+              name: 'TransitionEventHandler<HTMLDivElement>',
+              raw: 'TransitionEventHandler<HTMLDivElement>',
             },
           },
           onTransitionEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TransitionEvent<HTMLDivElement>) => void)',
+              name: 'TransitionEventHandler<HTMLDivElement>',
+              raw: 'TransitionEventHandler<HTMLDivElement>',
             },
           },
           ref: {
             parentName: 'ClassAttributes',
             type: {
-              name: 'function',
-              raw:
-                'string | ((instance: HTMLDivElement | null) => void) | RefObject<HTMLDivElement> | null',
+              name: 'LegacyRef<HTMLDivElement>',
+              raw: 'LegacyRef<HTMLDivElement>',
             },
           },
           key: {
@@ -12999,16 +12855,13 @@ describe('extract-props-info', () => {
               name: 'union',
               value: [
                 {
-                  name: 'string',
-                },
-                {
-                  name: 'number',
+                  name: 'Key',
                 },
                 {
                   name: 'null',
                 },
               ],
-              raw: 'string | number | null',
+              raw: 'Key | null',
             },
           },
         },
@@ -13053,7 +12906,7 @@ describe('extract-props-info', () => {
             type: {
               name: 'function',
               raw:
-                '(((name: string, component: Component) => boolean | void) & ((event: SyntheticEvent<HTMLDivElement, Event>) => void))',
+                '(((name: string, component: Component) => boolean | void) & ReactEventHandler<HTMLDivElement>)',
             },
           },
           ref: {
@@ -13067,9 +12920,20 @@ describe('extract-props-info', () => {
             description: 'Padding on top, left, bottom and right',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           slot: {
@@ -13100,31 +12964,20 @@ describe('extract-props-info', () => {
               name: 'union',
               value: [
                 {
-                  name: 'string',
-                },
-                {
-                  name: 'number',
+                  name: 'Key',
                 },
                 {
                   name: 'null',
                 },
               ],
-              raw: 'string | number | null',
+              raw: 'Key | null',
             },
           },
           sx: {
             parentName: 'Attributes',
             type: {
-              name: 'union',
-              value: [
-                {
-                  name: 'ThemeUICSSObject',
-                },
-                {
-                  name: 'ThemeDerivedStyles',
-                },
-              ],
-              raw: 'ThemeUICSSObject | ThemeDerivedStyles',
+              name: 'ThemeUIStyleObject',
+              raw: 'ThemeUIStyleObject',
             },
           },
           defaultChecked: {
@@ -13180,19 +13033,13 @@ describe('extract-props-info', () => {
               name: 'union',
               value: [
                 {
-                  name: 'boolean',
-                },
-                {
-                  name: 'true',
-                },
-                {
-                  name: 'false',
+                  name: 'Booleanish',
                 },
                 {
                   name: 'inherit',
                 },
               ],
-              raw: 'boolean | "true" | "false" | "inherit"',
+              raw: 'Booleanish | "inherit"',
             },
           },
           contextMenu: {
@@ -13212,19 +13059,8 @@ describe('extract-props-info', () => {
           draggable: {
             parentName: 'HTMLAttributes',
             type: {
-              name: 'union',
-              value: [
-                {
-                  name: 'boolean',
-                },
-                {
-                  name: 'true',
-                },
-                {
-                  name: 'false',
-                },
-              ],
-              raw: 'boolean | "true" | "false"',
+              name: 'Booleanish',
+              raw: 'Booleanish',
             },
           },
           hidden: {
@@ -13260,19 +13096,8 @@ describe('extract-props-info', () => {
           spellCheck: {
             parentName: 'HTMLAttributes',
             type: {
-              name: 'union',
-              value: [
-                {
-                  name: 'boolean',
-                },
-                {
-                  name: 'true',
-                },
-                {
-                  name: 'false',
-                },
-              ],
-              raw: 'boolean | "true" | "false"',
+              name: 'Booleanish',
+              raw: 'Booleanish',
             },
           },
           tabIndex: {
@@ -14358,1187 +14183,1121 @@ describe('extract-props-info', () => {
           onCopy: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLDivElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLDivElement>',
+              raw: 'ClipboardEventHandler<HTMLDivElement>',
             },
           },
           onCopyCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLDivElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLDivElement>',
+              raw: 'ClipboardEventHandler<HTMLDivElement>',
             },
           },
           onCut: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLDivElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLDivElement>',
+              raw: 'ClipboardEventHandler<HTMLDivElement>',
             },
           },
           onCutCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLDivElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLDivElement>',
+              raw: 'ClipboardEventHandler<HTMLDivElement>',
             },
           },
           onPaste: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLDivElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLDivElement>',
+              raw: 'ClipboardEventHandler<HTMLDivElement>',
             },
           },
           onPasteCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: ClipboardEvent<HTMLDivElement>) => void)',
+              name: 'ClipboardEventHandler<HTMLDivElement>',
+              raw: 'ClipboardEventHandler<HTMLDivElement>',
             },
           },
           onCompositionEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLDivElement>) => void)',
+              name: 'CompositionEventHandler<HTMLDivElement>',
+              raw: 'CompositionEventHandler<HTMLDivElement>',
             },
           },
           onCompositionEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLDivElement>) => void)',
+              name: 'CompositionEventHandler<HTMLDivElement>',
+              raw: 'CompositionEventHandler<HTMLDivElement>',
             },
           },
           onCompositionStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLDivElement>) => void)',
+              name: 'CompositionEventHandler<HTMLDivElement>',
+              raw: 'CompositionEventHandler<HTMLDivElement>',
             },
           },
           onCompositionStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLDivElement>) => void)',
+              name: 'CompositionEventHandler<HTMLDivElement>',
+              raw: 'CompositionEventHandler<HTMLDivElement>',
             },
           },
           onCompositionUpdate: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLDivElement>) => void)',
+              name: 'CompositionEventHandler<HTMLDivElement>',
+              raw: 'CompositionEventHandler<HTMLDivElement>',
             },
           },
           onCompositionUpdateCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: CompositionEvent<HTMLDivElement>) => void)',
+              name: 'CompositionEventHandler<HTMLDivElement>',
+              raw: 'CompositionEventHandler<HTMLDivElement>',
             },
           },
           onFocus: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FocusEvent<HTMLDivElement>) => void)',
+              name: 'FocusEventHandler<HTMLDivElement>',
+              raw: 'FocusEventHandler<HTMLDivElement>',
             },
           },
           onFocusCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FocusEvent<HTMLDivElement>) => void)',
+              name: 'FocusEventHandler<HTMLDivElement>',
+              raw: 'FocusEventHandler<HTMLDivElement>',
             },
           },
           onBlur: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FocusEvent<HTMLDivElement>) => void)',
+              name: 'FocusEventHandler<HTMLDivElement>',
+              raw: 'FocusEventHandler<HTMLDivElement>',
             },
           },
           onBlurCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FocusEvent<HTMLDivElement>) => void)',
+              name: 'FocusEventHandler<HTMLDivElement>',
+              raw: 'FocusEventHandler<HTMLDivElement>',
             },
           },
           onChange: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onChangeCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onBeforeInput: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onBeforeInputCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onInput: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onInputCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onReset: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onResetCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onSubmit: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onSubmitCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onInvalid: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onInvalidCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: FormEvent<HTMLDivElement>) => void)',
+              name: 'FormEventHandler<HTMLDivElement>',
+              raw: 'FormEventHandler<HTMLDivElement>',
             },
           },
           onLoad: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onLoadCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onError: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onErrorCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onKeyDown: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLDivElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLDivElement>',
+              raw: 'KeyboardEventHandler<HTMLDivElement>',
             },
           },
           onKeyDownCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLDivElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLDivElement>',
+              raw: 'KeyboardEventHandler<HTMLDivElement>',
             },
           },
           onKeyPress: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLDivElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLDivElement>',
+              raw: 'KeyboardEventHandler<HTMLDivElement>',
             },
           },
           onKeyPressCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLDivElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLDivElement>',
+              raw: 'KeyboardEventHandler<HTMLDivElement>',
             },
           },
           onKeyUp: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLDivElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLDivElement>',
+              raw: 'KeyboardEventHandler<HTMLDivElement>',
             },
           },
           onKeyUpCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: KeyboardEvent<HTMLDivElement>) => void)',
+              name: 'KeyboardEventHandler<HTMLDivElement>',
+              raw: 'KeyboardEventHandler<HTMLDivElement>',
             },
           },
           onAbort: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onAbortCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onCanPlay: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onCanPlayCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onCanPlayThrough: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onCanPlayThroughCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onDurationChange: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onDurationChangeCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onEmptied: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onEmptiedCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onEncrypted: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onEncryptedCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onEnded: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onEndedCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onLoadedData: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onLoadedDataCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onLoadedMetadata: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onLoadedMetadataCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onLoadStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onLoadStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onPause: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onPauseCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onPlay: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onPlayCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onPlaying: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onPlayingCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onProgress: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onProgressCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onRateChange: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onRateChangeCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onSeeked: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onSeekedCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onSeeking: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onSeekingCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onStalled: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onStalledCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onSuspend: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onSuspendCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onTimeUpdate: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onTimeUpdateCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onVolumeChange: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onVolumeChangeCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onWaiting: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onWaitingCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onAuxClick: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onAuxClickCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onClick: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onClickCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onContextMenu: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onContextMenuCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onDoubleClick: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onDoubleClickCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onDrag: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragEnter: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragEnterCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragExit: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragExitCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragLeave: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragLeaveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragOver: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragOverCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDragStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDrop: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onDropCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: DragEvent<HTMLDivElement>) => void)',
+              name: 'DragEventHandler<HTMLDivElement>',
+              raw: 'DragEventHandler<HTMLDivElement>',
             },
           },
           onMouseDown: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseDownCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseEnter: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseLeave: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseMove: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseMoveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseOut: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseOutCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseOver: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseOverCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseUp: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onMouseUpCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)',
+              name: 'MouseEventHandler<HTMLDivElement>',
+              raw: 'MouseEventHandler<HTMLDivElement>',
             },
           },
           onSelectCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: SyntheticEvent<HTMLDivElement, Event>) => void)',
+              name: 'ReactEventHandler<HTMLDivElement>',
+              raw: 'ReactEventHandler<HTMLDivElement>',
             },
           },
           onTouchCancel: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onTouchCancelCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onTouchEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onTouchEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onTouchMove: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onTouchMoveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onTouchStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onTouchStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TouchEvent<HTMLDivElement>) => void)',
+              name: 'TouchEventHandler<HTMLDivElement>',
+              raw: 'TouchEventHandler<HTMLDivElement>',
             },
           },
           onPointerDown: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerDownCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerMove: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerMoveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerUp: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerUpCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerCancel: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerCancelCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerEnter: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerEnterCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerLeave: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerLeaveCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerOver: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerOverCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerOut: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onPointerOutCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onGotPointerCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onGotPointerCaptureCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onLostPointerCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onLostPointerCaptureCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: PointerEvent<HTMLDivElement>) => void)',
+              name: 'PointerEventHandler<HTMLDivElement>',
+              raw: 'PointerEventHandler<HTMLDivElement>',
             },
           },
           onScroll: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: UIEvent<HTMLDivElement, UIEvent>) => void)',
+              name: 'UIEventHandler<HTMLDivElement>',
+              raw: 'UIEventHandler<HTMLDivElement>',
             },
           },
           onScrollCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: UIEvent<HTMLDivElement, UIEvent>) => void)',
+              name: 'UIEventHandler<HTMLDivElement>',
+              raw: 'UIEventHandler<HTMLDivElement>',
             },
           },
           onWheel: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: WheelEvent<HTMLDivElement>) => void)',
+              name: 'WheelEventHandler<HTMLDivElement>',
+              raw: 'WheelEventHandler<HTMLDivElement>',
             },
           },
           onWheelCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: WheelEvent<HTMLDivElement>) => void)',
+              name: 'WheelEventHandler<HTMLDivElement>',
+              raw: 'WheelEventHandler<HTMLDivElement>',
             },
           },
           onAnimationStart: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLDivElement>) => void)',
+              name: 'AnimationEventHandler<HTMLDivElement>',
+              raw: 'AnimationEventHandler<HTMLDivElement>',
             },
           },
           onAnimationStartCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLDivElement>) => void)',
+              name: 'AnimationEventHandler<HTMLDivElement>',
+              raw: 'AnimationEventHandler<HTMLDivElement>',
             },
           },
           onAnimationEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLDivElement>) => void)',
+              name: 'AnimationEventHandler<HTMLDivElement>',
+              raw: 'AnimationEventHandler<HTMLDivElement>',
             },
           },
           onAnimationEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLDivElement>) => void)',
+              name: 'AnimationEventHandler<HTMLDivElement>',
+              raw: 'AnimationEventHandler<HTMLDivElement>',
             },
           },
           onAnimationIteration: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLDivElement>) => void)',
+              name: 'AnimationEventHandler<HTMLDivElement>',
+              raw: 'AnimationEventHandler<HTMLDivElement>',
             },
           },
           onAnimationIterationCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: AnimationEvent<HTMLDivElement>) => void)',
+              name: 'AnimationEventHandler<HTMLDivElement>',
+              raw: 'AnimationEventHandler<HTMLDivElement>',
             },
           },
           onTransitionEnd: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TransitionEvent<HTMLDivElement>) => void)',
+              name: 'TransitionEventHandler<HTMLDivElement>',
+              raw: 'TransitionEventHandler<HTMLDivElement>',
             },
           },
           onTransitionEndCapture: {
             parentName: 'DOMAttributes',
             type: {
-              name: 'function',
-              raw: '((event: TransitionEvent<HTMLDivElement>) => void)',
+              name: 'TransitionEventHandler<HTMLDivElement>',
+              raw: 'TransitionEventHandler<HTMLDivElement>',
             },
           },
           as: {
             parentName: 'BoxOwnProps',
             type: {
-              name: 'union',
-              value: [
-                {
-                  name: 'symbol',
-                },
-                {
-                  name: 'object',
-                },
-                {
-                  name: 'div',
-                },
-                {
-                  name: 'a',
-                },
-                {
-                  name: 'abbr',
-                },
-                {
-                  name: 'address',
-                },
-                {
-                  name: 'area',
-                },
-                {
-                  name: 'article',
-                },
-                {
-                  name: 'aside',
-                },
-                {
-                  name: 'audio',
-                },
-                {
-                  name: 'b',
-                },
-                {
-                  name: 'base',
-                },
-                {
-                  name: 'bdi',
-                },
-                {
-                  name: 'bdo',
-                },
-                {
-                  name: 'big',
-                },
-                {
-                  name: 'blockquote',
-                },
-                {
-                  name: 'body',
-                },
-                {
-                  name: 'br',
-                },
-                {
-                  name: 'button',
-                },
-                {
-                  name: 'canvas',
-                },
-                {
-                  name: '... 157 more ...',
-                },
-              ],
-              raw:
-                '"symbol" | "object" | "div" | "a" | "abbr" | "address" | "area" | "article" | "aside" | "audio" | "b" | "base" | "bdi" | "bdo" | "big" | "blockquote" | "body" | "br" | "button" | "canvas" | ... 157 more ...',
+              name: 'ElementType<any>',
+              raw: 'ElementType<any>',
             },
           },
           variant: {
@@ -15559,243 +15318,540 @@ describe('extract-props-info', () => {
             description: 'Margin on top, left, bottom and right',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           margin: {
             description: 'Margin on top, left, bottom and right',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           mt: {
             description: 'Margin on top',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           marginTop: {
             description: 'Margin on top',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           mr: {
             description: 'Margin on right',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           marginRight: {
             description: 'Margin on right',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           mb: {
             description: 'Margin on bottom',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           marginBottom: {
             description: 'Margin on bottom',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           ml: {
             description: 'Margin on left',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           marginLeft: {
             description: 'Margin on left',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           mx: {
             description: 'Margin on left and right',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           marginX: {
             description: 'Margin on left and right',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           my: {
             description: 'Margin on top and bottom',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           marginY: {
             description: 'Margin on top and bottom',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           padding: {
             description: 'Padding on top, left, bottom and right',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           pt: {
             description: 'Padding on top',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           paddingTop: {
             description: 'Padding on top',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           pr: {
             description: 'Padding on right',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           paddingRight: {
             description: 'Padding on right',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           pb: {
             description: 'Padding on bottom',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           paddingBottom: {
             description: 'Padding on bottom',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           pl: {
             description: 'Padding on left',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           paddingLeft: {
             description: 'Padding on left',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           px: {
             description: 'Padding on left and right',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           paddingX: {
             description: 'Padding on left and right',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           py: {
             description: 'Padding on top and bottom',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           paddingY: {
             description: 'Padding on top and bottom',
             parentName: 'SpaceProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           bg: {
@@ -15803,17 +15859,39 @@ describe('extract-props-info', () => {
               "The color utility parses a component's `color` and `bg` props and converts them into CSS declarations.\nBy default the raw value of the prop is returned.\n\nColor palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation.\nArray values are converted into responsive values.\n\n[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color)",
             parentName: 'BackgroundColorProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           backgroundColor: {
             parentName: 'BackgroundColorProps',
             type: {
-              name: 'function',
+              name: 'union',
+              value: [
+                {
+                  name: 'ResponsiveValue<string',
+                },
+                {
+                  name: 'number',
+                },
+                {
+                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                },
+              ],
               raw:
-                'string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined',
+                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           opacity: {
@@ -15821,9 +15899,10 @@ describe('extract-props-info', () => {
               'The opacity CSS property sets the transparency of an element or the degree to which content\nbehind an element is visible.\n\n[MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)',
             parentName: 'OpacityProps',
             type: {
-              name: 'function',
+              name:
+                'ResponsiveValue<Opacity, Required<Theme<TLengthStyledSystem>>>',
               raw:
-                '"inherit" | "-moz-initial" | "initial" | "revert" | "unset" | (string & {}) | (number & {}) | ("inherit" | "-moz-initial" | "initial" | "revert" | "unset" | (string & {}) | (number & {}) | null)[] | { ...; } | null',
+                'ResponsiveValue<Opacity, Required<Theme<TLengthStyledSystem>>>',
             },
           },
           visibility: {
@@ -15849,7 +15928,7 @@ describe('extract-props-info', () => {
                   value: 'info',
                 },
               ],
-              raw: '"all" | "controls" | "info" | undefined',
+              raw: 'ComponentVisibility | undefined',
             },
           },
           of: {

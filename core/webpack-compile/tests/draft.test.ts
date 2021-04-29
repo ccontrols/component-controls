@@ -391,7 +391,7 @@ describe('test draft', () => {
               type: {
                 name: 'function',
                 raw:
-                  'string | (string & {}) | (string & ReactElement<any, string | ((props: any) => ReactElement<any, any> | null) | (new (props: any) => Component<any, any, any>)>) | (string & ReactNodeArray) | (string & ReactPortal)',
+                  '(string & (boolean | ReactChild | ReactFragment | ReactPortal | null))',
               },
             },
             onClick: {
