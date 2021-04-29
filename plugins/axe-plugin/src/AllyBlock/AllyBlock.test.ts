@@ -1,7 +1,5 @@
 import * as path from 'path';
-import { run, AxeResults } from 'axe-core';
-import { reactRunDOM } from '@component-controls/test-renderers';
-import '@component-controls/jest-axe-matcher';
+
 import { loadConfigurations } from '@component-controls/config';
 import { renderDocument } from '@component-controls/test-renderers';
 import { render, act } from '@testing-library/react';

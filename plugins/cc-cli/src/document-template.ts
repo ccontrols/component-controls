@@ -125,6 +125,7 @@ describe('{{=it.name}}', () => {
     bundle,
     template,
     vars,
+    ally,
     ...rest,
   });
 };

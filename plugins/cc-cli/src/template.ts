@@ -28,6 +28,7 @@ export const createTemplate = (
     config = path.resolve(process.cwd(), defaultConfigFolder),
     output,
     bundle,
+    ally,
     vars: customVars,
   } = options;
   const topImports = dot.template(
@@ -35,7 +36,7 @@ export const createTemplate = (
       path.resolve(__dirname, `../templates/top-imports/imports.${format}.js`),
       'utf8',
     ),
-  )(accessibilityTemplate(format));
+  )(accessibilityTemplate(format, ally));
   const importsPath = path.resolve(
     __dirname,
     `../templates/imports/${renderers[renderer]}.${format}.js`,
