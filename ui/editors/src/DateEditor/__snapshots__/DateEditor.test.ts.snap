@@ -1,11 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DateEditor onlyDatePicker 1`] = `
+exports[`DateEditor onlyDatePicker snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-uliqdc"
   >
     <input
+      aria-label="enter a date"
       class="css-1qqniy8"
       id="propdate"
       max="9999-12-31"
@@ -16,12 +17,13 @@ exports[`DateEditor onlyDatePicker 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DateEditor onlyTimePicker 1`] = `
+exports[`DateEditor onlyTimePicker snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-uliqdc"
   >
     <input
+      aria-label="enter a time"
       class="css-1qqniy8"
       id="proptime"
       name="proptime"
@@ -31,12 +33,13 @@ exports[`DateEditor onlyTimePicker 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DateEditor overview 1`] = `
+exports[`DateEditor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-uliqdc"
   >
     <input
+      aria-label="enter a date"
       class="css-1qqniy8"
       id="propdate"
       max="9999-12-31"
@@ -44,6 +47,7 @@ exports[`DateEditor overview 1`] = `
       type="date"
     />
     <input
+      aria-label="enter a time"
       class="css-1qqniy8"
       id="proptime"
       name="proptime"

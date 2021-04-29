@@ -1,14 +1,15 @@
 import path from 'path';
 import { Config } from '@jest/types';
+import { JestTests } from '@component-controls/core';
 import { sync as globSync } from 'glob';
-import { runTests, JestResults } from './run-tests';
+import { runTests } from './run-tests';
 
 export type RelatedTest = {
   /**
    * full name of the test file
    */
   testFileName: string;
-} & JestResults;
+} & JestTests;
 
 export type RelatedTests = RelatedTest[];
 

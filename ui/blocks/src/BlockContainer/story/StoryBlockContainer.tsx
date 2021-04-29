@@ -40,7 +40,11 @@ export const StoryBlockContainer: FC<StoryBlockContainerAllProps> = ({
       data-testid={dataTestid}
       title={title}
       collapsible={collapsible}
-      id={userTitle === CURRENT_STORY && story ? story.id : undefined}
+      id={
+        userTitle === CURRENT_STORY && story
+          ? `${dataTestid ? `${dataTestid}-` : ''}${story.id}`
+          : undefined
+      }
       description={description}
       plain={true}
       {...rest}

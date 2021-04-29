@@ -41,6 +41,7 @@ export const cliStory = async (
     output,
     include,
     exclude,
+    ally,
   } = options;
   let documents: string[] = [];
 
@@ -78,6 +79,7 @@ export const cliStory = async (
         bundle,
         name: options.name || componentName,
         storyPath: name,
+        ally,
         output: output
           ? output
           : bundle

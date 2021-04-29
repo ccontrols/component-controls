@@ -1,6 +1,7 @@
 import React from 'react';
-import { Box, Donut } from 'theme-ui';
+import { Box } from 'theme-ui';
 import { Document, Example } from '@component-controls/core';
+import { Donut } from '../Donut';
 import { PanelContainer } from './PanelContainer';
 
 export default {

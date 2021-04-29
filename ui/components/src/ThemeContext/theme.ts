@@ -52,6 +52,7 @@ export type ControlsTheme = {
   syntaxhighlight: Record<string, ThemeUIStyleObject>;
   tabs: Record<string, ThemeUIStyleObject>;
   tag: Record<string, ThemeUIStyleObject>;
+  shield: Record<string, ThemeUIStyleObject>;
   table: Record<string, ThemeUIStyleObject>;
   titledimage: Record<string, ThemeUIStyleObject>;
   value: Record<string, ThemeUIStyleObject>;
@@ -97,7 +98,6 @@ export const theme: ControlsTheme = {
     accent: '#f49342',
     darken: '#00044c',
     gray: '#f6f6f6',
-    sidebar: '#f6f6f6',
     highlight: '#d9f2f1',
     action: '#3B817D',
     selected: '#027AC5',
@@ -115,6 +115,12 @@ export const theme: ControlsTheme = {
     palette3: '#f44336',
     palette4: '#dc004e',
     palette5: '#1976d2',
+    status_passed: '#4caf50',
+    status_failed: '#f44336',
+    status_skipped: '#fab305',
+    status_pending: '#fce83a',
+    status_todo: '#39ccff',
+    status_disabled: '#9ea7ad',
     modes: {
       dark: {
         primary: '#efefef',
@@ -124,7 +130,6 @@ export const theme: ControlsTheme = {
         mutedText: '#c9cacf',
         gray: '#4d5866',
         background: '#38404a',
-        sidebar: '#000000',
         text: '#d3d4db',
         selected: '#b3d9ff',
         action: '#d9f2f1',
@@ -358,7 +363,7 @@ export const theme: ControlsTheme = {
     },
     th: {
       border: 'none',
-      py: 2,
+      py: 3,
       pr: 2,
       pl: 3,
     },
@@ -373,13 +378,13 @@ export const theme: ControlsTheme = {
       color: 'text',
     },
     td: {
-      py: 3,
+      py: 2,
       px: 3,
       borderBottom: 0,
     },
     tdgroup: {
       lineHeight: '24px',
-      background: '#fafbfc',
+      bg: 'gray',
       whiteSpace: 'nowrap',
       py: 3,
       fontWeight: 'bold',
@@ -694,6 +699,24 @@ export const theme: ControlsTheme = {
       },
     },
   },
+  shield: {
+    container: {
+      display: 'flex',
+      flexDirection: 'row',
+      fontSize: 0,
+      alignItems: 'center',
+    },
+    left: {
+      px: 1,
+      borderTopLeftRadius: 3,
+      borderBottomLeftRadius: 3,
+    },
+    right: {
+      px: 1,
+      borderTopRightRadius: 3,
+      borderBottomRightRadius: 3,
+    },
+  },
   tag: {
     default: {
       display: 'inline-block',
@@ -966,19 +989,16 @@ export const theme: ControlsTheme = {
     },
   },
   componentstats: {
-    responsive: {
+    container: {
       display: 'flex',
       flexDirection: ['column', 'row'],
-      alignItems: ['flex-end', 'baseline'],
-      justifyContent: 'space-between',
-      my: 1,
-    },
-    fixed: {
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'baseline',
-      justifyContent: 'space-between',
-      my: 1,
+      alignItems: ['baseline', 'center'],
+      my: [-1, 1],
+      mx: [0, -1],
+      '>div': {
+        mx: [0, 1],
+        my: [1, 0],
+      },
     },
   },
   sidebar: {

@@ -29,7 +29,7 @@ const useControlledState = (state: GroupByState) => {
   }, [state]);
 };
 export const useExpanderColumn = <D extends Record<string, unknown>>(
-  itemsLabel: string,
+  itemsLabel: string | null,
 ) => (hooks: UseTableHooks<D>): void => {
   hooks.useControlledState.push(useControlledState);
   hooks.visibleColumns.push((columns, { instance }) => {
@@ -66,8 +66,8 @@ export const useExpanderColumn = <D extends Record<string, unknown>>(
                       mx: 2,
                     }}
                   >
-                    {row.groupByVal ?? ''} (
-                    {`${row.subRows.length} ${itemsLabel}`})
+                    {row.groupByVal ?? ''}
+                    {itemsLabel ? `(${row.subRows.length} ${itemsLabel})` : ''}
                   </Text>
                 </Flex>
               </td>

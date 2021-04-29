@@ -50,7 +50,7 @@ export const OptionsEditor: PropertyEditor = ({ name, ...rest }) => {
     const selectValue = entries.filter(op => selected.includes(op.value));
     const v: string = selectValue.length ? selectValue[0].value : '';
     return (
-      <OptionsSelect value={v} onChange={handleChange}>
+      <OptionsSelect value={v} onChange={handleChange} {...rest}>
         {entries.map(entry => (
           <option key={entry.value} value={entry.value}>
             {entry.label}

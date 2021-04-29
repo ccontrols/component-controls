@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header customLeft 1`] = `
+exports[`Header customLeft snapshot 1`] = `
 <DocumentFragment>
   <header
     class="css-10bhldn"
@@ -142,7 +142,7 @@ exports[`Header customLeft 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Header customRight 1`] = `
+exports[`Header customRight snapshot 1`] = `
 <DocumentFragment>
   <header
     class="css-10bhldn"
@@ -288,7 +288,7 @@ exports[`Header customRight 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Header customized 1`] = `
+exports[`Header customized snapshot 1`] = `
 <DocumentFragment>
   <header
     class="css-10bhldn"
@@ -500,7 +500,7 @@ exports[`Header customized 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Header overview 1`] = `
+exports[`Header overview snapshot 1`] = `
 <DocumentFragment>
   <header
     class="css-10bhldn"

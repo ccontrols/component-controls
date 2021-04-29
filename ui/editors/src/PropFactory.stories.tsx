@@ -20,6 +20,7 @@ const CheckboxEditor: PropertyEditor = ({ name }) => {
   return (
     <input
       type="checkbox"
+      aria-label="custom editor"
       id={name}
       onChange={(e: ChangeEvent<HTMLInputElement>) => {
         onChange(e.target.checked);

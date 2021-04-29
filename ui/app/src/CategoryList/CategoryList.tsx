@@ -26,7 +26,7 @@ export const CategoryList: FC<CategoryListProps> = ({ type }) => {
       variant="categorylist.pagecontainer"
       id="content"
     >
-      <Themed.h1>{pageConfig.label}</Themed.h1>
+      {pageConfig.label && <Themed.h1>{pageConfig.label}</Themed.h1>}
       <Box variant="categorylist.list">
         <ul>
           {Object.keys(categories).map(key => (

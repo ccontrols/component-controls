@@ -11,6 +11,7 @@
     -   [<ins>ColorMode</ins>](#inscolormodeins)
     -   [<ins>CopyContainer</ins>](#inscopycontainerins)
     -   [<ins>Description</ins>](#insdescriptionins)
+    -   [<ins>Donut</ins>](#insdonutins)
     -   [<ins>ExternalLink</ins>](#insexternallinkins)
     -   [<ins>GithubAvatar</ins>](#insgithubavatarins)
     -   [<ins>useGithubProfile</ins>](#insusegithubprofileins)
@@ -31,6 +32,7 @@
     -   [<ins>Popover</ins>](#inspopoverins)
     -   [<ins>ProgressIndicator</ins>](#insprogressindicatorins)
     -   [<ins>SearchInput</ins>](#inssearchinputins)
+    -   [<ins>Shield</ins>](#insshieldins)
     -   [<ins>Sidebar</ins>](#inssidebarins)
     -   [<ins>SidebarContextProvider</ins>](#inssidebarcontextproviderins)
     -   [<ins>SkiLinksItem</ins>](#insskilinksitemins)
@@ -196,6 +198,22 @@ _Description [source code](https://github.com/ccontrols/component-controls/tree/
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
 | `children`   | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, any>) \| (new (props: any) => Component&lt;any, any, any>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | the markdown source code is passed as a children pro. |
 | `components` | _{ \[key: string]: ComponentOverride&lt;any, any>; a?: ComponentOverride&lt;any, any>; br?: ComponentOverride&lt;any, any>; button?: ComponentOverride&lt;any, any>; ... 27 more ...; ul?: ComponentOverride&lt;...>; }_        | components to customize the markdown display.         |
+
+## <ins>Donut</ins>
+
+_Donut [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Donut/Donut.tsx)_
+
+### properties
+
+| Name          | Type                     | Description                         |
+| ------------- | ------------------------ | ----------------------------------- |
+| `size`        | _number_                 | svg area size                       |
+| `strokeWidth` | _number_                 | circle stroke size                  |
+| `value`       | _number_                 | initial value = between min and max |
+| `min`         | _number_                 | minimum value                       |
+| `max`         | _number_                 | maximum value                       |
+| `title`       | _string_                 | a title for the graphic             |
+| `ref`         | _Ref&lt;HTMLDivElement>_ |                                     |
 
 ## <ins>ExternalLink</ins>
 
@@ -495,6 +513,25 @@ _SearchInput [source code](https://github.com/ccontrols/component-controls/tree/
 | `css`          | _Interpolation&lt;any>_                                                                                                                                                                                                             |                                                                              |
 | `sx`           | _ThemeUIStyleObject_                                                                                                                                                                                                                |                                                                              |
 
+## <ins>Shield</ins>
+
+A container component to display label/value pairs, where the value is colord. Similar design to github shields.
+
+_Shield [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Shield/Shield.tsx)_
+
+### properties
+
+| Name      | Type                                                                   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| --------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `label*`  | _string_                                                               | shield label/text                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `value`   | _ReactText_                                                            | value displayed with background color                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `percent` | _boolean_                                                              | if true, treat the value as a percentage number from 0 to 100                                                                                                                                                                                                                                                                                                                                                                                      |
+| `color`   | _string_                                                               | background color for the value. The color utility parses a component's \`color\` and \`bg\` props and converts them into CSS declarations. By default the raw value of the prop is returned.  Color palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation. Array values are converted into responsive values.  \[MDN reference](https&#x3A;//developer.mozilla.org/en-US/docs/Web/CSS/color) |
+| `ref`     | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `as`      | _ElementType&lt;any>_                                                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `css`     | _Interpolation&lt;any>_                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `sx`      | _ThemeUIStyleObject_                                                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+
 ## <ins>Sidebar</ins>
 
 Collapsible side bar component
@@ -774,6 +811,7 @@ _Tree [source code](https://github.com/ccontrols/component-controls/tree/master/
 | `search`           | _string_                                                                                    | If specified, will filter the items by the search terms    |
 | `chevronIcon`      | _ReactNode_                                                                                 | custom chevron icon                                        |
 | `indentPixels`     | _number_                                                                                    | indentation in pixels for each elevel, By default 6 pixels |
+| `rowLinkClass`     | _any_                                                                                       | row link class - to avoid anchor in anchor warning         |
 | `ref`              | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_                      |                                                            |
 | `as`               | _ElementType&lt;any>_                                                                       |                                                            |
 | `variant`          | _string_                                                                                    |                                                            |

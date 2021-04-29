@@ -36,6 +36,7 @@ export const Toggle: FC<ToggleProps> = forwardRef(function Toggle(
       id={id}
       checked={checked}
       onChange={onChange}
+      aria-label={`click to ${checked ? 'un-' : ''}select`}
       {...rest}
     />
   );

@@ -1,6 +1,7 @@
 import React from 'react';
-import { Donut, Text } from 'theme-ui';
+import { Text } from 'theme-ui';
 import { Document, Example } from '@component-controls/core';
+import { Donut } from '../Donut';
 import { HoverBox } from '.';
 
 export default {

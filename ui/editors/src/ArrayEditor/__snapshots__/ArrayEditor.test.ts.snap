@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ArrayEditor inline 1`] = `
+exports[`ArrayEditor inline snapshot 1`] = `
 <DocumentFragment>
   <ul>
     <li>
@@ -119,7 +119,7 @@ exports[`ArrayEditor inline 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ArrayEditor overview 1`] = `
+exports[`ArrayEditor overview snapshot 1`] = `
 <DocumentFragment>
   <ul>
     <li>

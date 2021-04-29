@@ -4,6 +4,8 @@ import {
   PropsTable,
   Story,
   Description,
+  TestsResults,
+  TestsCoverage,
 } from '@component-controls/blocks';
 import { getControlsCount, TabConfiguration } from '@component-controls/core';
 import { useCurrentStory } from '@component-controls/store';
@@ -25,6 +27,8 @@ const TestingPage: FC = () => {
           <PropsTable of="." title="Controls" visibility="controls" />
         </>
       )}
+      <TestsResults id="." title="Tests results" />
+      <TestsCoverage id="." title="Tests coverage" />
       <AllyBlock title="A11y tests" />
       <ViewportBlock title="Viewport" />
     </Fragment>

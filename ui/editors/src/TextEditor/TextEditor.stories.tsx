@@ -17,7 +17,7 @@ export const overview: Example = () => {
         prop: { type: ControlTypes.TEXT, value: state },
       }}
     >
-      <TextEditor name="prop" />
+      <TextEditor name="prop" aria-label="enter some text" />
     </ControlsStateProvider>
   );
 };

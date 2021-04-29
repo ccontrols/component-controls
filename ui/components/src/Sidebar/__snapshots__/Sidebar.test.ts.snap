@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Sidebar buttonProps 1`] = `
+exports[`Sidebar buttonProps snapshot 1`] = `
 <DocumentFragment>
   <div
     style="border: 1px solid black;"
@@ -33,7 +33,7 @@ exports[`Sidebar buttonProps 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Sidebar icon 1`] = `
+exports[`Sidebar icon snapshot 1`] = `
 <DocumentFragment>
   <div
     style="border: 1px solid black;"
@@ -66,7 +66,7 @@ exports[`Sidebar icon 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Sidebar overview 1`] = `
+exports[`Sidebar overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-ob37n5"
@@ -95,7 +95,7 @@ exports[`Sidebar overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Sidebar title 1`] = `
+exports[`Sidebar title snapshot 1`] = `
 <DocumentFragment>
   <div
     style="border: 1px solid black;"

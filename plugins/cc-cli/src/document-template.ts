@@ -6,6 +6,7 @@ import { parseStories } from '@component-controls/instrument';
 import { Document } from '@component-controls/core';
 import { loadStore } from '@component-controls/store';
 import { createTemplate } from './template';
+import { accessibilityTemplate } from './accessibily';
 import { StoryTemplateOptions, renderers, TemplateFunction } from './types';
 
 dot.templateSettings.strip = false;
@@ -26,6 +27,7 @@ export const createDocumentTemplate: TemplateFunction<StoryTemplateOptions> = as
     name,
     output,
     bundle,
+    ally,
     ...rest
   } = options;
   let stories: { id?: string; name: string }[] = [];
@@ -90,6 +92,7 @@ export const createDocumentTemplate: TemplateFunction<StoryTemplateOptions> = as
     documentLoop: dot.template(fs.readFileSync(documentLoopPath, 'utf8'))({
       type:
         format === 'ts' ? ': ReturnType<typeof renderDocument> = []' : ' = []',
+      ...accessibilityTemplate(format, ally),
     }),
     doc: bundle ? `const doc = store.docs['${doc.title}'];` : '',
     storyImports: fs.readFileSync(

@@ -140,6 +140,7 @@ export const editing: Example = () => {
           Cell: ({ cell: { value } }: any) => {
             return (
               <input
+                aria-label="edit table value"
                 value={value}
                 onChange={e => {
                   setSkipPageReset(true);

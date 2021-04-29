@@ -16,6 +16,12 @@ const sortOptions: Record<ComponentCatalogOrder, string> = {
   commits_asc: 'Least commits',
   comments_desc: 'Most commented',
   comments_asc: 'Least commented',
+  passing_desc: 'Most passing tests',
+  passing_asc: 'Least passing tests',
+  failed_desc: 'Most failed tests',
+  failed_asc: 'Least failed tests',
+  coverage_desc: 'Highest tests coverage',
+  coverage_asc: 'Lowest tests coverage',
 };
 export const ComponentFilter: FC<BoxProps> = props => {
   const context = useContext(ComponentCatalogContext);
@@ -42,6 +48,7 @@ export const ComponentFilter: FC<BoxProps> = props => {
       <div sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
         <div sx={{ mr: 1 }}>sort by:</div>
         <Select
+          aria-label="select sorting order"
           sx={{ width: '200px', py: '3px' }}
           onChange={e =>
             setState({

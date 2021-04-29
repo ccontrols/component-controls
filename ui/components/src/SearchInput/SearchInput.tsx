@@ -91,9 +91,10 @@ export const SearchInput = <ItemType extends SearchInputItemType>({
       setIsOpen(newIsOpen && items.length > 0);
     }
   };
+  const hasSearch = !!search;
   useEffect(() => {
-    setIsOpen(items.length > 0 && search !== '');
-  }, [items, search]);
+    setIsOpen(items.length > 0 && hasSearch);
+  }, [items, hasSearch]);
 
   const updateSearch = async (newSearch: string) => {
     await onSearch(newSearch);

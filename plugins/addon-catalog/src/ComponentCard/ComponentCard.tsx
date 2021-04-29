@@ -44,7 +44,6 @@ export const ComponentCard: FC<ComponentCardProps & BoxProps> = ({
   const pckg = component.package
     ? store.packages[component.package]
     : undefined;
-  const { browse } = pckg?.repository || {};
   const title = getStoryTitle(doc, component);
   const description = component.info?.description || story?.description;
   return (
@@ -73,6 +72,7 @@ export const ComponentCard: FC<ComponentCardProps & BoxProps> = ({
         sx={{
           display: 'flex',
           flexDirection: 'row',
+          alignItems: 'center',
           justifyContent: 'space-between',
         }}
       >
@@ -83,7 +83,34 @@ export const ComponentCard: FC<ComponentCardProps & BoxProps> = ({
         )}
         <CommitsPopover component={component} />
       </div>
-
+      {component.fileInfo && (
+        <div
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            my: 1,
+            justifyContent: 'space-between',
+          }}
+        >
+          <Value
+            label="created:"
+            value={
+              component.fileInfo.dateCreated
+                ? format(component.fileInfo.dateCreated)
+                : 'N/A'
+            }
+          />
+          <Value
+            label="updated:"
+            value={
+              component.fileInfo.dateModified
+                ? format(component.fileInfo.dateModified)
+                : 'N/A'
+            }
+          />
+        </div>
+      )}
+      <ComponentStats component={component} />
       <div sx={{ borderBottom: '1px solid rgba(0, 0, 0, 0.125)', my: 2 }} />
       {description && <Markdown>{description}</Markdown>}
       {store.stories[id] && (
@@ -105,60 +132,6 @@ export const ComponentCard: FC<ComponentCardProps & BoxProps> = ({
               },
             }}
           />
-        </div>
-      )}
-
-      {component.fileInfo && (
-        <div sx={{ borderTop: '1px solid rgba(0, 0, 0, 0.125)', my: 2 }}>
-          {component.fileName && (
-            <div
-              sx={{
-                display: 'flex',
-                flexDirection: 'row',
-                my: 1,
-                justifyContent: 'center',
-              }}
-            >
-              <div sx={{ mr: 1, fontWeight: 'bold', fontSize: 2 }}>
-                {browse ? (
-                  <Link
-                    href={browse}
-                    aria-label="visit component repository source "
-                  >
-                    {component.fileName}
-                  </Link>
-                ) : (
-                  component.fileName
-                )}
-              </div>
-            </div>
-          )}
-          <div
-            sx={{
-              display: 'flex',
-              flexDirection: 'row',
-              my: 1,
-              justifyContent: 'space-between',
-            }}
-          >
-            <Value
-              label="created:"
-              value={
-                component.fileInfo.dateCreated
-                  ? format(component.fileInfo.dateCreated)
-                  : 'N/A'
-              }
-            />
-            <Value
-              label="updated:"
-              value={
-                component.fileInfo.dateModified
-                  ? format(component.fileInfo.dateModified)
-                  : 'N/A'
-              }
-            />
-          </div>
-          <ComponentStats component={component} variant="fixed" />
         </div>
       )}
     </Card>

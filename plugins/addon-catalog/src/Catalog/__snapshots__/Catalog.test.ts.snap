@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Catalog overview 1`] = `
+exports[`Catalog overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-vurnku"
@@ -49,6 +49,7 @@ exports[`Catalog overview 1`] = `
           class="css-4cffwv"
         >
           <select
+            aria-label="select sorting order"
             class="css-e7xs09-ComponentFilter"
           >
             <option
@@ -106,6 +107,36 @@ exports[`Catalog overview 1`] = `
             >
               Least commented
             </option>
+            <option
+              value="passing_desc"
+            >
+              Most passing tests
+            </option>
+            <option
+              value="passing_asc"
+            >
+              Least passing tests
+            </option>
+            <option
+              value="failed_desc"
+            >
+              Most failed tests
+            </option>
+            <option
+              value="failed_asc"
+            >
+              Least failed tests
+            </option>
+            <option
+              value="coverage_desc"
+            >
+              Highest tests coverage
+            </option>
+            <option
+              value="coverage_asc"
+            >
+              Lowest tests coverage
+            </option>
           </select>
           <svg
             class="css-1swud1q"
@@ -150,7 +181,7 @@ exports[`Catalog overview 1`] = `
               />
             </div>
             <div
-              class="css-nj7jql-ComponentCard"
+              class="css-18hcion-ComponentCard"
             >
               <div
                 class="css-14a8v30-PackageLink"

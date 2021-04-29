@@ -1,5 +1,12 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import React, { createContext, useContext, useState, FC, useMemo } from 'react';
+import React, {
+  FC,
+  createContext,
+  useContext,
+  useState,
+  useMemo,
+  useEffect,
+} from 'react';
 import { Result } from 'axe-core';
 
 export type Selection = string[];
@@ -35,6 +42,13 @@ export const AxeContextProvider: FC = ({ children }) => {
     passes: [],
     incomplete: [],
   });
+  const [mounted, setMounted] = useState(true);
+
+  useEffect(() => {
+    setMounted(true);
+    return () => setMounted(false);
+  }, []);
+
   return (
     <AxeContext.Provider
       value={{
@@ -44,7 +58,9 @@ export const AxeContextProvider: FC = ({ children }) => {
       <AxeSetContext.Provider
         value={{
           setResults: results => {
-            setState(results);
+            if (mounted) {
+              setState({ ...results });
+            }
           },
         }}
       >

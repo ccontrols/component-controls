@@ -1,5 +1,9 @@
+const path = require('path');
 module.exports = {
   stories: [
-    '../../../../ui/components/src/Header/*.stories.tsx',
+    path.resolve(
+      __dirname,
+      '../../../../core/jest-extract/test/fixtures/story/*.docs.tsx',
+    ),
   ],
 };

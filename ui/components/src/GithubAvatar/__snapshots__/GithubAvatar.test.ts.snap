@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GithubAvatar overview 1`] = `
+exports[`GithubAvatar overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-9cbusc-GithubAvatar"
@@ -10,6 +10,7 @@ exports[`GithubAvatar overview 1`] = `
       class="css-db5lk0-GithubAvatar"
     >
       <img
+        alt="avatar of Atanas Stoyanov"
         class="css-1y16e88"
         height="48"
         src="https://www.gravatar.com/avatar/9b9913091795a48655ec0b10dcd62a95?s=128"

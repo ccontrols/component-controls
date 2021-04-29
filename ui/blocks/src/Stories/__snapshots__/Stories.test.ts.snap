@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Stories customTitle 1`] = `
+exports[`Stories customTitle snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
+    data-testid="stories"
   >
     <div
       class="css-jxxswp"
@@ -13,6 +14,7 @@ exports[`Stories customTitle 1`] = `
         class="css-xhp9da"
       >
         <a
+          aria-label="My Story Title"
           class="css-walqom-LinkHeading"
           data-id="my-story-title"
           data-level="3"
@@ -82,243 +84,13 @@ exports[`Stories customTitle 1`] = `
         >
           <div
             class="css-jxxswp"
-            id="story"
-          >
-            <div
-              class="css-xhp9da"
-            >
-              <a
-                class="css-1ptrway-LinkHeading"
-                data-id="story"
-                data-level="4"
-                data-title="story"
-                href="http://localhost/#story"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="octicon"
-                  fill="currentColor"
-                  height="16"
-                  role="img"
-                  style="display: inline-block; user-select: none; vertical-align: middle;"
-                  viewBox="0 0 16 16"
-                  width="16"
-                >
-                  <path
-                    d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </a>
-              <h4
-                class="css-vsfm4-BlockContainer"
-              >
-                story
-              </h4>
-            </div>
-          </div>
-          <div>
-            <div
-              class="css-15owl46"
-            >
-              <div
-                class="css-x60p33"
-              >
-                <div
-                  class="css-rkyxeq"
-                >
-                  <button
-                    aria-label="switch light and dark background"
-                    class="css-1tf4h46"
-                  >
-                    dark
-                  </button>
-                </div>
-                <div
-                  class="css-7d11p2"
-                >
-                  <button
-                    aria-label="switch left to right/right to left"
-                    class="css-1tf4h46"
-                  >
-                    RTL
-                  </button>
-                </div>
-                <div
-                  class="css-q7w4rh"
-                >
-                  <button
-                    aria-label="reset zoom"
-                    class="css-97huhz"
-                    style="padding-top: 3px; padding-bottom: 3px;"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
-                    >
-                      <path
-                        d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <div
-                  class="css-q7w4rh"
-                >
-                  <button
-                    aria-label="zoom out"
-                    class="css-97huhz"
-                    style="padding-top: 3px; padding-bottom: 3px;"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
-                    >
-                      <path
-                        d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <div
-                  class="css-7d11p2"
-                >
-                  <button
-                    aria-label="zoom in"
-                    class="css-97huhz"
-                    style="padding-top: 3px; padding-bottom: 3px;"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
-                    >
-                      <path
-                        d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <div
-                  class="css-q7w4rh"
-                >
-                  <button
-                    aria-label="display story source code"
-                    class="css-1tf4h46"
-                  >
-                    open source
-                  </button>
-                </div>
-                <div
-                  class="css-q7w4rh"
-                >
-                  <button
-                    aria-label="display story configuration object"
-                    class="css-1tf4h46"
-                  >
-                    open config
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              class="css-eqxzio"
-            >
-              <div
-                style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
-              >
-                <div
-                  class="css-1s8zxab"
-                >
-                  <div
-                    class="css-1j909cg"
-                  >
-                    <div
-                      class="css-1xkyebe"
-                    >
-                      <div
-                        class="css-jxxswp"
-                        id=""
-                      >
-                        <div
-                          class="css-xhp9da"
-                        >
-                          <h3
-                            class="css-16ist9v-BlockContainer"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        class="rah-static rah-static--height-auto"
-                        style="height: auto; overflow: visible;"
-                      >
-                        <div>
-                          <div
-                            class="css-154oin1"
-                            data-testid="story"
-                            id="id-of-single"
-                          >
-                            <div
-                              class="story-render-container css-dhmrnb"
-                            >
-                              <h2
-                                class="css-229nmx"
-                              >
-                                Components
-                              </h2>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                aria-hidden="true"
-                class="rah-static rah-static--height-zero"
-                style="height: 0px; overflow: hidden;"
-              >
-                <div
-                  style="display: none;"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="css-1xkyebe"
-          data-testid="playground"
-        >
-          <div
-            class="css-jxxswp"
             id="button"
           >
             <div
               class="css-xhp9da"
             >
               <a
+                aria-label="button"
                 class="css-1ptrway-LinkHeading"
                 data-id="button"
                 data-level="4"
@@ -486,6 +258,7 @@ exports[`Stories customTitle 1`] = `
                   >
                     <div
                       class="css-1xkyebe"
+                      data-testid="story"
                     >
                       <div
                         class="css-jxxswp"
@@ -493,11 +266,7 @@ exports[`Stories customTitle 1`] = `
                       >
                         <div
                           class="css-xhp9da"
-                        >
-                          <h3
-                            class="css-16ist9v-BlockContainer"
-                          />
-                        </div>
+                        />
                       </div>
                       <div
                         aria-hidden="false"
@@ -550,6 +319,7 @@ exports[`Stories customTitle 1`] = `
               class="css-xhp9da"
             >
               <a
+                aria-label="controls"
                 class="css-1ptrway-LinkHeading"
                 data-id="controls"
                 data-level="4"
@@ -717,6 +487,7 @@ exports[`Stories customTitle 1`] = `
                   >
                     <div
                       class="css-1xkyebe"
+                      data-testid="story"
                     >
                       <div
                         class="css-jxxswp"
@@ -724,11 +495,7 @@ exports[`Stories customTitle 1`] = `
                       >
                         <div
                           class="css-xhp9da"
-                        >
-                          <h3
-                            class="css-16ist9v-BlockContainer"
-                          />
-                        </div>
+                        />
                       </div>
                       <div
                         aria-hidden="false"
@@ -745,9 +512,7 @@ exports[`Stories customTitle 1`] = `
                               class="story-render-container css-dhmrnb"
                             >
                               <svg
-                                aria-valuemax="1"
-                                aria-valuemin="0"
-                                aria-valuenow="0.5"
+                                aria-label="example donut graphic"
                                 class="css-14d2907"
                                 fill="none"
                                 height="128"
@@ -792,16 +557,246 @@ exports[`Stories customTitle 1`] = `
             </div>
           </div>
         </div>
+        <div
+          class="css-1xkyebe"
+          data-testid="playground"
+        >
+          <div
+            class="css-jxxswp"
+            id="story"
+          >
+            <div
+              class="css-xhp9da"
+            >
+              <a
+                aria-label="story"
+                class="css-1ptrway-LinkHeading"
+                data-id="story"
+                data-level="4"
+                data-title="story"
+                href="http://localhost/#story"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <h4
+                class="css-vsfm4-BlockContainer"
+              >
+                story
+              </h4>
+            </div>
+          </div>
+          <div>
+            <div
+              class="css-15owl46"
+            >
+              <div
+                class="css-x60p33"
+              >
+                <div
+                  class="css-rkyxeq"
+                >
+                  <button
+                    aria-label="switch light and dark background"
+                    class="css-1tf4h46"
+                  >
+                    dark
+                  </button>
+                </div>
+                <div
+                  class="css-7d11p2"
+                >
+                  <button
+                    aria-label="switch left to right/right to left"
+                    class="css-1tf4h46"
+                  >
+                    RTL
+                  </button>
+                </div>
+                <div
+                  class="css-q7w4rh"
+                >
+                  <button
+                    aria-label="reset zoom"
+                    class="css-97huhz"
+                    style="padding-top: 3px; padding-bottom: 3px;"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div
+                  class="css-q7w4rh"
+                >
+                  <button
+                    aria-label="zoom out"
+                    class="css-97huhz"
+                    style="padding-top: 3px; padding-bottom: 3px;"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div
+                  class="css-7d11p2"
+                >
+                  <button
+                    aria-label="zoom in"
+                    class="css-97huhz"
+                    style="padding-top: 3px; padding-bottom: 3px;"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div
+                  class="css-q7w4rh"
+                >
+                  <button
+                    aria-label="display story source code"
+                    class="css-1tf4h46"
+                  >
+                    open source
+                  </button>
+                </div>
+                <div
+                  class="css-q7w4rh"
+                >
+                  <button
+                    aria-label="display story configuration object"
+                    class="css-1tf4h46"
+                  >
+                    open config
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="css-eqxzio"
+            >
+              <div
+                style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+              >
+                <div
+                  class="css-1s8zxab"
+                >
+                  <div
+                    class="css-1j909cg"
+                  >
+                    <div
+                      class="css-1xkyebe"
+                      data-testid="story"
+                    >
+                      <div
+                        class="css-jxxswp"
+                        id=""
+                      >
+                        <div
+                          class="css-xhp9da"
+                        />
+                      </div>
+                      <div
+                        aria-hidden="false"
+                        class="rah-static rah-static--height-auto"
+                        style="height: auto; overflow: visible;"
+                      >
+                        <div>
+                          <div
+                            class="css-154oin1"
+                            data-testid="story"
+                            id="id-of-single"
+                          >
+                            <div
+                              class="story-render-container css-dhmrnb"
+                            >
+                              <h2
+                                class="css-229nmx"
+                              >
+                                Components
+                              </h2>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden="true"
+                class="rah-static rah-static--height-zero"
+                style="height: 0px; overflow: hidden;"
+              >
+                <div
+                  style="display: none;"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Stories darkTheme 1`] = `
+exports[`Stories darkTheme snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
+    data-testid="stories"
   >
     <div
       class="css-jxxswp"
@@ -811,6 +806,7 @@ exports[`Stories darkTheme 1`] = `
         class="css-xhp9da"
       >
         <a
+          aria-label="Stories"
           class="css-walqom-LinkHeading"
           data-id="stories"
           data-level="3"
@@ -880,243 +876,13 @@ exports[`Stories darkTheme 1`] = `
         >
           <div
             class="css-jxxswp"
-            id="story"
-          >
-            <div
-              class="css-xhp9da"
-            >
-              <a
-                class="css-1ptrway-LinkHeading"
-                data-id="story"
-                data-level="4"
-                data-title="story"
-                href="http://localhost/#story"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="octicon"
-                  fill="currentColor"
-                  height="16"
-                  role="img"
-                  style="display: inline-block; user-select: none; vertical-align: middle;"
-                  viewBox="0 0 16 16"
-                  width="16"
-                >
-                  <path
-                    d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </a>
-              <h4
-                class="css-vsfm4-BlockContainer"
-              >
-                story
-              </h4>
-            </div>
-          </div>
-          <div>
-            <div
-              class="css-15owl46"
-            >
-              <div
-                class="css-x60p33"
-              >
-                <div
-                  class="css-rkyxeq"
-                >
-                  <button
-                    aria-label="switch light and dark background"
-                    class="css-1tf4h46"
-                  >
-                    dark
-                  </button>
-                </div>
-                <div
-                  class="css-7d11p2"
-                >
-                  <button
-                    aria-label="switch left to right/right to left"
-                    class="css-1tf4h46"
-                  >
-                    RTL
-                  </button>
-                </div>
-                <div
-                  class="css-q7w4rh"
-                >
-                  <button
-                    aria-label="reset zoom"
-                    class="css-97huhz"
-                    style="padding-top: 3px; padding-bottom: 3px;"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
-                    >
-                      <path
-                        d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <div
-                  class="css-q7w4rh"
-                >
-                  <button
-                    aria-label="zoom out"
-                    class="css-97huhz"
-                    style="padding-top: 3px; padding-bottom: 3px;"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
-                    >
-                      <path
-                        d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <div
-                  class="css-7d11p2"
-                >
-                  <button
-                    aria-label="zoom in"
-                    class="css-97huhz"
-                    style="padding-top: 3px; padding-bottom: 3px;"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
-                    >
-                      <path
-                        d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <div
-                  class="css-q7w4rh"
-                >
-                  <button
-                    aria-label="display story source code"
-                    class="css-1tf4h46"
-                  >
-                    open source
-                  </button>
-                </div>
-                <div
-                  class="css-q7w4rh"
-                >
-                  <button
-                    aria-label="display story configuration object"
-                    class="css-1tf4h46"
-                  >
-                    open config
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              class="css-eqxzio"
-            >
-              <div
-                style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
-              >
-                <div
-                  class="css-1s8zxab"
-                >
-                  <div
-                    class="css-1j909cg"
-                  >
-                    <div
-                      class="css-1xkyebe"
-                    >
-                      <div
-                        class="css-jxxswp"
-                        id=""
-                      >
-                        <div
-                          class="css-xhp9da"
-                        >
-                          <h3
-                            class="css-16ist9v-BlockContainer"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        class="rah-static rah-static--height-auto"
-                        style="height: auto; overflow: visible;"
-                      >
-                        <div>
-                          <div
-                            class="css-154oin1"
-                            data-testid="story"
-                            id="id-of-single"
-                          >
-                            <div
-                              class="story-render-container css-dhmrnb"
-                            >
-                              <h2
-                                class="css-229nmx"
-                              >
-                                Components
-                              </h2>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                aria-hidden="true"
-                class="rah-static rah-static--height-zero"
-                style="height: 0px; overflow: hidden;"
-              >
-                <div
-                  style="display: none;"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="css-1xkyebe"
-          data-testid="playground"
-        >
-          <div
-            class="css-jxxswp"
             id="button"
           >
             <div
               class="css-xhp9da"
             >
               <a
+                aria-label="button"
                 class="css-1ptrway-LinkHeading"
                 data-id="button"
                 data-level="4"
@@ -1284,6 +1050,7 @@ exports[`Stories darkTheme 1`] = `
                   >
                     <div
                       class="css-1xkyebe"
+                      data-testid="story"
                     >
                       <div
                         class="css-jxxswp"
@@ -1291,11 +1058,7 @@ exports[`Stories darkTheme 1`] = `
                       >
                         <div
                           class="css-xhp9da"
-                        >
-                          <h3
-                            class="css-16ist9v-BlockContainer"
-                          />
-                        </div>
+                        />
                       </div>
                       <div
                         aria-hidden="false"
@@ -1348,6 +1111,7 @@ exports[`Stories darkTheme 1`] = `
               class="css-xhp9da"
             >
               <a
+                aria-label="controls"
                 class="css-1ptrway-LinkHeading"
                 data-id="controls"
                 data-level="4"
@@ -1515,6 +1279,7 @@ exports[`Stories darkTheme 1`] = `
                   >
                     <div
                       class="css-1xkyebe"
+                      data-testid="story"
                     >
                       <div
                         class="css-jxxswp"
@@ -1522,11 +1287,7 @@ exports[`Stories darkTheme 1`] = `
                       >
                         <div
                           class="css-xhp9da"
-                        >
-                          <h3
-                            class="css-16ist9v-BlockContainer"
-                          />
-                        </div>
+                        />
                       </div>
                       <div
                         aria-hidden="false"
@@ -1543,9 +1304,7 @@ exports[`Stories darkTheme 1`] = `
                               class="story-render-container css-dhmrnb"
                             >
                               <svg
-                                aria-valuemax="1"
-                                aria-valuemin="0"
-                                aria-valuenow="0.5"
+                                aria-label="example donut graphic"
                                 class="css-14d2907"
                                 fill="none"
                                 height="128"
@@ -1590,16 +1349,246 @@ exports[`Stories darkTheme 1`] = `
             </div>
           </div>
         </div>
+        <div
+          class="css-1xkyebe"
+          data-testid="playground"
+        >
+          <div
+            class="css-jxxswp"
+            id="story"
+          >
+            <div
+              class="css-xhp9da"
+            >
+              <a
+                aria-label="story"
+                class="css-1ptrway-LinkHeading"
+                data-id="story"
+                data-level="4"
+                data-title="story"
+                href="http://localhost/#story"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <h4
+                class="css-vsfm4-BlockContainer"
+              >
+                story
+              </h4>
+            </div>
+          </div>
+          <div>
+            <div
+              class="css-15owl46"
+            >
+              <div
+                class="css-x60p33"
+              >
+                <div
+                  class="css-rkyxeq"
+                >
+                  <button
+                    aria-label="switch light and dark background"
+                    class="css-1tf4h46"
+                  >
+                    dark
+                  </button>
+                </div>
+                <div
+                  class="css-7d11p2"
+                >
+                  <button
+                    aria-label="switch left to right/right to left"
+                    class="css-1tf4h46"
+                  >
+                    RTL
+                  </button>
+                </div>
+                <div
+                  class="css-q7w4rh"
+                >
+                  <button
+                    aria-label="reset zoom"
+                    class="css-97huhz"
+                    style="padding-top: 3px; padding-bottom: 3px;"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div
+                  class="css-q7w4rh"
+                >
+                  <button
+                    aria-label="zoom out"
+                    class="css-97huhz"
+                    style="padding-top: 3px; padding-bottom: 3px;"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div
+                  class="css-7d11p2"
+                >
+                  <button
+                    aria-label="zoom in"
+                    class="css-97huhz"
+                    style="padding-top: 3px; padding-bottom: 3px;"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div
+                  class="css-q7w4rh"
+                >
+                  <button
+                    aria-label="display story source code"
+                    class="css-1tf4h46"
+                  >
+                    open source
+                  </button>
+                </div>
+                <div
+                  class="css-q7w4rh"
+                >
+                  <button
+                    aria-label="display story configuration object"
+                    class="css-1tf4h46"
+                  >
+                    open config
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="css-eqxzio"
+            >
+              <div
+                style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+              >
+                <div
+                  class="css-1s8zxab"
+                >
+                  <div
+                    class="css-1j909cg"
+                  >
+                    <div
+                      class="css-1xkyebe"
+                      data-testid="story"
+                    >
+                      <div
+                        class="css-jxxswp"
+                        id=""
+                      >
+                        <div
+                          class="css-xhp9da"
+                        />
+                      </div>
+                      <div
+                        aria-hidden="false"
+                        class="rah-static rah-static--height-auto"
+                        style="height: auto; overflow: visible;"
+                      >
+                        <div>
+                          <div
+                            class="css-154oin1"
+                            data-testid="story"
+                            id="id-of-single"
+                          >
+                            <div
+                              class="story-render-container css-dhmrnb"
+                            >
+                              <h2
+                                class="css-229nmx"
+                              >
+                                Components
+                              </h2>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden="true"
+                class="rah-static rah-static--height-zero"
+                style="height: 0px; overflow: hidden;"
+              >
+                <div
+                  style="display: none;"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Stories notCollapsible 1`] = `
+exports[`Stories notCollapsible snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
+    data-testid="stories"
   >
     <div
       class="css-jxxswp"
@@ -1609,6 +1598,7 @@ exports[`Stories notCollapsible 1`] = `
         class="css-xhp9da"
       >
         <a
+          aria-label="Stories"
           class="css-1ptrway-LinkHeading"
           data-id="stories"
           data-level="4"
@@ -1644,243 +1634,13 @@ exports[`Stories notCollapsible 1`] = `
     >
       <div
         class="css-jxxswp"
-        id="story"
-      >
-        <div
-          class="css-xhp9da"
-        >
-          <a
-            class="css-1ptrway-LinkHeading"
-            data-id="story"
-            data-level="4"
-            data-title="story"
-            href="http://localhost/#story"
-          >
-            <svg
-              aria-hidden="true"
-              class="octicon"
-              fill="currentColor"
-              height="16"
-              role="img"
-              style="display: inline-block; user-select: none; vertical-align: middle;"
-              viewBox="0 0 16 16"
-              width="16"
-            >
-              <path
-                d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </a>
-          <h4
-            class="css-vsfm4-BlockContainer"
-          >
-            story
-          </h4>
-        </div>
-      </div>
-      <div>
-        <div
-          class="css-15owl46"
-        >
-          <div
-            class="css-x60p33"
-          >
-            <div
-              class="css-rkyxeq"
-            >
-              <button
-                aria-label="switch light and dark background"
-                class="css-1tf4h46"
-              >
-                dark
-              </button>
-            </div>
-            <div
-              class="css-7d11p2"
-            >
-              <button
-                aria-label="switch left to right/right to left"
-                class="css-1tf4h46"
-              >
-                RTL
-              </button>
-            </div>
-            <div
-              class="css-q7w4rh"
-            >
-              <button
-                aria-label="reset zoom"
-                class="css-97huhz"
-                style="padding-top: 3px; padding-bottom: 3px;"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="octicon"
-                  fill="currentColor"
-                  height="16"
-                  role="img"
-                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                  viewBox="0 0 16 16"
-                  width="16"
-                >
-                  <path
-                    d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div
-              class="css-q7w4rh"
-            >
-              <button
-                aria-label="zoom out"
-                class="css-97huhz"
-                style="padding-top: 3px; padding-bottom: 3px;"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="octicon"
-                  fill="currentColor"
-                  height="16"
-                  role="img"
-                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                  viewBox="0 0 16 16"
-                  width="16"
-                >
-                  <path
-                    d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div
-              class="css-7d11p2"
-            >
-              <button
-                aria-label="zoom in"
-                class="css-97huhz"
-                style="padding-top: 3px; padding-bottom: 3px;"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="octicon"
-                  fill="currentColor"
-                  height="16"
-                  role="img"
-                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                  viewBox="0 0 16 16"
-                  width="16"
-                >
-                  <path
-                    d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div
-              class="css-q7w4rh"
-            >
-              <button
-                aria-label="display story source code"
-                class="css-1tf4h46"
-              >
-                open source
-              </button>
-            </div>
-            <div
-              class="css-q7w4rh"
-            >
-              <button
-                aria-label="display story configuration object"
-                class="css-1tf4h46"
-              >
-                open config
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="css-eqxzio"
-        >
-          <div
-            style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
-          >
-            <div
-              class="css-1s8zxab"
-            >
-              <div
-                class="css-1j909cg"
-              >
-                <div
-                  class="css-1xkyebe"
-                >
-                  <div
-                    class="css-jxxswp"
-                    id=""
-                  >
-                    <div
-                      class="css-xhp9da"
-                    >
-                      <h3
-                        class="css-16ist9v-BlockContainer"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    aria-hidden="false"
-                    class="rah-static rah-static--height-auto"
-                    style="height: auto; overflow: visible;"
-                  >
-                    <div>
-                      <div
-                        class="css-154oin1"
-                        data-testid="story"
-                        id="id-of-single"
-                      >
-                        <div
-                          class="story-render-container css-dhmrnb"
-                        >
-                          <h2
-                            class="css-229nmx"
-                          >
-                            Components
-                          </h2>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="rah-static rah-static--height-zero"
-            style="height: 0px; overflow: hidden;"
-          >
-            <div
-              style="display: none;"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-1xkyebe"
-      data-testid="playground"
-    >
-      <div
-        class="css-jxxswp"
         id="button"
       >
         <div
           class="css-xhp9da"
         >
           <a
+            aria-label="button"
             class="css-1ptrway-LinkHeading"
             data-id="button"
             data-level="4"
@@ -2048,6 +1808,7 @@ exports[`Stories notCollapsible 1`] = `
               >
                 <div
                   class="css-1xkyebe"
+                  data-testid="story"
                 >
                   <div
                     class="css-jxxswp"
@@ -2055,11 +1816,7 @@ exports[`Stories notCollapsible 1`] = `
                   >
                     <div
                       class="css-xhp9da"
-                    >
-                      <h3
-                        class="css-16ist9v-BlockContainer"
-                      />
-                    </div>
+                    />
                   </div>
                   <div
                     aria-hidden="false"
@@ -2112,6 +1869,7 @@ exports[`Stories notCollapsible 1`] = `
           class="css-xhp9da"
         >
           <a
+            aria-label="controls"
             class="css-1ptrway-LinkHeading"
             data-id="controls"
             data-level="4"
@@ -2279,6 +2037,7 @@ exports[`Stories notCollapsible 1`] = `
               >
                 <div
                   class="css-1xkyebe"
+                  data-testid="story"
                 >
                   <div
                     class="css-jxxswp"
@@ -2286,11 +2045,7 @@ exports[`Stories notCollapsible 1`] = `
                   >
                     <div
                       class="css-xhp9da"
-                    >
-                      <h3
-                        class="css-16ist9v-BlockContainer"
-                      />
-                    </div>
+                    />
                   </div>
                   <div
                     aria-hidden="false"
@@ -2307,9 +2062,7 @@ exports[`Stories notCollapsible 1`] = `
                           class="story-render-container css-dhmrnb"
                         >
                           <svg
-                            aria-valuemax="1"
-                            aria-valuemin="0"
-                            aria-valuenow="0.5"
+                            aria-label="example donut graphic"
                             class="css-14d2907"
                             fill="none"
                             height="128"
@@ -2354,14 +2107,244 @@ exports[`Stories notCollapsible 1`] = `
         </div>
       </div>
     </div>
+    <div
+      class="css-1xkyebe"
+      data-testid="playground"
+    >
+      <div
+        class="css-jxxswp"
+        id="story"
+      >
+        <div
+          class="css-xhp9da"
+        >
+          <a
+            aria-label="story"
+            class="css-1ptrway-LinkHeading"
+            data-id="story"
+            data-level="4"
+            data-title="story"
+            href="http://localhost/#story"
+          >
+            <svg
+              aria-hidden="true"
+              class="octicon"
+              fill="currentColor"
+              height="16"
+              role="img"
+              style="display: inline-block; user-select: none; vertical-align: middle;"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </a>
+          <h4
+            class="css-vsfm4-BlockContainer"
+          >
+            story
+          </h4>
+        </div>
+      </div>
+      <div>
+        <div
+          class="css-15owl46"
+        >
+          <div
+            class="css-x60p33"
+          >
+            <div
+              class="css-rkyxeq"
+            >
+              <button
+                aria-label="switch light and dark background"
+                class="css-1tf4h46"
+              >
+                dark
+              </button>
+            </div>
+            <div
+              class="css-7d11p2"
+            >
+              <button
+                aria-label="switch left to right/right to left"
+                class="css-1tf4h46"
+              >
+                RTL
+              </button>
+            </div>
+            <div
+              class="css-q7w4rh"
+            >
+              <button
+                aria-label="reset zoom"
+                class="css-97huhz"
+                style="padding-top: 3px; padding-bottom: 3px;"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="css-q7w4rh"
+            >
+              <button
+                aria-label="zoom out"
+                class="css-97huhz"
+                style="padding-top: 3px; padding-bottom: 3px;"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="css-7d11p2"
+            >
+              <button
+                aria-label="zoom in"
+                class="css-97huhz"
+                style="padding-top: 3px; padding-bottom: 3px;"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="css-q7w4rh"
+            >
+              <button
+                aria-label="display story source code"
+                class="css-1tf4h46"
+              >
+                open source
+              </button>
+            </div>
+            <div
+              class="css-q7w4rh"
+            >
+              <button
+                aria-label="display story configuration object"
+                class="css-1tf4h46"
+              >
+                open config
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-eqxzio"
+        >
+          <div
+            style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+          >
+            <div
+              class="css-1s8zxab"
+            >
+              <div
+                class="css-1j909cg"
+              >
+                <div
+                  class="css-1xkyebe"
+                  data-testid="story"
+                >
+                  <div
+                    class="css-jxxswp"
+                    id=""
+                  >
+                    <div
+                      class="css-xhp9da"
+                    />
+                  </div>
+                  <div
+                    aria-hidden="false"
+                    class="rah-static rah-static--height-auto"
+                    style="height: auto; overflow: visible;"
+                  >
+                    <div>
+                      <div
+                        class="css-154oin1"
+                        data-testid="story"
+                        id="id-of-single"
+                      >
+                        <div
+                          class="story-render-container css-dhmrnb"
+                        >
+                          <h2
+                            class="css-229nmx"
+                          >
+                            Components
+                          </h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="rah-static rah-static--height-zero"
+            style="height: 0px; overflow: hidden;"
+          >
+            <div
+              style="display: none;"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Stories overview 1`] = `
+exports[`Stories overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
+    data-testid="stories"
   >
     <div
       class="css-jxxswp"
@@ -2371,6 +2354,7 @@ exports[`Stories overview 1`] = `
         class="css-xhp9da"
       >
         <a
+          aria-label="Stories"
           class="css-walqom-LinkHeading"
           data-id="stories"
           data-level="3"
@@ -2440,243 +2424,13 @@ exports[`Stories overview 1`] = `
         >
           <div
             class="css-jxxswp"
-            id="story"
-          >
-            <div
-              class="css-xhp9da"
-            >
-              <a
-                class="css-1ptrway-LinkHeading"
-                data-id="story"
-                data-level="4"
-                data-title="story"
-                href="http://localhost/#story"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="octicon"
-                  fill="currentColor"
-                  height="16"
-                  role="img"
-                  style="display: inline-block; user-select: none; vertical-align: middle;"
-                  viewBox="0 0 16 16"
-                  width="16"
-                >
-                  <path
-                    d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </a>
-              <h4
-                class="css-vsfm4-BlockContainer"
-              >
-                story
-              </h4>
-            </div>
-          </div>
-          <div>
-            <div
-              class="css-15owl46"
-            >
-              <div
-                class="css-x60p33"
-              >
-                <div
-                  class="css-rkyxeq"
-                >
-                  <button
-                    aria-label="switch light and dark background"
-                    class="css-1tf4h46"
-                  >
-                    dark
-                  </button>
-                </div>
-                <div
-                  class="css-7d11p2"
-                >
-                  <button
-                    aria-label="switch left to right/right to left"
-                    class="css-1tf4h46"
-                  >
-                    RTL
-                  </button>
-                </div>
-                <div
-                  class="css-q7w4rh"
-                >
-                  <button
-                    aria-label="reset zoom"
-                    class="css-97huhz"
-                    style="padding-top: 3px; padding-bottom: 3px;"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
-                    >
-                      <path
-                        d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <div
-                  class="css-q7w4rh"
-                >
-                  <button
-                    aria-label="zoom out"
-                    class="css-97huhz"
-                    style="padding-top: 3px; padding-bottom: 3px;"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
-                    >
-                      <path
-                        d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <div
-                  class="css-7d11p2"
-                >
-                  <button
-                    aria-label="zoom in"
-                    class="css-97huhz"
-                    style="padding-top: 3px; padding-bottom: 3px;"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="octicon"
-                      fill="currentColor"
-                      height="16"
-                      role="img"
-                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                      viewBox="0 0 16 16"
-                      width="16"
-                    >
-                      <path
-                        d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <div
-                  class="css-q7w4rh"
-                >
-                  <button
-                    aria-label="display story source code"
-                    class="css-1tf4h46"
-                  >
-                    open source
-                  </button>
-                </div>
-                <div
-                  class="css-q7w4rh"
-                >
-                  <button
-                    aria-label="display story configuration object"
-                    class="css-1tf4h46"
-                  >
-                    open config
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              class="css-eqxzio"
-            >
-              <div
-                style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
-              >
-                <div
-                  class="css-1s8zxab"
-                >
-                  <div
-                    class="css-1j909cg"
-                  >
-                    <div
-                      class="css-1xkyebe"
-                    >
-                      <div
-                        class="css-jxxswp"
-                        id=""
-                      >
-                        <div
-                          class="css-xhp9da"
-                        >
-                          <h3
-                            class="css-16ist9v-BlockContainer"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        class="rah-static rah-static--height-auto"
-                        style="height: auto; overflow: visible;"
-                      >
-                        <div>
-                          <div
-                            class="css-154oin1"
-                            data-testid="story"
-                            id="id-of-single"
-                          >
-                            <div
-                              class="story-render-container css-dhmrnb"
-                            >
-                              <h2
-                                class="css-229nmx"
-                              >
-                                Components
-                              </h2>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                aria-hidden="true"
-                class="rah-static rah-static--height-zero"
-                style="height: 0px; overflow: hidden;"
-              >
-                <div
-                  style="display: none;"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="css-1xkyebe"
-          data-testid="playground"
-        >
-          <div
-            class="css-jxxswp"
             id="button"
           >
             <div
               class="css-xhp9da"
             >
               <a
+                aria-label="button"
                 class="css-1ptrway-LinkHeading"
                 data-id="button"
                 data-level="4"
@@ -2844,6 +2598,7 @@ exports[`Stories overview 1`] = `
                   >
                     <div
                       class="css-1xkyebe"
+                      data-testid="story"
                     >
                       <div
                         class="css-jxxswp"
@@ -2851,11 +2606,7 @@ exports[`Stories overview 1`] = `
                       >
                         <div
                           class="css-xhp9da"
-                        >
-                          <h3
-                            class="css-16ist9v-BlockContainer"
-                          />
-                        </div>
+                        />
                       </div>
                       <div
                         aria-hidden="false"
@@ -2908,6 +2659,7 @@ exports[`Stories overview 1`] = `
               class="css-xhp9da"
             >
               <a
+                aria-label="controls"
                 class="css-1ptrway-LinkHeading"
                 data-id="controls"
                 data-level="4"
@@ -3075,6 +2827,7 @@ exports[`Stories overview 1`] = `
                   >
                     <div
                       class="css-1xkyebe"
+                      data-testid="story"
                     >
                       <div
                         class="css-jxxswp"
@@ -3082,11 +2835,7 @@ exports[`Stories overview 1`] = `
                       >
                         <div
                           class="css-xhp9da"
-                        >
-                          <h3
-                            class="css-16ist9v-BlockContainer"
-                          />
-                        </div>
+                        />
                       </div>
                       <div
                         aria-hidden="false"
@@ -3103,9 +2852,7 @@ exports[`Stories overview 1`] = `
                               class="story-render-container css-dhmrnb"
                             >
                               <svg
-                                aria-valuemax="1"
-                                aria-valuemin="0"
-                                aria-valuenow="0.5"
+                                aria-label="example donut graphic"
                                 class="css-14d2907"
                                 fill="none"
                                 height="128"
@@ -3130,6 +2877,235 @@ exports[`Stories overview 1`] = `
                                   transform="rotate(-90 16 16)"
                                 />
                               </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden="true"
+                class="rah-static rah-static--height-zero"
+                style="height: 0px; overflow: hidden;"
+              >
+                <div
+                  style="display: none;"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-1xkyebe"
+          data-testid="playground"
+        >
+          <div
+            class="css-jxxswp"
+            id="story"
+          >
+            <div
+              class="css-xhp9da"
+            >
+              <a
+                aria-label="story"
+                class="css-1ptrway-LinkHeading"
+                data-id="story"
+                data-level="4"
+                data-title="story"
+                href="http://localhost/#story"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <h4
+                class="css-vsfm4-BlockContainer"
+              >
+                story
+              </h4>
+            </div>
+          </div>
+          <div>
+            <div
+              class="css-15owl46"
+            >
+              <div
+                class="css-x60p33"
+              >
+                <div
+                  class="css-rkyxeq"
+                >
+                  <button
+                    aria-label="switch light and dark background"
+                    class="css-1tf4h46"
+                  >
+                    dark
+                  </button>
+                </div>
+                <div
+                  class="css-7d11p2"
+                >
+                  <button
+                    aria-label="switch left to right/right to left"
+                    class="css-1tf4h46"
+                  >
+                    RTL
+                  </button>
+                </div>
+                <div
+                  class="css-q7w4rh"
+                >
+                  <button
+                    aria-label="reset zoom"
+                    class="css-97huhz"
+                    style="padding-top: 3px; padding-bottom: 3px;"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div
+                  class="css-q7w4rh"
+                >
+                  <button
+                    aria-label="zoom out"
+                    class="css-97huhz"
+                    style="padding-top: 3px; padding-bottom: 3px;"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M2 8a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 8z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div
+                  class="css-7d11p2"
+                >
+                  <button
+                    aria-label="zoom in"
+                    class="css-97huhz"
+                    style="padding-top: 3px; padding-bottom: 3px;"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div
+                  class="css-q7w4rh"
+                >
+                  <button
+                    aria-label="display story source code"
+                    class="css-1tf4h46"
+                  >
+                    open source
+                  </button>
+                </div>
+                <div
+                  class="css-q7w4rh"
+                >
+                  <button
+                    aria-label="display story configuration object"
+                    class="css-1tf4h46"
+                  >
+                    open config
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="css-eqxzio"
+            >
+              <div
+                style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
+              >
+                <div
+                  class="css-1s8zxab"
+                >
+                  <div
+                    class="css-1j909cg"
+                  >
+                    <div
+                      class="css-1xkyebe"
+                      data-testid="story"
+                    >
+                      <div
+                        class="css-jxxswp"
+                        id=""
+                      >
+                        <div
+                          class="css-xhp9da"
+                        />
+                      </div>
+                      <div
+                        aria-hidden="false"
+                        class="rah-static rah-static--height-auto"
+                        style="height: auto; overflow: visible;"
+                      >
+                        <div>
+                          <div
+                            class="css-154oin1"
+                            data-testid="story"
+                            id="id-of-single"
+                          >
+                            <div
+                              class="story-render-container css-dhmrnb"
+                            >
+                              <h2
+                                class="css-229nmx"
+                              >
+                                Components
+                              </h2>
                             </div>
                           </div>
                         </div>

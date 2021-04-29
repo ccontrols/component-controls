@@ -1,13 +1,7 @@
-import { TestResult } from '@jest/test-result';
-export interface JestTestResults {
-  ancestorTitles: string[];
-  failureDetails: unknown[];
-  failureMessages: string[];
-  numPassingAsserts: number;
-  status: 'passed' | 'failed' | 'skipped' | 'pending' | 'todo' | 'disabled';
-  title: string;
-}
-
+import {
+  TestResult as JestTestResult,
+  AssertionResult,
+} from '@jest/test-result';
 export interface CoverageMetrics {
   total: number;
   covered: number;
@@ -15,21 +9,31 @@ export interface CoverageMetrics {
   pct: number;
 }
 
-export interface JestCoverage {
-  lines: CoverageMetrics;
-  functions: CoverageMetrics;
-  statements: CoverageMetrics;
-  branches: CoverageMetrics;
-}
+export type CoverageKind = 'lines' | 'functions' | 'statements' | 'branches';
 
+export type JestCoverage = Record<CoverageKind, CoverageMetrics>;
+
+export type JestResult = Pick<
+  JestTestResult,
+  'leaks' | 'perfStats' | 'testFilePath'
+> & {
+  testResults: (Pick<
+    AssertionResult,
+    | 'ancestorTitles'
+    | 'duration'
+    | 'fullName'
+    | 'status'
+    | 'title'
+    | 'numPassingAsserts'
+  > & {
+    failureDetails: { message: string }[];
+  })[];
+};
 export interface JestTests {
   /**
    * test results
    */
-  results: Pick<
-    TestResult,
-    'leaks' | 'memoryUsage' | 'perfStats' | 'testFilePath' | 'testResults'
-  >[];
+  results: JestResult[];
   /**
    * coverage summary data, by file
    */

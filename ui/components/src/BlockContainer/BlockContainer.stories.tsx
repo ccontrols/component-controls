@@ -1,6 +1,6 @@
 import React from 'react';
-import { Donut } from 'theme-ui';
 import { Document, Example, ControlTypes } from '@component-controls/core';
+import { Donut } from '../Donut';
 import { ThemeProvider } from '../ThemeContext';
 import { BlockContainer, BlockContainerProps } from './BlockContainer';
 

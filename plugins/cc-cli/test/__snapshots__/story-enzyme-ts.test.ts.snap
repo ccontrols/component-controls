@@ -2,6 +2,9 @@
 
 exports[`enzyme  ts 1`] = `
 "import * as path from 'path';
+import { run, AxeResults } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
 import { loadConfigurations } from '@component-controls/config';
 import { renderExample } from '@component-controls/test-renderers';
 import { mount, configure } from 'enzyme';
@@ -24,7 +27,7 @@ describe('VariantButton', () => {
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
 
-  test('overview', () => {
+  describe('overview', () => {
     const example = overview;
 
     const rendered = renderExample({
@@ -33,11 +36,17 @@ describe('VariantButton', () => {
       config,
     });
 
-    const component = mount(rendered);
-    expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    it('snapshot', () => {
+      const component = mount(rendered);
+      expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
   });
 
-  test('primary', () => {
+  describe('primary', () => {
     const example = primary;
 
     const rendered = renderExample({
@@ -46,11 +55,17 @@ describe('VariantButton', () => {
       config,
     });
 
-    const component = mount(rendered);
-    expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    it('snapshot', () => {
+      const component = mount(rendered);
+      expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
   });
 
-  test('accent', () => {
+  describe('accent', () => {
     const example = accent;
 
     const rendered = renderExample({
@@ -59,11 +74,17 @@ describe('VariantButton', () => {
       config,
     });
 
-    const component = mount(rendered);
-    expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    it('snapshot', () => {
+      const component = mount(rendered);
+      expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
   });
 
-  test('disabled', () => {
+  describe('disabled', () => {
     const example = disabled;
 
     const rendered = renderExample({
@@ -72,11 +93,17 @@ describe('VariantButton', () => {
       config,
     });
 
-    const component = mount(rendered);
-    expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    it('snapshot', () => {
+      const component = mount(rendered);
+      expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
   });
 
-  test('success', () => {
+  describe('success', () => {
     const example = success;
 
     const rendered = renderExample({
@@ -85,11 +112,17 @@ describe('VariantButton', () => {
       config,
     });
 
-    const component = mount(rendered);
-    expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    it('snapshot', () => {
+      const component = mount(rendered);
+      expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
   });
 
-  test('error', () => {
+  describe('error', () => {
     const example = error;
 
     const rendered = renderExample({
@@ -98,11 +131,17 @@ describe('VariantButton', () => {
       config,
     });
 
-    const component = mount(rendered);
-    expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    it('snapshot', () => {
+      const component = mount(rendered);
+      expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
   });
 
-  test('warning', () => {
+  describe('warning', () => {
     const example = warning;
 
     const rendered = renderExample({
@@ -111,8 +150,14 @@ describe('VariantButton', () => {
       config,
     });
 
-    const component = mount(rendered);
-    expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    it('snapshot', () => {
+      const component = mount(rendered);
+      expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
   });
 });
 "

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NotesBlock customConfigProps 1`] = `
+exports[`NotesBlock customConfigProps snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -13,6 +13,7 @@ exports[`NotesBlock customConfigProps 1`] = `
         class="css-xhp9da"
       >
         <a
+          aria-label="Custom title here"
           class="css-1ptrway-LinkHeading"
           data-id="custom-title-here"
           data-level="4"
@@ -51,10 +52,11 @@ exports[`NotesBlock customConfigProps 1`] = `
           class="css-xhp9da"
         >
           <a
+            aria-label="Component  design notes"
             class="css-1aob0xw-LinkHeading"
             data-id="component-design-notes"
             data-level="2"
-            data-title="Component ,design notes"
+            data-title="Component  design notes"
             href="http://localhost/#component-design-notes"
           >
             <svg
@@ -105,7 +107,7 @@ exports[`NotesBlock customConfigProps 1`] = `
 </DocumentFragment>
 `;
 
-exports[`NotesBlock customItems 1`] = `
+exports[`NotesBlock customItems snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -116,11 +118,7 @@ exports[`NotesBlock customItems 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -137,6 +135,7 @@ exports[`NotesBlock customItems 1`] = `
               class="css-xhp9da"
             >
               <a
+                aria-label="Introduction"
                 class="css-6ugsdx-LinkHeading"
                 data-id="introduction"
                 data-level="1"
@@ -168,12 +167,14 @@ exports[`NotesBlock customItems 1`] = `
               </h1>
             </div>
           </div>
-          <p>
+          <div
+            variant="styles.p"
+          >
             some 
             <strong>
               markdown
             </strong>
-          </p>
+          </div>
         </div>
       </div>
     </div>
@@ -181,7 +182,7 @@ exports[`NotesBlock customItems 1`] = `
 </DocumentFragment>
 `;
 
-exports[`NotesBlock markdownFile 1`] = `
+exports[`NotesBlock markdownFile snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-vurnku"
@@ -192,11 +193,7 @@ exports[`NotesBlock markdownFile 1`] = `
     >
       <div
         class="css-vurnku"
-      >
-        <h3
-          class="css-7w8dq8-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -213,7 +210,7 @@ exports[`NotesBlock markdownFile 1`] = `
 </DocumentFragment>
 `;
 
-exports[`NotesBlock overview 1`] = `
+exports[`NotesBlock overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -224,11 +221,7 @@ exports[`NotesBlock overview 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -245,10 +238,11 @@ exports[`NotesBlock overview 1`] = `
               class="css-xhp9da"
             >
               <a
+                aria-label="Component  design notes"
                 class="css-1aob0xw-LinkHeading"
                 data-id="component-design-notes"
                 data-level="2"
-                data-title="Component ,design notes"
+                data-title="Component  design notes"
                 href="http://localhost/#component-design-notes"
               >
                 <svg

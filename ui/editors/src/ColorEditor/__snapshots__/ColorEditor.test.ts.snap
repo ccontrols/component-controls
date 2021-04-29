@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ColorEditor hsl 1`] = `
+exports[`ColorEditor hsl snapshot 1`] = `
 <DocumentFragment>
   <div
     style="display: inline-block;"
@@ -21,7 +21,7 @@ exports[`ColorEditor hsl 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ColorEditor hsla 1`] = `
+exports[`ColorEditor hsla snapshot 1`] = `
 <DocumentFragment>
   <div
     style="display: inline-block;"
@@ -42,7 +42,7 @@ exports[`ColorEditor hsla 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ColorEditor overview 1`] = `
+exports[`ColorEditor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     style="display: inline-block;"
@@ -63,7 +63,7 @@ exports[`ColorEditor overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ColorEditor rgb 1`] = `
+exports[`ColorEditor rgb snapshot 1`] = `
 <DocumentFragment>
   <div
     style="display: inline-block;"
@@ -84,7 +84,7 @@ exports[`ColorEditor rgb 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ColorEditor rgba 1`] = `
+exports[`ColorEditor rgba snapshot 1`] = `
 <DocumentFragment>
   <div
     style="display: inline-block;"

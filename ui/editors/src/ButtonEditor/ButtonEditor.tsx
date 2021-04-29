@@ -8,12 +8,13 @@ import { addPropertyEditor } from '../prop-factory';
 /**
  * Button control editor.
  */
-export const ButtonEditor: PropertyEditor = ({ name }) => {
+export const ButtonEditor: PropertyEditor = ({ name, ...rest }) => {
   const [control] = useControl<ComponentControlButton>(name);
   return (
     <Button
       name={name}
       onClick={() => (control.onClick ? control.onClick(control) : {})}
+      {...rest}
     >
       {name}
     </Button>

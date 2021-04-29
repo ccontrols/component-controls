@@ -7,9 +7,11 @@ if (!renderedExamples) {
   return;
 }
 renderedExamples.forEach(({ name, rendered}) => {
-  it(name, async () => {
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
-
+  describe(name, () => {
+    it('snapshot', () => {
+      const { asFragment } = render(rendered);
+      expect(asFragment()).toMatchSnapshot();
+    });  
+    {{=it.allytest}}
   });
 });

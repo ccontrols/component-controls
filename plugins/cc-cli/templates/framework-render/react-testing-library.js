@@ -14,5 +14,8 @@ if (!rendered) {
   renderErr();
   return;
 }
-const { asFragment } = render(rendered);
-expect(asFragment()).toMatchSnapshot();
+it('snapshot', () => {
+  const { asFragment } = render(rendered);
+  expect(asFragment()).toMatchSnapshot();
+});
+{{=it.allytest}}

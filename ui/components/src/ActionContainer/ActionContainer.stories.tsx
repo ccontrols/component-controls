@@ -1,6 +1,7 @@
 import React from 'react';
-import { Donut, Box } from 'theme-ui';
+import { Box } from 'theme-ui';
 import { Document, Example } from '@component-controls/core';
+import { Donut } from '../Donut';
 import { ExternalLink } from '../ExternalLink';
 import { ActionContainer } from './ActionContainer';
 

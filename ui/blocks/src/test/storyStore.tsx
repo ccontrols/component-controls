@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 import React, { ReactElement } from 'react';
-import { Donut, Button, Heading } from 'theme-ui';
+import { Button, Heading } from 'theme-ui';
 import {
   Store,
   getDefaultStore,
@@ -11,11 +11,14 @@ import {
 } from '@component-controls/core';
 import { render as reactRender } from '@component-controls/render/react';
 import ClassicPage from '@component-controls/pages/ClassicPage';
+import { Donut } from '@component-controls/components';
 import { MDXContent } from './MDXStory';
+
 import img_example from './image_example.jpg';
 
 export const store: Store = {
   ...getDefaultStore(),
+  search: require('@component-controls/search-fusejs').default,
   config: {
     ...deepMerge(defaultBuildConfig, defaultRunConfig),
     renderFn: reactRender,
@@ -137,10 +140,8 @@ export const store: Store = {
       info: {
         description: `
 Markdown descripton for component.
-
 # With a heading
-
-and a [link](https://google.com)
+and some bold **text**
         `,
         displayName: 'typescript',
         props: {
@@ -334,14 +335,14 @@ and a [link](https://google.com)
         },
         commits: [
           {
-            committerName: 'hasparus',
-            authorName: 'hasparus',
+            committerName: 'martin-stoyanov',
+            authorName: 'martin-stoyanov',
             authorDate: '2021-02-23T22:48:26.000Z',
             subject: 'third commit',
           },
           {
-            committerName: 'hasparus',
-            authorName: 'lachlanjc',
+            committerName: 'martin-stoyanov',
+            authorName: 'martin-stoyanov',
             authorDate: '2021-02-22T22:48:26.000Z',
             subject: '(งツ)ว',
           },
@@ -358,8 +359,8 @@ and a [link](https://google.com)
             subject: 'first commit!',
           },
           {
-            committerName: 'atanasster',
-            authorName: 'atanasster',
+            committerName: 'martin-stoyanov',
+            authorName: 'martin-stoyanov',
             authorDate: '2021-02-21T22:48:26.000Z',
             subject: 'first commit!',
           },
@@ -412,91 +413,125 @@ and a [link](https://google.com)
           {
             leaks: false,
             perfStats: {
-              end: 1618885808252,
-              runtime: 7032,
+              end: 1618979220883,
+              runtime: 5950,
               slow: true,
-              start: 1618885801220,
+              start: 1618979214933,
             },
             testFilePath: 'Table.test.ts',
             testResults: [
               {
                 ancestorTitles: ['Table'],
+                duration: 196,
                 failureDetails: [],
-                failureMessages: [],
                 fullName: 'Table overview',
-                location: null,
                 numPassingAsserts: 0,
                 status: 'passed',
                 title: 'overview',
               },
               {
                 ancestorTitles: ['Table'],
+                duration: 91,
                 failureDetails: [],
-                failureMessages: [],
                 fullName: 'Table noHeader',
-                location: null,
                 numPassingAsserts: 0,
                 status: 'passed',
                 title: 'noHeader',
               },
               {
                 ancestorTitles: ['Table'],
-                failureDetails: [],
-                failureMessages: [],
-                fullName: 'Table sortable',
-                location: null,
-                numPassingAsserts: 0,
-                status: 'passed',
-                title: 'sortable',
-              },
-              {
-                ancestorTitles: ['Table'],
-                failureDetails: [],
-                failureMessages: [],
-                fullName: 'Table filterable',
-                location: null,
-                numPassingAsserts: 0,
-                status: 'passed',
-                title: 'filterable',
-              },
-              {
-                ancestorTitles: ['Table'],
-                failureDetails: [],
-                failureMessages: [],
-                fullName: 'Table grouping',
-                location: null,
-                numPassingAsserts: 0,
-                status: 'passed',
-                title: 'grouping',
-              },
-              {
-                ancestorTitles: ['Table'],
-                failureDetails: [],
-                failureMessages: [],
+                duration: 33,
+                failureDetails: [
+                  {
+                    message:
+                      '\u001b[2mexpect(\u001b[22m\u001b[38;2;0;95;95m\u001b[48;2;215;255;255mreceived\u001b[49m\u001b[39m\u001b[2m).\u001b[22mtoMatchSnapshot\u001b[2m()\u001b[22m\n\nSnapshot name: `Table editing 1`\n\n\u001b[38;2;128;0;128m\u001b[48;2;255;215;255m- Snapshot  - 1\u001b[49m\u001b[39m\n\u001b[38;2;0;95;95m\u001b[48;2;215;255;255m+ Received  + 1\u001b[49m\u001b[39m\n\n\u001b[33m@@ -40,11 +40,11 @@\u001b[39m\n\u001b[2m            class="css-l4u9co"\u001b[22m\n\u001b[2m            role="cell"\u001b[22m\n\u001b[2m            style="width: 150px;"\u001b[22m\n\u001b[2m          >\u001b[22m\n\u001b[2m            <input\u001b[22m\n\u001b[38;2;128;0;128m\u001b[48;2;255;215;255m-             value="sample"\u001b[49m\u001b[39m\n\u001b[38;2;0;95;95m\u001b[48;2;215;255;255m+             value="example"\u001b[49m\u001b[39m\n\u001b[2m            />\u001b[22m\n\u001b[2m          </td>\u001b[22m\n\u001b[2m        </tr>\u001b[22m\n\u001b[2m      </tbody>\u001b[22m\n\u001b[2m    </table>\u001b[22m',
+                  },
+                ],
                 fullName: 'Table editing',
                 numPassingAsserts: 0,
-                status: 'passed',
+                status: 'failed',
                 title: 'editing',
               },
               {
                 ancestorTitles: ['Table'],
+                duration: 33,
                 failureDetails: [],
-                failureMessages: [],
+                fullName: 'Table disable',
+                numPassingAsserts: 0,
+                status: 'disabled',
+                title: 'disable',
+              },
+              {
+                ancestorTitles: ['Table'],
+                duration: 33,
+                failureDetails: [],
+                fullName: 'Table pending',
+                numPassingAsserts: 0,
+                status: 'pending',
+                title: 'pending',
+              },
+              {
+                ancestorTitles: ['Table'],
+                duration: 33,
+                failureDetails: [],
+                fullName: 'Table skipped',
+                numPassingAsserts: 0,
+                status: 'skipped',
+                title: 'skipped',
+              },
+              {
+                ancestorTitles: ['Table'],
+                duration: 33,
+                failureDetails: [],
+                fullName: 'Table todo',
+                numPassingAsserts: 0,
+                status: 'todo',
+                title: 'todo',
+              },
+              {
+                ancestorTitles: ['Table'],
+                duration: 144,
+                failureDetails: [],
                 fullName: 'Table rowSelect',
-                location: null,
                 numPassingAsserts: 0,
                 status: 'passed',
                 title: 'rowSelect',
               },
               {
                 ancestorTitles: ['Table'],
+                duration: 169,
                 failureDetails: [],
-                failureMessages: [],
                 fullName: 'Table pagination',
-                location: null,
                 numPassingAsserts: 0,
                 status: 'passed',
                 title: 'pagination',
+              },
+              {
+                ancestorTitles: ['Table'],
+                duration: 115,
+                failureDetails: [],
+                fullName: 'Table sortable',
+                numPassingAsserts: 0,
+                status: 'passed',
+                title: 'sortable',
+              },
+              {
+                ancestorTitles: ['Table'],
+                duration: 115,
+                failureDetails: [],
+                fullName: 'Table filterable',
+                numPassingAsserts: 0,
+                status: 'passed',
+                title: 'filterable',
+              },
+              {
+                ancestorTitles: ['Table'],
+                duration: 89,
+                failureDetails: [],
+                fullName: 'Table grouping',
+                numPassingAsserts: 0,
+                status: 'passed',
+                title: 'grouping',
               },
             ],
           },
@@ -662,8 +697,7 @@ and a [link](https://google.com)
       },
       info: {
         description: `
-Markdown descripton for component.
-with a [link](https://google.com)
+Markdown **descripton** for *component*.
         `,
         displayName: 'Control',
         props: {
@@ -697,9 +731,9 @@ with a [link](https://google.com)
       title: 'Story',
       stories: [
         'id-of-story',
-        'id-of-single',
         'id-of-button-story',
         'blocks-core-story-plain--controls',
+        'id-of-single',
       ],
     },
     mdxStory: {
@@ -775,7 +809,9 @@ with a [link](https://google.com)
       source: "() => 'hello'",
     },
     'blocks-core-story-plain--controls': {
-      renderFn: (): ReactElement => <Donut value={1 / 2} />,
+      renderFn: (): ReactElement => (
+        <Donut value={1 / 2} aria-label="example donut graphic" />
+      ),
       id: 'blocks-core-story-plain--controls',
       doc: 'Story',
       name: 'controls',
@@ -797,6 +833,7 @@ with a [link](https://google.com)
           {
             url:
               'https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1',
+            'aria-label': 'figma design file',
           },
         ],
         notes: [
@@ -810,7 +847,7 @@ with a [link](https://google.com)
             `,
           },
         ],
-        images: [img_example],
+        images: [{ src: img_example, 'aria-label': 'design resource image' }],
       },
       arguments: [
         {

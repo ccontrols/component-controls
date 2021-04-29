@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Footer overview 1`] = `
+exports[`Footer overview snapshot 1`] = `
 <DocumentFragment>
   <footer
     class="css-gtql5a"

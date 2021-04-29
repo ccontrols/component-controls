@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ObjectEditor editLabel 1`] = `
+exports[`ObjectEditor editLabel snapshot 1`] = `
 <DocumentFragment>
   <div
     style="display: inline-block;"
@@ -15,7 +15,7 @@ exports[`ObjectEditor editLabel 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ObjectEditor inline 1`] = `
+exports[`ObjectEditor inline snapshot 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -29,7 +29,7 @@ exports[`ObjectEditor inline 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ObjectEditor overview 1`] = `
+exports[`ObjectEditor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     style="display: inline-block;"

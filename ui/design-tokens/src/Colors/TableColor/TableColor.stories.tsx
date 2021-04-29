@@ -52,7 +52,6 @@ export const paletteDark: Example = () => (
       accent: '#f49342',
       darken: '#00044c',
       gray: { value: '#f6f6f6', dark: '#4d5866' },
-      sidebar: { value: '#f6f6f6', dark: '#000000' },
       highlight: { value: '#d9f2f1', dark: '#b7ecec' },
       action: { value: '#3B817D', dark: '#d9f2f1' },
       selected: { value: '#027AC5', dark: '#b3d9ff' },

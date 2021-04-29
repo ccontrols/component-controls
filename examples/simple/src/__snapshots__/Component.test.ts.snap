@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component main 1`] = `
+exports[`Component main snapshot 1`] = `
 <DocumentFragment>
   <div>
     some text

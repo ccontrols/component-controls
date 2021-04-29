@@ -1,6 +1,6 @@
 import React from 'react';
-import { Donut } from 'theme-ui';
 import { Document, Example } from '@component-controls/core';
+import { Donut } from '@component-controls/components';
 import { Playground } from './index';
 import { Story } from '../Story';
 import { makeDecorators } from '../test/MockContext';
@@ -57,7 +57,7 @@ export const customTitle: Example = () => (
 customTitle.decorators = makeDecorators('blocks-core-story-plain--controls');
 
 export const notCollapsible: Example = () => (
-  <Playground title="." collapsible={false} id=".">
+  <Playground collapsible={false} id=".">
     <Story id="." />
   </Playground>
 );

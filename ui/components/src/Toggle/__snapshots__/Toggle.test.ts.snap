@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Toggle checkbox 1`] = `
+exports[`Toggle checkbox snapshot 1`] = `
 <DocumentFragment>
   <label
     class="css-knfhfe"
@@ -45,7 +45,7 @@ exports[`Toggle checkbox 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Toggle customIcons 1`] = `
+exports[`Toggle customIcons snapshot 1`] = `
 <DocumentFragment>
   <div
     style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 14px; transition: opacity 0.25s; user-select: none;"
@@ -93,6 +93,7 @@ exports[`Toggle customIcons 1`] = `
     />
     <input
       aria-checked="false"
+      aria-label="click to select"
       role="switch"
       style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"
       type="checkbox"
@@ -101,7 +102,7 @@ exports[`Toggle customIcons 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Toggle label 1`] = `
+exports[`Toggle label snapshot 1`] = `
 <DocumentFragment>
   <label
     class="css-knfhfe"
@@ -158,6 +159,7 @@ exports[`Toggle label 1`] = `
       />
       <input
         aria-checked="false"
+        aria-label="click to select"
         id="custom-toggle"
         role="switch"
         style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"
@@ -168,7 +170,7 @@ exports[`Toggle label 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Toggle octicons 1`] = `
+exports[`Toggle octicons snapshot 1`] = `
 <DocumentFragment>
   <div
     style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 10px; transition: opacity 0.25s; user-select: none;"
@@ -238,6 +240,7 @@ exports[`Toggle octicons 1`] = `
     />
     <input
       aria-checked="false"
+      aria-label="click to select"
       role="switch"
       style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"
       type="checkbox"
@@ -246,7 +249,7 @@ exports[`Toggle octicons 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Toggle overview 1`] = `
+exports[`Toggle overview snapshot 1`] = `
 <DocumentFragment>
   <div
     style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 14px; transition: opacity 0.25s; user-select: none;"
@@ -294,6 +297,7 @@ exports[`Toggle overview 1`] = `
     />
     <input
       aria-checked="false"
+      aria-label="click to select"
       role="switch"
       style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"
       type="checkbox"

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppError overview 1`] = `
+exports[`AppError overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-vurnku"

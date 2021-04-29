@@ -21,7 +21,7 @@ export const overview: Example = () => {
         },
       }}
     >
-      <OptionsEditor name="prop" />
+      <OptionsEditor name="prop" aria-label="select one option" />
     </ControlsStateProvider>
   );
 };
@@ -39,7 +39,7 @@ export const objects: Example = () => {
         },
       }}
     >
-      <OptionsEditor name="prop" />
+      <OptionsEditor name="prop" aria-label="select one option" />
     </ControlsStateProvider>
   );
 };
@@ -61,7 +61,7 @@ export const numeric: Example = () => {
         },
       }}
     >
-      <OptionsEditor name="prop" />
+      <OptionsEditor name="prop" aria-label="select one option" />
     </ControlsStateProvider>
   );
 };
@@ -80,7 +80,7 @@ export const multiSelectSimple: Example = () => {
         },
       }}
     >
-      <OptionsEditor name="prop" />
+      <OptionsEditor name="prop" aria-label="select one or more options" />
     </ControlsStateProvider>
   );
 };
@@ -99,7 +99,7 @@ export const multiSelectObjects: Example = () => {
         },
       }}
     >
-      <OptionsEditor name="prop" />
+      <OptionsEditor name="prop" aria-label="select one or more options" />
     </ControlsStateProvider>
   );
 };
@@ -122,7 +122,7 @@ export const multiSelectNumeric: Example = () => {
         },
       }}
     >
-      <OptionsEditor name="prop" />
+      <OptionsEditor name="prop" aria-label="select one or more options" />
     </ControlsStateProvider>
   );
 };
@@ -141,7 +141,7 @@ export const simpleRadios: Example = () => {
         },
       }}
     >
-      <OptionsEditor name="prop" />
+      <OptionsEditor name="prop" aria-label="select one option" />
     </ControlsStateProvider>
   );
 };
@@ -160,7 +160,7 @@ export const objectsRadios: Example = () => {
         },
       }}
     >
-      <OptionsEditor name="prop" />
+      <OptionsEditor name="prop" aria-label="select one option" />
     </ControlsStateProvider>
   );
 };
@@ -183,7 +183,7 @@ export const numericRadios: Example = () => {
         },
       }}
     >
-      <OptionsEditor name="prop" />
+      <OptionsEditor name="prop" aria-label="select one option" />
     </ControlsStateProvider>
   );
 };
@@ -202,7 +202,7 @@ export const simpleRadiosInline: Example = () => {
         },
       }}
     >
-      <OptionsEditor name="prop" />
+      <OptionsEditor name="prop" aria-label="select one option" />
     </ControlsStateProvider>
   );
 };
@@ -221,7 +221,7 @@ export const objectsRadiosInline: Example = () => {
         },
       }}
     >
-      <OptionsEditor name="prop" />
+      <OptionsEditor name="prop" aria-label="select one option" />
     </ControlsStateProvider>
   );
 };
@@ -244,7 +244,7 @@ export const numericRadiosInline: Example = () => {
         },
       }}
     >
-      <OptionsEditor name="prop" />
+      <OptionsEditor name="prop" aria-label="select one option" />
     </ControlsStateProvider>
   );
 };
@@ -263,7 +263,7 @@ export const simpleCheck: Example = () => {
         },
       }}
     >
-      <OptionsEditor name="prop" />
+      <OptionsEditor name="prop" aria-label="select one or more options" />
     </ControlsStateProvider>
   );
 };
@@ -282,7 +282,7 @@ export const objectsCheck: Example = () => {
         },
       }}
     >
-      <OptionsEditor name="prop" />
+      <OptionsEditor name="prop" aria-label="select one or more options" />
     </ControlsStateProvider>
   );
 };
@@ -305,7 +305,7 @@ export const numericCheck: Example = () => {
         },
       }}
     >
-      <OptionsEditor name="prop" />
+      <OptionsEditor name="prop" aria-label="select one or more options" />
     </ControlsStateProvider>
   );
 };
@@ -324,7 +324,7 @@ export const simpleCheckInline: Example = () => {
         },
       }}
     >
-      <OptionsEditor name="prop" />
+      <OptionsEditor name="prop" aria-label="select one or more options" />
     </ControlsStateProvider>
   );
 };
@@ -343,7 +343,7 @@ export const objectsCheckInline: Example = () => {
         },
       }}
     >
-      <OptionsEditor name="prop" />
+      <OptionsEditor name="prop" aria-label="select one or more options" />
     </ControlsStateProvider>
   );
 };
@@ -366,7 +366,7 @@ export const numericCheckInline: Example = () => {
         },
       }}
     >
-      <OptionsEditor name="prop" />
+      <OptionsEditor name="prop" aria-label="select one or more options" />
     </ControlsStateProvider>
   );
 };

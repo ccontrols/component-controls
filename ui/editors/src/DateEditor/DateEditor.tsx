@@ -38,7 +38,7 @@ const formatTime = (date: Date | undefined) => {
 /**
  * Date control editor.
  */
-export const DateEditor: PropertyEditor = ({ name }) => {
+export const DateEditor: PropertyEditor = ({ name, ...rest }) => {
   const [control, onChange] = useControl<ComponentControlDate>(name);
   const [valid, setValid] = useState(true);
   const dateInputRef = useRef<HTMLInputElement>();
@@ -106,6 +106,8 @@ export const DateEditor: PropertyEditor = ({ name }) => {
           id={`${name}date`}
           name={`${name}date`}
           onChange={onDateChange}
+          aria-label="enter a date"
+          {...rest}
         />
       )}
       {timePicker && (
@@ -118,6 +120,8 @@ export const DateEditor: PropertyEditor = ({ name }) => {
           name={`${name}time`}
           ref={timeInputRef as RefObject<HTMLInputElement>}
           onChange={onTimeChange}
+          aria-label="enter a time"
+          {...rest}
         />
       )}
     </Box>

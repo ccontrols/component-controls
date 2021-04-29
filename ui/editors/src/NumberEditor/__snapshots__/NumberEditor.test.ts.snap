@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NumberEditor overview 1`] = `
+exports[`NumberEditor overview snapshot 1`] = `
 <DocumentFragment>
   <input
+    aria-label="enter a numeric value between 3 and 22"
     class="css-iyqgnx"
     max="22"
     min="3"
@@ -13,17 +14,19 @@ exports[`NumberEditor overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`NumberEditor range 1`] = `
+exports[`NumberEditor range snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-vurnku"
   >
     <span
+      aria-labelledby=""
       class="css-vurnku"
     >
       3
     </span>
     <input
+      aria-label="select a numeric value between 3 and 22"
       class="css-mo64tj"
       max="22"
       min="3"
@@ -40,9 +43,10 @@ exports[`NumberEditor range 1`] = `
 </DocumentFragment>
 `;
 
-exports[`NumberEditor step 1`] = `
+exports[`NumberEditor step snapshot 1`] = `
 <DocumentFragment>
   <input
+    aria-label="enter a numeric value between 3 and 22"
     class="css-iyqgnx"
     max="22"
     min="3"

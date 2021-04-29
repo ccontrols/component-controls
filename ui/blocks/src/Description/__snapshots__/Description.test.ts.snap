@@ -1,83 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Description components 1`] = `
+exports[`Description components snapshot 1`] = `
 <DocumentFragment>
-  <div>
-    <p>
-      Markdown descripton for component.
-    </p>
-    <h1>
-      custom component: With a heading 
-    </h1>
-    <p>
-      and a 
-      <a
-        href="https://google.com"
-      >
-        link
-      </a>
-    </p>
+  <div
+    variant="styles.p"
+  >
+    Markdown descripton for component.
+# With a heading
+and some bold 
+    <strong>
+      text
+    </strong>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Description overview 1`] = `
+exports[`Description overview snapshot 1`] = `
 <DocumentFragment>
-  <div>
-    <p
-      class="css-p7s6cm"
-    >
-      Markdown descripton for component.
-    </p>
-    <div
-      class="css-jxxswp"
-      id="with-a-heading"
-    >
-      <div
-        class="css-xhp9da"
-      >
-        <a
-          class="css-6ugsdx-LinkHeading"
-          data-id="with-a-heading"
-          data-level="1"
-          data-title="With a heading"
-          href="http://localhost/#with-a-heading"
-        >
-          <svg
-            aria-hidden="true"
-            class="octicon"
-            fill="currentColor"
-            height="28"
-            role="img"
-            style="display: inline-block; user-select: none; vertical-align: middle;"
-            viewBox="0 0 24 24"
-            width="28"
-          >
-            <path
-              d="M14.78 3.653a3.936 3.936 0 115.567 5.567l-3.627 3.627a3.936 3.936 0 01-5.88-.353.75.75 0 00-1.18.928 5.436 5.436 0 008.12.486l3.628-3.628a5.436 5.436 0 10-7.688-7.688l-3 3a.75.75 0 001.06 1.061l3-3z"
-            />
-            <path
-              d="M7.28 11.153a3.936 3.936 0 015.88.353.75.75 0 001.18-.928 5.436 5.436 0 00-8.12-.486L2.592 13.72a5.436 5.436 0 107.688 7.688l3-3a.75.75 0 10-1.06-1.06l-3 3a3.936 3.936 0 01-5.567-5.568l3.627-3.627z"
-            />
-          </svg>
-        </a>
-        <h1
-          class="css-ixvu55"
-        >
-          With a heading
-        </h1>
-      </div>
-    </div>
-    <p
-      class="css-p7s6cm"
-    >
-      and a 
-      <a
-        href="https://google.com"
-      >
-        link
-      </a>
-    </p>
-  </div>
+  <p
+    class="css-p7s6cm"
+  >
+    Markdown descripton for component.
+# With a heading
+and some bold 
+    <strong>
+      text
+    </strong>
+  </p>
 </DocumentFragment>
 `;

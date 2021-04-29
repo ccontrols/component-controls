@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App overview 1`] = `
+exports[`App overview snapshot 1`] = `
 <DocumentFragment>
   <section
     aria-label="skip tab order to linked items"

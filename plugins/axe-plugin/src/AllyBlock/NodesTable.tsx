@@ -48,8 +48,9 @@ export const NodesTable: FC<NodesTableProps> = ({
     () => [
       {
         Header: '',
-        accessor: 'target',
-        width: 80,
+        accessor: 'impact',
+        id: 'node_target',
+        width: 20,
         Cell: ({
           row: {
             original: { target },
@@ -65,7 +66,7 @@ export const NodesTable: FC<NodesTableProps> = ({
       {
         Header: 'html',
         accessor: 'html',
-        Cell: ({ value }: { value: string }) => {
+        Cell: ({ value }) => {
           return (
             <Flex
               sx={{
@@ -82,7 +83,7 @@ export const NodesTable: FC<NodesTableProps> = ({
       {
         Header: 'target',
         accessor: 'target',
-        Cell: ({ value }: { value: string[] }) => {
+        Cell: ({ value }) => {
           return (
             <Flex
               css={{
@@ -90,15 +91,26 @@ export const NodesTable: FC<NodesTableProps> = ({
               }}
             >
               {value &&
-                value.map(target => (
-                  <Tag
-                    key={`${target}`}
-                    color="lightgrey"
-                    variant="tag.rightmargin"
-                  >
-                    {trimNode(target)}
-                  </Tag>
-                ))}
+                value.map(target => {
+                  const selector = trimNode(target);
+                  return (
+                    <Tag
+                      key={`${target}`}
+                      color="lightgrey"
+                      variant="tag.rightmargin"
+                      title={selector}
+                      sx={{
+                        display: 'block',
+                        overflow: 'hidden',
+                        maxWidth: '400px',
+                        whiteSpace: 'nowrap',
+                        textOverflow: 'ellipsis',
+                      }}
+                    >
+                      {selector}
+                    </Tag>
+                  );
+                })}
             </Flex>
           );
         },
@@ -115,9 +127,7 @@ export const NodesTable: FC<NodesTableProps> = ({
       <Table<NodeResult>
         data={nodes}
         columns={columns}
-        hiddenColumns={
-          hideErrorColumns ? ['failureSummary', 'targets'] : ['targets']
-        }
+        hiddenColumns={hideErrorColumns ? ['failureSummary', 'html'] : ['html']}
       />
     </Box>
   );

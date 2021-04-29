@@ -48,6 +48,7 @@ _createDocumentTemplate [source code](https://github.com/ccontrols/component-con
 | `bundle`    | _string_                     | if specified, will get stories from the bundle instead of directly importing |
 | `output`    | _string_                     | tests output folder - where to create them                                   |
 | `name`      | _string_                     | describe section label                                                       |
+| `ally`      | _boolean_                    | if true, include axe accessibility tests                                     |
 
 ## <ins>createStoreTemplate</ins>
 
@@ -65,6 +66,7 @@ _createStoreTemplate [source code](https://github.com/ccontrols/component-contro
 | `bundle`   | _string_                     | if specified, will get stories from the bundle instead of directly importing |
 | `output`   | _string_                     | tests output folder - where to create them                                   |
 | `name`     | _string_                     | describe section label                                                       |
+| `ally`     | _boolean_                    | if true, include axe accessibility tests                                     |
 
 ## <ins>createStoriesTemplate</ins>
 
@@ -83,6 +85,7 @@ _createStoriesTemplate [source code](https://github.com/ccontrols/component-cont
 | `bundle`    | _string_                     | if specified, will get stories from the bundle instead of directly importing |
 | `output`    | _string_                     | tests output folder - where to create them                                   |
 | `name`      | _string_                     | describe section label                                                       |
+| `ally`      | _boolean_                    | if true, include axe accessibility tests                                     |
 
 ## <ins>createTemplate</ins>
 
@@ -100,6 +103,7 @@ _createTemplate [source code](https://github.com/ccontrols/component-controls/tr
 | `bundle`    | _string_                     | if specified, will get stories from the bundle instead of directly importing |
 | `output`    | _string_                     | tests output folder - where to create them                                   |
 | `name`      | _string_                     | describe section label                                                       |
+| `ally`      | _boolean_                    | if true, include axe accessibility tests                                     |
 | `template*` | _string_                     |                                                                              |
 | `vars*`     | _Record&lt;string, any>_     |                                                                              |
 
@@ -123,6 +127,7 @@ _cliStore [source code](https://github.com/ccontrols/component-controls/tree/mas
 | `bundle`     | _string_                     | if specified, will get stories from the bundle instead of directly importing |
 | `output`     | _string_                     | tests output folder - where to create them                                   |
 | `name`       | _string_                     | describe section label                                                       |
+| `ally`       | _boolean_                    | if true, include axe accessibility tests                                     |
 
 ## <ins>cliStory</ins>
 

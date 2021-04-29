@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchInput customize 1`] = `
+exports[`SearchInput customize snapshot 1`] = `
 <DocumentFragment>
   <div
     style="display: inline-block;"
@@ -33,7 +33,7 @@ exports[`SearchInput customize 1`] = `
 </DocumentFragment>
 `;
 
-exports[`SearchInput defaultRender 1`] = `
+exports[`SearchInput defaultRender snapshot 1`] = `
 <DocumentFragment>
   <div
     style="display: inline-block;"
@@ -66,7 +66,7 @@ exports[`SearchInput defaultRender 1`] = `
 </DocumentFragment>
 `;
 
-exports[`SearchInput overview 1`] = `
+exports[`SearchInput overview snapshot 1`] = `
 <DocumentFragment>
   <div
     style="display: inline-block;"
@@ -99,7 +99,7 @@ exports[`SearchInput overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`SearchInput placeholder 1`] = `
+exports[`SearchInput placeholder snapshot 1`] = `
 <DocumentFragment>
   <div
     style="display: inline-block;"

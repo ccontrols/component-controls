@@ -19,7 +19,7 @@ function fileReaderPromise(file: File) {
  * Files control editor.
  */
 
-export const FilesEditor: PropertyEditor = ({ name }) => {
+export const FilesEditor: PropertyEditor = ({ name, ...rest }) => {
   const [control, onChange] = useControl<ComponentControlFiles>(name);
   return (
     <Input
@@ -34,6 +34,8 @@ export const FilesEditor: PropertyEditor = ({ name }) => {
         }
       }}
       accept={control.accept}
+      aria-label="select files"
+      {...rest}
     />
   );
 };

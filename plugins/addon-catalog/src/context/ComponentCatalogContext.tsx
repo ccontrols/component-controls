@@ -11,7 +11,13 @@ export type ComponentCatalogOrder =
   | 'commits_desc'
   | 'commits_asc'
   | 'comments_desc'
-  | 'comments_asc';
+  | 'comments_asc'
+  | 'passing_desc'
+  | 'passing_asc'
+  | 'failed_desc'
+  | 'failed_asc'
+  | 'coverage_desc'
+  | 'coverage_asc';
 
 export interface ComponentCatalogContextState {
   sort?: ComponentCatalogOrder;

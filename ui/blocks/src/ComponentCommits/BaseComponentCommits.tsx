@@ -2,11 +2,11 @@
 /** @jsx jsx */
 import { FC, Fragment, useMemo } from 'react';
 import { jsx } from 'theme-ui';
-import { Column } from 'react-table';
 import { GitCommitIcon } from '@primer/octicons-react';
 import {
   ExternalLink,
   Table,
+  Column,
   TableProps,
 } from '@component-controls/components';
 import { useConfig, usePackage } from '@component-controls/store';

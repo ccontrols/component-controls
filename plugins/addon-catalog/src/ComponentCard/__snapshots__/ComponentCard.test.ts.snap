@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ComponentCard overview 1`] = `
+exports[`ComponentCard overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-wh7vml"
@@ -25,8 +25,8 @@ exports[`ComponentCard overview 1`] = `
           class="css-6582y1-ComponentContributors"
         >
           <div
-            aria-label="avatars of hasparus, lachlanjc, atanasster"
-            class="css-1wxrz40-GithubAvatarList"
+            aria-label="avatars of martin-stoyanov, atanasster"
+            class="css-1yvvfp0-GithubAvatarList"
           >
             <div
               class="css-dam4fv-GithubAvatar"
@@ -36,26 +36,11 @@ exports[`ComponentCard overview 1`] = `
                 class="css-1en2h0i-GithubAvatar"
               >
                 <img
+                  alt="avatar of martin-stoyanov"
                   class="css-1y16e88"
                   height="24"
-                  src="https://github.com/hasparus"
-                  title="hasparus"
-                  width="24"
-                />
-              </div>
-            </div>
-            <div
-              class="css-dam4fv-GithubAvatar"
-              style="display: inline-block;"
-            >
-              <div
-                class="css-1en2h0i-GithubAvatar"
-              >
-                <img
-                  class="css-1y16e88"
-                  height="24"
-                  src="https://github.com/lachlanjc"
-                  title="lachlanjc"
+                  src="https://github.com/martin-stoyanov"
+                  title="martin-stoyanov"
                   width="24"
                 />
               </div>
@@ -68,6 +53,7 @@ exports[`ComponentCard overview 1`] = `
                 class="css-1en2h0i-GithubAvatar"
               >
                 <img
+                  alt="avatar of atanasster"
                   class="css-1y16e88"
                   height="24"
                   src="https://github.com/atanasster"
@@ -81,7 +67,7 @@ exports[`ComponentCard overview 1`] = `
       </div>
     </div>
     <div
-      class="css-nj7jql-ComponentCard"
+      class="css-18hcion-ComponentCard"
     >
       <div />
       <div
@@ -108,98 +94,146 @@ exports[`ComponentCard overview 1`] = `
       </div>
     </div>
     <div
-      class="css-1akfoys-ComponentCard"
-    />
-    <p>
-      Markdown descripton for component.
-with a 
-      <a
-        href="https://google.com"
-      >
-        link
-      </a>
-    </p>
-    <div
-      class="css-pfgifj-ComponentCard"
+      class="css-1lguarf-ComponentCard"
     >
       <div
-        class="css-1lguarf-ComponentCard"
+        class="css-zf8zhj"
+      >
+        <span
+          class="css-13o2efz"
+        >
+          created:
+        </span>
+        <span
+          class="css-uv6qe8"
+        >
+          N/A
+        </span>
+      </div>
+      <div
+        class="css-zf8zhj"
+      >
+        <span
+          class="css-13o2efz"
+        >
+          updated:
+        </span>
+        <span
+          class="css-uv6qe8"
+        >
+          N/A
+        </span>
+      </div>
+    </div>
+    <div
+      class="css-1b2gf4v"
+    >
+      <div
+        class="css-ncjsai"
+        title="total lines of code"
       >
         <div
-          class="css-zf8zhj"
+          class="css-7ucnu2-Shield"
         >
-          <span
-            class="css-13o2efz"
-          >
-            created:
-          </span>
-          <span
-            class="css-uv6qe8"
-          >
-            N/A
-          </span>
+          loc
         </div>
         <div
-          class="css-zf8zhj"
+          class="css-o4rdbs-Shield"
         >
-          <span
-            class="css-13o2efz"
-          >
-            updated:
-          </span>
-          <span
-            class="css-uv6qe8"
-          >
-            N/A
-          </span>
+          25
         </div>
       </div>
       <div
-        class="css-1xa7s2f"
+        class="css-ncjsai"
+        title="percentage comments to lines of code"
       >
         <div
-          class="css-zf8zhj"
+          class="css-7ucnu2-Shield"
         >
-          <span
-            class="css-13o2efz"
-          >
-            source lines:
-          </span>
-          <span
-            class="css-uv6qe8"
-          >
-            25
-          </span>
+          comments
         </div>
         <div
-          class="css-loy9lz-ComponentStats"
+          class="css-38njz9-Shield"
         >
-          <span
-            class="css-13o2efz"
-          >
-            comments %:
-          </span>
-          <span
-            class="css-uv6qe8"
-          >
-            4
-          </span>
-        </div>
-        <div
-          class="css-loy9lz-ComponentStats"
-        >
-          <span
-            class="css-13o2efz"
-          >
-            todo lines:
-          </span>
-          <span
-            class="css-uv6qe8"
-          >
-            5
-          </span>
+          4%
         </div>
       </div>
+      <div
+        class="css-ncjsai"
+        title="total todo comments"
+      >
+        <div
+          class="css-7ucnu2-Shield"
+        >
+          todos
+        </div>
+        <div
+          class="css-o4rdbs-Shield"
+        >
+          5
+        </div>
+      </div>
+      <div
+        class="css-ncjsai"
+        title="number of passed tests"
+      >
+        <div
+          class="css-7ucnu2-Shield"
+        >
+          passed
+        </div>
+        <div
+          class="css-14o9xde-Shield"
+        >
+          7
+        </div>
+      </div>
+      <div
+        class="css-ncjsai"
+        title="number of failed tests"
+      >
+        <div
+          class="css-7ucnu2-Shield"
+        >
+          failed
+        </div>
+        <div
+          class="css-1os9rn1-Shield"
+        >
+          1
+        </div>
+      </div>
+      <div
+        class="css-ncjsai"
+        title="tests coverage by branches"
+      >
+        <div
+          class="css-7ucnu2-Shield"
+        >
+          coverage
+        </div>
+        <div
+          class="css-otdzg2-Shield"
+        >
+          67%
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1akfoys-ComponentCard"
+    />
+    <div
+      variant="styles.p"
+    >
+      Markdown 
+      <strong>
+        descripton
+      </strong>
+       for 
+      <em>
+        component
+      </em>
+      .
     </div>
   </div>
 </DocumentFragment>

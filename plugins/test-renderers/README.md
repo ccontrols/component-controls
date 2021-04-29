@@ -1,10 +1,11 @@
 # Table of contents
 
--   [Overview](#overview)
--   [Installation](#installation)
--   [API](#api)
-    -   [<ins>renderDocument</ins>](#insrenderdocumentins)
-    -   [<ins>renderExample</ins>](#insrenderexampleins)
+- [Overview](#overview)
+- [Installation](#installation)
+- [API](#api)
+  - [<ins>reactRunDOM</ins>](#insreactrundomins)
+  - [<ins>renderDocument</ins>](#insrenderdocumentins)
+  - [<ins>renderExample</ins>](#insrenderexampleins)
 
 # Overview
 
@@ -23,6 +24,12 @@ $ npm install @component-controls/test-renderers --save-dev
 <react-docgen-typescript path="./src" />
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
+
+## <ins>reactRunDOM</ins>
+
+run some function in the dom, by using react-dom
+
+_reactRunDOM [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/test-renderers/src/react-run-dom.ts)_
 
 ## <ins>renderDocument</ins>
 

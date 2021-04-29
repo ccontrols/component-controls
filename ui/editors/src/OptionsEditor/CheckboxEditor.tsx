@@ -47,7 +47,7 @@ const CheckboxLabel: FC<LabelProps> = props => (
   />
 );
 
-export const CheckboxEditor: PropertyEditor = ({ name }) => {
+export const CheckboxEditor: PropertyEditor = ({ name, ...rest }) => {
   const [control, onChange] = useControl<ComponentControlOptions>(name);
 
   const { options, value } = control;
@@ -83,6 +83,7 @@ export const CheckboxEditor: PropertyEditor = ({ name }) => {
           value={entry.value}
           onChange={handleChange}
           checked={selected.includes(entry.value)}
+          {...rest}
         />
         <CheckboxLabel htmlFor={id}>{entry.label}</CheckboxLabel>
       </div>

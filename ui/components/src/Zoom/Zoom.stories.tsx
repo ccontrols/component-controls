@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Document, Example } from '@component-controls/core';
-import { Donut, Box } from 'theme-ui';
+import { Box } from 'theme-ui';
+import { Donut } from '../Donut';
 import { Zoom } from './Zoom';
 import { ActionContainer } from '../ActionContainer';
 

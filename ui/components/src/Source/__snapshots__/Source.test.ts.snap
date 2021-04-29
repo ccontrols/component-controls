@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Source overview 1`] = `
+exports[`Source overview snapshot 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -606,7 +606,7 @@ exports[`Source overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Source theme 1`] = `
+exports[`Source theme snapshot 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -1212,7 +1212,7 @@ exports[`Source theme 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Source themeSelector 1`] = `
+exports[`Source themeSelector snapshot 1`] = `
 <DocumentFragment>
   <div>
     <div

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ActionBar groupEnd 1`] = `
+exports[`ActionBar groupEnd snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-vurnku"
@@ -45,7 +45,7 @@ exports[`ActionBar groupEnd 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ActionBar groupStart 1`] = `
+exports[`ActionBar groupStart snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-vurnku"
@@ -90,7 +90,7 @@ exports[`ActionBar groupStart 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ActionBar link 1`] = `
+exports[`ActionBar link snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-vurnku"
@@ -120,7 +120,7 @@ exports[`ActionBar link 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ActionBar order 1`] = `
+exports[`ActionBar order snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-vurnku"
@@ -159,7 +159,7 @@ exports[`ActionBar order 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ActionBar override 1`] = `
+exports[`ActionBar override snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-vurnku"
@@ -198,7 +198,7 @@ exports[`ActionBar override 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ActionBar overview 1`] = `
+exports[`ActionBar overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-vurnku"

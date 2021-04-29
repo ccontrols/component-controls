@@ -1,4 +1,7 @@
 import * as path from 'path';
+import { run, AxeResults } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
 import { loadConfigurations } from '@component-controls/config';
 import { renderDocument } from '@component-controls/test-renderers';
 import { render, act } from '@testing-library/react';
@@ -18,9 +21,15 @@ describe('Sidebar', () => {
     return;
   }
   renderedExamples.forEach(({ name, rendered }) => {
-    it(name, async () => {
-      const { asFragment } = render(rendered);
-      expect(asFragment()).toMatchSnapshot();
+    describe(name, () => {
+      it('snapshot', () => {
+        const { asFragment } = render(rendered);
+        expect(asFragment()).toMatchSnapshot();
+      });
+      it('accessibility', async () => {
+        const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+        expect(axeResults).toHaveNoAxeViolations();
+      });
     });
   });
 });

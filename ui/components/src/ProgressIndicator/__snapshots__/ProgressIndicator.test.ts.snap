@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProgressIndicator overview 1`] = `
+exports[`ProgressIndicator overview snapshot 1`] = `
 <DocumentFragment>
   <div
     style="width: 100%;"

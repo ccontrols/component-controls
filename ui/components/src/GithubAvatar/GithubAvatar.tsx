@@ -77,7 +77,9 @@ export const GithubAvatar: FC<GithubAvatarProps> = ({
           }}
         >
           {profile.name && (
-            <div sx={{ textWeight: 'bold', fontSize: 2 }}>{profile.login}</div>
+            <div sx={{ fontWeight: 'heading', fontSize: 2 }}>
+              {profile.login}
+            </div>
           )}
           <p sx={{ maxWidth: 400, py: 0 }}>{profile.bio}</p>
           {profile.location && (
@@ -114,7 +116,12 @@ export const GithubAvatar: FC<GithubAvatarProps> = ({
     </div>
   );
   const avatar = (
-    <Avatar size={size} src={profile.avatar_url || ''} title={username} />
+    <Avatar
+      size={size}
+      src={profile.avatar_url || ''}
+      alt={`avatar of ${username}`}
+      title={username}
+    />
   );
   const imgSx: BoxProps['sx'] = {
     maxWidth: 'unset',

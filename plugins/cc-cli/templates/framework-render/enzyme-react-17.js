@@ -7,5 +7,8 @@ const rendered = renderExample({
   config,
 });
 {{?}}
-const component = mount(rendered);
-expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+it('snapshot', () => {
+  const component = mount(rendered);
+  expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+});  
+{{=it.allytest}}

@@ -113,7 +113,7 @@ const sxProps: BoxProps['sx'] = {
  * Color control editor.
  */
 
-export const ColorEditor: PropertyEditor = ({ name }) => {
+export const ColorEditor: PropertyEditor = ({ name, ...rest }) => {
   const [control, onChange] = useControl<ComponentControlColor>(name);
   const [isOpen, setIsOpen] = useState(false);
   const { kind } = control;
@@ -159,6 +159,7 @@ export const ColorEditor: PropertyEditor = ({ name }) => {
             sx={sxProps}
             color={control.value}
             onChange={handleChange}
+            {...rest}
           />
         </Box>
       )}

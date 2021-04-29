@@ -33,6 +33,7 @@ export const customItems: Example = () => {
           {
             title: 'Image',
             width: 200,
+            'aria-label': 'design image',
             src: img,
           },
         ]}

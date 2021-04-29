@@ -40,6 +40,16 @@ export class CachedFileResource<T> {
         .digest('hex'),
     );
   };
+
+  private getKey = () => {
+    const version = '2';
+    const files = Array.isArray(this.filePath)
+      ? this.filePath
+      : [this.filePath];
+    return files
+      .reduce((acc, f) => acc.update(f), createHash('md5').update(version))
+      .digest('hex');
+  };
   /**
    *
    * @returns if the data is in the cache or undefined
@@ -56,7 +66,12 @@ export class CachedFileResource<T> {
       if (cacheModified >= fileModified) {
         const fileData = fs.readFileSync(cachedFileName, 'utf8');
         const json = JSON.parse(fileData);
-        return Object.keys(json).length ? json : undefined;
+        if (json.hasOwnProperty('key') && json.hasOwnProperty('data')) {
+          if (json.key === this.getKey()) {
+            return json['data'];
+          }
+        }
+        return undefined;
       }
     }
     return undefined;
@@ -68,6 +83,10 @@ export class CachedFileResource<T> {
    */
   set = (data: T | undefined): void => {
     const cachedFileName = this.getCachedFile();
-    fs.writeFileSync(cachedFileName, JSON.stringify(data || {}));
+    const json = {
+      key: this.getKey(),
+      data,
+    };
+    fs.writeFileSync(cachedFileName, JSON.stringify(json));
   };
 }

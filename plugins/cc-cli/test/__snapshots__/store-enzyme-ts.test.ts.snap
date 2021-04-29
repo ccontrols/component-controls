@@ -2,6 +2,9 @@
 
 exports[`enzyme  ts 1`] = `
 "import * as path from 'path';
+import { run, AxeResults } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
 import {
   loadConfigurations,
   extractDocuments,
@@ -32,15 +35,24 @@ describe('component-controls generated', () => {
         if (examples.length) {
           describe(doc.title, () => {
             examples.forEach(example => {
-              it(example.name, async () => {
+              describe(example.name, () => {
                 const rendered = renderExample({
                   example,
                   doc,
                   config,
                 });
 
-                const component = mount(rendered);
-                expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+                it('snapshot', () => {
+                  const component = mount(rendered);
+                  expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+                });
+                it('accessibility', async () => {
+                  const axeResults = await reactRunDOM<AxeResults>(
+                    rendered,
+                    run,
+                  );
+                  expect(axeResults).toHaveNoAxeViolations();
+                });
               });
             });
           });

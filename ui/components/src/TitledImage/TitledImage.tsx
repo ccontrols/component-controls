@@ -16,7 +16,7 @@ export const TitledImage: FC<Omit<ImageProps, 'ref'>> = props => {
   return title ? (
     <Box variant="titledimage.container">
       {img}
-      <Text variant="titledimage.title">{title}</Text>
+      {title && <Text variant="titledimage.title">{title}</Text>}
     </Box>
   ) : (
     img

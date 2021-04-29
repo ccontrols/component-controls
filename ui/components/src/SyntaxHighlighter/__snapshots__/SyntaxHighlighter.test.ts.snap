@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SyntaxHighlighter overview 1`] = `
+exports[`SyntaxHighlighter overview snapshot 1`] = `
 <DocumentFragment>
   <pre
     class="prism-code language-jsx css-3y8hb3"
@@ -71,7 +71,7 @@ exports[`SyntaxHighlighter overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`SyntaxHighlighter theme 1`] = `
+exports[`SyntaxHighlighter theme snapshot 1`] = `
 <DocumentFragment>
   <pre
     class="prism-code language-jsx css-3y8hb3"

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ComponentJSX overview 1`] = `
+exports[`ComponentJSX overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -11,11 +11,7 @@ exports[`ComponentJSX overview 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"

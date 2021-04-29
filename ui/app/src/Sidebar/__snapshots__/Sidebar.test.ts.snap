@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Sidebar overview 1`] = `
+exports[`Sidebar overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-19daslh-Sidebar"
@@ -163,62 +163,6 @@ exports[`Sidebar overview 1`] = `
                   >
                     <a
                       class="css-p1dwhj"
-                      href="/docs/id-of-single"
-                    >
-                      <div
-                        class="css-dcq909"
-                      >
-                        <div
-                          class="css-f5h6sg"
-                        >
-                          <div
-                            class="css-1ve1p3p"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="octicon"
-                              fill="currentColor"
-                              height="16"
-                              role="img"
-                              style="display: inline-block; user-select: none; vertical-align: middle;"
-                              viewBox="0 0 16 16"
-                              width="16"
-                            >
-                              <path
-                                d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5zm1.75-.25a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25v-8.5a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"
-                                fill-rule="evenodd"
-                              />
-                            </svg>
-                          </div>
-                          <span
-                            class="css-7w8u7j"
-                          >
-                            story
-                          </span>
-                        </div>
-                        <div
-                          class="css-vthntz"
-                        />
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="css-vurnku"
-            >
-              <div
-                class="css-15ej8gm"
-              >
-                <div
-                  class="css-tizfsr"
-                >
-                  <div
-                    class="css-162ewbd"
-                  >
-                    <a
-                      class="css-p1dwhj"
                       href="/docs/id-of-button-story"
                     >
                       <div
@@ -306,6 +250,62 @@ exports[`Sidebar overview 1`] = `
                             class="css-7w8u7j"
                           >
                             controls
+                          </span>
+                        </div>
+                        <div
+                          class="css-vthntz"
+                        />
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="css-vurnku"
+            >
+              <div
+                class="css-15ej8gm"
+              >
+                <div
+                  class="css-tizfsr"
+                >
+                  <div
+                    class="css-162ewbd"
+                  >
+                    <a
+                      class="css-p1dwhj"
+                      href="/docs/id-of-single"
+                    >
+                      <div
+                        class="css-dcq909"
+                      >
+                        <div
+                          class="css-f5h6sg"
+                        >
+                          <div
+                            class="css-1ve1p3p"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="octicon"
+                              fill="currentColor"
+                              height="16"
+                              role="img"
+                              style="display: inline-block; user-select: none; vertical-align: middle;"
+                              viewBox="0 0 16 16"
+                              width="16"
+                            >
+                              <path
+                                d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5zm1.75-.25a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25v-8.5a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
+                          <span
+                            class="css-7w8u7j"
+                          >
+                            story
                           </span>
                         </div>
                         <div

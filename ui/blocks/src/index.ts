@@ -7,6 +7,8 @@ export * from './ComponentCommits';
 export * from './ComponentJSX';
 export * from './ComponentSource';
 export * from './ComponentStats';
+export * from './TestsCoverage';
+export * from './TestsResults';
 export * from './Container';
 export * from './Description';
 export * from './DocumentItem';

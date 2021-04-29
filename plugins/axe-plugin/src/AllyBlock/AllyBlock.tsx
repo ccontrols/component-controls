@@ -1,10 +1,10 @@
 /* eslint-disable react/display-name */
-import React, { FC, useRef, useContext, useState, useEffect } from 'react';
+import React, { FC, useRef, useContext, useEffect } from 'react';
 import {
   run as runAxe,
   configure as configureAxe,
-  reset,
   cleanup,
+  Spec,
 } from 'axe-core';
 
 import { useStory, StoryInputProps } from '@component-controls/store';
@@ -15,7 +15,6 @@ import {
   StoryBlockContainerProps,
   Story,
 } from '@component-controls/blocks';
-import { Spec } from 'axe-core';
 
 import { BaseAllyBlock } from './BaseAllyBlock';
 import {
@@ -38,26 +37,19 @@ const RenderStory: FC<AllyBlockOwmProps & { storyId?: string }> = ({
 }) => {
   const storyRef = useRef<HTMLDivElement>(null);
   const { setResults } = useContext(AxeSetContext);
-  const [mounted, setMounted] = useState(true);
   const isRunning = useRef(false);
-  useEffect(() => {
-    setMounted(true);
-    return () => setMounted(false);
-  }, []);
   const collectResults = () => {
     const canvas = storyRef.current?.firstChild;
     if (canvas && isRunning.current === false) {
       isRunning.current = true;
-      reset();
       configureAxe(axeOptions || {});
       resetTabCounter();
       runAxe(canvas)
         .then(results => {
-          if (mounted) {
-            const { passes, violations, incomplete } = results;
-            setResults({ passes, violations, incomplete });
-            setTimeout(() => (isRunning.current = false), 1000);
-          }
+          const { passes, violations, incomplete } = results;
+          setResults({ passes, violations, incomplete });
+
+          setTimeout(() => (isRunning.current = false), 1000);
         })
         .catch(e => {
           console.error('error running axe-core', e);

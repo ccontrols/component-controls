@@ -1,11 +1,12 @@
 import path from 'path';
+import fs from 'fs';
 import {
   JestConfig,
   runProjectTests,
   findJestConfig,
   getRelatedTests,
-  JestResults,
 } from '@component-controls/jest-extract';
+import { resolveSnapshotFile } from '@component-controls/core/node-utils';
 import { JestTests } from '@component-controls/core';
 import { CachedFileResource } from './chached-file';
 
@@ -28,19 +29,31 @@ export const extractTests = async (
       acc: {
         testFiles: string[];
         coverageFiles: string[];
+        snapshotFiles: string[];
       },
       file,
     ) => {
-      acc.testFiles.push(...getRelatedTests(file));
-      acc.coverageFiles.push(file);
+      const testFiles = getRelatedTests(file);
+      acc.testFiles.push(...testFiles);
+      testFiles.forEach(f => {
+        const snapshotFile = resolveSnapshotFile(f);
+        if (fs.existsSync(snapshotFile)) {
+          acc.snapshotFiles.push(snapshotFile);
+        }
+      });
+      if (!acc.coverageFiles.includes(file)) {
+        acc.coverageFiles.push(file);
+      }
       return acc;
     },
-    { testFiles: [], coverageFiles: [] },
+    { testFiles: [], coverageFiles: [], snapshotFiles: [] },
   );
   if (tests.testFiles.length) {
-    const cached = new CachedFileResource<JestResults>('jest-tests', files[0], [
+    const cached = new CachedFileResource<JestTests>('jest-tests', files[0], [
       ...tests.testFiles,
       ...tests.coverageFiles,
+      ...tests.snapshotFiles,
+      ...files,
     ]);
     const cachedResults = cached.get();
     if (cachedResults) {

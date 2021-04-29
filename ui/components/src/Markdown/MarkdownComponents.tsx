@@ -66,6 +66,12 @@ export const markdownComponents: MarkdownComponentType = {
   code: props => {
     return <SyntaxHighlighter {...props} />;
   },
+  p: props =>
+    props.children?.length === 1 && typeof props.children[0] === 'string' ? (
+      <p {...props} />
+    ) : (
+      <div variant="styles.p" {...props} />
+    ),
   pre: props => {
     const mdxProps = preToCodeBlock(props);
     if (!mdxProps) {

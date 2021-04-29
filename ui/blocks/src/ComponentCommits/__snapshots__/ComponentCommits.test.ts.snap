@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ComponentCommits overview 1`] = `
+exports[`ComponentCommits overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -11,11 +11,7 @@ exports[`ComponentCommits overview 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -38,7 +34,7 @@ exports[`ComponentCommits overview 1`] = `
                 role="row"
               >
                 <th
-                  class="css-9hyy6f"
+                  class="css-n59tc9"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
@@ -69,7 +65,7 @@ exports[`ComponentCommits overview 1`] = `
                   </div>
                 </th>
                 <th
-                  class="css-9hyy6f"
+                  class="css-n59tc9"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
@@ -86,7 +82,7 @@ exports[`ComponentCommits overview 1`] = `
                   </div>
                 </th>
                 <th
-                  class="css-9hyy6f"
+                  class="css-n59tc9"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
@@ -113,7 +109,7 @@ exports[`ComponentCommits overview 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -122,7 +118,7 @@ exports[`ComponentCommits overview 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -132,7 +128,7 @@ exports[`ComponentCommits overview 1`] = `
                     <p
                       style="padding-right: 10px;"
                     >
-                      hasparus
+                      martin-stoyanov
                     </p>
                     <div
                       class="css-9cbusc-GithubAvatar"
@@ -142,10 +138,11 @@ exports[`ComponentCommits overview 1`] = `
                         class="css-bwynl2-GithubAvatar"
                       >
                         <img
+                          alt="avatar of martin-stoyanov"
                           class="css-1y16e88"
                           height="22"
-                          src="https://github.com/hasparus"
-                          title="hasparus"
+                          src="https://github.com/martin-stoyanov"
+                          title="martin-stoyanov"
                           width="22"
                         />
                       </div>
@@ -153,7 +150,7 @@ exports[`ComponentCommits overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -169,7 +166,7 @@ exports[`ComponentCommits overview 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -178,7 +175,7 @@ exports[`ComponentCommits overview 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -188,7 +185,7 @@ exports[`ComponentCommits overview 1`] = `
                     <p
                       style="padding-right: 10px;"
                     >
-                      lachlanjc
+                      martin-stoyanov
                     </p>
                     <div
                       class="css-9cbusc-GithubAvatar"
@@ -198,10 +195,11 @@ exports[`ComponentCommits overview 1`] = `
                         class="css-bwynl2-GithubAvatar"
                       >
                         <img
+                          alt="avatar of martin-stoyanov"
                           class="css-1y16e88"
                           height="22"
-                          src="https://github.com/lachlanjc"
-                          title="lachlanjc"
+                          src="https://github.com/martin-stoyanov"
+                          title="martin-stoyanov"
                           width="22"
                         />
                       </div>
@@ -209,7 +207,7 @@ exports[`ComponentCommits overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -225,7 +223,7 @@ exports[`ComponentCommits overview 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -234,7 +232,7 @@ exports[`ComponentCommits overview 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -254,6 +252,7 @@ exports[`ComponentCommits overview 1`] = `
                         class="css-bwynl2-GithubAvatar"
                       >
                         <img
+                          alt="avatar of atanasster"
                           class="css-1y16e88"
                           height="22"
                           src="https://github.com/atanasster"
@@ -265,7 +264,7 @@ exports[`ComponentCommits overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -281,7 +280,7 @@ exports[`ComponentCommits overview 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -290,7 +289,7 @@ exports[`ComponentCommits overview 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -310,6 +309,7 @@ exports[`ComponentCommits overview 1`] = `
                         class="css-bwynl2-GithubAvatar"
                       >
                         <img
+                          alt="avatar of atanasster"
                           class="css-1y16e88"
                           height="22"
                           src="https://github.com/atanasster"
@@ -321,7 +321,7 @@ exports[`ComponentCommits overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -337,7 +337,7 @@ exports[`ComponentCommits overview 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -346,7 +346,7 @@ exports[`ComponentCommits overview 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -366,6 +366,7 @@ exports[`ComponentCommits overview 1`] = `
                         class="css-bwynl2-GithubAvatar"
                       >
                         <img
+                          alt="avatar of atanasster"
                           class="css-1y16e88"
                           height="22"
                           src="https://github.com/atanasster"
@@ -377,7 +378,7 @@ exports[`ComponentCommits overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -393,7 +394,7 @@ exports[`ComponentCommits overview 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -402,7 +403,7 @@ exports[`ComponentCommits overview 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -422,6 +423,7 @@ exports[`ComponentCommits overview 1`] = `
                         class="css-bwynl2-GithubAvatar"
                       >
                         <img
+                          alt="avatar of atanasster"
                           class="css-1y16e88"
                           height="22"
                           src="https://github.com/atanasster"
@@ -433,7 +435,7 @@ exports[`ComponentCommits overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -449,7 +451,7 @@ exports[`ComponentCommits overview 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -458,7 +460,7 @@ exports[`ComponentCommits overview 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -478,6 +480,7 @@ exports[`ComponentCommits overview 1`] = `
                         class="css-bwynl2-GithubAvatar"
                       >
                         <img
+                          alt="avatar of atanasster"
                           class="css-1y16e88"
                           height="22"
                           src="https://github.com/atanasster"
@@ -489,7 +492,7 @@ exports[`ComponentCommits overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -505,7 +508,7 @@ exports[`ComponentCommits overview 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -514,7 +517,7 @@ exports[`ComponentCommits overview 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -534,6 +537,7 @@ exports[`ComponentCommits overview 1`] = `
                         class="css-bwynl2-GithubAvatar"
                       >
                         <img
+                          alt="avatar of atanasster"
                           class="css-1y16e88"
                           height="22"
                           src="https://github.com/atanasster"
@@ -545,7 +549,7 @@ exports[`ComponentCommits overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -561,7 +565,7 @@ exports[`ComponentCommits overview 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -570,7 +574,7 @@ exports[`ComponentCommits overview 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -590,6 +594,7 @@ exports[`ComponentCommits overview 1`] = `
                         class="css-bwynl2-GithubAvatar"
                       >
                         <img
+                          alt="avatar of atanasster"
                           class="css-1y16e88"
                           height="22"
                           src="https://github.com/atanasster"
@@ -601,7 +606,7 @@ exports[`ComponentCommits overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -617,7 +622,7 @@ exports[`ComponentCommits overview 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -626,7 +631,7 @@ exports[`ComponentCommits overview 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -636,7 +641,7 @@ exports[`ComponentCommits overview 1`] = `
                     <p
                       style="padding-right: 10px;"
                     >
-                      atanasster
+                      martin-stoyanov
                     </p>
                     <div
                       class="css-9cbusc-GithubAvatar"
@@ -646,10 +651,11 @@ exports[`ComponentCommits overview 1`] = `
                         class="css-bwynl2-GithubAvatar"
                       >
                         <img
+                          alt="avatar of martin-stoyanov"
                           class="css-1y16e88"
                           height="22"
-                          src="https://github.com/atanasster"
-                          title="atanasster"
+                          src="https://github.com/martin-stoyanov"
+                          title="martin-stoyanov"
                           width="22"
                         />
                       </div>
@@ -657,7 +663,7 @@ exports[`ComponentCommits overview 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -732,7 +738,7 @@ exports[`ComponentCommits overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ComponentCommits pagination 1`] = `
+exports[`ComponentCommits pagination snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -743,11 +749,7 @@ exports[`ComponentCommits pagination 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -770,7 +772,7 @@ exports[`ComponentCommits pagination 1`] = `
                 role="row"
               >
                 <th
-                  class="css-9hyy6f"
+                  class="css-n59tc9"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
@@ -801,7 +803,7 @@ exports[`ComponentCommits pagination 1`] = `
                   </div>
                 </th>
                 <th
-                  class="css-9hyy6f"
+                  class="css-n59tc9"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
@@ -818,7 +820,7 @@ exports[`ComponentCommits pagination 1`] = `
                   </div>
                 </th>
                 <th
-                  class="css-9hyy6f"
+                  class="css-n59tc9"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
@@ -845,7 +847,7 @@ exports[`ComponentCommits pagination 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -854,7 +856,7 @@ exports[`ComponentCommits pagination 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -864,7 +866,7 @@ exports[`ComponentCommits pagination 1`] = `
                     <p
                       style="padding-right: 10px;"
                     >
-                      hasparus
+                      martin-stoyanov
                     </p>
                     <div
                       class="css-9cbusc-GithubAvatar"
@@ -874,10 +876,11 @@ exports[`ComponentCommits pagination 1`] = `
                         class="css-bwynl2-GithubAvatar"
                       >
                         <img
+                          alt="avatar of martin-stoyanov"
                           class="css-1y16e88"
                           height="22"
-                          src="https://github.com/hasparus"
-                          title="hasparus"
+                          src="https://github.com/martin-stoyanov"
+                          title="martin-stoyanov"
                           width="22"
                         />
                       </div>
@@ -885,7 +888,7 @@ exports[`ComponentCommits pagination 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -901,7 +904,7 @@ exports[`ComponentCommits pagination 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -910,7 +913,7 @@ exports[`ComponentCommits pagination 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -920,7 +923,7 @@ exports[`ComponentCommits pagination 1`] = `
                     <p
                       style="padding-right: 10px;"
                     >
-                      lachlanjc
+                      martin-stoyanov
                     </p>
                     <div
                       class="css-9cbusc-GithubAvatar"
@@ -930,10 +933,11 @@ exports[`ComponentCommits pagination 1`] = `
                         class="css-bwynl2-GithubAvatar"
                       >
                         <img
+                          alt="avatar of martin-stoyanov"
                           class="css-1y16e88"
                           height="22"
-                          src="https://github.com/lachlanjc"
-                          title="lachlanjc"
+                          src="https://github.com/martin-stoyanov"
+                          title="martin-stoyanov"
                           width="22"
                         />
                       </div>
@@ -941,7 +945,7 @@ exports[`ComponentCommits pagination 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -957,7 +961,7 @@ exports[`ComponentCommits pagination 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -966,7 +970,7 @@ exports[`ComponentCommits pagination 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -986,6 +990,7 @@ exports[`ComponentCommits pagination 1`] = `
                         class="css-bwynl2-GithubAvatar"
                       >
                         <img
+                          alt="avatar of atanasster"
                           class="css-1y16e88"
                           height="22"
                           src="https://github.com/atanasster"
@@ -997,7 +1002,7 @@ exports[`ComponentCommits pagination 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -1013,7 +1018,7 @@ exports[`ComponentCommits pagination 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -1022,7 +1027,7 @@ exports[`ComponentCommits pagination 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -1042,6 +1047,7 @@ exports[`ComponentCommits pagination 1`] = `
                         class="css-bwynl2-GithubAvatar"
                       >
                         <img
+                          alt="avatar of atanasster"
                           class="css-1y16e88"
                           height="22"
                           src="https://github.com/atanasster"
@@ -1053,7 +1059,7 @@ exports[`ComponentCommits pagination 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -1069,7 +1075,7 @@ exports[`ComponentCommits pagination 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -1078,7 +1084,7 @@ exports[`ComponentCommits pagination 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -1098,6 +1104,7 @@ exports[`ComponentCommits pagination 1`] = `
                         class="css-bwynl2-GithubAvatar"
                       >
                         <img
+                          alt="avatar of atanasster"
                           class="css-1y16e88"
                           height="22"
                           src="https://github.com/atanasster"
@@ -1109,7 +1116,7 @@ exports[`ComponentCommits pagination 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -1125,7 +1132,7 @@ exports[`ComponentCommits pagination 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -1134,7 +1141,7 @@ exports[`ComponentCommits pagination 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -1154,6 +1161,7 @@ exports[`ComponentCommits pagination 1`] = `
                         class="css-bwynl2-GithubAvatar"
                       >
                         <img
+                          alt="avatar of atanasster"
                           class="css-1y16e88"
                           height="22"
                           src="https://github.com/atanasster"
@@ -1165,7 +1173,7 @@ exports[`ComponentCommits pagination 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -1181,7 +1189,7 @@ exports[`ComponentCommits pagination 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -1190,7 +1198,7 @@ exports[`ComponentCommits pagination 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -1210,6 +1218,7 @@ exports[`ComponentCommits pagination 1`] = `
                         class="css-bwynl2-GithubAvatar"
                       >
                         <img
+                          alt="avatar of atanasster"
                           class="css-1y16e88"
                           height="22"
                           src="https://github.com/atanasster"
@@ -1221,7 +1230,7 @@ exports[`ComponentCommits pagination 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -1237,7 +1246,7 @@ exports[`ComponentCommits pagination 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -1246,7 +1255,7 @@ exports[`ComponentCommits pagination 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -1266,6 +1275,7 @@ exports[`ComponentCommits pagination 1`] = `
                         class="css-bwynl2-GithubAvatar"
                       >
                         <img
+                          alt="avatar of atanasster"
                           class="css-1y16e88"
                           height="22"
                           src="https://github.com/atanasster"
@@ -1277,7 +1287,7 @@ exports[`ComponentCommits pagination 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -1293,7 +1303,7 @@ exports[`ComponentCommits pagination 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -1302,7 +1312,7 @@ exports[`ComponentCommits pagination 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -1322,6 +1332,7 @@ exports[`ComponentCommits pagination 1`] = `
                         class="css-bwynl2-GithubAvatar"
                       >
                         <img
+                          alt="avatar of atanasster"
                           class="css-1y16e88"
                           height="22"
                           src="https://github.com/atanasster"
@@ -1333,7 +1344,7 @@ exports[`ComponentCommits pagination 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -1349,7 +1360,7 @@ exports[`ComponentCommits pagination 1`] = `
                 role="row"
               >
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -1358,7 +1369,7 @@ exports[`ComponentCommits pagination 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >
@@ -1368,7 +1379,7 @@ exports[`ComponentCommits pagination 1`] = `
                     <p
                       style="padding-right: 10px;"
                     >
-                      atanasster
+                      martin-stoyanov
                     </p>
                     <div
                       class="css-9cbusc-GithubAvatar"
@@ -1378,10 +1389,11 @@ exports[`ComponentCommits pagination 1`] = `
                         class="css-bwynl2-GithubAvatar"
                       >
                         <img
+                          alt="avatar of martin-stoyanov"
                           class="css-1y16e88"
                           height="22"
-                          src="https://github.com/atanasster"
-                          title="atanasster"
+                          src="https://github.com/martin-stoyanov"
+                          title="martin-stoyanov"
                           width="22"
                         />
                       </div>
@@ -1389,7 +1401,7 @@ exports[`ComponentCommits pagination 1`] = `
                   </div>
                 </td>
                 <td
-                  class="css-l4u9co"
+                  class="css-1yjhfhu"
                   role="cell"
                   style="width: 150px;"
                 >

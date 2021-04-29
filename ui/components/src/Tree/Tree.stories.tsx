@@ -139,6 +139,7 @@ export const search: Example = () => {
       <Input
         type="search"
         value={search}
+        placeholder="search"
         onChange={e => setSearch(e.target.value)}
       />
       <Tree search={search} activeItem={{ id: 'all' }} items={navItems} />

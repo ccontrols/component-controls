@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AllyBlock overview 1`] = `
+exports[`AllyBlock overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -11,11 +11,7 @@ exports[`AllyBlock overview 1`] = `
     >
       <div
         class="css-xhp9da"
-      >
-        <h3
-          class="css-16ist9v-BlockContainer"
-        />
-      </div>
+      />
     </div>
     <div
       aria-hidden="false"
@@ -25,24 +21,6 @@ exports[`AllyBlock overview 1`] = `
       <div>
         <div>
           <div
-            class="css-15owl46"
-          >
-            <div
-              class="css-x60p33"
-            >
-              <div
-                class="css-1vga9oy"
-              >
-                <button
-                  aria-label="display the accessibility overview dashboard"
-                  class="css-1tf4h46"
-                >
-                  close dashboard
-                </button>
-              </div>
-            </div>
-          </div>
-          <div
             class="css-eqxzio"
           >
             <div>
@@ -51,6 +29,7 @@ exports[`AllyBlock overview 1`] = `
               >
                 <div
                   class="css-1xkyebe"
+                  data-testid="story"
                 >
                   <div
                     class="css-jxxswp"
@@ -58,11 +37,7 @@ exports[`AllyBlock overview 1`] = `
                   >
                     <div
                       class="css-xhp9da"
-                    >
-                      <h3
-                        class="css-16ist9v-BlockContainer"
-                      />
-                    </div>
+                    />
                   </div>
                   <div
                     aria-hidden="false"
@@ -79,9 +54,7 @@ exports[`AllyBlock overview 1`] = `
                           class="story-render-container css-dhmrnb"
                         >
                           <svg
-                            aria-valuemax="1"
-                            aria-valuemin="0"
-                            aria-valuenow="0.5"
+                            aria-label="example donut graphic"
                             class="css-14d2907"
                             fill="none"
                             height="128"
@@ -115,16 +88,12 @@ exports[`AllyBlock overview 1`] = `
             </div>
             <div
               aria-hidden="true"
-              class="rah-animating rah-animating--down rah-animating--to-height-auto"
-              style="height: 0px; overflow: hidden; transition: height 250ms ease 0ms;"
+              class="rah-static rah-static--height-zero"
+              style="height: 0px; overflow: hidden;"
             >
               <div
-                style=""
-              >
-                <div
-                  class="css-ez35gb"
-                />
-              </div>
+                style="display: none;"
+              />
             </div>
           </div>
         </div>

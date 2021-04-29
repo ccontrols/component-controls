@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ComponentContributors caption 1`] = `
+exports[`ComponentContributors caption snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-6582y1-ComponentContributors"
@@ -11,8 +11,8 @@ exports[`ComponentContributors caption 1`] = `
       contributors
     </div>
     <div
-      aria-label="avatars of hasparus, lachlanjc, atanasster"
-      class="css-1wxrz40-GithubAvatarList"
+      aria-label="avatars of martin-stoyanov, atanasster"
+      class="css-1yvvfp0-GithubAvatarList"
     >
       <div
         class="css-dam4fv-GithubAvatar"
@@ -22,26 +22,11 @@ exports[`ComponentContributors caption 1`] = `
           class="css-1en2h0i-GithubAvatar"
         >
           <img
+            alt="avatar of martin-stoyanov"
             class="css-1y16e88"
             height="24"
-            src="https://github.com/hasparus"
-            title="hasparus"
-            width="24"
-          />
-        </div>
-      </div>
-      <div
-        class="css-dam4fv-GithubAvatar"
-        style="display: inline-block;"
-      >
-        <div
-          class="css-1en2h0i-GithubAvatar"
-        >
-          <img
-            class="css-1y16e88"
-            height="24"
-            src="https://github.com/lachlanjc"
-            title="lachlanjc"
+            src="https://github.com/martin-stoyanov"
+            title="martin-stoyanov"
             width="24"
           />
         </div>
@@ -54,6 +39,7 @@ exports[`ComponentContributors caption 1`] = `
           class="css-1en2h0i-GithubAvatar"
         >
           <img
+            alt="avatar of atanasster"
             class="css-1y16e88"
             height="24"
             src="https://github.com/atanasster"
@@ -67,14 +53,14 @@ exports[`ComponentContributors caption 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ComponentContributors overview 1`] = `
+exports[`ComponentContributors overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-6582y1-ComponentContributors"
   >
     <div
-      aria-label="avatars of hasparus, lachlanjc, atanasster"
-      class="css-1wxrz40-GithubAvatarList"
+      aria-label="avatars of martin-stoyanov, atanasster"
+      class="css-1yvvfp0-GithubAvatarList"
     >
       <div
         class="css-dam4fv-GithubAvatar"
@@ -84,26 +70,11 @@ exports[`ComponentContributors overview 1`] = `
           class="css-1en2h0i-GithubAvatar"
         >
           <img
+            alt="avatar of martin-stoyanov"
             class="css-1y16e88"
             height="24"
-            src="https://github.com/hasparus"
-            title="hasparus"
-            width="24"
-          />
-        </div>
-      </div>
-      <div
-        class="css-dam4fv-GithubAvatar"
-        style="display: inline-block;"
-      >
-        <div
-          class="css-1en2h0i-GithubAvatar"
-        >
-          <img
-            class="css-1y16e88"
-            height="24"
-            src="https://github.com/lachlanjc"
-            title="lachlanjc"
+            src="https://github.com/martin-stoyanov"
+            title="martin-stoyanov"
             width="24"
           />
         </div>
@@ -116,6 +87,7 @@ exports[`ComponentContributors overview 1`] = `
           class="css-1en2h0i-GithubAvatar"
         >
           <img
+            alt="avatar of atanasster"
             class="css-1y16e88"
             height="24"
             src="https://github.com/atanasster"

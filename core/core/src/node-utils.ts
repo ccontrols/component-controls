@@ -38,3 +38,10 @@ export const getCSSBundleName = (options: BuildProps): string =>
 
 export const getCSSFilePath = (options: BuildProps): string =>
   path.join(getDistFolder(options), options.cssFileName || defCssFileName);
+
+export const resolveSnapshotFile = (testFilePath: string): string =>
+  path.resolve(
+    path.dirname(testFilePath),
+    '__snapshots__',
+    `${path.basename(testFilePath)}.snap`,
+  );

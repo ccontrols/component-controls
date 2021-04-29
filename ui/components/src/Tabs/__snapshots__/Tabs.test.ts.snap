@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tabs direction 1`] = `
+exports[`Tabs direction snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-nm5f2c-Tabs"
@@ -9,6 +9,114 @@ exports[`Tabs direction 1`] = `
       class="react-tabs"
       data-tabs="true"
       dir="rtl"
+    >
+      <ul
+        class="react-tabs__tab-list"
+        role="tablist"
+      >
+        <li
+          aria-controls="react-tabs-17"
+          aria-disabled="false"
+          aria-selected="true"
+          class="react-tabs__tab react-tabs__tab--selected"
+          id="react-tabs-16"
+          role="tab"
+          tabindex="0"
+        >
+          panel 1
+        </li>
+        <li
+          aria-controls="react-tabs-19"
+          aria-disabled="false"
+          aria-selected="false"
+          class="react-tabs__tab"
+          id="react-tabs-18"
+          role="tab"
+        >
+          panel 2
+        </li>
+      </ul>
+      <div
+        aria-labelledby="react-tabs-16"
+        class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+        id="react-tabs-17"
+        role="tabpanel"
+      >
+        panel 1
+      </div>
+      <div
+        aria-labelledby="react-tabs-18"
+        class="react-tabs__tab-panel"
+        id="react-tabs-19"
+        role="tabpanel"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tabs fontSize snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-q5owpx-Tabs"
+  >
+    <div
+      class="react-tabs"
+      data-tabs="true"
+    >
+      <ul
+        class="react-tabs__tab-list"
+        role="tablist"
+      >
+        <li
+          aria-controls="react-tabs-25"
+          aria-disabled="false"
+          aria-selected="true"
+          class="react-tabs__tab react-tabs__tab--selected"
+          id="react-tabs-24"
+          role="tab"
+          tabindex="0"
+        >
+          panel 1
+        </li>
+        <li
+          aria-controls="react-tabs-27"
+          aria-disabled="false"
+          aria-selected="false"
+          class="react-tabs__tab"
+          id="react-tabs-26"
+          role="tab"
+        >
+          panel 2
+        </li>
+      </ul>
+      <div
+        aria-labelledby="react-tabs-24"
+        class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+        id="react-tabs-25"
+        role="tabpanel"
+      >
+        panel 1
+      </div>
+      <div
+        aria-labelledby="react-tabs-26"
+        class="react-tabs__tab-panel"
+        id="react-tabs-27"
+        role="tabpanel"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tabs onSelect snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-nm5f2c-Tabs"
+  >
+    <div
+      class="react-tabs"
+      data-tabs="true"
     >
       <ul
         class="react-tabs__tab-list"
@@ -55,115 +163,7 @@ exports[`Tabs direction 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Tabs fontSize 1`] = `
-<DocumentFragment>
-  <div
-    class="css-q5owpx-Tabs"
-  >
-    <div
-      class="react-tabs"
-      data-tabs="true"
-    >
-      <ul
-        class="react-tabs__tab-list"
-        role="tablist"
-      >
-        <li
-          aria-controls="react-tabs-13"
-          aria-disabled="false"
-          aria-selected="true"
-          class="react-tabs__tab react-tabs__tab--selected"
-          id="react-tabs-12"
-          role="tab"
-          tabindex="0"
-        >
-          panel 1
-        </li>
-        <li
-          aria-controls="react-tabs-15"
-          aria-disabled="false"
-          aria-selected="false"
-          class="react-tabs__tab"
-          id="react-tabs-14"
-          role="tab"
-        >
-          panel 2
-        </li>
-      </ul>
-      <div
-        aria-labelledby="react-tabs-12"
-        class="react-tabs__tab-panel react-tabs__tab-panel--selected"
-        id="react-tabs-13"
-        role="tabpanel"
-      >
-        panel 1
-      </div>
-      <div
-        aria-labelledby="react-tabs-14"
-        class="react-tabs__tab-panel"
-        id="react-tabs-15"
-        role="tabpanel"
-      />
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Tabs onSelect 1`] = `
-<DocumentFragment>
-  <div
-    class="css-nm5f2c-Tabs"
-  >
-    <div
-      class="react-tabs"
-      data-tabs="true"
-    >
-      <ul
-        class="react-tabs__tab-list"
-        role="tablist"
-      >
-        <li
-          aria-controls="react-tabs-5"
-          aria-disabled="false"
-          aria-selected="true"
-          class="react-tabs__tab react-tabs__tab--selected"
-          id="react-tabs-4"
-          role="tab"
-          tabindex="0"
-        >
-          panel 1
-        </li>
-        <li
-          aria-controls="react-tabs-7"
-          aria-disabled="false"
-          aria-selected="false"
-          class="react-tabs__tab"
-          id="react-tabs-6"
-          role="tab"
-        >
-          panel 2
-        </li>
-      </ul>
-      <div
-        aria-labelledby="react-tabs-4"
-        class="react-tabs__tab-panel react-tabs__tab-panel--selected"
-        id="react-tabs-5"
-        role="tabpanel"
-      >
-        panel 1
-      </div>
-      <div
-        aria-labelledby="react-tabs-6"
-        class="react-tabs__tab-panel"
-        id="react-tabs-7"
-        role="tabpanel"
-      />
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Tabs overview 1`] = `
+exports[`Tabs overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-nm5f2c-Tabs"

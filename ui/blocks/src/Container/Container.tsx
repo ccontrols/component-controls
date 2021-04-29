@@ -30,29 +30,23 @@ export const Container: FC<ContainerProps> = ({
     <Box variant="blockpagecontainer.container">
       <Box variant="blockpagecontainer.inforow">
         <EditPage />
-        <div
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            my: 1,
-          }}
-        >
-          <Box variant="blockpagecontainer.createdbox.container">
-            {doc?.date && (
-              <Value label="created:" value={dateToLocalString(doc.date)} />
-            )}
-            {doc?.dateModified && (
-              <Value
-                label="updated:"
-                value={dateToLocalString(doc.dateModified)}
-                sx={{ ml: 2 }}
-              />
-            )}
-            {author}
-          </Box>
-          <ComponentStats component={component} />
-        </div>
+        <Box variant="blockpagecontainer.createdbox.container">
+          {doc?.date && (
+            <Value label="created:" value={dateToLocalString(doc.date)} />
+          )}
+          {doc?.dateModified && (
+            <Value
+              label="updated:"
+              value={dateToLocalString(doc.dateModified)}
+              sx={{ ml: 2 }}
+            />
+          )}
+          {author}
+        </Box>
       </Box>
+      <div sx={{ pt: 2 }}>
+        <ComponentStats component={component} />
+      </div>
       {secondRow && (
         <Box variant="blockpagecontainer.secondrow">{secondRow}</Box>
       )}

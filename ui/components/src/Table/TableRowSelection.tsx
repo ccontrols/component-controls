@@ -17,7 +17,12 @@ const IndeterminateCheckbox: FC<TableToggleAllRowsSelectedProps> = forwardRef(
   ) {
     return (
       <Label>
-        <Checkbox ref={ref} onChange={onChange} checked={checked} />
+        <Checkbox
+          ref={ref}
+          onChange={onChange}
+          checked={checked}
+          aria-label={`click to ${checked ? 'un-' : ''}select row`}
+        />
       </Label>
     );
   },

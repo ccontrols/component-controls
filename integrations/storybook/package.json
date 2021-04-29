@@ -49,7 +49,7 @@
     "@component-controls/webpack-configs": "^3.7.0",
     "@emotion/react": "^11.1.1",
     "@emotion/styled": "^11.0.0",
-    "typescript": "^4.0.5"
+    "typescript": "^4.2.4"
   },
   "devDependencies": {
     "@component-controls/ts-markdown-docs": "^2.6.0",

@@ -14,6 +14,7 @@ import {
   Column,
   Cell,
   Row,
+  UseExpandedRowProps,
   PluginHook,
   TableOptions,
   UseFiltersOptions,
@@ -44,7 +45,7 @@ const defaultColumn = memoize(() => ({
   accessor: '',
 }));
 
-export { Column, Cell, Row };
+export { Column, Cell, Row, UseExpandedRowProps };
 export type SelectedRowIds = Record<number, boolean>;
 interface TableOwnProps<D extends { [key: string]: any }> {
   /**
@@ -70,7 +71,7 @@ interface TableOwnProps<D extends { [key: string]: any }> {
   /**
    * string label for 'items' - used in the filter placeholder and grouping header.
    */
-  itemsLabel?: string;
+  itemsLabel?: string | null;
   /**
    * field to be grouped by.
    */
@@ -318,7 +319,7 @@ export function Table<D extends { [key: string]: any }>({
                           },
                         )}
                   </Box>
-                  {row.isExpanded && (
+                  {row.isExpanded && row.original && (
                     <tr>
                       <td colSpan={visibleColumns.length}>
                         {renderRowSubComponent

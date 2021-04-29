@@ -2,6 +2,9 @@
 
 exports[`rtl bundle esm 1`] = `
 "import * as path from 'path';
+import { run } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
 import { loadStore } from '@component-controls/store';
 import { render, act } from '@testing-library/react';
 import { renderErr } from '@component-controls/test-renderers';
@@ -13,7 +16,7 @@ describe('Components/Header', () => {
   const renderFn = store.config.renderFn;
   const doc = store.docs['Components/Header'];
 
-  test('Overview', () => {
+  describe('Overview', () => {
     const story = store.stories['components-header--overview'];
 
     let rendered;
@@ -24,8 +27,14 @@ describe('Components/Header', () => {
       renderErr();
       return;
     }
-    const { asFragment } = render(rendered);
-    expect(asFragment()).toMatchSnapshot();
+    it('snapshot', () => {
+      const { asFragment } = render(rendered);
+      expect(asFragment()).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
   });
 });
 "

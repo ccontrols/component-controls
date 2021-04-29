@@ -1,18 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Markdown image 1`] = `
+exports[`Markdown image snapshot 1`] = `
 <DocumentFragment>
-  <p>
+  <div
+    variant="styles.p"
+  >
     <img
       alt="integrated in storybook"
       class="css-9taffg"
       src="https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/images/component-controls.gif"
     />
-  </p>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Markdown overview 1`] = `
+exports[`Markdown overview snapshot 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -23,6 +25,7 @@ exports[`Markdown overview 1`] = `
         class="css-xhp9da"
       >
         <a
+          aria-label="Header H1"
           class="css-6ugsdx-LinkHeading"
           data-id="header-h1"
           data-level="1"
@@ -62,6 +65,7 @@ exports[`Markdown overview 1`] = `
         class="css-xhp9da"
       >
         <a
+          aria-label="Header H2"
           class="css-1aob0xw-LinkHeading"
           data-id="header-h2"
           data-level="2"
@@ -101,6 +105,7 @@ exports[`Markdown overview 1`] = `
         class="css-xhp9da"
       >
         <a
+          aria-label="Header H3"
           class="css-walqom-LinkHeading"
           data-id="header-h3"
           data-level="3"
@@ -138,6 +143,7 @@ exports[`Markdown overview 1`] = `
         class="css-xhp9da"
       >
         <a
+          aria-label="Header H4"
           class="css-1ptrway-LinkHeading"
           data-id="header-h4"
           data-level="4"
@@ -175,6 +181,7 @@ exports[`Markdown overview 1`] = `
         class="css-xhp9da"
       >
         <a
+          aria-label="Header H5"
           class="css-18myu3p-LinkHeading"
           data-id="header-h5"
           data-level="5"
@@ -207,34 +214,36 @@ exports[`Markdown overview 1`] = `
     <p>
       some text 
     </p>
-    <p />
-    <pre
-      class="prism-code language-jsx css-3y8hb3"
-      style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 3px 5px; display: inline; margin: 0px;"
+    <div
+      variant="styles.p"
     >
-      <span
-        class="token-line css-vurnku"
-        style="color: rgb(114, 143, 203);"
+      <pre
+        class="prism-code language-jsx css-3y8hb3"
+        style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 3px 5px; display: inline; margin: 0px;"
       >
         <span
-          class="token plain css-13aqjzy"
+          class="token-line css-vurnku"
+          style="color: rgb(114, 143, 203);"
         >
-          @theme
+          <span
+            class="token plain css-13aqjzy"
+          >
+            @theme
+          </span>
+          <span
+            class="token operator css-13aqjzy"
+            style="color: rgb(6, 50, 137);"
+          >
+            -
+          </span>
+          <span
+            class="token plain css-13aqjzy"
+          >
+            ui
+          </span>
         </span>
-        <span
-          class="token operator css-13aqjzy"
-          style="color: rgb(6, 50, 137);"
-        >
-          -
-        </span>
-        <span
-          class="token plain css-13aqjzy"
-        >
-          ui
-        </span>
-      </span>
-    </pre>
-    <p />
+      </pre>
+    </div>
   </div>
 </DocumentFragment>
 `;

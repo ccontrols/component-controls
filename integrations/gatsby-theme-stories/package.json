@@ -55,7 +55,7 @@
     "gatsby": "^3.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "typescript": "^4.0.5"
+    "typescript": "^4.2.4"
   },
   "peerDependencies": {
     "gatsby": "2.x || 3.x",

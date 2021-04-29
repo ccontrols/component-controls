@@ -47,7 +47,7 @@ export const Story: FC<StoryProps> = forwardRef(function Story(
   const story = useStory({ id, name });
   if (story && story.id && story.renderFn) {
     return (
-      <StoryBlockContainer {...rest} story={story}>
+      <StoryBlockContainer {...rest} data-testid="story" story={story}>
         <StoryRender
           ref={ref}
           story={story}

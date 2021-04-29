@@ -1,11 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OptionsEditor multiSelectNumeric 1`] = `
+exports[`OptionsEditor multiSelectNumeric snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-4cffwv"
   >
     <select
+      aria-label="select one or more options"
       class="css-wczjro-OptionsSelect"
     >
       <option
@@ -40,12 +41,13 @@ exports[`OptionsEditor multiSelectNumeric 1`] = `
 </DocumentFragment>
 `;
 
-exports[`OptionsEditor multiSelectObjects 1`] = `
+exports[`OptionsEditor multiSelectObjects snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-4cffwv"
   >
     <select
+      aria-label="select one or more options"
       class="css-wczjro-OptionsSelect"
     >
       <option
@@ -80,12 +82,13 @@ exports[`OptionsEditor multiSelectObjects 1`] = `
 </DocumentFragment>
 `;
 
-exports[`OptionsEditor multiSelectSimple 1`] = `
+exports[`OptionsEditor multiSelectSimple snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-4cffwv"
   >
     <select
+      aria-label="select one or more options"
       class="css-wczjro-OptionsSelect"
     >
       <option
@@ -120,12 +123,13 @@ exports[`OptionsEditor multiSelectSimple 1`] = `
 </DocumentFragment>
 `;
 
-exports[`OptionsEditor numeric 1`] = `
+exports[`OptionsEditor numeric snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-4cffwv"
   >
     <select
+      aria-label="select one option"
       class="css-wczjro-OptionsSelect"
     >
       <option
@@ -160,7 +164,7 @@ exports[`OptionsEditor numeric 1`] = `
 </DocumentFragment>
 `;
 
-exports[`OptionsEditor numericCheck 1`] = `
+exports[`OptionsEditor numericCheck snapshot 1`] = `
 <DocumentFragment>
   <fieldset
     class="css-xhmj93-CheckboxFieldset"
@@ -170,6 +174,7 @@ exports[`OptionsEditor numericCheck 1`] = `
     >
       <div>
         <input
+          aria-label="select one or more options"
           checked=""
           id="One-1"
           name="One"
@@ -185,6 +190,7 @@ exports[`OptionsEditor numericCheck 1`] = `
       </div>
       <div>
         <input
+          aria-label="select one or more options"
           id="Two-2"
           name="Two"
           type="checkbox"
@@ -199,6 +205,7 @@ exports[`OptionsEditor numericCheck 1`] = `
       </div>
       <div>
         <input
+          aria-label="select one or more options"
           id="Three-3"
           name="Three"
           type="checkbox"
@@ -216,7 +223,7 @@ exports[`OptionsEditor numericCheck 1`] = `
 </DocumentFragment>
 `;
 
-exports[`OptionsEditor numericCheckInline 1`] = `
+exports[`OptionsEditor numericCheckInline snapshot 1`] = `
 <DocumentFragment>
   <fieldset
     class="css-xhmj93-CheckboxFieldset"
@@ -226,6 +233,7 @@ exports[`OptionsEditor numericCheckInline 1`] = `
     >
       <div>
         <input
+          aria-label="select one or more options"
           checked=""
           id="One-1"
           name="One"
@@ -241,6 +249,7 @@ exports[`OptionsEditor numericCheckInline 1`] = `
       </div>
       <div>
         <input
+          aria-label="select one or more options"
           id="Two-2"
           name="Two"
           type="checkbox"
@@ -255,6 +264,7 @@ exports[`OptionsEditor numericCheckInline 1`] = `
       </div>
       <div>
         <input
+          aria-label="select one or more options"
           id="Three-3"
           name="Three"
           type="checkbox"
@@ -272,13 +282,14 @@ exports[`OptionsEditor numericCheckInline 1`] = `
 </DocumentFragment>
 `;
 
-exports[`OptionsEditor numericRadios 1`] = `
+exports[`OptionsEditor numericRadios snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-vurnku"
   >
     <div>
       <input
+        aria-label="select one option"
         checked=""
         id="One-1"
         name="prop"
@@ -294,6 +305,7 @@ exports[`OptionsEditor numericRadios 1`] = `
     </div>
     <div>
       <input
+        aria-label="select one option"
         id="Two-2"
         name="prop"
         type="radio"
@@ -308,6 +320,7 @@ exports[`OptionsEditor numericRadios 1`] = `
     </div>
     <div>
       <input
+        aria-label="select one option"
         id="Three-3"
         name="prop"
         type="radio"
@@ -324,13 +337,14 @@ exports[`OptionsEditor numericRadios 1`] = `
 </DocumentFragment>
 `;
 
-exports[`OptionsEditor numericRadiosInline 1`] = `
+exports[`OptionsEditor numericRadiosInline snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-3z2xr6-RadiosWrapper"
   >
     <div>
       <input
+        aria-label="select one option"
         checked=""
         id="One-1"
         name="prop"
@@ -346,6 +360,7 @@ exports[`OptionsEditor numericRadiosInline 1`] = `
     </div>
     <div>
       <input
+        aria-label="select one option"
         id="Two-2"
         name="prop"
         type="radio"
@@ -360,6 +375,7 @@ exports[`OptionsEditor numericRadiosInline 1`] = `
     </div>
     <div>
       <input
+        aria-label="select one option"
         id="Three-3"
         name="prop"
         type="radio"
@@ -376,12 +392,13 @@ exports[`OptionsEditor numericRadiosInline 1`] = `
 </DocumentFragment>
 `;
 
-exports[`OptionsEditor objects 1`] = `
+exports[`OptionsEditor objects snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-4cffwv"
   >
     <select
+      aria-label="select one option"
       class="css-wczjro-OptionsSelect"
     >
       <option
@@ -416,7 +433,7 @@ exports[`OptionsEditor objects 1`] = `
 </DocumentFragment>
 `;
 
-exports[`OptionsEditor objectsCheck 1`] = `
+exports[`OptionsEditor objectsCheck snapshot 1`] = `
 <DocumentFragment>
   <fieldset
     class="css-xhmj93-CheckboxFieldset"
@@ -426,6 +443,7 @@ exports[`OptionsEditor objectsCheck 1`] = `
     >
       <div>
         <input
+          aria-label="select one or more options"
           checked=""
           id="One-one"
           name="One"
@@ -441,6 +459,7 @@ exports[`OptionsEditor objectsCheck 1`] = `
       </div>
       <div>
         <input
+          aria-label="select one or more options"
           id="Two-two"
           name="Two"
           type="checkbox"
@@ -455,6 +474,7 @@ exports[`OptionsEditor objectsCheck 1`] = `
       </div>
       <div>
         <input
+          aria-label="select one or more options"
           id="Three-three"
           name="Three"
           type="checkbox"
@@ -472,7 +492,7 @@ exports[`OptionsEditor objectsCheck 1`] = `
 </DocumentFragment>
 `;
 
-exports[`OptionsEditor objectsCheckInline 1`] = `
+exports[`OptionsEditor objectsCheckInline snapshot 1`] = `
 <DocumentFragment>
   <fieldset
     class="css-xhmj93-CheckboxFieldset"
@@ -482,6 +502,7 @@ exports[`OptionsEditor objectsCheckInline 1`] = `
     >
       <div>
         <input
+          aria-label="select one or more options"
           checked=""
           id="One-one"
           name="One"
@@ -497,6 +518,7 @@ exports[`OptionsEditor objectsCheckInline 1`] = `
       </div>
       <div>
         <input
+          aria-label="select one or more options"
           id="Two-two"
           name="Two"
           type="checkbox"
@@ -511,6 +533,7 @@ exports[`OptionsEditor objectsCheckInline 1`] = `
       </div>
       <div>
         <input
+          aria-label="select one or more options"
           id="Three-three"
           name="Three"
           type="checkbox"
@@ -528,13 +551,14 @@ exports[`OptionsEditor objectsCheckInline 1`] = `
 </DocumentFragment>
 `;
 
-exports[`OptionsEditor objectsRadios 1`] = `
+exports[`OptionsEditor objectsRadios snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-vurnku"
   >
     <div>
       <input
+        aria-label="select one option"
         checked=""
         id="One-one"
         name="prop"
@@ -550,6 +574,7 @@ exports[`OptionsEditor objectsRadios 1`] = `
     </div>
     <div>
       <input
+        aria-label="select one option"
         id="Two-two"
         name="prop"
         type="radio"
@@ -564,6 +589,7 @@ exports[`OptionsEditor objectsRadios 1`] = `
     </div>
     <div>
       <input
+        aria-label="select one option"
         id="Three-three"
         name="prop"
         type="radio"
@@ -580,13 +606,14 @@ exports[`OptionsEditor objectsRadios 1`] = `
 </DocumentFragment>
 `;
 
-exports[`OptionsEditor objectsRadiosInline 1`] = `
+exports[`OptionsEditor objectsRadiosInline snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-3z2xr6-RadiosWrapper"
   >
     <div>
       <input
+        aria-label="select one option"
         checked=""
         id="One-one"
         name="prop"
@@ -602,6 +629,7 @@ exports[`OptionsEditor objectsRadiosInline 1`] = `
     </div>
     <div>
       <input
+        aria-label="select one option"
         id="Two-two"
         name="prop"
         type="radio"
@@ -616,6 +644,7 @@ exports[`OptionsEditor objectsRadiosInline 1`] = `
     </div>
     <div>
       <input
+        aria-label="select one option"
         id="Three-three"
         name="prop"
         type="radio"
@@ -632,12 +661,13 @@ exports[`OptionsEditor objectsRadiosInline 1`] = `
 </DocumentFragment>
 `;
 
-exports[`OptionsEditor overview 1`] = `
+exports[`OptionsEditor overview snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-4cffwv"
   >
     <select
+      aria-label="select one option"
       class="css-wczjro-OptionsSelect"
     >
       <option
@@ -672,7 +702,7 @@ exports[`OptionsEditor overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`OptionsEditor simpleCheck 1`] = `
+exports[`OptionsEditor simpleCheck snapshot 1`] = `
 <DocumentFragment>
   <fieldset
     class="css-xhmj93-CheckboxFieldset"
@@ -682,6 +712,7 @@ exports[`OptionsEditor simpleCheck 1`] = `
     >
       <div>
         <input
+          aria-label="select one or more options"
           checked=""
           id="one-one"
           name="one"
@@ -697,6 +728,7 @@ exports[`OptionsEditor simpleCheck 1`] = `
       </div>
       <div>
         <input
+          aria-label="select one or more options"
           id="two-two"
           name="two"
           type="checkbox"
@@ -711,6 +743,7 @@ exports[`OptionsEditor simpleCheck 1`] = `
       </div>
       <div>
         <input
+          aria-label="select one or more options"
           id="three-three"
           name="three"
           type="checkbox"
@@ -728,7 +761,7 @@ exports[`OptionsEditor simpleCheck 1`] = `
 </DocumentFragment>
 `;
 
-exports[`OptionsEditor simpleCheckInline 1`] = `
+exports[`OptionsEditor simpleCheckInline snapshot 1`] = `
 <DocumentFragment>
   <fieldset
     class="css-xhmj93-CheckboxFieldset"
@@ -738,6 +771,7 @@ exports[`OptionsEditor simpleCheckInline 1`] = `
     >
       <div>
         <input
+          aria-label="select one or more options"
           checked=""
           id="one-one"
           name="one"
@@ -753,6 +787,7 @@ exports[`OptionsEditor simpleCheckInline 1`] = `
       </div>
       <div>
         <input
+          aria-label="select one or more options"
           id="two-two"
           name="two"
           type="checkbox"
@@ -767,6 +802,7 @@ exports[`OptionsEditor simpleCheckInline 1`] = `
       </div>
       <div>
         <input
+          aria-label="select one or more options"
           id="three-three"
           name="three"
           type="checkbox"
@@ -784,13 +820,14 @@ exports[`OptionsEditor simpleCheckInline 1`] = `
 </DocumentFragment>
 `;
 
-exports[`OptionsEditor simpleRadios 1`] = `
+exports[`OptionsEditor simpleRadios snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-vurnku"
   >
     <div>
       <input
+        aria-label="select one option"
         checked=""
         id="one-one"
         name="prop"
@@ -806,6 +843,7 @@ exports[`OptionsEditor simpleRadios 1`] = `
     </div>
     <div>
       <input
+        aria-label="select one option"
         id="two-two"
         name="prop"
         type="radio"
@@ -820,6 +858,7 @@ exports[`OptionsEditor simpleRadios 1`] = `
     </div>
     <div>
       <input
+        aria-label="select one option"
         id="three-three"
         name="prop"
         type="radio"
@@ -836,13 +875,14 @@ exports[`OptionsEditor simpleRadios 1`] = `
 </DocumentFragment>
 `;
 
-exports[`OptionsEditor simpleRadiosInline 1`] = `
+exports[`OptionsEditor simpleRadiosInline snapshot 1`] = `
 <DocumentFragment>
   <div
     class="css-3z2xr6-RadiosWrapper"
   >
     <div>
       <input
+        aria-label="select one option"
         checked=""
         id="one-one"
         name="prop"
@@ -858,6 +898,7 @@ exports[`OptionsEditor simpleRadiosInline 1`] = `
     </div>
     <div>
       <input
+        aria-label="select one option"
         id="two-two"
         name="prop"
         type="radio"
@@ -872,6 +913,7 @@ exports[`OptionsEditor simpleRadiosInline 1`] = `
     </div>
     <div>
       <input
+        aria-label="select one option"
         id="three-three"
         name="prop"
         type="radio"

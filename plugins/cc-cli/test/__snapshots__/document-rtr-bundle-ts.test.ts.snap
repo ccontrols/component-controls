@@ -2,6 +2,9 @@
 
 exports[`rtr bundle ts 1`] = `
 "import * as path from 'path';
+import { run, AxeResults } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
 import { loadStore } from '@component-controls/store';
 import renderer, { act } from 'react-test-renderer';
 import { renderErr, componentErr } from '@component-controls/test-renderers';
@@ -18,7 +21,7 @@ describe('Components/Header', () => {
       describe(doc.title, () => {
         stories.forEach(storyId => {
           const story = store.stories[storyId];
-          it(story.name, async () => {
+          describe(story.name, () => {
             let rendered;
             act(() => {
               rendered = renderFn(story, doc);
@@ -27,12 +30,18 @@ describe('Components/Header', () => {
               renderErr();
               return;
             }
-            const component = renderer.create(rendered);
-            if (!component) {
-              componentErr();
-              return;
-            }
-            expect(component.toJSON()).toMatchSnapshot();
+            it('snapshot', () => {
+              const component = renderer.create(rendered);
+              if (!component) {
+                componentErr();
+                return;
+              }
+              expect(component.toJSON()).toMatchSnapshot();
+            });
+            it('accessibility', async () => {
+              const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+              expect(axeResults).toHaveNoAxeViolations();
+            });
           });
         });
       });

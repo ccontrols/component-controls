@@ -6,6 +6,7 @@ import { parseStories } from '@component-controls/instrument';
 import { Document } from '@component-controls/core';
 import { loadStore } from '@component-controls/store';
 import { createTemplate } from './template';
+import { accessibilityTemplate } from './accessibily';
 import { StoryTemplateOptions, renderers, TemplateFunction } from './types';
 
 dot.templateSettings.strip = false;
@@ -26,6 +27,7 @@ export const createStoriesTemplate: TemplateFunction<StoryTemplateOptions> = asy
     name,
     output,
     bundle,
+    ally,
     ...rest
   } = options;
   let stories: { id?: string; name: string }[] = [];
@@ -74,6 +76,7 @@ export const createStoriesTemplate: TemplateFunction<StoryTemplateOptions> = asy
   );
   const render = dot.template(fs.readFileSync(renderPath, 'utf8'))({
     bundle: !!bundle,
+    ...accessibilityTemplate(format, ally),
   });
   const importPath = `.${path.sep}${(output
     ? path.relative(output, storyPath)
@@ -123,7 +126,7 @@ describe('{{=it.name}}', () => {
 {{=it.load}}
 {{=it.doc}}
 {{~ it.stories :story }}
-  test('{{=story.name}}', () => {
+  describe('{{=story.name}}', () => {
     {{? it.bundlePath }}
       const story = store.stories['{{=story.id}}'];
     {{?? true }}

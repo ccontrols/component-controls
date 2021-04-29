@@ -11,7 +11,7 @@ export const GlobalFilter: FC<Pick<
   'preGlobalFilteredRows' | 'setGlobalFilter'
 > &
   Pick<UseGlobalFiltersOptions<any>, 'globalFilter'> & {
-    itemsLabel: string;
+    itemsLabel: string | null;
   }> = ({
   preGlobalFilteredRows,
   globalFilter,
