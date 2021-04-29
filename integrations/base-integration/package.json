@@ -57,7 +57,7 @@
     "@component-controls/ts-markdown-docs": "^2.6.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
-    "typescript": "^4.0.5"
+    "typescript": "^4.2.4"
   },
   "publishConfig": {
     "access": "public"
