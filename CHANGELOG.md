@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.8.0](https://github.com/ccontrols/component-controls/compare/v3.7.0...v3.8.0) (2021-04-29)
+
+
+### Bug Fixes
+
+* add data-testid props ([c50907a](https://github.com/ccontrols/component-controls/commit/c50907a1225aff049893ddfac0978c8aed746bd3))
+* add iframe title ally issue ([6910937](https://github.com/ccontrols/component-controls/commit/69109371be85fa16b750c2e089f8f0b896ef693a))
+* avatar alt text duplicate ([44cb551](https://github.com/ccontrols/component-controls/commit/44cb5512b51d386fd9253710e6c792bf575560fb))
+* color prop is not required ([ac6f850](https://github.com/ccontrols/component-controls/commit/ac6f8501ad6da68828a41d040bfcbccf1cdb7b15))
+* colors and padding of group row ([4388e5a](https://github.com/ccontrols/component-controls/commit/4388e5a77078c0dada7ea0a2f4ee35dbcbbc9202))
+* component description ([8d1881e](https://github.com/ccontrols/component-controls/commit/8d1881e6ab3c9e00fc75032b33247bd82fc1ffef))
+* docs accessibility test render ([cb59397](https://github.com/ccontrols/component-controls/commit/cb59397fddb44b0e08b91dccdd98421e5416e6bc))
+* document template async describe ([ac42b55](https://github.com/ccontrols/component-controls/commit/ac42b55798c5387e6962fade446452432d9b5421))
+* issue when links inside markdown (paragraph) ([2f11249](https://github.com/ccontrols/component-controls/commit/2f112498b84e4fc04245f8bd10b53466d73b2cdc))
+* issue with duplicate id for different story blocks ([ee3f298](https://github.com/ccontrols/component-controls/commit/ee3f298c85c4457c661119dabbbd249efafcbab2))
+* linting ([cffe623](https://github.com/ccontrols/component-controls/commit/cffe623867ac2b476e37129ea30f3d7dff682010))
+* mock store search ([527bd93](https://github.com/ccontrols/component-controls/commit/527bd93a84209476508c7b021c3899c308bd4302))
+* redundand map check ([86e192a](https://github.com/ccontrols/component-controls/commit/86e192a06b702227aa4a355ef20e53ba120f63b4))
+* remove axe ally imports when disabled ([fd295b0](https://github.com/ccontrols/component-controls/commit/fd295b028e9615bae01fded2aa3234f0ccca9fd9))
+* remove followCursor, bleeds into DOM ([d18127d](https://github.com/ccontrols/component-controls/commit/d18127d96c5481e579445f1503e3990de350c411))
+* remove intial open on search undefined ([d9a06e7](https://github.com/ccontrols/component-controls/commit/d9a06e76c6a38a2531b4d356d333854e7991ad08))
+* remove log ([c55e3e4](https://github.com/ccontrols/component-controls/commit/c55e3e431326cf80ea7ff0ee418ede07eecb9a19))
+* rename test to it for story-target ([c0363db](https://github.com/ccontrols/component-controls/commit/c0363db7ba0f7f1c3b92b608961b3d1836c3dbd3))
+* selector block overflow limit ([5ed1bb7](https://github.com/ccontrols/component-controls/commit/5ed1bb786711efead2fae8e6c18cc8073b285670))
+* spelling ([eedc21b](https://github.com/ccontrols/component-controls/commit/eedc21bd8ac764ac43895e6be8fb901899faf595))
+* table row select aria-label ([adbba76](https://github.com/ccontrols/component-controls/commit/adbba768afd4a157ac073dc50de26ee1feaa53f3))
+* toggle default aria-label ([92bccc9](https://github.com/ccontrols/component-controls/commit/92bccc9d46186ab4601c9384cc5437ea04fbc848))
+* typescript ally imports ([0f22572](https://github.com/ccontrols/component-controls/commit/0f22572986e6e390346ab5769c283506018fed01))
+* typescript imports ([c33643c](https://github.com/ccontrols/component-controls/commit/c33643cf75f017f6fe04cf8bbf8cbbc24b9c7eae))
+
+
+### Features
+
+* add accessibility tests to templates ([f58f4ae](https://github.com/ccontrols/component-controls/commit/f58f4ae6e3f199e63bf1fc9198a2c7caa0942ed0))
+* axe ally accessibility testing ([0cb9875](https://github.com/ccontrols/component-controls/commit/0cb9875b7b264187203580913373cad7ea9b9981))
+* initial test results block ([380886a](https://github.com/ccontrols/component-controls/commit/380886ad37655fff8195cac35f144f51b59768db))
+* refresh tests on update snapshot folder ([bd03dcd](https://github.com/ccontrols/component-controls/commit/bd03dcdcba3a2360cdca1d663ba9be5b720e43d1))
+* shield component and tests stats ([8733a1e](https://github.com/ccontrols/component-controls/commit/8733a1ec4cb3480fd777719c4ccdbdeb54be0c58))
+* test results block ([9d8e72c](https://github.com/ccontrols/component-controls/commit/9d8e72c0f470c07fba1efaec2e119a94069d898a))
+* tests coverage block ([3362c12](https://github.com/ccontrols/component-controls/commit/3362c12a469d449232bbda69758cb08339b83094))
+
+
+
+
+
 # [3.7.0](https://github.com/ccontrols/component-controls/compare/v3.6.3...v3.7.0) (2021-04-20)
 
 

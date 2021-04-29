@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/addon-catalog",
-  "version": "3.7.0",
+  "version": "3.8.0",
   "description": "Component-controls addon to display a catalog of components",
   "keywords": [
     "components",
@@ -35,10 +35,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/blocks": "^3.7.0",
-    "@component-controls/components": "^3.7.0",
-    "@component-controls/core": "^3.7.0",
-    "@component-controls/store": "^3.7.0",
+    "@component-controls/blocks": "^3.8.0",
+    "@component-controls/components": "^3.8.0",
+    "@component-controls/core": "^3.8.0",
+    "@component-controls/store": "^3.8.0",
     "timeago.js": "^4.0.2"
   },
   "devDependencies": {

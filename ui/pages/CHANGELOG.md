@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.8.0](https://github.com/ccontrols/component-controls/compare/v3.7.0...v3.8.0) (2021-04-29)
+
+
+### Features
+
+* test results block ([9d8e72c](https://github.com/ccontrols/component-controls/commit/9d8e72c0f470c07fba1efaec2e119a94069d898a))
+* tests coverage block ([3362c12](https://github.com/ccontrols/component-controls/commit/3362c12a469d449232bbda69758cb08339b83094))
+
+
+
+
+
 # [3.7.0](https://github.com/ccontrols/component-controls/compare/v3.6.3...v3.7.0) (2021-04-20)
 
 **Note:** Version bump only for package @component-controls/pages

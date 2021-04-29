@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.8.0](https://github.com/ccontrols/component-controls/compare/v3.7.0...v3.8.0) (2021-04-29)
+
+
+### Bug Fixes
+
+* avatar alt text duplicate ([44cb551](https://github.com/ccontrols/component-controls/commit/44cb5512b51d386fd9253710e6c792bf575560fb))
+* color prop is not required ([ac6f850](https://github.com/ccontrols/component-controls/commit/ac6f8501ad6da68828a41d040bfcbccf1cdb7b15))
+* colors and padding of group row ([4388e5a](https://github.com/ccontrols/component-controls/commit/4388e5a77078c0dada7ea0a2f4ee35dbcbbc9202))
+* issue when links inside markdown (paragraph) ([2f11249](https://github.com/ccontrols/component-controls/commit/2f112498b84e4fc04245f8bd10b53466d73b2cdc))
+* remove followCursor, bleeds into DOM ([d18127d](https://github.com/ccontrols/component-controls/commit/d18127d96c5481e579445f1503e3990de350c411))
+* remove intial open on search undefined ([d9a06e7](https://github.com/ccontrols/component-controls/commit/d9a06e76c6a38a2531b4d356d333854e7991ad08))
+* table row select aria-label ([adbba76](https://github.com/ccontrols/component-controls/commit/adbba768afd4a157ac073dc50de26ee1feaa53f3))
+* toggle default aria-label ([92bccc9](https://github.com/ccontrols/component-controls/commit/92bccc9d46186ab4601c9384cc5437ea04fbc848))
+
+
+### Features
+
+* axe ally accessibility testing ([0cb9875](https://github.com/ccontrols/component-controls/commit/0cb9875b7b264187203580913373cad7ea9b9981))
+* initial test results block ([380886a](https://github.com/ccontrols/component-controls/commit/380886ad37655fff8195cac35f144f51b59768db))
+* refresh tests on update snapshot folder ([bd03dcd](https://github.com/ccontrols/component-controls/commit/bd03dcdcba3a2360cdca1d663ba9be5b720e43d1))
+* shield component and tests stats ([8733a1e](https://github.com/ccontrols/component-controls/commit/8733a1ec4cb3480fd777719c4ccdbdeb54be0c58))
+* test results block ([9d8e72c](https://github.com/ccontrols/component-controls/commit/9d8e72c0f470c07fba1efaec2e119a94069d898a))
+* tests coverage block ([3362c12](https://github.com/ccontrols/component-controls/commit/3362c12a469d449232bbda69758cb08339b83094))
+
+
+
+
+
 # [3.7.0](https://github.com/ccontrols/component-controls/compare/v3.6.3...v3.7.0) (2021-04-20)
 
 

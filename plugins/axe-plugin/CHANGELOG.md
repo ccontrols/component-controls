@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.8.0](https://github.com/ccontrols/component-controls/compare/v3.7.0...v3.8.0) (2021-04-29)
+
+
+### Bug Fixes
+
+* remove axe ally imports when disabled ([fd295b0](https://github.com/ccontrols/component-controls/commit/fd295b028e9615bae01fded2aa3234f0ccca9fd9))
+* selector block overflow limit ([5ed1bb7](https://github.com/ccontrols/component-controls/commit/5ed1bb786711efead2fae8e6c18cc8073b285670))
+
+
+### Features
+
+* axe ally accessibility testing ([0cb9875](https://github.com/ccontrols/component-controls/commit/0cb9875b7b264187203580913373cad7ea9b9981))
+
+
+
+
+
 # [3.7.0](https://github.com/ccontrols/component-controls/compare/v3.6.3...v3.7.0) (2021-04-20)
 
 

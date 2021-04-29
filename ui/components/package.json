@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/components",
-  "version": "3.7.0",
+  "version": "3.8.0",
   "description": "Component controls commonly used UI components.",
   "sideEffects": false,
   "main": "dist/index.js",
@@ -54,8 +54,8 @@
     "tinycolor2": "^1.4.1"
   },
   "devDependencies": {
-    "@component-controls/cc-cli": "^3.7.0",
-    "@component-controls/ts-markdown-docs": "^2.6.0",
+    "@component-controls/cc-cli": "^3.8.0",
+    "@component-controls/ts-markdown-docs": "^3.8.0",
     "@theme-ui/css": "^0.6.0-alpha.7",
     "@types/markdown-to-jsx": "^6.11.0",
     "@types/md5": "^2.3.0",

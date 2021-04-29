@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.8.0](https://github.com/ccontrols/component-controls/compare/v3.7.0...v3.8.0) (2021-04-29)
+
+
+### Bug Fixes
+
+* add data-testid props ([c50907a](https://github.com/ccontrols/component-controls/commit/c50907a1225aff049893ddfac0978c8aed746bd3))
+* add iframe title ally issue ([6910937](https://github.com/ccontrols/component-controls/commit/69109371be85fa16b750c2e089f8f0b896ef693a))
+* colors and padding of group row ([4388e5a](https://github.com/ccontrols/component-controls/commit/4388e5a77078c0dada7ea0a2f4ee35dbcbbc9202))
+* component description ([8d1881e](https://github.com/ccontrols/component-controls/commit/8d1881e6ab3c9e00fc75032b33247bd82fc1ffef))
+* issue with duplicate id for different story blocks ([ee3f298](https://github.com/ccontrols/component-controls/commit/ee3f298c85c4457c661119dabbbd249efafcbab2))
+* mock store search ([527bd93](https://github.com/ccontrols/component-controls/commit/527bd93a84209476508c7b021c3899c308bd4302))
+* remove log ([c55e3e4](https://github.com/ccontrols/component-controls/commit/c55e3e431326cf80ea7ff0ee418ede07eecb9a19))
+* spelling ([eedc21b](https://github.com/ccontrols/component-controls/commit/eedc21bd8ac764ac43895e6be8fb901899faf595))
+
+
+### Features
+
+* axe ally accessibility testing ([0cb9875](https://github.com/ccontrols/component-controls/commit/0cb9875b7b264187203580913373cad7ea9b9981))
+* initial test results block ([380886a](https://github.com/ccontrols/component-controls/commit/380886ad37655fff8195cac35f144f51b59768db))
+* shield component and tests stats ([8733a1e](https://github.com/ccontrols/component-controls/commit/8733a1ec4cb3480fd777719c4ccdbdeb54be0c58))
+* test results block ([9d8e72c](https://github.com/ccontrols/component-controls/commit/9d8e72c0f470c07fba1efaec2e119a94069d898a))
+* tests coverage block ([3362c12](https://github.com/ccontrols/component-controls/commit/3362c12a469d449232bbda69758cb08339b83094))
+
+
+
+
+
 # [3.7.0](https://github.com/ccontrols/component-controls/compare/v3.6.3...v3.7.0) (2021-04-20)
 
 

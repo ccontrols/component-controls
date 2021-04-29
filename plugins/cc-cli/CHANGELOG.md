@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.8.0](https://github.com/ccontrols/component-controls/compare/v3.7.0...v3.8.0) (2021-04-29)
+
+
+### Bug Fixes
+
+* docs accessibility test render ([cb59397](https://github.com/ccontrols/component-controls/commit/cb59397fddb44b0e08b91dccdd98421e5416e6bc))
+* document template async describe ([ac42b55](https://github.com/ccontrols/component-controls/commit/ac42b55798c5387e6962fade446452432d9b5421))
+* remove axe ally imports when disabled ([fd295b0](https://github.com/ccontrols/component-controls/commit/fd295b028e9615bae01fded2aa3234f0ccca9fd9))
+* rename test to it for story-target ([c0363db](https://github.com/ccontrols/component-controls/commit/c0363db7ba0f7f1c3b92b608961b3d1836c3dbd3))
+* typescript ally imports ([0f22572](https://github.com/ccontrols/component-controls/commit/0f22572986e6e390346ab5769c283506018fed01))
+* typescript imports ([c33643c](https://github.com/ccontrols/component-controls/commit/c33643cf75f017f6fe04cf8bbf8cbbc24b9c7eae))
+
+
+### Features
+
+* add accessibility tests to templates ([f58f4ae](https://github.com/ccontrols/component-controls/commit/f58f4ae6e3f199e63bf1fc9198a2c7caa0942ed0))
+* axe ally accessibility testing ([0cb9875](https://github.com/ccontrols/component-controls/commit/0cb9875b7b264187203580913373cad7ea9b9981))
+
+
+
+
+
 # [3.7.0](https://github.com/ccontrols/component-controls/compare/v3.6.3...v3.7.0) (2021-04-20)
 
 

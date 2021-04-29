@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.8.0](https://github.com/ccontrols/component-controls/compare/v3.7.0...v3.8.0) (2021-04-29)
+
+
+### Bug Fixes
+
+* redundand map check ([86e192a](https://github.com/ccontrols/component-controls/commit/86e192a06b702227aa4a355ef20e53ba120f63b4))
+
+
+
+
+
 # [2.6.0](https://github.com/ccontrols/component-controls/compare/v2.5.3...v2.6.0) (2021-01-07)
 
 **Note:** Version bump only for package @component-controls/ts-markdown-docs

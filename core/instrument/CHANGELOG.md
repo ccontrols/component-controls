@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.8.0](https://github.com/ccontrols/component-controls/compare/v3.7.0...v3.8.0) (2021-04-29)
+
+
+### Features
+
+* axe ally accessibility testing ([0cb9875](https://github.com/ccontrols/component-controls/commit/0cb9875b7b264187203580913373cad7ea9b9981))
+* initial test results block ([380886a](https://github.com/ccontrols/component-controls/commit/380886ad37655fff8195cac35f144f51b59768db))
+* refresh tests on update snapshot folder ([bd03dcd](https://github.com/ccontrols/component-controls/commit/bd03dcdcba3a2360cdca1d663ba9be5b720e43d1))
+
+
+
+
+
 # [3.7.0](https://github.com/ccontrols/component-controls/compare/v3.6.3...v3.7.0) (2021-04-20)
 
 
