@@ -10,6 +10,9 @@ import { DocInfo } from '@component-controls/core';
 import { useSearch } from '@component-controls/store';
 import { DocumentItem } from '../DocumentItem';
 
+/**
+ * search input component connected to the store
+ */
 export const Search: FC<Omit<
   SearchInputProps<DocInfo>,
   'items' | 'onSearch'

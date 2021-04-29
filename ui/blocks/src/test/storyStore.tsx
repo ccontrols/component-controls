@@ -18,6 +18,7 @@ import img_example from './image_example.jpg';
 
 export const store: Store = {
   ...getDefaultStore(),
+  search: require('@component-controls/search-fusejs').default,
   config: {
     ...deepMerge(defaultBuildConfig, defaultRunConfig),
     renderFn: reactRender,
