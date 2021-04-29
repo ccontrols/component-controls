@@ -70,7 +70,7 @@ exports[`ComponentList overview snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-nj7jql-ComponentCard"
+        class="css-18hcion-ComponentCard"
       >
         <div />
         <div
@@ -94,6 +94,132 @@ exports[`ComponentList overview snapshot 1`] = `
               </span>
             </div>
           </a>
+        </div>
+      </div>
+      <div
+        class="css-1lguarf-ComponentCard"
+      >
+        <div
+          class="css-zf8zhj"
+        >
+          <span
+            class="css-13o2efz"
+          >
+            created:
+          </span>
+          <span
+            class="css-uv6qe8"
+          >
+            N/A
+          </span>
+        </div>
+        <div
+          class="css-zf8zhj"
+        >
+          <span
+            class="css-13o2efz"
+          >
+            updated:
+          </span>
+          <span
+            class="css-uv6qe8"
+          >
+            N/A
+          </span>
+        </div>
+      </div>
+      <div
+        class="css-1b2gf4v"
+      >
+        <div
+          class="css-ncjsai"
+          title="total lines of code"
+        >
+          <div
+            class="css-7ucnu2-Shield"
+          >
+            loc
+          </div>
+          <div
+            class="css-o4rdbs-Shield"
+          >
+            25
+          </div>
+        </div>
+        <div
+          class="css-ncjsai"
+          title="percentage comments to lines of code"
+        >
+          <div
+            class="css-7ucnu2-Shield"
+          >
+            comments
+          </div>
+          <div
+            class="css-38njz9-Shield"
+          >
+            4%
+          </div>
+        </div>
+        <div
+          class="css-ncjsai"
+          title="total todo comments"
+        >
+          <div
+            class="css-7ucnu2-Shield"
+          >
+            todos
+          </div>
+          <div
+            class="css-o4rdbs-Shield"
+          >
+            5
+          </div>
+        </div>
+        <div
+          class="css-ncjsai"
+          title="number of passed tests"
+        >
+          <div
+            class="css-7ucnu2-Shield"
+          >
+            passed
+          </div>
+          <div
+            class="css-14o9xde-Shield"
+          >
+            7
+          </div>
+        </div>
+        <div
+          class="css-ncjsai"
+          title="number of failed tests"
+        >
+          <div
+            class="css-7ucnu2-Shield"
+          >
+            failed
+          </div>
+          <div
+            class="css-1os9rn1-Shield"
+          >
+            1
+          </div>
+        </div>
+        <div
+          class="css-ncjsai"
+          title="tests coverage by branches"
+        >
+          <div
+            class="css-7ucnu2-Shield"
+          >
+            coverage
+          </div>
+          <div
+            class="css-otdzg2-Shield"
+          >
+            67%
+          </div>
         </div>
       </div>
       <div
@@ -152,88 +278,6 @@ exports[`ComponentList overview snapshot 1`] = `
           </div>
         </div>
       </div>
-      <div
-        class="css-pfgifj-ComponentCard"
-      >
-        <div
-          class="css-1lguarf-ComponentCard"
-        >
-          <div
-            class="css-zf8zhj"
-          >
-            <span
-              class="css-13o2efz"
-            >
-              created:
-            </span>
-            <span
-              class="css-uv6qe8"
-            >
-              N/A
-            </span>
-          </div>
-          <div
-            class="css-zf8zhj"
-          >
-            <span
-              class="css-13o2efz"
-            >
-              updated:
-            </span>
-            <span
-              class="css-uv6qe8"
-            >
-              N/A
-            </span>
-          </div>
-        </div>
-        <div
-          class="css-1xa7s2f"
-        >
-          <div
-            class="css-zf8zhj"
-          >
-            <span
-              class="css-13o2efz"
-            >
-              source lines:
-            </span>
-            <span
-              class="css-uv6qe8"
-            >
-              25
-            </span>
-          </div>
-          <div
-            class="css-loy9lz-ComponentStats"
-          >
-            <span
-              class="css-13o2efz"
-            >
-              comments %:
-            </span>
-            <span
-              class="css-uv6qe8"
-            >
-              4
-            </span>
-          </div>
-          <div
-            class="css-loy9lz-ComponentStats"
-          >
-            <span
-              class="css-13o2efz"
-            >
-              todo lines:
-            </span>
-            <span
-              class="css-uv6qe8"
-            >
-              5
-            </span>
-          </div>
-        </div>
-      </div>
     </div>
     <div
       class="css-wh7vml"
@@ -256,7 +300,7 @@ exports[`ComponentList overview snapshot 1`] = `
         />
       </div>
       <div
-        class="css-nj7jql-ComponentCard"
+        class="css-18hcion-ComponentCard"
       >
         <div />
       </div>
@@ -314,7 +358,7 @@ and some bold
         />
       </div>
       <div
-        class="css-nj7jql-ComponentCard"
+        class="css-18hcion-ComponentCard"
       >
         <div
           class="css-14a8v30-PackageLink"
@@ -386,7 +430,7 @@ and some bold
         />
       </div>
       <div
-        class="css-nj7jql-ComponentCard"
+        class="css-18hcion-ComponentCard"
       >
         <div
           class="css-14a8v30-PackageLink"

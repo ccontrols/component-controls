@@ -13,11 +13,7 @@ export const overview: Example<GithubAvatarListProps> = ({ size, overlap }) => {
     <GithubAvatarList
       size={size}
       overlap={overlap}
-      users={[
-        { username: 'hasparus' },
-        { username: 'lachlanjc' },
-        { username: 'atanasster' },
-      ]}
+      users={[{ username: 'martin-stoyanov' }, { username: 'atanasster' }]}
     />
   );
 };
@@ -26,11 +22,7 @@ export const maxItems: Example<GithubAvatarListProps> = () => {
   return (
     <GithubAvatarList
       maxItems={2}
-      users={[
-        { username: 'hasparus' },
-        { username: 'lachlanjc' },
-        { username: 'atanasster' },
-      ]}
+      users={[{ username: 'martin-stoyanov' }, { username: 'atanasster' }]}
     />
   );
 };

@@ -3,8 +3,8 @@
 exports[`GithubAvatarList maxItems snapshot 1`] = `
 <DocumentFragment>
   <div
-    aria-label="avatars of hasparus, lachlanjc, atanasster"
-    class="css-i07oab-GithubAvatarList"
+    aria-label="avatars of martin-stoyanov, atanasster"
+    class="css-bsqv3q-GithubAvatarList"
   >
     <div
       class="css-pncdcn-GithubAvatar"
@@ -14,11 +14,11 @@ exports[`GithubAvatarList maxItems snapshot 1`] = `
         class="css-1b0uybw-GithubAvatar"
       >
         <img
-          alt="avatar of hasparus"
+          alt="avatar of martin-stoyanov"
           class="css-1y16e88"
           height="32"
-          src="https://github.com/hasparus"
-          title="hasparus"
+          src="https://github.com/martin-stoyanov"
+          title="martin-stoyanov"
           width="32"
         />
       </div>
@@ -31,19 +31,14 @@ exports[`GithubAvatarList maxItems snapshot 1`] = `
         class="css-1b0uybw-GithubAvatar"
       >
         <img
-          alt="avatar of lachlanjc"
+          alt="avatar of atanasster"
           class="css-1y16e88"
           height="32"
-          src="https://github.com/lachlanjc"
-          title="lachlanjc"
+          src="https://github.com/atanasster"
+          title="atanasster"
           width="32"
         />
       </div>
-    </div>
-    <div
-      class="css-1tdzql8-GithubAvatarList"
-    >
-      ...
     </div>
   </div>
 </DocumentFragment>
@@ -52,8 +47,8 @@ exports[`GithubAvatarList maxItems snapshot 1`] = `
 exports[`GithubAvatarList overview snapshot 1`] = `
 <DocumentFragment>
   <div
-    aria-label="avatars of hasparus, lachlanjc, atanasster"
-    class="css-i07oab-GithubAvatarList"
+    aria-label="avatars of martin-stoyanov, atanasster"
+    class="css-bsqv3q-GithubAvatarList"
   >
     <div
       class="css-pncdcn-GithubAvatar"
@@ -63,28 +58,11 @@ exports[`GithubAvatarList overview snapshot 1`] = `
         class="css-1b0uybw-GithubAvatar"
       >
         <img
-          alt="avatar of hasparus"
+          alt="avatar of martin-stoyanov"
           class="css-1y16e88"
           height="32"
-          src="https://github.com/hasparus"
-          title="hasparus"
-          width="32"
-        />
-      </div>
-    </div>
-    <div
-      class="css-pncdcn-GithubAvatar"
-      style="display: inline-block;"
-    >
-      <div
-        class="css-1b0uybw-GithubAvatar"
-      >
-        <img
-          alt="avatar of lachlanjc"
-          class="css-1y16e88"
-          height="32"
-          src="https://github.com/lachlanjc"
-          title="lachlanjc"
+          src="https://github.com/martin-stoyanov"
+          title="martin-stoyanov"
           width="32"
         />
       </div>

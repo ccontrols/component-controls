@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shield fraction snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-ncjsai"
+  >
+    <div
+      class="css-7ucnu2-Shield"
+    >
+      percent
+    </div>
+    <div
+      class="css-bahhjw-Shield"
+    >
+      50%
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Shield overview snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-ncjsai"
+  >
+    <div
+      class="css-7ucnu2-Shield"
+    >
+      some text
+    </div>
+    <div
+      class="css-o4rdbs-Shield"
+    >
+      1.0.0
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Shield percent snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-ncjsai"
+  >
+    <div
+      class="css-7ucnu2-Shield"
+    >
+      zero
+    </div>
+    <div
+      class="css-1m33y6e-Shield"
+    >
+      80%
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Shield themeColor snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-ncjsai"
+  >
+    <div
+      class="css-7ucnu2-Shield"
+    >
+      color
+    </div>
+    <div
+      class="css-o4rdbs-Shield"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Shield zeroValue snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-ncjsai"
+  >
+    <div
+      class="css-7ucnu2-Shield"
+    >
+      zero
+    </div>
+    <div
+      class="css-o4rdbs-Shield"
+    >
+      0
+    </div>
+  </div>
+</DocumentFragment>
+`;

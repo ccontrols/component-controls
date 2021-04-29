@@ -30,6 +30,7 @@ export * from './PanelContainer';
 export * from './Popover';
 export * from './ProgressIndicator';
 export * from './SearchInput';
+export * from './Shield';
 export * from './Sidebar';
 export * from './SkipLinks';
 export * from './Source';

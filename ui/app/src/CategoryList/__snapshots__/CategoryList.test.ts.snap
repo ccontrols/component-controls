@@ -52,10 +52,38 @@ exports[`CategoryList overview snapshot 1`] = `
             </a>
           </div>
           <div
-            class="css-1v8m970-Container"
+            class="css-crmp15"
           >
             <div
-              class="css-crmp15"
+              class="css-zf8zhj"
+            >
+              <span
+                class="css-13o2efz"
+              >
+                created:
+              </span>
+              <span
+                class="css-uv6qe8"
+              >
+                1/1/2020
+              </span>
+            </div>
+            <div
+              class="css-tk62ho-Container"
+            >
+              <span
+                class="css-13o2efz"
+              >
+                updated:
+              </span>
+              <span
+                class="css-uv6qe8"
+              >
+                3/31/2020
+              </span>
+            </div>
+            <div
+              class="css-lllzso"
             >
               <div
                 class="css-zf8zhj"
@@ -63,54 +91,25 @@ exports[`CategoryList overview snapshot 1`] = `
                 <span
                   class="css-13o2efz"
                 >
-                  created:
+                  by
                 </span>
                 <span
                   class="css-uv6qe8"
                 >
-                  1/1/2020
-                </span>
-              </div>
-              <div
-                class="css-tk62ho-Container"
-              >
-                <span
-                  class="css-13o2efz"
-                >
-                  updated:
-                </span>
-                <span
-                  class="css-uv6qe8"
-                >
-                  3/31/2020
-                </span>
-              </div>
-              <div
-                class="css-lllzso"
-              >
-                <div
-                  class="css-zf8zhj"
-                >
-                  <span
-                    class="css-13o2efz"
+                  <a
+                    class="css-1t54e2w"
+                    href="/authors/atanasster"
                   >
-                    by
-                  </span>
-                  <span
-                    class="css-uv6qe8"
-                  >
-                    <a
-                      class="css-1t54e2w"
-                      href="/authors/atanasster"
-                    >
-                      atanasster
-                    </a>
-                  </span>
-                </div>
+                    atanasster
+                  </a>
+                </span>
               </div>
             </div>
           </div>
         </div>
+        <div
+          class="css-sj1i65-Container"
+        />
         <div
           class="css-i0y2du"
         >

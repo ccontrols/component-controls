@@ -1,7 +1,13 @@
 /** @jsx jsx */
 import { FC, useContext, useMemo } from 'react';
 import { jsx, Themed } from 'theme-ui';
-import { Story, Document } from '@component-controls/core';
+import {
+  Story,
+  Document,
+  Component,
+  JestResult,
+  CoverageKind,
+} from '@component-controls/core';
 import { useStore } from '@component-controls/store';
 import { ComponentCatalogContext } from '../context';
 import { ComponentList } from '../ComponentList';
@@ -90,6 +96,76 @@ export const ComponentsCatalog: FC<ComponentsCatalogProps> = ({
             return n2.localeCompare(n1);
           }
           return n1.localeCompare(n2);
+        };
+        const getComponentTestsCount = (
+          C: Component,
+          status: JestResult['testResults'][0]['status'],
+        ): number => {
+          return (
+            C.jest?.results.reduce(
+              (acc: number, result) =>
+                acc +
+                result.testResults.filter(r => r.status === status).length,
+              0,
+            ) || 0
+          );
+        };
+        const passedTestsCompare = (
+          A: Component,
+          B: Component,
+          direction: 'asc' | 'desc',
+        ) => {
+          const a = getComponentTestsCount(A, 'passed');
+          const b = getComponentTestsCount(B, 'passed');
+          return numCompare(a, b, direction);
+        };
+        const failedTestsCompare = (
+          A: Component,
+          B: Component,
+          direction: 'asc' | 'desc',
+        ) => {
+          const a = getComponentTestsCount(A, 'failed');
+          const b = getComponentTestsCount(B, 'failed');
+          return numCompare(a, b, direction);
+        };
+        const getComponentCoverage = (C: Component): number => {
+          const jest = C.jest;
+          if (!jest) {
+            return 0;
+          }
+          const minCovField: {
+            field: CoverageKind;
+            pct: number;
+          } = Object.values(jest.coverage).reduce(
+            (acc: { field: CoverageKind; pct: number }, cov) => {
+              Object.keys(cov).forEach(key => {
+                const kind = key as CoverageKind;
+                if (acc.pct > cov[kind].pct) {
+                  acc = { field: kind, pct: cov[kind].pct };
+                }
+              });
+              return acc;
+            },
+            { field: 'lines', pct: 101 },
+          );
+          const coverage = Object.values(jest.coverage).reduce(
+            (acc, cov) => ({
+              total: acc.total + cov[minCovField.field].total,
+              covered: acc.covered + cov[minCovField.field].covered,
+            }),
+            { total: 0, covered: 0 },
+          );
+          return coverage.total ? coverage.covered / coverage.total : 0;
+        };
+
+        const coverageCompare = (
+          A: Component,
+          B: Component,
+          direction: 'asc' | 'desc',
+        ) => {
+          const covA = getComponentCoverage(A);
+          const covB = getComponentCoverage(B);
+          return numCompare(covA, covB, direction);
         };
 
         const storyA = store.stories[a] as Story;
@@ -194,6 +270,18 @@ export const ComponentsCatalog: FC<ComponentsCatalogProps> = ({
               ) as unknown) as number,
               'desc',
             );
+          case 'passing_desc':
+            return passedTestsCompare(componentA, componentB, 'desc');
+          case 'passing_asc':
+            return passedTestsCompare(componentA, componentB, 'asc');
+          case 'failed_desc':
+            return failedTestsCompare(componentA, componentB, 'desc');
+          case 'failed_asc':
+            return failedTestsCompare(componentA, componentB, 'asc');
+          case 'coverage_desc':
+            return coverageCompare(componentA, componentB, 'desc');
+          case 'coverage_asc':
+            return coverageCompare(componentA, componentB, 'asc');
         }
         return 0;
       };

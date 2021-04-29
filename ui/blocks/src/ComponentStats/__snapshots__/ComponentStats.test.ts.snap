@@ -7,45 +7,93 @@ exports[`ComponentStats overview snapshot 1`] = `
   >
     <div
       class="css-vurnku"
+      title="total lines of code"
     >
-      <span
-        class="css-vurnku"
+      <div
+        class="css-1hgrbpt-Shield"
       >
-        source lines:
-      </span>
-      <span
-        class="css-vurnku"
+        loc
+      </div>
+      <div
+        class="css-1lvi1al-Shield"
       >
         25
-      </span>
+      </div>
     </div>
     <div
-      class="css-1pc5rs1-ComponentStats"
+      class="css-vurnku"
+      title="percentage comments to lines of code"
     >
-      <span
-        class="css-vurnku"
+      <div
+        class="css-1hgrbpt-Shield"
       >
-        comments %:
-      </span>
-      <span
-        class="css-vurnku"
+        comments
+      </div>
+      <div
+        class="css-1lvi1al-Shield"
       >
-        4
-      </span>
+        4%
+      </div>
     </div>
     <div
-      class="css-1pc5rs1-ComponentStats"
+      class="css-vurnku"
+      title="total todo comments"
     >
-      <span
-        class="css-vurnku"
+      <div
+        class="css-1hgrbpt-Shield"
       >
-        todo lines:
-      </span>
-      <span
-        class="css-vurnku"
+        todos
+      </div>
+      <div
+        class="css-1lvi1al-Shield"
       >
         5
-      </span>
+      </div>
+    </div>
+    <div
+      class="css-vurnku"
+      title="number of passed tests"
+    >
+      <div
+        class="css-1hgrbpt-Shield"
+      >
+        passed
+      </div>
+      <div
+        class="css-1njb4d0-Shield"
+      >
+        7
+      </div>
+    </div>
+    <div
+      class="css-vurnku"
+      title="number of failed tests"
+    >
+      <div
+        class="css-1hgrbpt-Shield"
+      >
+        failed
+      </div>
+      <div
+        class="css-kr2zk8-Shield"
+      >
+        1
+      </div>
+    </div>
+    <div
+      class="css-vurnku"
+      title="tests coverage by branches"
+    >
+      <div
+        class="css-1hgrbpt-Shield"
+      >
+        coverage
+      </div>
+      <div
+        class="css-1lvi1al-Shield"
+      >
+        67%
+      </div>
     </div>
   </div>
 </DocumentFragment>

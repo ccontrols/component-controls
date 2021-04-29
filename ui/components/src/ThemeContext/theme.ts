@@ -52,6 +52,7 @@ export type ControlsTheme = {
   syntaxhighlight: Record<string, ThemeUIStyleObject>;
   tabs: Record<string, ThemeUIStyleObject>;
   tag: Record<string, ThemeUIStyleObject>;
+  shield: Record<string, ThemeUIStyleObject>;
   table: Record<string, ThemeUIStyleObject>;
   titledimage: Record<string, ThemeUIStyleObject>;
   value: Record<string, ThemeUIStyleObject>;
@@ -698,6 +699,24 @@ export const theme: ControlsTheme = {
       },
     },
   },
+  shield: {
+    container: {
+      display: 'flex',
+      flexDirection: 'row',
+      fontSize: 0,
+      alignItems: 'center',
+    },
+    left: {
+      px: 1,
+      borderTopLeftRadius: 3,
+      borderBottomLeftRadius: 3,
+    },
+    right: {
+      px: 1,
+      borderTopRightRadius: 3,
+      borderBottomRightRadius: 3,
+    },
+  },
   tag: {
     default: {
       display: 'inline-block',
@@ -970,19 +989,16 @@ export const theme: ControlsTheme = {
     },
   },
   componentstats: {
-    responsive: {
+    container: {
       display: 'flex',
       flexDirection: ['column', 'row'],
-      alignItems: ['flex-end', 'baseline'],
-      justifyContent: 'space-between',
-      my: 1,
-    },
-    fixed: {
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'baseline',
-      justifyContent: 'space-between',
-      my: 1,
+      alignItems: ['baseline', 'center'],
+      my: [-1, 1],
+      mx: [0, -1],
+      '>div': {
+        mx: [0, 1],
+        my: [1, 0],
+      },
     },
   },
   sidebar: {
