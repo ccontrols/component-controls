@@ -19,11 +19,14 @@ export function renderDocument<Props = any>(
   config: string | RunConfiguration,
 ): { rendered: ReturnType<FrameworkRenderFn>; name: string }[] {
   const doc = props['default'] as Document<Props>;
-  const examples = Object.keys(props)
+  return Object.keys(props)
     .filter(key => key !== 'default')
-    .map(key => props[key] as Example<Props>);
-  return examples.map(example => ({
-    rendered: renderExample<Props>({ doc, example, config }),
-    name: example.name,
-  }));
+    .map(key => ({
+      rendered: renderExample<Props>({
+        doc,
+        example: props[key] as Example<Props>,
+        config,
+      }),
+      name: props[key].name || key,
+    }));
 }
