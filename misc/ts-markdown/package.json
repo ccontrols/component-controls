@@ -37,7 +37,7 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.0",
-    "react-docgen-typescript": "^1.20.5",
+    "react-docgen-typescript": "^1.22.0",
     "remark": "^11.0.2",
     "remark-toc": "^7.0.0",
     "typedoc": "^0.17.7",
