@@ -1,11 +1,6 @@
-import React, {
-  ChangeEvent,
-  RefObject,
-  useState,
-  useRef,
-  useEffect,
-} from 'react';
-import { Input, Box } from 'theme-ui';
+/** @jsx jsx */
+import { ChangeEvent, RefObject, useState, useRef, useEffect } from 'react';
+import { jsx, Input } from 'theme-ui';
 import { ComponentControlDate, ControlTypes } from '@component-controls/core';
 import { useControl } from '@component-controls/store';
 import { PropertyEditor } from '../types';
@@ -94,25 +89,26 @@ export const DateEditor: PropertyEditor = ({ name, ...rest }) => {
   };
   const { datePicker = true, timePicker = true } = control;
   return name ? (
-    <Box css={{ display: 'flex', flexDirection: 'column' }}>
+    <div sx={{ display: 'flex', flexDirection: 'column' }}>
       {datePicker && (
         <Input
-          css={{
+          sx={{
             flex: 1,
           }}
           type="date"
-          max="9999-12-31" // I do this because of a rendering bug in chrome
+          max="9999-12-31"
           ref={dateInputRef as RefObject<HTMLInputElement>}
           id={`${name}date`}
           name={`${name}date`}
           onChange={onDateChange}
-          aria-label="enter a date"
+          placeholder={`enter a date for ${name}`}
+          aria-autocomplete="none"
           {...rest}
         />
       )}
       {timePicker && (
         <Input
-          css={{
+          sx={{
             flex: 1,
           }}
           type="time"
@@ -120,11 +116,12 @@ export const DateEditor: PropertyEditor = ({ name, ...rest }) => {
           name={`${name}time`}
           ref={timeInputRef as RefObject<HTMLInputElement>}
           onChange={onTimeChange}
-          aria-label="enter a time"
+          placeholder={`enter a time for ${name}`}
+          aria-autocomplete="none"
           {...rest}
         />
       )}
-    </Box>
+    </div>
   ) : null;
 };
 

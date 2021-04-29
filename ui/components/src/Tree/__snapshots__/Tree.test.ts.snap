@@ -21,7 +21,7 @@ exports[`Tree arrowsStart snapshot 1`] = `
               class="css-162ewbd"
             >
               <button
-                aria-label="collapse items"
+                aria-expanded="true"
                 class="css-t9fq0h"
               >
                 <div
@@ -645,7 +645,7 @@ exports[`Tree customExpandIcons snapshot 1`] = `
               class="css-162ewbd"
             >
               <button
-                aria-label="collapse items"
+                aria-expanded="true"
                 class="css-t9fq0h"
               >
                 <div
@@ -1269,7 +1269,7 @@ exports[`Tree items snapshot 1`] = `
               class="css-162ewbd"
             >
               <button
-                aria-label="collapse items"
+                aria-expanded="true"
                 class="css-t9fq0h"
               >
                 <div
@@ -1894,7 +1894,7 @@ exports[`Tree largeIndentation snapshot 1`] = `
               class="css-162ewbd"
             >
               <button
-                aria-label="collapse items"
+                aria-expanded="true"
                 class="css-t9fq0h"
               >
                 <div
@@ -2519,7 +2519,7 @@ exports[`Tree overview snapshot 1`] = `
               class="css-162ewbd"
             >
               <button
-                aria-label="collapse items"
+                aria-expanded="true"
                 class="css-t9fq0h"
               >
                 <div
@@ -2653,7 +2653,7 @@ exports[`Tree overview snapshot 1`] = `
               class="css-162ewbd"
             >
               <button
-                aria-label="expand items"
+                aria-expanded="false"
                 class="css-t9fq0h"
               >
                 <div
@@ -2731,7 +2731,7 @@ exports[`Tree search snapshot 1`] = `
               class="css-162ewbd"
             >
               <button
-                aria-label="collapse items"
+                aria-expanded="true"
                 class="css-t9fq0h"
               >
                 <div

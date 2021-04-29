@@ -14,7 +14,7 @@ exports[`StoryConfig customTitle snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="Story configuration"
+          aria-label="navigate to Story configuration section"
           class="css-walqom-LinkHeading"
           data-id="story-configuration"
           data-level="3"
@@ -45,7 +45,7 @@ exports[`StoryConfig customTitle snapshot 1`] = `
           >
             Story configuration
             <a
-              aria-label="Collapse this block"
+              aria-expanded="true"
               class="css-1t48u3b-BlockContainer"
             >
               <span
@@ -1002,7 +1002,7 @@ exports[`StoryConfig notCollapsible snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="story"
+          aria-label="navigate to story section"
           class="css-1ptrway-LinkHeading"
           data-id="story-config-id-of-story"
           data-level="4"
@@ -2770,7 +2770,7 @@ exports[`StoryConfig theme snapshot 1`] = `
                   class="token property css-13aqjzy"
                   style="color: rgb(255, 157, 0);"
                 >
-                  "aria-label"
+                  "title"
                 </span>
                 <span
                   class="token operator css-13aqjzy"
@@ -4002,7 +4002,7 @@ exports[`StoryConfig themeSelector snapshot 1`] = `
                     <span
                       class="token property css-13aqjzy"
                     >
-                      "aria-label"
+                      "title"
                     </span>
                     <span
                       class="token operator css-13aqjzy"

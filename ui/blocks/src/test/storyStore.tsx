@@ -833,7 +833,7 @@ Markdown **descripton** for *component*.
           {
             url:
               'https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1',
-            'aria-label': 'figma design file',
+            title: 'figma design file',
           },
         ],
         notes: [

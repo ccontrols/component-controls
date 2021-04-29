@@ -13,7 +13,7 @@ exports[`AttributeUsage overview snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="Attributes usage"
+          aria-label="navigate to Attributes usage section"
           class="css-walqom-LinkHeading"
           data-id="attributes-usage"
           data-level="3"
@@ -44,7 +44,7 @@ exports[`AttributeUsage overview snapshot 1`] = `
           >
             Attributes usage
             <a
-              aria-label="Collapse this block"
+              aria-expanded="true"
               class="css-1t48u3b-BlockContainer"
             >
               <span

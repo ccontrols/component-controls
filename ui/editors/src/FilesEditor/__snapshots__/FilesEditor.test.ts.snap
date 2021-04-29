@@ -4,10 +4,10 @@ exports[`FilesEditor overview snapshot 1`] = `
 <DocumentFragment>
   <input
     accept="image/*"
-    aria-label="select files"
     class="css-iyqgnx"
     multiple=""
     name="prop"
+    placeholder="select files"
     type="file"
   />
   <img

@@ -14,7 +14,7 @@ exports[`Story customTitle snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="My Story Title"
+          aria-label="navigate to My Story Title section"
           class="css-walqom-LinkHeading"
           data-id="my-story-title"
           data-level="3"
@@ -45,7 +45,7 @@ exports[`Story customTitle snapshot 1`] = `
           >
             My Story Title
             <a
-              aria-label="Collapse this block"
+              aria-expanded="true"
               class="css-1t48u3b-BlockContainer"
             >
               <span
@@ -211,7 +211,7 @@ exports[`Story notCollapsible snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="controls"
+          aria-label="navigate to controls section"
           class="css-1ptrway-LinkHeading"
           data-id="story-blocks-core-story-plain--controls"
           data-level="4"
@@ -357,7 +357,7 @@ exports[`Story title snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="controls"
+          aria-label="navigate to controls section"
           class="css-walqom-LinkHeading"
           data-id="story-blocks-core-story-plain--controls"
           data-level="3"
@@ -388,7 +388,7 @@ exports[`Story title snapshot 1`] = `
           >
             controls
             <a
-              aria-label="Collapse this block"
+              aria-expanded="true"
               class="css-1t48u3b-BlockContainer"
             >
               <span

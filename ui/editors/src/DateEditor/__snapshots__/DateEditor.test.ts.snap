@@ -3,14 +3,15 @@
 exports[`DateEditor onlyDatePicker snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="css-uliqdc"
+    class="css-1amv3lq-DateEditor"
   >
     <input
-      aria-label="enter a date"
-      class="css-1qqniy8"
+      aria-autocomplete="none"
+      class="css-izz69a-DateEditor"
       id="propdate"
       max="9999-12-31"
       name="propdate"
+      placeholder="enter a date for prop"
       type="date"
     />
   </div>
@@ -20,13 +21,14 @@ exports[`DateEditor onlyDatePicker snapshot 1`] = `
 exports[`DateEditor onlyTimePicker snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="css-uliqdc"
+    class="css-1amv3lq-DateEditor"
   >
     <input
-      aria-label="enter a time"
-      class="css-1qqniy8"
+      aria-autocomplete="none"
+      class="css-izz69a-DateEditor"
       id="proptime"
       name="proptime"
+      placeholder="enter a time for prop"
       type="time"
     />
   </div>
@@ -36,21 +38,23 @@ exports[`DateEditor onlyTimePicker snapshot 1`] = `
 exports[`DateEditor overview snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="css-uliqdc"
+    class="css-1amv3lq-DateEditor"
   >
     <input
-      aria-label="enter a date"
-      class="css-1qqniy8"
+      aria-autocomplete="none"
+      class="css-izz69a-DateEditor"
       id="propdate"
       max="9999-12-31"
       name="propdate"
+      placeholder="enter a date for prop"
       type="date"
     />
     <input
-      aria-label="enter a time"
-      class="css-1qqniy8"
+      aria-autocomplete="none"
+      class="css-izz69a-DateEditor"
       id="proptime"
       name="proptime"
+      placeholder="enter a time for prop"
       type="time"
     />
   </div>

@@ -13,7 +13,7 @@ exports[`ComponentUsage overview snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="Components usage"
+          aria-label="navigate to Components usage section"
           class="css-walqom-LinkHeading"
           data-id="components-usage"
           data-level="3"
@@ -44,7 +44,7 @@ exports[`ComponentUsage overview snapshot 1`] = `
           >
             Components usage
             <a
-              aria-label="Collapse this block"
+              aria-expanded="true"
               class="css-1t48u3b-BlockContainer"
             >
               <span

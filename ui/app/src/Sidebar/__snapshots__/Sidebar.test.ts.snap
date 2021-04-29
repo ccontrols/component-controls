@@ -48,6 +48,7 @@ exports[`Sidebar overview snapshot 1`] = `
                   class="css-162ewbd"
                 >
                   <button
+                    aria-expanded="true"
                     class="css-t9fq0h"
                   >
                     <div
@@ -68,7 +69,6 @@ exports[`Sidebar overview snapshot 1`] = `
                         class="css-vthntz"
                       >
                         <div
-                          aria-label="collapse items"
                           class="css-aqscwe"
                         >
                           <svg

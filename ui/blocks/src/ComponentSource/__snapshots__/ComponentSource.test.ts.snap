@@ -13,7 +13,7 @@ exports[`ComponentSource customTitle snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="My Story Title"
+          aria-label="navigate to My Story Title section"
           class="css-walqom-LinkHeading"
           data-id="my-story-title"
           data-level="3"
@@ -44,7 +44,7 @@ exports[`ComponentSource customTitle snapshot 1`] = `
           >
             My Story Title
             <a
-              aria-label="Collapse this block"
+              aria-expanded="true"
               class="css-1t48u3b-BlockContainer"
             >
               <span
@@ -255,7 +255,7 @@ exports[`ComponentSource noComponent snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="Component"
+          aria-label="navigate to Component section"
           class="css-walqom-LinkHeading"
           data-id="component"
           data-level="3"
@@ -286,7 +286,7 @@ exports[`ComponentSource noComponent snapshot 1`] = `
           >
             Component
             <a
-              aria-label="Collapse this block"
+              aria-expanded="true"
               class="css-1t48u3b-BlockContainer"
             >
               <span
@@ -497,7 +497,7 @@ exports[`ComponentSource notCollapsible snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="ArrowButton"
+          aria-label="navigate to ArrowButton section"
           class="css-1ptrway-LinkHeading"
           data-id="arrowbutton"
           data-level="4"
@@ -1006,7 +1006,7 @@ exports[`ComponentSource title snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="ArrowButton"
+          aria-label="navigate to ArrowButton section"
           class="css-walqom-LinkHeading"
           data-id="arrowbutton"
           data-level="3"
@@ -1037,7 +1037,7 @@ exports[`ComponentSource title snapshot 1`] = `
           >
             ArrowButton
             <a
-              aria-label="Collapse this block"
+              aria-expanded="true"
               class="css-1t48u3b-BlockContainer"
             >
               <span

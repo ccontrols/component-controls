@@ -13,7 +13,7 @@ exports[`NotesBlock customConfigProps snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="Custom title here"
+          aria-label="navigate to Custom title here section"
           class="css-1ptrway-LinkHeading"
           data-id="custom-title-here"
           data-level="4"
@@ -52,7 +52,7 @@ exports[`NotesBlock customConfigProps snapshot 1`] = `
           class="css-xhp9da"
         >
           <a
-            aria-label="Component  design notes"
+            aria-label="navigate to Component  design notes section"
             class="css-1aob0xw-LinkHeading"
             data-id="component-design-notes"
             data-level="2"
@@ -135,7 +135,7 @@ exports[`NotesBlock customItems snapshot 1`] = `
               class="css-xhp9da"
             >
               <a
-                aria-label="Introduction"
+                aria-label="navigate to Introduction section"
                 class="css-6ugsdx-LinkHeading"
                 data-id="introduction"
                 data-level="1"
@@ -238,7 +238,7 @@ exports[`NotesBlock overview snapshot 1`] = `
               class="css-xhp9da"
             >
               <a
-                aria-label="Component  design notes"
+                aria-label="navigate to Component  design notes section"
                 class="css-1aob0xw-LinkHeading"
                 data-id="component-design-notes"
                 data-level="2"

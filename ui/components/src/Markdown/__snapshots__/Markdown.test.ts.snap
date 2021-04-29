@@ -25,7 +25,7 @@ exports[`Markdown overview snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="Header H1"
+          aria-label="navigate to Header H1 section"
           class="css-6ugsdx-LinkHeading"
           data-id="header-h1"
           data-level="1"
@@ -65,7 +65,7 @@ exports[`Markdown overview snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="Header H2"
+          aria-label="navigate to Header H2 section"
           class="css-1aob0xw-LinkHeading"
           data-id="header-h2"
           data-level="2"
@@ -105,7 +105,7 @@ exports[`Markdown overview snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="Header H3"
+          aria-label="navigate to Header H3 section"
           class="css-walqom-LinkHeading"
           data-id="header-h3"
           data-level="3"
@@ -143,7 +143,7 @@ exports[`Markdown overview snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="Header H4"
+          aria-label="navigate to Header H4 section"
           class="css-1ptrway-LinkHeading"
           data-id="header-h4"
           data-level="4"
@@ -181,7 +181,7 @@ exports[`Markdown overview snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="Header H5"
+          aria-label="navigate to Header H5 section"
           class="css-18myu3p-LinkHeading"
           data-id="header-h5"
           data-level="5"

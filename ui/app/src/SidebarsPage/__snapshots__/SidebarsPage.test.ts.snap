@@ -224,7 +224,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                       class="css-xhp9da"
                     >
                       <a
-                        aria-label="Component"
+                        aria-label="navigate to Component section"
                         class="css-walqom-LinkHeading"
                         data-id="component"
                         data-level="3"
@@ -255,7 +255,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                         >
                           Component
                           <a
-                            aria-label="Collapse this block"
+                            aria-expanded="true"
                             class="css-1t48u3b-BlockContainer"
                           >
                             <span
@@ -462,7 +462,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                       class="css-xhp9da"
                     >
                       <a
-                        aria-label="story"
+                        aria-label="navigate to story section"
                         class="css-walqom-LinkHeading"
                         data-id="playground-id-of-story"
                         data-level="3"
@@ -493,7 +493,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                         >
                           story
                           <a
-                            aria-label="Collapse this block"
+                            aria-expanded="true"
                             class="css-1t48u3b-BlockContainer"
                           >
                             <span
@@ -731,7 +731,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                       class="css-xhp9da"
                     >
                       <a
-                        aria-label="External dependencies"
+                        aria-label="navigate to External dependencies section"
                         class="css-walqom-LinkHeading"
                         data-id="external-dependencies"
                         data-level="3"
@@ -762,7 +762,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                         >
                           External dependencies
                           <a
-                            aria-label="Collapse this block"
+                            aria-expanded="true"
                             class="css-1t48u3b-BlockContainer"
                           >
                             <span
@@ -1059,7 +1059,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                       class="css-xhp9da"
                     >
                       <a
-                        aria-label="Internal dependencies"
+                        aria-label="navigate to Internal dependencies section"
                         class="css-walqom-LinkHeading"
                         data-id="internal-dependencies"
                         data-level="3"
@@ -1090,7 +1090,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                         >
                           Internal dependencies
                           <a
-                            aria-label="Collapse this block"
+                            aria-expanded="true"
                             class="css-1t48u3b-BlockContainer"
                           >
                             <span
@@ -1325,7 +1325,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                       class="css-xhp9da"
                     >
                       <a
-                        aria-label="Component JSX"
+                        aria-label="navigate to Component JSX section"
                         class="css-walqom-LinkHeading"
                         data-id="component-jsx"
                         data-level="3"
@@ -1356,7 +1356,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                         >
                           Component JSX
                           <a
-                            aria-label="Collapse this block"
+                            aria-expanded="true"
                             class="css-1t48u3b-BlockContainer"
                           >
                             <span
@@ -1588,7 +1588,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                       class="css-xhp9da"
                     >
                       <a
-                        aria-label="Stories"
+                        aria-label="navigate to Stories section"
                         class="css-walqom-LinkHeading"
                         data-id="stories"
                         data-level="3"
@@ -1619,7 +1619,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                         >
                           Stories
                           <a
-                            aria-label="Collapse this block"
+                            aria-expanded="true"
                             class="css-1t48u3b-BlockContainer"
                           >
                             <span
@@ -1664,7 +1664,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                             class="css-xhp9da"
                           >
                             <a
-                              aria-label="button"
+                              aria-label="navigate to button section"
                               class="css-1ptrway-LinkHeading"
                               data-id="button"
                               data-level="4"
@@ -1893,7 +1893,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                             class="css-xhp9da"
                           >
                             <a
-                              aria-label="controls"
+                              aria-label="navigate to controls section"
                               class="css-1ptrway-LinkHeading"
                               data-id="controls"
                               data-level="4"
@@ -2143,7 +2143,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                             class="css-xhp9da"
                           >
                             <a
-                              aria-label="story"
+                              aria-label="navigate to story section"
                               class="css-1ptrway-LinkHeading"
                               data-id="story"
                               data-level="4"

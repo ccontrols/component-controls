@@ -75,9 +75,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
               <Flex variant="blockcontainer.titleblock">
                 {title}
                 <Link
-                  aria-label={
-                    isOpen ? 'Collapse this block' : 'Expand this block'
-                  }
+                  aria-expanded={isOpen}
                   sx={{
                     cursor: 'pointer',
                   }}

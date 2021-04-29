@@ -13,7 +13,7 @@ exports[`BlockContainer customId snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="BlockContainer"
+          aria-label="navigate to BlockContainer section"
           class="css-walqom-LinkHeading"
           data-id="custom-id"
           data-level="3"
@@ -44,7 +44,7 @@ exports[`BlockContainer customId snapshot 1`] = `
           >
             BlockContainer
             <a
-              aria-label="Collapse this block"
+              aria-expanded="true"
               class="css-1t48u3b-BlockContainer"
             >
               <span
@@ -135,7 +135,7 @@ exports[`BlockContainer description snapshot 1`] = `
           class="css-xhp9da"
         >
           <a
-            aria-label="H3 title"
+            aria-label="navigate to H3 title section"
             class="css-walqom-LinkHeading"
             data-id="h3-title"
             data-level="3"
@@ -237,7 +237,7 @@ exports[`BlockContainer notCollapsible snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="BlockContainer"
+          aria-label="navigate to BlockContainer section"
           class="css-1ptrway-LinkHeading"
           data-id="blockcontainer"
           data-level="4"
@@ -314,7 +314,7 @@ exports[`BlockContainer overview snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="Block title"
+          aria-label="navigate to Block title section"
           class="css-walqom-LinkHeading"
           data-id="block-title"
           data-level="3"
@@ -345,7 +345,7 @@ exports[`BlockContainer overview snapshot 1`] = `
           >
             Block title
             <a
-              aria-label="Collapse this block"
+              aria-expanded="true"
               class="css-1t48u3b-BlockContainer"
             >
               <span

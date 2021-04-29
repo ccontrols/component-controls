@@ -14,7 +14,7 @@ exports[`StorySource customTitle snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="Story source"
+          aria-label="navigate to Story source section"
           class="css-walqom-LinkHeading"
           data-id="story-source"
           data-level="3"
@@ -45,7 +45,7 @@ exports[`StorySource customTitle snapshot 1`] = `
           >
             Story source
             <a
-              aria-label="Collapse this block"
+              aria-expanded="true"
               class="css-1t48u3b-BlockContainer"
             >
               <span
@@ -338,7 +338,7 @@ exports[`StorySource notCollapsible snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="story"
+          aria-label="navigate to story section"
           class="css-1ptrway-LinkHeading"
           data-id="story-source-id-of-story"
           data-level="4"

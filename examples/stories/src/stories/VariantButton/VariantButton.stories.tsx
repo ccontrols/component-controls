@@ -13,7 +13,7 @@ export default {
     figma: [
       {
         url: 'https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr',
-        'aria-label': 'figma design file',
+        title: 'figma design file',
       },
     ],
     notes: {

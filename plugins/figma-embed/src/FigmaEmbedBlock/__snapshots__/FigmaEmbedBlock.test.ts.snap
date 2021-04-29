@@ -21,10 +21,10 @@ exports[`FigmaEmbedBlock customConfigProps snapshot 1`] = `
       <div>
         <iframe
           allowfullscreen=""
-          aria-label="figma design file"
           class="css-6u5w61"
           height="450"
           src="https://www.figma.com/embed?embed_host=component-controls&url=https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1"
+          title="figma design file"
           width="100%"
         />
       </div>
@@ -54,10 +54,10 @@ exports[`FigmaEmbedBlock customIFrameProps snapshot 1`] = `
       <div>
         <iframe
           allowfullscreen=""
-          aria-label="figma design file"
           class="css-6u5w61"
           height="300"
           src="https://www.figma.com/embed?embed_host=component-controls&url=https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1"
+          title="figma design file"
           width="100%"
         />
       </div>
@@ -87,18 +87,18 @@ exports[`FigmaEmbedBlock customURLS snapshot 1`] = `
       <div>
         <iframe
           allowfullscreen=""
-          aria-label="design document 1"
           class="css-6u5w61"
           height="450"
           src="https://www.figma.com/embed?embed_host=component-controls&url=https://www.figma.com/file/hS1sLjYq49vjnKXhwGgHwg/Navigation-UI-design-components-Community?node-id=1%3A2309"
+          title="design document 1"
           width="100%"
         />
         <iframe
           allowfullscreen=""
-          aria-label="design document 2"
           class="css-6u5w61"
           height="450"
           src="https://www.figma.com/embed?embed_host=component-controls&url=https://www.figma.com/file/LtgbR2mbVPbQTNDfDQxbKL/Atanas-Stoyanov-s-Team-Colors?node-id=0%3A1"
+          title="design document 2"
           width="100%"
         />
       </div>
@@ -127,10 +127,10 @@ exports[`FigmaEmbedBlock noFullScreen snapshot 1`] = `
     >
       <div>
         <iframe
-          aria-label="figma design file"
           class="css-6u5w61"
           height="450"
           src="https://www.figma.com/embed?embed_host=component-controls&url=https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1"
+          title="figma design file"
           width="100%"
         />
       </div>
@@ -160,10 +160,10 @@ exports[`FigmaEmbedBlock overview snapshot 1`] = `
       <div>
         <iframe
           allowfullscreen=""
-          aria-label="figma design file"
           class="css-6u5w61"
           height="450"
           src="https://www.figma.com/embed?embed_host=component-controls&url=https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1"
+          title="figma design file"
           width="100%"
         />
       </div>

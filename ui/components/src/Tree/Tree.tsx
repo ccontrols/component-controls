@@ -123,12 +123,8 @@ export const Tree: FC<TreeProps> = ({
             className={isActiveItem && !itemItems ? 'selected' : undefined}
           >
             <LinkClass
-              aria-label={
-                itemItems?.length
-                  ? isExpanded
-                    ? 'collapse items'
-                    : 'expand items'
-                  : undefined
+              aria-expanded={
+                itemItems?.length ? (isExpanded ? true : false) : undefined
               }
               variant="tree.link"
               {...rest}

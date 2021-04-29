@@ -13,7 +13,7 @@ exports[`ComponentUsageDetails overview snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="ArrowButton"
+          aria-label="navigate to ArrowButton section"
           class="css-walqom-LinkHeading"
           data-id="attribute-arrowbutton"
           data-level="3"
@@ -44,7 +44,7 @@ exports[`ComponentUsageDetails overview snapshot 1`] = `
           >
             ArrowButton
             <a
-              aria-label="Collapse this block"
+              aria-expanded="true"
               class="css-1t48u3b-BlockContainer"
             >
               <span

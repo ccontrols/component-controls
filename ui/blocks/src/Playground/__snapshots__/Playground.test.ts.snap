@@ -14,7 +14,7 @@ exports[`Playground child snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="My donut example "
+          aria-label="navigate to My donut example  section"
           class="css-walqom-LinkHeading"
           data-id="my-donut-example-"
           data-level="3"
@@ -45,7 +45,7 @@ exports[`Playground child snapshot 1`] = `
           >
             My donut example 
             <a
-              aria-label="Collapse this block"
+              aria-expanded="true"
               class="css-1t48u3b-BlockContainer"
             >
               <span
@@ -258,7 +258,7 @@ exports[`Playground customTitle snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="Custom playground title"
+          aria-label="navigate to Custom playground title section"
           class="css-walqom-LinkHeading"
           data-id="custom-playground-title"
           data-level="3"
@@ -289,7 +289,7 @@ exports[`Playground customTitle snapshot 1`] = `
           >
             Custom playground title
             <a
-              aria-label="Collapse this block"
+              aria-expanded="true"
               class="css-1t48u3b-BlockContainer"
             >
               <span
@@ -1891,7 +1891,7 @@ exports[`Playground multiChild snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="Multiple donuts"
+          aria-label="navigate to Multiple donuts section"
           class="css-walqom-LinkHeading"
           data-id="multiple-donuts"
           data-level="3"
@@ -1922,7 +1922,7 @@ exports[`Playground multiChild snapshot 1`] = `
           >
             Multiple donuts
             <a
-              aria-label="Collapse this block"
+              aria-expanded="true"
               class="css-1t48u3b-BlockContainer"
             >
               <span
@@ -3123,7 +3123,7 @@ exports[`Playground title snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="story"
+          aria-label="navigate to story section"
           class="css-walqom-LinkHeading"
           data-id="playground-id-of-story"
           data-level="3"
@@ -3154,7 +3154,7 @@ exports[`Playground title snapshot 1`] = `
           >
             story
             <a
-              aria-label="Collapse this block"
+              aria-expanded="true"
               class="css-1t48u3b-BlockContainer"
             >
               <span

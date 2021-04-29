@@ -34,7 +34,7 @@ export const FilesEditor: PropertyEditor = ({ name, ...rest }) => {
         }
       }}
       accept={control.accept}
-      aria-label="select files"
+      placeholder="select files"
       {...rest}
     />
   );

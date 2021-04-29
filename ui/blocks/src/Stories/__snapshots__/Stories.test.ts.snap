@@ -14,7 +14,7 @@ exports[`Stories customTitle snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="My Story Title"
+          aria-label="navigate to My Story Title section"
           class="css-walqom-LinkHeading"
           data-id="my-story-title"
           data-level="3"
@@ -45,7 +45,7 @@ exports[`Stories customTitle snapshot 1`] = `
           >
             My Story Title
             <a
-              aria-label="Collapse this block"
+              aria-expanded="true"
               class="css-1t48u3b-BlockContainer"
             >
               <span
@@ -90,7 +90,7 @@ exports[`Stories customTitle snapshot 1`] = `
               class="css-xhp9da"
             >
               <a
-                aria-label="button"
+                aria-label="navigate to button section"
                 class="css-1ptrway-LinkHeading"
                 data-id="button"
                 data-level="4"
@@ -319,7 +319,7 @@ exports[`Stories customTitle snapshot 1`] = `
               class="css-xhp9da"
             >
               <a
-                aria-label="controls"
+                aria-label="navigate to controls section"
                 class="css-1ptrway-LinkHeading"
                 data-id="controls"
                 data-level="4"
@@ -569,7 +569,7 @@ exports[`Stories customTitle snapshot 1`] = `
               class="css-xhp9da"
             >
               <a
-                aria-label="story"
+                aria-label="navigate to story section"
                 class="css-1ptrway-LinkHeading"
                 data-id="story"
                 data-level="4"
@@ -806,7 +806,7 @@ exports[`Stories darkTheme snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="Stories"
+          aria-label="navigate to Stories section"
           class="css-walqom-LinkHeading"
           data-id="stories"
           data-level="3"
@@ -837,7 +837,7 @@ exports[`Stories darkTheme snapshot 1`] = `
           >
             Stories
             <a
-              aria-label="Collapse this block"
+              aria-expanded="true"
               class="css-1t48u3b-BlockContainer"
             >
               <span
@@ -882,7 +882,7 @@ exports[`Stories darkTheme snapshot 1`] = `
               class="css-xhp9da"
             >
               <a
-                aria-label="button"
+                aria-label="navigate to button section"
                 class="css-1ptrway-LinkHeading"
                 data-id="button"
                 data-level="4"
@@ -1111,7 +1111,7 @@ exports[`Stories darkTheme snapshot 1`] = `
               class="css-xhp9da"
             >
               <a
-                aria-label="controls"
+                aria-label="navigate to controls section"
                 class="css-1ptrway-LinkHeading"
                 data-id="controls"
                 data-level="4"
@@ -1361,7 +1361,7 @@ exports[`Stories darkTheme snapshot 1`] = `
               class="css-xhp9da"
             >
               <a
-                aria-label="story"
+                aria-label="navigate to story section"
                 class="css-1ptrway-LinkHeading"
                 data-id="story"
                 data-level="4"
@@ -1598,7 +1598,7 @@ exports[`Stories notCollapsible snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="Stories"
+          aria-label="navigate to Stories section"
           class="css-1ptrway-LinkHeading"
           data-id="stories"
           data-level="4"
@@ -1640,7 +1640,7 @@ exports[`Stories notCollapsible snapshot 1`] = `
           class="css-xhp9da"
         >
           <a
-            aria-label="button"
+            aria-label="navigate to button section"
             class="css-1ptrway-LinkHeading"
             data-id="button"
             data-level="4"
@@ -1869,7 +1869,7 @@ exports[`Stories notCollapsible snapshot 1`] = `
           class="css-xhp9da"
         >
           <a
-            aria-label="controls"
+            aria-label="navigate to controls section"
             class="css-1ptrway-LinkHeading"
             data-id="controls"
             data-level="4"
@@ -2119,7 +2119,7 @@ exports[`Stories notCollapsible snapshot 1`] = `
           class="css-xhp9da"
         >
           <a
-            aria-label="story"
+            aria-label="navigate to story section"
             class="css-1ptrway-LinkHeading"
             data-id="story"
             data-level="4"
@@ -2354,7 +2354,7 @@ exports[`Stories overview snapshot 1`] = `
         class="css-xhp9da"
       >
         <a
-          aria-label="Stories"
+          aria-label="navigate to Stories section"
           class="css-walqom-LinkHeading"
           data-id="stories"
           data-level="3"
@@ -2385,7 +2385,7 @@ exports[`Stories overview snapshot 1`] = `
           >
             Stories
             <a
-              aria-label="Collapse this block"
+              aria-expanded="true"
               class="css-1t48u3b-BlockContainer"
             >
               <span
@@ -2430,7 +2430,7 @@ exports[`Stories overview snapshot 1`] = `
               class="css-xhp9da"
             >
               <a
-                aria-label="button"
+                aria-label="navigate to button section"
                 class="css-1ptrway-LinkHeading"
                 data-id="button"
                 data-level="4"
@@ -2659,7 +2659,7 @@ exports[`Stories overview snapshot 1`] = `
               class="css-xhp9da"
             >
               <a
-                aria-label="controls"
+                aria-label="navigate to controls section"
                 class="css-1ptrway-LinkHeading"
                 data-id="controls"
                 data-level="4"
@@ -2909,7 +2909,7 @@ exports[`Stories overview snapshot 1`] = `
               class="css-xhp9da"
             >
               <a
-                aria-label="story"
+                aria-label="navigate to story section"
                 class="css-1ptrway-LinkHeading"
                 data-id="story"
                 data-level="4"
