@@ -1,5 +1,9 @@
 # Table of contents
 
+-   [Overview](#overview)
+-   [Installation](#installation)
+-   [API](#api)
+
 # Overview
 
 jest accessibility matching utilities with deque axe.
@@ -15,3 +19,7 @@ $ npm install @component-controls/jest-axe-matcher --save-dev
 # API
 
 <react-docgen-typescript path="./src" />
+
+<!-- START-REACT-DOCGEN-TYPESCRIPT -->
+
+<!-- END-REACT-DOCGEN-TYPESCRIPT -->

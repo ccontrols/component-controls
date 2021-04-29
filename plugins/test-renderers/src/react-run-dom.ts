@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 import { JSDOM } from 'jsdom';
 
 /**
- * run some some function in the dom, by using react-dom
+ * run some function in the dom, by using react-dom
  * @param el - array of react elements to render
  * @param fn - callback that will be usd
  * @param args - optional arguments for the callback function
