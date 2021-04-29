@@ -46,7 +46,6 @@ export const extractTSDoc = (
   ): { propsTable: Node[]; table?: NodeChildren } => {
     const props: PropItem[] =
       nodes &&
-      nodes.map &&
       nodes.reduce((acc: any, child: any) => {
         if (child.declaration) {
           if (!child.declaration.children) {
