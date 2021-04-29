@@ -5,9 +5,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build-sample": "cross-env NODE_OPTIONS=--max_old_space_size=10240 rm -rf .next && rm -rf dist && rm -rf out && next build && next export",
-    "server": "cross-env NODE_OPTIONS=--max_old_space_size=10240 next build && next start -p 9021",
-    "start": "cross-env NODE_OPTIONS=--max_old_space_size=10240 next -p 9021",
+    "build-sample": "cross-env NODE_OPTIONS=--max_old_space_size=20480 rm -rf .next && rm -rf dist && rm -rf out && next build && next export",
+    "server": "cross-env NODE_OPTIONS=--max_old_space_size=20480 next build && next start -p 9021",
+    "start": "cross-env NODE_OPTIONS=--max_old_space_size=20480 next -p 9021",
     "debug": "NODE_OPTIONS='--inspect' next -p 9021"
   },
   "repository": {

@@ -5,8 +5,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build-sample": "cross-env NODE_OPTIONS=--max_old_space_size=10240 gatsby clean && gatsby build",
-    "start": "cross-env NODE_OPTIONS=--max_old_space_size=10240 gatsby develop -p 9020"
+    "build-sample": "cross-env NODE_OPTIONS=--max_old_space_size=20480 gatsby clean && gatsby build",
+    "start": "cross-env NODE_OPTIONS=--max_old_space_size=20480 gatsby develop -p 9020"
   },
   "repository": {
     "type": "git",

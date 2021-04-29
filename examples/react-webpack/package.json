@@ -5,8 +5,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "cross-env NODE_OPTIONS=--max_old_space_size=10240 webpack serve --config webpack.dev.config.js --progress",
-    "build-sample": "cross-env NODE_OPTIONS=--max_old_space_size=10240 rm -rf public && webpack --config webpack.prod.config.js --progress"
+    "start": "cross-env NODE_OPTIONS=--max_old_space_size=20480 webpack serve --config webpack.dev.config.js --progress",
+    "build-sample": "cross-env NODE_OPTIONS=--max_old_space_size=20480 rm -rf public && webpack --config webpack.prod.config.js --progress"
   },
   "dependencies": {
     "@component-controls/react-router-integration": "^3.8.1",
