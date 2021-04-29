@@ -21,6 +21,7 @@ exports[`Tree arrowsStart snapshot 1`] = `
               class="css-162ewbd"
             >
               <button
+                aria-label="collapse items"
                 class="css-t9fq0h"
               >
                 <div
@@ -30,7 +31,6 @@ exports[`Tree arrowsStart snapshot 1`] = `
                     class="css-f5h6sg"
                   >
                     <div
-                      aria-label="collapse items"
                       class="css-aqscwe"
                     >
                       <svg
@@ -645,6 +645,7 @@ exports[`Tree customExpandIcons snapshot 1`] = `
               class="css-162ewbd"
             >
               <button
+                aria-label="collapse items"
                 class="css-t9fq0h"
               >
                 <div
@@ -684,7 +685,6 @@ exports[`Tree customExpandIcons snapshot 1`] = `
                     class="css-vthntz"
                   >
                     <div
-                      aria-label="collapse items"
                       class="css-aqscwe"
                     >
                       <svg
@@ -1269,6 +1269,7 @@ exports[`Tree items snapshot 1`] = `
               class="css-162ewbd"
             >
               <button
+                aria-label="collapse items"
                 class="css-t9fq0h"
               >
                 <div
@@ -1308,7 +1309,6 @@ exports[`Tree items snapshot 1`] = `
                     class="css-vthntz"
                   >
                     <div
-                      aria-label="collapse items"
                       class="css-aqscwe"
                     >
                       <svg
@@ -1894,6 +1894,7 @@ exports[`Tree largeIndentation snapshot 1`] = `
               class="css-162ewbd"
             >
               <button
+                aria-label="collapse items"
                 class="css-t9fq0h"
               >
                 <div
@@ -1933,7 +1934,6 @@ exports[`Tree largeIndentation snapshot 1`] = `
                     class="css-vthntz"
                   >
                     <div
-                      aria-label="collapse items"
                       class="css-aqscwe"
                     >
                       <svg
@@ -2519,6 +2519,7 @@ exports[`Tree overview snapshot 1`] = `
               class="css-162ewbd"
             >
               <button
+                aria-label="collapse items"
                 class="css-t9fq0h"
               >
                 <div
@@ -2539,7 +2540,6 @@ exports[`Tree overview snapshot 1`] = `
                     class="css-vthntz"
                   >
                     <div
-                      aria-label="collapse items"
                       class="css-aqscwe"
                     >
                       <svg
@@ -2653,6 +2653,7 @@ exports[`Tree overview snapshot 1`] = `
               class="css-162ewbd"
             >
               <button
+                aria-label="expand items"
                 class="css-t9fq0h"
               >
                 <div
@@ -2673,7 +2674,6 @@ exports[`Tree overview snapshot 1`] = `
                     class="css-vthntz"
                   >
                     <div
-                      aria-label="expand items"
                       class="css-164ifi5"
                     >
                       <svg
@@ -2731,6 +2731,7 @@ exports[`Tree search snapshot 1`] = `
               class="css-162ewbd"
             >
               <button
+                aria-label="collapse items"
                 class="css-t9fq0h"
               >
                 <div
@@ -2770,7 +2771,6 @@ exports[`Tree search snapshot 1`] = `
                     class="css-vthntz"
                   >
                     <div
-                      aria-label="collapse items"
                       class="css-aqscwe"
                     >
                       <svg

@@ -102,7 +102,6 @@ export const Tree: FC<TreeProps> = ({
     const isActiveParent = hasActiveChidlren(item, activeItem);
     const expandIcon = itemItems?.length ? (
       <Box
-        aria-label={isExpanded ? 'collapse items' : 'expand items'}
         variant="tree.expandicon"
         sx={{
           transform: isExpanded ? undefined : 'rotate(-90deg)',
@@ -124,6 +123,13 @@ export const Tree: FC<TreeProps> = ({
             className={isActiveItem && !itemItems ? 'selected' : undefined}
           >
             <LinkClass
+              aria-label={
+                itemItems?.length
+                  ? isExpanded
+                    ? 'collapse items'
+                    : 'expand items'
+                  : undefined
+              }
               variant="tree.link"
               {...rest}
               onClick={(e: any) => {
