@@ -3,7 +3,7 @@ import * as path from 'path';
 import {
   WebpackLoaderContext,
   LoaderOptions,
-  resolveSnapshotFile
+  resolveSnapshotFile,
 } from '@component-controls/core/node-utils';
 import { getOptions } from 'loader-utils';
 import { log } from '@component-controls/logger';
