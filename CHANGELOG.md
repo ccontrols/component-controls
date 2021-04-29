@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.8.1](https://github.com/ccontrols/component-controls/compare/v3.8.0...v3.8.1) (2021-04-29)
+
+
+### Bug Fixes
+
+* fix ally issues from axe-core 4.2 ([389b99f](https://github.com/ccontrols/component-controls/commit/389b99fe62f1599cfcc4617f0c1ab58f85bba6d0))
+* fix for aria-allowed-attr on div ([35c0f33](https://github.com/ccontrols/component-controls/commit/35c0f3318cc344f27bd6808fefb850a0d5dde2bf))
+
+
+
+
+
 # [3.8.0](https://github.com/ccontrols/component-controls/compare/v3.7.0...v3.8.0) (2021-04-29)
 
 
