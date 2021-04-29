@@ -794,73 +794,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "as": Object {
       "parentName": "BoxOwnProps",
       "type": Object {
-        "name": "union",
-        "raw": "\\"symbol\\" | \\"object\\" | \\"div\\" | \\"a\\" | \\"abbr\\" | \\"address\\" | \\"area\\" | \\"article\\" | \\"aside\\" | \\"audio\\" | \\"b\\" | \\"base\\" | \\"bdi\\" | \\"bdo\\" | \\"big\\" | \\"blockquote\\" | \\"body\\" | \\"br\\" | \\"button\\" | \\"canvas\\" | ... 157 more ...",
-        "value": Array [
-          Object {
-            "name": "symbol",
-          },
-          Object {
-            "name": "object",
-          },
-          Object {
-            "name": "div",
-          },
-          Object {
-            "name": "a",
-          },
-          Object {
-            "name": "abbr",
-          },
-          Object {
-            "name": "address",
-          },
-          Object {
-            "name": "area",
-          },
-          Object {
-            "name": "article",
-          },
-          Object {
-            "name": "aside",
-          },
-          Object {
-            "name": "audio",
-          },
-          Object {
-            "name": "b",
-          },
-          Object {
-            "name": "base",
-          },
-          Object {
-            "name": "bdi",
-          },
-          Object {
-            "name": "bdo",
-          },
-          Object {
-            "name": "big",
-          },
-          Object {
-            "name": "blockquote",
-          },
-          Object {
-            "name": "body",
-          },
-          Object {
-            "name": "br",
-          },
-          Object {
-            "name": "button",
-          },
-          Object {
-            "name": "canvas",
-          },
-          Object {
-            "name": "... 157 more ...",
-          },
-        ],
+        "name": "ElementType<any>",
+        "raw": "ElementType<any>",
       },
     },
     "autoCapitalize": Object {
@@ -887,8 +822,19 @@ A hint could be a sample value or a brief description of the expected format.",
     "backgroundColor": Object {
       "parentName": "BackgroundColorProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "bg": Object {
@@ -901,8 +847,19 @@ Array values are converted into responsive values.
 [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color)",
       "parentName": "BackgroundColorProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "className": Object {
@@ -938,16 +895,10 @@ Array values are converted into responsive values.
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "union",
-        "raw": "boolean | \\"true\\" | \\"false\\" | \\"inherit\\"",
+        "raw": "Booleanish | \\"inherit\\"",
         "value": Array [
           Object {
-            "name": "boolean",
-          },
-          Object {
-            "name": "true",
-          },
-          Object {
-            "name": "false",
+            "name": "Booleanish",
           },
           Object {
             "name": "inherit",
@@ -1028,19 +979,8 @@ Array values are converted into responsive values.
     "draggable": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "boolean | \\"true\\" | \\"false\\"",
-        "value": Array [
-          Object {
-            "name": "boolean",
-          },
-          Object {
-            "name": "true",
-          },
-          Object {
-            "name": "false",
-          },
-        ],
+        "name": "Booleanish",
+        "raw": "Booleanish",
       },
     },
     "hidden": Object {
@@ -1168,13 +1108,10 @@ from the title.",
       "parentName": "Attributes",
       "type": Object {
         "name": "union",
-        "raw": "string | number | null",
+        "raw": "Key | null",
         "value": Array [
           Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
+            "name": "Key",
           },
           Object {
             "name": "null",
@@ -1193,112 +1130,266 @@ from the title.",
       "description": "Margin on top, left, bottom and right",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "margin": Object {
       "description": "Margin on top, left, bottom and right",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "marginBottom": Object {
       "description": "Margin on bottom",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "marginLeft": Object {
       "description": "Margin on left",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "marginRight": Object {
       "description": "Margin on right",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "marginTop": Object {
       "description": "Margin on top",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "marginX": Object {
       "description": "Margin on left and right",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "marginY": Object {
       "description": "Margin on top and bottom",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "mb": Object {
       "description": "Margin on bottom",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "ml": Object {
       "description": "Margin on left",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "mr": Object {
       "description": "Margin on right",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "mt": Object {
       "description": "Margin on top",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "mx": Object {
       "description": "Margin on left and right",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "my": Object {
       "description": "Margin on top and bottom",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "name": Object {
@@ -1311,883 +1402,883 @@ from the title.",
     "onAbort": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onAbortCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onAnimationEnd": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: AnimationEvent<HTMLDivElement>) => void)",
+        "name": "AnimationEventHandler<HTMLDivElement>",
+        "raw": "AnimationEventHandler<HTMLDivElement>",
       },
     },
     "onAnimationEndCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: AnimationEvent<HTMLDivElement>) => void)",
+        "name": "AnimationEventHandler<HTMLDivElement>",
+        "raw": "AnimationEventHandler<HTMLDivElement>",
       },
     },
     "onAnimationIteration": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: AnimationEvent<HTMLDivElement>) => void)",
+        "name": "AnimationEventHandler<HTMLDivElement>",
+        "raw": "AnimationEventHandler<HTMLDivElement>",
       },
     },
     "onAnimationIterationCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: AnimationEvent<HTMLDivElement>) => void)",
+        "name": "AnimationEventHandler<HTMLDivElement>",
+        "raw": "AnimationEventHandler<HTMLDivElement>",
       },
     },
     "onAnimationStart": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: AnimationEvent<HTMLDivElement>) => void)",
+        "name": "AnimationEventHandler<HTMLDivElement>",
+        "raw": "AnimationEventHandler<HTMLDivElement>",
       },
     },
     "onAnimationStartCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: AnimationEvent<HTMLDivElement>) => void)",
+        "name": "AnimationEventHandler<HTMLDivElement>",
+        "raw": "AnimationEventHandler<HTMLDivElement>",
       },
     },
     "onAuxClick": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLDivElement>",
+        "raw": "MouseEventHandler<HTMLDivElement>",
       },
     },
     "onAuxClickCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLDivElement>",
+        "raw": "MouseEventHandler<HTMLDivElement>",
       },
     },
     "onBeforeInput": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLDivElement>) => void)",
+        "name": "FormEventHandler<HTMLDivElement>",
+        "raw": "FormEventHandler<HTMLDivElement>",
       },
     },
     "onBeforeInputCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLDivElement>) => void)",
+        "name": "FormEventHandler<HTMLDivElement>",
+        "raw": "FormEventHandler<HTMLDivElement>",
       },
     },
     "onBlur": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FocusEvent<HTMLDivElement>) => void)",
+        "name": "FocusEventHandler<HTMLDivElement>",
+        "raw": "FocusEventHandler<HTMLDivElement>",
       },
     },
     "onBlurCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FocusEvent<HTMLDivElement>) => void)",
+        "name": "FocusEventHandler<HTMLDivElement>",
+        "raw": "FocusEventHandler<HTMLDivElement>",
       },
     },
     "onCanPlay": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onCanPlayCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onCanPlayThrough": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onCanPlayThroughCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onChange": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLDivElement>) => void)",
+        "name": "FormEventHandler<HTMLDivElement>",
+        "raw": "FormEventHandler<HTMLDivElement>",
       },
     },
     "onChangeCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLDivElement>) => void)",
+        "name": "FormEventHandler<HTMLDivElement>",
+        "raw": "FormEventHandler<HTMLDivElement>",
       },
     },
     "onClick": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLDivElement>",
+        "raw": "MouseEventHandler<HTMLDivElement>",
       },
     },
     "onClickCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLDivElement>",
+        "raw": "MouseEventHandler<HTMLDivElement>",
       },
     },
     "onCompositionEnd": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: CompositionEvent<HTMLDivElement>) => void)",
+        "name": "CompositionEventHandler<HTMLDivElement>",
+        "raw": "CompositionEventHandler<HTMLDivElement>",
       },
     },
     "onCompositionEndCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: CompositionEvent<HTMLDivElement>) => void)",
+        "name": "CompositionEventHandler<HTMLDivElement>",
+        "raw": "CompositionEventHandler<HTMLDivElement>",
       },
     },
     "onCompositionStart": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: CompositionEvent<HTMLDivElement>) => void)",
+        "name": "CompositionEventHandler<HTMLDivElement>",
+        "raw": "CompositionEventHandler<HTMLDivElement>",
       },
     },
     "onCompositionStartCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: CompositionEvent<HTMLDivElement>) => void)",
+        "name": "CompositionEventHandler<HTMLDivElement>",
+        "raw": "CompositionEventHandler<HTMLDivElement>",
       },
     },
     "onCompositionUpdate": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: CompositionEvent<HTMLDivElement>) => void)",
+        "name": "CompositionEventHandler<HTMLDivElement>",
+        "raw": "CompositionEventHandler<HTMLDivElement>",
       },
     },
     "onCompositionUpdateCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: CompositionEvent<HTMLDivElement>) => void)",
+        "name": "CompositionEventHandler<HTMLDivElement>",
+        "raw": "CompositionEventHandler<HTMLDivElement>",
       },
     },
     "onContextMenu": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLDivElement>",
+        "raw": "MouseEventHandler<HTMLDivElement>",
       },
     },
     "onContextMenuCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLDivElement>",
+        "raw": "MouseEventHandler<HTMLDivElement>",
       },
     },
     "onCopy": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: ClipboardEvent<HTMLDivElement>) => void)",
+        "name": "ClipboardEventHandler<HTMLDivElement>",
+        "raw": "ClipboardEventHandler<HTMLDivElement>",
       },
     },
     "onCopyCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: ClipboardEvent<HTMLDivElement>) => void)",
+        "name": "ClipboardEventHandler<HTMLDivElement>",
+        "raw": "ClipboardEventHandler<HTMLDivElement>",
       },
     },
     "onCut": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: ClipboardEvent<HTMLDivElement>) => void)",
+        "name": "ClipboardEventHandler<HTMLDivElement>",
+        "raw": "ClipboardEventHandler<HTMLDivElement>",
       },
     },
     "onCutCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: ClipboardEvent<HTMLDivElement>) => void)",
+        "name": "ClipboardEventHandler<HTMLDivElement>",
+        "raw": "ClipboardEventHandler<HTMLDivElement>",
       },
     },
     "onDoubleClick": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLDivElement>",
+        "raw": "MouseEventHandler<HTMLDivElement>",
       },
     },
     "onDoubleClickCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLDivElement>",
+        "raw": "MouseEventHandler<HTMLDivElement>",
       },
     },
     "onDrag": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLDivElement>) => void)",
+        "name": "DragEventHandler<HTMLDivElement>",
+        "raw": "DragEventHandler<HTMLDivElement>",
       },
     },
     "onDragCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLDivElement>) => void)",
+        "name": "DragEventHandler<HTMLDivElement>",
+        "raw": "DragEventHandler<HTMLDivElement>",
       },
     },
     "onDragEnd": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLDivElement>) => void)",
+        "name": "DragEventHandler<HTMLDivElement>",
+        "raw": "DragEventHandler<HTMLDivElement>",
       },
     },
     "onDragEndCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLDivElement>) => void)",
+        "name": "DragEventHandler<HTMLDivElement>",
+        "raw": "DragEventHandler<HTMLDivElement>",
       },
     },
     "onDragEnter": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLDivElement>) => void)",
+        "name": "DragEventHandler<HTMLDivElement>",
+        "raw": "DragEventHandler<HTMLDivElement>",
       },
     },
     "onDragEnterCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLDivElement>) => void)",
+        "name": "DragEventHandler<HTMLDivElement>",
+        "raw": "DragEventHandler<HTMLDivElement>",
       },
     },
     "onDragExit": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLDivElement>) => void)",
+        "name": "DragEventHandler<HTMLDivElement>",
+        "raw": "DragEventHandler<HTMLDivElement>",
       },
     },
     "onDragExitCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLDivElement>) => void)",
+        "name": "DragEventHandler<HTMLDivElement>",
+        "raw": "DragEventHandler<HTMLDivElement>",
       },
     },
     "onDragLeave": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLDivElement>) => void)",
+        "name": "DragEventHandler<HTMLDivElement>",
+        "raw": "DragEventHandler<HTMLDivElement>",
       },
     },
     "onDragLeaveCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLDivElement>) => void)",
+        "name": "DragEventHandler<HTMLDivElement>",
+        "raw": "DragEventHandler<HTMLDivElement>",
       },
     },
     "onDragOver": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLDivElement>) => void)",
+        "name": "DragEventHandler<HTMLDivElement>",
+        "raw": "DragEventHandler<HTMLDivElement>",
       },
     },
     "onDragOverCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLDivElement>) => void)",
+        "name": "DragEventHandler<HTMLDivElement>",
+        "raw": "DragEventHandler<HTMLDivElement>",
       },
     },
     "onDragStart": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLDivElement>) => void)",
+        "name": "DragEventHandler<HTMLDivElement>",
+        "raw": "DragEventHandler<HTMLDivElement>",
       },
     },
     "onDragStartCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLDivElement>) => void)",
+        "name": "DragEventHandler<HTMLDivElement>",
+        "raw": "DragEventHandler<HTMLDivElement>",
       },
     },
     "onDrop": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLDivElement>) => void)",
+        "name": "DragEventHandler<HTMLDivElement>",
+        "raw": "DragEventHandler<HTMLDivElement>",
       },
     },
     "onDropCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLDivElement>) => void)",
+        "name": "DragEventHandler<HTMLDivElement>",
+        "raw": "DragEventHandler<HTMLDivElement>",
       },
     },
     "onDurationChange": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onDurationChangeCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onEmptied": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onEmptiedCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onEncrypted": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onEncryptedCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onEnded": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onEndedCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onError": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onErrorCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onFocus": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FocusEvent<HTMLDivElement>) => void)",
+        "name": "FocusEventHandler<HTMLDivElement>",
+        "raw": "FocusEventHandler<HTMLDivElement>",
       },
     },
     "onFocusCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FocusEvent<HTMLDivElement>) => void)",
+        "name": "FocusEventHandler<HTMLDivElement>",
+        "raw": "FocusEventHandler<HTMLDivElement>",
       },
     },
     "onGotPointerCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLDivElement>) => void)",
+        "name": "PointerEventHandler<HTMLDivElement>",
+        "raw": "PointerEventHandler<HTMLDivElement>",
       },
     },
     "onGotPointerCaptureCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLDivElement>) => void)",
+        "name": "PointerEventHandler<HTMLDivElement>",
+        "raw": "PointerEventHandler<HTMLDivElement>",
       },
     },
     "onInput": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLDivElement>) => void)",
+        "name": "FormEventHandler<HTMLDivElement>",
+        "raw": "FormEventHandler<HTMLDivElement>",
       },
     },
     "onInputCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLDivElement>) => void)",
+        "name": "FormEventHandler<HTMLDivElement>",
+        "raw": "FormEventHandler<HTMLDivElement>",
       },
     },
     "onInvalid": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLDivElement>) => void)",
+        "name": "FormEventHandler<HTMLDivElement>",
+        "raw": "FormEventHandler<HTMLDivElement>",
       },
     },
     "onInvalidCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLDivElement>) => void)",
+        "name": "FormEventHandler<HTMLDivElement>",
+        "raw": "FormEventHandler<HTMLDivElement>",
       },
     },
     "onKeyDown": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: KeyboardEvent<HTMLDivElement>) => void)",
+        "name": "KeyboardEventHandler<HTMLDivElement>",
+        "raw": "KeyboardEventHandler<HTMLDivElement>",
       },
     },
     "onKeyDownCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: KeyboardEvent<HTMLDivElement>) => void)",
+        "name": "KeyboardEventHandler<HTMLDivElement>",
+        "raw": "KeyboardEventHandler<HTMLDivElement>",
       },
     },
     "onKeyPress": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: KeyboardEvent<HTMLDivElement>) => void)",
+        "name": "KeyboardEventHandler<HTMLDivElement>",
+        "raw": "KeyboardEventHandler<HTMLDivElement>",
       },
     },
     "onKeyPressCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: KeyboardEvent<HTMLDivElement>) => void)",
+        "name": "KeyboardEventHandler<HTMLDivElement>",
+        "raw": "KeyboardEventHandler<HTMLDivElement>",
       },
     },
     "onKeyUp": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: KeyboardEvent<HTMLDivElement>) => void)",
+        "name": "KeyboardEventHandler<HTMLDivElement>",
+        "raw": "KeyboardEventHandler<HTMLDivElement>",
       },
     },
     "onKeyUpCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: KeyboardEvent<HTMLDivElement>) => void)",
+        "name": "KeyboardEventHandler<HTMLDivElement>",
+        "raw": "KeyboardEventHandler<HTMLDivElement>",
       },
     },
     "onLoad": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onLoadCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onLoadStart": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onLoadStartCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onLoadedData": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onLoadedDataCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onLoadedMetadata": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onLoadedMetadataCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onLostPointerCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLDivElement>) => void)",
+        "name": "PointerEventHandler<HTMLDivElement>",
+        "raw": "PointerEventHandler<HTMLDivElement>",
       },
     },
     "onLostPointerCaptureCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLDivElement>) => void)",
+        "name": "PointerEventHandler<HTMLDivElement>",
+        "raw": "PointerEventHandler<HTMLDivElement>",
       },
     },
     "onMouseDown": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLDivElement>",
+        "raw": "MouseEventHandler<HTMLDivElement>",
       },
     },
     "onMouseDownCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLDivElement>",
+        "raw": "MouseEventHandler<HTMLDivElement>",
       },
     },
     "onMouseEnter": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLDivElement>",
+        "raw": "MouseEventHandler<HTMLDivElement>",
       },
     },
     "onMouseLeave": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLDivElement>",
+        "raw": "MouseEventHandler<HTMLDivElement>",
       },
     },
     "onMouseMove": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLDivElement>",
+        "raw": "MouseEventHandler<HTMLDivElement>",
       },
     },
     "onMouseMoveCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLDivElement>",
+        "raw": "MouseEventHandler<HTMLDivElement>",
       },
     },
     "onMouseOut": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLDivElement>",
+        "raw": "MouseEventHandler<HTMLDivElement>",
       },
     },
     "onMouseOutCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLDivElement>",
+        "raw": "MouseEventHandler<HTMLDivElement>",
       },
     },
     "onMouseOver": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLDivElement>",
+        "raw": "MouseEventHandler<HTMLDivElement>",
       },
     },
     "onMouseOverCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLDivElement>",
+        "raw": "MouseEventHandler<HTMLDivElement>",
       },
     },
     "onMouseUp": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLDivElement>",
+        "raw": "MouseEventHandler<HTMLDivElement>",
       },
     },
     "onMouseUpCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLDivElement>",
+        "raw": "MouseEventHandler<HTMLDivElement>",
       },
     },
     "onPaste": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: ClipboardEvent<HTMLDivElement>) => void)",
+        "name": "ClipboardEventHandler<HTMLDivElement>",
+        "raw": "ClipboardEventHandler<HTMLDivElement>",
       },
     },
     "onPasteCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: ClipboardEvent<HTMLDivElement>) => void)",
+        "name": "ClipboardEventHandler<HTMLDivElement>",
+        "raw": "ClipboardEventHandler<HTMLDivElement>",
       },
     },
     "onPause": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onPauseCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onPlay": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onPlayCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onPlaying": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onPlayingCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onPointerCancel": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLDivElement>) => void)",
+        "name": "PointerEventHandler<HTMLDivElement>",
+        "raw": "PointerEventHandler<HTMLDivElement>",
       },
     },
     "onPointerCancelCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLDivElement>) => void)",
+        "name": "PointerEventHandler<HTMLDivElement>",
+        "raw": "PointerEventHandler<HTMLDivElement>",
       },
     },
     "onPointerDown": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLDivElement>) => void)",
+        "name": "PointerEventHandler<HTMLDivElement>",
+        "raw": "PointerEventHandler<HTMLDivElement>",
       },
     },
     "onPointerDownCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLDivElement>) => void)",
+        "name": "PointerEventHandler<HTMLDivElement>",
+        "raw": "PointerEventHandler<HTMLDivElement>",
       },
     },
     "onPointerEnter": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLDivElement>) => void)",
+        "name": "PointerEventHandler<HTMLDivElement>",
+        "raw": "PointerEventHandler<HTMLDivElement>",
       },
     },
     "onPointerEnterCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLDivElement>) => void)",
+        "name": "PointerEventHandler<HTMLDivElement>",
+        "raw": "PointerEventHandler<HTMLDivElement>",
       },
     },
     "onPointerLeave": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLDivElement>) => void)",
+        "name": "PointerEventHandler<HTMLDivElement>",
+        "raw": "PointerEventHandler<HTMLDivElement>",
       },
     },
     "onPointerLeaveCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLDivElement>) => void)",
+        "name": "PointerEventHandler<HTMLDivElement>",
+        "raw": "PointerEventHandler<HTMLDivElement>",
       },
     },
     "onPointerMove": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLDivElement>) => void)",
+        "name": "PointerEventHandler<HTMLDivElement>",
+        "raw": "PointerEventHandler<HTMLDivElement>",
       },
     },
     "onPointerMoveCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLDivElement>) => void)",
+        "name": "PointerEventHandler<HTMLDivElement>",
+        "raw": "PointerEventHandler<HTMLDivElement>",
       },
     },
     "onPointerOut": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLDivElement>) => void)",
+        "name": "PointerEventHandler<HTMLDivElement>",
+        "raw": "PointerEventHandler<HTMLDivElement>",
       },
     },
     "onPointerOutCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLDivElement>) => void)",
+        "name": "PointerEventHandler<HTMLDivElement>",
+        "raw": "PointerEventHandler<HTMLDivElement>",
       },
     },
     "onPointerOver": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLDivElement>) => void)",
+        "name": "PointerEventHandler<HTMLDivElement>",
+        "raw": "PointerEventHandler<HTMLDivElement>",
       },
     },
     "onPointerOverCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLDivElement>) => void)",
+        "name": "PointerEventHandler<HTMLDivElement>",
+        "raw": "PointerEventHandler<HTMLDivElement>",
       },
     },
     "onPointerUp": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLDivElement>) => void)",
+        "name": "PointerEventHandler<HTMLDivElement>",
+        "raw": "PointerEventHandler<HTMLDivElement>",
       },
     },
     "onPointerUpCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLDivElement>) => void)",
+        "name": "PointerEventHandler<HTMLDivElement>",
+        "raw": "PointerEventHandler<HTMLDivElement>",
       },
     },
     "onProgress": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onProgressCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onRateChange": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onRateChangeCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onRender": Object {
@@ -2202,239 +2293,239 @@ ie ally plugin uses it launch a new ally test on re-render",
     "onReset": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLDivElement>) => void)",
+        "name": "FormEventHandler<HTMLDivElement>",
+        "raw": "FormEventHandler<HTMLDivElement>",
       },
     },
     "onResetCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLDivElement>) => void)",
+        "name": "FormEventHandler<HTMLDivElement>",
+        "raw": "FormEventHandler<HTMLDivElement>",
       },
     },
     "onScroll": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: UIEvent<HTMLDivElement, UIEvent>) => void)",
+        "name": "UIEventHandler<HTMLDivElement>",
+        "raw": "UIEventHandler<HTMLDivElement>",
       },
     },
     "onScrollCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: UIEvent<HTMLDivElement, UIEvent>) => void)",
+        "name": "UIEventHandler<HTMLDivElement>",
+        "raw": "UIEventHandler<HTMLDivElement>",
       },
     },
     "onSeeked": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onSeekedCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onSeeking": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onSeekingCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onSelect": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onSelectCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onStalled": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onStalledCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onSubmit": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLDivElement>) => void)",
+        "name": "FormEventHandler<HTMLDivElement>",
+        "raw": "FormEventHandler<HTMLDivElement>",
       },
     },
     "onSubmitCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLDivElement>) => void)",
+        "name": "FormEventHandler<HTMLDivElement>",
+        "raw": "FormEventHandler<HTMLDivElement>",
       },
     },
     "onSuspend": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onSuspendCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onTimeUpdate": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onTimeUpdateCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onTouchCancel": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: TouchEvent<HTMLDivElement>) => void)",
+        "name": "TouchEventHandler<HTMLDivElement>",
+        "raw": "TouchEventHandler<HTMLDivElement>",
       },
     },
     "onTouchCancelCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: TouchEvent<HTMLDivElement>) => void)",
+        "name": "TouchEventHandler<HTMLDivElement>",
+        "raw": "TouchEventHandler<HTMLDivElement>",
       },
     },
     "onTouchEnd": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: TouchEvent<HTMLDivElement>) => void)",
+        "name": "TouchEventHandler<HTMLDivElement>",
+        "raw": "TouchEventHandler<HTMLDivElement>",
       },
     },
     "onTouchEndCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: TouchEvent<HTMLDivElement>) => void)",
+        "name": "TouchEventHandler<HTMLDivElement>",
+        "raw": "TouchEventHandler<HTMLDivElement>",
       },
     },
     "onTouchMove": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: TouchEvent<HTMLDivElement>) => void)",
+        "name": "TouchEventHandler<HTMLDivElement>",
+        "raw": "TouchEventHandler<HTMLDivElement>",
       },
     },
     "onTouchMoveCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: TouchEvent<HTMLDivElement>) => void)",
+        "name": "TouchEventHandler<HTMLDivElement>",
+        "raw": "TouchEventHandler<HTMLDivElement>",
       },
     },
     "onTouchStart": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: TouchEvent<HTMLDivElement>) => void)",
+        "name": "TouchEventHandler<HTMLDivElement>",
+        "raw": "TouchEventHandler<HTMLDivElement>",
       },
     },
     "onTouchStartCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: TouchEvent<HTMLDivElement>) => void)",
+        "name": "TouchEventHandler<HTMLDivElement>",
+        "raw": "TouchEventHandler<HTMLDivElement>",
       },
     },
     "onTransitionEnd": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: TransitionEvent<HTMLDivElement>) => void)",
+        "name": "TransitionEventHandler<HTMLDivElement>",
+        "raw": "TransitionEventHandler<HTMLDivElement>",
       },
     },
     "onTransitionEndCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: TransitionEvent<HTMLDivElement>) => void)",
+        "name": "TransitionEventHandler<HTMLDivElement>",
+        "raw": "TransitionEventHandler<HTMLDivElement>",
       },
     },
     "onVolumeChange": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onVolumeChangeCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onWaiting": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onWaitingCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLDivElement>",
+        "raw": "ReactEventHandler<HTMLDivElement>",
       },
     },
     "onWheel": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: WheelEvent<HTMLDivElement>) => void)",
+        "name": "WheelEventHandler<HTMLDivElement>",
+        "raw": "WheelEventHandler<HTMLDivElement>",
       },
     },
     "onWheelCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: WheelEvent<HTMLDivElement>) => void)",
+        "name": "WheelEventHandler<HTMLDivElement>",
+        "raw": "WheelEventHandler<HTMLDivElement>",
       },
     },
     "opacity": Object {
@@ -2444,88 +2535,198 @@ behind an element is visible.
 [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)",
       "parentName": "OpacityProps",
       "type": Object {
-        "name": "function",
-        "raw": "\\"inherit\\" | \\"-moz-initial\\" | \\"initial\\" | \\"revert\\" | \\"unset\\" | (string & {}) | (number & {}) | (\\"inherit\\" | \\"-moz-initial\\" | \\"initial\\" | \\"revert\\" | \\"unset\\" | (string & {}) | (number & {}) | null)[] | { ...; } | null",
+        "name": "ResponsiveValue<Opacity, Required<Theme<TLengthStyledSystem>>>",
+        "raw": "ResponsiveValue<Opacity, Required<Theme<TLengthStyledSystem>>>",
       },
     },
     "p": Object {
       "description": "Padding on top, left, bottom and right",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "padding": Object {
       "description": "Padding on top, left, bottom and right",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "paddingBottom": Object {
       "description": "Padding on bottom",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "paddingLeft": Object {
       "description": "Padding on left",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "paddingRight": Object {
       "description": "Padding on right",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "paddingTop": Object {
       "description": "Padding on top",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "paddingX": Object {
       "description": "Padding on left and right",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "paddingY": Object {
       "description": "Padding on top and bottom",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "pb": Object {
       "description": "Padding on bottom",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "pl": Object {
       "description": "Padding on left",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "placeholder": Object {
@@ -2547,8 +2748,19 @@ behind an element is visible.
       "description": "Padding on right",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "prefix": Object {
@@ -2569,24 +2781,57 @@ behind an element is visible.
       "description": "Padding on top",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "px": Object {
       "description": "Padding on left and right",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "py": Object {
       "description": "Padding on top and bottom",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "radioGroup": Object {
@@ -2642,19 +2887,8 @@ behind an element is visible.
     "spellCheck": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "boolean | \\"true\\" | \\"false\\"",
-        "value": Array [
-          Object {
-            "name": "boolean",
-          },
-          Object {
-            "name": "true",
-          },
-          Object {
-            "name": "false",
-          },
-        ],
+        "name": "Booleanish",
+        "raw": "Booleanish",
       },
     },
     "style": Object {
@@ -2681,16 +2915,8 @@ behind an element is visible.
     "sx": Object {
       "parentName": "Attributes",
       "type": Object {
-        "name": "union",
-        "raw": "ThemeUICSSObject | ThemeDerivedStyles",
-        "value": Array [
-          Object {
-            "name": "ThemeUICSSObject",
-          },
-          Object {
-            "name": "ThemeDerivedStyles",
-          },
-        ],
+        "name": "ThemeUIStyleObject",
+        "raw": "ThemeUIStyleObject",
       },
     },
     "tabIndex": Object {
@@ -2776,7 +3002,7 @@ behind an element is visible.
       "parentName": "StoryOwnProps",
       "type": Object {
         "name": "enum",
-        "raw": "\\"iframe\\" | \\"wrapper\\" | undefined",
+        "raw": "StoryWrapperType | undefined",
         "value": Array [
           Object {
             "name": "string",

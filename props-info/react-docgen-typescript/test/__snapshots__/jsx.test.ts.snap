@@ -839,16 +839,10 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "union",
-        "raw": "boolean | \\"true\\" | \\"false\\" | \\"inherit\\"",
+        "raw": "Booleanish | \\"inherit\\"",
         "value": Array [
           Object {
-            "name": "boolean",
-          },
-          Object {
-            "name": "true",
-          },
-          Object {
-            "name": "false",
+            "name": "Booleanish",
           },
           Object {
             "name": "inherit",
@@ -913,19 +907,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "draggable": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "boolean | \\"true\\" | \\"false\\"",
-        "value": Array [
-          Object {
-            "name": "boolean",
-          },
-          Object {
-            "name": "true",
-          },
-          Object {
-            "name": "false",
-          },
-        ],
+        "name": "Booleanish",
+        "raw": "Booleanish",
       },
     },
     "form": Object {
@@ -1084,13 +1067,10 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "Attributes",
       "type": Object {
         "name": "union",
-        "raw": "string | number | null",
+        "raw": "Key | null",
         "value": Array [
           Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
+            "name": "Key",
           },
           Object {
             "name": "null",
@@ -1115,1121 +1095,1121 @@ A hint could be a sample value or a brief description of the expected format.",
     "onAbort": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onAbortCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onAnimationEnd": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: AnimationEvent<HTMLButtonElement>) => void)",
+        "name": "AnimationEventHandler<HTMLButtonElement>",
+        "raw": "AnimationEventHandler<HTMLButtonElement>",
       },
     },
     "onAnimationEndCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: AnimationEvent<HTMLButtonElement>) => void)",
+        "name": "AnimationEventHandler<HTMLButtonElement>",
+        "raw": "AnimationEventHandler<HTMLButtonElement>",
       },
     },
     "onAnimationIteration": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: AnimationEvent<HTMLButtonElement>) => void)",
+        "name": "AnimationEventHandler<HTMLButtonElement>",
+        "raw": "AnimationEventHandler<HTMLButtonElement>",
       },
     },
     "onAnimationIterationCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: AnimationEvent<HTMLButtonElement>) => void)",
+        "name": "AnimationEventHandler<HTMLButtonElement>",
+        "raw": "AnimationEventHandler<HTMLButtonElement>",
       },
     },
     "onAnimationStart": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: AnimationEvent<HTMLButtonElement>) => void)",
+        "name": "AnimationEventHandler<HTMLButtonElement>",
+        "raw": "AnimationEventHandler<HTMLButtonElement>",
       },
     },
     "onAnimationStartCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: AnimationEvent<HTMLButtonElement>) => void)",
+        "name": "AnimationEventHandler<HTMLButtonElement>",
+        "raw": "AnimationEventHandler<HTMLButtonElement>",
       },
     },
     "onAuxClick": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLButtonElement>",
+        "raw": "MouseEventHandler<HTMLButtonElement>",
       },
     },
     "onAuxClickCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLButtonElement>",
+        "raw": "MouseEventHandler<HTMLButtonElement>",
       },
     },
     "onBeforeInput": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
+        "name": "FormEventHandler<HTMLButtonElement>",
+        "raw": "FormEventHandler<HTMLButtonElement>",
       },
     },
     "onBeforeInputCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
+        "name": "FormEventHandler<HTMLButtonElement>",
+        "raw": "FormEventHandler<HTMLButtonElement>",
       },
     },
     "onBlur": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FocusEvent<HTMLButtonElement>) => void)",
+        "name": "FocusEventHandler<HTMLButtonElement>",
+        "raw": "FocusEventHandler<HTMLButtonElement>",
       },
     },
     "onBlurCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FocusEvent<HTMLButtonElement>) => void)",
+        "name": "FocusEventHandler<HTMLButtonElement>",
+        "raw": "FocusEventHandler<HTMLButtonElement>",
       },
     },
     "onCanPlay": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onCanPlayCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onCanPlayThrough": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onCanPlayThroughCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onChange": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
+        "name": "FormEventHandler<HTMLButtonElement>",
+        "raw": "FormEventHandler<HTMLButtonElement>",
       },
     },
     "onChangeCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
+        "name": "FormEventHandler<HTMLButtonElement>",
+        "raw": "FormEventHandler<HTMLButtonElement>",
       },
     },
     "onClick": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLButtonElement>",
+        "raw": "MouseEventHandler<HTMLButtonElement>",
       },
     },
     "onClickCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLButtonElement>",
+        "raw": "MouseEventHandler<HTMLButtonElement>",
       },
     },
     "onCompositionEnd": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: CompositionEvent<HTMLButtonElement>) => void)",
+        "name": "CompositionEventHandler<HTMLButtonElement>",
+        "raw": "CompositionEventHandler<HTMLButtonElement>",
       },
     },
     "onCompositionEndCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: CompositionEvent<HTMLButtonElement>) => void)",
+        "name": "CompositionEventHandler<HTMLButtonElement>",
+        "raw": "CompositionEventHandler<HTMLButtonElement>",
       },
     },
     "onCompositionStart": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: CompositionEvent<HTMLButtonElement>) => void)",
+        "name": "CompositionEventHandler<HTMLButtonElement>",
+        "raw": "CompositionEventHandler<HTMLButtonElement>",
       },
     },
     "onCompositionStartCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: CompositionEvent<HTMLButtonElement>) => void)",
+        "name": "CompositionEventHandler<HTMLButtonElement>",
+        "raw": "CompositionEventHandler<HTMLButtonElement>",
       },
     },
     "onCompositionUpdate": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: CompositionEvent<HTMLButtonElement>) => void)",
+        "name": "CompositionEventHandler<HTMLButtonElement>",
+        "raw": "CompositionEventHandler<HTMLButtonElement>",
       },
     },
     "onCompositionUpdateCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: CompositionEvent<HTMLButtonElement>) => void)",
+        "name": "CompositionEventHandler<HTMLButtonElement>",
+        "raw": "CompositionEventHandler<HTMLButtonElement>",
       },
     },
     "onContextMenu": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLButtonElement>",
+        "raw": "MouseEventHandler<HTMLButtonElement>",
       },
     },
     "onContextMenuCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLButtonElement>",
+        "raw": "MouseEventHandler<HTMLButtonElement>",
       },
     },
     "onCopy": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: ClipboardEvent<HTMLButtonElement>) => void)",
+        "name": "ClipboardEventHandler<HTMLButtonElement>",
+        "raw": "ClipboardEventHandler<HTMLButtonElement>",
       },
     },
     "onCopyCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: ClipboardEvent<HTMLButtonElement>) => void)",
+        "name": "ClipboardEventHandler<HTMLButtonElement>",
+        "raw": "ClipboardEventHandler<HTMLButtonElement>",
       },
     },
     "onCut": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: ClipboardEvent<HTMLButtonElement>) => void)",
+        "name": "ClipboardEventHandler<HTMLButtonElement>",
+        "raw": "ClipboardEventHandler<HTMLButtonElement>",
       },
     },
     "onCutCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: ClipboardEvent<HTMLButtonElement>) => void)",
+        "name": "ClipboardEventHandler<HTMLButtonElement>",
+        "raw": "ClipboardEventHandler<HTMLButtonElement>",
       },
     },
     "onDoubleClick": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLButtonElement>",
+        "raw": "MouseEventHandler<HTMLButtonElement>",
       },
     },
     "onDoubleClickCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLButtonElement>",
+        "raw": "MouseEventHandler<HTMLButtonElement>",
       },
     },
     "onDrag": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
+        "name": "DragEventHandler<HTMLButtonElement>",
+        "raw": "DragEventHandler<HTMLButtonElement>",
       },
     },
     "onDragCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
+        "name": "DragEventHandler<HTMLButtonElement>",
+        "raw": "DragEventHandler<HTMLButtonElement>",
       },
     },
     "onDragEnd": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
+        "name": "DragEventHandler<HTMLButtonElement>",
+        "raw": "DragEventHandler<HTMLButtonElement>",
       },
     },
     "onDragEndCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
+        "name": "DragEventHandler<HTMLButtonElement>",
+        "raw": "DragEventHandler<HTMLButtonElement>",
       },
     },
     "onDragEnter": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
+        "name": "DragEventHandler<HTMLButtonElement>",
+        "raw": "DragEventHandler<HTMLButtonElement>",
       },
     },
     "onDragEnterCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
+        "name": "DragEventHandler<HTMLButtonElement>",
+        "raw": "DragEventHandler<HTMLButtonElement>",
       },
     },
     "onDragExit": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
+        "name": "DragEventHandler<HTMLButtonElement>",
+        "raw": "DragEventHandler<HTMLButtonElement>",
       },
     },
     "onDragExitCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
+        "name": "DragEventHandler<HTMLButtonElement>",
+        "raw": "DragEventHandler<HTMLButtonElement>",
       },
     },
     "onDragLeave": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
+        "name": "DragEventHandler<HTMLButtonElement>",
+        "raw": "DragEventHandler<HTMLButtonElement>",
       },
     },
     "onDragLeaveCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
+        "name": "DragEventHandler<HTMLButtonElement>",
+        "raw": "DragEventHandler<HTMLButtonElement>",
       },
     },
     "onDragOver": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
+        "name": "DragEventHandler<HTMLButtonElement>",
+        "raw": "DragEventHandler<HTMLButtonElement>",
       },
     },
     "onDragOverCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
+        "name": "DragEventHandler<HTMLButtonElement>",
+        "raw": "DragEventHandler<HTMLButtonElement>",
       },
     },
     "onDragStart": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
+        "name": "DragEventHandler<HTMLButtonElement>",
+        "raw": "DragEventHandler<HTMLButtonElement>",
       },
     },
     "onDragStartCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
+        "name": "DragEventHandler<HTMLButtonElement>",
+        "raw": "DragEventHandler<HTMLButtonElement>",
       },
     },
     "onDrop": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
+        "name": "DragEventHandler<HTMLButtonElement>",
+        "raw": "DragEventHandler<HTMLButtonElement>",
       },
     },
     "onDropCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: DragEvent<HTMLButtonElement>) => void)",
+        "name": "DragEventHandler<HTMLButtonElement>",
+        "raw": "DragEventHandler<HTMLButtonElement>",
       },
     },
     "onDurationChange": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onDurationChangeCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onEmptied": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onEmptiedCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onEncrypted": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onEncryptedCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onEnded": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onEndedCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onError": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onErrorCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onFocus": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FocusEvent<HTMLButtonElement>) => void)",
+        "name": "FocusEventHandler<HTMLButtonElement>",
+        "raw": "FocusEventHandler<HTMLButtonElement>",
       },
     },
     "onFocusCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FocusEvent<HTMLButtonElement>) => void)",
+        "name": "FocusEventHandler<HTMLButtonElement>",
+        "raw": "FocusEventHandler<HTMLButtonElement>",
       },
     },
     "onGotPointerCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
+        "name": "PointerEventHandler<HTMLButtonElement>",
+        "raw": "PointerEventHandler<HTMLButtonElement>",
       },
     },
     "onGotPointerCaptureCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
+        "name": "PointerEventHandler<HTMLButtonElement>",
+        "raw": "PointerEventHandler<HTMLButtonElement>",
       },
     },
     "onInput": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
+        "name": "FormEventHandler<HTMLButtonElement>",
+        "raw": "FormEventHandler<HTMLButtonElement>",
       },
     },
     "onInputCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
+        "name": "FormEventHandler<HTMLButtonElement>",
+        "raw": "FormEventHandler<HTMLButtonElement>",
       },
     },
     "onInvalid": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
+        "name": "FormEventHandler<HTMLButtonElement>",
+        "raw": "FormEventHandler<HTMLButtonElement>",
       },
     },
     "onInvalidCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
+        "name": "FormEventHandler<HTMLButtonElement>",
+        "raw": "FormEventHandler<HTMLButtonElement>",
       },
     },
     "onKeyDown": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: KeyboardEvent<HTMLButtonElement>) => void)",
+        "name": "KeyboardEventHandler<HTMLButtonElement>",
+        "raw": "KeyboardEventHandler<HTMLButtonElement>",
       },
     },
     "onKeyDownCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: KeyboardEvent<HTMLButtonElement>) => void)",
+        "name": "KeyboardEventHandler<HTMLButtonElement>",
+        "raw": "KeyboardEventHandler<HTMLButtonElement>",
       },
     },
     "onKeyPress": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: KeyboardEvent<HTMLButtonElement>) => void)",
+        "name": "KeyboardEventHandler<HTMLButtonElement>",
+        "raw": "KeyboardEventHandler<HTMLButtonElement>",
       },
     },
     "onKeyPressCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: KeyboardEvent<HTMLButtonElement>) => void)",
+        "name": "KeyboardEventHandler<HTMLButtonElement>",
+        "raw": "KeyboardEventHandler<HTMLButtonElement>",
       },
     },
     "onKeyUp": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: KeyboardEvent<HTMLButtonElement>) => void)",
+        "name": "KeyboardEventHandler<HTMLButtonElement>",
+        "raw": "KeyboardEventHandler<HTMLButtonElement>",
       },
     },
     "onKeyUpCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: KeyboardEvent<HTMLButtonElement>) => void)",
+        "name": "KeyboardEventHandler<HTMLButtonElement>",
+        "raw": "KeyboardEventHandler<HTMLButtonElement>",
       },
     },
     "onLoad": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onLoadCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onLoadStart": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onLoadStartCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onLoadedData": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onLoadedDataCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onLoadedMetadata": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onLoadedMetadataCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onLostPointerCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
+        "name": "PointerEventHandler<HTMLButtonElement>",
+        "raw": "PointerEventHandler<HTMLButtonElement>",
       },
     },
     "onLostPointerCaptureCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
+        "name": "PointerEventHandler<HTMLButtonElement>",
+        "raw": "PointerEventHandler<HTMLButtonElement>",
       },
     },
     "onMouseDown": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLButtonElement>",
+        "raw": "MouseEventHandler<HTMLButtonElement>",
       },
     },
     "onMouseDownCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLButtonElement>",
+        "raw": "MouseEventHandler<HTMLButtonElement>",
       },
     },
     "onMouseEnter": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLButtonElement>",
+        "raw": "MouseEventHandler<HTMLButtonElement>",
       },
     },
     "onMouseLeave": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLButtonElement>",
+        "raw": "MouseEventHandler<HTMLButtonElement>",
       },
     },
     "onMouseMove": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLButtonElement>",
+        "raw": "MouseEventHandler<HTMLButtonElement>",
       },
     },
     "onMouseMoveCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLButtonElement>",
+        "raw": "MouseEventHandler<HTMLButtonElement>",
       },
     },
     "onMouseOut": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLButtonElement>",
+        "raw": "MouseEventHandler<HTMLButtonElement>",
       },
     },
     "onMouseOutCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLButtonElement>",
+        "raw": "MouseEventHandler<HTMLButtonElement>",
       },
     },
     "onMouseOver": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLButtonElement>",
+        "raw": "MouseEventHandler<HTMLButtonElement>",
       },
     },
     "onMouseOverCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLButtonElement>",
+        "raw": "MouseEventHandler<HTMLButtonElement>",
       },
     },
     "onMouseUp": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLButtonElement>",
+        "raw": "MouseEventHandler<HTMLButtonElement>",
       },
     },
     "onMouseUpCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+        "name": "MouseEventHandler<HTMLButtonElement>",
+        "raw": "MouseEventHandler<HTMLButtonElement>",
       },
     },
     "onPaste": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: ClipboardEvent<HTMLButtonElement>) => void)",
+        "name": "ClipboardEventHandler<HTMLButtonElement>",
+        "raw": "ClipboardEventHandler<HTMLButtonElement>",
       },
     },
     "onPasteCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: ClipboardEvent<HTMLButtonElement>) => void)",
+        "name": "ClipboardEventHandler<HTMLButtonElement>",
+        "raw": "ClipboardEventHandler<HTMLButtonElement>",
       },
     },
     "onPause": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onPauseCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onPlay": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onPlayCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onPlaying": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onPlayingCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onPointerCancel": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
+        "name": "PointerEventHandler<HTMLButtonElement>",
+        "raw": "PointerEventHandler<HTMLButtonElement>",
       },
     },
     "onPointerCancelCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
+        "name": "PointerEventHandler<HTMLButtonElement>",
+        "raw": "PointerEventHandler<HTMLButtonElement>",
       },
     },
     "onPointerDown": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
+        "name": "PointerEventHandler<HTMLButtonElement>",
+        "raw": "PointerEventHandler<HTMLButtonElement>",
       },
     },
     "onPointerDownCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
+        "name": "PointerEventHandler<HTMLButtonElement>",
+        "raw": "PointerEventHandler<HTMLButtonElement>",
       },
     },
     "onPointerEnter": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
+        "name": "PointerEventHandler<HTMLButtonElement>",
+        "raw": "PointerEventHandler<HTMLButtonElement>",
       },
     },
     "onPointerEnterCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
+        "name": "PointerEventHandler<HTMLButtonElement>",
+        "raw": "PointerEventHandler<HTMLButtonElement>",
       },
     },
     "onPointerLeave": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
+        "name": "PointerEventHandler<HTMLButtonElement>",
+        "raw": "PointerEventHandler<HTMLButtonElement>",
       },
     },
     "onPointerLeaveCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
+        "name": "PointerEventHandler<HTMLButtonElement>",
+        "raw": "PointerEventHandler<HTMLButtonElement>",
       },
     },
     "onPointerMove": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
+        "name": "PointerEventHandler<HTMLButtonElement>",
+        "raw": "PointerEventHandler<HTMLButtonElement>",
       },
     },
     "onPointerMoveCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
+        "name": "PointerEventHandler<HTMLButtonElement>",
+        "raw": "PointerEventHandler<HTMLButtonElement>",
       },
     },
     "onPointerOut": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
+        "name": "PointerEventHandler<HTMLButtonElement>",
+        "raw": "PointerEventHandler<HTMLButtonElement>",
       },
     },
     "onPointerOutCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
+        "name": "PointerEventHandler<HTMLButtonElement>",
+        "raw": "PointerEventHandler<HTMLButtonElement>",
       },
     },
     "onPointerOver": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
+        "name": "PointerEventHandler<HTMLButtonElement>",
+        "raw": "PointerEventHandler<HTMLButtonElement>",
       },
     },
     "onPointerOverCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
+        "name": "PointerEventHandler<HTMLButtonElement>",
+        "raw": "PointerEventHandler<HTMLButtonElement>",
       },
     },
     "onPointerUp": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
+        "name": "PointerEventHandler<HTMLButtonElement>",
+        "raw": "PointerEventHandler<HTMLButtonElement>",
       },
     },
     "onPointerUpCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: PointerEvent<HTMLButtonElement>) => void)",
+        "name": "PointerEventHandler<HTMLButtonElement>",
+        "raw": "PointerEventHandler<HTMLButtonElement>",
       },
     },
     "onProgress": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onProgressCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onRateChange": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onRateChangeCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onReset": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
+        "name": "FormEventHandler<HTMLButtonElement>",
+        "raw": "FormEventHandler<HTMLButtonElement>",
       },
     },
     "onResetCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
+        "name": "FormEventHandler<HTMLButtonElement>",
+        "raw": "FormEventHandler<HTMLButtonElement>",
       },
     },
     "onScroll": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: UIEvent<HTMLButtonElement, UIEvent>) => void)",
+        "name": "UIEventHandler<HTMLButtonElement>",
+        "raw": "UIEventHandler<HTMLButtonElement>",
       },
     },
     "onScrollCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: UIEvent<HTMLButtonElement, UIEvent>) => void)",
+        "name": "UIEventHandler<HTMLButtonElement>",
+        "raw": "UIEventHandler<HTMLButtonElement>",
       },
     },
     "onSeeked": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onSeekedCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onSeeking": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onSeekingCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onSelect": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onSelectCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onStalled": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onStalledCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onSubmit": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
+        "name": "FormEventHandler<HTMLButtonElement>",
+        "raw": "FormEventHandler<HTMLButtonElement>",
       },
     },
     "onSubmitCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: FormEvent<HTMLButtonElement>) => void)",
+        "name": "FormEventHandler<HTMLButtonElement>",
+        "raw": "FormEventHandler<HTMLButtonElement>",
       },
     },
     "onSuspend": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onSuspendCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onTimeUpdate": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onTimeUpdateCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onTouchCancel": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: TouchEvent<HTMLButtonElement>) => void)",
+        "name": "TouchEventHandler<HTMLButtonElement>",
+        "raw": "TouchEventHandler<HTMLButtonElement>",
       },
     },
     "onTouchCancelCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: TouchEvent<HTMLButtonElement>) => void)",
+        "name": "TouchEventHandler<HTMLButtonElement>",
+        "raw": "TouchEventHandler<HTMLButtonElement>",
       },
     },
     "onTouchEnd": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: TouchEvent<HTMLButtonElement>) => void)",
+        "name": "TouchEventHandler<HTMLButtonElement>",
+        "raw": "TouchEventHandler<HTMLButtonElement>",
       },
     },
     "onTouchEndCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: TouchEvent<HTMLButtonElement>) => void)",
+        "name": "TouchEventHandler<HTMLButtonElement>",
+        "raw": "TouchEventHandler<HTMLButtonElement>",
       },
     },
     "onTouchMove": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: TouchEvent<HTMLButtonElement>) => void)",
+        "name": "TouchEventHandler<HTMLButtonElement>",
+        "raw": "TouchEventHandler<HTMLButtonElement>",
       },
     },
     "onTouchMoveCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: TouchEvent<HTMLButtonElement>) => void)",
+        "name": "TouchEventHandler<HTMLButtonElement>",
+        "raw": "TouchEventHandler<HTMLButtonElement>",
       },
     },
     "onTouchStart": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: TouchEvent<HTMLButtonElement>) => void)",
+        "name": "TouchEventHandler<HTMLButtonElement>",
+        "raw": "TouchEventHandler<HTMLButtonElement>",
       },
     },
     "onTouchStartCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: TouchEvent<HTMLButtonElement>) => void)",
+        "name": "TouchEventHandler<HTMLButtonElement>",
+        "raw": "TouchEventHandler<HTMLButtonElement>",
       },
     },
     "onTransitionEnd": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: TransitionEvent<HTMLButtonElement>) => void)",
+        "name": "TransitionEventHandler<HTMLButtonElement>",
+        "raw": "TransitionEventHandler<HTMLButtonElement>",
       },
     },
     "onTransitionEndCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: TransitionEvent<HTMLButtonElement>) => void)",
+        "name": "TransitionEventHandler<HTMLButtonElement>",
+        "raw": "TransitionEventHandler<HTMLButtonElement>",
       },
     },
     "onVolumeChange": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onVolumeChangeCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onWaiting": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onWaitingCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLButtonElement, Event>) => void)",
+        "name": "ReactEventHandler<HTMLButtonElement>",
+        "raw": "ReactEventHandler<HTMLButtonElement>",
       },
     },
     "onWheel": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: WheelEvent<HTMLButtonElement>) => void)",
+        "name": "WheelEventHandler<HTMLButtonElement>",
+        "raw": "WheelEventHandler<HTMLButtonElement>",
       },
     },
     "onWheelCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "((event: WheelEvent<HTMLButtonElement>) => void)",
+        "name": "WheelEventHandler<HTMLButtonElement>",
+        "raw": "WheelEventHandler<HTMLButtonElement>",
       },
     },
     "placeholder": Object {
@@ -2263,8 +2243,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "ref": Object {
       "parentName": "ClassAttributes",
       "type": Object {
-        "name": "function",
-        "raw": "string | ((instance: HTMLButtonElement | null) => void) | RefObject<HTMLButtonElement> | null",
+        "name": "LegacyRef<HTMLButtonElement>",
+        "raw": "LegacyRef<HTMLButtonElement>",
       },
     },
     "resource": Object {
@@ -2305,19 +2285,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "spellCheck": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "boolean | \\"true\\" | \\"false\\"",
-        "value": Array [
-          Object {
-            "name": "boolean",
-          },
-          Object {
-            "name": "true",
-          },
-          Object {
-            "name": "false",
-          },
-        ],
+        "name": "Booleanish",
+        "raw": "Booleanish",
       },
     },
     "style": Object {

@@ -49,8 +49,16 @@ Object {
     "optionalElement": Object {
       "parentName": "MyComponentProps",
       "type": Object {
-        "name": "function",
-        "raw": "ReactElement<any, string | ((props: any) => ReactElement<any, any> | null) | (new (props: any) => Component<any, any, any>)>",
+        "name": "union",
+        "raw": "ReactElement<any, string | JSXElementConstructor<any>>",
+        "value": Array [
+          Object {
+            "name": "ReactElement<any, string",
+          },
+          Object {
+            "name": "JSXElementConstructor<any>>",
+          },
+        ],
       },
     },
     "optionalElementType": Object {
