@@ -37,6 +37,7 @@ const config = {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
+    fallback: { crypto: false },
   },
   plugins: [
     new HtmlWebpackPlugin({
