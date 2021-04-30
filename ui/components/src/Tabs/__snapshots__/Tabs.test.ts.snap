@@ -2,8 +2,82 @@
 
 exports[`Tabs direction snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-nm5f2c-Tabs"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-0 .react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.emotion-0 .react-tabs__tab-list {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.emotion-0 .react-tabs__tab {
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  border-bottom: none;
+  bottom: -4px;
+  position: relative;
+  list-style: none;
+  padding: 4px 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+  color: #69768C;
+}
+
+.emotion-0 .react-tabs__tab a {
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.emotion-0 .react-tabs__tab:focus {
+  box-shadow: 0 0 5px hsl(208, 99%, 50%);
+  border-color: hsl(208, 99%, 50%);
+  outline: none;
+}
+
+.emotion-0 .react-tabs__tab:focus:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: #fff;
+}
+
+.emotion-0 .react-tabs__tab--selected {
+  border-bottom: 3px solid #5c6ac4;
+  color: #5c6ac4;
+}
+
+.emotion-0 .react-tabs__tab--disabled {
+  color: #69768C;
+  cursor: default;
+}
+
+.emotion-0 .react-tabs__tab-panel {
+  display: none;
+}
+
+.emotion-0 .react-tabs__tab-panel--selected {
+  display: block;
+}
+
+.emotion-0 .react-tabs__tab {
+  font-size: 14px;
+}
+
+<div
+    class="emotion-0"
   >
     <div
       class="react-tabs"
@@ -57,8 +131,82 @@ exports[`Tabs direction snapshot 1`] = `
 
 exports[`Tabs fontSize snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-q5owpx-Tabs"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-0 .react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.emotion-0 .react-tabs__tab-list {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.emotion-0 .react-tabs__tab {
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  border-bottom: none;
+  bottom: -4px;
+  position: relative;
+  list-style: none;
+  padding: 4px 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+  color: #69768C;
+}
+
+.emotion-0 .react-tabs__tab a {
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.emotion-0 .react-tabs__tab:focus {
+  box-shadow: 0 0 5px hsl(208, 99%, 50%);
+  border-color: hsl(208, 99%, 50%);
+  outline: none;
+}
+
+.emotion-0 .react-tabs__tab:focus:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: #fff;
+}
+
+.emotion-0 .react-tabs__tab--selected {
+  border-bottom: 3px solid #5c6ac4;
+  color: #5c6ac4;
+}
+
+.emotion-0 .react-tabs__tab--disabled {
+  color: #69768C;
+  cursor: default;
+}
+
+.emotion-0 .react-tabs__tab-panel {
+  display: none;
+}
+
+.emotion-0 .react-tabs__tab-panel--selected {
+  display: block;
+}
+
+.emotion-0 .react-tabs__tab {
+  font-size: 24px;
+}
+
+<div
+    class="emotion-0"
   >
     <div
       class="react-tabs"
@@ -111,8 +259,82 @@ exports[`Tabs fontSize snapshot 1`] = `
 
 exports[`Tabs onSelect snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-nm5f2c-Tabs"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-0 .react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.emotion-0 .react-tabs__tab-list {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.emotion-0 .react-tabs__tab {
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  border-bottom: none;
+  bottom: -4px;
+  position: relative;
+  list-style: none;
+  padding: 4px 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+  color: #69768C;
+}
+
+.emotion-0 .react-tabs__tab a {
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.emotion-0 .react-tabs__tab:focus {
+  box-shadow: 0 0 5px hsl(208, 99%, 50%);
+  border-color: hsl(208, 99%, 50%);
+  outline: none;
+}
+
+.emotion-0 .react-tabs__tab:focus:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: #fff;
+}
+
+.emotion-0 .react-tabs__tab--selected {
+  border-bottom: 3px solid #5c6ac4;
+  color: #5c6ac4;
+}
+
+.emotion-0 .react-tabs__tab--disabled {
+  color: #69768C;
+  cursor: default;
+}
+
+.emotion-0 .react-tabs__tab-panel {
+  display: none;
+}
+
+.emotion-0 .react-tabs__tab-panel--selected {
+  display: block;
+}
+
+.emotion-0 .react-tabs__tab {
+  font-size: 14px;
+}
+
+<div
+    class="emotion-0"
   >
     <div
       class="react-tabs"
@@ -165,8 +387,82 @@ exports[`Tabs onSelect snapshot 1`] = `
 
 exports[`Tabs overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-nm5f2c-Tabs"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-0 .react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.emotion-0 .react-tabs__tab-list {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.emotion-0 .react-tabs__tab {
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  border-bottom: none;
+  bottom: -4px;
+  position: relative;
+  list-style: none;
+  padding: 4px 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+  color: #69768C;
+}
+
+.emotion-0 .react-tabs__tab a {
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.emotion-0 .react-tabs__tab:focus {
+  box-shadow: 0 0 5px hsl(208, 99%, 50%);
+  border-color: hsl(208, 99%, 50%);
+  outline: none;
+}
+
+.emotion-0 .react-tabs__tab:focus:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: #fff;
+}
+
+.emotion-0 .react-tabs__tab--selected {
+  border-bottom: 3px solid #5c6ac4;
+  color: #5c6ac4;
+}
+
+.emotion-0 .react-tabs__tab--disabled {
+  color: #69768C;
+  cursor: default;
+}
+
+.emotion-0 .react-tabs__tab-panel {
+  display: none;
+}
+
+.emotion-0 .react-tabs__tab-panel--selected {
+  display: block;
+}
+
+.emotion-0 .react-tabs__tab {
+  font-size: 14px;
+}
+
+<div
+    class="emotion-0"
   >
     <div
       class="react-tabs"

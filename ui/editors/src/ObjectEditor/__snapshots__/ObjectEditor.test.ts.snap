@@ -2,12 +2,38 @@
 
 exports[`ObjectEditor editLabel snapshot 1`] = `
 <DocumentFragment>
-  <div
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+<div
     style="display: inline-block;"
   >
     <button
       aria-label="edit the properties of the object"
-      class="css-9nq87t-EditButton"
+      class="emotion-0"
     >
       Click to edit
     </button>
@@ -17,9 +43,19 @@ exports[`ObjectEditor editLabel snapshot 1`] = `
 
 exports[`ObjectEditor inline snapshot 1`] = `
 <DocumentFragment>
-  <div>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  min-width: 200px;
+  max-width: 800px;
+  padding: 15px;
+  box-sizing: content-box;
+}
+
+<div>
     <div
-      class="css-2qgnud"
+      class="emotion-0"
     >
       <table>
         <tbody />
@@ -31,12 +67,38 @@ exports[`ObjectEditor inline snapshot 1`] = `
 
 exports[`ObjectEditor overview snapshot 1`] = `
 <DocumentFragment>
-  <div
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+<div
     style="display: inline-block;"
   >
     <button
       aria-label="edit the properties of the object"
-      class="css-9nq87t-EditButton"
+      class="emotion-0"
     >
       edit...
     </button>

@@ -2,15 +2,68 @@
 
 exports[`Sidebar buttonProps snapshot 1`] = `
 <DocumentFragment>
-  <div
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+  background: none;
+  box-shadow: none;
+  cursor: pointer;
+  color: #454f5b;
+}
+
+.emotion-1:disabled {
+  color: #aaa;
+}
+
+<div
     style="border: 1px solid black;"
   >
     <div
-      class="css-ob37n5"
+      class="emotion-0"
     >
       <button
         aria-label="click to expand/collapse"
-        class="css-1ozx2qa"
+        class="emotion-1"
       >
         <svg
           aria-hidden="true"
@@ -35,15 +88,68 @@ exports[`Sidebar buttonProps snapshot 1`] = `
 
 exports[`Sidebar icon snapshot 1`] = `
 <DocumentFragment>
-  <div
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+  background: none;
+  box-shadow: none;
+  cursor: pointer;
+  color: #454f5b;
+}
+
+.emotion-1:disabled {
+  color: #aaa;
+}
+
+<div
     style="border: 1px solid black;"
   >
     <div
-      class="css-ob37n5"
+      class="emotion-0"
     >
       <button
         aria-label="Expand side bar"
-        class="css-1ozx2qa"
+        class="emotion-1"
       >
         <svg
           aria-hidden="true"
@@ -68,12 +174,65 @@ exports[`Sidebar icon snapshot 1`] = `
 
 exports[`Sidebar overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-ob37n5"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+  background: none;
+  box-shadow: none;
+  cursor: pointer;
+  color: #454f5b;
+}
+
+.emotion-1:disabled {
+  color: #aaa;
+}
+
+<div
+    class="emotion-0"
   >
     <button
       aria-label="Expand side bar"
-      class="css-1ozx2qa"
+      class="emotion-1"
     >
       <svg
         aria-hidden="true"
@@ -97,15 +256,68 @@ exports[`Sidebar overview snapshot 1`] = `
 
 exports[`Sidebar title snapshot 1`] = `
 <DocumentFragment>
-  <div
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+  background: none;
+  box-shadow: none;
+  cursor: pointer;
+  color: #454f5b;
+}
+
+.emotion-1:disabled {
+  color: #aaa;
+}
+
+<div
     style="border: 1px solid black;"
   >
     <div
-      class="css-ob37n5"
+      class="emotion-0"
     >
       <button
         aria-label="Expand side bar"
-        class="css-1ozx2qa"
+        class="emotion-1"
       >
         <svg
           aria-hidden="true"

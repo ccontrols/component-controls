@@ -2,11 +2,36 @@
 
 exports[`Popover overview snapshot 1`] = `
 <DocumentFragment>
-  <div
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  background-color: #3B817D;
+}
+
+<div
     style="display: inline-block;"
   >
     <button
-      class="css-gnc703"
+      class="emotion-0"
     >
       Click to open
     </button>

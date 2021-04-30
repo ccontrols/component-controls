@@ -2,18 +2,78 @@
 
 exports[`TagsList overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1sjta5i-TagsList"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 400px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(230,230,230,0.15);
+  border: 2px solid #e6e6e6;
+  margin-left: 4px;
+  margin-bottom: 4px;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  white-space: nowrap;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+<div
+    class="emotion-0"
   >
     <a
-      class="css-1t54e2w"
+      class="emotion-1"
       href="/tags/atanasster"
     >
       <span
-        class="css-sih56k-Tag"
+        class="emotion-2"
       >
         <span
-          class="css-vurnku"
+          class="emotion-3"
         >
           atanasster
         </span>

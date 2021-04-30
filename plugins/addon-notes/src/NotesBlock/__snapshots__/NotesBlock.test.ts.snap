@@ -2,19 +2,132 @@
 
 exports[`NotesBlock customConfigProps snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -20px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -30px;
+}
+
+.emotion-7:hover {
+  visibility: visible;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 32px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border-bottom: 4px solid #454f5b;
+  width: 100%;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id="custom-title-here"
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       >
         <a
           aria-label="navigate to Custom title here section"
-          class="css-1ptrway-LinkHeading"
+          class="emotion-3"
           data-id="custom-title-here"
           data-level="4"
           data-title="Custom title here"
@@ -37,7 +150,7 @@ exports[`NotesBlock customConfigProps snapshot 1`] = `
           </svg>
         </a>
         <h4
-          class="css-vsfm4-BlockContainer"
+          class="emotion-4"
         >
           Custom title here
         </h4>
@@ -45,15 +158,15 @@ exports[`NotesBlock customConfigProps snapshot 1`] = `
     </div>
     <div>
       <div
-        class="css-jxxswp"
+        class="emotion-1"
         id="component-design-notes"
       >
         <div
-          class="css-xhp9da"
+          class="emotion-2"
         >
           <a
             aria-label="navigate to Component  design notes section"
-            class="css-1aob0xw-LinkHeading"
+            class="emotion-7"
             data-id="component-design-notes"
             data-level="2"
             data-title="Component  design notes"
@@ -78,7 +191,7 @@ exports[`NotesBlock customConfigProps snapshot 1`] = `
             </svg>
           </a>
           <h2
-            class="css-nj5449"
+            class="emotion-8"
           >
             Component 
             <em>
@@ -109,15 +222,89 @@ exports[`NotesBlock customConfigProps snapshot 1`] = `
 
 exports[`NotesBlock customItems snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -32px;
+}
+
+.emotion-5:hover {
+  visibility: visible;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 42px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id=""
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       />
     </div>
     <div
@@ -128,15 +315,15 @@ exports[`NotesBlock customItems snapshot 1`] = `
       <div>
         <div>
           <div
-            class="css-jxxswp"
+            class="emotion-1"
             id="introduction"
           >
             <div
-              class="css-xhp9da"
+              class="emotion-2"
             >
               <a
                 aria-label="navigate to Introduction section"
-                class="css-6ugsdx-LinkHeading"
+                class="emotion-5"
                 data-id="introduction"
                 data-level="1"
                 data-title="Introduction"
@@ -161,7 +348,7 @@ exports[`NotesBlock customItems snapshot 1`] = `
                 </svg>
               </a>
               <h1
-                class="css-ixvu55"
+                class="emotion-6"
               >
                 Introduction
               </h1>
@@ -184,15 +371,21 @@ exports[`NotesBlock customItems snapshot 1`] = `
 
 exports[`NotesBlock markdownFile snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-vurnku"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-vurnku"
+      class="emotion-0"
       id=""
     >
       <div
-        class="css-vurnku"
+        class="emotion-0"
       />
     </div>
     <div
@@ -212,15 +405,91 @@ exports[`NotesBlock markdownFile snapshot 1`] = `
 
 exports[`NotesBlock overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -30px;
+}
+
+.emotion-5:hover {
+  visibility: visible;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 32px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border-bottom: 4px solid #454f5b;
+  width: 100%;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id=""
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       />
     </div>
     <div
@@ -231,15 +500,15 @@ exports[`NotesBlock overview snapshot 1`] = `
       <div>
         <div>
           <div
-            class="css-jxxswp"
+            class="emotion-1"
             id="component-design-notes"
           >
             <div
-              class="css-xhp9da"
+              class="emotion-2"
             >
               <a
                 aria-label="navigate to Component  design notes section"
-                class="css-1aob0xw-LinkHeading"
+                class="emotion-5"
                 data-id="component-design-notes"
                 data-level="2"
                 data-title="Component  design notes"
@@ -264,7 +533,7 @@ exports[`NotesBlock overview snapshot 1`] = `
                 </svg>
               </a>
               <h2
-                class="css-nj5449"
+                class="emotion-6"
               >
                 Component 
                 <em>

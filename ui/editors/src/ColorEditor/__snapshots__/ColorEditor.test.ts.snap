@@ -2,19 +2,75 @@
 
 exports[`ColorEditor hsl snapshot 1`] = `
 <DocumentFragment>
-  <div
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 4px;
+  padding-left: 10px;
+  min-height: 36px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  left: 6px;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  background-color: hsl(213, 50%, 16%);
+  border-radius: 1rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+<div
     style="display: inline-block;"
   >
     <button
       aria-label="edit the selected color"
-      class="css-rzf2n6-ColorEditor"
+      class="emotion-0"
     >
       <div
-        class="css-rh3qt1-ColorEditor"
+        class="emotion-1"
       />
       hsl(213, 50%, 16%)
       <div
-        class="css-vurnku"
+        class="emotion-2"
       />
     </button>
   </div>
@@ -23,19 +79,75 @@ exports[`ColorEditor hsl snapshot 1`] = `
 
 exports[`ColorEditor hsla snapshot 1`] = `
 <DocumentFragment>
-  <div
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 4px;
+  padding-left: 10px;
+  min-height: 36px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  left: 6px;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  background-color: hsla(213, 50%, 16%, 0.5);
+  border-radius: 1rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+<div
     style="display: inline-block;"
   >
     <button
       aria-label="edit the selected color"
-      class="css-rzf2n6-ColorEditor"
+      class="emotion-0"
     >
       <div
-        class="css-1748e51-ColorEditor"
+        class="emotion-1"
       />
       hsla(213, 50%, 16%, 0.5)
       <div
-        class="css-vurnku"
+        class="emotion-2"
       />
     </button>
   </div>
@@ -44,19 +156,75 @@ exports[`ColorEditor hsla snapshot 1`] = `
 
 exports[`ColorEditor overview snapshot 1`] = `
 <DocumentFragment>
-  <div
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 4px;
+  padding-left: 10px;
+  min-height: 36px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  left: 6px;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  background-color: #dedede;
+  border-radius: 1rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+<div
     style="display: inline-block;"
   >
     <button
       aria-label="edit the selected color"
-      class="css-rzf2n6-ColorEditor"
+      class="emotion-0"
     >
       <div
-        class="css-whxk4e-ColorEditor"
+        class="emotion-1"
       />
       #dedede
       <div
-        class="css-vurnku"
+        class="emotion-2"
       />
     </button>
   </div>
@@ -65,19 +233,75 @@ exports[`ColorEditor overview snapshot 1`] = `
 
 exports[`ColorEditor rgb snapshot 1`] = `
 <DocumentFragment>
-  <div
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 4px;
+  padding-left: 10px;
+  min-height: 36px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  left: 6px;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  background-color: rgb(192, 0, 0);
+  border-radius: 1rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+<div
     style="display: inline-block;"
   >
     <button
       aria-label="edit the selected color"
-      class="css-rzf2n6-ColorEditor"
+      class="emotion-0"
     >
       <div
-        class="css-jcbfff-ColorEditor"
+        class="emotion-1"
       />
       rgb(192, 0, 0)
       <div
-        class="css-vurnku"
+        class="emotion-2"
       />
     </button>
   </div>
@@ -86,19 +310,75 @@ exports[`ColorEditor rgb snapshot 1`] = `
 
 exports[`ColorEditor rgba snapshot 1`] = `
 <DocumentFragment>
-  <div
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 4px;
+  padding-left: 10px;
+  min-height: 36px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  left: 6px;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  background-color: rgba(0, 192, 0, 0.5);
+  border-radius: 1rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+<div
     style="display: inline-block;"
   >
     <button
       aria-label="edit the selected color"
-      class="css-rzf2n6-ColorEditor"
+      class="emotion-0"
     >
       <div
-        class="css-1cnoj9w-ColorEditor"
+        class="emotion-1"
       />
       rgba(0, 192, 0, 0.5)
       <div
-        class="css-vurnku"
+        class="emotion-2"
       />
     </button>
   </div>

@@ -2,39 +2,284 @@
 
 exports[`PanelContainer openTab snapshot 1`] = `
 <DocumentFragment>
-  <div>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-2 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-2 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-4 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-4 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-10 .react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.emotion-10 .react-tabs__tab-list {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.emotion-10 .react-tabs__tab {
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  border-bottom: none;
+  bottom: -4px;
+  position: relative;
+  list-style: none;
+  padding: 4px 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+  color: #69768C;
+}
+
+.emotion-10 .react-tabs__tab a {
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.emotion-10 .react-tabs__tab:focus {
+  box-shadow: 0 0 5px hsl(208, 99%, 50%);
+  border-color: hsl(208, 99%, 50%);
+  outline: none;
+}
+
+.emotion-10 .react-tabs__tab:focus:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: #fff;
+}
+
+.emotion-10 .react-tabs__tab--selected {
+  border-bottom: 3px solid #5c6ac4;
+  color: #5c6ac4;
+}
+
+.emotion-10 .react-tabs__tab--disabled {
+  color: #69768C;
+  cursor: default;
+}
+
+.emotion-10 .react-tabs__tab-panel {
+  display: none;
+}
+
+.emotion-10 .react-tabs__tab-panel--selected {
+  display: block;
+}
+
+.emotion-10 .react-tabs__tab {
+  font-size: 14px;
+}
+
+<div>
     <div
-      class="css-15owl46"
+      class="emotion-0"
     >
       <div
-        class="css-x60p33"
+        class="emotion-1"
       >
         <div
-          class="css-1vga9oy"
+          class="emotion-2"
         >
           <button
             aria-label="display panel 1"
-            class="css-1tf4h46"
+            class="emotion-3"
           >
             close panel-1
           </button>
         </div>
         <div
-          class="css-7d11p2"
+          class="emotion-4"
         >
           <button
             aria-label="display panel 2"
-            class="css-1tf4h46"
+            class="emotion-3"
           >
             open panel-2
           </button>
         </div>
         <div
-          class="css-7d11p2"
+          class="emotion-4"
         >
           <button
             aria-label="some action without panel"
-            class="css-1tf4h46"
+            class="emotion-3"
           >
             action
           </button>
@@ -42,12 +287,12 @@ exports[`PanelContainer openTab snapshot 1`] = `
       </div>
     </div>
     <div
-      class="css-eqxzio"
+      class="emotion-8"
     >
       <div>
         <svg
           aria-label="donut graphic value 1 - from 0 tp 1"
-          class="css-14d2907"
+          class="emotion-9"
           fill="none"
           height="128"
           role="img"
@@ -81,7 +326,7 @@ exports[`PanelContainer openTab snapshot 1`] = `
           style=""
         >
           <div
-            class="css-nm5f2c-Tabs"
+            class="emotion-10"
           >
             <div
               class="react-tabs"
@@ -133,7 +378,7 @@ exports[`PanelContainer openTab snapshot 1`] = `
                   </h2>
                   <svg
                     aria-label="donut graphic value 0.5 - from 0 tp 1"
-                    class="css-14d2907"
+                    class="emotion-9"
                     fill="none"
                     height="64"
                     role="img"
@@ -170,43 +415,227 @@ exports[`PanelContainer openTab snapshot 1`] = `
 
 exports[`PanelContainer overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-vurnku"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-3 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-3 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-5 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-5 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-top: 30px;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+<div
+    class="emotion-0"
     style="width: 100%;"
   >
     <div>
       <div
-        class="css-15owl46"
+        class="emotion-1"
       >
         <div
-          class="css-x60p33"
+          class="emotion-2"
         >
           <div
-            class="css-1vga9oy"
+            class="emotion-3"
           >
             <button
               aria-label="display panel 1"
-              class="css-1tf4h46"
+              class="emotion-4"
             >
               open panel-1
             </button>
           </div>
           <div
-            class="css-7d11p2"
+            class="emotion-5"
           >
             <button
               aria-label="display panel 2"
-              class="css-1tf4h46"
+              class="emotion-4"
             >
               open panel-2
             </button>
           </div>
           <div
-            class="css-7d11p2"
+            class="emotion-5"
           >
             <button
               aria-label="some action without panel"
-              class="css-1tf4h46"
+              class="emotion-4"
             >
               action
             </button>
@@ -214,15 +643,15 @@ exports[`PanelContainer overview snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-eqxzio"
+        class="emotion-9"
       >
         <div>
           <div
-            class="css-12y95y7"
+            class="emotion-10"
           >
             <svg
               aria-label="donut graphic value 1 - from 0 tp 1"
-              class="css-14d2907"
+              class="emotion-11"
               fill="none"
               height="128"
               role="img"
@@ -265,39 +694,210 @@ exports[`PanelContainer overview snapshot 1`] = `
 
 exports[`PanelContainer visibleTabs snapshot 1`] = `
 <DocumentFragment>
-  <div>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-2 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-2 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-4 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-4 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+<div>
     <div
-      class="css-15owl46"
+      class="emotion-0"
     >
       <div
-        class="css-x60p33"
+        class="emotion-1"
       >
         <div
-          class="css-1vga9oy"
+          class="emotion-2"
         >
           <button
             aria-label="display panel 1"
-            class="css-1tf4h46"
+            class="emotion-3"
           >
             open panel-1
           </button>
         </div>
         <div
-          class="css-7d11p2"
+          class="emotion-4"
         >
           <button
             aria-label="display panel 2"
-            class="css-1tf4h46"
+            class="emotion-3"
           >
             open panel-2
           </button>
         </div>
         <div
-          class="css-7d11p2"
+          class="emotion-4"
         >
           <button
             aria-label="some action without panel"
-            class="css-1tf4h46"
+            class="emotion-3"
           >
             action
           </button>
@@ -305,12 +905,12 @@ exports[`PanelContainer visibleTabs snapshot 1`] = `
       </div>
     </div>
     <div
-      class="css-eqxzio"
+      class="emotion-8"
     >
       <div>
         <svg
           aria-label="donut graphic value 1 - from 0 tp 1"
-          class="css-14d2907"
+          class="emotion-9"
           fill="none"
           height="128"
           role="img"

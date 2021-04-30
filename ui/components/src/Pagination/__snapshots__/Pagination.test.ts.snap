@@ -2,32 +2,123 @@
 
 exports[`Pagination onlyNext snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-8r2q2l"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 14px;
+  color: #69768C;
+  padding-bottom: 8px;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 20px;
+  color: #5c6ac4;
+  font-weight: 700;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 300px;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-vurnku"
+      class="emotion-1"
     />
     <div
-      class="css-vurnku"
+      class="emotion-1"
     >
       <a
-        class="css-10zwoio"
+        class="emotion-3"
         href="/"
       >
         <div
-          class="css-1my6hv5"
+          class="emotion-4"
         >
           <span
-            class="css-c3r86m"
+            class="emotion-5"
           >
             Next
           </span>
           <div
-            class="css-9tifnv"
+            class="emotion-6"
           >
             <span
-              class="css-1s8umv4"
+              class="emotion-7"
             >
               link to next
             </span>
@@ -56,26 +147,113 @@ exports[`Pagination onlyNext snapshot 1`] = `
 
 exports[`Pagination onlyPrev snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-8r2q2l"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 14px;
+  color: #69768C;
+  padding-bottom: 8px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 20px;
+  color: #5c6ac4;
+  font-weight: 700;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 300px;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-vurnku"
+      class="emotion-1"
     >
       <a
-        class="css-10zwoio"
+        class="emotion-2"
         href="/"
       >
         <div
-          class="css-1gq2x6q"
+          class="emotion-3"
         >
           <span
-            class="css-c3r86m"
+            class="emotion-4"
           >
             Previous
           </span>
           <div
-            class="css-9tifnv"
+            class="emotion-5"
           >
             <svg
               aria-hidden="true"
@@ -93,7 +271,7 @@ exports[`Pagination onlyPrev snapshot 1`] = `
               />
             </svg>
             <span
-              class="css-1s8umv4"
+              class="emotion-6"
             >
               link to prev
             </span>
@@ -102,7 +280,7 @@ exports[`Pagination onlyPrev snapshot 1`] = `
       </a>
     </div>
     <div
-      class="css-vurnku"
+      class="emotion-1"
     />
   </div>
 </DocumentFragment>
@@ -110,30 +288,136 @@ exports[`Pagination onlyPrev snapshot 1`] = `
 
 exports[`Pagination overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-vurnku"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 14px;
+  color: #69768C;
+  padding-bottom: 8px;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 20px;
+  color: #5c6ac4;
+  font-weight: 700;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 300px;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+<div
+    class="emotion-0"
     style="width: 100%;"
   >
     <div
-      class="css-8r2q2l"
+      class="emotion-1"
     >
       <div
-        class="css-vurnku"
+        class="emotion-0"
       >
         <a
-          class="css-10zwoio"
+          class="emotion-3"
           href="/"
         >
           <div
-            class="css-1gq2x6q"
+            class="emotion-4"
           >
             <span
-              class="css-c3r86m"
+              class="emotion-5"
             >
               Previous
             </span>
             <div
-              class="css-9tifnv"
+              class="emotion-6"
             >
               <svg
                 aria-hidden="true"
@@ -151,7 +435,7 @@ exports[`Pagination overview snapshot 1`] = `
                 />
               </svg>
               <span
-                class="css-1s8umv4"
+                class="emotion-7"
               >
                 link to prev
               </span>
@@ -160,25 +444,25 @@ exports[`Pagination overview snapshot 1`] = `
         </a>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-0"
       >
         <a
-          class="css-10zwoio"
+          class="emotion-3"
           href="/"
         >
           <div
-            class="css-1my6hv5"
+            class="emotion-10"
           >
             <span
-              class="css-c3r86m"
+              class="emotion-5"
             >
               Next
             </span>
             <div
-              class="css-9tifnv"
+              class="emotion-6"
             >
               <span
-                class="css-1s8umv4"
+                class="emotion-7"
               >
                 link to prev
               </span>

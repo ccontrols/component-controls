@@ -2,16 +2,58 @@
 
 exports[`Shield fraction snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-ncjsai"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #69768C;
+  color: #ffffff;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #a07943;
+  color: #ffffff;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-7ucnu2-Shield"
+      class="emotion-1"
     >
       percent
     </div>
     <div
-      class="css-bahhjw-Shield"
+      class="emotion-2"
     >
       50%
     </div>
@@ -21,16 +63,58 @@ exports[`Shield fraction snapshot 1`] = `
 
 exports[`Shield overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-ncjsai"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #69768C;
+  color: #ffffff;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #227fc0;
+  color: #ffffff;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-7ucnu2-Shield"
+      class="emotion-1"
     >
       some text
     </div>
     <div
-      class="css-o4rdbs-Shield"
+      class="emotion-2"
     >
       1.0.0
     </div>
@@ -40,16 +124,58 @@ exports[`Shield overview snapshot 1`] = `
 
 exports[`Shield percent snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-ncjsai"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #69768C;
+  color: #ffffff;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #6d994a;
+  color: #ffffff;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-7ucnu2-Shield"
+      class="emotion-1"
     >
       zero
     </div>
     <div
-      class="css-1m33y6e-Shield"
+      class="emotion-2"
     >
       80%
     </div>
@@ -59,16 +185,58 @@ exports[`Shield percent snapshot 1`] = `
 
 exports[`Shield themeColor snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-ncjsai"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #69768C;
+  color: #ffffff;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #227fc0;
+  color: #ffffff;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-7ucnu2-Shield"
+      class="emotion-1"
     >
       color
     </div>
     <div
-      class="css-o4rdbs-Shield"
+      class="emotion-2"
     />
   </div>
 </DocumentFragment>
@@ -76,16 +244,58 @@ exports[`Shield themeColor snapshot 1`] = `
 
 exports[`Shield zeroValue snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-ncjsai"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #69768C;
+  color: #ffffff;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #227fc0;
+  color: #ffffff;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-7ucnu2-Shield"
+      class="emotion-1"
     >
       zero
     </div>
     <div
-      class="css-o4rdbs-Shield"
+      class="emotion-2"
     >
       0
     </div>

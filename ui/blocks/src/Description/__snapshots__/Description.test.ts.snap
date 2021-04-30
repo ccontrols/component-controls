@@ -17,8 +17,13 @@ and some bold
 
 exports[`Description overview snapshot 1`] = `
 <DocumentFragment>
-  <p
-    class="css-p7s6cm"
+  .emotion-0 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+<p
+    class="emotion-0"
   >
     Markdown descripton for component.
 # With a heading

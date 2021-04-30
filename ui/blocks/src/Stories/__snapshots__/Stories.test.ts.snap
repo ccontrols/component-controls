@@ -2,20 +2,470 @@
 
 exports[`Stories customTitle snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -22px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -20px;
+}
+
+.emotion-11:hover {
+  visibility: visible;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-15 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-15 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-16 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-17 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-17 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-19 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-19 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-19 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-20 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+}
+
+.emotion-20:disabled {
+  color: #aaa;
+}
+
+.emotion-29 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-30 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  overflow: inherit;
+}
+
+.emotion-31 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  transform-origin: top left;
+  -webkit-transition: -webkit-transform .2s;
+  transition: transform .2s;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-35 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.emotion-36 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  all: unset;
+}
+
+.emotion-67 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+.emotion-97 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+<div
+    class="emotion-0"
     data-testid="stories"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id="my-story-title"
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       >
         <a
           aria-label="navigate to My Story Title section"
-          class="css-walqom-LinkHeading"
+          class="emotion-3"
           data-id="my-story-title"
           data-level="3"
           data-title="My Story Title"
@@ -38,18 +488,18 @@ exports[`Stories customTitle snapshot 1`] = `
           </svg>
         </a>
         <h3
-          class="css-16ist9v-BlockContainer"
+          class="emotion-4"
         >
           <div
-            class="css-tmrrvx"
+            class="emotion-5"
           >
             My Story Title
             <a
               aria-expanded="true"
-              class="css-1t48u3b-BlockContainer"
+              class="emotion-6"
             >
               <span
-                class="css-1ibxxpj"
+                class="emotion-7"
               >
                 <svg
                   aria-hidden="true"
@@ -79,19 +529,19 @@ exports[`Stories customTitle snapshot 1`] = `
     >
       <div>
         <div
-          class="css-1xkyebe"
+          class="emotion-0"
           data-testid="playground"
         >
           <div
-            class="css-jxxswp"
+            class="emotion-1"
             id="button"
           >
             <div
-              class="css-xhp9da"
+              class="emotion-2"
             >
               <a
                 aria-label="navigate to button section"
-                class="css-1ptrway-LinkHeading"
+                class="emotion-11"
                 data-id="button"
                 data-level="4"
                 data-title="button"
@@ -114,7 +564,7 @@ exports[`Stories customTitle snapshot 1`] = `
                 </svg>
               </a>
               <h4
-                class="css-vsfm4-BlockContainer"
+                class="emotion-12"
               >
                 button
               </h4>
@@ -122,37 +572,37 @@ exports[`Stories customTitle snapshot 1`] = `
           </div>
           <div>
             <div
-              class="css-15owl46"
+              class="emotion-13"
             >
               <div
-                class="css-x60p33"
+                class="emotion-14"
               >
                 <div
-                  class="css-rkyxeq"
+                  class="emotion-15"
                 >
                   <button
                     aria-label="switch light and dark background"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     dark
                   </button>
                 </div>
                 <div
-                  class="css-7d11p2"
+                  class="emotion-17"
                 >
                   <button
                     aria-label="switch left to right/right to left"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     RTL
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="reset zoom"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -173,11 +623,11 @@ exports[`Stories customTitle snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="zoom out"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -198,11 +648,11 @@ exports[`Stories customTitle snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-7d11p2"
+                  class="emotion-17"
                 >
                   <button
                     aria-label="zoom in"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -223,21 +673,21 @@ exports[`Stories customTitle snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="display story source code"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     open source
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="display story configuration object"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     open config
                   </button>
@@ -245,27 +695,27 @@ exports[`Stories customTitle snapshot 1`] = `
               </div>
             </div>
             <div
-              class="css-eqxzio"
+              class="emotion-29"
             >
               <div
                 style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
               >
                 <div
-                  class="css-1s8zxab"
+                  class="emotion-30"
                 >
                   <div
-                    class="css-1j909cg"
+                    class="emotion-31"
                   >
                     <div
-                      class="css-1xkyebe"
+                      class="emotion-0"
                       data-testid="story"
                     >
                       <div
-                        class="css-jxxswp"
+                        class="emotion-1"
                         id=""
                       >
                         <div
-                          class="css-xhp9da"
+                          class="emotion-2"
                         />
                       </div>
                       <div
@@ -275,15 +725,15 @@ exports[`Stories customTitle snapshot 1`] = `
                       >
                         <div>
                           <div
-                            class="css-154oin1"
+                            class="emotion-35"
                             data-testid="story"
                             id="id-of-button-story"
                           >
                             <div
-                              class="story-render-container css-dhmrnb"
+                              class="story-render-container emotion-36"
                             >
                               <button
-                                class="css-97huhz"
+                                class="emotion-20"
                               >
                                 test
                               </button>
@@ -308,19 +758,19 @@ exports[`Stories customTitle snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-1xkyebe"
+          class="emotion-0"
           data-testid="playground"
         >
           <div
-            class="css-jxxswp"
+            class="emotion-1"
             id="controls"
           >
             <div
-              class="css-xhp9da"
+              class="emotion-2"
             >
               <a
                 aria-label="navigate to controls section"
-                class="css-1ptrway-LinkHeading"
+                class="emotion-11"
                 data-id="controls"
                 data-level="4"
                 data-title="controls"
@@ -343,7 +793,7 @@ exports[`Stories customTitle snapshot 1`] = `
                 </svg>
               </a>
               <h4
-                class="css-vsfm4-BlockContainer"
+                class="emotion-12"
               >
                 controls
               </h4>
@@ -351,37 +801,37 @@ exports[`Stories customTitle snapshot 1`] = `
           </div>
           <div>
             <div
-              class="css-15owl46"
+              class="emotion-13"
             >
               <div
-                class="css-x60p33"
+                class="emotion-14"
               >
                 <div
-                  class="css-rkyxeq"
+                  class="emotion-15"
                 >
                   <button
                     aria-label="switch light and dark background"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     dark
                   </button>
                 </div>
                 <div
-                  class="css-7d11p2"
+                  class="emotion-17"
                 >
                   <button
                     aria-label="switch left to right/right to left"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     RTL
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="reset zoom"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -402,11 +852,11 @@ exports[`Stories customTitle snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="zoom out"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -427,11 +877,11 @@ exports[`Stories customTitle snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-7d11p2"
+                  class="emotion-17"
                 >
                   <button
                     aria-label="zoom in"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -452,21 +902,21 @@ exports[`Stories customTitle snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="display story source code"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     open source
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="display story configuration object"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     open config
                   </button>
@@ -474,27 +924,27 @@ exports[`Stories customTitle snapshot 1`] = `
               </div>
             </div>
             <div
-              class="css-eqxzio"
+              class="emotion-29"
             >
               <div
                 style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
               >
                 <div
-                  class="css-1s8zxab"
+                  class="emotion-30"
                 >
                   <div
-                    class="css-1j909cg"
+                    class="emotion-31"
                   >
                     <div
-                      class="css-1xkyebe"
+                      class="emotion-0"
                       data-testid="story"
                     >
                       <div
-                        class="css-jxxswp"
+                        class="emotion-1"
                         id=""
                       >
                         <div
-                          class="css-xhp9da"
+                          class="emotion-2"
                         />
                       </div>
                       <div
@@ -504,16 +954,16 @@ exports[`Stories customTitle snapshot 1`] = `
                       >
                         <div>
                           <div
-                            class="css-154oin1"
+                            class="emotion-35"
                             data-testid="story"
                             id="blocks-core-story-plain--controls"
                           >
                             <div
-                              class="story-render-container css-dhmrnb"
+                              class="story-render-container emotion-36"
                             >
                               <svg
                                 aria-label="example donut graphic"
-                                class="css-14d2907"
+                                class="emotion-67"
                                 fill="none"
                                 height="128"
                                 role="img"
@@ -558,19 +1008,19 @@ exports[`Stories customTitle snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-1xkyebe"
+          class="emotion-0"
           data-testid="playground"
         >
           <div
-            class="css-jxxswp"
+            class="emotion-1"
             id="story"
           >
             <div
-              class="css-xhp9da"
+              class="emotion-2"
             >
               <a
                 aria-label="navigate to story section"
-                class="css-1ptrway-LinkHeading"
+                class="emotion-11"
                 data-id="story"
                 data-level="4"
                 data-title="story"
@@ -593,7 +1043,7 @@ exports[`Stories customTitle snapshot 1`] = `
                 </svg>
               </a>
               <h4
-                class="css-vsfm4-BlockContainer"
+                class="emotion-12"
               >
                 story
               </h4>
@@ -601,37 +1051,37 @@ exports[`Stories customTitle snapshot 1`] = `
           </div>
           <div>
             <div
-              class="css-15owl46"
+              class="emotion-13"
             >
               <div
-                class="css-x60p33"
+                class="emotion-14"
               >
                 <div
-                  class="css-rkyxeq"
+                  class="emotion-15"
                 >
                   <button
                     aria-label="switch light and dark background"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     dark
                   </button>
                 </div>
                 <div
-                  class="css-7d11p2"
+                  class="emotion-17"
                 >
                   <button
                     aria-label="switch left to right/right to left"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     RTL
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="reset zoom"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -652,11 +1102,11 @@ exports[`Stories customTitle snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="zoom out"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -677,11 +1127,11 @@ exports[`Stories customTitle snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-7d11p2"
+                  class="emotion-17"
                 >
                   <button
                     aria-label="zoom in"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -702,21 +1152,21 @@ exports[`Stories customTitle snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="display story source code"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     open source
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="display story configuration object"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     open config
                   </button>
@@ -724,27 +1174,27 @@ exports[`Stories customTitle snapshot 1`] = `
               </div>
             </div>
             <div
-              class="css-eqxzio"
+              class="emotion-29"
             >
               <div
                 style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
               >
                 <div
-                  class="css-1s8zxab"
+                  class="emotion-30"
                 >
                   <div
-                    class="css-1j909cg"
+                    class="emotion-31"
                   >
                     <div
-                      class="css-1xkyebe"
+                      class="emotion-0"
                       data-testid="story"
                     >
                       <div
-                        class="css-jxxswp"
+                        class="emotion-1"
                         id=""
                       >
                         <div
-                          class="css-xhp9da"
+                          class="emotion-2"
                         />
                       </div>
                       <div
@@ -754,15 +1204,15 @@ exports[`Stories customTitle snapshot 1`] = `
                       >
                         <div>
                           <div
-                            class="css-154oin1"
+                            class="emotion-35"
                             data-testid="story"
                             id="id-of-single"
                           >
                             <div
-                              class="story-render-container css-dhmrnb"
+                              class="story-render-container emotion-36"
                             >
                               <h2
-                                class="css-229nmx"
+                                class="emotion-97"
                               >
                                 Components
                               </h2>
@@ -794,20 +1244,470 @@ exports[`Stories customTitle snapshot 1`] = `
 
 exports[`Stories darkTheme snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -22px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -20px;
+}
+
+.emotion-11:hover {
+  visibility: visible;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-15 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-15 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-16 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-17 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-17 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-19 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-19 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-19 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-20 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+}
+
+.emotion-20:disabled {
+  color: #aaa;
+}
+
+.emotion-29 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-30 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  overflow: inherit;
+}
+
+.emotion-31 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  transform-origin: top left;
+  -webkit-transition: -webkit-transform .2s;
+  transition: transform .2s;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-35 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.emotion-36 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  all: unset;
+}
+
+.emotion-67 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+.emotion-97 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+<div
+    class="emotion-0"
     data-testid="stories"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id="stories"
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       >
         <a
           aria-label="navigate to Stories section"
-          class="css-walqom-LinkHeading"
+          class="emotion-3"
           data-id="stories"
           data-level="3"
           data-title="Stories"
@@ -830,18 +1730,18 @@ exports[`Stories darkTheme snapshot 1`] = `
           </svg>
         </a>
         <h3
-          class="css-16ist9v-BlockContainer"
+          class="emotion-4"
         >
           <div
-            class="css-tmrrvx"
+            class="emotion-5"
           >
             Stories
             <a
               aria-expanded="true"
-              class="css-1t48u3b-BlockContainer"
+              class="emotion-6"
             >
               <span
-                class="css-1ibxxpj"
+                class="emotion-7"
               >
                 <svg
                   aria-hidden="true"
@@ -871,19 +1771,19 @@ exports[`Stories darkTheme snapshot 1`] = `
     >
       <div>
         <div
-          class="css-1xkyebe"
+          class="emotion-0"
           data-testid="playground"
         >
           <div
-            class="css-jxxswp"
+            class="emotion-1"
             id="button"
           >
             <div
-              class="css-xhp9da"
+              class="emotion-2"
             >
               <a
                 aria-label="navigate to button section"
-                class="css-1ptrway-LinkHeading"
+                class="emotion-11"
                 data-id="button"
                 data-level="4"
                 data-title="button"
@@ -906,7 +1806,7 @@ exports[`Stories darkTheme snapshot 1`] = `
                 </svg>
               </a>
               <h4
-                class="css-vsfm4-BlockContainer"
+                class="emotion-12"
               >
                 button
               </h4>
@@ -914,37 +1814,37 @@ exports[`Stories darkTheme snapshot 1`] = `
           </div>
           <div>
             <div
-              class="css-15owl46"
+              class="emotion-13"
             >
               <div
-                class="css-x60p33"
+                class="emotion-14"
               >
                 <div
-                  class="css-rkyxeq"
+                  class="emotion-15"
                 >
                   <button
                     aria-label="switch light and dark background"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     dark
                   </button>
                 </div>
                 <div
-                  class="css-7d11p2"
+                  class="emotion-17"
                 >
                   <button
                     aria-label="switch left to right/right to left"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     RTL
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="reset zoom"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -965,11 +1865,11 @@ exports[`Stories darkTheme snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="zoom out"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -990,11 +1890,11 @@ exports[`Stories darkTheme snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-7d11p2"
+                  class="emotion-17"
                 >
                   <button
                     aria-label="zoom in"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -1015,21 +1915,21 @@ exports[`Stories darkTheme snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="display story source code"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     open source
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="display story configuration object"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     open config
                   </button>
@@ -1037,27 +1937,27 @@ exports[`Stories darkTheme snapshot 1`] = `
               </div>
             </div>
             <div
-              class="css-eqxzio"
+              class="emotion-29"
             >
               <div
                 style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
               >
                 <div
-                  class="css-1s8zxab"
+                  class="emotion-30"
                 >
                   <div
-                    class="css-1j909cg"
+                    class="emotion-31"
                   >
                     <div
-                      class="css-1xkyebe"
+                      class="emotion-0"
                       data-testid="story"
                     >
                       <div
-                        class="css-jxxswp"
+                        class="emotion-1"
                         id=""
                       >
                         <div
-                          class="css-xhp9da"
+                          class="emotion-2"
                         />
                       </div>
                       <div
@@ -1067,15 +1967,15 @@ exports[`Stories darkTheme snapshot 1`] = `
                       >
                         <div>
                           <div
-                            class="css-154oin1"
+                            class="emotion-35"
                             data-testid="story"
                             id="id-of-button-story"
                           >
                             <div
-                              class="story-render-container css-dhmrnb"
+                              class="story-render-container emotion-36"
                             >
                               <button
-                                class="css-97huhz"
+                                class="emotion-20"
                               >
                                 test
                               </button>
@@ -1100,19 +2000,19 @@ exports[`Stories darkTheme snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-1xkyebe"
+          class="emotion-0"
           data-testid="playground"
         >
           <div
-            class="css-jxxswp"
+            class="emotion-1"
             id="controls"
           >
             <div
-              class="css-xhp9da"
+              class="emotion-2"
             >
               <a
                 aria-label="navigate to controls section"
-                class="css-1ptrway-LinkHeading"
+                class="emotion-11"
                 data-id="controls"
                 data-level="4"
                 data-title="controls"
@@ -1135,7 +2035,7 @@ exports[`Stories darkTheme snapshot 1`] = `
                 </svg>
               </a>
               <h4
-                class="css-vsfm4-BlockContainer"
+                class="emotion-12"
               >
                 controls
               </h4>
@@ -1143,37 +2043,37 @@ exports[`Stories darkTheme snapshot 1`] = `
           </div>
           <div>
             <div
-              class="css-15owl46"
+              class="emotion-13"
             >
               <div
-                class="css-x60p33"
+                class="emotion-14"
               >
                 <div
-                  class="css-rkyxeq"
+                  class="emotion-15"
                 >
                   <button
                     aria-label="switch light and dark background"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     dark
                   </button>
                 </div>
                 <div
-                  class="css-7d11p2"
+                  class="emotion-17"
                 >
                   <button
                     aria-label="switch left to right/right to left"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     RTL
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="reset zoom"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -1194,11 +2094,11 @@ exports[`Stories darkTheme snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="zoom out"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -1219,11 +2119,11 @@ exports[`Stories darkTheme snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-7d11p2"
+                  class="emotion-17"
                 >
                   <button
                     aria-label="zoom in"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -1244,21 +2144,21 @@ exports[`Stories darkTheme snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="display story source code"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     open source
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="display story configuration object"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     open config
                   </button>
@@ -1266,27 +2166,27 @@ exports[`Stories darkTheme snapshot 1`] = `
               </div>
             </div>
             <div
-              class="css-eqxzio"
+              class="emotion-29"
             >
               <div
                 style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
               >
                 <div
-                  class="css-1s8zxab"
+                  class="emotion-30"
                 >
                   <div
-                    class="css-1j909cg"
+                    class="emotion-31"
                   >
                     <div
-                      class="css-1xkyebe"
+                      class="emotion-0"
                       data-testid="story"
                     >
                       <div
-                        class="css-jxxswp"
+                        class="emotion-1"
                         id=""
                       >
                         <div
-                          class="css-xhp9da"
+                          class="emotion-2"
                         />
                       </div>
                       <div
@@ -1296,16 +2196,16 @@ exports[`Stories darkTheme snapshot 1`] = `
                       >
                         <div>
                           <div
-                            class="css-154oin1"
+                            class="emotion-35"
                             data-testid="story"
                             id="blocks-core-story-plain--controls"
                           >
                             <div
-                              class="story-render-container css-dhmrnb"
+                              class="story-render-container emotion-36"
                             >
                               <svg
                                 aria-label="example donut graphic"
-                                class="css-14d2907"
+                                class="emotion-67"
                                 fill="none"
                                 height="128"
                                 role="img"
@@ -1350,19 +2250,19 @@ exports[`Stories darkTheme snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-1xkyebe"
+          class="emotion-0"
           data-testid="playground"
         >
           <div
-            class="css-jxxswp"
+            class="emotion-1"
             id="story"
           >
             <div
-              class="css-xhp9da"
+              class="emotion-2"
             >
               <a
                 aria-label="navigate to story section"
-                class="css-1ptrway-LinkHeading"
+                class="emotion-11"
                 data-id="story"
                 data-level="4"
                 data-title="story"
@@ -1385,7 +2285,7 @@ exports[`Stories darkTheme snapshot 1`] = `
                 </svg>
               </a>
               <h4
-                class="css-vsfm4-BlockContainer"
+                class="emotion-12"
               >
                 story
               </h4>
@@ -1393,37 +2293,37 @@ exports[`Stories darkTheme snapshot 1`] = `
           </div>
           <div>
             <div
-              class="css-15owl46"
+              class="emotion-13"
             >
               <div
-                class="css-x60p33"
+                class="emotion-14"
               >
                 <div
-                  class="css-rkyxeq"
+                  class="emotion-15"
                 >
                   <button
                     aria-label="switch light and dark background"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     dark
                   </button>
                 </div>
                 <div
-                  class="css-7d11p2"
+                  class="emotion-17"
                 >
                   <button
                     aria-label="switch left to right/right to left"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     RTL
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="reset zoom"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -1444,11 +2344,11 @@ exports[`Stories darkTheme snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="zoom out"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -1469,11 +2369,11 @@ exports[`Stories darkTheme snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-7d11p2"
+                  class="emotion-17"
                 >
                   <button
                     aria-label="zoom in"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -1494,21 +2394,21 @@ exports[`Stories darkTheme snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="display story source code"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     open source
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="display story configuration object"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     open config
                   </button>
@@ -1516,27 +2416,27 @@ exports[`Stories darkTheme snapshot 1`] = `
               </div>
             </div>
             <div
-              class="css-eqxzio"
+              class="emotion-29"
             >
               <div
                 style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
               >
                 <div
-                  class="css-1s8zxab"
+                  class="emotion-30"
                 >
                   <div
-                    class="css-1j909cg"
+                    class="emotion-31"
                   >
                     <div
-                      class="css-1xkyebe"
+                      class="emotion-0"
                       data-testid="story"
                     >
                       <div
-                        class="css-jxxswp"
+                        class="emotion-1"
                         id=""
                       >
                         <div
-                          class="css-xhp9da"
+                          class="emotion-2"
                         />
                       </div>
                       <div
@@ -1546,15 +2446,15 @@ exports[`Stories darkTheme snapshot 1`] = `
                       >
                         <div>
                           <div
-                            class="css-154oin1"
+                            class="emotion-35"
                             data-testid="story"
                             id="id-of-single"
                           >
                             <div
-                              class="story-render-container css-dhmrnb"
+                              class="story-render-container emotion-36"
                             >
                               <h2
-                                class="css-229nmx"
+                                class="emotion-97"
                               >
                                 Components
                               </h2>
@@ -1586,20 +2486,399 @@ exports[`Stories darkTheme snapshot 1`] = `
 
 exports[`Stories notCollapsible snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -20px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-12 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-12 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-14 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-14 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-16 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-16 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-16 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+}
+
+.emotion-17:disabled {
+  color: #aaa;
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  overflow: inherit;
+}
+
+.emotion-28 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  transform-origin: top left;
+  -webkit-transition: -webkit-transform .2s;
+  transition: transform .2s;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-32 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.emotion-33 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  all: unset;
+}
+
+.emotion-64 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+.emotion-94 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+<div
+    class="emotion-0"
     data-testid="stories"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id="stories"
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       >
         <a
           aria-label="navigate to Stories section"
-          class="css-1ptrway-LinkHeading"
+          class="emotion-3"
           data-id="stories"
           data-level="4"
           data-title="Stories"
@@ -1622,26 +2901,26 @@ exports[`Stories notCollapsible snapshot 1`] = `
           </svg>
         </a>
         <h4
-          class="css-vsfm4-BlockContainer"
+          class="emotion-4"
         >
           Stories
         </h4>
       </div>
     </div>
     <div
-      class="css-1xkyebe"
+      class="emotion-0"
       data-testid="playground"
     >
       <div
-        class="css-jxxswp"
+        class="emotion-1"
         id="button"
       >
         <div
-          class="css-xhp9da"
+          class="emotion-2"
         >
           <a
             aria-label="navigate to button section"
-            class="css-1ptrway-LinkHeading"
+            class="emotion-3"
             data-id="button"
             data-level="4"
             data-title="button"
@@ -1664,7 +2943,7 @@ exports[`Stories notCollapsible snapshot 1`] = `
             </svg>
           </a>
           <h4
-            class="css-vsfm4-BlockContainer"
+            class="emotion-4"
           >
             button
           </h4>
@@ -1672,37 +2951,37 @@ exports[`Stories notCollapsible snapshot 1`] = `
       </div>
       <div>
         <div
-          class="css-15owl46"
+          class="emotion-10"
         >
           <div
-            class="css-x60p33"
+            class="emotion-11"
           >
             <div
-              class="css-rkyxeq"
+              class="emotion-12"
             >
               <button
                 aria-label="switch light and dark background"
-                class="css-1tf4h46"
+                class="emotion-13"
               >
                 dark
               </button>
             </div>
             <div
-              class="css-7d11p2"
+              class="emotion-14"
             >
               <button
                 aria-label="switch left to right/right to left"
-                class="css-1tf4h46"
+                class="emotion-13"
               >
                 RTL
               </button>
             </div>
             <div
-              class="css-q7w4rh"
+              class="emotion-16"
             >
               <button
                 aria-label="reset zoom"
-                class="css-97huhz"
+                class="emotion-17"
                 style="padding-top: 3px; padding-bottom: 3px;"
               >
                 <svg
@@ -1723,11 +3002,11 @@ exports[`Stories notCollapsible snapshot 1`] = `
               </button>
             </div>
             <div
-              class="css-q7w4rh"
+              class="emotion-16"
             >
               <button
                 aria-label="zoom out"
-                class="css-97huhz"
+                class="emotion-17"
                 style="padding-top: 3px; padding-bottom: 3px;"
               >
                 <svg
@@ -1748,11 +3027,11 @@ exports[`Stories notCollapsible snapshot 1`] = `
               </button>
             </div>
             <div
-              class="css-7d11p2"
+              class="emotion-14"
             >
               <button
                 aria-label="zoom in"
-                class="css-97huhz"
+                class="emotion-17"
                 style="padding-top: 3px; padding-bottom: 3px;"
               >
                 <svg
@@ -1773,21 +3052,21 @@ exports[`Stories notCollapsible snapshot 1`] = `
               </button>
             </div>
             <div
-              class="css-q7w4rh"
+              class="emotion-16"
             >
               <button
                 aria-label="display story source code"
-                class="css-1tf4h46"
+                class="emotion-13"
               >
                 open source
               </button>
             </div>
             <div
-              class="css-q7w4rh"
+              class="emotion-16"
             >
               <button
                 aria-label="display story configuration object"
-                class="css-1tf4h46"
+                class="emotion-13"
               >
                 open config
               </button>
@@ -1795,27 +3074,27 @@ exports[`Stories notCollapsible snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-eqxzio"
+          class="emotion-26"
         >
           <div
             style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
           >
             <div
-              class="css-1s8zxab"
+              class="emotion-27"
             >
               <div
-                class="css-1j909cg"
+                class="emotion-28"
               >
                 <div
-                  class="css-1xkyebe"
+                  class="emotion-0"
                   data-testid="story"
                 >
                   <div
-                    class="css-jxxswp"
+                    class="emotion-1"
                     id=""
                   >
                     <div
-                      class="css-xhp9da"
+                      class="emotion-2"
                     />
                   </div>
                   <div
@@ -1825,15 +3104,15 @@ exports[`Stories notCollapsible snapshot 1`] = `
                   >
                     <div>
                       <div
-                        class="css-154oin1"
+                        class="emotion-32"
                         data-testid="story"
                         id="id-of-button-story"
                       >
                         <div
-                          class="story-render-container css-dhmrnb"
+                          class="story-render-container emotion-33"
                         >
                           <button
-                            class="css-97huhz"
+                            class="emotion-17"
                           >
                             test
                           </button>
@@ -1858,19 +3137,19 @@ exports[`Stories notCollapsible snapshot 1`] = `
       </div>
     </div>
     <div
-      class="css-1xkyebe"
+      class="emotion-0"
       data-testid="playground"
     >
       <div
-        class="css-jxxswp"
+        class="emotion-1"
         id="controls"
       >
         <div
-          class="css-xhp9da"
+          class="emotion-2"
         >
           <a
             aria-label="navigate to controls section"
-            class="css-1ptrway-LinkHeading"
+            class="emotion-3"
             data-id="controls"
             data-level="4"
             data-title="controls"
@@ -1893,7 +3172,7 @@ exports[`Stories notCollapsible snapshot 1`] = `
             </svg>
           </a>
           <h4
-            class="css-vsfm4-BlockContainer"
+            class="emotion-4"
           >
             controls
           </h4>
@@ -1901,37 +3180,37 @@ exports[`Stories notCollapsible snapshot 1`] = `
       </div>
       <div>
         <div
-          class="css-15owl46"
+          class="emotion-10"
         >
           <div
-            class="css-x60p33"
+            class="emotion-11"
           >
             <div
-              class="css-rkyxeq"
+              class="emotion-12"
             >
               <button
                 aria-label="switch light and dark background"
-                class="css-1tf4h46"
+                class="emotion-13"
               >
                 dark
               </button>
             </div>
             <div
-              class="css-7d11p2"
+              class="emotion-14"
             >
               <button
                 aria-label="switch left to right/right to left"
-                class="css-1tf4h46"
+                class="emotion-13"
               >
                 RTL
               </button>
             </div>
             <div
-              class="css-q7w4rh"
+              class="emotion-16"
             >
               <button
                 aria-label="reset zoom"
-                class="css-97huhz"
+                class="emotion-17"
                 style="padding-top: 3px; padding-bottom: 3px;"
               >
                 <svg
@@ -1952,11 +3231,11 @@ exports[`Stories notCollapsible snapshot 1`] = `
               </button>
             </div>
             <div
-              class="css-q7w4rh"
+              class="emotion-16"
             >
               <button
                 aria-label="zoom out"
-                class="css-97huhz"
+                class="emotion-17"
                 style="padding-top: 3px; padding-bottom: 3px;"
               >
                 <svg
@@ -1977,11 +3256,11 @@ exports[`Stories notCollapsible snapshot 1`] = `
               </button>
             </div>
             <div
-              class="css-7d11p2"
+              class="emotion-14"
             >
               <button
                 aria-label="zoom in"
-                class="css-97huhz"
+                class="emotion-17"
                 style="padding-top: 3px; padding-bottom: 3px;"
               >
                 <svg
@@ -2002,21 +3281,21 @@ exports[`Stories notCollapsible snapshot 1`] = `
               </button>
             </div>
             <div
-              class="css-q7w4rh"
+              class="emotion-16"
             >
               <button
                 aria-label="display story source code"
-                class="css-1tf4h46"
+                class="emotion-13"
               >
                 open source
               </button>
             </div>
             <div
-              class="css-q7w4rh"
+              class="emotion-16"
             >
               <button
                 aria-label="display story configuration object"
-                class="css-1tf4h46"
+                class="emotion-13"
               >
                 open config
               </button>
@@ -2024,27 +3303,27 @@ exports[`Stories notCollapsible snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-eqxzio"
+          class="emotion-26"
         >
           <div
             style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
           >
             <div
-              class="css-1s8zxab"
+              class="emotion-27"
             >
               <div
-                class="css-1j909cg"
+                class="emotion-28"
               >
                 <div
-                  class="css-1xkyebe"
+                  class="emotion-0"
                   data-testid="story"
                 >
                   <div
-                    class="css-jxxswp"
+                    class="emotion-1"
                     id=""
                   >
                     <div
-                      class="css-xhp9da"
+                      class="emotion-2"
                     />
                   </div>
                   <div
@@ -2054,16 +3333,16 @@ exports[`Stories notCollapsible snapshot 1`] = `
                   >
                     <div>
                       <div
-                        class="css-154oin1"
+                        class="emotion-32"
                         data-testid="story"
                         id="blocks-core-story-plain--controls"
                       >
                         <div
-                          class="story-render-container css-dhmrnb"
+                          class="story-render-container emotion-33"
                         >
                           <svg
                             aria-label="example donut graphic"
-                            class="css-14d2907"
+                            class="emotion-64"
                             fill="none"
                             height="128"
                             role="img"
@@ -2108,19 +3387,19 @@ exports[`Stories notCollapsible snapshot 1`] = `
       </div>
     </div>
     <div
-      class="css-1xkyebe"
+      class="emotion-0"
       data-testid="playground"
     >
       <div
-        class="css-jxxswp"
+        class="emotion-1"
         id="story"
       >
         <div
-          class="css-xhp9da"
+          class="emotion-2"
         >
           <a
             aria-label="navigate to story section"
-            class="css-1ptrway-LinkHeading"
+            class="emotion-3"
             data-id="story"
             data-level="4"
             data-title="story"
@@ -2143,7 +3422,7 @@ exports[`Stories notCollapsible snapshot 1`] = `
             </svg>
           </a>
           <h4
-            class="css-vsfm4-BlockContainer"
+            class="emotion-4"
           >
             story
           </h4>
@@ -2151,37 +3430,37 @@ exports[`Stories notCollapsible snapshot 1`] = `
       </div>
       <div>
         <div
-          class="css-15owl46"
+          class="emotion-10"
         >
           <div
-            class="css-x60p33"
+            class="emotion-11"
           >
             <div
-              class="css-rkyxeq"
+              class="emotion-12"
             >
               <button
                 aria-label="switch light and dark background"
-                class="css-1tf4h46"
+                class="emotion-13"
               >
                 dark
               </button>
             </div>
             <div
-              class="css-7d11p2"
+              class="emotion-14"
             >
               <button
                 aria-label="switch left to right/right to left"
-                class="css-1tf4h46"
+                class="emotion-13"
               >
                 RTL
               </button>
             </div>
             <div
-              class="css-q7w4rh"
+              class="emotion-16"
             >
               <button
                 aria-label="reset zoom"
-                class="css-97huhz"
+                class="emotion-17"
                 style="padding-top: 3px; padding-bottom: 3px;"
               >
                 <svg
@@ -2202,11 +3481,11 @@ exports[`Stories notCollapsible snapshot 1`] = `
               </button>
             </div>
             <div
-              class="css-q7w4rh"
+              class="emotion-16"
             >
               <button
                 aria-label="zoom out"
-                class="css-97huhz"
+                class="emotion-17"
                 style="padding-top: 3px; padding-bottom: 3px;"
               >
                 <svg
@@ -2227,11 +3506,11 @@ exports[`Stories notCollapsible snapshot 1`] = `
               </button>
             </div>
             <div
-              class="css-7d11p2"
+              class="emotion-14"
             >
               <button
                 aria-label="zoom in"
-                class="css-97huhz"
+                class="emotion-17"
                 style="padding-top: 3px; padding-bottom: 3px;"
               >
                 <svg
@@ -2252,21 +3531,21 @@ exports[`Stories notCollapsible snapshot 1`] = `
               </button>
             </div>
             <div
-              class="css-q7w4rh"
+              class="emotion-16"
             >
               <button
                 aria-label="display story source code"
-                class="css-1tf4h46"
+                class="emotion-13"
               >
                 open source
               </button>
             </div>
             <div
-              class="css-q7w4rh"
+              class="emotion-16"
             >
               <button
                 aria-label="display story configuration object"
-                class="css-1tf4h46"
+                class="emotion-13"
               >
                 open config
               </button>
@@ -2274,27 +3553,27 @@ exports[`Stories notCollapsible snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-eqxzio"
+          class="emotion-26"
         >
           <div
             style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
           >
             <div
-              class="css-1s8zxab"
+              class="emotion-27"
             >
               <div
-                class="css-1j909cg"
+                class="emotion-28"
               >
                 <div
-                  class="css-1xkyebe"
+                  class="emotion-0"
                   data-testid="story"
                 >
                   <div
-                    class="css-jxxswp"
+                    class="emotion-1"
                     id=""
                   >
                     <div
-                      class="css-xhp9da"
+                      class="emotion-2"
                     />
                   </div>
                   <div
@@ -2304,15 +3583,15 @@ exports[`Stories notCollapsible snapshot 1`] = `
                   >
                     <div>
                       <div
-                        class="css-154oin1"
+                        class="emotion-32"
                         data-testid="story"
                         id="id-of-single"
                       >
                         <div
-                          class="story-render-container css-dhmrnb"
+                          class="story-render-container emotion-33"
                         >
                           <h2
-                            class="css-229nmx"
+                            class="emotion-94"
                           >
                             Components
                           </h2>
@@ -2342,20 +3621,470 @@ exports[`Stories notCollapsible snapshot 1`] = `
 
 exports[`Stories overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -22px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -20px;
+}
+
+.emotion-11:hover {
+  visibility: visible;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-15 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-15 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-16 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-17 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-17 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-19 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-19 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-19 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-20 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+}
+
+.emotion-20:disabled {
+  color: #aaa;
+}
+
+.emotion-29 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-30 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  overflow: inherit;
+}
+
+.emotion-31 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  transform-origin: top left;
+  -webkit-transition: -webkit-transform .2s;
+  transition: transform .2s;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-35 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.emotion-36 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  all: unset;
+}
+
+.emotion-67 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+.emotion-97 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+<div
+    class="emotion-0"
     data-testid="stories"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id="stories"
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       >
         <a
           aria-label="navigate to Stories section"
-          class="css-walqom-LinkHeading"
+          class="emotion-3"
           data-id="stories"
           data-level="3"
           data-title="Stories"
@@ -2378,18 +4107,18 @@ exports[`Stories overview snapshot 1`] = `
           </svg>
         </a>
         <h3
-          class="css-16ist9v-BlockContainer"
+          class="emotion-4"
         >
           <div
-            class="css-tmrrvx"
+            class="emotion-5"
           >
             Stories
             <a
               aria-expanded="true"
-              class="css-1t48u3b-BlockContainer"
+              class="emotion-6"
             >
               <span
-                class="css-1ibxxpj"
+                class="emotion-7"
               >
                 <svg
                   aria-hidden="true"
@@ -2419,19 +4148,19 @@ exports[`Stories overview snapshot 1`] = `
     >
       <div>
         <div
-          class="css-1xkyebe"
+          class="emotion-0"
           data-testid="playground"
         >
           <div
-            class="css-jxxswp"
+            class="emotion-1"
             id="button"
           >
             <div
-              class="css-xhp9da"
+              class="emotion-2"
             >
               <a
                 aria-label="navigate to button section"
-                class="css-1ptrway-LinkHeading"
+                class="emotion-11"
                 data-id="button"
                 data-level="4"
                 data-title="button"
@@ -2454,7 +4183,7 @@ exports[`Stories overview snapshot 1`] = `
                 </svg>
               </a>
               <h4
-                class="css-vsfm4-BlockContainer"
+                class="emotion-12"
               >
                 button
               </h4>
@@ -2462,37 +4191,37 @@ exports[`Stories overview snapshot 1`] = `
           </div>
           <div>
             <div
-              class="css-15owl46"
+              class="emotion-13"
             >
               <div
-                class="css-x60p33"
+                class="emotion-14"
               >
                 <div
-                  class="css-rkyxeq"
+                  class="emotion-15"
                 >
                   <button
                     aria-label="switch light and dark background"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     dark
                   </button>
                 </div>
                 <div
-                  class="css-7d11p2"
+                  class="emotion-17"
                 >
                   <button
                     aria-label="switch left to right/right to left"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     RTL
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="reset zoom"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -2513,11 +4242,11 @@ exports[`Stories overview snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="zoom out"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -2538,11 +4267,11 @@ exports[`Stories overview snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-7d11p2"
+                  class="emotion-17"
                 >
                   <button
                     aria-label="zoom in"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -2563,21 +4292,21 @@ exports[`Stories overview snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="display story source code"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     open source
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="display story configuration object"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     open config
                   </button>
@@ -2585,27 +4314,27 @@ exports[`Stories overview snapshot 1`] = `
               </div>
             </div>
             <div
-              class="css-eqxzio"
+              class="emotion-29"
             >
               <div
                 style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
               >
                 <div
-                  class="css-1s8zxab"
+                  class="emotion-30"
                 >
                   <div
-                    class="css-1j909cg"
+                    class="emotion-31"
                   >
                     <div
-                      class="css-1xkyebe"
+                      class="emotion-0"
                       data-testid="story"
                     >
                       <div
-                        class="css-jxxswp"
+                        class="emotion-1"
                         id=""
                       >
                         <div
-                          class="css-xhp9da"
+                          class="emotion-2"
                         />
                       </div>
                       <div
@@ -2615,15 +4344,15 @@ exports[`Stories overview snapshot 1`] = `
                       >
                         <div>
                           <div
-                            class="css-154oin1"
+                            class="emotion-35"
                             data-testid="story"
                             id="id-of-button-story"
                           >
                             <div
-                              class="story-render-container css-dhmrnb"
+                              class="story-render-container emotion-36"
                             >
                               <button
-                                class="css-97huhz"
+                                class="emotion-20"
                               >
                                 test
                               </button>
@@ -2648,19 +4377,19 @@ exports[`Stories overview snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-1xkyebe"
+          class="emotion-0"
           data-testid="playground"
         >
           <div
-            class="css-jxxswp"
+            class="emotion-1"
             id="controls"
           >
             <div
-              class="css-xhp9da"
+              class="emotion-2"
             >
               <a
                 aria-label="navigate to controls section"
-                class="css-1ptrway-LinkHeading"
+                class="emotion-11"
                 data-id="controls"
                 data-level="4"
                 data-title="controls"
@@ -2683,7 +4412,7 @@ exports[`Stories overview snapshot 1`] = `
                 </svg>
               </a>
               <h4
-                class="css-vsfm4-BlockContainer"
+                class="emotion-12"
               >
                 controls
               </h4>
@@ -2691,37 +4420,37 @@ exports[`Stories overview snapshot 1`] = `
           </div>
           <div>
             <div
-              class="css-15owl46"
+              class="emotion-13"
             >
               <div
-                class="css-x60p33"
+                class="emotion-14"
               >
                 <div
-                  class="css-rkyxeq"
+                  class="emotion-15"
                 >
                   <button
                     aria-label="switch light and dark background"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     dark
                   </button>
                 </div>
                 <div
-                  class="css-7d11p2"
+                  class="emotion-17"
                 >
                   <button
                     aria-label="switch left to right/right to left"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     RTL
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="reset zoom"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -2742,11 +4471,11 @@ exports[`Stories overview snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="zoom out"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -2767,11 +4496,11 @@ exports[`Stories overview snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-7d11p2"
+                  class="emotion-17"
                 >
                   <button
                     aria-label="zoom in"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -2792,21 +4521,21 @@ exports[`Stories overview snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="display story source code"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     open source
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="display story configuration object"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     open config
                   </button>
@@ -2814,27 +4543,27 @@ exports[`Stories overview snapshot 1`] = `
               </div>
             </div>
             <div
-              class="css-eqxzio"
+              class="emotion-29"
             >
               <div
                 style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
               >
                 <div
-                  class="css-1s8zxab"
+                  class="emotion-30"
                 >
                   <div
-                    class="css-1j909cg"
+                    class="emotion-31"
                   >
                     <div
-                      class="css-1xkyebe"
+                      class="emotion-0"
                       data-testid="story"
                     >
                       <div
-                        class="css-jxxswp"
+                        class="emotion-1"
                         id=""
                       >
                         <div
-                          class="css-xhp9da"
+                          class="emotion-2"
                         />
                       </div>
                       <div
@@ -2844,16 +4573,16 @@ exports[`Stories overview snapshot 1`] = `
                       >
                         <div>
                           <div
-                            class="css-154oin1"
+                            class="emotion-35"
                             data-testid="story"
                             id="blocks-core-story-plain--controls"
                           >
                             <div
-                              class="story-render-container css-dhmrnb"
+                              class="story-render-container emotion-36"
                             >
                               <svg
                                 aria-label="example donut graphic"
-                                class="css-14d2907"
+                                class="emotion-67"
                                 fill="none"
                                 height="128"
                                 role="img"
@@ -2898,19 +4627,19 @@ exports[`Stories overview snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-1xkyebe"
+          class="emotion-0"
           data-testid="playground"
         >
           <div
-            class="css-jxxswp"
+            class="emotion-1"
             id="story"
           >
             <div
-              class="css-xhp9da"
+              class="emotion-2"
             >
               <a
                 aria-label="navigate to story section"
-                class="css-1ptrway-LinkHeading"
+                class="emotion-11"
                 data-id="story"
                 data-level="4"
                 data-title="story"
@@ -2933,7 +4662,7 @@ exports[`Stories overview snapshot 1`] = `
                 </svg>
               </a>
               <h4
-                class="css-vsfm4-BlockContainer"
+                class="emotion-12"
               >
                 story
               </h4>
@@ -2941,37 +4670,37 @@ exports[`Stories overview snapshot 1`] = `
           </div>
           <div>
             <div
-              class="css-15owl46"
+              class="emotion-13"
             >
               <div
-                class="css-x60p33"
+                class="emotion-14"
               >
                 <div
-                  class="css-rkyxeq"
+                  class="emotion-15"
                 >
                   <button
                     aria-label="switch light and dark background"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     dark
                   </button>
                 </div>
                 <div
-                  class="css-7d11p2"
+                  class="emotion-17"
                 >
                   <button
                     aria-label="switch left to right/right to left"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     RTL
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="reset zoom"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -2992,11 +4721,11 @@ exports[`Stories overview snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="zoom out"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -3017,11 +4746,11 @@ exports[`Stories overview snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-7d11p2"
+                  class="emotion-17"
                 >
                   <button
                     aria-label="zoom in"
-                    class="css-97huhz"
+                    class="emotion-20"
                     style="padding-top: 3px; padding-bottom: 3px;"
                   >
                     <svg
@@ -3042,21 +4771,21 @@ exports[`Stories overview snapshot 1`] = `
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="display story source code"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     open source
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-19"
                 >
                   <button
                     aria-label="display story configuration object"
-                    class="css-1tf4h46"
+                    class="emotion-16"
                   >
                     open config
                   </button>
@@ -3064,27 +4793,27 @@ exports[`Stories overview snapshot 1`] = `
               </div>
             </div>
             <div
-              class="css-eqxzio"
+              class="emotion-29"
             >
               <div
                 style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
               >
                 <div
-                  class="css-1s8zxab"
+                  class="emotion-30"
                 >
                   <div
-                    class="css-1j909cg"
+                    class="emotion-31"
                   >
                     <div
-                      class="css-1xkyebe"
+                      class="emotion-0"
                       data-testid="story"
                     >
                       <div
-                        class="css-jxxswp"
+                        class="emotion-1"
                         id=""
                       >
                         <div
-                          class="css-xhp9da"
+                          class="emotion-2"
                         />
                       </div>
                       <div
@@ -3094,15 +4823,15 @@ exports[`Stories overview snapshot 1`] = `
                       >
                         <div>
                           <div
-                            class="css-154oin1"
+                            class="emotion-35"
                             data-testid="story"
                             id="id-of-single"
                           >
                             <div
-                              class="story-render-container css-dhmrnb"
+                              class="story-render-container emotion-36"
                             >
                               <h2
-                                class="css-229nmx"
+                                class="emotion-97"
                               >
                                 Components
                               </h2>

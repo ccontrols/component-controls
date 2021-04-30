@@ -2,9 +2,28 @@
 
 exports[`FilesEditor overview snapshot 1`] = `
 <DocumentFragment>
-  <input
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+}
+
+<input
     accept="image/*"
-    class="css-iyqgnx"
+    class="emotion-0"
     multiple=""
     name="prop"
     placeholder="select files"

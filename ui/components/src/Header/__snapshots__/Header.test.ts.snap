@@ -2,8 +2,39 @@
 
 exports[`Header overview snapshot 1`] = `
 <DocumentFragment>
-  <header
-    class="css-10bhldn"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  top: 0;
+  left: auto;
+  right: 0;
+  z-index: 10;
+  -webkit-position: sticky;
+  position: sticky;
+  background-color: #ffffff;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-bottom: 4px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+<header
+    class="emotion-0"
   >
     header
   </header>

@@ -2,27 +2,336 @@
 
 exports[`Container overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-vurnku"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  line-height: 1.25;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 40em) {
+  .emotion-7 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: baseline;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+  }
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 12px;
+  color: #69768C;
+  margin-right: 4px;
+  line-height: 1.25;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  margin-left: 8px;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 0;
+}
+
+@media screen and (min-width: 40em) {
+  .emotion-14 {
+    margin-left: 8px;
+  }
+}
+
+.emotion-19 {
+  padding-top: 8px;
+}
+
+.emotion-20 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-top: 32px;
+}
+
+.emotion-21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding-bottom: 0;
+}
+
+.emotion-22 {
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 42px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.emotion-23 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #69768C;
+  font-weight: 400;
+  padding-bottom: 8px;
+}
+
+.emotion-24 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.emotion-25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.emotion-28 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-29 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-30 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 14px;
+  color: #69768C;
+  padding-bottom: 8px;
+}
+
+.emotion-31 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 20px;
+  color: #5c6ac4;
+  font-weight: 700;
+}
+
+.emotion-32 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 300px;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-vurnku"
+      class="emotion-0"
     >
       <div
-        class="css-1nu2k4w"
+        class="emotion-2"
       >
         <div
-          class="css-1h9kuou"
+          class="emotion-3"
         >
           <a
             aria-label="edit this page"
-            class="css-1t54e2w"
+            class="emotion-4"
             href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
             rel="noopener noreferrer"
             target="_blank"
           >
             <div
-              class="css-f5h6sg"
+              class="emotion-5"
             >
               <svg
                 aria-hidden="true"
@@ -40,7 +349,7 @@ exports[`Container overview snapshot 1`] = `
                 />
               </svg>
               <span
-                class="css-6amu4j"
+                class="emotion-6"
               >
                 Edit this page
               </span>
@@ -48,52 +357,52 @@ exports[`Container overview snapshot 1`] = `
           </a>
         </div>
         <div
-          class="css-crmp15"
+          class="emotion-7"
         >
           <div
-            class="css-zf8zhj"
+            class="emotion-8"
           >
             <span
-              class="css-13o2efz"
+              class="emotion-9"
             >
               created:
             </span>
             <span
-              class="css-uv6qe8"
+              class="emotion-10"
             >
               1/1/2020
             </span>
           </div>
           <div
-            class="css-tk62ho-Container"
+            class="emotion-11"
           >
             <span
-              class="css-13o2efz"
+              class="emotion-9"
             >
               updated:
             </span>
             <span
-              class="css-uv6qe8"
+              class="emotion-10"
             >
               3/31/2020
             </span>
           </div>
           <div
-            class="css-lllzso"
+            class="emotion-14"
           >
             <div
-              class="css-zf8zhj"
+              class="emotion-8"
             >
               <span
-                class="css-13o2efz"
+                class="emotion-9"
               >
                 by
               </span>
               <span
-                class="css-uv6qe8"
+                class="emotion-10"
               >
                 <a
-                  class="css-1t54e2w"
+                  class="emotion-4"
                   href="/authors/atanasster"
                 >
                   atanasster
@@ -104,55 +413,55 @@ exports[`Container overview snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-sj1i65-Container"
+        class="emotion-19"
       />
       <div
-        class="css-i0y2du"
+        class="emotion-20"
       >
         <div
-          class="css-1k9l6xu-Container"
+          class="emotion-21"
         >
           <h1
-            class="css-ymxumn"
+            class="emotion-22"
           >
             Story
           </h1>
         </div>
       </div>
       <h2
-        class="css-1uqrmoi"
+        class="emotion-23"
       >
         story subtitle
       </h2>
       <div
-        class="css-5qse13"
+        class="emotion-24"
       >
         <div
-          class="css-8r2q2l"
+          class="emotion-25"
         >
           <div
-            class="css-vurnku"
+            class="emotion-0"
           />
           <div
-            class="css-vurnku"
+            class="emotion-0"
           >
             <a
-              class="css-10zwoio"
+              class="emotion-28"
               href="/docs/mdx-story"
             >
               <div
-                class="css-1my6hv5"
+                class="emotion-29"
               >
                 <span
-                  class="css-c3r86m"
+                  class="emotion-30"
                 >
                   Next
                 </span>
                 <div
-                  class="css-9tifnv"
+                  class="emotion-31"
                 >
                   <span
-                    class="css-1s8umv4"
+                    class="emotion-32"
                   >
                     MDX Story
                   </span>

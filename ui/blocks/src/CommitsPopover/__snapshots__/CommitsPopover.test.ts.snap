@@ -2,22 +2,49 @@
 
 exports[`CommitsPopover overview snapshot 1`] = `
 <DocumentFragment>
-  <div
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-0:hover {
+  cursor: pointer;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 12px;
+  margin-right: 4px;
+  line-height: heading;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<div
     style="display: inline-block;"
   >
     <a
-      class="css-1fukkpf-CommitsPopover"
+      class="emotion-0"
     >
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-x25fu2-CommitsPopover"
+          class="emotion-2"
         >
           commits:
         </div>
         <span
-          class="css-vurnku"
+          class="emotion-1"
         >
           12
         </span>

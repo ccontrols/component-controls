@@ -2,9 +2,28 @@
 
 exports[`NumberEditor overview snapshot 1`] = `
 <DocumentFragment>
-  <input
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+}
+
+<input
     aria-label="enter a numeric value between 3 and 22"
-    class="css-iyqgnx"
+    class="emotion-0"
     max="22"
     min="3"
     name="prop"
@@ -16,18 +35,84 @@ exports[`NumberEditor overview snapshot 1`] = `
 
 exports[`NumberEditor range snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-vurnku"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  border-radius: 9999px;
+  color: inherit;
+  background-color: gray;
+}
+
+.emotion-2:focus {
+  outline: none;
+  color: primary;
+}
+
+.emotion-2::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: currentcolor;
+  border: 0;
+  border-radius: 9999px;
+}
+
+.emotion-2::-moz-range-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: currentcolor;
+  border: 0;
+  border-radius: 9999px;
+}
+
+.emotion-2::-ms-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: currentcolor;
+  border: 0;
+  border-radius: 9999px;
+}
+
+<div
+    class="emotion-0"
   >
     <span
       aria-labelledby=""
-      class="css-vurnku"
+      class="emotion-0"
     >
       3
     </span>
     <input
       aria-label="select a numeric value between 3 and 22"
-      class="css-mo64tj"
+      class="emotion-2"
       max="22"
       min="3"
       name="prop"
@@ -35,7 +120,7 @@ exports[`NumberEditor range snapshot 1`] = `
       value="10"
     />
     <span
-      class="css-vurnku"
+      class="emotion-0"
     >
       10 / 22
     </span>
@@ -45,9 +130,28 @@ exports[`NumberEditor range snapshot 1`] = `
 
 exports[`NumberEditor step snapshot 1`] = `
 <DocumentFragment>
-  <input
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+}
+
+<input
     aria-label="enter a numeric value between 3 and 22"
-    class="css-iyqgnx"
+    class="emotion-0"
     max="22"
     min="3"
     name="prop"

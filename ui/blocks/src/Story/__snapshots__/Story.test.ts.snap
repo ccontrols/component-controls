@@ -2,20 +2,156 @@
 
 exports[`Story customTitle snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -22px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  all: unset;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+<div
+    class="emotion-0"
     data-testid="story"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id="my-story-title"
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       >
         <a
           aria-label="navigate to My Story Title section"
-          class="css-walqom-LinkHeading"
+          class="emotion-3"
           data-id="my-story-title"
           data-level="3"
           data-title="My Story Title"
@@ -38,18 +174,18 @@ exports[`Story customTitle snapshot 1`] = `
           </svg>
         </a>
         <h3
-          class="css-16ist9v-BlockContainer"
+          class="emotion-4"
         >
           <div
-            class="css-tmrrvx"
+            class="emotion-5"
           >
             My Story Title
             <a
               aria-expanded="true"
-              class="css-1t48u3b-BlockContainer"
+              class="emotion-6"
             >
               <span
-                class="css-1ibxxpj"
+                class="emotion-7"
               >
                 <svg
                   aria-hidden="true"
@@ -79,16 +215,16 @@ exports[`Story customTitle snapshot 1`] = `
     >
       <div>
         <div
-          class="css-154oin1"
+          class="emotion-8"
           data-testid="story"
           id="blocks-core-story-plain--controls"
         >
           <div
-            class="story-render-container css-dhmrnb"
+            class="story-render-container emotion-9"
           >
             <svg
               aria-label="example donut graphic"
-              class="css-14d2907"
+              class="emotion-10"
               fill="none"
               height="128"
               role="img"
@@ -122,16 +258,83 @@ exports[`Story customTitle snapshot 1`] = `
 
 exports[`Story description snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  all: unset;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+<div
+    class="emotion-0"
     data-testid="story"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id=""
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       />
     </div>
     <div
@@ -141,15 +344,15 @@ exports[`Story description snapshot 1`] = `
     >
       <div>
         <div
-          class="css-154oin1"
+          class="emotion-3"
           data-testid="story"
           id="id-of-story"
         >
           <div
-            class="story-render-container css-dhmrnb"
+            class="story-render-container emotion-4"
           >
             <h2
-              class="css-229nmx"
+              class="emotion-5"
             >
               Components
             </h2>
@@ -163,16 +366,67 @@ exports[`Story description snapshot 1`] = `
 
 exports[`Story iframe snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+<div
+    class="emotion-0"
     data-testid="story"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id=""
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       />
     </div>
     <div
@@ -182,7 +436,7 @@ exports[`Story iframe snapshot 1`] = `
     >
       <div>
         <div
-          class="css-154oin1"
+          class="emotion-3"
           data-testid="story"
           id="blocks-core-story-plain--controls"
         >
@@ -199,20 +453,122 @@ exports[`Story iframe snapshot 1`] = `
 
 exports[`Story notCollapsible snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -20px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  all: unset;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+<div
+    class="emotion-0"
     data-testid="story"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id="story-blocks-core-story-plain--controls"
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       >
         <a
           aria-label="navigate to controls section"
-          class="css-1ptrway-LinkHeading"
+          class="emotion-3"
           data-id="story-blocks-core-story-plain--controls"
           data-level="4"
           data-title="controls"
@@ -235,23 +591,23 @@ exports[`Story notCollapsible snapshot 1`] = `
           </svg>
         </a>
         <h4
-          class="css-vsfm4-BlockContainer"
+          class="emotion-4"
         >
           controls
         </h4>
       </div>
     </div>
     <div
-      class="css-154oin1"
+      class="emotion-5"
       data-testid="story"
       id="blocks-core-story-plain--controls"
     >
       <div
-        class="story-render-container css-dhmrnb"
+        class="story-render-container emotion-6"
       >
         <svg
           aria-label="example donut graphic"
-          class="css-14d2907"
+          class="emotion-7"
           fill="none"
           height="128"
           role="img"
@@ -283,16 +639,81 @@ exports[`Story notCollapsible snapshot 1`] = `
 
 exports[`Story overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  all: unset;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+<div
+    class="emotion-0"
     data-testid="story"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id=""
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       />
     </div>
     <div
@@ -302,16 +723,16 @@ exports[`Story overview snapshot 1`] = `
     >
       <div>
         <div
-          class="css-154oin1"
+          class="emotion-3"
           data-testid="story"
           id="blocks-core-story-plain--controls"
         >
           <div
-            class="story-render-container css-dhmrnb"
+            class="story-render-container emotion-4"
           >
             <svg
               aria-label="example donut graphic"
-              class="css-14d2907"
+              class="emotion-5"
               fill="none"
               height="128"
               role="img"
@@ -345,20 +766,156 @@ exports[`Story overview snapshot 1`] = `
 
 exports[`Story title snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -22px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  all: unset;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+<div
+    class="emotion-0"
     data-testid="story"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id="story-blocks-core-story-plain--controls"
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       >
         <a
           aria-label="navigate to controls section"
-          class="css-walqom-LinkHeading"
+          class="emotion-3"
           data-id="story-blocks-core-story-plain--controls"
           data-level="3"
           data-title="controls"
@@ -381,18 +938,18 @@ exports[`Story title snapshot 1`] = `
           </svg>
         </a>
         <h3
-          class="css-16ist9v-BlockContainer"
+          class="emotion-4"
         >
           <div
-            class="css-tmrrvx"
+            class="emotion-5"
           >
             controls
             <a
               aria-expanded="true"
-              class="css-1t48u3b-BlockContainer"
+              class="emotion-6"
             >
               <span
-                class="css-1ibxxpj"
+                class="emotion-7"
               >
                 <svg
                   aria-hidden="true"
@@ -422,16 +979,16 @@ exports[`Story title snapshot 1`] = `
     >
       <div>
         <div
-          class="css-154oin1"
+          class="emotion-8"
           data-testid="story"
           id="blocks-core-story-plain--controls"
         >
           <div
-            class="story-render-container css-dhmrnb"
+            class="story-render-container emotion-9"
           >
             <svg
               aria-label="example donut graphic"
-              class="css-14d2907"
+              class="emotion-10"
               fill="none"
               height="128"
               role="img"

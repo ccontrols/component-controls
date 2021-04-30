@@ -2,31 +2,166 @@
 
 exports[`DocumentItem overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-127g8mg"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-0 p {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #69768C;
+  font-weight: 400;
+  padding-bottom: 8px;
+  margin-right: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(244,147,66,0.15);
+  border: 2px solid #f49342;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #69768C;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-4136op"
+      class="emotion-1"
     >
       <a
-        class="css-1t54e2w"
+        class="emotion-2"
         href="/docs/id-of-story"
       >
         <h2
-          class="css-cmp44e-DocumentItem"
+          class="emotion-3"
         >
           Story
         </h2>
       </a>
       <a
-        class="css-1t54e2w"
+        class="emotion-2"
         href="/docs"
       >
         <span
-          class="css-pqmwqh-Tag"
+          class="emotion-5"
         >
           <span
-            class="css-vurnku"
+            class="emotion-6"
           >
             story
           </span>
@@ -34,36 +169,36 @@ exports[`DocumentItem overview snapshot 1`] = `
       </a>
     </div>
     <div
-      class="css-1jbmnp7"
+      class="emotion-7"
     >
       <div
-        class="css-f5h6sg"
+        class="emotion-8"
       >
         <div
-          class="css-z4eqsg"
+          class="emotion-9"
         >
           created: 1/1/2020
         </div>
         <div
-          class="css-f5h6sg"
+          class="emotion-8"
         >
           <span
-            class="css-9cwl6c"
+            class="emotion-11"
           >
             ,
           </span>
           <span
-            class="css-12cl38p"
+            class="emotion-12"
           >
             by
           </span>
           <a
-            class="css-1t54e2w"
+            class="emotion-2"
             rel="noopener noreferrer"
             target="_blank"
           >
             <span
-              class="css-vurnku"
+              class="emotion-6"
             >
               atanasster
             </span>

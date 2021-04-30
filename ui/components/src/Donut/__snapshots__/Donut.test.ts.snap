@@ -2,9 +2,16 @@
 
 exports[`Donut overview snapshot 1`] = `
 <DocumentFragment>
-  <svg
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+<svg
     aria-label="donut graphic value 0.5 - from 0 tp 1"
-    class="css-14d2907"
+    class="emotion-0"
     fill="none"
     height="128"
     role="img"

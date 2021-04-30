@@ -2,15 +2,333 @@
 
 exports[`LocalDependencies overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3:hover a {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-4 .react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.emotion-4 .react-tabs__tab-list {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.emotion-4 .react-tabs__tab {
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  border-bottom: none;
+  bottom: -4px;
+  position: relative;
+  list-style: none;
+  padding: 4px 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+  color: #69768C;
+}
+
+.emotion-4 .react-tabs__tab a {
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.emotion-4 .react-tabs__tab:focus {
+  box-shadow: 0 0 5px hsl(208, 99%, 50%);
+  border-color: hsl(208, 99%, 50%);
+  outline: none;
+}
+
+.emotion-4 .react-tabs__tab:focus:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: #fff;
+}
+
+.emotion-4 .react-tabs__tab--selected {
+  border-bottom: 3px solid #5c6ac4;
+  color: #5c6ac4;
+}
+
+.emotion-4 .react-tabs__tab--disabled {
+  color: #69768C;
+  cursor: default;
+}
+
+.emotion-4 .react-tabs__tab-panel {
+  display: none;
+}
+
+.emotion-4 .react-tabs__tab-panel--selected {
+  display: block;
+}
+
+.emotion-4 .react-tabs__tab {
+  font-size: 14px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-5 p {
+  margin: 0;
+}
+
+.emotion-5 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-5 a {
+  word-break: break-word;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-14 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-16 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 14px;
+  line-height: 1.2rem;
+  white-space: nowrap;
+}
+
+.emotion-19 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-20 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(0,128,0,0.15);
+  border: 1px solid green;
+  margin-right: 4px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.2rem;
+}
+
+.emotion-22 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-23 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(211,211,211,0.15);
+  border: 1px solid lightgrey;
+  margin-right: 4px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.2rem;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id=""
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       />
     </div>
     <div
@@ -20,10 +338,10 @@ exports[`LocalDependencies overview snapshot 1`] = `
     >
       <div>
         <div
-          class="css-1d6wxci"
+          class="emotion-3"
         >
           <div
-            class="css-nm5f2c-Tabs"
+            class="emotion-4"
           >
             <div
               class="react-tabs"
@@ -62,44 +380,44 @@ exports[`LocalDependencies overview snapshot 1`] = `
                 role="tabpanel"
               >
                 <table
-                  class="css-11y77l0"
+                  class="emotion-5"
                   data-testid="local-dependencies"
                   role="table"
                 >
                   <thead
-                    class="css-14kw1rx"
+                    class="emotion-6"
                   >
                     <tr
-                      class="css-vurnku"
+                      class="emotion-7"
                       role="row"
                     >
                       <th
-                        class="css-n59tc9"
+                        class="emotion-8"
                         colspan="1"
                         role="columnheader"
                         style="width: 150px;"
                       >
                         <div
-                          class="css-wwqljn"
+                          class="emotion-9"
                         >
                           <div
-                            class="css-206mi5"
+                            class="emotion-10"
                           >
                             file
                           </div>
                         </div>
                       </th>
                       <th
-                        class="css-n59tc9"
+                        class="emotion-8"
                         colspan="1"
                         role="columnheader"
                         style="width: 150px;"
                       >
                         <div
-                          class="css-wwqljn"
+                          class="emotion-9"
                         >
                           <div
-                            class="css-206mi5"
+                            class="emotion-10"
                           >
                             imports
                           </div>
@@ -108,40 +426,40 @@ exports[`LocalDependencies overview snapshot 1`] = `
                     </tr>
                   </thead>
                   <tbody
-                    class="css-tuhk50"
+                    class="emotion-14"
                     role="rowgroup"
                   >
                     <tr
-                      class="css-ijvt85"
+                      class="emotion-15"
                       role="row"
                     >
                       <td
-                        class="css-1yjhfhu"
+                        class="emotion-16"
                         role="cell"
                         style="width: 150px;"
                       >
                         <span
-                          class="css-b7g03d-Cell"
+                          class="emotion-17"
                         >
                           "./Button"
                         </span>
                       </td>
                       <td
-                        class="css-1yjhfhu"
+                        class="emotion-16"
                         role="cell"
                         style="width: 150px;"
                       >
                         <div
-                          class="css-zivbkl-Cell"
+                          class="emotion-19"
                         >
                           <span
-                            class="css-1ver5lo-LocalImport"
+                            class="emotion-20"
                           >
                             <span
-                              class="css-vurnku"
+                              class="emotion-7"
                             >
                               <a
-                                class="css-1t54e2w"
+                                class="emotion-22"
                                 href="/docs/id-of-story"
                               >
                                 Button
@@ -149,10 +467,10 @@ exports[`LocalDependencies overview snapshot 1`] = `
                             </span>
                           </span>
                           <span
-                            class="css-9c8bof-LocalImport"
+                            class="emotion-23"
                           >
                             <span
-                              class="css-vurnku"
+                              class="emotion-7"
                             >
                               ButtonProps
                             </span>
@@ -161,33 +479,33 @@ exports[`LocalDependencies overview snapshot 1`] = `
                       </td>
                     </tr>
                     <tr
-                      class="css-ijvt85"
+                      class="emotion-15"
                       role="row"
                     >
                       <td
-                        class="css-1yjhfhu"
+                        class="emotion-16"
                         role="cell"
                         style="width: 150px;"
                       >
                         <span
-                          class="css-b7g03d-Cell"
+                          class="emotion-17"
                         >
                           "@component-controls/components"
                         </span>
                       </td>
                       <td
-                        class="css-1yjhfhu"
+                        class="emotion-16"
                         role="cell"
                         style="width: 150px;"
                       >
                         <div
-                          class="css-zivbkl-Cell"
+                          class="emotion-19"
                         >
                           <span
-                            class="css-9c8bof-LocalImport"
+                            class="emotion-23"
                           >
                             <span
-                              class="css-vurnku"
+                              class="emotion-7"
                             >
                               Table
                             </span>

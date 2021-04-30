@@ -2,15 +2,43 @@
 
 exports[`PageTypeTag overview snapshot 1`] = `
 <DocumentFragment>
-  <a
-    class="css-1t54e2w"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(244,147,66,0.15);
+  border: 2px solid #f49342;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+<a
+    class="emotion-0"
     href="/docs"
   >
     <span
-      class="css-pqmwqh-Tag"
+      class="emotion-1"
     >
       <span
-        class="css-vurnku"
+        class="emotion-2"
       >
         story
       </span>

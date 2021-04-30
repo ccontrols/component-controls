@@ -2,44 +2,1627 @@
 
 exports[`SidebarsPage overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-100p3zm"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-0 allsidebar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  position: relative;
+}
+
+.emotion-0 navsidebar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  min-height: 100vh;
+  position: relative;
+}
+
+.emotion-0 contextsidebar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  min-height: calc(100vh - 68px);
+  position: relative;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-2 .react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.emotion-2 .react-tabs__tab-list {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.emotion-2 .react-tabs__tab {
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  border-bottom: none;
+  bottom: -4px;
+  position: relative;
+  list-style: none;
+  padding: 4px 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+  color: #69768C;
+}
+
+.emotion-2 .react-tabs__tab a {
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.emotion-2 .react-tabs__tab:focus {
+  box-shadow: 0 0 5px hsl(208, 99%, 50%);
+  border-color: hsl(208, 99%, 50%);
+  outline: none;
+}
+
+.emotion-2 .react-tabs__tab:focus:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: #fff;
+}
+
+.emotion-2 .react-tabs__tab--selected {
+  border-bottom: 3px solid #5c6ac4;
+  color: #5c6ac4;
+}
+
+.emotion-2 .react-tabs__tab--disabled {
+  color: #69768C;
+  cursor: default;
+}
+
+.emotion-2 .react-tabs__tab-panel {
+  display: none;
+}
+
+.emotion-2 .react-tabs__tab-panel--selected {
+  display: block;
+}
+
+.emotion-2 .react-tabs__tab {
+  font-size: 16px;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  background-color: #ffffff;
+  color: #454f5b;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: auto;
+  width: 100%;
+  position: relative;
+  max-width: 1000px;
+}
+
+@media screen and (min-width: 40em) {
+  .emotion-3 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media screen and (min-width: 52em) {
+  .emotion-3 {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  line-height: 1.25;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 40em) {
+  .emotion-11 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: baseline;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+  }
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 12px;
+  color: #69768C;
+  margin-right: 4px;
+  line-height: 1.25;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  margin-left: 8px;
+}
+
+.emotion-18 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 0;
+}
+
+@media screen and (min-width: 40em) {
+  .emotion-18 {
+    margin-left: 8px;
+  }
+}
+
+.emotion-23 {
+  padding-top: 8px;
+}
+
+.emotion-24 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-top: 32px;
+}
+
+.emotion-25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding-bottom: 0;
+}
+
+.emotion-26 {
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 42px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #69768C;
+  font-weight: 400;
+  padding-bottom: 8px;
+}
+
+.emotion-28 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.emotion-30 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.emotion-31 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(173,216,230,0.15);
+  border: 1px solid lightblue;
+  margin-left: 4px;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1rem;
+  white-space: nowrap;
+  margin-left: 8px;
+}
+
+.emotion-33 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-33 .react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.emotion-33 .react-tabs__tab-list {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.emotion-33 .react-tabs__tab {
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  border-bottom: none;
+  bottom: -4px;
+  position: relative;
+  list-style: none;
+  padding: 4px 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+  color: #69768C;
+}
+
+.emotion-33 .react-tabs__tab a {
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.emotion-33 .react-tabs__tab:focus {
+  box-shadow: 0 0 5px hsl(208, 99%, 50%);
+  border-color: hsl(208, 99%, 50%);
+  outline: none;
+}
+
+.emotion-33 .react-tabs__tab:focus:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: #fff;
+}
+
+.emotion-33 .react-tabs__tab--selected {
+  border-bottom: 3px solid #5c6ac4;
+  color: #5c6ac4;
+}
+
+.emotion-33 .react-tabs__tab--disabled {
+  color: #69768C;
+  cursor: default;
+}
+
+.emotion-33 .react-tabs__tab-panel {
+  display: none;
+}
+
+.emotion-33 .react-tabs__tab-panel--selected {
+  display: block;
+}
+
+.emotion-33 .react-tabs__tab {
+  font-size: 14px;
+}
+
+.emotion-34 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-35 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-36 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-36:hover a {
+  visibility: visible;
+}
+
+.emotion-37 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -22px;
+}
+
+.emotion-37:hover {
+  visibility: visible;
+}
+
+.emotion-38 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-39 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-40 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.emotion-41 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-42 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-42:hover a {
+  visibility: visible;
+}
+
+.emotion-44 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-45 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-46 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-46 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-46 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-47 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-48 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-48 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-48 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-54 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-55 {
+  font-family: Menlo,monospace;
+  overflow-x: auto;
+  background-color: #e6e6e6;
+}
+
+.emotion-55 code {
+  color: inherit;
+}
+
+.emotion-57 {
+  display: inline-block;
+}
+
+.emotion-71 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.emotion-74 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-74 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-74 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-76 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-76 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-76 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-79 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+}
+
+.emotion-79:disabled {
+  color: #aaa;
+}
+
+.emotion-89 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  overflow: inherit;
+}
+
+.emotion-90 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  transform-origin: top left;
+  -webkit-transition: -webkit-transform .2s;
+  transition: transform .2s;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-94 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.emotion-95 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  all: unset;
+}
+
+.emotion-96 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.emotion-107 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-107 p {
+  margin: 0;
+}
+
+.emotion-107 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-107 a {
+  word-break: break-word;
+}
+
+.emotion-108 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-110 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-111 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-112 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-119 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-119 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-120 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-121 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+.emotion-128 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-129 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(211,211,211,0.15);
+  border: 1px solid lightgrey;
+  margin-right: 4px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  white-space: nowrap;
+}
+
+.emotion-141 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(255,165,0,0.15);
+  border: 1px solid orange;
+  margin-right: 4px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  white-space: nowrap;
+}
+
+.emotion-168 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 14px;
+  line-height: 1.2rem;
+  white-space: nowrap;
+}
+
+.emotion-171 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(0,128,0,0.15);
+  border: 1px solid green;
+  margin-right: 4px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.2rem;
+}
+
+.emotion-174 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(211,211,211,0.15);
+  border: 1px solid lightgrey;
+  margin-right: 4px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.2rem;
+}
+
+.emotion-198 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
+.emotion-200 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 16px;
+}
+
+.emotion-201 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-202 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-203 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: none;
+  background: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #5c6ac4;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 0;
+  padding-bottom: 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-203:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.emotion-204 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-206 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #006fbb;
+}
+
+.emotion-207 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 14px;
+  font-weight: 300;
+  font-weight: 700;
+}
+
+.emotion-208 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-right: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #5c6ac4;
+}
+
+.emotion-209 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(211,211,211,0.15);
+  border: 0px solid lightgrey;
+  margin-left: 4px;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1rem;
+  white-space: nowrap;
+}
+
+.emotion-214 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-216 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-220 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.emotion-221 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  font-size: 12px;
+  line-height: 1.2rem;
+}
+
+.emotion-222 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 14px;
+  line-height: 1.2rem;
+  white-space: nowrap;
+}
+
+.emotion-234 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -20px;
+}
+
+.emotion-234:hover {
+  visibility: visible;
+}
+
+.emotion-235 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-290 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+.emotion-321 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.emotion-322 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.emotion-325 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-326 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-327 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 14px;
+  color: #69768C;
+  padding-bottom: 8px;
+}
+
+.emotion-328 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 20px;
+  color: #5c6ac4;
+  font-weight: 700;
+}
+
+.emotion-329 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 300px;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-1mistll-SidebarsStoryPage"
+      class="emotion-1"
       id="content"
     >
       <div
-        class="css-3pyqel-Tabs"
+        class="emotion-2"
       >
         <div
           class="react-tabs"
           data-tabs="true"
         >
           <div
-            class="css-1hkyity"
+            class="emotion-3"
           >
             <div
-              class="css-vurnku"
+              class="emotion-4"
             >
               <div
-                class="css-vurnku"
+                class="emotion-4"
               >
                 <div
-                  class="css-1nu2k4w"
+                  class="emotion-6"
                 >
                   <div
-                    class="css-1h9kuou"
+                    class="emotion-7"
                   >
                     <a
                       aria-label="edit this page"
-                      class="css-1t54e2w"
+                      class="emotion-8"
                       href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
                       <div
-                        class="css-f5h6sg"
+                        class="emotion-9"
                       >
                         <svg
                           aria-hidden="true"
@@ -57,7 +1640,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                           />
                         </svg>
                         <span
-                          class="css-6amu4j"
+                          class="emotion-10"
                         >
                           Edit this page
                         </span>
@@ -65,52 +1648,52 @@ exports[`SidebarsPage overview snapshot 1`] = `
                     </a>
                   </div>
                   <div
-                    class="css-crmp15"
+                    class="emotion-11"
                   >
                     <div
-                      class="css-zf8zhj"
+                      class="emotion-12"
                     >
                       <span
-                        class="css-13o2efz"
+                        class="emotion-13"
                       >
                         created:
                       </span>
                       <span
-                        class="css-uv6qe8"
+                        class="emotion-14"
                       >
                         1/1/2020
                       </span>
                     </div>
                     <div
-                      class="css-tk62ho-Container"
+                      class="emotion-15"
                     >
                       <span
-                        class="css-13o2efz"
+                        class="emotion-13"
                       >
                         updated:
                       </span>
                       <span
-                        class="css-uv6qe8"
+                        class="emotion-14"
                       >
                         3/31/2020
                       </span>
                     </div>
                     <div
-                      class="css-lllzso"
+                      class="emotion-18"
                     >
                       <div
-                        class="css-zf8zhj"
+                        class="emotion-12"
                       >
                         <span
-                          class="css-13o2efz"
+                          class="emotion-13"
                         >
                           by
                         </span>
                         <span
-                          class="css-uv6qe8"
+                          class="emotion-14"
                         >
                           <a
-                            class="css-1t54e2w"
+                            class="emotion-8"
                             href="/authors/atanasster"
                           >
                             atanasster
@@ -121,53 +1704,53 @@ exports[`SidebarsPage overview snapshot 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-sj1i65-Container"
+                  class="emotion-23"
                 />
                 <div
-                  class="css-i0y2du"
+                  class="emotion-24"
                 >
                   <div
-                    class="css-1k9l6xu-Container"
+                    class="emotion-25"
                   >
                     <h1
-                      class="css-ymxumn"
+                      class="emotion-26"
                     >
                       Story
                     </h1>
                   </div>
                 </div>
                 <h2
-                  class="css-1uqrmoi"
+                  class="emotion-27"
                 >
                   story subtitle
                 </h2>
                 <div
-                  class="css-14a8v30-PackageLink"
+                  class="emotion-28"
                 >
                   <a
-                    class="css-1t54e2w"
+                    class="emotion-8"
                     href="https://npmjs.com/package/@component-controls/blocks/v/1.0.3"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
                     <div
-                      class="css-13b120i-PackageLink"
+                      class="emotion-30"
                     >
                       @component-controls/blocks
                     </div>
                   </a>
                   <span
-                    class="css-n8ts03-PackageLink"
+                    class="emotion-31"
                   >
                     <span
-                      class="css-vurnku"
+                      class="emotion-4"
                     >
                       1.0.3
                     </span>
                   </span>
                 </div>
                 <div
-                  class="css-nm5f2c-Tabs"
+                  class="emotion-33"
                 >
                   <div
                     class="react-tabs"
@@ -214,18 +1797,18 @@ exports[`SidebarsPage overview snapshot 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-1xkyebe"
+                  class="emotion-34"
                 >
                   <div
-                    class="css-jxxswp"
+                    class="emotion-35"
                     id="component"
                   >
                     <div
-                      class="css-xhp9da"
+                      class="emotion-36"
                     >
                       <a
                         aria-label="navigate to Component section"
-                        class="css-walqom-LinkHeading"
+                        class="emotion-37"
                         data-id="component"
                         data-level="3"
                         data-title="Component"
@@ -248,18 +1831,18 @@ exports[`SidebarsPage overview snapshot 1`] = `
                         </svg>
                       </a>
                       <h3
-                        class="css-16ist9v-BlockContainer"
+                        class="emotion-38"
                       >
                         <div
-                          class="css-tmrrvx"
+                          class="emotion-39"
                         >
                           Component
                           <a
                             aria-expanded="true"
-                            class="css-1t48u3b-BlockContainer"
+                            class="emotion-40"
                           >
                             <span
-                              class="css-1ibxxpj"
+                              class="emotion-41"
                             >
                               <svg
                                 aria-hidden="true"
@@ -289,10 +1872,10 @@ exports[`SidebarsPage overview snapshot 1`] = `
                   >
                     <div>
                       <div
-                        class="css-1d6wxci"
+                        class="emotion-42"
                       >
                         <div
-                          class="css-nm5f2c-Tabs"
+                          class="emotion-33"
                         >
                           <div
                             class="react-tabs"
@@ -332,27 +1915,27 @@ exports[`SidebarsPage overview snapshot 1`] = `
                             >
                               <div>
                                 <div
-                                  class="css-15owl46"
+                                  class="emotion-44"
                                 >
                                   <div
-                                    class="css-x60p33"
+                                    class="emotion-45"
                                   >
                                     <div
-                                      class="css-1vga9oy"
+                                      class="emotion-46"
                                     >
                                       <button
                                         aria-label="copy the displayed source code"
-                                        class="css-1tf4h46"
+                                        class="emotion-47"
                                       >
                                         copy
                                       </button>
                                     </div>
                                     <div
-                                      class="css-q7w4rh"
+                                      class="emotion-48"
                                     >
                                       <a
                                         aria-label="browse repository"
-                                        class="css-1t54e2w"
+                                        class="emotion-8"
                                         href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
                                         rel="noopener noreferrer"
                                         target="_blank"
@@ -361,11 +1944,11 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                       </a>
                                     </div>
                                     <div
-                                      class="css-q7w4rh"
+                                      class="emotion-48"
                                     >
                                       <a
                                         aria-label="browse readme documentation"
-                                        class="css-1t54e2w"
+                                        class="emotion-8"
                                         href="https://github.com/ccontrols/component-controls/tree/master#readme"
                                         rel="noopener noreferrer"
                                         target="_blank"
@@ -374,11 +1957,11 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                       </a>
                                     </div>
                                     <div
-                                      class="css-q7w4rh"
+                                      class="emotion-48"
                                     >
                                       <a
                                         aria-label="browse filed issues"
-                                        class="css-1t54e2w"
+                                        class="emotion-8"
                                         href="https://github.com/ccontrols/component-controls/issues"
                                         rel="noopener noreferrer"
                                         target="_blank"
@@ -389,46 +1972,46 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="css-eqxzio"
+                                  class="emotion-54"
                                 >
                                   <pre
-                                    class="prism-code language-jsx css-3y8hb3"
+                                    class="prism-code language-jsx emotion-55"
                                     style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; display: block; margin: 0px;"
                                   >
                                     <div
-                                      class="token-line css-vurnku"
+                                      class="token-line emotion-4"
                                       style="color: rgb(114, 143, 203);"
                                     >
                                       <span
-                                        class="token keyword css-13aqjzy"
+                                        class="token keyword emotion-57"
                                         style="color: rgb(114, 143, 203);"
                                       >
                                         import
                                       </span>
                                       <span
-                                        class="token plain css-13aqjzy"
+                                        class="token plain emotion-57"
                                       >
                                          ArrowButton 
                                       </span>
                                       <span
-                                        class="token keyword css-13aqjzy"
+                                        class="token keyword emotion-57"
                                         style="color: rgb(114, 143, 203);"
                                       >
                                         from
                                       </span>
                                       <span
-                                        class="token plain css-13aqjzy"
+                                        class="token plain emotion-57"
                                       >
                                          
                                       </span>
                                       <span
-                                        class="token string css-13aqjzy"
+                                        class="token string emotion-57"
                                         style="color: rgb(114, 143, 203);"
                                       >
                                         '@component-controls/blocks'
                                       </span>
                                       <span
-                                        class="token punctuation css-13aqjzy"
+                                        class="token punctuation emotion-57"
                                         style="color: rgb(182, 173, 154);"
                                       >
                                         ;
@@ -451,19 +2034,19 @@ exports[`SidebarsPage overview snapshot 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-1xkyebe"
+                  class="emotion-34"
                   data-testid="playground"
                 >
                   <div
-                    class="css-jxxswp"
+                    class="emotion-35"
                     id="playground-id-of-story"
                   >
                     <div
-                      class="css-xhp9da"
+                      class="emotion-36"
                     >
                       <a
                         aria-label="navigate to story section"
-                        class="css-walqom-LinkHeading"
+                        class="emotion-37"
                         data-id="playground-id-of-story"
                         data-level="3"
                         data-title="story"
@@ -486,18 +2069,18 @@ exports[`SidebarsPage overview snapshot 1`] = `
                         </svg>
                       </a>
                       <h3
-                        class="css-16ist9v-BlockContainer"
+                        class="emotion-38"
                       >
                         <div
-                          class="css-tmrrvx"
+                          class="emotion-39"
                         >
                           story
                           <a
                             aria-expanded="true"
-                            class="css-1t48u3b-BlockContainer"
+                            class="emotion-40"
                           >
                             <span
-                              class="css-1ibxxpj"
+                              class="emotion-41"
                             >
                               <svg
                                 aria-hidden="true"
@@ -521,7 +2104,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                     </div>
                   </div>
                   <p
-                    class="css-p7s6cm"
+                    class="emotion-71"
                   >
                     description of story
                   </p>
@@ -533,37 +2116,37 @@ exports[`SidebarsPage overview snapshot 1`] = `
                     <div>
                       <div>
                         <div
-                          class="css-15owl46"
+                          class="emotion-44"
                         >
                           <div
-                            class="css-x60p33"
+                            class="emotion-45"
                           >
                             <div
-                              class="css-rkyxeq"
+                              class="emotion-74"
                             >
                               <button
                                 aria-label="switch light and dark background"
-                                class="css-1tf4h46"
+                                class="emotion-47"
                               >
                                 dark
                               </button>
                             </div>
                             <div
-                              class="css-7d11p2"
+                              class="emotion-76"
                             >
                               <button
                                 aria-label="switch left to right/right to left"
-                                class="css-1tf4h46"
+                                class="emotion-47"
                               >
                                 RTL
                               </button>
                             </div>
                             <div
-                              class="css-q7w4rh"
+                              class="emotion-48"
                             >
                               <button
                                 aria-label="reset zoom"
-                                class="css-97huhz"
+                                class="emotion-79"
                                 style="padding-top: 3px; padding-bottom: 3px;"
                               >
                                 <svg
@@ -584,11 +2167,11 @@ exports[`SidebarsPage overview snapshot 1`] = `
                               </button>
                             </div>
                             <div
-                              class="css-q7w4rh"
+                              class="emotion-48"
                             >
                               <button
                                 aria-label="zoom out"
-                                class="css-97huhz"
+                                class="emotion-79"
                                 style="padding-top: 3px; padding-bottom: 3px;"
                               >
                                 <svg
@@ -609,11 +2192,11 @@ exports[`SidebarsPage overview snapshot 1`] = `
                               </button>
                             </div>
                             <div
-                              class="css-7d11p2"
+                              class="emotion-76"
                             >
                               <button
                                 aria-label="zoom in"
-                                class="css-97huhz"
+                                class="emotion-79"
                                 style="padding-top: 3px; padding-bottom: 3px;"
                               >
                                 <svg
@@ -634,21 +2217,21 @@ exports[`SidebarsPage overview snapshot 1`] = `
                               </button>
                             </div>
                             <div
-                              class="css-q7w4rh"
+                              class="emotion-48"
                             >
                               <button
                                 aria-label="display story source code"
-                                class="css-1tf4h46"
+                                class="emotion-47"
                               >
                                 open source
                               </button>
                             </div>
                             <div
-                              class="css-q7w4rh"
+                              class="emotion-48"
                             >
                               <button
                                 aria-label="display story configuration object"
-                                class="css-1tf4h46"
+                                class="emotion-47"
                               >
                                 open config
                               </button>
@@ -656,27 +2239,27 @@ exports[`SidebarsPage overview snapshot 1`] = `
                           </div>
                         </div>
                         <div
-                          class="css-eqxzio"
+                          class="emotion-54"
                         >
                           <div
                             style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
                           >
                             <div
-                              class="css-1s8zxab"
+                              class="emotion-89"
                             >
                               <div
-                                class="css-1j909cg"
+                                class="emotion-90"
                               >
                                 <div
-                                  class="css-1xkyebe"
+                                  class="emotion-34"
                                   data-testid="story"
                                 >
                                   <div
-                                    class="css-jxxswp"
+                                    class="emotion-35"
                                     id=""
                                   >
                                     <div
-                                      class="css-xhp9da"
+                                      class="emotion-36"
                                     />
                                   </div>
                                   <div
@@ -686,15 +2269,15 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                   >
                                     <div>
                                       <div
-                                        class="css-154oin1"
+                                        class="emotion-94"
                                         data-testid="story"
                                         id="id-of-story"
                                       >
                                         <div
-                                          class="story-render-container css-dhmrnb"
+                                          class="story-render-container emotion-95"
                                         >
                                           <h2
-                                            class="css-229nmx"
+                                            class="emotion-96"
                                           >
                                             Components
                                           </h2>
@@ -721,18 +2304,18 @@ exports[`SidebarsPage overview snapshot 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-1xkyebe"
+                  class="emotion-34"
                 >
                   <div
-                    class="css-jxxswp"
+                    class="emotion-35"
                     id="external-dependencies"
                   >
                     <div
-                      class="css-xhp9da"
+                      class="emotion-36"
                     >
                       <a
                         aria-label="navigate to External dependencies section"
-                        class="css-walqom-LinkHeading"
+                        class="emotion-37"
                         data-id="external-dependencies"
                         data-level="3"
                         data-title="External dependencies"
@@ -755,18 +2338,18 @@ exports[`SidebarsPage overview snapshot 1`] = `
                         </svg>
                       </a>
                       <h3
-                        class="css-16ist9v-BlockContainer"
+                        class="emotion-38"
                       >
                         <div
-                          class="css-tmrrvx"
+                          class="emotion-39"
                         >
                           External dependencies
                           <a
                             aria-expanded="true"
-                            class="css-1t48u3b-BlockContainer"
+                            class="emotion-40"
                           >
                             <span
-                              class="css-1ibxxpj"
+                              class="emotion-41"
                             >
                               <svg
                                 aria-hidden="true"
@@ -796,10 +2379,10 @@ exports[`SidebarsPage overview snapshot 1`] = `
                   >
                     <div>
                       <div
-                        class="css-1d6wxci"
+                        class="emotion-42"
                       >
                         <div
-                          class="css-nm5f2c-Tabs"
+                          class="emotion-33"
                         >
                           <div
                             class="react-tabs"
@@ -838,59 +2421,59 @@ exports[`SidebarsPage overview snapshot 1`] = `
                               role="tabpanel"
                             >
                               <table
-                                class="css-11y77l0"
+                                class="emotion-107"
                                 role="table"
                               >
                                 <thead
-                                  class="css-14kw1rx"
+                                  class="emotion-108"
                                 >
                                   <tr
-                                    class="css-vurnku"
+                                    class="emotion-4"
                                     role="row"
                                   >
                                     <th
-                                      class="css-n59tc9"
+                                      class="emotion-110"
                                       colspan="1"
                                       role="columnheader"
                                       style="width: 150px;"
                                     >
                                       <div
-                                        class="css-wwqljn"
+                                        class="emotion-111"
                                       >
                                         <div
-                                          class="css-206mi5"
+                                          class="emotion-112"
                                         >
                                           package
                                         </div>
                                       </div>
                                     </th>
                                     <th
-                                      class="css-n59tc9"
+                                      class="emotion-110"
                                       colspan="1"
                                       role="columnheader"
                                       style="width: 70%;"
                                     >
                                       <div
-                                        class="css-wwqljn"
+                                        class="emotion-111"
                                       >
                                         <div
-                                          class="css-206mi5"
+                                          class="emotion-112"
                                         >
                                           imports
                                         </div>
                                       </div>
                                     </th>
                                     <th
-                                      class="css-n59tc9"
+                                      class="emotion-110"
                                       colspan="1"
                                       role="columnheader"
                                       style="width: 150px;"
                                     >
                                       <div
-                                        class="css-wwqljn"
+                                        class="emotion-111"
                                       >
                                         <div
-                                          class="css-206mi5"
+                                          class="emotion-112"
                                         >
                                           peer
                                         </div>
@@ -899,38 +2482,38 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                   </tr>
                                 </thead>
                                 <tbody
-                                  class="css-tuhk50"
+                                  class="emotion-119"
                                   role="rowgroup"
                                 >
                                   <tr
-                                    class="css-ijvt85"
+                                    class="emotion-120"
                                     role="row"
                                   >
                                     <td
-                                      class="css-1yjhfhu"
+                                      class="emotion-121"
                                       role="cell"
                                       style="width: 150px;"
                                     >
                                       <div
-                                        class="css-14a8v30-PackageLink"
+                                        class="emotion-28"
                                       >
                                         <a
-                                          class="css-1t54e2w"
+                                          class="emotion-8"
                                           href="https://npmjs.com/package/@component-controls/components/v/1.0.1"
                                           rel="noopener noreferrer"
                                           target="_blank"
                                         >
                                           <div
-                                            class="css-13b120i-PackageLink"
+                                            class="emotion-30"
                                           >
                                             @component-controls/components
                                           </div>
                                         </a>
                                         <span
-                                          class="css-n8ts03-PackageLink"
+                                          class="emotion-31"
                                         >
                                           <span
-                                            class="css-vurnku"
+                                            class="emotion-4"
                                           >
                                             ^1.0.1
                                           </span>
@@ -938,18 +2521,18 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                       </div>
                                     </td>
                                     <td
-                                      class="css-1yjhfhu"
+                                      class="emotion-121"
                                       role="cell"
                                       style="width: 70%;"
                                     >
                                       <div
-                                        class="css-zivbkl-Cell"
+                                        class="emotion-128"
                                       >
                                         <span
-                                          class="css-hpa617-Tag"
+                                          class="emotion-129"
                                         >
                                           <span
-                                            class="css-vurnku"
+                                            class="emotion-4"
                                           >
                                             Table
                                           </span>
@@ -957,40 +2540,40 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                       </div>
                                     </td>
                                     <td
-                                      class="css-1yjhfhu"
+                                      class="emotion-121"
                                       role="cell"
                                       style="width: 150px;"
                                     />
                                   </tr>
                                   <tr
-                                    class="css-ijvt85"
+                                    class="emotion-120"
                                     role="row"
                                   >
                                     <td
-                                      class="css-1yjhfhu"
+                                      class="emotion-121"
                                       role="cell"
                                       style="width: 150px;"
                                     >
                                       <div
-                                        class="css-14a8v30-PackageLink"
+                                        class="emotion-28"
                                       >
                                         <a
-                                          class="css-1t54e2w"
+                                          class="emotion-8"
                                           href="https://npmjs.com/package/react/v/16.13.1"
                                           rel="noopener noreferrer"
                                           target="_blank"
                                         >
                                           <div
-                                            class="css-13b120i-PackageLink"
+                                            class="emotion-30"
                                           >
                                             react
                                           </div>
                                         </a>
                                         <span
-                                          class="css-n8ts03-PackageLink"
+                                          class="emotion-31"
                                         >
                                           <span
-                                            class="css-vurnku"
+                                            class="emotion-4"
                                           >
                                             ^16.13.1
                                           </span>
@@ -998,27 +2581,27 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                       </div>
                                     </td>
                                     <td
-                                      class="css-1yjhfhu"
+                                      class="emotion-121"
                                       role="cell"
                                       style="width: 70%;"
                                     >
                                       <div
-                                        class="css-zivbkl-Cell"
+                                        class="emotion-128"
                                       >
                                         <span
-                                          class="css-1j59y6j-Tag"
+                                          class="emotion-141"
                                         >
                                           <span
-                                            class="css-vurnku"
+                                            class="emotion-4"
                                           >
                                             React
                                           </span>
                                         </span>
                                         <span
-                                          class="css-hpa617-Tag"
+                                          class="emotion-129"
                                         >
                                           <span
-                                            class="css-vurnku"
+                                            class="emotion-4"
                                           >
                                             FC
                                           </span>
@@ -1026,7 +2609,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                       </div>
                                     </td>
                                     <td
-                                      class="css-1yjhfhu"
+                                      class="emotion-121"
                                       role="cell"
                                       style="width: 150px;"
                                     >
@@ -1049,18 +2632,18 @@ exports[`SidebarsPage overview snapshot 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-1xkyebe"
+                  class="emotion-34"
                 >
                   <div
-                    class="css-jxxswp"
+                    class="emotion-35"
                     id="internal-dependencies"
                   >
                     <div
-                      class="css-xhp9da"
+                      class="emotion-36"
                     >
                       <a
                         aria-label="navigate to Internal dependencies section"
-                        class="css-walqom-LinkHeading"
+                        class="emotion-37"
                         data-id="internal-dependencies"
                         data-level="3"
                         data-title="Internal dependencies"
@@ -1083,18 +2666,18 @@ exports[`SidebarsPage overview snapshot 1`] = `
                         </svg>
                       </a>
                       <h3
-                        class="css-16ist9v-BlockContainer"
+                        class="emotion-38"
                       >
                         <div
-                          class="css-tmrrvx"
+                          class="emotion-39"
                         >
                           Internal dependencies
                           <a
                             aria-expanded="true"
-                            class="css-1t48u3b-BlockContainer"
+                            class="emotion-40"
                           >
                             <span
-                              class="css-1ibxxpj"
+                              class="emotion-41"
                             >
                               <svg
                                 aria-hidden="true"
@@ -1124,10 +2707,10 @@ exports[`SidebarsPage overview snapshot 1`] = `
                   >
                     <div>
                       <div
-                        class="css-1d6wxci"
+                        class="emotion-42"
                       >
                         <div
-                          class="css-nm5f2c-Tabs"
+                          class="emotion-33"
                         >
                           <div
                             class="react-tabs"
@@ -1166,44 +2749,44 @@ exports[`SidebarsPage overview snapshot 1`] = `
                               role="tabpanel"
                             >
                               <table
-                                class="css-11y77l0"
+                                class="emotion-107"
                                 data-testid="local-dependencies"
                                 role="table"
                               >
                                 <thead
-                                  class="css-14kw1rx"
+                                  class="emotion-108"
                                 >
                                   <tr
-                                    class="css-vurnku"
+                                    class="emotion-4"
                                     role="row"
                                   >
                                     <th
-                                      class="css-n59tc9"
+                                      class="emotion-110"
                                       colspan="1"
                                       role="columnheader"
                                       style="width: 150px;"
                                     >
                                       <div
-                                        class="css-wwqljn"
+                                        class="emotion-111"
                                       >
                                         <div
-                                          class="css-206mi5"
+                                          class="emotion-112"
                                         >
                                           file
                                         </div>
                                       </div>
                                     </th>
                                     <th
-                                      class="css-n59tc9"
+                                      class="emotion-110"
                                       colspan="1"
                                       role="columnheader"
                                       style="width: 150px;"
                                     >
                                       <div
-                                        class="css-wwqljn"
+                                        class="emotion-111"
                                       >
                                         <div
-                                          class="css-206mi5"
+                                          class="emotion-112"
                                         >
                                           imports
                                         </div>
@@ -1212,40 +2795,40 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                   </tr>
                                 </thead>
                                 <tbody
-                                  class="css-tuhk50"
+                                  class="emotion-119"
                                   role="rowgroup"
                                 >
                                   <tr
-                                    class="css-ijvt85"
+                                    class="emotion-120"
                                     role="row"
                                   >
                                     <td
-                                      class="css-1yjhfhu"
+                                      class="emotion-121"
                                       role="cell"
                                       style="width: 150px;"
                                     >
                                       <span
-                                        class="css-b7g03d-Cell"
+                                        class="emotion-168"
                                       >
                                         "./Button"
                                       </span>
                                     </td>
                                     <td
-                                      class="css-1yjhfhu"
+                                      class="emotion-121"
                                       role="cell"
                                       style="width: 150px;"
                                     >
                                       <div
-                                        class="css-zivbkl-Cell"
+                                        class="emotion-128"
                                       >
                                         <span
-                                          class="css-1ver5lo-LocalImport"
+                                          class="emotion-171"
                                         >
                                           <span
-                                            class="css-vurnku"
+                                            class="emotion-4"
                                           >
                                             <a
-                                              class="css-1t54e2w"
+                                              class="emotion-8"
                                               href="/docs/id-of-story"
                                             >
                                               Button
@@ -1253,10 +2836,10 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                           </span>
                                         </span>
                                         <span
-                                          class="css-9c8bof-LocalImport"
+                                          class="emotion-174"
                                         >
                                           <span
-                                            class="css-vurnku"
+                                            class="emotion-4"
                                           >
                                             ButtonProps
                                           </span>
@@ -1265,33 +2848,33 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                     </td>
                                   </tr>
                                   <tr
-                                    class="css-ijvt85"
+                                    class="emotion-120"
                                     role="row"
                                   >
                                     <td
-                                      class="css-1yjhfhu"
+                                      class="emotion-121"
                                       role="cell"
                                       style="width: 150px;"
                                     >
                                       <span
-                                        class="css-b7g03d-Cell"
+                                        class="emotion-168"
                                       >
                                         "@component-controls/components"
                                       </span>
                                     </td>
                                     <td
-                                      class="css-1yjhfhu"
+                                      class="emotion-121"
                                       role="cell"
                                       style="width: 150px;"
                                     >
                                       <div
-                                        class="css-zivbkl-Cell"
+                                        class="emotion-128"
                                       >
                                         <span
-                                          class="css-9c8bof-LocalImport"
+                                          class="emotion-174"
                                         >
                                           <span
-                                            class="css-vurnku"
+                                            class="emotion-4"
                                           >
                                             Table
                                           </span>
@@ -1315,18 +2898,18 @@ exports[`SidebarsPage overview snapshot 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-1xkyebe"
+                  class="emotion-34"
                 >
                   <div
-                    class="css-jxxswp"
+                    class="emotion-35"
                     id="component-jsx"
                   >
                     <div
-                      class="css-xhp9da"
+                      class="emotion-36"
                     >
                       <a
                         aria-label="navigate to Component JSX section"
-                        class="css-walqom-LinkHeading"
+                        class="emotion-37"
                         data-id="component-jsx"
                         data-level="3"
                         data-title="Component JSX"
@@ -1349,18 +2932,18 @@ exports[`SidebarsPage overview snapshot 1`] = `
                         </svg>
                       </a>
                       <h3
-                        class="css-16ist9v-BlockContainer"
+                        class="emotion-38"
                       >
                         <div
-                          class="css-tmrrvx"
+                          class="emotion-39"
                         >
                           Component JSX
                           <a
                             aria-expanded="true"
-                            class="css-1t48u3b-BlockContainer"
+                            class="emotion-40"
                           >
                             <span
-                              class="css-1ibxxpj"
+                              class="emotion-41"
                             >
                               <svg
                                 aria-hidden="true"
@@ -1390,10 +2973,10 @@ exports[`SidebarsPage overview snapshot 1`] = `
                   >
                     <div>
                       <div
-                        class="css-1d6wxci"
+                        class="emotion-42"
                       >
                         <div
-                          class="css-nm5f2c-Tabs"
+                          class="emotion-33"
                         >
                           <div
                             class="react-tabs"
@@ -1433,16 +3016,16 @@ exports[`SidebarsPage overview snapshot 1`] = `
                             >
                               <div>
                                 <div
-                                  class="css-15owl46"
+                                  class="emotion-44"
                                 >
                                   <div
-                                    class="css-x60p33"
+                                    class="emotion-45"
                                   >
                                     <div
-                                      class="css-1vga9oy"
+                                      class="emotion-46"
                                     >
                                       <button
-                                        class="css-1tf4h46"
+                                        class="emotion-47"
                                       >
                                         collapse all
                                       </button>
@@ -1450,87 +3033,87 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="css-eqxzio"
+                                  class="emotion-54"
                                 >
                                   <div
-                                    class="css-aroec7-Tree"
+                                    class="emotion-198"
                                     data-testid="component-jsx"
                                   >
                                     <div
-                                      class="css-vurnku"
+                                      class="emotion-4"
                                     >
                                       <div
-                                        class="css-15ej8gm"
+                                        class="emotion-200"
                                       >
                                         <div
-                                          class="css-tizfsr"
+                                          class="emotion-201"
                                         >
                                           <div
-                                            class="css-162ewbd"
+                                            class="emotion-202"
                                           >
                                             <div
-                                              class="css-p1dwhj"
+                                              class="emotion-203"
                                             >
                                               <div
-                                                class="css-dcq909"
+                                                class="emotion-204"
                                               >
                                                 <div
-                                                  class="css-f5h6sg"
+                                                  class="emotion-9"
                                                 >
                                                   <div
-                                                    class="css-1ujq37u-JSXTreeNode"
+                                                    class="emotion-206"
                                                   >
                                                     <span
-                                                      class="css-kde9kw-JSXTreeNode"
+                                                      class="emotion-207"
                                                     >
                                                       &lt;Button
                                                     </span>
                                                     <div
-                                                      class="css-1j19kj1-JSXTreeNode"
+                                                      class="emotion-208"
                                                     >
                                                       <span
-                                                        class="css-19j54vt-Tag"
+                                                        class="emotion-209"
                                                       >
                                                         <span
-                                                          class="css-vurnku"
+                                                          class="emotion-4"
                                                         >
                                                           ref
                                                         </span>
                                                       </span>
                                                       <span
-                                                        class="css-19j54vt-Tag"
+                                                        class="emotion-209"
                                                       >
                                                         <span
-                                                          class="css-vurnku"
+                                                          class="emotion-4"
                                                         >
                                                           id
                                                         </span>
                                                       </span>
                                                     </div>
                                                     <span
-                                                      class="css-kde9kw-JSXTreeNode"
+                                                      class="emotion-207"
                                                     >
                                                       /&gt;
                                                     </span>
                                                   </div>
                                                 </div>
                                                 <div
-                                                  class="css-vthntz"
+                                                  class="emotion-214"
                                                 >
                                                   <div
-                                                    class="css-vurnku"
+                                                    class="emotion-4"
                                                   >
                                                     <div
-                                                      class="css-u91vyr-ImportLabel"
+                                                      class="emotion-216"
                                                     >
                                                       <span
-                                                        class="css-1ver5lo-LocalImport"
+                                                        class="emotion-171"
                                                       >
                                                         <span
-                                                          class="css-vurnku"
+                                                          class="emotion-4"
                                                         >
                                                           <a
-                                                            class="css-1t54e2w"
+                                                            class="emotion-8"
                                                             href="/docs/id-of-story"
                                                           >
                                                             Button
@@ -1538,15 +3121,15 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                                         </span>
                                                       </span>
                                                       <div
-                                                        class="css-10stqcc-ImportLabel"
+                                                        class="emotion-220"
                                                       >
                                                         <span
-                                                          class="css-1tf5k16-ImportLabel"
+                                                          class="emotion-221"
                                                         >
                                                           from
                                                         </span>
                                                         <span
-                                                          class="css-tfsmtt-ImportLabel"
+                                                          class="emotion-222"
                                                         >
                                                           "./Button"
                                                         </span>
@@ -1577,19 +3160,19 @@ exports[`SidebarsPage overview snapshot 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-1xkyebe"
+                  class="emotion-34"
                   data-testid="stories"
                 >
                   <div
-                    class="css-jxxswp"
+                    class="emotion-35"
                     id="stories"
                   >
                     <div
-                      class="css-xhp9da"
+                      class="emotion-36"
                     >
                       <a
                         aria-label="navigate to Stories section"
-                        class="css-walqom-LinkHeading"
+                        class="emotion-37"
                         data-id="stories"
                         data-level="3"
                         data-title="Stories"
@@ -1612,18 +3195,18 @@ exports[`SidebarsPage overview snapshot 1`] = `
                         </svg>
                       </a>
                       <h3
-                        class="css-16ist9v-BlockContainer"
+                        class="emotion-38"
                       >
                         <div
-                          class="css-tmrrvx"
+                          class="emotion-39"
                         >
                           Stories
                           <a
                             aria-expanded="true"
-                            class="css-1t48u3b-BlockContainer"
+                            class="emotion-40"
                           >
                             <span
-                              class="css-1ibxxpj"
+                              class="emotion-41"
                             >
                               <svg
                                 aria-hidden="true"
@@ -1653,19 +3236,19 @@ exports[`SidebarsPage overview snapshot 1`] = `
                   >
                     <div>
                       <div
-                        class="css-1xkyebe"
+                        class="emotion-34"
                         data-testid="playground"
                       >
                         <div
-                          class="css-jxxswp"
+                          class="emotion-35"
                           id="button"
                         >
                           <div
-                            class="css-xhp9da"
+                            class="emotion-36"
                           >
                             <a
                               aria-label="navigate to button section"
-                              class="css-1ptrway-LinkHeading"
+                              class="emotion-234"
                               data-id="button"
                               data-level="4"
                               data-title="button"
@@ -1688,7 +3271,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                               </svg>
                             </a>
                             <h4
-                              class="css-vsfm4-BlockContainer"
+                              class="emotion-235"
                             >
                               button
                             </h4>
@@ -1696,37 +3279,37 @@ exports[`SidebarsPage overview snapshot 1`] = `
                         </div>
                         <div>
                           <div
-                            class="css-15owl46"
+                            class="emotion-44"
                           >
                             <div
-                              class="css-x60p33"
+                              class="emotion-45"
                             >
                               <div
-                                class="css-rkyxeq"
+                                class="emotion-74"
                               >
                                 <button
                                   aria-label="switch light and dark background"
-                                  class="css-1tf4h46"
+                                  class="emotion-47"
                                 >
                                   dark
                                 </button>
                               </div>
                               <div
-                                class="css-7d11p2"
+                                class="emotion-76"
                               >
                                 <button
                                   aria-label="switch left to right/right to left"
-                                  class="css-1tf4h46"
+                                  class="emotion-47"
                                 >
                                   RTL
                                 </button>
                               </div>
                               <div
-                                class="css-q7w4rh"
+                                class="emotion-48"
                               >
                                 <button
                                   aria-label="reset zoom"
-                                  class="css-97huhz"
+                                  class="emotion-79"
                                   style="padding-top: 3px; padding-bottom: 3px;"
                                 >
                                   <svg
@@ -1747,11 +3330,11 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                 </button>
                               </div>
                               <div
-                                class="css-q7w4rh"
+                                class="emotion-48"
                               >
                                 <button
                                   aria-label="zoom out"
-                                  class="css-97huhz"
+                                  class="emotion-79"
                                   style="padding-top: 3px; padding-bottom: 3px;"
                                 >
                                   <svg
@@ -1772,11 +3355,11 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                 </button>
                               </div>
                               <div
-                                class="css-7d11p2"
+                                class="emotion-76"
                               >
                                 <button
                                   aria-label="zoom in"
-                                  class="css-97huhz"
+                                  class="emotion-79"
                                   style="padding-top: 3px; padding-bottom: 3px;"
                                 >
                                   <svg
@@ -1797,21 +3380,21 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                 </button>
                               </div>
                               <div
-                                class="css-q7w4rh"
+                                class="emotion-48"
                               >
                                 <button
                                   aria-label="display story source code"
-                                  class="css-1tf4h46"
+                                  class="emotion-47"
                                 >
                                   open source
                                 </button>
                               </div>
                               <div
-                                class="css-q7w4rh"
+                                class="emotion-48"
                               >
                                 <button
                                   aria-label="display story configuration object"
-                                  class="css-1tf4h46"
+                                  class="emotion-47"
                                 >
                                   open config
                                 </button>
@@ -1819,27 +3402,27 @@ exports[`SidebarsPage overview snapshot 1`] = `
                             </div>
                           </div>
                           <div
-                            class="css-eqxzio"
+                            class="emotion-54"
                           >
                             <div
                               style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
                             >
                               <div
-                                class="css-1s8zxab"
+                                class="emotion-89"
                               >
                                 <div
-                                  class="css-1j909cg"
+                                  class="emotion-90"
                                 >
                                   <div
-                                    class="css-1xkyebe"
+                                    class="emotion-34"
                                     data-testid="story"
                                   >
                                     <div
-                                      class="css-jxxswp"
+                                      class="emotion-35"
                                       id=""
                                     >
                                       <div
-                                        class="css-xhp9da"
+                                        class="emotion-36"
                                       />
                                     </div>
                                     <div
@@ -1849,15 +3432,15 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                     >
                                       <div>
                                         <div
-                                          class="css-154oin1"
+                                          class="emotion-94"
                                           data-testid="story"
                                           id="id-of-button-story"
                                         >
                                           <div
-                                            class="story-render-container css-dhmrnb"
+                                            class="story-render-container emotion-95"
                                           >
                                             <button
-                                              class="css-97huhz"
+                                              class="emotion-79"
                                             >
                                               test
                                             </button>
@@ -1882,19 +3465,19 @@ exports[`SidebarsPage overview snapshot 1`] = `
                         </div>
                       </div>
                       <div
-                        class="css-1xkyebe"
+                        class="emotion-34"
                         data-testid="playground"
                       >
                         <div
-                          class="css-jxxswp"
+                          class="emotion-35"
                           id="controls"
                         >
                           <div
-                            class="css-xhp9da"
+                            class="emotion-36"
                           >
                             <a
                               aria-label="navigate to controls section"
-                              class="css-1ptrway-LinkHeading"
+                              class="emotion-234"
                               data-id="controls"
                               data-level="4"
                               data-title="controls"
@@ -1917,7 +3500,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                               </svg>
                             </a>
                             <h4
-                              class="css-vsfm4-BlockContainer"
+                              class="emotion-235"
                             >
                               controls
                             </h4>
@@ -1925,37 +3508,37 @@ exports[`SidebarsPage overview snapshot 1`] = `
                         </div>
                         <div>
                           <div
-                            class="css-15owl46"
+                            class="emotion-44"
                           >
                             <div
-                              class="css-x60p33"
+                              class="emotion-45"
                             >
                               <div
-                                class="css-rkyxeq"
+                                class="emotion-74"
                               >
                                 <button
                                   aria-label="switch light and dark background"
-                                  class="css-1tf4h46"
+                                  class="emotion-47"
                                 >
                                   dark
                                 </button>
                               </div>
                               <div
-                                class="css-7d11p2"
+                                class="emotion-76"
                               >
                                 <button
                                   aria-label="switch left to right/right to left"
-                                  class="css-1tf4h46"
+                                  class="emotion-47"
                                 >
                                   RTL
                                 </button>
                               </div>
                               <div
-                                class="css-q7w4rh"
+                                class="emotion-48"
                               >
                                 <button
                                   aria-label="reset zoom"
-                                  class="css-97huhz"
+                                  class="emotion-79"
                                   style="padding-top: 3px; padding-bottom: 3px;"
                                 >
                                   <svg
@@ -1976,11 +3559,11 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                 </button>
                               </div>
                               <div
-                                class="css-q7w4rh"
+                                class="emotion-48"
                               >
                                 <button
                                   aria-label="zoom out"
-                                  class="css-97huhz"
+                                  class="emotion-79"
                                   style="padding-top: 3px; padding-bottom: 3px;"
                                 >
                                   <svg
@@ -2001,11 +3584,11 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                 </button>
                               </div>
                               <div
-                                class="css-7d11p2"
+                                class="emotion-76"
                               >
                                 <button
                                   aria-label="zoom in"
-                                  class="css-97huhz"
+                                  class="emotion-79"
                                   style="padding-top: 3px; padding-bottom: 3px;"
                                 >
                                   <svg
@@ -2026,21 +3609,21 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                 </button>
                               </div>
                               <div
-                                class="css-q7w4rh"
+                                class="emotion-48"
                               >
                                 <button
                                   aria-label="display story source code"
-                                  class="css-1tf4h46"
+                                  class="emotion-47"
                                 >
                                   open source
                                 </button>
                               </div>
                               <div
-                                class="css-q7w4rh"
+                                class="emotion-48"
                               >
                                 <button
                                   aria-label="display story configuration object"
-                                  class="css-1tf4h46"
+                                  class="emotion-47"
                                 >
                                   open config
                                 </button>
@@ -2048,27 +3631,27 @@ exports[`SidebarsPage overview snapshot 1`] = `
                             </div>
                           </div>
                           <div
-                            class="css-eqxzio"
+                            class="emotion-54"
                           >
                             <div
                               style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
                             >
                               <div
-                                class="css-1s8zxab"
+                                class="emotion-89"
                               >
                                 <div
-                                  class="css-1j909cg"
+                                  class="emotion-90"
                                 >
                                   <div
-                                    class="css-1xkyebe"
+                                    class="emotion-34"
                                     data-testid="story"
                                   >
                                     <div
-                                      class="css-jxxswp"
+                                      class="emotion-35"
                                       id=""
                                     >
                                       <div
-                                        class="css-xhp9da"
+                                        class="emotion-36"
                                       />
                                     </div>
                                     <div
@@ -2078,16 +3661,16 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                     >
                                       <div>
                                         <div
-                                          class="css-154oin1"
+                                          class="emotion-94"
                                           data-testid="story"
                                           id="blocks-core-story-plain--controls"
                                         >
                                           <div
-                                            class="story-render-container css-dhmrnb"
+                                            class="story-render-container emotion-95"
                                           >
                                             <svg
                                               aria-label="example donut graphic"
-                                              class="css-14d2907"
+                                              class="emotion-290"
                                               fill="none"
                                               height="128"
                                               role="img"
@@ -2132,19 +3715,19 @@ exports[`SidebarsPage overview snapshot 1`] = `
                         </div>
                       </div>
                       <div
-                        class="css-1xkyebe"
+                        class="emotion-34"
                         data-testid="playground"
                       >
                         <div
-                          class="css-jxxswp"
+                          class="emotion-35"
                           id="story"
                         >
                           <div
-                            class="css-xhp9da"
+                            class="emotion-36"
                           >
                             <a
                               aria-label="navigate to story section"
-                              class="css-1ptrway-LinkHeading"
+                              class="emotion-234"
                               data-id="story"
                               data-level="4"
                               data-title="story"
@@ -2167,7 +3750,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                               </svg>
                             </a>
                             <h4
-                              class="css-vsfm4-BlockContainer"
+                              class="emotion-235"
                             >
                               story
                             </h4>
@@ -2175,37 +3758,37 @@ exports[`SidebarsPage overview snapshot 1`] = `
                         </div>
                         <div>
                           <div
-                            class="css-15owl46"
+                            class="emotion-44"
                           >
                             <div
-                              class="css-x60p33"
+                              class="emotion-45"
                             >
                               <div
-                                class="css-rkyxeq"
+                                class="emotion-74"
                               >
                                 <button
                                   aria-label="switch light and dark background"
-                                  class="css-1tf4h46"
+                                  class="emotion-47"
                                 >
                                   dark
                                 </button>
                               </div>
                               <div
-                                class="css-7d11p2"
+                                class="emotion-76"
                               >
                                 <button
                                   aria-label="switch left to right/right to left"
-                                  class="css-1tf4h46"
+                                  class="emotion-47"
                                 >
                                   RTL
                                 </button>
                               </div>
                               <div
-                                class="css-q7w4rh"
+                                class="emotion-48"
                               >
                                 <button
                                   aria-label="reset zoom"
-                                  class="css-97huhz"
+                                  class="emotion-79"
                                   style="padding-top: 3px; padding-bottom: 3px;"
                                 >
                                   <svg
@@ -2226,11 +3809,11 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                 </button>
                               </div>
                               <div
-                                class="css-q7w4rh"
+                                class="emotion-48"
                               >
                                 <button
                                   aria-label="zoom out"
-                                  class="css-97huhz"
+                                  class="emotion-79"
                                   style="padding-top: 3px; padding-bottom: 3px;"
                                 >
                                   <svg
@@ -2251,11 +3834,11 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                 </button>
                               </div>
                               <div
-                                class="css-7d11p2"
+                                class="emotion-76"
                               >
                                 <button
                                   aria-label="zoom in"
-                                  class="css-97huhz"
+                                  class="emotion-79"
                                   style="padding-top: 3px; padding-bottom: 3px;"
                                 >
                                   <svg
@@ -2276,21 +3859,21 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                 </button>
                               </div>
                               <div
-                                class="css-q7w4rh"
+                                class="emotion-48"
                               >
                                 <button
                                   aria-label="display story source code"
-                                  class="css-1tf4h46"
+                                  class="emotion-47"
                                 >
                                   open source
                                 </button>
                               </div>
                               <div
-                                class="css-q7w4rh"
+                                class="emotion-48"
                               >
                                 <button
                                   aria-label="display story configuration object"
-                                  class="css-1tf4h46"
+                                  class="emotion-47"
                                 >
                                   open config
                                 </button>
@@ -2298,27 +3881,27 @@ exports[`SidebarsPage overview snapshot 1`] = `
                             </div>
                           </div>
                           <div
-                            class="css-eqxzio"
+                            class="emotion-54"
                           >
                             <div
                               style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
                             >
                               <div
-                                class="css-1s8zxab"
+                                class="emotion-89"
                               >
                                 <div
-                                  class="css-1j909cg"
+                                  class="emotion-90"
                                 >
                                   <div
-                                    class="css-1xkyebe"
+                                    class="emotion-34"
                                     data-testid="story"
                                   >
                                     <div
-                                      class="css-jxxswp"
+                                      class="emotion-35"
                                       id=""
                                     >
                                       <div
-                                        class="css-xhp9da"
+                                        class="emotion-36"
                                       />
                                     </div>
                                     <div
@@ -2328,15 +3911,15 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                     >
                                       <div>
                                         <div
-                                          class="css-154oin1"
+                                          class="emotion-94"
                                           data-testid="story"
                                           id="id-of-single"
                                         >
                                           <div
-                                            class="story-render-container css-dhmrnb"
+                                            class="story-render-container emotion-95"
                                           >
                                             <h2
-                                              class="css-229nmx"
+                                              class="emotion-96"
                                             >
                                               Components
                                             </h2>
@@ -2364,34 +3947,34 @@ exports[`SidebarsPage overview snapshot 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-5qse13"
+                  class="emotion-321"
                 >
                   <div
-                    class="css-8r2q2l"
+                    class="emotion-322"
                   >
                     <div
-                      class="css-vurnku"
+                      class="emotion-4"
                     />
                     <div
-                      class="css-vurnku"
+                      class="emotion-4"
                     >
                       <a
-                        class="css-10zwoio"
+                        class="emotion-325"
                         href="/docs/mdx-story"
                       >
                         <div
-                          class="css-1my6hv5"
+                          class="emotion-326"
                         >
                           <span
-                            class="css-c3r86m"
+                            class="emotion-327"
                           >
                             Next
                           </span>
                           <div
-                            class="css-9tifnv"
+                            class="emotion-328"
                           >
                             <span
-                              class="css-1s8umv4"
+                              class="emotion-329"
                             >
                               MDX Story
                             </span>

@@ -2,15 +2,101 @@
 
 exports[`AllyBlock overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  all: unset;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id=""
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       />
     </div>
     <div
@@ -21,22 +107,22 @@ exports[`AllyBlock overview snapshot 1`] = `
       <div>
         <div>
           <div
-            class="css-eqxzio"
+            class="emotion-3"
           >
             <div>
               <div
-                class="css-vurnku"
+                class="emotion-4"
               >
                 <div
-                  class="css-1xkyebe"
+                  class="emotion-0"
                   data-testid="story"
                 >
                   <div
-                    class="css-jxxswp"
+                    class="emotion-1"
                     id=""
                   >
                     <div
-                      class="css-xhp9da"
+                      class="emotion-2"
                     />
                   </div>
                   <div
@@ -46,16 +132,16 @@ exports[`AllyBlock overview snapshot 1`] = `
                   >
                     <div>
                       <div
-                        class="css-154oin1"
+                        class="emotion-8"
                         data-testid="story"
                         id="blocks-core-story-plain--controls"
                       >
                         <div
-                          class="story-render-container css-dhmrnb"
+                          class="story-render-container emotion-9"
                         >
                           <svg
                             aria-label="example donut graphic"
-                            class="css-14d2907"
+                            class="emotion-10"
                             fill="none"
                             height="128"
                             role="img"

@@ -2,8 +2,17 @@
 
 exports[`Link overview snapshot 1`] = `
 <DocumentFragment>
-  <a
-    class="css-1t54e2w"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+<a
+    class="emotion-0"
     href="/"
   >
     link to home

@@ -2,12 +2,20 @@
 
 exports[`Markdown image snapshot 1`] = `
 <DocumentFragment>
-  <div
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+<div
     variant="styles.p"
   >
     <img
       alt="integrated in storybook"
-      class="css-9taffg"
+      class="emotion-0"
       src="https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/images/component-controls.gif"
     />
   </div>
@@ -16,17 +24,233 @@ exports[`Markdown image snapshot 1`] = `
 
 exports[`Markdown overview snapshot 1`] = `
 <DocumentFragment>
-  <div>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1:hover a {
+  visibility: visible;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -32px;
+}
+
+.emotion-2:hover {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 42px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -30px;
+}
+
+.emotion-6:hover {
+  visibility: visible;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 32px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border-bottom: 4px solid #454f5b;
+  width: 100%;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -22px;
+}
+
+.emotion-10:hover {
+  visibility: visible;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -20px;
+}
+
+.emotion-14:hover {
+  visibility: visible;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.emotion-18 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -18px;
+}
+
+.emotion-18:hover {
+  visibility: visible;
+}
+
+.emotion-19 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.emotion-20 {
+  font-family: Menlo,monospace;
+  overflow-x: auto;
+  background-color: #e6e6e6;
+}
+
+.emotion-20 code {
+  color: inherit;
+}
+
+.emotion-21 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-22 {
+  display: inline-block;
+}
+
+<div>
     <div
-      class="css-jxxswp"
+      class="emotion-0"
       id="header-h1"
     >
       <div
-        class="css-xhp9da"
+        class="emotion-1"
       >
         <a
           aria-label="navigate to Header H1 section"
-          class="css-6ugsdx-LinkHeading"
+          class="emotion-2"
           data-id="header-h1"
           data-level="1"
           data-title="Header H1"
@@ -51,22 +275,22 @@ exports[`Markdown overview snapshot 1`] = `
           </svg>
         </a>
         <h1
-          class="css-ixvu55"
+          class="emotion-3"
         >
           Header H1
         </h1>
       </div>
     </div>
     <div
-      class="css-jxxswp"
+      class="emotion-0"
       id="header-h2"
     >
       <div
-        class="css-xhp9da"
+        class="emotion-1"
       >
         <a
           aria-label="navigate to Header H2 section"
-          class="css-1aob0xw-LinkHeading"
+          class="emotion-6"
           data-id="header-h2"
           data-level="2"
           data-title="Header H2"
@@ -91,22 +315,22 @@ exports[`Markdown overview snapshot 1`] = `
           </svg>
         </a>
         <h2
-          class="css-nj5449"
+          class="emotion-7"
         >
           Header H2
         </h2>
       </div>
     </div>
     <div
-      class="css-jxxswp"
+      class="emotion-0"
       id="header-h3"
     >
       <div
-        class="css-xhp9da"
+        class="emotion-1"
       >
         <a
           aria-label="navigate to Header H3 section"
-          class="css-walqom-LinkHeading"
+          class="emotion-10"
           data-id="header-h3"
           data-level="3"
           data-title="Header H3"
@@ -129,22 +353,22 @@ exports[`Markdown overview snapshot 1`] = `
           </svg>
         </a>
         <h3
-          class="css-1xpnkao"
+          class="emotion-11"
         >
           Header H3
         </h3>
       </div>
     </div>
     <div
-      class="css-jxxswp"
+      class="emotion-0"
       id="header-h4"
     >
       <div
-        class="css-xhp9da"
+        class="emotion-1"
       >
         <a
           aria-label="navigate to Header H4 section"
-          class="css-1ptrway-LinkHeading"
+          class="emotion-14"
           data-id="header-h4"
           data-level="4"
           data-title="Header H4"
@@ -167,22 +391,22 @@ exports[`Markdown overview snapshot 1`] = `
           </svg>
         </a>
         <h4
-          class="css-1ibbw5a"
+          class="emotion-15"
         >
           Header H4
         </h4>
       </div>
     </div>
     <div
-      class="css-jxxswp"
+      class="emotion-0"
       id="header-h5"
     >
       <div
-        class="css-xhp9da"
+        class="emotion-1"
       >
         <a
           aria-label="navigate to Header H5 section"
-          class="css-18myu3p-LinkHeading"
+          class="emotion-18"
           data-id="header-h5"
           data-level="5"
           data-title="Header H5"
@@ -205,7 +429,7 @@ exports[`Markdown overview snapshot 1`] = `
           </svg>
         </a>
         <h5
-          class="css-17t17dl"
+          class="emotion-19"
         >
           Header H5
         </h5>
@@ -218,26 +442,26 @@ exports[`Markdown overview snapshot 1`] = `
       variant="styles.p"
     >
       <pre
-        class="prism-code language-jsx css-3y8hb3"
+        class="prism-code language-jsx emotion-20"
         style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 3px 5px; display: inline; margin: 0px;"
       >
         <span
-          class="token-line css-vurnku"
+          class="token-line emotion-21"
           style="color: rgb(114, 143, 203);"
         >
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-22"
           >
             @theme
           </span>
           <span
-            class="token operator css-13aqjzy"
+            class="token operator emotion-22"
             style="color: rgb(6, 50, 137);"
           >
             -
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-22"
           >
             ui
           </span>

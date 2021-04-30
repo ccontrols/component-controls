@@ -2,19 +2,152 @@
 
 exports[`Source overview snapshot 1`] = `
 <DocumentFragment>
-  <div>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-2 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-2 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-5 {
+  font-family: Menlo,monospace;
+  overflow-x: auto;
+  background-color: #e6e6e6;
+}
+
+.emotion-5 code {
+  color: inherit;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-7 {
+  display: inline-block;
+}
+
+<div>
     <div
-      class="css-15owl46"
+      class="emotion-0"
     >
       <div
-        class="css-x60p33"
+        class="emotion-1"
       >
         <div
-          class="css-1vga9oy"
+          class="emotion-2"
         >
           <button
             aria-label="copy the displayed source code"
-            class="css-1tf4h46"
+            class="emotion-3"
           >
             copy
           </button>
@@ -22,579 +155,579 @@ exports[`Source overview snapshot 1`] = `
       </div>
     </div>
     <div
-      class="css-eqxzio"
+      class="emotion-4"
     >
       <pre
-        class="prism-code language-jsx css-3y8hb3"
+        class="prism-code language-jsx emotion-5"
         style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; display: block; margin: 0px;"
       >
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-6"
           style="color: rgb(114, 143, 203);"
         >
           <span
-            class="token keyword css-13aqjzy"
+            class="token keyword emotion-7"
             style="color: rgb(114, 143, 203);"
           >
             export
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
              
           </span>
           <span
-            class="token keyword css-13aqjzy"
+            class="token keyword emotion-7"
             style="color: rgb(114, 143, 203);"
           >
             const
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
              
           </span>
           <span
-            class="token function-variable function css-13aqjzy"
+            class="token function-variable function emotion-7"
             style="color: rgb(178, 151, 98);"
           >
             sample
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
              
           </span>
           <span
-            class="token operator css-13aqjzy"
+            class="token operator emotion-7"
             style="color: rgb(6, 50, 137);"
           >
             =
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
              
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             (
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             )
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
              
           </span>
           <span
-            class="token operator css-13aqjzy"
+            class="token operator emotion-7"
             style="color: rgb(6, 50, 137);"
           >
             =&gt;
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
              
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             {
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-6"
           style="color: rgb(114, 143, 203);"
         >
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
               
           </span>
           <span
-            class="token keyword css-13aqjzy"
+            class="token keyword emotion-7"
             style="color: rgb(114, 143, 203);"
           >
             const
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
              
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             [
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
             state
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             ,
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
              setState
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             ]
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
              
           </span>
           <span
-            class="token operator css-13aqjzy"
+            class="token operator emotion-7"
             style="color: rgb(6, 50, 137);"
           >
             =
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
              React
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             .
           </span>
           <span
-            class="token function css-13aqjzy"
+            class="token function emotion-7"
             style="color: rgb(178, 151, 98);"
           >
             useState
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             (
           </span>
           <span
-            class="token boolean css-13aqjzy"
+            class="token boolean emotion-7"
             style="color: rgb(114, 143, 203);"
           >
             false
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             )
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             ;
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-6"
           style="color: rgb(114, 143, 203);"
         >
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
               
           </span>
           <span
-            class="token keyword css-13aqjzy"
+            class="token keyword emotion-7"
             style="color: rgb(114, 143, 203);"
           >
             return
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
              
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             (
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-6"
           style="color: rgb(114, 143, 203);"
         >
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
                 
           </span>
           <span
-            class="token tag punctuation css-13aqjzy"
+            class="token tag punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             &lt;
           </span>
           <span
-            class="token tag class-name css-13aqjzy"
+            class="token tag class-name emotion-7"
             style="color: rgb(6, 50, 137);"
           >
             BooleanEditor
           </span>
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-7"
             style="color: rgb(6, 50, 137);"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-6"
           style="color: rgb(114, 143, 203);"
         >
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-7"
             style="color: rgb(6, 50, 137);"
           >
                   
           </span>
           <span
-            class="token tag attr-name css-13aqjzy"
+            class="token tag attr-name emotion-7"
             style="color: rgb(137, 103, 36);"
           >
             name
           </span>
           <span
-            class="token tag attr-value punctuation css-13aqjzy"
+            class="token tag attr-value punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             =
           </span>
           <span
-            class="token tag attr-value punctuation css-13aqjzy"
+            class="token tag attr-value punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             "
           </span>
           <span
-            class="token tag attr-value css-13aqjzy"
+            class="token tag attr-value emotion-7"
             style="color: rgb(114, 143, 203);"
           >
             prop
           </span>
           <span
-            class="token tag attr-value punctuation css-13aqjzy"
+            class="token tag attr-value punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             "
           </span>
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-7"
             style="color: rgb(6, 50, 137);"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-6"
           style="color: rgb(114, 143, 203);"
         >
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-7"
             style="color: rgb(6, 50, 137);"
           >
                   
           </span>
           <span
-            class="token tag attr-name css-13aqjzy"
+            class="token tag attr-name emotion-7"
             style="color: rgb(137, 103, 36);"
           >
             onChange
           </span>
           <span
-            class="token tag script language-javascript script-punctuation punctuation css-13aqjzy"
+            class="token tag script language-javascript script-punctuation punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             =
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             {
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             (
           </span>
           <span
-            class="token tag script language-javascript parameter css-13aqjzy"
+            class="token tag script language-javascript parameter emotion-7"
             style="color: rgb(6, 50, 137);"
           >
             name
           </span>
           <span
-            class="token tag script language-javascript parameter punctuation css-13aqjzy"
+            class="token tag script language-javascript parameter punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             ,
           </span>
           <span
-            class="token tag script language-javascript parameter css-13aqjzy"
+            class="token tag script language-javascript parameter emotion-7"
             style="color: rgb(6, 50, 137);"
           >
              newVal
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             )
           </span>
           <span
-            class="token tag script language-javascript css-13aqjzy"
+            class="token tag script language-javascript emotion-7"
             style="color: rgb(6, 50, 137);"
           >
              
           </span>
           <span
-            class="token tag script language-javascript operator css-13aqjzy"
+            class="token tag script language-javascript operator emotion-7"
             style="color: rgb(6, 50, 137);"
           >
             =&gt;
           </span>
           <span
-            class="token tag script language-javascript css-13aqjzy"
+            class="token tag script language-javascript emotion-7"
             style="color: rgb(6, 50, 137);"
           >
              
           </span>
           <span
-            class="token tag script language-javascript function css-13aqjzy"
+            class="token tag script language-javascript function emotion-7"
             style="color: rgb(178, 151, 98);"
           >
             setState
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             (
           </span>
           <span
-            class="token tag script language-javascript css-13aqjzy"
+            class="token tag script language-javascript emotion-7"
             style="color: rgb(6, 50, 137);"
           >
             newVal
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             )
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             }
           </span>
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-7"
             style="color: rgb(6, 50, 137);"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-6"
           style="color: rgb(114, 143, 203);"
         >
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-7"
             style="color: rgb(6, 50, 137);"
           >
                   
           </span>
           <span
-            class="token tag attr-name css-13aqjzy"
+            class="token tag attr-name emotion-7"
             style="color: rgb(137, 103, 36);"
           >
             prop
           </span>
           <span
-            class="token tag script language-javascript script-punctuation punctuation css-13aqjzy"
+            class="token tag script language-javascript script-punctuation punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             =
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             {
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             {
           </span>
           <span
-            class="token tag script language-javascript css-13aqjzy"
+            class="token tag script language-javascript emotion-7"
             style="color: rgb(6, 50, 137);"
           >
              type
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             :
           </span>
           <span
-            class="token tag script language-javascript css-13aqjzy"
+            class="token tag script language-javascript emotion-7"
             style="color: rgb(6, 50, 137);"
           >
              ControlTypes
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             .
           </span>
           <span
-            class="token tag script language-javascript constant css-13aqjzy"
+            class="token tag script language-javascript constant emotion-7"
             style="color: rgb(6, 50, 137);"
           >
             BOOLEAN
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             ,
           </span>
           <span
-            class="token tag script language-javascript css-13aqjzy"
+            class="token tag script language-javascript emotion-7"
             style="color: rgb(6, 50, 137);"
           >
              value
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             :
           </span>
           <span
-            class="token tag script language-javascript css-13aqjzy"
+            class="token tag script language-javascript emotion-7"
             style="color: rgb(6, 50, 137);"
           >
              state 
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             }
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             }
           </span>
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-7"
             style="color: rgb(6, 50, 137);"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-6"
           style="color: rgb(114, 143, 203);"
         >
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-7"
             style="color: rgb(6, 50, 137);"
           >
                 
           </span>
           <span
-            class="token tag punctuation css-13aqjzy"
+            class="token tag punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             /&gt;
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-6"
           style="color: rgb(114, 143, 203);"
         >
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
               
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             )
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             ;
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-6"
           style="color: rgb(114, 143, 203);"
         >
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           />
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             }
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(182, 173, 154);"
           >
             ;
@@ -608,19 +741,152 @@ exports[`Source overview snapshot 1`] = `
 
 exports[`Source theme snapshot 1`] = `
 <DocumentFragment>
-  <div>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-2 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-2 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-5 {
+  font-family: Menlo,monospace;
+  overflow-x: auto;
+  background-color: #e6e6e6;
+}
+
+.emotion-5 code {
+  color: inherit;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-7 {
+  display: inline-block;
+}
+
+<div>
     <div
-      class="css-15owl46"
+      class="emotion-0"
     >
       <div
-        class="css-x60p33"
+        class="emotion-1"
       >
         <div
-          class="css-1vga9oy"
+          class="emotion-2"
         >
           <button
             aria-label="copy the displayed source code"
-            class="css-1tf4h46"
+            class="emotion-3"
           >
             copy
           </button>
@@ -628,579 +894,579 @@ exports[`Source theme snapshot 1`] = `
       </div>
     </div>
     <div
-      class="css-eqxzio"
+      class="emotion-4"
     >
       <pre
-        class="prism-code language-jsx css-3y8hb3"
+        class="prism-code language-jsx emotion-5"
         style="color: rgb(158, 254, 255); background-color: rgb(45, 42, 85); padding: 25px 10px 10px; display: block; margin: 0px;"
       >
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-6"
           style="color: rgb(158, 254, 255);"
         >
           <span
-            class="token keyword css-13aqjzy"
+            class="token keyword emotion-7"
             style="color: rgb(255, 157, 0);"
           >
             export
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
              
           </span>
           <span
-            class="token keyword css-13aqjzy"
+            class="token keyword emotion-7"
             style="color: rgb(255, 157, 0);"
           >
             const
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
              
           </span>
           <span
-            class="token function-variable function css-13aqjzy"
+            class="token function-variable function emotion-7"
             style="color: rgb(250, 208, 0);"
           >
             sample
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
              
           </span>
           <span
-            class="token operator css-13aqjzy"
+            class="token operator emotion-7"
             style="color: rgb(255, 157, 0);"
           >
             =
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
              
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             (
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             )
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
              
           </span>
           <span
-            class="token operator css-13aqjzy"
+            class="token operator emotion-7"
             style="color: rgb(255, 157, 0);"
           >
             =&gt;
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
              
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             {
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-6"
           style="color: rgb(158, 254, 255);"
         >
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
               
           </span>
           <span
-            class="token keyword css-13aqjzy"
+            class="token keyword emotion-7"
             style="color: rgb(255, 157, 0);"
           >
             const
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
              
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             [
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
             state
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             ,
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
              setState
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             ]
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
              
           </span>
           <span
-            class="token operator css-13aqjzy"
+            class="token operator emotion-7"
             style="color: rgb(255, 157, 0);"
           >
             =
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
              React
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             .
           </span>
           <span
-            class="token function css-13aqjzy"
+            class="token function emotion-7"
             style="color: rgb(250, 208, 0);"
           >
             useState
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             (
           </span>
           <span
-            class="token boolean css-13aqjzy"
+            class="token boolean emotion-7"
             style="color: rgb(255, 98, 140);"
           >
             false
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             )
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             ;
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-6"
           style="color: rgb(158, 254, 255);"
         >
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
               
           </span>
           <span
-            class="token keyword css-13aqjzy"
+            class="token keyword emotion-7"
             style="color: rgb(255, 157, 0);"
           >
             return
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
              
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             (
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-6"
           style="color: rgb(158, 254, 255);"
         >
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
                 
           </span>
           <span
-            class="token tag punctuation css-13aqjzy"
+            class="token tag punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             &lt;
           </span>
           <span
-            class="token tag class-name css-13aqjzy"
+            class="token tag class-name emotion-7"
             style="color: rgb(250, 208, 0);"
           >
             BooleanEditor
           </span>
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-7"
             style="color: rgb(255, 157, 0);"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-6"
           style="color: rgb(158, 254, 255);"
         >
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-7"
             style="color: rgb(255, 157, 0);"
           >
                   
           </span>
           <span
-            class="token tag attr-name css-13aqjzy"
+            class="token tag attr-name emotion-7"
             style="color: rgb(255, 180, 84);"
           >
             name
           </span>
           <span
-            class="token tag attr-value punctuation css-13aqjzy"
+            class="token tag attr-value punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             =
           </span>
           <span
-            class="token tag attr-value punctuation css-13aqjzy"
+            class="token tag attr-value punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             "
           </span>
           <span
-            class="token tag attr-value css-13aqjzy"
+            class="token tag attr-value emotion-7"
             style="color: rgb(255, 157, 0);"
           >
             prop
           </span>
           <span
-            class="token tag attr-value punctuation css-13aqjzy"
+            class="token tag attr-value punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             "
           </span>
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-7"
             style="color: rgb(255, 157, 0);"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-6"
           style="color: rgb(158, 254, 255);"
         >
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-7"
             style="color: rgb(255, 157, 0);"
           >
                   
           </span>
           <span
-            class="token tag attr-name css-13aqjzy"
+            class="token tag attr-name emotion-7"
             style="color: rgb(255, 180, 84);"
           >
             onChange
           </span>
           <span
-            class="token tag script language-javascript script-punctuation punctuation css-13aqjzy"
+            class="token tag script language-javascript script-punctuation punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             =
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             {
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             (
           </span>
           <span
-            class="token tag script language-javascript parameter css-13aqjzy"
+            class="token tag script language-javascript parameter emotion-7"
             style="color: rgb(255, 157, 0);"
           >
             name
           </span>
           <span
-            class="token tag script language-javascript parameter punctuation css-13aqjzy"
+            class="token tag script language-javascript parameter punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             ,
           </span>
           <span
-            class="token tag script language-javascript parameter css-13aqjzy"
+            class="token tag script language-javascript parameter emotion-7"
             style="color: rgb(255, 157, 0);"
           >
              newVal
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             )
           </span>
           <span
-            class="token tag script language-javascript css-13aqjzy"
+            class="token tag script language-javascript emotion-7"
             style="color: rgb(255, 157, 0);"
           >
              
           </span>
           <span
-            class="token tag script language-javascript operator css-13aqjzy"
+            class="token tag script language-javascript operator emotion-7"
             style="color: rgb(255, 157, 0);"
           >
             =&gt;
           </span>
           <span
-            class="token tag script language-javascript css-13aqjzy"
+            class="token tag script language-javascript emotion-7"
             style="color: rgb(255, 157, 0);"
           >
              
           </span>
           <span
-            class="token tag script language-javascript function css-13aqjzy"
+            class="token tag script language-javascript function emotion-7"
             style="color: rgb(250, 208, 0);"
           >
             setState
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             (
           </span>
           <span
-            class="token tag script language-javascript css-13aqjzy"
+            class="token tag script language-javascript emotion-7"
             style="color: rgb(255, 157, 0);"
           >
             newVal
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             )
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             }
           </span>
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-7"
             style="color: rgb(255, 157, 0);"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-6"
           style="color: rgb(158, 254, 255);"
         >
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-7"
             style="color: rgb(255, 157, 0);"
           >
                   
           </span>
           <span
-            class="token tag attr-name css-13aqjzy"
+            class="token tag attr-name emotion-7"
             style="color: rgb(255, 180, 84);"
           >
             prop
           </span>
           <span
-            class="token tag script language-javascript script-punctuation punctuation css-13aqjzy"
+            class="token tag script language-javascript script-punctuation punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             =
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             {
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             {
           </span>
           <span
-            class="token tag script language-javascript css-13aqjzy"
+            class="token tag script language-javascript emotion-7"
             style="color: rgb(255, 157, 0);"
           >
              type
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             :
           </span>
           <span
-            class="token tag script language-javascript css-13aqjzy"
+            class="token tag script language-javascript emotion-7"
             style="color: rgb(255, 157, 0);"
           >
              ControlTypes
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             .
           </span>
           <span
-            class="token tag script language-javascript constant css-13aqjzy"
+            class="token tag script language-javascript constant emotion-7"
             style="color: rgb(250, 208, 0);"
           >
             BOOLEAN
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             ,
           </span>
           <span
-            class="token tag script language-javascript css-13aqjzy"
+            class="token tag script language-javascript emotion-7"
             style="color: rgb(255, 157, 0);"
           >
              value
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             :
           </span>
           <span
-            class="token tag script language-javascript css-13aqjzy"
+            class="token tag script language-javascript emotion-7"
             style="color: rgb(255, 157, 0);"
           >
              state 
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             }
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             }
           </span>
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-7"
             style="color: rgb(255, 157, 0);"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-6"
           style="color: rgb(158, 254, 255);"
         >
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-7"
             style="color: rgb(255, 157, 0);"
           >
                 
           </span>
           <span
-            class="token tag punctuation css-13aqjzy"
+            class="token tag punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             /&gt;
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-6"
           style="color: rgb(158, 254, 255);"
         >
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           >
               
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             )
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             ;
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-6"
           style="color: rgb(158, 254, 255);"
         >
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-7"
           />
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             }
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             ;
@@ -1214,28 +1480,212 @@ exports[`Source theme snapshot 1`] = `
 
 exports[`Source themeSelector snapshot 1`] = `
 <DocumentFragment>
-  <div>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-2 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-2 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-4 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-4 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-7 {
+  font-family: Menlo,monospace;
+  overflow-x: auto;
+  background-color: #e6e6e6;
+}
+
+.emotion-7 code {
+  color: inherit;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-9 {
+  display: inline-block;
+}
+
+<div>
     <div
-      class="css-15owl46"
+      class="emotion-0"
     >
       <div
-        class="css-x60p33"
+        class="emotion-1"
       >
         <div
-          class="css-1vga9oy"
+          class="emotion-2"
         >
           <button
             aria-label="copy the displayed source code"
-            class="css-1tf4h46"
+            class="emotion-3"
           >
             copy
           </button>
         </div>
         <div
-          class="css-7d11p2"
+          class="emotion-4"
         >
           <button
-            class="css-1tf4h46"
+            class="emotion-3"
           >
             dracula
           </button>
@@ -1243,575 +1693,575 @@ exports[`Source themeSelector snapshot 1`] = `
       </div>
     </div>
     <div
-      class="css-eqxzio"
+      class="emotion-6"
     >
       <pre
-        class="prism-code language-jsx css-3y8hb3"
+        class="prism-code language-jsx emotion-7"
         style="color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); padding: 25px 10px 10px; display: block; margin: 0px;"
       >
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-8"
           style="color: rgb(248, 248, 242);"
         >
           <span
-            class="token keyword css-13aqjzy"
+            class="token keyword emotion-9"
             style="color: rgb(189, 147, 249); font-style: italic;"
           >
             export
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-9"
           >
              
           </span>
           <span
-            class="token keyword css-13aqjzy"
+            class="token keyword emotion-9"
             style="color: rgb(189, 147, 249); font-style: italic;"
           >
             const
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-9"
           >
              
           </span>
           <span
-            class="token function-variable function css-13aqjzy"
+            class="token function-variable function emotion-9"
             style="color: rgb(80, 250, 123);"
           >
             sample
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-9"
           >
              
           </span>
           <span
-            class="token operator css-13aqjzy"
+            class="token operator emotion-9"
           >
             =
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-9"
           >
              
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             (
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             )
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-9"
           >
              
           </span>
           <span
-            class="token operator css-13aqjzy"
+            class="token operator emotion-9"
           >
             =&gt;
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-9"
           >
              
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             {
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-9"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-8"
           style="color: rgb(248, 248, 242);"
         >
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-9"
           >
               
           </span>
           <span
-            class="token keyword css-13aqjzy"
+            class="token keyword emotion-9"
             style="color: rgb(189, 147, 249); font-style: italic;"
           >
             const
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-9"
           >
              
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             [
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-9"
           >
             state
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             ,
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-9"
           >
              setState
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             ]
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-9"
           >
              
           </span>
           <span
-            class="token operator css-13aqjzy"
+            class="token operator emotion-9"
           >
             =
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-9"
           >
              React
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             .
           </span>
           <span
-            class="token function css-13aqjzy"
+            class="token function emotion-9"
             style="color: rgb(80, 250, 123);"
           >
             useState
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             (
           </span>
           <span
-            class="token boolean css-13aqjzy"
+            class="token boolean emotion-9"
           >
             false
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             )
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             ;
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-9"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-8"
           style="color: rgb(248, 248, 242);"
         >
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-9"
           >
               
           </span>
           <span
-            class="token keyword css-13aqjzy"
+            class="token keyword emotion-9"
             style="color: rgb(189, 147, 249); font-style: italic;"
           >
             return
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-9"
           >
              
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             (
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-9"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-8"
           style="color: rgb(248, 248, 242);"
         >
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-9"
           >
                 
           </span>
           <span
-            class="token tag punctuation css-13aqjzy"
+            class="token tag punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             &lt;
           </span>
           <span
-            class="token tag class-name css-13aqjzy"
+            class="token tag class-name emotion-9"
             style="color: rgb(255, 121, 198);"
           >
             BooleanEditor
           </span>
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-9"
             style="color: rgb(255, 121, 198);"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-8"
           style="color: rgb(248, 248, 242);"
         >
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-9"
             style="color: rgb(255, 121, 198);"
           >
                   
           </span>
           <span
-            class="token tag attr-name css-13aqjzy"
+            class="token tag attr-name emotion-9"
             style="color: rgb(241, 250, 140);"
           >
             name
           </span>
           <span
-            class="token tag attr-value punctuation css-13aqjzy"
+            class="token tag attr-value punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             =
           </span>
           <span
-            class="token tag attr-value punctuation css-13aqjzy"
+            class="token tag attr-value punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             "
           </span>
           <span
-            class="token tag attr-value css-13aqjzy"
+            class="token tag attr-value emotion-9"
             style="color: rgb(255, 121, 198);"
           >
             prop
           </span>
           <span
-            class="token tag attr-value punctuation css-13aqjzy"
+            class="token tag attr-value punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             "
           </span>
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-9"
             style="color: rgb(255, 121, 198);"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-8"
           style="color: rgb(248, 248, 242);"
         >
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-9"
             style="color: rgb(255, 121, 198);"
           >
                   
           </span>
           <span
-            class="token tag attr-name css-13aqjzy"
+            class="token tag attr-name emotion-9"
             style="color: rgb(241, 250, 140);"
           >
             onChange
           </span>
           <span
-            class="token tag script language-javascript script-punctuation punctuation css-13aqjzy"
+            class="token tag script language-javascript script-punctuation punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             =
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             {
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             (
           </span>
           <span
-            class="token tag script language-javascript parameter css-13aqjzy"
+            class="token tag script language-javascript parameter emotion-9"
             style="color: rgb(255, 121, 198);"
           >
             name
           </span>
           <span
-            class="token tag script language-javascript parameter punctuation css-13aqjzy"
+            class="token tag script language-javascript parameter punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             ,
           </span>
           <span
-            class="token tag script language-javascript parameter css-13aqjzy"
+            class="token tag script language-javascript parameter emotion-9"
             style="color: rgb(255, 121, 198);"
           >
              newVal
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             )
           </span>
           <span
-            class="token tag script language-javascript css-13aqjzy"
+            class="token tag script language-javascript emotion-9"
             style="color: rgb(255, 121, 198);"
           >
              
           </span>
           <span
-            class="token tag script language-javascript operator css-13aqjzy"
+            class="token tag script language-javascript operator emotion-9"
             style="color: rgb(255, 121, 198);"
           >
             =&gt;
           </span>
           <span
-            class="token tag script language-javascript css-13aqjzy"
+            class="token tag script language-javascript emotion-9"
             style="color: rgb(255, 121, 198);"
           >
              
           </span>
           <span
-            class="token tag script language-javascript function css-13aqjzy"
+            class="token tag script language-javascript function emotion-9"
             style="color: rgb(80, 250, 123);"
           >
             setState
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             (
           </span>
           <span
-            class="token tag script language-javascript css-13aqjzy"
+            class="token tag script language-javascript emotion-9"
             style="color: rgb(255, 121, 198);"
           >
             newVal
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             )
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             }
           </span>
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-9"
             style="color: rgb(255, 121, 198);"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-8"
           style="color: rgb(248, 248, 242);"
         >
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-9"
             style="color: rgb(255, 121, 198);"
           >
                   
           </span>
           <span
-            class="token tag attr-name css-13aqjzy"
+            class="token tag attr-name emotion-9"
             style="color: rgb(241, 250, 140);"
           >
             prop
           </span>
           <span
-            class="token tag script language-javascript script-punctuation punctuation css-13aqjzy"
+            class="token tag script language-javascript script-punctuation punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             =
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             {
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             {
           </span>
           <span
-            class="token tag script language-javascript css-13aqjzy"
+            class="token tag script language-javascript emotion-9"
             style="color: rgb(255, 121, 198);"
           >
              type
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             :
           </span>
           <span
-            class="token tag script language-javascript css-13aqjzy"
+            class="token tag script language-javascript emotion-9"
             style="color: rgb(255, 121, 198);"
           >
              ControlTypes
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             .
           </span>
           <span
-            class="token tag script language-javascript constant css-13aqjzy"
+            class="token tag script language-javascript constant emotion-9"
             style="color: rgb(189, 147, 249);"
           >
             BOOLEAN
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             ,
           </span>
           <span
-            class="token tag script language-javascript css-13aqjzy"
+            class="token tag script language-javascript emotion-9"
             style="color: rgb(255, 121, 198);"
           >
              value
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             :
           </span>
           <span
-            class="token tag script language-javascript css-13aqjzy"
+            class="token tag script language-javascript emotion-9"
             style="color: rgb(255, 121, 198);"
           >
              state 
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             }
           </span>
           <span
-            class="token tag script language-javascript punctuation css-13aqjzy"
+            class="token tag script language-javascript punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             }
           </span>
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-9"
             style="color: rgb(255, 121, 198);"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-8"
           style="color: rgb(248, 248, 242);"
         >
           <span
-            class="token tag css-13aqjzy"
+            class="token tag emotion-9"
             style="color: rgb(255, 121, 198);"
           >
                 
           </span>
           <span
-            class="token tag punctuation css-13aqjzy"
+            class="token tag punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             /&gt;
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-9"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-8"
           style="color: rgb(248, 248, 242);"
         >
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-9"
           >
               
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             )
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             ;
           </span>
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-9"
           />
         </div>
         <div
-          class="token-line css-vurnku"
+          class="token-line emotion-8"
           style="color: rgb(248, 248, 242);"
         >
           <span
-            class="token plain css-13aqjzy"
+            class="token plain emotion-9"
           />
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             }
           </span>
           <span
-            class="token punctuation css-13aqjzy"
+            class="token punctuation emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             ;

@@ -2,15 +2,426 @@
 
 exports[`TestsCoverage overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3:hover a {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-4 p {
+  margin: 0;
+}
+
+.emotion-4 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-4 a {
+  word-break: break-word;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-25 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  line-height: 24px;
+  background-color: #f6f6f6;
+  white-space: nowrap;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-weight: 700;
+  font-family: Menlo,monospace;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-28 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.emotion-30 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+.emotion-32 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-weight: 600;
+}
+
+.emotion-34 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.emotion-41 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(76,175,80,0.15);
+  border: 2px solid #4caf50;
+}
+
+.emotion-55 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(126,142,72,0.15);
+  border: 2px solid #7e8e48;
+}
+
+.emotion-83 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(109,153,74,0.15);
+  border: 2px solid #6d994a;
+}
+
+.emotion-114 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(160,121,67,0.15);
+  border: 2px solid #a07943;
+}
+
+.emotion-142 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(193,99,61,0.15);
+  border: 2px solid #c1633d;
+}
+
+.emotion-144 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-145 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-146 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-147 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-147 button {
+  width: 50px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.emotion-148 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 50px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.emotion-149 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+}
+
+.emotion-149:disabled {
+  color: #aaa;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id=""
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       />
     </div>
     <div
@@ -20,113 +431,113 @@ exports[`TestsCoverage overview snapshot 1`] = `
     >
       <div>
         <div
-          class="css-1d6wxci"
+          class="emotion-3"
         >
           <table
-            class="css-11y77l0"
+            class="emotion-4"
             role="table"
           >
             <thead
-              class="css-14kw1rx"
+              class="emotion-5"
             >
               <tr
-                class="css-vurnku"
+                class="emotion-6"
                 role="row"
               >
                 <th
-                  class="css-n59tc9"
+                  class="emotion-7"
                   colspan="1"
                   role="columnheader"
                   style="width: 20px;"
                 >
                   <div
-                    class="css-wwqljn"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-206mi5"
+                      class="emotion-9"
                     />
                   </div>
                 </th>
                 <th
-                  class="css-n59tc9"
+                  class="emotion-7"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
                   title="Toggle SortBy"
                 >
                   <div
-                    class="css-wwqljn"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-206mi5"
+                      class="emotion-9"
                     >
                       Kind
                     </div>
                   </div>
                 </th>
                 <th
-                  class="css-n59tc9"
+                  class="emotion-7"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
                   title="Toggle SortBy"
                 >
                   <div
-                    class="css-wwqljn"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-206mi5"
+                      class="emotion-9"
                     >
                       Total
                     </div>
                   </div>
                 </th>
                 <th
-                  class="css-n59tc9"
+                  class="emotion-7"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
                   title="Toggle SortBy"
                 >
                   <div
-                    class="css-wwqljn"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-206mi5"
+                      class="emotion-9"
                     >
                       Covered
                     </div>
                   </div>
                 </th>
                 <th
-                  class="css-n59tc9"
+                  class="emotion-7"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
                   title="Toggle SortBy"
                 >
                   <div
-                    class="css-wwqljn"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-206mi5"
+                      class="emotion-9"
                     >
                       Skipped
                     </div>
                   </div>
                 </th>
                 <th
-                  class="css-n59tc9"
+                  class="emotion-7"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
                   title="Toggle SortBy"
                 >
                   <div
-                    class="css-wwqljn"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-206mi5"
+                      class="emotion-9"
                     >
                       %
                     </div>
@@ -135,18 +546,18 @@ exports[`TestsCoverage overview snapshot 1`] = `
               </tr>
             </thead>
             <tbody
-              class="css-tuhk50"
+              class="emotion-25"
               role="rowgroup"
             >
               <tr
-                class="css-ijvt85"
+                class="emotion-26"
                 role="row"
               >
                 <td
                   colspan="6"
                 >
                   <div
-                    class="css-fz9au7"
+                    class="emotion-27"
                     style="cursor: pointer;"
                     title="Toggle Row Expanded"
                   >
@@ -167,7 +578,7 @@ exports[`TestsCoverage overview snapshot 1`] = `
                     </svg>
                      
                     <span
-                      class="css-15vncxw-Cell"
+                      class="emotion-28"
                     >
                       Table.tsx
                     </span>
@@ -175,71 +586,71 @@ exports[`TestsCoverage overview snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="css-ijvt85"
+                class="emotion-26"
                 role="row"
               >
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-1h7qns8-Cell"
+                    class="emotion-32"
                   >
                     lines
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     51
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     50
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     <span
-                      class="css-x0l7ch-Tag"
+                      class="emotion-41"
                     >
                       <span
-                        class="css-vurnku"
+                        class="emotion-6"
                       >
                         98.04%
                       </span>
@@ -248,71 +659,71 @@ exports[`TestsCoverage overview snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="css-ijvt85"
+                class="emotion-26"
                 role="row"
               >
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-1h7qns8-Cell"
+                    class="emotion-32"
                   >
                     functions
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     10
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     7
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     <span
-                      class="css-kp3u7p-Tag"
+                      class="emotion-55"
                     >
                       <span
-                        class="css-vurnku"
+                        class="emotion-6"
                       >
                         70%
                       </span>
@@ -321,71 +732,71 @@ exports[`TestsCoverage overview snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="css-ijvt85"
+                class="emotion-26"
                 role="row"
               >
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-1h7qns8-Cell"
+                    class="emotion-32"
                   >
                     statements
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     56
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     55
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     <span
-                      class="css-x0l7ch-Tag"
+                      class="emotion-41"
                     >
                       <span
-                        class="css-vurnku"
+                        class="emotion-6"
                       >
                         98.21%
                       </span>
@@ -394,71 +805,71 @@ exports[`TestsCoverage overview snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="css-ijvt85"
+                class="emotion-26"
                 role="row"
               >
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-1h7qns8-Cell"
+                    class="emotion-32"
                   >
                     branches
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     49
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     40
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     <span
-                      class="css-180ttpd-Tag"
+                      class="emotion-83"
                     >
                       <span
-                        class="css-vurnku"
+                        class="emotion-6"
                       >
                         81.63%
                       </span>
@@ -467,14 +878,14 @@ exports[`TestsCoverage overview snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="css-ijvt85"
+                class="emotion-26"
                 role="row"
               >
                 <td
                   colspan="6"
                 >
                   <div
-                    class="css-fz9au7"
+                    class="emotion-27"
                     style="cursor: pointer;"
                     title="Toggle Row Expanded"
                   >
@@ -495,7 +906,7 @@ exports[`TestsCoverage overview snapshot 1`] = `
                     </svg>
                      
                     <span
-                      class="css-15vncxw-Cell"
+                      class="emotion-28"
                     >
                       TableFilter.tsx
                     </span>
@@ -503,71 +914,71 @@ exports[`TestsCoverage overview snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="css-ijvt85"
+                class="emotion-26"
                 role="row"
               >
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-1h7qns8-Cell"
+                    class="emotion-32"
                   >
                     lines
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     6
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     5
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     <span
-                      class="css-180ttpd-Tag"
+                      class="emotion-83"
                     >
                       <span
-                        class="css-vurnku"
+                        class="emotion-6"
                       >
                         83.33%
                       </span>
@@ -576,71 +987,71 @@ exports[`TestsCoverage overview snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="css-ijvt85"
+                class="emotion-26"
                 role="row"
               >
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-1h7qns8-Cell"
+                    class="emotion-32"
                   >
                     functions
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     2
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     1
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     <span
-                      class="css-w68kdb-Tag"
+                      class="emotion-114"
                     >
                       <span
-                        class="css-vurnku"
+                        class="emotion-6"
                       >
                         50%
                       </span>
@@ -649,71 +1060,71 @@ exports[`TestsCoverage overview snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="css-ijvt85"
+                class="emotion-26"
                 role="row"
               >
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-1h7qns8-Cell"
+                    class="emotion-32"
                   >
                     statements
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     6
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     5
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     <span
-                      class="css-180ttpd-Tag"
+                      class="emotion-83"
                     >
                       <span
-                        class="css-vurnku"
+                        class="emotion-6"
                       >
                         83.33%
                       </span>
@@ -722,71 +1133,71 @@ exports[`TestsCoverage overview snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="css-ijvt85"
+                class="emotion-26"
                 role="row"
               >
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-1h7qns8-Cell"
+                    class="emotion-32"
                   >
                     branches
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     4
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     1
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     <span
-                      class="css-vhxbzo-Tag"
+                      class="emotion-142"
                     >
                       <span
-                        class="css-vurnku"
+                        class="emotion-6"
                       >
                         25%
                       </span>
@@ -797,51 +1208,51 @@ exports[`TestsCoverage overview snapshot 1`] = `
             </tbody>
           </table>
           <div
-            class="css-43hdi9"
+            class="emotion-144"
           >
             <div
-              class="css-v7kut1"
+              class="emotion-145"
             />
             <div
-              class="css-f5h6sg"
+              class="emotion-146"
             >
               <div
-                class="css-wzqkm9"
+                class="emotion-147"
               >
                 <div
-                  class="css-1c1rsqy"
+                  class="emotion-148"
                 >
                   <button
-                    class="css-97huhz"
+                    class="emotion-149"
                     disabled=""
                   >
                     &lt;&lt;
                   </button>
                 </div>
                 <div
-                  class="css-1c1rsqy"
+                  class="emotion-148"
                 >
                   <button
-                    class="css-97huhz"
+                    class="emotion-149"
                     disabled=""
                   >
                     &lt;
                   </button>
                 </div>
                 <div
-                  class="css-1c1rsqy"
+                  class="emotion-148"
                 >
                   <button
-                    class="css-97huhz"
+                    class="emotion-149"
                   >
                     &gt;
                   </button>
                 </div>
                 <div
-                  class="css-1c1rsqy"
+                  class="emotion-148"
                 >
                   <button
-                    class="css-97huhz"
+                    class="emotion-149"
                   >
                     &gt;&gt;
                   </button>
@@ -858,15 +1269,395 @@ exports[`TestsCoverage overview snapshot 1`] = `
 
 exports[`TestsCoverage pagination snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3:hover a {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-4 p {
+  margin: 0;
+}
+
+.emotion-4 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-4 a {
+  word-break: break-word;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-25 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  line-height: 24px;
+  background-color: #f6f6f6;
+  white-space: nowrap;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-weight: 700;
+  font-family: Menlo,monospace;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-28 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.emotion-30 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+.emotion-32 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-weight: 600;
+}
+
+.emotion-34 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.emotion-41 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(76,175,80,0.15);
+  border: 2px solid #4caf50;
+}
+
+.emotion-55 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(126,142,72,0.15);
+  border: 2px solid #7e8e48;
+}
+
+.emotion-71 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-72 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-73 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-74 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-74 button {
+  width: 50px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.emotion-75 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 50px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.emotion-76 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+}
+
+.emotion-76:disabled {
+  color: #aaa;
+}
+
+.emotion-83 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id=""
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       />
     </div>
     <div
@@ -876,113 +1667,113 @@ exports[`TestsCoverage pagination snapshot 1`] = `
     >
       <div>
         <div
-          class="css-1d6wxci"
+          class="emotion-3"
         >
           <table
-            class="css-11y77l0"
+            class="emotion-4"
             role="table"
           >
             <thead
-              class="css-14kw1rx"
+              class="emotion-5"
             >
               <tr
-                class="css-vurnku"
+                class="emotion-6"
                 role="row"
               >
                 <th
-                  class="css-n59tc9"
+                  class="emotion-7"
                   colspan="1"
                   role="columnheader"
                   style="width: 20px;"
                 >
                   <div
-                    class="css-wwqljn"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-206mi5"
+                      class="emotion-9"
                     />
                   </div>
                 </th>
                 <th
-                  class="css-n59tc9"
+                  class="emotion-7"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
                   title="Toggle SortBy"
                 >
                   <div
-                    class="css-wwqljn"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-206mi5"
+                      class="emotion-9"
                     >
                       Kind
                     </div>
                   </div>
                 </th>
                 <th
-                  class="css-n59tc9"
+                  class="emotion-7"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
                   title="Toggle SortBy"
                 >
                   <div
-                    class="css-wwqljn"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-206mi5"
+                      class="emotion-9"
                     >
                       Total
                     </div>
                   </div>
                 </th>
                 <th
-                  class="css-n59tc9"
+                  class="emotion-7"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
                   title="Toggle SortBy"
                 >
                   <div
-                    class="css-wwqljn"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-206mi5"
+                      class="emotion-9"
                     >
                       Covered
                     </div>
                   </div>
                 </th>
                 <th
-                  class="css-n59tc9"
+                  class="emotion-7"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
                   title="Toggle SortBy"
                 >
                   <div
-                    class="css-wwqljn"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-206mi5"
+                      class="emotion-9"
                     >
                       Skipped
                     </div>
                   </div>
                 </th>
                 <th
-                  class="css-n59tc9"
+                  class="emotion-7"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
                   title="Toggle SortBy"
                 >
                   <div
-                    class="css-wwqljn"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-206mi5"
+                      class="emotion-9"
                     >
                       %
                     </div>
@@ -991,18 +1782,18 @@ exports[`TestsCoverage pagination snapshot 1`] = `
               </tr>
             </thead>
             <tbody
-              class="css-tuhk50"
+              class="emotion-25"
               role="rowgroup"
             >
               <tr
-                class="css-ijvt85"
+                class="emotion-26"
                 role="row"
               >
                 <td
                   colspan="6"
                 >
                   <div
-                    class="css-fz9au7"
+                    class="emotion-27"
                     style="cursor: pointer;"
                     title="Toggle Row Expanded"
                   >
@@ -1023,7 +1814,7 @@ exports[`TestsCoverage pagination snapshot 1`] = `
                     </svg>
                      
                     <span
-                      class="css-15vncxw-Cell"
+                      class="emotion-28"
                     >
                       Table.tsx
                     </span>
@@ -1031,71 +1822,71 @@ exports[`TestsCoverage pagination snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="css-ijvt85"
+                class="emotion-26"
                 role="row"
               >
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-1h7qns8-Cell"
+                    class="emotion-32"
                   >
                     lines
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     51
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     50
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     <span
-                      class="css-x0l7ch-Tag"
+                      class="emotion-41"
                     >
                       <span
-                        class="css-vurnku"
+                        class="emotion-6"
                       >
                         98.04%
                       </span>
@@ -1104,71 +1895,71 @@ exports[`TestsCoverage pagination snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="css-ijvt85"
+                class="emotion-26"
                 role="row"
               >
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-1h7qns8-Cell"
+                    class="emotion-32"
                   >
                     functions
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     10
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     7
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     <span
-                      class="css-kp3u7p-Tag"
+                      class="emotion-55"
                     >
                       <span
-                        class="css-vurnku"
+                        class="emotion-6"
                       >
                         70%
                       </span>
@@ -1177,71 +1968,71 @@ exports[`TestsCoverage pagination snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="css-ijvt85"
+                class="emotion-26"
                 role="row"
               >
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-1h7qns8-Cell"
+                    class="emotion-32"
                   >
                     statements
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     56
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     55
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-30"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-gd1z0a-Cell"
+                    class="emotion-34"
                   >
                     <span
-                      class="css-x0l7ch-Tag"
+                      class="emotion-41"
                     >
                       <span
-                        class="css-vurnku"
+                        class="emotion-6"
                       >
                         98.21%
                       </span>
@@ -1252,60 +2043,60 @@ exports[`TestsCoverage pagination snapshot 1`] = `
             </tbody>
           </table>
           <div
-            class="css-43hdi9"
+            class="emotion-71"
           >
             <div
-              class="css-v7kut1"
+              class="emotion-72"
             >
               Total: 24 records
             </div>
             <div
-              class="css-f5h6sg"
+              class="emotion-73"
             >
               <div
-                class="css-wzqkm9"
+                class="emotion-74"
               >
                 <div
-                  class="css-1c1rsqy"
+                  class="emotion-75"
                 >
                   <button
-                    class="css-97huhz"
+                    class="emotion-76"
                     disabled=""
                   >
                     &lt;&lt;
                   </button>
                 </div>
                 <div
-                  class="css-1c1rsqy"
+                  class="emotion-75"
                 >
                   <button
-                    class="css-97huhz"
+                    class="emotion-76"
                     disabled=""
                   >
                     &lt;
                   </button>
                 </div>
                 <div
-                  class="css-1c1rsqy"
+                  class="emotion-75"
                 >
                   <button
-                    class="css-97huhz"
+                    class="emotion-76"
                   >
                     &gt;
                   </button>
                 </div>
                 <div
-                  class="css-1c1rsqy"
+                  class="emotion-75"
                 >
                   <button
-                    class="css-97huhz"
+                    class="emotion-76"
                   >
                     &gt;&gt;
                   </button>
                 </div>
               </div>
               <div
-                class="css-1f9rp2t"
+                class="emotion-83"
               >
                 Page 1 of 8
               </div>

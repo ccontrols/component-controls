@@ -2,11 +2,30 @@
 
 exports[`Tag overview snapshot 1`] = `
 <DocumentFragment>
-  <span
-    class="css-15dvo6t-Tag"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(255,0,0,0.15);
+  border: 2px solid red;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+<span
+    class="emotion-0"
   >
     <span
-      class="css-vurnku"
+      class="emotion-1"
     >
       some text
     </span>
@@ -16,11 +35,30 @@ exports[`Tag overview snapshot 1`] = `
 
 exports[`Tag twilwindArrayColors snapshot 1`] = `
 <DocumentFragment>
-  <span
-    class="css-1t9ofat-Tag"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(255,255,255,0.15);
+  border: 2px solid white;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+<span
+    class="emotion-0"
   >
     <span
-      class="css-vurnku"
+      class="emotion-1"
     >
       some text
     </span>

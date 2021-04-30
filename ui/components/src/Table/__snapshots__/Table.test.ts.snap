@@ -2,28 +2,136 @@
 
 exports[`Table editing snapshot 1`] = `
 <DocumentFragment>
-  <table
-    class="css-11y77l0"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-0 p {
+  margin: 0;
+}
+
+.emotion-0 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-0 a {
+  word-break: break-word;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-6 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+<table
+    class="emotion-0"
     role="table"
   >
     <thead
-      class="css-14kw1rx"
+      class="emotion-1"
     >
       <tr
-        class="css-vurnku"
+        class="emotion-2"
         role="row"
       >
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               Value
             </div>
@@ -32,15 +140,15 @@ exports[`Table editing snapshot 1`] = `
       </tr>
     </thead>
     <tbody
-      class="css-tuhk50"
+      class="emotion-6"
       role="rowgroup"
     >
       <tr
-        class="css-ijvt85"
+        class="emotion-7"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-8"
           role="cell"
           style="width: 150px;"
         >
@@ -57,108 +165,280 @@ exports[`Table editing snapshot 1`] = `
 
 exports[`Table filterable snapshot 1`] = `
 <DocumentFragment>
-  <table
-    class="css-11y77l0"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-0 p {
+  margin: 0;
+}
+
+.emotion-0 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-0 a {
+  word-break: break-word;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-22 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+  text-align: left;
+}
+
+.emotion-23 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.emotion-24 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 16px;
+  width: auto;
+  color: #69768C;
+}
+
+.emotion-25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+  padding: 4px;
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-26 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-28 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+<table
+    class="emotion-0"
     role="table"
   >
     <thead
-      class="css-14kw1rx"
+      class="emotion-1"
     >
       <tr
-        class="css-vurnku"
+        class="emotion-2"
         role="row"
       >
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               Age
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               Name
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 20%;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               User Name
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               Street
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               City
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               Zip Code
             </div>
@@ -166,22 +446,22 @@ exports[`Table filterable snapshot 1`] = `
         </th>
       </tr>
       <tr
-        class="css-vurnku"
+        class="emotion-2"
       >
         <th
-          class="css-i6z8uu-Table"
+          class="emotion-22"
           colspan="6"
         >
           <div
-            class="css-w3wlip-GlobalFilter"
+            class="emotion-23"
           >
             <label
-              class="css-lzeyj8-GlobalFilter"
+              class="emotion-24"
             >
               search:
             </label>
             <input
-              class="css-1onaisy"
+              class="emotion-25"
               placeholder="5 properties..."
               value=""
             />
@@ -190,50 +470,50 @@ exports[`Table filterable snapshot 1`] = `
       </tr>
     </thead>
     <tbody
-      class="css-tuhk50"
+      class="emotion-26"
       role="rowgroup"
     >
       <tr
-        class="css-ijvt85"
+        class="emotion-27"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
           22
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
           Edison Keebler
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 20%;"
         >
           Danielle_Pollich
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
           Jayde Rapids
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
           Montanaborough
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
@@ -241,46 +521,46 @@ exports[`Table filterable snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-27"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
           24
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
           London Runolfsson
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 20%;"
         >
           Audreanne.Sanford
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
           Towne Cliff
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
           Langoshport
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
@@ -288,46 +568,46 @@ exports[`Table filterable snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-27"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
           25
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
           Sebastian Gleason
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 20%;"
         >
           Johnathan.Klocko58
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
           Haley Drives
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
           South Kiannaberg
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
@@ -335,46 +615,46 @@ exports[`Table filterable snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-27"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
           25
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
           Gladys Baumbach
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 20%;"
         >
           Darien.Gutmann
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
           Anastasia Points
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
           West Graycemouth
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
@@ -382,46 +662,46 @@ exports[`Table filterable snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-27"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
           22
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
           Ms. Jaunita Lubowitz
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 20%;"
         >
           Kody.McClure
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
           Lindgren Inlet
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
           Grimesshire
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-28"
           role="cell"
           style="width: 150px;"
         >
@@ -435,106 +715,235 @@ exports[`Table filterable snapshot 1`] = `
 
 exports[`Table grouping snapshot 1`] = `
 <DocumentFragment>
-  <table
-    class="css-11y77l0"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-0 p {
+  margin: 0;
+}
+
+.emotion-0 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-0 a {
+  word-break: break-word;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-21 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-21 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-22 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-23 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  line-height: 24px;
+  background-color: #f6f6f6;
+  white-space: nowrap;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-weight: 700;
+  font-family: Menlo,monospace;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-24 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+<table
+    class="emotion-0"
     role="table"
   >
     <thead
-      class="css-14kw1rx"
+      class="emotion-1"
     >
       <tr
-        class="css-vurnku"
+        class="emotion-2"
         role="row"
       >
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 20px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             />
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               Name
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 20%;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               User Name
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               Street
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               City
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               Zip Code
             </div>
@@ -543,18 +952,18 @@ exports[`Table grouping snapshot 1`] = `
       </tr>
     </thead>
     <tbody
-      class="css-tuhk50"
+      class="emotion-21"
       role="rowgroup"
     >
       <tr
-        class="css-ijvt85"
+        class="emotion-22"
         role="row"
       >
         <td
           colspan="6"
         >
           <div
-            class="css-fz9au7"
+            class="emotion-23"
             style="cursor: pointer;"
             title="Toggle Row Expanded"
           >
@@ -575,7 +984,7 @@ exports[`Table grouping snapshot 1`] = `
             </svg>
              
             <span
-              class="css-15vncxw-Cell"
+              class="emotion-24"
             >
               22(2 properties)
             </span>
@@ -583,14 +992,14 @@ exports[`Table grouping snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-22"
         role="row"
       >
         <td
           colspan="6"
         >
           <div
-            class="css-fz9au7"
+            class="emotion-23"
             style="cursor: pointer;"
             title="Toggle Row Expanded"
           >
@@ -611,7 +1020,7 @@ exports[`Table grouping snapshot 1`] = `
             </svg>
              
             <span
-              class="css-15vncxw-Cell"
+              class="emotion-24"
             >
               24(1 properties)
             </span>
@@ -619,14 +1028,14 @@ exports[`Table grouping snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-22"
         role="row"
       >
         <td
           colspan="6"
         >
           <div
-            class="css-fz9au7"
+            class="emotion-23"
             style="cursor: pointer;"
             title="Toggle Row Expanded"
           >
@@ -647,7 +1056,7 @@ exports[`Table grouping snapshot 1`] = `
             </svg>
              
             <span
-              class="css-15vncxw-Cell"
+              class="emotion-24"
             >
               25(2 properties)
             </span>
@@ -661,48 +1070,106 @@ exports[`Table grouping snapshot 1`] = `
 
 exports[`Table noHeader snapshot 1`] = `
 <DocumentFragment>
-  <table
-    class="css-11y77l0"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-0 p {
+  margin: 0;
+}
+
+.emotion-0 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-0 a {
+  word-break: break-word;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-1 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+<table
+    class="emotion-0"
     role="table"
   >
     <tbody
-      class="css-tuhk50"
+      class="emotion-1"
       role="rowgroup"
     >
       <tr
-        class="css-ijvt85"
+        class="emotion-2"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 150px;"
         >
           Edison Keebler
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 20%;"
         >
           Danielle_Pollich
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 150px;"
         >
           Jayde Rapids
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 150px;"
         >
           Montanaborough
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 150px;"
         >
@@ -710,39 +1177,39 @@ exports[`Table noHeader snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-2"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 150px;"
         >
           London Runolfsson
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 20%;"
         >
           Audreanne.Sanford
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 150px;"
         >
           Towne Cliff
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 150px;"
         >
           Langoshport
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 150px;"
         >
@@ -750,39 +1217,39 @@ exports[`Table noHeader snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-2"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 150px;"
         >
           Sebastian Gleason
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 20%;"
         >
           Johnathan.Klocko58
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 150px;"
         >
           Haley Drives
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 150px;"
         >
           South Kiannaberg
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 150px;"
         >
@@ -790,39 +1257,39 @@ exports[`Table noHeader snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-2"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 150px;"
         >
           Gladys Baumbach
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 20%;"
         >
           Darien.Gutmann
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 150px;"
         >
           Anastasia Points
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 150px;"
         >
           West Graycemouth
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 150px;"
         >
@@ -830,39 +1297,39 @@ exports[`Table noHeader snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-2"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 150px;"
         >
           Ms. Jaunita Lubowitz
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 20%;"
         >
           Kody.McClure
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 150px;"
         >
           Lindgren Inlet
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 150px;"
         >
           Grimesshire
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-3"
           role="cell"
           style="width: 150px;"
         >
@@ -876,92 +1343,200 @@ exports[`Table noHeader snapshot 1`] = `
 
 exports[`Table overview snapshot 1`] = `
 <DocumentFragment>
-  <table
-    class="css-11y77l0"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-0 p {
+  margin: 0;
+}
+
+.emotion-0 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-0 a {
+  word-break: break-word;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-18 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-18 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-19 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-20 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+<table
+    class="emotion-0"
     role="table"
   >
     <thead
-      class="css-14kw1rx"
+      class="emotion-1"
     >
       <tr
-        class="css-vurnku"
+        class="emotion-2"
         role="row"
       >
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               Name
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 20%;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               User Name
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               Street
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               City
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               Zip Code
             </div>
@@ -970,43 +1545,43 @@ exports[`Table overview snapshot 1`] = `
       </tr>
     </thead>
     <tbody
-      class="css-tuhk50"
+      class="emotion-18"
       role="rowgroup"
     >
       <tr
-        class="css-ijvt85"
+        class="emotion-19"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 150px;"
         >
           Edison Keebler
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 20%;"
         >
           Danielle_Pollich
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 150px;"
         >
           Jayde Rapids
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 150px;"
         >
           Montanaborough
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 150px;"
         >
@@ -1014,39 +1589,39 @@ exports[`Table overview snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-19"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 150px;"
         >
           London Runolfsson
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 20%;"
         >
           Audreanne.Sanford
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 150px;"
         >
           Towne Cliff
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 150px;"
         >
           Langoshport
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 150px;"
         >
@@ -1054,39 +1629,39 @@ exports[`Table overview snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-19"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 150px;"
         >
           Sebastian Gleason
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 20%;"
         >
           Johnathan.Klocko58
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 150px;"
         >
           Haley Drives
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 150px;"
         >
           South Kiannaberg
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 150px;"
         >
@@ -1094,39 +1669,39 @@ exports[`Table overview snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-19"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 150px;"
         >
           Gladys Baumbach
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 20%;"
         >
           Darien.Gutmann
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 150px;"
         >
           Anastasia Points
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 150px;"
         >
           West Graycemouth
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 150px;"
         >
@@ -1134,39 +1709,39 @@ exports[`Table overview snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-19"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 150px;"
         >
           Ms. Jaunita Lubowitz
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 20%;"
         >
           Kody.McClure
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 150px;"
         >
           Lindgren Inlet
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 150px;"
         >
           Grimesshire
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-20"
           role="cell"
           style="width: 150px;"
         >
@@ -1180,108 +1755,216 @@ exports[`Table overview snapshot 1`] = `
 
 exports[`Table pagination snapshot 1`] = `
 <DocumentFragment>
-  <table
-    class="css-11y77l0"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-0 p {
+  margin: 0;
+}
+
+.emotion-0 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-0 a {
+  word-break: break-word;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-21 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-21 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-22 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-23 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+<table
+    class="emotion-0"
     role="table"
   >
     <thead
-      class="css-14kw1rx"
+      class="emotion-1"
     >
       <tr
-        class="css-vurnku"
+        class="emotion-2"
         role="row"
       >
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               Age
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               Name
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 20%;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               User Name
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               Street
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               City
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               Zip Code
             </div>
@@ -1290,50 +1973,50 @@ exports[`Table pagination snapshot 1`] = `
       </tr>
     </thead>
     <tbody
-      class="css-tuhk50"
+      class="emotion-21"
       role="rowgroup"
     >
       <tr
-        class="css-ijvt85"
+        class="emotion-22"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           22
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Edison Keebler
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 20%;"
         >
           Danielle_Pollich
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Jayde Rapids
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Montanaborough
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
@@ -1341,46 +2024,46 @@ exports[`Table pagination snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-22"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           24
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           London Runolfsson
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 20%;"
         >
           Audreanne.Sanford
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Towne Cliff
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Langoshport
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
@@ -1388,46 +2071,46 @@ exports[`Table pagination snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-22"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           25
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Sebastian Gleason
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 20%;"
         >
           Johnathan.Klocko58
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Haley Drives
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           South Kiannaberg
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
@@ -1435,46 +2118,46 @@ exports[`Table pagination snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-22"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           25
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Gladys Baumbach
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 20%;"
         >
           Darien.Gutmann
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Anastasia Points
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           West Graycemouth
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
@@ -1482,46 +2165,46 @@ exports[`Table pagination snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-22"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           22
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Ms. Jaunita Lubowitz
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 20%;"
         >
           Kody.McClure
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Lindgren Inlet
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Grimesshire
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
@@ -1529,46 +2212,46 @@ exports[`Table pagination snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-22"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           23
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Jacques Bernhard
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 20%;"
         >
           Nichole_Kozey4
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Ramona Station
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Gunnerland
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
@@ -1576,46 +2259,46 @@ exports[`Table pagination snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-22"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           24
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Dr. Rylee DuBuque
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 20%;"
         >
           Lewis.Vandervort7
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Kelly Landing
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Lake Gabe
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
@@ -1623,46 +2306,46 @@ exports[`Table pagination snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-22"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           22
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Nettie Runte
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 20%;"
         >
           Johnny.Marquardt30
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Larson Square
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Hannaton
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
@@ -1670,46 +2353,46 @@ exports[`Table pagination snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-22"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           25
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Isabell Feil Jr.
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 20%;"
         >
           Rafaela.Gusikowski4
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Kaya Mountain
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Kemmerbury
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
@@ -1717,46 +2400,46 @@ exports[`Table pagination snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-22"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           24
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Jillian Hoeger
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 20%;"
         >
           Annamae.Maggio23
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Darlene Course
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Earlenebury
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
@@ -1765,54 +2448,179 @@ exports[`Table pagination snapshot 1`] = `
       </tr>
     </tbody>
   </table>
-  <div
-    class="css-43hdi9"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-3 button {
+  width: 50px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 50px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+}
+
+.emotion-5:disabled {
+  color: #aaa;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-v7kut1"
+      class="emotion-1"
     >
       Total: 20 records
     </div>
     <div
-      class="css-f5h6sg"
+      class="emotion-2"
     >
       <div
-        class="css-wzqkm9"
+        class="emotion-3"
       >
         <div
-          class="css-1c1rsqy"
+          class="emotion-4"
         >
           <button
-            class="css-97huhz"
+            class="emotion-5"
             disabled=""
           >
             &lt;&lt;
           </button>
         </div>
         <div
-          class="css-1c1rsqy"
+          class="emotion-4"
         >
           <button
-            class="css-97huhz"
+            class="emotion-5"
             disabled=""
           >
             &lt;
           </button>
         </div>
         <div
-          class="css-1c1rsqy"
+          class="emotion-4"
         >
           <button
-            class="css-97huhz"
+            class="emotion-5"
           >
             &gt;
           </button>
         </div>
         <div
-          class="css-1c1rsqy"
+          class="emotion-4"
         >
           <button
-            class="css-97huhz"
+            class="emotion-5"
           >
             &gt;&gt;
           </button>
@@ -1825,43 +2633,257 @@ exports[`Table pagination snapshot 1`] = `
 
 exports[`Table rowSelect snapshot 1`] = `
 <DocumentFragment>
-  <table
-    class="css-11y77l0"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-0 p {
+  margin: 0;
+}
+
+.emotion-0 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-0 a {
+  word-break: break-word;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: 4px;
+  color: #f6f6f6;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+  border: 1px solid #454f5b;
+}
+
+input:checked~.emotion-9 {
+  display: block;
+}
+
+input:checked~.emotion-9 {
+  color: #5c6ac4;
+}
+
+input:focus~.emotion-9 {
+  color: #5c6ac4;
+  background-color: #d9f2f1;
+}
+
+.emotion-9:focus {
+  background-color: transarent;
+  box-shadow: 0 0 0 2px #5c6ac4;
+  outline: none;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: 4px;
+  color: #f6f6f6;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+  border: 1px solid #454f5b;
+}
+
+input:checked~.emotion-10 {
+  display: none;
+}
+
+input:checked~.emotion-10 {
+  color: #5c6ac4;
+}
+
+input:focus~.emotion-10 {
+  color: #5c6ac4;
+  background-color: #d9f2f1;
+}
+
+.emotion-10:focus {
+  background-color: transarent;
+  box-shadow: 0 0 0 2px #5c6ac4;
+  outline: none;
+}
+
+.emotion-29 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-29 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-30 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-31 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+<table
+    class="emotion-0"
     role="table"
   >
     <thead
-      class="css-14kw1rx"
+      class="emotion-1"
     >
       <tr
-        class="css-vurnku"
+        class="emotion-2"
         role="row"
       >
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 30px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               <label
-                class="css-knfhfe"
+                class="emotion-6"
               >
                 <div
-                  class="css-x3crln"
+                  class="emotion-7"
                 >
                   <input
                     aria-label="click to select row"
-                    class="css-p19g2b"
+                    class="emotion-8"
                     type="checkbox"
                   />
                   <svg
                     aria-hidden="true"
-                    class="css-1dq90k0"
+                    class="emotion-9"
                     fill="currentcolor"
                     height="24"
                     viewBox="0 0 24 24"
@@ -1874,7 +2896,7 @@ exports[`Table rowSelect snapshot 1`] = `
                   </svg>
                   <svg
                     aria-hidden="true"
-                    class="css-1b36guq"
+                    class="emotion-10"
                     fill="currentcolor"
                     height="24"
                     viewBox="0 0 24 24"
@@ -1891,96 +2913,96 @@ exports[`Table rowSelect snapshot 1`] = `
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               Age
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               Name
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 20%;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               User Name
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               Street
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               City
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px;"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               Zip Code
             </div>
@@ -1989,33 +3011,33 @@ exports[`Table rowSelect snapshot 1`] = `
       </tr>
     </thead>
     <tbody
-      class="css-tuhk50"
+      class="emotion-29"
       role="rowgroup"
     >
       <tr
-        class="css-ijvt85"
+        class="emotion-30"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 30px;"
         >
           <div>
             <label
-              class="css-knfhfe"
+              class="emotion-6"
             >
               <div
-                class="css-x3crln"
+                class="emotion-7"
               >
                 <input
                   aria-label="click to select row"
-                  class="css-p19g2b"
+                  class="emotion-8"
                   type="checkbox"
                 />
                 <svg
                   aria-hidden="true"
-                  class="css-1dq90k0"
+                  class="emotion-9"
                   fill="currentcolor"
                   height="24"
                   viewBox="0 0 24 24"
@@ -2028,7 +3050,7 @@ exports[`Table rowSelect snapshot 1`] = `
                 </svg>
                 <svg
                   aria-hidden="true"
-                  class="css-1b36guq"
+                  class="emotion-10"
                   fill="currentcolor"
                   height="24"
                   viewBox="0 0 24 24"
@@ -2044,42 +3066,42 @@ exports[`Table rowSelect snapshot 1`] = `
           </div>
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
           22
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
           Edison Keebler
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 20%;"
         >
           Danielle_Pollich
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
           Jayde Rapids
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
           Montanaborough
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
@@ -2087,29 +3109,29 @@ exports[`Table rowSelect snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-30"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 30px;"
         >
           <div>
             <label
-              class="css-knfhfe"
+              class="emotion-6"
             >
               <div
-                class="css-x3crln"
+                class="emotion-7"
               >
                 <input
                   aria-label="click to select row"
-                  class="css-p19g2b"
+                  class="emotion-8"
                   type="checkbox"
                 />
                 <svg
                   aria-hidden="true"
-                  class="css-1dq90k0"
+                  class="emotion-9"
                   fill="currentcolor"
                   height="24"
                   viewBox="0 0 24 24"
@@ -2122,7 +3144,7 @@ exports[`Table rowSelect snapshot 1`] = `
                 </svg>
                 <svg
                   aria-hidden="true"
-                  class="css-1b36guq"
+                  class="emotion-10"
                   fill="currentcolor"
                   height="24"
                   viewBox="0 0 24 24"
@@ -2138,42 +3160,42 @@ exports[`Table rowSelect snapshot 1`] = `
           </div>
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
           24
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
           London Runolfsson
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 20%;"
         >
           Audreanne.Sanford
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
           Towne Cliff
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
           Langoshport
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
@@ -2181,29 +3203,29 @@ exports[`Table rowSelect snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-30"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 30px;"
         >
           <div>
             <label
-              class="css-knfhfe"
+              class="emotion-6"
             >
               <div
-                class="css-x3crln"
+                class="emotion-7"
               >
                 <input
                   aria-label="click to select row"
-                  class="css-p19g2b"
+                  class="emotion-8"
                   type="checkbox"
                 />
                 <svg
                   aria-hidden="true"
-                  class="css-1dq90k0"
+                  class="emotion-9"
                   fill="currentcolor"
                   height="24"
                   viewBox="0 0 24 24"
@@ -2216,7 +3238,7 @@ exports[`Table rowSelect snapshot 1`] = `
                 </svg>
                 <svg
                   aria-hidden="true"
-                  class="css-1b36guq"
+                  class="emotion-10"
                   fill="currentcolor"
                   height="24"
                   viewBox="0 0 24 24"
@@ -2232,42 +3254,42 @@ exports[`Table rowSelect snapshot 1`] = `
           </div>
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
           25
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
           Sebastian Gleason
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 20%;"
         >
           Johnathan.Klocko58
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
           Haley Drives
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
           South Kiannaberg
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
@@ -2275,29 +3297,29 @@ exports[`Table rowSelect snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-30"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 30px;"
         >
           <div>
             <label
-              class="css-knfhfe"
+              class="emotion-6"
             >
               <div
-                class="css-x3crln"
+                class="emotion-7"
               >
                 <input
                   aria-label="click to select row"
-                  class="css-p19g2b"
+                  class="emotion-8"
                   type="checkbox"
                 />
                 <svg
                   aria-hidden="true"
-                  class="css-1dq90k0"
+                  class="emotion-9"
                   fill="currentcolor"
                   height="24"
                   viewBox="0 0 24 24"
@@ -2310,7 +3332,7 @@ exports[`Table rowSelect snapshot 1`] = `
                 </svg>
                 <svg
                   aria-hidden="true"
-                  class="css-1b36guq"
+                  class="emotion-10"
                   fill="currentcolor"
                   height="24"
                   viewBox="0 0 24 24"
@@ -2326,42 +3348,42 @@ exports[`Table rowSelect snapshot 1`] = `
           </div>
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
           25
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
           Gladys Baumbach
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 20%;"
         >
           Darien.Gutmann
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
           Anastasia Points
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
           West Graycemouth
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
@@ -2369,29 +3391,29 @@ exports[`Table rowSelect snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-30"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 30px;"
         >
           <div>
             <label
-              class="css-knfhfe"
+              class="emotion-6"
             >
               <div
-                class="css-x3crln"
+                class="emotion-7"
               >
                 <input
                   aria-label="click to select row"
-                  class="css-p19g2b"
+                  class="emotion-8"
                   type="checkbox"
                 />
                 <svg
                   aria-hidden="true"
-                  class="css-1dq90k0"
+                  class="emotion-9"
                   fill="currentcolor"
                   height="24"
                   viewBox="0 0 24 24"
@@ -2404,7 +3426,7 @@ exports[`Table rowSelect snapshot 1`] = `
                 </svg>
                 <svg
                   aria-hidden="true"
-                  class="css-1b36guq"
+                  class="emotion-10"
                   fill="currentcolor"
                   height="24"
                   viewBox="0 0 24 24"
@@ -2420,42 +3442,42 @@ exports[`Table rowSelect snapshot 1`] = `
           </div>
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
           22
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
           Ms. Jaunita Lubowitz
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 20%;"
         >
           Kody.McClure
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
           Lindgren Inlet
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
           Grimesshire
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-31"
           role="cell"
           style="width: 150px;"
         >
@@ -2469,29 +3491,137 @@ exports[`Table rowSelect snapshot 1`] = `
 
 exports[`Table sortable snapshot 1`] = `
 <DocumentFragment>
-  <table
-    class="css-11y77l0"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-0 p {
+  margin: 0;
+}
+
+.emotion-0 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-0 a {
+  word-break: break-word;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-21 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-21 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-22 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-23 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+<table
+    class="emotion-0"
     role="table"
   >
     <thead
-      class="css-14kw1rx"
+      class="emotion-1"
     >
       <tr
-        class="css-vurnku"
+        class="emotion-2"
         role="row"
       >
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px; cursor: pointer;"
           title="Toggle SortBy"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               Age
             </div>
@@ -2512,85 +3642,85 @@ exports[`Table sortable snapshot 1`] = `
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px; cursor: pointer;"
           title="Toggle SortBy"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               Name
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 20%; cursor: pointer;"
           title="Toggle SortBy"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               User Name
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px; cursor: pointer;"
           title="Toggle SortBy"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               Street
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px; cursor: pointer;"
           title="Toggle SortBy"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               City
             </div>
           </div>
         </th>
         <th
-          class="css-n59tc9"
+          class="emotion-3"
           colspan="1"
           role="columnheader"
           style="width: 150px; cursor: pointer;"
           title="Toggle SortBy"
         >
           <div
-            class="css-wwqljn"
+            class="emotion-4"
           >
             <div
-              class="css-206mi5"
+              class="emotion-5"
             >
               Zip Code
             </div>
@@ -2599,50 +3729,50 @@ exports[`Table sortable snapshot 1`] = `
       </tr>
     </thead>
     <tbody
-      class="css-tuhk50"
+      class="emotion-21"
       role="rowgroup"
     >
       <tr
-        class="css-ijvt85"
+        class="emotion-22"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           25
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Gladys Baumbach
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 20%;"
         >
           Darien.Gutmann
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Anastasia Points
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           West Graycemouth
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
@@ -2650,46 +3780,46 @@ exports[`Table sortable snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-22"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           25
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Sebastian Gleason
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 20%;"
         >
           Johnathan.Klocko58
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Haley Drives
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           South Kiannaberg
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
@@ -2697,46 +3827,46 @@ exports[`Table sortable snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-22"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           24
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           London Runolfsson
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 20%;"
         >
           Audreanne.Sanford
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Towne Cliff
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Langoshport
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
@@ -2744,46 +3874,46 @@ exports[`Table sortable snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-22"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           22
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Ms. Jaunita Lubowitz
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 20%;"
         >
           Kody.McClure
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Lindgren Inlet
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Grimesshire
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
@@ -2791,46 +3921,46 @@ exports[`Table sortable snapshot 1`] = `
         </td>
       </tr>
       <tr
-        class="css-ijvt85"
+        class="emotion-22"
         role="row"
       >
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           22
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Edison Keebler
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 20%;"
         >
           Danielle_Pollich
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Jayde Rapids
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
           Montanaborough
         </td>
         <td
-          class="css-1yjhfhu"
+          class="emotion-23"
           role="cell"
           style="width: 150px;"
         >

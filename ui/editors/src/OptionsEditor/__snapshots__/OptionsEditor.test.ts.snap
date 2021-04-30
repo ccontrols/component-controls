@@ -2,12 +2,56 @@
 
 exports[`OptionsEditor multiSelectNumeric snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-4cffwv"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+  color: black;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: -28px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  pointer-events: none;
+}
+
+<div
+    class="emotion-0"
   >
     <select
       aria-label="select one or more options"
-      class="css-wczjro-OptionsSelect"
+      class="emotion-1"
     >
       <option
         value="1"
@@ -26,7 +70,7 @@ exports[`OptionsEditor multiSelectNumeric snapshot 1`] = `
       </option>
     </select>
     <svg
-      class="css-1swud1q"
+      class="emotion-2"
       fill="currentcolor"
       height="24"
       viewBox="0 0 24 24"
@@ -43,12 +87,56 @@ exports[`OptionsEditor multiSelectNumeric snapshot 1`] = `
 
 exports[`OptionsEditor multiSelectObjects snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-4cffwv"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+  color: black;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: -28px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  pointer-events: none;
+}
+
+<div
+    class="emotion-0"
   >
     <select
       aria-label="select one or more options"
-      class="css-wczjro-OptionsSelect"
+      class="emotion-1"
     >
       <option
         value="one"
@@ -67,7 +155,7 @@ exports[`OptionsEditor multiSelectObjects snapshot 1`] = `
       </option>
     </select>
     <svg
-      class="css-1swud1q"
+      class="emotion-2"
       fill="currentcolor"
       height="24"
       viewBox="0 0 24 24"
@@ -84,12 +172,56 @@ exports[`OptionsEditor multiSelectObjects snapshot 1`] = `
 
 exports[`OptionsEditor multiSelectSimple snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-4cffwv"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+  color: black;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: -28px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  pointer-events: none;
+}
+
+<div
+    class="emotion-0"
   >
     <select
       aria-label="select one or more options"
-      class="css-wczjro-OptionsSelect"
+      class="emotion-1"
     >
       <option
         value="one"
@@ -108,7 +240,7 @@ exports[`OptionsEditor multiSelectSimple snapshot 1`] = `
       </option>
     </select>
     <svg
-      class="css-1swud1q"
+      class="emotion-2"
       fill="currentcolor"
       height="24"
       viewBox="0 0 24 24"
@@ -125,12 +257,56 @@ exports[`OptionsEditor multiSelectSimple snapshot 1`] = `
 
 exports[`OptionsEditor numeric snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-4cffwv"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+  color: black;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: -28px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  pointer-events: none;
+}
+
+<div
+    class="emotion-0"
   >
     <select
       aria-label="select one option"
-      class="css-wczjro-OptionsSelect"
+      class="emotion-1"
     >
       <option
         value="1"
@@ -149,7 +325,7 @@ exports[`OptionsEditor numeric snapshot 1`] = `
       </option>
     </select>
     <svg
-      class="css-1swud1q"
+      class="emotion-2"
       fill="currentcolor"
       height="24"
       viewBox="0 0 24 24"
@@ -166,11 +342,41 @@ exports[`OptionsEditor numeric snapshot 1`] = `
 
 exports[`OptionsEditor numericCheck snapshot 1`] = `
 <DocumentFragment>
-  <fieldset
-    class="css-xhmj93-CheckboxFieldset"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: unset;
+  padding: 3px 0 3px 5px;
+  line-height: 18px;
+  display: inline-block;
+}
+
+<fieldset
+    class="emotion-0"
   >
     <div
-      class="css-vurnku"
+      class="emotion-1"
     >
       <div>
         <input
@@ -182,7 +388,7 @@ exports[`OptionsEditor numericCheck snapshot 1`] = `
           value="1"
         />
         <label
-          class="css-16zyabg-CheckboxLabel"
+          class="emotion-2"
           for="One-1"
         >
           One
@@ -197,7 +403,7 @@ exports[`OptionsEditor numericCheck snapshot 1`] = `
           value="2"
         />
         <label
-          class="css-16zyabg-CheckboxLabel"
+          class="emotion-2"
           for="Two-2"
         >
           Two
@@ -212,7 +418,7 @@ exports[`OptionsEditor numericCheck snapshot 1`] = `
           value="3"
         />
         <label
-          class="css-16zyabg-CheckboxLabel"
+          class="emotion-2"
           for="Three-3"
         >
           Three
@@ -225,11 +431,57 @@ exports[`OptionsEditor numericCheck snapshot 1`] = `
 
 exports[`OptionsEditor numericCheckInline snapshot 1`] = `
 <DocumentFragment>
-  <fieldset
-    class="css-xhmj93-CheckboxFieldset"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1>*+* {
+  margin-left: 10px;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: unset;
+  padding: 3px 0 3px 5px;
+  line-height: 18px;
+  display: inline-block;
+}
+
+<fieldset
+    class="emotion-0"
   >
     <div
-      class="css-14k5yya-CheckboxesWrapper"
+      class="emotion-1"
     >
       <div>
         <input
@@ -241,7 +493,7 @@ exports[`OptionsEditor numericCheckInline snapshot 1`] = `
           value="1"
         />
         <label
-          class="css-16zyabg-CheckboxLabel"
+          class="emotion-2"
           for="One-1"
         >
           One
@@ -256,7 +508,7 @@ exports[`OptionsEditor numericCheckInline snapshot 1`] = `
           value="2"
         />
         <label
-          class="css-16zyabg-CheckboxLabel"
+          class="emotion-2"
           for="Two-2"
         >
           Two
@@ -271,7 +523,7 @@ exports[`OptionsEditor numericCheckInline snapshot 1`] = `
           value="3"
         />
         <label
-          class="css-16zyabg-CheckboxLabel"
+          class="emotion-2"
           for="Three-3"
         >
           Three
@@ -284,8 +536,29 @@ exports[`OptionsEditor numericCheckInline snapshot 1`] = `
 
 exports[`OptionsEditor numericRadios snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-vurnku"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: unset;
+  padding: 3px 0 3px 5px;
+  line-height: 18px;
+  display: inline-block;
+}
+
+<div
+    class="emotion-0"
   >
     <div>
       <input
@@ -297,7 +570,7 @@ exports[`OptionsEditor numericRadios snapshot 1`] = `
         value="1"
       />
       <label
-        class="css-hr46x5-RadioLabel"
+        class="emotion-1"
         for="One-1"
       >
         One
@@ -312,7 +585,7 @@ exports[`OptionsEditor numericRadios snapshot 1`] = `
         value="2"
       />
       <label
-        class="css-hr46x5-RadioLabel"
+        class="emotion-1"
         for="Two-2"
       >
         Two
@@ -327,7 +600,7 @@ exports[`OptionsEditor numericRadios snapshot 1`] = `
         value="3"
       />
       <label
-        class="css-hr46x5-RadioLabel"
+        class="emotion-1"
         for="Three-3"
       >
         Three
@@ -339,8 +612,45 @@ exports[`OptionsEditor numericRadios snapshot 1`] = `
 
 exports[`OptionsEditor numericRadiosInline snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-3z2xr6-RadiosWrapper"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0>*+* {
+  margin-left: 10px;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: unset;
+  padding: 3px 0 3px 5px;
+  line-height: 18px;
+  display: inline-block;
+}
+
+<div
+    class="emotion-0"
   >
     <div>
       <input
@@ -352,7 +662,7 @@ exports[`OptionsEditor numericRadiosInline snapshot 1`] = `
         value="1"
       />
       <label
-        class="css-hr46x5-RadioLabel"
+        class="emotion-1"
         for="One-1"
       >
         One
@@ -367,7 +677,7 @@ exports[`OptionsEditor numericRadiosInline snapshot 1`] = `
         value="2"
       />
       <label
-        class="css-hr46x5-RadioLabel"
+        class="emotion-1"
         for="Two-2"
       >
         Two
@@ -382,7 +692,7 @@ exports[`OptionsEditor numericRadiosInline snapshot 1`] = `
         value="3"
       />
       <label
-        class="css-hr46x5-RadioLabel"
+        class="emotion-1"
         for="Three-3"
       >
         Three
@@ -394,12 +704,56 @@ exports[`OptionsEditor numericRadiosInline snapshot 1`] = `
 
 exports[`OptionsEditor objects snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-4cffwv"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+  color: black;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: -28px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  pointer-events: none;
+}
+
+<div
+    class="emotion-0"
   >
     <select
       aria-label="select one option"
-      class="css-wczjro-OptionsSelect"
+      class="emotion-1"
     >
       <option
         value="one"
@@ -418,7 +772,7 @@ exports[`OptionsEditor objects snapshot 1`] = `
       </option>
     </select>
     <svg
-      class="css-1swud1q"
+      class="emotion-2"
       fill="currentcolor"
       height="24"
       viewBox="0 0 24 24"
@@ -435,11 +789,41 @@ exports[`OptionsEditor objects snapshot 1`] = `
 
 exports[`OptionsEditor objectsCheck snapshot 1`] = `
 <DocumentFragment>
-  <fieldset
-    class="css-xhmj93-CheckboxFieldset"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: unset;
+  padding: 3px 0 3px 5px;
+  line-height: 18px;
+  display: inline-block;
+}
+
+<fieldset
+    class="emotion-0"
   >
     <div
-      class="css-vurnku"
+      class="emotion-1"
     >
       <div>
         <input
@@ -451,7 +835,7 @@ exports[`OptionsEditor objectsCheck snapshot 1`] = `
           value="one"
         />
         <label
-          class="css-16zyabg-CheckboxLabel"
+          class="emotion-2"
           for="One-one"
         >
           One
@@ -466,7 +850,7 @@ exports[`OptionsEditor objectsCheck snapshot 1`] = `
           value="two"
         />
         <label
-          class="css-16zyabg-CheckboxLabel"
+          class="emotion-2"
           for="Two-two"
         >
           Two
@@ -481,7 +865,7 @@ exports[`OptionsEditor objectsCheck snapshot 1`] = `
           value="three"
         />
         <label
-          class="css-16zyabg-CheckboxLabel"
+          class="emotion-2"
           for="Three-three"
         >
           Three
@@ -494,11 +878,57 @@ exports[`OptionsEditor objectsCheck snapshot 1`] = `
 
 exports[`OptionsEditor objectsCheckInline snapshot 1`] = `
 <DocumentFragment>
-  <fieldset
-    class="css-xhmj93-CheckboxFieldset"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1>*+* {
+  margin-left: 10px;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: unset;
+  padding: 3px 0 3px 5px;
+  line-height: 18px;
+  display: inline-block;
+}
+
+<fieldset
+    class="emotion-0"
   >
     <div
-      class="css-14k5yya-CheckboxesWrapper"
+      class="emotion-1"
     >
       <div>
         <input
@@ -510,7 +940,7 @@ exports[`OptionsEditor objectsCheckInline snapshot 1`] = `
           value="one"
         />
         <label
-          class="css-16zyabg-CheckboxLabel"
+          class="emotion-2"
           for="One-one"
         >
           One
@@ -525,7 +955,7 @@ exports[`OptionsEditor objectsCheckInline snapshot 1`] = `
           value="two"
         />
         <label
-          class="css-16zyabg-CheckboxLabel"
+          class="emotion-2"
           for="Two-two"
         >
           Two
@@ -540,7 +970,7 @@ exports[`OptionsEditor objectsCheckInline snapshot 1`] = `
           value="three"
         />
         <label
-          class="css-16zyabg-CheckboxLabel"
+          class="emotion-2"
           for="Three-three"
         >
           Three
@@ -553,8 +983,29 @@ exports[`OptionsEditor objectsCheckInline snapshot 1`] = `
 
 exports[`OptionsEditor objectsRadios snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-vurnku"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: unset;
+  padding: 3px 0 3px 5px;
+  line-height: 18px;
+  display: inline-block;
+}
+
+<div
+    class="emotion-0"
   >
     <div>
       <input
@@ -566,7 +1017,7 @@ exports[`OptionsEditor objectsRadios snapshot 1`] = `
         value="one"
       />
       <label
-        class="css-hr46x5-RadioLabel"
+        class="emotion-1"
         for="One-one"
       >
         One
@@ -581,7 +1032,7 @@ exports[`OptionsEditor objectsRadios snapshot 1`] = `
         value="two"
       />
       <label
-        class="css-hr46x5-RadioLabel"
+        class="emotion-1"
         for="Two-two"
       >
         Two
@@ -596,7 +1047,7 @@ exports[`OptionsEditor objectsRadios snapshot 1`] = `
         value="three"
       />
       <label
-        class="css-hr46x5-RadioLabel"
+        class="emotion-1"
         for="Three-three"
       >
         Three
@@ -608,8 +1059,45 @@ exports[`OptionsEditor objectsRadios snapshot 1`] = `
 
 exports[`OptionsEditor objectsRadiosInline snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-3z2xr6-RadiosWrapper"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0>*+* {
+  margin-left: 10px;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: unset;
+  padding: 3px 0 3px 5px;
+  line-height: 18px;
+  display: inline-block;
+}
+
+<div
+    class="emotion-0"
   >
     <div>
       <input
@@ -621,7 +1109,7 @@ exports[`OptionsEditor objectsRadiosInline snapshot 1`] = `
         value="one"
       />
       <label
-        class="css-hr46x5-RadioLabel"
+        class="emotion-1"
         for="One-one"
       >
         One
@@ -636,7 +1124,7 @@ exports[`OptionsEditor objectsRadiosInline snapshot 1`] = `
         value="two"
       />
       <label
-        class="css-hr46x5-RadioLabel"
+        class="emotion-1"
         for="Two-two"
       >
         Two
@@ -651,7 +1139,7 @@ exports[`OptionsEditor objectsRadiosInline snapshot 1`] = `
         value="three"
       />
       <label
-        class="css-hr46x5-RadioLabel"
+        class="emotion-1"
         for="Three-three"
       >
         Three
@@ -663,12 +1151,56 @@ exports[`OptionsEditor objectsRadiosInline snapshot 1`] = `
 
 exports[`OptionsEditor overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-4cffwv"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+  color: black;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: -28px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  pointer-events: none;
+}
+
+<div
+    class="emotion-0"
   >
     <select
       aria-label="select one option"
-      class="css-wczjro-OptionsSelect"
+      class="emotion-1"
     >
       <option
         value="one"
@@ -687,7 +1219,7 @@ exports[`OptionsEditor overview snapshot 1`] = `
       </option>
     </select>
     <svg
-      class="css-1swud1q"
+      class="emotion-2"
       fill="currentcolor"
       height="24"
       viewBox="0 0 24 24"
@@ -704,11 +1236,41 @@ exports[`OptionsEditor overview snapshot 1`] = `
 
 exports[`OptionsEditor simpleCheck snapshot 1`] = `
 <DocumentFragment>
-  <fieldset
-    class="css-xhmj93-CheckboxFieldset"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: unset;
+  padding: 3px 0 3px 5px;
+  line-height: 18px;
+  display: inline-block;
+}
+
+<fieldset
+    class="emotion-0"
   >
     <div
-      class="css-vurnku"
+      class="emotion-1"
     >
       <div>
         <input
@@ -720,7 +1282,7 @@ exports[`OptionsEditor simpleCheck snapshot 1`] = `
           value="one"
         />
         <label
-          class="css-16zyabg-CheckboxLabel"
+          class="emotion-2"
           for="one-one"
         >
           one
@@ -735,7 +1297,7 @@ exports[`OptionsEditor simpleCheck snapshot 1`] = `
           value="two"
         />
         <label
-          class="css-16zyabg-CheckboxLabel"
+          class="emotion-2"
           for="two-two"
         >
           two
@@ -750,7 +1312,7 @@ exports[`OptionsEditor simpleCheck snapshot 1`] = `
           value="three"
         />
         <label
-          class="css-16zyabg-CheckboxLabel"
+          class="emotion-2"
           for="three-three"
         >
           three
@@ -763,11 +1325,57 @@ exports[`OptionsEditor simpleCheck snapshot 1`] = `
 
 exports[`OptionsEditor simpleCheckInline snapshot 1`] = `
 <DocumentFragment>
-  <fieldset
-    class="css-xhmj93-CheckboxFieldset"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1>*+* {
+  margin-left: 10px;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: unset;
+  padding: 3px 0 3px 5px;
+  line-height: 18px;
+  display: inline-block;
+}
+
+<fieldset
+    class="emotion-0"
   >
     <div
-      class="css-14k5yya-CheckboxesWrapper"
+      class="emotion-1"
     >
       <div>
         <input
@@ -779,7 +1387,7 @@ exports[`OptionsEditor simpleCheckInline snapshot 1`] = `
           value="one"
         />
         <label
-          class="css-16zyabg-CheckboxLabel"
+          class="emotion-2"
           for="one-one"
         >
           one
@@ -794,7 +1402,7 @@ exports[`OptionsEditor simpleCheckInline snapshot 1`] = `
           value="two"
         />
         <label
-          class="css-16zyabg-CheckboxLabel"
+          class="emotion-2"
           for="two-two"
         >
           two
@@ -809,7 +1417,7 @@ exports[`OptionsEditor simpleCheckInline snapshot 1`] = `
           value="three"
         />
         <label
-          class="css-16zyabg-CheckboxLabel"
+          class="emotion-2"
           for="three-three"
         >
           three
@@ -822,8 +1430,29 @@ exports[`OptionsEditor simpleCheckInline snapshot 1`] = `
 
 exports[`OptionsEditor simpleRadios snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-vurnku"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: unset;
+  padding: 3px 0 3px 5px;
+  line-height: 18px;
+  display: inline-block;
+}
+
+<div
+    class="emotion-0"
   >
     <div>
       <input
@@ -835,7 +1464,7 @@ exports[`OptionsEditor simpleRadios snapshot 1`] = `
         value="one"
       />
       <label
-        class="css-hr46x5-RadioLabel"
+        class="emotion-1"
         for="one-one"
       >
         one
@@ -850,7 +1479,7 @@ exports[`OptionsEditor simpleRadios snapshot 1`] = `
         value="two"
       />
       <label
-        class="css-hr46x5-RadioLabel"
+        class="emotion-1"
         for="two-two"
       >
         two
@@ -865,7 +1494,7 @@ exports[`OptionsEditor simpleRadios snapshot 1`] = `
         value="three"
       />
       <label
-        class="css-hr46x5-RadioLabel"
+        class="emotion-1"
         for="three-three"
       >
         three
@@ -877,8 +1506,45 @@ exports[`OptionsEditor simpleRadios snapshot 1`] = `
 
 exports[`OptionsEditor simpleRadiosInline snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-3z2xr6-RadiosWrapper"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0>*+* {
+  margin-left: 10px;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: unset;
+  padding: 3px 0 3px 5px;
+  line-height: 18px;
+  display: inline-block;
+}
+
+<div
+    class="emotion-0"
   >
     <div>
       <input
@@ -890,7 +1556,7 @@ exports[`OptionsEditor simpleRadiosInline snapshot 1`] = `
         value="one"
       />
       <label
-        class="css-hr46x5-RadioLabel"
+        class="emotion-1"
         for="one-one"
       >
         one
@@ -905,7 +1571,7 @@ exports[`OptionsEditor simpleRadiosInline snapshot 1`] = `
         value="two"
       />
       <label
-        class="css-hr46x5-RadioLabel"
+        class="emotion-1"
         for="two-two"
       >
         two
@@ -920,7 +1586,7 @@ exports[`OptionsEditor simpleRadiosInline snapshot 1`] = `
         value="three"
       />
       <label
-        class="css-hr46x5-RadioLabel"
+        class="emotion-1"
         for="three-three"
       >
         three

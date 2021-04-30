@@ -2,19 +2,346 @@
 
 exports[`ComponentUsageDetails overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -22px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8:hover a {
+  visibility: visible;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-9 p {
+  margin: 0;
+}
+
+.emotion-9 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-9 a {
+  word-break: break-word;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-18 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-18 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-19 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-20 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+.emotion-21 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(0,128,0,0.15);
+  border: 1px solid green;
+  margin-right: 4px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.2rem;
+}
+
+.emotion-23 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  color: #5c6ac4;
+  background-color: #f6f6f6;
+  border-radius: 9999px;
+  border: none;
+  color: #f49342;
+}
+
+.emotion-26::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+.emotion-26::-webkit-progress-value {
+  background-color: currentcolor;
+}
+
+.emotion-26::-moz-progress-bar {
+  background-color: currentcolor;
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 12px;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id="attribute-arrowbutton"
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       >
         <a
           aria-label="navigate to ArrowButton section"
-          class="css-walqom-LinkHeading"
+          class="emotion-3"
           data-id="attribute-arrowbutton"
           data-level="3"
           data-title="ArrowButton"
@@ -37,18 +364,18 @@ exports[`ComponentUsageDetails overview snapshot 1`] = `
           </svg>
         </a>
         <h3
-          class="css-16ist9v-BlockContainer"
+          class="emotion-4"
         >
           <div
-            class="css-tmrrvx"
+            class="emotion-5"
           >
             ArrowButton
             <a
               aria-expanded="true"
-              class="css-1t48u3b-BlockContainer"
+              class="emotion-6"
             >
               <span
-                class="css-1ibxxpj"
+                class="emotion-7"
               >
                 <svg
                   aria-hidden="true"
@@ -78,48 +405,48 @@ exports[`ComponentUsageDetails overview snapshot 1`] = `
     >
       <div>
         <div
-          class="css-1d6wxci"
+          class="emotion-8"
         >
           <table
-            class="css-11y77l0"
+            class="emotion-9"
             role="table"
           >
             <thead
-              class="css-14kw1rx"
+              class="emotion-10"
             >
               <tr
-                class="css-vurnku"
+                class="emotion-11"
                 role="row"
               >
                 <th
-                  class="css-n59tc9"
+                  class="emotion-12"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
                   title="Toggle SortBy"
                 >
                   <div
-                    class="css-wwqljn"
+                    class="emotion-13"
                   >
                     <div
-                      class="css-206mi5"
+                      class="emotion-14"
                     >
                       component
                     </div>
                   </div>
                 </th>
                 <th
-                  class="css-n59tc9"
+                  class="emotion-12"
                   colspan="1"
                   role="columnheader"
                   style="width: 150px; cursor: pointer;"
                   title="Toggle SortBy"
                 >
                   <div
-                    class="css-wwqljn"
+                    class="emotion-13"
                   >
                     <div
-                      class="css-206mi5"
+                      class="emotion-14"
                     >
                       #used
                     </div>
@@ -142,26 +469,26 @@ exports[`ComponentUsageDetails overview snapshot 1`] = `
               </tr>
             </thead>
             <tbody
-              class="css-tuhk50"
+              class="emotion-18"
               role="rowgroup"
             >
               <tr
-                class="css-ijvt85"
+                class="emotion-19"
                 role="row"
               >
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-20"
                   role="cell"
                   style="width: 150px;"
                 >
                   <span
-                    class="css-1ver5lo-LocalImport"
+                    class="emotion-21"
                   >
                     <span
-                      class="css-vurnku"
+                      class="emotion-11"
                     >
                       <a
-                        class="css-1t54e2w"
+                        class="emotion-23"
                         href="/docs/id-of-story"
                       >
                         Button
@@ -170,20 +497,20 @@ exports[`ComponentUsageDetails overview snapshot 1`] = `
                   </span>
                 </td>
                 <td
-                  class="css-1yjhfhu"
+                  class="emotion-20"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="css-iapobn-ProgressIndicator"
+                    class="emotion-25"
                   >
                     <progress
-                      class="css-wp73w3"
+                      class="emotion-26"
                       max="1"
                       value="1"
                     />
                     <span
-                      class="css-cagqfd-ProgressIndicator"
+                      class="emotion-27"
                     >
                       1
                     </span>

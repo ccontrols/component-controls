@@ -2,24 +2,144 @@
 
 exports[`ComponentFilter overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-3bvl02-ComponentFilter"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-1 {
+  position: relative;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+  padding-left: 32px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  line-height: normal;
+  width: 200px;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5 {
+  margin-right: 4px;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+  width: 200px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: -28px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  pointer-events: none;
+}
+
+<div
+    class="emotion-0"
   >
     <div
       style="display: inline-block;"
     >
       <div
-        class="css-nnvwbb-SearchInput"
+        class="emotion-1"
       >
         <input
           aria-label="type some text to start searching"
-          class="css-o7a2z8-ComponentFilter"
+          class="emotion-2"
           placeholder="search..."
           value=""
         />
         <svg
           aria-hidden="true"
-          class="css-1f2hmcd-SearchInput"
+          class="emotion-3"
           fill="currentColor"
           height="16"
           role="img"
@@ -35,19 +155,19 @@ exports[`ComponentFilter overview snapshot 1`] = `
       </div>
     </div>
     <div
-      class="css-1rkktkn-ComponentFilter"
+      class="emotion-4"
     >
       <div
-        class="css-1pwn4pj-ComponentFilter"
+        class="emotion-5"
       >
         sort by:
       </div>
       <div
-        class="css-4cffwv"
+        class="emotion-6"
       >
         <select
           aria-label="select sorting order"
-          class="css-e7xs09-ComponentFilter"
+          class="emotion-7"
         >
           <option
             value="name"
@@ -136,7 +256,7 @@ exports[`ComponentFilter overview snapshot 1`] = `
           </option>
         </select>
         <svg
-          class="css-1swud1q"
+          class="emotion-8"
           fill="currentcolor"
           height="24"
           viewBox="0 0 24 24"

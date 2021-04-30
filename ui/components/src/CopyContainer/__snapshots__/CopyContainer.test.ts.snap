@@ -2,8 +2,13 @@
 
 exports[`CopyContainer overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-6bf4yd-CopyContainer"
+  .emotion-0 {
+  cursor: pointer;
+  position: relative;
+}
+
+<div
+    class="emotion-0"
     style="display: inline-block;"
   >
     <div

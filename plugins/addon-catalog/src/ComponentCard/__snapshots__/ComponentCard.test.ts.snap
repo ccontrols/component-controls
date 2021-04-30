@@ -2,42 +2,408 @@
 
 exports[`ComponentCard overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-wh7vml"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.emotion-0:hover {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.125);
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 48px;
+}
+
+.emotion-7 {
+  max-width: 14px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.emotion-7:hover {
+  max-width: 24px;
+}
+
+.emotion-8 {
+  max-width: unset;
+  display: block;
+  overflow: hidden;
+  line-height: 1;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 9999px;
+}
+
+.emotion-10 {
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-14:hover {
+  cursor: pointer;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.emotion-16 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 12px;
+  margin-right: 4px;
+  line-height: 1.25;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.emotion-18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-20 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 12px;
+  color: #69768C;
+  margin-right: 4px;
+  line-height: 1.25;
+}
+
+.emotion-25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  margin-top: -4px;
+  margin-bottom: -4px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media screen and (min-width: 40em) {
+  .emotion-25 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: -4px;
+    margin-right: -4px;
+  }
+}
+
+.emotion-25>div {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+@media screen and (min-width: 40em) {
+  .emotion-25>div {
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #69768C;
+  color: #ffffff;
+}
+
+.emotion-28 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #227fc0;
+  color: #ffffff;
+}
+
+.emotion-31 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #ed4737;
+  color: #ffffff;
+}
+
+.emotion-37 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #4caf50;
+  color: #454f5b;
+}
+
+.emotion-40 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #f44336;
+  color: #ffffff;
+}
+
+.emotion-43 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #838b47;
+  color: #ffffff;
+}
+
+.emotion-44 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-nj7jql-ComponentCard"
+      class="emotion-1"
     >
       <a
-        class="css-1t54e2w"
+        class="emotion-2"
         href=""
       >
         <div
-          class="css-kbmfeb-ComponentCard"
+          class="emotion-3"
         >
           Story
         </div>
       </a>
       <div
-        class="css-10zcph3-ComponentCard"
+        class="emotion-4"
       >
         <div
-          class="css-6582y1-ComponentContributors"
+          class="emotion-5"
         >
           <div
             aria-label="avatars of martin-stoyanov, atanasster"
-            class="css-1yvvfp0-GithubAvatarList"
+            class="emotion-6"
           >
             <div
-              class="css-dam4fv-GithubAvatar"
+              class="emotion-7"
               style="display: inline-block;"
             >
               <div
-                class="css-1en2h0i-GithubAvatar"
+                class="emotion-8"
               >
                 <img
                   alt="avatar of martin-stoyanov"
-                  class="css-1y16e88"
+                  class="emotion-9"
                   height="24"
                   src="https://github.com/martin-stoyanov"
                   title="martin-stoyanov"
@@ -46,15 +412,15 @@ exports[`ComponentCard overview snapshot 1`] = `
               </div>
             </div>
             <div
-              class="css-9cbusc-GithubAvatar"
+              class="emotion-10"
               style="display: inline-block;"
             >
               <div
-                class="css-1en2h0i-GithubAvatar"
+                class="emotion-8"
               >
                 <img
                   alt="avatar of atanasster"
-                  class="css-1y16e88"
+                  class="emotion-9"
                   height="24"
                   src="https://github.com/atanasster"
                   title="atanasster"
@@ -67,25 +433,25 @@ exports[`ComponentCard overview snapshot 1`] = `
       </div>
     </div>
     <div
-      class="css-18hcion-ComponentCard"
+      class="emotion-13"
     >
       <div />
       <div
         style="display: inline-block;"
       >
         <a
-          class="css-1yxfg47-CommitsPopover"
+          class="emotion-14"
         >
           <div
-            class="css-zf8zhj"
+            class="emotion-15"
           >
             <div
-              class="css-1vu7ggh-CommitsPopover"
+              class="emotion-16"
             >
               commits:
             </div>
             <span
-              class="css-uv6qe8"
+              class="emotion-17"
             >
               12
             </span>
@@ -94,133 +460,133 @@ exports[`ComponentCard overview snapshot 1`] = `
       </div>
     </div>
     <div
-      class="css-1lguarf-ComponentCard"
+      class="emotion-18"
     >
       <div
-        class="css-zf8zhj"
+        class="emotion-15"
       >
         <span
-          class="css-13o2efz"
+          class="emotion-20"
         >
           created:
         </span>
         <span
-          class="css-uv6qe8"
+          class="emotion-17"
         >
           N/A
         </span>
       </div>
       <div
-        class="css-zf8zhj"
+        class="emotion-15"
       >
         <span
-          class="css-13o2efz"
+          class="emotion-20"
         >
           updated:
         </span>
         <span
-          class="css-uv6qe8"
+          class="emotion-17"
         >
           N/A
         </span>
       </div>
     </div>
     <div
-      class="css-1b2gf4v"
+      class="emotion-25"
     >
       <div
-        class="css-ncjsai"
+        class="emotion-26"
         title="total lines of code"
       >
         <div
-          class="css-7ucnu2-Shield"
+          class="emotion-27"
         >
           loc
         </div>
         <div
-          class="css-o4rdbs-Shield"
+          class="emotion-28"
         >
           25
         </div>
       </div>
       <div
-        class="css-ncjsai"
+        class="emotion-26"
         title="percentage comments to lines of code"
       >
         <div
-          class="css-7ucnu2-Shield"
+          class="emotion-27"
         >
           comments
         </div>
         <div
-          class="css-38njz9-Shield"
+          class="emotion-31"
         >
           4%
         </div>
       </div>
       <div
-        class="css-ncjsai"
+        class="emotion-26"
         title="total todo comments"
       >
         <div
-          class="css-7ucnu2-Shield"
+          class="emotion-27"
         >
           todos
         </div>
         <div
-          class="css-o4rdbs-Shield"
+          class="emotion-28"
         >
           5
         </div>
       </div>
       <div
-        class="css-ncjsai"
+        class="emotion-26"
         title="number of passed tests"
       >
         <div
-          class="css-7ucnu2-Shield"
+          class="emotion-27"
         >
           passed
         </div>
         <div
-          class="css-14o9xde-Shield"
+          class="emotion-37"
         >
           7
         </div>
       </div>
       <div
-        class="css-ncjsai"
+        class="emotion-26"
         title="number of failed tests"
       >
         <div
-          class="css-7ucnu2-Shield"
+          class="emotion-27"
         >
           failed
         </div>
         <div
-          class="css-1os9rn1-Shield"
+          class="emotion-40"
         >
           1
         </div>
       </div>
       <div
-        class="css-ncjsai"
+        class="emotion-26"
         title="tests coverage by branches"
       >
         <div
-          class="css-7ucnu2-Shield"
+          class="emotion-27"
         >
           coverage
         </div>
         <div
-          class="css-otdzg2-Shield"
+          class="emotion-43"
         >
           67%
         </div>
       </div>
     </div>
     <div
-      class="css-1akfoys-ComponentCard"
+      class="emotion-44"
     />
     <div
       variant="styles.p"

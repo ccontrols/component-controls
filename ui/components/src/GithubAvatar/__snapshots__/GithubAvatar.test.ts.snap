@@ -2,16 +2,40 @@
 
 exports[`GithubAvatar overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-9cbusc-GithubAvatar"
+  .emotion-0 {
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.emotion-1 {
+  max-width: unset;
+  display: block;
+  overflow: hidden;
+  line-height: 1;
+  width: 48px;
+  height: 48px;
+  vertical-align: middle;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 9999px;
+}
+
+<div
+    class="emotion-0"
     style="display: inline-block;"
   >
     <div
-      class="css-db5lk0-GithubAvatar"
+      class="emotion-1"
     >
       <img
         alt="avatar of Atanas Stoyanov"
-        class="css-1y16e88"
+        class="emotion-2"
         height="48"
         src="https://www.gravatar.com/avatar/9b9913091795a48655ec0b10dcd62a95?s=128"
         title="Atanas Stoyanov"

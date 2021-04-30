@@ -2,66 +2,86 @@
 
 exports[`SyntaxHighlighter overview snapshot 1`] = `
 <DocumentFragment>
-  <pre
-    class="prism-code language-jsx css-3y8hb3"
+  .emotion-0 {
+  font-family: Menlo,monospace;
+  overflow-x: auto;
+  background-color: #e6e6e6;
+}
+
+.emotion-0 code {
+  color: inherit;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-2 {
+  display: inline-block;
+}
+
+<pre
+    class="prism-code language-jsx emotion-0"
     style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 3px 5px; display: inline; margin: 0px;"
   >
     <span
-      class="token-line css-vurnku"
+      class="token-line emotion-1"
       style="color: rgb(114, 143, 203);"
     >
       <span
-        class="token keyword css-13aqjzy"
+        class="token keyword emotion-2"
         style="color: rgb(114, 143, 203);"
       >
         import
       </span>
       <span
-        class="token plain css-13aqjzy"
+        class="token plain emotion-2"
       >
          
       </span>
       <span
-        class="token punctuation css-13aqjzy"
+        class="token punctuation emotion-2"
         style="color: rgb(182, 173, 154);"
       >
         {
       </span>
       <span
-        class="token plain css-13aqjzy"
+        class="token plain emotion-2"
       >
          Button 
       </span>
       <span
-        class="token punctuation css-13aqjzy"
+        class="token punctuation emotion-2"
         style="color: rgb(182, 173, 154);"
       >
         }
       </span>
       <span
-        class="token plain css-13aqjzy"
+        class="token plain emotion-2"
       >
          
       </span>
       <span
-        class="token keyword css-13aqjzy"
+        class="token keyword emotion-2"
         style="color: rgb(114, 143, 203);"
       >
         from
       </span>
       <span
-        class="token plain css-13aqjzy"
+        class="token plain emotion-2"
       >
          
       </span>
       <span
-        class="token string css-13aqjzy"
+        class="token string emotion-2"
         style="color: rgb(114, 143, 203);"
       >
         'theme-ui'
       </span>
       <span
-        class="token punctuation css-13aqjzy"
+        class="token punctuation emotion-2"
         style="color: rgb(182, 173, 154);"
       >
         ;
@@ -73,66 +93,86 @@ exports[`SyntaxHighlighter overview snapshot 1`] = `
 
 exports[`SyntaxHighlighter theme snapshot 1`] = `
 <DocumentFragment>
-  <pre
-    class="prism-code language-jsx css-3y8hb3"
+  .emotion-0 {
+  font-family: Menlo,monospace;
+  overflow-x: auto;
+  background-color: #e6e6e6;
+}
+
+.emotion-0 code {
+  color: inherit;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-2 {
+  display: inline-block;
+}
+
+<pre
+    class="prism-code language-jsx emotion-0"
     style="color: rgb(158, 254, 255); background-color: rgb(45, 42, 85); padding: 3px 5px; display: inline; margin: 0px;"
   >
     <span
-      class="token-line css-vurnku"
+      class="token-line emotion-1"
       style="color: rgb(158, 254, 255);"
     >
       <span
-        class="token keyword css-13aqjzy"
+        class="token keyword emotion-2"
         style="color: rgb(255, 157, 0);"
       >
         import
       </span>
       <span
-        class="token plain css-13aqjzy"
+        class="token plain emotion-2"
       >
          
       </span>
       <span
-        class="token punctuation css-13aqjzy"
+        class="token punctuation emotion-2"
         style="color: rgb(255, 255, 255);"
       >
         {
       </span>
       <span
-        class="token plain css-13aqjzy"
+        class="token plain emotion-2"
       >
          Button 
       </span>
       <span
-        class="token punctuation css-13aqjzy"
+        class="token punctuation emotion-2"
         style="color: rgb(255, 255, 255);"
       >
         }
       </span>
       <span
-        class="token plain css-13aqjzy"
+        class="token plain emotion-2"
       >
          
       </span>
       <span
-        class="token keyword css-13aqjzy"
+        class="token keyword emotion-2"
         style="color: rgb(255, 157, 0);"
       >
         from
       </span>
       <span
-        class="token plain css-13aqjzy"
+        class="token plain emotion-2"
       >
          
       </span>
       <span
-        class="token string css-13aqjzy"
+        class="token string emotion-2"
         style="color: rgb(165, 255, 144);"
       >
         'theme-ui'
       </span>
       <span
-        class="token punctuation css-13aqjzy"
+        class="token punctuation emotion-2"
         style="color: rgb(255, 255, 255);"
       >
         ;

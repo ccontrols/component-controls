@@ -2,24 +2,110 @@
 
 exports[`DocumentsList overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-vurnku"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: unset;
+  padding-right: 8px;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+  min-width: 300px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: -28px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  pointer-events: none;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  list-style: none;
+  padding: 0;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-18xaazt"
+      class="emotion-1"
     >
       <label
-        class="css-okr6fe"
+        class="emotion-2"
         for="sortorder"
       >
         Sort by:
       </label>
       <div
-        class="css-4cffwv"
+        class="emotion-3"
       >
         <select
           aria-label="select sort order"
-          class="css-1lmm0mo"
+          class="emotion-4"
           name="sortorder"
         >
           <option
@@ -39,7 +125,7 @@ exports[`DocumentsList overview snapshot 1`] = `
           </option>
         </select>
         <svg
-          class="css-1swud1q"
+          class="emotion-5"
           fill="currentcolor"
           height="24"
           viewBox="0 0 24 24"
@@ -53,7 +139,7 @@ exports[`DocumentsList overview snapshot 1`] = `
       </div>
     </div>
     <ul
-      class="css-da1yre"
+      class="emotion-6"
     />
   </div>
 </DocumentFragment>

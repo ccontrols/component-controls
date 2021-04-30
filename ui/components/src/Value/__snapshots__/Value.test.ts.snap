@@ -2,16 +2,51 @@
 
 exports[`Value overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-zf8zhj"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 12px;
+  color: #69768C;
+  margin-right: 4px;
+  line-height: 1.25;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+<div
+    class="emotion-0"
   >
     <span
-      class="css-13o2efz"
+      class="emotion-1"
     >
       date created
     </span>
     <span
-      class="css-uv6qe8"
+      class="emotion-2"
     >
       01/01/2020
     </span>

@@ -2,15 +2,56 @@
 
 exports[`HoverBox overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-vkd8ti"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  min-height: 100%;
+  min-width: unset;
+  padding-right: 32px;
+}
+
+.emotion-0:hover>.hoverbox-text {
+  color: #69768C;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #e6e6e6;
+  font-weight: 700;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-xtndwh"
+      class="emotion-1"
     >
       <svg
         aria-label="donut graphic value 0.5 - from 0 tp 1"
-        class="css-14d2907"
+        class="emotion-2"
         fill="none"
         height="128"
         role="img"
@@ -35,13 +76,13 @@ exports[`HoverBox overview snapshot 1`] = `
         />
       </svg>
       <span
-        class="css-vurnku"
+        class="emotion-3"
       >
         some text
       </span>
     </div>
     <span
-      class="hoverbox-text css-1cgogy4"
+      class="hoverbox-text emotion-4"
     >
       donut component
     </span>

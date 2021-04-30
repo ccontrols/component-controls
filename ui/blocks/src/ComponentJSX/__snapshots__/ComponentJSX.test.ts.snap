@@ -2,15 +2,555 @@
 
 exports[`ComponentJSX overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3:hover a {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-4 .react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.emotion-4 .react-tabs__tab-list {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.emotion-4 .react-tabs__tab {
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  border-bottom: none;
+  bottom: -4px;
+  position: relative;
+  list-style: none;
+  padding: 4px 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+  color: #69768C;
+}
+
+.emotion-4 .react-tabs__tab a {
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.emotion-4 .react-tabs__tab:focus {
+  box-shadow: 0 0 5px hsl(208, 99%, 50%);
+  border-color: hsl(208, 99%, 50%);
+  outline: none;
+}
+
+.emotion-4 .react-tabs__tab:focus:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: #fff;
+}
+
+.emotion-4 .react-tabs__tab--selected {
+  border-bottom: 3px solid #5c6ac4;
+  color: #5c6ac4;
+}
+
+.emotion-4 .react-tabs__tab--disabled {
+  color: #69768C;
+  cursor: default;
+}
+
+.emotion-4 .react-tabs__tab-panel {
+  display: none;
+}
+
+.emotion-4 .react-tabs__tab-panel--selected {
+  display: block;
+}
+
+.emotion-4 .react-tabs__tab {
+  font-size: 14px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-7 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-7 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 16px;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: none;
+  background: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #5c6ac4;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 0;
+  padding-bottom: 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-15:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.emotion-16 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-18 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #006fbb;
+}
+
+.emotion-19 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 14px;
+  font-weight: 300;
+  font-weight: 700;
+}
+
+.emotion-20 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-right: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #5c6ac4;
+}
+
+.emotion-21 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(211,211,211,0.15);
+  border: 0px solid lightgrey;
+  margin-left: 4px;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1rem;
+  white-space: nowrap;
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-28 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-29 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(0,128,0,0.15);
+  border: 1px solid green;
+  margin-right: 4px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.2rem;
+}
+
+.emotion-31 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-32 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.emotion-33 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  font-size: 12px;
+  line-height: 1.2rem;
+}
+
+.emotion-34 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 14px;
+  line-height: 1.2rem;
+  white-space: nowrap;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id=""
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       />
     </div>
     <div
@@ -20,10 +560,10 @@ exports[`ComponentJSX overview snapshot 1`] = `
     >
       <div>
         <div
-          class="css-1d6wxci"
+          class="emotion-3"
         >
           <div
-            class="css-nm5f2c-Tabs"
+            class="emotion-4"
           >
             <div
               class="react-tabs"
@@ -63,16 +603,16 @@ exports[`ComponentJSX overview snapshot 1`] = `
               >
                 <div>
                   <div
-                    class="css-15owl46"
+                    class="emotion-5"
                   >
                     <div
-                      class="css-x60p33"
+                      class="emotion-6"
                     >
                       <div
-                        class="css-1vga9oy"
+                        class="emotion-7"
                       >
                         <button
-                          class="css-1tf4h46"
+                          class="emotion-8"
                         >
                           collapse all
                         </button>
@@ -80,87 +620,87 @@ exports[`ComponentJSX overview snapshot 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-eqxzio"
+                    class="emotion-9"
                   >
                     <div
-                      class="css-aroec7-Tree"
+                      class="emotion-10"
                       data-testid="component-jsx"
                     >
                       <div
-                        class="css-vurnku"
+                        class="emotion-11"
                       >
                         <div
-                          class="css-15ej8gm"
+                          class="emotion-12"
                         >
                           <div
-                            class="css-tizfsr"
+                            class="emotion-13"
                           >
                             <div
-                              class="css-162ewbd"
+                              class="emotion-14"
                             >
                               <div
-                                class="css-p1dwhj"
+                                class="emotion-15"
                               >
                                 <div
-                                  class="css-dcq909"
+                                  class="emotion-16"
                                 >
                                   <div
-                                    class="css-f5h6sg"
+                                    class="emotion-17"
                                   >
                                     <div
-                                      class="css-1ujq37u-JSXTreeNode"
+                                      class="emotion-18"
                                     >
                                       <span
-                                        class="css-kde9kw-JSXTreeNode"
+                                        class="emotion-19"
                                       >
                                         &lt;Button
                                       </span>
                                       <div
-                                        class="css-1j19kj1-JSXTreeNode"
+                                        class="emotion-20"
                                       >
                                         <span
-                                          class="css-19j54vt-Tag"
+                                          class="emotion-21"
                                         >
                                           <span
-                                            class="css-vurnku"
+                                            class="emotion-11"
                                           >
                                             ref
                                           </span>
                                         </span>
                                         <span
-                                          class="css-19j54vt-Tag"
+                                          class="emotion-21"
                                         >
                                           <span
-                                            class="css-vurnku"
+                                            class="emotion-11"
                                           >
                                             id
                                           </span>
                                         </span>
                                       </div>
                                       <span
-                                        class="css-kde9kw-JSXTreeNode"
+                                        class="emotion-19"
                                       >
                                         /&gt;
                                       </span>
                                     </div>
                                   </div>
                                   <div
-                                    class="css-vthntz"
+                                    class="emotion-26"
                                   >
                                     <div
-                                      class="css-vurnku"
+                                      class="emotion-11"
                                     >
                                       <div
-                                        class="css-u91vyr-ImportLabel"
+                                        class="emotion-28"
                                       >
                                         <span
-                                          class="css-1ver5lo-LocalImport"
+                                          class="emotion-29"
                                         >
                                           <span
-                                            class="css-vurnku"
+                                            class="emotion-11"
                                           >
                                             <a
-                                              class="css-1t54e2w"
+                                              class="emotion-31"
                                               href="/docs/id-of-story"
                                             >
                                               Button
@@ -168,15 +708,15 @@ exports[`ComponentJSX overview snapshot 1`] = `
                                           </span>
                                         </span>
                                         <div
-                                          class="css-10stqcc-ImportLabel"
+                                          class="emotion-32"
                                         >
                                           <span
-                                            class="css-1tf5k16-ImportLabel"
+                                            class="emotion-33"
                                           >
                                             from
                                           </span>
                                           <span
-                                            class="css-tfsmtt-ImportLabel"
+                                            class="emotion-34"
                                           >
                                             "./Button"
                                           </span>

@@ -2,8 +2,20 @@
 
 exports[`Subtitle overview snapshot 1`] = `
 <DocumentFragment>
-  <h2
-    class="css-1uqrmoi"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #69768C;
+  font-weight: 400;
+  padding-bottom: 8px;
+}
+
+<h2
+    class="emotion-0"
   >
     story subtitle
   </h2>

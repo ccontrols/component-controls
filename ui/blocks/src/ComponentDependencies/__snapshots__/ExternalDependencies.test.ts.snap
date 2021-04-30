@@ -2,15 +2,365 @@
 
 exports[`ExternalDependencies overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3:hover a {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-4 .react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.emotion-4 .react-tabs__tab-list {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.emotion-4 .react-tabs__tab {
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  border-bottom: none;
+  bottom: -4px;
+  position: relative;
+  list-style: none;
+  padding: 4px 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+  color: #69768C;
+}
+
+.emotion-4 .react-tabs__tab a {
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.emotion-4 .react-tabs__tab:focus {
+  box-shadow: 0 0 5px hsl(208, 99%, 50%);
+  border-color: hsl(208, 99%, 50%);
+  outline: none;
+}
+
+.emotion-4 .react-tabs__tab:focus:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: #fff;
+}
+
+.emotion-4 .react-tabs__tab--selected {
+  border-bottom: 3px solid #5c6ac4;
+  color: #5c6ac4;
+}
+
+.emotion-4 .react-tabs__tab--disabled {
+  color: #69768C;
+  cursor: default;
+}
+
+.emotion-4 .react-tabs__tab-panel {
+  display: none;
+}
+
+.emotion-4 .react-tabs__tab-panel--selected {
+  display: block;
+}
+
+.emotion-4 .react-tabs__tab {
+  font-size: 14px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-5 p {
+  margin: 0;
+}
+
+.emotion-5 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-5 a {
+  word-break: break-word;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-17 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-18 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-19 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+.emotion-20 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.emotion-21 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-22 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.emotion-23 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(173,216,230,0.15);
+  border: 1px solid lightblue;
+  margin-left: 4px;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1rem;
+  white-space: nowrap;
+  margin-left: 8px;
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(211,211,211,0.15);
+  border: 1px solid lightgrey;
+  margin-right: 4px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  white-space: nowrap;
+}
+
+.emotion-39 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(255,165,0,0.15);
+  border: 1px solid orange;
+  margin-right: 4px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  white-space: nowrap;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id=""
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       />
     </div>
     <div
@@ -20,10 +370,10 @@ exports[`ExternalDependencies overview snapshot 1`] = `
     >
       <div>
         <div
-          class="css-1d6wxci"
+          class="emotion-3"
         >
           <div
-            class="css-nm5f2c-Tabs"
+            class="emotion-4"
           >
             <div
               class="react-tabs"
@@ -62,59 +412,59 @@ exports[`ExternalDependencies overview snapshot 1`] = `
                 role="tabpanel"
               >
                 <table
-                  class="css-11y77l0"
+                  class="emotion-5"
                   role="table"
                 >
                   <thead
-                    class="css-14kw1rx"
+                    class="emotion-6"
                   >
                     <tr
-                      class="css-vurnku"
+                      class="emotion-7"
                       role="row"
                     >
                       <th
-                        class="css-n59tc9"
+                        class="emotion-8"
                         colspan="1"
                         role="columnheader"
                         style="width: 150px;"
                       >
                         <div
-                          class="css-wwqljn"
+                          class="emotion-9"
                         >
                           <div
-                            class="css-206mi5"
+                            class="emotion-10"
                           >
                             package
                           </div>
                         </div>
                       </th>
                       <th
-                        class="css-n59tc9"
+                        class="emotion-8"
                         colspan="1"
                         role="columnheader"
                         style="width: 70%;"
                       >
                         <div
-                          class="css-wwqljn"
+                          class="emotion-9"
                         >
                           <div
-                            class="css-206mi5"
+                            class="emotion-10"
                           >
                             imports
                           </div>
                         </div>
                       </th>
                       <th
-                        class="css-n59tc9"
+                        class="emotion-8"
                         colspan="1"
                         role="columnheader"
                         style="width: 150px;"
                       >
                         <div
-                          class="css-wwqljn"
+                          class="emotion-9"
                         >
                           <div
-                            class="css-206mi5"
+                            class="emotion-10"
                           >
                             peer
                           </div>
@@ -123,38 +473,38 @@ exports[`ExternalDependencies overview snapshot 1`] = `
                     </tr>
                   </thead>
                   <tbody
-                    class="css-tuhk50"
+                    class="emotion-17"
                     role="rowgroup"
                   >
                     <tr
-                      class="css-ijvt85"
+                      class="emotion-18"
                       role="row"
                     >
                       <td
-                        class="css-1yjhfhu"
+                        class="emotion-19"
                         role="cell"
                         style="width: 150px;"
                       >
                         <div
-                          class="css-14a8v30-PackageLink"
+                          class="emotion-20"
                         >
                           <a
-                            class="css-1t54e2w"
+                            class="emotion-21"
                             href="https://npmjs.com/package/@component-controls/components/v/1.0.1"
                             rel="noopener noreferrer"
                             target="_blank"
                           >
                             <div
-                              class="css-13b120i-PackageLink"
+                              class="emotion-22"
                             >
                               @component-controls/components
                             </div>
                           </a>
                           <span
-                            class="css-n8ts03-PackageLink"
+                            class="emotion-23"
                           >
                             <span
-                              class="css-vurnku"
+                              class="emotion-7"
                             >
                               ^1.0.1
                             </span>
@@ -162,18 +512,18 @@ exports[`ExternalDependencies overview snapshot 1`] = `
                         </div>
                       </td>
                       <td
-                        class="css-1yjhfhu"
+                        class="emotion-19"
                         role="cell"
                         style="width: 70%;"
                       >
                         <div
-                          class="css-zivbkl-Cell"
+                          class="emotion-26"
                         >
                           <span
-                            class="css-hpa617-Tag"
+                            class="emotion-27"
                           >
                             <span
-                              class="css-vurnku"
+                              class="emotion-7"
                             >
                               Table
                             </span>
@@ -181,40 +531,40 @@ exports[`ExternalDependencies overview snapshot 1`] = `
                         </div>
                       </td>
                       <td
-                        class="css-1yjhfhu"
+                        class="emotion-19"
                         role="cell"
                         style="width: 150px;"
                       />
                     </tr>
                     <tr
-                      class="css-ijvt85"
+                      class="emotion-18"
                       role="row"
                     >
                       <td
-                        class="css-1yjhfhu"
+                        class="emotion-19"
                         role="cell"
                         style="width: 150px;"
                       >
                         <div
-                          class="css-14a8v30-PackageLink"
+                          class="emotion-20"
                         >
                           <a
-                            class="css-1t54e2w"
+                            class="emotion-21"
                             href="https://npmjs.com/package/react/v/16.13.1"
                             rel="noopener noreferrer"
                             target="_blank"
                           >
                             <div
-                              class="css-13b120i-PackageLink"
+                              class="emotion-22"
                             >
                               react
                             </div>
                           </a>
                           <span
-                            class="css-n8ts03-PackageLink"
+                            class="emotion-23"
                           >
                             <span
-                              class="css-vurnku"
+                              class="emotion-7"
                             >
                               ^16.13.1
                             </span>
@@ -222,27 +572,27 @@ exports[`ExternalDependencies overview snapshot 1`] = `
                         </div>
                       </td>
                       <td
-                        class="css-1yjhfhu"
+                        class="emotion-19"
                         role="cell"
                         style="width: 70%;"
                       >
                         <div
-                          class="css-zivbkl-Cell"
+                          class="emotion-26"
                         >
                           <span
-                            class="css-1j59y6j-Tag"
+                            class="emotion-39"
                           >
                             <span
-                              class="css-vurnku"
+                              class="emotion-7"
                             >
                               React
                             </span>
                           </span>
                           <span
-                            class="css-hpa617-Tag"
+                            class="emotion-27"
                           >
                             <span
-                              class="css-vurnku"
+                              class="emotion-7"
                             >
                               FC
                             </span>
@@ -250,7 +600,7 @@ exports[`ExternalDependencies overview snapshot 1`] = `
                         </div>
                       </td>
                       <td
-                        class="css-1yjhfhu"
+                        class="emotion-19"
                         role="cell"
                         style="width: 150px;"
                       >

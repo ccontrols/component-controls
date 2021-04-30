@@ -2,20 +2,94 @@
 
 exports[`Footer overview snapshot 1`] = `
 <DocumentFragment>
-  <footer
-    class="css-gtql5a"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+<footer
+    class="emotion-0"
   >
     <div
-      class="css-vurnku"
+      class="emotion-1"
     >
       <div
-        class="css-f5h6sg"
+        class="emotion-2"
       >
         <div
-          class="css-1rw838x"
+          class="emotion-3"
         >
           <span
-            class="css-vurnku"
+            class="emotion-1"
           >
             Copyright © 2021 by @component-controls
           </span>
@@ -23,17 +97,17 @@ exports[`Footer overview snapshot 1`] = `
       </div>
     </div>
     <div
-      class="css-vurnku"
+      class="emotion-1"
     >
       <div
-        class="css-f5h6sg"
+        class="emotion-2"
       >
         <div
-          class="css-1rw838x"
+          class="emotion-3"
         >
           <a
             aria-label="visit project home page"
-            class="css-1t54e2w"
+            class="emotion-8"
             href="/"
           >
             Component controls

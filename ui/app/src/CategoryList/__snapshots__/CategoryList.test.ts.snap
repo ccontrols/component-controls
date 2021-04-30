@@ -2,31 +2,382 @@
 
 exports[`CategoryList overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1hkyity"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  background-color: #ffffff;
+  color: #454f5b;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: auto;
+  width: 100%;
+  position: relative;
+  max-width: 1000px;
+}
+
+@media screen and (min-width: 40em) {
+  .emotion-0 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media screen and (min-width: 52em) {
+  .emotion-0 {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  line-height: 1.25;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 40em) {
+  .emotion-8 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: baseline;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+  }
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 12px;
+  color: #69768C;
+  margin-right: 4px;
+  line-height: 1.25;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  margin-left: 8px;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 0;
+}
+
+@media screen and (min-width: 40em) {
+  .emotion-15 {
+    margin-left: 8px;
+  }
+}
+
+.emotion-20 {
+  padding-top: 8px;
+}
+
+.emotion-21 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-top: 32px;
+}
+
+.emotion-22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding-bottom: 0;
+}
+
+.emotion-23 {
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 42px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.emotion-24 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #69768C;
+  font-weight: 400;
+  padding-bottom: 8px;
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.emotion-29 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.emotion-30 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.emotion-33 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-34 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-35 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 14px;
+  color: #69768C;
+  padding-bottom: 8px;
+}
+
+.emotion-36 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 20px;
+  color: #5c6ac4;
+  font-weight: 700;
+}
+
+.emotion-37 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 300px;
+}
+
+<div
+    class="emotion-0"
     id="content"
   >
     <div
-      class="css-vurnku"
+      class="emotion-1"
     >
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1nu2k4w"
+          class="emotion-3"
         >
           <div
-            class="css-1h9kuou"
+            class="emotion-4"
           >
             <a
               aria-label="edit this page"
-              class="css-1t54e2w"
+              class="emotion-5"
               href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
               rel="noopener noreferrer"
               target="_blank"
             >
               <div
-                class="css-f5h6sg"
+                class="emotion-6"
               >
                 <svg
                   aria-hidden="true"
@@ -44,7 +395,7 @@ exports[`CategoryList overview snapshot 1`] = `
                   />
                 </svg>
                 <span
-                  class="css-6amu4j"
+                  class="emotion-7"
                 >
                   Edit this page
                 </span>
@@ -52,52 +403,52 @@ exports[`CategoryList overview snapshot 1`] = `
             </a>
           </div>
           <div
-            class="css-crmp15"
+            class="emotion-8"
           >
             <div
-              class="css-zf8zhj"
+              class="emotion-9"
             >
               <span
-                class="css-13o2efz"
+                class="emotion-10"
               >
                 created:
               </span>
               <span
-                class="css-uv6qe8"
+                class="emotion-11"
               >
                 1/1/2020
               </span>
             </div>
             <div
-              class="css-tk62ho-Container"
+              class="emotion-12"
             >
               <span
-                class="css-13o2efz"
+                class="emotion-10"
               >
                 updated:
               </span>
               <span
-                class="css-uv6qe8"
+                class="emotion-11"
               >
                 3/31/2020
               </span>
             </div>
             <div
-              class="css-lllzso"
+              class="emotion-15"
             >
               <div
-                class="css-zf8zhj"
+                class="emotion-9"
               >
                 <span
-                  class="css-13o2efz"
+                  class="emotion-10"
                 >
                   by
                 </span>
                 <span
-                  class="css-uv6qe8"
+                  class="emotion-11"
                 >
                   <a
-                    class="css-1t54e2w"
+                    class="emotion-5"
                     href="/authors/atanasster"
                   >
                     atanasster
@@ -108,40 +459,40 @@ exports[`CategoryList overview snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-sj1i65-Container"
+          class="emotion-20"
         />
         <div
-          class="css-i0y2du"
+          class="emotion-21"
         >
           <div
-            class="css-1k9l6xu-Container"
+            class="emotion-22"
           >
             <h1
-              class="css-ymxumn"
+              class="emotion-23"
             >
               Story
             </h1>
           </div>
         </div>
         <h2
-          class="css-1uqrmoi"
+          class="emotion-24"
         >
           story subtitle
         </h2>
         <div
-          class="css-vurnku"
+          class="emotion-1"
         >
           <ul>
             <li>
               <div
-                class="css-1dj4wno"
+                class="emotion-26"
               >
                 <a
-                  class="css-1t54e2w"
+                  class="emotion-5"
                   href="/authors/atanasster"
                 >
                   <h2
-                    class="css-1uqrmoi"
+                    class="emotion-24"
                   >
                     atanasster (2)
                   </h2>
@@ -151,34 +502,34 @@ exports[`CategoryList overview snapshot 1`] = `
           </ul>
         </div>
         <div
-          class="css-5qse13"
+          class="emotion-29"
         >
           <div
-            class="css-8r2q2l"
+            class="emotion-30"
           >
             <div
-              class="css-vurnku"
+              class="emotion-1"
             />
             <div
-              class="css-vurnku"
+              class="emotion-1"
             >
               <a
-                class="css-10zwoio"
+                class="emotion-33"
                 href="/docs/mdx-story"
               >
                 <div
-                  class="css-1my6hv5"
+                  class="emotion-34"
                 >
                   <span
-                    class="css-c3r86m"
+                    class="emotion-35"
                   >
                     Next
                   </span>
                   <div
-                    class="css-9tifnv"
+                    class="emotion-36"
                   >
                     <span
-                      class="css-1s8umv4"
+                      class="emotion-37"
                     >
                       MDX Story
                     </span>

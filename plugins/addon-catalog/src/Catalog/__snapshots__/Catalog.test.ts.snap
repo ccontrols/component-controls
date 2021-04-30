@@ -2,27 +2,362 @@
 
 exports[`Catalog overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-vurnku"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-2 {
+  position: relative;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+  padding: 4px;
+  padding-left: 32px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  line-height: normal;
+  width: 200px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-6 {
+  margin-right: 4px;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+  width: 200px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: -28px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  pointer-events: none;
+}
+
+.emotion-10 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(420px,1fr));
+  -webkit-column-gap: 16px;
+  column-gap: 16px;
+  row-gap: 32px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.emotion-12:hover {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.125);
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-15 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-18 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.emotion-20 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.emotion-21 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(173,216,230,0.15);
+  border: 1px solid lightblue;
+  margin-left: 4px;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1rem;
+  white-space: nowrap;
+  margin-left: 8px;
+}
+
+.emotion-23 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.emotion-24 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 0;
+  padding-right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-height: 420px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-25 .story-render-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  all: unset;
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-3bvl02-ComponentFilter"
+      class="emotion-1"
     >
       <div
         style="display: inline-block;"
       >
         <div
-          class="css-nnvwbb-SearchInput"
+          class="emotion-2"
         >
           <input
             aria-label="type some text to start searching"
-            class="css-1rimw92-ComponentFilter"
+            class="emotion-3"
             placeholder="search..."
             value=""
           />
           <svg
             aria-hidden="true"
-            class="css-1f2hmcd-SearchInput"
+            class="emotion-4"
             fill="currentColor"
             height="16"
             role="img"
@@ -38,19 +373,19 @@ exports[`Catalog overview snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-1rkktkn-ComponentFilter"
+        class="emotion-5"
       >
         <div
-          class="css-1pwn4pj-ComponentFilter"
+          class="emotion-6"
         >
           sort by:
         </div>
         <div
-          class="css-4cffwv"
+          class="emotion-7"
         >
           <select
             aria-label="select sorting order"
-            class="css-e7xs09-ComponentFilter"
+            class="emotion-8"
           >
             <option
               value="name"
@@ -139,7 +474,7 @@ exports[`Catalog overview snapshot 1`] = `
             </option>
           </select>
           <svg
-            class="css-1swud1q"
+            class="emotion-9"
             fill="currentcolor"
             height="24"
             viewBox="0 0 24 24"
@@ -155,54 +490,54 @@ exports[`Catalog overview snapshot 1`] = `
     </div>
     <div>
       <div
-        class="css-vc9b9i"
+        class="emotion-10"
       >
         <div
-          class="css-fo5v1-ComponentList"
+          class="emotion-11"
         >
           <div
-            class="css-wh7vml"
+            class="emotion-12"
           >
             <div
-              class="css-nj7jql-ComponentCard"
+              class="emotion-13"
             >
               <a
-                class="css-1t54e2w"
+                class="emotion-14"
                 href="/docs/id-of-story"
               >
                 <div
-                  class="css-kbmfeb-ComponentCard"
+                  class="emotion-15"
                 >
                   Story
                 </div>
               </a>
               <div
-                class="css-10zcph3-ComponentCard"
+                class="emotion-16"
               />
             </div>
             <div
-              class="css-18hcion-ComponentCard"
+              class="emotion-17"
             >
               <div
-                class="css-14a8v30-PackageLink"
+                class="emotion-18"
               >
                 <a
-                  class="css-1t54e2w"
+                  class="emotion-14"
                   href="https://npmjs.com/package/@component-controls/blocks/v/1.0.3"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
                   <div
-                    class="css-13b120i-PackageLink"
+                    class="emotion-20"
                   >
                     @component-controls/blocks
                   </div>
                 </a>
                 <span
-                  class="css-n8ts03-PackageLink"
+                  class="emotion-21"
                 >
                   <span
-                    class="css-vurnku"
+                    class="emotion-0"
                   >
                     1.0.3
                   </span>
@@ -210,24 +545,24 @@ exports[`Catalog overview snapshot 1`] = `
               </div>
             </div>
             <div
-              class="css-1akfoys-ComponentCard"
+              class="emotion-23"
             />
             <p>
               description of story
             </p>
             <div
-              class="css-k8h5so-ComponentCard"
+              class="emotion-24"
             >
               <div
-                class="css-nxqmcg-ComponentCard"
+                class="emotion-25"
                 data-testid="story"
                 id="id-of-story"
               >
                 <div
-                  class="story-render-container css-dhmrnb"
+                  class="story-render-container emotion-26"
                 >
                   <h2
-                    class="css-229nmx"
+                    class="emotion-27"
                   >
                     Components
                   </h2>

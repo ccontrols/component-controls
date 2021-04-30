@@ -2,9 +2,28 @@
 
 exports[`TextEditor overview snapshot 1`] = `
 <DocumentFragment>
-  <input
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+}
+
+<input
     aria-label="enter some text"
-    class="css-iyqgnx"
+    class="emotion-0"
     id="prop"
     name="prop"
     value="Hello"
@@ -14,9 +33,28 @@ exports[`TextEditor overview snapshot 1`] = `
 
 exports[`TextEditor placeholder snapshot 1`] = `
 <DocumentFragment>
-  <input
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+}
+
+<input
     aria-label="enter a value for prop"
-    class="css-iyqgnx"
+    class="emotion-0"
     id="prop"
     name="prop"
     placeholder="Enter some text"
@@ -27,9 +65,28 @@ exports[`TextEditor placeholder snapshot 1`] = `
 
 exports[`TextEditor textArea snapshot 1`] = `
 <DocumentFragment>
-  <textarea
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+}
+
+<textarea
     aria-label="enter a value for prop"
-    class="css-iyqgnx"
+    class="emotion-0"
     id="prop"
     name="prop"
     placeholder="Enter multiple lines of text"

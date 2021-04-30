@@ -2,20 +2,69 @@
 
 exports[`GithubAvatarList maxItems snapshot 1`] = `
 <DocumentFragment>
-  <div
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 64px;
+}
+
+.emotion-1 {
+  max-width: 19px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.emotion-1:hover {
+  max-width: 32px;
+}
+
+.emotion-2 {
+  max-width: unset;
+  display: block;
+  overflow: hidden;
+  line-height: 1;
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 9999px;
+}
+
+.emotion-4 {
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+<div
     aria-label="avatars of martin-stoyanov, atanasster"
-    class="css-bsqv3q-GithubAvatarList"
+    class="emotion-0"
   >
     <div
-      class="css-pncdcn-GithubAvatar"
+      class="emotion-1"
       style="display: inline-block;"
     >
       <div
-        class="css-1b0uybw-GithubAvatar"
+        class="emotion-2"
       >
         <img
           alt="avatar of martin-stoyanov"
-          class="css-1y16e88"
+          class="emotion-3"
           height="32"
           src="https://github.com/martin-stoyanov"
           title="martin-stoyanov"
@@ -24,15 +73,15 @@ exports[`GithubAvatarList maxItems snapshot 1`] = `
       </div>
     </div>
     <div
-      class="css-9cbusc-GithubAvatar"
+      class="emotion-4"
       style="display: inline-block;"
     >
       <div
-        class="css-1b0uybw-GithubAvatar"
+        class="emotion-2"
       >
         <img
           alt="avatar of atanasster"
-          class="css-1y16e88"
+          class="emotion-3"
           height="32"
           src="https://github.com/atanasster"
           title="atanasster"
@@ -46,20 +95,69 @@ exports[`GithubAvatarList maxItems snapshot 1`] = `
 
 exports[`GithubAvatarList overview snapshot 1`] = `
 <DocumentFragment>
-  <div
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 64px;
+}
+
+.emotion-1 {
+  max-width: 19px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.emotion-1:hover {
+  max-width: 32px;
+}
+
+.emotion-2 {
+  max-width: unset;
+  display: block;
+  overflow: hidden;
+  line-height: 1;
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 9999px;
+}
+
+.emotion-4 {
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+<div
     aria-label="avatars of martin-stoyanov, atanasster"
-    class="css-bsqv3q-GithubAvatarList"
+    class="emotion-0"
   >
     <div
-      class="css-pncdcn-GithubAvatar"
+      class="emotion-1"
       style="display: inline-block;"
     >
       <div
-        class="css-1b0uybw-GithubAvatar"
+        class="emotion-2"
       >
         <img
           alt="avatar of martin-stoyanov"
-          class="css-1y16e88"
+          class="emotion-3"
           height="32"
           src="https://github.com/martin-stoyanov"
           title="martin-stoyanov"
@@ -68,15 +166,15 @@ exports[`GithubAvatarList overview snapshot 1`] = `
       </div>
     </div>
     <div
-      class="css-9cbusc-GithubAvatar"
+      class="emotion-4"
       style="display: inline-block;"
     >
       <div
-        class="css-1b0uybw-GithubAvatar"
+        class="emotion-2"
       >
         <img
           alt="avatar of atanasster"
-          class="css-1y16e88"
+          class="emotion-3"
           height="32"
           src="https://github.com/atanasster"
           title="atanasster"

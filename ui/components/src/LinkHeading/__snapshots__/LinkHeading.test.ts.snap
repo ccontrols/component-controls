@@ -2,19 +2,82 @@
 
 exports[`LinkHeading overview snapshot 1`] = `
 <DocumentFragment>
-  <div
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1:hover a {
+  visibility: visible;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -32px;
+}
+
+.emotion-2:hover {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 42px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+<div
     style="margin-left: 32px;"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-0"
       id="linkheading-text"
     >
       <div
-        class="css-xhp9da"
+        class="emotion-1"
       >
         <a
           aria-label="navigate to navigate to linkheading-text section"
-          class="css-6ugsdx-LinkHeading"
+          class="emotion-2"
           data-id="linkheading-text"
           data-level="1"
           data-title="navigate to linkheading-text"
@@ -39,7 +102,7 @@ exports[`LinkHeading overview snapshot 1`] = `
           </svg>
         </a>
         <h1
-          class="css-ixvu55"
+          class="emotion-3"
         >
           LinkHeading text
         </h1>

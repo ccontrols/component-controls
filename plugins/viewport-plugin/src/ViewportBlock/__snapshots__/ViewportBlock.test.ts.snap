@@ -2,15 +2,347 @@
 
 exports[`ViewportBlock overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-5 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-5 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+}
+
+.emotion-6:disabled {
+  color: #aaa;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  padding-top: 16px;
+  padding-bottom: 32px;
+  padding-left: 4px;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  min-height: 100%;
+  min-width: unset;
+  padding-right: 32px;
+  width: 320px;
+  padding-bottom: 8px;
+}
+
+.emotion-9:hover>.hoverbox-text {
+  color: #69768C;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+  margin-bottom: 0;
+  width: 320px;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  all: unset;
+}
+
+.emotion-16 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #e6e6e6;
+  font-weight: 700;
+}
+
+.emotion-18 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  min-height: 100%;
+  min-width: unset;
+  padding-right: 32px;
+  width: 375px;
+  padding-bottom: 8px;
+}
+
+.emotion-18:hover>.hoverbox-text {
+  color: #69768C;
+}
+
+.emotion-20 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+  margin-bottom: 0;
+  width: 375px;
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  min-height: 100%;
+  min-width: unset;
+  padding-right: 32px;
+  width: 768px;
+  padding-bottom: 8px;
+}
+
+.emotion-27:hover>.hoverbox-text {
+  color: #69768C;
+}
+
+.emotion-29 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+  margin-bottom: 0;
+  width: 768px;
+}
+
+.emotion-36 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  min-height: 100%;
+  min-width: unset;
+  padding-right: 32px;
+  width: 1024px;
+  padding-bottom: 8px;
+}
+
+.emotion-36:hover>.hoverbox-text {
+  color: #69768C;
+}
+
+.emotion-38 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+  margin-bottom: 0;
+  width: 1024px;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id=""
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       />
     </div>
     <div
@@ -21,19 +353,19 @@ exports[`ViewportBlock overview snapshot 1`] = `
       <div>
         <div>
           <div
-            class="css-15owl46"
+            class="emotion-3"
           >
             <div
-              class="css-x60p33"
+              class="emotion-4"
             >
               <div
-                class="css-1vga9oy"
+                class="emotion-5"
               >
                 <div
                   style="display: inline-block;"
                 >
                   <button
-                    class="css-97huhz"
+                    class="emotion-6"
                   >
                     widths
                   </button>
@@ -42,27 +374,27 @@ exports[`ViewportBlock overview snapshot 1`] = `
             </div>
           </div>
           <div
-            class="css-eqxzio"
+            class="emotion-7"
           >
             <div
-              class="css-10nnqwz-ViewportBlock"
+              class="emotion-8"
             >
               <div
-                class="css-77fsv4-HoverBox"
+                class="emotion-9"
               >
                 <div
-                  class="css-xtndwh"
+                  class="emotion-10"
                 >
                   <div
-                    class="css-bff87g-Story"
+                    class="emotion-11"
                     data-testid="story"
                   >
                     <div
-                      class="css-jxxswp"
+                      class="emotion-1"
                       id=""
                     >
                       <div
-                        class="css-xhp9da"
+                        class="emotion-2"
                       />
                     </div>
                     <div
@@ -72,16 +404,16 @@ exports[`ViewportBlock overview snapshot 1`] = `
                     >
                       <div>
                         <div
-                          class="css-154oin1"
+                          class="emotion-14"
                           data-testid="story"
                           id="blocks-core-story-plain--controls"
                         >
                           <div
-                            class="story-render-container css-dhmrnb"
+                            class="story-render-container emotion-15"
                           >
                             <svg
                               aria-label="example donut graphic"
-                              class="css-14d2907"
+                              class="emotion-16"
                               fill="none"
                               height="128"
                               role="img"
@@ -112,27 +444,27 @@ exports[`ViewportBlock overview snapshot 1`] = `
                   </div>
                 </div>
                 <span
-                  class="hoverbox-text css-1cgogy4"
+                  class="hoverbox-text emotion-17"
                 >
                   320px
                 </span>
               </div>
               <div
-                class="css-x0hg6m-HoverBox"
+                class="emotion-18"
               >
                 <div
-                  class="css-xtndwh"
+                  class="emotion-10"
                 >
                   <div
-                    class="css-1xj1pl2-Story"
+                    class="emotion-20"
                     data-testid="story"
                   >
                     <div
-                      class="css-jxxswp"
+                      class="emotion-1"
                       id=""
                     >
                       <div
-                        class="css-xhp9da"
+                        class="emotion-2"
                       />
                     </div>
                     <div
@@ -142,16 +474,16 @@ exports[`ViewportBlock overview snapshot 1`] = `
                     >
                       <div>
                         <div
-                          class="css-154oin1"
+                          class="emotion-14"
                           data-testid="story"
                           id="blocks-core-story-plain--controls"
                         >
                           <div
-                            class="story-render-container css-dhmrnb"
+                            class="story-render-container emotion-15"
                           >
                             <svg
                               aria-label="example donut graphic"
-                              class="css-14d2907"
+                              class="emotion-16"
                               fill="none"
                               height="128"
                               role="img"
@@ -182,27 +514,27 @@ exports[`ViewportBlock overview snapshot 1`] = `
                   </div>
                 </div>
                 <span
-                  class="hoverbox-text css-1cgogy4"
+                  class="hoverbox-text emotion-17"
                 >
                   375px
                 </span>
               </div>
               <div
-                class="css-1j6jxrr-HoverBox"
+                class="emotion-27"
               >
                 <div
-                  class="css-xtndwh"
+                  class="emotion-10"
                 >
                   <div
-                    class="css-1xpqjvh-Story"
+                    class="emotion-29"
                     data-testid="story"
                   >
                     <div
-                      class="css-jxxswp"
+                      class="emotion-1"
                       id=""
                     >
                       <div
-                        class="css-xhp9da"
+                        class="emotion-2"
                       />
                     </div>
                     <div
@@ -212,16 +544,16 @@ exports[`ViewportBlock overview snapshot 1`] = `
                     >
                       <div>
                         <div
-                          class="css-154oin1"
+                          class="emotion-14"
                           data-testid="story"
                           id="blocks-core-story-plain--controls"
                         >
                           <div
-                            class="story-render-container css-dhmrnb"
+                            class="story-render-container emotion-15"
                           >
                             <svg
                               aria-label="example donut graphic"
-                              class="css-14d2907"
+                              class="emotion-16"
                               fill="none"
                               height="128"
                               role="img"
@@ -252,27 +584,27 @@ exports[`ViewportBlock overview snapshot 1`] = `
                   </div>
                 </div>
                 <span
-                  class="hoverbox-text css-1cgogy4"
+                  class="hoverbox-text emotion-17"
                 >
                   768px
                 </span>
               </div>
               <div
-                class="css-aua95t-HoverBox"
+                class="emotion-36"
               >
                 <div
-                  class="css-xtndwh"
+                  class="emotion-10"
                 >
                   <div
-                    class="css-xxu1iu-Story"
+                    class="emotion-38"
                     data-testid="story"
                   >
                     <div
-                      class="css-jxxswp"
+                      class="emotion-1"
                       id=""
                     >
                       <div
-                        class="css-xhp9da"
+                        class="emotion-2"
                       />
                     </div>
                     <div
@@ -282,16 +614,16 @@ exports[`ViewportBlock overview snapshot 1`] = `
                     >
                       <div>
                         <div
-                          class="css-154oin1"
+                          class="emotion-14"
                           data-testid="story"
                           id="blocks-core-story-plain--controls"
                         >
                           <div
-                            class="story-render-container css-dhmrnb"
+                            class="story-render-container emotion-15"
                           >
                             <svg
                               aria-label="example donut graphic"
-                              class="css-14d2907"
+                              class="emotion-16"
                               fill="none"
                               height="128"
                               role="img"
@@ -322,7 +654,7 @@ exports[`ViewportBlock overview snapshot 1`] = `
                   </div>
                 </div>
                 <span
-                  class="hoverbox-text css-1cgogy4"
+                  class="hoverbox-text emotion-17"
                 >
                   1024px
                 </span>
@@ -338,15 +670,291 @@ exports[`ViewportBlock overview snapshot 1`] = `
 
 exports[`ViewportBlock sizes snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-5 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-5 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+}
+
+.emotion-6:disabled {
+  color: #aaa;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  padding-top: 16px;
+  padding-bottom: 32px;
+  padding-left: 4px;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  min-height: 100%;
+  min-width: unset;
+  padding-right: 32px;
+  width: 192px;
+  padding-bottom: 8px;
+}
+
+.emotion-9:hover>.hoverbox-text {
+  color: #69768C;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+  margin-bottom: 0;
+  width: 192px;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  all: unset;
+}
+
+.emotion-16 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #e6e6e6;
+  font-weight: 700;
+}
+
+.emotion-18 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  min-height: 100%;
+  min-width: unset;
+  padding-right: 32px;
+  width: 280px;
+  padding-bottom: 8px;
+}
+
+.emotion-18:hover>.hoverbox-text {
+  color: #69768C;
+}
+
+.emotion-20 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+  margin-bottom: 0;
+  width: 280px;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id=""
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       />
     </div>
     <div
@@ -357,19 +965,19 @@ exports[`ViewportBlock sizes snapshot 1`] = `
       <div>
         <div>
           <div
-            class="css-15owl46"
+            class="emotion-3"
           >
             <div
-              class="css-x60p33"
+              class="emotion-4"
             >
               <div
-                class="css-1vga9oy"
+                class="emotion-5"
               >
                 <div
                   style="display: inline-block;"
                 >
                   <button
-                    class="css-97huhz"
+                    class="emotion-6"
                   >
                     widths
                   </button>
@@ -378,27 +986,27 @@ exports[`ViewportBlock sizes snapshot 1`] = `
             </div>
           </div>
           <div
-            class="css-eqxzio"
+            class="emotion-7"
           >
             <div
-              class="css-10nnqwz-ViewportBlock"
+              class="emotion-8"
             >
               <div
-                class="css-1bxbzmw-HoverBox"
+                class="emotion-9"
               >
                 <div
-                  class="css-xtndwh"
+                  class="emotion-10"
                 >
                   <div
-                    class="css-ks1xfj-Story"
+                    class="emotion-11"
                     data-testid="story"
                   >
                     <div
-                      class="css-jxxswp"
+                      class="emotion-1"
                       id=""
                     >
                       <div
-                        class="css-xhp9da"
+                        class="emotion-2"
                       />
                     </div>
                     <div
@@ -408,16 +1016,16 @@ exports[`ViewportBlock sizes snapshot 1`] = `
                     >
                       <div>
                         <div
-                          class="css-154oin1"
+                          class="emotion-14"
                           data-testid="story"
                           id="blocks-core-story-plain--controls"
                         >
                           <div
-                            class="story-render-container css-dhmrnb"
+                            class="story-render-container emotion-15"
                           >
                             <svg
                               aria-label="example donut graphic"
-                              class="css-14d2907"
+                              class="emotion-16"
                               fill="none"
                               height="128"
                               role="img"
@@ -448,27 +1056,27 @@ exports[`ViewportBlock sizes snapshot 1`] = `
                   </div>
                 </div>
                 <span
-                  class="hoverbox-text css-1cgogy4"
+                  class="hoverbox-text emotion-17"
                 >
                   xsmall
                 </span>
               </div>
               <div
-                class="css-y3p6ve-HoverBox"
+                class="emotion-18"
               >
                 <div
-                  class="css-xtndwh"
+                  class="emotion-10"
                 >
                   <div
-                    class="css-1jzdp2u-Story"
+                    class="emotion-20"
                     data-testid="story"
                   >
                     <div
-                      class="css-jxxswp"
+                      class="emotion-1"
                       id=""
                     >
                       <div
-                        class="css-xhp9da"
+                        class="emotion-2"
                       />
                     </div>
                     <div
@@ -478,16 +1086,16 @@ exports[`ViewportBlock sizes snapshot 1`] = `
                     >
                       <div>
                         <div
-                          class="css-154oin1"
+                          class="emotion-14"
                           data-testid="story"
                           id="blocks-core-story-plain--controls"
                         >
                           <div
-                            class="story-render-container css-dhmrnb"
+                            class="story-render-container emotion-15"
                           >
                             <svg
                               aria-label="example donut graphic"
-                              class="css-14d2907"
+                              class="emotion-16"
                               fill="none"
                               height="128"
                               role="img"
@@ -518,7 +1126,7 @@ exports[`ViewportBlock sizes snapshot 1`] = `
                   </div>
                 </div>
                 <span
-                  class="hoverbox-text css-1cgogy4"
+                  class="hoverbox-text emotion-17"
                 >
                   small
                 </span>

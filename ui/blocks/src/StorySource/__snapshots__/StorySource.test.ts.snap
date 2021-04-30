@@ -2,20 +2,319 @@
 
 exports[`StorySource customTitle snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -22px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-10 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-10 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-12 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-12 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-18 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-19 {
+  font-family: Menlo,monospace;
+  overflow-x: auto;
+  background-color: #e6e6e6;
+}
+
+.emotion-19 code {
+  color: inherit;
+}
+
+.emotion-20 {
+  display: inline-block;
+}
+
+<div
+    class="emotion-0"
     data-testid="story-source"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id="story-source"
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       >
         <a
           aria-label="navigate to Story source section"
-          class="css-walqom-LinkHeading"
+          class="emotion-3"
           data-id="story-source"
           data-level="3"
           data-title="Story source"
@@ -38,18 +337,18 @@ exports[`StorySource customTitle snapshot 1`] = `
           </svg>
         </a>
         <h3
-          class="css-16ist9v-BlockContainer"
+          class="emotion-4"
         >
           <div
-            class="css-tmrrvx"
+            class="emotion-5"
           >
             Story source
             <a
               aria-expanded="true"
-              class="css-1t48u3b-BlockContainer"
+              class="emotion-6"
             >
               <span
-                class="css-1ibxxpj"
+                class="emotion-7"
               >
                 <svg
                   aria-hidden="true"
@@ -80,27 +379,27 @@ exports[`StorySource customTitle snapshot 1`] = `
       <div>
         <div>
           <div
-            class="css-15owl46"
+            class="emotion-8"
           >
             <div
-              class="css-x60p33"
+              class="emotion-9"
             >
               <div
-                class="css-1vga9oy"
+                class="emotion-10"
               >
                 <button
                   aria-label="copy the displayed source code"
-                  class="css-1tf4h46"
+                  class="emotion-11"
                 >
                   copy
                 </button>
               </div>
               <div
-                class="css-q7w4rh"
+                class="emotion-12"
               >
                 <a
                   aria-label="browse repository"
-                  class="css-1t54e2w"
+                  class="emotion-13"
                   href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -109,11 +408,11 @@ exports[`StorySource customTitle snapshot 1`] = `
                 </a>
               </div>
               <div
-                class="css-q7w4rh"
+                class="emotion-12"
               >
                 <a
                   aria-label="browse readme documentation"
-                  class="css-1t54e2w"
+                  class="emotion-13"
                   href="https://github.com/ccontrols/component-controls/tree/master#readme"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -122,11 +421,11 @@ exports[`StorySource customTitle snapshot 1`] = `
                 </a>
               </div>
               <div
-                class="css-q7w4rh"
+                class="emotion-12"
               >
                 <a
                   aria-label="browse filed issues"
-                  class="css-1t54e2w"
+                  class="emotion-13"
                   href="https://github.com/ccontrols/component-controls/issues"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -137,10 +436,10 @@ exports[`StorySource customTitle snapshot 1`] = `
             </div>
           </div>
           <div
-            class="css-eqxzio"
+            class="emotion-18"
           >
             <pre
-              class="prism-code language-jsx css-3y8hb3"
+              class="prism-code language-jsx emotion-19"
               style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; margin: 0px;"
             >
               <div
@@ -148,35 +447,35 @@ exports[`StorySource customTitle snapshot 1`] = `
                 style="color: rgb(114, 143, 203);"
               >
                 <span
-                  class="token punctuation css-13aqjzy"
+                  class="token punctuation emotion-20"
                   style="color: rgb(182, 173, 154);"
                 >
                   (
                 </span>
                 <span
-                  class="token punctuation css-13aqjzy"
+                  class="token punctuation emotion-20"
                   style="color: rgb(182, 173, 154);"
                 >
                   )
                 </span>
                 <span
-                  class="token plain css-13aqjzy"
+                  class="token plain emotion-20"
                 >
                    
                 </span>
                 <span
-                  class="token operator css-13aqjzy"
+                  class="token operator emotion-20"
                   style="color: rgb(6, 50, 137);"
                 >
                   =&gt;
                 </span>
                 <span
-                  class="token plain css-13aqjzy"
+                  class="token plain emotion-20"
                 >
                    
                 </span>
                 <span
-                  class="token string css-13aqjzy"
+                  class="token string emotion-20"
                   style="color: rgb(114, 143, 203);"
                 >
                   'hello'
@@ -193,16 +492,246 @@ exports[`StorySource customTitle snapshot 1`] = `
 
 exports[`StorySource noMargin snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-7wa6r1-StoryBlockContainer"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-5 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-5 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-7 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-7 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-14 {
+  font-family: Menlo,monospace;
+  overflow-x: auto;
+  background-color: #e6e6e6;
+}
+
+.emotion-14 code {
+  color: inherit;
+}
+
+.emotion-15 {
+  display: inline-block;
+}
+
+<div
+    class="emotion-0"
     data-testid="story-source"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id=""
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       />
     </div>
     <div
@@ -213,27 +742,27 @@ exports[`StorySource noMargin snapshot 1`] = `
       <div>
         <div>
           <div
-            class="css-15owl46"
+            class="emotion-3"
           >
             <div
-              class="css-x60p33"
+              class="emotion-4"
             >
               <div
-                class="css-1vga9oy"
+                class="emotion-5"
               >
                 <button
                   aria-label="copy the displayed source code"
-                  class="css-1tf4h46"
+                  class="emotion-6"
                 >
                   copy
                 </button>
               </div>
               <div
-                class="css-q7w4rh"
+                class="emotion-7"
               >
                 <a
                   aria-label="browse repository"
-                  class="css-1t54e2w"
+                  class="emotion-8"
                   href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -242,11 +771,11 @@ exports[`StorySource noMargin snapshot 1`] = `
                 </a>
               </div>
               <div
-                class="css-q7w4rh"
+                class="emotion-7"
               >
                 <a
                   aria-label="browse readme documentation"
-                  class="css-1t54e2w"
+                  class="emotion-8"
                   href="https://github.com/ccontrols/component-controls/tree/master#readme"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -255,11 +784,11 @@ exports[`StorySource noMargin snapshot 1`] = `
                 </a>
               </div>
               <div
-                class="css-q7w4rh"
+                class="emotion-7"
               >
                 <a
                   aria-label="browse filed issues"
-                  class="css-1t54e2w"
+                  class="emotion-8"
                   href="https://github.com/ccontrols/component-controls/issues"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -270,10 +799,10 @@ exports[`StorySource noMargin snapshot 1`] = `
             </div>
           </div>
           <div
-            class="css-eqxzio"
+            class="emotion-13"
           >
             <pre
-              class="prism-code language-jsx css-3y8hb3"
+              class="prism-code language-jsx emotion-14"
               style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; margin: 0px;"
             >
               <div
@@ -281,35 +810,35 @@ exports[`StorySource noMargin snapshot 1`] = `
                 style="color: rgb(114, 143, 203);"
               >
                 <span
-                  class="token punctuation css-13aqjzy"
+                  class="token punctuation emotion-15"
                   style="color: rgb(182, 173, 154);"
                 >
                   (
                 </span>
                 <span
-                  class="token punctuation css-13aqjzy"
+                  class="token punctuation emotion-15"
                   style="color: rgb(182, 173, 154);"
                 >
                   )
                 </span>
                 <span
-                  class="token plain css-13aqjzy"
+                  class="token plain emotion-15"
                 >
                    
                 </span>
                 <span
-                  class="token operator css-13aqjzy"
+                  class="token operator emotion-15"
                   style="color: rgb(6, 50, 137);"
                 >
                   =&gt;
                 </span>
                 <span
-                  class="token plain css-13aqjzy"
+                  class="token plain emotion-15"
                 >
                    
                 </span>
                 <span
-                  class="token string css-13aqjzy"
+                  class="token string emotion-15"
                   style="color: rgb(114, 143, 203);"
                 >
                   'hello'
@@ -326,20 +855,285 @@ exports[`StorySource noMargin snapshot 1`] = `
 
 exports[`StorySource notCollapsible snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -20px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-7 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-7 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-9 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-9 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-16 {
+  font-family: Menlo,monospace;
+  overflow-x: auto;
+  background-color: #e6e6e6;
+}
+
+.emotion-16 code {
+  color: inherit;
+}
+
+.emotion-17 {
+  display: inline-block;
+}
+
+<div
+    class="emotion-0"
     data-testid="story-source"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id="story-source-id-of-story"
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       >
         <a
           aria-label="navigate to story section"
-          class="css-1ptrway-LinkHeading"
+          class="emotion-3"
           data-id="story-source-id-of-story"
           data-level="4"
           data-title="story"
@@ -362,7 +1156,7 @@ exports[`StorySource notCollapsible snapshot 1`] = `
           </svg>
         </a>
         <h4
-          class="css-vsfm4-BlockContainer"
+          class="emotion-4"
         >
           story
         </h4>
@@ -370,27 +1164,27 @@ exports[`StorySource notCollapsible snapshot 1`] = `
     </div>
     <div>
       <div
-        class="css-15owl46"
+        class="emotion-5"
       >
         <div
-          class="css-x60p33"
+          class="emotion-6"
         >
           <div
-            class="css-1vga9oy"
+            class="emotion-7"
           >
             <button
               aria-label="copy the displayed source code"
-              class="css-1tf4h46"
+              class="emotion-8"
             >
               copy
             </button>
           </div>
           <div
-            class="css-q7w4rh"
+            class="emotion-9"
           >
             <a
               aria-label="browse repository"
-              class="css-1t54e2w"
+              class="emotion-10"
               href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
               rel="noopener noreferrer"
               target="_blank"
@@ -399,11 +1193,11 @@ exports[`StorySource notCollapsible snapshot 1`] = `
             </a>
           </div>
           <div
-            class="css-q7w4rh"
+            class="emotion-9"
           >
             <a
               aria-label="browse readme documentation"
-              class="css-1t54e2w"
+              class="emotion-10"
               href="https://github.com/ccontrols/component-controls/tree/master#readme"
               rel="noopener noreferrer"
               target="_blank"
@@ -412,11 +1206,11 @@ exports[`StorySource notCollapsible snapshot 1`] = `
             </a>
           </div>
           <div
-            class="css-q7w4rh"
+            class="emotion-9"
           >
             <a
               aria-label="browse filed issues"
-              class="css-1t54e2w"
+              class="emotion-10"
               href="https://github.com/ccontrols/component-controls/issues"
               rel="noopener noreferrer"
               target="_blank"
@@ -427,10 +1221,10 @@ exports[`StorySource notCollapsible snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-eqxzio"
+        class="emotion-15"
       >
         <pre
-          class="prism-code language-jsx css-3y8hb3"
+          class="prism-code language-jsx emotion-16"
           style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; margin: 0px;"
         >
           <div
@@ -438,35 +1232,35 @@ exports[`StorySource notCollapsible snapshot 1`] = `
             style="color: rgb(114, 143, 203);"
           >
             <span
-              class="token punctuation css-13aqjzy"
+              class="token punctuation emotion-17"
               style="color: rgb(182, 173, 154);"
             >
               (
             </span>
             <span
-              class="token punctuation css-13aqjzy"
+              class="token punctuation emotion-17"
               style="color: rgb(182, 173, 154);"
             >
               )
             </span>
             <span
-              class="token plain css-13aqjzy"
+              class="token plain emotion-17"
             >
                
             </span>
             <span
-              class="token operator css-13aqjzy"
+              class="token operator emotion-17"
               style="color: rgb(6, 50, 137);"
             >
               =&gt;
             </span>
             <span
-              class="token plain css-13aqjzy"
+              class="token plain emotion-17"
             >
                
             </span>
             <span
-              class="token string css-13aqjzy"
+              class="token string emotion-17"
               style="color: rgb(114, 143, 203);"
             >
               'hello'
@@ -481,16 +1275,327 @@ exports[`StorySource notCollapsible snapshot 1`] = `
 
 exports[`StorySource overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-5 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-5 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-7 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-7 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-11 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-11 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-16 {
+  font-family: Menlo,monospace;
+  overflow-x: auto;
+  background-color: #e6e6e6;
+}
+
+.emotion-16 code {
+  color: inherit;
+}
+
+.emotion-17 {
+  display: inline-block;
+}
+
+.emotion-19 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(182,173,154,0.15);
+  border: 2px solid #b6ad9a;
+}
+
+.emotion-20 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-22 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(114,143,203,0.15);
+  border: 2px solid #728fcb;
+}
+
+<div
+    class="emotion-0"
     data-testid="story-source"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id=""
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       />
     </div>
     <div
@@ -501,27 +1606,27 @@ exports[`StorySource overview snapshot 1`] = `
       <div>
         <div>
           <div
-            class="css-15owl46"
+            class="emotion-3"
           >
             <div
-              class="css-x60p33"
+              class="emotion-4"
             >
               <div
-                class="css-1vga9oy"
+                class="emotion-5"
               >
                 <button
                   aria-label="copy the displayed source code"
-                  class="css-1tf4h46"
+                  class="emotion-6"
                 >
                   copy
                 </button>
               </div>
               <div
-                class="css-q7w4rh"
+                class="emotion-7"
               >
                 <a
                   aria-label="browse repository"
-                  class="css-1t54e2w"
+                  class="emotion-8"
                   href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -530,11 +1635,11 @@ exports[`StorySource overview snapshot 1`] = `
                 </a>
               </div>
               <div
-                class="css-q7w4rh"
+                class="emotion-7"
               >
                 <a
                   aria-label="browse readme documentation"
-                  class="css-1t54e2w"
+                  class="emotion-8"
                   href="https://github.com/ccontrols/component-controls/tree/master#readme"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -543,11 +1648,11 @@ exports[`StorySource overview snapshot 1`] = `
                 </a>
               </div>
               <div
-                class="css-7d11p2"
+                class="emotion-11"
               >
                 <a
                   aria-label="browse filed issues"
-                  class="css-1t54e2w"
+                  class="emotion-8"
                   href="https://github.com/ccontrols/component-controls/issues"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -556,10 +1661,10 @@ exports[`StorySource overview snapshot 1`] = `
                 </a>
               </div>
               <div
-                class="css-7d11p2"
+                class="emotion-11"
               >
                 <button
-                  class="css-1tf4h46"
+                  class="emotion-6"
                 >
                   values
                 </button>
@@ -567,10 +1672,10 @@ exports[`StorySource overview snapshot 1`] = `
             </div>
           </div>
           <div
-            class="css-eqxzio"
+            class="emotion-15"
           >
             <pre
-              class="prism-code language-jsx css-3y8hb3"
+              class="prism-code language-jsx emotion-16"
               style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; margin: 0px;"
             >
               <div
@@ -578,80 +1683,80 @@ exports[`StorySource overview snapshot 1`] = `
                 style="color: rgb(114, 143, 203);"
               >
                 <span
-                  class="token punctuation css-13aqjzy"
+                  class="token punctuation emotion-17"
                   style="color: rgb(182, 173, 154);"
                 >
                   (
                 </span>
                 <span
-                  class="token parameter punctuation css-13aqjzy"
+                  class="token parameter punctuation emotion-17"
                   style="color: rgb(182, 173, 154);"
                 >
                   {
                 </span>
                  
                 <span
-                  class="token parameter css-ldhfal-Tag"
+                  class="token parameter emotion-19"
                 >
                   <span
-                    class="css-vurnku"
+                    class="emotion-20"
                   >
                     name
                   </span>
                 </span>
                 <span
-                  class="token parameter punctuation css-13aqjzy"
+                  class="token parameter punctuation emotion-17"
                   style="color: rgb(182, 173, 154);"
                 >
                   ,
                 </span>
                  
                 <span
-                  class="token parameter css-u2xcrg-Tag"
+                  class="token parameter emotion-22"
                 >
                   <span
-                    class="css-vurnku"
+                    class="emotion-20"
                   >
                     age
                   </span>
                 </span>
                  
                 <span
-                  class="token parameter punctuation css-13aqjzy"
+                  class="token parameter punctuation emotion-17"
                   style="color: rgb(182, 173, 154);"
                 >
                   }
                 </span>
                 <span
-                  class="token punctuation css-13aqjzy"
+                  class="token punctuation emotion-17"
                   style="color: rgb(182, 173, 154);"
                 >
                   )
                 </span>
                 <span
-                  class="token plain css-13aqjzy"
+                  class="token plain emotion-17"
                 >
                    
                 </span>
                 <span
-                  class="token operator css-13aqjzy"
+                  class="token operator emotion-17"
                   style="color: rgb(6, 50, 137);"
                 >
                   =&gt;
                 </span>
                 <span
-                  class="token plain css-13aqjzy"
+                  class="token plain emotion-17"
                 >
                    
                 </span>
                 <span
-                  class="token punctuation css-13aqjzy"
+                  class="token punctuation emotion-17"
                   style="color: rgb(182, 173, 154);"
                 >
                   (
                 </span>
                 <span
-                  class="token plain css-13aqjzy"
+                  class="token plain emotion-17"
                 />
               </div>
               <div
@@ -659,132 +1764,132 @@ exports[`StorySource overview snapshot 1`] = `
                 style="color: rgb(114, 143, 203);"
               >
                 <span
-                  class="token plain css-13aqjzy"
+                  class="token plain emotion-17"
                 >
                     
                 </span>
                 <span
-                  class="token tag punctuation css-13aqjzy"
+                  class="token tag punctuation emotion-17"
                   style="color: rgb(182, 173, 154);"
                 >
                   &lt;
                 </span>
                 <span
-                  class="token tag css-13aqjzy"
+                  class="token tag emotion-17"
                   style="color: rgb(6, 50, 137);"
                 >
                   h2
                 </span>
                 <span
-                  class="token tag punctuation css-13aqjzy"
+                  class="token tag punctuation emotion-17"
                   style="color: rgb(182, 173, 154);"
                 >
                   &gt;
                 </span>
                 <span
-                  class="token punctuation css-13aqjzy"
+                  class="token punctuation emotion-17"
                   style="color: rgb(182, 173, 154);"
                 >
                   {
                 </span>
                 <span
-                  class="token template-string template-punctuation string css-13aqjzy"
+                  class="token template-string template-punctuation string emotion-17"
                   style="color: rgb(114, 143, 203);"
                 >
                   \`
                 </span>
                 <span
-                  class="token template-string string css-13aqjzy"
+                  class="token template-string string emotion-17"
                   style="color: rgb(114, 143, 203);"
                 >
                   Hello, my name is 
                 </span>
                 <span
-                  class="token template-string interpolation interpolation-punctuation punctuation css-13aqjzy"
+                  class="token template-string interpolation interpolation-punctuation punctuation emotion-17"
                   style="color: rgb(182, 173, 154);"
                 >
                   \${
                 </span>
                 <span
-                  class="token template-string interpolation css-ldhfal-Tag"
+                  class="token template-string interpolation emotion-19"
                 >
                   <span
-                    class="css-vurnku"
+                    class="emotion-20"
                   >
                     name
                   </span>
                 </span>
                 <span
-                  class="token template-string interpolation interpolation-punctuation punctuation css-13aqjzy"
+                  class="token template-string interpolation interpolation-punctuation punctuation emotion-17"
                   style="color: rgb(182, 173, 154);"
                 >
                   }
                 </span>
                 <span
-                  class="token template-string string css-13aqjzy"
+                  class="token template-string string emotion-17"
                   style="color: rgb(114, 143, 203);"
                 >
                   , and I am 
                 </span>
                 <span
-                  class="token template-string interpolation interpolation-punctuation punctuation css-13aqjzy"
+                  class="token template-string interpolation interpolation-punctuation punctuation emotion-17"
                   style="color: rgb(182, 173, 154);"
                 >
                   \${
                 </span>
                 <span
-                  class="token template-string interpolation css-u2xcrg-Tag"
+                  class="token template-string interpolation emotion-22"
                 >
                   <span
-                    class="css-vurnku"
+                    class="emotion-20"
                   >
                     age
                   </span>
                 </span>
                 <span
-                  class="token template-string interpolation interpolation-punctuation punctuation css-13aqjzy"
+                  class="token template-string interpolation interpolation-punctuation punctuation emotion-17"
                   style="color: rgb(182, 173, 154);"
                 >
                   }
                 </span>
                 <span
-                  class="token template-string string css-13aqjzy"
+                  class="token template-string string emotion-17"
                   style="color: rgb(114, 143, 203);"
                 >
                    years old.
                 </span>
                 <span
-                  class="token template-string template-punctuation string css-13aqjzy"
+                  class="token template-string template-punctuation string emotion-17"
                   style="color: rgb(114, 143, 203);"
                 >
                   \`
                 </span>
                 <span
-                  class="token punctuation css-13aqjzy"
+                  class="token punctuation emotion-17"
                   style="color: rgb(182, 173, 154);"
                 >
                   }
                 </span>
                 <span
-                  class="token tag punctuation css-13aqjzy"
+                  class="token tag punctuation emotion-17"
                   style="color: rgb(182, 173, 154);"
                 >
                   &lt;/
                 </span>
                 <span
-                  class="token tag css-13aqjzy"
+                  class="token tag emotion-17"
                   style="color: rgb(6, 50, 137);"
                 >
                   h2
                 </span>
                 <span
-                  class="token tag punctuation css-13aqjzy"
+                  class="token tag punctuation emotion-17"
                   style="color: rgb(182, 173, 154);"
                 >
                   &gt;
                 </span>
                 <span
-                  class="token plain css-13aqjzy"
+                  class="token plain emotion-17"
                 />
               </div>
               <div
@@ -792,16 +1897,16 @@ exports[`StorySource overview snapshot 1`] = `
                 style="color: rgb(114, 143, 203);"
               >
                 <span
-                  class="token plain css-13aqjzy"
+                  class="token plain emotion-17"
                 />
                 <span
-                  class="token punctuation css-13aqjzy"
+                  class="token punctuation emotion-17"
                   style="color: rgb(182, 173, 154);"
                 >
                   )
                 </span>
                 <span
-                  class="token punctuation css-13aqjzy"
+                  class="token punctuation emotion-17"
                   style="color: rgb(182, 173, 154);"
                 >
                   ;
@@ -818,16 +1923,327 @@ exports[`StorySource overview snapshot 1`] = `
 
 exports[`StorySource theme snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-5 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-5 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-7 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-7 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-11 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-11 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-16 {
+  font-family: Menlo,monospace;
+  overflow-x: auto;
+  background-color: #e6e6e6;
+}
+
+.emotion-16 code {
+  color: inherit;
+}
+
+.emotion-17 {
+  display: inline-block;
+}
+
+.emotion-19 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(255,238,128,0.15);
+  border: 2px solid rgb(255, 238, 128);
+}
+
+.emotion-20 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-22 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(239,83,80,0);
+  border: 2px solid rgba(239, 83, 80, 0.56);
+}
+
+<div
+    class="emotion-0"
     data-testid="story-source"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id=""
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       />
     </div>
     <div
@@ -838,27 +2254,27 @@ exports[`StorySource theme snapshot 1`] = `
       <div>
         <div>
           <div
-            class="css-15owl46"
+            class="emotion-3"
           >
             <div
-              class="css-x60p33"
+              class="emotion-4"
             >
               <div
-                class="css-1vga9oy"
+                class="emotion-5"
               >
                 <button
                   aria-label="copy the displayed source code"
-                  class="css-1tf4h46"
+                  class="emotion-6"
                 >
                   copy
                 </button>
               </div>
               <div
-                class="css-q7w4rh"
+                class="emotion-7"
               >
                 <a
                   aria-label="browse repository"
-                  class="css-1t54e2w"
+                  class="emotion-8"
                   href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -867,11 +2283,11 @@ exports[`StorySource theme snapshot 1`] = `
                 </a>
               </div>
               <div
-                class="css-q7w4rh"
+                class="emotion-7"
               >
                 <a
                   aria-label="browse readme documentation"
-                  class="css-1t54e2w"
+                  class="emotion-8"
                   href="https://github.com/ccontrols/component-controls/tree/master#readme"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -880,11 +2296,11 @@ exports[`StorySource theme snapshot 1`] = `
                 </a>
               </div>
               <div
-                class="css-7d11p2"
+                class="emotion-11"
               >
                 <a
                   aria-label="browse filed issues"
-                  class="css-1t54e2w"
+                  class="emotion-8"
                   href="https://github.com/ccontrols/component-controls/issues"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -893,10 +2309,10 @@ exports[`StorySource theme snapshot 1`] = `
                 </a>
               </div>
               <div
-                class="css-7d11p2"
+                class="emotion-11"
               >
                 <button
-                  class="css-1tf4h46"
+                  class="emotion-6"
                 >
                   values
                 </button>
@@ -904,10 +2320,10 @@ exports[`StorySource theme snapshot 1`] = `
             </div>
           </div>
           <div
-            class="css-eqxzio"
+            class="emotion-15"
           >
             <pre
-              class="prism-code language-jsx css-3y8hb3"
+              class="prism-code language-jsx emotion-16"
               style="color: rgb(158, 254, 255); background-color: rgb(45, 42, 85); padding: 25px 10px 10px; margin: 0px;"
             >
               <div
@@ -915,80 +2331,80 @@ exports[`StorySource theme snapshot 1`] = `
                 style="color: rgb(158, 254, 255);"
               >
                 <span
-                  class="token punctuation css-13aqjzy"
+                  class="token punctuation emotion-17"
                   style="color: rgb(255, 255, 255);"
                 >
                   (
                 </span>
                 <span
-                  class="token parameter punctuation css-13aqjzy"
+                  class="token parameter punctuation emotion-17"
                   style="color: rgb(255, 255, 255);"
                 >
                   {
                 </span>
                  
                 <span
-                  class="token parameter css-1i9wh6i-Tag"
+                  class="token parameter emotion-19"
                 >
                   <span
-                    class="css-vurnku"
+                    class="emotion-20"
                   >
                     name
                   </span>
                 </span>
                 <span
-                  class="token parameter punctuation css-13aqjzy"
+                  class="token parameter punctuation emotion-17"
                   style="color: rgb(255, 255, 255);"
                 >
                   ,
                 </span>
                  
                 <span
-                  class="token parameter css-3fldth-Tag"
+                  class="token parameter emotion-22"
                 >
                   <span
-                    class="css-vurnku"
+                    class="emotion-20"
                   >
                     age
                   </span>
                 </span>
                  
                 <span
-                  class="token parameter punctuation css-13aqjzy"
+                  class="token parameter punctuation emotion-17"
                   style="color: rgb(255, 255, 255);"
                 >
                   }
                 </span>
                 <span
-                  class="token punctuation css-13aqjzy"
+                  class="token punctuation emotion-17"
                   style="color: rgb(255, 255, 255);"
                 >
                   )
                 </span>
                 <span
-                  class="token plain css-13aqjzy"
+                  class="token plain emotion-17"
                 >
                    
                 </span>
                 <span
-                  class="token operator css-13aqjzy"
+                  class="token operator emotion-17"
                   style="color: rgb(255, 157, 0);"
                 >
                   =&gt;
                 </span>
                 <span
-                  class="token plain css-13aqjzy"
+                  class="token plain emotion-17"
                 >
                    
                 </span>
                 <span
-                  class="token punctuation css-13aqjzy"
+                  class="token punctuation emotion-17"
                   style="color: rgb(255, 255, 255);"
                 >
                   (
                 </span>
                 <span
-                  class="token plain css-13aqjzy"
+                  class="token plain emotion-17"
                 />
               </div>
               <div
@@ -996,132 +2412,132 @@ exports[`StorySource theme snapshot 1`] = `
                 style="color: rgb(158, 254, 255);"
               >
                 <span
-                  class="token plain css-13aqjzy"
+                  class="token plain emotion-17"
                 >
                     
                 </span>
                 <span
-                  class="token tag punctuation css-13aqjzy"
+                  class="token tag punctuation emotion-17"
                   style="color: rgb(255, 255, 255);"
                 >
                   &lt;
                 </span>
                 <span
-                  class="token tag css-13aqjzy"
+                  class="token tag emotion-17"
                   style="color: rgb(255, 157, 0);"
                 >
                   h2
                 </span>
                 <span
-                  class="token tag punctuation css-13aqjzy"
+                  class="token tag punctuation emotion-17"
                   style="color: rgb(255, 255, 255);"
                 >
                   &gt;
                 </span>
                 <span
-                  class="token punctuation css-13aqjzy"
+                  class="token punctuation emotion-17"
                   style="color: rgb(255, 255, 255);"
                 >
                   {
                 </span>
                 <span
-                  class="token template-string template-punctuation string css-13aqjzy"
+                  class="token template-string template-punctuation string emotion-17"
                   style="color: rgb(165, 255, 144);"
                 >
                   \`
                 </span>
                 <span
-                  class="token template-string string css-13aqjzy"
+                  class="token template-string string emotion-17"
                   style="color: rgb(165, 255, 144);"
                 >
                   Hello, my name is 
                 </span>
                 <span
-                  class="token template-string interpolation interpolation-punctuation punctuation css-13aqjzy"
+                  class="token template-string interpolation interpolation-punctuation punctuation emotion-17"
                   style="color: rgb(255, 255, 255);"
                 >
                   \${
                 </span>
                 <span
-                  class="token template-string interpolation css-1i9wh6i-Tag"
+                  class="token template-string interpolation emotion-19"
                 >
                   <span
-                    class="css-vurnku"
+                    class="emotion-20"
                   >
                     name
                   </span>
                 </span>
                 <span
-                  class="token template-string interpolation interpolation-punctuation punctuation css-13aqjzy"
+                  class="token template-string interpolation interpolation-punctuation punctuation emotion-17"
                   style="color: rgb(255, 255, 255);"
                 >
                   }
                 </span>
                 <span
-                  class="token template-string string css-13aqjzy"
+                  class="token template-string string emotion-17"
                   style="color: rgb(165, 255, 144);"
                 >
                   , and I am 
                 </span>
                 <span
-                  class="token template-string interpolation interpolation-punctuation punctuation css-13aqjzy"
+                  class="token template-string interpolation interpolation-punctuation punctuation emotion-17"
                   style="color: rgb(255, 255, 255);"
                 >
                   \${
                 </span>
                 <span
-                  class="token template-string interpolation css-3fldth-Tag"
+                  class="token template-string interpolation emotion-22"
                 >
                   <span
-                    class="css-vurnku"
+                    class="emotion-20"
                   >
                     age
                   </span>
                 </span>
                 <span
-                  class="token template-string interpolation interpolation-punctuation punctuation css-13aqjzy"
+                  class="token template-string interpolation interpolation-punctuation punctuation emotion-17"
                   style="color: rgb(255, 255, 255);"
                 >
                   }
                 </span>
                 <span
-                  class="token template-string string css-13aqjzy"
+                  class="token template-string string emotion-17"
                   style="color: rgb(165, 255, 144);"
                 >
                    years old.
                 </span>
                 <span
-                  class="token template-string template-punctuation string css-13aqjzy"
+                  class="token template-string template-punctuation string emotion-17"
                   style="color: rgb(165, 255, 144);"
                 >
                   \`
                 </span>
                 <span
-                  class="token punctuation css-13aqjzy"
+                  class="token punctuation emotion-17"
                   style="color: rgb(255, 255, 255);"
                 >
                   }
                 </span>
                 <span
-                  class="token tag punctuation css-13aqjzy"
+                  class="token tag punctuation emotion-17"
                   style="color: rgb(255, 255, 255);"
                 >
                   &lt;/
                 </span>
                 <span
-                  class="token tag css-13aqjzy"
+                  class="token tag emotion-17"
                   style="color: rgb(255, 157, 0);"
                 >
                   h2
                 </span>
                 <span
-                  class="token tag punctuation css-13aqjzy"
+                  class="token tag punctuation emotion-17"
                   style="color: rgb(255, 255, 255);"
                 >
                   &gt;
                 </span>
                 <span
-                  class="token plain css-13aqjzy"
+                  class="token plain emotion-17"
                 />
               </div>
               <div
@@ -1129,16 +2545,16 @@ exports[`StorySource theme snapshot 1`] = `
                 style="color: rgb(158, 254, 255);"
               >
                 <span
-                  class="token plain css-13aqjzy"
+                  class="token plain emotion-17"
                 />
                 <span
-                  class="token punctuation css-13aqjzy"
+                  class="token punctuation emotion-17"
                   style="color: rgb(255, 255, 255);"
                 >
                   )
                 </span>
                 <span
-                  class="token punctuation css-13aqjzy"
+                  class="token punctuation emotion-17"
                   style="color: rgb(255, 255, 255);"
                 >
                   ;
@@ -1155,18 +2571,329 @@ exports[`StorySource theme snapshot 1`] = `
 
 exports[`StorySource themeSelector snapshot 1`] = `
 <DocumentFragment>
-  <div>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-2 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-2 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-7:hover a {
+  visibility: visible;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-12 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-12 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-16 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-16 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-16 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-21 {
+  font-family: Menlo,monospace;
+  overflow-x: auto;
+  background-color: #e6e6e6;
+}
+
+.emotion-21 code {
+  color: inherit;
+}
+
+.emotion-22 {
+  display: inline-block;
+}
+
+.emotion-24 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(189,147,249,0.15);
+  border: 2px solid rgb(189, 147, 249);
+}
+
+.emotion-25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(80,250,123,0.15);
+  border: 2px solid rgb(80, 250, 123);
+}
+
+<div>
     <div
-      class="css-15owl46"
+      class="emotion-0"
     >
       <div
-        class="css-x60p33"
+        class="emotion-1"
       >
         <div
-          class="css-1vga9oy"
+          class="emotion-2"
         >
           <button
-            class="css-1tf4h46"
+            class="emotion-3"
           >
             dracula
           </button>
@@ -1174,18 +2901,18 @@ exports[`StorySource themeSelector snapshot 1`] = `
       </div>
     </div>
     <div
-      class="css-eqxzio"
+      class="emotion-4"
     >
       <div
-        class="css-1xkyebe"
+        class="emotion-5"
         data-testid="story-source"
       >
         <div
-          class="css-jxxswp"
+          class="emotion-6"
           id=""
         >
           <div
-            class="css-xhp9da"
+            class="emotion-7"
           />
         </div>
         <div
@@ -1196,27 +2923,27 @@ exports[`StorySource themeSelector snapshot 1`] = `
           <div>
             <div>
               <div
-                class="css-15owl46"
+                class="emotion-0"
               >
                 <div
-                  class="css-x60p33"
+                  class="emotion-1"
                 >
                   <div
-                    class="css-1vga9oy"
+                    class="emotion-2"
                   >
                     <button
                       aria-label="copy the displayed source code"
-                      class="css-1tf4h46"
+                      class="emotion-3"
                     >
                       copy
                     </button>
                   </div>
                   <div
-                    class="css-q7w4rh"
+                    class="emotion-12"
                   >
                     <a
                       aria-label="browse repository"
-                      class="css-1t54e2w"
+                      class="emotion-13"
                       href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1225,11 +2952,11 @@ exports[`StorySource themeSelector snapshot 1`] = `
                     </a>
                   </div>
                   <div
-                    class="css-q7w4rh"
+                    class="emotion-12"
                   >
                     <a
                       aria-label="browse readme documentation"
-                      class="css-1t54e2w"
+                      class="emotion-13"
                       href="https://github.com/ccontrols/component-controls/tree/master#readme"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1238,11 +2965,11 @@ exports[`StorySource themeSelector snapshot 1`] = `
                     </a>
                   </div>
                   <div
-                    class="css-7d11p2"
+                    class="emotion-16"
                   >
                     <a
                       aria-label="browse filed issues"
-                      class="css-1t54e2w"
+                      class="emotion-13"
                       href="https://github.com/ccontrols/component-controls/issues"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1251,10 +2978,10 @@ exports[`StorySource themeSelector snapshot 1`] = `
                     </a>
                   </div>
                   <div
-                    class="css-7d11p2"
+                    class="emotion-16"
                   >
                     <button
-                      class="css-1tf4h46"
+                      class="emotion-3"
                     >
                       values
                     </button>
@@ -1262,10 +2989,10 @@ exports[`StorySource themeSelector snapshot 1`] = `
                 </div>
               </div>
               <div
-                class="css-eqxzio"
+                class="emotion-4"
               >
                 <pre
-                  class="prism-code language-jsx css-3y8hb3"
+                  class="prism-code language-jsx emotion-21"
                   style="color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); padding: 25px 10px 10px; margin: 0px;"
                 >
                   <div
@@ -1273,79 +3000,79 @@ exports[`StorySource themeSelector snapshot 1`] = `
                     style="color: rgb(248, 248, 242);"
                   >
                     <span
-                      class="token punctuation css-13aqjzy"
+                      class="token punctuation emotion-22"
                       style="color: rgb(248, 248, 242);"
                     >
                       (
                     </span>
                     <span
-                      class="token parameter punctuation css-13aqjzy"
+                      class="token parameter punctuation emotion-22"
                       style="color: rgb(248, 248, 242);"
                     >
                       {
                     </span>
                      
                     <span
-                      class="token parameter css-1uynce5-Tag"
+                      class="token parameter emotion-24"
                     >
                       <span
-                        class="css-vurnku"
+                        class="emotion-25"
                       >
                         name
                       </span>
                     </span>
                     <span
-                      class="token parameter punctuation css-13aqjzy"
+                      class="token parameter punctuation emotion-22"
                       style="color: rgb(248, 248, 242);"
                     >
                       ,
                     </span>
                      
                     <span
-                      class="token parameter css-11mur5a-Tag"
+                      class="token parameter emotion-27"
                     >
                       <span
-                        class="css-vurnku"
+                        class="emotion-25"
                       >
                         age
                       </span>
                     </span>
                      
                     <span
-                      class="token parameter punctuation css-13aqjzy"
+                      class="token parameter punctuation emotion-22"
                       style="color: rgb(248, 248, 242);"
                     >
                       }
                     </span>
                     <span
-                      class="token punctuation css-13aqjzy"
+                      class="token punctuation emotion-22"
                       style="color: rgb(248, 248, 242);"
                     >
                       )
                     </span>
                     <span
-                      class="token plain css-13aqjzy"
+                      class="token plain emotion-22"
                     >
                        
                     </span>
                     <span
-                      class="token operator css-13aqjzy"
+                      class="token operator emotion-22"
                     >
                       =&gt;
                     </span>
                     <span
-                      class="token plain css-13aqjzy"
+                      class="token plain emotion-22"
                     >
                        
                     </span>
                     <span
-                      class="token punctuation css-13aqjzy"
+                      class="token punctuation emotion-22"
                       style="color: rgb(248, 248, 242);"
                     >
                       (
                     </span>
                     <span
-                      class="token plain css-13aqjzy"
+                      class="token plain emotion-22"
                     />
                   </div>
                   <div
@@ -1353,132 +3080,132 @@ exports[`StorySource themeSelector snapshot 1`] = `
                     style="color: rgb(248, 248, 242);"
                   >
                     <span
-                      class="token plain css-13aqjzy"
+                      class="token plain emotion-22"
                     >
                         
                     </span>
                     <span
-                      class="token tag punctuation css-13aqjzy"
+                      class="token tag punctuation emotion-22"
                       style="color: rgb(248, 248, 242);"
                     >
                       &lt;
                     </span>
                     <span
-                      class="token tag css-13aqjzy"
+                      class="token tag emotion-22"
                       style="color: rgb(255, 121, 198);"
                     >
                       h2
                     </span>
                     <span
-                      class="token tag punctuation css-13aqjzy"
+                      class="token tag punctuation emotion-22"
                       style="color: rgb(248, 248, 242);"
                     >
                       &gt;
                     </span>
                     <span
-                      class="token punctuation css-13aqjzy"
+                      class="token punctuation emotion-22"
                       style="color: rgb(248, 248, 242);"
                     >
                       {
                     </span>
                     <span
-                      class="token template-string template-punctuation string css-13aqjzy"
+                      class="token template-string template-punctuation string emotion-22"
                       style="color: rgb(255, 121, 198);"
                     >
                       \`
                     </span>
                     <span
-                      class="token template-string string css-13aqjzy"
+                      class="token template-string string emotion-22"
                       style="color: rgb(255, 121, 198);"
                     >
                       Hello, my name is 
                     </span>
                     <span
-                      class="token template-string interpolation interpolation-punctuation punctuation css-13aqjzy"
+                      class="token template-string interpolation interpolation-punctuation punctuation emotion-22"
                       style="color: rgb(248, 248, 242);"
                     >
                       \${
                     </span>
                     <span
-                      class="token template-string interpolation css-1uynce5-Tag"
+                      class="token template-string interpolation emotion-24"
                     >
                       <span
-                        class="css-vurnku"
+                        class="emotion-25"
                       >
                         name
                       </span>
                     </span>
                     <span
-                      class="token template-string interpolation interpolation-punctuation punctuation css-13aqjzy"
+                      class="token template-string interpolation interpolation-punctuation punctuation emotion-22"
                       style="color: rgb(248, 248, 242);"
                     >
                       }
                     </span>
                     <span
-                      class="token template-string string css-13aqjzy"
+                      class="token template-string string emotion-22"
                       style="color: rgb(255, 121, 198);"
                     >
                       , and I am 
                     </span>
                     <span
-                      class="token template-string interpolation interpolation-punctuation punctuation css-13aqjzy"
+                      class="token template-string interpolation interpolation-punctuation punctuation emotion-22"
                       style="color: rgb(248, 248, 242);"
                     >
                       \${
                     </span>
                     <span
-                      class="token template-string interpolation css-11mur5a-Tag"
+                      class="token template-string interpolation emotion-27"
                     >
                       <span
-                        class="css-vurnku"
+                        class="emotion-25"
                       >
                         age
                       </span>
                     </span>
                     <span
-                      class="token template-string interpolation interpolation-punctuation punctuation css-13aqjzy"
+                      class="token template-string interpolation interpolation-punctuation punctuation emotion-22"
                       style="color: rgb(248, 248, 242);"
                     >
                       }
                     </span>
                     <span
-                      class="token template-string string css-13aqjzy"
+                      class="token template-string string emotion-22"
                       style="color: rgb(255, 121, 198);"
                     >
                        years old.
                     </span>
                     <span
-                      class="token template-string template-punctuation string css-13aqjzy"
+                      class="token template-string template-punctuation string emotion-22"
                       style="color: rgb(255, 121, 198);"
                     >
                       \`
                     </span>
                     <span
-                      class="token punctuation css-13aqjzy"
+                      class="token punctuation emotion-22"
                       style="color: rgb(248, 248, 242);"
                     >
                       }
                     </span>
                     <span
-                      class="token tag punctuation css-13aqjzy"
+                      class="token tag punctuation emotion-22"
                       style="color: rgb(248, 248, 242);"
                     >
                       &lt;/
                     </span>
                     <span
-                      class="token tag css-13aqjzy"
+                      class="token tag emotion-22"
                       style="color: rgb(255, 121, 198);"
                     >
                       h2
                     </span>
                     <span
-                      class="token tag punctuation css-13aqjzy"
+                      class="token tag punctuation emotion-22"
                       style="color: rgb(248, 248, 242);"
                     >
                       &gt;
                     </span>
                     <span
-                      class="token plain css-13aqjzy"
+                      class="token plain emotion-22"
                     />
                   </div>
                   <div
@@ -1486,16 +3213,16 @@ exports[`StorySource themeSelector snapshot 1`] = `
                     style="color: rgb(248, 248, 242);"
                   >
                     <span
-                      class="token plain css-13aqjzy"
+                      class="token plain emotion-22"
                     />
                     <span
-                      class="token punctuation css-13aqjzy"
+                      class="token punctuation emotion-22"
                       style="color: rgb(248, 248, 242);"
                     >
                       )
                     </span>
                     <span
-                      class="token punctuation css-13aqjzy"
+                      class="token punctuation emotion-22"
                       style="color: rgb(248, 248, 242);"
                     >
                       ;

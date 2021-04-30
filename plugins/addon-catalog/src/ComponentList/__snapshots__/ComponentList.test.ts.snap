@@ -2,45 +2,571 @@
 
 exports[`ComponentList overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xm7kb8-ComponentList"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(420px,1fr));
+  -webkit-column-gap: 16px;
+  column-gap: 16px;
+  row-gap: 32px;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.emotion-1:hover {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.125);
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-4 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 48px;
+}
+
+.emotion-8 {
+  max-width: 14px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.emotion-8:hover {
+  max-width: 24px;
+}
+
+.emotion-9 {
+  max-width: unset;
+  display: block;
+  overflow: hidden;
+  line-height: 1;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 9999px;
+}
+
+.emotion-11 {
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-15:hover {
+  cursor: pointer;
+}
+
+.emotion-16 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 12px;
+  margin-right: 4px;
+  line-height: 1.25;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-18 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.emotion-19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-21 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 12px;
+  color: #69768C;
+  margin-right: 4px;
+  line-height: 1.25;
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  margin-top: -4px;
+  margin-bottom: -4px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media screen and (min-width: 40em) {
+  .emotion-26 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: -4px;
+    margin-right: -4px;
+  }
+}
+
+.emotion-26>div {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+@media screen and (min-width: 40em) {
+  .emotion-26>div {
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-28 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #69768C;
+  color: #ffffff;
+}
+
+.emotion-29 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #227fc0;
+  color: #ffffff;
+}
+
+.emotion-32 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #ed4737;
+  color: #ffffff;
+}
+
+.emotion-38 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #4caf50;
+  color: #454f5b;
+}
+
+.emotion-41 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #f44336;
+  color: #ffffff;
+}
+
+.emotion-44 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #838b47;
+  color: #ffffff;
+}
+
+.emotion-45 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.emotion-46 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-47 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 0;
+  padding-right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-height: 420px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-47 .story-render-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.emotion-48 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  all: unset;
+}
+
+.emotion-49 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+.emotion-60 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+}
+
+.emotion-60:disabled {
+  color: #aaa;
+}
+
+.emotion-67 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.emotion-69 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.emotion-70 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(173,216,230,0.15);
+  border: 1px solid lightblue;
+  margin-left: 4px;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1rem;
+  white-space: nowrap;
+  margin-left: 8px;
+}
+
+.emotion-71 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-76 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-wh7vml"
+      class="emotion-1"
     >
       <div
-        class="css-nj7jql-ComponentCard"
+        class="emotion-2"
       >
         <a
-          class="css-1t54e2w"
+          class="emotion-3"
           href="/docs/blocks-core-story-plain--controls"
         >
           <div
-            class="css-kbmfeb-ComponentCard"
+            class="emotion-4"
           >
             Story
           </div>
         </a>
         <div
-          class="css-10zcph3-ComponentCard"
+          class="emotion-5"
         >
           <div
-            class="css-6582y1-ComponentContributors"
+            class="emotion-6"
           >
             <div
               aria-label="avatars of martin-stoyanov, atanasster"
-              class="css-1yvvfp0-GithubAvatarList"
+              class="emotion-7"
             >
               <div
-                class="css-dam4fv-GithubAvatar"
+                class="emotion-8"
                 style="display: inline-block;"
               >
                 <div
-                  class="css-1en2h0i-GithubAvatar"
+                  class="emotion-9"
                 >
                   <img
                     alt="avatar of martin-stoyanov"
-                    class="css-1y16e88"
+                    class="emotion-10"
                     height="24"
                     src="https://github.com/martin-stoyanov"
                     title="martin-stoyanov"
@@ -49,15 +575,15 @@ exports[`ComponentList overview snapshot 1`] = `
                 </div>
               </div>
               <div
-                class="css-9cbusc-GithubAvatar"
+                class="emotion-11"
                 style="display: inline-block;"
               >
                 <div
-                  class="css-1en2h0i-GithubAvatar"
+                  class="emotion-9"
                 >
                   <img
                     alt="avatar of atanasster"
-                    class="css-1y16e88"
+                    class="emotion-10"
                     height="24"
                     src="https://github.com/atanasster"
                     title="atanasster"
@@ -70,25 +596,25 @@ exports[`ComponentList overview snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-18hcion-ComponentCard"
+        class="emotion-14"
       >
         <div />
         <div
           style="display: inline-block;"
         >
           <a
-            class="css-1yxfg47-CommitsPopover"
+            class="emotion-15"
           >
             <div
-              class="css-zf8zhj"
+              class="emotion-16"
             >
               <div
-                class="css-1vu7ggh-CommitsPopover"
+                class="emotion-17"
               >
                 commits:
               </div>
               <span
-                class="css-uv6qe8"
+                class="emotion-18"
               >
                 12
               </span>
@@ -97,133 +623,133 @@ exports[`ComponentList overview snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-1lguarf-ComponentCard"
+        class="emotion-19"
       >
         <div
-          class="css-zf8zhj"
+          class="emotion-16"
         >
           <span
-            class="css-13o2efz"
+            class="emotion-21"
           >
             created:
           </span>
           <span
-            class="css-uv6qe8"
+            class="emotion-18"
           >
             N/A
           </span>
         </div>
         <div
-          class="css-zf8zhj"
+          class="emotion-16"
         >
           <span
-            class="css-13o2efz"
+            class="emotion-21"
           >
             updated:
           </span>
           <span
-            class="css-uv6qe8"
+            class="emotion-18"
           >
             N/A
           </span>
         </div>
       </div>
       <div
-        class="css-1b2gf4v"
+        class="emotion-26"
       >
         <div
-          class="css-ncjsai"
+          class="emotion-27"
           title="total lines of code"
         >
           <div
-            class="css-7ucnu2-Shield"
+            class="emotion-28"
           >
             loc
           </div>
           <div
-            class="css-o4rdbs-Shield"
+            class="emotion-29"
           >
             25
           </div>
         </div>
         <div
-          class="css-ncjsai"
+          class="emotion-27"
           title="percentage comments to lines of code"
         >
           <div
-            class="css-7ucnu2-Shield"
+            class="emotion-28"
           >
             comments
           </div>
           <div
-            class="css-38njz9-Shield"
+            class="emotion-32"
           >
             4%
           </div>
         </div>
         <div
-          class="css-ncjsai"
+          class="emotion-27"
           title="total todo comments"
         >
           <div
-            class="css-7ucnu2-Shield"
+            class="emotion-28"
           >
             todos
           </div>
           <div
-            class="css-o4rdbs-Shield"
+            class="emotion-29"
           >
             5
           </div>
         </div>
         <div
-          class="css-ncjsai"
+          class="emotion-27"
           title="number of passed tests"
         >
           <div
-            class="css-7ucnu2-Shield"
+            class="emotion-28"
           >
             passed
           </div>
           <div
-            class="css-14o9xde-Shield"
+            class="emotion-38"
           >
             7
           </div>
         </div>
         <div
-          class="css-ncjsai"
+          class="emotion-27"
           title="number of failed tests"
         >
           <div
-            class="css-7ucnu2-Shield"
+            class="emotion-28"
           >
             failed
           </div>
           <div
-            class="css-1os9rn1-Shield"
+            class="emotion-41"
           >
             1
           </div>
         </div>
         <div
-          class="css-ncjsai"
+          class="emotion-27"
           title="tests coverage by branches"
         >
           <div
-            class="css-7ucnu2-Shield"
+            class="emotion-28"
           >
             coverage
           </div>
           <div
-            class="css-otdzg2-Shield"
+            class="emotion-44"
           >
             67%
           </div>
         </div>
       </div>
       <div
-        class="css-1akfoys-ComponentCard"
+        class="emotion-45"
       />
       <div
         variant="styles.p"
@@ -239,19 +765,19 @@ exports[`ComponentList overview snapshot 1`] = `
         .
       </div>
       <div
-        class="css-k8h5so-ComponentCard"
+        class="emotion-46"
       >
         <div
-          class="css-nxqmcg-ComponentCard"
+          class="emotion-47"
           data-testid="story"
           id="blocks-core-story-plain--controls"
         >
           <div
-            class="story-render-container css-dhmrnb"
+            class="story-render-container emotion-48"
           >
             <svg
               aria-label="example donut graphic"
-              class="css-14d2907"
+              class="emotion-49"
               fill="none"
               height="128"
               role="img"
@@ -280,32 +806,32 @@ exports[`ComponentList overview snapshot 1`] = `
       </div>
     </div>
     <div
-      class="css-wh7vml"
+      class="emotion-1"
     >
       <div
-        class="css-nj7jql-ComponentCard"
+        class="emotion-2"
       >
         <a
-          class="css-1t54e2w"
+          class="emotion-3"
           href="/docs/id-of-button-story"
         >
           <div
-            class="css-kbmfeb-ComponentCard"
+            class="emotion-4"
           >
             Story
           </div>
         </a>
         <div
-          class="css-10zcph3-ComponentCard"
+          class="emotion-5"
         />
       </div>
       <div
-        class="css-18hcion-ComponentCard"
+        class="emotion-14"
       >
         <div />
       </div>
       <div
-        class="css-1akfoys-ComponentCard"
+        class="emotion-45"
       />
       <div
         variant="styles.p"
@@ -318,18 +844,18 @@ and some bold
         </strong>
       </div>
       <div
-        class="css-k8h5so-ComponentCard"
+        class="emotion-46"
       >
         <div
-          class="css-nxqmcg-ComponentCard"
+          class="emotion-47"
           data-testid="story"
           id="id-of-button-story"
         >
           <div
-            class="story-render-container css-dhmrnb"
+            class="story-render-container emotion-48"
           >
             <button
-              class="css-97huhz"
+              class="emotion-60"
             >
               test
             </button>
@@ -338,48 +864,48 @@ and some bold
       </div>
     </div>
     <div
-      class="css-wh7vml"
+      class="emotion-1"
     >
       <div
-        class="css-nj7jql-ComponentCard"
+        class="emotion-2"
       >
         <a
-          class="css-1t54e2w"
+          class="emotion-3"
           href="/docs/id-of-single"
         >
           <div
-            class="css-kbmfeb-ComponentCard"
+            class="emotion-4"
           >
             Story
           </div>
         </a>
         <div
-          class="css-10zcph3-ComponentCard"
+          class="emotion-5"
         />
       </div>
       <div
-        class="css-18hcion-ComponentCard"
+        class="emotion-14"
       >
         <div
-          class="css-14a8v30-PackageLink"
+          class="emotion-67"
         >
           <a
-            class="css-1t54e2w"
+            class="emotion-3"
             href="https://npmjs.com/package/@component-controls/blocks/v/1.0.3"
             rel="noopener noreferrer"
             target="_blank"
           >
             <div
-              class="css-13b120i-PackageLink"
+              class="emotion-69"
             >
               @component-controls/blocks
             </div>
           </a>
           <span
-            class="css-n8ts03-PackageLink"
+            class="emotion-70"
           >
             <span
-              class="css-vurnku"
+              class="emotion-71"
             >
               1.0.3
             </span>
@@ -387,21 +913,21 @@ and some bold
         </div>
       </div>
       <div
-        class="css-1akfoys-ComponentCard"
+        class="emotion-45"
       />
       <div
-        class="css-k8h5so-ComponentCard"
+        class="emotion-46"
       >
         <div
-          class="css-nxqmcg-ComponentCard"
+          class="emotion-47"
           data-testid="story"
           id="id-of-single"
         >
           <div
-            class="story-render-container css-dhmrnb"
+            class="story-render-container emotion-48"
           >
             <h2
-              class="css-229nmx"
+              class="emotion-76"
             >
               Components
             </h2>
@@ -410,48 +936,48 @@ and some bold
       </div>
     </div>
     <div
-      class="css-wh7vml"
+      class="emotion-1"
     >
       <div
-        class="css-nj7jql-ComponentCard"
+        class="emotion-2"
       >
         <a
-          class="css-1t54e2w"
+          class="emotion-3"
           href="/docs/id-of-story"
         >
           <div
-            class="css-kbmfeb-ComponentCard"
+            class="emotion-4"
           >
             Story
           </div>
         </a>
         <div
-          class="css-10zcph3-ComponentCard"
+          class="emotion-5"
         />
       </div>
       <div
-        class="css-18hcion-ComponentCard"
+        class="emotion-14"
       >
         <div
-          class="css-14a8v30-PackageLink"
+          class="emotion-67"
         >
           <a
-            class="css-1t54e2w"
+            class="emotion-3"
             href="https://npmjs.com/package/@component-controls/blocks/v/1.0.3"
             rel="noopener noreferrer"
             target="_blank"
           >
             <div
-              class="css-13b120i-PackageLink"
+              class="emotion-69"
             >
               @component-controls/blocks
             </div>
           </a>
           <span
-            class="css-n8ts03-PackageLink"
+            class="emotion-70"
           >
             <span
-              class="css-vurnku"
+              class="emotion-71"
             >
               1.0.3
             </span>
@@ -459,24 +985,24 @@ and some bold
         </div>
       </div>
       <div
-        class="css-1akfoys-ComponentCard"
+        class="emotion-45"
       />
       <p>
         description of story
       </p>
       <div
-        class="css-k8h5so-ComponentCard"
+        class="emotion-46"
       >
         <div
-          class="css-nxqmcg-ComponentCard"
+          class="emotion-47"
           data-testid="story"
           id="id-of-story"
         >
           <div
-            class="story-render-container css-dhmrnb"
+            class="story-render-container emotion-48"
           >
             <h2
-              class="css-229nmx"
+              class="emotion-76"
             >
               Components
             </h2>

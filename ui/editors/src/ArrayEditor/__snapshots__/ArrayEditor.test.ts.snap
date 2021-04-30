@@ -13,9 +13,70 @@ exports[`ArrayEditor inline snapshot 1`] = `
       Whiskey
     </li>
   </ul>
-  <div>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 800px;
+  padding: 15px;
+  box-sizing: content-box;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+<div>
     <div
-      class="css-q2mafu-ChildContainer"
+      class="emotion-0"
     >
       <table>
         <tbody>
@@ -23,7 +84,7 @@ exports[`ArrayEditor inline snapshot 1`] = `
             <td>
               <button
                 aria-label="delete row"
-                class="css-1obc4w6"
+                class="emotion-1"
               >
                 <svg
                   aria-hidden="true"
@@ -47,7 +108,7 @@ exports[`ArrayEditor inline snapshot 1`] = `
             <td>
               <button
                 aria-label="delete row"
-                class="css-1obc4w6"
+                class="emotion-1"
               >
                 <svg
                   aria-hidden="true"
@@ -71,7 +132,7 @@ exports[`ArrayEditor inline snapshot 1`] = `
             <td>
               <button
                 aria-label="delete row"
-                class="css-1obc4w6"
+                class="emotion-1"
               >
                 <svg
                   aria-hidden="true"
@@ -95,7 +156,7 @@ exports[`ArrayEditor inline snapshot 1`] = `
       </table>
       <button
         aria-label="add new row"
-        class="css-9nq87t-EditButton"
+        class="emotion-4"
       >
         <svg
           aria-hidden="true"
@@ -132,16 +193,46 @@ exports[`ArrayEditor overview snapshot 1`] = `
       Whiskey
     </li>
   </ul>
-  <div
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: primary;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+<div
     style="display: inline-block;"
   >
     <button
       aria-label="edit the properties of the array"
-      class="css-vhv7r1"
+      class="emotion-0"
     >
       edit...
       <div
-        class="css-vurnku"
+        class="emotion-1"
       />
     </button>
   </div>

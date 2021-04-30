@@ -2,28 +2,95 @@
 
 exports[`ComponentContributors caption snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-6582y1-ComponentContributors"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  margin-right: 4px;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 48px;
+}
+
+.emotion-3 {
+  max-width: 14px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.emotion-3:hover {
+  max-width: 24px;
+}
+
+.emotion-4 {
+  max-width: unset;
+  display: block;
+  overflow: hidden;
+  line-height: 1;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 9999px;
+}
+
+.emotion-6 {
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-1nwo78o-ComponentContributors"
+      class="emotion-1"
     >
       contributors
     </div>
     <div
       aria-label="avatars of martin-stoyanov, atanasster"
-      class="css-1yvvfp0-GithubAvatarList"
+      class="emotion-2"
     >
       <div
-        class="css-dam4fv-GithubAvatar"
+        class="emotion-3"
         style="display: inline-block;"
       >
         <div
-          class="css-1en2h0i-GithubAvatar"
+          class="emotion-4"
         >
           <img
             alt="avatar of martin-stoyanov"
-            class="css-1y16e88"
+            class="emotion-5"
             height="24"
             src="https://github.com/martin-stoyanov"
             title="martin-stoyanov"
@@ -32,15 +99,15 @@ exports[`ComponentContributors caption snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-9cbusc-GithubAvatar"
+        class="emotion-6"
         style="display: inline-block;"
       >
         <div
-          class="css-1en2h0i-GithubAvatar"
+          class="emotion-4"
         >
           <img
             alt="avatar of atanasster"
-            class="css-1y16e88"
+            class="emotion-5"
             height="24"
             src="https://github.com/atanasster"
             title="atanasster"
@@ -55,23 +122,86 @@ exports[`ComponentContributors caption snapshot 1`] = `
 
 exports[`ComponentContributors overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-6582y1-ComponentContributors"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 48px;
+}
+
+.emotion-2 {
+  max-width: 14px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.emotion-2:hover {
+  max-width: 24px;
+}
+
+.emotion-3 {
+  max-width: unset;
+  display: block;
+  overflow: hidden;
+  line-height: 1;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 9999px;
+}
+
+.emotion-5 {
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+<div
+    class="emotion-0"
   >
     <div
       aria-label="avatars of martin-stoyanov, atanasster"
-      class="css-1yvvfp0-GithubAvatarList"
+      class="emotion-1"
     >
       <div
-        class="css-dam4fv-GithubAvatar"
+        class="emotion-2"
         style="display: inline-block;"
       >
         <div
-          class="css-1en2h0i-GithubAvatar"
+          class="emotion-3"
         >
           <img
             alt="avatar of martin-stoyanov"
-            class="css-1y16e88"
+            class="emotion-4"
             height="24"
             src="https://github.com/martin-stoyanov"
             title="martin-stoyanov"
@@ -80,15 +210,15 @@ exports[`ComponentContributors overview snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-9cbusc-GithubAvatar"
+        class="emotion-5"
         style="display: inline-block;"
       >
         <div
-          class="css-1en2h0i-GithubAvatar"
+          class="emotion-3"
         >
           <img
             alt="avatar of atanasster"
-            class="css-1y16e88"
+            class="emotion-4"
             height="24"
             src="https://github.com/atanasster"
             title="atanasster"

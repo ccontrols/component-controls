@@ -2,30 +2,378 @@
 
 exports[`Sidebar overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-19daslh-Sidebar"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  overflow-x: hidden;
+  -webkit-position: sticky;
+  position: sticky;
+  top: 4.5rem;
+  max-width: 300px;
+  overflow-y: auto;
+  background-color: #ffffff;
+  height: 100vh;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-bottom: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-2 .selected {
+  border-left: 4px solid #f49342;
+  font-weight: 700;
+  padding-left: 4px;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-bottom: 8px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 8px;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: none;
+  background: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #5c6ac4;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 0;
+  padding-bottom: 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-13:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-16 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #5c6ac4;
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-18 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-20 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: active;
+  padding-left: 16px;
+}
+
+.emotion-23 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: none;
+  background: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #5c6ac4;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 0;
+  padding-bottom: 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-23:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-30 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 16px;
+}
+
+.emotion-37 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #454f5b;
+}
+
+<div
+    class="emotion-0"
     id="sidebar"
   >
     <div
-      class="css-6cvfyb"
+      class="emotion-1"
     />
     <div
-      class="css-d8brrc"
+      class="emotion-2"
     >
       <div
-        class="css-10ch4bz"
+        class="emotion-3"
       >
         <div
-          class="css-10ch4bz"
+          class="emotion-3"
         >
           <div
-            class="css-uliqdc"
+            class="emotion-5"
           >
             <div
-              class="css-1lml2j3"
+              class="emotion-6"
             >
               <h3
-                class="css-yrrbzf"
+                class="emotion-7"
               >
                 sidebar
               </h3>
@@ -33,32 +381,32 @@ exports[`Sidebar overview snapshot 1`] = `
           </div>
         </div>
         <nav
-          class="css-vurnku"
+          class="emotion-8"
         >
           <div
-            class="css-vurnku"
+            class="emotion-8"
           >
             <div
-              class="css-1em5sge"
+              class="emotion-10"
             >
               <div
-                class="css-tizfsr"
+                class="emotion-11"
               >
                 <div
-                  class="css-162ewbd"
+                  class="emotion-12"
                 >
                   <button
                     aria-expanded="true"
-                    class="css-t9fq0h"
+                    class="emotion-13"
                   >
                     <div
-                      class="css-dcq909"
+                      class="emotion-14"
                     >
                       <div
-                        class="css-f5h6sg"
+                        class="emotion-15"
                       >
                         <span
-                          class="css-15xx8i3"
+                          class="emotion-16"
                         >
                           <strong>
                             Story
@@ -66,10 +414,10 @@ exports[`Sidebar overview snapshot 1`] = `
                         </span>
                       </div>
                       <div
-                        class="css-vthntz"
+                        class="emotion-17"
                       >
                         <div
-                          class="css-aqscwe"
+                          class="emotion-18"
                         >
                           <svg
                             aria-hidden="true"
@@ -94,29 +442,29 @@ exports[`Sidebar overview snapshot 1`] = `
               </div>
             </div>
             <div
-              class="css-vurnku"
+              class="emotion-8"
             >
               <div
-                class="css-48rgnb"
+                class="emotion-20"
               >
                 <div
-                  class="css-tizfsr"
+                  class="emotion-11"
                 >
                   <div
-                    class="selected css-162ewbd"
+                    class="selected emotion-12"
                   >
                     <a
-                      class="css-p1dwhj"
+                      class="emotion-23"
                       href="/docs/id-of-story"
                     >
                       <div
-                        class="css-dcq909"
+                        class="emotion-14"
                       >
                         <div
-                          class="css-f5h6sg"
+                          class="emotion-15"
                         >
                           <div
-                            class="css-1ve1p3p"
+                            class="emotion-26"
                           >
                             <svg
                               aria-hidden="true"
@@ -135,13 +483,13 @@ exports[`Sidebar overview snapshot 1`] = `
                             </svg>
                           </div>
                           <span
-                            class="css-15xx8i3"
+                            class="emotion-16"
                           >
                             story
                           </span>
                         </div>
                         <div
-                          class="css-vthntz"
+                          class="emotion-17"
                         />
                       </div>
                     </a>
@@ -150,29 +498,29 @@ exports[`Sidebar overview snapshot 1`] = `
               </div>
             </div>
             <div
-              class="css-vurnku"
+              class="emotion-8"
             >
               <div
-                class="css-15ej8gm"
+                class="emotion-30"
               >
                 <div
-                  class="css-tizfsr"
+                  class="emotion-11"
                 >
                   <div
-                    class="css-162ewbd"
+                    class="emotion-12"
                   >
                     <a
-                      class="css-p1dwhj"
+                      class="emotion-23"
                       href="/docs/id-of-button-story"
                     >
                       <div
-                        class="css-dcq909"
+                        class="emotion-14"
                       >
                         <div
-                          class="css-f5h6sg"
+                          class="emotion-15"
                         >
                           <div
-                            class="css-1ve1p3p"
+                            class="emotion-26"
                           >
                             <svg
                               aria-hidden="true"
@@ -191,13 +539,13 @@ exports[`Sidebar overview snapshot 1`] = `
                             </svg>
                           </div>
                           <span
-                            class="css-7w8u7j"
+                            class="emotion-37"
                           >
                             button
                           </span>
                         </div>
                         <div
-                          class="css-vthntz"
+                          class="emotion-17"
                         />
                       </div>
                     </a>
@@ -206,29 +554,29 @@ exports[`Sidebar overview snapshot 1`] = `
               </div>
             </div>
             <div
-              class="css-vurnku"
+              class="emotion-8"
             >
               <div
-                class="css-15ej8gm"
+                class="emotion-30"
               >
                 <div
-                  class="css-tizfsr"
+                  class="emotion-11"
                 >
                   <div
-                    class="css-162ewbd"
+                    class="emotion-12"
                   >
                     <a
-                      class="css-p1dwhj"
+                      class="emotion-23"
                       href="/docs/blocks-core-story-plain--controls"
                     >
                       <div
-                        class="css-dcq909"
+                        class="emotion-14"
                       >
                         <div
-                          class="css-f5h6sg"
+                          class="emotion-15"
                         >
                           <div
-                            class="css-1ve1p3p"
+                            class="emotion-26"
                           >
                             <svg
                               aria-hidden="true"
@@ -247,13 +595,13 @@ exports[`Sidebar overview snapshot 1`] = `
                             </svg>
                           </div>
                           <span
-                            class="css-7w8u7j"
+                            class="emotion-37"
                           >
                             controls
                           </span>
                         </div>
                         <div
-                          class="css-vthntz"
+                          class="emotion-17"
                         />
                       </div>
                     </a>
@@ -262,29 +610,29 @@ exports[`Sidebar overview snapshot 1`] = `
               </div>
             </div>
             <div
-              class="css-vurnku"
+              class="emotion-8"
             >
               <div
-                class="css-15ej8gm"
+                class="emotion-30"
               >
                 <div
-                  class="css-tizfsr"
+                  class="emotion-11"
                 >
                   <div
-                    class="css-162ewbd"
+                    class="emotion-12"
                   >
                     <a
-                      class="css-p1dwhj"
+                      class="emotion-23"
                       href="/docs/id-of-single"
                     >
                       <div
-                        class="css-dcq909"
+                        class="emotion-14"
                       >
                         <div
-                          class="css-f5h6sg"
+                          class="emotion-15"
                         >
                           <div
-                            class="css-1ve1p3p"
+                            class="emotion-26"
                           >
                             <svg
                               aria-hidden="true"
@@ -303,13 +651,13 @@ exports[`Sidebar overview snapshot 1`] = `
                             </svg>
                           </div>
                           <span
-                            class="css-7w8u7j"
+                            class="emotion-37"
                           >
                             story
                           </span>
                         </div>
                         <div
-                          class="css-vthntz"
+                          class="emotion-17"
                         />
                       </div>
                     </a>
@@ -319,29 +667,29 @@ exports[`Sidebar overview snapshot 1`] = `
             </div>
           </div>
           <div
-            class="css-vurnku"
+            class="emotion-8"
           >
             <div
-              class="css-1em5sge"
+              class="emotion-10"
             >
               <div
-                class="css-tizfsr"
+                class="emotion-11"
               >
                 <div
-                  class="css-162ewbd"
+                  class="emotion-12"
                 >
                   <a
-                    class="css-p1dwhj"
+                    class="emotion-23"
                     href="/docs/mdx-story"
                   >
                     <div
-                      class="css-dcq909"
+                      class="emotion-14"
                     >
                       <div
-                        class="css-f5h6sg"
+                        class="emotion-15"
                       >
                         <div
-                          class="css-1ve1p3p"
+                          class="emotion-26"
                         >
                           <svg
                             aria-hidden="true"
@@ -360,13 +708,13 @@ exports[`Sidebar overview snapshot 1`] = `
                           </svg>
                         </div>
                         <span
-                          class="css-7w8u7j"
+                          class="emotion-37"
                         >
                           MDX Story
                         </span>
                       </div>
                       <div
-                        class="css-vthntz"
+                        class="emotion-17"
                       />
                     </div>
                   </a>

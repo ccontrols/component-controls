@@ -2,8 +2,51 @@
 
 exports[`ColorMode overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-vurnku"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+<div
+    class="emotion-0"
   >
     <div
       style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 14px; transition: opacity 0.25s; user-select: none;"
@@ -16,10 +59,10 @@ exports[`ColorMode overview snapshot 1`] = `
           style="height: 28px; width: 30px; position: relative; opacity: 0; pointer-events: none; transition: opacity 0.25s;"
         >
           <div
-            class="css-vfszow"
+            class="emotion-1"
           >
             <div
-              class="css-14ic6yi"
+              class="emotion-2"
             >
               <svg
                 aria-hidden="true"
@@ -43,10 +86,10 @@ exports[`ColorMode overview snapshot 1`] = `
           style="height: 28px; width: 30px; position: absolute; opacity: 1; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s;"
         >
           <div
-            class="css-vfszow"
+            class="emotion-1"
           >
             <div
-              class="css-14ic6yi"
+              class="emotion-2"
             >
               <svg
                 aria-hidden="true"

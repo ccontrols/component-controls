@@ -2,36 +2,303 @@
 
 exports[`Tree arrowsStart snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1w9pxwp"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 250px;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 8px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: none;
+  background: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #5c6ac4;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 0;
+  padding-bottom: 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-6:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #5c6ac4;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: active;
+  padding-left: 16px;
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: none;
+  background: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #5c6ac4;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 0;
+  padding-bottom: 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-17:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.emotion-23 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 2px;
+  color: white;
+  background-color: #5c6ac4;
+}
+
+.emotion-25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 16px;
+}
+
+.emotion-31 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #454f5b;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-vurnku"
+      class="emotion-1"
     >
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <button
                 aria-expanded="true"
-                class="css-t9fq0h"
+                class="emotion-6"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-aqscwe"
+                      class="emotion-9"
                     >
                       <svg
                         aria-hidden="true"
@@ -50,7 +317,7 @@ exports[`Tree arrowsStart snapshot 1`] = `
                       </svg>
                     </div>
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-10"
                     >
                       <svg
                         aria-hidden="true"
@@ -69,7 +336,7 @@ exports[`Tree arrowsStart snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-15xx8i3"
+                      class="emotion-11"
                     >
                       <strong>
                         Inbox
@@ -77,7 +344,7 @@ exports[`Tree arrowsStart snapshot 1`] = `
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-12"
                   />
                 </div>
               </button>
@@ -85,41 +352,41 @@ exports[`Tree arrowsStart snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-vurnku"
+          class="emotion-1"
         >
           <div
-            class="css-48rgnb"
+            class="emotion-14"
           >
             <div
-              class="css-tizfsr"
+              class="emotion-4"
             >
               <div
-                class="selected css-162ewbd"
+                class="selected emotion-5"
               >
                 <a
-                  class="css-p1dwhj"
+                  class="emotion-17"
                   href="/inbox/all"
                 >
                   <div
-                    class="css-dcq909"
+                    class="emotion-7"
                   >
                     <div
-                      class="css-f5h6sg"
+                      class="emotion-8"
                     >
                       <span
-                        class="css-15xx8i3"
+                        class="emotion-11"
                       >
                         All
                       </span>
                     </div>
                     <div
-                      class="css-vthntz"
+                      class="emotion-12"
                     >
                       <div
-                        class="css-vurnku"
+                        class="emotion-1"
                       >
                         <div
-                          class="css-1jxn1yx"
+                          class="emotion-23"
                         >
                           10
                         </div>
@@ -132,41 +399,41 @@ exports[`Tree arrowsStart snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-vurnku"
+          class="emotion-1"
         >
           <div
-            class="css-15ej8gm"
+            class="emotion-25"
           >
             <div
-              class="css-tizfsr"
+              class="emotion-4"
             >
               <div
-                class="css-162ewbd"
+                class="emotion-5"
               >
                 <a
-                  class="css-p1dwhj"
+                  class="emotion-17"
                   href="/inbox/gmail"
                 >
                   <div
-                    class="css-dcq909"
+                    class="emotion-7"
                   >
                     <div
-                      class="css-f5h6sg"
+                      class="emotion-8"
                     >
                       <span
-                        class="css-7w8u7j"
+                        class="emotion-31"
                       >
                         GMail
                       </span>
                     </div>
                     <div
-                      class="css-vthntz"
+                      class="emotion-12"
                     >
                       <div
-                        class="css-vurnku"
+                        class="emotion-1"
                       >
                         <div
-                          class="css-1jxn1yx"
+                          class="emotion-23"
                         >
                           8
                         </div>
@@ -179,41 +446,41 @@ exports[`Tree arrowsStart snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-vurnku"
+          class="emotion-1"
         >
           <div
-            class="css-15ej8gm"
+            class="emotion-25"
           >
             <div
-              class="css-tizfsr"
+              class="emotion-4"
             >
               <div
-                class="css-162ewbd"
+                class="emotion-5"
               >
                 <a
-                  class="css-p1dwhj"
+                  class="emotion-17"
                   href="/inbox/work"
                 >
                   <div
-                    class="css-dcq909"
+                    class="emotion-7"
                   >
                     <div
-                      class="css-f5h6sg"
+                      class="emotion-8"
                     >
                       <span
-                        class="css-7w8u7j"
+                        class="emotion-31"
                       >
                         Work
                       </span>
                     </div>
                     <div
-                      class="css-vthntz"
+                      class="emotion-12"
                     >
                       <div
-                        class="css-vurnku"
+                        class="emotion-1"
                       >
                         <div
-                          class="css-1jxn1yx"
+                          class="emotion-23"
                         >
                           1
                         </div>
@@ -226,41 +493,41 @@ exports[`Tree arrowsStart snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-vurnku"
+          class="emotion-1"
         >
           <div
-            class="css-15ej8gm"
+            class="emotion-25"
           >
             <div
-              class="css-tizfsr"
+              class="emotion-4"
             >
               <div
-                class="css-162ewbd"
+                class="emotion-5"
               >
                 <a
-                  class="css-p1dwhj"
+                  class="emotion-17"
                   href="/inbox/amazon"
                 >
                   <div
-                    class="css-dcq909"
+                    class="emotion-7"
                   >
                     <div
-                      class="css-f5h6sg"
+                      class="emotion-8"
                     >
                       <span
-                        class="css-7w8u7j"
+                        class="emotion-31"
                       >
                         Amazon
                       </span>
                     </div>
                     <div
-                      class="css-vthntz"
+                      class="emotion-12"
                     >
                       <div
-                        class="css-vurnku"
+                        class="emotion-1"
                       >
                         <div
-                          class="css-1jxn1yx"
+                          class="emotion-23"
                         >
                           1
                         </div>
@@ -274,29 +541,29 @@ exports[`Tree arrowsStart snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/sent"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-10"
                     >
                       <svg
                         aria-hidden="true"
@@ -315,13 +582,13 @@ exports[`Tree arrowsStart snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Sent
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-12"
                   />
                 </div>
               </a>
@@ -330,29 +597,29 @@ exports[`Tree arrowsStart snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/flagged"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-10"
                     >
                       <svg
                         aria-hidden="true"
@@ -371,19 +638,19 @@ exports[`Tree arrowsStart snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Flagged
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-12"
                   >
                     <div
-                      class="css-vurnku"
+                      class="emotion-1"
                     >
                       <div
-                        class="css-1jxn1yx"
+                        class="emotion-23"
                       >
                         3
                       </div>
@@ -396,29 +663,29 @@ exports[`Tree arrowsStart snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/starred"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-10"
                     >
                       <svg
                         aria-hidden="true"
@@ -437,13 +704,13 @@ exports[`Tree arrowsStart snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Starred
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-12"
                   />
                 </div>
               </a>
@@ -452,29 +719,29 @@ exports[`Tree arrowsStart snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/drafts"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-10"
                     >
                       <svg
                         aria-hidden="true"
@@ -493,13 +760,13 @@ exports[`Tree arrowsStart snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Drafts
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-12"
                   />
                 </div>
               </a>
@@ -508,29 +775,29 @@ exports[`Tree arrowsStart snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/tagged"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-10"
                     >
                       <svg
                         aria-hidden="true"
@@ -549,13 +816,13 @@ exports[`Tree arrowsStart snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Tagged
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-12"
                   />
                 </div>
               </a>
@@ -564,29 +831,29 @@ exports[`Tree arrowsStart snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/trash"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-10"
                     >
                       <svg
                         aria-hidden="true"
@@ -605,13 +872,13 @@ exports[`Tree arrowsStart snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Trash
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-12"
                   />
                 </div>
               </a>
@@ -626,36 +893,303 @@ exports[`Tree arrowsStart snapshot 1`] = `
 
 exports[`Tree customExpandIcons snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1w9pxwp"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 250px;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 8px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: none;
+  background: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #5c6ac4;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 0;
+  padding-bottom: 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-6:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #5c6ac4;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: active;
+  padding-left: 16px;
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: none;
+  background: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #5c6ac4;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 0;
+  padding-bottom: 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-17:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.emotion-23 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 2px;
+  color: white;
+  background-color: #5c6ac4;
+}
+
+.emotion-25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 16px;
+}
+
+.emotion-31 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #454f5b;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-vurnku"
+      class="emotion-1"
     >
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <button
                 aria-expanded="true"
-                class="css-t9fq0h"
+                class="emotion-6"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-9"
                     >
                       <svg
                         aria-hidden="true"
@@ -674,7 +1208,7 @@ exports[`Tree customExpandIcons snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-15xx8i3"
+                      class="emotion-10"
                     >
                       <strong>
                         Inbox
@@ -682,10 +1216,10 @@ exports[`Tree customExpandIcons snapshot 1`] = `
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-11"
                   >
                     <div
-                      class="css-aqscwe"
+                      class="emotion-12"
                     >
                       <svg
                         aria-hidden="true"
@@ -709,41 +1243,41 @@ exports[`Tree customExpandIcons snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-vurnku"
+          class="emotion-1"
         >
           <div
-            class="css-48rgnb"
+            class="emotion-14"
           >
             <div
-              class="css-tizfsr"
+              class="emotion-4"
             >
               <div
-                class="selected css-162ewbd"
+                class="selected emotion-5"
               >
                 <a
-                  class="css-p1dwhj"
+                  class="emotion-17"
                   href="/inbox/all"
                 >
                   <div
-                    class="css-dcq909"
+                    class="emotion-7"
                   >
                     <div
-                      class="css-f5h6sg"
+                      class="emotion-8"
                     >
                       <span
-                        class="css-15xx8i3"
+                        class="emotion-10"
                       >
                         All
                       </span>
                     </div>
                     <div
-                      class="css-vthntz"
+                      class="emotion-11"
                     >
                       <div
-                        class="css-vurnku"
+                        class="emotion-1"
                       >
                         <div
-                          class="css-1jxn1yx"
+                          class="emotion-23"
                         >
                           10
                         </div>
@@ -756,41 +1290,41 @@ exports[`Tree customExpandIcons snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-vurnku"
+          class="emotion-1"
         >
           <div
-            class="css-15ej8gm"
+            class="emotion-25"
           >
             <div
-              class="css-tizfsr"
+              class="emotion-4"
             >
               <div
-                class="css-162ewbd"
+                class="emotion-5"
               >
                 <a
-                  class="css-p1dwhj"
+                  class="emotion-17"
                   href="/inbox/gmail"
                 >
                   <div
-                    class="css-dcq909"
+                    class="emotion-7"
                   >
                     <div
-                      class="css-f5h6sg"
+                      class="emotion-8"
                     >
                       <span
-                        class="css-7w8u7j"
+                        class="emotion-31"
                       >
                         GMail
                       </span>
                     </div>
                     <div
-                      class="css-vthntz"
+                      class="emotion-11"
                     >
                       <div
-                        class="css-vurnku"
+                        class="emotion-1"
                       >
                         <div
-                          class="css-1jxn1yx"
+                          class="emotion-23"
                         >
                           8
                         </div>
@@ -803,41 +1337,41 @@ exports[`Tree customExpandIcons snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-vurnku"
+          class="emotion-1"
         >
           <div
-            class="css-15ej8gm"
+            class="emotion-25"
           >
             <div
-              class="css-tizfsr"
+              class="emotion-4"
             >
               <div
-                class="css-162ewbd"
+                class="emotion-5"
               >
                 <a
-                  class="css-p1dwhj"
+                  class="emotion-17"
                   href="/inbox/work"
                 >
                   <div
-                    class="css-dcq909"
+                    class="emotion-7"
                   >
                     <div
-                      class="css-f5h6sg"
+                      class="emotion-8"
                     >
                       <span
-                        class="css-7w8u7j"
+                        class="emotion-31"
                       >
                         Work
                       </span>
                     </div>
                     <div
-                      class="css-vthntz"
+                      class="emotion-11"
                     >
                       <div
-                        class="css-vurnku"
+                        class="emotion-1"
                       >
                         <div
-                          class="css-1jxn1yx"
+                          class="emotion-23"
                         >
                           1
                         </div>
@@ -850,41 +1384,41 @@ exports[`Tree customExpandIcons snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-vurnku"
+          class="emotion-1"
         >
           <div
-            class="css-15ej8gm"
+            class="emotion-25"
           >
             <div
-              class="css-tizfsr"
+              class="emotion-4"
             >
               <div
-                class="css-162ewbd"
+                class="emotion-5"
               >
                 <a
-                  class="css-p1dwhj"
+                  class="emotion-17"
                   href="/inbox/amazon"
                 >
                   <div
-                    class="css-dcq909"
+                    class="emotion-7"
                   >
                     <div
-                      class="css-f5h6sg"
+                      class="emotion-8"
                     >
                       <span
-                        class="css-7w8u7j"
+                        class="emotion-31"
                       >
                         Amazon
                       </span>
                     </div>
                     <div
-                      class="css-vthntz"
+                      class="emotion-11"
                     >
                       <div
-                        class="css-vurnku"
+                        class="emotion-1"
                       >
                         <div
-                          class="css-1jxn1yx"
+                          class="emotion-23"
                         >
                           1
                         </div>
@@ -898,29 +1432,29 @@ exports[`Tree customExpandIcons snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/sent"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-9"
                     >
                       <svg
                         aria-hidden="true"
@@ -939,13 +1473,13 @@ exports[`Tree customExpandIcons snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Sent
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-11"
                   />
                 </div>
               </a>
@@ -954,29 +1488,29 @@ exports[`Tree customExpandIcons snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/flagged"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-9"
                     >
                       <svg
                         aria-hidden="true"
@@ -995,19 +1529,19 @@ exports[`Tree customExpandIcons snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Flagged
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-11"
                   >
                     <div
-                      class="css-vurnku"
+                      class="emotion-1"
                     >
                       <div
-                        class="css-1jxn1yx"
+                        class="emotion-23"
                       >
                         3
                       </div>
@@ -1020,29 +1554,29 @@ exports[`Tree customExpandIcons snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/starred"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-9"
                     >
                       <svg
                         aria-hidden="true"
@@ -1061,13 +1595,13 @@ exports[`Tree customExpandIcons snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Starred
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-11"
                   />
                 </div>
               </a>
@@ -1076,29 +1610,29 @@ exports[`Tree customExpandIcons snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/drafts"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-9"
                     >
                       <svg
                         aria-hidden="true"
@@ -1117,13 +1651,13 @@ exports[`Tree customExpandIcons snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Drafts
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-11"
                   />
                 </div>
               </a>
@@ -1132,29 +1666,29 @@ exports[`Tree customExpandIcons snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/tagged"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-9"
                     >
                       <svg
                         aria-hidden="true"
@@ -1173,13 +1707,13 @@ exports[`Tree customExpandIcons snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Tagged
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-11"
                   />
                 </div>
               </a>
@@ -1188,29 +1722,29 @@ exports[`Tree customExpandIcons snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/trash"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-9"
                     >
                       <svg
                         aria-hidden="true"
@@ -1229,13 +1763,13 @@ exports[`Tree customExpandIcons snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Trash
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-11"
                   />
                 </div>
               </a>
@@ -1250,36 +1784,303 @@ exports[`Tree customExpandIcons snapshot 1`] = `
 
 exports[`Tree items snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1w9pxwp"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 250px;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 8px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: none;
+  background: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #5c6ac4;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 0;
+  padding-bottom: 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-6:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #5c6ac4;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: active;
+  padding-left: 16px;
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: none;
+  background: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #5c6ac4;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 0;
+  padding-bottom: 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-17:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.emotion-23 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 2px;
+  color: white;
+  background-color: #5c6ac4;
+}
+
+.emotion-25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 16px;
+}
+
+.emotion-31 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #454f5b;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-vurnku"
+      class="emotion-1"
     >
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <button
                 aria-expanded="true"
-                class="css-t9fq0h"
+                class="emotion-6"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-9"
                     >
                       <svg
                         aria-hidden="true"
@@ -1298,7 +2099,7 @@ exports[`Tree items snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-15xx8i3"
+                      class="emotion-10"
                     >
                       <strong>
                         Inbox
@@ -1306,10 +2107,10 @@ exports[`Tree items snapshot 1`] = `
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-11"
                   >
                     <div
-                      class="css-aqscwe"
+                      class="emotion-12"
                     >
                       <svg
                         aria-hidden="true"
@@ -1334,41 +2135,41 @@ exports[`Tree items snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-vurnku"
+          class="emotion-1"
         >
           <div
-            class="css-48rgnb"
+            class="emotion-14"
           >
             <div
-              class="css-tizfsr"
+              class="emotion-4"
             >
               <div
-                class="selected css-162ewbd"
+                class="selected emotion-5"
               >
                 <a
-                  class="css-p1dwhj"
+                  class="emotion-17"
                   href="/inbox/all"
                 >
                   <div
-                    class="css-dcq909"
+                    class="emotion-7"
                   >
                     <div
-                      class="css-f5h6sg"
+                      class="emotion-8"
                     >
                       <span
-                        class="css-15xx8i3"
+                        class="emotion-10"
                       >
                         All
                       </span>
                     </div>
                     <div
-                      class="css-vthntz"
+                      class="emotion-11"
                     >
                       <div
-                        class="css-vurnku"
+                        class="emotion-1"
                       >
                         <div
-                          class="css-1jxn1yx"
+                          class="emotion-23"
                         >
                           10
                         </div>
@@ -1381,41 +2182,41 @@ exports[`Tree items snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-vurnku"
+          class="emotion-1"
         >
           <div
-            class="css-15ej8gm"
+            class="emotion-25"
           >
             <div
-              class="css-tizfsr"
+              class="emotion-4"
             >
               <div
-                class="css-162ewbd"
+                class="emotion-5"
               >
                 <a
-                  class="css-p1dwhj"
+                  class="emotion-17"
                   href="/inbox/gmail"
                 >
                   <div
-                    class="css-dcq909"
+                    class="emotion-7"
                   >
                     <div
-                      class="css-f5h6sg"
+                      class="emotion-8"
                     >
                       <span
-                        class="css-7w8u7j"
+                        class="emotion-31"
                       >
                         GMail
                       </span>
                     </div>
                     <div
-                      class="css-vthntz"
+                      class="emotion-11"
                     >
                       <div
-                        class="css-vurnku"
+                        class="emotion-1"
                       >
                         <div
-                          class="css-1jxn1yx"
+                          class="emotion-23"
                         >
                           8
                         </div>
@@ -1428,41 +2229,41 @@ exports[`Tree items snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-vurnku"
+          class="emotion-1"
         >
           <div
-            class="css-15ej8gm"
+            class="emotion-25"
           >
             <div
-              class="css-tizfsr"
+              class="emotion-4"
             >
               <div
-                class="css-162ewbd"
+                class="emotion-5"
               >
                 <a
-                  class="css-p1dwhj"
+                  class="emotion-17"
                   href="/inbox/work"
                 >
                   <div
-                    class="css-dcq909"
+                    class="emotion-7"
                   >
                     <div
-                      class="css-f5h6sg"
+                      class="emotion-8"
                     >
                       <span
-                        class="css-7w8u7j"
+                        class="emotion-31"
                       >
                         Work
                       </span>
                     </div>
                     <div
-                      class="css-vthntz"
+                      class="emotion-11"
                     >
                       <div
-                        class="css-vurnku"
+                        class="emotion-1"
                       >
                         <div
-                          class="css-1jxn1yx"
+                          class="emotion-23"
                         >
                           1
                         </div>
@@ -1475,41 +2276,41 @@ exports[`Tree items snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-vurnku"
+          class="emotion-1"
         >
           <div
-            class="css-15ej8gm"
+            class="emotion-25"
           >
             <div
-              class="css-tizfsr"
+              class="emotion-4"
             >
               <div
-                class="css-162ewbd"
+                class="emotion-5"
               >
                 <a
-                  class="css-p1dwhj"
+                  class="emotion-17"
                   href="/inbox/amazon"
                 >
                   <div
-                    class="css-dcq909"
+                    class="emotion-7"
                   >
                     <div
-                      class="css-f5h6sg"
+                      class="emotion-8"
                     >
                       <span
-                        class="css-7w8u7j"
+                        class="emotion-31"
                       >
                         Amazon
                       </span>
                     </div>
                     <div
-                      class="css-vthntz"
+                      class="emotion-11"
                     >
                       <div
-                        class="css-vurnku"
+                        class="emotion-1"
                       >
                         <div
-                          class="css-1jxn1yx"
+                          class="emotion-23"
                         >
                           1
                         </div>
@@ -1523,29 +2324,29 @@ exports[`Tree items snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/sent"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-9"
                     >
                       <svg
                         aria-hidden="true"
@@ -1564,13 +2365,13 @@ exports[`Tree items snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Sent
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-11"
                   />
                 </div>
               </a>
@@ -1579,29 +2380,29 @@ exports[`Tree items snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/flagged"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-9"
                     >
                       <svg
                         aria-hidden="true"
@@ -1620,19 +2421,19 @@ exports[`Tree items snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Flagged
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-11"
                   >
                     <div
-                      class="css-vurnku"
+                      class="emotion-1"
                     >
                       <div
-                        class="css-1jxn1yx"
+                        class="emotion-23"
                       >
                         3
                       </div>
@@ -1645,29 +2446,29 @@ exports[`Tree items snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/starred"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-9"
                     >
                       <svg
                         aria-hidden="true"
@@ -1686,13 +2487,13 @@ exports[`Tree items snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Starred
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-11"
                   />
                 </div>
               </a>
@@ -1701,29 +2502,29 @@ exports[`Tree items snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/drafts"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-9"
                     >
                       <svg
                         aria-hidden="true"
@@ -1742,13 +2543,13 @@ exports[`Tree items snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Drafts
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-11"
                   />
                 </div>
               </a>
@@ -1757,29 +2558,29 @@ exports[`Tree items snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/tagged"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-9"
                     >
                       <svg
                         aria-hidden="true"
@@ -1798,13 +2599,13 @@ exports[`Tree items snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Tagged
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-11"
                   />
                 </div>
               </a>
@@ -1813,29 +2614,29 @@ exports[`Tree items snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/trash"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-9"
                     >
                       <svg
                         aria-hidden="true"
@@ -1854,13 +2655,13 @@ exports[`Tree items snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Trash
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-11"
                   />
                 </div>
               </a>
@@ -1875,36 +2676,303 @@ exports[`Tree items snapshot 1`] = `
 
 exports[`Tree largeIndentation snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1w9pxwp"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 250px;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 24px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: none;
+  background: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #5c6ac4;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 0;
+  padding-bottom: 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-6:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #5c6ac4;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: active;
+  padding-left: 48px;
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: none;
+  background: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #5c6ac4;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 0;
+  padding-bottom: 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-17:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.emotion-23 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 2px;
+  color: white;
+  background-color: #5c6ac4;
+}
+
+.emotion-25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 48px;
+}
+
+.emotion-31 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #454f5b;
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-vurnku"
+      class="emotion-1"
     >
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-3d17q9"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <button
                 aria-expanded="true"
-                class="css-t9fq0h"
+                class="emotion-6"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-9"
                     >
                       <svg
                         aria-hidden="true"
@@ -1923,7 +2991,7 @@ exports[`Tree largeIndentation snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-15xx8i3"
+                      class="emotion-10"
                     >
                       <strong>
                         Inbox
@@ -1931,10 +2999,10 @@ exports[`Tree largeIndentation snapshot 1`] = `
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-11"
                   >
                     <div
-                      class="css-aqscwe"
+                      class="emotion-12"
                     >
                       <svg
                         aria-hidden="true"
@@ -1959,41 +3027,41 @@ exports[`Tree largeIndentation snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-vurnku"
+          class="emotion-1"
         >
           <div
-            class="css-chuluf"
+            class="emotion-14"
           >
             <div
-              class="css-tizfsr"
+              class="emotion-4"
             >
               <div
-                class="selected css-162ewbd"
+                class="selected emotion-5"
               >
                 <a
-                  class="css-p1dwhj"
+                  class="emotion-17"
                   href="/inbox/all"
                 >
                   <div
-                    class="css-dcq909"
+                    class="emotion-7"
                   >
                     <div
-                      class="css-f5h6sg"
+                      class="emotion-8"
                     >
                       <span
-                        class="css-15xx8i3"
+                        class="emotion-10"
                       >
                         All
                       </span>
                     </div>
                     <div
-                      class="css-vthntz"
+                      class="emotion-11"
                     >
                       <div
-                        class="css-vurnku"
+                        class="emotion-1"
                       >
                         <div
-                          class="css-1jxn1yx"
+                          class="emotion-23"
                         >
                           10
                         </div>
@@ -2006,41 +3074,41 @@ exports[`Tree largeIndentation snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-vurnku"
+          class="emotion-1"
         >
           <div
-            class="css-16e1uh4"
+            class="emotion-25"
           >
             <div
-              class="css-tizfsr"
+              class="emotion-4"
             >
               <div
-                class="css-162ewbd"
+                class="emotion-5"
               >
                 <a
-                  class="css-p1dwhj"
+                  class="emotion-17"
                   href="/inbox/gmail"
                 >
                   <div
-                    class="css-dcq909"
+                    class="emotion-7"
                   >
                     <div
-                      class="css-f5h6sg"
+                      class="emotion-8"
                     >
                       <span
-                        class="css-7w8u7j"
+                        class="emotion-31"
                       >
                         GMail
                       </span>
                     </div>
                     <div
-                      class="css-vthntz"
+                      class="emotion-11"
                     >
                       <div
-                        class="css-vurnku"
+                        class="emotion-1"
                       >
                         <div
-                          class="css-1jxn1yx"
+                          class="emotion-23"
                         >
                           8
                         </div>
@@ -2053,41 +3121,41 @@ exports[`Tree largeIndentation snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-vurnku"
+          class="emotion-1"
         >
           <div
-            class="css-16e1uh4"
+            class="emotion-25"
           >
             <div
-              class="css-tizfsr"
+              class="emotion-4"
             >
               <div
-                class="css-162ewbd"
+                class="emotion-5"
               >
                 <a
-                  class="css-p1dwhj"
+                  class="emotion-17"
                   href="/inbox/work"
                 >
                   <div
-                    class="css-dcq909"
+                    class="emotion-7"
                   >
                     <div
-                      class="css-f5h6sg"
+                      class="emotion-8"
                     >
                       <span
-                        class="css-7w8u7j"
+                        class="emotion-31"
                       >
                         Work
                       </span>
                     </div>
                     <div
-                      class="css-vthntz"
+                      class="emotion-11"
                     >
                       <div
-                        class="css-vurnku"
+                        class="emotion-1"
                       >
                         <div
-                          class="css-1jxn1yx"
+                          class="emotion-23"
                         >
                           1
                         </div>
@@ -2100,41 +3168,41 @@ exports[`Tree largeIndentation snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-vurnku"
+          class="emotion-1"
         >
           <div
-            class="css-16e1uh4"
+            class="emotion-25"
           >
             <div
-              class="css-tizfsr"
+              class="emotion-4"
             >
               <div
-                class="css-162ewbd"
+                class="emotion-5"
               >
                 <a
-                  class="css-p1dwhj"
+                  class="emotion-17"
                   href="/inbox/amazon"
                 >
                   <div
-                    class="css-dcq909"
+                    class="emotion-7"
                   >
                     <div
-                      class="css-f5h6sg"
+                      class="emotion-8"
                     >
                       <span
-                        class="css-7w8u7j"
+                        class="emotion-31"
                       >
                         Amazon
                       </span>
                     </div>
                     <div
-                      class="css-vthntz"
+                      class="emotion-11"
                     >
                       <div
-                        class="css-vurnku"
+                        class="emotion-1"
                       >
                         <div
-                          class="css-1jxn1yx"
+                          class="emotion-23"
                         >
                           1
                         </div>
@@ -2148,29 +3216,29 @@ exports[`Tree largeIndentation snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-3d17q9"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/sent"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-9"
                     >
                       <svg
                         aria-hidden="true"
@@ -2189,13 +3257,13 @@ exports[`Tree largeIndentation snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Sent
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-11"
                   />
                 </div>
               </a>
@@ -2204,29 +3272,29 @@ exports[`Tree largeIndentation snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-3d17q9"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/flagged"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-9"
                     >
                       <svg
                         aria-hidden="true"
@@ -2245,19 +3313,19 @@ exports[`Tree largeIndentation snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Flagged
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-11"
                   >
                     <div
-                      class="css-vurnku"
+                      class="emotion-1"
                     >
                       <div
-                        class="css-1jxn1yx"
+                        class="emotion-23"
                       >
                         3
                       </div>
@@ -2270,29 +3338,29 @@ exports[`Tree largeIndentation snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-3d17q9"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/starred"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-9"
                     >
                       <svg
                         aria-hidden="true"
@@ -2311,13 +3379,13 @@ exports[`Tree largeIndentation snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Starred
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-11"
                   />
                 </div>
               </a>
@@ -2326,29 +3394,29 @@ exports[`Tree largeIndentation snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-3d17q9"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/drafts"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-9"
                     >
                       <svg
                         aria-hidden="true"
@@ -2367,13 +3435,13 @@ exports[`Tree largeIndentation snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Drafts
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-11"
                   />
                 </div>
               </a>
@@ -2382,29 +3450,29 @@ exports[`Tree largeIndentation snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-3d17q9"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/tagged"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-9"
                     >
                       <svg
                         aria-hidden="true"
@@ -2423,13 +3491,13 @@ exports[`Tree largeIndentation snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Tagged
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-11"
                   />
                 </div>
               </a>
@@ -2438,29 +3506,29 @@ exports[`Tree largeIndentation snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-3d17q9"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-17"
                 href="/inbox/trash"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-9"
                     >
                       <svg
                         aria-hidden="true"
@@ -2479,13 +3547,13 @@ exports[`Tree largeIndentation snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-31"
                     >
                       Trash
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-11"
                   />
                 </div>
               </a>
@@ -2500,36 +3568,279 @@ exports[`Tree largeIndentation snapshot 1`] = `
 
 exports[`Tree overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-w4m163"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 200px;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 8px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: none;
+  background: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #5c6ac4;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 0;
+  padding-bottom: 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-6:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #5c6ac4;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: active;
+  padding-left: 16px;
+}
+
+.emotion-16 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: none;
+  background: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #5c6ac4;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 0;
+  padding-bottom: 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-16:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.emotion-22 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 16px;
+}
+
+.emotion-28 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #454f5b;
+}
+
+.emotion-39 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+<div
+    class="emotion-0"
   >
     <div
-      class="css-vurnku"
+      class="emotion-1"
     >
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <button
                 aria-expanded="true"
-                class="css-t9fq0h"
+                class="emotion-6"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <span
-                      class="css-15xx8i3"
+                      class="emotion-9"
                     >
                       <strong>
                         Local
@@ -2537,10 +3848,10 @@ exports[`Tree overview snapshot 1`] = `
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-10"
                   >
                     <div
-                      class="css-aqscwe"
+                      class="emotion-11"
                     >
                       <svg
                         aria-hidden="true"
@@ -2565,35 +3876,35 @@ exports[`Tree overview snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-vurnku"
+          class="emotion-1"
         >
           <div
-            class="css-48rgnb"
+            class="emotion-13"
           >
             <div
-              class="css-tizfsr"
+              class="emotion-4"
             >
               <div
-                class="selected css-162ewbd"
+                class="selected emotion-5"
               >
                 <a
-                  class="css-p1dwhj"
+                  class="emotion-16"
                   href="/c_drive"
                 >
                   <div
-                    class="css-dcq909"
+                    class="emotion-7"
                   >
                     <div
-                      class="css-f5h6sg"
+                      class="emotion-8"
                     >
                       <span
-                        class="css-15xx8i3"
+                        class="emotion-9"
                       >
                         C: drive
                       </span>
                     </div>
                     <div
-                      class="css-vthntz"
+                      class="emotion-10"
                     />
                   </div>
                 </a>
@@ -2602,36 +3913,36 @@ exports[`Tree overview snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-vurnku"
+          class="emotion-1"
         >
           <div
-            class="css-15ej8gm"
+            class="emotion-22"
           >
             <div
-              class="css-tizfsr"
+              class="emotion-4"
             >
               <div
-                class="css-162ewbd"
+                class="emotion-5"
               >
                 <a
-                  class="css-p1dwhj"
+                  class="emotion-16"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
                   <div
-                    class="css-dcq909"
+                    class="emotion-7"
                   >
                     <div
-                      class="css-f5h6sg"
+                      class="emotion-8"
                     >
                       <span
-                        class="css-7w8u7j"
+                        class="emotion-28"
                       >
                         F: drive
                       </span>
                     </div>
                     <div
-                      class="css-vthntz"
+                      class="emotion-10"
                     />
                   </div>
                 </a>
@@ -2641,29 +3952,29 @@ exports[`Tree overview snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-1"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-3"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-4"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-5"
             >
               <button
                 aria-expanded="false"
-                class="css-t9fq0h"
+                class="emotion-6"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-7"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-8"
                   >
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-28"
                     >
                       <strong>
                         Cloud
@@ -2671,10 +3982,10 @@ exports[`Tree overview snapshot 1`] = `
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-10"
                   >
                     <div
-                      class="css-164ifi5"
+                      class="emotion-39"
                     >
                       <svg
                         aria-hidden="true"
@@ -2706,42 +4017,329 @@ exports[`Tree overview snapshot 1`] = `
 
 exports[`Tree search snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1w9pxwp"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 250px;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+  padding: 4px;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 8px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: none;
+  background: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #5c6ac4;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 0;
+  padding-bottom: 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-7:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #5c6ac4;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: active;
+  padding-left: 16px;
+}
+
+.emotion-18 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: none;
+  background: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #5c6ac4;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 0;
+  padding-bottom: 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-18:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.emotion-24 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 2px;
+  color: white;
+  background-color: #5c6ac4;
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 16px;
+}
+
+.emotion-32 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #454f5b;
+}
+
+<div
+    class="emotion-0"
   >
     <input
-      class="css-1onaisy"
+      class="emotion-1"
       placeholder="search"
       type="search"
       value=""
     />
     <div
-      class="css-vurnku"
+      class="emotion-2"
     >
       <div
-        class="css-vurnku"
+        class="emotion-2"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-4"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-5"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-6"
             >
               <button
                 aria-expanded="true"
-                class="css-t9fq0h"
+                class="emotion-7"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-8"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-9"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-10"
                     >
                       <svg
                         aria-hidden="true"
@@ -2760,7 +4358,7 @@ exports[`Tree search snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-15xx8i3"
+                      class="emotion-11"
                     >
                       <strong>
                         Inbox
@@ -2768,10 +4366,10 @@ exports[`Tree search snapshot 1`] = `
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-12"
                   >
                     <div
-                      class="css-aqscwe"
+                      class="emotion-13"
                     >
                       <svg
                         aria-hidden="true"
@@ -2796,41 +4394,41 @@ exports[`Tree search snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-vurnku"
+          class="emotion-2"
         >
           <div
-            class="css-48rgnb"
+            class="emotion-15"
           >
             <div
-              class="css-tizfsr"
+              class="emotion-5"
             >
               <div
-                class="selected css-162ewbd"
+                class="selected emotion-6"
               >
                 <a
-                  class="css-p1dwhj"
+                  class="emotion-18"
                   href="/inbox/all"
                 >
                   <div
-                    class="css-dcq909"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-f5h6sg"
+                      class="emotion-9"
                     >
                       <span
-                        class="css-15xx8i3"
+                        class="emotion-11"
                       >
                         All
                       </span>
                     </div>
                     <div
-                      class="css-vthntz"
+                      class="emotion-12"
                     >
                       <div
-                        class="css-vurnku"
+                        class="emotion-2"
                       >
                         <div
-                          class="css-1jxn1yx"
+                          class="emotion-24"
                         >
                           10
                         </div>
@@ -2843,41 +4441,41 @@ exports[`Tree search snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-vurnku"
+          class="emotion-2"
         >
           <div
-            class="css-15ej8gm"
+            class="emotion-26"
           >
             <div
-              class="css-tizfsr"
+              class="emotion-5"
             >
               <div
-                class="css-162ewbd"
+                class="emotion-6"
               >
                 <a
-                  class="css-p1dwhj"
+                  class="emotion-18"
                   href="/inbox/gmail"
                 >
                   <div
-                    class="css-dcq909"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-f5h6sg"
+                      class="emotion-9"
                     >
                       <span
-                        class="css-7w8u7j"
+                        class="emotion-32"
                       >
                         GMail
                       </span>
                     </div>
                     <div
-                      class="css-vthntz"
+                      class="emotion-12"
                     >
                       <div
-                        class="css-vurnku"
+                        class="emotion-2"
                       >
                         <div
-                          class="css-1jxn1yx"
+                          class="emotion-24"
                         >
                           8
                         </div>
@@ -2890,41 +4488,41 @@ exports[`Tree search snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-vurnku"
+          class="emotion-2"
         >
           <div
-            class="css-15ej8gm"
+            class="emotion-26"
           >
             <div
-              class="css-tizfsr"
+              class="emotion-5"
             >
               <div
-                class="css-162ewbd"
+                class="emotion-6"
               >
                 <a
-                  class="css-p1dwhj"
+                  class="emotion-18"
                   href="/inbox/work"
                 >
                   <div
-                    class="css-dcq909"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-f5h6sg"
+                      class="emotion-9"
                     >
                       <span
-                        class="css-7w8u7j"
+                        class="emotion-32"
                       >
                         Work
                       </span>
                     </div>
                     <div
-                      class="css-vthntz"
+                      class="emotion-12"
                     >
                       <div
-                        class="css-vurnku"
+                        class="emotion-2"
                       >
                         <div
-                          class="css-1jxn1yx"
+                          class="emotion-24"
                         >
                           1
                         </div>
@@ -2937,41 +4535,41 @@ exports[`Tree search snapshot 1`] = `
           </div>
         </div>
         <div
-          class="css-vurnku"
+          class="emotion-2"
         >
           <div
-            class="css-15ej8gm"
+            class="emotion-26"
           >
             <div
-              class="css-tizfsr"
+              class="emotion-5"
             >
               <div
-                class="css-162ewbd"
+                class="emotion-6"
               >
                 <a
-                  class="css-p1dwhj"
+                  class="emotion-18"
                   href="/inbox/amazon"
                 >
                   <div
-                    class="css-dcq909"
+                    class="emotion-8"
                   >
                     <div
-                      class="css-f5h6sg"
+                      class="emotion-9"
                     >
                       <span
-                        class="css-7w8u7j"
+                        class="emotion-32"
                       >
                         Amazon
                       </span>
                     </div>
                     <div
-                      class="css-vthntz"
+                      class="emotion-12"
                     >
                       <div
-                        class="css-vurnku"
+                        class="emotion-2"
                       >
                         <div
-                          class="css-1jxn1yx"
+                          class="emotion-24"
                         >
                           1
                         </div>
@@ -2985,29 +4583,29 @@ exports[`Tree search snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-2"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-4"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-5"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-6"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-18"
                 href="/inbox/sent"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-8"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-9"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-10"
                     >
                       <svg
                         aria-hidden="true"
@@ -3026,13 +4624,13 @@ exports[`Tree search snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-32"
                     >
                       Sent
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-12"
                   />
                 </div>
               </a>
@@ -3041,29 +4639,29 @@ exports[`Tree search snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-2"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-4"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-5"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-6"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-18"
                 href="/inbox/flagged"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-8"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-9"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-10"
                     >
                       <svg
                         aria-hidden="true"
@@ -3082,19 +4680,19 @@ exports[`Tree search snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-32"
                     >
                       Flagged
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-12"
                   >
                     <div
-                      class="css-vurnku"
+                      class="emotion-2"
                     >
                       <div
-                        class="css-1jxn1yx"
+                        class="emotion-24"
                       >
                         3
                       </div>
@@ -3107,29 +4705,29 @@ exports[`Tree search snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-2"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-4"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-5"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-6"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-18"
                 href="/inbox/starred"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-8"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-9"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-10"
                     >
                       <svg
                         aria-hidden="true"
@@ -3148,13 +4746,13 @@ exports[`Tree search snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-32"
                     >
                       Starred
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-12"
                   />
                 </div>
               </a>
@@ -3163,29 +4761,29 @@ exports[`Tree search snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-2"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-4"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-5"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-6"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-18"
                 href="/inbox/drafts"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-8"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-9"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-10"
                     >
                       <svg
                         aria-hidden="true"
@@ -3204,13 +4802,13 @@ exports[`Tree search snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-32"
                     >
                       Drafts
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-12"
                   />
                 </div>
               </a>
@@ -3219,29 +4817,29 @@ exports[`Tree search snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-2"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-4"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-5"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-6"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-18"
                 href="/inbox/tagged"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-8"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-9"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-10"
                     >
                       <svg
                         aria-hidden="true"
@@ -3260,13 +4858,13 @@ exports[`Tree search snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-32"
                     >
                       Tagged
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-12"
                   />
                 </div>
               </a>
@@ -3275,29 +4873,29 @@ exports[`Tree search snapshot 1`] = `
         </div>
       </div>
       <div
-        class="css-vurnku"
+        class="emotion-2"
       >
         <div
-          class="css-1em5sge"
+          class="emotion-4"
         >
           <div
-            class="css-tizfsr"
+            class="emotion-5"
           >
             <div
-              class="css-162ewbd"
+              class="emotion-6"
             >
               <a
-                class="css-p1dwhj"
+                class="emotion-18"
                 href="/inbox/trash"
               >
                 <div
-                  class="css-dcq909"
+                  class="emotion-8"
                 >
                   <div
-                    class="css-f5h6sg"
+                    class="emotion-9"
                   >
                     <div
-                      class="css-1ve1p3p"
+                      class="emotion-10"
                     >
                       <svg
                         aria-hidden="true"
@@ -3316,13 +4914,13 @@ exports[`Tree search snapshot 1`] = `
                       </svg>
                     </div>
                     <span
-                      class="css-7w8u7j"
+                      class="emotion-32"
                     >
                       Trash
                     </span>
                   </div>
                   <div
-                    class="css-vthntz"
+                    class="emotion-12"
                   />
                 </div>
               </a>

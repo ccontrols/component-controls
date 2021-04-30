@@ -2,18 +2,60 @@
 
 exports[`EditPage overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1h9kuou"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  line-height: 1.25;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+<div
+    class="emotion-0"
   >
     <a
       aria-label="edit this page"
-      class="css-1t54e2w"
+      class="emotion-1"
       href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
       rel="noopener noreferrer"
       target="_blank"
     >
       <div
-        class="css-f5h6sg"
+        class="emotion-2"
       >
         <svg
           aria-hidden="true"
@@ -31,7 +73,7 @@ exports[`EditPage overview snapshot 1`] = `
           />
         </svg>
         <span
-          class="css-6amu4j"
+          class="emotion-3"
         >
           Edit this page
         </span>

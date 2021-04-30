@@ -42,6 +42,7 @@
   },
   "devDependencies": {
     "@component-controls/cc-cli": "^3.8.3",
+    "@emotion/jest": "^11.3.0",
     "@types/react": "^16.9.34",
     "react": "^17.0.1",
     "theme-ui": "^0.6.0-alpha.7",
@@ -70,6 +71,9 @@
     ],
     "roots": [
       "./src"
+    ],
+    "snapshotSerializers": [
+      "@emotion/jest/serializer"
     ]
   },
   "gitHead": "e30d62f101e104711a16261fce04785d58cac1eb"

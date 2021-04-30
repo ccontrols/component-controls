@@ -5,16 +5,428 @@ exports[`PropsTable controls snapshot 1`] = `
   <h2>
     Hello, my name is Mark, and I am 19 years old.
   </h2>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3:hover a {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-6 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-6 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 0;
+  margin-left: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-8 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-8 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-16 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-17 p {
+  margin: 0;
+}
+
+.emotion-17 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-17 a {
+  word-break: break-word;
+}
+
+.emotion-17 th {
+  padding-top: 32px;
+}
+
+.emotion-18 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-19 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-20 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-21 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-22 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-32 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-32 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-33 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-34 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+.emotion-35 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-weight: 700;
+  text-overflow: ellipsis;
+}
+
+.emotion-37 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-38 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #69768C;
+  letter-spacing: 0.10em;
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+.emotion-39 {
+  font-family: Menlo,monospace;
+  overflow-x: auto;
+  background-color: #e6e6e6;
+}
+
+.emotion-39 code {
+  color: inherit;
+}
+
+.emotion-41 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 400px;
+  white-space: pre-wrap;
+}
+
+.emotion-44 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 300px;
+}
+
+.emotion-45 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+  padding: 4px;
+}
+
+<div
+    class="emotion-0"
     data-testid="propstable"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id=""
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       />
     </div>
     <div
@@ -24,61 +436,61 @@ exports[`PropsTable controls snapshot 1`] = `
     >
       <div>
         <div
-          class="css-1d6wxci"
+          class="emotion-3"
         >
           <div>
             <div
-              class="css-15owl46"
+              class="emotion-4"
             >
               <div
-                class="css-x60p33"
+                class="emotion-5"
               >
                 <div
-                  class="css-1vga9oy"
+                  class="emotion-6"
                 >
                   <button
                     aria-label="copy table as csv"
-                    class="css-1tf4h46"
+                    class="emotion-7"
                   >
                     copy table
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-8"
                 >
                   <button
                     aria-label="copy control values"
-                    class="css-1tf4h46"
+                    class="emotion-7"
                   >
                     copy values
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-8"
                 >
                   <button
                     aria-label="generate random values for the component controls"
-                    class="css-1tf4h46"
+                    class="emotion-7"
                   >
                     randomize
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-8"
                 >
                   <button
                     aria-label="copy the control values as url search params"
-                    class="css-1tf4h46"
+                    class="emotion-7"
                   >
                     share
                   </button>
                 </div>
                 <div
-                  class="css-q7w4rh"
+                  class="emotion-8"
                 >
                   <button
                     aria-label="reset control values to their initial value"
-                    class="css-1tf4h46"
+                    class="emotion-7"
                   >
                     reset
                   </button>
@@ -86,78 +498,78 @@ exports[`PropsTable controls snapshot 1`] = `
               </div>
             </div>
             <div
-              class="css-eqxzio"
+              class="emotion-16"
             >
               <table
-                class="css-1yvbyiz-BasePropsTable"
+                class="emotion-17"
                 role="table"
               >
                 <thead
-                  class="css-14kw1rx"
+                  class="emotion-18"
                 >
                   <tr
-                    class="css-vurnku"
+                    class="emotion-19"
                     role="row"
                   >
                     <th
-                      class="css-n59tc9"
+                      class="emotion-20"
                       colspan="1"
                       role="columnheader"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-wwqljn"
+                        class="emotion-21"
                       >
                         <div
-                          class="css-206mi5"
+                          class="emotion-22"
                         >
                           Name
                         </div>
                       </div>
                     </th>
                     <th
-                      class="css-n59tc9"
+                      class="emotion-20"
                       colspan="1"
                       role="columnheader"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-wwqljn"
+                        class="emotion-21"
                       >
                         <div
-                          class="css-206mi5"
+                          class="emotion-22"
                         >
                           Description
                         </div>
                       </div>
                     </th>
                     <th
-                      class="css-n59tc9"
+                      class="emotion-20"
                       colspan="1"
                       role="columnheader"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-wwqljn"
+                        class="emotion-21"
                       >
                         <div
-                          class="css-206mi5"
+                          class="emotion-22"
                         >
                           Default
                         </div>
                       </div>
                     </th>
                     <th
-                      class="css-n59tc9"
+                      class="emotion-20"
                       colspan="1"
                       role="columnheader"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-wwqljn"
+                        class="emotion-21"
                       >
                         <div
-                          class="css-206mi5"
+                          class="emotion-22"
                         >
                           Controls
                         </div>
@@ -166,40 +578,40 @@ exports[`PropsTable controls snapshot 1`] = `
                   </tr>
                 </thead>
                 <tbody
-                  class="css-tuhk50"
+                  class="emotion-32"
                   role="rowgroup"
                 >
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-33"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-34"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-35"
                       >
                         Name
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-34"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-37"
                       >
                         <p>
                           a name property
                         </p>
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-38"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-39"
                           >
                             string
                           </pre>
@@ -207,31 +619,31 @@ exports[`PropsTable controls snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-34"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-41"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-39"
                         >
                           -
                         </pre>
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-34"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ye8g6w"
+                        class="emotion-44"
                       >
                         <input
                           aria-label="enter a value for name"
-                          class="css-1onaisy"
+                          class="emotion-45"
                           id="name"
                           name="name"
                           value="Mark"
@@ -240,36 +652,36 @@ exports[`PropsTable controls snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-33"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-34"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-35"
                       >
                         Age
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-34"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-37"
                       >
                         <p>
                           age is a number property
                         </p>
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-38"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-39"
                           >
                             number
                           </pre>
@@ -277,31 +689,31 @@ exports[`PropsTable controls snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-34"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-41"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-39"
                         >
                           -
                         </pre>
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-34"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ye8g6w"
+                        class="emotion-44"
                       >
                         <input
                           aria-label="enter a numeric value"
-                          class="css-1onaisy"
+                          class="emotion-45"
                           name="age"
                           type="number"
                           value="19"
@@ -322,20 +734,432 @@ exports[`PropsTable controls snapshot 1`] = `
 
 exports[`PropsTable customTitle snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -22px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8:hover a {
+  visibility: visible;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-9 .react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.emotion-9 .react-tabs__tab-list {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.emotion-9 .react-tabs__tab {
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  border-bottom: none;
+  bottom: -4px;
+  position: relative;
+  list-style: none;
+  padding: 4px 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+  color: #69768C;
+}
+
+.emotion-9 .react-tabs__tab a {
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.emotion-9 .react-tabs__tab:focus {
+  box-shadow: 0 0 5px hsl(208, 99%, 50%);
+  border-color: hsl(208, 99%, 50%);
+  outline: none;
+}
+
+.emotion-9 .react-tabs__tab:focus:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: #fff;
+}
+
+.emotion-9 .react-tabs__tab--selected {
+  border-bottom: 3px solid #5c6ac4;
+  color: #5c6ac4;
+}
+
+.emotion-9 .react-tabs__tab--disabled {
+  color: #69768C;
+  cursor: default;
+}
+
+.emotion-9 .react-tabs__tab-panel {
+  display: none;
+}
+
+.emotion-9 .react-tabs__tab-panel--selected {
+  display: block;
+}
+
+.emotion-9 .react-tabs__tab {
+  font-size: 14px;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-12 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-12 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-15 p {
+  margin: 0;
+}
+
+.emotion-15 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-15 a {
+  word-break: break-word;
+}
+
+.emotion-15 th {
+  padding-top: 32px;
+}
+
+.emotion-16 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-18 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-19 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-20 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-27 tr:last-of-type {
+  border-bottom: 0;
+}
+
+<div
+    class="emotion-0"
     data-testid="propstable"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id="custom-props-table-title"
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       >
         <a
           aria-label="navigate to Custom Props Table Title section"
-          class="css-walqom-LinkHeading"
+          class="emotion-3"
           data-id="custom-props-table-title"
           data-level="3"
           data-title="Custom Props Table Title"
@@ -358,18 +1182,18 @@ exports[`PropsTable customTitle snapshot 1`] = `
           </svg>
         </a>
         <h3
-          class="css-16ist9v-BlockContainer"
+          class="emotion-4"
         >
           <div
-            class="css-tmrrvx"
+            class="emotion-5"
           >
             Custom Props Table Title
             <a
               aria-expanded="true"
-              class="css-1t48u3b-BlockContainer"
+              class="emotion-6"
             >
               <span
-                class="css-1ibxxpj"
+                class="emotion-7"
               >
                 <svg
                   aria-hidden="true"
@@ -399,10 +1223,10 @@ exports[`PropsTable customTitle snapshot 1`] = `
     >
       <div>
         <div
-          class="css-1d6wxci"
+          class="emotion-8"
         >
           <div
-            class="css-nm5f2c-Tabs"
+            class="emotion-9"
           >
             <div
               class="react-tabs"
@@ -442,17 +1266,17 @@ exports[`PropsTable customTitle snapshot 1`] = `
               >
                 <div>
                   <div
-                    class="css-15owl46"
+                    class="emotion-10"
                   >
                     <div
-                      class="css-x60p33"
+                      class="emotion-11"
                     >
                       <div
-                        class="css-1vga9oy"
+                        class="emotion-12"
                       >
                         <button
                           aria-label="copy table as csv"
-                          class="css-1tf4h46"
+                          class="emotion-13"
                         >
                           copy table
                         </button>
@@ -460,62 +1284,62 @@ exports[`PropsTable customTitle snapshot 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-eqxzio"
+                    class="emotion-14"
                   >
                     <table
-                      class="css-1yvbyiz-BasePropsTable"
+                      class="emotion-15"
                       role="table"
                     >
                       <thead
-                        class="css-14kw1rx"
+                        class="emotion-16"
                       >
                         <tr
-                          class="css-vurnku"
+                          class="emotion-17"
                           role="row"
                         >
                           <th
-                            class="css-n59tc9"
+                            class="emotion-18"
                             colspan="1"
                             role="columnheader"
                             style="width: 150px;"
                           >
                             <div
-                              class="css-wwqljn"
+                              class="emotion-19"
                             >
                               <div
-                                class="css-206mi5"
+                                class="emotion-20"
                               >
                                 Name
                               </div>
                             </div>
                           </th>
                           <th
-                            class="css-n59tc9"
+                            class="emotion-18"
                             colspan="1"
                             role="columnheader"
                             style="width: 150px;"
                           >
                             <div
-                              class="css-wwqljn"
+                              class="emotion-19"
                             >
                               <div
-                                class="css-206mi5"
+                                class="emotion-20"
                               >
                                 Description
                               </div>
                             </div>
                           </th>
                           <th
-                            class="css-n59tc9"
+                            class="emotion-18"
                             colspan="1"
                             role="columnheader"
                             style="width: 150px;"
                           >
                             <div
-                              class="css-wwqljn"
+                              class="emotion-19"
                             >
                               <div
-                                class="css-206mi5"
+                                class="emotion-20"
                               >
                                 Default
                               </div>
@@ -524,7 +1348,7 @@ exports[`PropsTable customTitle snapshot 1`] = `
                         </tr>
                       </thead>
                       <tbody
-                        class="css-tuhk50"
+                        class="emotion-27"
                         role="rowgroup"
                       />
                     </table>
@@ -548,16 +1372,383 @@ exports[`PropsTable customTitle snapshot 1`] = `
 
 exports[`PropsTable extraColumns snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3:hover a {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-6 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-6 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-9 p {
+  margin: 0;
+}
+
+.emotion-9 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-9 a {
+  word-break: break-word;
+}
+
+.emotion-9 th {
+  padding-top: 32px;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-24 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-24 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-weight: 700;
+  text-overflow: ellipsis;
+}
+
+.emotion-29 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-30 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #69768C;
+  letter-spacing: 0.10em;
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+.emotion-31 {
+  font-family: Menlo,monospace;
+  overflow-x: auto;
+  background-color: #e6e6e6;
+}
+
+.emotion-31 code {
+  color: inherit;
+}
+
+.emotion-33 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 400px;
+  white-space: pre-wrap;
+}
+
+.emotion-87 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(128,128,128,0.1);
+  border: 1px solid grey;
+  margin-right: 4px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  white-space: nowrap;
+}
+
+.emotion-224 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(255,0,0,0.05);
+  border: 1px solid red;
+}
+
+<div
+    class="emotion-0"
     data-testid="propstable"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id=""
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       />
     </div>
     <div
@@ -567,21 +1758,21 @@ exports[`PropsTable extraColumns snapshot 1`] = `
     >
       <div>
         <div
-          class="css-1d6wxci"
+          class="emotion-3"
         >
           <div>
             <div
-              class="css-15owl46"
+              class="emotion-4"
             >
               <div
-                class="css-x60p33"
+                class="emotion-5"
               >
                 <div
-                  class="css-1vga9oy"
+                  class="emotion-6"
                 >
                   <button
                     aria-label="copy table as csv"
-                    class="css-1tf4h46"
+                    class="emotion-7"
                   >
                     copy table
                   </button>
@@ -589,78 +1780,78 @@ exports[`PropsTable extraColumns snapshot 1`] = `
               </div>
             </div>
             <div
-              class="css-eqxzio"
+              class="emotion-8"
             >
               <table
-                class="css-1yvbyiz-BasePropsTable"
+                class="emotion-9"
                 role="table"
               >
                 <thead
-                  class="css-14kw1rx"
+                  class="emotion-10"
                 >
                   <tr
-                    class="css-vurnku"
+                    class="emotion-11"
                     role="row"
                   >
                     <th
-                      class="css-n59tc9"
+                      class="emotion-12"
                       colspan="1"
                       role="columnheader"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-wwqljn"
+                        class="emotion-13"
                       >
                         <div
-                          class="css-206mi5"
+                          class="emotion-14"
                         >
                           Name
                         </div>
                       </div>
                     </th>
                     <th
-                      class="css-n59tc9"
+                      class="emotion-12"
                       colspan="1"
                       role="columnheader"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-wwqljn"
+                        class="emotion-13"
                       >
                         <div
-                          class="css-206mi5"
+                          class="emotion-14"
                         >
                           Description
                         </div>
                       </div>
                     </th>
                     <th
-                      class="css-n59tc9"
+                      class="emotion-12"
                       colspan="1"
                       role="columnheader"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-wwqljn"
+                        class="emotion-13"
                       >
                         <div
-                          class="css-206mi5"
+                          class="emotion-14"
                         >
                           Default
                         </div>
                       </div>
                     </th>
                     <th
-                      class="css-n59tc9"
+                      class="emotion-12"
                       colspan="1"
                       role="columnheader"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-wwqljn"
+                        class="emotion-13"
                       >
                         <div
-                          class="css-206mi5"
+                          class="emotion-14"
                         >
                           Custom
                         </div>
@@ -669,37 +1860,37 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                   </tr>
                 </thead>
                 <tbody
-                  class="css-tuhk50"
+                  class="emotion-24"
                   role="rowgroup"
                 >
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-25"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-27"
                       >
                         optionalArray
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-29"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-30"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-31"
                           >
                             any[]
                           </pre>
@@ -707,22 +1898,22 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-33"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-31"
                         >
                           -
                         </pre>
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
@@ -730,33 +1921,33 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-25"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-27"
                       >
                         optionalArrayOf
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-29"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-30"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-31"
                           >
                             number[]
                           </pre>
@@ -764,22 +1955,22 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-33"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-31"
                         >
                           -
                         </pre>
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
@@ -787,33 +1978,33 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-25"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-27"
                       >
                         optionalBool
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-29"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-30"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-31"
                           >
                             boolean
                           </pre>
@@ -821,22 +2012,22 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-33"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-31"
                         >
                           -
                         </pre>
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
@@ -844,33 +2035,33 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-25"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-27"
                       >
                         optionalElement
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-29"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-30"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-31"
                           >
                             any
                           </pre>
@@ -878,22 +2069,22 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-33"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-31"
                         >
                           -
                         </pre>
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
@@ -901,33 +2092,33 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-25"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-27"
                       >
                         optionalElementType
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-29"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-30"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-31"
                           >
                             Element
                           </pre>
@@ -935,22 +2126,22 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-33"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-31"
                         >
                           -
                         </pre>
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
@@ -958,48 +2149,48 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-25"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-27"
                       >
                         optionalEnum
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-29"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-30"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-31"
                           >
                             <span
-                              class="css-bgm36v-Tag"
+                              class="emotion-87"
                             >
                               <span
-                                class="css-vurnku"
+                                class="emotion-11"
                               >
                                 News
                               </span>
                             </span>
                             <span
-                              class="css-bgm36v-Tag"
+                              class="emotion-87"
                             >
                               <span
-                                class="css-vurnku"
+                                class="emotion-11"
                               >
                                 Photos
                               </span>
@@ -1009,22 +2200,22 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-33"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-31"
                         >
                           -
                         </pre>
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
@@ -1032,33 +2223,33 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-25"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-27"
                       >
                         optionalFunc
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-29"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-30"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-31"
                           >
                             (args: any) =&gt; any
                           </pre>
@@ -1066,22 +2257,22 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-33"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-31"
                         >
                           -
                         </pre>
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
@@ -1089,33 +2280,33 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-25"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-27"
                       >
                         optionalMessage
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-29"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-30"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-31"
                           >
                             Message
                           </pre>
@@ -1123,22 +2314,22 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-33"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-31"
                         >
                           -
                         </pre>
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
@@ -1146,33 +2337,33 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-25"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-27"
                       >
                         optionalNode
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-29"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-30"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-31"
                           >
                             any
                           </pre>
@@ -1180,22 +2371,22 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-33"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-31"
                         >
                           -
                         </pre>
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
@@ -1203,33 +2394,33 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-25"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-27"
                       >
                         optionalNumber
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-29"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-30"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-31"
                           >
                             number
                           </pre>
@@ -1237,22 +2428,22 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-33"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-31"
                         >
                           21
                         </pre>
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
@@ -1260,33 +2451,33 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-25"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-27"
                       >
                         optionalObject
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-29"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-30"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-31"
                           >
                             object
                           </pre>
@@ -1294,22 +2485,22 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-33"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-31"
                         >
                           -
                         </pre>
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
@@ -1317,33 +2508,33 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-25"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-27"
                       >
                         optionalObjectOf
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-29"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-30"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-31"
                           >
                             { [key: string]: number; }
                           </pre>
@@ -1351,22 +2542,22 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-33"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-31"
                         >
                           -
                         </pre>
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
@@ -1374,33 +2565,33 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-25"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-27"
                       >
                         optionalObjectWithShape
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-29"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-30"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-31"
                           >
                             { optionalProperty?: string; requiredProperty: number; }
                           </pre>
@@ -1408,22 +2599,22 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-33"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-31"
                         >
                           -
                         </pre>
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
@@ -1431,33 +2622,33 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-25"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-27"
                       >
                         optionalObjectWithStrictShape
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-29"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-30"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-31"
                           >
                             { optionalProperty?: string; requiredProperty: number; }
                           </pre>
@@ -1465,22 +2656,22 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-33"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-31"
                         >
                           -
                         </pre>
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
@@ -1488,33 +2679,33 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-25"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-27"
                       >
                         optionalString
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-29"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-30"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-31"
                           >
                             string
                           </pre>
@@ -1522,22 +2713,22 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-33"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-31"
                         >
                           -
                         </pre>
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
@@ -1545,33 +2736,33 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-25"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-27"
                       >
                         optionalSymbol
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-29"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-30"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-31"
                           >
                             symbol
                           </pre>
@@ -1579,22 +2770,22 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-33"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-31"
                         >
                           -
                         </pre>
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
@@ -1602,57 +2793,57 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-25"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-27"
                       >
                         optionalUnion
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-29"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-30"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-31"
                           >
                             <span
-                              class="css-bgm36v-Tag"
+                              class="emotion-87"
                             >
                               <span
-                                class="css-vurnku"
+                                class="emotion-11"
                               >
                                 string
                               </span>
                             </span>
                             <span
-                              class="css-bgm36v-Tag"
+                              class="emotion-87"
                             >
                               <span
-                                class="css-vurnku"
+                                class="emotion-11"
                               >
                                 number
                               </span>
                             </span>
                             <span
-                              class="css-bgm36v-Tag"
+                              class="emotion-87"
                             >
                               <span
-                                class="css-vurnku"
+                                class="emotion-11"
                               >
                                 Message
                               </span>
@@ -1662,22 +2853,22 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-33"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-31"
                         >
                           -
                         </pre>
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
@@ -1685,22 +2876,22 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-25"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-pm3wg4-Tag"
+                        class="emotion-224"
                       >
                         <span
-                          class="css-vurnku"
+                          class="emotion-11"
                         >
                           <span
-                            class="css-1fo6vjb"
+                            class="emotion-27"
                           >
                             requiredAny
                           </span>
@@ -1708,18 +2899,18 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-29"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-30"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-31"
                           >
                             any
                           </pre>
@@ -1727,22 +2918,22 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-33"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-31"
                         >
                           -
                         </pre>
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
@@ -1750,22 +2941,22 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-25"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-pm3wg4-Tag"
+                        class="emotion-224"
                       >
                         <span
-                          class="css-vurnku"
+                          class="emotion-11"
                         >
                           <span
-                            class="css-1fo6vjb"
+                            class="emotion-27"
                           >
                             requiredFunc
                           </span>
@@ -1773,18 +2964,18 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-29"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-30"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-31"
                           >
                             (prop: any) =&gt; any
                           </pre>
@@ -1792,22 +2983,22 @@ exports[`PropsTable extraColumns snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-33"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-31"
                         >
                           -
                         </pre>
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-26"
                       role="cell"
                       style="width: 150px;"
                     >
@@ -1827,20 +3018,398 @@ exports[`PropsTable extraColumns snapshot 1`] = `
 
 exports[`PropsTable notCollapsible snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -20px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5:hover a {
+  visibility: visible;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-6 .react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.emotion-6 .react-tabs__tab-list {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.emotion-6 .react-tabs__tab {
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  border-bottom: none;
+  bottom: -4px;
+  position: relative;
+  list-style: none;
+  padding: 4px 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+  color: #69768C;
+}
+
+.emotion-6 .react-tabs__tab a {
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.emotion-6 .react-tabs__tab:focus {
+  box-shadow: 0 0 5px hsl(208, 99%, 50%);
+  border-color: hsl(208, 99%, 50%);
+  outline: none;
+}
+
+.emotion-6 .react-tabs__tab:focus:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: #fff;
+}
+
+.emotion-6 .react-tabs__tab--selected {
+  border-bottom: 3px solid #5c6ac4;
+  color: #5c6ac4;
+}
+
+.emotion-6 .react-tabs__tab--disabled {
+  color: #69768C;
+  cursor: default;
+}
+
+.emotion-6 .react-tabs__tab-panel {
+  display: none;
+}
+
+.emotion-6 .react-tabs__tab-panel--selected {
+  display: block;
+}
+
+.emotion-6 .react-tabs__tab {
+  font-size: 14px;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-9 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-9 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-12 p {
+  margin: 0;
+}
+
+.emotion-12 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-12 a {
+  word-break: break-word;
+}
+
+.emotion-12 th {
+  padding-top: 32px;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-16 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-24 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-24 tr:last-of-type {
+  border-bottom: 0;
+}
+
+<div
+    class="emotion-0"
     data-testid="propstable"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id="arrowbutton"
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       >
         <a
           aria-label="navigate to ArrowButton section"
-          class="css-1ptrway-LinkHeading"
+          class="emotion-3"
           data-id="arrowbutton"
           data-level="4"
           data-title="ArrowButton"
@@ -1863,17 +3432,17 @@ exports[`PropsTable notCollapsible snapshot 1`] = `
           </svg>
         </a>
         <h4
-          class="css-vsfm4-BlockContainer"
+          class="emotion-4"
         >
           ArrowButton
         </h4>
       </div>
     </div>
     <div
-      class="css-1d6wxci"
+      class="emotion-5"
     >
       <div
-        class="css-nm5f2c-Tabs"
+        class="emotion-6"
       >
         <div
           class="react-tabs"
@@ -1913,17 +3482,17 @@ exports[`PropsTable notCollapsible snapshot 1`] = `
           >
             <div>
               <div
-                class="css-15owl46"
+                class="emotion-7"
               >
                 <div
-                  class="css-x60p33"
+                  class="emotion-8"
                 >
                   <div
-                    class="css-1vga9oy"
+                    class="emotion-9"
                   >
                     <button
                       aria-label="copy table as csv"
-                      class="css-1tf4h46"
+                      class="emotion-10"
                     >
                       copy table
                     </button>
@@ -1931,62 +3500,62 @@ exports[`PropsTable notCollapsible snapshot 1`] = `
                 </div>
               </div>
               <div
-                class="css-eqxzio"
+                class="emotion-11"
               >
                 <table
-                  class="css-1yvbyiz-BasePropsTable"
+                  class="emotion-12"
                   role="table"
                 >
                   <thead
-                    class="css-14kw1rx"
+                    class="emotion-13"
                   >
                     <tr
-                      class="css-vurnku"
+                      class="emotion-14"
                       role="row"
                     >
                       <th
-                        class="css-n59tc9"
+                        class="emotion-15"
                         colspan="1"
                         role="columnheader"
                         style="width: 150px;"
                       >
                         <div
-                          class="css-wwqljn"
+                          class="emotion-16"
                         >
                           <div
-                            class="css-206mi5"
+                            class="emotion-17"
                           >
                             Name
                           </div>
                         </div>
                       </th>
                       <th
-                        class="css-n59tc9"
+                        class="emotion-15"
                         colspan="1"
                         role="columnheader"
                         style="width: 150px;"
                       >
                         <div
-                          class="css-wwqljn"
+                          class="emotion-16"
                         >
                           <div
-                            class="css-206mi5"
+                            class="emotion-17"
                           >
                             Description
                           </div>
                         </div>
                       </th>
                       <th
-                        class="css-n59tc9"
+                        class="emotion-15"
                         colspan="1"
                         role="columnheader"
                         style="width: 150px;"
                       >
                         <div
-                          class="css-wwqljn"
+                          class="emotion-16"
                         >
                           <div
-                            class="css-206mi5"
+                            class="emotion-17"
                           >
                             Default
                           </div>
@@ -1995,7 +3564,7 @@ exports[`PropsTable notCollapsible snapshot 1`] = `
                     </tr>
                   </thead>
                   <tbody
-                    class="css-tuhk50"
+                    class="emotion-24"
                     role="rowgroup"
                   />
                 </table>
@@ -2017,16 +3586,383 @@ exports[`PropsTable notCollapsible snapshot 1`] = `
 
 exports[`PropsTable overview snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3:hover a {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-6 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-6 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-9 p {
+  margin: 0;
+}
+
+.emotion-9 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-9 a {
+  word-break: break-word;
+}
+
+.emotion-9 th {
+  padding-top: 32px;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-21 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-21 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-22 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-23 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+.emotion-24 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-weight: 700;
+  text-overflow: ellipsis;
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #69768C;
+  letter-spacing: 0.10em;
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+.emotion-28 {
+  font-family: Menlo,monospace;
+  overflow-x: auto;
+  background-color: #e6e6e6;
+}
+
+.emotion-28 code {
+  color: inherit;
+}
+
+.emotion-30 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 400px;
+  white-space: pre-wrap;
+}
+
+.emotion-79 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(128,128,128,0.1);
+  border: 1px solid grey;
+  margin-right: 4px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  white-space: nowrap;
+}
+
+.emotion-204 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(255,0,0,0.05);
+  border: 1px solid red;
+}
+
+<div
+    class="emotion-0"
     data-testid="propstable"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id=""
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       />
     </div>
     <div
@@ -2036,21 +3972,21 @@ exports[`PropsTable overview snapshot 1`] = `
     >
       <div>
         <div
-          class="css-1d6wxci"
+          class="emotion-3"
         >
           <div>
             <div
-              class="css-15owl46"
+              class="emotion-4"
             >
               <div
-                class="css-x60p33"
+                class="emotion-5"
               >
                 <div
-                  class="css-1vga9oy"
+                  class="emotion-6"
                 >
                   <button
                     aria-label="copy table as csv"
-                    class="css-1tf4h46"
+                    class="emotion-7"
                   >
                     copy table
                   </button>
@@ -2058,62 +3994,62 @@ exports[`PropsTable overview snapshot 1`] = `
               </div>
             </div>
             <div
-              class="css-eqxzio"
+              class="emotion-8"
             >
               <table
-                class="css-1yvbyiz-BasePropsTable"
+                class="emotion-9"
                 role="table"
               >
                 <thead
-                  class="css-14kw1rx"
+                  class="emotion-10"
                 >
                   <tr
-                    class="css-vurnku"
+                    class="emotion-11"
                     role="row"
                   >
                     <th
-                      class="css-n59tc9"
+                      class="emotion-12"
                       colspan="1"
                       role="columnheader"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-wwqljn"
+                        class="emotion-13"
                       >
                         <div
-                          class="css-206mi5"
+                          class="emotion-14"
                         >
                           Name
                         </div>
                       </div>
                     </th>
                     <th
-                      class="css-n59tc9"
+                      class="emotion-12"
                       colspan="1"
                       role="columnheader"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-wwqljn"
+                        class="emotion-13"
                       >
                         <div
-                          class="css-206mi5"
+                          class="emotion-14"
                         >
                           Description
                         </div>
                       </div>
                     </th>
                     <th
-                      class="css-n59tc9"
+                      class="emotion-12"
                       colspan="1"
                       role="columnheader"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-wwqljn"
+                        class="emotion-13"
                       >
                         <div
-                          class="css-206mi5"
+                          class="emotion-14"
                         >
                           Default
                         </div>
@@ -2122,37 +4058,37 @@ exports[`PropsTable overview snapshot 1`] = `
                   </tr>
                 </thead>
                 <tbody
-                  class="css-tuhk50"
+                  class="emotion-21"
                   role="rowgroup"
                 >
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-22"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-24"
                       >
                         optionalArray
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-26"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-27"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-28"
                           >
                             any[]
                           </pre>
@@ -2160,15 +4096,15 @@ exports[`PropsTable overview snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-30"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-28"
                         >
                           -
                         </pre>
@@ -2176,33 +4112,33 @@ exports[`PropsTable overview snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-22"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-24"
                       >
                         optionalArrayOf
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-26"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-27"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-28"
                           >
                             number[]
                           </pre>
@@ -2210,15 +4146,15 @@ exports[`PropsTable overview snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-30"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-28"
                         >
                           -
                         </pre>
@@ -2226,33 +4162,33 @@ exports[`PropsTable overview snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-22"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-24"
                       >
                         optionalBool
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-26"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-27"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-28"
                           >
                             boolean
                           </pre>
@@ -2260,15 +4196,15 @@ exports[`PropsTable overview snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-30"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-28"
                         >
                           -
                         </pre>
@@ -2276,33 +4212,33 @@ exports[`PropsTable overview snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-22"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-24"
                       >
                         optionalElement
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-26"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-27"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-28"
                           >
                             any
                           </pre>
@@ -2310,15 +4246,15 @@ exports[`PropsTable overview snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-30"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-28"
                         >
                           -
                         </pre>
@@ -2326,33 +4262,33 @@ exports[`PropsTable overview snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-22"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-24"
                       >
                         optionalElementType
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-26"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-27"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-28"
                           >
                             Element
                           </pre>
@@ -2360,15 +4296,15 @@ exports[`PropsTable overview snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-30"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-28"
                         >
                           -
                         </pre>
@@ -2376,48 +4312,48 @@ exports[`PropsTable overview snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-22"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-24"
                       >
                         optionalEnum
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-26"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-27"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-28"
                           >
                             <span
-                              class="css-bgm36v-Tag"
+                              class="emotion-79"
                             >
                               <span
-                                class="css-vurnku"
+                                class="emotion-11"
                               >
                                 News
                               </span>
                             </span>
                             <span
-                              class="css-bgm36v-Tag"
+                              class="emotion-79"
                             >
                               <span
-                                class="css-vurnku"
+                                class="emotion-11"
                               >
                                 Photos
                               </span>
@@ -2427,15 +4363,15 @@ exports[`PropsTable overview snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-30"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-28"
                         >
                           -
                         </pre>
@@ -2443,33 +4379,33 @@ exports[`PropsTable overview snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-22"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-24"
                       >
                         optionalFunc
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-26"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-27"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-28"
                           >
                             (args: any) =&gt; any
                           </pre>
@@ -2477,15 +4413,15 @@ exports[`PropsTable overview snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-30"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-28"
                         >
                           -
                         </pre>
@@ -2493,33 +4429,33 @@ exports[`PropsTable overview snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-22"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-24"
                       >
                         optionalMessage
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-26"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-27"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-28"
                           >
                             Message
                           </pre>
@@ -2527,15 +4463,15 @@ exports[`PropsTable overview snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-30"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-28"
                         >
                           -
                         </pre>
@@ -2543,33 +4479,33 @@ exports[`PropsTable overview snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-22"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-24"
                       >
                         optionalNode
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-26"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-27"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-28"
                           >
                             any
                           </pre>
@@ -2577,15 +4513,15 @@ exports[`PropsTable overview snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-30"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-28"
                         >
                           -
                         </pre>
@@ -2593,33 +4529,33 @@ exports[`PropsTable overview snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-22"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-24"
                       >
                         optionalNumber
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-26"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-27"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-28"
                           >
                             number
                           </pre>
@@ -2627,15 +4563,15 @@ exports[`PropsTable overview snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-30"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-28"
                         >
                           21
                         </pre>
@@ -2643,33 +4579,33 @@ exports[`PropsTable overview snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-22"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-24"
                       >
                         optionalObject
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-26"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-27"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-28"
                           >
                             object
                           </pre>
@@ -2677,15 +4613,15 @@ exports[`PropsTable overview snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-30"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-28"
                         >
                           -
                         </pre>
@@ -2693,33 +4629,33 @@ exports[`PropsTable overview snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-22"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-24"
                       >
                         optionalObjectOf
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-26"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-27"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-28"
                           >
                             { [key: string]: number; }
                           </pre>
@@ -2727,15 +4663,15 @@ exports[`PropsTable overview snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-30"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-28"
                         >
                           -
                         </pre>
@@ -2743,33 +4679,33 @@ exports[`PropsTable overview snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-22"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-24"
                       >
                         optionalObjectWithShape
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-26"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-27"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-28"
                           >
                             { optionalProperty?: string; requiredProperty: number; }
                           </pre>
@@ -2777,15 +4713,15 @@ exports[`PropsTable overview snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-30"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-28"
                         >
                           -
                         </pre>
@@ -2793,33 +4729,33 @@ exports[`PropsTable overview snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-22"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-24"
                       >
                         optionalObjectWithStrictShape
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-26"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-27"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-28"
                           >
                             { optionalProperty?: string; requiredProperty: number; }
                           </pre>
@@ -2827,15 +4763,15 @@ exports[`PropsTable overview snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-30"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-28"
                         >
                           -
                         </pre>
@@ -2843,33 +4779,33 @@ exports[`PropsTable overview snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-22"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-24"
                       >
                         optionalString
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-26"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-27"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-28"
                           >
                             string
                           </pre>
@@ -2877,15 +4813,15 @@ exports[`PropsTable overview snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-30"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-28"
                         >
                           -
                         </pre>
@@ -2893,33 +4829,33 @@ exports[`PropsTable overview snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-22"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-24"
                       >
                         optionalSymbol
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-26"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-27"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-28"
                           >
                             symbol
                           </pre>
@@ -2927,15 +4863,15 @@ exports[`PropsTable overview snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-30"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-28"
                         >
                           -
                         </pre>
@@ -2943,57 +4879,57 @@ exports[`PropsTable overview snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-22"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-1fo6vjb"
+                        class="emotion-24"
                       >
                         optionalUnion
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-26"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-27"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-28"
                           >
                             <span
-                              class="css-bgm36v-Tag"
+                              class="emotion-79"
                             >
                               <span
-                                class="css-vurnku"
+                                class="emotion-11"
                               >
                                 string
                               </span>
                             </span>
                             <span
-                              class="css-bgm36v-Tag"
+                              class="emotion-79"
                             >
                               <span
-                                class="css-vurnku"
+                                class="emotion-11"
                               >
                                 number
                               </span>
                             </span>
                             <span
-                              class="css-bgm36v-Tag"
+                              class="emotion-79"
                             >
                               <span
-                                class="css-vurnku"
+                                class="emotion-11"
                               >
                                 Message
                               </span>
@@ -3003,15 +4939,15 @@ exports[`PropsTable overview snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-30"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-28"
                         >
                           -
                         </pre>
@@ -3019,22 +4955,22 @@ exports[`PropsTable overview snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-22"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-pm3wg4-Tag"
+                        class="emotion-204"
                       >
                         <span
-                          class="css-vurnku"
+                          class="emotion-11"
                         >
                           <span
-                            class="css-1fo6vjb"
+                            class="emotion-24"
                           >
                             requiredAny
                           </span>
@@ -3042,18 +4978,18 @@ exports[`PropsTable overview snapshot 1`] = `
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-26"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-27"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-28"
                           >
                             any
                           </pre>
@@ -3061,15 +4997,15 @@ exports[`PropsTable overview snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-30"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-28"
                         >
                           -
                         </pre>
@@ -3077,22 +5013,22 @@ exports[`PropsTable overview snapshot 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="css-ijvt85"
+                    class="emotion-22"
                     role="row"
                   >
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <span
-                        class="css-pm3wg4-Tag"
+                        class="emotion-204"
                       >
                         <span
-                          class="css-vurnku"
+                          class="emotion-11"
                         >
                           <span
-                            class="css-1fo6vjb"
+                            class="emotion-24"
                           >
                             requiredFunc
                           </span>
@@ -3100,18 +5036,18 @@ exports[`PropsTable overview snapshot 1`] = `
                       </span>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-uliqdc"
+                        class="emotion-26"
                       >
                         <div
-                          class="css-1tcjtkx"
+                          class="emotion-27"
                         >
                           <pre
-                            class="css-3y8hb3"
+                            class="emotion-28"
                           >
                             (prop: any) =&gt; any
                           </pre>
@@ -3119,15 +5055,15 @@ exports[`PropsTable overview snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="css-1yjhfhu"
+                      class="emotion-23"
                       role="cell"
                       style="width: 150px;"
                     >
                       <div
-                        class="css-1ydg41s"
+                        class="emotion-30"
                       >
                         <pre
-                          class="css-3y8hb3"
+                          class="emotion-28"
                         >
                           -
                         </pre>
@@ -3147,16 +5083,357 @@ exports[`PropsTable overview snapshot 1`] = `
 
 exports[`PropsTable subcomponents snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3:hover a {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-4 .react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.emotion-4 .react-tabs__tab-list {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.emotion-4 .react-tabs__tab {
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  border-bottom: none;
+  bottom: -4px;
+  position: relative;
+  list-style: none;
+  padding: 4px 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+  color: #69768C;
+}
+
+.emotion-4 .react-tabs__tab a {
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.emotion-4 .react-tabs__tab:focus {
+  box-shadow: 0 0 5px hsl(208, 99%, 50%);
+  border-color: hsl(208, 99%, 50%);
+  outline: none;
+}
+
+.emotion-4 .react-tabs__tab:focus:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: #fff;
+}
+
+.emotion-4 .react-tabs__tab--selected {
+  border-bottom: 3px solid #5c6ac4;
+  color: #5c6ac4;
+}
+
+.emotion-4 .react-tabs__tab--disabled {
+  color: #69768C;
+  cursor: default;
+}
+
+.emotion-4 .react-tabs__tab-panel {
+  display: none;
+}
+
+.emotion-4 .react-tabs__tab-panel--selected {
+  display: block;
+}
+
+.emotion-4 .react-tabs__tab {
+  font-size: 14px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-7 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-7 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-10 p {
+  margin: 0;
+}
+
+.emotion-10 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-10 a {
+  word-break: break-word;
+}
+
+.emotion-10 th {
+  padding-top: 32px;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-22 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-22 tr:last-of-type {
+  border-bottom: 0;
+}
+
+<div
+    class="emotion-0"
     data-testid="propstable"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id=""
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       />
     </div>
     <div
@@ -3166,10 +5443,10 @@ exports[`PropsTable subcomponents snapshot 1`] = `
     >
       <div>
         <div
-          class="css-1d6wxci"
+          class="emotion-3"
         >
           <div
-            class="css-nm5f2c-Tabs"
+            class="emotion-4"
           >
             <div
               class="react-tabs"
@@ -3209,17 +5486,17 @@ exports[`PropsTable subcomponents snapshot 1`] = `
               >
                 <div>
                   <div
-                    class="css-15owl46"
+                    class="emotion-5"
                   >
                     <div
-                      class="css-x60p33"
+                      class="emotion-6"
                     >
                       <div
-                        class="css-1vga9oy"
+                        class="emotion-7"
                       >
                         <button
                           aria-label="copy table as csv"
-                          class="css-1tf4h46"
+                          class="emotion-8"
                         >
                           copy table
                         </button>
@@ -3227,62 +5504,62 @@ exports[`PropsTable subcomponents snapshot 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-eqxzio"
+                    class="emotion-9"
                   >
                     <table
-                      class="css-1yvbyiz-BasePropsTable"
+                      class="emotion-10"
                       role="table"
                     >
                       <thead
-                        class="css-14kw1rx"
+                        class="emotion-11"
                       >
                         <tr
-                          class="css-vurnku"
+                          class="emotion-12"
                           role="row"
                         >
                           <th
-                            class="css-n59tc9"
+                            class="emotion-13"
                             colspan="1"
                             role="columnheader"
                             style="width: 150px;"
                           >
                             <div
-                              class="css-wwqljn"
+                              class="emotion-14"
                             >
                               <div
-                                class="css-206mi5"
+                                class="emotion-15"
                               >
                                 Name
                               </div>
                             </div>
                           </th>
                           <th
-                            class="css-n59tc9"
+                            class="emotion-13"
                             colspan="1"
                             role="columnheader"
                             style="width: 150px;"
                           >
                             <div
-                              class="css-wwqljn"
+                              class="emotion-14"
                             >
                               <div
-                                class="css-206mi5"
+                                class="emotion-15"
                               >
                                 Description
                               </div>
                             </div>
                           </th>
                           <th
-                            class="css-n59tc9"
+                            class="emotion-13"
                             colspan="1"
                             role="columnheader"
                             style="width: 150px;"
                           >
                             <div
-                              class="css-wwqljn"
+                              class="emotion-14"
                             >
                               <div
-                                class="css-206mi5"
+                                class="emotion-15"
                               >
                                 Default
                               </div>
@@ -3291,7 +5568,7 @@ exports[`PropsTable subcomponents snapshot 1`] = `
                         </tr>
                       </thead>
                       <tbody
-                        class="css-tuhk50"
+                        class="emotion-22"
                         role="rowgroup"
                       />
                     </table>
@@ -3315,20 +5592,432 @@ exports[`PropsTable subcomponents snapshot 1`] = `
 
 exports[`PropsTable title snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -22px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8:hover a {
+  visibility: visible;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-9 .react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.emotion-9 .react-tabs__tab-list {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.emotion-9 .react-tabs__tab {
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  border-bottom: none;
+  bottom: -4px;
+  position: relative;
+  list-style: none;
+  padding: 4px 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+  color: #69768C;
+}
+
+.emotion-9 .react-tabs__tab a {
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.emotion-9 .react-tabs__tab:focus {
+  box-shadow: 0 0 5px hsl(208, 99%, 50%);
+  border-color: hsl(208, 99%, 50%);
+  outline: none;
+}
+
+.emotion-9 .react-tabs__tab:focus:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: #fff;
+}
+
+.emotion-9 .react-tabs__tab--selected {
+  border-bottom: 3px solid #5c6ac4;
+  color: #5c6ac4;
+}
+
+.emotion-9 .react-tabs__tab--disabled {
+  color: #69768C;
+  cursor: default;
+}
+
+.emotion-9 .react-tabs__tab-panel {
+  display: none;
+}
+
+.emotion-9 .react-tabs__tab-panel--selected {
+  display: block;
+}
+
+.emotion-9 .react-tabs__tab {
+  font-size: 14px;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-12 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-12 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-15 p {
+  margin: 0;
+}
+
+.emotion-15 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-15 a {
+  word-break: break-word;
+}
+
+.emotion-15 th {
+  padding-top: 32px;
+}
+
+.emotion-16 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-18 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-19 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-20 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-27 tr:last-of-type {
+  border-bottom: 0;
+}
+
+<div
+    class="emotion-0"
     data-testid="propstable"
   >
     <div
-      class="css-jxxswp"
+      class="emotion-1"
       id="arrowbutton"
     >
       <div
-        class="css-xhp9da"
+        class="emotion-2"
       >
         <a
           aria-label="navigate to ArrowButton section"
-          class="css-walqom-LinkHeading"
+          class="emotion-3"
           data-id="arrowbutton"
           data-level="3"
           data-title="ArrowButton"
@@ -3351,18 +6040,18 @@ exports[`PropsTable title snapshot 1`] = `
           </svg>
         </a>
         <h3
-          class="css-16ist9v-BlockContainer"
+          class="emotion-4"
         >
           <div
-            class="css-tmrrvx"
+            class="emotion-5"
           >
             ArrowButton
             <a
               aria-expanded="true"
-              class="css-1t48u3b-BlockContainer"
+              class="emotion-6"
             >
               <span
-                class="css-1ibxxpj"
+                class="emotion-7"
               >
                 <svg
                   aria-hidden="true"
@@ -3392,10 +6081,10 @@ exports[`PropsTable title snapshot 1`] = `
     >
       <div>
         <div
-          class="css-1d6wxci"
+          class="emotion-8"
         >
           <div
-            class="css-nm5f2c-Tabs"
+            class="emotion-9"
           >
             <div
               class="react-tabs"
@@ -3435,17 +6124,17 @@ exports[`PropsTable title snapshot 1`] = `
               >
                 <div>
                   <div
-                    class="css-15owl46"
+                    class="emotion-10"
                   >
                     <div
-                      class="css-x60p33"
+                      class="emotion-11"
                     >
                       <div
-                        class="css-1vga9oy"
+                        class="emotion-12"
                       >
                         <button
                           aria-label="copy table as csv"
-                          class="css-1tf4h46"
+                          class="emotion-13"
                         >
                           copy table
                         </button>
@@ -3453,62 +6142,62 @@ exports[`PropsTable title snapshot 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-eqxzio"
+                    class="emotion-14"
                   >
                     <table
-                      class="css-1yvbyiz-BasePropsTable"
+                      class="emotion-15"
                       role="table"
                     >
                       <thead
-                        class="css-14kw1rx"
+                        class="emotion-16"
                       >
                         <tr
-                          class="css-vurnku"
+                          class="emotion-17"
                           role="row"
                         >
                           <th
-                            class="css-n59tc9"
+                            class="emotion-18"
                             colspan="1"
                             role="columnheader"
                             style="width: 150px;"
                           >
                             <div
-                              class="css-wwqljn"
+                              class="emotion-19"
                             >
                               <div
-                                class="css-206mi5"
+                                class="emotion-20"
                               >
                                 Name
                               </div>
                             </div>
                           </th>
                           <th
-                            class="css-n59tc9"
+                            class="emotion-18"
                             colspan="1"
                             role="columnheader"
                             style="width: 150px;"
                           >
                             <div
-                              class="css-wwqljn"
+                              class="emotion-19"
                             >
                               <div
-                                class="css-206mi5"
+                                class="emotion-20"
                               >
                                 Description
                               </div>
                             </div>
                           </th>
                           <th
-                            class="css-n59tc9"
+                            class="emotion-18"
                             colspan="1"
                             role="columnheader"
                             style="width: 150px;"
                           >
                             <div
-                              class="css-wwqljn"
+                              class="emotion-19"
                             >
                               <div
-                                class="css-206mi5"
+                                class="emotion-20"
                               >
                                 Default
                               </div>
@@ -3517,7 +6206,7 @@ exports[`PropsTable title snapshot 1`] = `
                         </tr>
                       </thead>
                       <tbody
-                        class="css-tuhk50"
+                        class="emotion-27"
                         role="rowgroup"
                       />
                     </table>

@@ -56,6 +56,7 @@
   "devDependencies": {
     "@component-controls/cc-cli": "^3.8.3",
     "@component-controls/ts-markdown-docs": "^3.8.2",
+    "@emotion/jest": "^11.3.0",
     "@theme-ui/css": "^0.6.0-alpha.7",
     "@types/markdown-to-jsx": "^6.11.0",
     "@types/md5": "^2.3.0",
@@ -100,6 +101,9 @@
     ],
     "roots": [
       "./src"
+    ],
+    "snapshotSerializers": [
+      "@emotion/jest/serializer"
     ]
   },
   "gitHead": "e30d62f101e104711a16261fce04785d58cac1eb"
