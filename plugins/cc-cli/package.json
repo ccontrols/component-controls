@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/cc-cli",
-  "version": "3.8.1",
+  "version": "3.8.2",
   "description": "Command line tool to generate testing templates",
   "keywords": [
     "jest",
@@ -42,12 +42,12 @@
     "cc-cli": "./bin/index.js"
   },
   "dependencies": {
-    "@component-controls/instrument": "^3.8.0",
+    "@component-controls/instrument": "^3.8.2",
     "@component-controls/jest-axe-matcher": "^3.8.1",
-    "@component-controls/store": "^3.8.0",
-    "@component-controls/test-renderers": "^3.8.0",
-    "@component-controls/webpack-compile": "^3.8.0",
-    "@component-controls/webpack-configs": "^3.8.0",
+    "@component-controls/store": "^3.8.2",
+    "@component-controls/test-renderers": "^3.8.2",
+    "@component-controls/webpack-compile": "^3.8.2",
+    "@component-controls/webpack-configs": "^3.8.2",
     "dot": "^1.1.3",
     "path": "^0.12.7"
   },

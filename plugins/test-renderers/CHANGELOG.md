@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.8.2](https://github.com/ccontrols/component-controls/compare/v3.8.1...v3.8.2) (2021-04-30)
+
+
+### Bug Fixes
+
+* issue when export function name missing ([57bb2e5](https://github.com/ccontrols/component-controls/commit/57bb2e5363f40f19f01d231a5bcc5d931d72e7c8))
+
+
+
+
+
 # [3.8.0](https://github.com/ccontrols/component-controls/compare/v3.7.0...v3.8.0) (2021-04-29)
 
 

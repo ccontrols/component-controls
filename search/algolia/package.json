@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/search-algolia",
-  "version": "3.8.0",
+  "version": "3.8.2",
   "description": "Component controls Algolia search and index",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -31,12 +31,12 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/core": "^3.8.0",
-    "@component-controls/logger": "^3.8.0",
+    "@component-controls/core": "^3.8.2",
+    "@component-controls/logger": "^3.8.2",
     "algoliasearch": "^4.8.3"
   },
   "devDependencies": {
-    "@component-controls/ts-markdown-docs": "^3.8.0",
+    "@component-controls/ts-markdown-docs": "^3.8.2",
     "@types/jest": "^26.0.10",
     "@types/react": "^16.9.34",
     "cross-env": "^5.2.1",

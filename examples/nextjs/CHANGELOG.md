@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.8.2](https://github.com/ccontrols/component-controls/compare/v3.8.1...v3.8.2) (2021-04-30)
+
+
+### Bug Fixes
+
+* increase memory requirement for examples ([38be72f](https://github.com/ccontrols/component-controls/commit/38be72f17498fc1466fbba39c4ba1fb38713bf45))
+
+
+
+
+
 ## [3.8.1](https://github.com/ccontrols/component-controls/compare/v3.8.0...v3.8.1) (2021-04-29)
 
 **Note:** Version bump only for package component-controls-nextjs-starter

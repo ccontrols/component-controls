@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/storybook-custom-docs",
-  "version": "3.8.0",
+  "version": "3.8.2",
   "description": "Storybook custom docs pages",
   "keywords": [
     "addon",
@@ -35,10 +35,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/core": "^3.8.0"
+    "@component-controls/core": "^3.8.2"
   },
   "devDependencies": {
-    "@component-controls/ts-markdown-docs": "^3.8.0",
+    "@component-controls/ts-markdown-docs": "^3.8.2",
     "@storybook/addons": "^6.2.0-beta.10",
     "@storybook/api": "^6.2.0-beta.10",
     "@storybook/client-api": "^6.2.0-beta.10",

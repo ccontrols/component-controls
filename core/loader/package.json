@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/loader",
-  "version": "3.8.0",
+  "version": "3.8.2",
   "description": "Webpack loader for component controls instrumentation",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -35,10 +35,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/config": "^3.8.0",
-    "@component-controls/core": "^3.8.0",
-    "@component-controls/instrument": "^3.8.0",
-    "@component-controls/logger": "^3.8.0",
+    "@component-controls/config": "^3.8.2",
+    "@component-controls/core": "^3.8.2",
+    "@component-controls/instrument": "^3.8.2",
+    "@component-controls/logger": "^3.8.2",
     "js-string-escape": "^1.0.1",
     "loader-utils": "^2.0.0",
     "path-browserify": "^1.0.1",
@@ -47,7 +47,7 @@
     "webpack-sources": "^2.2.0"
   },
   "devDependencies": {
-    "@component-controls/ts-markdown-docs": "^3.8.0",
+    "@component-controls/ts-markdown-docs": "^3.8.2",
     "@types/jest": "^26.0.10",
     "@types/loader-utils": "^2.0.1",
     "cross-env": "^5.2.1",

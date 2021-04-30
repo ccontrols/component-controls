@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/webpack-configs",
-  "version": "3.8.0",
+  "version": "3.8.2",
   "description": "Webpack preset configurations",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,11 +30,11 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/instrument": "^3.8.0",
-    "@component-controls/logger": "^3.8.0",
-    "@component-controls/react-docgen-info": "^3.8.0",
-    "@component-controls/react-docgen-typescript-info": "^3.8.0",
-    "@component-controls/store": "^3.8.0",
+    "@component-controls/instrument": "^3.8.2",
+    "@component-controls/logger": "^3.8.2",
+    "@component-controls/react-docgen-info": "^3.8.2",
+    "@component-controls/react-docgen-typescript-info": "^3.8.2",
+    "@component-controls/store": "^3.8.2",
     "babel-loader": "^8.2.2",
     "babel-preset-react-app": "^10.0.0",
     "core-js": "^3.9.1",
@@ -57,7 +57,7 @@
   },
   "devDependencies": {
     "@babel/preset-env": "^7.13.10",
-    "@component-controls/ts-markdown-docs": "^3.8.0",
+    "@component-controls/ts-markdown-docs": "^3.8.2",
     "@types/css-minimizer-webpack-plugin": "^1.1.1",
     "@types/jest": "^26.0.10",
     "@types/mini-css-extract-plugin": "^1.2.2",

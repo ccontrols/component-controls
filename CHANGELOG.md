@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.8.2](https://github.com/ccontrols/component-controls/compare/v3.8.1...v3.8.2) (2021-04-30)
+
+
+### Bug Fixes
+
+* increase memory requirement for examples ([38be72f](https://github.com/ccontrols/component-controls/commit/38be72f17498fc1466fbba39c4ba1fb38713bf45))
+* issue when export function name missing ([57bb2e5](https://github.com/ccontrols/component-controls/commit/57bb2e5363f40f19f01d231a5bcc5d931d72e7c8))
+* temp fix for axe-core crypto issue ([27a7bb7](https://github.com/ccontrols/component-controls/commit/27a7bb722d46a48c678ae7c7a795fe1700664857))
+
+
+
+
+
 ## [3.8.1](https://github.com/ccontrols/component-controls/compare/v3.8.0...v3.8.1) (2021-04-29)
 
 
