@@ -122,7 +122,7 @@ export const BaseTestsResults: FC<BaseTestsResultsProps> = ({
           row: {
             original: { ancestorTitles },
           },
-        }) => <div>{ancestorTitles.join('>')}</div>,
+        }) => <div>{ancestorTitles.join(' > ')}</div>,
       },
       {
         Header: 'Title',
