@@ -1,7 +1,7 @@
 {
   "name": "component-controls-react-webpack-5-starter",
   "private": true,
-  "version": "3.8.2",
+  "version": "3.8.3",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -9,7 +9,7 @@
     "build-sample": "cross-env NODE_OPTIONS=--max_old_space_size=20480 rm -rf public && webpack --config webpack.prod.config.ts --progress"
   },
   "dependencies": {
-    "@component-controls/react-router-integration": "^3.8.2",
+    "@component-controls/react-router-integration": "^3.8.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },

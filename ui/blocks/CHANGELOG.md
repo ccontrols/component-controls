@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.8.3](https://github.com/ccontrols/component-controls/compare/v3.8.2...v3.8.3) (2021-04-30)
+
+
+### Bug Fixes
+
+* extend test separator ([fc66831](https://github.com/ccontrols/component-controls/commit/fc66831eb40e6e7bad8ae8b2d38af2752a733ba1))
+
+
+
+
+
 ## [3.8.2](https://github.com/ccontrols/component-controls/compare/v3.8.1...v3.8.2) (2021-04-30)
 
 **Note:** Version bump only for package @component-controls/blocks
