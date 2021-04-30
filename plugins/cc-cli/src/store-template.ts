@@ -36,7 +36,7 @@ export const createStoreTemplate: TemplateFunction = async (
   );
   const renderPath = path.resolve(
     __dirname,
-    `../templates/framework-render/${renderers[renderer]}.js`,
+    `../templates/framework-render/${renderers[renderer]}.${format}.js`,
   );
   const render = dot.template(fs.readFileSync(renderPath, 'utf8'))({
     bundle: !!bundle,

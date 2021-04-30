@@ -19,7 +19,7 @@ describe('Components/Header', () => {
   describe('Overview', () => {
     const story = store.stories['components-header--overview'];
 
-    let rendered;
+    let rendered: ReturnType<typeof renderExample> = undefined as any;
     act(() => {
       rendered = renderFn(story, doc);
     });

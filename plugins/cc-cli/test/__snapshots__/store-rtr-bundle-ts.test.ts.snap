@@ -22,7 +22,7 @@ describe('component-controls generated', () => {
         stories.forEach(storyId => {
           const story = store.stories[storyId];
           describe(story.name, () => {
-            let rendered;
+            let rendered: ReturnType<typeof renderExample> = undefined as any;
             act(() => {
               rendered = renderFn(story, doc);
             });
