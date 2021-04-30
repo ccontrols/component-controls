@@ -719,8 +719,8 @@ Markdown **descripton** for *component*.
   },
   docs: {
     Story: {
-      date: new Date('2020-01-01'),
-      dateModified: new Date('2020-03-31'),
+      date: new Date('2020-01-01').toISOString(),
+      dateModified: new Date('2020-03-31').toISOString(),
       package: 'test-package',
       componentsLookup: {
         ArrowButton: 'ArrowButton',

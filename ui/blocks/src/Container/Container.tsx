@@ -32,12 +32,15 @@ export const Container: FC<ContainerProps> = ({
         <EditPage />
         <Box variant="blockpagecontainer.createdbox.container">
           {doc?.date && (
-            <Value label="created:" value={dateToLocalString(doc.date)} />
+            <Value
+              label="created:"
+              value={dateToLocalString(new Date(doc.date))}
+            />
           )}
           {doc?.dateModified && (
             <Value
               label="updated:"
-              value={dateToLocalString(doc.dateModified)}
+              value={dateToLocalString(new Date(doc.dateModified))}
               sx={{ ml: 2 }}
             />
           )}

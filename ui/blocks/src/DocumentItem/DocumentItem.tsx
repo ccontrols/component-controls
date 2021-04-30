@@ -44,7 +44,7 @@ export const DocumentItem: FC<DocumentItemProps & BoxProps> = ({
     <Box variant="documentitem.info.inner">
       {date ? (
         <Box variant="documentitem.info.date">{`created: ${dateToLocalString(
-          date,
+          new Date(date),
         )}`}</Box>
       ) : (
         ''

@@ -183,12 +183,12 @@ export type Document<Props = any> = {
   /**
    *  optional date the document was created. If not assigned, the instrumentation process will use birthtime
    */
-  date?: Date;
+  date?: string;
 
   /**
    *  optional date the document was last modified. If not assigned, the instrumentation process will use mtime
    */
-  dateModified?: Date;
+  dateModified?: string;
 
   /**
    * if set to true, the document will be hidden in production builds.

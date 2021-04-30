@@ -7,13 +7,13 @@ import { findUpFile } from '@component-controls/core/node-utils';
 import { FileInfo } from '@component-controls/core';
 import { CachedFileResource } from './chached-file';
 
-export const getFileDates = async (
+export const getFileDates = (
   filePath: string,
-): Promise<Pick<FileInfo, 'dateCreated' | 'dateModified'>> => {
+): { dateCreated: string; dateModified: string } => {
   const stats = fs.statSync(filePath);
   return {
-    dateCreated: stats.birthtime,
-    dateModified: stats.mtime,
+    dateCreated: stats.birthtime.toISOString(),
+    dateModified: stats.mtime.toISOString(),
   };
 };
 export const getFileIinfo = async (
@@ -70,8 +70,8 @@ export const getFileIinfo = async (
       const commits = gitlog(options);
       if (commits.length > 0) {
         result = {
-          dateCreated: new Date(commits[commits.length - 1].authorDate),
-          dateModified: new Date(commits[0].authorDate),
+          dateCreated: commits[commits.length - 1].authorDate,
+          dateModified: commits[0].authorDate,
           sloc,
           commits: commits.map(
             ({
@@ -100,7 +100,7 @@ export const getFileIinfo = async (
       }
     } catch (e) {}
   }
-  const dates = await getFileDates(filePath);
+  const dates = getFileDates(filePath);
   result = {
     ...dates,
     sloc,

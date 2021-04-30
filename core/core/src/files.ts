@@ -18,12 +18,12 @@ export interface FileInfo {
   /**
    *  date file created
    */
-  dateCreated?: Date;
+  dateCreated?: string;
 
   /**
    *  date last modified
    */
-  dateModified?: Date;
+  dateModified?: string;
 
   /**
    * git commits for the file
