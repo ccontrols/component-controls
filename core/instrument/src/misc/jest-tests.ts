@@ -10,43 +10,64 @@ import { resolveSnapshotFile } from '@component-controls/core/node-utils';
 import { JestTests } from '@component-controls/core';
 import { CachedFileResource } from './chached-file';
 
+type TestCumulators = {
+  testFiles: string[];
+  coverageFiles: string[];
+  snapshotFiles: string[];
+};
+
+const addCumulators = (
+  acc: TestCumulators,
+  filePath: string,
+  inCoverage: boolean,
+) => {
+  const testFiles = getRelatedTests(filePath);
+  testFiles.forEach(f => {
+    if (!acc.testFiles.includes(f)) {
+      acc.testFiles.push(f);
+    }
+    const snapshotFile = resolveSnapshotFile(f);
+    if (
+      !acc.snapshotFiles.includes(snapshotFile) &&
+      fs.existsSync(snapshotFile)
+    ) {
+      acc.snapshotFiles.push(snapshotFile);
+    }
+  });
+  if (inCoverage && !acc.coverageFiles.includes(filePath)) {
+    acc.coverageFiles.push(filePath);
+  }
+  return acc;
+};
 /**
  * Separates the files into projects and runs jest tests
+ * @param documentPath full path to the document/story
  * @param files key filePathName pair of all files to test
  * @param options jest runCLI options
  * @returns return key/value pairs with test results and coverage associated with each file
  */
 export const extractTests = async (
+  documentPath: string,
   files: string[],
   options?: JestConfig,
 ): Promise<JestTests | undefined> => {
   if (!files.length) {
     return undefined;
   }
-  const projectFolder = findJestConfig(files[0]);
   const tests = files.reduce(
-    (
-      acc: {
-        testFiles: string[];
-        coverageFiles: string[];
-        snapshotFiles: string[];
-      },
-      file,
-    ) => {
-      const testFiles = getRelatedTests(file);
-      acc.testFiles.push(...testFiles);
-      testFiles.forEach(f => {
-        const snapshotFile = resolveSnapshotFile(f);
-        if (fs.existsSync(snapshotFile)) {
-          acc.snapshotFiles.push(snapshotFile);
-        }
-      });
-      if (!acc.coverageFiles.includes(file)) {
-        acc.coverageFiles.push(file);
-      }
+    (acc: TestCumulators, file) => {
+      addCumulators(acc, file, true);
       return acc;
     },
-    { testFiles: [], coverageFiles: [], snapshotFiles: [] },
+    addCumulators(
+      {
+        testFiles: [],
+        coverageFiles: [],
+        snapshotFiles: [],
+      },
+      documentPath,
+      false,
+    ),
   );
   if (tests.testFiles.length) {
     const cached = new CachedFileResource<JestTests>('jest-tests', files[0], [
@@ -59,6 +80,7 @@ export const extractTests = async (
     if (cachedResults) {
       return cachedResults;
     }
+    const projectFolder = findJestConfig(tests.testFiles[0]);
     const testResults = await runProjectTests({
       testFiles: tests.testFiles.map(
         f => `.${path.sep}${path.relative(projectFolder, f)}`,

@@ -141,12 +141,15 @@ export const extractComponent = async (
 };
 
 /**
- * instruemnt related metrics for the component
+ * instrument related metrics for the component
+ * @param store to retrieved stored packes info
+ * @param filePath current document file path
  * @param component to be instrumented, will use component.request as the location
  * @param options - instrumentaion options
  */
 const componentRelatedMetrics = async (
   store: LoadingDocStore,
+  filePath: string,
   component: Component,
   options?: InstrumentOptions,
 ) => {
@@ -198,7 +201,7 @@ const componentRelatedMetrics = async (
           }
         });
     }
-    const testResults = await extractTests(testFiles, jest);
+    const testResults = await extractTests(filePath, testFiles, jest);
     if (testResults) {
       component.jest = testResults;
     }
@@ -231,7 +234,7 @@ export const extractStoreComponent = async (
             options,
           );
           if (component) {
-            await componentRelatedMetrics(store, component, options);
+            await componentRelatedMetrics(store, filePath, component, options);
             const key = componentKey(
               component.request ?? filePath,
               componentName,
