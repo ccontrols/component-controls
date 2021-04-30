@@ -47,7 +47,16 @@ export class CachedFileResource<T> {
       ? this.filePath
       : [this.filePath];
     return files
-      .reduce((acc, f) => acc.update(f), createHash('md5').update(version))
+      .reduce(
+        (acc, f) =>
+          acc.update(f).update(
+            fs
+              .statSync(f)
+              .mtime.getTime()
+              .toString(),
+          ),
+        createHash('md5').update(version),
+      )
       .digest('hex');
   };
   /**
@@ -57,19 +66,11 @@ export class CachedFileResource<T> {
   get = (): T | undefined => {
     const cachedFileName = this.getCachedFile();
     if (fs.existsSync(cachedFileName)) {
-      const cacheModified = fs.statSync(cachedFileName).mtime.getTime();
-      const fileModified = Array.isArray(this.filePath)
-        ? this.filePath.reduce((m, f) => {
-            return Math.max(m, fs.statSync(f).mtime.getTime());
-          }, 0)
-        : fs.statSync(this.filePath).mtime.getTime();
-      if (cacheModified >= fileModified) {
-        const fileData = fs.readFileSync(cachedFileName, 'utf8');
-        const json = JSON.parse(fileData);
-        if (json.hasOwnProperty('key') && json.hasOwnProperty('data')) {
-          if (json.key === this.getKey()) {
-            return json['data'];
-          }
+      const fileData = fs.readFileSync(cachedFileName, 'utf8');
+      const json = JSON.parse(fileData);
+      if (json.hasOwnProperty('key') && json.hasOwnProperty('data')) {
+        if (json.key === this.getKey()) {
+          return json['data'];
         }
         return undefined;
       }
