@@ -120,9 +120,9 @@ export const BaseTestsResults: FC<BaseTestsResultsProps> = ({
         accessor: 'fullName',
         Cell: ({
           row: {
-            original: { fullName },
+            original: { ancestorTitles },
           },
-        }) => <div>{fullName}</div>,
+        }) => <div>{ancestorTitles.join('>')}</div>,
       },
       {
         Header: 'Title',
