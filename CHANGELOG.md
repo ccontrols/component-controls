@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.9.0](https://github.com/ccontrols/component-controls/compare/v3.8.3...v3.9.0) (2021-04-30)
+
+
+### Bug Fixes
+
+* add modified date to files key ([5a68300](https://github.com/ccontrols/component-controls/commit/5a683004201a6469c608b0063c9412317f860028))
+* update tests ([0373b1f](https://github.com/ccontrols/component-controls/commit/0373b1f9bf6db0aaa842efe21dbeb8083265d4d6))
+
+
+### Features
+
+* ability to store test files next to stories ([644fb4d](https://github.com/ccontrols/component-controls/commit/644fb4d14d8969e47319aa6c3e1566dba50ea491))
+
+
+
+
+
 ## [3.8.3](https://github.com/ccontrols/component-controls/compare/v3.8.2...v3.8.3) (2021-04-30)
 
 

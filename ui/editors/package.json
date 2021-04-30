@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/editors",
-  "version": "3.8.3",
+  "version": "3.9.0",
   "description": "Component controls editors for component control values.",
   "sideEffects": false,
   "main": "dist/index.js",
@@ -32,14 +32,14 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/components": "^3.8.3",
-    "@component-controls/core": "^3.8.2",
-    "@component-controls/store": "^3.8.2",
+    "@component-controls/components": "^3.9.0",
+    "@component-controls/core": "^3.9.0",
+    "@component-controls/store": "^3.9.0",
     "global": "^4.3.2",
     "react-colorful": "^5.0.0"
   },
   "devDependencies": {
-    "@component-controls/cc-cli": "^3.8.3",
+    "@component-controls/cc-cli": "^3.9.0",
     "@component-controls/ts-markdown-docs": "^3.8.2",
     "@emotion/jest": "^11.3.0",
     "@primer/octicons-react": "^10.0.0",
