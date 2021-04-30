@@ -189,7 +189,7 @@ exports[`TestsResults overview snapshot 1`] = `
                   style="width: 150px;"
                 >
                   <div>
-                    Table overview
+                    Table
                   </div>
                 </td>
                 <td
@@ -247,7 +247,7 @@ exports[`TestsResults overview snapshot 1`] = `
                   style="width: 150px;"
                 >
                   <div>
-                    Table noHeader
+                    Table
                   </div>
                 </td>
                 <td
@@ -327,7 +327,7 @@ exports[`TestsResults overview snapshot 1`] = `
                   style="width: 150px;"
                 >
                   <div>
-                    Table editing
+                    Table
                   </div>
                 </td>
                 <td
@@ -385,7 +385,7 @@ exports[`TestsResults overview snapshot 1`] = `
                   style="width: 150px;"
                 >
                   <div>
-                    Table disable
+                    Table
                   </div>
                 </td>
                 <td
@@ -443,7 +443,7 @@ exports[`TestsResults overview snapshot 1`] = `
                   style="width: 150px;"
                 >
                   <div>
-                    Table pending
+                    Table
                   </div>
                 </td>
                 <td
@@ -501,7 +501,7 @@ exports[`TestsResults overview snapshot 1`] = `
                   style="width: 150px;"
                 >
                   <div>
-                    Table skipped
+                    Table
                   </div>
                 </td>
                 <td
@@ -559,7 +559,7 @@ exports[`TestsResults overview snapshot 1`] = `
                   style="width: 150px;"
                 >
                   <div>
-                    Table todo
+                    Table
                   </div>
                 </td>
                 <td
@@ -617,7 +617,7 @@ exports[`TestsResults overview snapshot 1`] = `
                   style="width: 150px;"
                 >
                   <div>
-                    Table rowSelect
+                    Table
                   </div>
                 </td>
                 <td
@@ -675,7 +675,7 @@ exports[`TestsResults overview snapshot 1`] = `
                   style="width: 150px;"
                 >
                   <div>
-                    Table pagination
+                    Table
                   </div>
                 </td>
                 <td
@@ -954,7 +954,7 @@ exports[`TestsResults pagination snapshot 1`] = `
                   style="width: 150px;"
                 >
                   <div>
-                    Table overview
+                    Table
                   </div>
                 </td>
                 <td
@@ -1012,7 +1012,7 @@ exports[`TestsResults pagination snapshot 1`] = `
                   style="width: 150px;"
                 >
                   <div>
-                    Table noHeader
+                    Table
                   </div>
                 </td>
                 <td
@@ -1092,7 +1092,7 @@ exports[`TestsResults pagination snapshot 1`] = `
                   style="width: 150px;"
                 >
                   <div>
-                    Table editing
+                    Table
                   </div>
                 </td>
                 <td
