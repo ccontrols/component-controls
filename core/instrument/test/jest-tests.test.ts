@@ -7,29 +7,35 @@ describe('component-tests', () => {
     setLogOptions({ logLevel: 'none' });
   });
   it('Table', async () => {
-    const tests = await extractTests([
-      path.resolve(__dirname, '../../../ui/components/src/Table/Table.tsx'),
+    const tests = await extractTests(
       path.resolve(
         __dirname,
-        '../../../ui/components/src/Table/TableFilter.tsx',
+        '../../../ui/components/src/Table/Table.stories.tsx',
       ),
-      path.resolve(
-        __dirname,
-        '../../../ui/components/src/Table/TableGrouping.tsx',
-      ),
-      path.resolve(
-        __dirname,
-        '../../../ui/components/src/Table/TablePagination.tsx',
-      ),
-      path.resolve(
-        __dirname,
-        '../../../ui/components/src/Table/TableRowSelection.tsx',
-      ),
-      path.resolve(
-        __dirname,
-        '../../../ui/components/src/Table/useTableLayout.ts',
-      ),
-    ]);
+      [
+        path.resolve(__dirname, '../../../ui/components/src/Table/Table.tsx'),
+        path.resolve(
+          __dirname,
+          '../../../ui/components/src/Table/TableFilter.tsx',
+        ),
+        path.resolve(
+          __dirname,
+          '../../../ui/components/src/Table/TableGrouping.tsx',
+        ),
+        path.resolve(
+          __dirname,
+          '../../../ui/components/src/Table/TablePagination.tsx',
+        ),
+        path.resolve(
+          __dirname,
+          '../../../ui/components/src/Table/TableRowSelection.tsx',
+        ),
+        path.resolve(
+          __dirname,
+          '../../../ui/components/src/Table/useTableLayout.ts',
+        ),
+      ],
+    );
     expect(tests).toMatchObject({
       results: [
         {
@@ -329,12 +335,18 @@ describe('component-tests', () => {
   }, 100000);
 
   it('Catalog', async () => {
-    const tests = await extractTests([
+    const tests = await extractTests(
       path.resolve(
         __dirname,
-        '../../../plugins/addon-catalog/src/Catalog/Catalog.tsx',
+        '../../../plugins/addon-catalog/src/Catalog/Catalog.stories.tsx',
       ),
-    ]);
+      [
+        path.resolve(
+          __dirname,
+          '../../../plugins/addon-catalog/src/Catalog/Catalog.tsx',
+        ),
+      ],
+    );
     expect(tests).toMatchObject({
       results: [
         {
@@ -391,9 +403,13 @@ describe('component-tests', () => {
     });
   }, 100000);
   it('Header', async () => {
-    const tests = await extractTests([
-      path.resolve(__dirname, '../../../ui/components/src/Header/Header.tsx'),
-    ]);
+    const tests = await extractTests(
+      path.resolve(
+        __dirname,
+        '../../../ui/components/src/Header/Header.stories.tsx',
+      ),
+      [path.resolve(__dirname, '../../../ui/components/src/Header/Header.tsx')],
+    );
     expect(tests).toMatchObject({
       results: [
         {
