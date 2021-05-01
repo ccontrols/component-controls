@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.9.1](https://github.com/ccontrols/component-controls/compare/v3.9.0...v3.9.1) (2021-05-01)
+
+
+### Bug Fixes
+
+* callback invoke on hmr ([430e9cd](https://github.com/ccontrols/component-controls/commit/430e9cdbb1a42c615c62456d512d910474e1d6f0))
+
+
+
+
+
 # [3.9.0](https://github.com/ccontrols/component-controls/compare/v3.8.3...v3.9.0) (2021-04-30)
 
 **Note:** Version bump only for package @component-controls/webpack-compile
