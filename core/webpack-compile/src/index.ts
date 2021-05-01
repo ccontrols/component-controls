@@ -48,10 +48,8 @@ export const watch = async (
       ...rest,
       mode: 'development',
     },
+    callback,
   );
-  if (callback) {
-    await callback(results);
-  }
   return results;
 };
 

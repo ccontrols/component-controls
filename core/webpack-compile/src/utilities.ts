@@ -133,12 +133,13 @@ const createConfig = (options: BuildProps): webpack.Configuration => {
 export const runCompiler = (
   run: (compiler: Compiler, callback: Parameters<Compiler['run']>[0]) => void,
   props: BuildProps,
+  callback?: CompilerCallbackFn,
 ): Promise<CompileResults> => {
   return new Promise(resolve => {
     const buildConfig = mergeBuildConfiguration(props);
     const compiler = webpack(createConfig(buildConfig));
 
-    run(compiler, (err, stats) => {
+    run(compiler, async (err, stats) => {
       const bundleName = path.join(
         stats?.compilation.outputOptions?.path || '',
         typeof stats?.compilation.outputOptions.filename === 'string'
@@ -179,6 +180,9 @@ module.exports = ${JSON.stringify({
           }`,
           bundleName,
         );
+        if (callback) {
+          await callback({ store, stats: stats as Stats, bundleName });
+        }
       } else {
         error('error creating bundle', bundleName);
       }
