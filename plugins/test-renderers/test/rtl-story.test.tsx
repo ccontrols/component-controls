@@ -26,7 +26,7 @@ describe('VariantButton', () => {
       example: overview,
       doc,
       config: path.join(__dirname, 'fixtures/.config'),
-      controls: {
+      values: {
         text: 'New Text',
       },
     });

@@ -62,7 +62,7 @@ const variant_icons: Record<ButtonIconType, typeof SearchIcon | undefined> = {
   'down-arrow': ArrowDownIcon,
   'up-arrow': ArrowUpIcon,
 };
-export interface VariantButtonProps {
+export type VariantButtonProps = {
   /**
    *  button label of text
    */
@@ -103,7 +103,7 @@ export interface VariantButtonProps {
    * @deprecated since version 1.0
    */
   isPrimary?: boolean;
-}
+};
 
 /**
  * Button with variants

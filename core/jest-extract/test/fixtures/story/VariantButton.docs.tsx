@@ -5,6 +5,7 @@ import { VariantButton, VariantButtonProps } from './VariantButton';
 export default {
   title: 'VariantButton',
   component: VariantButton,
+  values: './VariantButton.controls.ts',
 } as Document;
 
 export const overview: Example<VariantButtonProps> = props => (

@@ -25,12 +25,12 @@ export function renderExample<Props = any>({
   example,
   doc,
   config,
-  controls,
+  values,
 }: {
   example: Example<Props>;
   doc: Document<Props>;
   config: string | RunConfiguration;
-  controls?: ExampleControls;
+  values?: ExampleControls;
 }): ReturnType<FrameworkRenderFn> {
   let runtimeConfig;
   if (typeof config === 'string') {
@@ -53,11 +53,11 @@ export function renderExample<Props = any>({
     mergeStoryProps(mergeStoryProps<Props>(runtimeConfig, doc), story),
   );
   story.controls = transformControls(story.controls);
-  if (controls && story.controls) {
+  if (values) {
     story.controls = mergeControlValues(
-      story.controls,
+      story.controls || {},
       undefined,
-      getControlValues(transformControls(controls as ComponentControls)),
+      getControlValues(transformControls(values as ComponentControls)),
     );
   }
   return (runtimeConfig.renderFn as StoryRenderFn)(story, doc);
