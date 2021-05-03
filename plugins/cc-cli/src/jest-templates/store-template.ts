@@ -1,9 +1,8 @@
-import fs from 'fs';
-import path from 'path';
 import dot from 'dot';
-import { TemplateOptions, renderers, TemplateFunction } from './types';
 import { createTemplate } from './template';
 import { accessibilityTemplate } from './accessibily';
+import { TemplateOptions, renderers, TemplateFunction } from '../types';
+import { getTemplate } from '../templating/resolve-template';
 
 dot.templateSettings.strip = false;
 (dot as any).log = false;
@@ -26,26 +25,16 @@ export const createStoreTemplate: TemplateFunction = async (
   } = options;
 
   const store = bundle ? 'bundle' : 'imports';
-  const storeImportPath = path.resolve(
-    __dirname,
-    `../templates/store/import/${store}.${format}.js`,
-  );
-  const storeLoopPath = path.resolve(
-    __dirname,
-    `../templates/store/loop/${store}.${format}.js`,
-  );
-  const renderPath = path.resolve(
-    __dirname,
-    `../templates/framework-render/${renderers[renderer]}.${format}.js`,
-  );
-  const render = dot.template(fs.readFileSync(renderPath, 'utf8'))({
+  const render = dot.template(
+    getTemplate(`framework-render/${renderers[renderer]}`, format),
+  )({
     bundle: !!bundle,
     ...accessibilityTemplate(format, ally),
   });
   const vars = {
     render,
-    storeImports: fs.readFileSync(storeImportPath, 'utf8'),
-    storeLoop: dot.template(fs.readFileSync(storeLoopPath, 'utf8'))({
+    storeImports: getTemplate(`store/import/${store}`, format),
+    storeLoop: dot.template(getTemplate(`store/loop/${store}`, format))({
       render,
     }),
     name,

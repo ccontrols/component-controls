@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { runCLI } from 'jest';
-import { createStoreTemplate } from '../src/store-template';
+import { createStoreTemplate } from '../src/jest-templates/store-template';
 import { TemplateOptions } from '../src/types';
 
 export const runTests = async (props: TemplateOptions): Promise<void> => {

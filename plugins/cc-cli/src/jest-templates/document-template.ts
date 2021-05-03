@@ -1,4 +1,3 @@
-import fs from 'fs';
 import path from 'path';
 import dot from 'dot';
 import { parseStories } from '@component-controls/instrument';
@@ -7,7 +6,8 @@ import { Document } from '@component-controls/core';
 import { loadStore } from '@component-controls/store';
 import { createTemplate } from './template';
 import { accessibilityTemplate } from './accessibily';
-import { StoryTemplateOptions, renderers, TemplateFunction } from './types';
+import { StoryTemplateOptions, renderers, TemplateFunction } from '../types';
+import { getTemplate } from '../templating/resolve-template';
 
 dot.templateSettings.strip = false;
 (dot as any).log = false;
@@ -70,10 +70,7 @@ export const createDocumentTemplate: TemplateFunction<StoryTemplateOptions> = as
     return '';
   }
   const store = bundle ? 'bundle' : 'imports';
-  const documentLoopPath = path.resolve(
-    __dirname,
-    `../templates/document/loop/${store}-${renderers[renderer]}.js`,
-  );
+
   const importPath = `.${path.sep}${(output
     ? path.relative(output, storyPath)
     : path.basename(storyPath)
@@ -89,19 +86,15 @@ export const createDocumentTemplate: TemplateFunction<StoryTemplateOptions> = as
   const vars = {
     stories,
     bundle: !!bundle,
-    documentLoop: dot.template(fs.readFileSync(documentLoopPath, 'utf8'))({
+    documentLoop: dot.template(
+      getTemplate(`document/loop/${store}-${renderers[renderer]}`, format),
+    )({
       type:
         format === 'ts' ? ': ReturnType<typeof renderDocument> = []' : ' = []',
       ...accessibilityTemplate(format, ally),
     }),
     doc: bundle ? `const doc = store.docs['${doc.title}'];` : '',
-    storyImports: fs.readFileSync(
-      path.resolve(
-        __dirname,
-        `../templates/document/import/${store}.${format}.js`,
-      ),
-      'utf8',
-    ),
+    storyImports: getTemplate(`document/import/${store}`, format),
 
     storiesFileImports,
     name: name || doc.title,

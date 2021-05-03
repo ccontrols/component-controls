@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { runCLI } from 'jest';
-import { createStoriesTemplate } from '../src/stories-template';
+import { createStoriesTemplate } from '../src/jest-templates/stories-template';
 import { StoryTemplateOptions } from '../src/types';
 
 export const runTests = async (

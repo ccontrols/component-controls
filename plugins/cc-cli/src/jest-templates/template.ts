@@ -1,11 +1,10 @@
-import fs from 'fs';
 import path from 'path';
 import dot from 'dot';
 import { defaultConfigFolder } from '@component-controls/core/node-utils';
 import { prettify } from '@component-controls/instrument';
 import { accessibilityTemplate } from './accessibily';
-import { TemplateOptions, renderers } from './types';
-
+import { TemplateOptions, renderers } from '../types';
+import { getTemplate } from '../templating/resolve-template';
 dot.templateSettings.strip = false;
 (dot as any).log = false;
 
@@ -31,28 +30,20 @@ export const createTemplate = (
     ally,
     vars: customVars,
   } = options;
-  const topImports = dot.template(
-    fs.readFileSync(
-      path.resolve(__dirname, `../templates/top-imports/imports.${format}.js`),
-      'utf8',
-    ),
-  )(accessibilityTemplate(format, ally));
-  const importsPath = path.resolve(
-    __dirname,
-    `../templates/imports/${renderers[renderer]}.${format}.js`,
+  const topImports = dot.template(getTemplate('top-imports/imports', format))(
+    accessibilityTemplate(format, ally),
   );
   const store = bundle ? 'bundle' : 'imports';
-  const loadPath = path.resolve(__dirname, `../templates/load/${store}.js`);
 
   const bundlePath =
     output && bundle ? `.${path.sep}${path.relative(output, bundle)}` : bundle;
   const configPath = output ? path.relative(output, config) : config;
   const vars = {
     topImports,
-    imports: fs.readFileSync(importsPath, 'utf8'),
+    imports: getTemplate(`imports/${renderers[renderer]}`, format),
     configPath,
     bundlePath,
-    load: dot.template(fs.readFileSync(loadPath, 'utf8'))({
+    load: dot.template(getTemplate(`load/${store}`, format))({
       bundlePath,
       configPath,
     }),

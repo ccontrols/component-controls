@@ -6,7 +6,8 @@ export const renderers = {
 
 export type Renderers = keyof typeof renderers;
 
-export type TeplateFormats = 'cjs' | 'esm' | 'ts';
+export const Formats = ['cjs', 'esm', 'ts'] as const;
+export type TeplateFormats = typeof Formats[number];
 
 export type TemplateOptions = {
   /**

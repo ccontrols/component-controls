@@ -1,1 +1,0 @@
-import { loadStore } from '@component-controls/store';
