@@ -47,7 +47,9 @@ export const cliStory = async (
 
   if (bundle) {
     const store = loadStore(require(bundle));
-    documents = Object.keys(store.docs).map(key => store.docs[key].title);
+    documents = Object.keys(store.docs).map(
+      key => store.docs[key].fileName || store.docs[key].title,
+    );
   } else {
     const configPath = path.resolve(process.cwd(), config);
     const configuration = loadConfig(configPath);
@@ -61,7 +63,7 @@ export const cliStory = async (
     const splitName = basename.split('.');
     const componentName = splitName[0];
     const fileFormat =
-      format || path.extname(name).startsWith('.ts') ? 'ts' : 'esm';
+      format || (path.extname(name).startsWith('.ts') ? 'ts' : 'esm');
     const testName =
       test || formatExtension(`${componentName}.test.js`, fileFormat);
     const templateFn = generateDoc

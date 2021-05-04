@@ -25,7 +25,8 @@ export const getStore = async ({
         'When using a bundle, you must specify the document title/name as name (-n) parameter',
       );
     }
-    const store = loadStore(require(bundle));
+    const loadedStore = require(bundle);
+    const store = loadStore(loadedStore);
     const doc = store.docs[name];
     if (!doc) {
       throw new Error(
