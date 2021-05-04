@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`VariantButton overview snapshot 1`] = `
+exports[`VariantButton special-chars overview snapshot 1`] = `
 <button
   disabled={false}
   style={
@@ -12,7 +12,7 @@ exports[`VariantButton overview snapshot 1`] = `
       "color": "#F2F2F2",
       "display": "flex",
       "flexDirection": "row",
-      "fontSize": 18,
+      "fontSize": 12,
       "padding": "10px 20px",
     }
   }
@@ -55,7 +55,7 @@ exports[`VariantButton overview snapshot 1`] = `
       }
     }
   >
-    Button
+    s%~\`
   </div>
 </button>
 `;

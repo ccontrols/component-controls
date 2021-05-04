@@ -9,6 +9,7 @@ import {
 } from './controls';
 import { deepmerge } from './deepMerge';
 
+export const randomizeSeed = (seed: number): void => faker.seed(seed);
 const arrayElements = (arr: any[], c?: number) => {
   const array = arr || ['a', 'b', 'c'];
   let count = 0;

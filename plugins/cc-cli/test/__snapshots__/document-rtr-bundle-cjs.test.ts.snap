@@ -14,7 +14,7 @@ const {
 } = require('@component-controls/test-renderers');
 const act = renderer.act;
 
-describe('Components/Header', () => {
+describe('VariantButton', () => {
   const store = loadStore(
     require(path.resolve(__dirname, './bundle/component-controls.js')),
   );

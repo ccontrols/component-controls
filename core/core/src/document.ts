@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import { PropsWithChildren, ReactElement } from 'react';
 import { CodeLocation, PackageInfo, StoryRenderFn } from './utility';
-import { Component } from './components';
+import { Components } from './components';
 import { StoryProps } from './common';
 import { ComponentControl } from './controls';
 import { RunConfiguration, DocType, PageLayoutProps } from './configuration';
@@ -303,11 +303,6 @@ export type DocInfo = Pick<
   rawTags?: string[];
   rawType?: string;
 };
-/**
- * list of components used in stories
- */
-
-export type Components = Record<string, Component>;
 
 /**
  * list of story files, or groups

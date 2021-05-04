@@ -16,7 +16,7 @@ describe('VariantButton', () => {
   const controls = require(path.resolve(
     __dirname,
     '../../../core/jest-extract/test/fixtures/story/',
-    doc.values,
+    doc.testData,
   ));
   Object.keys(controls['overview']).forEach(ctrlName => {
     const values = controls['overview'][ctrlName];

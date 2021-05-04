@@ -1,6 +1,6 @@
 import { CliOptions } from './types';
 import { saveTemplate } from './save-template';
-import { createStoreTemplate } from '../store-template';
+import { createStoreTemplate } from '../jest-templates/store-template';
 
 /**
  * cli function to create a test file with dynamic tests for the entre store

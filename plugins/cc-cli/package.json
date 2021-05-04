@@ -24,6 +24,7 @@
     "docs": "ts-md",
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
+    "create-bundle": "ccc -c test/.config -d test/bundle",
     "prepare": "yarn build",
     "test:create": "cc-cli -g story -c ./test/.config -o test -w",
     "test": "yarn jest -i"

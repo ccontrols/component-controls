@@ -9,7 +9,7 @@ import { loadStore } from '@component-controls/store';
 import renderer, { act } from 'react-test-renderer';
 import { renderErr, componentErr } from '@component-controls/test-renderers';
 
-describe('Components/Header', () => {
+describe('VariantButton', () => {
   const store = loadStore(
     require(path.resolve(__dirname, './bundle/component-controls.js')),
   );

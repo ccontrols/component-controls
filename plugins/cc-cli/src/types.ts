@@ -38,6 +38,11 @@ export type TemplateOptions = {
    * if true, include axe accessibility tests
    */
   ally?: boolean;
+
+  /**
+   * if positive number, how many rows of random data to generate for data-driven testing
+   */
+  data?: number;
 };
 
 export interface StoryTemplateOptions extends TemplateOptions {

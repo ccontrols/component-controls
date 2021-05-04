@@ -13,7 +13,7 @@ export const runTests = async (
     renderedFile = await createStoriesTemplate({
       storyPath: path.resolve(__dirname, 'fixtures/VariantButton.docs.tsx'),
       format,
-      name: bundle ? 'Components/Header' : undefined,
+      name: bundle ? 'VariantButton' : undefined,
       renderer,
       bundle,
       config,

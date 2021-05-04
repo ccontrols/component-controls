@@ -188,6 +188,13 @@ export interface Component {
    */
   jest?: JestTests;
 }
+
+/**
+ * list of components used in store
+ */
+
+export type Components = Record<string, Component>;
+
 /**
  * given a component, return its name
  * @param component a string component name, or a component class, with a name or displayName static property

@@ -12,15 +12,105 @@ import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 
 configure({ adapter: new Adapter() });
 
-describe('Components/Header', () => {
+describe('VariantButton', () => {
   const store = loadStore(
     require(path.resolve(__dirname, './bundle/component-controls.js')),
   );
   const renderFn = store.config.renderFn;
-  const doc = store.docs['Components/Header'];
+  const doc = store.docs['VariantButton'];
 
   describe('Overview', () => {
-    const story = store.stories['components-header--overview'];
+    const story = store.stories['variantbutton--overview'];
+
+    const rendered = renderFn(story, doc);
+
+    it('snapshot', () => {
+      const component = mount(rendered);
+      expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+
+  describe('Primary', () => {
+    const story = store.stories['variantbutton--primary'];
+
+    const rendered = renderFn(story, doc);
+
+    it('snapshot', () => {
+      const component = mount(rendered);
+      expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+
+  describe('Accent', () => {
+    const story = store.stories['variantbutton--accent'];
+
+    const rendered = renderFn(story, doc);
+
+    it('snapshot', () => {
+      const component = mount(rendered);
+      expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+
+  describe('Disabled', () => {
+    const story = store.stories['variantbutton--disabled'];
+
+    const rendered = renderFn(story, doc);
+
+    it('snapshot', () => {
+      const component = mount(rendered);
+      expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+
+  describe('Success', () => {
+    const story = store.stories['variantbutton--success'];
+
+    const rendered = renderFn(story, doc);
+
+    it('snapshot', () => {
+      const component = mount(rendered);
+      expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+
+  describe('Error', () => {
+    const story = store.stories['variantbutton--error'];
+
+    const rendered = renderFn(story, doc);
+
+    it('snapshot', () => {
+      const component = mount(rendered);
+      expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+
+  describe('Warning', () => {
+    const story = store.stories['variantbutton--warning'];
 
     const rendered = renderFn(story, doc);
 

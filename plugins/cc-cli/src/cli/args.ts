@@ -99,4 +99,13 @@ export const jestCliArgs: ArgOptions = [
       type: 'boolean',
     },
   },
+  {
+    name: 'data',
+    options: {
+      alias: 'd',
+      description: '[n] rows to generate with data-driven testing files',
+      default: 0,
+      type: 'number',
+    },
+  },
 ];

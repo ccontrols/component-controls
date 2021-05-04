@@ -1,13 +1,10 @@
 import path from 'path';
 import dot from 'dot';
-import { parseStories } from '@component-controls/instrument';
-
-import { Document } from '@component-controls/core';
-import { loadStore } from '@component-controls/store';
 import { createTemplate } from './template';
 import { accessibilityTemplate } from './accessibily';
 import { StoryTemplateOptions, renderers, TemplateFunction } from '../types';
 import { getTemplate } from '../templating/resolve-template';
+import { getStore } from '../templating/store';
 
 dot.templateSettings.strip = false;
 (dot as any).log = false;
@@ -30,46 +27,15 @@ export const createStoriesTemplate: TemplateFunction<StoryTemplateOptions> = asy
     ally,
     ...rest
   } = options;
-  let stories: { id?: string; name: string }[] = [];
-  let doc: Document = { title: 'doc' };
-  if (bundle) {
-    if (!name) {
-      throw new Error(
-        'When using a bundle, you must specify the document title/name as name parameter',
-      );
-    }
-    const store = loadStore(require(bundle));
-
-    if (!store.docs[name]) {
-      throw new Error(
-        `Could not find document ${name} in the specified bundle`,
-      );
-    }
-    doc = store.docs[name];
-    if (doc.stories) {
-      stories = doc.stories.map(id => {
-        const story = store.stories[id];
-        return { name: story.name, id };
-      });
-    }
-  } else {
-    const { doc: storeDoc, stories: storeStories } = await parseStories(
-      storyPath,
-    );
-    if (storeDoc) {
-      doc = storeDoc;
-    }
-    if (storeStories) {
-      stories = Object.keys(storeStories).map(key => ({
-        name: storeStories[key].name,
-        id: key,
-      }));
-    }
-  }
-  if (stories.length === 0 || doc.isMDXComponent) {
+  const parsed = await getStore({ bundle, name, storyPath });
+  if (!parsed) {
     return '';
   }
-  const store = bundle ? 'bundle' : 'imports';
+  const { doc, stories, storeName } = parsed;
+  const arrStories = Object.keys(stories).map(key => ({
+    name: stories[key].name,
+    id: key,
+  }));
   const render = dot.template(
     getTemplate(`framework-render/${renderers[renderer]}`, format),
   )({
@@ -88,22 +54,22 @@ export const createStoriesTemplate: TemplateFunction<StoryTemplateOptions> = asy
     : format === 'cjs'
     ? `
 const doc = require('${importPath}');
-const { ${stories
+const { ${arrStories
         .map(story =>
           story.name === 'example' ? 'example as example_story' : story.name,
         )
         .join(', ')} } = require('${importPath}');
     `
-    : `import doc, { ${stories
+    : `import doc, { ${arrStories
         .map(story =>
           story.name === 'example' ? 'example as example_story' : story.name,
         )
         .join(', ')} } from '${importPath}';`;
   const vars = {
-    stories,
+    stories: arrStories,
     render,
     doc: bundle ? `const doc = store.docs['${doc.title}'];` : '',
-    storyImports: getTemplate(`story/import/${store}`, format),
+    storyImports: getTemplate(`story/import/${storeName}`, format),
 
     storiesFileImports,
     name: name || doc.title,

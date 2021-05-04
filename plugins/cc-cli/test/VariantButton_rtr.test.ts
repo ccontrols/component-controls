@@ -14,28 +14,39 @@ import doc, {
 describe('VariantButton', () => {
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
-  describe('overview', () => {
-    const example = overview;
+  const controls = require(path.resolve(
+    __dirname,
+    '../../../core/jest-extract/test/fixtures/story/',
+    doc.testData,
+  ));
+  Object.keys(controls['overview']).forEach(ctrlName => {
+    const values = controls['overview'][ctrlName];
+    describe(ctrlName, () => {
+      describe('overview', () => {
+        const example = overview;
 
-    let rendered;
-    act(() => {
-      rendered = renderExample({
-        example,
-        doc,
-        config,
+        let rendered;
+        act(() => {
+          rendered = renderExample({
+            example,
+            doc,
+            config,
+            values,
+          });
+        });
+        if (!rendered) {
+          renderErr();
+          return;
+        }
+        it('snapshot', () => {
+          const component = renderer.create(rendered);
+          expect(component.toJSON()).toMatchSnapshot();
+        });
+        it('accessibility', async () => {
+          const results = await reactRunDOM<AxeResults>(rendered, run);
+          expect(results).toHaveNoAxeViolations();
+        });
       });
-    });
-    if (!rendered) {
-      renderErr();
-      return;
-    }
-    it('snapshot', () => {
-      const component = renderer.create(rendered);
-      expect(component.toJSON()).toMatchSnapshot();
-    });
-    it('accessibility', async () => {
-      const results = await reactRunDOM<AxeResults>(rendered, run);
-      expect(results).toHaveNoAxeViolations();
     });
   });
 });

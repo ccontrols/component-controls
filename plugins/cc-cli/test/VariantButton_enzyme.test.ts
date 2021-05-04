@@ -17,21 +17,32 @@ import doc, {
 describe('VariantButton', () => {
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
-  describe('overview', () => {
-    const example = overview;
+  const controls = require(path.resolve(
+    __dirname,
+    '../../../core/jest-extract/test/fixtures/story/',
+    doc.testData,
+  ));
+  Object.keys(controls['overview']).forEach(ctrlName => {
+    const values = controls['overview'][ctrlName];
+    describe(ctrlName, () => {
+      describe('overview', () => {
+        const example = overview;
 
-    const rendered = renderExample({
-      example,
-      doc,
-      config,
-    });
-    it('snapshot', async () => {
-      const component = mount(rendered);
-      expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
-    });
-    it('accessibility', async () => {
-      const results = await reactRunDOM<AxeResults>(rendered, run);
-      expect(results).toHaveNoAxeViolations();
+        const rendered = renderExample({
+          example,
+          doc,
+          config,
+          values,
+        });
+        it('snapshot', async () => {
+          const component = mount(rendered);
+          expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+        });
+        it('accessibility', async () => {
+          const results = await reactRunDOM<AxeResults>(rendered, run);
+          expect(results).toHaveNoAxeViolations();
+        });
+      });
     });
   });
 });

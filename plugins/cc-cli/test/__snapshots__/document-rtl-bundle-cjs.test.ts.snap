@@ -10,7 +10,7 @@ const { loadStore } = require('@component-controls/store');
 const { render, act } = require('@testing-library/react');
 const { renderErr } = require('@component-controls/test-renderers');
 
-describe('Components/Header', () => {
+describe('VariantButton', () => {
   const store = loadStore(
     require(path.resolve(__dirname, './bundle/component-controls.js')),
   );

@@ -13,7 +13,7 @@ const Adapter = require('@wojtekmaj/enzyme-adapter-react-17');
 
 configure({ adapter: new Adapter() });
 
-describe('Components/Header', () => {
+describe('VariantButton', () => {
   const store = loadStore(
     require(path.resolve(__dirname, './bundle/component-controls.js')),
   );

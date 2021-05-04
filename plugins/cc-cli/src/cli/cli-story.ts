@@ -4,8 +4,8 @@ import { loadStore } from '@component-controls/store';
 import { StoryTemplateOptions, TeplateFormats } from '../types';
 import { CliOptions } from './types';
 import { saveTemplate } from './save-template';
-import { createStoriesTemplate } from '../stories-template';
-import { createDocumentTemplate } from '../document-template';
+import { createStoriesTemplate } from '../jest-templates/stories-template';
+import { createDocumentTemplate } from '../jest-templates/document-template';
 
 const formatExtensions: { [key in TeplateFormats]: string } = {
   cjs: '.js',
