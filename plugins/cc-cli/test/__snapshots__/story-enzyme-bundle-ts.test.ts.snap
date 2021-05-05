@@ -22,7 +22,7 @@ describe('VariantButton', () => {
   describe('Overview', () => {
     const story = store.stories['variantbutton--overview'];
 
-    const rendered = renderFn(story, doc);
+    const rendered = renderFn({ story, doc });
 
     it('snapshot', () => {
       const component = mount(rendered);
@@ -37,7 +37,7 @@ describe('VariantButton', () => {
   describe('Primary', () => {
     const story = store.stories['variantbutton--primary'];
 
-    const rendered = renderFn(story, doc);
+    const rendered = renderFn({ story, doc });
 
     it('snapshot', () => {
       const component = mount(rendered);
@@ -52,7 +52,7 @@ describe('VariantButton', () => {
   describe('Accent', () => {
     const story = store.stories['variantbutton--accent'];
 
-    const rendered = renderFn(story, doc);
+    const rendered = renderFn({ story, doc });
 
     it('snapshot', () => {
       const component = mount(rendered);
@@ -67,7 +67,7 @@ describe('VariantButton', () => {
   describe('Disabled', () => {
     const story = store.stories['variantbutton--disabled'];
 
-    const rendered = renderFn(story, doc);
+    const rendered = renderFn({ story, doc });
 
     it('snapshot', () => {
       const component = mount(rendered);
@@ -82,7 +82,7 @@ describe('VariantButton', () => {
   describe('Success', () => {
     const story = store.stories['variantbutton--success'];
 
-    const rendered = renderFn(story, doc);
+    const rendered = renderFn({ story, doc });
 
     it('snapshot', () => {
       const component = mount(rendered);
@@ -97,7 +97,7 @@ describe('VariantButton', () => {
   describe('Error', () => {
     const story = store.stories['variantbutton--error'];
 
-    const rendered = renderFn(story, doc);
+    const rendered = renderFn({ story, doc });
 
     it('snapshot', () => {
       const component = mount(rendered);
@@ -112,7 +112,7 @@ describe('VariantButton', () => {
   describe('Warning', () => {
     const story = store.stories['variantbutton--warning'];
 
-    const rendered = renderFn(story, doc);
+    const rendered = renderFn({ story, doc });
 
     it('snapshot', () => {
       const component = mount(rendered);

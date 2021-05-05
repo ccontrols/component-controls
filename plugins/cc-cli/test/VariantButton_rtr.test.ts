@@ -6,6 +6,7 @@ import { reactRunDOM } from '@component-controls/test-renderers';
 import renderer, { act } from 'react-test-renderer';
 import { renderErr } from '@component-controls/test-renderers';
 import '@component-controls/jest-axe-matcher';
+import * as data from '../../../core/jest-extract/test/fixtures/story/VariantButton.data';
 
 import doc, {
   overview,
@@ -14,13 +15,8 @@ import doc, {
 describe('VariantButton', () => {
   const configPath = path.resolve(__dirname, '.config');
   const config = loadConfigurations(configPath);
-  const controls = require(path.resolve(
-    __dirname,
-    '../../../core/jest-extract/test/fixtures/story/',
-    doc.testData,
-  ));
-  Object.keys(controls['overview']).forEach(ctrlName => {
-    const values = controls['overview'][ctrlName];
+  Object.keys(data['overview']).forEach(ctrlName => {
+    const values = data['overview'][ctrlName];
     describe(ctrlName, () => {
       describe('overview', () => {
         const example = overview;

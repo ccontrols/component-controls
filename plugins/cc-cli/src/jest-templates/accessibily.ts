@@ -1,5 +1,5 @@
-import { TeplateFormats } from '../types';
-import { getTemplate } from '../templating/resolve-template';
+import { TeplateFormats } from '../utils';
+import { getTemplate } from '../resolve-template';
 
 export const accessibilityTemplate = (
   format: TeplateFormats,

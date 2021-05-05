@@ -12,7 +12,7 @@ const { renderDocument } = require('@component-controls/test-renderers');
 const { render, act } = require('@testing-library/react');
 const { renderErr } = require('@component-controls/test-renderers');
 
-const examples = require('./../../../../core/jest-extract/test/fixtures/story/VariantButton.docs');
+const examples = require('../../../../core/jest-extract/test/fixtures/story/VariantButton.docs');
 
 describe('VariantButton', () => {
   const configPath = path.resolve(__dirname, '../.config');
@@ -56,7 +56,7 @@ import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 
 configure({ adapter: new Adapter() });
 
-import * as examples from './../../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
+import * as examples from '../../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
 
 describe('VariantButton', () => {
   const configPath = path.resolve(__dirname, '../.config');
@@ -90,7 +90,7 @@ import { renderDocument } from '@component-controls/test-renderers';
 import { render, act } from '@testing-library/react';
 import { renderErr } from '@component-controls/test-renderers';
 
-import * as examples from './../../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
+import * as examples from '../../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
 
 describe('VariantButton', () => {
   const configPath = path.resolve(__dirname, '../.config');
@@ -131,7 +131,7 @@ import { renderDocument } from '@component-controls/test-renderers';
 import renderer, { act } from 'react-test-renderer';
 import { renderErr, componentErr } from '@component-controls/test-renderers';
 
-import * as examples from './../../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
+import * as examples from '../../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
 
 describe('VariantButton', () => {
   const configPath = path.resolve(__dirname, '../.config');
@@ -176,7 +176,7 @@ import { renderDocument } from '@component-controls/test-renderers';
 import { render, act } from '@testing-library/react';
 import { renderErr } from '@component-controls/test-renderers';
 
-import * as examples from './../../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
+import * as examples from '../../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
 
 describe('VariantButton', () => {
   const configPath = path.resolve(__dirname, '../.config');

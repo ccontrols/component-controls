@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { runCLI } from 'jest';
 import { createStoriesTemplate } from '../src/jest-templates/stories-template';
-import { StoryTemplateOptions } from '../src/types';
+import { StoryTemplateOptions } from '../src/utils';
 
 export const runTests = async (
   props: Omit<StoryTemplateOptions, 'storyPath'>,

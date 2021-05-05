@@ -1,8 +1,8 @@
 import dot from 'dot';
 import { createTemplate } from './template';
 import { accessibilityTemplate } from './accessibily';
-import { TemplateOptions, renderers, TemplateFunction } from '../types';
-import { getTemplate } from '../templating/resolve-template';
+import { TemplateOptions, renderers, TemplateFunction } from '../utils';
+import { getTemplate } from '../resolve-template';
 
 dot.templateSettings.strip = false;
 (dot as any).log = false;
@@ -32,7 +32,6 @@ export const createStoreTemplate: TemplateFunction = async (
     ...accessibilityTemplate(format, ally),
   });
   const vars = {
-    render,
     storeImports: getTemplate(`store/import/${store}`, format),
     storeLoop: dot.template(getTemplate(`store/loop/${store}`, format))({
       render,

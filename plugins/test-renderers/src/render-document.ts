@@ -1,6 +1,7 @@
 import {
   Example,
   Document,
+  ExampleControls,
   FrameworkRenderFn,
   RunConfiguration,
 } from '@component-controls/core';
@@ -17,6 +18,7 @@ export function renderDocument<Props = any>(
     [prop: string]: Document<Props> | Example<Props>;
   },
   config: string | RunConfiguration,
+  values?: Record<string, ExampleControls>,
 ): { rendered: ReturnType<FrameworkRenderFn>; name: string }[] {
   const doc = props['default'] as Document<Props>;
   return Object.keys(props)
@@ -26,6 +28,7 @@ export function renderDocument<Props = any>(
         doc,
         example: props[key] as Example<Props>,
         config,
+        values: values?.[key],
       }),
       name: props[key].name || key,
     }));

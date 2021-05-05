@@ -9,18 +9,19 @@ import {
 import { BuildProps } from './build';
 import { StoryProps } from './common';
 import { ActionItems } from './utility';
-import { Story, Document } from './document';
+import { Story, Document, ExampleControls } from './document';
 import { SearchOptions } from './search';
 import { TokenOptions } from './tokens';
 
 /**
  * render function by framework. By default 'react'
  */
-export type FrameworkRenderFn = (
-  story: Story,
-  doc?: Document,
-  options?: any,
-) => ReactElement;
+export type FrameworkRenderFn = (props: {
+  story: Story;
+  doc?: Document;
+  values?: ExampleControls;
+  options?: any;
+}) => ReactElement;
 
 /**
  * story type pages can have multiple tabs with separate page configurations.

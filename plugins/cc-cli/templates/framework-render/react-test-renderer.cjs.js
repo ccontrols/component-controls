@@ -1,7 +1,7 @@
 let rendered;
 act(() => {
   {{? it.bundle }}
-  rendered = renderFn(story, doc);
+  rendered = renderFn({ story, doc });
   {{?? true }}
   rendered = renderExample({
     example,

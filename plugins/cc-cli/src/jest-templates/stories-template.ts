@@ -2,9 +2,15 @@ import path from 'path';
 import dot from 'dot';
 import { createTemplate } from './template';
 import { accessibilityTemplate } from './accessibily';
-import { StoryTemplateOptions, renderers, TemplateFunction } from '../types';
-import { getTemplate } from '../templating/resolve-template';
-import { getStore } from '../templating/store';
+import {
+  StoryTemplateOptions,
+  renderers,
+  TemplateFunction,
+  DataImportOptions,
+  relativeImport,
+} from '../utils';
+import { getTemplate } from '../resolve-template';
+import { getStore } from '../store';
 
 dot.templateSettings.strip = false;
 (dot as any).log = false;
@@ -16,6 +22,7 @@ dot.templateSettings.strip = false;
  */
 export const createStoriesTemplate: TemplateFunction<StoryTemplateOptions> = async (
   options: StoryTemplateOptions,
+  dataImports?: DataImportOptions,
 ): Promise<string> => {
   const {
     storyPath = '',
@@ -42,13 +49,13 @@ export const createStoriesTemplate: TemplateFunction<StoryTemplateOptions> = asy
     bundle: !!bundle,
     ...accessibilityTemplate(format, ally),
   });
-  const importPath = `.${path.sep}${(output
-    ? path.relative(output, storyPath)
-    : path.basename(storyPath)
+  const importPath = (output
+    ? relativeImport(output, storyPath)
+    : `./${path.basename(storyPath)}`
   )
     .split('.')
     .slice(0, -1)
-    .join('.')}`;
+    .join('.');
   const storiesFileImports = bundle
     ? ''
     : format === 'cjs'
@@ -66,6 +73,9 @@ const { ${arrStories
         )
         .join(', ')} } from '${importPath}';`;
   const vars = {
+    dataImports: dot.template(getTemplate(`data-include/import`, format))({
+      dataFile: dataImports?.filePath,
+    }),
     stories: arrStories,
     render,
     doc: bundle ? `const doc = store.docs['${doc.title}'];` : '',
@@ -79,6 +89,7 @@ const { ${arrStories
 {{=it.storyImports}}
 {{=it.imports}}
 {{=it.storiesFileImports}}
+{{=it.dataImports}}
 
 describe('{{=it.name}}', () => {
 {{=it.load}}

@@ -1,27 +1,36 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`rtl bundle ts 1`] = `
-"import * as path from 'path';
+import * as path from 'path';
 import { run, AxeResults } from 'axe-core';
 import { reactRunDOM } from '@component-controls/test-renderers';
 import '@component-controls/jest-axe-matcher';
-import { loadStore } from '@component-controls/store';
+import { loadConfigurations } from '@component-controls/config';
+import { renderExample } from '@component-controls/test-renderers';
 import { render, act } from '@testing-library/react';
 import { renderErr } from '@component-controls/test-renderers';
 
+import doc, {
+  overview,
+  primary,
+  accent,
+  disabled,
+  success,
+  error,
+  warning,
+} from '../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
+
 describe('VariantButton', () => {
-  const store = loadStore(
-    require(path.resolve(__dirname, './bundle/component-controls.js')),
-  );
-  const renderFn = store.config.renderFn;
-  const doc = store.docs['VariantButton'];
+  const configPath = path.resolve(__dirname, '.config');
+  const config = loadConfigurations(configPath);
 
-  describe('Overview', () => {
-    const story = store.stories['variantbutton--overview'];
+  describe('overview', () => {
+    const example = overview;
 
     let rendered: ReturnType<typeof renderExample> = undefined as any;
     act(() => {
-      rendered = renderFn({ story, doc });
+      rendered = renderExample({
+        example,
+        doc,
+        config,
+      });
     });
     if (!rendered) {
       renderErr();
@@ -37,12 +46,16 @@ describe('VariantButton', () => {
     });
   });
 
-  describe('Primary', () => {
-    const story = store.stories['variantbutton--primary'];
+  describe('primary', () => {
+    const example = primary;
 
     let rendered: ReturnType<typeof renderExample> = undefined as any;
     act(() => {
-      rendered = renderFn({ story, doc });
+      rendered = renderExample({
+        example,
+        doc,
+        config,
+      });
     });
     if (!rendered) {
       renderErr();
@@ -58,12 +71,16 @@ describe('VariantButton', () => {
     });
   });
 
-  describe('Accent', () => {
-    const story = store.stories['variantbutton--accent'];
+  describe('accent', () => {
+    const example = accent;
 
     let rendered: ReturnType<typeof renderExample> = undefined as any;
     act(() => {
-      rendered = renderFn({ story, doc });
+      rendered = renderExample({
+        example,
+        doc,
+        config,
+      });
     });
     if (!rendered) {
       renderErr();
@@ -79,12 +96,16 @@ describe('VariantButton', () => {
     });
   });
 
-  describe('Disabled', () => {
-    const story = store.stories['variantbutton--disabled'];
+  describe('disabled', () => {
+    const example = disabled;
 
     let rendered: ReturnType<typeof renderExample> = undefined as any;
     act(() => {
-      rendered = renderFn({ story, doc });
+      rendered = renderExample({
+        example,
+        doc,
+        config,
+      });
     });
     if (!rendered) {
       renderErr();
@@ -100,12 +121,16 @@ describe('VariantButton', () => {
     });
   });
 
-  describe('Success', () => {
-    const story = store.stories['variantbutton--success'];
+  describe('success', () => {
+    const example = success;
 
     let rendered: ReturnType<typeof renderExample> = undefined as any;
     act(() => {
-      rendered = renderFn({ story, doc });
+      rendered = renderExample({
+        example,
+        doc,
+        config,
+      });
     });
     if (!rendered) {
       renderErr();
@@ -121,12 +146,16 @@ describe('VariantButton', () => {
     });
   });
 
-  describe('Error', () => {
-    const story = store.stories['variantbutton--error'];
+  describe('error', () => {
+    const example = error;
 
     let rendered: ReturnType<typeof renderExample> = undefined as any;
     act(() => {
-      rendered = renderFn({ story, doc });
+      rendered = renderExample({
+        example,
+        doc,
+        config,
+      });
     });
     if (!rendered) {
       renderErr();
@@ -142,12 +171,16 @@ describe('VariantButton', () => {
     });
   });
 
-  describe('Warning', () => {
-    const story = store.stories['variantbutton--warning'];
+  describe('warning', () => {
+    const example = warning;
 
     let rendered: ReturnType<typeof renderExample> = undefined as any;
     act(() => {
-      rendered = renderFn({ story, doc });
+      rendered = renderExample({
+        example,
+        doc,
+        config,
+      });
     });
     if (!rendered) {
       renderErr();
@@ -163,5 +196,3 @@ describe('VariantButton', () => {
     });
   });
 });
-"
-`;

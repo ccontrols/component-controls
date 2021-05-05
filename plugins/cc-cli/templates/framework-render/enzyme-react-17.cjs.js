@@ -1,5 +1,5 @@
 {{? it.bundle }}
-const rendered = renderFn(story, doc);
+const rendered = renderFn({ story, doc });
 {{?? true }}
 const rendered = renderExample({
   example,

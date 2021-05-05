@@ -1,34 +1,25 @@
 import path from 'path';
 import fs from 'fs';
-import { CliOptions } from './types';
-import { TemplateFunction, TemplateOptions } from '../types';
+import { CliOptions, getTestFolder } from './utils';
+import { TemplateFunction, TemplateOptions } from '../utils';
+import { saveDataTemplate } from './save-data-template';
 
 /**
  * save a template file based on options
  * @param options - the rendering and file options
  * @param templateFn - a selected templating function
+ * @param dataImports - the data import parameters - ie file to import and stories that have data values associated
  * @returns a promise, since the function is async
  */
 export const saveTemplate = async <P extends TemplateOptions>(
   options: CliOptions<P>,
   templateFn: TemplateFunction<P>,
 ): Promise<void> => {
-  const { test, overwrite, output, include, exclude, ...rest } = options;
-
-  //check if the test file name is to be included.
-  const testName = test.split('.')[0];
-  if (include && !include.includes(testName)) {
-    return;
+  const testFolder = getTestFolder(options);
+  if (!testFolder) {
+    return undefined;
   }
-  if (exclude && exclude.includes(testName)) {
-    return;
-  }
-
-  let testFolder = output as string;
-
-  if (!path.isAbsolute(testFolder)) {
-    testFolder = path.resolve(process.cwd(), testFolder);
-  }
+  const { test, overwrite, ...rest } = options;
 
   const testFilePath = path.resolve(testFolder, test);
 
@@ -38,10 +29,15 @@ export const saveTemplate = async <P extends TemplateOptions>(
     );
     return;
   }
-  const content = await templateFn(({
-    output: testFolder,
-    ...rest,
-  } as unknown) as P);
+  const dataTemplate = await saveDataTemplate(options);
+
+  const content = await templateFn(
+    ({
+      output: testFolder,
+      ...rest,
+    } as unknown) as P,
+    dataTemplate,
+  );
   if (content) {
     if (!fs.existsSync(testFolder)) {
       fs.mkdirSync(testFolder);

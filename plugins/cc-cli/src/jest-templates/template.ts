@@ -3,8 +3,8 @@ import dot from 'dot';
 import { defaultConfigFolder } from '@component-controls/core/node-utils';
 import { prettify } from '@component-controls/instrument';
 import { accessibilityTemplate } from './accessibily';
-import { TemplateOptions, renderers } from '../types';
-import { getTemplate } from '../templating/resolve-template';
+import { TemplateOptions, renderers, relativeImport } from '../utils';
+import { getTemplate } from '../resolve-template';
 dot.templateSettings.strip = false;
 (dot as any).log = false;
 
@@ -35,8 +35,7 @@ export const createTemplate = (
   );
   const store = bundle ? 'bundle' : 'imports';
 
-  const bundlePath =
-    output && bundle ? `.${path.sep}${path.relative(output, bundle)}` : bundle;
+  const bundlePath = output && bundle ? relativeImport(output, bundle) : bundle;
   const configPath = output ? path.relative(output, config) : config;
   const vars = {
     topImports,

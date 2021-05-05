@@ -12,7 +12,7 @@ const { renderExample } = require('@component-controls/test-renderers');
 const { render, act } = require('@testing-library/react');
 const { renderErr } = require('@component-controls/test-renderers');
 
-const doc = require('./../../../../core/jest-extract/test/fixtures/story/VariantButton.docs');
+const doc = require('../../../../core/jest-extract/test/fixtures/story/VariantButton.docs');
 const {
   overview,
   primary,
@@ -21,7 +21,7 @@ const {
   success,
   error,
   warning,
-} = require('./../../../../core/jest-extract/test/fixtures/story/VariantButton.docs');
+} = require('../../../../core/jest-extract/test/fixtures/story/VariantButton.docs');
 
 describe('VariantButton', () => {
   const configPath = path.resolve(__dirname, '../.config');
@@ -228,7 +228,7 @@ import doc, {
   success,
   error,
   warning,
-} from './../../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
+} from '../../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
 
 describe('VariantButton', () => {
   const configPath = path.resolve(__dirname, '../.config');
@@ -390,7 +390,7 @@ import doc, {
   success,
   error,
   warning,
-} from './../../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
+} from '../../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
 
 describe('VariantButton', () => {
   const configPath = path.resolve(__dirname, '../.config');
@@ -594,7 +594,7 @@ import doc, {
   success,
   error,
   warning,
-} from './../../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
+} from '../../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
 
 describe('VariantButton', () => {
   const configPath = path.resolve(__dirname, '../.config');
@@ -826,7 +826,7 @@ import doc, {
   success,
   error,
   warning,
-} from './../../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
+} from '../../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
 
 describe('VariantButton', () => {
   const configPath = path.resolve(__dirname, '../.config');

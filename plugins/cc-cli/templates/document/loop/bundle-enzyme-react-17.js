@@ -6,7 +6,7 @@
         stories.forEach(storyId => {
           const story = store.stories[storyId];
           describe(story.name, () => {
-            const rendered = renderFn(story, doc);
+            const rendered = renderFn({ story, doc });
             it('snapshot', () => {
               const component = mount(rendered);
               expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();

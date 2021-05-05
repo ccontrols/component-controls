@@ -60,5 +60,5 @@ export function renderExample<Props = any>({
       getControlValues(transformControls(values as ComponentControls)),
     );
   }
-  return (runtimeConfig.renderFn as StoryRenderFn)(story, doc);
+  return (runtimeConfig.renderFn as StoryRenderFn)({ story, doc });
 }

@@ -1,5 +1,5 @@
-import { CliOptions } from './types';
-import { saveTemplate } from './save-template';
+import { CliOptions } from './utils';
+import { saveTemplate } from './save-test-template';
 import { createStoreTemplate } from '../jest-templates/store-template';
 
 /**
@@ -19,6 +19,7 @@ export const cliStore = async (options: CliOptions): Promise<void> => {
     include,
     exclude,
     ally,
+    data,
   } = options;
   const test =
     userTest || `component-controls.test.${format === 'ts' ? 'ts' : 'js'}`;
@@ -35,6 +36,7 @@ export const cliStore = async (options: CliOptions): Promise<void> => {
       include,
       exclude,
       ally,
+      data,
     },
     createStoreTemplate,
   );

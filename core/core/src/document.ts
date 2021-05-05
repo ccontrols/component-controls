@@ -129,12 +129,7 @@ export type Story<Props = any> = {
 export type DynamicExamples = Story[];
 
 export type ExampleControls = {
-  [name: string]:
-    | ComponentControl<ExampleControls>
-    | string
-    | string[]
-    | boolean
-    | number;
+  [name: string]: ComponentControl<ExampleControls> | any;
 };
 
 /**

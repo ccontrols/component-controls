@@ -1,3 +1,3 @@
-export const {{=it.story}} =
+exports.{{=it.story}} =
   {{=it.values }}
 ;

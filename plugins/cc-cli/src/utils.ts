@@ -1,3 +1,4 @@
+import path from 'path';
 export const renderers = {
   rtl: 'react-testing-library',
   rtr: 'react-test-renderer',
@@ -51,4 +52,17 @@ export interface StoryTemplateOptions extends TemplateOptions {
 
 export type TemplateFunction<P extends TemplateOptions = TemplateOptions> = (
   options: P,
+  dataImports?: DataImportOptions,
 ) => Promise<string>;
+
+export interface DataImportOptions {
+  // the imported filename
+  filePath: string;
+  // the list of stories that do have some data-driven values and their values
+  data: Record<string, any>;
+}
+
+export const relativeImport = (from: string, to: string): string => {
+  const relative = path.relative(from, to);
+  return relative.startsWith('.') ? relative : `./${relative}`;
+};

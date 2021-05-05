@@ -1,13 +1,21 @@
 import dot from 'dot';
 import { getStoryControls, randomizeData } from '@component-controls/core';
 import { prettify } from '@component-controls/instrument';
-import { StoryTemplateOptions } from '../types';
-import { getStore } from '../templating/store';
-import { getTemplate } from '../templating/resolve-template';
+import { StoryTemplateOptions } from '../utils';
+import { getStore } from '../store';
+import { getTemplate } from '../resolve-template';
 
+/**
+ * create a data-driven testing template with random values
+ * if some values already exist, will re-use them
+ * @param options - templating options
+ * @param existing - optional existing values
+ * @returns the file content (to be saved) and the list of the document stories that have values
+ */
 export const createDataTemplate = async (
   options: StoryTemplateOptions,
-): Promise<string> => {
+  existing?: Record<string, any>,
+): Promise<{ content: string; data: Record<string, any> } | undefined> => {
   const {
     name,
     bundle,
@@ -17,28 +25,38 @@ export const createDataTemplate = async (
     data: numValues = 0,
   } = options;
   if (numValues <= 0) {
-    return '';
+    return undefined;
   }
   const parsed = await getStore({ bundle, name, storyPath });
   if (!parsed) {
-    return '';
+    return undefined;
   }
   const { doc, stories, components } = parsed;
-  const data: string[] = [];
+  const data: Record<string, any> = {};
   Object.keys(stories).forEach(storyId => {
     const story = stories[storyId];
     const controls = getStoryControls(story, doc, components);
     if (controls) {
-      const values: Record<string, any> = {};
-      for (let i = 0; i < numValues; i += 1) {
+      const values: Record<string, any> = existing?.[storyId] || {};
+      for (let i = Object.keys(values).length; i < numValues; i += 1) {
         values[i.toString()] = randomizeData(controls);
       }
-      const vars = {
-        story: storyId,
-        values: JSON.stringify(values, null, 2),
-      };
-      data.push(dot.template(getTemplate(`data-templates/data`, format))(vars));
+      data[storyId] = values;
     }
   });
-  return prettify(data.join('/n'), {}, output);
+  return {
+    content: prettify(
+      Object.keys(data)
+        .map(storyId =>
+          dot.template(getTemplate(`data-templates/data`, format))({
+            story: storyId,
+            values: JSON.stringify(data[storyId], null, 2),
+          }),
+        )
+        .join('/n'),
+      {},
+      output,
+    ),
+    data,
+  };
 };

@@ -1,7 +1,7 @@
 let rendered: ReturnType<typeof renderExample> = undefined as any;
 act(() => {
   {{? it.bundle }}
-  rendered = renderFn(story, doc);
+  rendered = renderFn({ story, doc });
   {{?? true }}
   rendered = renderExample({
     example,

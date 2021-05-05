@@ -7,7 +7,7 @@ import {
   FrameworkRenderFn,
 } from '@component-controls/core';
 
-export const render: FrameworkRenderFn = (story, doc, options: any = {}) => {
+export const render: FrameworkRenderFn = ({ story, doc, options }) => {
   if (!story) {
     throw new Error(`Invalid story`);
   }
@@ -20,7 +20,7 @@ export const render: FrameworkRenderFn = (story, doc, options: any = {}) => {
     controls,
     ...options,
   };
-  const { decorators: globalDecorators = [] } = options;
+  const { decorators: globalDecorators = [] } = options || {};
   const { decorators: storyDecorators = [] } = story;
   const decorators = deepMerge<StoryRenderFn[]>(
     globalDecorators,

@@ -8,7 +8,7 @@
           describe(story.name, () => {
             let rendered;
             act(() => {
-              rendered = renderFn(story, doc);
+              rendered = renderFn({ story, doc });
             });  
             if (!rendered) {
               renderErr();

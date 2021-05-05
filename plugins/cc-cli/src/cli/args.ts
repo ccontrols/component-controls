@@ -3,7 +3,7 @@ import {
   defaultCliArgs,
 } from '@component-controls/webpack-compile/cli';
 
-import { renderers } from '../types';
+import { renderers } from '../utils';
 
 export const jestCliArgs: ArgOptions = [
   ...defaultCliArgs.filter(arg => arg.name === 'config'),

@@ -26,7 +26,7 @@ describe('VariantButton', () => {
 
     let rendered;
     act(() => {
-      rendered = renderFn(story, doc);
+      rendered = renderFn({ story, doc });
     });
     if (!rendered) {
       renderErr();
@@ -51,7 +51,7 @@ describe('VariantButton', () => {
 
     let rendered;
     act(() => {
-      rendered = renderFn(story, doc);
+      rendered = renderFn({ story, doc });
     });
     if (!rendered) {
       renderErr();
@@ -76,7 +76,7 @@ describe('VariantButton', () => {
 
     let rendered;
     act(() => {
-      rendered = renderFn(story, doc);
+      rendered = renderFn({ story, doc });
     });
     if (!rendered) {
       renderErr();
@@ -101,7 +101,7 @@ describe('VariantButton', () => {
 
     let rendered;
     act(() => {
-      rendered = renderFn(story, doc);
+      rendered = renderFn({ story, doc });
     });
     if (!rendered) {
       renderErr();
@@ -126,7 +126,7 @@ describe('VariantButton', () => {
 
     let rendered;
     act(() => {
-      rendered = renderFn(story, doc);
+      rendered = renderFn({ story, doc });
     });
     if (!rendered) {
       renderErr();
@@ -151,7 +151,7 @@ describe('VariantButton', () => {
 
     let rendered;
     act(() => {
-      rendered = renderFn(story, doc);
+      rendered = renderFn({ story, doc });
     });
     if (!rendered) {
       renderErr();
@@ -176,7 +176,7 @@ describe('VariantButton', () => {
 
     let rendered;
     act(() => {
-      rendered = renderFn(story, doc);
+      rendered = renderFn({ story, doc });
     });
     if (!rendered) {
       renderErr();

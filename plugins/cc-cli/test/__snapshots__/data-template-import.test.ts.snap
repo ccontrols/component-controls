@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`data-template-import import 1`] = `
-"export const overview = {
+Object {
+  "content": "export const overview = {
   \\"0\\": {
     text: \\"Gisselle Mohr\\",
     icon: \\"Kaden Powlowski\\",
@@ -28,5 +29,35 @@ exports[`data-template-import import 1`] = `
     fontSize: 16
   }
 };
-"
+",
+  "data": Object {
+    "overview": Object {
+      "0": Object {
+        "fontSize": 12,
+        "icon": "Kaden Powlowski",
+        "text": "Gisselle Mohr",
+      },
+      "1": Object {
+        "fontSize": 22,
+        "icon": "Miss Dolly Ferry",
+        "text": "Barbara Brakus",
+      },
+      "2": Object {
+        "fontSize": 22,
+        "icon": "Anais Pagac",
+        "text": "Adah Nolan",
+      },
+      "3": Object {
+        "fontSize": 20,
+        "icon": "Geraldine Metz",
+        "text": "Jon Will",
+      },
+      "4": Object {
+        "fontSize": 16,
+        "icon": "Karianne Bins",
+        "text": "Mr. Dulce Rice",
+      },
+    },
+  },
+}
 `;

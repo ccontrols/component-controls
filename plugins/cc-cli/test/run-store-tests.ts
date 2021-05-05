@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { runCLI } from 'jest';
 import { createStoreTemplate } from '../src/jest-templates/store-template';
-import { TemplateOptions } from '../src/types';
+import { TemplateOptions } from '../src/utils';
 
 export const runTests = async (props: TemplateOptions): Promise<void> => {
   const { renderer, format, config, bundle, name } = props;

@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`cli-document-data create cjs document 1`] = `
+Object {
+  "VariantButton.data.js": "exports.overview = {
+  '0': {
+    text: 'Gisselle Mohr',
+    icon: 'Kaden Powlowski',
+    fontSize: 12,
+  },
+  '1': {
+    text: 'Barbara Brakus',
+    icon: 'Miss Dolly Ferry',
+    fontSize: 22,
+  },
+  '2': {
+    text: 'Adah Nolan',
+    icon: 'Anais Pagac',
+    fontSize: 22,
+  },
+  '3': {
+    text: 'Jon Will',
+    icon: 'Geraldine Metz',
+    fontSize: 20,
+  },
+  '4': {
+    text: 'Mr. Dulce Rice',
+    icon: 'Karianne Bins',
+    fontSize: 16,
+  },
+  '5': {
+    text: 'Mrs. Jermey Jacobson',
+    icon: 'Mikayla Gusikowski',
+    fontSize: 29,
+  },
+  '6': {
+    text: 'Clark Hickle',
+    icon: 'Marielle Durgan',
+    fontSize: 16,
+  },
+  '7': {
+    text: 'Ibrahim Purdy',
+    icon: 'Cullen Heller',
+    fontSize: 27,
+  },
+  '8': {
+    text: 'Jody Legros',
+    icon: 'Dedric Smitham',
+    fontSize: 16,
+  },
+  '9': {
+    text: 'Ford Kunze',
+    icon: 'Trinity Hickle',
+    fontSize: 12,
+  },
+};
+",
+  "VariantButton.test.js": "const path = require('path');
+const { run } = require('axe-core');
+const { reactRunDOM } = require('@component-controls/test-renderers');
+require('@component-controls/jest-axe-matcher');
+
+const { loadConfigurations } = require('@component-controls/config');
+const { renderDocument } = require('@component-controls/test-renderers');
+const { render, act } = require('@testing-library/react');
+const { renderErr } = require('@component-controls/test-renderers');
+
+const examples = require('../../../../core/jest-extract/test/fixtures/story/VariantButton.docs');
+const data = require('./VariantButton.data.js');
+
+describe('VariantButton', () => {
+  const configPath = path.resolve(__dirname, '../.config');
+  const config = loadConfigurations(configPath);
+  let renderedExamples = [];
+  act(() => {
+    renderedExamples = renderDocument(examples, config);
+  });
+  if (!renderedExamples) {
+    renderErr();
+    return;
+  }
+  renderedExamples.forEach(({ name, rendered }) => {
+    describe(name, () => {
+      it('snapshot', () => {
+        const { asFragment } = render(rendered);
+        expect(asFragment()).toMatchSnapshot();
+      });
+      it('accessibility', async () => {
+        const axeResults = await reactRunDOM(rendered, run);
+        expect(axeResults).toHaveNoAxeViolations();
+      });
+    });
+  });
+});
+",
+}
+`;
+
+exports[`cli-document-data create esm document 1`] = `
+Object {
+  "VariantButton.data.js": "export const overview = {
+  '0': {
+    text: 'Ms. Mariah Pollich',
+    icon: 'Kenny Mueller',
+    fontSize: 26,
+  },
+  '1': {
+    text: 'Dorothea Tremblay',
+    icon: 'Juliet Harber',
+    fontSize: 32,
+  },
+};
+",
+  "VariantButton.test.js": "import * as path from 'path';
+import { run } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
+import { loadConfigurations } from '@component-controls/config';
+import { renderDocument } from '@component-controls/test-renderers';
+import { render, act } from '@testing-library/react';
+import { renderErr } from '@component-controls/test-renderers';
+
+import * as examples from '../../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
+import * as data from './VariantButton.data.js';
+
+describe('VariantButton', () => {
+  const configPath = path.resolve(__dirname, '../.config');
+  const config = loadConfigurations(configPath);
+  let renderedExamples = [];
+  act(() => {
+    renderedExamples = renderDocument(examples, config);
+  });
+  if (!renderedExamples) {
+    renderErr();
+    return;
+  }
+  renderedExamples.forEach(({ name, rendered }) => {
+    describe(name, () => {
+      it('snapshot', () => {
+        const { asFragment } = render(rendered);
+        expect(asFragment()).toMatchSnapshot();
+      });
+      it('accessibility', async () => {
+        const axeResults = await reactRunDOM(rendered, run);
+        expect(axeResults).toHaveNoAxeViolations();
+      });
+    });
+  });
+});
+",
+}
+`;
