@@ -46,14 +46,9 @@ export const createDataTemplate = async (
   });
   return {
     content: prettify(
-      Object.keys(data)
-        .map(storyId =>
-          dot.template(getTemplate(`data-templates/data`, format))({
-            story: storyId,
-            values: JSON.stringify(data[storyId], null, 2),
-          }),
-        )
-        .join('/n'),
+      dot.template(getTemplate(`data-templates/data`, format))({
+        data: JSON.stringify(data, null, 2),
+      }),
       {},
       output,
     ),

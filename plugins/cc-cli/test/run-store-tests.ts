@@ -1,11 +1,13 @@
 import fs from 'fs';
 import path from 'path';
 import { runCLI } from 'jest';
+import { randomizeSeed } from '@component-controls/core';
 import { createStoreTemplate } from '../src/jest-templates/store-template';
-import { TemplateOptions } from '../src/utils';
+import { TemplateOptions, formatExtension } from '../src/utils';
 
 export const runTests = async (props: TemplateOptions): Promise<void> => {
   const { renderer, format, config, bundle, name } = props;
+  randomizeSeed(123456);
   it(`${renderer} ${bundle ? 'bundle' : ''} ${format}`, async () => {
     let renderedFile = '';
     renderedFile = await createStoreTemplate({
@@ -17,7 +19,7 @@ export const runTests = async (props: TemplateOptions): Promise<void> => {
     });
     expect(renderedFile).toMatchSnapshot();
     if (name) {
-      const extension = format === 'ts' ? 'ts' : 'js';
+      const extension = formatExtension(format);
       const testName = `test_${renderer}_${format}${bundle ? '_bundle' : ''}`;
       const testFileName = path.resolve(
         __dirname,

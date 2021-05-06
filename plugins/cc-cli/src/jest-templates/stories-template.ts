@@ -8,6 +8,7 @@ import {
   TemplateFunction,
   DataImportOptions,
   relativeImport,
+  removeExtension,
 } from '../utils';
 import { getTemplate } from '../resolve-template';
 import { getStore } from '../store';
@@ -43,12 +44,6 @@ export const createStoriesTemplate: TemplateFunction<StoryTemplateOptions> = asy
     name: stories[key].name,
     id: key,
   }));
-  const render = dot.template(
-    getTemplate(`framework-render/${renderers[renderer]}`, format),
-  )({
-    bundle: !!bundle,
-    ...accessibilityTemplate(format, ally),
-  });
   const importPath = (output
     ? relativeImport(output, storyPath)
     : `./${path.basename(storyPath)}`
@@ -74,15 +69,16 @@ const { ${arrStories
         .join(', ')} } from '${importPath}';`;
   const vars = {
     dataImports: dot.template(getTemplate(`data-include/import`, format))({
-      dataFile: dataImports?.filePath,
+      dataFile: removeExtension(dataImports?.filePath),
     }),
     stories: arrStories,
-    render,
     doc: bundle ? `const doc = store.docs['${doc.title}'];` : '',
     storyImports: getTemplate(`story/import/${storeName}`, format),
-
+    data: dataImports?.data,
     storiesFileImports,
     name: name || doc.title,
+    bundle: !!bundle,
+    ...accessibilityTemplate(format, ally),
   };
   const template = `
 {{=it.topImports}}
@@ -96,25 +92,37 @@ describe('{{=it.name}}', () => {
 {{=it.doc}}
 {{~ it.stories :story }}
   describe('{{=story.name}}', () => {
-    {{? it.bundlePath }}
-      const story = store.stories['{{=story.id}}'];
-    {{?? true }}
-      const example = {{=story.name}};
-    {{?}}
-{{=it.render}}
+    {{? it.data && it.data[story.id] }}
+      Object.keys(data['{{=story.id}}']).forEach(dataId => {
+      const values = data['{{=story.id}}'][dataId];
+      describe(dataId, () => {
+    {{?}}    
+      {{? it.bundlePath }}
+          const story = store.stories['{{=story.id}}'];
+      {{?? true }}
+        const example = {{=story.name}};
+      {{?}}
+{{#def.loadTemplate('framework-render/${renderers[renderer]}')}}
+{{? it.data && it.data[story.id] }}
+    });
+  });
+{{?}}  
   });
 {{~}}
 });
 `;
-  return createTemplate({
-    renderer,
-    output,
-    format,
-    name,
-    bundle,
-    template,
-    vars,
-    ally,
-    ...rest,
-  });
+  return createTemplate(
+    {
+      renderer,
+      output,
+      format,
+      name,
+      bundle,
+      template,
+      vars,
+      ally,
+      ...rest,
+    },
+    {},
+  );
 };

@@ -1,3 +1,1 @@
-exports.{{=it.story}} =
-  {{=it.values }}
-;
+module.exports = {{=it.data}};

@@ -1,3 +1,1 @@
-export const {{=it.story}} =
-  {{=it.values }}
-;
+export default {{=it.data}};

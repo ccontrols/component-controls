@@ -18,6 +18,7 @@ export const createTemplate = (
     template: string;
     vars: Record<string, any>;
   },
+  defs?: Record<string, unknown>,
 ): string => {
   const {
     name,
@@ -49,6 +50,11 @@ export const createTemplate = (
     name,
     ...customVars,
   };
-  const content = dot.template(template)(vars);
+  const content = dot.template(template, undefined, {
+    loadTemplate: (name: string) => {
+      return getTemplate(name, format);
+    },
+    ...defs,
+  })(vars);
   return prettify(content, {}, output);
 };

@@ -66,3 +66,14 @@ export const relativeImport = (from: string, to: string): string => {
   const relative = path.relative(from, to);
   return relative.startsWith('.') ? relative : `./${relative}`;
 };
+
+export const formatExtension = (format: TeplateFormats): string =>
+  format === 'ts' ? 'ts' : 'js';
+
+export const removeExtension = (fileName?: string): string | undefined =>
+  fileName
+    ? fileName
+        .split('.')
+        .slice(0, -1)
+        .join('.')
+    : undefined;

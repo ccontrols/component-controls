@@ -1,1 +1,1 @@
-{{? it.dataFile }}import * as data from '{{=it.dataFile}}';{{?}}
+{{? it.dataFile }}import data from '{{=it.dataFile}}';{{?}}

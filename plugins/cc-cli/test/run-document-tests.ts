@@ -1,13 +1,15 @@
 import fs from 'fs';
 import path from 'path';
 import { runCLI } from 'jest';
+import { randomizeSeed } from '@component-controls/core';
 import { createDocumentTemplate } from '../src/jest-templates/document-template';
-import { StoryTemplateOptions } from '../src/utils';
+import { StoryTemplateOptions, formatExtension } from '../src/utils';
 
 export const runTests = async (
   props: Omit<StoryTemplateOptions, 'storyPath'>,
 ): Promise<void> => {
   const { renderer, format, config, bundle, name } = props;
+  randomizeSeed(123456);
   it(`${renderer} ${bundle ? 'bundle' : ''} ${format}`, async () => {
     let renderedFile = '';
     renderedFile = await createDocumentTemplate({
@@ -20,7 +22,7 @@ export const runTests = async (
       output: __dirname,
     });
 
-    const extension = format === 'ts' ? 'ts' : 'js';
+    const extension = formatExtension(format);
     const testName = `story_test_${renderer}_${format}${
       bundle ? '_bundle' : ''
     }`;

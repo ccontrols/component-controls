@@ -1,0 +1,207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rtr bundle cjs 1`] = `
+"const path = require('path');
+const { run } = require('axe-core');
+const { reactRunDOM } = require('@component-controls/test-renderers');
+require('@component-controls/jest-axe-matcher');
+
+const { loadStore } = require('@component-controls/store');
+const renderer = require('react-test-renderer');
+const {
+  renderErr,
+  componentErr,
+} = require('@component-controls/test-renderers');
+const act = renderer.act;
+
+const data = require('./VariantButton.data');
+
+describe('VariantButton', () => {
+  const store = loadStore(
+    require(path.resolve(__dirname, './bundle/component-controls.js')),
+  );
+  const renderFn = store.config.renderFn;
+  const doc = store.docs['VariantButton'];
+
+  describe('Overview', () => {
+    Object.keys(data['variantbutton--overview']).forEach(dataId => {
+      const values = data['variantbutton--overview'][dataId];
+      describe(dataId, () => {
+        const story = store.stories['variantbutton--overview'];
+
+        let rendered;
+        act(() => {
+          rendered = renderFn({ story, doc, values });
+        });
+        if (!rendered) {
+          renderErr();
+          return;
+        }
+        it('snapshot', () => {
+          const component = renderer.create(rendered);
+          if (!component) {
+            componentErr();
+            return;
+          }
+          expect(component.toJSON()).toMatchSnapshot();
+        });
+        it('accessibility', async () => {
+          const axeResults = await reactRunDOM(rendered, run);
+          expect(axeResults).toHaveNoAxeViolations();
+        });
+      });
+    });
+  });
+
+  describe('Primary', () => {
+    const story = store.stories['variantbutton--primary'];
+
+    let rendered;
+    act(() => {
+      rendered = renderFn({ story, doc });
+    });
+    if (!rendered) {
+      renderErr();
+      return;
+    }
+    it('snapshot', () => {
+      const component = renderer.create(rendered);
+      if (!component) {
+        componentErr();
+        return;
+      }
+      expect(component.toJSON()).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+
+  describe('Accent', () => {
+    const story = store.stories['variantbutton--accent'];
+
+    let rendered;
+    act(() => {
+      rendered = renderFn({ story, doc });
+    });
+    if (!rendered) {
+      renderErr();
+      return;
+    }
+    it('snapshot', () => {
+      const component = renderer.create(rendered);
+      if (!component) {
+        componentErr();
+        return;
+      }
+      expect(component.toJSON()).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+
+  describe('Disabled', () => {
+    const story = store.stories['variantbutton--disabled'];
+
+    let rendered;
+    act(() => {
+      rendered = renderFn({ story, doc });
+    });
+    if (!rendered) {
+      renderErr();
+      return;
+    }
+    it('snapshot', () => {
+      const component = renderer.create(rendered);
+      if (!component) {
+        componentErr();
+        return;
+      }
+      expect(component.toJSON()).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+
+  describe('Success', () => {
+    const story = store.stories['variantbutton--success'];
+
+    let rendered;
+    act(() => {
+      rendered = renderFn({ story, doc });
+    });
+    if (!rendered) {
+      renderErr();
+      return;
+    }
+    it('snapshot', () => {
+      const component = renderer.create(rendered);
+      if (!component) {
+        componentErr();
+        return;
+      }
+      expect(component.toJSON()).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+
+  describe('Error', () => {
+    const story = store.stories['variantbutton--error'];
+
+    let rendered;
+    act(() => {
+      rendered = renderFn({ story, doc });
+    });
+    if (!rendered) {
+      renderErr();
+      return;
+    }
+    it('snapshot', () => {
+      const component = renderer.create(rendered);
+      if (!component) {
+        componentErr();
+        return;
+      }
+      expect(component.toJSON()).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+
+  describe('Warning', () => {
+    const story = store.stories['variantbutton--warning'];
+
+    let rendered;
+    act(() => {
+      rendered = renderFn({ story, doc });
+    });
+    if (!rendered) {
+      renderErr();
+      return;
+    }
+    it('snapshot', () => {
+      const component = renderer.create(rendered);
+      if (!component) {
+        componentErr();
+        return;
+      }
+      expect(component.toJSON()).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+});
+"
+`;

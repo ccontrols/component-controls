@@ -2,31 +2,33 @@
 
 exports[`data-template-import import 1`] = `
 Object {
-  "content": "export const overview = {
-  \\"0\\": {
-    text: \\"Gisselle Mohr\\",
-    icon: \\"Kaden Powlowski\\",
-    fontSize: 12
-  },
-  \\"1\\": {
-    text: \\"Barbara Brakus\\",
-    icon: \\"Miss Dolly Ferry\\",
-    fontSize: 22
-  },
-  \\"2\\": {
-    text: \\"Adah Nolan\\",
-    icon: \\"Anais Pagac\\",
-    fontSize: 22
-  },
-  \\"3\\": {
-    text: \\"Jon Will\\",
-    icon: \\"Geraldine Metz\\",
-    fontSize: 20
-  },
-  \\"4\\": {
-    text: \\"Mr. Dulce Rice\\",
-    icon: \\"Karianne Bins\\",
-    fontSize: 16
+  "content": "export default {
+  overview: {
+    \\"0\\": {
+      text: \\"Gisselle Mohr\\",
+      icon: \\"Kaden Powlowski\\",
+      fontSize: 12
+    },
+    \\"1\\": {
+      text: \\"Barbara Brakus\\",
+      icon: \\"Miss Dolly Ferry\\",
+      fontSize: 22
+    },
+    \\"2\\": {
+      text: \\"Adah Nolan\\",
+      icon: \\"Anais Pagac\\",
+      fontSize: 22
+    },
+    \\"3\\": {
+      text: \\"Jon Will\\",
+      icon: \\"Geraldine Metz\\",
+      fontSize: 20
+    },
+    \\"4\\": {
+      text: \\"Mr. Dulce Rice\\",
+      icon: \\"Karianne Bins\\",
+      fontSize: 16
+    }
   }
 };
 ",

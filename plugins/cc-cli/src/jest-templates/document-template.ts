@@ -8,6 +8,7 @@ import {
   TemplateFunction,
   DataImportOptions,
   relativeImport,
+  removeExtension,
 } from '../utils';
 import { getTemplate } from '../resolve-template';
 import { getStore } from '../store';
@@ -53,7 +54,7 @@ export const createDocumentTemplate: TemplateFunction<StoryTemplateOptions> = as
     : `import * as examples from '${importPath}';`;
   const vars = {
     dataImports: dot.template(getTemplate(`data-include/import`, format))({
-      dataFile: dataImports?.filePath,
+      dataFile: removeExtension(dataImports?.filePath),
     }),
     stories: Object.keys(stories).map(key => ({
       name: stories[key].name,

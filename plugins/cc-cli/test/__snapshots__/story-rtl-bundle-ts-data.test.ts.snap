@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rtl bundle ts 1`] = `
+"import * as path from 'path';
+import { run, AxeResults } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
+import { loadStore } from '@component-controls/store';
+import { render, act } from '@testing-library/react';
+import { renderErr } from '@component-controls/test-renderers';
+
+import data from './VariantButton.data';
+
+describe('VariantButton', () => {
+  const store = loadStore(
+    require(path.resolve(__dirname, './bundle/component-controls.js')),
+  );
+  const renderFn = store.config.renderFn;
+  const doc = store.docs['VariantButton'];
+
+  describe('Overview', () => {
+    Object.keys(data['variantbutton--overview']).forEach(dataId => {
+      const values = data['variantbutton--overview'][dataId];
+      describe(dataId, () => {
+        const story = store.stories['variantbutton--overview'];
+
+        let rendered: ReturnType<typeof renderExample> = undefined as any;
+        act(() => {
+          rendered = renderFn({ story, doc, values });
+        });
+        if (!rendered) {
+          renderErr();
+          return;
+        }
+        it('snapshot', () => {
+          const { asFragment } = render(rendered);
+          expect(asFragment()).toMatchSnapshot();
+        });
+        it('accessibility', async () => {
+          const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+          expect(axeResults).toHaveNoAxeViolations();
+        });
+      });
+    });
+  });
+
+  describe('Primary', () => {
+    const story = store.stories['variantbutton--primary'];
+
+    let rendered: ReturnType<typeof renderExample> = undefined as any;
+    act(() => {
+      rendered = renderFn({ story, doc });
+    });
+    if (!rendered) {
+      renderErr();
+      return;
+    }
+    it('snapshot', () => {
+      const { asFragment } = render(rendered);
+      expect(asFragment()).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+
+  describe('Accent', () => {
+    const story = store.stories['variantbutton--accent'];
+
+    let rendered: ReturnType<typeof renderExample> = undefined as any;
+    act(() => {
+      rendered = renderFn({ story, doc });
+    });
+    if (!rendered) {
+      renderErr();
+      return;
+    }
+    it('snapshot', () => {
+      const { asFragment } = render(rendered);
+      expect(asFragment()).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+
+  describe('Disabled', () => {
+    const story = store.stories['variantbutton--disabled'];
+
+    let rendered: ReturnType<typeof renderExample> = undefined as any;
+    act(() => {
+      rendered = renderFn({ story, doc });
+    });
+    if (!rendered) {
+      renderErr();
+      return;
+    }
+    it('snapshot', () => {
+      const { asFragment } = render(rendered);
+      expect(asFragment()).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+
+  describe('Success', () => {
+    const story = store.stories['variantbutton--success'];
+
+    let rendered: ReturnType<typeof renderExample> = undefined as any;
+    act(() => {
+      rendered = renderFn({ story, doc });
+    });
+    if (!rendered) {
+      renderErr();
+      return;
+    }
+    it('snapshot', () => {
+      const { asFragment } = render(rendered);
+      expect(asFragment()).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+
+  describe('Error', () => {
+    const story = store.stories['variantbutton--error'];
+
+    let rendered: ReturnType<typeof renderExample> = undefined as any;
+    act(() => {
+      rendered = renderFn({ story, doc });
+    });
+    if (!rendered) {
+      renderErr();
+      return;
+    }
+    it('snapshot', () => {
+      const { asFragment } = render(rendered);
+      expect(asFragment()).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+
+  describe('Warning', () => {
+    const story = store.stories['variantbutton--warning'];
+
+    let rendered: ReturnType<typeof renderExample> = undefined as any;
+    act(() => {
+      rendered = renderFn({ story, doc });
+    });
+    if (!rendered) {
+      renderErr();
+      return;
+    }
+    it('snapshot', () => {
+      const { asFragment } = render(rendered);
+      expect(asFragment()).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+});
+"
+`;
