@@ -18,18 +18,43 @@ export function renderDocument<Props = any>(
     [prop: string]: Document<Props> | Example<Props>;
   },
   config: string | RunConfiguration,
-  values?: Record<string, ExampleControls>,
-): { rendered: ReturnType<FrameworkRenderFn>; name: string }[] {
+  data?: Record<string, ExampleControls>,
+): {
+  rendered: ReturnType<FrameworkRenderFn>;
+  name: string;
+  values?: ExampleControls;
+  dataId?: string;
+}[] {
   const doc = props['default'] as Document<Props>;
-  return Object.keys(props)
+  const results: ReturnType<typeof renderDocument> = [];
+  Object.keys(props)
     .filter(key => key !== 'default')
-    .map(key => ({
-      rendered: renderExample<Props>({
-        doc,
-        example: props[key] as Example<Props>,
-        config,
-        values: values?.[key],
-      }),
-      name: props[key].name || key,
-    }));
+    .forEach(key => {
+      if (data?.[key]) {
+        Object.keys(data[key]).forEach(dataId => {
+          const values = data[key][dataId];
+          results.push({
+            rendered: renderExample<Props>({
+              doc,
+              example: props[key] as Example<Props>,
+              config,
+              values,
+            }),
+            dataId,
+            values,
+            name: props[key].name || key,
+          });
+        });
+      } else {
+        results.push({
+          rendered: renderExample<Props>({
+            doc,
+            example: props[key] as Example<Props>,
+            config,
+          }),
+          name: props[key].name || key,
+        });
+      }
+    });
+  return results;
 }

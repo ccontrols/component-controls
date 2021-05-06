@@ -7,7 +7,7 @@ import { mount, configure } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import '@component-controls/jest-axe-matcher';
-import * as data from '../../../core/jest-extract/test/fixtures/story/VariantButton.data';
+import data from '../../../core/jest-extract/test/fixtures/story/VariantButton.data';
 
 configure({ adapter: new Adapter() });
 

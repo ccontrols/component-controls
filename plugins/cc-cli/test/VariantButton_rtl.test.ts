@@ -5,7 +5,7 @@ import { renderExample } from '@component-controls/test-renderers';
 import { render, act } from '@testing-library/react';
 import { renderErr } from '@component-controls/test-renderers';
 import '@component-controls/jest-axe-matcher';
-import * as data from '../../../core/jest-extract/test/fixtures/story/VariantButton.data';
+import data from '../../../core/jest-extract/test/fixtures/story/VariantButton.data';
 
 import doc, {
   overview,

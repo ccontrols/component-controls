@@ -15,35 +15,33 @@ describe('VariantButton', () => {
     require(path.resolve(__dirname, './bundle/component-controls.js')),
   );
   const renderFn = store.config.renderFn;
-  Object.keys(store.docs).forEach(docId => {
-    const doc = store.docs[docId];
-    if (doc.stories && doc.stories.length) {
-      const stories = doc.stories;
-      describe(doc.title, () => {
-        stories.forEach(storyId => {
-          const story = store.stories[storyId];
-          describe(story.name, () => {
-            let rendered;
-            act(() => {
-              rendered = renderFn({ story, doc });
-            });
-            if (!rendered) {
-              renderErr();
-              return;
-            }
-            it('snapshot', () => {
-              const { asFragment } = render(rendered);
-              expect(asFragment()).toMatchSnapshot();
-            });
-            it('accessibility', async () => {
-              const axeResults = await reactRunDOM(rendered, run);
-              expect(axeResults).toHaveNoAxeViolations();
-            });
+  const doc = store.docs['VariantButton'];
+  if (doc.stories && doc.stories.length) {
+    const stories = doc.stories;
+    describe(doc.title, () => {
+      stories.forEach(storyId => {
+        const story = store.stories[storyId];
+        describe(story.name, () => {
+          let rendered;
+          act(() => {
+            rendered = renderFn({ story, doc });
+          });
+          if (!rendered) {
+            renderErr();
+            return;
+          }
+          it('snapshot', () => {
+            const { asFragment } = render(rendered);
+            expect(asFragment()).toMatchSnapshot();
+          });
+          it('accessibility', async () => {
+            const axeResults = await reactRunDOM(rendered, run);
+            expect(axeResults).toHaveNoAxeViolations();
           });
         });
       });
-    }
-  });
+    });
+  }
 });
 "
 `;

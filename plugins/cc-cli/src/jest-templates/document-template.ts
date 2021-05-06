@@ -64,13 +64,15 @@ export const createDocumentTemplate: TemplateFunction<StoryTemplateOptions> = as
     documentLoop: dot.template(
       getTemplate(`document/loop/${storeName}-${renderers[renderer]}`, format),
     )({
+      docId: doc.title,
+      data: dataImports?.data,
+      format,
       type:
         format === 'ts' ? ': ReturnType<typeof renderDocument> = []' : ' = []',
       ...accessibilityTemplate(format, ally),
     }),
     doc: bundle ? `const doc = store.docs['${doc.title}'];` : '',
     storyImports: getTemplate(`document/import/${storeName}`, format),
-
     storiesFileImports,
     name: name || doc.title,
   };
