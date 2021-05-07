@@ -44,6 +44,9 @@ export const createDataTemplate = async (
       data[storyId] = values;
     }
   });
+  if (!Object.keys(data).length) {
+    return undefined;
+  }
   return {
     content: prettify(
       dot.template(getTemplate(`data-templates/data`, format))({
