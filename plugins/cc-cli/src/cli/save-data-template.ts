@@ -24,7 +24,7 @@ export const saveDataTemplate = async <P extends TemplateOptions>(
     .join('.');
 
   const filePath = path.resolve(testFolder, dataName);
-  log('saving data', filePath, [184, 226, 255]);
+
   let existing: Record<string, any> | undefined = undefined;
   if (fs.existsSync(filePath)) {
     if (overwrite) {
@@ -37,6 +37,7 @@ export const saveDataTemplate = async <P extends TemplateOptions>(
   }
   const dataTemplate = await createDataTemplate(options, existing);
   if (dataTemplate) {
+    log('saving data', filePath, [184, 226, 255]);
     if (!fs.existsSync(testFolder)) {
       fs.mkdirSync(testFolder);
     }

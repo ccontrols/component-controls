@@ -82,7 +82,7 @@ export const extractTests = async (
       return cachedResults;
     }
     const projectFolder = findJestConfig(tests.testFiles[0]);
-    log('jest tests', tests.testFiles[0], [115, 245, 184]);
+    log('jest tests', tests.testFiles[0], [229, 232, 211]);
     const testResults = await runProjectTests({
       testFiles: tests.testFiles.map(
         f => `.${path.sep}${path.relative(projectFolder, f)}`,
