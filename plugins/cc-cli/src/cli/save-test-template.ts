@@ -1,5 +1,6 @@
 import path from 'path';
 import fs from 'fs';
+import { log } from '@component-controls/logger';
 import { CliOptions, getTestFolder } from './utils';
 import { TemplateFunction, TemplateOptions } from '../utils';
 import { saveDataTemplate } from './save-data-template';
@@ -29,6 +30,7 @@ export const saveTemplate = async <P extends TemplateOptions>(
     );
     return;
   }
+  log('saving test', testFilePath, [115, 245, 184]);
   const dataTemplate = await saveDataTemplate(options);
 
   const content = await templateFn(

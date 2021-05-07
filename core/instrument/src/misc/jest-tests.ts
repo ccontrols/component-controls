@@ -6,6 +6,7 @@ import {
   findJestConfig,
   getRelatedTests,
 } from '@component-controls/jest-extract';
+import { log } from '@component-controls/logger';
 import { resolveSnapshotFile } from '@component-controls/core/node-utils';
 import { JestTests } from '@component-controls/core';
 import { CachedFileResource } from './chached-file';
@@ -81,6 +82,7 @@ export const extractTests = async (
       return cachedResults;
     }
     const projectFolder = findJestConfig(tests.testFiles[0]);
+    log('jest tests', tests.testFiles[0], [115, 245, 184]);
     const testResults = await runProjectTests({
       testFiles: tests.testFiles.map(
         f => `.${path.sep}${path.relative(projectFolder, f)}`,

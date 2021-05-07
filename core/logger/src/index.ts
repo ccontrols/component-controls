@@ -14,18 +14,33 @@ const defaultOptions: LogOptions = {
 
 let logOptions: LogOptions = { ...defaultOptions };
 
-const output = (heading: string, text: string) => {
-  console.log(chalk.bgRgb(...logOptions.colors)(`@${heading}`), text);
+const output = (
+  heading: string,
+  text: string,
+  bgColor?: [number, number, number],
+) => {
+  console.log(
+    chalk.bgRgb(...(bgColor || logOptions.colors))(`@${heading}`),
+    text,
+  );
 };
 
-export const log = (heading: string, text: string): void => {
+export const log = (
+  heading: string,
+  text: string,
+  bgColor?: [number, number, number],
+): void => {
   if (logOptions.logLevel === 'all') {
-    output(heading, text);
+    output(heading, text, bgColor);
   }
 };
-export const error = (heading: string, text: string): void => {
+export const error = (
+  heading: string,
+  text: string,
+  bgColor?: [number, number, number],
+): void => {
   if (logOptions.logLevel !== 'none') {
-    output(heading, text);
+    output(heading, text, bgColor);
   }
 };
 

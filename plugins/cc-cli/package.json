@@ -45,6 +45,7 @@
   "dependencies": {
     "@component-controls/instrument": "^3.9.0",
     "@component-controls/jest-axe-matcher": "^3.8.1",
+    "@component-controls/logger": "^3.8.2",
     "@component-controls/store": "^3.9.0",
     "@component-controls/test-renderers": "^3.9.0",
     "@component-controls/webpack-compile": "^3.9.1",

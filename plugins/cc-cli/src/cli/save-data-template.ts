@@ -1,6 +1,7 @@
 import path from 'path';
 import fs from 'fs';
 import { dynamicRequire } from '@component-controls/core/node-utils';
+import { log } from '@component-controls/logger';
 import { CliOptions, getTestFolder } from './utils';
 import { TemplateOptions, DataImportOptions, relativeImport } from '../utils';
 import { createDataTemplate } from '../data-templates/data-template';
@@ -21,7 +22,9 @@ export const saveDataTemplate = async <P extends TemplateOptions>(
     .split('.')
     .map((e, i) => (i === 1 ? 'data' : e))
     .join('.');
+
   const filePath = path.resolve(testFolder, dataName);
+  log('saving data', filePath, [184, 226, 255]);
   let existing: Record<string, any> | undefined = undefined;
   if (fs.existsSync(filePath)) {
     if (overwrite) {
