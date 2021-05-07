@@ -1,24 +1,24 @@
 export default {
   overview: {
     '0': {
-      label: 'Shannon Grady',
-      value: 'Ilene Sawayn',
+      label: 'Darrel Labadie',
+      value: 'Seamus McGlynn',
     },
     '1': {
-      label: 'Deron Jenkins',
-      value: 'Broderick Hartmann',
+      label: 'Pietro Kassulke',
+      value: 'Miss Ines Kemmer',
     },
     '2': {
-      label: 'Jillian Rodriguez',
-      value: 'Lorna Weber',
+      label: 'Billy Kuvalis PhD',
+      value: 'Marvin Krajcik',
     },
     '3': {
-      label: 'Lenny Howell',
-      value: 'Benny Bahringer',
+      label: 'Eino Anderson',
+      value: 'Carter Swift',
     },
     '4': {
-      label: 'Brennon Kemmer',
-      value: 'Demarco Towne',
+      label: 'Cali Hilpert',
+      value: 'Mrs. Ulises Batz',
     },
   },
 };

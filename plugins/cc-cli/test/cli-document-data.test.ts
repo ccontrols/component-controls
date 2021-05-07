@@ -6,12 +6,11 @@ describe('cli-document-data', () => {
   runTests('create cjs document', [
     '-g',
     'doc',
-    '-f',
-    'cjs',
     '-d',
     '5',
     '-c',
     '../../ui/components/.config',
+    '-w',
     '-i',
     'Popover',
   ]);

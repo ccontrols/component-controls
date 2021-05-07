@@ -13,6 +13,16 @@ export const nakedFileName = (filePath: string): string => {
   return baseName.substr(0, baseName.lastIndexOf('.'));
 };
 
+const esmRequire = (filePath: string): any => {
+  const result = require('esm')(module)(filePath);
+  if (
+    !result ||
+    (typeof result === 'object' && Object.keys(result).length === 0)
+  ) {
+    return require(filePath);
+  }
+  return result;
+};
 export const dynamicRequire = (filePath: string): any => {
   const ext =
     filePath
@@ -55,12 +65,13 @@ export const dynamicRequire = (filePath: string): any => {
         }
         ts.sys.writeFile(fileName, data);
       });
-      return require('esm')(module)(jsFilePath);
+      const result = esmRequire(jsFilePath);
+      return result;
     } finally {
       fs.rmdirSync(tmpDir.name, { recursive: true });
       // tmpDir.removeCallback();
     }
   }
 
-  return require('esm')(module)(filePath);
+  return esmRequire(filePath);
 };

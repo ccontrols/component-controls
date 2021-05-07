@@ -2,7 +2,7 @@
 
 exports[`cli-document-data create cjs document 1`] = `
 Object {
-  "Popover.data.js": "module.exports = {
+  "Popover.data.ts": "export default {
   overview: {
     '0': {
       placement: 'bottom-end',
@@ -27,18 +27,17 @@ Object {
   },
 };
 ",
-  "Popover.test.js": "const path = require('path');
-const { run } = require('axe-core');
-const { reactRunDOM } = require('@component-controls/test-renderers');
-require('@component-controls/jest-axe-matcher');
+  "Popover.test.ts": "import * as path from 'path';
+import { run, AxeResults } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
+import { loadConfigurations } from '@component-controls/config';
+import { renderDocument } from '@component-controls/test-renderers';
+import { render, act } from '@testing-library/react';
+import { renderErr } from '@component-controls/test-renderers';
 
-const { loadConfigurations } = require('@component-controls/config');
-const { renderDocument } = require('@component-controls/test-renderers');
-const { render, act } = require('@testing-library/react');
-const { renderErr } = require('@component-controls/test-renderers');
-
-const examples = require('../../../../ui/components/src/Popover/Popover.stories');
-const data = require('./Popover.data');
+import * as examples from '../../../../ui/components/src/Popover/Popover.stories';
+import data from './Popover.data';
 
 describe('Popover', () => {
   const configPath = path.resolve(
@@ -46,7 +45,7 @@ describe('Popover', () => {
     '../../../../ui/components/.config',
   );
   const config = loadConfigurations(configPath);
-  let renderedExamples = [];
+  let renderedExamples: ReturnType<typeof renderDocument> = [];
   act(() => {
     renderedExamples = renderDocument(examples, config, data);
   });
@@ -62,7 +61,7 @@ describe('Popover', () => {
           expect(asFragment()).toMatchSnapshot();
         });
         it('accessibility', async () => {
-          const axeResults = await reactRunDOM(rendered, run);
+          const axeResults = await reactRunDOM<AxeResults>(rendered, run);
           expect(axeResults).toHaveNoAxeViolations();
         });
       };

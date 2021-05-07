@@ -1,24 +1,24 @@
 export default {
   overview: {
     '0': {
-      children: 'Adan Kovacek',
-      size: 22,
+      children: 'Pansy Feeney',
+      size: 17,
     },
     '1': {
-      children: 'Garrett Collier',
-      size: 33,
+      children: 'Emilia McLaughlin',
+      size: 36,
     },
     '2': {
-      children: 'Mr. Sherman Walker',
-      size: 33,
+      children: 'Citlalli Emard',
+      size: 31,
     },
     '3': {
-      children: 'Eloise Boyle',
-      size: 16,
+      children: 'Reynold Toy',
+      size: 13,
     },
     '4': {
-      children: 'Nicholas Lebsack',
-      size: 26,
+      children: 'Mr. Soledad Labadie',
+      size: 22,
     },
   },
 };

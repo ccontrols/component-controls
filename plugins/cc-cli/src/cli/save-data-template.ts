@@ -26,14 +26,8 @@ export const saveDataTemplate = async <P extends TemplateOptions>(
   if (fs.existsSync(filePath)) {
     if (overwrite) {
       //load existing data file
-
-      existing = dynamicRequire(filePath);
-      if (
-        !existing ||
-        (typeof existing === 'object' && Object.keys(existing).length === 0)
-      ) {
-        existing = require(filePath);
-      }
+      const loaded = dynamicRequire(filePath);
+      existing = loaded.default || loaded;
     } else {
       return undefined;
     }

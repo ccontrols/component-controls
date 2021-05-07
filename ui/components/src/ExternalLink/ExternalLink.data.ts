@@ -1,19 +1,19 @@
 export default {
   overview: {
     '0': {
-      href: 'http://era.org',
+      href: 'https://shyann.biz',
     },
     '1': {
-      href: 'http://salvatore.info',
+      href: 'https://lera.info',
     },
     '2': {
-      href: 'http://trudie.net',
+      href: 'https://bella.name',
     },
     '3': {
-      href: 'http://amina.info',
+      href: 'https://heber.net',
     },
     '4': {
-      href: 'http://brooks.us',
+      href: 'http://gudrun.org',
     },
   },
 };

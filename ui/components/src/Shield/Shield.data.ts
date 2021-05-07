@@ -1,26 +1,41 @@
 export default {
   overview: {
     '0': {
-      label: 'Ms. Angelina Leffler',
+      color: '#071542',
+      label: 'Jaden Kozey',
     },
     '1': {
-      label: 'Oliver Abshire',
+      color: '#3e1402',
+      label: 'Violet Jerde',
     },
     '2': {
-      label: 'Kenyon Collins Jr.',
+      color: '#303c4a',
+      label: 'Oren Hermiston',
     },
     '3': {
-      label: 'Candida Dare',
+      color: '#4b412c',
+      label: 'Randy Jones',
     },
     '4': {
-      label: 'Alta West',
+      color: '#07632f',
+      label: 'Vicenta Swaniawski',
     },
   },
   themeColor: {
-    '0': {},
-    '1': {},
-    '2': {},
-    '3': {},
-    '4': {},
+    '0': {
+      color: 'palette2',
+    },
+    '1': {
+      color: 'accentPalette0',
+    },
+    '2': {
+      color: 'status_passed',
+    },
+    '3': {
+      color: 'accentPalette2',
+    },
+    '4': {
+      color: 'palette5',
+    },
   },
 };
