@@ -15,7 +15,6 @@ describe('cli-document-data', () => {
     '-i',
     'Popover',
   ]);
-  return;
   runTests('create cjs document', ['-g', 'doc', '-f', 'cjs', '-d', '10']);
   runTests('create esm document', ['-g', 'doc', '-f', 'esm', '-d', '2']);
   runTests('create typescript document', ['-g', 'doc', '-f', 'ts', '-d', '2']);
