@@ -61,6 +61,311 @@ exports[`Shield fraction snapshot 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Shield overview 0 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #69768C;
+  color: #ffffff;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #227fc0;
+  color: #ffffff;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      Barry Harris
+    </div>
+    <div
+      class="emotion-2"
+    >
+      1.0.0
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Shield overview 1 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #69768C;
+  color: #ffffff;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #227fc0;
+  color: #ffffff;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      Dakota Lang I
+    </div>
+    <div
+      class="emotion-2"
+    >
+      1.0.0
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Shield overview 2 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #69768C;
+  color: #ffffff;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #227fc0;
+  color: #ffffff;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      Rollin Hand
+    </div>
+    <div
+      class="emotion-2"
+    >
+      1.0.0
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Shield overview 3 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #69768C;
+  color: #ffffff;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #227fc0;
+  color: #ffffff;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      Damaris Ullrich
+    </div>
+    <div
+      class="emotion-2"
+    >
+      1.0.0
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Shield overview 4 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #69768C;
+  color: #ffffff;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #227fc0;
+  color: #ffffff;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      Kelli Sipes
+    </div>
+    <div
+      class="emotion-2"
+    >
+      1.0.0
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Shield overview snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -179,6 +484,301 @@ exports[`Shield percent snapshot 1`] = `
     >
       80%
     </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Shield themeColor 0 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #69768C;
+  color: #ffffff;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #227fc0;
+  color: #ffffff;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      color
+    </div>
+    <div
+      class="emotion-2"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Shield themeColor 1 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #69768C;
+  color: #ffffff;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #227fc0;
+  color: #ffffff;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      color
+    </div>
+    <div
+      class="emotion-2"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Shield themeColor 2 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #69768C;
+  color: #ffffff;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #227fc0;
+  color: #ffffff;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      color
+    </div>
+    <div
+      class="emotion-2"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Shield themeColor 3 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #69768C;
+  color: #ffffff;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #227fc0;
+  color: #ffffff;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      color
+    </div>
+    <div
+      class="emotion-2"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Shield themeColor 4 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #69768C;
+  color: #ffffff;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #227fc0;
+  color: #ffffff;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      color
+    </div>
+    <div
+      class="emotion-2"
+    />
   </div>
 </DocumentFragment>
 `;

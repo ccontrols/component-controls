@@ -647,6 +647,1261 @@ exports[`BlockContainer notCollapsible snapshot 1`] = `
 </DocumentFragment>
 `;
 
+exports[`BlockContainer overview 0 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -22px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8:hover a {
+  visibility: visible;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+      id="block-title"
+    >
+      <div
+        class="emotion-2"
+      >
+        <a
+          aria-label="navigate to Block title section"
+          class="emotion-3"
+          data-id="block-title"
+          data-level="3"
+          data-title="Block title"
+          href="http://localhost/#block-title"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="18"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h3
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            Block title
+            <a
+              aria-expanded="true"
+              class="emotion-6"
+            >
+              <span
+                class="emotion-7"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="emotion-8"
+        >
+          <svg
+            aria-label="donut graphic value 0.5 - from 0 tp 1"
+            class="emotion-9"
+            fill="none"
+            height="128"
+            role="img"
+            stroke="currentcolor"
+            stroke-width="2"
+            viewBox="0 0 32 32"
+            width="128"
+          >
+            <circle
+              cx="16"
+              cy="16"
+              opacity="0.125"
+              r="14"
+            />
+            <circle
+              cx="16"
+              cy="16"
+              r="14"
+              stroke-dasharray="87.96459430051421"
+              stroke-dashoffset="43.982297150257104"
+              transform="rotate(-90 16 16)"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`BlockContainer overview 1 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -22px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8:hover a {
+  visibility: visible;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+      id="block-title"
+    >
+      <div
+        class="emotion-2"
+      >
+        <a
+          aria-label="navigate to Block title section"
+          class="emotion-3"
+          data-id="block-title"
+          data-level="3"
+          data-title="Block title"
+          href="http://localhost/#block-title"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="18"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h3
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            Block title
+            <a
+              aria-expanded="true"
+              class="emotion-6"
+            >
+              <span
+                class="emotion-7"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="emotion-8"
+        >
+          <svg
+            aria-label="donut graphic value 0.5 - from 0 tp 1"
+            class="emotion-9"
+            fill="none"
+            height="128"
+            role="img"
+            stroke="currentcolor"
+            stroke-width="2"
+            viewBox="0 0 32 32"
+            width="128"
+          >
+            <circle
+              cx="16"
+              cy="16"
+              opacity="0.125"
+              r="14"
+            />
+            <circle
+              cx="16"
+              cy="16"
+              r="14"
+              stroke-dasharray="87.96459430051421"
+              stroke-dashoffset="43.982297150257104"
+              transform="rotate(-90 16 16)"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`BlockContainer overview 2 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -22px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8:hover a {
+  visibility: visible;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+      id="block-title"
+    >
+      <div
+        class="emotion-2"
+      >
+        <a
+          aria-label="navigate to Block title section"
+          class="emotion-3"
+          data-id="block-title"
+          data-level="3"
+          data-title="Block title"
+          href="http://localhost/#block-title"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="18"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h3
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            Block title
+            <a
+              aria-expanded="true"
+              class="emotion-6"
+            >
+              <span
+                class="emotion-7"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="emotion-8"
+        >
+          <svg
+            aria-label="donut graphic value 0.5 - from 0 tp 1"
+            class="emotion-9"
+            fill="none"
+            height="128"
+            role="img"
+            stroke="currentcolor"
+            stroke-width="2"
+            viewBox="0 0 32 32"
+            width="128"
+          >
+            <circle
+              cx="16"
+              cy="16"
+              opacity="0.125"
+              r="14"
+            />
+            <circle
+              cx="16"
+              cy="16"
+              r="14"
+              stroke-dasharray="87.96459430051421"
+              stroke-dashoffset="43.982297150257104"
+              transform="rotate(-90 16 16)"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`BlockContainer overview 3 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -22px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8:hover a {
+  visibility: visible;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+      id="block-title"
+    >
+      <div
+        class="emotion-2"
+      >
+        <a
+          aria-label="navigate to Block title section"
+          class="emotion-3"
+          data-id="block-title"
+          data-level="3"
+          data-title="Block title"
+          href="http://localhost/#block-title"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="18"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h3
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            Block title
+            <a
+              aria-expanded="true"
+              class="emotion-6"
+            >
+              <span
+                class="emotion-7"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="emotion-8"
+        >
+          <svg
+            aria-label="donut graphic value 0.5 - from 0 tp 1"
+            class="emotion-9"
+            fill="none"
+            height="128"
+            role="img"
+            stroke="currentcolor"
+            stroke-width="2"
+            viewBox="0 0 32 32"
+            width="128"
+          >
+            <circle
+              cx="16"
+              cy="16"
+              opacity="0.125"
+              r="14"
+            />
+            <circle
+              cx="16"
+              cy="16"
+              r="14"
+              stroke-dasharray="87.96459430051421"
+              stroke-dashoffset="43.982297150257104"
+              transform="rotate(-90 16 16)"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`BlockContainer overview 4 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -22px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8:hover a {
+  visibility: visible;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+      id="block-title"
+    >
+      <div
+        class="emotion-2"
+      >
+        <a
+          aria-label="navigate to Block title section"
+          class="emotion-3"
+          data-id="block-title"
+          data-level="3"
+          data-title="Block title"
+          href="http://localhost/#block-title"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="18"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h3
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            Block title
+            <a
+              aria-expanded="true"
+              class="emotion-6"
+            >
+              <span
+                class="emotion-7"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="emotion-8"
+        >
+          <svg
+            aria-label="donut graphic value 0.5 - from 0 tp 1"
+            class="emotion-9"
+            fill="none"
+            height="128"
+            role="img"
+            stroke="currentcolor"
+            stroke-width="2"
+            viewBox="0 0 32 32"
+            width="128"
+          >
+            <circle
+              cx="16"
+              cy="16"
+              opacity="0.125"
+              r="14"
+            />
+            <circle
+              cx="16"
+              cy="16"
+              r="14"
+              stroke-dasharray="87.96459430051421"
+              stroke-dashoffset="43.982297150257104"
+              transform="rotate(-90 16 16)"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`BlockContainer overview snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
