@@ -41,7 +41,9 @@ export const createDataTemplate = async (
       for (let i = Object.keys(values).length; i < numValues; i += 1) {
         values[i.toString()] = randomizeData(controls);
       }
-      data[storyId] = values;
+      if (Object.keys(values).length) {
+        data[storyId] = values;
+      }
     }
   });
   if (!Object.keys(data).length) {
