@@ -1,5 +1,6 @@
 import path from 'path';
 import fs from 'fs';
+import { dynamicRequire } from '@component-controls/core/node-utils';
 import { CliOptions, getTestFolder } from './utils';
 import { TemplateOptions, DataImportOptions, relativeImport } from '../utils';
 import { createDataTemplate } from '../data-templates/data-template';
@@ -26,7 +27,7 @@ export const saveDataTemplate = async <P extends TemplateOptions>(
     if (overwrite) {
       //load existing data file
 
-      existing = require('esm')(module)(filePath);
+      existing = dynamicRequire(filePath);
       if (
         !existing ||
         (typeof existing === 'object' && Object.keys(existing).length === 0)

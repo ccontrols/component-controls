@@ -1,6 +1,6 @@
 import path from 'path';
 import fs from 'fs';
-import mockArgv from 'mock-argv';
+const mockArgv = require('mock-argv');
 
 import { run } from '../src/cli/cli';
 

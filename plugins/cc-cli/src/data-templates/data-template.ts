@@ -1,5 +1,9 @@
 import dot from 'dot';
-import { getStoryControls, randomizeData } from '@component-controls/core';
+import {
+  getStoryControls,
+  randomizeData,
+  fixControlTypes,
+} from '@component-controls/core';
 import { prettify } from '@component-controls/instrument';
 import { StoryTemplateOptions } from '../utils';
 import { getStore } from '../store';
@@ -35,8 +39,10 @@ export const createDataTemplate = async (
   const data: Record<string, any> = {};
   Object.keys(stories).forEach(storyId => {
     const story = stories[storyId];
-    const controls = getStoryControls(story, doc, components);
-    if (controls) {
+
+    const storyControls = getStoryControls(story, doc, components);
+    if (storyControls) {
+      const controls = fixControlTypes(storyControls);
       const values: Record<string, any> = existing?.[storyId] || {};
       for (let i = Object.keys(values).length; i < numValues; i += 1) {
         const rnd = randomizeData(controls);

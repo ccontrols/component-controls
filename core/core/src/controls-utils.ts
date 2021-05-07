@@ -366,6 +366,30 @@ export const transformControls = (
     : undefined;
 };
 
+const typeNames: Record<string, ControlTypes> = {
+  'ControlTypes.TEXT': ControlTypes.TEXT,
+  'ControlTypes.NUMBER': ControlTypes.NUMBER,
+  'ControlTypes.BOOLEAN': ControlTypes.BOOLEAN,
+  'ControlTypes.OPTIONS': ControlTypes.OPTIONS,
+  'ControlTypes.DATE': ControlTypes.DATE,
+  'ControlTypes.COLOR': ControlTypes.COLOR,
+  'ControlTypes.BUTTON': ControlTypes.BUTTON,
+  'ControlTypes.OBJECT': ControlTypes.OBJECT,
+  'ControlTypes.ARRAY': ControlTypes.ARRAY,
+  'ControlTypes.FILES': ControlTypes.FILES,
+};
+export const fixControlTypes = (
+  controls: ComponentControls,
+): ComponentControls => {
+  return Object.keys(controls).reduce((acc, key) => {
+    const control = controls[key];
+    if (typeof control === 'object' && control.type) {
+      const newType = typeNames[control.type] || control.type;
+      return { ...acc, [key]: { ...control, type: newType } };
+    }
+    return { ...acc, [key]: control };
+  }, {});
+};
 /**
  * create controls for a story
  * @param story - the story for which to create controls. Will check if the story accepts any arguments
@@ -379,6 +403,7 @@ export const getStoryControls = (
   components: Components,
 ): ComponentControls | undefined => {
   const { controls: storyControls } = story;
+
   if (!story.arguments?.length) {
     //story has no arguments
     return transformControls(storyControls);

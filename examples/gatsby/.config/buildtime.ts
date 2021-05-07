@@ -1,9 +1,10 @@
-const path = require('path');
+import path from 'path';
+import { BuildConfiguration } from '@component-controls/core';
 require('dotenv').config();
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
-  .BundleAnalyzerPlugin;
+//const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+//  .BundleAnalyzerPlugin;
 
-module.exports = {
+const config: BuildConfiguration = {
   stories: [
     '../../stories/src/blogs/*.mdx',
     '../../stories/src/showcase/*.mdx',
@@ -108,3 +109,5 @@ module.exports = {
     },
   },
 };
+
+export default config;

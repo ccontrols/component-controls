@@ -1,10 +1,4 @@
-import {
-  Components,
-  Document,
-  Stories,
-  assignProps,
-} from '@component-controls/core';
-import { dynamicRequire } from '@component-controls/core/node-utils';
+import { Components, Document, Stories } from '@component-controls/core';
 import { parseStories } from '@component-controls/instrument';
 import { loadStore } from '@component-controls/store';
 
@@ -75,19 +69,7 @@ export const getStore = async ({
     if (doc.isMDXComponent || !Object.keys(stories).length) {
       return undefined;
     }
-    try {
-      const loaded = dynamicRequire(storyPath);
-      if (loaded.default) {
-        assignProps(doc, loaded.default);
-      }
-      Object.keys(stories).forEach(storyId => {
-        if (loaded[storyId]) {
-          assignProps(stories[storyId], loaded[storyId]);
-        }
-      });
-    } catch (e) {
-      console.error(e);
-    }
+
     cache.storyPath[storyPath] = {
       doc,
       stories,
