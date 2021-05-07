@@ -1,24 +1,24 @@
 export default {
   overview: {
     '0': {
-      children: 'Stanley Nitzsche',
-      size: 20,
-    },
-    '1': {
-      children: 'Geovanni Kerluke',
-      size: 28,
-    },
-    '2': {
-      children: 'Tristian Zemlak',
+      children: 'Adan Kovacek',
       size: 22,
     },
+    '1': {
+      children: 'Garrett Collier',
+      size: 33,
+    },
+    '2': {
+      children: 'Mr. Sherman Walker',
+      size: 33,
+    },
     '3': {
-      children: 'Sunny Herzog',
-      size: 24,
+      children: 'Eloise Boyle',
+      size: 16,
     },
     '4': {
-      children: 'Alfonzo Kuphal',
-      size: 34,
+      children: 'Nicholas Lebsack',
+      size: 26,
     },
   },
 };

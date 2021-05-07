@@ -1,19 +1,19 @@
 export default {
   overview: {
     '0': {
-      label: 'Barry Harris',
+      label: 'Ms. Angelina Leffler',
     },
     '1': {
-      label: 'Dakota Lang I',
+      label: 'Oliver Abshire',
     },
     '2': {
-      label: 'Rollin Hand',
+      label: 'Kenyon Collins Jr.',
     },
     '3': {
-      label: 'Damaris Ullrich',
+      label: 'Candida Dare',
     },
     '4': {
-      label: 'Kelli Sipes',
+      label: 'Alta West',
     },
   },
   themeColor: {

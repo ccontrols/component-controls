@@ -1,19 +1,19 @@
 export default {
   overview: {
     '0': {
-      href: 'http://una.org',
+      href: 'http://era.org',
     },
     '1': {
-      href: 'http://bryce.name',
+      href: 'http://salvatore.info',
     },
     '2': {
-      href: 'https://barbara.net',
+      href: 'http://trudie.net',
     },
     '3': {
-      href: 'http://beatrice.com',
+      href: 'http://amina.info',
     },
     '4': {
-      href: 'https://jayde.us',
+      href: 'http://brooks.us',
     },
   },
 };

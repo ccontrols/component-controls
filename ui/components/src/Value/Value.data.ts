@@ -1,24 +1,24 @@
 export default {
   overview: {
     '0': {
-      label: 'Kianna Upton',
-      value: 'Delta Littel',
+      label: 'Shannon Grady',
+      value: 'Ilene Sawayn',
     },
     '1': {
-      label: 'Parker Torphy',
-      value: 'Kaden Mosciski',
+      label: 'Deron Jenkins',
+      value: 'Broderick Hartmann',
     },
     '2': {
-      label: 'Mr. Favian Bins',
-      value: 'Ms. Erica Collins',
+      label: 'Jillian Rodriguez',
+      value: 'Lorna Weber',
     },
     '3': {
-      label: 'Karianne Walsh',
-      value: 'Rashad Wunsch',
+      label: 'Lenny Howell',
+      value: 'Benny Bahringer',
     },
     '4': {
-      label: 'Gage Hoppe',
-      value: 'Ezra Hodkiewicz',
+      label: 'Brennon Kemmer',
+      value: 'Demarco Towne',
     },
   },
 };
