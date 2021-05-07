@@ -50,6 +50,7 @@
     "@component-controls/webpack-compile": "^3.9.1",
     "@component-controls/webpack-configs": "^3.9.0",
     "dot": "^1.1.3",
+    "esm": "^3.2.25",
     "path": "^0.12.7"
   },
   "devDependencies": {

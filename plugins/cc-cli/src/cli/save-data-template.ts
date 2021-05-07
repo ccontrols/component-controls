@@ -25,7 +25,14 @@ export const saveDataTemplate = async <P extends TemplateOptions>(
   if (fs.existsSync(filePath)) {
     if (overwrite) {
       //load existing data file
-      existing = require(filePath);
+
+      existing = require('esm')(module)(filePath);
+      if (
+        !existing ||
+        (typeof existing === 'object' && Object.keys(existing).length === 0)
+      ) {
+        existing = require(filePath);
+      }
     } else {
       return undefined;
     }
