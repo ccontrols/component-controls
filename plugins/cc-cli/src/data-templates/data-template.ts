@@ -39,7 +39,10 @@ export const createDataTemplate = async (
     if (controls) {
       const values: Record<string, any> = existing?.[storyId] || {};
       for (let i = Object.keys(values).length; i < numValues; i += 1) {
-        values[i.toString()] = randomizeData(controls);
+        const rnd = randomizeData(controls);
+        if (Object.keys(rnd).length) {
+          values[i.toString()] = rnd;
+        }
       }
       if (Object.keys(values).length) {
         data[storyId] = values;

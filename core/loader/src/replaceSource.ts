@@ -64,21 +64,7 @@ ${contexts
 `;
   const storeConst = `const store = ${hashKey};\n`;
   const loadStories = `
-  const assignProps = (obj, { storyName, story, ...props}) => {
-    //preserve component and subcomponents as strings
-    const componentName = obj.component;
-    const subcomponentsName = obj.subcomponents;
-    Object.assign(obj, props);
-    if (componentName !== undefined) {
-      obj.component = componentName;
-    }  
-    if (subcomponentsName !== undefined) {
-      obj.subcomponents = subcomponentsName;
-    }
-    if (storyName) {
-      obj.name = storyName;
-    }
-  }
+  
   for (let i = 0; i < store.stores.length; i+= 1) {
     const s =  store.stores[i];
     const doc = s.doc;
@@ -127,7 +113,7 @@ ${contexts
   const newContent = `
 
 const path = require('path-browserify');
-const { loadPageTab } = require('@component-controls/core')
+const { loadPageTab, assignProps } = require('@component-controls/core')
 ${imports}
 ${storeConst}
 store.search = search.default || search;

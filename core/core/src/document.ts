@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-types */
 import { PropsWithChildren, ReactElement } from 'react';
 import { CodeLocation, PackageInfo, StoryRenderFn } from './utility';
@@ -389,3 +390,24 @@ class DefaultStore {
 }
 
 export const getDefaultStore = (): Store => new DefaultStore();
+
+export const assignProps = (
+  obj: Document | Story,
+  //@ts-expect-error remove story shorthand
+  { storyName, story, ...props }: Document | Story,
+): Document | Story => {
+  //preserve component and subcomponents as strings
+  const componentName = obj.component;
+  const subcomponentsName = obj.subcomponents;
+  Object.assign(obj, props);
+  if (componentName !== undefined) {
+    obj.component = componentName;
+  }
+  if (subcomponentsName !== undefined) {
+    obj.subcomponents = subcomponentsName;
+  }
+  if (storyName) {
+    obj.name = storyName;
+  }
+  return obj;
+};

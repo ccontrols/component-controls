@@ -3,6 +3,19 @@ import { runTests } from './run-cli-tests';
 
 describe('cli-document-data', () => {
   randomizeSeed(11223344);
+  runTests('create cjs document', [
+    '-g',
+    'doc',
+    '-f',
+    'cjs',
+    '-d',
+    '5',
+    '-c',
+    '../../ui/components/.config',
+    '-i',
+    'Popover',
+  ]);
+  return;
   runTests('create cjs document', ['-g', 'doc', '-f', 'cjs', '-d', '10']);
   runTests('create esm document', ['-g', 'doc', '-f', 'esm', '-d', '2']);
   runTests('create typescript document', ['-g', 'doc', '-f', 'ts', '-d', '2']);

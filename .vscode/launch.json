@@ -211,7 +211,7 @@
       "name": "jest cc-cli",
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "cwd": "${workspaceFolder}/plugins/cc-cli",
-      "args": ["-u", "VariantButton_rtr_doc"],
+      "args": ["-u", "cli-document-data"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "disableOptimisticBPs": true,

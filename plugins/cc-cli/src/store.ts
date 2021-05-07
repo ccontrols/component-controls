@@ -1,7 +1,26 @@
-import { Components, Document, Stories } from '@component-controls/core';
+import {
+  Components,
+  Document,
+  Stories,
+  assignProps,
+} from '@component-controls/core';
+import { dynamicRequire } from '@component-controls/core/node-utils';
 import { parseStories } from '@component-controls/instrument';
 import { loadStore } from '@component-controls/store';
 
+interface StoreResults {
+  doc: Document;
+  stories: Stories;
+  components: Components;
+  storeName: string;
+}
+const cache: {
+  storyPath: Record<string, StoreResults>;
+  bundle: Record<string, StoreResults>;
+} = {
+  storyPath: {},
+  bundle: {},
+};
 export const getStore = async ({
   storyPath,
   bundle,
@@ -10,22 +29,17 @@ export const getStore = async ({
   storyPath: string;
   bundle?: string;
   name?: string;
-}): Promise<
-  | {
-      doc: Document;
-      stories: Stories;
-      components: Components;
-      storeName: string;
-    }
-  | undefined
-> => {
+}): Promise<StoreResults | undefined> => {
   if (bundle) {
     if (!name) {
       throw new Error(
         'When using a bundle, you must specify the document title/name as name (-n) parameter',
       );
     }
-    const loadedStore = require(bundle);
+    if (cache.bundle[bundle]) {
+      return cache.bundle[bundle];
+    }
+    const loadedStore = require('esm')(module)(bundle);
     const store = loadStore(loadedStore);
     const doc = store.docs[name];
     if (!doc) {
@@ -39,8 +53,7 @@ export const getStore = async ({
     if (doc.isMDXComponent || !doc.stories.length) {
       return undefined;
     }
-
-    return {
+    cache.bundle[bundle] = {
       doc,
       stories: doc.stories.reduce((acc, id) => {
         return { ...acc, [id]: store.stories[id] };
@@ -48,14 +61,39 @@ export const getStore = async ({
       components: store.components,
       storeName: 'bundle',
     };
+    return cache.bundle[bundle];
   } else {
+    if (cache.storyPath[storyPath]) {
+      return cache.storyPath[storyPath];
+    }
+
     const { doc, stories, components = {} } = await parseStories(storyPath);
+
     if (!doc || !stories) {
       throw new Error(`Invalid story path ${storyPath}`);
     }
     if (doc.isMDXComponent || !Object.keys(stories).length) {
       return undefined;
     }
-    return { doc, stories, components, storeName: 'imports' };
+    try {
+      const loaded = dynamicRequire(storyPath);
+      if (loaded.default) {
+        assignProps(doc, loaded.default);
+      }
+      Object.keys(stories).forEach(storyId => {
+        if (loaded[storyId]) {
+          assignProps(stories[storyId], loaded[storyId]);
+        }
+      });
+    } catch (e) {
+      console.error(e);
+    }
+    cache.storyPath[storyPath] = {
+      doc,
+      stories,
+      components,
+      storeName: 'imports',
+    };
+    return cache.storyPath[storyPath];
   }
 };

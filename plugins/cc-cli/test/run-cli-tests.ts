@@ -12,8 +12,9 @@ export const runTests = (testName: string, args: string[]): void => {
       await mockArgv(
         [
           ...args,
-          '-c',
-          `${path.resolve(__dirname, './.config')}`,
+          ...(args.indexOf('-c') === -1
+            ? ['-c', `${path.resolve(__dirname, './.config')}`]
+            : []),
           '-o',
           outPath,
         ],
