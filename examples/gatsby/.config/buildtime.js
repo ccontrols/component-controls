@@ -1,10 +1,9 @@
 import path from 'path';
-import { BuildConfiguration } from '@component-controls/core';
 require('dotenv').config();
 //const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
 //  .BundleAnalyzerPlugin;
 
-const config: BuildConfiguration = {
+const config = {
   stories: [
     '../../stories/src/blogs/*.mdx',
     '../../stories/src/showcase/*.mdx',

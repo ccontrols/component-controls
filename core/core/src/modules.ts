@@ -48,7 +48,6 @@ export const dynamicRequire = (filePath: string): any => {
         ts.readConfigFile(configPath, ts.sys.readFile).config,
       );
     }
-
     const tmpDir = dirSync();
     config.config.compilerOptions.outDir = tmpDir.name;
     try {
@@ -65,8 +64,12 @@ export const dynamicRequire = (filePath: string): any => {
         }
         ts.sys.writeFile(fileName, data);
       });
-      const result = esmRequire(jsFilePath);
-      return result;
+      try {
+        const result = esmRequire(jsFilePath);
+        return result;
+      } catch (e) {
+        throw new Error(`error compiling file ${filePath}`);
+      }
     } finally {
       fs.rmdirSync(tmpDir.name, { recursive: true });
       // tmpDir.removeCallback();
