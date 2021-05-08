@@ -14,8 +14,10 @@ const Test = () => (
 describe('jazmine', () => {
   test('render small component', async () => {
     const rendered = renderReact({
-      name: 'test',
-      renderFn: Test,
+      story: {
+        name: 'test',
+        renderFn: Test,
+      },
     });
     const component = mount(rendered);
 

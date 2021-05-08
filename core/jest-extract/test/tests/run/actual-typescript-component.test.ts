@@ -21,8 +21,8 @@ beforeAll(async () => {
 describe('react typescript component', () => {
   it('testResults ', () => {
     expect(results?.results[0].testResults[0]).toMatchObject({
-      ancestorTitles: ['Popover', 'overview'],
-      fullName: 'Popover overview snapshot',
+      ancestorTitles: ['Popover', 'overview', '0'],
+      fullName: 'Popover overview 0 snapshot',
       status: 'passed',
       title: 'snapshot',
     });

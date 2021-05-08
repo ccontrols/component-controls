@@ -1,0 +1,439 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`cli-document-data create cjs document 1`] = `
+Object {
+  "Popover.data.ts": "export default {
+  overview: {
+    '0': {
+      placement: 'bottom-end',
+      trigger: 'hover',
+    },
+    '1': {
+      placement: 'top-end',
+      trigger: 'hover',
+    },
+    '2': {
+      placement: 'bottom-end',
+      trigger: 'click',
+    },
+    '3': {
+      placement: 'right-end',
+      trigger: 'hover',
+    },
+    '4': {
+      placement: 'auto-start',
+      trigger: 'right-click',
+    },
+  },
+};
+",
+  "Popover.test.ts": "import * as path from 'path';
+import { run, AxeResults } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
+import { loadConfigurations } from '@component-controls/config';
+import { renderDocument } from '@component-controls/test-renderers';
+import { render, act } from '@testing-library/react';
+import { renderErr } from '@component-controls/test-renderers';
+
+import * as examples from '../../../../ui/components/src/Popover/Popover.stories';
+import data from './Popover.data';
+
+describe('Popover', () => {
+  const configPath = path.resolve(
+    __dirname,
+    '../../../../ui/components/.config',
+  );
+  const config = loadConfigurations(configPath);
+  let renderedExamples: ReturnType<typeof renderDocument> = [];
+  act(() => {
+    renderedExamples = renderDocument(examples, config, data);
+  });
+  if (!renderedExamples) {
+    renderErr();
+    return;
+  }
+  renderedExamples.forEach(({ name, rendered, dataId, values }) => {
+    describe(name, () => {
+      const runTests = () => {
+        it('snapshot', () => {
+          const { asFragment } = render(rendered);
+          expect(asFragment()).toMatchSnapshot();
+        });
+        it('accessibility', async () => {
+          const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+          expect(axeResults).toHaveNoAxeViolations();
+        });
+      };
+      if (values) {
+        describe(dataId, runTests);
+      } else {
+        runTests();
+      }
+    });
+  });
+});
+",
+}
+`;
+
+exports[`cli-document-data create cjs document 2`] = `
+Object {
+  "VariantButton.data.js": "module.exports = {
+  overview: {
+    '0': {
+      text: 'Bart Bechtelar',
+      icon: 'Dayana Roob',
+      fontSize: 22,
+    },
+    '1': {
+      text: 'Adah Nolan',
+      icon: 'Anais Pagac',
+      fontSize: 22,
+    },
+    '2': {
+      text: 'Jon Will',
+      icon: 'Geraldine Metz',
+      fontSize: 20,
+    },
+    '3': {
+      text: 'Mr. Dulce Rice',
+      icon: 'Karianne Bins',
+      fontSize: 16,
+    },
+    '4': {
+      text: 'Mrs. Jermey Jacobson',
+      icon: 'Mikayla Gusikowski',
+      fontSize: 29,
+    },
+    '5': {
+      text: 'Clark Hickle',
+      icon: 'Marielle Durgan',
+      fontSize: 16,
+    },
+    '6': {
+      text: 'Ibrahim Purdy',
+      icon: 'Cullen Heller',
+      fontSize: 27,
+    },
+    '7': {
+      text: 'Jody Legros',
+      icon: 'Dedric Smitham',
+      fontSize: 16,
+    },
+    '8': {
+      text: 'Ford Kunze',
+      icon: 'Trinity Hickle',
+      fontSize: 12,
+    },
+    '9': {
+      text: 'Ms. Mariah Pollich',
+      icon: 'Kenny Mueller',
+      fontSize: 26,
+    },
+  },
+};
+",
+  "VariantButton.test.js": "const path = require('path');
+const { run } = require('axe-core');
+const { reactRunDOM } = require('@component-controls/test-renderers');
+require('@component-controls/jest-axe-matcher');
+
+const { loadConfigurations } = require('@component-controls/config');
+const { renderDocument } = require('@component-controls/test-renderers');
+const { render, act } = require('@testing-library/react');
+const { renderErr } = require('@component-controls/test-renderers');
+
+const examples = require('../../../../core/jest-extract/test/fixtures/story/VariantButton.docs');
+const data = require('./VariantButton.data');
+
+describe('VariantButton', () => {
+  const configPath = path.resolve(__dirname, '../.config');
+  const config = loadConfigurations(configPath);
+  let renderedExamples = [];
+  act(() => {
+    renderedExamples = renderDocument(examples, config, data);
+  });
+  if (!renderedExamples) {
+    renderErr();
+    return;
+  }
+  renderedExamples.forEach(({ name, rendered, dataId, values }) => {
+    describe(name, () => {
+      const runTests = () => {
+        it('snapshot', () => {
+          const { asFragment } = render(rendered);
+          expect(asFragment()).toMatchSnapshot();
+        });
+        it('accessibility', async () => {
+          const axeResults = await reactRunDOM(rendered, run);
+          expect(axeResults).toHaveNoAxeViolations();
+        });
+      };
+      if (values) {
+        describe(dataId, runTests);
+      } else {
+        runTests();
+      }
+    });
+  });
+});
+",
+}
+`;
+
+exports[`cli-document-data create enzyme document 1`] = `
+Object {
+  "VariantButton.data.ts": "export default {
+  overview: {
+    '0': {
+      text: 'Hugh Lockman',
+      icon: 'Ansel Nicolas',
+      fontSize: 14,
+    },
+    '1': {
+      text: 'Mohamed Bins',
+      icon: 'Consuelo Sipes',
+      fontSize: 24,
+    },
+  },
+};
+",
+  "VariantButton.test.ts": "import * as path from 'path';
+import { run, AxeResults } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
+import { loadConfigurations } from '@component-controls/config';
+import { renderDocument } from '@component-controls/test-renderers';
+import { mount, configure } from 'enzyme';
+import toJson from 'enzyme-to-json';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+
+configure({ adapter: new Adapter() });
+
+import * as examples from '../../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
+import data from './VariantButton.data';
+
+describe('VariantButton', () => {
+  const configPath = path.resolve(__dirname, '../.config');
+  const config = loadConfigurations(configPath);
+  const renderedExamples = renderDocument(examples, config, data);
+  renderedExamples.forEach(({ name, rendered, dataId, values }) => {
+    describe(name, () => {
+      const runTests = () => {
+        it('snapshot', () => {
+          const component = mount(rendered);
+          expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+        });
+        it('accessibility', async () => {
+          const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+          expect(axeResults).toHaveNoAxeViolations();
+        });
+      };
+      if (values) {
+        describe(dataId, runTests);
+      } else {
+        runTests();
+      }
+    });
+  });
+});
+",
+}
+`;
+
+exports[`cli-document-data create esm document 1`] = `
+Object {
+  "VariantButton.data.js": "export default {
+  overview: {
+    '0': {
+      text: 'Dorothea Tremblay',
+      icon: 'Juliet Harber',
+      fontSize: 32,
+    },
+    '1': {
+      text: 'Alana Kunde',
+      icon: 'Alexys Cartwright',
+      fontSize: 29,
+    },
+  },
+};
+",
+  "VariantButton.test.js": "import * as path from 'path';
+import { run } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
+import { loadConfigurations } from '@component-controls/config';
+import { renderDocument } from '@component-controls/test-renderers';
+import { render, act } from '@testing-library/react';
+import { renderErr } from '@component-controls/test-renderers';
+
+import * as examples from '../../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
+import data from './VariantButton.data';
+
+describe('VariantButton', () => {
+  const configPath = path.resolve(__dirname, '../.config');
+  const config = loadConfigurations(configPath);
+  let renderedExamples = [];
+  act(() => {
+    renderedExamples = renderDocument(examples, config, data);
+  });
+  if (!renderedExamples) {
+    renderErr();
+    return;
+  }
+  renderedExamples.forEach(({ name, rendered, dataId, values }) => {
+    describe(name, () => {
+      const runTests = () => {
+        it('snapshot', () => {
+          const { asFragment } = render(rendered);
+          expect(asFragment()).toMatchSnapshot();
+        });
+        it('accessibility', async () => {
+          const axeResults = await reactRunDOM(rendered, run);
+          expect(axeResults).toHaveNoAxeViolations();
+        });
+      };
+      if (values) {
+        describe(dataId, runTests);
+      } else {
+        runTests();
+      }
+    });
+  });
+});
+",
+}
+`;
+
+exports[`cli-document-data create rtr document 1`] = `
+Object {
+  "VariantButton.data.ts": "export default {
+  overview: {
+    '0': {
+      text: 'Alexa Feest',
+      icon: 'Mozelle Murphy',
+      fontSize: 25,
+    },
+    '1': {
+      text: 'Jonas Kihn',
+      icon: 'Sandrine Pagac',
+      fontSize: 12,
+    },
+  },
+};
+",
+  "VariantButton.test.ts": "import * as path from 'path';
+import { run, AxeResults } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
+import { loadConfigurations } from '@component-controls/config';
+import { renderDocument } from '@component-controls/test-renderers';
+import renderer, { act } from 'react-test-renderer';
+import { renderErr, componentErr } from '@component-controls/test-renderers';
+
+import * as examples from '../../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
+import data from './VariantButton.data';
+
+describe('VariantButton', () => {
+  const configPath = path.resolve(__dirname, '../.config');
+  const config = loadConfigurations(configPath);
+  let renderedExamples: ReturnType<typeof renderDocument> = [];
+  act(() => {
+    renderedExamples = renderDocument(examples, config, data);
+  });
+  if (!renderedExamples.length) {
+    renderErr();
+    return;
+  }
+  renderedExamples.forEach(({ name, rendered, dataId, values }) => {
+    describe(name, () => {
+      const runTests = () => {
+        it('snapshot', () => {
+          const component = renderer.create(rendered);
+          if (!component) {
+            componentErr();
+            return;
+          }
+          expect(component.toJSON()).toMatchSnapshot();
+        });
+        it('accessibility', async () => {
+          const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+          expect(axeResults).toHaveNoAxeViolations();
+        });
+      };
+      if (values) {
+        describe(dataId, runTests);
+      } else {
+        runTests();
+      }
+    });
+  });
+});
+",
+}
+`;
+
+exports[`cli-document-data create typescript document 1`] = `
+Object {
+  "VariantButton.data.ts": "export default {
+  overview: {
+    '0': {
+      text: 'Dawn Gerlach DDS',
+      icon: 'Nasir Cassin',
+      fontSize: 14,
+    },
+    '1': {
+      text: 'Emilia Feeney',
+      icon: 'Gage Dicki',
+      fontSize: 19,
+    },
+  },
+};
+",
+  "VariantButton.test.ts": "import * as path from 'path';
+import { run, AxeResults } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
+import { loadConfigurations } from '@component-controls/config';
+import { renderDocument } from '@component-controls/test-renderers';
+import { render, act } from '@testing-library/react';
+import { renderErr } from '@component-controls/test-renderers';
+
+import * as examples from '../../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
+import data from './VariantButton.data';
+
+describe('VariantButton', () => {
+  const configPath = path.resolve(__dirname, '../.config');
+  const config = loadConfigurations(configPath);
+  let renderedExamples: ReturnType<typeof renderDocument> = [];
+  act(() => {
+    renderedExamples = renderDocument(examples, config, data);
+  });
+  if (!renderedExamples) {
+    renderErr();
+    return;
+  }
+  renderedExamples.forEach(({ name, rendered, dataId, values }) => {
+    describe(name, () => {
+      const runTests = () => {
+        it('snapshot', () => {
+          const { asFragment } = render(rendered);
+          expect(asFragment()).toMatchSnapshot();
+        });
+        it('accessibility', async () => {
+          const axeResults = await reactRunDOM<AxeResults>(rendered, run);
+          expect(axeResults).toHaveNoAxeViolations();
+        });
+      };
+      if (values) {
+        describe(dataId, runTests);
+      } else {
+        runTests();
+      }
+    });
+  });
+});
+",
+}
+`;

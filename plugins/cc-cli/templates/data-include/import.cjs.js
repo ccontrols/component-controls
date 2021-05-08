@@ -1,0 +1,1 @@
+{{? it.dataFile }}const data = require('{{=it.dataFile}}');{{?}}

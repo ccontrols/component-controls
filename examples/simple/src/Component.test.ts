@@ -16,7 +16,7 @@ describe('Component', () => {
   describe('main', () => {
     const example = main;
 
-    let rendered;
+    let rendered: ReturnType<typeof renderExample> = undefined as any;
     act(() => {
       rendered = renderExample({
         example,

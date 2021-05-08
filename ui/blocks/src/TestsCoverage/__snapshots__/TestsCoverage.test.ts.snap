@@ -1267,7 +1267,7 @@ exports[`TestsCoverage overview snapshot 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TestsCoverage pagination snapshot 1`] = `
+exports[`TestsCoverage pagination 0 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
   box-sizing: border-box;
@@ -1516,7 +1516,20 @@ exports[`TestsCoverage pagination snapshot 1`] = `
   border: 2px solid #7e8e48;
 }
 
-.emotion-71 {
+.emotion-83 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(109,153,74,0.15);
+  border: 2px solid #6d994a;
+}
+
+.emotion-88 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1539,7 +1552,7 @@ exports[`TestsCoverage pagination snapshot 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-72 {
+.emotion-89 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1558,7 +1571,7 @@ exports[`TestsCoverage pagination snapshot 1`] = `
   padding-right: 16px;
 }
 
-.emotion-73 {
+.emotion-90 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1575,7 +1588,7 @@ exports[`TestsCoverage pagination snapshot 1`] = `
   align-items: center;
 }
 
-.emotion-74 {
+.emotion-91 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1594,13 +1607,13 @@ exports[`TestsCoverage pagination snapshot 1`] = `
   padding-right: 8px;
 }
 
-.emotion-74 button {
+.emotion-91 button {
   width: 50px;
   margin-left: 2px;
   margin-right: 2px;
 }
 
-.emotion-75 {
+.emotion-92 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1609,7 +1622,7 @@ exports[`TestsCoverage pagination snapshot 1`] = `
   margin-right: 2px;
 }
 
-.emotion-76 {
+.emotion-93 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1637,11 +1650,3402 @@ exports[`TestsCoverage pagination snapshot 1`] = `
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
 }
 
-.emotion-76:disabled {
+.emotion-93:disabled {
   color: #aaa;
 }
 
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+      id=""
+    >
+      <div
+        class="emotion-2"
+      />
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="emotion-3"
+        >
+          <table
+            class="emotion-4"
+            role="table"
+          >
+            <thead
+              class="emotion-5"
+            >
+              <tr
+                class="emotion-6"
+                role="row"
+              >
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 20px;"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    />
+                  </div>
+                </th>
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      Kind
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      Total
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      Covered
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      Skipped
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      %
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              class="emotion-25"
+              role="rowgroup"
+            >
+              <tr
+                class="emotion-26"
+                role="row"
+              >
+                <td
+                  colspan="6"
+                >
+                  <div
+                    class="emotion-27"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                     
+                    <span
+                      class="emotion-28"
+                    >
+                      Table.tsx
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-26"
+                role="row"
+              >
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 20px;"
+                />
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-32"
+                  >
+                    lines
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    51
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    50
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    0
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    <span
+                      class="emotion-41"
+                    >
+                      <span
+                        class="emotion-6"
+                      >
+                        98.04%
+                      </span>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-26"
+                role="row"
+              >
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 20px;"
+                />
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-32"
+                  >
+                    functions
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    10
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    7
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    0
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    <span
+                      class="emotion-55"
+                    >
+                      <span
+                        class="emotion-6"
+                      >
+                        70%
+                      </span>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-26"
+                role="row"
+              >
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 20px;"
+                />
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-32"
+                  >
+                    statements
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    56
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    55
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    0
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    <span
+                      class="emotion-41"
+                    >
+                      <span
+                        class="emotion-6"
+                      >
+                        98.21%
+                      </span>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-26"
+                role="row"
+              >
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 20px;"
+                />
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-32"
+                  >
+                    branches
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    49
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    40
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    0
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    <span
+                      class="emotion-83"
+                    >
+                      <span
+                        class="emotion-6"
+                      >
+                        81.63%
+                      </span>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-26"
+                role="row"
+              >
+                <td
+                  colspan="6"
+                >
+                  <div
+                    class="emotion-27"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                     
+                    <span
+                      class="emotion-28"
+                    >
+                      TableFilter.tsx
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div
+            class="emotion-88"
+          >
+            <div
+              class="emotion-89"
+            >
+              Total: 24 records
+            </div>
+            <div
+              class="emotion-90"
+            >
+              <div
+                class="emotion-91"
+              >
+                <div
+                  class="emotion-92"
+                >
+                  <button
+                    class="emotion-93"
+                    disabled=""
+                  >
+                    &lt;&lt;
+                  </button>
+                </div>
+                <div
+                  class="emotion-92"
+                >
+                  <button
+                    class="emotion-93"
+                    disabled=""
+                  >
+                    &lt;
+                  </button>
+                </div>
+                <div
+                  class="emotion-92"
+                >
+                  <button
+                    class="emotion-93"
+                  >
+                    &gt;
+                  </button>
+                </div>
+                <div
+                  class="emotion-92"
+                >
+                  <button
+                    class="emotion-93"
+                  >
+                    &gt;&gt;
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TestsCoverage pagination 1 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3:hover a {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-4 p {
+  margin: 0;
+}
+
+.emotion-4 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-4 a {
+  word-break: break-word;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-25 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  line-height: 24px;
+  background-color: #f6f6f6;
+  white-space: nowrap;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-weight: 700;
+  font-family: Menlo,monospace;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-28 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.emotion-30 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+.emotion-32 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-weight: 600;
+}
+
+.emotion-34 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.emotion-41 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(76,175,80,0.15);
+  border: 2px solid #4caf50;
+}
+
+.emotion-55 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(126,142,72,0.15);
+  border: 2px solid #7e8e48;
+}
+
+.emotion-57 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-58 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-59 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-60 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-60 button {
+  width: 50px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.emotion-61 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 50px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.emotion-62 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+}
+
+.emotion-62:disabled {
+  color: #aaa;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+      id=""
+    >
+      <div
+        class="emotion-2"
+      />
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="emotion-3"
+        >
+          <table
+            class="emotion-4"
+            role="table"
+          >
+            <thead
+              class="emotion-5"
+            >
+              <tr
+                class="emotion-6"
+                role="row"
+              >
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 20px;"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    />
+                  </div>
+                </th>
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      Kind
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      Total
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      Covered
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      Skipped
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      %
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              class="emotion-25"
+              role="rowgroup"
+            >
+              <tr
+                class="emotion-26"
+                role="row"
+              >
+                <td
+                  colspan="6"
+                >
+                  <div
+                    class="emotion-27"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                     
+                    <span
+                      class="emotion-28"
+                    >
+                      Table.tsx
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-26"
+                role="row"
+              >
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 20px;"
+                />
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-32"
+                  >
+                    lines
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    51
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    50
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    0
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    <span
+                      class="emotion-41"
+                    >
+                      <span
+                        class="emotion-6"
+                      >
+                        98.04%
+                      </span>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-26"
+                role="row"
+              >
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 20px;"
+                />
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-32"
+                  >
+                    functions
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    10
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    7
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    0
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    <span
+                      class="emotion-55"
+                    >
+                      <span
+                        class="emotion-6"
+                      >
+                        70%
+                      </span>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div
+            class="emotion-57"
+          >
+            <div
+              class="emotion-58"
+            >
+              Total: 24 records
+            </div>
+            <div
+              class="emotion-59"
+            >
+              <div
+                class="emotion-60"
+              >
+                <div
+                  class="emotion-61"
+                >
+                  <button
+                    class="emotion-62"
+                    disabled=""
+                  >
+                    &lt;&lt;
+                  </button>
+                </div>
+                <div
+                  class="emotion-61"
+                >
+                  <button
+                    class="emotion-62"
+                    disabled=""
+                  >
+                    &lt;
+                  </button>
+                </div>
+                <div
+                  class="emotion-61"
+                >
+                  <button
+                    class="emotion-62"
+                  >
+                    &gt;
+                  </button>
+                </div>
+                <div
+                  class="emotion-61"
+                >
+                  <button
+                    class="emotion-62"
+                  >
+                    &gt;&gt;
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TestsCoverage pagination 2 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3:hover a {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-4 p {
+  margin: 0;
+}
+
+.emotion-4 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-4 a {
+  word-break: break-word;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-25 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  line-height: 24px;
+  background-color: #f6f6f6;
+  white-space: nowrap;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-weight: 700;
+  font-family: Menlo,monospace;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-28 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.emotion-30 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+.emotion-32 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-weight: 600;
+}
+
+.emotion-34 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.emotion-41 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(76,175,80,0.15);
+  border: 2px solid #4caf50;
+}
+
+.emotion-55 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(126,142,72,0.15);
+  border: 2px solid #7e8e48;
+}
+
+.emotion-57 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-58 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-59 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-60 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-60 button {
+  width: 50px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.emotion-61 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 50px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.emotion-62 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+}
+
+.emotion-62:disabled {
+  color: #aaa;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+      id=""
+    >
+      <div
+        class="emotion-2"
+      />
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="emotion-3"
+        >
+          <table
+            class="emotion-4"
+            role="table"
+          >
+            <thead
+              class="emotion-5"
+            >
+              <tr
+                class="emotion-6"
+                role="row"
+              >
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 20px;"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    />
+                  </div>
+                </th>
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      Kind
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      Total
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      Covered
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      Skipped
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      %
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              class="emotion-25"
+              role="rowgroup"
+            >
+              <tr
+                class="emotion-26"
+                role="row"
+              >
+                <td
+                  colspan="6"
+                >
+                  <div
+                    class="emotion-27"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                     
+                    <span
+                      class="emotion-28"
+                    >
+                      Table.tsx
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-26"
+                role="row"
+              >
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 20px;"
+                />
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-32"
+                  >
+                    lines
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    51
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    50
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    0
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    <span
+                      class="emotion-41"
+                    >
+                      <span
+                        class="emotion-6"
+                      >
+                        98.04%
+                      </span>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-26"
+                role="row"
+              >
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 20px;"
+                />
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-32"
+                  >
+                    functions
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    10
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    7
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    0
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    <span
+                      class="emotion-55"
+                    >
+                      <span
+                        class="emotion-6"
+                      >
+                        70%
+                      </span>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div
+            class="emotion-57"
+          >
+            <div
+              class="emotion-58"
+            >
+              Total: 24 records
+            </div>
+            <div
+              class="emotion-59"
+            >
+              <div
+                class="emotion-60"
+              >
+                <div
+                  class="emotion-61"
+                >
+                  <button
+                    class="emotion-62"
+                    disabled=""
+                  >
+                    &lt;&lt;
+                  </button>
+                </div>
+                <div
+                  class="emotion-61"
+                >
+                  <button
+                    class="emotion-62"
+                    disabled=""
+                  >
+                    &lt;
+                  </button>
+                </div>
+                <div
+                  class="emotion-61"
+                >
+                  <button
+                    class="emotion-62"
+                  >
+                    &gt;
+                  </button>
+                </div>
+                <div
+                  class="emotion-61"
+                >
+                  <button
+                    class="emotion-62"
+                  >
+                    &gt;&gt;
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TestsCoverage pagination 3 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3:hover a {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-4 p {
+  margin: 0;
+}
+
+.emotion-4 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-4 a {
+  word-break: break-word;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-25 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  line-height: 24px;
+  background-color: #f6f6f6;
+  white-space: nowrap;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-weight: 700;
+  font-family: Menlo,monospace;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-28 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.emotion-30 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+.emotion-32 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-weight: 600;
+}
+
+.emotion-34 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.emotion-41 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(76,175,80,0.15);
+  border: 2px solid #4caf50;
+}
+
+.emotion-55 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(126,142,72,0.15);
+  border: 2px solid #7e8e48;
+}
+
 .emotion-83 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(109,153,74,0.15);
+  border: 2px solid #6d994a;
+}
+
+.emotion-85 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-86 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-87 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-88 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-88 button {
+  width: 50px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.emotion-89 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 50px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.emotion-90 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+}
+
+.emotion-90:disabled {
+  color: #aaa;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+      id=""
+    >
+      <div
+        class="emotion-2"
+      />
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="emotion-3"
+        >
+          <table
+            class="emotion-4"
+            role="table"
+          >
+            <thead
+              class="emotion-5"
+            >
+              <tr
+                class="emotion-6"
+                role="row"
+              >
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 20px;"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    />
+                  </div>
+                </th>
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      Kind
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      Total
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      Covered
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      Skipped
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      %
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              class="emotion-25"
+              role="rowgroup"
+            >
+              <tr
+                class="emotion-26"
+                role="row"
+              >
+                <td
+                  colspan="6"
+                >
+                  <div
+                    class="emotion-27"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                     
+                    <span
+                      class="emotion-28"
+                    >
+                      Table.tsx
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-26"
+                role="row"
+              >
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 20px;"
+                />
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-32"
+                  >
+                    lines
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    51
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    50
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    0
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    <span
+                      class="emotion-41"
+                    >
+                      <span
+                        class="emotion-6"
+                      >
+                        98.04%
+                      </span>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-26"
+                role="row"
+              >
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 20px;"
+                />
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-32"
+                  >
+                    functions
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    10
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    7
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    0
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    <span
+                      class="emotion-55"
+                    >
+                      <span
+                        class="emotion-6"
+                      >
+                        70%
+                      </span>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-26"
+                role="row"
+              >
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 20px;"
+                />
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-32"
+                  >
+                    statements
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    56
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    55
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    0
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    <span
+                      class="emotion-41"
+                    >
+                      <span
+                        class="emotion-6"
+                      >
+                        98.21%
+                      </span>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-26"
+                role="row"
+              >
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 20px;"
+                />
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-32"
+                  >
+                    branches
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    49
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    40
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    0
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    <span
+                      class="emotion-83"
+                    >
+                      <span
+                        class="emotion-6"
+                      >
+                        81.63%
+                      </span>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div
+            class="emotion-85"
+          >
+            <div
+              class="emotion-86"
+            >
+              Total: 24 records
+            </div>
+            <div
+              class="emotion-87"
+            >
+              <div
+                class="emotion-88"
+              >
+                <div
+                  class="emotion-89"
+                >
+                  <button
+                    class="emotion-90"
+                    disabled=""
+                  >
+                    &lt;&lt;
+                  </button>
+                </div>
+                <div
+                  class="emotion-89"
+                >
+                  <button
+                    class="emotion-90"
+                    disabled=""
+                  >
+                    &lt;
+                  </button>
+                </div>
+                <div
+                  class="emotion-89"
+                >
+                  <button
+                    class="emotion-90"
+                  >
+                    &gt;
+                  </button>
+                </div>
+                <div
+                  class="emotion-89"
+                >
+                  <button
+                    class="emotion-90"
+                  >
+                    &gt;&gt;
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TestsCoverage pagination 4 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3:hover a {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-4 p {
+  margin: 0;
+}
+
+.emotion-4 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-4 a {
+  word-break: break-word;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-25 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  line-height: 24px;
+  background-color: #f6f6f6;
+  white-space: nowrap;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-weight: 700;
+  font-family: Menlo,monospace;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-28 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.emotion-30 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+.emotion-32 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-weight: 600;
+}
+
+.emotion-34 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.emotion-41 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(76,175,80,0.15);
+  border: 2px solid #4caf50;
+}
+
+.emotion-55 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(126,142,72,0.15);
+  border: 2px solid #7e8e48;
+}
+
+.emotion-83 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(109,153,74,0.15);
+  border: 2px solid #6d994a;
+}
+
+.emotion-114 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(160,121,67,0.15);
+  border: 2px solid #a07943;
+}
+
+.emotion-116 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-117 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-118 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-119 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-119 button {
+  width: 50px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.emotion-120 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 50px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.emotion-121 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+}
+
+.emotion-121:disabled {
+  color: #aaa;
+}
+
+.emotion-128 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -2040,65 +5444,320 @@ exports[`TestsCoverage pagination snapshot 1`] = `
                   </div>
                 </td>
               </tr>
+              <tr
+                class="emotion-26"
+                role="row"
+              >
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 20px;"
+                />
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-32"
+                  >
+                    branches
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    49
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    40
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    0
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    <span
+                      class="emotion-83"
+                    >
+                      <span
+                        class="emotion-6"
+                      >
+                        81.63%
+                      </span>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-26"
+                role="row"
+              >
+                <td
+                  colspan="6"
+                >
+                  <div
+                    class="emotion-27"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                     
+                    <span
+                      class="emotion-28"
+                    >
+                      TableFilter.tsx
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-26"
+                role="row"
+              >
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 20px;"
+                />
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-32"
+                  >
+                    lines
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    6
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    5
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    0
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    <span
+                      class="emotion-83"
+                    >
+                      <span
+                        class="emotion-6"
+                      >
+                        83.33%
+                      </span>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-26"
+                role="row"
+              >
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 20px;"
+                />
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-32"
+                  >
+                    functions
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    2
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    1
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    0
+                  </div>
+                </td>
+                <td
+                  class="emotion-30"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-34"
+                  >
+                    <span
+                      class="emotion-114"
+                    >
+                      <span
+                        class="emotion-6"
+                      >
+                        50%
+                      </span>
+                    </span>
+                  </div>
+                </td>
+              </tr>
             </tbody>
           </table>
           <div
-            class="emotion-71"
+            class="emotion-116"
           >
             <div
-              class="emotion-72"
+              class="emotion-117"
             >
               Total: 24 records
             </div>
             <div
-              class="emotion-73"
+              class="emotion-118"
             >
               <div
-                class="emotion-74"
+                class="emotion-119"
               >
                 <div
-                  class="emotion-75"
+                  class="emotion-120"
                 >
                   <button
-                    class="emotion-76"
+                    class="emotion-121"
                     disabled=""
                   >
                     &lt;&lt;
                   </button>
                 </div>
                 <div
-                  class="emotion-75"
+                  class="emotion-120"
                 >
                   <button
-                    class="emotion-76"
+                    class="emotion-121"
                     disabled=""
                   >
                     &lt;
                   </button>
                 </div>
                 <div
-                  class="emotion-75"
+                  class="emotion-120"
                 >
                   <button
-                    class="emotion-76"
+                    class="emotion-121"
                   >
                     &gt;
                   </button>
                 </div>
                 <div
-                  class="emotion-75"
+                  class="emotion-120"
                 >
                   <button
-                    class="emotion-76"
+                    class="emotion-121"
                   >
                     &gt;&gt;
                   </button>
                 </div>
               </div>
               <div
-                class="emotion-83"
+                class="emotion-128"
               >
-                Page 1 of 8
+                Page 1 of 4
               </div>
             </div>
           </div>

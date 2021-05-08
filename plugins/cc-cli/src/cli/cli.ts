@@ -2,7 +2,7 @@ import { cliArgs } from '@component-controls/webpack-compile/cli';
 import { jestCliArgs } from './args';
 import { cliStore } from './cli-store';
 import { cliStory } from './cli-story';
-import { CliOptions } from './types';
+import { CliOptions } from './utils';
 
 /**
  * cc-cli central function. based on the selected g/generate option will call the specific
@@ -23,6 +23,7 @@ export const run = async (): Promise<void> => {
     include,
     exclude,
     ally,
+    data,
   } = parsedArgs;
   switch (parsedArgs.generate) {
     case 'store':
@@ -38,6 +39,7 @@ export const run = async (): Promise<void> => {
         include,
         exclude,
         ally,
+        data,
       } as CliOptions);
     case 'story':
     case 'doc':
@@ -54,6 +56,7 @@ export const run = async (): Promise<void> => {
           include,
           exclude,
           ally,
+          data,
         } as CliOptions,
         parsedArgs.generate === 'doc',
       );

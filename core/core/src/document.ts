@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-types */
 import { PropsWithChildren, ReactElement } from 'react';
 import { CodeLocation, PackageInfo, StoryRenderFn } from './utility';
-import { Component } from './components';
+import { Components } from './components';
 import { StoryProps } from './common';
 import { ComponentControl } from './controls';
 import { RunConfiguration, DocType, PageLayoutProps } from './configuration';
@@ -129,12 +130,7 @@ export type Story<Props = any> = {
 export type DynamicExamples = Story[];
 
 export type ExampleControls = {
-  [name: string]:
-    | ComponentControl<ExampleControls>
-    | string
-    | string[]
-    | boolean
-    | number;
+  [name: string]: ComponentControl<ExampleControls> | any;
 };
 
 /**
@@ -303,11 +299,6 @@ export type DocInfo = Pick<
   rawTags?: string[];
   rawType?: string;
 };
-/**
- * list of components used in stories
- */
-
-export type Components = Record<string, Component>;
 
 /**
  * list of story files, or groups
@@ -399,3 +390,24 @@ class DefaultStore {
 }
 
 export const getDefaultStore = (): Store => new DefaultStore();
+
+export const assignProps = (
+  obj: Document | Story,
+  //@ts-expect-error remove story shorthand
+  { storyName, story, ...props }: Document | Story,
+): Document | Story => {
+  //preserve component and subcomponents as strings
+  const componentName = obj.component;
+  const subcomponentsName = obj.subcomponents;
+  Object.assign(obj, props);
+  if (componentName !== undefined) {
+    obj.component = componentName;
+  }
+  if (subcomponentsName !== undefined) {
+    obj.subcomponents = subcomponentsName;
+  }
+  if (storyName) {
+    obj.name = storyName;
+  }
+  return obj;
+};

@@ -1,0 +1,337 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`cli-store create cjs store 1`] = `
+Object {
+  "component-controls.test.js": "const path = require('path');
+const { run } = require('axe-core');
+const { reactRunDOM } = require('@component-controls/test-renderers');
+require('@component-controls/jest-axe-matcher');
+
+const {
+  loadConfigurations,
+  extractDocuments,
+  isMDXDocument,
+} = require('@component-controls/config');
+const { renderExample } = require('@component-controls/test-renderers');
+const { render, act } = require('@testing-library/react');
+const { renderErr } = require('@component-controls/test-renderers');
+
+describe('component-controls generated', () => {
+  const configPath = path.resolve(__dirname, '../.config');
+  const config = loadConfigurations(configPath);
+  const documents = extractDocuments({ config, configPath });
+  if (documents) {
+    documents
+      .filter(file => !isMDXDocument(file, config.instrument))
+      .forEach(file => {
+        // eslint-disable-next-line global-require, import/no-dynamic-require
+        const exports = require(file);
+        const doc = exports.default;
+        const examples = Object.keys(exports)
+          .filter(key => key !== 'default')
+          .map(key => exports[key]);
+
+        if (examples.length) {
+          describe(doc.title, () => {
+            examples.forEach(example => {
+              describe(example.name, () => {
+                let rendered;
+                act(() => {
+                  rendered = renderExample({
+                    example,
+                    doc,
+                    config,
+                  });
+                });
+                if (!rendered) {
+                  renderErr();
+                  return;
+                }
+                it('snapshot', () => {
+                  const { asFragment } = render(rendered);
+                  expect(asFragment()).toMatchSnapshot();
+                });
+                it('accessibility', async () => {
+                  const axeResults = await reactRunDOM(rendered, run);
+                  expect(axeResults).toHaveNoAxeViolations();
+                });
+              });
+            });
+          });
+        }
+      });
+  }
+});
+",
+}
+`;
+
+exports[`cli-store create enzyme store 1`] = `
+Object {
+  "component-controls.test.js": "const path = require('path');
+const { run } = require('axe-core');
+const { reactRunDOM } = require('@component-controls/test-renderers');
+require('@component-controls/jest-axe-matcher');
+
+const {
+  loadConfigurations,
+  extractDocuments,
+  isMDXDocument,
+} = require('@component-controls/config');
+const { renderExample } = require('@component-controls/test-renderers');
+const { mount, configure } = require('enzyme');
+const toJson = require('enzyme-to-json').default;
+const Adapter = require('@wojtekmaj/enzyme-adapter-react-17');
+
+configure({ adapter: new Adapter() });
+
+describe('component-controls generated', () => {
+  const configPath = path.resolve(__dirname, '../.config');
+  const config = loadConfigurations(configPath);
+  const documents = extractDocuments({ config, configPath });
+  if (documents) {
+    documents
+      .filter(file => !isMDXDocument(file, config.instrument))
+      .forEach(file => {
+        // eslint-disable-next-line global-require, import/no-dynamic-require
+        const exports = require(file);
+        const doc = exports.default;
+        const examples = Object.keys(exports)
+          .filter(key => key !== 'default')
+          .map(key => exports[key]);
+
+        if (examples.length) {
+          describe(doc.title, () => {
+            examples.forEach(example => {
+              describe(example.name, () => {
+                const rendered = renderExample({
+                  example,
+                  doc,
+                  config,
+                });
+
+                it('snapshot', () => {
+                  const component = mount(rendered);
+                  expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+                });
+                it('accessibility', async () => {
+                  const axeResults = await reactRunDOM(rendered, run);
+                  expect(axeResults).toHaveNoAxeViolations();
+                });
+              });
+            });
+          });
+        }
+      });
+  }
+});
+",
+}
+`;
+
+exports[`cli-store create esm store 1`] = `
+Object {
+  "component-controls.test.js": "import * as path from 'path';
+import { run } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
+import {
+  loadConfigurations,
+  extractDocuments,
+  isMDXDocument,
+} from '@component-controls/config';
+import { renderExample } from '@component-controls/test-renderers';
+import { render, act } from '@testing-library/react';
+import { renderErr } from '@component-controls/test-renderers';
+
+describe('component-controls generated', () => {
+  const configPath = path.resolve(__dirname, '../.config');
+  const config = loadConfigurations(configPath);
+  const documents = extractDocuments({ config, configPath });
+  if (documents) {
+    documents
+      .filter(file => !isMDXDocument(file, config.instrument))
+      .forEach(file => {
+        // eslint-disable-next-line global-require, import/no-dynamic-require
+        const exports = require(file);
+        const doc = exports.default;
+        const examples = Object.keys(exports)
+          .filter(key => key !== 'default')
+          .map(key => exports[key]);
+
+        if (examples.length) {
+          describe(doc.title, () => {
+            examples.forEach(example => {
+              describe(example.name, () => {
+                let rendered;
+                act(() => {
+                  rendered = renderExample({
+                    example,
+                    doc,
+                    config,
+                  });
+                });
+                if (!rendered) {
+                  renderErr();
+                  return;
+                }
+                it('snapshot', () => {
+                  const { asFragment } = render(rendered);
+                  expect(asFragment()).toMatchSnapshot();
+                });
+                it('accessibility', async () => {
+                  const axeResults = await reactRunDOM(rendered, run);
+                  expect(axeResults).toHaveNoAxeViolations();
+                });
+              });
+            });
+          });
+        }
+      });
+  }
+});
+",
+}
+`;
+
+exports[`cli-store create rtr store 1`] = `
+Object {
+  "component-controls.test.js": "const path = require('path');
+const { run } = require('axe-core');
+const { reactRunDOM } = require('@component-controls/test-renderers');
+require('@component-controls/jest-axe-matcher');
+
+const {
+  loadConfigurations,
+  extractDocuments,
+  isMDXDocument,
+} = require('@component-controls/config');
+const { renderExample } = require('@component-controls/test-renderers');
+const renderer = require('react-test-renderer');
+const {
+  renderErr,
+  componentErr,
+} = require('@component-controls/test-renderers');
+const act = renderer.act;
+
+describe('component-controls generated', () => {
+  const configPath = path.resolve(__dirname, '../.config');
+  const config = loadConfigurations(configPath);
+  const documents = extractDocuments({ config, configPath });
+  if (documents) {
+    documents
+      .filter(file => !isMDXDocument(file, config.instrument))
+      .forEach(file => {
+        // eslint-disable-next-line global-require, import/no-dynamic-require
+        const exports = require(file);
+        const doc = exports.default;
+        const examples = Object.keys(exports)
+          .filter(key => key !== 'default')
+          .map(key => exports[key]);
+
+        if (examples.length) {
+          describe(doc.title, () => {
+            examples.forEach(example => {
+              describe(example.name, () => {
+                let rendered;
+                act(() => {
+                  rendered = renderExample({
+                    example,
+                    doc,
+                    config,
+                  });
+                });
+                if (!rendered) {
+                  renderErr();
+                  return;
+                }
+                it('snapshot', () => {
+                  const component = renderer.create(rendered);
+                  if (!component) {
+                    componentErr();
+                    return;
+                  }
+                  expect(component.toJSON()).toMatchSnapshot();
+                });
+                it('accessibility', async () => {
+                  const axeResults = await reactRunDOM(rendered, run);
+                  expect(axeResults).toHaveNoAxeViolations();
+                });
+              });
+            });
+          });
+        }
+      });
+  }
+});
+",
+}
+`;
+
+exports[`cli-store create typescript store 1`] = `
+Object {
+  "component-controls.test.ts": "import * as path from 'path';
+import { run, AxeResults } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
+import {
+  loadConfigurations,
+  extractDocuments,
+  isMDXDocument,
+} from '@component-controls/config';
+import { renderExample } from '@component-controls/test-renderers';
+import { render, act } from '@testing-library/react';
+import { renderErr } from '@component-controls/test-renderers';
+
+describe('component-controls generated', () => {
+  const configPath = path.resolve(__dirname, '../.config');
+  const config = loadConfigurations(configPath);
+  const documents = extractDocuments({ config, configPath });
+  if (documents) {
+    documents
+      .filter((file: string) => !isMDXDocument(file, config.instrument))
+      .forEach((file: string) => {
+        // eslint-disable-next-line @typescript-eslint/no-var-requires, global-require, import/no-dynamic-require
+        const exports = require(file);
+        const doc = exports.default;
+        const examples = Object.keys(exports)
+          .filter(key => key !== 'default')
+          .map(key => exports[key]);
+
+        if (examples.length) {
+          describe(doc.title, () => {
+            examples.forEach(example => {
+              describe(example.name, () => {
+                let rendered: ReturnType<typeof renderExample> = undefined as any;
+                act(() => {
+                  rendered = renderExample({
+                    example,
+                    doc,
+                    config,
+                  });
+                });
+                if (!rendered) {
+                  renderErr();
+                  return;
+                }
+                it('snapshot', () => {
+                  const { asFragment } = render(rendered);
+                  expect(asFragment()).toMatchSnapshot();
+                });
+                it('accessibility', async () => {
+                  const axeResults = await reactRunDOM<AxeResults>(
+                    rendered,
+                    run,
+                  );
+                  expect(axeResults).toHaveNoAxeViolations();
+                });
+              });
+            });
+          });
+        }
+      });
+  }
+});
+",
+}
+`;

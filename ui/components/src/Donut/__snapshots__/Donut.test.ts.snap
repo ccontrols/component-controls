@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Donut overview snapshot 1`] = `
+exports[`Donut overview 0 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
   box-sizing: border-box;
@@ -10,18 +10,18 @@ exports[`Donut overview snapshot 1`] = `
 }
 
 <svg
-    aria-label="donut graphic value 0.5 - from 0 tp 1"
+    aria-label="donut graphic value 0 - from 1 tp 1"
     class="emotion-0"
     fill="none"
-    height="128"
+    height="141"
     role="img"
     stroke="currentcolor"
     stroke-width="2"
     viewBox="0 0 32 32"
-    width="128"
+    width="141"
   >
     <title>
-      some text
+      Dr. Stewart Leuschke
     </title>
     <circle
       cx="16"
@@ -34,7 +34,171 @@ exports[`Donut overview snapshot 1`] = `
       cy="16"
       r="14"
       stroke-dasharray="87.96459430051421"
-      stroke-dashoffset="43.982297150257104"
+      stroke-dashoffset="0"
+      transform="rotate(-90 16 16)"
+    />
+  </svg>
+</DocumentFragment>
+`;
+
+exports[`Donut overview 1 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+<svg
+    aria-label="donut graphic value 1 - from 1 tp 1"
+    class="emotion-0"
+    fill="none"
+    height="171"
+    role="img"
+    stroke="currentcolor"
+    stroke-width="2"
+    viewBox="0 0 32 32"
+    width="171"
+  >
+    <title>
+      Meredith Fritsch
+    </title>
+    <circle
+      cx="16"
+      cy="16"
+      opacity="0.125"
+      r="14"
+    />
+    <circle
+      cx="16"
+      cy="16"
+      r="14"
+      stroke-dasharray="87.96459430051421"
+      stroke-dashoffset="0"
+      transform="rotate(-90 16 16)"
+    />
+  </svg>
+</DocumentFragment>
+`;
+
+exports[`Donut overview 2 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+<svg
+    aria-label="donut graphic value 0 - from 1 tp 1"
+    class="emotion-0"
+    fill="none"
+    height="135"
+    role="img"
+    stroke="currentcolor"
+    stroke-width="2"
+    viewBox="0 0 32 32"
+    width="135"
+  >
+    <title>
+      Emmet King
+    </title>
+    <circle
+      cx="16"
+      cy="16"
+      opacity="0.125"
+      r="14"
+    />
+    <circle
+      cx="16"
+      cy="16"
+      r="14"
+      stroke-dasharray="87.96459430051421"
+      stroke-dashoffset="0"
+      transform="rotate(-90 16 16)"
+    />
+  </svg>
+</DocumentFragment>
+`;
+
+exports[`Donut overview 3 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+<svg
+    aria-label="donut graphic value 0 - from 0 tp 2"
+    class="emotion-0"
+    fill="none"
+    height="234"
+    role="img"
+    stroke="currentcolor"
+    stroke-width="3"
+    viewBox="0 0 32 32"
+    width="234"
+  >
+    <title>
+      Luther Pacocha
+    </title>
+    <circle
+      cx="16"
+      cy="16"
+      opacity="0.125"
+      r="13"
+    />
+    <circle
+      cx="16"
+      cy="16"
+      r="13"
+      stroke-dasharray="81.68140899333463"
+      stroke-dashoffset="81.68140899333463"
+      transform="rotate(-90 16 16)"
+    />
+  </svg>
+</DocumentFragment>
+`;
+
+exports[`Donut overview 4 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+}
+
+<svg
+    aria-label="donut graphic value 0 - from 0 tp 1"
+    class="emotion-0"
+    fill="none"
+    height="232"
+    role="img"
+    stroke="currentcolor"
+    stroke-width="2"
+    viewBox="0 0 32 32"
+    width="232"
+  >
+    <title>
+      Jovany Adams
+    </title>
+    <circle
+      cx="16"
+      cy="16"
+      opacity="0.125"
+      r="14"
+    />
+    <circle
+      cx="16"
+      cy="16"
+      r="14"
+      stroke-dasharray="87.96459430051421"
+      stroke-dashoffset="87.96459430051421"
       transform="rotate(-90 16 16)"
     />
   </svg>

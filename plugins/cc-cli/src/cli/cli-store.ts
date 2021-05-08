@@ -1,6 +1,6 @@
-import { CliOptions } from './types';
-import { saveTemplate } from './save-template';
-import { createStoreTemplate } from '../store-template';
+import { CliOptions } from './utils';
+import { saveTemplate } from './save-test-template';
+import { createStoreTemplate } from '../jest-templates/store-template';
 
 /**
  * cli function to create a test file with dynamic tests for the entre store
@@ -19,6 +19,7 @@ export const cliStore = async (options: CliOptions): Promise<void> => {
     include,
     exclude,
     ally,
+    data,
   } = options;
   const test =
     userTest || `component-controls.test.${format === 'ts' ? 'ts' : 'js'}`;
@@ -35,6 +36,7 @@ export const cliStore = async (options: CliOptions): Promise<void> => {
       include,
       exclude,
       ally,
+      data,
     },
     createStoreTemplate,
   );

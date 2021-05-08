@@ -94,11 +94,11 @@ export const StoryRender: FC<StoryRenderProps & StoryWrapperProps> = forwardRef(
     const store = useStore();
     const options = useExternalOptions();
     const rendered = store.config.renderFn
-      ? store.config.renderFn(
+      ? store.config.renderFn({
           story,
-          story.doc ? store.docs[story.doc] : undefined,
+          doc: story.doc ? store.docs[story.doc] : undefined,
           options,
-        )
+        })
       : null;
     return (
       <Box

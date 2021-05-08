@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Source overview snapshot 1`] = `
+exports[`Source overview 0 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
   box-sizing: border-box;
@@ -166,87 +166,178 @@ exports[`Source overview snapshot 1`] = `
           style="color: rgb(114, 143, 203);"
         >
           <span
-            class="token keyword emotion-7"
-            style="color: rgb(114, 143, 203);"
-          >
-            export
-          </span>
-          <span
             class="token plain emotion-7"
           >
-             
+            Eve Barrows
           </span>
-          <span
-            class="token keyword emotion-7"
-            style="color: rgb(114, 143, 203);"
-          >
-            const
-          </span>
-          <span
-            class="token plain emotion-7"
-          >
-             
-          </span>
-          <span
-            class="token function-variable function emotion-7"
-            style="color: rgb(178, 151, 98);"
-          >
-            sample
-          </span>
-          <span
-            class="token plain emotion-7"
-          >
-             
-          </span>
-          <span
-            class="token operator emotion-7"
-            style="color: rgb(6, 50, 137);"
-          >
-            =
-          </span>
-          <span
-            class="token plain emotion-7"
-          >
-             
-          </span>
-          <span
-            class="token punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            (
-          </span>
-          <span
-            class="token punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            )
-          </span>
-          <span
-            class="token plain emotion-7"
-          >
-             
-          </span>
-          <span
-            class="token operator emotion-7"
-            style="color: rgb(6, 50, 137);"
-          >
-            =&gt;
-          </span>
-          <span
-            class="token plain emotion-7"
-          >
-             
-          </span>
-          <span
-            class="token punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            {
-          </span>
-          <span
-            class="token plain emotion-7"
-          />
         </div>
+      </pre>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Source overview 1 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-2 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-2 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-5 {
+  font-family: Menlo,monospace;
+  overflow-x: auto;
+  background-color: #e6e6e6;
+}
+
+.emotion-5 code {
+  color: inherit;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-7 {
+  display: inline-block;
+}
+
+<div>
+    <div
+      class="emotion-0"
+    >
+      <div
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <button
+            aria-label="copy the displayed source code"
+            class="emotion-3"
+          >
+            copy
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="emotion-4"
+    >
+      <pre
+        class="prism-code language-jsx emotion-5"
+        style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; display: block; margin: 0px;"
+      >
         <div
           class="token-line emotion-6"
           style="color: rgb(114, 143, 203);"
@@ -254,483 +345,543 @@ exports[`Source overview snapshot 1`] = `
           <span
             class="token plain emotion-7"
           >
-              
+            Earnest Smitham 
           </span>
           <span
-            class="token keyword emotion-7"
-            style="color: rgb(114, 143, 203);"
+            class="token constant emotion-7"
           >
-            const
+            MD
           </span>
-          <span
-            class="token plain emotion-7"
-          >
-             
-          </span>
-          <span
-            class="token punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            [
-          </span>
-          <span
-            class="token plain emotion-7"
-          >
-            state
-          </span>
-          <span
-            class="token punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            ,
-          </span>
-          <span
-            class="token plain emotion-7"
-          >
-             setState
-          </span>
-          <span
-            class="token punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            ]
-          </span>
-          <span
-            class="token plain emotion-7"
-          >
-             
-          </span>
-          <span
-            class="token operator emotion-7"
-            style="color: rgb(6, 50, 137);"
-          >
-            =
-          </span>
-          <span
-            class="token plain emotion-7"
-          >
-             React
-          </span>
-          <span
-            class="token punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            .
-          </span>
-          <span
-            class="token function emotion-7"
-            style="color: rgb(178, 151, 98);"
-          >
-            useState
-          </span>
-          <span
-            class="token punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            (
-          </span>
-          <span
-            class="token boolean emotion-7"
-            style="color: rgb(114, 143, 203);"
-          >
-            false
-          </span>
-          <span
-            class="token punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            )
-          </span>
-          <span
-            class="token punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            ;
-          </span>
-          <span
-            class="token plain emotion-7"
-          />
         </div>
+      </pre>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Source overview 2 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-2 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-2 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-5 {
+  font-family: Menlo,monospace;
+  overflow-x: auto;
+  background-color: #e6e6e6;
+}
+
+.emotion-5 code {
+  color: inherit;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-7 {
+  display: inline-block;
+}
+
+<div>
+    <div
+      class="emotion-0"
+    >
+      <div
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <button
+            aria-label="copy the displayed source code"
+            class="emotion-3"
+          >
+            copy
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="emotion-4"
+    >
+      <pre
+        class="prism-code language-jsx emotion-5"
+        style="background-color: rgb(42, 39, 52); color: rgb(154, 134, 253); padding: 25px 10px 10px; display: block; margin: 0px;"
+      >
         <div
           class="token-line emotion-6"
-          style="color: rgb(114, 143, 203);"
+          style="color: rgb(154, 134, 253);"
         >
           <span
             class="token plain emotion-7"
           >
-              
+            Brianne Fay
           </span>
-          <span
-            class="token keyword emotion-7"
-            style="color: rgb(114, 143, 203);"
-          >
-            return
-          </span>
-          <span
-            class="token plain emotion-7"
-          >
-             
-          </span>
-          <span
-            class="token punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            (
-          </span>
-          <span
-            class="token plain emotion-7"
-          />
         </div>
+      </pre>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Source overview 3 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-2 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-2 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-5 {
+  font-family: Menlo,monospace;
+  overflow-x: auto;
+  background-color: #e6e6e6;
+}
+
+.emotion-5 code {
+  color: inherit;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-7 {
+  display: inline-block;
+}
+
+<div>
+    <div
+      class="emotion-0"
+    >
+      <div
+        class="emotion-1"
+      >
+        <div
+          class="emotion-2"
+        >
+          <button
+            aria-label="copy the displayed source code"
+            class="emotion-3"
+          >
+            copy
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="emotion-4"
+    >
+      <pre
+        class="prism-code language-jsx emotion-5"
+        style="background-color: rgb(42, 39, 52); color: rgb(154, 134, 253); padding: 25px 10px 10px; display: block; margin: 0px;"
+      >
         <div
           class="token-line emotion-6"
-          style="color: rgb(114, 143, 203);"
+          style="color: rgb(154, 134, 253);"
         >
           <span
             class="token plain emotion-7"
           >
-                
+            Maeve Quigley
           </span>
-          <span
-            class="token tag punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            &lt;
-          </span>
-          <span
-            class="token tag class-name emotion-7"
-            style="color: rgb(6, 50, 137);"
-          >
-            BooleanEditor
-          </span>
-          <span
-            class="token tag emotion-7"
-            style="color: rgb(6, 50, 137);"
-          />
         </div>
+      </pre>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Source overview 4 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.emotion-2 a {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-2 button {
+  color: #ffffff;
+  background-color: #3B817D;
+  -webkit-text-fill-color: initial;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1;
+  border-radius: 1px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  border: 1px solid #3B817D;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-5 {
+  font-family: Menlo,monospace;
+  overflow-x: auto;
+  background-color: #e6e6e6;
+}
+
+.emotion-5 code {
+  color: inherit;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-7 {
+  display: inline-block;
+}
+
+<div>
+    <div
+      class="emotion-0"
+    >
+      <div
+        class="emotion-1"
+      >
         <div
-          class="token-line emotion-6"
-          style="color: rgb(114, 143, 203);"
+          class="emotion-2"
         >
-          <span
-            class="token tag emotion-7"
-            style="color: rgb(6, 50, 137);"
+          <button
+            aria-label="copy the displayed source code"
+            class="emotion-3"
           >
-                  
-          </span>
-          <span
-            class="token tag attr-name emotion-7"
-            style="color: rgb(137, 103, 36);"
-          >
-            name
-          </span>
-          <span
-            class="token tag attr-value punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            =
-          </span>
-          <span
-            class="token tag attr-value punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            "
-          </span>
-          <span
-            class="token tag attr-value emotion-7"
-            style="color: rgb(114, 143, 203);"
-          >
-            prop
-          </span>
-          <span
-            class="token tag attr-value punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            "
-          </span>
-          <span
-            class="token tag emotion-7"
-            style="color: rgb(6, 50, 137);"
-          />
+            copy
+          </button>
         </div>
+      </div>
+    </div>
+    <div
+      class="emotion-4"
+    >
+      <pre
+        class="prism-code language-jsx emotion-5"
+        style="background-color: rgb(42, 39, 52); color: rgb(154, 134, 253); padding: 25px 10px 10px; display: block; margin: 0px;"
+      >
         <div
           class="token-line emotion-6"
-          style="color: rgb(114, 143, 203);"
-        >
-          <span
-            class="token tag emotion-7"
-            style="color: rgb(6, 50, 137);"
-          >
-                  
-          </span>
-          <span
-            class="token tag attr-name emotion-7"
-            style="color: rgb(137, 103, 36);"
-          >
-            onChange
-          </span>
-          <span
-            class="token tag script language-javascript script-punctuation punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            =
-          </span>
-          <span
-            class="token tag script language-javascript punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            {
-          </span>
-          <span
-            class="token tag script language-javascript punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            (
-          </span>
-          <span
-            class="token tag script language-javascript parameter emotion-7"
-            style="color: rgb(6, 50, 137);"
-          >
-            name
-          </span>
-          <span
-            class="token tag script language-javascript parameter punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            ,
-          </span>
-          <span
-            class="token tag script language-javascript parameter emotion-7"
-            style="color: rgb(6, 50, 137);"
-          >
-             newVal
-          </span>
-          <span
-            class="token tag script language-javascript punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            )
-          </span>
-          <span
-            class="token tag script language-javascript emotion-7"
-            style="color: rgb(6, 50, 137);"
-          >
-             
-          </span>
-          <span
-            class="token tag script language-javascript operator emotion-7"
-            style="color: rgb(6, 50, 137);"
-          >
-            =&gt;
-          </span>
-          <span
-            class="token tag script language-javascript emotion-7"
-            style="color: rgb(6, 50, 137);"
-          >
-             
-          </span>
-          <span
-            class="token tag script language-javascript function emotion-7"
-            style="color: rgb(178, 151, 98);"
-          >
-            setState
-          </span>
-          <span
-            class="token tag script language-javascript punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            (
-          </span>
-          <span
-            class="token tag script language-javascript emotion-7"
-            style="color: rgb(6, 50, 137);"
-          >
-            newVal
-          </span>
-          <span
-            class="token tag script language-javascript punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            )
-          </span>
-          <span
-            class="token tag script language-javascript punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            }
-          </span>
-          <span
-            class="token tag emotion-7"
-            style="color: rgb(6, 50, 137);"
-          />
-        </div>
-        <div
-          class="token-line emotion-6"
-          style="color: rgb(114, 143, 203);"
-        >
-          <span
-            class="token tag emotion-7"
-            style="color: rgb(6, 50, 137);"
-          >
-                  
-          </span>
-          <span
-            class="token tag attr-name emotion-7"
-            style="color: rgb(137, 103, 36);"
-          >
-            prop
-          </span>
-          <span
-            class="token tag script language-javascript script-punctuation punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            =
-          </span>
-          <span
-            class="token tag script language-javascript punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            {
-          </span>
-          <span
-            class="token tag script language-javascript punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            {
-          </span>
-          <span
-            class="token tag script language-javascript emotion-7"
-            style="color: rgb(6, 50, 137);"
-          >
-             type
-          </span>
-          <span
-            class="token tag script language-javascript punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            :
-          </span>
-          <span
-            class="token tag script language-javascript emotion-7"
-            style="color: rgb(6, 50, 137);"
-          >
-             ControlTypes
-          </span>
-          <span
-            class="token tag script language-javascript punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            .
-          </span>
-          <span
-            class="token tag script language-javascript constant emotion-7"
-            style="color: rgb(6, 50, 137);"
-          >
-            BOOLEAN
-          </span>
-          <span
-            class="token tag script language-javascript punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            ,
-          </span>
-          <span
-            class="token tag script language-javascript emotion-7"
-            style="color: rgb(6, 50, 137);"
-          >
-             value
-          </span>
-          <span
-            class="token tag script language-javascript punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            :
-          </span>
-          <span
-            class="token tag script language-javascript emotion-7"
-            style="color: rgb(6, 50, 137);"
-          >
-             state 
-          </span>
-          <span
-            class="token tag script language-javascript punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            }
-          </span>
-          <span
-            class="token tag script language-javascript punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            }
-          </span>
-          <span
-            class="token tag emotion-7"
-            style="color: rgb(6, 50, 137);"
-          />
-        </div>
-        <div
-          class="token-line emotion-6"
-          style="color: rgb(114, 143, 203);"
-        >
-          <span
-            class="token tag emotion-7"
-            style="color: rgb(6, 50, 137);"
-          >
-                
-          </span>
-          <span
-            class="token tag punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            /&gt;
-          </span>
-          <span
-            class="token plain emotion-7"
-          />
-        </div>
-        <div
-          class="token-line emotion-6"
-          style="color: rgb(114, 143, 203);"
+          style="color: rgb(154, 134, 253);"
         >
           <span
             class="token plain emotion-7"
           >
-              
-          </span>
-          <span
-            class="token punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            )
-          </span>
-          <span
-            class="token punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            ;
-          </span>
-          <span
-            class="token plain emotion-7"
-          />
-        </div>
-        <div
-          class="token-line emotion-6"
-          style="color: rgb(114, 143, 203);"
-        >
-          <span
-            class="token plain emotion-7"
-          />
-          <span
-            class="token punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            }
-          </span>
-          <span
-            class="token punctuation emotion-7"
-            style="color: rgb(182, 173, 154);"
-          >
-            ;
+            Cathryn Fadel
           </span>
         </div>
       </pre>

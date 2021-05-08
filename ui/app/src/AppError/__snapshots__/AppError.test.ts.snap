@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppError overview snapshot 1`] = `
+exports[`AppError overview 0 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
   box-sizing: border-box;
@@ -11,10 +11,71 @@ exports[`AppError overview snapshot 1`] = `
 <div
     class="emotion-0"
   >
-    some error
-    <br />
-    text
-    <br />
+    Dr. Eli Beatty
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AppError overview 1 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+<div
+    class="emotion-0"
+  >
+    Mr. Russell Volkman
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AppError overview 2 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+<div
+    class="emotion-0"
+  >
+    Dr. Zachary Kuphal
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AppError overview 3 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+<div
+    class="emotion-0"
+  >
+    Mrs. Freeda Nikolaus
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AppError overview 4 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+<div
+    class="emotion-0"
+  >
+    Emilio Kozey
   </div>
 </DocumentFragment>
 `;

@@ -1,27 +1,52 @@
 import fs from 'fs';
 import path from 'path';
 import { runCLI } from 'jest';
-import { createStoriesTemplate } from '../src/stories-template';
-import { StoryTemplateOptions } from '../src/types';
+import { randomizeSeed } from '@component-controls/core';
+import { setLogOptions } from '@component-controls/logger';
+import { createStoriesTemplate } from '../src/jest-templates/stories-template';
+import { saveDataTemplate } from '../src/cli/save-data-template';
+import {
+  StoryTemplateOptions,
+  DataImportOptions,
+  formatExtension,
+} from '../src/utils';
 
 export const runTests = async (
   props: Omit<StoryTemplateOptions, 'storyPath'>,
 ): Promise<void> => {
-  const { renderer, format, config, bundle, name } = props;
+  const { renderer, format, config, bundle, data } = props;
+  setLogOptions({ logLevel: 'none' });
+  randomizeSeed(123456);
+  const storyPath = path.resolve(__dirname, 'fixtures/VariantButton.docs.tsx');
   it(`${renderer} ${bundle ? 'bundle' : ''} ${format}`, async () => {
+    let dataImports: DataImportOptions | undefined = undefined;
+    if (data) {
+      dataImports = await saveDataTemplate({
+        ...props,
+        storyPath,
+        overwrite: true,
+        output: __dirname,
+        name: bundle ? 'VariantButton' : undefined,
+        test: `VariantButton.data.${formatExtension(format)}`,
+      });
+    }
     let renderedFile = '';
-    renderedFile = await createStoriesTemplate({
-      storyPath: path.resolve(__dirname, 'fixtures/VariantButton.docs.tsx'),
-      format,
-      name: bundle ? 'Components/Header' : undefined,
-      renderer,
-      bundle,
-      config,
-      output: __dirname,
-    });
+    renderedFile = await createStoriesTemplate(
+      {
+        storyPath,
+        format,
+        name: bundle ? 'VariantButton' : undefined,
+        renderer,
+        bundle,
+        config,
+        output: __dirname,
+        data,
+      },
+      dataImports,
+    );
     expect(renderedFile).toMatchSnapshot();
     if (name) {
-      const extension = format === 'ts' ? 'ts' : 'js';
+      const extension = formatExtension(format);
       const testName = `story_test_${renderer}_${format}${
         bundle ? '_bundle' : ''
       }`;
@@ -60,6 +85,12 @@ export const runTests = async (
           fs.unlinkSync(snapshotFileName);
         }
       }
+    }
+    if (
+      dataImports &&
+      fs.existsSync(path.resolve(__dirname, dataImports.filePath))
+    ) {
+      fs.unlinkSync(path.resolve(__dirname, dataImports.filePath));
     }
   }, 1000000);
 };

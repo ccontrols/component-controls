@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rtr bundle esm 1`] = `
+"import * as path from 'path';
+import { run } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
+import { loadStore } from '@component-controls/store';
+import renderer, { act } from 'react-test-renderer';
+import { renderErr, componentErr } from '@component-controls/test-renderers';
+
+import data from './VariantButton.data';
+
+describe('VariantButton', () => {
+  const store = loadStore(
+    require(path.resolve(__dirname, './bundle/component-controls.js')),
+  );
+  const renderFn = store.config.renderFn;
+  const doc = store.docs['VariantButton'];
+  if (doc.stories && doc.stories.length) {
+    const stories = doc.stories;
+    describe(doc.title, () => {
+      stories.forEach(storyId => {
+        const story = store.stories[storyId];
+        describe(story.name, () => {
+          const runTests = values => {
+            let rendered;
+            act(() => {
+              rendered = renderFn({ story, doc, values });
+            });
+            if (!rendered) {
+              renderErr();
+              return;
+            }
+            it('snapshot', () => {
+              const component = renderer.create(rendered);
+              if (!component) {
+                componentErr();
+                return;
+              }
+              expect(component.toJSON()).toMatchSnapshot();
+            });
+            it('accessibility', async () => {
+              const axeResults = await reactRunDOM(rendered, run);
+              expect(axeResults).toHaveNoAxeViolations();
+            });
+          };
+          if (data[story.id]) {
+            Object.keys(data[story.id]).forEach(dataId => {
+              describe(dataId, () => {
+                const values = data[story.id][dataId];
+                runTests(values);
+              });
+            });
+          } else {
+            runTests();
+          }
+        });
+      });
+    });
+  }
+});
+"
+`;

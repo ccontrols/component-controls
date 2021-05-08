@@ -3,7 +3,7 @@ import {
   defaultCliArgs,
 } from '@component-controls/webpack-compile/cli';
 
-import { renderers } from '../types';
+import { renderers } from '../utils';
 
 export const jestCliArgs: ArgOptions = [
   ...defaultCliArgs.filter(arg => arg.name === 'config'),
@@ -97,6 +97,15 @@ export const jestCliArgs: ArgOptions = [
       description: 'include axe accessibility tests',
       default: true,
       type: 'boolean',
+    },
+  },
+  {
+    name: 'data',
+    options: {
+      alias: 'd',
+      description: '[n] rows to generate with data-driven testing files',
+      default: 0,
+      type: 'number',
     },
   },
 ];

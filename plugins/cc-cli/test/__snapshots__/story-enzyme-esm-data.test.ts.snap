@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`enzyme  esm 1`] = `
+"import * as path from 'path';
+import { run } from 'axe-core';
+import { reactRunDOM } from '@component-controls/test-renderers';
+import '@component-controls/jest-axe-matcher';
+import { loadConfigurations } from '@component-controls/config';
+import { renderExample } from '@component-controls/test-renderers';
+import { mount, configure } from 'enzyme';
+import toJson from 'enzyme-to-json';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+
+configure({ adapter: new Adapter() });
+
+import doc, {
+  overview,
+  primary,
+  accent,
+  disabled,
+  success,
+  error,
+  warning,
+} from './fixtures/VariantButton.docs';
+import data from './VariantButton.data';
+
+describe('VariantButton', () => {
+  const configPath = path.resolve(__dirname, '.config');
+  const config = loadConfigurations(configPath);
+
+  describe('overview', () => {
+    Object.keys(data['overview']).forEach(dataId => {
+      const values = data['overview'][dataId];
+      describe(dataId, () => {
+        const example = overview;
+
+        const rendered = renderExample({
+          example,
+          doc,
+          config,
+          values,
+        });
+
+        it('snapshot', () => {
+          const component = mount(rendered);
+          expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+        });
+        it('accessibility', async () => {
+          const axeResults = await reactRunDOM(rendered, run);
+          expect(axeResults).toHaveNoAxeViolations();
+        });
+      });
+    });
+  });
+
+  describe('primary', () => {
+    const example = primary;
+
+    const rendered = renderExample({
+      example,
+      doc,
+      config,
+    });
+
+    it('snapshot', () => {
+      const component = mount(rendered);
+      expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+
+  describe('accent', () => {
+    const example = accent;
+
+    const rendered = renderExample({
+      example,
+      doc,
+      config,
+    });
+
+    it('snapshot', () => {
+      const component = mount(rendered);
+      expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+
+  describe('disabled', () => {
+    const example = disabled;
+
+    const rendered = renderExample({
+      example,
+      doc,
+      config,
+    });
+
+    it('snapshot', () => {
+      const component = mount(rendered);
+      expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+
+  describe('success', () => {
+    const example = success;
+
+    const rendered = renderExample({
+      example,
+      doc,
+      config,
+    });
+
+    it('snapshot', () => {
+      const component = mount(rendered);
+      expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+
+  describe('error', () => {
+    const example = error;
+
+    const rendered = renderExample({
+      example,
+      doc,
+      config,
+    });
+
+    it('snapshot', () => {
+      const component = mount(rendered);
+      expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+
+  describe('warning', () => {
+    const example = warning;
+
+    const rendered = renderExample({
+      example,
+      doc,
+      config,
+    });
+
+    it('snapshot', () => {
+      const component = mount(rendered);
+      expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+    });
+    it('accessibility', async () => {
+      const axeResults = await reactRunDOM(rendered, run);
+      expect(axeResults).toHaveNoAxeViolations();
+    });
+  });
+});
+"
+`;

@@ -12,8 +12,10 @@ const Test = () => (
 describe('rtl', () => {
   test('render small component', async () => {
     const rendered = renderReact({
-      name: 'test',
-      renderFn: Test,
+      story: {
+        name: 'test',
+        renderFn: Test,
+      },
     });
     const { asFragment, getByTestId } = rtlRender(rendered);
     expect(asFragment()).toMatchSnapshot();

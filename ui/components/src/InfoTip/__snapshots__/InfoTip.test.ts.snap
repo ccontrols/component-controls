@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InfoTip overview snapshot 1`] = `
+exports[`InfoTip overview 0 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
   box-sizing: border-box;
@@ -36,26 +36,260 @@ exports[`InfoTip overview snapshot 1`] = `
     style="display: inline-block;"
   >
     <button
-      aria-label="
-  # Header H1
-  ## Header H2
-  ### Header H3
-  #### Header H4
-  ##### Header H5
-  
-  some text  
-  "
+      aria-label="Pansy Feeney"
       class="emotion-0"
     >
       <svg
         aria-hidden="true"
         class="octicon"
         fill="currentColor"
-        height="18"
+        height="17"
         role="img"
         style="display: inline-block; user-select: none; vertical-align: text-bottom;"
         viewBox="0 0 16 16"
-        width="18"
+        width="17"
+      >
+        <path
+          d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InfoTip overview 1 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  padding: 0;
+  line-height: normal;
+  background-color: transparent;
+  color: #5c6ac4;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+<div
+    style="display: inline-block;"
+  >
+    <button
+      aria-label="Emilia McLaughlin"
+      class="emotion-0"
+    >
+      <svg
+        aria-hidden="true"
+        class="octicon"
+        fill="currentColor"
+        height="36"
+        role="img"
+        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+        viewBox="0 0 24 24"
+        width="36"
+      >
+        <path
+          d="M13 7.5a1 1 0 11-2 0 1 1 0 012 0zm-3 3.75a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v4.25h.75a.75.75 0 010 1.5h-3a.75.75 0 010-1.5h.75V12h-.75a.75.75 0 01-.75-.75z"
+        />
+        <path
+          d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InfoTip overview 2 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  padding: 0;
+  line-height: normal;
+  background-color: transparent;
+  color: #5c6ac4;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+<div
+    style="display: inline-block;"
+  >
+    <button
+      aria-label="Citlalli Emard"
+      class="emotion-0"
+    >
+      <svg
+        aria-hidden="true"
+        class="octicon"
+        fill="currentColor"
+        height="31"
+        role="img"
+        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+        viewBox="0 0 24 24"
+        width="31"
+      >
+        <path
+          d="M13 7.5a1 1 0 11-2 0 1 1 0 012 0zm-3 3.75a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v4.25h.75a.75.75 0 010 1.5h-3a.75.75 0 010-1.5h.75V12h-.75a.75.75 0 01-.75-.75z"
+        />
+        <path
+          d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InfoTip overview 3 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  padding: 0;
+  line-height: normal;
+  background-color: transparent;
+  color: #5c6ac4;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+<div
+    style="display: inline-block;"
+  >
+    <button
+      aria-label="Reynold Toy"
+      class="emotion-0"
+    >
+      <svg
+        aria-hidden="true"
+        class="octicon"
+        fill="currentColor"
+        height="13"
+        role="img"
+        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+        viewBox="0 0 16 16"
+        width="13"
+      >
+        <path
+          d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InfoTip overview 4 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  padding: 0;
+  line-height: normal;
+  background-color: transparent;
+  color: #5c6ac4;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+<div
+    style="display: inline-block;"
+  >
+    <button
+      aria-label="Mr. Soledad Labadie"
+      class="emotion-0"
+    >
+      <svg
+        aria-hidden="true"
+        class="octicon"
+        fill="currentColor"
+        height="22"
+        role="img"
+        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+        viewBox="0 0 16 16"
+        width="22"
       >
         <path
           d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"

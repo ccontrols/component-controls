@@ -15,7 +15,7 @@
     "strictPropertyInitialization": true,
     "noImplicitThis": true,
     "alwaysStrict": false,
-    "noImplicitUseStrict": true, 
+    "noImplicitUseStrict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": false,
     "noImplicitReturns": true,
@@ -26,5 +26,5 @@
     "pretty": true,
     "lib": ["es2017", "dom"]
   },
-  "include": ["doc/**/*"],
+  "include": ["doc/**/*"]
 }

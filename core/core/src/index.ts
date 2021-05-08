@@ -11,7 +11,11 @@ export * from './document-utils';
 export * from './files';
 export * from './jest';
 export * from './utility';
-export { randomizeData, canRandomizeControl } from './controls-randomize';
+export {
+  randomizeData,
+  canRandomizeControl,
+  randomizeSeed,
+} from './controls-randomize';
 export * from './controls-smart';
 export * from './search';
 export * from './source';

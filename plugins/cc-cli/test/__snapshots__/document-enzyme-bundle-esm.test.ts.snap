@@ -12,33 +12,31 @@ import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 
 configure({ adapter: new Adapter() });
 
-describe('Components/Header', () => {
+describe('VariantButton', () => {
   const store = loadStore(
     require(path.resolve(__dirname, './bundle/component-controls.js')),
   );
   const renderFn = store.config.renderFn;
-  Object.keys(store.docs).forEach(docId => {
-    const doc = store.docs[docId];
-    if (doc.stories && doc.stories.length) {
-      const stories = doc.stories;
-      describe(doc.title, () => {
-        stories.forEach(storyId => {
-          const story = store.stories[storyId];
-          describe(story.name, () => {
-            const rendered = renderFn(story, doc);
-            it('snapshot', () => {
-              const component = mount(rendered);
-              expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
-            });
-            it('accessibility', async () => {
-              const axeResults = await reactRunDOM(rendered, run);
-              expect(axeResults).toHaveNoAxeViolations();
-            });
+  const doc = store.docs['VariantButton'];
+  if (doc.stories && doc.stories.length) {
+    const stories = doc.stories;
+    describe(doc.title, () => {
+      stories.forEach(storyId => {
+        const story = store.stories[storyId];
+        describe(story.name, () => {
+          const rendered = renderFn({ story, doc });
+          it('snapshot', () => {
+            const component = mount(rendered);
+            expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
+          });
+          it('accessibility', async () => {
+            const axeResults = await reactRunDOM(rendered, run);
+            expect(axeResults).toHaveNoAxeViolations();
           });
         });
       });
-    }
-  });
+    });
+  }
 });
 "
 `;

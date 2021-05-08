@@ -15,7 +15,7 @@ import doc, {
   success,
   error,
   warning,
-} from './../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
+} from '../../../core/jest-extract/test/fixtures/story/VariantButton.docs';
 
 describe('VariantButton', () => {
   const configPath = path.resolve(__dirname, '.config');
@@ -24,7 +24,7 @@ describe('VariantButton', () => {
   describe('overview', () => {
     const example = overview;
 
-    let rendered;
+    let rendered: ReturnType<typeof renderExample> = undefined as any;
     act(() => {
       rendered = renderExample({
         example,
@@ -49,7 +49,7 @@ describe('VariantButton', () => {
   describe('primary', () => {
     const example = primary;
 
-    let rendered;
+    let rendered: ReturnType<typeof renderExample> = undefined as any;
     act(() => {
       rendered = renderExample({
         example,
@@ -74,7 +74,7 @@ describe('VariantButton', () => {
   describe('accent', () => {
     const example = accent;
 
-    let rendered;
+    let rendered: ReturnType<typeof renderExample> = undefined as any;
     act(() => {
       rendered = renderExample({
         example,
@@ -99,7 +99,7 @@ describe('VariantButton', () => {
   describe('disabled', () => {
     const example = disabled;
 
-    let rendered;
+    let rendered: ReturnType<typeof renderExample> = undefined as any;
     act(() => {
       rendered = renderExample({
         example,
@@ -124,7 +124,7 @@ describe('VariantButton', () => {
   describe('success', () => {
     const example = success;
 
-    let rendered;
+    let rendered: ReturnType<typeof renderExample> = undefined as any;
     act(() => {
       rendered = renderExample({
         example,
@@ -149,7 +149,7 @@ describe('VariantButton', () => {
   describe('error', () => {
     const example = error;
 
-    let rendered;
+    let rendered: ReturnType<typeof renderExample> = undefined as any;
     act(() => {
       rendered = renderExample({
         example,
@@ -174,7 +174,7 @@ describe('VariantButton', () => {
   describe('warning', () => {
     const example = warning;
 
-    let rendered;
+    let rendered: ReturnType<typeof renderExample> = undefined as any;
     act(() => {
       rendered = renderExample({
         example,

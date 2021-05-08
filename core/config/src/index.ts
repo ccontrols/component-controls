@@ -13,6 +13,7 @@ import {
   defaultRunConfig,
   convertConfig,
 } from '@component-controls/core';
+import { dynamicRequire } from '@component-controls/core/node-utils';
 import { render as reactRender } from '@component-controls/render/react';
 import {
   defaultMDXOptions,
@@ -21,8 +22,11 @@ import {
 
 export const buildConfigFileNames = [
   'buildtime.js',
+  'buildtime.ts',
   'build.js',
+  'build.ts',
   'main.js',
+  'main.ts',
   'doczrc.js',
 ];
 
@@ -75,7 +79,7 @@ export const loadConfig = (
   );
   if (buildConfigFile) {
     const buildPath = path.resolve(configPath, buildConfigFile);
-    let config = require('esm')(module)(buildPath);
+    let config = dynamicRequire(buildPath);
     if (
       !config ||
       (typeof config === 'object' && Object.keys(config).length === 0)

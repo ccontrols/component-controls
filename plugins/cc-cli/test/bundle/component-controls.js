@@ -1,16 +1,45 @@
 /* eslint-disable */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("@component-controls/blocks"), require("@component-controls/core"), require("@component-controls/store"), require("fuse.js"), require("theme-ui"), require("react"));
+		module.exports = factory(require("@component-controls/blocks"), require("@component-controls/core"), require("@component-controls/store"), require("@primer/octicons-react"), require("fuse.js"), require("theme-ui"), require("react"));
 	else if(typeof define === 'function' && define.amd)
-		define(["@component-controls/blocks", "@component-controls/core", "@component-controls/store", "fuse.js", "theme-ui", "React"], factory);
+		define(["@component-controls/blocks", "@component-controls/core", "@component-controls/store", "@primer/octicons-react", "fuse.js", "theme-ui", "React"], factory);
 	else {
-		var a = typeof exports === 'object' ? factory(require("@component-controls/blocks"), require("@component-controls/core"), require("@component-controls/store"), require("fuse.js"), require("theme-ui"), require("react")) : factory(root["@component-controls/blocks"], root["@component-controls/core"], root["@component-controls/store"], root["fuse.js"], root["theme-ui"], root["React"]);
+		var a = typeof exports === 'object' ? factory(require("@component-controls/blocks"), require("@component-controls/core"), require("@component-controls/store"), require("@primer/octicons-react"), require("fuse.js"), require("theme-ui"), require("react")) : factory(root["@component-controls/blocks"], root["@component-controls/core"], root["@component-controls/store"], root["@primer/octicons-react"], root["fuse.js"], root["theme-ui"], root["React"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE__9553__, __WEBPACK_EXTERNAL_MODULE__6647__, __WEBPACK_EXTERNAL_MODULE__2348__, __WEBPACK_EXTERNAL_MODULE__3408__, __WEBPACK_EXTERNAL_MODULE__7631__, __WEBPACK_EXTERNAL_MODULE__8798__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE__9553__, __WEBPACK_EXTERNAL_MODULE__6647__, __WEBPACK_EXTERNAL_MODULE__2348__, __WEBPACK_EXTERNAL_MODULE__3887__, __WEBPACK_EXTERNAL_MODULE__3408__, __WEBPACK_EXTERNAL_MODULE__7631__, __WEBPACK_EXTERNAL_MODULE__8798__) {
 return /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
+
+/***/ 9279:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var map = {
+	"./VariantButton.docs.tsx": 4321
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 9279;
+
+/***/ }),
 
 /***/ 4839:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
@@ -87,10 +116,10 @@ var story_0 = __webpack_require__(5547);
 
 var contexts = [];
 contexts.push({
-  folder: "/Users/atanasster/component-controls/ui/components/src/Header",
-  req: __webpack_require__(2072)
+  folder: "/Users/atanasster/component-controls/core/jest-extract/test/fixtures/story",
+  req: __webpack_require__(9279)
 });
-var store = {"stores":[{"filePath":"/Users/atanasster/component-controls/ui/components/src/Header/Header.stories.tsx","stories":{"overview":{"loc":{"start":{"column":33,"line":11},"end":{"column":62,"line":11}},"name":"overview","id":"overview","arguments":[],"source":"() => <Header>header</Header>"}},"doc":{"title":"Components/Header","component":"Header","category":"Display","componentsLookup":{"Header":"360a1a2b3bb1220cb76752ce28374c51"},"package":"95d22e88229c88536b101148951a375a","dateModified":"2021-03-05T05:18:11.433Z","date":"2021-03-05T05:18:11.433Z","fileName":"/Users/atanasster/component-controls/ui/components/src/Header/Header.stories.tsx"}}],"components":{"360a1a2b3bb1220cb76752ce28374c51":{"name":"Header","from":".","externalDependencies":{"react":[{"name":"FC","importedName":"FC"}],"theme-ui":[{"name":"jsx","importedName":"jsx"},{"name":"Flex","importedName":"Flex"},{"name":"BoxProps","importedName":"BoxProps"}]},"localDependencies":{},"importedName":"Header","jsx":[{"children":[],"name":"Flex","attributes":["as","variant"],"from":"theme-ui","importedName":"Flex"}],"request":"/Users/atanasster/component-controls/ui/components/src/Header/Header.tsx","fileName":"Header.tsx","package":"360a1a2b3bb1220cb76752ce28374c51","info":{"tags":{},"description":"A page header component","displayName":"Header","methods":[],"props":{"slot":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"style":{"parentName":"HTMLAttributes","type":{"name":"CSSProperties","raw":"CSSProperties"}},"title":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"key":{"parentName":"Attributes","type":{"name":"union","value":[{"name":"string"},{"name":"number"},{"name":"null"}],"raw":"string | number | null"}},"defaultChecked":{"parentName":"HTMLAttributes","type":{"name":"boolean","raw":"boolean"}},"defaultValue":{"parentName":"HTMLAttributes","type":{"name":"array","value":[{"name":"string | number | readonly string"}],"raw":"string | number | readonly string[]"}},"suppressContentEditableWarning":{"parentName":"HTMLAttributes","type":{"name":"boolean","raw":"boolean"}},"suppressHydrationWarning":{"parentName":"HTMLAttributes","type":{"name":"boolean","raw":"boolean"}},"accessKey":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"className":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"contentEditable":{"parentName":"HTMLAttributes","type":{"name":"union","value":[{"name":"boolean"},{"name":"true"},{"name":"false"},{"name":"inherit"}],"raw":"boolean | \"true\" | \"false\" | \"inherit\""}},"contextMenu":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"dir":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"draggable":{"parentName":"HTMLAttributes","type":{"name":"union","value":[{"name":"boolean"},{"name":"true"},{"name":"false"}],"raw":"boolean | \"true\" | \"false\""}},"hidden":{"parentName":"HTMLAttributes","type":{"name":"boolean","raw":"boolean"}},"id":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"lang":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"placeholder":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"spellCheck":{"parentName":"HTMLAttributes","type":{"name":"union","value":[{"name":"boolean"},{"name":"true"},{"name":"false"}],"raw":"boolean | \"true\" | \"false\""}},"tabIndex":{"parentName":"HTMLAttributes","type":{"name":"number","raw":"number"}},"translate":{"parentName":"HTMLAttributes","type":{"name":"union","value":[{"name":"yes"},{"name":"no"}],"raw":"\"yes\" | \"no\""}},"radioGroup":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"role":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"about":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"datatype":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"inlist":{"parentName":"HTMLAttributes","type":{"name":"any","raw":"any"}},"prefix":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"property":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"resource":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"typeof":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"vocab":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"autoCapitalize":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"autoCorrect":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"autoSave":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"color":{"description":"The color utility parses a component's `color` and `bg` props and converts them into CSS declarations.\nBy default the raw value of the prop is returned.\n\nColor palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation.\nArray values are converted into responsive values.\n\n[MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/color)","parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"itemProp":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"itemScope":{"parentName":"HTMLAttributes","type":{"name":"boolean","raw":"boolean"}},"itemType":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"itemID":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"itemRef":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"results":{"parentName":"HTMLAttributes","type":{"name":"number","raw":"number"}},"security":{"parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"unselectable":{"parentName":"HTMLAttributes","type":{"name":"union","value":[{"name":"on"},{"name":"off"}],"raw":"\"on\" | \"off\""}},"inputMode":{"description":"Hints at the type of data that might be entered by the user while editing the element or its contents\n@see https ://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute","parentName":"HTMLAttributes","type":{"name":"union","value":[{"name":"text"},{"name":"none"},{"name":"tel"},{"name":"url"},{"name":"email"},{"name":"numeric"},{"name":"decimal"},{"name":"search"}],"raw":"\"text\" | \"none\" | \"tel\" | \"url\" | \"email\" | \"numeric\" | \"decimal\" | \"search\""}},"is":{"description":"Specify that a standard HTML element should behave like a defined custom built-in element\n@see https ://html.spec.whatwg.org/multipage/custom-elements.html#attr-is","parentName":"HTMLAttributes","type":{"name":"string","raw":"string"}},"aria-activedescendant":{"description":"Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.","parentName":"AriaAttributes","type":{"name":"string","raw":"string"}},"aria-atomic":{"description":"Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.","parentName":"AriaAttributes","type":{"name":"union","value":[{"name":"boolean"},{"name":"true"},{"name":"false"}],"raw":"boolean | \"true\" | \"false\""}},"aria-autocomplete":{"description":"Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be\npresented if they are made.","parentName":"AriaAttributes","type":{"name":"union","value":[{"name":"none"},{"name":"inline"},{"name":"list"},{"name":"both"}],"raw":"\"none\" | \"inline\" | \"list\" | \"both\""}},"aria-busy":{"description":"Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.","parentName":"AriaAttributes","type":{"name":"union","value":[{"name":"boolean"},{"name":"true"},{"name":"false"}],"raw":"boolean | \"true\" | \"false\""}},"aria-checked":{"description":"Indicates the current \"checked\" state of checkboxes, radio buttons, and other widgets.\n@see aria-pressed\n@see aria-selected.","parentName":"AriaAttributes","type":{"name":"union","value":[{"name":"boolean"},{"name":"true"},{"name":"false"},{"name":"mixed"}],"raw":"boolean | \"true\" | \"false\" | \"mixed\""}},"aria-colcount":{"description":"Defines the total number of columns in a table, grid, or treegrid.\n@see aria-colindex.","parentName":"AriaAttributes","type":{"name":"number","raw":"number"}},"aria-colindex":{"description":"Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.\n@see aria-colcount\n@see aria-colspan.","parentName":"AriaAttributes","type":{"name":"number","raw":"number"}},"aria-colspan":{"description":"Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.\n@see aria-colindex\n@see aria-rowspan.","parentName":"AriaAttributes","type":{"name":"number","raw":"number"}},"aria-controls":{"description":"Identifies the element (or elements) whose contents or presence are controlled by the current element.\n@see aria-owns.","parentName":"AriaAttributes","type":{"name":"string","raw":"string"}},"aria-current":{"description":"Indicates the element that represents the current item within a container or set of related elements.","parentName":"AriaAttributes","type":{"name":"union","value":[{"name":"boolean"},{"name":"time"},{"name":"true"},{"name":"false"},{"name":"page"},{"name":"step"},{"name":"location"},{"name":"date"}],"raw":"boolean | \"time\" | \"true\" | \"false\" | \"page\" | \"step\" | \"location\" | \"date\""}},"aria-describedby":{"description":"Identifies the element (or elements) that describes the object.\n@see aria-labelledby","parentName":"AriaAttributes","type":{"name":"string","raw":"string"}},"aria-details":{"description":"Identifies the element that provides a detailed, extended description for the object.\n@see aria-describedby.","parentName":"AriaAttributes","type":{"name":"string","raw":"string"}},"aria-disabled":{"description":"Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.\n@see aria-hidden\n@see aria-readonly.","parentName":"AriaAttributes","type":{"name":"union","value":[{"name":"boolean"},{"name":"true"},{"name":"false"}],"raw":"boolean | \"true\" | \"false\""}},"aria-dropeffect":{"description":"Indicates what functions can be performed when a dragged object is released on the drop target.\n@deprecated in ARIA 1.1","parentName":"AriaAttributes","type":{"name":"union","value":[{"name":"link"},{"name":"none"},{"name":"copy"},{"name":"execute"},{"name":"move"},{"name":"popup"}],"raw":"\"link\" | \"none\" | \"copy\" | \"execute\" | \"move\" | \"popup\""}},"aria-errormessage":{"description":"Identifies the element that provides an error message for the object.\n@see aria-invalid\n@see aria-describedby.","parentName":"AriaAttributes","type":{"name":"string","raw":"string"}},"aria-expanded":{"description":"Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.","parentName":"AriaAttributes","type":{"name":"union","value":[{"name":"boolean"},{"name":"true"},{"name":"false"}],"raw":"boolean | \"true\" | \"false\""}},"aria-flowto":{"description":"Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,\nallows assistive technology to override the general default of reading in document source order.","parentName":"AriaAttributes","type":{"name":"string","raw":"string"}},"aria-grabbed":{"description":"Indicates an element's \"grabbed\" state in a drag-and-drop operation.\n@deprecated in ARIA 1.1","parentName":"AriaAttributes","type":{"name":"union","value":[{"name":"boolean"},{"name":"true"},{"name":"false"}],"raw":"boolean | \"true\" | \"false\""}},"aria-haspopup":{"description":"Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.","parentName":"AriaAttributes","type":{"name":"union","value":[{"name":"boolean"},{"name":"dialog"},{"name":"menu"},{"name":"true"},{"name":"false"},{"name":"listbox"},{"name":"tree"},{"name":"grid"}],"raw":"boolean | \"dialog\" | \"menu\" | \"true\" | \"false\" | \"listbox\" | \"tree\" | \"grid\""}},"aria-hidden":{"description":"Indicates whether the element is exposed to an accessibility API.\n@see aria-disabled.","parentName":"AriaAttributes","type":{"name":"union","value":[{"name":"boolean"},{"name":"true"},{"name":"false"}],"raw":"boolean | \"true\" | \"false\""}},"aria-invalid":{"description":"Indicates the entered value does not conform to the format expected by the application.\n@see aria-errormessage.","parentName":"AriaAttributes","type":{"name":"union","value":[{"name":"boolean"},{"name":"true"},{"name":"false"},{"name":"grammar"},{"name":"spelling"}],"raw":"boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""}},"aria-keyshortcuts":{"description":"Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.","parentName":"AriaAttributes","type":{"name":"string","raw":"string"}},"aria-label":{"description":"Defines a string value that labels the current element.\n@see aria-labelledby.","parentName":"AriaAttributes","type":{"name":"string","raw":"string"}},"aria-labelledby":{"description":"Identifies the element (or elements) that labels the current element.\n@see aria-describedby.","parentName":"AriaAttributes","type":{"name":"string","raw":"string"}},"aria-level":{"description":"Defines the hierarchical level of an element within a structure.","parentName":"AriaAttributes","type":{"name":"number","raw":"number"}},"aria-live":{"description":"Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.","parentName":"AriaAttributes","type":{"name":"union","value":[{"name":"off"},{"name":"assertive"},{"name":"polite"}],"raw":"\"off\" | \"assertive\" | \"polite\""}},"aria-modal":{"description":"Indicates whether an element is modal when displayed.","parentName":"AriaAttributes","type":{"name":"union","value":[{"name":"boolean"},{"name":"true"},{"name":"false"}],"raw":"boolean | \"true\" | \"false\""}},"aria-multiline":{"description":"Indicates whether a text box accepts multiple lines of input or only a single line.","parentName":"AriaAttributes","type":{"name":"union","value":[{"name":"boolean"},{"name":"true"},{"name":"false"}],"raw":"boolean | \"true\" | \"false\""}},"aria-multiselectable":{"description":"Indicates that the user may select more than one item from the current selectable descendants.","parentName":"AriaAttributes","type":{"name":"union","value":[{"name":"boolean"},{"name":"true"},{"name":"false"}],"raw":"boolean | \"true\" | \"false\""}},"aria-orientation":{"description":"Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.","parentName":"AriaAttributes","type":{"name":"union","value":[{"name":"horizontal"},{"name":"vertical"}],"raw":"\"horizontal\" | \"vertical\""}},"aria-owns":{"description":"Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship\nbetween DOM elements where the DOM hierarchy cannot be used to represent the relationship.\n@see aria-controls.","parentName":"AriaAttributes","type":{"name":"string","raw":"string"}},"aria-placeholder":{"description":"Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.\nA hint could be a sample value or a brief description of the expected format.","parentName":"AriaAttributes","type":{"name":"string","raw":"string"}},"aria-posinset":{"description":"Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.\n@see aria-setsize.","parentName":"AriaAttributes","type":{"name":"number","raw":"number"}},"aria-pressed":{"description":"Indicates the current \"pressed\" state of toggle buttons.\n@see aria-checked\n@see aria-selected.","parentName":"AriaAttributes","type":{"name":"union","value":[{"name":"boolean"},{"name":"true"},{"name":"false"},{"name":"mixed"}],"raw":"boolean | \"true\" | \"false\" | \"mixed\""}},"aria-readonly":{"description":"Indicates that the element is not editable, but is otherwise operable.\n@see aria-disabled.","parentName":"AriaAttributes","type":{"name":"union","value":[{"name":"boolean"},{"name":"true"},{"name":"false"}],"raw":"boolean | \"true\" | \"false\""}},"aria-relevant":{"description":"Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.\n@see aria-atomic.","parentName":"AriaAttributes","type":{"name":"union","value":[{"name":"text"},{"name":"additions"},{"name":"additions removals"},{"name":"additions text"},{"name":"all"},{"name":"removals"},{"name":"removals additions"},{"name":"removals text"},{"name":"text additions"},{"name":"text removals"}],"raw":"\"text\" | \"additions\" | \"additions removals\" | \"additions text\" | \"all\" | \"removals\" | \"removals additions\" | \"removals text\" | \"text additions\" | \"text removals\""}},"aria-required":{"description":"Indicates that user input is required on the element before a form may be submitted.","parentName":"AriaAttributes","type":{"name":"union","value":[{"name":"boolean"},{"name":"true"},{"name":"false"}],"raw":"boolean | \"true\" | \"false\""}},"aria-roledescription":{"description":"Defines a human-readable, author-localized description for the role of an element.","parentName":"AriaAttributes","type":{"name":"string","raw":"string"}},"aria-rowcount":{"description":"Defines the total number of rows in a table, grid, or treegrid.\n@see aria-rowindex.","parentName":"AriaAttributes","type":{"name":"number","raw":"number"}},"aria-rowindex":{"description":"Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.\n@see aria-rowcount\n@see aria-rowspan.","parentName":"AriaAttributes","type":{"name":"number","raw":"number"}},"aria-rowspan":{"description":"Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.\n@see aria-rowindex\n@see aria-colspan.","parentName":"AriaAttributes","type":{"name":"number","raw":"number"}},"aria-selected":{"description":"Indicates the current \"selected\" state of various widgets.\n@see aria-checked\n@see aria-pressed.","parentName":"AriaAttributes","type":{"name":"union","value":[{"name":"boolean"},{"name":"true"},{"name":"false"}],"raw":"boolean | \"true\" | \"false\""}},"aria-setsize":{"description":"Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.\n@see aria-posinset.","parentName":"AriaAttributes","type":{"name":"number","raw":"number"}},"aria-sort":{"description":"Indicates if items in a table or grid are sorted in ascending or descending order.","parentName":"AriaAttributes","type":{"name":"union","value":[{"name":"none"},{"name":"ascending"},{"name":"descending"},{"name":"other"}],"raw":"\"none\" | \"ascending\" | \"descending\" | \"other\""}},"aria-valuemax":{"description":"Defines the maximum allowed value for a range widget.","parentName":"AriaAttributes","type":{"name":"number","raw":"number"}},"aria-valuemin":{"description":"Defines the minimum allowed value for a range widget.","parentName":"AriaAttributes","type":{"name":"number","raw":"number"}},"aria-valuenow":{"description":"Defines the current value for a range widget.\n@see aria-valuetext.","parentName":"AriaAttributes","type":{"name":"number","raw":"number"}},"aria-valuetext":{"description":"Defines the human readable text alternative of aria-valuenow for a range widget.","parentName":"AriaAttributes","type":{"name":"string","raw":"string"}},"dangerouslySetInnerHTML":{"parentName":"DOMAttributes","type":{"name":"object","raw":"{ __html: string; }"}},"onCopy":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: ClipboardEvent<HTMLDivElement>) => void)"}},"onCopyCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: ClipboardEvent<HTMLDivElement>) => void)"}},"onCut":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: ClipboardEvent<HTMLDivElement>) => void)"}},"onCutCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: ClipboardEvent<HTMLDivElement>) => void)"}},"onPaste":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: ClipboardEvent<HTMLDivElement>) => void)"}},"onPasteCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: ClipboardEvent<HTMLDivElement>) => void)"}},"onCompositionEnd":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: CompositionEvent<HTMLDivElement>) => void)"}},"onCompositionEndCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: CompositionEvent<HTMLDivElement>) => void)"}},"onCompositionStart":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: CompositionEvent<HTMLDivElement>) => void)"}},"onCompositionStartCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: CompositionEvent<HTMLDivElement>) => void)"}},"onCompositionUpdate":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: CompositionEvent<HTMLDivElement>) => void)"}},"onCompositionUpdateCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: CompositionEvent<HTMLDivElement>) => void)"}},"onFocus":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: FocusEvent<HTMLDivElement>) => void)"}},"onFocusCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: FocusEvent<HTMLDivElement>) => void)"}},"onBlur":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: FocusEvent<HTMLDivElement>) => void)"}},"onBlurCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: FocusEvent<HTMLDivElement>) => void)"}},"onChange":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: FormEvent<HTMLDivElement>) => void)"}},"onChangeCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: FormEvent<HTMLDivElement>) => void)"}},"onBeforeInput":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: FormEvent<HTMLDivElement>) => void)"}},"onBeforeInputCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: FormEvent<HTMLDivElement>) => void)"}},"onInput":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: FormEvent<HTMLDivElement>) => void)"}},"onInputCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: FormEvent<HTMLDivElement>) => void)"}},"onReset":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: FormEvent<HTMLDivElement>) => void)"}},"onResetCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: FormEvent<HTMLDivElement>) => void)"}},"onSubmit":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: FormEvent<HTMLDivElement>) => void)"}},"onSubmitCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: FormEvent<HTMLDivElement>) => void)"}},"onInvalid":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: FormEvent<HTMLDivElement>) => void)"}},"onInvalidCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: FormEvent<HTMLDivElement>) => void)"}},"onLoad":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onLoadCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onError":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onErrorCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onKeyDown":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: KeyboardEvent<HTMLDivElement>) => void)"}},"onKeyDownCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: KeyboardEvent<HTMLDivElement>) => void)"}},"onKeyPress":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: KeyboardEvent<HTMLDivElement>) => void)"}},"onKeyPressCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: KeyboardEvent<HTMLDivElement>) => void)"}},"onKeyUp":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: KeyboardEvent<HTMLDivElement>) => void)"}},"onKeyUpCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: KeyboardEvent<HTMLDivElement>) => void)"}},"onAbort":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onAbortCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onCanPlay":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onCanPlayCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onCanPlayThrough":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onCanPlayThroughCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onDurationChange":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onDurationChangeCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onEmptied":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onEmptiedCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onEncrypted":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onEncryptedCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onEnded":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onEndedCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onLoadedData":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onLoadedDataCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onLoadedMetadata":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onLoadedMetadataCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onLoadStart":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onLoadStartCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onPause":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onPauseCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onPlay":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onPlayCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onPlaying":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onPlayingCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onProgress":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onProgressCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onRateChange":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onRateChangeCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onSeeked":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onSeekedCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onSeeking":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onSeekingCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onStalled":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onStalledCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onSuspend":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onSuspendCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onTimeUpdate":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onTimeUpdateCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onVolumeChange":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onVolumeChangeCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onWaiting":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onWaitingCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onAuxClick":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)"}},"onAuxClickCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)"}},"onClick":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)"}},"onClickCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)"}},"onContextMenu":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)"}},"onContextMenuCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)"}},"onDoubleClick":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)"}},"onDoubleClickCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)"}},"onDrag":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: DragEvent<HTMLDivElement>) => void)"}},"onDragCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: DragEvent<HTMLDivElement>) => void)"}},"onDragEnd":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: DragEvent<HTMLDivElement>) => void)"}},"onDragEndCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: DragEvent<HTMLDivElement>) => void)"}},"onDragEnter":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: DragEvent<HTMLDivElement>) => void)"}},"onDragEnterCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: DragEvent<HTMLDivElement>) => void)"}},"onDragExit":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: DragEvent<HTMLDivElement>) => void)"}},"onDragExitCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: DragEvent<HTMLDivElement>) => void)"}},"onDragLeave":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: DragEvent<HTMLDivElement>) => void)"}},"onDragLeaveCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: DragEvent<HTMLDivElement>) => void)"}},"onDragOver":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: DragEvent<HTMLDivElement>) => void)"}},"onDragOverCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: DragEvent<HTMLDivElement>) => void)"}},"onDragStart":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: DragEvent<HTMLDivElement>) => void)"}},"onDragStartCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: DragEvent<HTMLDivElement>) => void)"}},"onDrop":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: DragEvent<HTMLDivElement>) => void)"}},"onDropCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: DragEvent<HTMLDivElement>) => void)"}},"onMouseDown":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)"}},"onMouseDownCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)"}},"onMouseEnter":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)"}},"onMouseLeave":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)"}},"onMouseMove":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)"}},"onMouseMoveCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)"}},"onMouseOut":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)"}},"onMouseOutCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)"}},"onMouseOver":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)"}},"onMouseOverCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)"}},"onMouseUp":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)"}},"onMouseUpCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)"}},"onSelect":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onSelectCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: SyntheticEvent<HTMLDivElement, Event>) => void)"}},"onTouchCancel":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: TouchEvent<HTMLDivElement>) => void)"}},"onTouchCancelCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: TouchEvent<HTMLDivElement>) => void)"}},"onTouchEnd":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: TouchEvent<HTMLDivElement>) => void)"}},"onTouchEndCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: TouchEvent<HTMLDivElement>) => void)"}},"onTouchMove":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: TouchEvent<HTMLDivElement>) => void)"}},"onTouchMoveCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: TouchEvent<HTMLDivElement>) => void)"}},"onTouchStart":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: TouchEvent<HTMLDivElement>) => void)"}},"onTouchStartCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: TouchEvent<HTMLDivElement>) => void)"}},"onPointerDown":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: PointerEvent<HTMLDivElement>) => void)"}},"onPointerDownCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: PointerEvent<HTMLDivElement>) => void)"}},"onPointerMove":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: PointerEvent<HTMLDivElement>) => void)"}},"onPointerMoveCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: PointerEvent<HTMLDivElement>) => void)"}},"onPointerUp":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: PointerEvent<HTMLDivElement>) => void)"}},"onPointerUpCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: PointerEvent<HTMLDivElement>) => void)"}},"onPointerCancel":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: PointerEvent<HTMLDivElement>) => void)"}},"onPointerCancelCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: PointerEvent<HTMLDivElement>) => void)"}},"onPointerEnter":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: PointerEvent<HTMLDivElement>) => void)"}},"onPointerEnterCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: PointerEvent<HTMLDivElement>) => void)"}},"onPointerLeave":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: PointerEvent<HTMLDivElement>) => void)"}},"onPointerLeaveCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: PointerEvent<HTMLDivElement>) => void)"}},"onPointerOver":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: PointerEvent<HTMLDivElement>) => void)"}},"onPointerOverCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: PointerEvent<HTMLDivElement>) => void)"}},"onPointerOut":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: PointerEvent<HTMLDivElement>) => void)"}},"onPointerOutCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: PointerEvent<HTMLDivElement>) => void)"}},"onGotPointerCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: PointerEvent<HTMLDivElement>) => void)"}},"onGotPointerCaptureCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: PointerEvent<HTMLDivElement>) => void)"}},"onLostPointerCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: PointerEvent<HTMLDivElement>) => void)"}},"onLostPointerCaptureCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: PointerEvent<HTMLDivElement>) => void)"}},"onScroll":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: UIEvent<HTMLDivElement, UIEvent>) => void)"}},"onScrollCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: UIEvent<HTMLDivElement, UIEvent>) => void)"}},"onWheel":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: WheelEvent<HTMLDivElement>) => void)"}},"onWheelCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: WheelEvent<HTMLDivElement>) => void)"}},"onAnimationStart":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: AnimationEvent<HTMLDivElement>) => void)"}},"onAnimationStartCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: AnimationEvent<HTMLDivElement>) => void)"}},"onAnimationEnd":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: AnimationEvent<HTMLDivElement>) => void)"}},"onAnimationEndCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: AnimationEvent<HTMLDivElement>) => void)"}},"onAnimationIteration":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: AnimationEvent<HTMLDivElement>) => void)"}},"onAnimationIterationCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: AnimationEvent<HTMLDivElement>) => void)"}},"onTransitionEnd":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: TransitionEvent<HTMLDivElement>) => void)"}},"onTransitionEndCapture":{"parentName":"DOMAttributes","type":{"name":"function","raw":"((event: TransitionEvent<HTMLDivElement>) => void)"}},"ref":{"type":{"name":"function","raw":"((instance: HTMLDivElement | null) => void) | RefObject<HTMLDivElement> | null"}},"as":{"parentName":"BoxOwnProps","type":{"name":"union","value":[{"name":"symbol"},{"name":"object"},{"name":"div"},{"name":"a"},{"name":"abbr"},{"name":"address"},{"name":"area"},{"name":"article"},{"name":"aside"},{"name":"audio"},{"name":"b"},{"name":"base"},{"name":"bdi"},{"name":"bdo"},{"name":"big"},{"name":"blockquote"},{"name":"body"},{"name":"br"},{"name":"button"},{"name":"canvas"},{"name":"... 157 more ..."}],"raw":"\"symbol\" | \"object\" | \"div\" | \"a\" | \"abbr\" | \"address\" | \"area\" | \"article\" | \"aside\" | \"audio\" | \"b\" | \"base\" | \"bdi\" | \"bdo\" | \"big\" | \"blockquote\" | \"body\" | \"br\" | \"button\" | \"canvas\" | ... 157 more ..."}},"variant":{"parentName":"BoxOwnProps","type":{"name":"string","raw":"string"}},"css":{"parentName":"BoxOwnProps","type":{"name":"Interpolation<any>","raw":"Interpolation<any>"}},"sx":{"parentName":"BoxOwnProps","type":{"name":"union","value":[{"name":"ThemeUICSSObject"},{"name":"ThemeDerivedStyles"}],"raw":"ThemeUICSSObject | ThemeDerivedStyles"}},"m":{"description":"Margin on top, left, bottom and right","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"margin":{"description":"Margin on top, left, bottom and right","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"mt":{"description":"Margin on top","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"marginTop":{"description":"Margin on top","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"mr":{"description":"Margin on right","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"marginRight":{"description":"Margin on right","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"mb":{"description":"Margin on bottom","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"marginBottom":{"description":"Margin on bottom","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"ml":{"description":"Margin on left","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"marginLeft":{"description":"Margin on left","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"mx":{"description":"Margin on left and right","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"marginX":{"description":"Margin on left and right","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"my":{"description":"Margin on top and bottom","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"marginY":{"description":"Margin on top and bottom","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"p":{"description":"Padding on top, left, bottom and right","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"padding":{"description":"Padding on top, left, bottom and right","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"pt":{"description":"Padding on top","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"paddingTop":{"description":"Padding on top","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"pr":{"description":"Padding on right","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"paddingRight":{"description":"Padding on right","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"pb":{"description":"Padding on bottom","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"paddingBottom":{"description":"Padding on bottom","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"pl":{"description":"Padding on left","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"paddingLeft":{"description":"Padding on left","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"px":{"description":"Padding on left and right","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"paddingX":{"description":"Padding on left and right","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"py":{"description":"Padding on top and bottom","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"paddingY":{"description":"Padding on top and bottom","parentName":"SpaceProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"bg":{"description":"The color utility parses a component's `color` and `bg` props and converts them into CSS declarations.\nBy default the raw value of the prop is returned.\n\nColor palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation.\nArray values are converted into responsive values.\n\n[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color)","parentName":"BackgroundColorProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"backgroundColor":{"parentName":"BackgroundColorProps","type":{"name":"function","raw":"string | number | symbol | (string | number | symbol | null)[] | { [x: string]: string | number | symbol; [x: number]: string | number | symbol | undefined; } | null | undefined"}},"opacity":{"description":"The opacity CSS property sets the transparency of an element or the degree to which content\nbehind an element is visible.\n\n[MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)","parentName":"OpacityProps","type":{"name":"function","raw":"\"inherit\" | \"-moz-initial\" | \"initial\" | \"revert\" | \"unset\" | (string & {}) | (number & {}) | (\"inherit\" | \"-moz-initial\" | \"initial\" | \"revert\" | \"unset\" | (string & {}) | (number & {}) | null)[] | { ...; } | null"}}}},"fileInfo":{"dateCreated":"2020-06-16T11:41:03.000Z","dateModified":"2020-06-16T11:41:03.000Z","sloc":{"total":12,"source":7,"comment":4,"single":0,"block":4,"mixed":0,"empty":1,"todo":0,"blockEmpty":0},"commits":[{"hash":"cbeb180c1aaf10c0ba0c754a6de0ff801c477c70","subject":"chore: merge app-components into components","authorName":"atanasster","authorDate":"2020-06-16T11:41:03.000Z","authorEmail":"atanasster@gmail.com","committerName":"atanasster","committerDate":"2020-06-16T11:41:03.000Z","committerEmail":"atanasster@gmail.com"}]}}},"packages":{"360a1a2b3bb1220cb76752ce28374c51":{"fileHash":"360a1a2b3bb1220cb76752ce28374c51","name":"@component-controls/components","version":"3.4.5","repository":{"browse":"https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Header/Header.tsx","docs":"https://github.com/ccontrols/component-controls/tree/master#readme","issues":"https://github.com/ccontrols/component-controls/issues"},"dependencies":{"@primer/octicons-react":"^10.0.0","@theme-ui/color":"^0.6.0-alpha.7","@theme-ui/css":"^0.6.0-alpha.7","@theme-ui/match-media":"^0.6.0-alpha.7","@theme-ui/presets":"^0.6.0-alpha.7","copy-to-clipboard":"^3.2.1","fast-memoize":"^2.5.2","markdown-to-jsx":"^6.11.0","md5":"^2.3.0","mdx-utils":"*","prism-react-renderer":"^1.0.2","react-animate-height":"^2.0.20","react-popper-tooltip":"^3.1.0","react-switch":"^5.0.1","react-table":"^7.0.0","react-tabs":"^3.1.0","scroll-into-view-if-needed":"^2.2.25","theme-ui":"^0.6.0-alpha.7"},"devDependencies":{"@component-controls/cc-cli":"^3.4.5","@component-controls/ts-markdown-docs":"^2.6.0","@theme-ui/css":"^0.6.0-alpha.7","@types/markdown-to-jsx":"^6.11.0","@types/md5":"^2.3.0","@types/react":"^16.9.34","@types/react-table":"^7.0.10","@types/react-tabs":"^2.3.1","cross-env":"^5.2.1","eslint":"^6.5.1","react":"^17.0.1","react-dom":"^17.0.1","typescript":"^4.0.5"},"peerDependencies":{"@theme-ui/css":">= 0.6.0-alpha.7","react":"^16.8.0 || ^17","react-dom":"^16.8.0 || ^17"}},"95d22e88229c88536b101148951a375a":{"fileHash":"95d22e88229c88536b101148951a375a","name":"@component-controls/components","version":"3.4.5","repository":{"browse":"https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Header/Header.stories.tsx","docs":"https://github.com/ccontrols/component-controls/tree/master#readme","issues":"https://github.com/ccontrols/component-controls/issues"},"dependencies":{"@primer/octicons-react":"^10.0.0","@theme-ui/color":"^0.6.0-alpha.7","@theme-ui/css":"^0.6.0-alpha.7","@theme-ui/match-media":"^0.6.0-alpha.7","@theme-ui/presets":"^0.6.0-alpha.7","copy-to-clipboard":"^3.2.1","fast-memoize":"^2.5.2","markdown-to-jsx":"^6.11.0","md5":"^2.3.0","mdx-utils":"*","prism-react-renderer":"^1.0.2","react-animate-height":"^2.0.20","react-popper-tooltip":"^3.1.0","react-switch":"^5.0.1","react-table":"^7.0.0","react-tabs":"^3.1.0","scroll-into-view-if-needed":"^2.2.25","theme-ui":"^0.6.0-alpha.7"},"devDependencies":{"@component-controls/cc-cli":"^3.4.5","@component-controls/ts-markdown-docs":"^2.6.0","@theme-ui/css":"^0.6.0-alpha.7","@types/markdown-to-jsx":"^6.11.0","@types/md5":"^2.3.0","@types/react":"^16.9.34","@types/react-table":"^7.0.10","@types/react-tabs":"^2.3.1","cross-env":"^5.2.1","eslint":"^6.5.1","react":"^17.0.1","react-dom":"^17.0.1","typescript":"^4.0.5"},"peerDependencies":{"@theme-ui/css":">= 0.6.0-alpha.7","react":"^16.8.0 || ^17","react-dom":"^16.8.0 || ^17"}}},"config":{},"buildConfig":{"siteRoot":"/","siteMap":{"pages":{"home":{"priority":1},"index":{"priority":0.8},"doc":{"priority":0.5}}},"categories":["author","tags"],"ignore":["readme.md","changelog.md","code_of_conduct.md","contributing.md","license.md"],"pages":{"story":{"basePath":"docs/","sideNav":{"storyPaths":true,"collapseSingle":true},"tabs":{"page":"/Users/atanasster/component-controls/ui/pages/ClassicPage.js"}},"blog":{"basePath":"blogs/"},"author":{"basePath":"authors/"},"page":{"basePath":"pages/"},"tags":{"basePath":"tags/"}},"search":{"searchingModule":"@component-controls/search-fusejs"},"configPath":"test/.config","distFolder":"/Users/atanasster/component-controls/plugins/cc-cli/test/bundle","bundleName":"component-controls.js","staticFolder":"public/static","stories":["../../../../ui/components/src/Header/*.stories.tsx"]}};
+var store = {"stores":[{"filePath":"/Users/atanasster/component-controls/core/jest-extract/test/fixtures/story/VariantButton.docs.tsx","stories":{"overview":{"loc":{"start":{"column":53,"line":11},"end":{"column":1,"line":13}},"name":"overview","id":"overview","arguments":[{"value":"props","name":"props","loc":{"start":{"line":0,"column":0},"end":{"line":0,"column":5}},"usage":[{"loc":{"start":{"line":1,"column":21},"end":{"line":1,"column":26}}}]}],"controls":{"text":"Button","icon":"search","fontSize":{"type":"ControlTypes.NUMBER","data":{"name":"random.number","options":{"min":12,"max":32}}}},"source":"props => (\n  <VariantButton {...props} />\n)"},"primary":{"loc":{"start":{"column":32,"line":24},"end":{"column":1,"line":26}},"name":"primary","id":"primary","arguments":[],"source":"() => (\n  <VariantButton variant=\"primary\" text=\"Primary\" />\n)"},"accent":{"loc":{"start":{"column":31,"line":28},"end":{"column":1,"line":30}},"name":"accent","id":"accent","arguments":[],"source":"() => (\n  <VariantButton variant=\"accent\" text=\"Accent\" />\n)"},"disabled":{"loc":{"start":{"column":33,"line":32},"end":{"column":1,"line":34}},"name":"disabled","id":"disabled","arguments":[],"source":"() => (\n  <VariantButton variant=\"disabled\" text=\"Disabled\" />\n)"},"success":{"loc":{"start":{"column":32,"line":36},"end":{"column":1,"line":38}},"name":"success","id":"success","arguments":[],"source":"() => (\n  <VariantButton variant=\"success\" text=\"Success\" />\n)"},"error":{"loc":{"start":{"column":30,"line":40},"end":{"column":1,"line":42}},"name":"error","id":"error","arguments":[],"source":"() => (\n  <VariantButton variant=\"error\" text=\"Error\" />\n)"},"warning":{"loc":{"start":{"column":32,"line":44},"end":{"column":1,"line":46}},"name":"warning","id":"warning","arguments":[],"source":"() => (\n  <VariantButton variant=\"error\" text=\"Warning\" />\n)"}},"doc":{"title":"VariantButton","component":"VariantButton","testData":"./VariantButton.data.ts","componentsLookup":{"VariantButton":"a43d841323373aff56d44a3c5792e313"},"package":"3bd75e504b4a522120e3a801ff48943a","dateModified":"2021-05-03T05:27:52.331Z","date":"2021-04-04T01:43:44.092Z","fileName":"/Users/atanasster/component-controls/core/jest-extract/test/fixtures/story/VariantButton.docs.tsx"}}],"components":{"a43d841323373aff56d44a3c5792e313":{"name":"VariantButton","from":"./VariantButton","externalDependencies":{"react":[{"name":"React","importedName":"default"},{"name":"FC","importedName":"FC"}],"@primer/octicons-react":[{"name":"SearchIcon","importedName":"SearchIcon"},{"name":"ArrowLeftIcon","importedName":"ArrowLeftIcon"},{"name":"ArrowRightIcon","importedName":"ArrowRightIcon"},{"name":"ArrowDownIcon","importedName":"ArrowDownIcon"},{"name":"ArrowUpIcon","importedName":"ArrowUpIcon"}]},"localDependencies":{},"importedName":"VariantButton","jsx":[{"children":[{"children":[{"children":[],"name":"Icon","attributes":["size"]}],"name":"div","attributes":["style"]},{"children":[],"name":"div","attributes":["data-testid","style"]}],"name":"button","attributes":["disabled","style"]}],"request":"/Users/atanasster/component-controls/core/jest-extract/test/fixtures/story/VariantButton.tsx","fileName":"VariantButton.tsx","package":"a43d841323373aff56d44a3c5792e313","info":{"tags":{},"description":"Button with variants","displayName":"VariantButton","methods":[],"props":{"text":{"description":"button label of text","type":{"required":true,"name":"string","raw":"string"}},"variant":{"description":"variant kind","defaultValue":"primary","type":{"name":"enum","value":[{"name":"string","value":"undefined"},{"name":"string","value":"primary"},{"name":"string","value":"accent"},{"name":"string","value":"disabled"},{"name":"string","value":"success"},{"name":"string","value":"warning"},{"name":"string","value":"error"}],"raw":"ButtonVariant | undefined"}},"fontSize":{"description":"font size for the Button label","defaultValue":18,"type":{"name":"number","raw":"number"}},"icon":{"description":"icon kind","type":{"name":"enum","value":[{"name":"string","value":"undefined"},{"name":"string","value":"none"},{"name":"string","value":"search"},{"name":"string","value":"left-arrow"},{"name":"string","value":"right-arrow"},{"name":"string","value":"down-arrow"},{"name":"string","value":"up-arrow"}],"raw":"ButtonIconType | undefined"}},"iconSide":{"description":"on which side of the label should the icon be placed","defaultValue":"left","type":{"name":"enum","value":[{"name":"string","value":"undefined"},{"name":"string","value":"left"},{"name":"string","value":"right"}],"raw":"IconSideType | undefined"}},"iconSize":{"description":"icon size","defaultValue":"small","type":{"name":"enum","value":[{"name":"string","value":"undefined"},{"name":"string","value":"small"},{"name":"string","value":"medium"},{"name":"string","value":"large"}],"raw":"SizeVariants | undefined"}},"padding":{"description":"padding variants","defaultValue":"medium","type":{"name":"enum","value":[{"name":"string","value":"undefined"},{"name":"string","value":"small"},{"name":"string","value":"medium"},{"name":"string","value":"large"}],"raw":"SizeVariants | undefined"}},"isPrimary":{"description":"boolean switch for primary variant","deprecated":"since version 1.0","defaultValue":false,"type":{"name":"boolean","raw":"boolean"}}}},"fileInfo":{"dateCreated":"2021-04-03 21:38:35 -0400","dateModified":"2021-05-02 06:15:28 -0400","sloc":{"total":153,"source":106,"comment":31,"single":2,"block":29,"mixed":0,"empty":16,"todo":2,"blockEmpty":0},"commits":[{"hash":"14f8f53eee515bf494200d33e080ba029a531f99","subject":"chore: initial control values","authorName":"atanasster","authorDate":"2021-05-02T10:15:28.000Z","authorEmail":"atanasster@gmail.com","committerName":"atanasster","committerDate":"2021-05-02T10:15:28.000Z","committerEmail":"atanasster@gmail.com"},{"hash":"af41a21f118dbb7ada6a0b0f28311712476250a1","subject":"chore: rename testing packages","authorName":"atanasster","authorDate":"2021-04-04T01:38:35.000Z","authorEmail":"atanasster@gmail.com","committerName":"atanasster","committerDate":"2021-04-04T01:38:35.000Z","committerEmail":"atanasster@gmail.com"}]},"jest":{"results":[{"leaks":false,"perfStats":{"end":1620078351467,"runtime":2184,"slow":false,"start":1620078349283},"testFilePath":"VariantButton.test.tsx","testResults":[{"ancestorTitles":["VariantButton"],"duration":49,"fullName":"VariantButton primary","status":"passed","title":"primary","numPassingAsserts":0,"failureDetails":[]},{"ancestorTitles":["VariantButton"],"duration":119,"fullName":"VariantButton disabled","status":"passed","title":"disabled","numPassingAsserts":0,"failureDetails":[]}]}],"coverage":{"VariantButton.tsx":{"lines":{"total":10,"covered":10,"skipped":0,"pct":100},"functions":{"total":1,"covered":1,"skipped":0,"pct":100},"statements":{"total":11,"covered":11,"skipped":0,"pct":100},"branches":{"total":14,"covered":9,"skipped":0,"pct":64.29}}}}}},"packages":{"a43d841323373aff56d44a3c5792e313":{"fileHash":"a43d841323373aff56d44a3c5792e313","name":"@component-controls/jest-extract","version":"3.9.0","repository":{"browse":"https://github.com/ccontrols/component-controls/tree/master/core/jest-extract/test/fixtures/story/VariantButton.tsx","docs":"https://github.com/ccontrols/component-controls/tree/master#readme","issues":"https://github.com/ccontrols/component-controls/issues"},"dependencies":{"@component-controls/core":"^3.9.0","babel-jest":"^26.6.3","fastq":"^1.11.0","jest":"^26.4.2","path":"^0.12.7","ts-jest":"^26.5.5"},"devDependencies":{"@babel/preset-env":"^7.13.10","@babel/preset-react":"^7.12.13","@jest/reporters":"^26.0.10","@jest/test-result":"^26.0.10","@types/jest":"^26.0.10","@types/react-dom":"^16.9.8","react-dom":"^17.0.1","react-test-renderer":"^17.0.1","typescript":"^4.0.5"}},"3bd75e504b4a522120e3a801ff48943a":{"fileHash":"3bd75e504b4a522120e3a801ff48943a","name":"@component-controls/jest-extract","version":"3.9.0","repository":{"browse":"https://github.com/ccontrols/component-controls/tree/master/core/jest-extract/test/fixtures/story/VariantButton.docs.tsx","docs":"https://github.com/ccontrols/component-controls/tree/master#readme","issues":"https://github.com/ccontrols/component-controls/issues"},"dependencies":{"@component-controls/core":"^3.9.0","babel-jest":"^26.6.3","fastq":"^1.11.0","jest":"^26.4.2","path":"^0.12.7","ts-jest":"^26.5.5"},"devDependencies":{"@babel/preset-env":"^7.13.10","@babel/preset-react":"^7.12.13","@jest/reporters":"^26.0.10","@jest/test-result":"^26.0.10","@types/jest":"^26.0.10","@types/react-dom":"^16.9.8","react-dom":"^17.0.1","react-test-renderer":"^17.0.1","typescript":"^4.0.5"}}},"config":{},"buildConfig":{"siteRoot":"/","siteMap":{"pages":{"home":{"priority":1},"index":{"priority":0.8},"doc":{"priority":0.5}}},"categories":["author","tags"],"ignore":["readme.md","changelog.md","code_of_conduct.md","contributing.md","license.md"],"pages":{"story":{"basePath":"docs/","sideNav":{"storyPaths":true,"collapseSingle":true},"tabs":{"page":"/Users/atanasster/component-controls/ui/pages/ClassicPage.js"}},"blog":{"basePath":"blogs/"},"author":{"basePath":"authors/"},"page":{"basePath":"pages/"},"tags":{"basePath":"tags/"}},"search":{"searchingModule":"@component-controls/search-fusejs"},"configPath":"test/.config","distFolder":"/Users/atanasster/component-controls/plugins/cc-cli/test/bundle","bundleName":"component-controls.js","staticFolder":"public/static","stories":["/Users/atanasster/component-controls/core/jest-extract/test/fixtures/story/*.docs.tsx"]}};
 store.search = search["default"] || search;
 store.config = configJSON;
 store.buildConfig = {
@@ -141,7 +170,7 @@ store.buildConfig = {
   "distFolder": "/Users/atanasster/component-controls/plugins/cc-cli/test/bundle",
   "bundleName": "component-controls.js",
   "staticFolder": "public/static",
-  "stories": ["../../../../ui/components/src/Header/*.stories.tsx"]
+  "stories": ["/Users/atanasster/component-controls/core/jest-extract/test/fixtures/story/*.docs.tsx"]
 };
 store.buildConfig.pages.story.tabs["page"] = loadPageTab(store.buildConfig.pages.story.tabs["page"], story_0);
 
@@ -512,7 +541,7 @@ module.exports = ClassicPage$1;
 
 /***/ }),
 
-/***/ 956:
+/***/ 4321:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -521,98 +550,240 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ Header_stories),
-  "overview": () => (/* binding */ overview)
+  "accent": () => (/* binding */ accent),
+  "default": () => (/* binding */ VariantButton_docs),
+  "disabled": () => (/* binding */ disabled),
+  "error": () => (/* binding */ error),
+  "overview": () => (/* binding */ overview),
+  "primary": () => (/* binding */ primary),
+  "success": () => (/* binding */ success),
+  "warning": () => (/* binding */ warning)
 });
 
 // EXTERNAL MODULE: external {"commonjs":"react","commonjs2":"react","amd":"React","root":"React"}
 var external_commonjs_react_commonjs2_react_amd_React_root_React_ = __webpack_require__(8798);
 var external_commonjs_react_commonjs2_react_amd_React_root_React_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_react_commonjs2_react_amd_React_root_React_);
-;// CONCATENATED MODULE: ../../node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-
-  return target;
-}
-;// CONCATENATED MODULE: ../../node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
-
-function _objectWithoutProperties(source, excluded) {
-  if (source == null) return {};
-  var target = _objectWithoutPropertiesLoose(source, excluded);
-  var key, i;
-
-  if (Object.getOwnPropertySymbols) {
-    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-
-    for (i = 0; i < sourceSymbolKeys.length; i++) {
-      key = sourceSymbolKeys[i];
-      if (excluded.indexOf(key) >= 0) continue;
-      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
-      target[key] = source[key];
-    }
-  }
-
-  return target;
-}
-// EXTERNAL MODULE: external "theme-ui"
-var external_theme_ui_ = __webpack_require__(7631);
-;// CONCATENATED MODULE: ../../ui/components/src/Header/Header.tsx
-
-
+// EXTERNAL MODULE: external "@component-controls/core"
+var core_ = __webpack_require__(6647);
+// EXTERNAL MODULE: external "@primer/octicons-react"
+var octicons_react_ = __webpack_require__(3887);
+;// CONCATENATED MODULE: ../../core/jest-extract/test/fixtures/story/VariantButton.tsx
 var _this = undefined,
-    _jsxFileName = "/Users/atanasster/component-controls/ui/components/src/Header/Header.tsx";
+    _jsxFileName = "/Users/atanasster/component-controls/core/jest-extract/test/fixtures/story/VariantButton.tsx";
 
-/** @jsx jsx */
+/* eslint-disable @typescript-eslint/no-empty-function */
+
+ // TODO: Write the documentation
+// TODO: Add variant for spinner
+
+var variant_colors = {
+  primary: '#F2F2F2',
+  accent: '#F2F2F2',
+  disabled: '#828282',
+  success: '#F2F2F2',
+  warning: '#4F4F4F',
+  error: '#F2F2F2'
+};
+var variant_backgrounds = {
+  primary: '#2F80ED',
+  accent: '#9B51E0',
+  disabled: '#E0E0E0',
+  success: '#219653',
+  warning: '#F2C94C',
+  error: '#EB5757'
+};
+var paddings = {
+  small: "5px 10px",
+  medium: "10px 20px",
+  large: "15px 30px"
+};
+var variant_icons = {
+  none: undefined,
+  search: octicons_react_.SearchIcon,
+  'left-arrow': octicons_react_.ArrowLeftIcon,
+  'right-arrow': octicons_react_.ArrowRightIcon,
+  'down-arrow': octicons_react_.ArrowDownIcon,
+  'up-arrow': octicons_react_.ArrowUpIcon
+};
 
 /**
- * A page header component
+ * Button with variants
  */
-
-var Header = function Header(_ref) {
-  var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, ["children"]);
-
-  return (0,external_theme_ui_.jsx)(external_theme_ui_.Flex, Object.assign({
-    as: "header",
-    variant: "header"
-  }, rest, {
+var VariantButton = function VariantButton(_ref) {
+  var text = _ref.text,
+      _ref$fontSize = _ref.fontSize,
+      fontSize = _ref$fontSize === void 0 ? 18 : _ref$fontSize,
+      _ref$iconSize = _ref.iconSize,
+      iconSize = _ref$iconSize === void 0 ? 'small' : _ref$iconSize,
+      _ref$variant = _ref.variant,
+      variant = _ref$variant === void 0 ? 'primary' : _ref$variant,
+      _ref$iconSide = _ref.iconSide,
+      iconSide = _ref$iconSide === void 0 ? 'left' : _ref$iconSide,
+      _ref$padding = _ref.padding,
+      padding = _ref$padding === void 0 ? 'medium' : _ref$padding,
+      _ref$isPrimary = _ref.isPrimary,
+      isPrimary = _ref$isPrimary === void 0 ? false : _ref$isPrimary,
+      icon = _ref.icon;
+  var Icon = icon ? variant_icons[icon] : undefined;
+  var finalVariant = isPrimary ? 'primary' : variant;
+  return /*#__PURE__*/external_commonjs_react_commonjs2_react_amd_React_root_React_default().createElement("button", {
+    disabled: variant === 'disabled',
+    style: {
+      color: variant_colors[finalVariant],
+      backgroundColor: variant_backgrounds[finalVariant],
+      fontSize: fontSize,
+      padding: paddings[padding],
+      borderRadius: 8,
+      border: "1px solid #000000",
+      display: 'flex',
+      flexDirection: iconSide === 'left' ? 'row' : 'row-reverse',
+      alignItems: 'center'
+    },
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 124,
+      columnNumber: 5
+    }
+  }, Icon && /*#__PURE__*/external_commonjs_react_commonjs2_react_amd_React_root_React_default().createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center'
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 139,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/external_commonjs_react_commonjs2_react_amd_React_root_React_default().createElement(Icon, {
+    size: iconSize,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 145,
+      columnNumber: 11
+    }
+  })), /*#__PURE__*/external_commonjs_react_commonjs2_react_amd_React_root_React_default().createElement("div", {
+    "data-testid": "label",
+    style: {
+      padding: '0 10px'
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 148,
+      columnNumber: 7
+    }
+  }, text));
+};
+;// CONCATENATED MODULE: ../../core/jest-extract/test/fixtures/story/VariantButton.docs.tsx
+var VariantButton_docs_this = undefined,
+    VariantButton_docs_jsxFileName = "/Users/atanasster/component-controls/core/jest-extract/test/fixtures/story/VariantButton.docs.tsx";
+
+
+
+
+/* harmony default export */ const VariantButton_docs = ({
+  title: 'VariantButton',
+  component: VariantButton,
+  testData: './VariantButton.data.ts'
+});
+var overview = function overview(props) {
+  return /*#__PURE__*/external_commonjs_react_commonjs2_react_amd_React_root_React_default().createElement(VariantButton, Object.assign({}, props, {
+    __self: VariantButton_docs_this,
+    __source: {
+      fileName: VariantButton_docs_jsxFileName,
+      lineNumber: 12,
       columnNumber: 3
     }
-  }), children);
+  }));
 };
-;// CONCATENATED MODULE: ../../ui/components/src/Header/Header.stories.tsx
-var Header_stories_this = undefined,
-    Header_stories_jsxFileName = "/Users/atanasster/component-controls/ui/components/src/Header/Header.stories.tsx";
-
-
-
-/* harmony default export */ const Header_stories = ({
-  title: 'Components/Header',
-  component: Header,
-  category: 'Display'
-});
-var overview = function overview() {
-  return /*#__PURE__*/external_commonjs_react_commonjs2_react_amd_React_root_React_default().createElement(Header, {
-    __self: Header_stories_this,
-    __source: {
-      fileName: Header_stories_jsxFileName,
-      lineNumber: 11,
-      columnNumber: 40
+overview.controls = {
+  text: 'Button',
+  icon: 'search',
+  fontSize: {
+    type: core_.ControlTypes.NUMBER,
+    data: {
+      name: 'random.number',
+      options: {
+        min: 12,
+        max: 32
+      }
     }
-  }, "header");
+  }
+};
+var primary = function primary() {
+  return /*#__PURE__*/external_commonjs_react_commonjs2_react_amd_React_root_React_default().createElement(VariantButton, {
+    variant: "primary",
+    text: "Primary",
+    __self: VariantButton_docs_this,
+    __source: {
+      fileName: VariantButton_docs_jsxFileName,
+      lineNumber: 25,
+      columnNumber: 3
+    }
+  });
+};
+var accent = function accent() {
+  return /*#__PURE__*/external_commonjs_react_commonjs2_react_amd_React_root_React_default().createElement(VariantButton, {
+    variant: "accent",
+    text: "Accent",
+    __self: VariantButton_docs_this,
+    __source: {
+      fileName: VariantButton_docs_jsxFileName,
+      lineNumber: 29,
+      columnNumber: 3
+    }
+  });
+};
+var disabled = function disabled() {
+  return /*#__PURE__*/external_commonjs_react_commonjs2_react_amd_React_root_React_default().createElement(VariantButton, {
+    variant: "disabled",
+    text: "Disabled",
+    __self: VariantButton_docs_this,
+    __source: {
+      fileName: VariantButton_docs_jsxFileName,
+      lineNumber: 33,
+      columnNumber: 3
+    }
+  });
+};
+var success = function success() {
+  return /*#__PURE__*/external_commonjs_react_commonjs2_react_amd_React_root_React_default().createElement(VariantButton, {
+    variant: "success",
+    text: "Success",
+    __self: VariantButton_docs_this,
+    __source: {
+      fileName: VariantButton_docs_jsxFileName,
+      lineNumber: 37,
+      columnNumber: 3
+    }
+  });
+};
+var error = function error() {
+  return /*#__PURE__*/external_commonjs_react_commonjs2_react_amd_React_root_React_default().createElement(VariantButton, {
+    variant: "error",
+    text: "Error",
+    __self: VariantButton_docs_this,
+    __source: {
+      fileName: VariantButton_docs_jsxFileName,
+      lineNumber: 41,
+      columnNumber: 3
+    }
+  });
+};
+var warning = function warning() {
+  return /*#__PURE__*/external_commonjs_react_commonjs2_react_amd_React_root_React_default().createElement(VariantButton, {
+    variant: "error",
+    text: "Warning",
+    __self: VariantButton_docs_this,
+    __source: {
+      fileName: VariantButton_docs_jsxFileName,
+      lineNumber: 45,
+      columnNumber: 3
+    }
+  });
 };
 
 /***/ }),
@@ -5381,35 +5552,6 @@ module.exports = posix;
 
 /***/ }),
 
-/***/ 2072:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var map = {
-	"./Header.stories.tsx": 956
-};
-
-
-function webpackContext(req) {
-	var id = webpackContextResolve(req);
-	return __webpack_require__(id);
-}
-function webpackContextResolve(req) {
-	if(!__webpack_require__.o(map, req)) {
-		var e = new Error("Cannot find module '" + req + "'");
-		e.code = 'MODULE_NOT_FOUND';
-		throw e;
-	}
-	return map[req];
-}
-webpackContext.keys = function webpackContextKeys() {
-	return Object.keys(map);
-};
-webpackContext.resolve = webpackContextResolve;
-module.exports = webpackContext;
-webpackContext.id = 2072;
-
-/***/ }),
-
 /***/ 9553:
 /***/ ((module) => {
 
@@ -5431,6 +5573,14 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__6647__;
 
 "use strict";
 module.exports = __WEBPACK_EXTERNAL_MODULE__2348__;
+
+/***/ }),
+
+/***/ 3887:
+/***/ ((module) => {
+
+"use strict";
+module.exports = __WEBPACK_EXTERNAL_MODULE__3887__;
 
 /***/ }),
 

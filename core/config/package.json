@@ -33,7 +33,6 @@
     "@component-controls/core": "^3.9.0",
     "@component-controls/instrument": "^3.9.0",
     "@component-controls/render": "^3.9.0",
-    "esm": "^3.2.25",
     "glob": "^7.1.6",
     "glob-base": "^0.3.0",
     "micromatch": "^4.0.2",

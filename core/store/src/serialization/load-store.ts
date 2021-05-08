@@ -15,10 +15,10 @@ import {
   PageLayoutProps,
   mapDynamicStories,
   mergeStoryProps,
+  getStoryControls,
 } from '@component-controls/core';
 import { LoadingStore } from '@component-controls/loader';
 import { render as reactRender } from '@component-controls/render/react';
-import { getControls } from './transform-controls';
 
 export { LoadingStore };
 
@@ -82,7 +82,7 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
                 //storybook compat
                 story.controls = story.controls || (story as any).args;
                 Object.assign(story, mergeStoryProps(doc, story));
-                story.controls = getControls(story, doc, loadedComponents);
+                story.controls = getStoryControls(story, doc, loadedComponents);
                 if (!doc.stories) {
                   doc.stories = [];
                 }

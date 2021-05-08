@@ -1,0 +1,1 @@
+{{? it.dataFile }}import data from '{{=it.dataFile}}';{{?}}

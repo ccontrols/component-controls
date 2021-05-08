@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ExternalLink overview snapshot 1`] = `
+exports[`ExternalLink overview 0 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
   box-sizing: border-box;
@@ -13,11 +13,99 @@ exports[`ExternalLink overview snapshot 1`] = `
 
 <a
     class="emotion-0"
-    href="https://www.google.com"
+    href="https://shyann.biz"
     rel="noopener noreferrer"
     target="_blank"
   >
-    https://www.google.com
+    https://shyann.biz
+  </a>
+</DocumentFragment>
+`;
+
+exports[`ExternalLink overview 1 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+<a
+    class="emotion-0"
+    href="https://lera.info"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    https://lera.info
+  </a>
+</DocumentFragment>
+`;
+
+exports[`ExternalLink overview 2 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+<a
+    class="emotion-0"
+    href="https://bella.name"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    https://bella.name
+  </a>
+</DocumentFragment>
+`;
+
+exports[`ExternalLink overview 3 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+<a
+    class="emotion-0"
+    href="https://heber.net"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    https://heber.net
+  </a>
+</DocumentFragment>
+`;
+
+exports[`ExternalLink overview 4 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+<a
+    class="emotion-0"
+    href="http://gudrun.org"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    http://gudrun.org
   </a>
 </DocumentFragment>
 `;

@@ -134,6 +134,7 @@ export const TablePagination: FC<UsePaginationInstanceProps<{
             {goToPageTemplate}
             <Input
               type="number"
+              placeholder="jump to page..."
               defaultValue={pageIndex + 1}
               onChange={e => {
                 const page = e.target.value ? Number(e.target.value) - 1 : 0;
@@ -145,6 +146,7 @@ export const TablePagination: FC<UsePaginationInstanceProps<{
         {pageSizeVisible && (
           <Box variant="table.pagination.pagesize">
             <Select
+              aria-label="select number of rows per page"
               value={pageSize}
               onChange={e => {
                 setPageSize(Number(e.target.value));

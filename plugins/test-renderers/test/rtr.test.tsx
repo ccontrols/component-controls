@@ -10,8 +10,10 @@ const Test = () => (
 describe('rtr', () => {
   test('render small component', async () => {
     const rendered = renderReact({
-      name: 'test',
-      renderFn: Test,
+      story: {
+        name: 'test',
+        renderFn: Test,
+      },
     });
     const { toJSON, root } = renderer.create(rendered);
     expect(toJSON()).toMatchSnapshot();

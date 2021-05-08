@@ -24,6 +24,7 @@
     "docs": "ts-md",
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
+    "create-bundle": "ccc -c test/.config -d test/bundle",
     "prepare": "yarn build",
     "test:create": "cc-cli -g story -c ./test/.config -o test -w",
     "test": "yarn jest -i"
@@ -44,6 +45,7 @@
   "dependencies": {
     "@component-controls/instrument": "^3.9.0",
     "@component-controls/jest-axe-matcher": "^3.8.1",
+    "@component-controls/logger": "^3.8.2",
     "@component-controls/store": "^3.9.0",
     "@component-controls/test-renderers": "^3.9.0",
     "@component-controls/webpack-compile": "^3.9.1",
@@ -68,6 +70,7 @@
     "enzyme-to-json": "^3.5.0",
     "jest": "^26.4.2",
     "jsdom": "^16.5.3",
+    "mock-argv": "^2.0.0",
     "react-dom": "^17.0.1",
     "react-test-renderer": "^17.0.1",
     "ts-jest": "^26.4.4",

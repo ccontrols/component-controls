@@ -1,11 +1,11 @@
 import path from 'path';
 import { loadConfig, extractDocuments } from '@component-controls/config';
 import { loadStore } from '@component-controls/store';
-import { StoryTemplateOptions, TeplateFormats } from '../types';
-import { CliOptions } from './types';
-import { saveTemplate } from './save-template';
-import { createStoriesTemplate } from '../stories-template';
-import { createDocumentTemplate } from '../document-template';
+import { StoryTemplateOptions, TeplateFormats } from '../utils';
+import { CliOptions } from './utils';
+import { saveTemplate } from './save-test-template';
+import { createStoriesTemplate } from '../jest-templates/stories-template';
+import { createDocumentTemplate } from '../jest-templates/document-template';
 
 const formatExtensions: { [key in TeplateFormats]: string } = {
   cjs: '.js',
@@ -42,12 +42,15 @@ export const cliStory = async (
     include,
     exclude,
     ally,
+    data,
   } = options;
   let documents: string[] = [];
 
   if (bundle) {
     const store = loadStore(require(bundle));
-    documents = Object.keys(store.docs).map(key => store.docs[key].title);
+    documents = Object.keys(store.docs).map(
+      key => store.docs[key].fileName || store.docs[key].title,
+    );
   } else {
     const configPath = path.resolve(process.cwd(), config);
     const configuration = loadConfig(configPath);
@@ -60,33 +63,34 @@ export const cliStory = async (
     const basename = path.basename(name);
     const splitName = basename.split('.');
     const componentName = splitName[0];
+
     const fileFormat =
-      format || path.extname(name).startsWith('.ts') ? 'ts' : 'esm';
+      format || (path.extname(name).startsWith('.ts') ? 'ts' : 'esm');
     const testName =
       test || formatExtension(`${componentName}.test.js`, fileFormat);
+
+    const docOptions = {
+      renderer,
+      format: fileFormat,
+      include,
+      exclude,
+      overwrite,
+      config,
+      test: testName,
+      bundle,
+      name: options.name || componentName,
+      storyPath: name,
+      ally,
+      data,
+      output: output
+        ? output
+        : bundle
+        ? path.dirname(bundle)
+        : path.dirname(name),
+    };
     const templateFn = generateDoc
       ? createDocumentTemplate
       : createStoriesTemplate;
-    await saveTemplate<StoryTemplateOptions>(
-      {
-        renderer,
-        format: fileFormat,
-        include,
-        exclude,
-        overwrite,
-        config,
-        test: testName,
-        bundle,
-        name: options.name || componentName,
-        storyPath: name,
-        ally,
-        output: output
-          ? output
-          : bundle
-          ? path.dirname(bundle)
-          : path.dirname(name),
-      },
-      templateFn,
-    );
+    await saveTemplate<StoryTemplateOptions>(docOptions, templateFn);
   }
 };

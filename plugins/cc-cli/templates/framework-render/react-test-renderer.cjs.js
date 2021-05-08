@@ -1,12 +1,13 @@
 let rendered;
 act(() => {
   {{? it.bundle }}
-  rendered = renderFn(story, doc);
+  rendered = renderFn({ story, doc{{? it.data && it.data[story.id] }}, values{{?}} });
   {{?? true }}
   rendered = renderExample({
     example,
     doc,
     config,
+    {{? it.data && it.data[story.id] }}values,{{?}}
   });
   {{?}}
 })

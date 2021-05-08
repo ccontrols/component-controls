@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`data-template-bundle import 1`] = `
+Object {
+  "content": "export default {
+  \\"variantbutton--overview\\": {
+    \\"0\\": {
+      text: \\"Gisselle Mohr\\",
+      variant: \\"success\\",
+      fontSize: 19,
+      icon: \\"left-arrow\\",
+      iconSide: \\"right\\",
+      iconSize: \\"undefined\\",
+      padding: \\"medium\\",
+      isPrimary: true
+    },
+    \\"1\\": {
+      text: \\"Mrs. Amely Wintheiser\\",
+      variant: \\"primary\\",
+      fontSize: 27,
+      icon: \\"left-arrow\\",
+      iconSide: \\"undefined\\",
+      iconSize: \\"small\\",
+      padding: \\"undefined\\",
+      isPrimary: true
+    },
+    \\"2\\": {
+      text: \\"Anais Pagac\\",
+      variant: \\"disabled\\",
+      fontSize: 29,
+      icon: \\"none\\",
+      iconSide: \\"left\\",
+      iconSize: \\"large\\",
+      padding: \\"medium\\",
+      isPrimary: false
+    },
+    \\"3\\": {
+      text: \\"Henry Bednar\\",
+      variant: \\"primary\\",
+      fontSize: 17,
+      icon: \\"down-arrow\\",
+      iconSide: \\"undefined\\",
+      iconSize: \\"medium\\",
+      padding: \\"medium\\",
+      isPrimary: true
+    },
+    \\"4\\": {
+      text: \\"Ms. Alessia Gutmann\\",
+      variant: \\"accent\\",
+      fontSize: 16,
+      icon: \\"down-arrow\\",
+      iconSide: \\"right\\",
+      iconSize: \\"medium\\",
+      padding: \\"small\\",
+      isPrimary: true
+    }
+  }
+};
+",
+  "data": Object {
+    "variantbutton--overview": Object {
+      "0": Object {
+        "fontSize": 19,
+        "icon": "left-arrow",
+        "iconSide": "right",
+        "iconSize": "undefined",
+        "isPrimary": true,
+        "padding": "medium",
+        "text": "Gisselle Mohr",
+        "variant": "success",
+      },
+      "1": Object {
+        "fontSize": 27,
+        "icon": "left-arrow",
+        "iconSide": "undefined",
+        "iconSize": "small",
+        "isPrimary": true,
+        "padding": "undefined",
+        "text": "Mrs. Amely Wintheiser",
+        "variant": "primary",
+      },
+      "2": Object {
+        "fontSize": 29,
+        "icon": "none",
+        "iconSide": "left",
+        "iconSize": "large",
+        "isPrimary": false,
+        "padding": "medium",
+        "text": "Anais Pagac",
+        "variant": "disabled",
+      },
+      "3": Object {
+        "fontSize": 17,
+        "icon": "down-arrow",
+        "iconSide": "undefined",
+        "iconSize": "medium",
+        "isPrimary": true,
+        "padding": "medium",
+        "text": "Henry Bednar",
+        "variant": "primary",
+      },
+      "4": Object {
+        "fontSize": 16,
+        "icon": "down-arrow",
+        "iconSide": "right",
+        "iconSize": "medium",
+        "isPrimary": true,
+        "padding": "small",
+        "text": "Ms. Alessia Gutmann",
+        "variant": "accent",
+      },
+    },
+  },
+}
+`;

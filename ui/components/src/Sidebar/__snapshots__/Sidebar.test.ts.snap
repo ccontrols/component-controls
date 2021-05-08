@@ -172,7 +172,346 @@ exports[`Sidebar icon snapshot 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Sidebar overview snapshot 1`] = `
+exports[`Sidebar overview 0 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+  position: absolute;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-bottom: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-3 .selected {
+  border-left: 4px solid #f49342;
+  font-weight: 700;
+  padding-left: 4px;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <div
+        class="emotion-2"
+      />
+      <div
+        class="emotion-3"
+      >
+        <ul>
+          <li>
+            item 1
+          </li>
+          <li>
+            item 2
+          </li>
+          <li>
+            item 3
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Sidebar overview 1 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+  background: none;
+  box-shadow: none;
+  cursor: pointer;
+  color: #454f5b;
+}
+
+.emotion-1:disabled {
+  color: #aaa;
+}
+
+<div
+    class="emotion-0"
+  >
+    <button
+      aria-label="Expand side bar"
+      class="emotion-1"
+    >
+      <svg
+        aria-hidden="true"
+        class="octicon"
+        fill="currentColor"
+        height="32"
+        role="img"
+        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+        viewBox="0 0 16 16"
+        width="32"
+      >
+        <path
+          d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Sidebar overview 2 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+  background: none;
+  box-shadow: none;
+  cursor: pointer;
+  color: #454f5b;
+}
+
+.emotion-1:disabled {
+  color: #aaa;
+}
+
+<div
+    class="emotion-0"
+  >
+    <button
+      aria-label="Expand side bar"
+      class="emotion-1"
+    >
+      <svg
+        aria-hidden="true"
+        class="octicon"
+        fill="currentColor"
+        height="32"
+        role="img"
+        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+        viewBox="0 0 16 16"
+        width="32"
+      >
+        <path
+          d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Sidebar overview 3 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+  background: none;
+  box-shadow: none;
+  cursor: pointer;
+  color: #454f5b;
+}
+
+.emotion-1:disabled {
+  color: #aaa;
+}
+
+<div
+    class="emotion-0"
+  >
+    <button
+      aria-label="Expand side bar"
+      class="emotion-1"
+    >
+      <svg
+        aria-hidden="true"
+        class="octicon"
+        fill="currentColor"
+        height="32"
+        role="img"
+        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+        viewBox="0 0 16 16"
+        width="32"
+      >
+        <path
+          d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Sidebar overview 4 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
   box-sizing: border-box;

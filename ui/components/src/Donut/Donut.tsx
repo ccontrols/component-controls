@@ -37,8 +37,7 @@ export const Donut: FC<DonutProps> = forwardRef(function Donut(
   const r = 16 - strokeWidth;
   const C = 2 * r * Math.PI;
   // eslint-disable-next-line no-mixed-operators
-  const offset = C - ((value - min) / (max - min)) * C;
-
+  const offset = max !== min ? C - ((value - min) / (max - min)) * C : 0;
   return (
     <Box
       ref={ref}
