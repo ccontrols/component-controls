@@ -24,67 +24,16 @@ exports[`SyntaxHighlighter overview 0 snapshot 1`] = `
 
 <pre
     class="prism-code language-jsx emotion-0"
-    style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 3px 5px; display: inline; margin: 0px;"
+    style="background-color: rgb(42, 39, 52); color: rgb(154, 134, 253); padding: 3px 5px; display: inline; margin: 0px;"
   >
     <span
       class="token-line emotion-1"
-      style="color: rgb(114, 143, 203);"
+      style="color: rgb(154, 134, 253);"
     >
       <span
-        class="token keyword emotion-2"
-        style="color: rgb(114, 143, 203);"
-      >
-        import
-      </span>
-      <span
         class="token plain emotion-2"
       >
-         
-      </span>
-      <span
-        class="token punctuation emotion-2"
-        style="color: rgb(182, 173, 154);"
-      >
-        {
-      </span>
-      <span
-        class="token plain emotion-2"
-      >
-         Button 
-      </span>
-      <span
-        class="token punctuation emotion-2"
-        style="color: rgb(182, 173, 154);"
-      >
-        }
-      </span>
-      <span
-        class="token plain emotion-2"
-      >
-         
-      </span>
-      <span
-        class="token keyword emotion-2"
-        style="color: rgb(114, 143, 203);"
-      >
-        from
-      </span>
-      <span
-        class="token plain emotion-2"
-      >
-         
-      </span>
-      <span
-        class="token string emotion-2"
-        style="color: rgb(114, 143, 203);"
-      >
-        'theme-ui'
-      </span>
-      <span
-        class="token punctuation emotion-2"
-        style="color: rgb(182, 173, 154);"
-      >
-        ;
+        Iliana Jaskolski
       </span>
     </span>
   </pre>
@@ -115,67 +64,16 @@ exports[`SyntaxHighlighter overview 1 snapshot 1`] = `
 
 <pre
     class="prism-code language-jsx emotion-0"
-    style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 3px 5px; display: inline; margin: 0px;"
+    style="background-color: rgb(42, 39, 52); color: rgb(154, 134, 253); padding: 3px 5px; display: inline; margin: 0px;"
   >
     <span
       class="token-line emotion-1"
-      style="color: rgb(114, 143, 203);"
+      style="color: rgb(154, 134, 253);"
     >
       <span
-        class="token keyword emotion-2"
-        style="color: rgb(114, 143, 203);"
-      >
-        import
-      </span>
-      <span
         class="token plain emotion-2"
       >
-         
-      </span>
-      <span
-        class="token punctuation emotion-2"
-        style="color: rgb(182, 173, 154);"
-      >
-        {
-      </span>
-      <span
-        class="token plain emotion-2"
-      >
-         Button 
-      </span>
-      <span
-        class="token punctuation emotion-2"
-        style="color: rgb(182, 173, 154);"
-      >
-        }
-      </span>
-      <span
-        class="token plain emotion-2"
-      >
-         
-      </span>
-      <span
-        class="token keyword emotion-2"
-        style="color: rgb(114, 143, 203);"
-      >
-        from
-      </span>
-      <span
-        class="token plain emotion-2"
-      >
-         
-      </span>
-      <span
-        class="token string emotion-2"
-        style="color: rgb(114, 143, 203);"
-      >
-        'theme-ui'
-      </span>
-      <span
-        class="token punctuation emotion-2"
-        style="color: rgb(182, 173, 154);"
-      >
-        ;
+        Okey Barrows
       </span>
     </span>
   </pre>
@@ -206,67 +104,16 @@ exports[`SyntaxHighlighter overview 2 snapshot 1`] = `
 
 <pre
     class="prism-code language-jsx emotion-0"
-    style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 3px 5px; display: inline; margin: 0px;"
+    style="background-color: rgb(42, 39, 52); color: rgb(154, 134, 253); padding: 3px 5px; display: inline; margin: 0px;"
   >
     <span
       class="token-line emotion-1"
-      style="color: rgb(114, 143, 203);"
+      style="color: rgb(154, 134, 253);"
     >
       <span
-        class="token keyword emotion-2"
-        style="color: rgb(114, 143, 203);"
-      >
-        import
-      </span>
-      <span
         class="token plain emotion-2"
       >
-         
-      </span>
-      <span
-        class="token punctuation emotion-2"
-        style="color: rgb(182, 173, 154);"
-      >
-        {
-      </span>
-      <span
-        class="token plain emotion-2"
-      >
-         Button 
-      </span>
-      <span
-        class="token punctuation emotion-2"
-        style="color: rgb(182, 173, 154);"
-      >
-        }
-      </span>
-      <span
-        class="token plain emotion-2"
-      >
-         
-      </span>
-      <span
-        class="token keyword emotion-2"
-        style="color: rgb(114, 143, 203);"
-      >
-        from
-      </span>
-      <span
-        class="token plain emotion-2"
-      >
-         
-      </span>
-      <span
-        class="token string emotion-2"
-        style="color: rgb(114, 143, 203);"
-      >
-        'theme-ui'
-      </span>
-      <span
-        class="token punctuation emotion-2"
-        style="color: rgb(182, 173, 154);"
-      >
-        ;
+        Leopoldo Langworth
       </span>
     </span>
   </pre>
@@ -304,60 +151,9 @@ exports[`SyntaxHighlighter overview 3 snapshot 1`] = `
       style="color: rgb(114, 143, 203);"
     >
       <span
-        class="token keyword emotion-2"
-        style="color: rgb(114, 143, 203);"
-      >
-        import
-      </span>
-      <span
         class="token plain emotion-2"
       >
-         
-      </span>
-      <span
-        class="token punctuation emotion-2"
-        style="color: rgb(182, 173, 154);"
-      >
-        {
-      </span>
-      <span
-        class="token plain emotion-2"
-      >
-         Button 
-      </span>
-      <span
-        class="token punctuation emotion-2"
-        style="color: rgb(182, 173, 154);"
-      >
-        }
-      </span>
-      <span
-        class="token plain emotion-2"
-      >
-         
-      </span>
-      <span
-        class="token keyword emotion-2"
-        style="color: rgb(114, 143, 203);"
-      >
-        from
-      </span>
-      <span
-        class="token plain emotion-2"
-      >
-         
-      </span>
-      <span
-        class="token string emotion-2"
-        style="color: rgb(114, 143, 203);"
-      >
-        'theme-ui'
-      </span>
-      <span
-        class="token punctuation emotion-2"
-        style="color: rgb(182, 173, 154);"
-      >
-        ;
+        Brent Turcotte
       </span>
     </span>
   </pre>
@@ -388,158 +184,16 @@ exports[`SyntaxHighlighter overview 4 snapshot 1`] = `
 
 <pre
     class="prism-code language-jsx emotion-0"
-    style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 3px 5px; display: inline; margin: 0px;"
+    style="background-color: rgb(42, 39, 52); color: rgb(154, 134, 253); padding: 3px 5px; display: inline; margin: 0px;"
   >
     <span
       class="token-line emotion-1"
-      style="color: rgb(114, 143, 203);"
+      style="color: rgb(154, 134, 253);"
     >
       <span
-        class="token keyword emotion-2"
-        style="color: rgb(114, 143, 203);"
-      >
-        import
-      </span>
-      <span
         class="token plain emotion-2"
       >
-         
-      </span>
-      <span
-        class="token punctuation emotion-2"
-        style="color: rgb(182, 173, 154);"
-      >
-        {
-      </span>
-      <span
-        class="token plain emotion-2"
-      >
-         Button 
-      </span>
-      <span
-        class="token punctuation emotion-2"
-        style="color: rgb(182, 173, 154);"
-      >
-        }
-      </span>
-      <span
-        class="token plain emotion-2"
-      >
-         
-      </span>
-      <span
-        class="token keyword emotion-2"
-        style="color: rgb(114, 143, 203);"
-      >
-        from
-      </span>
-      <span
-        class="token plain emotion-2"
-      >
-         
-      </span>
-      <span
-        class="token string emotion-2"
-        style="color: rgb(114, 143, 203);"
-      >
-        'theme-ui'
-      </span>
-      <span
-        class="token punctuation emotion-2"
-        style="color: rgb(182, 173, 154);"
-      >
-        ;
-      </span>
-    </span>
-  </pre>
-</DocumentFragment>
-`;
-
-exports[`SyntaxHighlighter overview snapshot 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  font-family: Menlo,monospace;
-  overflow-x: auto;
-  background-color: #e6e6e6;
-}
-
-.emotion-0 code {
-  color: inherit;
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-}
-
-.emotion-2 {
-  display: inline-block;
-}
-
-<pre
-    class="prism-code language-jsx emotion-0"
-    style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 3px 5px; display: inline; margin: 0px;"
-  >
-    <span
-      class="token-line emotion-1"
-      style="color: rgb(114, 143, 203);"
-    >
-      <span
-        class="token keyword emotion-2"
-        style="color: rgb(114, 143, 203);"
-      >
-        import
-      </span>
-      <span
-        class="token plain emotion-2"
-      >
-         
-      </span>
-      <span
-        class="token punctuation emotion-2"
-        style="color: rgb(182, 173, 154);"
-      >
-        {
-      </span>
-      <span
-        class="token plain emotion-2"
-      >
-         Button 
-      </span>
-      <span
-        class="token punctuation emotion-2"
-        style="color: rgb(182, 173, 154);"
-      >
-        }
-      </span>
-      <span
-        class="token plain emotion-2"
-      >
-         
-      </span>
-      <span
-        class="token keyword emotion-2"
-        style="color: rgb(114, 143, 203);"
-      >
-        from
-      </span>
-      <span
-        class="token plain emotion-2"
-      >
-         
-      </span>
-      <span
-        class="token string emotion-2"
-        style="color: rgb(114, 143, 203);"
-      >
-        'theme-ui'
-      </span>
-      <span
-        class="token punctuation emotion-2"
-        style="color: rgb(182, 173, 154);"
-      >
-        ;
+        Modesta Steuber
       </span>
     </span>
   </pre>

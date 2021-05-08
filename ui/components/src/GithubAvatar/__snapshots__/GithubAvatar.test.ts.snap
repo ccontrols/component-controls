@@ -34,11 +34,11 @@ exports[`GithubAvatar overview 0 snapshot 1`] = `
       class="emotion-1"
     >
       <img
-        alt="avatar of Geoffrey Bayer"
+        alt="avatar of Lelia Hirthe"
         class="emotion-2"
         height="48"
-        src="https://www.gravatar.com/avatar/f3705ade10de04ca0e406bba0a2af215?s=128"
-        title="Geoffrey Bayer"
+        src="https://www.gravatar.com/avatar/3baa41d42fe629d3a4e682d543d438db?s=128"
+        title="Lelia Hirthe"
         width="48"
       />
     </div>
@@ -80,11 +80,11 @@ exports[`GithubAvatar overview 1 snapshot 1`] = `
       class="emotion-1"
     >
       <img
-        alt="avatar of Aron Flatley"
+        alt="avatar of Werner Fay"
         class="emotion-2"
         height="48"
-        src="https://www.gravatar.com/avatar/12b65815c4049e6fca9d26053f49ed09?s=128"
-        title="Aron Flatley"
+        src="https://www.gravatar.com/avatar/1746aed1c297405bad2dc69c71ba4188?s=128"
+        title="Werner Fay"
         width="48"
       />
     </div>
@@ -126,11 +126,11 @@ exports[`GithubAvatar overview 2 snapshot 1`] = `
       class="emotion-1"
     >
       <img
-        alt="avatar of Lavada Weimann I"
+        alt="avatar of Jermaine Mohr"
         class="emotion-2"
         height="48"
-        src="https://www.gravatar.com/avatar/5d28f35a11f2aadb47b0c8d8374543ee?s=128"
-        title="Lavada Weimann I"
+        src="https://www.gravatar.com/avatar/57868c0e381dc78f46ca367d80ef89da?s=128"
+        title="Jermaine Mohr"
         width="48"
       />
     </div>
@@ -172,11 +172,11 @@ exports[`GithubAvatar overview 3 snapshot 1`] = `
       class="emotion-1"
     >
       <img
-        alt="avatar of Rickey Bartoletti"
+        alt="avatar of Charley Rosenbaum"
         class="emotion-2"
         height="48"
-        src="https://www.gravatar.com/avatar/20fbcc7ad8c87765c69558dcf11f6ac8?s=128"
-        title="Rickey Bartoletti"
+        src="https://www.gravatar.com/avatar/e08d86fb953ea9f163c0b872f5977679?s=128"
+        title="Charley Rosenbaum"
         width="48"
       />
     </div>
@@ -218,57 +218,11 @@ exports[`GithubAvatar overview 4 snapshot 1`] = `
       class="emotion-1"
     >
       <img
-        alt="avatar of Abraham Graham"
+        alt="avatar of Dr. Josephine Kris"
         class="emotion-2"
         height="48"
-        src="https://www.gravatar.com/avatar/470ff5ce18b60ffa031cc61336448f21?s=128"
-        title="Abraham Graham"
-        width="48"
-      />
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`GithubAvatar overview snapshot 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  -webkit-transition: 0.2s ease;
-  transition: 0.2s ease;
-}
-
-.emotion-1 {
-  max-width: unset;
-  display: block;
-  overflow: hidden;
-  line-height: 1;
-  width: 48px;
-  height: 48px;
-  vertical-align: middle;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  max-width: 100%;
-  height: auto;
-  border-radius: 9999px;
-}
-
-<div
-    class="emotion-0"
-    style="display: inline-block;"
-  >
-    <div
-      class="emotion-1"
-    >
-      <img
-        alt="avatar of Atanas Stoyanov"
-        class="emotion-2"
-        height="48"
-        src="https://www.gravatar.com/avatar/9b9913091795a48655ec0b10dcd62a95?s=128"
-        title="Atanas Stoyanov"
+        src="https://www.gravatar.com/avatar/7533f3b47b8db1c377587308e4ff1651?s=128"
+        title="Dr. Josephine Kris"
         width="48"
       />
     </div>

@@ -33,7 +33,7 @@ export const getStore = async ({
     if (cache.bundle[bundle]) {
       return cache.bundle[bundle];
     }
-    const loadedStore = require('esm')(module)(bundle);
+    const loadedStore = require(bundle);
     const store = loadStore(loadedStore);
     const doc = store.docs[name];
     if (!doc) {

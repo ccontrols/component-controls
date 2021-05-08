@@ -9,7 +9,7 @@
     "directory": "examples/stories"
   },
   "scripts": {
-    "test:create": "cc-cli -g doc -i VariantButton -c ./.config -w",
+    "test:create": "cc-cli -g doc -i VariantButton -c ./.config -w -d 5",
     "test": "yarn jest"
   },
   "jest": {

@@ -2,11 +2,13 @@ import fs from 'fs';
 import path from 'path';
 import { runCLI } from 'jest';
 import { randomizeSeed } from '@component-controls/core';
+import { setLogOptions } from '@component-controls/logger';
 import { createStoreTemplate } from '../src/jest-templates/store-template';
 import { TemplateOptions, formatExtension } from '../src/utils';
 
 export const runTests = async (props: TemplateOptions): Promise<void> => {
   const { renderer, format, config, bundle, name } = props;
+  setLogOptions({ logLevel: 'none' });
   randomizeSeed(123456);
   it(`${renderer} ${bundle ? 'bundle' : ''} ${format}`, async () => {
     let renderedFile = '';

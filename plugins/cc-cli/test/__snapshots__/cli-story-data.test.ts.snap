@@ -5,14 +5,14 @@ Object {
   "VariantButton.data.js": "module.exports = {
   overview: {
     '0': {
-      text: 'Felicity Leannon',
-      icon: 'Don Green',
-      fontSize: 21,
+      text: 'Gisselle Mohr',
+      icon: 'Kaden Powlowski',
+      fontSize: 12,
     },
     '1': {
-      text: 'Arden Quitzon',
-      icon: 'Aliya Prohaska',
-      fontSize: 16,
+      text: 'Barbara Brakus',
+      icon: 'Miss Dolly Ferry',
+      fontSize: 22,
     },
   },
 };
@@ -234,14 +234,14 @@ Object {
   "VariantButton.data.ts": "export default {
   overview: {
     '0': {
-      text: 'Jean Medhurst',
-      icon: 'Gustave Grady MD',
-      fontSize: 26,
+      text: 'Jody Legros',
+      icon: 'Dedric Smitham',
+      fontSize: 16,
     },
     '1': {
-      text: 'Eloy Kassulke',
-      icon: 'Josefa Schumm',
-      fontSize: 19,
+      text: 'Ford Kunze',
+      icon: 'Trinity Hickle',
+      fontSize: 12,
     },
   },
 };
@@ -421,14 +421,14 @@ Object {
   "VariantButton.data.js": "export default {
   overview: {
     '0': {
-      text: 'Lexi Stracke',
-      icon: 'Gene Schowalter',
-      fontSize: 19,
+      text: 'Adah Nolan',
+      icon: 'Anais Pagac',
+      fontSize: 22,
     },
     '1': {
-      text: 'Maude Fahey',
-      icon: 'Dr. Carmella Zulauf',
-      fontSize: 28,
+      text: 'Jon Will',
+      icon: 'Geraldine Metz',
+      fontSize: 20,
     },
   },
 };
@@ -647,14 +647,14 @@ Object {
   "VariantButton.data.ts": "export default {
   overview: {
     '0': {
-      text: 'Cayla Luettgen',
-      icon: 'Rose Zboncak',
-      fontSize: 12,
+      text: 'Clark Hickle',
+      icon: 'Marielle Durgan',
+      fontSize: 16,
     },
     '1': {
-      text: 'Terry Paucek',
-      icon: 'Devan Greenfelder',
-      fontSize: 13,
+      text: 'Ibrahim Purdy',
+      icon: 'Cullen Heller',
+      fontSize: 27,
     },
   },
 };
@@ -901,14 +901,14 @@ Object {
   "VariantButton.data.ts": "export default {
   overview: {
     '0': {
-      text: 'Angela Herman',
-      icon: 'Hunter Von',
-      fontSize: 14,
+      text: 'Mr. Dulce Rice',
+      icon: 'Karianne Bins',
+      fontSize: 16,
     },
     '1': {
-      text: 'Miss Amira Schamberger',
-      icon: 'Kip Berge',
-      fontSize: 30,
+      text: 'Mrs. Jermey Jacobson',
+      icon: 'Mikayla Gusikowski',
+      fontSize: 29,
     },
   },
 };

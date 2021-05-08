@@ -79,7 +79,7 @@ exports[`VariantButton error snapshot 1`] = `
 </button>
 `;
 
-exports[`VariantButton overview special-chars snapshot 1`] = `
+exports[`VariantButton overview 0 snapshot 1`] = `
 <button
   style={
     Object {
@@ -93,35 +93,31 @@ exports[`VariantButton overview special-chars snapshot 1`] = `
   }
 >
   <div
+    data-testid="label"
     style={
       Object {
-        "alignItems": "center",
-        "display": "flex",
+        "padding": "0 10px",
       }
     }
   >
-    <svg
-      aria-hidden="true"
-      className="octicon"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "<path fill-rule=\\"evenodd\\" d=\\"M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z\\"></path>",
-        }
-      }
-      fill="currentColor"
-      height={16}
-      role="img"
-      style={
-        Object {
-          "display": "inline-block",
-          "userSelect": "none",
-          "verticalAlign": "text-bottom",
-        }
-      }
-      viewBox="0 0 16 16"
-      width={16}
-    />
+    Gisselle Mohr
   </div>
+</button>
+`;
+
+exports[`VariantButton overview 1 snapshot 1`] = `
+<button
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#2F80ED",
+      "border": "1px solid #000000",
+      "borderRadius": 8,
+      "color": "#F2F2F2",
+      "display": "flex",
+    }
+  }
+>
   <div
     data-testid="label"
     style={
@@ -130,7 +126,215 @@ exports[`VariantButton overview special-chars snapshot 1`] = `
       }
     }
   >
-    s%~\`
+    Barbara Brakus
+  </div>
+</button>
+`;
+
+exports[`VariantButton overview 2 snapshot 1`] = `
+<button
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#2F80ED",
+      "border": "1px solid #000000",
+      "borderRadius": 8,
+      "color": "#F2F2F2",
+      "display": "flex",
+    }
+  }
+>
+  <div
+    data-testid="label"
+    style={
+      Object {
+        "padding": "0 10px",
+      }
+    }
+  >
+    Adah Nolan
+  </div>
+</button>
+`;
+
+exports[`VariantButton overview 3 snapshot 1`] = `
+<button
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#2F80ED",
+      "border": "1px solid #000000",
+      "borderRadius": 8,
+      "color": "#F2F2F2",
+      "display": "flex",
+    }
+  }
+>
+  <div
+    data-testid="label"
+    style={
+      Object {
+        "padding": "0 10px",
+      }
+    }
+  >
+    Jon Will
+  </div>
+</button>
+`;
+
+exports[`VariantButton overview 4 snapshot 1`] = `
+<button
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#2F80ED",
+      "border": "1px solid #000000",
+      "borderRadius": 8,
+      "color": "#F2F2F2",
+      "display": "flex",
+    }
+  }
+>
+  <div
+    data-testid="label"
+    style={
+      Object {
+        "padding": "0 10px",
+      }
+    }
+  >
+    Mr. Dulce Rice
+  </div>
+</button>
+`;
+
+exports[`VariantButton overview 5 snapshot 1`] = `
+<button
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#2F80ED",
+      "border": "1px solid #000000",
+      "borderRadius": 8,
+      "color": "#F2F2F2",
+      "display": "flex",
+    }
+  }
+>
+  <div
+    data-testid="label"
+    style={
+      Object {
+        "padding": "0 10px",
+      }
+    }
+  >
+    Mrs. Jermey Jacobson
+  </div>
+</button>
+`;
+
+exports[`VariantButton overview 6 snapshot 1`] = `
+<button
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#2F80ED",
+      "border": "1px solid #000000",
+      "borderRadius": 8,
+      "color": "#F2F2F2",
+      "display": "flex",
+    }
+  }
+>
+  <div
+    data-testid="label"
+    style={
+      Object {
+        "padding": "0 10px",
+      }
+    }
+  >
+    Clark Hickle
+  </div>
+</button>
+`;
+
+exports[`VariantButton overview 7 snapshot 1`] = `
+<button
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#2F80ED",
+      "border": "1px solid #000000",
+      "borderRadius": 8,
+      "color": "#F2F2F2",
+      "display": "flex",
+    }
+  }
+>
+  <div
+    data-testid="label"
+    style={
+      Object {
+        "padding": "0 10px",
+      }
+    }
+  >
+    Ibrahim Purdy
+  </div>
+</button>
+`;
+
+exports[`VariantButton overview 8 snapshot 1`] = `
+<button
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#2F80ED",
+      "border": "1px solid #000000",
+      "borderRadius": 8,
+      "color": "#F2F2F2",
+      "display": "flex",
+    }
+  }
+>
+  <div
+    data-testid="label"
+    style={
+      Object {
+        "padding": "0 10px",
+      }
+    }
+  >
+    Jody Legros
+  </div>
+</button>
+`;
+
+exports[`VariantButton overview 9 snapshot 1`] = `
+<button
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#2F80ED",
+      "border": "1px solid #000000",
+      "borderRadius": 8,
+      "color": "#F2F2F2",
+      "display": "flex",
+    }
+  }
+>
+  <div
+    data-testid="label"
+    style={
+      Object {
+        "padding": "0 10px",
+      }
+    }
+  >
+    Ford Kunze
   </div>
 </button>
 `;

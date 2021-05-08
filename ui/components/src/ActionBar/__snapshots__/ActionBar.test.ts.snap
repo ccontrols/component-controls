@@ -1136,27 +1136,21 @@ exports[`ActionBar overview 1 snapshot 1`] = `
   min-width: 0;
 }
 
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: relative;
-}
-
 .emotion-2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-  margin-left: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-3 {
@@ -1176,38 +1170,6 @@ exports[`ActionBar overview 1 snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 4px;
-  font-size: 14px;
-}
-
-.emotion-3 a {
-  color: #ffffff;
-  background-color: #3B817D;
-  -webkit-text-fill-color: initial;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  line-height: 1;
-  border-radius: 1px;
-  display: inline-block;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  border: 1px solid #3B817D;
-}
-
-.emotion-3 button {
-  color: #ffffff;
-  background-color: #3B817D;
-  -webkit-text-fill-color: initial;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  line-height: 1;
-  border-radius: 1px;
-  display: inline-block;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  border: 1px solid #3B817D;
 }
 
 .emotion-4 {
@@ -1251,38 +1213,6 @@ exports[`ActionBar overview 1 snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 4px;
-  font-size: 14px;
-}
-
-.emotion-5 a {
-  color: #ffffff;
-  background-color: #3B817D;
-  -webkit-text-fill-color: initial;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  line-height: 1;
-  border-radius: 1px;
-  display: inline-block;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  border: 1px solid #3B817D;
-}
-
-.emotion-5 button {
-  color: #ffffff;
-  background-color: #3B817D;
-  -webkit-text-fill-color: initial;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  line-height: 1;
-  border-radius: 1px;
-  display: inline-block;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  border: 1px solid #3B817D;
 }
 
 .emotion-6 {
@@ -1299,7 +1229,7 @@ exports[`ActionBar overview 1 snapshot 1`] = `
     style="height: 100px; width: 100%; background-color: rgb(250, 248, 245);"
   >
     <div
-      class="emotion-1"
+      class="emotion-0"
     >
       <div
         class="emotion-2"
@@ -1339,27 +1269,21 @@ exports[`ActionBar overview 2 snapshot 1`] = `
   min-width: 0;
 }
 
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: relative;
-}
-
 .emotion-2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-  margin-left: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-3 {
@@ -1379,38 +1303,6 @@ exports[`ActionBar overview 2 snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 4px;
-  font-size: 14px;
-}
-
-.emotion-3 a {
-  color: #ffffff;
-  background-color: #3B817D;
-  -webkit-text-fill-color: initial;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  line-height: 1;
-  border-radius: 1px;
-  display: inline-block;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  border: 1px solid #3B817D;
-}
-
-.emotion-3 button {
-  color: #ffffff;
-  background-color: #3B817D;
-  -webkit-text-fill-color: initial;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  line-height: 1;
-  border-radius: 1px;
-  display: inline-block;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  border: 1px solid #3B817D;
 }
 
 .emotion-4 {
@@ -1454,38 +1346,6 @@ exports[`ActionBar overview 2 snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 4px;
-  font-size: 14px;
-}
-
-.emotion-5 a {
-  color: #ffffff;
-  background-color: #3B817D;
-  -webkit-text-fill-color: initial;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  line-height: 1;
-  border-radius: 1px;
-  display: inline-block;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  border: 1px solid #3B817D;
-}
-
-.emotion-5 button {
-  color: #ffffff;
-  background-color: #3B817D;
-  -webkit-text-fill-color: initial;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  line-height: 1;
-  border-radius: 1px;
-  display: inline-block;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  border: 1px solid #3B817D;
 }
 
 .emotion-6 {
@@ -1502,7 +1362,7 @@ exports[`ActionBar overview 2 snapshot 1`] = `
     style="height: 100px; width: 100%; background-color: rgb(250, 248, 245);"
   >
     <div
-      class="emotion-1"
+      class="emotion-0"
     >
       <div
         class="emotion-2"
@@ -1542,27 +1402,21 @@ exports[`ActionBar overview 3 snapshot 1`] = `
   min-width: 0;
 }
 
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: relative;
-}
-
 .emotion-2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-  margin-left: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-3 {
@@ -1582,38 +1436,6 @@ exports[`ActionBar overview 3 snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 4px;
-  font-size: 14px;
-}
-
-.emotion-3 a {
-  color: #ffffff;
-  background-color: #3B817D;
-  -webkit-text-fill-color: initial;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  line-height: 1;
-  border-radius: 1px;
-  display: inline-block;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  border: 1px solid #3B817D;
-}
-
-.emotion-3 button {
-  color: #ffffff;
-  background-color: #3B817D;
-  -webkit-text-fill-color: initial;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  line-height: 1;
-  border-radius: 1px;
-  display: inline-block;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  border: 1px solid #3B817D;
 }
 
 .emotion-4 {
@@ -1657,38 +1479,6 @@ exports[`ActionBar overview 3 snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 4px;
-  font-size: 14px;
-}
-
-.emotion-5 a {
-  color: #ffffff;
-  background-color: #3B817D;
-  -webkit-text-fill-color: initial;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  line-height: 1;
-  border-radius: 1px;
-  display: inline-block;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  border: 1px solid #3B817D;
-}
-
-.emotion-5 button {
-  color: #ffffff;
-  background-color: #3B817D;
-  -webkit-text-fill-color: initial;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  line-height: 1;
-  border-radius: 1px;
-  display: inline-block;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  border: 1px solid #3B817D;
 }
 
 .emotion-6 {
@@ -1705,7 +1495,7 @@ exports[`ActionBar overview 3 snapshot 1`] = `
     style="height: 100px; width: 100%; background-color: rgb(250, 248, 245);"
   >
     <div
-      class="emotion-1"
+      class="emotion-0"
     >
       <div
         class="emotion-2"
@@ -1745,27 +1535,21 @@ exports[`ActionBar overview 4 snapshot 1`] = `
   min-width: 0;
 }
 
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: relative;
-}
-
 .emotion-2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-  margin-left: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-3 {
@@ -1785,38 +1569,6 @@ exports[`ActionBar overview 4 snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 4px;
-  font-size: 14px;
-}
-
-.emotion-3 a {
-  color: #ffffff;
-  background-color: #3B817D;
-  -webkit-text-fill-color: initial;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  line-height: 1;
-  border-radius: 1px;
-  display: inline-block;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  border: 1px solid #3B817D;
-}
-
-.emotion-3 button {
-  color: #ffffff;
-  background-color: #3B817D;
-  -webkit-text-fill-color: initial;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  line-height: 1;
-  border-radius: 1px;
-  display: inline-block;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  border: 1px solid #3B817D;
 }
 
 .emotion-4 {
@@ -1860,38 +1612,6 @@ exports[`ActionBar overview 4 snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 4px;
-  font-size: 14px;
-}
-
-.emotion-5 a {
-  color: #ffffff;
-  background-color: #3B817D;
-  -webkit-text-fill-color: initial;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  line-height: 1;
-  border-radius: 1px;
-  display: inline-block;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  border: 1px solid #3B817D;
-}
-
-.emotion-5 button {
-  color: #ffffff;
-  background-color: #3B817D;
-  -webkit-text-fill-color: initial;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  line-height: 1;
-  border-radius: 1px;
-  display: inline-block;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  border: 1px solid #3B817D;
 }
 
 .emotion-6 {
@@ -1908,210 +1628,7 @@ exports[`ActionBar overview 4 snapshot 1`] = `
     style="height: 100px; width: 100%; background-color: rgb(250, 248, 245);"
   >
     <div
-      class="emotion-1"
-    >
-      <div
-        class="emotion-2"
-      >
-        <div
-          class="emotion-3"
-        >
-          <button
-            class="emotion-4"
-          >
-            action 1
-          </button>
-        </div>
-        <div
-          class="emotion-5"
-        >
-          <a
-            class="emotion-6"
-            href="https://google.com"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            google
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`ActionBar overview snapshot 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: relative;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: absolute;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-  margin-left: auto;
-}
-
-.emotion-3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  margin-right: 4px;
-  margin-left: 8px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 4px;
-  font-size: 14px;
-}
-
-.emotion-3 a {
-  color: #ffffff;
-  background-color: #3B817D;
-  -webkit-text-fill-color: initial;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  line-height: 1;
-  border-radius: 1px;
-  display: inline-block;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  border: 1px solid #3B817D;
-}
-
-.emotion-3 button {
-  color: #ffffff;
-  background-color: #3B817D;
-  -webkit-text-fill-color: initial;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  line-height: 1;
-  border-radius: 1px;
-  display: inline-block;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  border: 1px solid #3B817D;
-}
-
-.emotion-4 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  display: inline-block;
-  text-align: center;
-  line-height: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: inherit;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  color: white;
-  background-color: #5c6ac4;
-  border: 0;
-  border-radius: 4px;
-}
-
-.emotion-5 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  margin-right: 0;
-  margin-left: 8px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 4px;
-  font-size: 14px;
-}
-
-.emotion-5 a {
-  color: #ffffff;
-  background-color: #3B817D;
-  -webkit-text-fill-color: initial;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  line-height: 1;
-  border-radius: 1px;
-  display: inline-block;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  border: 1px solid #3B817D;
-}
-
-.emotion-5 button {
-  color: #ffffff;
-  background-color: #3B817D;
-  -webkit-text-fill-color: initial;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  line-height: 1;
-  border-radius: 1px;
-  display: inline-block;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 1px,rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  border: 1px solid #3B817D;
-}
-
-.emotion-6 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  color: #5c6ac4;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-<div
-    class="emotion-0"
-    style="height: 100px; width: 100%; background-color: rgb(250, 248, 245);"
-  >
-    <div
-      class="emotion-1"
+      class="emotion-0"
     >
       <div
         class="emotion-2"

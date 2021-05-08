@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { runCLI } from 'jest';
 import { randomizeSeed } from '@component-controls/core';
+import { setLogOptions } from '@component-controls/logger';
 import { createStoriesTemplate } from '../src/jest-templates/stories-template';
 import { saveDataTemplate } from '../src/cli/save-data-template';
 import {
@@ -14,6 +15,7 @@ export const runTests = async (
   props: Omit<StoryTemplateOptions, 'storyPath'>,
 ): Promise<void> => {
   const { renderer, format, config, bundle, data } = props;
+  setLogOptions({ logLevel: 'none' });
   randomizeSeed(123456);
   const storyPath = path.resolve(__dirname, 'fixtures/VariantButton.docs.tsx');
   it(`${renderer} ${bundle ? 'bundle' : ''} ${format}`, async () => {

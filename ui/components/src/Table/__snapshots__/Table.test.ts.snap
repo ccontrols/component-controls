@@ -1985,6 +1985,694 @@ exports[`Table pagination 0 snapshot 1`] = `
           role="cell"
           style="width: 150px;"
         >
+          24
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Dr. Rylee DuBuque
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 20%;"
+        >
+          Lewis.Vandervort7
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Kelly Landing
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Lake Gabe
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          98806
+        </td>
+      </tr>
+      <tr
+        class="emotion-22"
+        role="row"
+      >
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          22
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Nettie Runte
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 20%;"
+        >
+          Johnny.Marquardt30
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Larson Square
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Hannaton
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          81636
+        </td>
+      </tr>
+      <tr
+        class="emotion-22"
+        role="row"
+      >
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          25
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Isabell Feil Jr.
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 20%;"
+        >
+          Rafaela.Gusikowski4
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Kaya Mountain
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Kemmerbury
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          01459
+        </td>
+      </tr>
+      <tr
+        class="emotion-22"
+        role="row"
+      >
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          24
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Jillian Hoeger
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 20%;"
+        >
+          Annamae.Maggio23
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Darlene Course
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Earlenebury
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          70931
+        </td>
+      </tr>
+      <tr
+        class="emotion-22"
+        role="row"
+      >
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          23
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Melyssa Herman
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 20%;"
+        >
+          Verona_Wiza
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Zulauf Circle
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Corkeryland
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          52057-0050
+        </td>
+      </tr>
+      <tr
+        class="emotion-22"
+        role="row"
+      >
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          22
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Urban Towne
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 20%;"
+        >
+          Kayleigh_Hauck
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Bechtelar Extensions
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Ruthshire
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          49065
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-3 button {
+  width: 50px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 50px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+}
+
+.emotion-5:disabled {
+  color: #aaa;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      Howell Williamson
+    </div>
+    <div
+      class="emotion-2"
+    >
+      <div
+        class="emotion-3"
+      >
+        <div
+          class="emotion-4"
+        >
+          <button
+            class="emotion-5"
+          >
+            &lt;&lt;
+          </button>
+        </div>
+        <div
+          class="emotion-4"
+        >
+          <button
+            class="emotion-5"
+          >
+            &lt;
+          </button>
+        </div>
+        <div
+          class="emotion-4"
+        >
+          <button
+            class="emotion-5"
+          >
+            &gt;
+          </button>
+        </div>
+        <div
+          class="emotion-4"
+        >
+          <button
+            class="emotion-5"
+          >
+            &gt;&gt;
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Table pagination 1 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-0 p {
+  margin: 0;
+}
+
+.emotion-0 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-0 a {
+  word-break: break-word;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+}
+
+.emotion-21 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-21 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-22 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-23 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+<table
+    class="emotion-0"
+    role="table"
+  >
+    <thead
+      class="emotion-1"
+    >
+      <tr
+        class="emotion-2"
+        role="row"
+      >
+        <th
+          class="emotion-3"
+          colspan="1"
+          role="columnheader"
+          style="width: 150px;"
+        >
+          <div
+            class="emotion-4"
+          >
+            <div
+              class="emotion-5"
+            >
+              Age
+            </div>
+          </div>
+        </th>
+        <th
+          class="emotion-3"
+          colspan="1"
+          role="columnheader"
+          style="width: 150px;"
+        >
+          <div
+            class="emotion-4"
+          >
+            <div
+              class="emotion-5"
+            >
+              Name
+            </div>
+          </div>
+        </th>
+        <th
+          class="emotion-3"
+          colspan="1"
+          role="columnheader"
+          style="width: 20%;"
+        >
+          <div
+            class="emotion-4"
+          >
+            <div
+              class="emotion-5"
+            >
+              User Name
+            </div>
+          </div>
+        </th>
+        <th
+          class="emotion-3"
+          colspan="1"
+          role="columnheader"
+          style="width: 150px;"
+        >
+          <div
+            class="emotion-4"
+          >
+            <div
+              class="emotion-5"
+            >
+              Street
+            </div>
+          </div>
+        </th>
+        <th
+          class="emotion-3"
+          colspan="1"
+          role="columnheader"
+          style="width: 150px;"
+        >
+          <div
+            class="emotion-4"
+          >
+            <div
+              class="emotion-5"
+            >
+              City
+            </div>
+          </div>
+        </th>
+        <th
+          class="emotion-3"
+          colspan="1"
+          role="columnheader"
+          style="width: 150px;"
+        >
+          <div
+            class="emotion-4"
+          >
+            <div
+              class="emotion-5"
+            >
+              Zip Code
+            </div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="emotion-21"
+      role="rowgroup"
+    >
+      <tr
+        class="emotion-22"
+        role="row"
+      >
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
           22
         </td>
         <td
@@ -2352,288 +3040,6 @@ exports[`Table pagination 0 snapshot 1`] = `
           81636
         </td>
       </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          25
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Isabell Feil Jr.
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Rafaela.Gusikowski4
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Kaya Mountain
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Kemmerbury
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          01459
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          24
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Jillian Hoeger
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Annamae.Maggio23
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Darlene Course
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Earlenebury
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          70931
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          23
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Melyssa Herman
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Verona_Wiza
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Zulauf Circle
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Corkeryland
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          52057-0050
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          22
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Urban Towne
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Kayleigh_Hauck
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Bechtelar Extensions
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Ruthshire
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          49065
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          21
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Hazle Hansen
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Hassie_Tillman73
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Reichel Street
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          West Audreymouth
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          53056-1765
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          21
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Jamarcus Stroman
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Orval13
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Hobart Park
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          West Rahul
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          60010
-        </td>
-      </tr>
     </tbody>
   </table>
   .emotion-0 {
@@ -2765,30 +3171,27 @@ exports[`Table pagination 0 snapshot 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.emotion-13 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding-left: 8px;
-  padding-right: 8px;
-  width: 140px;
-}
-
-.emotion-14 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
-.emotion-15 {
+.emotion-12 input {
+  margin-left: 4px;
+  width: 100px;
+}
+
+.emotion-13 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -2805,17 +3208,7 @@ exports[`Table pagination 0 snapshot 1`] = `
   border-radius: 4px;
   color: inherit;
   background-color: transparent;
-}
-
-.emotion-16 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  margin-left: -28px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  pointer-events: none;
+  padding: 4px;
 }
 
 <div
@@ -2872,953 +3265,12 @@ exports[`Table pagination 0 snapshot 1`] = `
       <div
         class="emotion-12"
       >
-        Jaylon Botsford
-      </div>
-      <div
-        class="emotion-13"
-      >
-        <div
-          class="emotion-14"
-        >
-          <select
-            class="emotion-15"
-          >
-            <option
-              value="10"
-            >
-              Prince Hayes
-            </option>
-            <option
-              value="20"
-            >
-              Prince Hayes
-            </option>
-            <option
-              value="30"
-            >
-              Prince Hayes
-            </option>
-            <option
-              value="40"
-            >
-              Prince Hayes
-            </option>
-            <option
-              value="50"
-            >
-              Prince Hayes
-            </option>
-          </select>
-          <svg
-            class="emotion-16"
-            fill="currentcolor"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7 10l5 5 5-5z"
-            />
-          </svg>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Table pagination 1 snapshot 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  margin: 0;
-  border-collapse: collapse;
-  font-size: 14px;
-  line-height: 20px;
-  text-align: left;
-  width: 100%;
-  border-spacing: 0;
-}
-
-.emotion-0 p {
-  margin: 0;
-}
-
-.emotion-0 pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  max-width: 240px;
-  background-color: inherit;
-  margin-top: 8px;
-  margin-bottom: 0;
-}
-
-.emotion-0 a {
-  word-break: break-word;
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
-  color: #454f5b;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-}
-
-.emotion-3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  border: none;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-right: 8px;
-  padding-left: 16px;
-}
-
-.emotion-4 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-5 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  margin-right: 4px;
-}
-
-.emotion-21 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-}
-
-.emotion-21 tr:last-of-type {
-  border-bottom: 0;
-}
-
-.emotion-22 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.emotion-23 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 16px;
-  padding-right: 16px;
-  border-bottom: 0;
-}
-
-<table
-    class="emotion-0"
-    role="table"
-  >
-    <thead
-      class="emotion-1"
-    >
-      <tr
-        class="emotion-2"
-        role="row"
-      >
-        <th
-          class="emotion-3"
-          colspan="1"
-          role="columnheader"
-          style="width: 150px;"
-        >
-          <div
-            class="emotion-4"
-          >
-            <div
-              class="emotion-5"
-            >
-              Age
-            </div>
-          </div>
-        </th>
-        <th
-          class="emotion-3"
-          colspan="1"
-          role="columnheader"
-          style="width: 150px;"
-        >
-          <div
-            class="emotion-4"
-          >
-            <div
-              class="emotion-5"
-            >
-              Name
-            </div>
-          </div>
-        </th>
-        <th
-          class="emotion-3"
-          colspan="1"
-          role="columnheader"
-          style="width: 20%;"
-        >
-          <div
-            class="emotion-4"
-          >
-            <div
-              class="emotion-5"
-            >
-              User Name
-            </div>
-          </div>
-        </th>
-        <th
-          class="emotion-3"
-          colspan="1"
-          role="columnheader"
-          style="width: 150px;"
-        >
-          <div
-            class="emotion-4"
-          >
-            <div
-              class="emotion-5"
-            >
-              Street
-            </div>
-          </div>
-        </th>
-        <th
-          class="emotion-3"
-          colspan="1"
-          role="columnheader"
-          style="width: 150px;"
-        >
-          <div
-            class="emotion-4"
-          >
-            <div
-              class="emotion-5"
-            >
-              City
-            </div>
-          </div>
-        </th>
-        <th
-          class="emotion-3"
-          colspan="1"
-          role="columnheader"
-          style="width: 150px;"
-        >
-          <div
-            class="emotion-4"
-          >
-            <div
-              class="emotion-5"
-            >
-              Zip Code
-            </div>
-          </div>
-        </th>
-      </tr>
-    </thead>
-    <tbody
-      class="emotion-21"
-      role="rowgroup"
-    >
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          22
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Urban Towne
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Kayleigh_Hauck
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Bechtelar Extensions
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Ruthshire
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          49065
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          21
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Hazle Hansen
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Hassie_Tillman73
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Reichel Street
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          West Audreymouth
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          53056-1765
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          21
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Jamarcus Stroman
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Orval13
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Hobart Park
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          West Rahul
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          60010
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          24
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Ms. Melany Senger
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Henderson.Kihn
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Lia Village
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          DuBuqueview
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          93383
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          25
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Granville Mann
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Christine.Bahringer10
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Hilpert Landing
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          North Autumnside
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          87215-3190
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          24
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Delia Feeney
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Greyson13
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Purdy Fords
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Zoilaside
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          96503
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          25
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Mr. Johanna Turcotte
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Dameon76
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Mante Junctions
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          North Roxane
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          17884-9473
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          23
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Renee Erdman
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Ben.Hammes
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Treutel Inlet
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Port Maiabury
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          21650
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          24
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Graham Brown
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Eloise.Schumm35
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Alia Port
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Port Brandt
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          80217-7245
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  .emotion-0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #ffffff;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.emotion-3 button {
-  width: 50px;
-  margin-left: 2px;
-  margin-right: 2px;
-}
-
-.emotion-4 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  width: 50px;
-  margin-left: 2px;
-  margin-right: 2px;
-}
-
-.emotion-5 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  display: inline-block;
-  text-align: center;
-  line-height: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: inherit;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  color: white;
-  background-color: #5c6ac4;
-  border: 0;
-  border-radius: 4px;
-  color: #333;
-  background-color: #f3f3f3;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
-}
-
-.emotion-5:disabled {
-  color: #aaa;
-}
-
-.emotion-12 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.emotion-13 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.emotion-13 input {
-  margin-left: 4px;
-  width: 100px;
-}
-
-.emotion-14 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: block;
-  width: 100%;
-  padding: 8px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  font-size: inherit;
-  line-height: inherit;
-  border: 1px solid;
-  border-radius: 4px;
-  color: inherit;
-  background-color: transparent;
-  padding: 4px;
-}
-
-<div
-    class="emotion-0"
-  >
-    <div
-      class="emotion-1"
-    >
-      Sonya Stracke
-    </div>
-    <div
-      class="emotion-2"
-    >
-      <div
-        class="emotion-3"
-      >
-        <div
-          class="emotion-4"
-        >
-          <button
-            class="emotion-5"
-          >
-            &lt;&lt;
-          </button>
-        </div>
-        <div
-          class="emotion-4"
-        >
-          <button
-            class="emotion-5"
-          >
-            &lt;
-          </button>
-        </div>
-        <div
-          class="emotion-4"
-        >
-          <button
-            class="emotion-5"
-            disabled=""
-          >
-            &gt;
-          </button>
-        </div>
-        <div
-          class="emotion-4"
-        >
-          <button
-            class="emotion-5"
-            disabled=""
-          >
-            &gt;&gt;
-          </button>
-        </div>
-      </div>
-      <div
-        class="emotion-12"
-      >
-        Lulu Greenholt
-      </div>
-      <div
-        class="emotion-13"
-      >
-        Mrs. Paolo Yundt
+        Glennie Casper
         <input
-          class="emotion-14"
+          class="emotion-13"
+          placeholder="jump to page..."
           type="number"
-          value="2"
+          value="1"
         />
       </div>
     </div>
@@ -4378,382 +3830,6 @@ exports[`Table pagination 2 snapshot 1`] = `
           98806
         </td>
       </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          22
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Nettie Runte
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Johnny.Marquardt30
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Larson Square
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Hannaton
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          81636
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          25
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Isabell Feil Jr.
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Rafaela.Gusikowski4
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Kaya Mountain
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Kemmerbury
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          01459
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          24
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Jillian Hoeger
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Annamae.Maggio23
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Darlene Course
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Earlenebury
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          70931
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          23
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Melyssa Herman
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Verona_Wiza
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Zulauf Circle
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Corkeryland
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          52057-0050
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          22
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Urban Towne
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Kayleigh_Hauck
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Bechtelar Extensions
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Ruthshire
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          49065
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          21
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Hazle Hansen
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Hassie_Tillman73
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Reichel Street
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          West Audreymouth
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          53056-1765
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          21
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Jamarcus Stroman
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Orval13
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Hobart Park
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          West Rahul
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          60010
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          24
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Ms. Melany Senger
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Henderson.Kihn
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Lia Village
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          DuBuqueview
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          93383
-        </td>
-      </tr>
     </tbody>
   </table>
   .emotion-0 {
@@ -4885,27 +3961,30 @@ exports[`Table pagination 2 snapshot 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.emotion-12 input {
-  margin-left: 4px;
-  width: 100px;
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 140px;
 }
 
-.emotion-13 {
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-15 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4922,7 +4001,17 @@ exports[`Table pagination 2 snapshot 1`] = `
   border-radius: 4px;
   color: inherit;
   background-color: transparent;
-  padding: 4px;
+}
+
+.emotion-16 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: -28px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  pointer-events: none;
 }
 
 <div
@@ -4930,9 +4019,7 @@ exports[`Table pagination 2 snapshot 1`] = `
   >
     <div
       class="emotion-1"
-    >
-      Dorian Cummings
-    </div>
+    />
     <div
       class="emotion-2"
     >
@@ -4981,12 +4068,57 @@ exports[`Table pagination 2 snapshot 1`] = `
       <div
         class="emotion-12"
       >
-        Wilmer Ruecker
-        <input
-          class="emotion-13"
-          type="number"
-          value="1"
-        />
+        Beth Jacobson
+      </div>
+      <div
+        class="emotion-13"
+      >
+        <div
+          class="emotion-14"
+        >
+          <select
+            aria-label="select number of rows per page"
+            class="emotion-15"
+          >
+            <option
+              value="10"
+            >
+              Chet Yundt
+            </option>
+            <option
+              value="20"
+            >
+              Chet Yundt
+            </option>
+            <option
+              value="30"
+            >
+              Chet Yundt
+            </option>
+            <option
+              value="40"
+            >
+              Chet Yundt
+            </option>
+            <option
+              value="50"
+            >
+              Chet Yundt
+            </option>
+          </select>
+          <svg
+            class="emotion-16"
+            fill="currentcolor"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   </div>
@@ -5225,42 +4357,183 @@ exports[`Table pagination 3 snapshot 1`] = `
           role="cell"
           style="width: 150px;"
         >
-          23
+          22
         </td>
         <td
           class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
-          Melyssa Herman
+          Edison Keebler
         </td>
         <td
           class="emotion-23"
           role="cell"
           style="width: 20%;"
         >
-          Verona_Wiza
+          Danielle_Pollich
         </td>
         <td
           class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
-          Zulauf Circle
+          Jayde Rapids
         </td>
         <td
           class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
-          Corkeryland
+          Montanaborough
         </td>
         <td
           class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
-          52057-0050
+          20635
+        </td>
+      </tr>
+      <tr
+        class="emotion-22"
+        role="row"
+      >
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          24
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          London Runolfsson
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 20%;"
+        >
+          Audreanne.Sanford
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Towne Cliff
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Langoshport
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          65133
+        </td>
+      </tr>
+      <tr
+        class="emotion-22"
+        role="row"
+      >
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          25
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Sebastian Gleason
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 20%;"
+        >
+          Johnathan.Klocko58
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Haley Drives
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          South Kiannaberg
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          58169
+        </td>
+      </tr>
+      <tr
+        class="emotion-22"
+        role="row"
+      >
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          25
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Gladys Baumbach
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 20%;"
+        >
+          Darien.Gutmann
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Anastasia Points
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          West Graycemouth
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          33850
         </td>
       </tr>
       <tr
@@ -5279,317 +4552,35 @@ exports[`Table pagination 3 snapshot 1`] = `
           role="cell"
           style="width: 150px;"
         >
-          Urban Towne
+          Ms. Jaunita Lubowitz
         </td>
         <td
           class="emotion-23"
           role="cell"
           style="width: 20%;"
         >
-          Kayleigh_Hauck
+          Kody.McClure
         </td>
         <td
           class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
-          Bechtelar Extensions
+          Lindgren Inlet
         </td>
         <td
           class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
-          Ruthshire
+          Grimesshire
         </td>
         <td
           class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
-          49065
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          21
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Hazle Hansen
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Hassie_Tillman73
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Reichel Street
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          West Audreymouth
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          53056-1765
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          21
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Jamarcus Stroman
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Orval13
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Hobart Park
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          West Rahul
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          60010
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          24
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Ms. Melany Senger
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Henderson.Kihn
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Lia Village
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          DuBuqueview
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          93383
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          25
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Granville Mann
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Christine.Bahringer10
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Hilpert Landing
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          North Autumnside
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          87215-3190
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          24
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Delia Feeney
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Greyson13
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Purdy Fords
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Zoilaside
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          96503
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          25
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Mr. Johanna Turcotte
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Dameon76
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Mante Junctions
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          North Roxane
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          17884-9473
+          27558-3367
         </td>
       </tr>
       <tr
@@ -5608,35 +4599,35 @@ exports[`Table pagination 3 snapshot 1`] = `
           role="cell"
           style="width: 150px;"
         >
-          Renee Erdman
+          Jacques Bernhard
         </td>
         <td
           class="emotion-23"
           role="cell"
           style="width: 20%;"
         >
-          Ben.Hammes
+          Nichole_Kozey4
         </td>
         <td
           class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
-          Treutel Inlet
+          Ramona Station
         </td>
         <td
           class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
-          Port Maiabury
+          Gunnerland
         </td>
         <td
           class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
-          21650
+          64856
         </td>
       </tr>
       <tr
@@ -5655,35 +4646,35 @@ exports[`Table pagination 3 snapshot 1`] = `
           role="cell"
           style="width: 150px;"
         >
-          Graham Brown
+          Dr. Rylee DuBuque
         </td>
         <td
           class="emotion-23"
           role="cell"
           style="width: 20%;"
         >
-          Eloise.Schumm35
+          Lewis.Vandervort7
         </td>
         <td
           class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
-          Alia Port
+          Kelly Landing
         </td>
         <td
           class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
-          Port Brandt
+          Lake Gabe
         </td>
         <td
           class="emotion-23"
           role="cell"
           style="width: 150px;"
         >
-          80217-7245
+          98806
         </td>
       </tr>
     </tbody>
@@ -5813,22 +4804,12 @@ exports[`Table pagination 3 snapshot 1`] = `
   color: #aaa;
 }
 
-.emotion-12 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
 <div
     class="emotion-0"
   >
     <div
       class="emotion-1"
-    >
-      Guillermo Zboncak
-    </div>
+    />
     <div
       class="emotion-2"
     >
@@ -5840,6 +4821,7 @@ exports[`Table pagination 3 snapshot 1`] = `
         >
           <button
             class="emotion-5"
+            disabled=""
           >
             &lt;&lt;
           </button>
@@ -5849,6 +4831,7 @@ exports[`Table pagination 3 snapshot 1`] = `
         >
           <button
             class="emotion-5"
+            disabled=""
           >
             &lt;
           </button>
@@ -5858,7 +4841,6 @@ exports[`Table pagination 3 snapshot 1`] = `
         >
           <button
             class="emotion-5"
-            disabled=""
           >
             &gt;
           </button>
@@ -5868,16 +4850,10 @@ exports[`Table pagination 3 snapshot 1`] = `
         >
           <button
             class="emotion-5"
-            disabled=""
           >
             &gt;&gt;
           </button>
         </div>
-      </div>
-      <div
-        class="emotion-12"
-      >
-        Stevie Braun
       </div>
     </div>
   </div>
@@ -6577,6 +5553,53 @@ exports[`Table pagination 4 snapshot 1`] = `
           70931
         </td>
       </tr>
+      <tr
+        class="emotion-22"
+        role="row"
+      >
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          23
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Melyssa Herman
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 20%;"
+        >
+          Verona_Wiza
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Zulauf Circle
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          Corkeryland
+        </td>
+        <td
+          class="emotion-23"
+          role="cell"
+          style="width: 150px;"
+        >
+          52057-0050
+        </td>
+      </tr>
     </tbody>
   </table>
   .emotion-0 {
@@ -6766,9 +5789,7 @@ exports[`Table pagination 4 snapshot 1`] = `
   >
     <div
       class="emotion-1"
-    >
-      Ms. Candida Conroy
-    </div>
+    />
     <div
       class="emotion-2"
     >
@@ -6817,7 +5838,7 @@ exports[`Table pagination 4 snapshot 1`] = `
       <div
         class="emotion-12"
       >
-        Paolo Fritsch
+        Dr. Ryley Hills
       </div>
       <div
         class="emotion-13"
@@ -6826,32 +5847,33 @@ exports[`Table pagination 4 snapshot 1`] = `
           class="emotion-14"
         >
           <select
+            aria-label="select number of rows per page"
             class="emotion-15"
           >
             <option
               value="10"
             >
-              Cassandra Williamson DVM
+              Maximus Tillman
             </option>
             <option
               value="20"
             >
-              Cassandra Williamson DVM
+              Maximus Tillman
             </option>
             <option
               value="30"
             >
-              Cassandra Williamson DVM
+              Maximus Tillman
             </option>
             <option
               value="40"
             >
-              Cassandra Williamson DVM
+              Maximus Tillman
             </option>
             <option
               value="50"
             >
-              Cassandra Williamson DVM
+              Maximus Tillman
             </option>
           </select>
           <svg
@@ -6866,884 +5888,6 @@ exports[`Table pagination 4 snapshot 1`] = `
               d="M7 10l5 5 5-5z"
             />
           </svg>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Table pagination snapshot 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  margin: 0;
-  border-collapse: collapse;
-  font-size: 14px;
-  line-height: 20px;
-  text-align: left;
-  width: 100%;
-  border-spacing: 0;
-}
-
-.emotion-0 p {
-  margin: 0;
-}
-
-.emotion-0 pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  max-width: 240px;
-  background-color: inherit;
-  margin-top: 8px;
-  margin-bottom: 0;
-}
-
-.emotion-0 a {
-  word-break: break-word;
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
-  color: #454f5b;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-}
-
-.emotion-3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  border: none;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-right: 8px;
-  padding-left: 16px;
-}
-
-.emotion-4 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-5 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  margin-right: 4px;
-}
-
-.emotion-21 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-}
-
-.emotion-21 tr:last-of-type {
-  border-bottom: 0;
-}
-
-.emotion-22 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.emotion-23 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 16px;
-  padding-right: 16px;
-  border-bottom: 0;
-}
-
-<table
-    class="emotion-0"
-    role="table"
-  >
-    <thead
-      class="emotion-1"
-    >
-      <tr
-        class="emotion-2"
-        role="row"
-      >
-        <th
-          class="emotion-3"
-          colspan="1"
-          role="columnheader"
-          style="width: 150px;"
-        >
-          <div
-            class="emotion-4"
-          >
-            <div
-              class="emotion-5"
-            >
-              Age
-            </div>
-          </div>
-        </th>
-        <th
-          class="emotion-3"
-          colspan="1"
-          role="columnheader"
-          style="width: 150px;"
-        >
-          <div
-            class="emotion-4"
-          >
-            <div
-              class="emotion-5"
-            >
-              Name
-            </div>
-          </div>
-        </th>
-        <th
-          class="emotion-3"
-          colspan="1"
-          role="columnheader"
-          style="width: 20%;"
-        >
-          <div
-            class="emotion-4"
-          >
-            <div
-              class="emotion-5"
-            >
-              User Name
-            </div>
-          </div>
-        </th>
-        <th
-          class="emotion-3"
-          colspan="1"
-          role="columnheader"
-          style="width: 150px;"
-        >
-          <div
-            class="emotion-4"
-          >
-            <div
-              class="emotion-5"
-            >
-              Street
-            </div>
-          </div>
-        </th>
-        <th
-          class="emotion-3"
-          colspan="1"
-          role="columnheader"
-          style="width: 150px;"
-        >
-          <div
-            class="emotion-4"
-          >
-            <div
-              class="emotion-5"
-            >
-              City
-            </div>
-          </div>
-        </th>
-        <th
-          class="emotion-3"
-          colspan="1"
-          role="columnheader"
-          style="width: 150px;"
-        >
-          <div
-            class="emotion-4"
-          >
-            <div
-              class="emotion-5"
-            >
-              Zip Code
-            </div>
-          </div>
-        </th>
-      </tr>
-    </thead>
-    <tbody
-      class="emotion-21"
-      role="rowgroup"
-    >
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          22
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Edison Keebler
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Danielle_Pollich
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Jayde Rapids
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Montanaborough
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          20635
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          24
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          London Runolfsson
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Audreanne.Sanford
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Towne Cliff
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Langoshport
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          65133
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          25
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Sebastian Gleason
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Johnathan.Klocko58
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Haley Drives
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          South Kiannaberg
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          58169
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          25
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Gladys Baumbach
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Darien.Gutmann
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Anastasia Points
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          West Graycemouth
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          33850
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          22
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Ms. Jaunita Lubowitz
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Kody.McClure
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Lindgren Inlet
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Grimesshire
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          27558-3367
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          23
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Jacques Bernhard
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Nichole_Kozey4
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Ramona Station
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Gunnerland
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          64856
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          24
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Dr. Rylee DuBuque
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Lewis.Vandervort7
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Kelly Landing
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Lake Gabe
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          98806
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          22
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Nettie Runte
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Johnny.Marquardt30
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Larson Square
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Hannaton
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          81636
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          25
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Isabell Feil Jr.
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Rafaela.Gusikowski4
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Kaya Mountain
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Kemmerbury
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          01459
-        </td>
-      </tr>
-      <tr
-        class="emotion-22"
-        role="row"
-      >
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          24
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Jillian Hoeger
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 20%;"
-        >
-          Annamae.Maggio23
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Darlene Course
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          Earlenebury
-        </td>
-        <td
-          class="emotion-23"
-          role="cell"
-          style="width: 150px;"
-        >
-          70931
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  .emotion-0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #ffffff;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.emotion-3 button {
-  width: 50px;
-  margin-left: 2px;
-  margin-right: 2px;
-}
-
-.emotion-4 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  width: 50px;
-  margin-left: 2px;
-  margin-right: 2px;
-}
-
-.emotion-5 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  display: inline-block;
-  text-align: center;
-  line-height: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: inherit;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  color: white;
-  background-color: #5c6ac4;
-  border: 0;
-  border-radius: 4px;
-  color: #333;
-  background-color: #f3f3f3;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
-}
-
-.emotion-5:disabled {
-  color: #aaa;
-}
-
-<div
-    class="emotion-0"
-  >
-    <div
-      class="emotion-1"
-    >
-      Total: 20 records
-    </div>
-    <div
-      class="emotion-2"
-    >
-      <div
-        class="emotion-3"
-      >
-        <div
-          class="emotion-4"
-        >
-          <button
-            class="emotion-5"
-            disabled=""
-          >
-            &lt;&lt;
-          </button>
-        </div>
-        <div
-          class="emotion-4"
-        >
-          <button
-            class="emotion-5"
-            disabled=""
-          >
-            &lt;
-          </button>
-        </div>
-        <div
-          class="emotion-4"
-        >
-          <button
-            class="emotion-5"
-          >
-            &gt;
-          </button>
-        </div>
-        <div
-          class="emotion-4"
-        >
-          <button
-            class="emotion-5"
-          >
-            &gt;&gt;
-          </button>
         </div>
       </div>
     </div>

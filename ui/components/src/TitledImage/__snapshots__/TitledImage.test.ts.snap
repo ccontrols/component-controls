@@ -44,12 +44,12 @@ exports[`TitledImage overview 0 snapshot 1`] = `
       alt="alt text"
       class="emotion-1"
       src="https://github.com/ccontrols/component-controls/raw/master/misc/storybook-custom-docs/images/simple-page.jpg"
-      title="some image title"
+      title="Joana VonRueden"
     />
     <span
       class="emotion-2"
     >
-      some image title
+      Joana VonRueden
     </span>
   </div>
 </DocumentFragment>
@@ -99,12 +99,12 @@ exports[`TitledImage overview 1 snapshot 1`] = `
       alt="alt text"
       class="emotion-1"
       src="https://github.com/ccontrols/component-controls/raw/master/misc/storybook-custom-docs/images/simple-page.jpg"
-      title="some image title"
+      title="Leo Lakin"
     />
     <span
       class="emotion-2"
     >
-      some image title
+      Leo Lakin
     </span>
   </div>
 </DocumentFragment>
@@ -154,12 +154,12 @@ exports[`TitledImage overview 2 snapshot 1`] = `
       alt="alt text"
       class="emotion-1"
       src="https://github.com/ccontrols/component-controls/raw/master/misc/storybook-custom-docs/images/simple-page.jpg"
-      title="some image title"
+      title="Destin Turcotte"
     />
     <span
       class="emotion-2"
     >
-      some image title
+      Destin Turcotte
     </span>
   </div>
 </DocumentFragment>
@@ -209,12 +209,12 @@ exports[`TitledImage overview 3 snapshot 1`] = `
       alt="alt text"
       class="emotion-1"
       src="https://github.com/ccontrols/component-controls/raw/master/misc/storybook-custom-docs/images/simple-page.jpg"
-      title="some image title"
+      title="Daniela Monahan"
     />
     <span
       class="emotion-2"
     >
-      some image title
+      Daniela Monahan
     </span>
   </div>
 </DocumentFragment>
@@ -264,67 +264,12 @@ exports[`TitledImage overview 4 snapshot 1`] = `
       alt="alt text"
       class="emotion-1"
       src="https://github.com/ccontrols/component-controls/raw/master/misc/storybook-custom-docs/images/simple-page.jpg"
-      title="some image title"
+      title="Jaunita Quitzon"
     />
     <span
       class="emotion-2"
     >
-      some image title
-    </span>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`TitledImage overview snapshot 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  max-width: 100%;
-  height: auto;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  color: #69768C;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  font-size: 14px;
-}
-
-<div
-    class="emotion-0"
-  >
-    <img
-      alt="alt text"
-      class="emotion-1"
-      src="https://github.com/ccontrols/component-controls/raw/master/misc/storybook-custom-docs/images/simple-page.jpg"
-      title="some image title"
-    />
-    <span
-      class="emotion-2"
-    >
-      some image title
+      Jaunita Quitzon
     </span>
   </div>
 </DocumentFragment>

@@ -37,7 +37,7 @@ exports[`ProgressIndicator overview 0 snapshot 1`] = `
   background-color: #f6f6f6;
   border-radius: 9999px;
   border: none;
-  color: red;
+  color: #0c3a21;
 }
 
 .emotion-1::-webkit-progress-bar {
@@ -67,7 +67,7 @@ exports[`ProgressIndicator overview 0 snapshot 1`] = `
     >
       <progress
         class="emotion-1"
-        max="10"
+        max="14"
         value="5"
       />
       <span
@@ -117,7 +117,7 @@ exports[`ProgressIndicator overview 1 snapshot 1`] = `
   background-color: #f6f6f6;
   border-radius: 9999px;
   border: none;
-  color: red;
+  color: #642242;
 }
 
 .emotion-1::-webkit-progress-bar {
@@ -147,13 +147,13 @@ exports[`ProgressIndicator overview 1 snapshot 1`] = `
     >
       <progress
         class="emotion-1"
-        max="8"
-        value="4"
+        max="15"
+        value="6"
       />
       <span
         class="emotion-2"
       >
-        4
+        6
       </span>
     </div>
   </div>
@@ -197,7 +197,7 @@ exports[`ProgressIndicator overview 2 snapshot 1`] = `
   background-color: #f6f6f6;
   border-radius: 9999px;
   border: none;
-  color: red;
+  color: #5b7f18;
 }
 
 .emotion-1::-webkit-progress-bar {
@@ -227,13 +227,13 @@ exports[`ProgressIndicator overview 2 snapshot 1`] = `
     >
       <progress
         class="emotion-1"
-        max="9"
-        value="5"
+        max="10"
+        value="4"
       />
       <span
         class="emotion-2"
       >
-        5
+        4
       </span>
     </div>
   </div>
@@ -277,7 +277,7 @@ exports[`ProgressIndicator overview 3 snapshot 1`] = `
   background-color: #f6f6f6;
   border-radius: 9999px;
   border: none;
-  color: red;
+  color: #4e6404;
 }
 
 .emotion-1::-webkit-progress-bar {
@@ -307,13 +307,13 @@ exports[`ProgressIndicator overview 3 snapshot 1`] = `
     >
       <progress
         class="emotion-1"
-        max="10"
-        value="5"
+        max="6"
+        value="2"
       />
       <span
         class="emotion-2"
       >
-        5
+        2
       </span>
     </div>
   </div>
@@ -357,7 +357,7 @@ exports[`ProgressIndicator overview 4 snapshot 1`] = `
   background-color: #f6f6f6;
   border-radius: 9999px;
   border: none;
-  color: red;
+  color: #2c5e74;
 }
 
 .emotion-1::-webkit-progress-bar {
@@ -387,93 +387,13 @@ exports[`ProgressIndicator overview 4 snapshot 1`] = `
     >
       <progress
         class="emotion-1"
-        max="20"
+        max="5"
         value="5"
       />
       <span
         class="emotion-2"
       >
         5
-      </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`ProgressIndicator overview snapshot 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: block;
-  width: 100%;
-  height: 4px;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  color: #5c6ac4;
-  background-color: #f6f6f6;
-  border-radius: 9999px;
-  border: none;
-  color: red;
-}
-
-.emotion-1::-webkit-progress-bar {
-  background-color: transparent;
-}
-
-.emotion-1::-webkit-progress-value {
-  background-color: currentcolor;
-}
-
-.emotion-1::-moz-progress-bar {
-  background-color: currentcolor;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  font-size: 12px;
-}
-
-<div
-    style="width: 100%;"
-  >
-    <div
-      class="emotion-0"
-    >
-      <progress
-        class="emotion-1"
-        max="10"
-        value="3"
-      />
-      <span
-        class="emotion-2"
-      >
-        3
       </span>
     </div>
   </div>

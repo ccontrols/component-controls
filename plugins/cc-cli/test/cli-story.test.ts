@@ -1,6 +1,8 @@
+import { setLogOptions } from '@component-controls/logger';
 import { runTests } from './run-cli-tests';
 
 describe('cli-story', () => {
+  setLogOptions({ logLevel: 'none' });
   runTests('create cjs story', ['-g', 'story', '-f', 'cjs']);
   runTests('create esm story', ['-g', 'story', '-f', 'esm']);
   runTests('create typescript story', ['-g', 'story', '-f', 'ts']);

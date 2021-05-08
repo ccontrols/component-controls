@@ -101,7 +101,7 @@ exports[`Shield overview 0 snapshot 1`] = `
   padding-right: 4px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  background-color: #227fc0;
+  background-color: #071542;
   color: #ffffff;
 }
 
@@ -111,7 +111,7 @@ exports[`Shield overview 0 snapshot 1`] = `
     <div
       class="emotion-1"
     >
-      Barry Harris
+      Jaden Kozey
     </div>
     <div
       class="emotion-2"
@@ -162,7 +162,7 @@ exports[`Shield overview 1 snapshot 1`] = `
   padding-right: 4px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  background-color: #227fc0;
+  background-color: #3e1402;
   color: #ffffff;
 }
 
@@ -172,7 +172,7 @@ exports[`Shield overview 1 snapshot 1`] = `
     <div
       class="emotion-1"
     >
-      Dakota Lang I
+      Violet Jerde
     </div>
     <div
       class="emotion-2"
@@ -223,7 +223,7 @@ exports[`Shield overview 2 snapshot 1`] = `
   padding-right: 4px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  background-color: #227fc0;
+  background-color: #303c4a;
   color: #ffffff;
 }
 
@@ -233,7 +233,7 @@ exports[`Shield overview 2 snapshot 1`] = `
     <div
       class="emotion-1"
     >
-      Rollin Hand
+      Oren Hermiston
     </div>
     <div
       class="emotion-2"
@@ -284,7 +284,7 @@ exports[`Shield overview 3 snapshot 1`] = `
   padding-right: 4px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  background-color: #227fc0;
+  background-color: #4b412c;
   color: #ffffff;
 }
 
@@ -294,7 +294,7 @@ exports[`Shield overview 3 snapshot 1`] = `
     <div
       class="emotion-1"
     >
-      Damaris Ullrich
+      Randy Jones
     </div>
     <div
       class="emotion-2"
@@ -345,7 +345,7 @@ exports[`Shield overview 4 snapshot 1`] = `
   padding-right: 4px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  background-color: #227fc0;
+  background-color: #07632f;
   color: #ffffff;
 }
 
@@ -355,68 +355,7 @@ exports[`Shield overview 4 snapshot 1`] = `
     <div
       class="emotion-1"
     >
-      Kelli Sipes
-    </div>
-    <div
-      class="emotion-2"
-    >
-      1.0.0
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Shield overview snapshot 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  font-size: 12px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  background-color: #69768C;
-  color: #ffffff;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  background-color: #227fc0;
-  color: #ffffff;
-}
-
-<div
-    class="emotion-0"
-  >
-    <div
-      class="emotion-1"
-    >
-      some text
+      Vicenta Swaniawski
     </div>
     <div
       class="emotion-2"
@@ -528,8 +467,8 @@ exports[`Shield themeColor 0 snapshot 1`] = `
   padding-right: 4px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  background-color: #227fc0;
-  color: #ffffff;
+  background-color: #ff9800;
+  color: #454f5b;
 }
 
 <div
@@ -542,7 +481,9 @@ exports[`Shield themeColor 0 snapshot 1`] = `
     </div>
     <div
       class="emotion-2"
-    />
+    >
+      palette2
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -587,7 +528,7 @@ exports[`Shield themeColor 1 snapshot 1`] = `
   padding-right: 4px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  background-color: #227fc0;
+  background-color: #8338ec;
   color: #ffffff;
 }
 
@@ -601,7 +542,9 @@ exports[`Shield themeColor 1 snapshot 1`] = `
     </div>
     <div
       class="emotion-2"
-    />
+    >
+      accentPalette0
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -646,8 +589,8 @@ exports[`Shield themeColor 2 snapshot 1`] = `
   padding-right: 4px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  background-color: #227fc0;
-  color: #ffffff;
+  background-color: #4caf50;
+  color: #454f5b;
 }
 
 <div
@@ -660,7 +603,9 @@ exports[`Shield themeColor 2 snapshot 1`] = `
     </div>
     <div
       class="emotion-2"
-    />
+    >
+      status_passed
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -705,7 +650,7 @@ exports[`Shield themeColor 3 snapshot 1`] = `
   padding-right: 4px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  background-color: #227fc0;
+  background-color: #ff006e;
   color: #ffffff;
 }
 
@@ -719,7 +664,9 @@ exports[`Shield themeColor 3 snapshot 1`] = `
     </div>
     <div
       class="emotion-2"
-    />
+    >
+      accentPalette2
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -764,7 +711,7 @@ exports[`Shield themeColor 4 snapshot 1`] = `
   padding-right: 4px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  background-color: #227fc0;
+  background-color: #1976d2;
   color: #ffffff;
 }
 
@@ -778,66 +725,9 @@ exports[`Shield themeColor 4 snapshot 1`] = `
     </div>
     <div
       class="emotion-2"
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Shield themeColor snapshot 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  font-size: 12px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  background-color: #69768C;
-  color: #ffffff;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  background-color: #227fc0;
-  color: #ffffff;
-}
-
-<div
-    class="emotion-0"
-  >
-    <div
-      class="emotion-1"
     >
-      color
+      palette5
     </div>
-    <div
-      class="emotion-2"
-    />
   </div>
 </DocumentFragment>
 `;

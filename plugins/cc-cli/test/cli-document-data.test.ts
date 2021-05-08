@@ -1,8 +1,6 @@
-import { randomizeSeed } from '@component-controls/core';
 import { runTests } from './run-cli-tests';
 
 describe('cli-document-data', () => {
-  randomizeSeed(11223344);
   runTests('create cjs document', [
     '-g',
     'doc',

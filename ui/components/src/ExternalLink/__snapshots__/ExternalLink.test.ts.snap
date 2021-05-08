@@ -13,11 +13,11 @@ exports[`ExternalLink overview 0 snapshot 1`] = `
 
 <a
     class="emotion-0"
-    href="http://una.org"
+    href="https://shyann.biz"
     rel="noopener noreferrer"
     target="_blank"
   >
-    http://una.org
+    https://shyann.biz
   </a>
 </DocumentFragment>
 `;
@@ -35,11 +35,11 @@ exports[`ExternalLink overview 1 snapshot 1`] = `
 
 <a
     class="emotion-0"
-    href="http://bryce.name"
+    href="https://lera.info"
     rel="noopener noreferrer"
     target="_blank"
   >
-    http://bryce.name
+    https://lera.info
   </a>
 </DocumentFragment>
 `;
@@ -57,11 +57,11 @@ exports[`ExternalLink overview 2 snapshot 1`] = `
 
 <a
     class="emotion-0"
-    href="https://barbara.net"
+    href="https://bella.name"
     rel="noopener noreferrer"
     target="_blank"
   >
-    https://barbara.net
+    https://bella.name
   </a>
 </DocumentFragment>
 `;
@@ -79,11 +79,11 @@ exports[`ExternalLink overview 3 snapshot 1`] = `
 
 <a
     class="emotion-0"
-    href="http://beatrice.com"
+    href="https://heber.net"
     rel="noopener noreferrer"
     target="_blank"
   >
-    http://beatrice.com
+    https://heber.net
   </a>
 </DocumentFragment>
 `;
@@ -101,33 +101,11 @@ exports[`ExternalLink overview 4 snapshot 1`] = `
 
 <a
     class="emotion-0"
-    href="https://jayde.us"
+    href="http://gudrun.org"
     rel="noopener noreferrer"
     target="_blank"
   >
-    https://jayde.us
-  </a>
-</DocumentFragment>
-`;
-
-exports[`ExternalLink overview snapshot 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  color: #5c6ac4;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-<a
-    class="emotion-0"
-    href="https://www.google.com"
-    rel="noopener noreferrer"
-    target="_blank"
-  >
-    https://www.google.com
+    http://gudrun.org
   </a>
 </DocumentFragment>
 `;

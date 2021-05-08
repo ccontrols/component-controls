@@ -1,34 +1,150 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`VariantButton special-chars overview snapshot 1`] = `
+exports[`VariantButton 0 overview snapshot 1`] = `
 <DocumentFragment>
   <button
     style="color: rgb(242, 242, 242); background-color: rgb(47, 128, 237); font-size: 12px; padding: 10px 20px; border-radius: 8px; border: 1px solid #000000; display: flex; flex-direction: row; align-items: center;"
   >
     <div
-      style="display: flex; align-items: center;"
+      data-testid="label"
+      style="padding: 0px 10px;"
     >
-      <svg
-        aria-hidden="true"
-        class="octicon"
-        fill="currentColor"
-        height="16"
-        role="img"
-        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-        viewBox="0 0 16 16"
-        width="16"
-      >
-        <path
-          d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z"
-          fill-rule="evenodd"
-        />
-      </svg>
+      Gisselle Mohr
     </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`VariantButton 1 overview snapshot 1`] = `
+<DocumentFragment>
+  <button
+    style="color: rgb(242, 242, 242); background-color: rgb(47, 128, 237); font-size: 22px; padding: 10px 20px; border-radius: 8px; border: 1px solid #000000; display: flex; flex-direction: row; align-items: center;"
+  >
     <div
       data-testid="label"
       style="padding: 0px 10px;"
     >
-      s%~\`
+      Barbara Brakus
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`VariantButton 2 overview snapshot 1`] = `
+<DocumentFragment>
+  <button
+    style="color: rgb(242, 242, 242); background-color: rgb(47, 128, 237); font-size: 22px; padding: 10px 20px; border-radius: 8px; border: 1px solid #000000; display: flex; flex-direction: row; align-items: center;"
+  >
+    <div
+      data-testid="label"
+      style="padding: 0px 10px;"
+    >
+      Adah Nolan
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`VariantButton 3 overview snapshot 1`] = `
+<DocumentFragment>
+  <button
+    style="color: rgb(242, 242, 242); background-color: rgb(47, 128, 237); font-size: 20px; padding: 10px 20px; border-radius: 8px; border: 1px solid #000000; display: flex; flex-direction: row; align-items: center;"
+  >
+    <div
+      data-testid="label"
+      style="padding: 0px 10px;"
+    >
+      Jon Will
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`VariantButton 4 overview snapshot 1`] = `
+<DocumentFragment>
+  <button
+    style="color: rgb(242, 242, 242); background-color: rgb(47, 128, 237); font-size: 16px; padding: 10px 20px; border-radius: 8px; border: 1px solid #000000; display: flex; flex-direction: row; align-items: center;"
+  >
+    <div
+      data-testid="label"
+      style="padding: 0px 10px;"
+    >
+      Mr. Dulce Rice
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`VariantButton 5 overview snapshot 1`] = `
+<DocumentFragment>
+  <button
+    style="color: rgb(242, 242, 242); background-color: rgb(47, 128, 237); font-size: 29px; padding: 10px 20px; border-radius: 8px; border: 1px solid #000000; display: flex; flex-direction: row; align-items: center;"
+  >
+    <div
+      data-testid="label"
+      style="padding: 0px 10px;"
+    >
+      Mrs. Jermey Jacobson
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`VariantButton 6 overview snapshot 1`] = `
+<DocumentFragment>
+  <button
+    style="color: rgb(242, 242, 242); background-color: rgb(47, 128, 237); font-size: 16px; padding: 10px 20px; border-radius: 8px; border: 1px solid #000000; display: flex; flex-direction: row; align-items: center;"
+  >
+    <div
+      data-testid="label"
+      style="padding: 0px 10px;"
+    >
+      Clark Hickle
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`VariantButton 7 overview snapshot 1`] = `
+<DocumentFragment>
+  <button
+    style="color: rgb(242, 242, 242); background-color: rgb(47, 128, 237); font-size: 27px; padding: 10px 20px; border-radius: 8px; border: 1px solid #000000; display: flex; flex-direction: row; align-items: center;"
+  >
+    <div
+      data-testid="label"
+      style="padding: 0px 10px;"
+    >
+      Ibrahim Purdy
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`VariantButton 8 overview snapshot 1`] = `
+<DocumentFragment>
+  <button
+    style="color: rgb(242, 242, 242); background-color: rgb(47, 128, 237); font-size: 16px; padding: 10px 20px; border-radius: 8px; border: 1px solid #000000; display: flex; flex-direction: row; align-items: center;"
+  >
+    <div
+      data-testid="label"
+      style="padding: 0px 10px;"
+    >
+      Jody Legros
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`VariantButton 9 overview snapshot 1`] = `
+<DocumentFragment>
+  <button
+    style="color: rgb(242, 242, 242); background-color: rgb(47, 128, 237); font-size: 12px; padding: 10px 20px; border-radius: 8px; border: 1px solid #000000; display: flex; flex-direction: row; align-items: center;"
+  >
+    <div
+      data-testid="label"
+      style="padding: 0px 10px;"
+    >
+      Ford Kunze
     </div>
   </button>
 </DocumentFragment>
