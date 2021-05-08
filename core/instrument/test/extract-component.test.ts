@@ -1,14 +1,7 @@
 import path from 'path';
 import { Component } from '@component-controls/core';
-import {
-  defaultParserOptions,
-  defaultResolveOptions,
-  LoadingDocStore,
-} from '../src/index';
-import {
-  extractComponent,
-  extractStoreComponent,
-} from '../src/babel/extract-component';
+import { defaultParserOptions, defaultResolveOptions } from '../src/index';
+import { extractComponent } from '../src/babel/extract-component';
 
 export type ComponentCallback = (component: Component) => void;
 export const componentFixture = (
