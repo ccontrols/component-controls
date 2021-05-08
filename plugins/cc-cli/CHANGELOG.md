@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.10.0](https://github.com/ccontrols/component-controls/compare/v3.9.1...v3.10.0) (2021-05-08)
+
+
+### Bug Fixes
+
+* do not generate data if no controls ([9c19117](https://github.com/ccontrols/component-controls/commit/9c19117e832dfb315273a6d961c73dbdfb5dcb63))
+* do not generate record if no data ([f29ccb3](https://github.com/ccontrols/component-controls/commit/f29ccb37e099d55d6aff971f807d773e27628947))
+* enable support for esm data files ([25b3336](https://github.com/ccontrols/component-controls/commit/25b3336501cd54602fc620a8c7a2f598b78acddc))
+* load existing data files ([cbdeaa3](https://github.com/ccontrols/component-controls/commit/cbdeaa36a7940b522c718f743c42adb6fa6816f4))
+* remove running tests in test:create ([ee01409](https://github.com/ccontrols/component-controls/commit/ee0140923cbb234353de4dcd85a49a5f3a32fb8a))
+
+
+### Features
+
+* data-driven testing template ([249db17](https://github.com/ccontrols/component-controls/commit/249db1775b10d34353ded5284f45a98953dfe97b))
+* document-level data-driven tests ([806b16a](https://github.com/ccontrols/component-controls/commit/806b16a622e839ece9fca625e83a6d6427b49753))
+* initial values data testing ([3f5d298](https://github.com/ccontrols/component-controls/commit/3f5d2983c1f589cd4dd297d231309fbcc3b9c7da))
+* logger custom colors ([1e416a3](https://github.com/ccontrols/component-controls/commit/1e416a3ae8aa465681e4d8580ffedc3fd918e44b))
+* story level data driven tests ([591fc8c](https://github.com/ccontrols/component-controls/commit/591fc8ceb50307443395df84b2b52c165b6b7cb4))
+* typescript buildtime config files ([ad17804](https://github.com/ccontrols/component-controls/commit/ad1780481e5593d39ed8fa5cccda6b19acdac140))
+
+
+
+
+
 ## [3.9.1](https://github.com/ccontrols/component-controls/compare/v3.9.0...v3.9.1) (2021-05-01)
 
 **Note:** Version bump only for package @component-controls/cc-cli

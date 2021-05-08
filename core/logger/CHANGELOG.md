@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.10.0](https://github.com/ccontrols/component-controls/compare/v3.9.1...v3.10.0) (2021-05-08)
+
+
+### Features
+
+* logger custom colors ([1e416a3](https://github.com/ccontrols/component-controls/commit/1e416a3ae8aa465681e4d8580ffedc3fd918e44b))
+
+
+
+
+
 ## [3.8.2](https://github.com/ccontrols/component-controls/compare/v3.8.1...v3.8.2) (2021-04-30)
 
 **Note:** Version bump only for package @component-controls/logger

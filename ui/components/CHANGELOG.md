@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.10.0](https://github.com/ccontrols/component-controls/compare/v3.9.1...v3.10.0) (2021-05-08)
+
+
+### Bug Fixes
+
+* load existing data files ([cbdeaa3](https://github.com/ccontrols/component-controls/commit/cbdeaa36a7940b522c718f743c42adb6fa6816f4))
+
+
+### Features
+
+* data-driven testing for components ([7a24899](https://github.com/ccontrols/component-controls/commit/7a248999d8bae247913c5f523bed6a083964af6a))
+
+
+
+
+
 ## [3.9.1](https://github.com/ccontrols/component-controls/compare/v3.9.0...v3.9.1) (2021-05-01)
 
 **Note:** Version bump only for package @component-controls/components

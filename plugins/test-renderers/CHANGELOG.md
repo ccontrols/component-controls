@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.10.0](https://github.com/ccontrols/component-controls/compare/v3.9.1...v3.10.0) (2021-05-08)
+
+
+### Features
+
+* document-level data-driven tests ([806b16a](https://github.com/ccontrols/component-controls/commit/806b16a622e839ece9fca625e83a6d6427b49753))
+* initial values data testing ([3f5d298](https://github.com/ccontrols/component-controls/commit/3f5d2983c1f589cd4dd297d231309fbcc3b9c7da))
+
+
+
+
+
 # [3.9.0](https://github.com/ccontrols/component-controls/compare/v3.8.3...v3.9.0) (2021-04-30)
 
 **Note:** Version bump only for package @component-controls/test-renderers

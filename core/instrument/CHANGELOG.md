@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.10.0](https://github.com/ccontrols/component-controls/compare/v3.9.1...v3.10.0) (2021-05-08)
+
+
+### Bug Fixes
+
+* liniting issue ([7ba014a](https://github.com/ccontrols/component-controls/commit/7ba014aea31365a1aec570ca4a53f3231ee5a2ff))
+* remove running tests in test:create ([ee01409](https://github.com/ccontrols/component-controls/commit/ee0140923cbb234353de4dcd85a49a5f3a32fb8a))
+
+
+### Features
+
+* logger custom colors ([1e416a3](https://github.com/ccontrols/component-controls/commit/1e416a3ae8aa465681e4d8580ffedc3fd918e44b))
+
+
+
+
+
 # [3.9.0](https://github.com/ccontrols/component-controls/compare/v3.8.3...v3.9.0) (2021-04-30)
 
 

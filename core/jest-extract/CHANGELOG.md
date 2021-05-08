@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.10.0](https://github.com/ccontrols/component-controls/compare/v3.9.1...v3.10.0) (2021-05-08)
+
+
+### Bug Fixes
+
+* load existing data files ([cbdeaa3](https://github.com/ccontrols/component-controls/commit/cbdeaa36a7940b522c718f743c42adb6fa6816f4))
+
+
+### Features
+
+* data-driven testing template ([249db17](https://github.com/ccontrols/component-controls/commit/249db1775b10d34353ded5284f45a98953dfe97b))
+* document-level data-driven tests ([806b16a](https://github.com/ccontrols/component-controls/commit/806b16a622e839ece9fca625e83a6d6427b49753))
+
+
+
+
+
 # [3.9.0](https://github.com/ccontrols/component-controls/compare/v3.8.3...v3.9.0) (2021-04-30)
 
 **Note:** Version bump only for package @component-controls/jest-extract

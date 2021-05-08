@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.10.0](https://github.com/ccontrols/component-controls/compare/v3.9.1...v3.10.0) (2021-05-08)
+
+
+### Features
+
+* typescript buildtime config files ([ad17804](https://github.com/ccontrols/component-controls/commit/ad1780481e5593d39ed8fa5cccda6b19acdac140))
+
+
+
+
+
 # [3.9.0](https://github.com/ccontrols/component-controls/compare/v3.8.3...v3.9.0) (2021-04-30)
 
 **Note:** Version bump only for package @component-controls/config

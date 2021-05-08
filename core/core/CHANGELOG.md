@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.10.0](https://github.com/ccontrols/component-controls/compare/v3.9.1...v3.10.0) (2021-05-08)
+
+
+### Bug Fixes
+
+* load existing data files ([cbdeaa3](https://github.com/ccontrols/component-controls/commit/cbdeaa36a7940b522c718f743c42adb6fa6816f4))
+* ts configs ([34e35a1](https://github.com/ccontrols/component-controls/commit/34e35a11c555f995ddbe81fc6515d4bd17bfe398))
+
+
+### Features
+
+* data-driven testing template ([249db17](https://github.com/ccontrols/component-controls/commit/249db1775b10d34353ded5284f45a98953dfe97b))
+* initial values data testing ([3f5d298](https://github.com/ccontrols/component-controls/commit/3f5d2983c1f589cd4dd297d231309fbcc3b9c7da))
+* typescript buildtime config files ([ad17804](https://github.com/ccontrols/component-controls/commit/ad1780481e5593d39ed8fa5cccda6b19acdac140))
+
+
+
+
+
 # [3.9.0](https://github.com/ccontrols/component-controls/compare/v3.8.3...v3.9.0) (2021-04-30)
 
 **Note:** Version bump only for package @component-controls/core
