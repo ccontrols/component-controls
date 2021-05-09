@@ -320,7 +320,7 @@ const controlShortcuts = (
         return { type: ControlTypes.OPTIONS, ...propControl, options: control };
       }
       if (
-        control.type === ControlTypes.OBJECT &&
+        control?.type === ControlTypes.OBJECT &&
         typeof control.value === 'object'
       ) {
         return {
