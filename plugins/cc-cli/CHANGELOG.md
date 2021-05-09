@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.10.1](https://github.com/ccontrols/component-controls/compare/v3.10.0...v3.10.1) (2021-05-09)
+
+**Note:** Version bump only for package @component-controls/cc-cli
+
+
+
+
+
 # [3.10.0](https://github.com/ccontrols/component-controls/compare/v3.9.1...v3.10.0) (2021-05-08)
 
 

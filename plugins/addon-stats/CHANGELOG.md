@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.10.1](https://github.com/ccontrols/component-controls/compare/v3.10.0...v3.10.1) (2021-05-09)
+
+
+### Bug Fixes
+
+* table header centered labels ([7e32468](https://github.com/ccontrols/component-controls/commit/7e32468bd12819ca21b69bf7ea6ea18a124606a4))
+
+
+
+
+
 # [3.10.0](https://github.com/ccontrols/component-controls/compare/v3.9.1...v3.10.0) (2021-05-08)
 
 **Note:** Version bump only for package @component-controls/addon-stats
