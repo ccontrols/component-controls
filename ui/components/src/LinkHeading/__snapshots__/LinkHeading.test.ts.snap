@@ -76,11 +76,11 @@ exports[`LinkHeading overview 0 snapshot 1`] = `
         class="emotion-1"
       >
         <a
-          aria-label="navigate to angelica-howell section"
+          aria-label="navigate to Angelica Howell section"
           class="emotion-2"
           data-id="angelica-howell"
           data-level="1"
-          data-title="angelica-howell"
+          data-title="Angelica Howell"
           href="http://localhost/#angelica-howell"
         >
           <svg
@@ -188,11 +188,11 @@ exports[`LinkHeading overview 1 snapshot 1`] = `
         class="emotion-1"
       >
         <a
-          aria-label="navigate to mrs--rosalyn-moen section"
+          aria-label="navigate to Mrs. Rosalyn Moen section"
           class="emotion-2"
           data-id="mrs--rosalyn-moen"
           data-level="6"
-          data-title="mrs--rosalyn-moen"
+          data-title="Mrs. Rosalyn Moen"
           href="http://localhost/#mrs--rosalyn-moen"
         >
           <svg
@@ -298,11 +298,11 @@ exports[`LinkHeading overview 2 snapshot 1`] = `
         class="emotion-1"
       >
         <a
-          aria-label="navigate to stuart-rutherford section"
+          aria-label="navigate to Stuart Rutherford section"
           class="emotion-2"
           data-id="stuart-rutherford"
           data-level="1"
-          data-title="stuart-rutherford"
+          data-title="Stuart Rutherford"
           href="http://localhost/#stuart-rutherford"
         >
           <svg
@@ -412,11 +412,11 @@ exports[`LinkHeading overview 3 snapshot 1`] = `
         class="emotion-1"
       >
         <a
-          aria-label="navigate to miss-litzy-bergnaum section"
+          aria-label="navigate to Miss Litzy Bergnaum section"
           class="emotion-2"
           data-id="miss-litzy-bergnaum"
           data-level="2"
-          data-title="miss-litzy-bergnaum"
+          data-title="Miss Litzy Bergnaum"
           href="http://localhost/#miss-litzy-bergnaum"
         >
           <svg
@@ -524,11 +524,11 @@ exports[`LinkHeading overview 4 snapshot 1`] = `
         class="emotion-1"
       >
         <a
-          aria-label="navigate to dr--dariana-murray section"
+          aria-label="navigate to Dr. Dariana Murray section"
           class="emotion-2"
           data-id="dr--dariana-murray"
           data-level="1"
-          data-title="dr--dariana-murray"
+          data-title="Dr. Dariana Murray"
           href="http://localhost/#dr--dariana-murray"
         >
           <svg

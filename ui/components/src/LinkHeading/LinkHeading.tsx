@@ -45,6 +45,8 @@ export const LinkHeading: FC<LinkHeadingProps> = ({
             typeof c === 'string' ? c : Array.isArray(c) ? c.join(' ') : '',
           )
           .join(' ')
+      : typeof childStrings === 'string'
+      ? childStrings
       : linkId);
   return (
     <Box id={linkId} variant="linkheading.container">
