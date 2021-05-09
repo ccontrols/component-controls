@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/test-renderers",
-  "version": "3.10.3",
+  "version": "3.10.4",
   "description": "React test renderers: rtl, rtr and enzyme",
   "keywords": [
     "react",
@@ -37,7 +37,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/config": "^3.10.3",
+    "@component-controls/config": "^3.10.4",
     "@component-controls/core": "^3.10.3",
     "@component-controls/render": "^3.10.3",
     "jest": "^26.4.2",

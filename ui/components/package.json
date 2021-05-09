@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/components",
-  "version": "3.10.3",
+  "version": "3.10.4",
   "description": "Component controls commonly used UI components.",
   "sideEffects": false,
   "main": "dist/index.js",
@@ -54,7 +54,7 @@
     "tinycolor2": "^1.4.1"
   },
   "devDependencies": {
-    "@component-controls/cc-cli": "^3.10.3",
+    "@component-controls/cc-cli": "^3.10.4",
     "@component-controls/ts-markdown-docs": "^3.8.2",
     "@emotion/jest": "^11.3.0",
     "@theme-ui/css": "^0.6.0-alpha.7",
