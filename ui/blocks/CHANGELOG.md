@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.10.2](https://github.com/ccontrols/component-controls/compare/v3.10.1...v3.10.2) (2021-05-09)
+
+
+### Bug Fixes
+
+* update test headers alignment ([451e2bd](https://github.com/ccontrols/component-controls/commit/451e2bd23ab0c5dc5a699d1394e840735e1a3a8b))
+
+
+
+
+
 ## [3.10.1](https://github.com/ccontrols/component-controls/compare/v3.10.0...v3.10.1) (2021-05-09)
 
 
