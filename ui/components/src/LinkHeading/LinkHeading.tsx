@@ -45,7 +45,7 @@ export const LinkHeading: FC<LinkHeadingProps> = ({
             typeof c === 'string' ? c : Array.isArray(c) ? c.join(' ') : '',
           )
           .join(' ')
-      : `navigate to ${linkId}`);
+      : linkId);
   return (
     <Box id={linkId} variant="linkheading.container">
       <Box variant="linkheading.inner">
