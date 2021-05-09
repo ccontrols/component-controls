@@ -19,7 +19,7 @@ renderedExamples.forEach(({ name, rendered{{? it.data }}, dataId, values{{?}}}) 
       {{=it.allytest}}
       {{? it.data }}  
     }
-    if (values) {
+    if (dataId && values) {
       describe(dataId, runTests);
     } else {
       runTests();

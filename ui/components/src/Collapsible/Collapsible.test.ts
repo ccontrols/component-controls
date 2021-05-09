@@ -33,7 +33,7 @@ describe('Collapsible', () => {
           expect(axeResults).toHaveNoAxeViolations();
         });
       };
-      if (values) {
+      if (dataId && values) {
         describe(dataId, runTests);
       } else {
         runTests();
