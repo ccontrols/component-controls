@@ -164,7 +164,10 @@ export const BaseTestsCoverage: FC<BaseTestsCoverageProps> = ({
         : undefined,
     [component?.jest?.coverage],
   );
-  if (!component?.jest) {
+  if (
+    !component?.jest?.coverage ||
+    !Object.keys(component.jest.coverage).length
+  ) {
     return null;
   }
   return (
