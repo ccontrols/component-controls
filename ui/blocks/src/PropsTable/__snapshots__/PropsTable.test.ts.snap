@@ -311,6 +311,9 @@ exports[`PropsTable controls snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-32 {
@@ -1134,6 +1137,9 @@ exports[`PropsTable customTitle snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-27 {
@@ -1627,6 +1633,9 @@ exports[`PropsTable extraColumns snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-24 {
@@ -3384,6 +3393,9 @@ exports[`PropsTable notCollapsible snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-24 {
@@ -3841,6 +3853,9 @@ exports[`PropsTable overview snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-21 {
@@ -5412,6 +5427,9 @@ exports[`PropsTable subcomponents snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-22 {
@@ -5992,6 +6010,9 @@ exports[`PropsTable title snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-27 {

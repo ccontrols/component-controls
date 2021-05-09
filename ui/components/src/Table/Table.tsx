@@ -254,7 +254,9 @@ export function Table<D extends { [key: string]: any }>({
                         alignItems: 'center ',
                       }}
                     >
-                      <Box sx={{ mr: 1 }}>{column.render('Header')}</Box>
+                      <Box sx={{ mr: 1, flex: 1 }}>
+                        {column.render('Header')}
+                      </Box>
                       {sorting &&
                         column.isSorted &&
                         (column.isSortedDesc ? (

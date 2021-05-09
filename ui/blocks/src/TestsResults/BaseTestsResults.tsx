@@ -116,16 +116,26 @@ export const BaseTestsResults: FC<BaseTestsResultsProps> = ({
         },
       },
       {
-        Header: 'Full name',
+        Header: <div sx={{ textAlign: 'center' }}>Full name</div>,
         accessor: 'fullName',
         Cell: ({
           row: {
             original: { ancestorTitles },
           },
-        }) => <div>{ancestorTitles.join(' > ')}</div>,
+        }) => (
+          <div
+            sx={{
+              whiteSpace: 'nowrap',
+              textOverflow: 'ellipsis',
+              maxWidth: '400px',
+            }}
+          >
+            {ancestorTitles.join(' > ')}
+          </div>
+        ),
       },
       {
-        Header: 'Title',
+        Header: <div sx={{ textAlign: 'center' }}>Title</div>,
         accessor: 'title',
         Cell: ({
           row: {
@@ -134,7 +144,7 @@ export const BaseTestsResults: FC<BaseTestsResultsProps> = ({
         }) => <div sx={{ fontWeight: 'bolder' }}>{title}</div>,
       },
       {
-        Header: 'Time(ms)',
+        Header: <div sx={{ textAlign: 'center' }}>Time(ms)</div>,
         accessor: 'duration',
         Cell: ({
           row: {

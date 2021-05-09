@@ -140,6 +140,9 @@ exports[`TestsCoverage overview snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-25 {
@@ -1407,6 +1410,9 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-25 {
@@ -2358,6 +2364,9 @@ exports[`TestsCoverage pagination 1 snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-25 {
@@ -3114,6 +3123,9 @@ exports[`TestsCoverage pagination 2 snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-25 {
@@ -3870,6 +3882,9 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-25 {
@@ -4785,6 +4800,9 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-25 {

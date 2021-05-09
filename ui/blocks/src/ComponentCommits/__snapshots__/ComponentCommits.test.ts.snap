@@ -140,6 +140,9 @@ exports[`ComponentCommits overview snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-16 {
@@ -1199,6 +1202,9 @@ exports[`ComponentCommits pagination 0 snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-16 {
@@ -2263,6 +2269,9 @@ exports[`ComponentCommits pagination 1 snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-16 {
@@ -3327,6 +3336,9 @@ exports[`ComponentCommits pagination 2 snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-16 {
@@ -4391,6 +4403,9 @@ exports[`ComponentCommits pagination 3 snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-16 {
@@ -5279,6 +5294,9 @@ exports[`ComponentCommits pagination 4 snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-16 {

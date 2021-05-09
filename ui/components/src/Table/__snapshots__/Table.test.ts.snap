@@ -80,6 +80,9 @@ exports[`Table editing snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-6 {
@@ -243,6 +246,9 @@ exports[`Table filterable snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-22 {
@@ -793,6 +799,9 @@ exports[`Table grouping snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-21 {
@@ -1421,6 +1430,9 @@ exports[`Table overview snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-18 {
@@ -1833,6 +1845,9 @@ exports[`Table pagination 0 snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-21 {
@@ -2521,6 +2536,9 @@ exports[`Table pagination 1 snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-21 {
@@ -3358,6 +3376,9 @@ exports[`Table pagination 2 snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-21 {
@@ -4205,6 +4226,9 @@ exports[`Table pagination 3 snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-21 {
@@ -4940,6 +4964,9 @@ exports[`Table pagination 4 snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-21 {
@@ -5975,6 +6002,9 @@ exports[`Table rowSelect snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-6 {
@@ -6833,6 +6863,9 @@ exports[`Table sortable snapshot 1`] = `
   margin: 0;
   min-width: 0;
   margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-21 {
