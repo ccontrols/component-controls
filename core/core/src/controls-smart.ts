@@ -172,23 +172,25 @@ interface NamedComponentControl {
   control: ComponentControl | null;
 }
 export const controlsFromProps = (props: PropTypes): ComponentControls => {
-  return Object.keys(props)
-    .map((key: string) => {
-      const control = controlFromProps(key, props[key]);
-      if (control) {
-        control.defaultValue = control.value;
-      }
-      return {
-        name: key,
-        control,
-      };
-    })
-    .filter(p => p.control)
-    .reduce(
-      (acc: ComponentControls, prop: NamedComponentControl) => ({
-        ...acc,
-        [prop.name]: prop.control as any,
-      }),
-      {},
-    );
+  return props
+    ? Object.keys(props)
+        .map((key: string) => {
+          const control = controlFromProps(key, props[key]);
+          if (control) {
+            control.defaultValue = control.value;
+          }
+          return {
+            name: key,
+            control,
+          };
+        })
+        .filter(p => p.control)
+        .reduce(
+          (acc: ComponentControls, prop: NamedComponentControl) => ({
+            ...acc,
+            [prop.name]: prop.control as any,
+          }),
+          {},
+        )
+    : {};
 };
