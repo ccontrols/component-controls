@@ -98,7 +98,7 @@
       "name": "jest core",
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "cwd": "${workspaceFolder}/core/core",
-      "args": ["deepmerge"],
+      "args": ["dynamic-import"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "disableOptimisticBPs": true,

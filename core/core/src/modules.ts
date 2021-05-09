@@ -1,7 +1,8 @@
 import path from 'path';
 import fs from 'fs';
 import * as ts from 'typescript';
-import { dirSync } from 'tmp';
+import { createHash } from 'crypto';
+import { error } from '@component-controls/logger';
 import { deepMerge } from './deepMerge';
 
 /**
@@ -17,7 +18,10 @@ const esmRequire = (filePath: string): any => {
   const result = require('esm')(module)(filePath);
   if (
     !result ||
-    (typeof result === 'object' && Object.keys(result).length === 0)
+    (typeof result === 'object' && Object.keys(result).length === 0) ||
+    (result.default &&
+      typeof result.default === 'object' &&
+      Object.keys(result.default).length === 0)
   ) {
     return require(filePath);
   }
@@ -47,17 +51,40 @@ export const dynamicRequire = (filePath: string): any => {
         config.config,
         ts.readConfigFile(configPath, ts.sys.readFile).config,
       );
+      if (config.config.extends) {
+        const extendsPath = ts.findConfigFile(
+          path.dirname(path.resolve(configPath, config.config.extends)),
+          ts.sys.fileExists,
+        );
+        if (extendsPath) {
+          config.config = deepMerge(
+            ts.readConfigFile(extendsPath, ts.sys.readFile).config,
+            config.config,
+          );
+        }
+      }
     }
-    const tmpDir = dirSync();
-    config.config.compilerOptions.outDir = tmpDir.name;
+    const tmpFolder = path.resolve(
+      path.dirname(filePath),
+      createHash('md5')
+        .update(filePath)
+        .digest('hex'),
+    );
+    if (!fs.existsSync(tmpFolder)) {
+      fs.mkdirSync(tmpFolder);
+    }
     try {
+      config.config.compilerOptions.outDir = tmpFolder;
+      // moduleResolution option not working
+      delete config.config.compilerOptions['moduleResolution'];
+      delete config.config.compilerOptions['noEmit'];
       const program = ts.createProgram(
         [filePath],
         config.config.compilerOptions,
       );
       const nakedFile = nakedFileName(filePath);
       // by default output file name same but with .js extension
-      let jsFilePath = path.resolve(tmpDir.name, nakedFile + '.js');
+      let jsFilePath = path.resolve(tmpFolder, nakedFile + '.js');
       program.emit(undefined, (fileName: string, data: string) => {
         if (nakedFileName(fileName) === nakedFile) {
           jsFilePath = fileName;
@@ -68,10 +95,11 @@ export const dynamicRequire = (filePath: string): any => {
         const result = esmRequire(jsFilePath);
         return result;
       } catch (e) {
-        throw new Error(`error compiling file ${filePath}`);
+        error(filePath, e);
+        return esmRequire(filePath);
       }
     } finally {
-      fs.rmdirSync(tmpDir.name, { recursive: true });
+      fs.rmdirSync(tmpFolder, { recursive: true });
       // tmpDir.removeCallback();
     }
   }
