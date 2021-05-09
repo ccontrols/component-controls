@@ -8,6 +8,7 @@ import {
   ImportTypes,
   isLocalImport,
 } from '@component-controls/core';
+import { getRelatedTests } from '@component-controls/jest-extract';
 import { componentKey } from '../misc/hashStore';
 import { followImports } from './follow-imports';
 import { analyze_components } from './analyze-component';
@@ -186,7 +187,16 @@ const componentRelatedMetrics = async (
   }
   if (jest !== false && component.request) {
     const componentFolder = path.dirname(component.request);
-    const testFiles: string[] = [component.request];
+    const docTestFiles = store.doc?.testFiles;
+    const testFiles: string[] = docTestFiles || [
+      ...getRelatedTests(component.request),
+    ];
+    const docCoverageFiles = store.doc?.testCoverage;
+    const coverageFiles: string[] = docCoverageFiles
+      ? docCoverageFiles
+          .map(f => path.resolve(filePath, f))
+          .filter(f => fs.existsSync(f))
+      : [];
     //add local dependecnies from same folder to include in coverage.
     if (component.localDependencies) {
       Object.keys(component.localDependencies)
@@ -197,11 +207,20 @@ const componentRelatedMetrics = async (
             basedir: componentFolder,
           });
           if (fs.existsSync(fileName)) {
-            testFiles.push(fileName);
+            if (!docTestFiles) {
+              testFiles.push(fileName);
+            }
+            if (!docCoverageFiles) {
+              coverageFiles.push(fileName);
+            }
           }
         });
     }
-    const testResults = await extractTests(filePath, testFiles, jest);
+    const testResults = await extractTests(
+      Array.from(new Set(testFiles)),
+      Array.from(new Set(coverageFiles)),
+      jest,
+    );
     if (testResults) {
       component.jest = testResults;
     }

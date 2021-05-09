@@ -8,10 +8,12 @@ describe('component-tests', () => {
   });
   it('Table', async () => {
     const tests = await extractTests(
-      path.resolve(
-        __dirname,
-        '../../../ui/components/src/Table/Table.stories.tsx',
-      ),
+      [
+        path.resolve(
+          __dirname,
+          '../../../ui/components/src/Table/Table.test.ts',
+        ),
+      ],
       [
         path.resolve(__dirname, '../../../ui/components/src/Table/Table.tsx'),
         path.resolve(
@@ -400,10 +402,12 @@ describe('component-tests', () => {
 
   it('Catalog', async () => {
     const tests = await extractTests(
-      path.resolve(
-        __dirname,
-        '../../../plugins/addon-catalog/src/Catalog/Catalog.stories.tsx',
-      ),
+      [
+        path.resolve(
+          __dirname,
+          '../../../plugins/addon-catalog/src/Catalog/Catalog.test.ts',
+        ),
+      ],
       [
         path.resolve(
           __dirname,
@@ -468,10 +472,12 @@ describe('component-tests', () => {
   }, 100000);
   it('Header', async () => {
     const tests = await extractTests(
-      path.resolve(
-        __dirname,
-        '../../../ui/components/src/Header/Header.stories.tsx',
-      ),
+      [
+        path.resolve(
+          __dirname,
+          '../../../ui/components/src/Header/Header.test.ts',
+        ),
+      ],
       [path.resolve(__dirname, '../../../ui/components/src/Header/Header.tsx')],
     );
     expect(tests).toMatchObject({

@@ -252,6 +252,20 @@ export type Document<Props = any> = {
   package?: string;
 
   /**
+   * optional specify which test files are asociated with the document
+   */
+  testFiles?: string[];
+
+  /**
+   * optional specify which files to use for test coverage
+   */
+  testCoverage?: string[];
+
+  /**
+   * optional test data file
+   */
+  testData?: string;
+  /**
    * lookup into the global store.components
    * since multiple components of the same name can be used
    * example: ['Button']: 'c:/myapp/Button.tsx'
