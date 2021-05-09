@@ -71,6 +71,10 @@ export const extractTests = async (
     ),
   );
   if (tests.testFiles.length) {
+    if (options?.color) {
+      console.log('tests.testFiles', tests.testFiles);
+      console.log('tests.coverageFiles', tests.coverageFiles);
+    }
     const cached = new CachedFileResource<JestTests>('jest-tests', files[0], [
       ...tests.testFiles,
       ...tests.coverageFiles,
