@@ -48,7 +48,7 @@ export const BaseTestsCoverage: FC<BaseTestsCoverageProps> = ({
         },
       },
       {
-        Header: 'Total',
+        Header: <div sx={{ textAlign: 'center' }}>Total</div>,
         accessor: 'total',
         Cell: ({ value }) => (
           <div
@@ -63,7 +63,7 @@ export const BaseTestsCoverage: FC<BaseTestsCoverageProps> = ({
         ),
       },
       {
-        Header: 'Covered',
+        Header: <div sx={{ textAlign: 'center' }}>Covered</div>,
         accessor: 'covered',
         Cell: ({ value }) => (
           <div
@@ -78,7 +78,7 @@ export const BaseTestsCoverage: FC<BaseTestsCoverageProps> = ({
         ),
       },
       {
-        Header: 'Skipped',
+        Header: <div sx={{ textAlign: 'center' }}>Skipped</div>,
         accessor: 'skipped',
         Cell: ({ value }) => (
           <div
@@ -93,7 +93,7 @@ export const BaseTestsCoverage: FC<BaseTestsCoverageProps> = ({
         ),
       },
       {
-        Header: '%',
+        Header: <div sx={{ textAlign: 'center' }}>%</div>,
         accessor: 'pct',
         Cell: ({ value }) =>
           theme?.colors ? (
@@ -117,7 +117,7 @@ export const BaseTestsCoverage: FC<BaseTestsCoverageProps> = ({
           ) : null,
       },
     ] as Column<TestRow>[];
-  }, []);
+  }, [theme.colors]);
   const data = useMemo(() => {
     const coverage = component?.jest?.coverage;
     return coverage

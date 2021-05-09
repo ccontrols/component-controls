@@ -145,24 +145,28 @@ exports[`TestsCoverage overview snapshot 1`] = `
   flex: 1;
 }
 
-.emotion-25 {
+.emotion-16 {
+  text-align: center;
+}
+
+.emotion-29 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
 }
 
-.emotion-25 tr:last-of-type {
+.emotion-29 tr:last-of-type {
   border-bottom: 0;
 }
 
-.emotion-26 {
+.emotion-30 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.emotion-27 {
+.emotion-31 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -186,7 +190,7 @@ exports[`TestsCoverage overview snapshot 1`] = `
   display: flex;
 }
 
-.emotion-28 {
+.emotion-32 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -194,7 +198,7 @@ exports[`TestsCoverage overview snapshot 1`] = `
   margin-right: 8px;
 }
 
-.emotion-30 {
+.emotion-34 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -205,14 +209,14 @@ exports[`TestsCoverage overview snapshot 1`] = `
   border-bottom: 0;
 }
 
-.emotion-32 {
+.emotion-36 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   font-weight: 600;
 }
 
-.emotion-34 {
+.emotion-38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -226,7 +230,7 @@ exports[`TestsCoverage overview snapshot 1`] = `
   justify-content: flex-end;
 }
 
-.emotion-41 {
+.emotion-45 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -239,7 +243,7 @@ exports[`TestsCoverage overview snapshot 1`] = `
   border: 2px solid #4caf50;
 }
 
-.emotion-55 {
+.emotion-59 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -252,7 +256,7 @@ exports[`TestsCoverage overview snapshot 1`] = `
   border: 2px solid #7e8e48;
 }
 
-.emotion-83 {
+.emotion-87 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -265,7 +269,7 @@ exports[`TestsCoverage overview snapshot 1`] = `
   border: 2px solid #6d994a;
 }
 
-.emotion-114 {
+.emotion-118 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -278,7 +282,7 @@ exports[`TestsCoverage overview snapshot 1`] = `
   border: 2px solid #a07943;
 }
 
-.emotion-142 {
+.emotion-146 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -291,7 +295,7 @@ exports[`TestsCoverage overview snapshot 1`] = `
   border: 2px solid #c1633d;
 }
 
-.emotion-144 {
+.emotion-148 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -314,7 +318,7 @@ exports[`TestsCoverage overview snapshot 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-145 {
+.emotion-149 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -333,7 +337,7 @@ exports[`TestsCoverage overview snapshot 1`] = `
   padding-right: 16px;
 }
 
-.emotion-146 {
+.emotion-150 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -350,7 +354,7 @@ exports[`TestsCoverage overview snapshot 1`] = `
   align-items: center;
 }
 
-.emotion-147 {
+.emotion-151 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -369,13 +373,13 @@ exports[`TestsCoverage overview snapshot 1`] = `
   padding-right: 8px;
 }
 
-.emotion-147 button {
+.emotion-151 button {
   width: 50px;
   margin-left: 2px;
   margin-right: 2px;
 }
 
-.emotion-148 {
+.emotion-152 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -384,7 +388,7 @@ exports[`TestsCoverage overview snapshot 1`] = `
   margin-right: 2px;
 }
 
-.emotion-149 {
+.emotion-153 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -412,7 +416,7 @@ exports[`TestsCoverage overview snapshot 1`] = `
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
 }
 
-.emotion-149:disabled {
+.emotion-153:disabled {
   color: #aaa;
 }
 
@@ -491,7 +495,11 @@ exports[`TestsCoverage overview snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      Total
+                      <div
+                        class="emotion-16"
+                      >
+                        Total
+                      </div>
                     </div>
                   </div>
                 </th>
@@ -508,7 +516,11 @@ exports[`TestsCoverage overview snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      Covered
+                      <div
+                        class="emotion-16"
+                      >
+                        Covered
+                      </div>
                     </div>
                   </div>
                 </th>
@@ -525,7 +537,11 @@ exports[`TestsCoverage overview snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      Skipped
+                      <div
+                        class="emotion-16"
+                      >
+                        Skipped
+                      </div>
                     </div>
                   </div>
                 </th>
@@ -542,25 +558,29 @@ exports[`TestsCoverage overview snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      %
+                      <div
+                        class="emotion-16"
+                      >
+                        %
+                      </div>
                     </div>
                   </div>
                 </th>
               </tr>
             </thead>
             <tbody
-              class="emotion-25"
+              class="emotion-29"
               role="rowgroup"
             >
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
                   colspan="6"
                 >
                   <div
-                    class="emotion-27"
+                    class="emotion-31"
                     style="cursor: pointer;"
                     title="Toggle Row Expanded"
                   >
@@ -581,7 +601,7 @@ exports[`TestsCoverage overview snapshot 1`] = `
                     </svg>
                      
                     <span
-                      class="emotion-28"
+                      class="emotion-32"
                     >
                       Table.tsx
                     </span>
@@ -589,68 +609,68 @@ exports[`TestsCoverage overview snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     lines
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     51
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     50
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-41"
+                      class="emotion-45"
                     >
                       <span
                         class="emotion-6"
@@ -662,68 +682,68 @@ exports[`TestsCoverage overview snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     functions
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     10
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     7
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-55"
+                      class="emotion-59"
                     >
                       <span
                         class="emotion-6"
@@ -735,68 +755,68 @@ exports[`TestsCoverage overview snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     statements
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     56
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     55
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-41"
+                      class="emotion-45"
                     >
                       <span
                         class="emotion-6"
@@ -808,68 +828,68 @@ exports[`TestsCoverage overview snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     branches
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     49
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     40
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-83"
+                      class="emotion-87"
                     >
                       <span
                         class="emotion-6"
@@ -881,14 +901,14 @@ exports[`TestsCoverage overview snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
                   colspan="6"
                 >
                   <div
-                    class="emotion-27"
+                    class="emotion-31"
                     style="cursor: pointer;"
                     title="Toggle Row Expanded"
                   >
@@ -909,7 +929,7 @@ exports[`TestsCoverage overview snapshot 1`] = `
                     </svg>
                      
                     <span
-                      class="emotion-28"
+                      class="emotion-32"
                     >
                       TableFilter.tsx
                     </span>
@@ -917,68 +937,68 @@ exports[`TestsCoverage overview snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     lines
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     6
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     5
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-83"
+                      class="emotion-87"
                     >
                       <span
                         class="emotion-6"
@@ -990,68 +1010,68 @@ exports[`TestsCoverage overview snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     functions
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     2
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     1
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-114"
+                      class="emotion-118"
                     >
                       <span
                         class="emotion-6"
@@ -1063,68 +1083,68 @@ exports[`TestsCoverage overview snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     statements
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     6
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     5
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-83"
+                      class="emotion-87"
                     >
                       <span
                         class="emotion-6"
@@ -1136,68 +1156,68 @@ exports[`TestsCoverage overview snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     branches
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     4
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     1
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-142"
+                      class="emotion-146"
                     >
                       <span
                         class="emotion-6"
@@ -1211,51 +1231,51 @@ exports[`TestsCoverage overview snapshot 1`] = `
             </tbody>
           </table>
           <div
-            class="emotion-144"
+            class="emotion-148"
           >
             <div
-              class="emotion-145"
+              class="emotion-149"
             />
             <div
-              class="emotion-146"
+              class="emotion-150"
             >
               <div
-                class="emotion-147"
+                class="emotion-151"
               >
                 <div
-                  class="emotion-148"
+                  class="emotion-152"
                 >
                   <button
-                    class="emotion-149"
+                    class="emotion-153"
                     disabled=""
                   >
                     &lt;&lt;
                   </button>
                 </div>
                 <div
-                  class="emotion-148"
+                  class="emotion-152"
                 >
                   <button
-                    class="emotion-149"
+                    class="emotion-153"
                     disabled=""
                   >
                     &lt;
                   </button>
                 </div>
                 <div
-                  class="emotion-148"
+                  class="emotion-152"
                 >
                   <button
-                    class="emotion-149"
+                    class="emotion-153"
                   >
                     &gt;
                   </button>
                 </div>
                 <div
-                  class="emotion-148"
+                  class="emotion-152"
                 >
                   <button
-                    class="emotion-149"
+                    class="emotion-153"
                   >
                     &gt;&gt;
                   </button>
@@ -1415,24 +1435,28 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
   flex: 1;
 }
 
-.emotion-25 {
+.emotion-16 {
+  text-align: center;
+}
+
+.emotion-29 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
 }
 
-.emotion-25 tr:last-of-type {
+.emotion-29 tr:last-of-type {
   border-bottom: 0;
 }
 
-.emotion-26 {
+.emotion-30 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.emotion-27 {
+.emotion-31 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1456,7 +1480,7 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
   display: flex;
 }
 
-.emotion-28 {
+.emotion-32 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1464,7 +1488,7 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
   margin-right: 8px;
 }
 
-.emotion-30 {
+.emotion-34 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1475,14 +1499,14 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
   border-bottom: 0;
 }
 
-.emotion-32 {
+.emotion-36 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   font-weight: 600;
 }
 
-.emotion-34 {
+.emotion-38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1496,7 +1520,7 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
   justify-content: flex-end;
 }
 
-.emotion-41 {
+.emotion-45 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1509,7 +1533,7 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
   border: 2px solid #4caf50;
 }
 
-.emotion-55 {
+.emotion-59 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1522,7 +1546,7 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
   border: 2px solid #7e8e48;
 }
 
-.emotion-83 {
+.emotion-87 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1535,7 +1559,7 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
   border: 2px solid #6d994a;
 }
 
-.emotion-88 {
+.emotion-92 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1558,7 +1582,7 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-89 {
+.emotion-93 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1577,7 +1601,7 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
   padding-right: 16px;
 }
 
-.emotion-90 {
+.emotion-94 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1594,7 +1618,7 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
   align-items: center;
 }
 
-.emotion-91 {
+.emotion-95 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1613,13 +1637,13 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
   padding-right: 8px;
 }
 
-.emotion-91 button {
+.emotion-95 button {
   width: 50px;
   margin-left: 2px;
   margin-right: 2px;
 }
 
-.emotion-92 {
+.emotion-96 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1628,7 +1652,7 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
   margin-right: 2px;
 }
 
-.emotion-93 {
+.emotion-97 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1656,7 +1680,7 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
 }
 
-.emotion-93:disabled {
+.emotion-97:disabled {
   color: #aaa;
 }
 
@@ -1735,7 +1759,11 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      Total
+                      <div
+                        class="emotion-16"
+                      >
+                        Total
+                      </div>
                     </div>
                   </div>
                 </th>
@@ -1752,7 +1780,11 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      Covered
+                      <div
+                        class="emotion-16"
+                      >
+                        Covered
+                      </div>
                     </div>
                   </div>
                 </th>
@@ -1769,7 +1801,11 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      Skipped
+                      <div
+                        class="emotion-16"
+                      >
+                        Skipped
+                      </div>
                     </div>
                   </div>
                 </th>
@@ -1786,25 +1822,29 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      %
+                      <div
+                        class="emotion-16"
+                      >
+                        %
+                      </div>
                     </div>
                   </div>
                 </th>
               </tr>
             </thead>
             <tbody
-              class="emotion-25"
+              class="emotion-29"
               role="rowgroup"
             >
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
                   colspan="6"
                 >
                   <div
-                    class="emotion-27"
+                    class="emotion-31"
                     style="cursor: pointer;"
                     title="Toggle Row Expanded"
                   >
@@ -1825,7 +1865,7 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
                     </svg>
                      
                     <span
-                      class="emotion-28"
+                      class="emotion-32"
                     >
                       Table.tsx
                     </span>
@@ -1833,68 +1873,68 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     lines
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     51
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     50
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-41"
+                      class="emotion-45"
                     >
                       <span
                         class="emotion-6"
@@ -1906,68 +1946,68 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     functions
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     10
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     7
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-55"
+                      class="emotion-59"
                     >
                       <span
                         class="emotion-6"
@@ -1979,68 +2019,68 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     statements
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     56
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     55
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-41"
+                      class="emotion-45"
                     >
                       <span
                         class="emotion-6"
@@ -2052,68 +2092,68 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     branches
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     49
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     40
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-83"
+                      class="emotion-87"
                     >
                       <span
                         class="emotion-6"
@@ -2125,14 +2165,14 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
                   colspan="6"
                 >
                   <div
-                    class="emotion-27"
+                    class="emotion-31"
                     style="cursor: pointer;"
                     title="Toggle Row Expanded"
                   >
@@ -2153,7 +2193,7 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
                     </svg>
                      
                     <span
-                      class="emotion-28"
+                      class="emotion-32"
                     >
                       TableFilter.tsx
                     </span>
@@ -2163,53 +2203,53 @@ exports[`TestsCoverage pagination 0 snapshot 1`] = `
             </tbody>
           </table>
           <div
-            class="emotion-88"
+            class="emotion-92"
           >
             <div
-              class="emotion-89"
+              class="emotion-93"
             >
               Total: 24 records
             </div>
             <div
-              class="emotion-90"
+              class="emotion-94"
             >
               <div
-                class="emotion-91"
+                class="emotion-95"
               >
                 <div
-                  class="emotion-92"
+                  class="emotion-96"
                 >
                   <button
-                    class="emotion-93"
+                    class="emotion-97"
                     disabled=""
                   >
                     &lt;&lt;
                   </button>
                 </div>
                 <div
-                  class="emotion-92"
+                  class="emotion-96"
                 >
                   <button
-                    class="emotion-93"
+                    class="emotion-97"
                     disabled=""
                   >
                     &lt;
                   </button>
                 </div>
                 <div
-                  class="emotion-92"
+                  class="emotion-96"
                 >
                   <button
-                    class="emotion-93"
+                    class="emotion-97"
                   >
                     &gt;
                   </button>
                 </div>
                 <div
-                  class="emotion-92"
+                  class="emotion-96"
                 >
                   <button
-                    class="emotion-93"
+                    class="emotion-97"
                   >
                     &gt;&gt;
                   </button>
@@ -2369,24 +2409,28 @@ exports[`TestsCoverage pagination 1 snapshot 1`] = `
   flex: 1;
 }
 
-.emotion-25 {
+.emotion-16 {
+  text-align: center;
+}
+
+.emotion-29 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
 }
 
-.emotion-25 tr:last-of-type {
+.emotion-29 tr:last-of-type {
   border-bottom: 0;
 }
 
-.emotion-26 {
+.emotion-30 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.emotion-27 {
+.emotion-31 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -2410,7 +2454,7 @@ exports[`TestsCoverage pagination 1 snapshot 1`] = `
   display: flex;
 }
 
-.emotion-28 {
+.emotion-32 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -2418,7 +2462,7 @@ exports[`TestsCoverage pagination 1 snapshot 1`] = `
   margin-right: 8px;
 }
 
-.emotion-30 {
+.emotion-34 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -2429,14 +2473,14 @@ exports[`TestsCoverage pagination 1 snapshot 1`] = `
   border-bottom: 0;
 }
 
-.emotion-32 {
+.emotion-36 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   font-weight: 600;
 }
 
-.emotion-34 {
+.emotion-38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2450,7 +2494,7 @@ exports[`TestsCoverage pagination 1 snapshot 1`] = `
   justify-content: flex-end;
 }
 
-.emotion-41 {
+.emotion-45 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -2463,7 +2507,7 @@ exports[`TestsCoverage pagination 1 snapshot 1`] = `
   border: 2px solid #4caf50;
 }
 
-.emotion-55 {
+.emotion-59 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -2476,7 +2520,7 @@ exports[`TestsCoverage pagination 1 snapshot 1`] = `
   border: 2px solid #7e8e48;
 }
 
-.emotion-57 {
+.emotion-61 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -2499,7 +2543,7 @@ exports[`TestsCoverage pagination 1 snapshot 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-58 {
+.emotion-62 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -2518,7 +2562,7 @@ exports[`TestsCoverage pagination 1 snapshot 1`] = `
   padding-right: 16px;
 }
 
-.emotion-59 {
+.emotion-63 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -2535,7 +2579,7 @@ exports[`TestsCoverage pagination 1 snapshot 1`] = `
   align-items: center;
 }
 
-.emotion-60 {
+.emotion-64 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -2554,13 +2598,13 @@ exports[`TestsCoverage pagination 1 snapshot 1`] = `
   padding-right: 8px;
 }
 
-.emotion-60 button {
+.emotion-64 button {
   width: 50px;
   margin-left: 2px;
   margin-right: 2px;
 }
 
-.emotion-61 {
+.emotion-65 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -2569,7 +2613,7 @@ exports[`TestsCoverage pagination 1 snapshot 1`] = `
   margin-right: 2px;
 }
 
-.emotion-62 {
+.emotion-66 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -2597,7 +2641,7 @@ exports[`TestsCoverage pagination 1 snapshot 1`] = `
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
 }
 
-.emotion-62:disabled {
+.emotion-66:disabled {
   color: #aaa;
 }
 
@@ -2676,7 +2720,11 @@ exports[`TestsCoverage pagination 1 snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      Total
+                      <div
+                        class="emotion-16"
+                      >
+                        Total
+                      </div>
                     </div>
                   </div>
                 </th>
@@ -2693,7 +2741,11 @@ exports[`TestsCoverage pagination 1 snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      Covered
+                      <div
+                        class="emotion-16"
+                      >
+                        Covered
+                      </div>
                     </div>
                   </div>
                 </th>
@@ -2710,7 +2762,11 @@ exports[`TestsCoverage pagination 1 snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      Skipped
+                      <div
+                        class="emotion-16"
+                      >
+                        Skipped
+                      </div>
                     </div>
                   </div>
                 </th>
@@ -2727,25 +2783,29 @@ exports[`TestsCoverage pagination 1 snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      %
+                      <div
+                        class="emotion-16"
+                      >
+                        %
+                      </div>
                     </div>
                   </div>
                 </th>
               </tr>
             </thead>
             <tbody
-              class="emotion-25"
+              class="emotion-29"
               role="rowgroup"
             >
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
                   colspan="6"
                 >
                   <div
-                    class="emotion-27"
+                    class="emotion-31"
                     style="cursor: pointer;"
                     title="Toggle Row Expanded"
                   >
@@ -2766,7 +2826,7 @@ exports[`TestsCoverage pagination 1 snapshot 1`] = `
                     </svg>
                      
                     <span
-                      class="emotion-28"
+                      class="emotion-32"
                     >
                       Table.tsx
                     </span>
@@ -2774,68 +2834,68 @@ exports[`TestsCoverage pagination 1 snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     lines
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     51
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     50
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-41"
+                      class="emotion-45"
                     >
                       <span
                         class="emotion-6"
@@ -2847,68 +2907,68 @@ exports[`TestsCoverage pagination 1 snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     functions
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     10
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     7
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-55"
+                      class="emotion-59"
                     >
                       <span
                         class="emotion-6"
@@ -2922,53 +2982,53 @@ exports[`TestsCoverage pagination 1 snapshot 1`] = `
             </tbody>
           </table>
           <div
-            class="emotion-57"
+            class="emotion-61"
           >
             <div
-              class="emotion-58"
+              class="emotion-62"
             >
               Total: 24 records
             </div>
             <div
-              class="emotion-59"
+              class="emotion-63"
             >
               <div
-                class="emotion-60"
+                class="emotion-64"
               >
                 <div
-                  class="emotion-61"
+                  class="emotion-65"
                 >
                   <button
-                    class="emotion-62"
+                    class="emotion-66"
                     disabled=""
                   >
                     &lt;&lt;
                   </button>
                 </div>
                 <div
-                  class="emotion-61"
+                  class="emotion-65"
                 >
                   <button
-                    class="emotion-62"
+                    class="emotion-66"
                     disabled=""
                   >
                     &lt;
                   </button>
                 </div>
                 <div
-                  class="emotion-61"
+                  class="emotion-65"
                 >
                   <button
-                    class="emotion-62"
+                    class="emotion-66"
                   >
                     &gt;
                   </button>
                 </div>
                 <div
-                  class="emotion-61"
+                  class="emotion-65"
                 >
                   <button
-                    class="emotion-62"
+                    class="emotion-66"
                   >
                     &gt;&gt;
                   </button>
@@ -3128,24 +3188,28 @@ exports[`TestsCoverage pagination 2 snapshot 1`] = `
   flex: 1;
 }
 
-.emotion-25 {
+.emotion-16 {
+  text-align: center;
+}
+
+.emotion-29 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
 }
 
-.emotion-25 tr:last-of-type {
+.emotion-29 tr:last-of-type {
   border-bottom: 0;
 }
 
-.emotion-26 {
+.emotion-30 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.emotion-27 {
+.emotion-31 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -3169,7 +3233,7 @@ exports[`TestsCoverage pagination 2 snapshot 1`] = `
   display: flex;
 }
 
-.emotion-28 {
+.emotion-32 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -3177,7 +3241,7 @@ exports[`TestsCoverage pagination 2 snapshot 1`] = `
   margin-right: 8px;
 }
 
-.emotion-30 {
+.emotion-34 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -3188,14 +3252,14 @@ exports[`TestsCoverage pagination 2 snapshot 1`] = `
   border-bottom: 0;
 }
 
-.emotion-32 {
+.emotion-36 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   font-weight: 600;
 }
 
-.emotion-34 {
+.emotion-38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3209,7 +3273,7 @@ exports[`TestsCoverage pagination 2 snapshot 1`] = `
   justify-content: flex-end;
 }
 
-.emotion-41 {
+.emotion-45 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -3222,7 +3286,7 @@ exports[`TestsCoverage pagination 2 snapshot 1`] = `
   border: 2px solid #4caf50;
 }
 
-.emotion-55 {
+.emotion-59 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -3235,7 +3299,7 @@ exports[`TestsCoverage pagination 2 snapshot 1`] = `
   border: 2px solid #7e8e48;
 }
 
-.emotion-57 {
+.emotion-61 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -3258,7 +3322,7 @@ exports[`TestsCoverage pagination 2 snapshot 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-58 {
+.emotion-62 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -3277,7 +3341,7 @@ exports[`TestsCoverage pagination 2 snapshot 1`] = `
   padding-right: 16px;
 }
 
-.emotion-59 {
+.emotion-63 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -3294,7 +3358,7 @@ exports[`TestsCoverage pagination 2 snapshot 1`] = `
   align-items: center;
 }
 
-.emotion-60 {
+.emotion-64 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -3313,13 +3377,13 @@ exports[`TestsCoverage pagination 2 snapshot 1`] = `
   padding-right: 8px;
 }
 
-.emotion-60 button {
+.emotion-64 button {
   width: 50px;
   margin-left: 2px;
   margin-right: 2px;
 }
 
-.emotion-61 {
+.emotion-65 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -3328,7 +3392,7 @@ exports[`TestsCoverage pagination 2 snapshot 1`] = `
   margin-right: 2px;
 }
 
-.emotion-62 {
+.emotion-66 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -3356,7 +3420,7 @@ exports[`TestsCoverage pagination 2 snapshot 1`] = `
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
 }
 
-.emotion-62:disabled {
+.emotion-66:disabled {
   color: #aaa;
 }
 
@@ -3435,7 +3499,11 @@ exports[`TestsCoverage pagination 2 snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      Total
+                      <div
+                        class="emotion-16"
+                      >
+                        Total
+                      </div>
                     </div>
                   </div>
                 </th>
@@ -3452,7 +3520,11 @@ exports[`TestsCoverage pagination 2 snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      Covered
+                      <div
+                        class="emotion-16"
+                      >
+                        Covered
+                      </div>
                     </div>
                   </div>
                 </th>
@@ -3469,7 +3541,11 @@ exports[`TestsCoverage pagination 2 snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      Skipped
+                      <div
+                        class="emotion-16"
+                      >
+                        Skipped
+                      </div>
                     </div>
                   </div>
                 </th>
@@ -3486,25 +3562,29 @@ exports[`TestsCoverage pagination 2 snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      %
+                      <div
+                        class="emotion-16"
+                      >
+                        %
+                      </div>
                     </div>
                   </div>
                 </th>
               </tr>
             </thead>
             <tbody
-              class="emotion-25"
+              class="emotion-29"
               role="rowgroup"
             >
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
                   colspan="6"
                 >
                   <div
-                    class="emotion-27"
+                    class="emotion-31"
                     style="cursor: pointer;"
                     title="Toggle Row Expanded"
                   >
@@ -3525,7 +3605,7 @@ exports[`TestsCoverage pagination 2 snapshot 1`] = `
                     </svg>
                      
                     <span
-                      class="emotion-28"
+                      class="emotion-32"
                     >
                       Table.tsx
                     </span>
@@ -3533,68 +3613,68 @@ exports[`TestsCoverage pagination 2 snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     lines
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     51
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     50
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-41"
+                      class="emotion-45"
                     >
                       <span
                         class="emotion-6"
@@ -3606,68 +3686,68 @@ exports[`TestsCoverage pagination 2 snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     functions
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     10
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     7
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-55"
+                      class="emotion-59"
                     >
                       <span
                         class="emotion-6"
@@ -3681,53 +3761,53 @@ exports[`TestsCoverage pagination 2 snapshot 1`] = `
             </tbody>
           </table>
           <div
-            class="emotion-57"
+            class="emotion-61"
           >
             <div
-              class="emotion-58"
+              class="emotion-62"
             >
               Total: 24 records
             </div>
             <div
-              class="emotion-59"
+              class="emotion-63"
             >
               <div
-                class="emotion-60"
+                class="emotion-64"
               >
                 <div
-                  class="emotion-61"
+                  class="emotion-65"
                 >
                   <button
-                    class="emotion-62"
+                    class="emotion-66"
                     disabled=""
                   >
                     &lt;&lt;
                   </button>
                 </div>
                 <div
-                  class="emotion-61"
+                  class="emotion-65"
                 >
                   <button
-                    class="emotion-62"
+                    class="emotion-66"
                     disabled=""
                   >
                     &lt;
                   </button>
                 </div>
                 <div
-                  class="emotion-61"
+                  class="emotion-65"
                 >
                   <button
-                    class="emotion-62"
+                    class="emotion-66"
                   >
                     &gt;
                   </button>
                 </div>
                 <div
-                  class="emotion-61"
+                  class="emotion-65"
                 >
                   <button
-                    class="emotion-62"
+                    class="emotion-66"
                   >
                     &gt;&gt;
                   </button>
@@ -3887,24 +3967,28 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
   flex: 1;
 }
 
-.emotion-25 {
+.emotion-16 {
+  text-align: center;
+}
+
+.emotion-29 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
 }
 
-.emotion-25 tr:last-of-type {
+.emotion-29 tr:last-of-type {
   border-bottom: 0;
 }
 
-.emotion-26 {
+.emotion-30 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.emotion-27 {
+.emotion-31 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -3928,7 +4012,7 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
   display: flex;
 }
 
-.emotion-28 {
+.emotion-32 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -3936,7 +4020,7 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
   margin-right: 8px;
 }
 
-.emotion-30 {
+.emotion-34 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -3947,14 +4031,14 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
   border-bottom: 0;
 }
 
-.emotion-32 {
+.emotion-36 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   font-weight: 600;
 }
 
-.emotion-34 {
+.emotion-38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3968,7 +4052,7 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
   justify-content: flex-end;
 }
 
-.emotion-41 {
+.emotion-45 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -3981,7 +4065,7 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
   border: 2px solid #4caf50;
 }
 
-.emotion-55 {
+.emotion-59 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -3994,7 +4078,7 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
   border: 2px solid #7e8e48;
 }
 
-.emotion-83 {
+.emotion-87 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4007,7 +4091,7 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
   border: 2px solid #6d994a;
 }
 
-.emotion-85 {
+.emotion-89 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4030,7 +4114,7 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-86 {
+.emotion-90 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4049,7 +4133,7 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
   padding-right: 16px;
 }
 
-.emotion-87 {
+.emotion-91 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4066,7 +4150,7 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
   align-items: center;
 }
 
-.emotion-88 {
+.emotion-92 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4085,13 +4169,13 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
   padding-right: 8px;
 }
 
-.emotion-88 button {
+.emotion-92 button {
   width: 50px;
   margin-left: 2px;
   margin-right: 2px;
 }
 
-.emotion-89 {
+.emotion-93 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4100,7 +4184,7 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
   margin-right: 2px;
 }
 
-.emotion-90 {
+.emotion-94 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4128,7 +4212,7 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
 }
 
-.emotion-90:disabled {
+.emotion-94:disabled {
   color: #aaa;
 }
 
@@ -4207,7 +4291,11 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      Total
+                      <div
+                        class="emotion-16"
+                      >
+                        Total
+                      </div>
                     </div>
                   </div>
                 </th>
@@ -4224,7 +4312,11 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      Covered
+                      <div
+                        class="emotion-16"
+                      >
+                        Covered
+                      </div>
                     </div>
                   </div>
                 </th>
@@ -4241,7 +4333,11 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      Skipped
+                      <div
+                        class="emotion-16"
+                      >
+                        Skipped
+                      </div>
                     </div>
                   </div>
                 </th>
@@ -4258,25 +4354,29 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      %
+                      <div
+                        class="emotion-16"
+                      >
+                        %
+                      </div>
                     </div>
                   </div>
                 </th>
               </tr>
             </thead>
             <tbody
-              class="emotion-25"
+              class="emotion-29"
               role="rowgroup"
             >
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
                   colspan="6"
                 >
                   <div
-                    class="emotion-27"
+                    class="emotion-31"
                     style="cursor: pointer;"
                     title="Toggle Row Expanded"
                   >
@@ -4297,7 +4397,7 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
                     </svg>
                      
                     <span
-                      class="emotion-28"
+                      class="emotion-32"
                     >
                       Table.tsx
                     </span>
@@ -4305,68 +4405,68 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     lines
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     51
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     50
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-41"
+                      class="emotion-45"
                     >
                       <span
                         class="emotion-6"
@@ -4378,68 +4478,68 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     functions
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     10
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     7
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-55"
+                      class="emotion-59"
                     >
                       <span
                         class="emotion-6"
@@ -4451,68 +4551,68 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     statements
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     56
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     55
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-41"
+                      class="emotion-45"
                     >
                       <span
                         class="emotion-6"
@@ -4524,68 +4624,68 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     branches
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     49
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     40
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-83"
+                      class="emotion-87"
                     >
                       <span
                         class="emotion-6"
@@ -4599,53 +4699,53 @@ exports[`TestsCoverage pagination 3 snapshot 1`] = `
             </tbody>
           </table>
           <div
-            class="emotion-85"
+            class="emotion-89"
           >
             <div
-              class="emotion-86"
+              class="emotion-90"
             >
               Total: 24 records
             </div>
             <div
-              class="emotion-87"
+              class="emotion-91"
             >
               <div
-                class="emotion-88"
+                class="emotion-92"
               >
                 <div
-                  class="emotion-89"
+                  class="emotion-93"
                 >
                   <button
-                    class="emotion-90"
+                    class="emotion-94"
                     disabled=""
                   >
                     &lt;&lt;
                   </button>
                 </div>
                 <div
-                  class="emotion-89"
+                  class="emotion-93"
                 >
                   <button
-                    class="emotion-90"
+                    class="emotion-94"
                     disabled=""
                   >
                     &lt;
                   </button>
                 </div>
                 <div
-                  class="emotion-89"
+                  class="emotion-93"
                 >
                   <button
-                    class="emotion-90"
+                    class="emotion-94"
                   >
                     &gt;
                   </button>
                 </div>
                 <div
-                  class="emotion-89"
+                  class="emotion-93"
                 >
                   <button
-                    class="emotion-90"
+                    class="emotion-94"
                   >
                     &gt;&gt;
                   </button>
@@ -4805,24 +4905,28 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
   flex: 1;
 }
 
-.emotion-25 {
+.emotion-16 {
+  text-align: center;
+}
+
+.emotion-29 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
 }
 
-.emotion-25 tr:last-of-type {
+.emotion-29 tr:last-of-type {
   border-bottom: 0;
 }
 
-.emotion-26 {
+.emotion-30 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.emotion-27 {
+.emotion-31 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4846,7 +4950,7 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
   display: flex;
 }
 
-.emotion-28 {
+.emotion-32 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4854,7 +4958,7 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
   margin-right: 8px;
 }
 
-.emotion-30 {
+.emotion-34 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4865,14 +4969,14 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
   border-bottom: 0;
 }
 
-.emotion-32 {
+.emotion-36 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   font-weight: 600;
 }
 
-.emotion-34 {
+.emotion-38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4886,7 +4990,7 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
   justify-content: flex-end;
 }
 
-.emotion-41 {
+.emotion-45 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4899,7 +5003,7 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
   border: 2px solid #4caf50;
 }
 
-.emotion-55 {
+.emotion-59 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4912,7 +5016,7 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
   border: 2px solid #7e8e48;
 }
 
-.emotion-83 {
+.emotion-87 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4925,7 +5029,7 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
   border: 2px solid #6d994a;
 }
 
-.emotion-114 {
+.emotion-118 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4938,7 +5042,7 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
   border: 2px solid #a07943;
 }
 
-.emotion-116 {
+.emotion-120 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4961,7 +5065,7 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-117 {
+.emotion-121 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4980,7 +5084,7 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
   padding-right: 16px;
 }
 
-.emotion-118 {
+.emotion-122 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4997,7 +5101,7 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
   align-items: center;
 }
 
-.emotion-119 {
+.emotion-123 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -5016,13 +5120,13 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
   padding-right: 8px;
 }
 
-.emotion-119 button {
+.emotion-123 button {
   width: 50px;
   margin-left: 2px;
   margin-right: 2px;
 }
 
-.emotion-120 {
+.emotion-124 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -5031,7 +5135,7 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
   margin-right: 2px;
 }
 
-.emotion-121 {
+.emotion-125 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -5059,11 +5163,11 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
 }
 
-.emotion-121:disabled {
+.emotion-125:disabled {
   color: #aaa;
 }
 
-.emotion-128 {
+.emotion-132 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -5146,7 +5250,11 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      Total
+                      <div
+                        class="emotion-16"
+                      >
+                        Total
+                      </div>
                     </div>
                   </div>
                 </th>
@@ -5163,7 +5271,11 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      Covered
+                      <div
+                        class="emotion-16"
+                      >
+                        Covered
+                      </div>
                     </div>
                   </div>
                 </th>
@@ -5180,7 +5292,11 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      Skipped
+                      <div
+                        class="emotion-16"
+                      >
+                        Skipped
+                      </div>
                     </div>
                   </div>
                 </th>
@@ -5197,25 +5313,29 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
                     <div
                       class="emotion-9"
                     >
-                      %
+                      <div
+                        class="emotion-16"
+                      >
+                        %
+                      </div>
                     </div>
                   </div>
                 </th>
               </tr>
             </thead>
             <tbody
-              class="emotion-25"
+              class="emotion-29"
               role="rowgroup"
             >
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
                   colspan="6"
                 >
                   <div
-                    class="emotion-27"
+                    class="emotion-31"
                     style="cursor: pointer;"
                     title="Toggle Row Expanded"
                   >
@@ -5236,7 +5356,7 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
                     </svg>
                      
                     <span
-                      class="emotion-28"
+                      class="emotion-32"
                     >
                       Table.tsx
                     </span>
@@ -5244,68 +5364,68 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     lines
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     51
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     50
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-41"
+                      class="emotion-45"
                     >
                       <span
                         class="emotion-6"
@@ -5317,68 +5437,68 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     functions
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     10
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     7
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-55"
+                      class="emotion-59"
                     >
                       <span
                         class="emotion-6"
@@ -5390,68 +5510,68 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     statements
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     56
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     55
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-41"
+                      class="emotion-45"
                     >
                       <span
                         class="emotion-6"
@@ -5463,68 +5583,68 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     branches
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     49
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     40
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-83"
+                      class="emotion-87"
                     >
                       <span
                         class="emotion-6"
@@ -5536,14 +5656,14 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
                   colspan="6"
                 >
                   <div
-                    class="emotion-27"
+                    class="emotion-31"
                     style="cursor: pointer;"
                     title="Toggle Row Expanded"
                   >
@@ -5564,7 +5684,7 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
                     </svg>
                      
                     <span
-                      class="emotion-28"
+                      class="emotion-32"
                     >
                       TableFilter.tsx
                     </span>
@@ -5572,68 +5692,68 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     lines
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     6
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     5
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-83"
+                      class="emotion-87"
                     >
                       <span
                         class="emotion-6"
@@ -5645,68 +5765,68 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
                 </td>
               </tr>
               <tr
-                class="emotion-26"
+                class="emotion-30"
                 role="row"
               >
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 20px;"
                 />
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-32"
+                    class="emotion-36"
                   >
                     functions
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     2
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     1
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     0
                   </div>
                 </td>
                 <td
-                  class="emotion-30"
+                  class="emotion-34"
                   role="cell"
                   style="width: 150px;"
                 >
                   <div
-                    class="emotion-34"
+                    class="emotion-38"
                   >
                     <span
-                      class="emotion-114"
+                      class="emotion-118"
                     >
                       <span
                         class="emotion-6"
@@ -5720,60 +5840,60 @@ exports[`TestsCoverage pagination 4 snapshot 1`] = `
             </tbody>
           </table>
           <div
-            class="emotion-116"
+            class="emotion-120"
           >
             <div
-              class="emotion-117"
+              class="emotion-121"
             >
               Total: 24 records
             </div>
             <div
-              class="emotion-118"
+              class="emotion-122"
             >
               <div
-                class="emotion-119"
+                class="emotion-123"
               >
                 <div
-                  class="emotion-120"
+                  class="emotion-124"
                 >
                   <button
-                    class="emotion-121"
+                    class="emotion-125"
                     disabled=""
                   >
                     &lt;&lt;
                   </button>
                 </div>
                 <div
-                  class="emotion-120"
+                  class="emotion-124"
                 >
                   <button
-                    class="emotion-121"
+                    class="emotion-125"
                     disabled=""
                   >
                     &lt;
                   </button>
                 </div>
                 <div
-                  class="emotion-120"
+                  class="emotion-124"
                 >
                   <button
-                    class="emotion-121"
+                    class="emotion-125"
                   >
                     &gt;
                   </button>
                 </div>
                 <div
-                  class="emotion-120"
+                  class="emotion-124"
                 >
                   <button
-                    class="emotion-121"
+                    class="emotion-125"
                   >
                     &gt;&gt;
                   </button>
                 </div>
               </div>
               <div
-                class="emotion-128"
+                class="emotion-132"
               >
                 Page 1 of 4
               </div>

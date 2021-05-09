@@ -116,7 +116,7 @@ export const BaseTestsResults: FC<BaseTestsResultsProps> = ({
         },
       },
       {
-        Header: <div sx={{ textAlign: 'center' }}>Full name</div>,
+        Header: 'Full name',
         accessor: 'fullName',
         Cell: ({
           row: {
@@ -135,7 +135,7 @@ export const BaseTestsResults: FC<BaseTestsResultsProps> = ({
         ),
       },
       {
-        Header: <div sx={{ textAlign: 'center' }}>Title</div>,
+        Header: 'Title',
         accessor: 'title',
         Cell: ({
           row: {
