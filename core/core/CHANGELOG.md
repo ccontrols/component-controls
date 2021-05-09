@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.10.3](https://github.com/ccontrols/component-controls/compare/v3.10.2...v3.10.3) (2021-05-09)
+
+
+### Bug Fixes
+
+* issue on non-existing control ([2644e16](https://github.com/ccontrols/component-controls/commit/2644e16464bb87877a0e2a562edb5afeaed22fd0))
+* issue when props are null ([f69d66d](https://github.com/ccontrols/component-controls/commit/f69d66d530294e4c7df5f3e348e24ca9d3ff888c))
+
+
+
+
+
 ## [3.10.2](https://github.com/ccontrols/component-controls/compare/v3.10.1...v3.10.2) (2021-05-09)
 
 

@@ -2,7 +2,7 @@
   "name": "component-controls-simple",
   "description": "component-controls example with css styles",
   "private": true,
-  "version": "3.10.2",
+  "version": "3.10.3",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -16,9 +16,9 @@
     "test": "yarn jest"
   },
   "dependencies": {
-    "@component-controls/gatsby-theme-stories": "^3.10.2",
-    "@component-controls/nextjs-plugin": "^3.10.2",
-    "@component-controls/react-router-integration": "^3.10.2",
+    "@component-controls/gatsby-theme-stories": "^3.10.3",
+    "@component-controls/nextjs-plugin": "^3.10.3",
+    "@component-controls/react-router-integration": "^3.10.3",
     "gatsby": "^3.0.0",
     "next": "^10.0.7",
     "react": "^17.0.1",
