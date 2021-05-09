@@ -92,7 +92,7 @@ export const ComponentStats: FC<{
           value={
             coverage.total
               ? (100 * (coverage.covered / coverage.total)).toFixed(0)
-              : ''
+              : '0'
           }
           percent
         />
