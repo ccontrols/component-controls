@@ -29,7 +29,7 @@ export const TestsResults: FC<TestsResultsProps> = ({
   if (!component?.jest?.results.length) {
     return null;
   }
-
+  console.log(component?.jest?.results);
   return (
     <BlockContainer {...props}>
       <BaseTestsResults component={component} pagination={pagination} />
