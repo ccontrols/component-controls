@@ -35,11 +35,11 @@ export const BaseComponentSource: FC<BaseComponentSourceProps> = props => {
   const [showType, setShowType] = useState<ShowType>('import');
   const custom = useCustomProps<BaseComponentSourceProps>(NAME, props);
   const { component, actions, ...rest } = custom;
+  const componentPackage = usePackage(component?.package);
   if (!component) {
     return null;
   }
   let source;
-  const componentPackage = usePackage(component.package);
   const { from, importedName, name: componentName } = component;
   const importFrom =
     componentPackage && componentPackage.name ? componentPackage.name : from;
