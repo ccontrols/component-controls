@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.11.0](https://github.com/ccontrols/component-controls/compare/v3.10.4...v3.11.0) (2021-05-10)
+
+
+### Bug Fixes
+
+* coverage 0 when no coverage files ([709f1c9](https://github.com/ccontrols/component-controls/commit/709f1c910a322a6e35bd80dd4c1618a3785e404c))
+
+
+
+
+
 ## [3.10.4](https://github.com/ccontrols/component-controls/compare/v3.10.3...v3.10.4) (2021-05-09)
 
 

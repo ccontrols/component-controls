@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.11.0](https://github.com/ccontrols/component-controls/compare/v3.10.4...v3.11.0) (2021-05-10)
+
+
+### Bug Fixes
+
+* comment spelling ([b8b459c](https://github.com/ccontrols/component-controls/commit/b8b459c7418bd132de8edf239c0521156a71dfdd))
+* coverage 0 when no coverage files ([709f1c9](https://github.com/ccontrols/component-controls/commit/709f1c910a322a6e35bd80dd4c1618a3785e404c))
+
+
+### Features
+
+* configurable document test and coverage files ([3bae432](https://github.com/ccontrols/component-controls/commit/3bae4322ba16f2d86d4a82a980401148646a91a6))
+
+
+
+
+
 ## [3.10.4](https://github.com/ccontrols/component-controls/compare/v3.10.3...v3.10.4) (2021-05-09)
 
 
