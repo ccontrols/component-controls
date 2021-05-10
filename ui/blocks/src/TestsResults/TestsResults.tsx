@@ -25,10 +25,12 @@ export const TestsResults: FC<TestsResultsProps> = ({
 }) => {
   const props = useCustomProps<TestsResultsProps>('tests_results', rest);
   const component = useStoryComponent({ id, name });
-
   if (
     !component?.jest?.results.length ||
-    !component.jest.results[0].testResults.length
+    !component.jest.results.reduce(
+      (acc, { testResults }) => acc + testResults.length,
+      0,
+    )
   ) {
     return null;
   }
