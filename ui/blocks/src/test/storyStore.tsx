@@ -82,8 +82,6 @@ export const store: Store = {
       from: '../../components/button-default-arrow-func',
       importedName: 'default',
       name: 'ArrowButton',
-      request:
-        '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js',
       jsx: [
         {
           from: './Button',
@@ -135,8 +133,6 @@ export const store: Store = {
       from: '../../components/button-named-arrow-func',
       importedName: 'Button',
       name: 'Button',
-      request:
-        '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js',
       info: {
         description: `
 Markdown descripton for component.
@@ -319,8 +315,6 @@ and some bold **text**
       from: '../../components/button-named-arrow-func',
       importedName: 'Button',
       name: 'Button',
-      request:
-        '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js',
       fileInfo: {
         sloc: {
           total: 28,
