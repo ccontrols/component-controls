@@ -280,10 +280,10 @@ describe('react story tests', () => {
       coverage: {
         '../../../dist/index.js': {
           lines: {
-            total: 61,
-            covered: 21,
+            total: 63,
+            covered: 22,
             skipped: 0,
-            pct: 34.43,
+            pct: 34.92,
           },
           functions: {
             total: 15,
@@ -292,10 +292,10 @@ describe('react story tests', () => {
             pct: 6.67,
           },
           statements: {
-            total: 63,
-            covered: 21,
+            total: 65,
+            covered: 22,
             skipped: 0,
-            pct: 33.33,
+            pct: 33.85,
           },
           branches: {
             total: 16,
