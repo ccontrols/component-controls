@@ -10,6 +10,7 @@ exports[`Sidebar overview snapshot 1`] = `
   -webkit-position: sticky;
   position: sticky;
   top: 4.5rem;
+  min-width: 150px;
   max-width: 300px;
   overflow-y: auto;
   background-color: #ffffff;
