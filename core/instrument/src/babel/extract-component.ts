@@ -8,6 +8,7 @@ import {
   ImportTypes,
   isLocalImport,
 } from '@component-controls/core';
+import { error } from '@component-controls/logger';
 import { getRelatedTests } from '@component-controls/jest-extract';
 import { componentKey } from '../misc/hashStore';
 import { followImports } from './follow-imports';
@@ -188,14 +189,28 @@ const componentRelatedMetrics = async (
   if (jest !== false && component.request) {
     const componentFolder = path.dirname(component.request);
     const docTestFiles = store.doc?.testFiles;
-    const testFiles: string[] = docTestFiles || [
-      ...getRelatedTests(component.request),
-    ];
+    const testFiles: string[] = docTestFiles
+      ? docTestFiles
+          .map(f => path.resolve(filePath, f))
+          .filter(f => {
+            const found = fs.existsSync(f);
+            if (!found) {
+              error('testFiles file', f);
+            }
+            return found;
+          })
+      : [...getRelatedTests(component.request), ...getRelatedTests(filePath)];
     const docCoverageFiles = store.doc?.testCoverage;
     const coverageFiles: string[] = docCoverageFiles
       ? docCoverageFiles
           .map(f => path.resolve(filePath, f))
-          .filter(f => fs.existsSync(f))
+          .filter(f => {
+            const found = fs.existsSync(f);
+            if (!found) {
+              error('testCoverage file', f);
+            }
+            return found;
+          })
       : [];
     //add local dependencies from same folder to include in coverage.
     if (component.localDependencies) {
