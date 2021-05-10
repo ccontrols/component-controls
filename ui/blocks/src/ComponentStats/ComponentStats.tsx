@@ -86,16 +86,18 @@ export const ComponentStats: FC<{
             color="status_failed"
           />
         )}
-        <Shield
-          label="coverage"
-          title={`tests coverage by ${minCovField.field}`}
-          value={
-            coverage.total
-              ? (100 * (coverage.covered / coverage.total)).toFixed(0)
-              : '0'
-          }
-          percent
-        />
+        {coverage.total && (
+          <Shield
+            label="coverage"
+            title={`tests coverage by ${minCovField.field}`}
+            value={
+              coverage.total
+                ? (100 * (coverage.covered / coverage.total)).toFixed(0)
+                : '0'
+            }
+            percent
+          />
+        )}
       </Fragment>
     );
   }
