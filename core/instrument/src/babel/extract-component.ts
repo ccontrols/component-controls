@@ -211,7 +211,7 @@ const componentRelatedMetrics = async (
             }
             return found;
           })
-      : [];
+      : [component.request];
     //add local dependencies from same folder to include in coverage.
     if (component.localDependencies) {
       Object.keys(component.localDependencies)
