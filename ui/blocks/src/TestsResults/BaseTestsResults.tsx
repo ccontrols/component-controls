@@ -185,7 +185,7 @@ export const BaseTestsResults: FC<BaseTestsResultsProps> = ({
       ),
     [component?.jest?.results],
   );
-  if (!component?.jest) {
+  if (!component?.jest?.results.length) {
     return null;
   }
   return (

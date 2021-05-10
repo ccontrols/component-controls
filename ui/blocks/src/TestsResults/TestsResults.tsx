@@ -26,7 +26,7 @@ export const TestsResults: FC<TestsResultsProps> = ({
   const props = useCustomProps<TestsResultsProps>('tests_results', rest);
   const component = useStoryComponent({ id, name });
 
-  if (!component?.jest) {
+  if (!component?.jest?.results.length) {
     return null;
   }
 
