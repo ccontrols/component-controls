@@ -1,6 +1,7 @@
 import path from 'path';
 import { runCLI } from 'jest';
 import { Config } from '@jest/types';
+import { error } from '@component-controls/logger';
 import { JestTests } from '@component-controls/core';
 import { findUpFile } from '@component-controls/core/node-utils';
 import { AggregatedResult } from '@jest/test-result';
@@ -72,6 +73,7 @@ const runTestsWorker: fastq.asyncWorker<
       [projectFolder],
     );
   } catch (err) {
+    error(testFiles[0], err);
     return undefined;
   }
   const { coverageMap, testResults } = runResults.results;
