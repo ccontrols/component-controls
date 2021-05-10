@@ -86,7 +86,7 @@ export const ComponentStats: FC<{
             color="status_failed"
           />
         )}
-        {coverage.total && (
+        {!!coverage.total && (
           <Shield
             label="coverage"
             title={`tests coverage by ${minCovField.field}`}
