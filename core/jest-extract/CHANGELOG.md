@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.11.3](https://github.com/ccontrols/component-controls/compare/v3.11.2...v3.11.3) (2021-05-10)
+
+
+### Bug Fixes
+
+* publish error on exception ([d3fded2](https://github.com/ccontrols/component-controls/commit/d3fded23ac1ef33f80f9beaf2576da5954f8cd3b))
+
+
+
+
+
 # [3.11.0](https://github.com/ccontrols/component-controls/compare/v3.10.4...v3.11.0) (2021-05-10)
 
 **Note:** Version bump only for package @component-controls/jest-extract

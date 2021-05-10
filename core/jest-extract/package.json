@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/jest-extract",
-  "version": "3.11.0",
+  "version": "3.11.3",
   "description": "Given a test file, extracts the tests, test results and coverage data",
   "keywords": [
     "jest",

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.11.3](https://github.com/ccontrols/component-controls/compare/v3.11.2...v3.11.3) (2021-05-10)
+
+
+### Bug Fixes
+
+* add component file to coverage ([a605b80](https://github.com/ccontrols/component-controls/commit/a605b80331b44f2e47fa6d898acfd986f2e22748))
+* coverage total is a number ([3aaf48e](https://github.com/ccontrols/component-controls/commit/3aaf48e65ef6b2850d86fe9c57f516abf35dd8c5))
+* memoize totalTests ([5d4b62b](https://github.com/ccontrols/component-controls/commit/5d4b62b62896273d3c10784842a5302f55957835))
+* misssing test results ([d522a0f](https://github.com/ccontrols/component-controls/commit/d522a0f6874221f7ab1e989f33764266362739a5))
+* multiple test files check ([e06b176](https://github.com/ccontrols/component-controls/commit/e06b17690860bec162f38372c1c80ac59f9f2729))
+* publish error on exception ([d3fded2](https://github.com/ccontrols/component-controls/commit/d3fded23ac1ef33f80f9beaf2576da5954f8cd3b))
+* remove personal info from test store ([f92713d](https://github.com/ccontrols/component-controls/commit/f92713d7b5166aae4a8b8b1e38f6cc234b304e1d))
+* rule of hooks ([d8933f5](https://github.com/ccontrols/component-controls/commit/d8933f5364a7a6556fa298b3a8e8b595546b7ed5))
+
+
+
+
+
 ## [3.11.2](https://github.com/ccontrols/component-controls/compare/v3.11.1...v3.11.2) (2021-05-10)
 
 
