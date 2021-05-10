@@ -197,7 +197,7 @@ const componentRelatedMetrics = async (
           .map(f => path.resolve(filePath, f))
           .filter(f => fs.existsSync(f))
       : [];
-    //add local dependecnies from same folder to include in coverage.
+    //add local dependencies from same folder to include in coverage.
     if (component.localDependencies) {
       Object.keys(component.localDependencies)
         .filter(f => f.startsWith(`.${path.sep}`))
