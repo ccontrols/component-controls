@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/design-tokens",
-  "version": "3.11.1",
+  "version": "3.11.2",
   "description": "Component controls design tokens components.",
   "sideEffects": false,
   "main": "dist/index.js",
@@ -32,7 +32,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/components": "^3.11.1",
+    "@component-controls/components": "^3.11.2",
     "copy-to-clipboard": "^3.2.1",
     "simple-color-converter": "^2.1.9",
     "tinycolor2": "^1.4.1"

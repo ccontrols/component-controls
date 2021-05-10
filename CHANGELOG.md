@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.11.2](https://github.com/ccontrols/component-controls/compare/v3.11.1...v3.11.2) (2021-05-10)
+
+
+### Bug Fixes
+
+* context sidebar min width ([3d12989](https://github.com/ccontrols/component-controls/commit/3d1298983799485c899595147403724c4e4ddd4d))
+* empty jest tests hide block ([09afcc2](https://github.com/ccontrols/component-controls/commit/09afcc26db482750e844a7b0afbc99899138c986))
+* hide coverage stats if no coverage total ([d7d8426](https://github.com/ccontrols/component-controls/commit/d7d84269013b44fa18e479f2f22155a99de06793))
+
+
+
+
+
 ## [3.11.1](https://github.com/ccontrols/component-controls/compare/v3.11.0...v3.11.1) (2021-05-10)
 
 

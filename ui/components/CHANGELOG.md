@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.11.2](https://github.com/ccontrols/component-controls/compare/v3.11.1...v3.11.2) (2021-05-10)
+
+
+### Bug Fixes
+
+* context sidebar min width ([3d12989](https://github.com/ccontrols/component-controls/commit/3d1298983799485c899595147403724c4e4ddd4d))
+
+
+
+
+
 ## [3.11.1](https://github.com/ccontrols/component-controls/compare/v3.11.0...v3.11.1) (2021-05-10)
 
 **Note:** Version bump only for package @component-controls/components
