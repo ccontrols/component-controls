@@ -26,10 +26,12 @@ export const TestsResults: FC<TestsResultsProps> = ({
   const props = useCustomProps<TestsResultsProps>('tests_results', rest);
   const component = useStoryComponent({ id, name });
 
-  if (!component?.jest?.results.length) {
+  if (
+    !component?.jest?.results.length ||
+    !component.jest.results[0].testResults.length
+  ) {
     return null;
   }
-  console.log(component?.jest?.results);
   return (
     <BlockContainer {...props}>
       <BaseTestsResults component={component} pagination={pagination} />
