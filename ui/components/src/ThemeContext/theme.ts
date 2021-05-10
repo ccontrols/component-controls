@@ -1006,6 +1006,7 @@ export const theme: ControlsTheme = {
       overflowX: 'hidden',
       position: 'sticky',
       top: '4.5rem',
+      minWidth: '150px',
       maxWidth: '300px',
       overflowY: 'auto',
       backgroundColor: 'background',
