@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
-import { FC } from 'react';
+import { FC, useMemo } from 'react';
 import { jsx } from 'theme-ui';
 import {
   BlockContainer,
@@ -25,15 +25,20 @@ export const TestsResults: FC<TestsResultsProps> = ({
 }) => {
   const props = useCustomProps<TestsResultsProps>('tests_results', rest);
   const component = useStoryComponent({ id, name });
-  if (
-    !component?.jest?.results.length ||
-    !component.jest.results.reduce(
-      (acc, { testResults }) => acc + testResults.length,
-      0,
-    )
-  ) {
+  const totalTests = useMemo(
+    () =>
+      component?.jest
+        ? component.jest.results.reduce(
+            (acc, { testResults }) => acc + testResults.length,
+            0,
+          )
+        : 0,
+    [component?.jest],
+  );
+  if (!totalTests) {
     return null;
   }
+
   return (
     <BlockContainer {...props}>
       <BaseTestsResults component={component} pagination={pagination} />
