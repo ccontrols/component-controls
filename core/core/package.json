@@ -62,5 +62,16 @@
   "authors": [
     "Atanas Stoyanov"
   ],
+  "jest": {
+    "preset": "ts-jest",
+    "globals": {
+      "ts-jest": {
+        "isolatedModules": true
+      }
+    },
+    "snapshotSerializers": [
+      "@emotion/jest/serializer"
+    ]
+  },
   "gitHead": "e30d62f101e104711a16261fce04785d58cac1eb"
 }
