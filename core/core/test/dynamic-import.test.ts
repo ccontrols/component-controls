@@ -49,9 +49,7 @@ describe('dynamic-import', () => {
       path.resolve(__dirname, './fixtures/buildtime.js'),
     );
     expect(config).toMatchObject({
-      default: {
-        stories: ['../../stories/src/blogs/*.mdx'],
-      },
+      stories: ['../../stories/src/blogs/*.mdx'],
     });
   });
 });
