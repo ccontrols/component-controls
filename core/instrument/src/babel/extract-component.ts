@@ -200,44 +200,46 @@ const componentRelatedMetrics = async (
             return found;
           })
       : [...getRelatedTests(component.request), ...getRelatedTests(filePath)];
-    const docCoverageFiles = store.doc?.testCoverage;
-    const coverageFiles: string[] = docCoverageFiles
-      ? docCoverageFiles
-          .map(f => path.resolve(filePath, f))
-          .filter(f => {
-            const found = fs.existsSync(f);
-            if (!found) {
-              error('testCoverage file', f);
+    if (testFiles.length) {
+      const docCoverageFiles = store.doc?.testCoverage;
+      const coverageFiles: string[] = docCoverageFiles
+        ? docCoverageFiles
+            .map(f => path.resolve(filePath, f))
+            .filter(f => {
+              const found = fs.existsSync(f);
+              if (!found) {
+                error('testCoverage file', f);
+              }
+              return found;
+            })
+        : [component.request];
+      //add local dependencies from same folder to include in coverage.
+      if (component.localDependencies) {
+        Object.keys(component.localDependencies)
+          .filter(f => f.startsWith(`.${path.sep}`))
+          .forEach(f => {
+            const fileName = resolve.sync(f, {
+              ...resolveOptions,
+              basedir: componentFolder,
+            });
+            if (fs.existsSync(fileName)) {
+              if (!docTestFiles) {
+                testFiles.push(fileName);
+              }
+              if (!docCoverageFiles) {
+                coverageFiles.push(fileName);
+              }
             }
-            return found;
-          })
-      : [component.request];
-    //add local dependencies from same folder to include in coverage.
-    if (component.localDependencies) {
-      Object.keys(component.localDependencies)
-        .filter(f => f.startsWith(`.${path.sep}`))
-        .forEach(f => {
-          const fileName = resolve.sync(f, {
-            ...resolveOptions,
-            basedir: componentFolder,
           });
-          if (fs.existsSync(fileName)) {
-            if (!docTestFiles) {
-              testFiles.push(fileName);
-            }
-            if (!docCoverageFiles) {
-              coverageFiles.push(fileName);
-            }
-          }
-        });
-    }
-    const testResults = await extractTests(
-      Array.from(new Set(testFiles)),
-      Array.from(new Set(coverageFiles)),
-      jest,
-    );
-    if (testResults) {
-      component.jest = testResults;
+      }
+      const testResults = await extractTests(
+        Array.from(new Set(testFiles)),
+        Array.from(new Set(coverageFiles)),
+        jest,
+      );
+      if (testResults) {
+        component.jest = testResults;
+      }
     }
   }
 };
