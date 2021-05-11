@@ -558,3 +558,57 @@ export const overview = () => <div>decorator test</div>;
   title="document decorators"
   src={decoratorsImg}
 />
+
+### testFiles
+
+type: `string[]
+
+associate component test files with the document, the paths sould be relative to the document file. By default the associated test files are inferred automatically.
+
+[ESM](/tutorial/esmodules-stories)
+
+```
+import { Button } from '../components/Button';
+
+export default {
+  title: 'Library/Components/Button',
+  component: Button,
+  testFiles: ['./Button.test.ts']
+};
+```
+
+### testCoverage
+
+type: `string[]
+
+associate component files to include in the coverage testing, the paths sould be relative to the document file. By default the associated coverage files are inferred automatically.
+
+[ESM](/tutorial/esmodules-stories)
+
+```
+import { Button } from '../components/Button';
+
+export default {
+  title: 'Library/Components/Button',
+  component: Button,
+  testCoverage: ['./Button.ts', '../utils.ts']
+};
+```
+
+### testData
+
+type: `string
+
+associate a data-driven testing file component, the path sould be relative to the document file. By default the associated data-driven testing file is inferred automatically.
+
+[ESM](/tutorial/esmodules-stories)
+
+```
+import { Button } from '../components/Button';
+
+export default {
+  title: 'Library/Components/Button',
+  component: Button,
+  testCoverage: ['./Button.ts', '../utils.ts']
+};
+```
