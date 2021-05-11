@@ -1,6 +1,6 @@
 import path from 'path';
 import fs from 'fs';
-import { BuildProps, RuleOptions } from '@component-controls/core';
+import { BuildProps } from '@component-controls/core';
 import {
   getCSSFilePath,
   getDistFolder,
@@ -42,17 +42,6 @@ module.exports = ({
         },
       });
       return [];
-    },
-    webpack: (config: RuleOptions['config']) => {
-      const loader: any = config.module?.rules?.find(
-        (r: any) => (r?.use as any)?.loader === 'next-babel-loader',
-      );
-      if (loader?.options) {
-        (loader.options as any).babelPresetPlugins.push(
-          '@emotion/babel-plugin',
-        );
-      }
-      return config;
     },
 
     ...rest,
