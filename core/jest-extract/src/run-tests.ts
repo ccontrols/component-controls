@@ -51,27 +51,33 @@ const runTestsWorker: fastq.asyncWorker<
     globalConfig: Config.GlobalConfig;
   };
   try {
-    runResults = await runCLI(
-      {
-        rootDir: projectFolder,
-        testRegex: testFiles,
-        forceExit: true,
-        testPathIgnorePatterns: ['/node_modules/', '/__snapshots__/'],
-        silent: true,
-        testTimeout: 100000,
-        reporters: [],
-        coverage: true,
-        coverageReporters: ['none'],
-        watchman: false,
-        collectCoverageFrom: [
-          '**/*.{js,jsx,tsx,ts}',
-          '!**/jest.config.js',
-          '!**/*.{test,spec}.{js,jsx,tsx,ts}',
-        ],
-        ...options,
-      } as Config.Argv,
-      [projectFolder],
-    );
+    const nodeEnv = process.env.NODE_ENV;
+    process.env.NODE_ENV = 'test';
+    try {
+      runResults = await runCLI(
+        {
+          rootDir: projectFolder,
+          testRegex: testFiles,
+          forceExit: true,
+          testPathIgnorePatterns: ['/node_modules/', '/__snapshots__/'],
+          silent: true,
+          testTimeout: 100000,
+          reporters: [],
+          coverage: true,
+          coverageReporters: ['none'],
+          watchman: false,
+          collectCoverageFrom: [
+            '**/*.{js,jsx,tsx,ts}',
+            '!**/jest.config.js',
+            '!**/*.{test,spec}.{js,jsx,tsx,ts}',
+          ],
+          ...options,
+        } as Config.Argv,
+        [projectFolder],
+      );
+    } finally {
+      process.env.NODE_ENV = nodeEnv;
+    }
   } catch (err) {
     error(testFiles[0], err);
     return undefined;
