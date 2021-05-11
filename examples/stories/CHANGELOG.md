@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.11.4](https://github.com/ccontrols/component-controls/compare/v3.11.3...v3.11.4) (2021-05-11)
+
+
+### Bug Fixes
+
+* icon type ([7bb8dc8](https://github.com/ccontrols/component-controls/commit/7bb8dc8b9109c3995728b3ac3bb383c7125b80ca))
+
+
+
+
+
 ## [3.10.1](https://github.com/ccontrols/component-controls/compare/v3.10.0...v3.10.1) (2021-05-09)
 
 **Note:** Version bump only for package component-controls-stories

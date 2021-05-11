@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.11.4](https://github.com/ccontrols/component-controls/compare/v3.11.3...v3.11.4) (2021-05-11)
+
+
+### Bug Fixes
+
+* avoid running tests if nonoe for story/component ([3066920](https://github.com/ccontrols/component-controls/commit/30669201dbb260fdcae7defe1fb88869d8103fff))
+* enable test mode for running tests ([afd20b7](https://github.com/ccontrols/component-controls/commit/afd20b7639bbdfc3530c71541a44882c9da553c8))
+* icon type ([7bb8dc8](https://github.com/ccontrols/component-controls/commit/7bb8dc8b9109c3995728b3ac3bb383c7125b80ca))
+
+
+
+
+
 ## [3.11.3](https://github.com/ccontrols/component-controls/compare/v3.11.2...v3.11.3) (2021-05-10)
 
 

@@ -1,7 +1,7 @@
 {
   "name": "component-controls-react-webpack-starter",
   "private": true,
-  "version": "3.11.3",
+  "version": "3.11.4",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -9,7 +9,7 @@
     "build-sample": "cross-env NODE_OPTIONS=--max_old_space_size=20480 rm -rf public && webpack --config webpack.prod.config.js --progress"
   },
   "dependencies": {
-    "@component-controls/react-router-integration": "^3.11.3",
+    "@component-controls/react-router-integration": "^3.11.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
