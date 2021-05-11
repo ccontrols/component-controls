@@ -47,13 +47,12 @@
     "@component-controls/store": "^3.11.3",
     "@component-controls/storybook-custom-docs": "^3.11.0",
     "@component-controls/webpack-configs": "^3.11.3",
-    "@emotion/react": "^11.1.1",
-    "@emotion/styled": "^11.0.0",
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
     "typescript": "^4.2.4"
   },
   "devDependencies": {
     "@component-controls/ts-markdown-docs": "^3.8.2",
-    "@emotion/babel-plugin": "^11.0.0",
     "@storybook/addons": "^6.2.0-beta.10",
     "@storybook/api": "^6.2.0-beta.10",
     "@storybook/client-api": "^6.2.0-beta.10",

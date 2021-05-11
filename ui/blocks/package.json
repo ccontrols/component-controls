@@ -38,7 +38,7 @@
     "@component-controls/render": "^3.11.0",
     "@component-controls/search-algolia": "^3.11.0",
     "@component-controls/store": "^3.11.3",
-    "@theme-ui/css": "^0.6.0-alpha.7",
+    "@theme-ui/css": "^0.8.4",
     "ansi_up": "^5.0.1",
     "copy-to-clipboard": "^3.2.1",
     "global": "^4.3.2",
@@ -48,7 +48,7 @@
     "react-resize-detector": "^5.0.6",
     "recoil": "^0.0.10",
     "stringify-object": "^3.3.0",
-    "theme-ui": "^0.6.0-alpha.7"
+    "theme-ui": "^0.8.4"
   },
   "devDependencies": {
     "@component-controls/cc-cli": "^3.11.3",

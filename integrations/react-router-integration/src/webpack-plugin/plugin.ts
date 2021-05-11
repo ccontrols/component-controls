@@ -21,7 +21,6 @@ export class HTMLInjectStylePlugin {
             hooks.alterAssetTagGroups.tapAsync(
               HTMLInjectStylePlugin.pluginName,
               (data: any, cb: any) => {
-                console.log('APPLY tapAsync');
                 data.headTags.push({
                   tagName: 'style',
                   innerHTML: this.options.styles,
