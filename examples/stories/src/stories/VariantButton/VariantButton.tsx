@@ -54,7 +54,7 @@ const paddings: Record<SizeVariants, string> = {
   medium: `10px 20px`,
   large: `15px 30px`,
 };
-const variant_icons: Record<ButtonIconType, typeof SearchIcon> = {
+const variant_icons: Record<ButtonIconType, typeof SearchIcon | null> = {
   none: null,
   search: SearchIcon,
   'left-arrow': ArrowLeftIcon,
@@ -116,7 +116,7 @@ export const VariantButton: FC<VariantButtonProps> = ({
   iconSide = 'left',
   padding = 'medium',
   isPrimary = false,
-  icon,
+  icon = 'none',
 }) => {
   const Icon = variant_icons[icon];
   const finalVariant = isPrimary ? 'primary' : variant;
