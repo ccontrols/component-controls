@@ -1,9 +1,14 @@
 import path from 'path';
 import fs from 'fs';
-import { dynamicRequire } from '@component-controls/core/node-utils';
+import {
+  dynamicRequire,
+  relativeImport,
+} from '@component-controls/core/node-utils';
+import { getDataFile } from '@component-controls/instrument';
+
 import { log } from '@component-controls/logger';
 import { CliOptions, getTestFolder } from './utils';
-import { TemplateOptions, DataImportOptions, relativeImport } from '../utils';
+import { TemplateOptions, DataImportOptions } from '../utils';
 import { createDataTemplate } from '../data-templates/data-template';
 
 /**
@@ -18,10 +23,7 @@ export const saveDataTemplate = async <P extends TemplateOptions>(
     return undefined;
   }
   const { test, overwrite } = options;
-  const dataName = test
-    .split('.')
-    .map((e, i) => (i === 1 ? 'data' : e))
-    .join('.');
+  const dataName = getDataFile(test);
 
   const filePath = path.resolve(testFolder, dataName);
 
@@ -37,11 +39,13 @@ export const saveDataTemplate = async <P extends TemplateOptions>(
   }
   const dataTemplate = await createDataTemplate(options, existing);
   if (dataTemplate) {
-    log('saving data', filePath, [184, 226, 255]);
-    if (!fs.existsSync(testFolder)) {
-      fs.mkdirSync(testFolder);
+    if (dataTemplate.isModified) {
+      log('saving data', filePath, [184, 226, 255]);
+      if (!fs.existsSync(testFolder)) {
+        fs.mkdirSync(testFolder);
+      }
+      fs.writeFileSync(filePath, dataTemplate.content, 'utf8');
     }
-    fs.writeFileSync(filePath, dataTemplate.content, 'utf8');
     return {
       data: dataTemplate.data,
       filePath: relativeImport(testFolder, filePath),

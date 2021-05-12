@@ -19,7 +19,10 @@ import { getTemplate } from '../resolve-template';
 export const createDataTemplate = async (
   options: StoryTemplateOptions,
   existing?: Record<string, any>,
-): Promise<{ content: string; data: Record<string, any> } | undefined> => {
+): Promise<
+  | { content: string; data: Record<string, any>; isModified: boolean }
+  | undefined
+> => {
   const {
     name,
     bundle,
@@ -37,6 +40,7 @@ export const createDataTemplate = async (
   }
   const { doc, stories, components } = parsed;
   const data: Record<string, any> = {};
+  let isModified = false;
   Object.keys(stories).forEach(storyId => {
     const story = stories[storyId];
 
@@ -47,6 +51,7 @@ export const createDataTemplate = async (
       for (let i = Object.keys(values).length; i < numValues; i += 1) {
         const rnd = randomizeData(controls);
         if (Object.keys(rnd).length) {
+          isModified = true;
           values[i.toString()] = rnd;
         }
       }
@@ -59,6 +64,7 @@ export const createDataTemplate = async (
     return undefined;
   }
   return {
+    isModified,
     content: prettify(
       dot.template(getTemplate(`data-templates/data`, format))({
         data: JSON.stringify(data, null, 2),

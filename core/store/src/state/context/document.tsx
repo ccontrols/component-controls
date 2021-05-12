@@ -10,6 +10,7 @@ import {
   getHomePath,
   getComponentName,
   SearchResult,
+  CURRENT_STORY,
 } from '@component-controls/core';
 import { useStore, useActiveTab } from './store';
 
@@ -30,9 +31,12 @@ export const DocumentContextProvider: FC<{ docId: string | undefined }> = ({
 /**
  * Retrieves a Document object from a document id
  */
-export const useDocument = (docId?: string): Document | undefined => {
+export const useDocument = (
+  docId: string = CURRENT_STORY,
+): Document | undefined => {
   const store = useStore();
-  return docId ? store.docs[docId] : undefined;
+  const current = useCurrentDocument();
+  return docId === CURRENT_STORY ? current : store.docs[docId];
 };
 
 export const useGetDocument = (): ((docId: string) => Document | undefined) => {

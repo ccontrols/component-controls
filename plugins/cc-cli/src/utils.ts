@@ -1,4 +1,3 @@
-import path from 'path';
 export const renderers = {
   rtl: 'react-testing-library',
   rtr: 'react-test-renderer',
@@ -61,11 +60,6 @@ export interface DataImportOptions {
   // the list of stories that do have some data-driven values and their values
   data: Record<string, any>;
 }
-
-export const relativeImport = (from: string, to: string): string => {
-  const relative = path.relative(from, to);
-  return relative.startsWith('.') ? relative : `./${relative}`;
-};
 
 export const formatExtension = (format: TeplateFormats): string =>
   format === 'ts' ? 'ts' : 'js';

@@ -1,5 +1,6 @@
 import path from 'path';
 import dot from 'dot';
+import { relativeImport } from '@component-controls/core/node-utils';
 import { createTemplate } from './template';
 import { accessibilityTemplate } from './accessibily';
 import {
@@ -7,7 +8,6 @@ import {
   renderers,
   TemplateFunction,
   DataImportOptions,
-  relativeImport,
   removeExtension,
 } from '../utils';
 import { getTemplate } from '../resolve-template';

@@ -83,6 +83,10 @@ export type Story<Props = any> = {
   id?: string;
 
   /**
+   * raw id for the story as declared in ESM format
+   */
+  rawId?: string;
+  /**
    * title of the file/group of stories
    */
   doc?: string;
@@ -129,8 +133,10 @@ export type Story<Props = any> = {
 
 export type DynamicExamples = Story[];
 
+export type ExampleControl = ComponentControl<ExampleControls> | any;
+
 export type ExampleControls = {
-  [name: string]: ComponentControl<ExampleControls> | any;
+  [name: string]: ExampleControl;
 };
 
 /**
@@ -146,6 +152,10 @@ export type Example<Props = any> = {
     controls?: ExampleControls;
   };
 
+/**
+ * records of storyid/data pairs, to be associated with documents
+ */
+export type DocumentData = Record<string, ExampleControls>;
 /**
  * dynamic story creator function type.
  * returns an array of dynamically loaded stories
@@ -265,6 +275,11 @@ export type Document<Props = any> = {
    * optional test data file
    */
   testData?: string;
+
+  /**
+   * loaded data associated with the document
+   */
+  data?: DocumentData;
   /**
    * lookup into the global store.components
    * since multiple components of the same name can be used

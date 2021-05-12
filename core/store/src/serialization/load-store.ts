@@ -76,6 +76,7 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
                 const story = {
                   ...docStory,
                   id: docStoryToId(doc.title, id),
+                  rawId: id,
                   name: storyNameFromExport(docStory.name),
                   doc: doc.title,
                 };

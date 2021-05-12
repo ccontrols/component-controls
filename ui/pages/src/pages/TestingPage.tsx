@@ -3,6 +3,7 @@ import {
   Playground,
   PropsTable,
   Story,
+  StoryData,
   Description,
   TestsResults,
   TestsCoverage,
@@ -23,7 +24,7 @@ const TestingPage: FC = () => {
           <Playground title=".">
             <Story id="." />
           </Playground>
-
+          <StoryData title="Test data" />
           <PropsTable of="." title="Controls" visibility="controls" />
         </>
       )}
