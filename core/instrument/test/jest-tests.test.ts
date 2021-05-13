@@ -392,9 +392,9 @@ describe('component-tests', () => {
           },
           branches: {
             total: 24,
-            covered: 10,
+            covered: 11,
             skipped: 0,
-            pct: 41.67,
+            pct: 45.83,
           },
         },
       },
