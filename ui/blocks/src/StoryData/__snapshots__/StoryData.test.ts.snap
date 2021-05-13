@@ -1,13 +1,5371 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`StoryData overview snapshot 1`] = `<DocumentFragment />`;
+exports[`StoryData overview snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
 
-exports[`StoryData pagination 1 snapshot 1`] = `<DocumentFragment />`;
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
 
-exports[`StoryData pagination 2 snapshot 1`] = `<DocumentFragment />`;
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
 
-exports[`StoryData pagination 3 snapshot 1`] = `<DocumentFragment />`;
+.emotion-2:hover a {
+  visibility: visible;
+}
 
-exports[`StoryData pagination 4 snapshot 1`] = `<DocumentFragment />`;
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  overflow-x: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
 
-exports[`StoryData pagination 5 snapshot 1`] = `<DocumentFragment />`;
+.emotion-3:hover a {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-4 p {
+  margin: 0;
+}
+
+.emotion-4 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-4 a {
+  word-break: break-word;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-19 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-19 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-20 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-21 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+.emotion-22 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-24 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-26 {
+  white-space: nowrap;
+  max-width: 450px;
+  text-overflow: ellipsis;
+}
+
+.emotion-65 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-66 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-67 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+      id=""
+    >
+      <div
+        class="emotion-2"
+      />
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="emotion-3"
+        >
+          <table
+            class="emotion-4"
+            role="table"
+          >
+            <thead
+              class="emotion-5"
+            >
+              <tr
+                class="emotion-6"
+                role="row"
+              >
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      select
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      #
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      name
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-7"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-8"
+                  >
+                    <div
+                      class="emotion-9"
+                    >
+                      age
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              class="emotion-19"
+              role="rowgroup"
+            >
+              <tr
+                class="emotion-20"
+                role="row"
+              >
+                <td
+                  class="emotion-21"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-22"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-21"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-24"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    1
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-21"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-26"
+                  >
+                    Cecelia Langosh
+                  </div>
+                </td>
+                <td
+                  class="emotion-21"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-26"
+                  >
+                    16
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-20"
+                role="row"
+              >
+                <td
+                  class="emotion-21"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-22"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-21"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-24"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    2
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-21"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-26"
+                  >
+                    Murl Green I
+                  </div>
+                </td>
+                <td
+                  class="emotion-21"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-26"
+                  >
+                    26
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-20"
+                role="row"
+              >
+                <td
+                  class="emotion-21"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-22"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-21"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-24"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    3
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-21"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-26"
+                  >
+                    Lela McClure
+                  </div>
+                </td>
+                <td
+                  class="emotion-21"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-26"
+                  >
+                    24
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-20"
+                role="row"
+              >
+                <td
+                  class="emotion-21"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-22"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-21"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-24"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    4
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-21"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-26"
+                  >
+                    Ms. Jean Barrows
+                  </div>
+                </td>
+                <td
+                  class="emotion-21"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-26"
+                  >
+                    23
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-20"
+                role="row"
+              >
+                <td
+                  class="emotion-21"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-22"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-21"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-24"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    5
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-21"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-26"
+                  >
+                    Tanya Sanford
+                  </div>
+                </td>
+                <td
+                  class="emotion-21"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-26"
+                  >
+                    19
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div
+            class="emotion-65"
+          >
+            <div
+              class="emotion-66"
+            >
+              5 data rows
+            </div>
+            <div
+              class="emotion-67"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`StoryData pagination 1 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -22px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  overflow-x: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8:hover a {
+  visibility: visible;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-9 p {
+  margin: 0;
+}
+
+.emotion-9 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-9 a {
+  word-break: break-word;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-24 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-24 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-29 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-31 {
+  white-space: nowrap;
+  max-width: 450px;
+  text-overflow: ellipsis;
+}
+
+.emotion-70 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-71 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-72 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-73 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+      id="test-data"
+    >
+      <div
+        class="emotion-2"
+      >
+        <a
+          aria-label="navigate to Test Data section"
+          class="emotion-3"
+          data-id="test-data"
+          data-level="3"
+          data-title="Test Data"
+          href="http://localhost/#test-data"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="18"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h3
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            Test Data
+            <a
+              aria-expanded="true"
+              class="emotion-6"
+            >
+              <span
+                class="emotion-7"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="emotion-8"
+        >
+          <table
+            class="emotion-9"
+            role="table"
+          >
+            <thead
+              class="emotion-10"
+            >
+              <tr
+                class="emotion-11"
+                role="row"
+              >
+                <th
+                  class="emotion-12"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-13"
+                  >
+                    <div
+                      class="emotion-14"
+                    >
+                      select
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-12"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-13"
+                  >
+                    <div
+                      class="emotion-14"
+                    >
+                      #
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-12"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-13"
+                  >
+                    <div
+                      class="emotion-14"
+                    >
+                      name
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-12"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-13"
+                  >
+                    <div
+                      class="emotion-14"
+                    >
+                      age
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              class="emotion-24"
+              role="rowgroup"
+            >
+              <tr
+                class="emotion-25"
+                role="row"
+              >
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-27"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-29"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    1
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    Cecelia Langosh
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    16
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-25"
+                role="row"
+              >
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-27"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-29"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    2
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    Murl Green I
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    26
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-25"
+                role="row"
+              >
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-27"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-29"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    3
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    Lela McClure
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    24
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-25"
+                role="row"
+              >
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-27"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-29"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    4
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    Ms. Jean Barrows
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    23
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-25"
+                role="row"
+              >
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-27"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-29"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    5
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    Tanya Sanford
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    19
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div
+            class="emotion-70"
+          >
+            <div
+              class="emotion-71"
+            >
+              Total: 5 records
+            </div>
+            <div
+              class="emotion-72"
+            >
+              <div
+                class="emotion-73"
+              >
+                Page 1 of 1
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`StoryData pagination 2 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -22px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  overflow-x: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8:hover a {
+  visibility: visible;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-9 p {
+  margin: 0;
+}
+
+.emotion-9 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-9 a {
+  word-break: break-word;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-24 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-24 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-29 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-31 {
+  white-space: nowrap;
+  max-width: 450px;
+  text-overflow: ellipsis;
+}
+
+.emotion-52 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-53 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-54 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-55 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-55 button {
+  width: 50px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.emotion-56 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 50px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.emotion-57 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+}
+
+.emotion-57:disabled {
+  color: #aaa;
+}
+
+.emotion-64 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+      id="test-data"
+    >
+      <div
+        class="emotion-2"
+      >
+        <a
+          aria-label="navigate to Test Data section"
+          class="emotion-3"
+          data-id="test-data"
+          data-level="3"
+          data-title="Test Data"
+          href="http://localhost/#test-data"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="18"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h3
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            Test Data
+            <a
+              aria-expanded="true"
+              class="emotion-6"
+            >
+              <span
+                class="emotion-7"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="emotion-8"
+        >
+          <table
+            class="emotion-9"
+            role="table"
+          >
+            <thead
+              class="emotion-10"
+            >
+              <tr
+                class="emotion-11"
+                role="row"
+              >
+                <th
+                  class="emotion-12"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-13"
+                  >
+                    <div
+                      class="emotion-14"
+                    >
+                      select
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-12"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-13"
+                  >
+                    <div
+                      class="emotion-14"
+                    >
+                      #
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-12"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-13"
+                  >
+                    <div
+                      class="emotion-14"
+                    >
+                      name
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-12"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-13"
+                  >
+                    <div
+                      class="emotion-14"
+                    >
+                      age
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              class="emotion-24"
+              role="rowgroup"
+            >
+              <tr
+                class="emotion-25"
+                role="row"
+              >
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-27"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-29"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    1
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    Cecelia Langosh
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    16
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-25"
+                role="row"
+              >
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-27"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-29"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    2
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    Murl Green I
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    26
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-25"
+                role="row"
+              >
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-27"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-29"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    3
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    Lela McClure
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    24
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div
+            class="emotion-52"
+          >
+            <div
+              class="emotion-53"
+            >
+              Total: 5 records
+            </div>
+            <div
+              class="emotion-54"
+            >
+              <div
+                class="emotion-55"
+              >
+                <div
+                  class="emotion-56"
+                >
+                  <button
+                    class="emotion-57"
+                    disabled=""
+                  >
+                    &lt;&lt;
+                  </button>
+                </div>
+                <div
+                  class="emotion-56"
+                >
+                  <button
+                    class="emotion-57"
+                    disabled=""
+                  >
+                    &lt;
+                  </button>
+                </div>
+                <div
+                  class="emotion-56"
+                >
+                  <button
+                    class="emotion-57"
+                  >
+                    &gt;
+                  </button>
+                </div>
+                <div
+                  class="emotion-56"
+                >
+                  <button
+                    class="emotion-57"
+                  >
+                    &gt;&gt;
+                  </button>
+                </div>
+              </div>
+              <div
+                class="emotion-64"
+              >
+                Page 1 of 2
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`StoryData pagination 3 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -22px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  overflow-x: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8:hover a {
+  visibility: visible;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-9 p {
+  margin: 0;
+}
+
+.emotion-9 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-9 a {
+  word-break: break-word;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-24 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-24 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-29 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-31 {
+  white-space: nowrap;
+  max-width: 450px;
+  text-overflow: ellipsis;
+}
+
+.emotion-70 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-71 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-72 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+      id="test-data"
+    >
+      <div
+        class="emotion-2"
+      >
+        <a
+          aria-label="navigate to Test Data section"
+          class="emotion-3"
+          data-id="test-data"
+          data-level="3"
+          data-title="Test Data"
+          href="http://localhost/#test-data"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="18"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h3
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            Test Data
+            <a
+              aria-expanded="true"
+              class="emotion-6"
+            >
+              <span
+                class="emotion-7"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="emotion-8"
+        >
+          <table
+            class="emotion-9"
+            role="table"
+          >
+            <thead
+              class="emotion-10"
+            >
+              <tr
+                class="emotion-11"
+                role="row"
+              >
+                <th
+                  class="emotion-12"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-13"
+                  >
+                    <div
+                      class="emotion-14"
+                    >
+                      select
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-12"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-13"
+                  >
+                    <div
+                      class="emotion-14"
+                    >
+                      #
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-12"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-13"
+                  >
+                    <div
+                      class="emotion-14"
+                    >
+                      name
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-12"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-13"
+                  >
+                    <div
+                      class="emotion-14"
+                    >
+                      age
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              class="emotion-24"
+              role="rowgroup"
+            >
+              <tr
+                class="emotion-25"
+                role="row"
+              >
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-27"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-29"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    1
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    Cecelia Langosh
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    16
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-25"
+                role="row"
+              >
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-27"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-29"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    2
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    Murl Green I
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    26
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-25"
+                role="row"
+              >
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-27"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-29"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    3
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    Lela McClure
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    24
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-25"
+                role="row"
+              >
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-27"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-29"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    4
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    Ms. Jean Barrows
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    23
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-25"
+                role="row"
+              >
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-27"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-29"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    5
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    Tanya Sanford
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    19
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div
+            class="emotion-70"
+          >
+            <div
+              class="emotion-71"
+            >
+              Total: 5 records
+            </div>
+            <div
+              class="emotion-72"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`StoryData pagination 4 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -22px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  overflow-x: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8:hover a {
+  visibility: visible;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-9 p {
+  margin: 0;
+}
+
+.emotion-9 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-9 a {
+  word-break: break-word;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-24 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-24 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-29 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-31 {
+  white-space: nowrap;
+  max-width: 450px;
+  text-overflow: ellipsis;
+}
+
+.emotion-52 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-53 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-54 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-55 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-55 button {
+  width: 50px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.emotion-56 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 50px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.emotion-57 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #5c6ac4;
+  border: 0;
+  border-radius: 4px;
+  color: #333;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
+}
+
+.emotion-57:disabled {
+  color: #aaa;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+      id="test-data"
+    >
+      <div
+        class="emotion-2"
+      >
+        <a
+          aria-label="navigate to Test Data section"
+          class="emotion-3"
+          data-id="test-data"
+          data-level="3"
+          data-title="Test Data"
+          href="http://localhost/#test-data"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="18"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h3
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            Test Data
+            <a
+              aria-expanded="true"
+              class="emotion-6"
+            >
+              <span
+                class="emotion-7"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="emotion-8"
+        >
+          <table
+            class="emotion-9"
+            role="table"
+          >
+            <thead
+              class="emotion-10"
+            >
+              <tr
+                class="emotion-11"
+                role="row"
+              >
+                <th
+                  class="emotion-12"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-13"
+                  >
+                    <div
+                      class="emotion-14"
+                    >
+                      select
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-12"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-13"
+                  >
+                    <div
+                      class="emotion-14"
+                    >
+                      #
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-12"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-13"
+                  >
+                    <div
+                      class="emotion-14"
+                    >
+                      name
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-12"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-13"
+                  >
+                    <div
+                      class="emotion-14"
+                    >
+                      age
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              class="emotion-24"
+              role="rowgroup"
+            >
+              <tr
+                class="emotion-25"
+                role="row"
+              >
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-27"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-29"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    1
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    Cecelia Langosh
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    16
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-25"
+                role="row"
+              >
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-27"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-29"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    2
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    Murl Green I
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    26
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-25"
+                role="row"
+              >
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-27"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-29"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    3
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    Lela McClure
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    24
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div
+            class="emotion-52"
+          >
+            <div
+              class="emotion-53"
+            >
+              Total: 5 records
+            </div>
+            <div
+              class="emotion-54"
+            >
+              <div
+                class="emotion-55"
+              >
+                <div
+                  class="emotion-56"
+                >
+                  <button
+                    class="emotion-57"
+                    disabled=""
+                  >
+                    &lt;&lt;
+                  </button>
+                </div>
+                <div
+                  class="emotion-56"
+                >
+                  <button
+                    class="emotion-57"
+                    disabled=""
+                  >
+                    &lt;
+                  </button>
+                </div>
+                <div
+                  class="emotion-56"
+                >
+                  <button
+                    class="emotion-57"
+                  >
+                    &gt;
+                  </button>
+                </div>
+                <div
+                  class="emotion-56"
+                >
+                  <button
+                    class="emotion-57"
+                  >
+                    &gt;&gt;
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`StoryData pagination 5 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2:hover a {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -22px;
+}
+
+.emotion-3:hover {
+  visibility: visible;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  overflow-x: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8:hover a {
+  visibility: visible;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.emotion-9 p {
+  margin: 0;
+}
+
+.emotion-9 pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 240px;
+  background-color: inherit;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.emotion-9 a {
+  word-break: break-word;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #454f5b;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  padding-left: 16px;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-24 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-24 tr:last-of-type {
+  border-bottom: 0;
+}
+
+.emotion-25 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 0;
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.emotion-29 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-31 {
+  white-space: nowrap;
+  max-width: 450px;
+  text-overflow: ellipsis;
+}
+
+.emotion-70 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-71 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-72 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+      id="test-data"
+    >
+      <div
+        class="emotion-2"
+      >
+        <a
+          aria-label="navigate to Test Data section"
+          class="emotion-3"
+          data-id="test-data"
+          data-level="3"
+          data-title="Test Data"
+          href="http://localhost/#test-data"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="18"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h3
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            Test Data
+            <a
+              aria-expanded="true"
+              class="emotion-6"
+            >
+              <span
+                class="emotion-7"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="emotion-8"
+        >
+          <table
+            class="emotion-9"
+            role="table"
+          >
+            <thead
+              class="emotion-10"
+            >
+              <tr
+                class="emotion-11"
+                role="row"
+              >
+                <th
+                  class="emotion-12"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-13"
+                  >
+                    <div
+                      class="emotion-14"
+                    >
+                      select
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-12"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-13"
+                  >
+                    <div
+                      class="emotion-14"
+                    >
+                      #
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-12"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-13"
+                  >
+                    <div
+                      class="emotion-14"
+                    >
+                      name
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="emotion-12"
+                  colspan="1"
+                  role="columnheader"
+                  style="width: 150px; cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="emotion-13"
+                  >
+                    <div
+                      class="emotion-14"
+                    >
+                      age
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              class="emotion-24"
+              role="rowgroup"
+            >
+              <tr
+                class="emotion-25"
+                role="row"
+              >
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-27"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-29"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    1
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    Cecelia Langosh
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    16
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-25"
+                role="row"
+              >
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-27"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-29"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    2
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    Murl Green I
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    26
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-25"
+                role="row"
+              >
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-27"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-29"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    3
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    Lela McClure
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    24
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-25"
+                role="row"
+              >
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-27"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-29"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    4
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    Ms. Jean Barrows
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    23
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="emotion-25"
+                role="row"
+              >
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <a
+                    class="emotion-27"
+                    href="#"
+                    title="click to select this row of values"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="octicon"
+                      fill="currentColor"
+                      height="16"
+                      role="img"
+                      style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-29"
+                    style="cursor: pointer;"
+                    title="Toggle Row Expanded"
+                  >
+                    5
+                    <div>
+                      <svg
+                        aria-hidden="true"
+                        class="octicon"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    Tanya Sanford
+                  </div>
+                </td>
+                <td
+                  class="emotion-26"
+                  role="cell"
+                  style="width: 150px;"
+                >
+                  <div
+                    class="emotion-31"
+                  >
+                    19
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div
+            class="emotion-70"
+          >
+            <div
+              class="emotion-71"
+            >
+              Total: 5 records
+            </div>
+            <div
+              class="emotion-72"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
