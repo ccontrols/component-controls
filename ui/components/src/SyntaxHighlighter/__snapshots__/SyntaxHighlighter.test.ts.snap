@@ -1,45 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SyntaxHighlighter overview 0 snapshot 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  font-family: Menlo,monospace;
-  overflow-x: auto;
-  background-color: #e6e6e6;
-}
-
-.emotion-0 code {
-  color: inherit;
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-}
-
-.emotion-2 {
-  display: inline-block;
-}
-
-<pre
-    class="prism-code language-jsx emotion-0"
-    style="background-color: rgb(42, 39, 52); color: rgb(154, 134, 253); padding: 3px 5px; display: inline; margin: 0px;"
-  >
-    <span
-      class="token-line emotion-1"
-      style="color: rgb(154, 134, 253);"
-    >
-      <span
-        class="token plain emotion-2"
-      >
-        Iliana Jaskolski
-      </span>
-    </span>
-  </pre>
-</DocumentFragment>
-`;
-
 exports[`SyntaxHighlighter overview 1 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -73,7 +33,7 @@ exports[`SyntaxHighlighter overview 1 snapshot 1`] = `
       <span
         class="token plain emotion-2"
       >
-        Okey Barrows
+        Johnny Oberbrunner
       </span>
     </span>
   </pre>
@@ -104,16 +64,22 @@ exports[`SyntaxHighlighter overview 2 snapshot 1`] = `
 
 <pre
     class="prism-code language-jsx emotion-0"
-    style="background-color: rgb(42, 39, 52); color: rgb(154, 134, 253); padding: 3px 5px; display: inline; margin: 0px;"
+    style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 3px 5px; display: inline; margin: 0px;"
   >
     <span
       class="token-line emotion-1"
-      style="color: rgb(154, 134, 253);"
+      style="color: rgb(114, 143, 203);"
     >
       <span
         class="token plain emotion-2"
       >
-        Leopoldo Langworth
+        Jolie Beahan Sr
+      </span>
+      <span
+        class="token punctuation emotion-2"
+        style="color: rgb(182, 173, 154);"
+      >
+        .
       </span>
     </span>
   </pre>
@@ -153,7 +119,7 @@ exports[`SyntaxHighlighter overview 3 snapshot 1`] = `
       <span
         class="token plain emotion-2"
       >
-        Brent Turcotte
+        Cleo Lindgren
       </span>
     </span>
   </pre>
@@ -193,7 +159,47 @@ exports[`SyntaxHighlighter overview 4 snapshot 1`] = `
       <span
         class="token plain emotion-2"
       >
-        Modesta Steuber
+        Tyler Blanda
+      </span>
+    </span>
+  </pre>
+</DocumentFragment>
+`;
+
+exports[`SyntaxHighlighter overview 5 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  font-family: Menlo,monospace;
+  overflow-x: auto;
+  background-color: #e6e6e6;
+}
+
+.emotion-0 code {
+  color: inherit;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-2 {
+  display: inline-block;
+}
+
+<pre
+    class="prism-code language-jsx emotion-0"
+    style="background-color: rgb(42, 39, 52); color: rgb(154, 134, 253); padding: 3px 5px; display: inline; margin: 0px;"
+  >
+    <span
+      class="token-line emotion-1"
+      style="color: rgb(154, 134, 253);"
+    >
+      <span
+        class="token plain emotion-2"
+      >
+        Krista Zulauf
       </span>
     </span>
   </pre>

@@ -37,6 +37,7 @@ describe('component-tests', () => {
           '../../../ui/components/src/Table/useTableLayout.ts',
         ),
       ],
+      [],
     );
     expect(tests).toMatchObject({
       results: [
@@ -157,22 +158,6 @@ describe('component-tests', () => {
               failureDetails: [],
             },
             {
-              ancestorTitles: ['Table', 'pagination', '0'],
-              fullName: 'Table pagination 0 snapshot',
-              status: 'passed',
-              title: 'snapshot',
-              numPassingAsserts: 0,
-              failureDetails: [],
-            },
-            {
-              ancestorTitles: ['Table', 'pagination', '0'],
-              fullName: 'Table pagination 0 accessibility',
-              status: 'passed',
-              title: 'accessibility',
-              numPassingAsserts: 0,
-              failureDetails: [],
-            },
-            {
               ancestorTitles: ['Table', 'pagination', '1'],
               fullName: 'Table pagination 1 snapshot',
               status: 'passed',
@@ -231,6 +216,22 @@ describe('component-tests', () => {
             {
               ancestorTitles: ['Table', 'pagination', '4'],
               fullName: 'Table pagination 4 accessibility',
+              status: 'passed',
+              title: 'accessibility',
+              numPassingAsserts: 0,
+              failureDetails: [],
+            },
+            {
+              ancestorTitles: ['Table', 'pagination', '5'],
+              fullName: 'Table pagination 5 snapshot',
+              status: 'passed',
+              title: 'snapshot',
+              numPassingAsserts: 0,
+              failureDetails: [],
+            },
+            {
+              ancestorTitles: ['Table', 'pagination', '5'],
+              fullName: 'Table pagination 5 accessibility',
               status: 'passed',
               title: 'accessibility',
               numPassingAsserts: 0,
@@ -414,6 +415,7 @@ describe('component-tests', () => {
           '../../../plugins/addon-catalog/src/Catalog/Catalog.tsx',
         ),
       ],
+      [],
     );
     expect(tests).toMatchObject({
       results: [
@@ -479,6 +481,7 @@ describe('component-tests', () => {
         ),
       ],
       [path.resolve(__dirname, '../../../ui/components/src/Header/Header.tsx')],
+      [],
     );
     expect(tests).toMatchObject({
       results: [

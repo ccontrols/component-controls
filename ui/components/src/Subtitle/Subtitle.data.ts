@@ -1,19 +1,19 @@
 export default {
   overview: {
-    '0': {
-      children: 'Dr. Tate Hermann',
-    },
     '1': {
-      children: 'Rosina Zulauf MD',
+      children: 'Cecelia Langosh',
     },
     '2': {
-      children: 'Sydnee Heaney',
+      children: 'Cassidy Brekke',
     },
     '3': {
-      children: 'Ervin Ward',
+      children: 'Chance Kessler',
     },
     '4': {
-      children: 'Destany Dach',
+      children: 'Cleo Lindgren',
+    },
+    '5': {
+      children: 'Adeline Welch',
     },
   },
 };

@@ -39,6 +39,8 @@ import {
 
 export * from './types';
 
+export { getDataFile } from './misc/data-driven';
+
 export { prettify };
 
 type TraverseFn = (
@@ -88,19 +90,21 @@ const parseSource = async (
   }
   await extractStoreComponent(store, filePath, source, options);
   const doc: Document | undefined = store.doc;
-  if (doc && store.stories) {
-    const storyPackage = await packageInfo(
-      doc.title,
-      filePath,
-      options.stories.package,
-    );
-    if (storyPackage) {
-      store.packages[storyPackage.fileHash] = storyPackage;
-      doc.package = storyPackage.fileHash;
+  if (doc) {
+    if (store.stories) {
+      const storyPackage = await packageInfo(
+        doc.title,
+        filePath,
+        options.stories.package,
+      );
+      if (storyPackage) {
+        store.packages[storyPackage.fileHash] = storyPackage;
+        doc.package = storyPackage.fileHash;
+      }
+      const dates = await getFileDates(filePath);
+      doc.dateModified = doc.dateModified || dates.dateModified;
+      doc.date = doc.date || dates.dateCreated;
     }
-    const dates = await getFileDates(filePath);
-    doc.dateModified = doc.dateModified || dates.dateModified;
-    doc.date = doc.date || dates.dateCreated;
   }
   for (const key of Object.keys(store.stories)) {
     const story: Story = store.stories[key];

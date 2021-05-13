@@ -20,6 +20,7 @@ export const cliStore = async (options: CliOptions): Promise<void> => {
     exclude,
     ally,
     data,
+    seed,
   } = options;
   const test =
     userTest || `component-controls.test.${format === 'ts' ? 'ts' : 'js'}`;
@@ -37,6 +38,7 @@ export const cliStore = async (options: CliOptions): Promise<void> => {
       exclude,
       ally,
       data,
+      seed,
     },
     createStoreTemplate,
   );

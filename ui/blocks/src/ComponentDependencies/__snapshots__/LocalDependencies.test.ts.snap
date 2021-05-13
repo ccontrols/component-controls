@@ -52,6 +52,7 @@ exports[`LocalDependencies overview snapshot 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  overflow-x: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;

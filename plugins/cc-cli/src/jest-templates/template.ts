@@ -1,9 +1,12 @@
 import path from 'path';
 import dot from 'dot';
-import { defaultConfigFolder } from '@component-controls/core/node-utils';
+import {
+  defaultConfigFolder,
+  relativeImport,
+} from '@component-controls/core/node-utils';
 import { prettify } from '@component-controls/instrument';
 import { accessibilityTemplate } from './accessibily';
-import { TemplateOptions, renderers, relativeImport } from '../utils';
+import { TemplateOptions, renderers } from '../utils';
 import { getTemplate } from '../resolve-template';
 dot.templateSettings.strip = false;
 (dot as any).log = false;

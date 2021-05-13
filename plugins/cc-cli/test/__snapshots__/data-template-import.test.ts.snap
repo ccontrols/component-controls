@@ -4,60 +4,96 @@ exports[`data-template-import import 1`] = `
 Object {
   "content": "export default {
   overview: {
-    \\"0\\": {
-      text: \\"Gisselle Mohr\\",
-      icon: \\"Kaden Powlowski\\",
-      fontSize: 12
-    },
     \\"1\\": {
-      text: \\"Barbara Brakus\\",
-      icon: \\"Miss Dolly Ferry\\",
-      fontSize: 22
+      text: \\"Gisselle Mohr\\",
+      variant: \\"success\\",
+      fontSize: 19,
+      icon: \\"left-arrow\\",
+      iconSide: \\"right\\",
+      padding: \\"medium\\"
     },
     \\"2\\": {
-      text: \\"Adah Nolan\\",
-      icon: \\"Anais Pagac\\",
-      fontSize: 22
+      text: \\"Bart Bechtelar\\",
+      variant: \\"error\\",
+      fontSize: 17,
+      icon: \\"none\\",
+      iconSide: \\"right\\",
+      iconSize: \\"medium\\",
+      padding: \\"small\\"
     },
     \\"3\\": {
-      text: \\"Jon Will\\",
-      icon: \\"Geraldine Metz\\",
-      fontSize: 20
+      text: \\"Lula Rippin\\",
+      variant: \\"primary\\",
+      fontSize: 13,
+      icon: \\"right-arrow\\",
+      iconSide: \\"left\\",
+      iconSize: \\"large\\",
+      padding: \\"small\\"
     },
     \\"4\\": {
-      text: \\"Mr. Dulce Rice\\",
-      icon: \\"Karianne Bins\\",
-      fontSize: 16
+      text: \\"Kelvin Feeney\\",
+      variant: \\"accent\\",
+      fontSize: 24,
+      icon: \\"search\\",
+      padding: \\"small\\"
+    },
+    \\"5\\": {
+      text: \\"Leslie Mohr\\",
+      variant: \\"disabled\\",
+      fontSize: 13,
+      icon: \\"none\\",
+      iconSize: \\"small\\",
+      padding: \\"small\\"
     }
   }
 };
 ",
   "data": Object {
     "overview": Object {
-      "0": Object {
-        "fontSize": 12,
-        "icon": "Kaden Powlowski",
-        "text": "Gisselle Mohr",
-      },
       "1": Object {
-        "fontSize": 22,
-        "icon": "Miss Dolly Ferry",
-        "text": "Barbara Brakus",
+        "fontSize": 19,
+        "icon": "left-arrow",
+        "iconSide": "right",
+        "iconSize": undefined,
+        "padding": "medium",
+        "text": "Gisselle Mohr",
+        "variant": "success",
       },
       "2": Object {
-        "fontSize": 22,
-        "icon": "Anais Pagac",
-        "text": "Adah Nolan",
+        "fontSize": 17,
+        "icon": "none",
+        "iconSide": "right",
+        "iconSize": "medium",
+        "padding": "small",
+        "text": "Bart Bechtelar",
+        "variant": "error",
       },
       "3": Object {
-        "fontSize": 20,
-        "icon": "Geraldine Metz",
-        "text": "Jon Will",
+        "fontSize": 13,
+        "icon": "right-arrow",
+        "iconSide": "left",
+        "iconSize": "large",
+        "padding": "small",
+        "text": "Lula Rippin",
+        "variant": "primary",
       },
       "4": Object {
-        "fontSize": 16,
-        "icon": "Karianne Bins",
-        "text": "Mr. Dulce Rice",
+        "fontSize": 24,
+        "icon": "search",
+        "iconSide": undefined,
+        "iconSize": undefined,
+        "padding": "small",
+        "text": "Kelvin Feeney",
+        "variant": "accent",
+      },
+      "5": Object {
+        "fontSize": 13,
+        "icon": "none",
+        "iconSide": undefined,
+        "iconSize": "small",
+        "padding": "small",
+        "text": "Leslie Mohr",
+        "variant": "disabled",
       },
     },
   },

@@ -4,23 +4,23 @@ exports[`cli-document-data create cjs document 1`] = `
 Object {
   "Popover.data.ts": "export default {
   overview: {
-    '0': {
-      placement: 'bottom-end',
-      trigger: 'hover',
-    },
     '1': {
-      placement: 'top-end',
+      placement: 'bottom-end',
       trigger: 'hover',
     },
     '2': {
+      placement: 'top-end',
+      trigger: 'hover',
+    },
+    '3': {
       placement: 'bottom-end',
       trigger: 'click',
     },
-    '3': {
+    '4': {
       placement: 'right-end',
       trigger: 'hover',
     },
-    '4': {
+    '5': {
       placement: 'auto-start',
       trigger: 'right-click',
     },
@@ -79,61 +79,6 @@ describe('Popover', () => {
 
 exports[`cli-document-data create cjs document 2`] = `
 Object {
-  "VariantButton.data.js": "module.exports = {
-  overview: {
-    '0': {
-      text: 'Bart Bechtelar',
-      icon: 'Dayana Roob',
-      fontSize: 22,
-    },
-    '1': {
-      text: 'Adah Nolan',
-      icon: 'Anais Pagac',
-      fontSize: 22,
-    },
-    '2': {
-      text: 'Jon Will',
-      icon: 'Geraldine Metz',
-      fontSize: 20,
-    },
-    '3': {
-      text: 'Mr. Dulce Rice',
-      icon: 'Karianne Bins',
-      fontSize: 16,
-    },
-    '4': {
-      text: 'Mrs. Jermey Jacobson',
-      icon: 'Mikayla Gusikowski',
-      fontSize: 29,
-    },
-    '5': {
-      text: 'Clark Hickle',
-      icon: 'Marielle Durgan',
-      fontSize: 16,
-    },
-    '6': {
-      text: 'Ibrahim Purdy',
-      icon: 'Cullen Heller',
-      fontSize: 27,
-    },
-    '7': {
-      text: 'Jody Legros',
-      icon: 'Dedric Smitham',
-      fontSize: 16,
-    },
-    '8': {
-      text: 'Ford Kunze',
-      icon: 'Trinity Hickle',
-      fontSize: 12,
-    },
-    '9': {
-      text: 'Ms. Mariah Pollich',
-      icon: 'Kenny Mueller',
-      fontSize: 26,
-    },
-  },
-};
-",
   "VariantButton.test.js": "const path = require('path');
 const { run } = require('axe-core');
 const { reactRunDOM } = require('@component-controls/test-renderers');
@@ -184,21 +129,6 @@ describe('VariantButton', () => {
 
 exports[`cli-document-data create enzyme document 1`] = `
 Object {
-  "VariantButton.data.ts": "export default {
-  overview: {
-    '0': {
-      text: 'Hugh Lockman',
-      icon: 'Ansel Nicolas',
-      fontSize: 14,
-    },
-    '1': {
-      text: 'Mohamed Bins',
-      icon: 'Consuelo Sipes',
-      fontSize: 24,
-    },
-  },
-};
-",
   "VariantButton.test.ts": "import * as path from 'path';
 import { run, AxeResults } from 'axe-core';
 import { reactRunDOM } from '@component-controls/test-renderers';
@@ -244,21 +174,6 @@ describe('VariantButton', () => {
 
 exports[`cli-document-data create esm document 1`] = `
 Object {
-  "VariantButton.data.js": "export default {
-  overview: {
-    '0': {
-      text: 'Dorothea Tremblay',
-      icon: 'Juliet Harber',
-      fontSize: 32,
-    },
-    '1': {
-      text: 'Alana Kunde',
-      icon: 'Alexys Cartwright',
-      fontSize: 29,
-    },
-  },
-};
-",
   "VariantButton.test.js": "import * as path from 'path';
 import { run } from 'axe-core';
 import { reactRunDOM } from '@component-controls/test-renderers';
@@ -308,21 +223,6 @@ describe('VariantButton', () => {
 
 exports[`cli-document-data create rtr document 1`] = `
 Object {
-  "VariantButton.data.ts": "export default {
-  overview: {
-    '0': {
-      text: 'Alexa Feest',
-      icon: 'Mozelle Murphy',
-      fontSize: 25,
-    },
-    '1': {
-      text: 'Jonas Kihn',
-      icon: 'Sandrine Pagac',
-      fontSize: 12,
-    },
-  },
-};
-",
   "VariantButton.test.ts": "import * as path from 'path';
 import { run, AxeResults } from 'axe-core';
 import { reactRunDOM } from '@component-controls/test-renderers';
@@ -376,21 +276,6 @@ describe('VariantButton', () => {
 
 exports[`cli-document-data create typescript document 1`] = `
 Object {
-  "VariantButton.data.ts": "export default {
-  overview: {
-    '0': {
-      text: 'Dawn Gerlach DDS',
-      icon: 'Nasir Cassin',
-      fontSize: 14,
-    },
-    '1': {
-      text: 'Emilia Feeney',
-      icon: 'Gage Dicki',
-      fontSize: 19,
-    },
-  },
-};
-",
   "VariantButton.test.ts": "import * as path from 'path';
 import { run, AxeResults } from 'axe-core';
 import { reactRunDOM } from '@component-controls/test-renderers';

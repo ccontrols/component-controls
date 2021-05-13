@@ -14,7 +14,8 @@ export const nakedFileName = (filePath: string): string => {
   return baseName.substr(0, baseName.lastIndexOf('.'));
 };
 
-const esmRequire = (filePath: string): any => {
+export const esmRequire = (filePath: string): any => {
+  delete require.cache[filePath];
   const result = require('esm')(module)(filePath);
   if (
     !result ||

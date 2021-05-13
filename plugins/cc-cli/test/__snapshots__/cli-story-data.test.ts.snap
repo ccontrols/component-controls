@@ -2,21 +2,6 @@
 
 exports[`cli-story-data create cjs story 1`] = `
 Object {
-  "VariantButton.data.js": "module.exports = {
-  overview: {
-    '0': {
-      text: 'Gisselle Mohr',
-      icon: 'Kaden Powlowski',
-      fontSize: 12,
-    },
-    '1': {
-      text: 'Barbara Brakus',
-      icon: 'Miss Dolly Ferry',
-      fontSize: 22,
-    },
-  },
-};
-",
   "VariantButton.test.js": "const path = require('path');
 const { run } = require('axe-core');
 const { reactRunDOM } = require('@component-controls/test-renderers');
@@ -231,21 +216,6 @@ describe('VariantButton', () => {
 
 exports[`cli-story-data create enzyme story 1`] = `
 Object {
-  "VariantButton.data.ts": "export default {
-  overview: {
-    '0': {
-      text: 'Jody Legros',
-      icon: 'Dedric Smitham',
-      fontSize: 16,
-    },
-    '1': {
-      text: 'Ford Kunze',
-      icon: 'Trinity Hickle',
-      fontSize: 12,
-    },
-  },
-};
-",
   "VariantButton.test.ts": "import * as path from 'path';
 import { run, AxeResults } from 'axe-core';
 import { reactRunDOM } from '@component-controls/test-renderers';
@@ -418,21 +388,6 @@ describe('VariantButton', () => {
 
 exports[`cli-story-data create esm story 1`] = `
 Object {
-  "VariantButton.data.js": "export default {
-  overview: {
-    '0': {
-      text: 'Adah Nolan',
-      icon: 'Anais Pagac',
-      fontSize: 22,
-    },
-    '1': {
-      text: 'Jon Will',
-      icon: 'Geraldine Metz',
-      fontSize: 20,
-    },
-  },
-};
-",
   "VariantButton.test.js": "import * as path from 'path';
 import { run } from 'axe-core';
 import { reactRunDOM } from '@component-controls/test-renderers';
@@ -644,21 +599,6 @@ describe('VariantButton', () => {
 
 exports[`cli-story-data create rtr story 1`] = `
 Object {
-  "VariantButton.data.ts": "export default {
-  overview: {
-    '0': {
-      text: 'Clark Hickle',
-      icon: 'Marielle Durgan',
-      fontSize: 16,
-    },
-    '1': {
-      text: 'Ibrahim Purdy',
-      icon: 'Cullen Heller',
-      fontSize: 27,
-    },
-  },
-};
-",
   "VariantButton.test.ts": "import * as path from 'path';
 import { run, AxeResults } from 'axe-core';
 import { reactRunDOM } from '@component-controls/test-renderers';
@@ -898,21 +838,6 @@ describe('VariantButton', () => {
 
 exports[`cli-story-data create typescript story 1`] = `
 Object {
-  "VariantButton.data.ts": "export default {
-  overview: {
-    '0': {
-      text: 'Mr. Dulce Rice',
-      icon: 'Karianne Bins',
-      fontSize: 16,
-    },
-    '1': {
-      text: 'Mrs. Jermey Jacobson',
-      icon: 'Mikayla Gusikowski',
-      fontSize: 29,
-    },
-  },
-};
-",
   "VariantButton.test.ts": "import * as path from 'path';
 import { run, AxeResults } from 'axe-core';
 import { reactRunDOM } from '@component-controls/test-renderers';

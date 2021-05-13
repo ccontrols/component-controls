@@ -1,29 +1,29 @@
 export default {
   overview: {
-    '0': {
-      max: 14,
-      value: 5,
-      color: '#0c3a21',
-    },
     '1': {
-      max: 15,
-      value: 6,
-      color: '#642242',
+      value: 4,
+      max: 13,
+      color: '#154153',
     },
     '2': {
-      max: 10,
-      value: 4,
-      color: '#5b7f18',
+      value: 2,
+      max: 7,
+      color: '#0d4106',
     },
     '3': {
-      max: 6,
       value: 2,
-      color: '#4e6404',
+      max: 12,
+      color: '#5e2519',
     },
     '4': {
-      max: 5,
-      value: 5,
-      color: '#2c5e74',
+      value: 4,
+      max: 15,
+      color: '#650179',
+    },
+    '5': {
+      value: 1,
+      max: 18,
+      color: '#6c4d4a',
     },
   },
 };

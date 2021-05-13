@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import {
   useStory,
-  useCurrentDocument,
+  useDocument,
   StoryInputProps,
   useStore,
 } from '@component-controls/store';
@@ -25,7 +25,7 @@ export type StoriesProps = StoriesOwnProps &
  */
 export const Stories: FC<StoriesProps> = ({ id, name, title, ...rest }) => {
   const story = useStory({ id, name });
-  const doc = useCurrentDocument();
+  const doc = useDocument(story?.doc);
   const store = useStore();
   const stories = doc?.stories
     ? doc.stories.filter((id: string) => !story || story.id !== id)

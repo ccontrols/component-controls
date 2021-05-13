@@ -108,4 +108,12 @@ export const jestCliArgs: ArgOptions = [
       type: 'number',
     },
   },
+  {
+    name: 'seed',
+    options: {
+      alias: 's',
+      description: 'random generator seed when generating data',
+      type: 'number',
+    },
+  },
 ];

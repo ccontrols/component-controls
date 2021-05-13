@@ -1,7 +1,15 @@
-import { Components, Document, Stories } from '@component-controls/core';
-import { parseStories } from '@component-controls/instrument';
+import {
+  Components,
+  Document,
+  Stories,
+  BuildConfiguration,
+  deepmerge,
+} from '@component-controls/core';
+import {
+  InstrumentOptions,
+  parseStories,
+} from '@component-controls/instrument';
 import { loadStore } from '@component-controls/store';
-
 interface StoreResults {
   doc: Document;
   stories: Stories;
@@ -15,15 +23,19 @@ const cache: {
   storyPath: {},
   bundle: {},
 };
-export const getStore = async ({
-  storyPath,
-  bundle,
-  name,
-}: {
-  storyPath: string;
-  bundle?: string;
-  name?: string;
-}): Promise<StoreResults | undefined> => {
+export const getStore = async (
+  {
+    storyPath,
+    bundle,
+    name,
+  }: {
+    storyPath: string;
+    bundle?: string;
+    name?: string;
+    config?: BuildConfiguration;
+  },
+  configuration?: BuildConfiguration,
+): Promise<StoreResults | undefined> => {
   if (bundle) {
     if (!name) {
       throw new Error(
@@ -60,13 +72,29 @@ export const getStore = async ({
     if (cache.storyPath[storyPath]) {
       return cache.storyPath[storyPath];
     }
-
+    const options: InstrumentOptions = deepmerge(
+      {
+        propsLoaders: [
+          {
+            name: '@component-controls/react-docgen-info',
+            test: /\.(js|jsx)$/,
+          },
+          {
+            name: '@component-controls/react-docgen-typescript-info',
+            test: /\.(ts|tsx)$/,
+          },
+        ],
+        components: {
+          sourceFiles: false,
+        },
+      },
+      configuration?.instrument || {},
+    );
     const { doc, stories, components = {} } = await parseStories(
       storyPath,
       undefined,
-      { jest: false },
+      { ...options, jest: false },
     );
-
     if (!doc || !stories) {
       throw new Error(`Invalid story path ${storyPath}`);
     }

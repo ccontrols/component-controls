@@ -52,6 +52,7 @@ exports[`TestsResults overview snapshot 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  overflow-x: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1225,7 +1226,7 @@ exports[`TestsResults overview snapshot 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TestsResults pagination 0 snapshot 1`] = `
+exports[`TestsResults pagination 1 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
   box-sizing: border-box;
@@ -1277,6 +1278,7 @@ exports[`TestsResults pagination 0 snapshot 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  overflow-x: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1514,20 +1516,7 @@ exports[`TestsResults pagination 0 snapshot 1`] = `
   border: 2px solid #fce83a;
 }
 
-.emotion-86 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: inline-block;
-  padding-left: 4px;
-  padding-right: 4px;
-  border-radius: 5px;
-  white-space: nowrap;
-  background-color: rgba(250,179,5,0.15);
-  border: 2px solid #fab305;
-}
-
-.emotion-94 {
+.emotion-83 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1550,7 +1539,7 @@ exports[`TestsResults pagination 0 snapshot 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-95 {
+.emotion-84 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1569,7 +1558,7 @@ exports[`TestsResults pagination 0 snapshot 1`] = `
   padding-right: 16px;
 }
 
-.emotion-96 {
+.emotion-85 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1586,7 +1575,7 @@ exports[`TestsResults pagination 0 snapshot 1`] = `
   align-items: center;
 }
 
-.emotion-97 {
+.emotion-86 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1605,13 +1594,13 @@ exports[`TestsResults pagination 0 snapshot 1`] = `
   padding-right: 8px;
 }
 
-.emotion-97 button {
+.emotion-86 button {
   width: 50px;
   margin-left: 2px;
   margin-right: 2px;
 }
 
-.emotion-98 {
+.emotion-87 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1620,7 +1609,7 @@ exports[`TestsResults pagination 0 snapshot 1`] = `
   margin-right: 2px;
 }
 
-.emotion-99 {
+.emotion-88 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1648,8 +1637,16 @@ exports[`TestsResults pagination 0 snapshot 1`] = `
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
 }
 
-.emotion-99:disabled {
+.emotion-88:disabled {
   color: #aaa;
+}
+
+.emotion-95 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 <div
@@ -2133,120 +2130,65 @@ exports[`TestsResults pagination 0 snapshot 1`] = `
                   </div>
                 </td>
               </tr>
-              <tr
-                class="emotion-24"
-                role="row"
-              >
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 20px;"
-                />
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <span
-                    class="emotion-86"
-                  >
-                    <span
-                      class="emotion-6"
-                    >
-                      <div>
-                        skipped
-                      </div>
-                    </span>
-                  </span>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-33"
-                  >
-                    Table
-                  </div>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-35"
-                  >
-                    skipped
-                  </div>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-37"
-                  >
-                    33
-                  </div>
-                </td>
-              </tr>
             </tbody>
           </table>
           <div
-            class="emotion-94"
+            class="emotion-83"
           >
             <div
-              class="emotion-95"
+              class="emotion-84"
             >
               Total: 12 records
             </div>
             <div
-              class="emotion-96"
+              class="emotion-85"
             >
               <div
-                class="emotion-97"
+                class="emotion-86"
               >
                 <div
-                  class="emotion-98"
+                  class="emotion-87"
                 >
                   <button
-                    class="emotion-99"
+                    class="emotion-88"
                     disabled=""
                   >
                     &lt;&lt;
                   </button>
                 </div>
                 <div
-                  class="emotion-98"
+                  class="emotion-87"
                 >
                   <button
-                    class="emotion-99"
+                    class="emotion-88"
                     disabled=""
                   >
                     &lt;
                   </button>
                 </div>
                 <div
-                  class="emotion-98"
+                  class="emotion-87"
                 >
                   <button
-                    class="emotion-99"
+                    class="emotion-88"
                   >
                     &gt;
                   </button>
                 </div>
                 <div
-                  class="emotion-98"
+                  class="emotion-87"
                 >
                   <button
-                    class="emotion-99"
+                    class="emotion-88"
                   >
                     &gt;&gt;
                   </button>
                 </div>
+              </div>
+              <div
+                class="emotion-95"
+              >
+                Page 1 of 3
               </div>
             </div>
           </div>
@@ -2257,7 +2199,7 @@ exports[`TestsResults pagination 0 snapshot 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TestsResults pagination 1 snapshot 1`] = `
+exports[`TestsResults pagination 2 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
   box-sizing: border-box;
@@ -2309,6 +2251,7 @@ exports[`TestsResults pagination 1 snapshot 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  overflow-x: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2493,47 +2436,7 @@ exports[`TestsResults pagination 1 snapshot 1`] = `
   text-align: end;
 }
 
-.emotion-52 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: inline-block;
-  padding-left: 4px;
-  padding-right: 4px;
-  border-radius: 5px;
-  white-space: nowrap;
-  background-color: rgba(244,67,54,0.15);
-  border: 2px solid #f44336;
-}
-
-.emotion-54 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-64 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: inline-block;
-  padding-left: 4px;
-  padding-right: 4px;
-  border-radius: 5px;
-  white-space: nowrap;
-  background-color: rgba(158,167,173,0.15);
-  border: 2px solid #9ea7ad;
-}
-
-.emotion-72 {
+.emotion-49 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -2556,7 +2459,7 @@ exports[`TestsResults pagination 1 snapshot 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-73 {
+.emotion-50 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -2575,7 +2478,7 @@ exports[`TestsResults pagination 1 snapshot 1`] = `
   padding-right: 16px;
 }
 
-.emotion-74 {
+.emotion-51 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -2592,7 +2495,7 @@ exports[`TestsResults pagination 1 snapshot 1`] = `
   align-items: center;
 }
 
-.emotion-75 {
+.emotion-52 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -2611,13 +2514,13 @@ exports[`TestsResults pagination 1 snapshot 1`] = `
   padding-right: 8px;
 }
 
-.emotion-75 button {
+.emotion-52 button {
   width: 50px;
   margin-left: 2px;
   margin-right: 2px;
 }
 
-.emotion-76 {
+.emotion-53 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -2626,7 +2529,7 @@ exports[`TestsResults pagination 1 snapshot 1`] = `
   margin-right: 2px;
 }
 
-.emotion-77 {
+.emotion-54 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -2654,8 +2557,16 @@ exports[`TestsResults pagination 1 snapshot 1`] = `
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
 }
 
-.emotion-77:disabled {
+.emotion-54:disabled {
   color: #aaa;
+}
+
+.emotion-61 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 <div
@@ -2937,202 +2848,65 @@ exports[`TestsResults pagination 1 snapshot 1`] = `
                   </div>
                 </td>
               </tr>
-              <tr
-                class="emotion-24"
-                role="row"
-              >
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 20px;"
-                />
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <span
-                    class="emotion-52"
-                  >
-                    <span
-                      class="emotion-6"
-                    >
-                      <div
-                        class="emotion-54"
-                        style="cursor: pointer;"
-                        title="Toggle Row Expanded"
-                      >
-                        <div>
-                          failed
-                        </div>
-                        <div>
-                          <svg
-                            aria-hidden="true"
-                            class="octicon"
-                            fill="currentColor"
-                            height="24"
-                            role="img"
-                            style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                            viewBox="0 0 24 24"
-                            width="24"
-                          >
-                            <path
-                              d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </span>
-                  </span>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-33"
-                  >
-                    Table
-                  </div>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-35"
-                  >
-                    editing
-                  </div>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-37"
-                  >
-                    33
-                  </div>
-                </td>
-              </tr>
-              <tr
-                class="emotion-24"
-                role="row"
-              >
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 20px;"
-                />
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <span
-                    class="emotion-64"
-                  >
-                    <span
-                      class="emotion-6"
-                    >
-                      <div>
-                        disabled
-                      </div>
-                    </span>
-                  </span>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-33"
-                  >
-                    Table
-                  </div>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-35"
-                  >
-                    disable
-                  </div>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-37"
-                  >
-                    33
-                  </div>
-                </td>
-              </tr>
             </tbody>
           </table>
           <div
-            class="emotion-72"
+            class="emotion-49"
           >
             <div
-              class="emotion-73"
+              class="emotion-50"
             >
               Total: 12 records
             </div>
             <div
-              class="emotion-74"
+              class="emotion-51"
             >
               <div
-                class="emotion-75"
+                class="emotion-52"
               >
                 <div
-                  class="emotion-76"
+                  class="emotion-53"
                 >
                   <button
-                    class="emotion-77"
+                    class="emotion-54"
                     disabled=""
                   >
                     &lt;&lt;
                   </button>
                 </div>
                 <div
-                  class="emotion-76"
+                  class="emotion-53"
                 >
                   <button
-                    class="emotion-77"
+                    class="emotion-54"
                     disabled=""
                   >
                     &lt;
                   </button>
                 </div>
                 <div
-                  class="emotion-76"
+                  class="emotion-53"
                 >
                   <button
-                    class="emotion-77"
+                    class="emotion-54"
                   >
                     &gt;
                   </button>
                 </div>
                 <div
-                  class="emotion-76"
+                  class="emotion-53"
                 >
                   <button
-                    class="emotion-77"
+                    class="emotion-54"
                   >
                     &gt;&gt;
                   </button>
                 </div>
+              </div>
+              <div
+                class="emotion-61"
+              >
+                Page 1 of 5
               </div>
             </div>
           </div>
@@ -3143,7 +2917,7 @@ exports[`TestsResults pagination 1 snapshot 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TestsResults pagination 2 snapshot 1`] = `
+exports[`TestsResults pagination 3 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
   box-sizing: border-box;
@@ -3195,6 +2969,7 @@ exports[`TestsResults pagination 2 snapshot 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  overflow-x: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4102,7 +3877,7 @@ exports[`TestsResults pagination 2 snapshot 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TestsResults pagination 3 snapshot 1`] = `
+exports[`TestsResults pagination 4 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
   box-sizing: border-box;
@@ -4154,6 +3929,7 @@ exports[`TestsResults pagination 3 snapshot 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  overflow-x: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4338,86 +4114,7 @@ exports[`TestsResults pagination 3 snapshot 1`] = `
   text-align: end;
 }
 
-.emotion-52 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: inline-block;
-  padding-left: 4px;
-  padding-right: 4px;
-  border-radius: 5px;
-  white-space: nowrap;
-  background-color: rgba(244,67,54,0.15);
-  border: 2px solid #f44336;
-}
-
-.emotion-54 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-64 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: inline-block;
-  padding-left: 4px;
-  padding-right: 4px;
-  border-radius: 5px;
-  white-space: nowrap;
-  background-color: rgba(158,167,173,0.15);
-  border: 2px solid #9ea7ad;
-}
-
-.emotion-75 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: inline-block;
-  padding-left: 4px;
-  padding-right: 4px;
-  border-radius: 5px;
-  white-space: nowrap;
-  background-color: rgba(252,232,58,0.15);
-  border: 2px solid #fce83a;
-}
-
-.emotion-86 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: inline-block;
-  padding-left: 4px;
-  padding-right: 4px;
-  border-radius: 5px;
-  white-space: nowrap;
-  background-color: rgba(250,179,5,0.15);
-  border: 2px solid #fab305;
-}
-
-.emotion-97 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: inline-block;
-  padding-left: 4px;
-  padding-right: 4px;
-  border-radius: 5px;
-  white-space: nowrap;
-  background-color: rgba(57,204,255,0.15);
-  border: 2px solid #39ccff;
-}
-
-.emotion-105 {
+.emotion-49 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4440,7 +4137,7 @@ exports[`TestsResults pagination 3 snapshot 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-106 {
+.emotion-50 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4459,7 +4156,7 @@ exports[`TestsResults pagination 3 snapshot 1`] = `
   padding-right: 16px;
 }
 
-.emotion-107 {
+.emotion-51 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4476,7 +4173,7 @@ exports[`TestsResults pagination 3 snapshot 1`] = `
   align-items: center;
 }
 
-.emotion-108 {
+.emotion-52 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4495,13 +4192,13 @@ exports[`TestsResults pagination 3 snapshot 1`] = `
   padding-right: 8px;
 }
 
-.emotion-108 button {
+.emotion-52 button {
   width: 50px;
   margin-left: 2px;
   margin-right: 2px;
 }
 
-.emotion-109 {
+.emotion-53 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4510,7 +4207,7 @@ exports[`TestsResults pagination 3 snapshot 1`] = `
   margin-right: 2px;
 }
 
-.emotion-110 {
+.emotion-54 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -4538,7 +4235,7 @@ exports[`TestsResults pagination 3 snapshot 1`] = `
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset;
 }
 
-.emotion-110:disabled {
+.emotion-54:disabled {
   color: #aaa;
 }
 
@@ -4821,378 +4518,56 @@ exports[`TestsResults pagination 3 snapshot 1`] = `
                   </div>
                 </td>
               </tr>
-              <tr
-                class="emotion-24"
-                role="row"
-              >
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 20px;"
-                />
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <span
-                    class="emotion-52"
-                  >
-                    <span
-                      class="emotion-6"
-                    >
-                      <div
-                        class="emotion-54"
-                        style="cursor: pointer;"
-                        title="Toggle Row Expanded"
-                      >
-                        <div>
-                          failed
-                        </div>
-                        <div>
-                          <svg
-                            aria-hidden="true"
-                            class="octicon"
-                            fill="currentColor"
-                            height="24"
-                            role="img"
-                            style="display: inline-block; user-select: none; vertical-align: text-bottom;"
-                            viewBox="0 0 24 24"
-                            width="24"
-                          >
-                            <path
-                              d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </span>
-                  </span>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-33"
-                  >
-                    Table
-                  </div>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-35"
-                  >
-                    editing
-                  </div>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-37"
-                  >
-                    33
-                  </div>
-                </td>
-              </tr>
-              <tr
-                class="emotion-24"
-                role="row"
-              >
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 20px;"
-                />
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <span
-                    class="emotion-64"
-                  >
-                    <span
-                      class="emotion-6"
-                    >
-                      <div>
-                        disabled
-                      </div>
-                    </span>
-                  </span>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-33"
-                  >
-                    Table
-                  </div>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-35"
-                  >
-                    disable
-                  </div>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-37"
-                  >
-                    33
-                  </div>
-                </td>
-              </tr>
-              <tr
-                class="emotion-24"
-                role="row"
-              >
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 20px;"
-                />
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <span
-                    class="emotion-75"
-                  >
-                    <span
-                      class="emotion-6"
-                    >
-                      <div>
-                        pending
-                      </div>
-                    </span>
-                  </span>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-33"
-                  >
-                    Table
-                  </div>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-35"
-                  >
-                    pending
-                  </div>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-37"
-                  >
-                    33
-                  </div>
-                </td>
-              </tr>
-              <tr
-                class="emotion-24"
-                role="row"
-              >
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 20px;"
-                />
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <span
-                    class="emotion-86"
-                  >
-                    <span
-                      class="emotion-6"
-                    >
-                      <div>
-                        skipped
-                      </div>
-                    </span>
-                  </span>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-33"
-                  >
-                    Table
-                  </div>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-35"
-                  >
-                    skipped
-                  </div>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-37"
-                  >
-                    33
-                  </div>
-                </td>
-              </tr>
-              <tr
-                class="emotion-24"
-                role="row"
-              >
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 20px;"
-                />
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <span
-                    class="emotion-97"
-                  >
-                    <span
-                      class="emotion-6"
-                    >
-                      <div>
-                        todo
-                      </div>
-                    </span>
-                  </span>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-33"
-                  >
-                    Table
-                  </div>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-35"
-                  >
-                    todo
-                  </div>
-                </td>
-                <td
-                  class="emotion-28"
-                  role="cell"
-                  style="width: 150px;"
-                >
-                  <div
-                    class="emotion-37"
-                  >
-                    33
-                  </div>
-                </td>
-              </tr>
             </tbody>
           </table>
           <div
-            class="emotion-105"
+            class="emotion-49"
           >
             <div
-              class="emotion-106"
+              class="emotion-50"
             >
               Total: 12 records
             </div>
             <div
-              class="emotion-107"
+              class="emotion-51"
             >
               <div
-                class="emotion-108"
+                class="emotion-52"
               >
                 <div
-                  class="emotion-109"
+                  class="emotion-53"
                 >
                   <button
-                    class="emotion-110"
+                    class="emotion-54"
                     disabled=""
                   >
                     &lt;&lt;
                   </button>
                 </div>
                 <div
-                  class="emotion-109"
+                  class="emotion-53"
                 >
                   <button
-                    class="emotion-110"
+                    class="emotion-54"
                     disabled=""
                   >
                     &lt;
                   </button>
                 </div>
                 <div
-                  class="emotion-109"
+                  class="emotion-53"
                 >
                   <button
-                    class="emotion-110"
+                    class="emotion-54"
                   >
                     &gt;
                   </button>
                 </div>
                 <div
-                  class="emotion-109"
+                  class="emotion-53"
                 >
                   <button
-                    class="emotion-110"
+                    class="emotion-54"
                   >
                     &gt;&gt;
                   </button>
@@ -5207,7 +4582,7 @@ exports[`TestsResults pagination 3 snapshot 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TestsResults pagination 4 snapshot 1`] = `
+exports[`TestsResults pagination 5 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
   box-sizing: border-box;
@@ -5259,6 +4634,7 @@ exports[`TestsResults pagination 4 snapshot 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  overflow-x: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5606,14 +4982,6 @@ exports[`TestsResults pagination 4 snapshot 1`] = `
 
 .emotion-77:disabled {
   color: #aaa;
-}
-
-.emotion-84 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding-left: 8px;
-  padding-right: 8px;
 }
 
 <div
@@ -6091,11 +5459,6 @@ exports[`TestsResults pagination 4 snapshot 1`] = `
                     &gt;&gt;
                   </button>
                 </div>
-              </div>
-              <div
-                class="emotion-84"
-              >
-                Page 1 of 3
               </div>
             </div>
           </div>

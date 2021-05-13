@@ -1,27 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ExternalLink overview 0 snapshot 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  color: #5c6ac4;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-<a
-    class="emotion-0"
-    href="https://shyann.biz"
-    rel="noopener noreferrer"
-    target="_blank"
-  >
-    https://shyann.biz
-  </a>
-</DocumentFragment>
-`;
-
 exports[`ExternalLink overview 1 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -35,11 +13,11 @@ exports[`ExternalLink overview 1 snapshot 1`] = `
 
 <a
     class="emotion-0"
-    href="https://lera.info"
+    href="https://joshua.us"
     rel="noopener noreferrer"
     target="_blank"
   >
-    https://lera.info
+    https://joshua.us
   </a>
 </DocumentFragment>
 `;
@@ -57,11 +35,11 @@ exports[`ExternalLink overview 2 snapshot 1`] = `
 
 <a
     class="emotion-0"
-    href="https://bella.name"
+    href="https://lurline.us"
     rel="noopener noreferrer"
     target="_blank"
   >
-    https://bella.name
+    https://lurline.us
   </a>
 </DocumentFragment>
 `;
@@ -79,11 +57,11 @@ exports[`ExternalLink overview 3 snapshot 1`] = `
 
 <a
     class="emotion-0"
-    href="https://heber.net"
+    href="http://bernadette.info"
     rel="noopener noreferrer"
     target="_blank"
   >
-    https://heber.net
+    http://bernadette.info
   </a>
 </DocumentFragment>
 `;
@@ -101,11 +79,33 @@ exports[`ExternalLink overview 4 snapshot 1`] = `
 
 <a
     class="emotion-0"
-    href="http://gudrun.org"
+    href="http://chance.info"
     rel="noopener noreferrer"
     target="_blank"
   >
-    http://gudrun.org
+    http://chance.info
+  </a>
+</DocumentFragment>
+`;
+
+exports[`ExternalLink overview 5 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #5c6ac4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+<a
+    class="emotion-0"
+    href="https://effie.us"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    https://effie.us
   </a>
 </DocumentFragment>
 `;

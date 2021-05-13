@@ -1,24 +1,24 @@
 export default {
   overview: {
-    '0': {
-      dark: false,
-      children: 'Eve Barrows',
-    },
     '1': {
-      dark: false,
-      children: 'Earnest Smitham MD',
+      dark: true,
+      children: 'Johnny Oberbrunner',
     },
     '2': {
-      dark: true,
-      children: 'Brianne Fay',
+      dark: false,
+      children: 'Jolie Beahan Sr.',
     },
     '3': {
-      dark: true,
-      children: 'Maeve Quigley',
+      dark: false,
+      children: 'Cleo Lindgren',
     },
     '4': {
       dark: true,
-      children: 'Cathryn Fadel',
+      children: 'Tyler Blanda',
+    },
+    '5': {
+      dark: true,
+      children: 'Krista Zulauf',
     },
   },
 };

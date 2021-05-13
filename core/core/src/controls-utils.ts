@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import escape from 'escape-html';
-import { deepmerge, deepMergeReplaceArrays } from './deepMerge';
+import { deepmerge } from './deepMerge';
 import { Components, getComponentName } from './components';
 import { Story, Document } from './document';
 import { SmartControls } from './common';
@@ -351,18 +351,22 @@ const controlShortcuts = (
 export const transformControls = (
   controls?: ComponentControls,
   propControls?: ComponentControls,
+  smart = true,
 ): ComponentControls | undefined => {
   return controls
-    ? Object.keys(controls).reduce((acc, key) => {
-        const control = controlShortcuts(key, controls, propControls);
-        if (control.defaultValue === undefined) {
-          const defaultValue = getControlValue(control);
-          if (typeof defaultValue !== 'function') {
-            control.defaultValue = defaultValue;
+    ? Object.keys(smart ? { ...propControls, ...controls } : controls).reduce(
+        (acc, key) => {
+          const control = controlShortcuts(key, controls, propControls);
+          if (control.defaultValue === undefined) {
+            const defaultValue = getControlValue(control);
+            if (typeof defaultValue !== 'function') {
+              control.defaultValue = defaultValue;
+            }
           }
-        }
-        return { ...acc, [key]: control };
-      }, {})
+          return { ...acc, [key]: control };
+        },
+        {},
+      )
     : undefined;
 };
 
@@ -423,7 +427,6 @@ export const getStoryControls = (
     const component = doc.componentsLookup
       ? components[doc.componentsLookup[componentName]]
       : undefined;
-
     if (component?.info) {
       const newControls = controlsFromProps(component.info.props);
       const { include, exclude } = smartControls;
@@ -446,14 +449,10 @@ export const getStoryControls = (
           return true;
         })
         .reduce((acc, key) => ({ ...acc, [key]: newControls[key] }), {});
-      const transformed = transformControls(storyControls, filteredControls);
       const { smart = true } = smartControls;
-      if (!story.component || !smart || story.smartControls === false) {
-        return transformControls(storyControls, filteredControls);
-      }
-      return transformed
-        ? deepMergeReplaceArrays(filteredControls, transformed)
-        : filteredControls;
+      const isSmart: boolean = story.smartControls !== false && smart;
+
+      return transformControls(storyControls, filteredControls, isSmart);
     }
   }
   return transformControls(storyControls);

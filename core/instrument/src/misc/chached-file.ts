@@ -41,22 +41,19 @@ export class CachedFileResource<T> {
     );
   };
 
-  private getKey = () => {
+  getKey = (): string => {
     const version = '2';
     const files = Array.isArray(this.filePath)
       ? this.filePath
       : [this.filePath];
     return files
-      .reduce(
-        (acc, f) =>
-          acc.update(f).update(
-            fs
-              .statSync(f)
-              .mtime.getTime()
-              .toString(),
-          ),
-        createHash('md5').update(version),
-      )
+      .reduce((acc, f) => {
+        const mTime = fs
+          .statSync(f)
+          .mtime.getTime()
+          .toString();
+        return acc.update(f).update(mTime);
+      }, createHash('md5').update(version))
       .digest('hex');
   };
   /**

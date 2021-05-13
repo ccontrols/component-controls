@@ -1,51 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GithubAvatar overview 0 snapshot 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  -webkit-transition: 0.2s ease;
-  transition: 0.2s ease;
-}
-
-.emotion-1 {
-  max-width: unset;
-  display: block;
-  overflow: hidden;
-  line-height: 1;
-  width: 48px;
-  height: 48px;
-  vertical-align: middle;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  max-width: 100%;
-  height: auto;
-  border-radius: 9999px;
-}
-
-<div
-    class="emotion-0"
-    style="display: inline-block;"
-  >
-    <div
-      class="emotion-1"
-    >
-      <img
-        alt="avatar of Lelia Hirthe"
-        class="emotion-2"
-        height="48"
-        src="https://www.gravatar.com/avatar/3baa41d42fe629d3a4e682d543d438db?s=128"
-        title="Lelia Hirthe"
-        width="48"
-      />
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`GithubAvatar overview 1 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -80,11 +34,11 @@ exports[`GithubAvatar overview 1 snapshot 1`] = `
       class="emotion-1"
     >
       <img
-        alt="avatar of Werner Fay"
+        alt="avatar of Cecelia Langosh"
         class="emotion-2"
         height="48"
-        src="https://www.gravatar.com/avatar/1746aed1c297405bad2dc69c71ba4188?s=128"
-        title="Werner Fay"
+        src="https://www.gravatar.com/avatar/eb811a57269e583b3360a6c43e8921dc?s=128"
+        title="Cecelia Langosh"
         width="48"
       />
     </div>
@@ -126,11 +80,11 @@ exports[`GithubAvatar overview 2 snapshot 1`] = `
       class="emotion-1"
     >
       <img
-        alt="avatar of Jermaine Mohr"
+        alt="avatar of Murl Green I"
         class="emotion-2"
         height="48"
-        src="https://www.gravatar.com/avatar/57868c0e381dc78f46ca367d80ef89da?s=128"
-        title="Jermaine Mohr"
+        src="https://www.gravatar.com/avatar/b38a316d8b308cd33fbbb49ca0a3b2db?s=128"
+        title="Murl Green I"
         width="48"
       />
     </div>
@@ -172,11 +126,11 @@ exports[`GithubAvatar overview 3 snapshot 1`] = `
       class="emotion-1"
     >
       <img
-        alt="avatar of Charley Rosenbaum"
+        alt="avatar of Lela McClure"
         class="emotion-2"
         height="48"
-        src="https://www.gravatar.com/avatar/e08d86fb953ea9f163c0b872f5977679?s=128"
-        title="Charley Rosenbaum"
+        src="https://www.gravatar.com/avatar/5a43c990a056a2c6532a3637f3086991?s=128"
+        title="Lela McClure"
         width="48"
       />
     </div>
@@ -218,11 +172,57 @@ exports[`GithubAvatar overview 4 snapshot 1`] = `
       class="emotion-1"
     >
       <img
-        alt="avatar of Dr. Josephine Kris"
+        alt="avatar of Ms. Jean Barrows"
         class="emotion-2"
         height="48"
-        src="https://www.gravatar.com/avatar/7533f3b47b8db1c377587308e4ff1651?s=128"
-        title="Dr. Josephine Kris"
+        src="https://www.gravatar.com/avatar/46bdb0fa4124e1022694e4f760abe166?s=128"
+        title="Ms. Jean Barrows"
+        width="48"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`GithubAvatar overview 5 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.emotion-1 {
+  max-width: unset;
+  display: block;
+  overflow: hidden;
+  line-height: 1;
+  width: 48px;
+  height: 48px;
+  vertical-align: middle;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 9999px;
+}
+
+<div
+    class="emotion-0"
+    style="display: inline-block;"
+  >
+    <div
+      class="emotion-1"
+    >
+      <img
+        alt="avatar of Tanya Sanford"
+        class="emotion-2"
+        height="48"
+        src="https://www.gravatar.com/avatar/7ec99ebd34df4f0cb06694edf74a9d81?s=128"
+        title="Tanya Sanford"
         width="48"
       />
     </div>

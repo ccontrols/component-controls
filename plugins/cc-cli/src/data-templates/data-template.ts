@@ -2,7 +2,9 @@ import dot from 'dot';
 import {
   getStoryControls,
   randomizeData,
+  randomizeSeed,
   fixControlTypes,
+  BuildConfiguration,
 } from '@component-controls/core';
 import { prettify } from '@component-controls/instrument';
 import { StoryTemplateOptions } from '../utils';
@@ -19,6 +21,7 @@ import { getTemplate } from '../resolve-template';
 export const createDataTemplate = async (
   options: StoryTemplateOptions,
   existing?: Record<string, any>,
+  configration?: BuildConfiguration,
 ): Promise<{ content: string; data: Record<string, any> } | undefined> => {
   const {
     name,
@@ -27,16 +30,20 @@ export const createDataTemplate = async (
     output,
     format = 'ts',
     data: numValues = 0,
+    seed,
   } = options;
   if (numValues <= 0) {
     return undefined;
   }
-  const parsed = await getStore({ bundle, name, storyPath });
+  const parsed = await getStore({ bundle, name, storyPath }, configration);
   if (!parsed) {
     return undefined;
   }
   const { doc, stories, components } = parsed;
   const data: Record<string, any> = {};
+  if (seed) {
+    randomizeSeed(seed);
+  }
   Object.keys(stories).forEach(storyId => {
     const story = stories[storyId];
 
@@ -47,7 +54,7 @@ export const createDataTemplate = async (
       for (let i = Object.keys(values).length; i < numValues; i += 1) {
         const rnd = randomizeData(controls);
         if (Object.keys(rnd).length) {
-          values[i.toString()] = rnd;
+          values[(i + 1).toString()] = rnd;
         }
       }
       if (Object.keys(values).length) {

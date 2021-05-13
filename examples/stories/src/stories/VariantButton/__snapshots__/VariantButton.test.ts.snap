@@ -1,28 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`VariantButton overview 0 snapshot 1`] = `
-<DocumentFragment>
-  <button
-    style="color: rgb(242, 242, 242); background-color: rgb(47, 128, 237); font-size: 27px; padding: 10px 20px; border-radius: 8px; border: 1px solid #000000; display: flex; flex-direction: row; align-items: center;"
-  >
-    <div
-      style="padding: 0px 10px;"
-    >
-      Josue Beier III
-    </div>
-  </button>
-</DocumentFragment>
-`;
-
 exports[`VariantButton overview 1 snapshot 1`] = `
 <DocumentFragment>
   <button
-    style="color: rgb(242, 242, 242); background-color: rgb(47, 128, 237); font-size: 19px; padding: 10px 20px; border-radius: 8px; border: 1px solid #000000; display: flex; flex-direction: row; align-items: center;"
+    style="color: rgb(242, 242, 242); background-color: rgb(47, 128, 237); font-size: 16px; padding: 10px 20px; border-radius: 8px; border: 1px solid #000000; display: flex; flex-direction: row; align-items: center;"
   >
     <div
       style="padding: 0px 10px;"
     >
-      Darrel Kuhn
+      Cecelia Langosh
     </div>
   </button>
 </DocumentFragment>
@@ -31,12 +17,31 @@ exports[`VariantButton overview 1 snapshot 1`] = `
 exports[`VariantButton overview 2 snapshot 1`] = `
 <DocumentFragment>
   <button
-    style="color: rgb(242, 242, 242); background-color: rgb(47, 128, 237); font-size: 29px; padding: 10px 20px; border-radius: 8px; border: 1px solid #000000; display: flex; flex-direction: row; align-items: center;"
+    style="color: rgb(242, 242, 242); background-color: rgb(47, 128, 237); font-size: 26px; padding: 10px 20px; border-radius: 8px; border: 1px solid #000000; display: flex; flex-direction: row; align-items: center;"
   >
+    <div
+      style="display: flex; align-items: center;"
+    >
+      <svg
+        aria-hidden="true"
+        class="octicon"
+        fill="currentColor"
+        height="16"
+        role="img"
+        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          d="M13.03 8.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.47 9.28a.75.75 0 011.06-1.06l2.97 2.97V3.75a.75.75 0 011.5 0v7.44l2.97-2.97a.75.75 0 011.06 0z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </div>
     <div
       style="padding: 0px 10px;"
     >
-      Dessie Gleichner
+      Murl Green I
     </div>
   </button>
 </DocumentFragment>
@@ -45,12 +50,31 @@ exports[`VariantButton overview 2 snapshot 1`] = `
 exports[`VariantButton overview 3 snapshot 1`] = `
 <DocumentFragment>
   <button
-    style="color: rgb(242, 242, 242); background-color: rgb(47, 128, 237); font-size: 30px; padding: 10px 20px; border-radius: 8px; border: 1px solid #000000; display: flex; flex-direction: row; align-items: center;"
+    style="color: rgb(242, 242, 242); background-color: rgb(47, 128, 237); font-size: 24px; padding: 10px 20px; border-radius: 8px; border: 1px solid #000000; display: flex; flex-direction: row; align-items: center;"
   >
+    <div
+      style="display: flex; align-items: center;"
+    >
+      <svg
+        aria-hidden="true"
+        class="octicon"
+        fill="currentColor"
+        height="16"
+        role="img"
+        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </div>
     <div
       style="padding: 0px 10px;"
     >
-      Rafaela Heaney
+      Lela McClure
     </div>
   </button>
 </DocumentFragment>
@@ -59,12 +83,64 @@ exports[`VariantButton overview 3 snapshot 1`] = `
 exports[`VariantButton overview 4 snapshot 1`] = `
 <DocumentFragment>
   <button
-    style="color: rgb(242, 242, 242); background-color: rgb(47, 128, 237); font-size: 19px; padding: 10px 20px; border-radius: 8px; border: 1px solid #000000; display: flex; flex-direction: row; align-items: center;"
+    style="color: rgb(242, 242, 242); background-color: rgb(47, 128, 237); font-size: 23px; padding: 10px 20px; border-radius: 8px; border: 1px solid #000000; display: flex; flex-direction: row; align-items: center;"
   >
+    <div
+      style="display: flex; align-items: center;"
+    >
+      <svg
+        aria-hidden="true"
+        class="octicon"
+        fill="currentColor"
+        height="16"
+        role="img"
+        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          d="M3.47 7.78a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 0l4.25 4.25a.75.75 0 01-1.06 1.06L9 4.81v7.44a.75.75 0 01-1.5 0V4.81L4.53 7.78a.75.75 0 01-1.06 0z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </div>
     <div
       style="padding: 0px 10px;"
     >
-      Frida Adams
+      Ms. Jean Barrows
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`VariantButton overview 5 snapshot 1`] = `
+<DocumentFragment>
+  <button
+    style="color: rgb(242, 242, 242); background-color: rgb(47, 128, 237); font-size: 19px; padding: 10px 20px; border-radius: 8px; border: 1px solid #000000; display: flex; flex-direction: row; align-items: center;"
+  >
+    <div
+      style="display: flex; align-items: center;"
+    >
+      <svg
+        aria-hidden="true"
+        class="octicon"
+        fill="currentColor"
+        height="16"
+        role="img"
+        style="display: inline-block; user-select: none; vertical-align: text-bottom;"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          d="M3.47 7.78a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 0l4.25 4.25a.75.75 0 01-1.06 1.06L9 4.81v7.44a.75.75 0 01-1.5 0V4.81L4.53 7.78a.75.75 0 01-1.06 0z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </div>
+    <div
+      style="padding: 0px 10px;"
+    >
+      Tanya Sanford
     </div>
   </button>
 </DocumentFragment>

@@ -1,4 +1,5 @@
-import path from 'path';
+import { BuildConfiguration } from '@component-controls/core';
+
 export const renderers = {
   rtl: 'react-testing-library',
   rtr: 'react-test-renderer',
@@ -44,6 +45,9 @@ export type TemplateOptions = {
    * if positive number, how many rows of random data to generate for data-driven testing
    */
   data?: number;
+
+  /** random generator seed if generating data */
+  seed?: number;
 };
 
 export interface StoryTemplateOptions extends TemplateOptions {
@@ -53,6 +57,7 @@ export interface StoryTemplateOptions extends TemplateOptions {
 export type TemplateFunction<P extends TemplateOptions = TemplateOptions> = (
   options: P,
   dataImports?: DataImportOptions,
+  configuration?: BuildConfiguration,
 ) => Promise<string>;
 
 export interface DataImportOptions {
@@ -61,11 +66,6 @@ export interface DataImportOptions {
   // the list of stories that do have some data-driven values and their values
   data: Record<string, any>;
 }
-
-export const relativeImport = (from: string, to: string): string => {
-  const relative = path.relative(from, to);
-  return relative.startsWith('.') ? relative : `./${relative}`;
-};
 
 export const formatExtension = (format: TeplateFormats): string =>
   format === 'ts' ? 'ts' : 'js';

@@ -6,6 +6,7 @@ import { CliOptions } from './utils';
 import { saveTemplate } from './save-test-template';
 import { createStoriesTemplate } from '../jest-templates/stories-template';
 import { createDocumentTemplate } from '../jest-templates/document-template';
+import { BuildConfiguration } from '@component-controls/core';
 
 const formatExtensions: { [key in TeplateFormats]: string } = {
   cjs: '.js',
@@ -43,20 +44,22 @@ export const cliStory = async (
     exclude,
     ally,
     data,
+    seed,
   } = options;
   let documents: string[] = [];
-
+  let configuration: BuildConfiguration | undefined;
   if (bundle) {
     const store = loadStore(require(bundle));
+    configuration = store.config;
     documents = Object.keys(store.docs).map(
       key => store.docs[key].fileName || store.docs[key].title,
     );
   } else {
     const configPath = path.resolve(process.cwd(), config);
-    const configuration = loadConfig(configPath);
-    if (configuration) {
-      documents =
-        extractDocuments({ config: configuration.config, configPath }) || [];
+    const configResult = loadConfig(configPath);
+    if (configResult) {
+      configuration = configResult?.config;
+      documents = extractDocuments({ config: configuration, configPath }) || [];
     }
   }
   for (const name of documents) {
@@ -82,6 +85,7 @@ export const cliStory = async (
       storyPath: name,
       ally,
       data,
+      seed,
       output: output
         ? output
         : bundle

@@ -393,7 +393,9 @@ export const defaultBuildConfig: BuildConfiguration = {
         collapseSingle: true,
       },
       tabs: {
-        page: require.resolve('@component-controls/pages/ClassicPage'),
+        page: '@component-controls/pages/ClassicPage',
+        test: '@component-controls/pages/TestingPage',
+        design: '@component-controls/pages/DesignPage',
       },
     },
     blog: {

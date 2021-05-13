@@ -1,5 +1,6 @@
 import path from 'path';
 import dot from 'dot';
+import { relativeImport } from '@component-controls/core/node-utils';
 import { createTemplate } from './template';
 import { accessibilityTemplate } from './accessibily';
 import {
@@ -7,11 +8,11 @@ import {
   renderers,
   TemplateFunction,
   DataImportOptions,
-  relativeImport,
   removeExtension,
 } from '../utils';
 import { getTemplate } from '../resolve-template';
 import { getStore } from '../store';
+import { BuildConfiguration } from '@component-controls/core';
 
 dot.templateSettings.strip = false;
 (dot as any).log = false;
@@ -24,6 +25,7 @@ dot.templateSettings.strip = false;
 export const createStoriesTemplate: TemplateFunction<StoryTemplateOptions> = async (
   options: StoryTemplateOptions,
   dataImports?: DataImportOptions,
+  configration?: BuildConfiguration,
 ): Promise<string> => {
   const {
     storyPath = '',
@@ -35,7 +37,7 @@ export const createStoriesTemplate: TemplateFunction<StoryTemplateOptions> = asy
     ally,
     ...rest
   } = options;
-  const parsed = await getStore({ bundle, name, storyPath });
+  const parsed = await getStore({ bundle, name, storyPath }, configration);
   if (!parsed) {
     return '';
   }

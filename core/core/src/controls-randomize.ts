@@ -197,7 +197,7 @@ export const randomizeData = (controls: ComponentControls): RandomizedData => {
           }
           return {
             name,
-            value,
+            value: value === 'undefined' ? undefined : value,
           };
         }
         default:

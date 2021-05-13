@@ -24,6 +24,7 @@ export const run = async (): Promise<void> => {
     exclude,
     ally,
     data,
+    seed,
   } = parsedArgs;
   switch (parsedArgs.generate) {
     case 'store':
@@ -40,6 +41,7 @@ export const run = async (): Promise<void> => {
         exclude,
         ally,
         data,
+        seed,
       } as CliOptions);
     case 'story':
     case 'doc':
@@ -57,6 +59,7 @@ export const run = async (): Promise<void> => {
           exclude,
           ally,
           data,
+          seed,
         } as CliOptions,
         parsedArgs.generate === 'doc',
       );

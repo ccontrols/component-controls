@@ -4,6 +4,7 @@ import { log } from '@component-controls/logger';
 import { CliOptions, getTestFolder } from './utils';
 import { TemplateFunction, TemplateOptions } from '../utils';
 import { saveDataTemplate } from './save-data-template';
+import { BuildConfiguration } from '@component-controls/core';
 
 /**
  * save a template file based on options
@@ -15,6 +16,7 @@ import { saveDataTemplate } from './save-data-template';
 export const saveTemplate = async <P extends TemplateOptions>(
   options: CliOptions<P>,
   templateFn: TemplateFunction<P>,
+  configuration?: BuildConfiguration,
 ): Promise<void> => {
   const testFolder = getTestFolder(options);
   if (!testFolder) {
@@ -30,8 +32,7 @@ export const saveTemplate = async <P extends TemplateOptions>(
     );
     return;
   }
-  log('saving test', testFilePath, [115, 245, 184]);
-  const dataTemplate = await saveDataTemplate(options);
+  const dataTemplate = await saveDataTemplate(options, configuration);
 
   const content = await templateFn(
     ({
@@ -39,11 +40,18 @@ export const saveTemplate = async <P extends TemplateOptions>(
       ...rest,
     } as unknown) as P,
     dataTemplate,
+    configuration,
   );
   if (content) {
-    if (!fs.existsSync(testFolder)) {
-      fs.mkdirSync(testFolder);
+    const existing =
+      fs.existsSync(testFilePath) && fs.readFileSync(testFilePath, 'utf8');
+    if (existing !== content) {
+      log('saving test', testFilePath, [115, 245, 184]);
+
+      if (!fs.existsSync(testFolder)) {
+        fs.mkdirSync(testFolder);
+      }
+      fs.writeFileSync(testFilePath, content, 'utf8');
     }
-    fs.writeFileSync(testFilePath, content, 'utf8');
   }
 };

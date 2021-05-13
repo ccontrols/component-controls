@@ -1,117 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LinkHeading overview 0 snapshot 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  width: 100%;
-  scroll-margin-top: 5rem;
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-1:hover a {
-  visibility: visible;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  height: 32px;
-  visibility: hidden;
-  padding-right: 4px;
-  left: -32px;
-}
-
-.emotion-2:hover {
-  visibility: visible;
-}
-
-.emotion-3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
-  font-weight: 600;
-  line-height: 1.25;
-  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
-  line-height: 1.25;
-  font-weight: 600;
-  font-size: 42px;
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
-
-<div
-    style="margin-left: 32px;"
-  >
-    <div
-      class="emotion-0"
-      id="angelica-howell"
-    >
-      <div
-        class="emotion-1"
-      >
-        <a
-          aria-label="navigate to Angelica Howell section"
-          class="emotion-2"
-          data-id="angelica-howell"
-          data-level="1"
-          data-title="Angelica Howell"
-          href="http://localhost/#angelica-howell"
-        >
-          <svg
-            aria-hidden="true"
-            class="octicon"
-            fill="currentColor"
-            height="28"
-            role="img"
-            style="display: inline-block; user-select: none; vertical-align: middle;"
-            viewBox="0 0 24 24"
-            width="28"
-          >
-            <path
-              d="M14.78 3.653a3.936 3.936 0 115.567 5.567l-3.627 3.627a3.936 3.936 0 01-5.88-.353.75.75 0 00-1.18.928 5.436 5.436 0 008.12.486l3.628-3.628a5.436 5.436 0 10-7.688-7.688l-3 3a.75.75 0 001.06 1.061l3-3z"
-            />
-            <path
-              d="M7.28 11.153a3.936 3.936 0 015.88.353.75.75 0 001.18-.928 5.436 5.436 0 00-8.12-.486L2.592 13.72a5.436 5.436 0 107.688 7.688l3-3a.75.75 0 10-1.06-1.06l-3 3a3.936 3.936 0 01-5.567-5.568l3.627-3.627z"
-            />
-          </svg>
-        </a>
-        <h1
-          class="emotion-3"
-        >
-          Angelica Howell
-        </h1>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`LinkHeading overview 1 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -155,7 +43,7 @@ exports[`LinkHeading overview 1 snapshot 1`] = `
   height: 32px;
   visibility: hidden;
   padding-right: 4px;
-  left: -16px;
+  left: -20px;
 }
 
 .emotion-2:hover {
@@ -172,9 +60,9 @@ exports[`LinkHeading overview 1 snapshot 1`] = `
   font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
   line-height: 1.25;
   font-weight: 600;
-  font-size: 12px;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 <div
@@ -182,28 +70,28 @@ exports[`LinkHeading overview 1 snapshot 1`] = `
   >
     <div
       class="emotion-0"
-      id="mrs--rosalyn-moen"
+      id="cecelia-langosh"
     >
       <div
         class="emotion-1"
       >
         <a
-          aria-label="navigate to Mrs. Rosalyn Moen section"
+          aria-label="navigate to Cecelia Langosh section"
           class="emotion-2"
-          data-id="mrs--rosalyn-moen"
-          data-level="6"
-          data-title="Mrs. Rosalyn Moen"
-          href="http://localhost/#mrs--rosalyn-moen"
+          data-id="cecelia-langosh"
+          data-level="4"
+          data-title="Cecelia Langosh"
+          href="http://localhost/#cecelia-langosh"
         >
           <svg
             aria-hidden="true"
             class="octicon"
             fill="currentColor"
-            height="12"
+            height="16"
             role="img"
             style="display: inline-block; user-select: none; vertical-align: middle;"
             viewBox="0 0 16 16"
-            width="12"
+            width="16"
           >
             <path
               d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
@@ -211,11 +99,11 @@ exports[`LinkHeading overview 1 snapshot 1`] = `
             />
           </svg>
         </a>
-        <h6
+        <h4
           class="emotion-3"
         >
-          Mrs. Rosalyn Moen
-        </h6>
+          Cecelia Langosh
+        </h4>
       </div>
     </div>
   </div>
@@ -223,118 +111,6 @@ exports[`LinkHeading overview 1 snapshot 1`] = `
 `;
 
 exports[`LinkHeading overview 2 snapshot 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  width: 100%;
-  scroll-margin-top: 5rem;
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-1:hover a {
-  visibility: visible;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  height: 32px;
-  visibility: hidden;
-  padding-right: 4px;
-  left: -32px;
-}
-
-.emotion-2:hover {
-  visibility: visible;
-}
-
-.emotion-3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
-  font-weight: 600;
-  line-height: 1.25;
-  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
-  line-height: 1.25;
-  font-weight: 600;
-  font-size: 42px;
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
-
-<div
-    style="margin-left: 32px;"
-  >
-    <div
-      class="emotion-0"
-      id="stuart-rutherford"
-    >
-      <div
-        class="emotion-1"
-      >
-        <a
-          aria-label="navigate to Stuart Rutherford section"
-          class="emotion-2"
-          data-id="stuart-rutherford"
-          data-level="1"
-          data-title="Stuart Rutherford"
-          href="http://localhost/#stuart-rutherford"
-        >
-          <svg
-            aria-hidden="true"
-            class="octicon"
-            fill="currentColor"
-            height="28"
-            role="img"
-            style="display: inline-block; user-select: none; vertical-align: middle;"
-            viewBox="0 0 24 24"
-            width="28"
-          >
-            <path
-              d="M14.78 3.653a3.936 3.936 0 115.567 5.567l-3.627 3.627a3.936 3.936 0 01-5.88-.353.75.75 0 00-1.18.928 5.436 5.436 0 008.12.486l3.628-3.628a5.436 5.436 0 10-7.688-7.688l-3 3a.75.75 0 001.06 1.061l3-3z"
-            />
-            <path
-              d="M7.28 11.153a3.936 3.936 0 015.88.353.75.75 0 001.18-.928 5.436 5.436 0 00-8.12-.486L2.592 13.72a5.436 5.436 0 107.688 7.688l3-3a.75.75 0 10-1.06-1.06l-3 3a3.936 3.936 0 01-5.567-5.568l3.627-3.627z"
-            />
-          </svg>
-        </a>
-        <h1
-          class="emotion-3"
-        >
-          Stuart Rutherford
-        </h1>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`LinkHeading overview 3 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
   box-sizing: border-box;
@@ -406,18 +182,18 @@ exports[`LinkHeading overview 3 snapshot 1`] = `
   >
     <div
       class="emotion-0"
-      id="miss-litzy-bergnaum"
+      id="bernadette-langosh-jr-"
     >
       <div
         class="emotion-1"
       >
         <a
-          aria-label="navigate to Miss Litzy Bergnaum section"
+          aria-label="navigate to Bernadette Langosh Jr. section"
           class="emotion-2"
-          data-id="miss-litzy-bergnaum"
+          data-id="bernadette-langosh-jr-"
           data-level="2"
-          data-title="Miss Litzy Bergnaum"
-          href="http://localhost/#miss-litzy-bergnaum"
+          data-title="Bernadette Langosh Jr."
+          href="http://localhost/#bernadette-langosh-jr-"
         >
           <svg
             aria-hidden="true"
@@ -440,8 +216,118 @@ exports[`LinkHeading overview 3 snapshot 1`] = `
         <h2
           class="emotion-3"
         >
-          Miss Litzy Bergnaum
+          Bernadette Langosh Jr.
         </h2>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`LinkHeading overview 3 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1:hover a {
+  visibility: visible;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -20px;
+}
+
+.emotion-2:hover {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+<div
+    style="margin-left: 32px;"
+  >
+    <div
+      class="emotion-0"
+      id="effie-dietrich"
+    >
+      <div
+        class="emotion-1"
+      >
+        <a
+          aria-label="navigate to Effie Dietrich section"
+          class="emotion-2"
+          data-id="effie-dietrich"
+          data-level="4"
+          data-title="Effie Dietrich"
+          href="http://localhost/#effie-dietrich"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="16"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h4
+          class="emotion-3"
+        >
+          Effie Dietrich
+        </h4>
       </div>
     </div>
   </div>
@@ -518,18 +404,18 @@ exports[`LinkHeading overview 4 snapshot 1`] = `
   >
     <div
       class="emotion-0"
-      id="dr--dariana-murray"
+      id="adeline-welch"
     >
       <div
         class="emotion-1"
       >
         <a
-          aria-label="navigate to Dr. Dariana Murray section"
+          aria-label="navigate to Adeline Welch section"
           class="emotion-2"
-          data-id="dr--dariana-murray"
+          data-id="adeline-welch"
           data-level="1"
-          data-title="Dr. Dariana Murray"
-          href="http://localhost/#dr--dariana-murray"
+          data-title="Adeline Welch"
+          href="http://localhost/#adeline-welch"
         >
           <svg
             aria-hidden="true"
@@ -552,8 +438,118 @@ exports[`LinkHeading overview 4 snapshot 1`] = `
         <h1
           class="emotion-3"
         >
-          Dr. Dariana Murray
+          Adeline Welch
         </h1>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`LinkHeading overview 5 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 5rem;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1:hover a {
+  visibility: visible;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 32px;
+  visibility: hidden;
+  padding-right: 4px;
+  left: -16px;
+}
+
+.emotion-2:hover {
+  visibility: visible;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+<div
+    style="margin-left: 32px;"
+  >
+    <div
+      class="emotion-0"
+      id="lela-mcclure"
+    >
+      <div
+        class="emotion-1"
+      >
+        <a
+          aria-label="navigate to Lela McClure section"
+          class="emotion-2"
+          data-id="lela-mcclure"
+          data-level="6"
+          data-title="Lela McClure"
+          href="http://localhost/#lela-mcclure"
+        >
+          <svg
+            aria-hidden="true"
+            class="octicon"
+            fill="currentColor"
+            height="12"
+            role="img"
+            style="display: inline-block; user-select: none; vertical-align: middle;"
+            viewBox="0 0 16 16"
+            width="12"
+          >
+            <path
+              d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <h6
+          class="emotion-3"
+        >
+          Lela McClure
+        </h6>
       </div>
     </div>
   </div>

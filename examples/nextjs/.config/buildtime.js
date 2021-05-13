@@ -44,11 +44,6 @@ module.exports = {
   pages: {
     story: {
       basePath: 'api/',
-      tabs: {
-        page: '@component-controls/pages/ClassicPage',
-        test: '@component-controls/pages/TestingPage',
-        design: '@component-controls/pages/DesignPage',
-      },
     },
     tutorial: {
       basePath: 'tutorial/',

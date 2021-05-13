@@ -1,8 +1,5 @@
 export default {
   overview: {
-    '0': {
-      collapsible: false,
-    },
     '1': {
       collapsible: true,
     },
@@ -10,9 +7,12 @@ export default {
       collapsible: true,
     },
     '3': {
-      collapsible: true,
+      collapsible: false,
     },
     '4': {
+      collapsible: true,
+    },
+    '5': {
       collapsible: true,
     },
   },

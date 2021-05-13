@@ -1,18 +1,18 @@
 export default {
   overview: {
-    '0': {
-      themeKey: 'actionbar',
-    },
     '1': {
       themeKey: 'toolbar',
     },
     '2': {
-      themeKey: 'footer',
-    },
-    '3': {
       themeKey: 'toolbar',
     },
+    '3': {
+      themeKey: 'actionbar',
+    },
     '4': {
+      themeKey: 'toolbar',
+    },
+    '5': {
       themeKey: 'toolbar',
     },
   },

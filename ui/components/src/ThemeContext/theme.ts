@@ -452,6 +452,7 @@ export const theme: ControlsTheme = {
       boxShadow: (t: Theme): string => `0px 1px 3px 0px ${t.colors?.shadow}`,
       border: (t: Theme): string => ` 1px solid  ${t.colors?.shadow}`,
       flexDirection: 'row',
+      overflowX: 'auto',
       alignItems: 'center',
       ':hover': {
         a: {

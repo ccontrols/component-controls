@@ -30,3 +30,8 @@ export const resolveSnapshotFile = (testFilePath: string): string =>
     '__snapshots__',
     `${path.basename(testFilePath)}.snap`,
   );
+
+export const relativeImport = (from: string, to: string): string => {
+  const relative = path.relative(from, to);
+  return relative.startsWith('.') ? relative : `./${relative}`;
+};

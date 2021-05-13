@@ -32,8 +32,13 @@ async function loader(this: WebpackLoaderContext): Promise<string> {
     );
     if (store?.doc) {
       log('loaded: ', filePath);
+      const fileDependencies: string[] = [];
+      if (store.doc.testData) {
+        fileDependencies.push(
+          path.resolve(path.dirname(filePath), store.doc.testData),
+        );
+      }
       if (store.stories && store.components && store.packages) {
-        const fileDependencies: string[] = [];
         Object.values(store.components).forEach(component => {
           if (component.request) {
             fileDependencies.push(component.request as string);
@@ -54,7 +59,6 @@ async function loader(this: WebpackLoaderContext): Promise<string> {
             }
           }
         });
-        new Set(fileDependencies).forEach(d => this.addDependency(d));
         addStoriesDoc(filePath, this._compilation.records.hash, {
           stories: store.stories,
           components: store.components,
@@ -65,6 +69,9 @@ async function loader(this: WebpackLoaderContext): Promise<string> {
           },
         });
       }
+      new Set(fileDependencies).forEach(d => {
+        this.addDependency(d);
+      });
     } else {
       log('removed: ', filePath);
       removeStoriesDoc(filePath);

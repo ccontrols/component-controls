@@ -61,67 +61,6 @@ exports[`Shield fraction snapshot 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Shield overview 0 snapshot 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  font-size: 12px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  background-color: #69768C;
-  color: #ffffff;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  background-color: #071542;
-  color: #ffffff;
-}
-
-<div
-    class="emotion-0"
-  >
-    <div
-      class="emotion-1"
-    >
-      Jaden Kozey
-    </div>
-    <div
-      class="emotion-2"
-    >
-      1.0.0
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`Shield overview 1 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -162,7 +101,7 @@ exports[`Shield overview 1 snapshot 1`] = `
   padding-right: 4px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  background-color: #3e1402;
+  background-color: #531c15;
   color: #ffffff;
 }
 
@@ -172,7 +111,7 @@ exports[`Shield overview 1 snapshot 1`] = `
     <div
       class="emotion-1"
     >
-      Violet Jerde
+      Cecelia Langosh
     </div>
     <div
       class="emotion-2"
@@ -223,7 +162,7 @@ exports[`Shield overview 2 snapshot 1`] = `
   padding-right: 4px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  background-color: #303c4a;
+  background-color: #5e2519;
   color: #ffffff;
 }
 
@@ -233,7 +172,7 @@ exports[`Shield overview 2 snapshot 1`] = `
     <div
       class="emotion-1"
     >
-      Oren Hermiston
+      Ms. Alysha Daniel
     </div>
     <div
       class="emotion-2"
@@ -284,7 +223,7 @@ exports[`Shield overview 3 snapshot 1`] = `
   padding-right: 4px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  background-color: #4b412c;
+  background-color: #79096c;
   color: #ffffff;
 }
 
@@ -294,7 +233,7 @@ exports[`Shield overview 3 snapshot 1`] = `
     <div
       class="emotion-1"
     >
-      Randy Jones
+      Pearlie Altenwerth
     </div>
     <div
       class="emotion-2"
@@ -345,7 +284,7 @@ exports[`Shield overview 4 snapshot 1`] = `
   padding-right: 4px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  background-color: #07632f;
+  background-color: #4d3d65;
   color: #ffffff;
 }
 
@@ -355,7 +294,68 @@ exports[`Shield overview 4 snapshot 1`] = `
     <div
       class="emotion-1"
     >
-      Vicenta Swaniawski
+      Krista Zulauf
+    </div>
+    <div
+      class="emotion-2"
+    >
+      1.0.0
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Shield overview 5 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #69768C;
+  color: #ffffff;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #033c34;
+  color: #ffffff;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      Ms. Ayla Swift
     </div>
     <div
       class="emotion-2"
@@ -427,67 +427,6 @@ exports[`Shield percent snapshot 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Shield themeColor 0 snapshot 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  font-size: 12px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  background-color: #69768C;
-  color: #ffffff;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  background-color: #ff9800;
-  color: #454f5b;
-}
-
-<div
-    class="emotion-0"
-  >
-    <div
-      class="emotion-1"
-    >
-      color
-    </div>
-    <div
-      class="emotion-2"
-    >
-      palette2
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`Shield themeColor 1 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -528,7 +467,7 @@ exports[`Shield themeColor 1 snapshot 1`] = `
   padding-right: 4px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  background-color: #8338ec;
+  background-color: #f44336;
   color: #ffffff;
 }
 
@@ -543,7 +482,7 @@ exports[`Shield themeColor 1 snapshot 1`] = `
     <div
       class="emotion-2"
     >
-      accentPalette0
+      palette3
     </div>
   </div>
 </DocumentFragment>
@@ -589,7 +528,7 @@ exports[`Shield themeColor 2 snapshot 1`] = `
   padding-right: 4px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  background-color: #4caf50;
+  background-color: #39ccff;
   color: #454f5b;
 }
 
@@ -604,13 +543,74 @@ exports[`Shield themeColor 2 snapshot 1`] = `
     <div
       class="emotion-2"
     >
-      status_passed
+      status_todo
     </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`Shield themeColor 3 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-size: 12px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #69768C;
+  color: #ffffff;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #f44336;
+  color: #ffffff;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      color
+    </div>
+    <div
+      class="emotion-2"
+    >
+      palette3
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Shield themeColor 4 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
   box-sizing: border-box;
@@ -671,7 +671,7 @@ exports[`Shield themeColor 3 snapshot 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Shield themeColor 4 snapshot 1`] = `
+exports[`Shield themeColor 5 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
   box-sizing: border-box;
@@ -711,7 +711,7 @@ exports[`Shield themeColor 4 snapshot 1`] = `
   padding-right: 4px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  background-color: #1976d2;
+  background-color: #8338ec;
   color: #ffffff;
 }
 
@@ -726,7 +726,7 @@ exports[`Shield themeColor 4 snapshot 1`] = `
     <div
       class="emotion-2"
     >
-      palette5
+      accentPalette0
     </div>
   </div>
 </DocumentFragment>

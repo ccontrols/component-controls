@@ -1,29 +1,42 @@
-export default {
+import { VariantButtonProps } from './VariantButton';
+const data: Record<string, Record<string, VariantButtonProps>> = {
   overview: {
-    '0': {
-      text: 'Josue Beier III',
-      icon: 'Ms. Geovany Gislason',
-      fontSize: 27,
-    },
     '1': {
-      text: 'Darrel Kuhn',
-      icon: 'Cleora Yost',
-      fontSize: 19,
+      text: 'Cecelia Langosh',
+      variant: 'success',
+      fontSize: 16,
+      icon: 'none',
+      iconSize: 'medium',
     },
     '2': {
-      text: 'Dessie Gleichner',
-      icon: 'Miss Shaun Lind',
-      fontSize: 29,
+      text: 'Murl Green I',
+      variant: 'disabled',
+      fontSize: 26,
+      icon: 'down-arrow',
+      iconSize: 'large',
     },
     '3': {
-      text: 'Rafaela Heaney',
-      icon: 'Dr. Walter Lowe',
-      fontSize: 30,
+      text: 'Lela McClure',
+      variant: 'error',
+      fontSize: 24,
+      icon: 'left-arrow',
+      iconSide: 'right',
+      padding: 'large',
     },
     '4': {
-      text: 'Frida Adams',
-      icon: 'Omari Dibbert',
+      text: 'Ms. Jean Barrows',
+      variant: 'accent',
+      fontSize: 23,
+      icon: 'up-arrow',
+      iconSide: 'left',
+    },
+    '5': {
+      text: 'Tanya Sanford',
+      variant: 'error',
       fontSize: 19,
+      icon: 'up-arrow',
+      iconSide: 'left',
     },
   },
 };
+export default data;

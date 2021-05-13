@@ -723,6 +723,30 @@ Markdown **descripton** for *component*.
       },
       author: 'atanasster',
       title: 'Story',
+      data: {
+        'plain--controls': {
+          '1': {
+            name: 'Cecelia Langosh',
+            age: 16,
+          },
+          '2': {
+            name: 'Murl Green I',
+            age: 26,
+          },
+          '3': {
+            name: 'Lela McClure',
+            age: 24,
+          },
+          '4': {
+            name: 'Ms. Jean Barrows',
+            age: 23,
+          },
+          '5': {
+            name: 'Tanya Sanford',
+            age: 19,
+          },
+        },
+      },
       stories: [
         'id-of-story',
         'id-of-button-story',
@@ -807,6 +831,7 @@ Markdown **descripton** for *component*.
         <Donut value={1 / 2} aria-label="example donut graphic" />
       ),
       id: 'blocks-core-story-plain--controls',
+      rawId: 'plain--controls',
       doc: 'Story',
       name: 'controls',
       component: 'Control',
