@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.12.0](https://github.com/ccontrols/component-controls/compare/v3.11.4...v3.12.0) (2021-05-13)
+
+
+### Bug Fixes
+
+* undefined option randomize ([bf8e893](https://github.com/ccontrols/component-controls/commit/bf8e8932773e9786678464b8265f2a52cabdaeb6))
+
+
+### Features
+
+* configure random seed generator ([ab14802](https://github.com/ccontrols/component-controls/commit/ab14802aec9dd3966c357a880f87c18f1984770d))
+* load data values and hmr on change ([1d7102b](https://github.com/ccontrols/component-controls/commit/1d7102b0df7875aeabfdf9b0f626e95a18f72b99))
+
+
+
+
+
 ## [3.11.4](https://github.com/ccontrols/component-controls/compare/v3.11.3...v3.11.4) (2021-05-11)
 
 

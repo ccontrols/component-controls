@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.12.0](https://github.com/ccontrols/component-controls/compare/v3.11.4...v3.12.0) (2021-05-13)
+
+
+### Features
+
+* data driven testing ui ([4684b95](https://github.com/ccontrols/component-controls/commit/4684b95b8ea7d79e27a9a1b3090438829ae35d42))
+
+
+
+
+
 ## [3.11.4](https://github.com/ccontrols/component-controls/compare/v3.11.3...v3.11.4) (2021-05-11)
 
 **Note:** Version bump only for package @component-controls/store
