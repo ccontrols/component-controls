@@ -45,6 +45,9 @@ export type TemplateOptions = {
    * if positive number, how many rows of random data to generate for data-driven testing
    */
   data?: number;
+
+  /** random generator seed if generating data */
+  seed?: number;
 };
 
 export interface StoryTemplateOptions extends TemplateOptions {

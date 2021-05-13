@@ -172,99 +172,6 @@ exports[`Sidebar icon snapshot 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Sidebar overview 0 snapshot 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  overflow-x: hidden;
-  background-color: #ffffff;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 9999;
-  position: absolute;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  padding-bottom: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-}
-
-.emotion-3 .selected {
-  border-left: 4px solid #f49342;
-  font-weight: 700;
-  padding-left: 4px;
-}
-
-<div
-    class="emotion-0"
-  >
-    <div
-      class="emotion-1"
-    >
-      <div
-        class="emotion-2"
-      />
-      <div
-        class="emotion-3"
-      >
-        <ul>
-          <li>
-            item 1
-          </li>
-          <li>
-            item 2
-          </li>
-          <li>
-            item 3
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`Sidebar overview 1 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -452,6 +359,99 @@ exports[`Sidebar overview 3 snapshot 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+  position: absolute;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-bottom: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.emotion-3 .selected {
+  border-left: 4px solid #f49342;
+  font-weight: 700;
+  padding-left: 4px;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <div
+        class="emotion-2"
+      />
+      <div
+        class="emotion-3"
+      >
+        <ul>
+          <li>
+            item 1
+          </li>
+          <li>
+            item 2
+          </li>
+          <li>
+            item 3
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Sidebar overview 4 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -511,7 +511,7 @@ exports[`Sidebar overview 3 snapshot 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Sidebar overview 4 snapshot 1`] = `
+exports[`Sidebar overview 5 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
   box-sizing: border-box;

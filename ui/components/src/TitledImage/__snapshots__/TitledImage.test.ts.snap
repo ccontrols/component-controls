@@ -1,60 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TitledImage overview 0 snapshot 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  max-width: 100%;
-  height: auto;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  color: #69768C;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  font-size: 14px;
-}
-
-<div
-    class="emotion-0"
-  >
-    <img
-      alt="alt text"
-      class="emotion-1"
-      src="https://github.com/ccontrols/component-controls/raw/master/misc/storybook-custom-docs/images/simple-page.jpg"
-      title="Joana VonRueden"
-    />
-    <span
-      class="emotion-2"
-    >
-      Joana VonRueden
-    </span>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`TitledImage overview 1 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -99,12 +44,12 @@ exports[`TitledImage overview 1 snapshot 1`] = `
       alt="alt text"
       class="emotion-1"
       src="https://github.com/ccontrols/component-controls/raw/master/misc/storybook-custom-docs/images/simple-page.jpg"
-      title="Leo Lakin"
+      title="Cecelia Langosh"
     />
     <span
       class="emotion-2"
     >
-      Leo Lakin
+      Cecelia Langosh
     </span>
   </div>
 </DocumentFragment>
@@ -154,12 +99,12 @@ exports[`TitledImage overview 2 snapshot 1`] = `
       alt="alt text"
       class="emotion-1"
       src="https://github.com/ccontrols/component-controls/raw/master/misc/storybook-custom-docs/images/simple-page.jpg"
-      title="Destin Turcotte"
+      title="Cassidy Brekke"
     />
     <span
       class="emotion-2"
     >
-      Destin Turcotte
+      Cassidy Brekke
     </span>
   </div>
 </DocumentFragment>
@@ -209,12 +154,12 @@ exports[`TitledImage overview 3 snapshot 1`] = `
       alt="alt text"
       class="emotion-1"
       src="https://github.com/ccontrols/component-controls/raw/master/misc/storybook-custom-docs/images/simple-page.jpg"
-      title="Daniela Monahan"
+      title="Chance Kessler"
     />
     <span
       class="emotion-2"
     >
-      Daniela Monahan
+      Chance Kessler
     </span>
   </div>
 </DocumentFragment>
@@ -264,12 +209,67 @@ exports[`TitledImage overview 4 snapshot 1`] = `
       alt="alt text"
       class="emotion-1"
       src="https://github.com/ccontrols/component-controls/raw/master/misc/storybook-custom-docs/images/simple-page.jpg"
-      title="Jaunita Quitzon"
+      title="Cleo Lindgren"
     />
     <span
       class="emotion-2"
     >
-      Jaunita Quitzon
+      Cleo Lindgren
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TitledImage overview 5 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #69768C;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 14px;
+}
+
+<div
+    class="emotion-0"
+  >
+    <img
+      alt="alt text"
+      class="emotion-1"
+      src="https://github.com/ccontrols/component-controls/raw/master/misc/storybook-custom-docs/images/simple-page.jpg"
+      title="Adeline Welch"
+    />
+    <span
+      class="emotion-2"
+    >
+      Adeline Welch
     </span>
   </div>
 </DocumentFragment>

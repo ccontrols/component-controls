@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StoryData overview snapshot 1`] = `<DocumentFragment />`;
+
+exports[`StoryData pagination 1 snapshot 1`] = `<DocumentFragment />`;
+
+exports[`StoryData pagination 2 snapshot 1`] = `<DocumentFragment />`;
+
+exports[`StoryData pagination 3 snapshot 1`] = `<DocumentFragment />`;
+
+exports[`StoryData pagination 4 snapshot 1`] = `<DocumentFragment />`;
+
+exports[`StoryData pagination 5 snapshot 1`] = `<DocumentFragment />`;

@@ -1,14 +1,12 @@
 import path from 'path';
 import fs from 'fs';
 const mockArgv = require('mock-argv');
-import { randomizeSeed } from '@component-controls/core';
 import { setLogOptions } from '@component-controls/logger';
 
 import { run } from '../src/cli/cli';
 
 export const runTests = (testName: string, args: string[]): void => {
   setLogOptions({ logLevel: 'none' });
-  randomizeSeed(11223344);
   it(
     testName,
     async () => {
@@ -21,6 +19,8 @@ export const runTests = (testName: string, args: string[]): void => {
             : []),
           '-o',
           outPath,
+          '-s',
+          '11223344',
         ],
         async () => {
           await run();

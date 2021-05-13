@@ -1,19 +1,19 @@
 export default {
   overview: {
-    '0': {
-      color: '#464a48',
-    },
     '1': {
-      color: '#7e262d',
+      color: '#4f4215',
     },
     '2': {
-      color: '#796d26',
+      color: '#41531c',
     },
     '3': {
-      color: '#4a4529',
+      color: '#150d41',
     },
     '4': {
-      color: '#5e6756',
+      color: '#061638',
+    },
+    '5': {
+      color: '#5e2519',
     },
   },
 };

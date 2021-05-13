@@ -1,19 +1,19 @@
 export default {
   overview: {
-    '0': {
+    '1': {
       easing: 'ease-out',
     },
-    '1': {
-      easing: 'ease-in-out',
-    },
     '2': {
-      easing: 'ease',
+      easing: 'ease-in',
     },
     '3': {
       easing: 'ease',
     },
     '4': {
       easing: 'ease-in',
+    },
+    '5': {
+      easing: 'ease-out',
     },
   },
 };

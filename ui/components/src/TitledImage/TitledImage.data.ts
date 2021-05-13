@@ -1,19 +1,19 @@
 export default {
   overview: {
-    '0': {
-      title: 'Joana VonRueden',
-    },
     '1': {
-      title: 'Leo Lakin',
+      title: 'Cecelia Langosh',
     },
     '2': {
-      title: 'Destin Turcotte',
+      title: 'Cassidy Brekke',
     },
     '3': {
-      title: 'Daniela Monahan',
+      title: 'Chance Kessler',
     },
     '4': {
-      title: 'Jaunita Quitzon',
+      title: 'Cleo Lindgren',
+    },
+    '5': {
+      title: 'Adeline Welch',
     },
   },
 };

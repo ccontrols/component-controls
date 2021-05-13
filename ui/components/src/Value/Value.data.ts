@@ -1,24 +1,24 @@
 export default {
   overview: {
-    '0': {
-      label: 'Darrel Labadie',
-      value: 'Seamus McGlynn',
-    },
     '1': {
-      label: 'Pietro Kassulke',
-      value: 'Miss Ines Kemmer',
+      label: 'Cecelia Langosh',
+      value: 'Cassidy Brekke',
     },
     '2': {
-      label: 'Billy Kuvalis PhD',
-      value: 'Marvin Krajcik',
+      label: 'Chance Kessler',
+      value: 'Cleo Lindgren',
     },
     '3': {
-      label: 'Eino Anderson',
-      value: 'Carter Swift',
+      label: 'Adeline Welch',
+      value: 'Ms. Ronny Mitchell',
     },
     '4': {
-      label: 'Cali Hilpert',
-      value: 'Mrs. Ulises Batz',
+      label: 'Jayce Schaden',
+      value: 'Ms. Ayla Swift',
+    },
+    '5': {
+      label: 'Dr. Gustave Little',
+      value: 'Amara Kuvalis',
     },
   },
 };

@@ -10,7 +10,6 @@ Object {
       fontSize: 19,
       icon: \\"left-arrow\\",
       iconSide: \\"right\\",
-      iconSize: \\"undefined\\",
       padding: \\"medium\\"
     },
     \\"2\\": {
@@ -36,8 +35,6 @@ Object {
       variant: \\"accent\\",
       fontSize: 24,
       icon: \\"search\\",
-      iconSide: \\"undefined\\",
-      iconSize: \\"undefined\\",
       padding: \\"small\\"
     },
     \\"5\\": {
@@ -45,7 +42,6 @@ Object {
       variant: \\"disabled\\",
       fontSize: 13,
       icon: \\"none\\",
-      iconSide: \\"undefined\\",
       iconSize: \\"small\\",
       padding: \\"small\\"
     }
@@ -58,7 +54,7 @@ Object {
         "fontSize": 19,
         "icon": "left-arrow",
         "iconSide": "right",
-        "iconSize": "undefined",
+        "iconSize": undefined,
         "padding": "medium",
         "text": "Gisselle Mohr",
         "variant": "success",
@@ -84,8 +80,8 @@ Object {
       "4": Object {
         "fontSize": 24,
         "icon": "search",
-        "iconSide": "undefined",
-        "iconSize": "undefined",
+        "iconSide": undefined,
+        "iconSize": undefined,
         "padding": "small",
         "text": "Kelvin Feeney",
         "variant": "accent",
@@ -93,7 +89,7 @@ Object {
       "5": Object {
         "fontSize": 13,
         "icon": "none",
-        "iconSide": "undefined",
+        "iconSide": undefined,
         "iconSize": "small",
         "padding": "small",
         "text": "Leslie Mohr",
@@ -101,6 +97,5 @@ Object {
       },
     },
   },
-  "isModified": true,
 }
 `;

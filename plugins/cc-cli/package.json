@@ -26,7 +26,7 @@
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "create-bundle": "ccc -c test/.config -d test/bundle",
     "prepare": "yarn build",
-    "test:create": "cc-cli -g story -c ./test/.config -o test -w",
+    "test:create": "cc-cli -g story -c ./test/.config -o test -w -s 1122334455",
     "test": "yarn jest -i"
   },
   "homepage": "https://github.com/ccontrols/component-controls",
@@ -51,6 +51,7 @@
     "@component-controls/webpack-compile": "^3.11.4",
     "@component-controls/webpack-configs": "^3.11.4",
     "dot": "^1.1.3",
+    "fast-deep-equal": "^3.1.3",
     "path": "^0.12.7"
   },
   "devDependencies": {

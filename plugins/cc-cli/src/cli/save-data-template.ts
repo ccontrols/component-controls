@@ -1,11 +1,11 @@
 import path from 'path';
 import fs from 'fs';
+import deepEqual from 'fast-deep-equal';
 import {
   dynamicRequire,
   relativeImport,
 } from '@component-controls/core/node-utils';
 import { getDataFile } from '@component-controls/instrument';
-
 import { log } from '@component-controls/logger';
 import { CliOptions, getTestFolder } from './utils';
 import { TemplateOptions, DataImportOptions } from '../utils';
@@ -45,7 +45,9 @@ export const saveDataTemplate = async <P extends TemplateOptions>(
     configuration,
   );
   if (dataTemplate) {
-    if (dataTemplate.isModified) {
+    const isModified =
+      typeof existing === 'undefined' || deepEqual(existing, dataTemplate.data);
+    if (isModified && overwrite) {
       log('saving data', filePath, [184, 226, 255]);
       if (!fs.existsSync(testFolder)) {
         fs.mkdirSync(testFolder);

@@ -1,24 +1,24 @@
 export default {
   overview: {
-    '0': {
-      placement: 'bottom-end',
-      trigger: 'hover',
-    },
     '1': {
-      placement: 'top-end',
-      trigger: 'hover',
+      placement: 'bottom-end',
+      trigger: 'right-click',
     },
     '2': {
+      placement: 'auto-end',
+      trigger: 'right-click',
+    },
+    '3': {
       placement: 'bottom-end',
       trigger: 'click',
     },
-    '3': {
-      placement: 'right-end',
-      trigger: 'hover',
-    },
     '4': {
-      placement: 'auto-start',
-      trigger: 'right-click',
+      placement: 'auto-end',
+      trigger: 'none',
+    },
+    '5': {
+      placement: 'right',
+      trigger: 'none',
     },
   },
 };

@@ -1,24 +1,24 @@
 export default {
   overview: {
-    '0': {
-      children: 'Angelica Howell',
-      as: 'h1',
-    },
     '1': {
-      children: 'Mrs. Rosalyn Moen',
-      as: 'h6',
+      children: 'Cecelia Langosh',
+      as: 'h4',
     },
     '2': {
-      children: 'Stuart Rutherford',
-      as: 'h1',
-    },
-    '3': {
-      children: 'Miss Litzy Bergnaum',
+      children: 'Bernadette Langosh Jr.',
       as: 'h2',
     },
+    '3': {
+      children: 'Effie Dietrich',
+      as: 'h4',
+    },
     '4': {
-      children: 'Dr. Dariana Murray',
+      children: 'Adeline Welch',
       as: 'h1',
+    },
+    '5': {
+      children: 'Lela McClure',
+      as: 'h6',
     },
   },
 };

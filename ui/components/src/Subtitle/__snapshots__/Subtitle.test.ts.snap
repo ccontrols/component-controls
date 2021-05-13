@@ -1,27 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Subtitle overview 0 snapshot 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
-  font-weight: 600;
-  line-height: 1.25;
-  color: #69768C;
-  font-weight: 400;
-  padding-bottom: 8px;
-}
-
-<h2
-    class="emotion-0"
-  >
-    Dr. Tate Hermann
-  </h2>
-</DocumentFragment>
-`;
-
 exports[`Subtitle overview 1 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -39,7 +17,7 @@ exports[`Subtitle overview 1 snapshot 1`] = `
 <h2
     class="emotion-0"
   >
-    Rosina Zulauf MD
+    Cecelia Langosh
   </h2>
 </DocumentFragment>
 `;
@@ -61,7 +39,7 @@ exports[`Subtitle overview 2 snapshot 1`] = `
 <h2
     class="emotion-0"
   >
-    Sydnee Heaney
+    Cassidy Brekke
   </h2>
 </DocumentFragment>
 `;
@@ -83,7 +61,7 @@ exports[`Subtitle overview 3 snapshot 1`] = `
 <h2
     class="emotion-0"
   >
-    Ervin Ward
+    Chance Kessler
   </h2>
 </DocumentFragment>
 `;
@@ -105,7 +83,29 @@ exports[`Subtitle overview 4 snapshot 1`] = `
 <h2
     class="emotion-0"
   >
-    Destany Dach
+    Cleo Lindgren
+  </h2>
+</DocumentFragment>
+`;
+
+exports[`Subtitle overview 5 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #69768C;
+  font-weight: 400;
+  padding-bottom: 8px;
+}
+
+<h2
+    class="emotion-0"
+  >
+    Adeline Welch
   </h2>
 </DocumentFragment>
 `;

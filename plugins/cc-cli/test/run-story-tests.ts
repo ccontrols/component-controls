@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import { runCLI } from 'jest';
-import { randomizeSeed } from '@component-controls/core';
 import { setLogOptions } from '@component-controls/logger';
 import { createStoriesTemplate } from '../src/jest-templates/stories-template';
 import { saveDataTemplate } from '../src/cli/save-data-template';
@@ -16,7 +15,6 @@ export const runTests = async (
 ): Promise<void> => {
   const { renderer, format, config, bundle, data } = props;
   setLogOptions({ logLevel: 'none' });
-  randomizeSeed(123456);
   const storyPath = path.resolve(__dirname, 'fixtures/VariantButton.docs.tsx');
   it(`${renderer} ${bundle ? 'bundle' : ''} ${format}`, async () => {
     let dataImports: DataImportOptions | undefined = undefined;
@@ -28,6 +26,7 @@ export const runTests = async (
         output: __dirname,
         name: bundle ? 'VariantButton' : undefined,
         test: `VariantButton.data.${formatExtension(format)}`,
+        seed: 123456,
       });
     }
     let renderedFile = '';

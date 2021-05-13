@@ -1,59 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Value overview 0 snapshot 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  font-size: 12px;
-  color: #69768C;
-  margin-right: 4px;
-  line-height: 1.25;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  font-size: 16px;
-  line-height: 1.25;
-}
-
-<div
-    class="emotion-0"
-  >
-    <span
-      class="emotion-1"
-    >
-      Darrel Labadie
-    </span>
-    <span
-      class="emotion-2"
-    >
-      Seamus McGlynn
-    </span>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`Value overview 1 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -97,12 +43,12 @@ exports[`Value overview 1 snapshot 1`] = `
     <span
       class="emotion-1"
     >
-      Pietro Kassulke
+      Cecelia Langosh
     </span>
     <span
       class="emotion-2"
     >
-      Miss Ines Kemmer
+      Cassidy Brekke
     </span>
   </div>
 </DocumentFragment>
@@ -151,12 +97,12 @@ exports[`Value overview 2 snapshot 1`] = `
     <span
       class="emotion-1"
     >
-      Billy Kuvalis PhD
+      Chance Kessler
     </span>
     <span
       class="emotion-2"
     >
-      Marvin Krajcik
+      Cleo Lindgren
     </span>
   </div>
 </DocumentFragment>
@@ -205,12 +151,12 @@ exports[`Value overview 3 snapshot 1`] = `
     <span
       class="emotion-1"
     >
-      Eino Anderson
+      Adeline Welch
     </span>
     <span
       class="emotion-2"
     >
-      Carter Swift
+      Ms. Ronny Mitchell
     </span>
   </div>
 </DocumentFragment>
@@ -259,12 +205,66 @@ exports[`Value overview 4 snapshot 1`] = `
     <span
       class="emotion-1"
     >
-      Cali Hilpert
+      Jayce Schaden
     </span>
     <span
       class="emotion-2"
     >
-      Mrs. Ulises Batz
+      Ms. Ayla Swift
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Value overview 5 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 12px;
+  color: #69768C;
+  margin-right: 4px;
+  line-height: 1.25;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+<div
+    class="emotion-0"
+  >
+    <span
+      class="emotion-1"
+    >
+      Dr. Gustave Little
+    </span>
+    <span
+      class="emotion-2"
+    >
+      Amara Kuvalis
     </span>
   </div>
 </DocumentFragment>

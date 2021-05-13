@@ -1,24 +1,24 @@
 export default {
   overview: {
-    '0': {
-      children: 'Iliana Jaskolski',
-      dark: true,
-    },
     '1': {
-      children: 'Okey Barrows',
       dark: true,
+      children: 'Johnny Oberbrunner',
     },
     '2': {
-      children: 'Leopoldo Langworth',
-      dark: true,
+      dark: false,
+      children: 'Jolie Beahan Sr.',
     },
     '3': {
-      children: 'Brent Turcotte',
       dark: false,
+      children: 'Cleo Lindgren',
     },
     '4': {
-      children: 'Modesta Steuber',
       dark: true,
+      children: 'Tyler Blanda',
+    },
+    '5': {
+      dark: true,
+      children: 'Krista Zulauf',
     },
   },
 };

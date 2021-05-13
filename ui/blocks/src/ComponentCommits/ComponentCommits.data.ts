@@ -1,24 +1,24 @@
 export default {
   pagination: {
-    '0': {
-      pageSize: 12,
-      pageVisible: false,
-    },
     '1': {
-      pageSize: 12,
-      pageVisible: false,
+      pageSize: 14,
+      pageVisible: true,
     },
     '2': {
+      pageSize: 7,
+      pageVisible: true,
+    },
+    '3': {
       pageSize: 15,
       pageVisible: false,
     },
-    '3': {
+    '4': {
       pageSize: 7,
       pageVisible: false,
     },
-    '4': {
+    '5': {
       pageSize: 13,
-      pageVisible: true,
+      pageVisible: false,
     },
   },
 };

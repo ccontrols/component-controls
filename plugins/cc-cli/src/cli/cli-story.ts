@@ -44,6 +44,7 @@ export const cliStory = async (
     exclude,
     ally,
     data,
+    seed,
   } = options;
   let documents: string[] = [];
   let configuration: BuildConfiguration | undefined;
@@ -84,6 +85,7 @@ export const cliStory = async (
       storyPath: name,
       ally,
       data,
+      seed,
       output: output
         ? output
         : bundle

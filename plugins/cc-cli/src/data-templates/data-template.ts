@@ -2,6 +2,7 @@ import dot from 'dot';
 import {
   getStoryControls,
   randomizeData,
+  randomizeSeed,
   fixControlTypes,
   BuildConfiguration,
 } from '@component-controls/core';
@@ -21,10 +22,7 @@ export const createDataTemplate = async (
   options: StoryTemplateOptions,
   existing?: Record<string, any>,
   configration?: BuildConfiguration,
-): Promise<
-  | { content: string; data: Record<string, any>; isModified: boolean }
-  | undefined
-> => {
+): Promise<{ content: string; data: Record<string, any> } | undefined> => {
   const {
     name,
     bundle,
@@ -32,6 +30,7 @@ export const createDataTemplate = async (
     output,
     format = 'ts',
     data: numValues = 0,
+    seed,
   } = options;
   if (numValues <= 0) {
     return undefined;
@@ -42,7 +41,9 @@ export const createDataTemplate = async (
   }
   const { doc, stories, components } = parsed;
   const data: Record<string, any> = {};
-  let isModified = false;
+  if (seed) {
+    randomizeSeed(seed);
+  }
   Object.keys(stories).forEach(storyId => {
     const story = stories[storyId];
 
@@ -53,7 +54,6 @@ export const createDataTemplate = async (
       for (let i = Object.keys(values).length; i < numValues; i += 1) {
         const rnd = randomizeData(controls);
         if (Object.keys(rnd).length) {
-          isModified = true;
           values[(i + 1).toString()] = rnd;
         }
       }
@@ -66,7 +66,6 @@ export const createDataTemplate = async (
     return undefined;
   }
   return {
-    isModified,
     content: prettify(
       dot.template(getTemplate(`data-templates/data`, format))({
         data: JSON.stringify(data, null, 2),

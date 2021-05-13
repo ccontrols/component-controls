@@ -1,24 +1,24 @@
 export default {
   overview: {
-    '0': {
-      children: 'Pansy Feeney',
-      size: 17,
-    },
     '1': {
-      children: 'Emilia McLaughlin',
-      size: 36,
+      size: 26,
+      children: 'Johnny Oberbrunner',
     },
     '2': {
-      children: 'Citlalli Emard',
-      size: 31,
+      size: 15,
+      children: 'Jolie Beahan Sr.',
     },
     '3': {
-      children: 'Reynold Toy',
-      size: 13,
+      size: 21,
+      children: 'Cleo Lindgren',
     },
     '4': {
-      children: 'Mr. Soledad Labadie',
-      size: 22,
+      size: 27,
+      children: 'Tyler Blanda',
+    },
+    '5': {
+      size: 32,
+      children: 'Krista Zulauf',
     },
   },
 };

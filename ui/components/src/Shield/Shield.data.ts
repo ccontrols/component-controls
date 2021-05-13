@@ -1,41 +1,41 @@
 export default {
   overview: {
-    '0': {
-      color: '#071542',
-      label: 'Jaden Kozey',
-    },
     '1': {
-      color: '#3e1402',
-      label: 'Violet Jerde',
+      label: 'Cecelia Langosh',
+      color: '#531c15',
     },
     '2': {
-      color: '#303c4a',
-      label: 'Oren Hermiston',
+      label: 'Ms. Alysha Daniel',
+      color: '#5e2519',
     },
     '3': {
-      color: '#4b412c',
-      label: 'Randy Jones',
+      label: 'Pearlie Altenwerth',
+      color: '#79096c',
     },
     '4': {
-      color: '#07632f',
-      label: 'Vicenta Swaniawski',
+      label: 'Krista Zulauf',
+      color: '#4d3d65',
+    },
+    '5': {
+      label: 'Ms. Ayla Swift',
+      color: '#033c34',
     },
   },
   themeColor: {
-    '0': {
-      color: 'palette2',
-    },
     '1': {
-      color: 'accentPalette0',
+      color: 'palette3',
     },
     '2': {
-      color: 'status_passed',
+      color: 'status_todo',
     },
     '3': {
-      color: 'accentPalette2',
+      color: 'palette3',
     },
     '4': {
-      color: 'palette5',
+      color: 'accentPalette2',
+    },
+    '5': {
+      color: 'accentPalette0',
     },
   },
 };

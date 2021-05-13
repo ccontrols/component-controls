@@ -1,19 +1,19 @@
 export default {
   overview: {
-    '0': {
-      title: 'Kristina Homenick',
-    },
     '1': {
-      title: 'Vergie Zboncak',
+      title: 'Cecelia Langosh',
     },
     '2': {
-      title: 'Lenora Greenholt',
+      title: 'Cassidy Brekke',
     },
     '3': {
-      title: 'Brayan Osinski',
+      title: 'Chance Kessler',
     },
     '4': {
-      title: 'Nyasia Dare',
+      title: 'Cleo Lindgren',
+    },
+    '5': {
+      title: 'Adeline Welch',
     },
   },
 };

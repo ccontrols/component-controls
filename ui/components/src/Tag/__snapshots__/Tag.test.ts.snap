@@ -1,38 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tag overview 0 snapshot 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: inline-block;
-  padding-left: 4px;
-  padding-right: 4px;
-  border-radius: 5px;
-  white-space: nowrap;
-  background-color: rgba(70,74,72,0.15);
-  border: 2px solid #464a48;
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-}
-
-<span
-    class="emotion-0"
-  >
-    <span
-      class="emotion-1"
-    >
-      some text
-    </span>
-  </span>
-</DocumentFragment>
-`;
-
 exports[`Tag overview 1 snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -44,8 +11,8 @@ exports[`Tag overview 1 snapshot 1`] = `
   padding-right: 4px;
   border-radius: 5px;
   white-space: nowrap;
-  background-color: rgba(126,38,45,0.15);
-  border: 2px solid #7e262d;
+  background-color: rgba(79,66,21,0.15);
+  border: 2px solid #4f4215;
 }
 
 .emotion-1 {
@@ -77,8 +44,8 @@ exports[`Tag overview 2 snapshot 1`] = `
   padding-right: 4px;
   border-radius: 5px;
   white-space: nowrap;
-  background-color: rgba(121,109,38,0.15);
-  border: 2px solid #796d26;
+  background-color: rgba(65,83,28,0.15);
+  border: 2px solid #41531c;
 }
 
 .emotion-1 {
@@ -110,8 +77,8 @@ exports[`Tag overview 3 snapshot 1`] = `
   padding-right: 4px;
   border-radius: 5px;
   white-space: nowrap;
-  background-color: rgba(74,69,41,0.15);
-  border: 2px solid #4a4529;
+  background-color: rgba(21,13,65,0.15);
+  border: 2px solid #150d41;
 }
 
 .emotion-1 {
@@ -143,8 +110,41 @@ exports[`Tag overview 4 snapshot 1`] = `
   padding-right: 4px;
   border-radius: 5px;
   white-space: nowrap;
-  background-color: rgba(94,103,86,0.15);
-  border: 2px solid #5e6756;
+  background-color: rgba(6,22,56,0.15);
+  border: 2px solid #061638;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+<span
+    class="emotion-0"
+  >
+    <span
+      class="emotion-1"
+    >
+      some text
+    </span>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Tag overview 5 snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-color: rgba(94,37,25,0.15);
+  border: 2px solid #5e2519;
 }
 
 .emotion-1 {

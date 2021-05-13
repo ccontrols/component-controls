@@ -2,29 +2,6 @@
 
 exports[`cli-story-data create cjs story 1`] = `
 Object {
-  "VariantButton.data.js": "module.exports = {
-  overview: {
-    '1': {
-      text: 'Gisselle Mohr',
-      variant: 'success',
-      fontSize: 19,
-      icon: 'left-arrow',
-      iconSide: 'right',
-      iconSize: 'undefined',
-      padding: 'medium',
-    },
-    '2': {
-      text: 'Bart Bechtelar',
-      variant: 'error',
-      fontSize: 17,
-      icon: 'none',
-      iconSide: 'right',
-      iconSize: 'medium',
-      padding: 'small',
-    },
-  },
-};
-",
   "VariantButton.test.js": "const path = require('path');
 const { run } = require('axe-core');
 const { reactRunDOM } = require('@component-controls/test-renderers');
@@ -239,29 +216,6 @@ describe('VariantButton', () => {
 
 exports[`cli-story-data create enzyme story 1`] = `
 Object {
-  "VariantButton.data.ts": "export default {
-  overview: {
-    '1': {
-      text: 'Roger Emard I',
-      variant: 'warning',
-      fontSize: 19,
-      icon: 'left-arrow',
-      iconSide: 'left',
-      iconSize: 'medium',
-      padding: 'large',
-    },
-    '2': {
-      text: 'Annamarie Koelpin',
-      variant: 'success',
-      fontSize: 26,
-      icon: 'search',
-      iconSide: 'right',
-      iconSize: 'medium',
-      padding: 'medium',
-    },
-  },
-};
-",
   "VariantButton.test.ts": "import * as path from 'path';
 import { run, AxeResults } from 'axe-core';
 import { reactRunDOM } from '@component-controls/test-renderers';
@@ -434,29 +388,6 @@ describe('VariantButton', () => {
 
 exports[`cli-story-data create esm story 1`] = `
 Object {
-  "VariantButton.data.js": "export default {
-  overview: {
-    '1': {
-      text: 'Lula Rippin',
-      variant: 'primary',
-      fontSize: 13,
-      icon: 'right-arrow',
-      iconSide: 'left',
-      iconSize: 'large',
-      padding: 'small',
-    },
-    '2': {
-      text: 'Kelvin Feeney',
-      variant: 'accent',
-      fontSize: 24,
-      icon: 'search',
-      iconSide: 'undefined',
-      iconSize: 'undefined',
-      padding: 'small',
-    },
-  },
-};
-",
   "VariantButton.test.js": "import * as path from 'path';
 import { run } from 'axe-core';
 import { reactRunDOM } from '@component-controls/test-renderers';
@@ -668,29 +599,6 @@ describe('VariantButton', () => {
 
 exports[`cli-story-data create rtr story 1`] = `
 Object {
-  "VariantButton.data.ts": "export default {
-  overview: {
-    '1': {
-      text: 'Jailyn Parisian',
-      variant: 'primary',
-      fontSize: 16,
-      icon: 'left-arrow',
-      iconSide: 'right',
-      iconSize: 'small',
-      padding: 'medium',
-    },
-    '2': {
-      text: 'Cullen Heller',
-      variant: 'warning',
-      fontSize: 20,
-      icon: 'search',
-      iconSide: 'left',
-      iconSize: 'medium',
-      padding: 'undefined',
-    },
-  },
-};
-",
   "VariantButton.test.ts": "import * as path from 'path';
 import { run, AxeResults } from 'axe-core';
 import { reactRunDOM } from '@component-controls/test-renderers';
@@ -930,29 +838,6 @@ describe('VariantButton', () => {
 
 exports[`cli-story-data create typescript story 1`] = `
 Object {
-  "VariantButton.data.ts": "export default {
-  overview: {
-    '1': {
-      text: 'Leslie Mohr',
-      variant: 'disabled',
-      fontSize: 13,
-      icon: 'none',
-      iconSide: 'undefined',
-      iconSize: 'small',
-      padding: 'small',
-    },
-    '2': {
-      text: 'Mitchel Wisoky',
-      variant: 'warning',
-      fontSize: 18,
-      icon: 'down-arrow',
-      iconSide: 'undefined',
-      iconSize: 'large',
-      padding: 'undefined',
-    },
-  },
-};
-",
   "VariantButton.test.ts": "import * as path from 'path';
 import { run, AxeResults } from 'axe-core';
 import { reactRunDOM } from '@component-controls/test-renderers';
