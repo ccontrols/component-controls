@@ -32,7 +32,6 @@ export const saveTemplate = async <P extends TemplateOptions>(
     );
     return;
   }
-  log('saving test', testFilePath, [115, 245, 184]);
   const dataTemplate = await saveDataTemplate(options, configuration);
 
   const content = await templateFn(
@@ -44,9 +43,15 @@ export const saveTemplate = async <P extends TemplateOptions>(
     configuration,
   );
   if (content) {
-    if (!fs.existsSync(testFolder)) {
-      fs.mkdirSync(testFolder);
+    const existing =
+      fs.existsSync(testFilePath) && fs.readFileSync(testFilePath, 'utf8');
+    if (existing !== content) {
+      log('saving test', testFilePath, [115, 245, 184]);
+
+      if (!fs.existsSync(testFolder)) {
+        fs.mkdirSync(testFolder);
+      }
+      fs.writeFileSync(testFilePath, content, 'utf8');
     }
-    fs.writeFileSync(testFilePath, content, 'utf8');
   }
 };
