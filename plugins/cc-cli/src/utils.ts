@@ -1,3 +1,5 @@
+import { BuildConfiguration } from '@component-controls/core';
+
 export const renderers = {
   rtl: 'react-testing-library',
   rtr: 'react-test-renderer',
@@ -52,6 +54,7 @@ export interface StoryTemplateOptions extends TemplateOptions {
 export type TemplateFunction<P extends TemplateOptions = TemplateOptions> = (
   options: P,
   dataImports?: DataImportOptions,
+  configuration?: BuildConfiguration,
 ) => Promise<string>;
 
 export interface DataImportOptions {

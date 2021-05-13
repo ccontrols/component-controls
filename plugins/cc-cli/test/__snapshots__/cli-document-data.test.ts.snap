@@ -4,23 +4,23 @@ exports[`cli-document-data create cjs document 1`] = `
 Object {
   "Popover.data.ts": "export default {
   overview: {
-    '0': {
-      placement: 'bottom-end',
-      trigger: 'hover',
-    },
     '1': {
-      placement: 'top-end',
+      placement: 'bottom-end',
       trigger: 'hover',
     },
     '2': {
+      placement: 'top-end',
+      trigger: 'hover',
+    },
+    '3': {
       placement: 'bottom-end',
       trigger: 'click',
     },
-    '3': {
+    '4': {
       placement: 'right-end',
       trigger: 'hover',
     },
-    '4': {
+    '5': {
       placement: 'auto-start',
       trigger: 'right-click',
     },
@@ -81,55 +81,95 @@ exports[`cli-document-data create cjs document 2`] = `
 Object {
   "VariantButton.data.js": "module.exports = {
   overview: {
-    '0': {
-      text: 'Bart Bechtelar',
-      icon: 'Dayana Roob',
-      fontSize: 22,
-    },
     '1': {
-      text: 'Adah Nolan',
-      icon: 'Anais Pagac',
-      fontSize: 22,
+      text: 'Bart Bechtelar',
+      variant: 'error',
+      fontSize: 17,
+      icon: 'none',
+      iconSide: 'right',
+      iconSize: 'medium',
+      padding: 'small',
     },
     '2': {
-      text: 'Jon Will',
-      icon: 'Geraldine Metz',
-      fontSize: 20,
+      text: 'Lula Rippin',
+      variant: 'primary',
+      fontSize: 13,
+      icon: 'right-arrow',
+      iconSide: 'left',
+      iconSize: 'large',
+      padding: 'small',
     },
     '3': {
-      text: 'Mr. Dulce Rice',
-      icon: 'Karianne Bins',
-      fontSize: 16,
+      text: 'Kelvin Feeney',
+      variant: 'accent',
+      fontSize: 24,
+      icon: 'search',
+      iconSide: 'undefined',
+      iconSize: 'undefined',
+      padding: 'small',
     },
     '4': {
-      text: 'Mrs. Jermey Jacobson',
-      icon: 'Mikayla Gusikowski',
-      fontSize: 29,
+      text: 'Leslie Mohr',
+      variant: 'disabled',
+      fontSize: 13,
+      icon: 'none',
+      iconSide: 'undefined',
+      iconSize: 'small',
+      padding: 'small',
     },
     '5': {
-      text: 'Clark Hickle',
-      icon: 'Marielle Durgan',
-      fontSize: 16,
+      text: 'Mitchel Wisoky',
+      variant: 'warning',
+      fontSize: 18,
+      icon: 'down-arrow',
+      iconSide: 'undefined',
+      iconSize: 'large',
+      padding: 'undefined',
     },
     '6': {
-      text: 'Ibrahim Purdy',
-      icon: 'Cullen Heller',
-      fontSize: 27,
+      text: 'Jailyn Parisian',
+      variant: 'primary',
+      fontSize: 16,
+      icon: 'left-arrow',
+      iconSide: 'right',
+      iconSize: 'small',
+      padding: 'medium',
     },
     '7': {
-      text: 'Jody Legros',
-      icon: 'Dedric Smitham',
-      fontSize: 16,
+      text: 'Cullen Heller',
+      variant: 'warning',
+      fontSize: 20,
+      icon: 'search',
+      iconSide: 'left',
+      iconSize: 'medium',
+      padding: 'undefined',
     },
     '8': {
-      text: 'Ford Kunze',
-      icon: 'Trinity Hickle',
-      fontSize: 12,
+      text: 'Roger Emard I',
+      variant: 'warning',
+      fontSize: 19,
+      icon: 'left-arrow',
+      iconSide: 'left',
+      iconSize: 'medium',
+      padding: 'large',
     },
     '9': {
-      text: 'Ms. Mariah Pollich',
-      icon: 'Kenny Mueller',
+      text: 'Annamarie Koelpin',
+      variant: 'success',
       fontSize: 26,
+      icon: 'search',
+      iconSide: 'right',
+      iconSize: 'medium',
+      padding: 'medium',
+    },
+    '10': {
+      text: 'Esta Yost',
+      variant: 'primary',
+      fontSize: 30,
+      icon: 'left-arrow',
+      iconSide: 'left',
+      iconSize: 'medium',
+      padding: 'small',
     },
   },
 };
@@ -186,15 +226,23 @@ exports[`cli-document-data create enzyme document 1`] = `
 Object {
   "VariantButton.data.ts": "export default {
   overview: {
-    '0': {
-      text: 'Hugh Lockman',
-      icon: 'Ansel Nicolas',
-      fontSize: 14,
-    },
     '1': {
-      text: 'Mohamed Bins',
-      icon: 'Consuelo Sipes',
-      fontSize: 24,
+      text: 'Larry Corkery PhD',
+      variant: 'success',
+      fontSize: 31,
+      icon: 'undefined',
+      iconSide: 'left',
+      iconSize: 'medium',
+      padding: 'large',
+    },
+    '2': {
+      text: 'Noemie Beer',
+      variant: 'success',
+      fontSize: 23,
+      icon: 'search',
+      iconSide: 'undefined',
+      iconSize: 'small',
+      padding: 'large',
     },
   },
 };
@@ -246,15 +294,23 @@ exports[`cli-document-data create esm document 1`] = `
 Object {
   "VariantButton.data.js": "export default {
   overview: {
-    '0': {
-      text: 'Dorothea Tremblay',
-      icon: 'Juliet Harber',
-      fontSize: 32,
-    },
     '1': {
-      text: 'Alana Kunde',
-      icon: 'Alexys Cartwright',
-      fontSize: 29,
+      text: 'Alvena Bahringer',
+      variant: 'disabled',
+      fontSize: 23,
+      icon: 'left-arrow',
+      iconSide: 'undefined',
+      iconSize: 'undefined',
+      padding: 'large',
+    },
+    '2': {
+      text: 'Dawn Gerlach DDS',
+      variant: 'error',
+      fontSize: 15,
+      icon: 'down-arrow',
+      iconSide: 'undefined',
+      iconSize: 'undefined',
+      padding: 'medium',
     },
   },
 };
@@ -310,15 +366,23 @@ exports[`cli-document-data create rtr document 1`] = `
 Object {
   "VariantButton.data.ts": "export default {
   overview: {
-    '0': {
-      text: 'Alexa Feest',
-      icon: 'Mozelle Murphy',
-      fontSize: 25,
-    },
     '1': {
-      text: 'Jonas Kihn',
-      icon: 'Sandrine Pagac',
-      fontSize: 12,
+      text: 'Sandrine Pagac',
+      variant: 'undefined',
+      fontSize: 23,
+      icon: 'down-arrow',
+      iconSide: 'left',
+      iconSize: 'medium',
+      padding: 'large',
+    },
+    '2': {
+      text: 'Lori Cassin',
+      variant: 'warning',
+      fontSize: 30,
+      icon: 'down-arrow',
+      iconSide: 'undefined',
+      iconSize: 'small',
+      padding: 'large',
     },
   },
 };
@@ -378,15 +442,23 @@ exports[`cli-document-data create typescript document 1`] = `
 Object {
   "VariantButton.data.ts": "export default {
   overview: {
-    '0': {
-      text: 'Dawn Gerlach DDS',
-      icon: 'Nasir Cassin',
-      fontSize: 14,
-    },
     '1': {
-      text: 'Emilia Feeney',
-      icon: 'Gage Dicki',
+      text: 'Darren Farrell',
+      variant: 'success',
       fontSize: 19,
+      icon: 'none',
+      iconSide: 'left',
+      iconSize: 'medium',
+      padding: 'medium',
+    },
+    '2': {
+      text: 'Miss Nat Reilly',
+      variant: 'success',
+      fontSize: 25,
+      icon: 'none',
+      iconSide: 'undefined',
+      iconSize: 'medium',
+      padding: 'small',
     },
   },
 };

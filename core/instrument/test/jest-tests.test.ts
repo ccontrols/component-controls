@@ -37,6 +37,7 @@ describe('component-tests', () => {
           '../../../ui/components/src/Table/useTableLayout.ts',
         ),
       ],
+      [],
     );
     expect(tests).toMatchObject({
       results: [
@@ -414,6 +415,7 @@ describe('component-tests', () => {
           '../../../plugins/addon-catalog/src/Catalog/Catalog.tsx',
         ),
       ],
+      [],
     );
     expect(tests).toMatchObject({
       results: [
@@ -479,6 +481,7 @@ describe('component-tests', () => {
         ),
       ],
       [path.resolve(__dirname, '../../../ui/components/src/Header/Header.tsx')],
+      [],
     );
     expect(tests).toMatchObject({
       results: [

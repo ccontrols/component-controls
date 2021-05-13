@@ -9,15 +9,17 @@ import { CachedFileResource } from './chached-file';
 
 export const getDataFile = (filePath: string): string => {
   const parts = filePath.split('.');
-  parts.splice(
-    parts.length - parts.length <= 2 ? 1 : 2,
-    parts.length <= 2 ? 0 : 1,
-    'data',
-  );
-  const extention = parts[parts.length - 1];
-  if (extention.length === 3) {
-    parts[parts.length - 1] = extention.slice(0, -1);
+  if (parts.length > 2) {
+    parts.splice(1, 1, 'data');
+  } else {
+    parts.splice(1, 0, 'data');
   }
+  if (parts.length <= 2) {
+    parts.push('js');
+  } else if (parts[parts.length - 1].length > 2) {
+    parts[parts.length - 1] = parts[parts.length - 1].slice(0, -1);
+  }
+
   return parts.join('.');
 };
 
@@ -30,7 +32,7 @@ export const assignDocumentData = (doc: Document, filePath: string): void => {
     const cached = new CachedFileResource<DocumentData>(
       'data-driven',
       `v1`,
-      filePath,
+      dataFilePath,
     );
     let result: DocumentData | undefined = cached.get();
     if (result) {
@@ -44,6 +46,7 @@ export const assignDocumentData = (doc: Document, filePath: string): void => {
     result = loaded.default || loaded;
     cached.set(result);
     doc.data = result;
-    doc.testData = doc.testData || path.relative(filePath, dataFilePath);
+    doc.testData =
+      doc.testData || relativeImport(path.dirname(filePath), dataFilePath);
   }
 };

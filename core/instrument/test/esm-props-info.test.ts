@@ -9,7 +9,6 @@ const createTest = (fileName: string, callback: TestCallback) =>
         name: '@component-controls/react-docgen-typescript-info',
         test: /\.(ts|tsx)$/,
       },
-      ,
     ],
     components: {
       sourceFiles: false,

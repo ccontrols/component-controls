@@ -4,112 +4,103 @@ exports[`data-template-bundle import 1`] = `
 Object {
   "content": "export default {
   \\"variantbutton--overview\\": {
-    \\"0\\": {
+    \\"1\\": {
       text: \\"Gisselle Mohr\\",
       variant: \\"success\\",
       fontSize: 19,
       icon: \\"left-arrow\\",
       iconSide: \\"right\\",
       iconSize: \\"undefined\\",
-      padding: \\"medium\\",
-      isPrimary: true
-    },
-    \\"1\\": {
-      text: \\"Mrs. Amely Wintheiser\\",
-      variant: \\"primary\\",
-      fontSize: 27,
-      icon: \\"left-arrow\\",
-      iconSide: \\"undefined\\",
-      iconSize: \\"small\\",
-      padding: \\"undefined\\",
-      isPrimary: true
+      padding: \\"medium\\"
     },
     \\"2\\": {
-      text: \\"Anais Pagac\\",
-      variant: \\"disabled\\",
-      fontSize: 29,
-      icon: \\"none\\",
-      iconSide: \\"left\\",
-      iconSize: \\"large\\",
-      padding: \\"medium\\",
-      isPrimary: false
-    },
-    \\"3\\": {
-      text: \\"Henry Bednar\\",
-      variant: \\"primary\\",
+      text: \\"Bart Bechtelar\\",
+      variant: \\"error\\",
       fontSize: 17,
-      icon: \\"down-arrow\\",
-      iconSide: \\"undefined\\",
-      iconSize: \\"medium\\",
-      padding: \\"medium\\",
-      isPrimary: true
-    },
-    \\"4\\": {
-      text: \\"Ms. Alessia Gutmann\\",
-      variant: \\"accent\\",
-      fontSize: 16,
-      icon: \\"down-arrow\\",
+      icon: \\"none\\",
       iconSide: \\"right\\",
       iconSize: \\"medium\\",
-      padding: \\"small\\",
-      isPrimary: true
+      padding: \\"small\\"
+    },
+    \\"3\\": {
+      text: \\"Lula Rippin\\",
+      variant: \\"primary\\",
+      fontSize: 13,
+      icon: \\"right-arrow\\",
+      iconSide: \\"left\\",
+      iconSize: \\"large\\",
+      padding: \\"small\\"
+    },
+    \\"4\\": {
+      text: \\"Kelvin Feeney\\",
+      variant: \\"accent\\",
+      fontSize: 24,
+      icon: \\"search\\",
+      iconSide: \\"undefined\\",
+      iconSize: \\"undefined\\",
+      padding: \\"small\\"
+    },
+    \\"5\\": {
+      text: \\"Leslie Mohr\\",
+      variant: \\"disabled\\",
+      fontSize: 13,
+      icon: \\"none\\",
+      iconSide: \\"undefined\\",
+      iconSize: \\"small\\",
+      padding: \\"small\\"
     }
   }
 };
 ",
   "data": Object {
     "variantbutton--overview": Object {
-      "0": Object {
+      "1": Object {
         "fontSize": 19,
         "icon": "left-arrow",
         "iconSide": "right",
         "iconSize": "undefined",
-        "isPrimary": true,
         "padding": "medium",
         "text": "Gisselle Mohr",
         "variant": "success",
       },
-      "1": Object {
-        "fontSize": 27,
-        "icon": "left-arrow",
-        "iconSide": "undefined",
-        "iconSize": "small",
-        "isPrimary": true,
-        "padding": "undefined",
-        "text": "Mrs. Amely Wintheiser",
-        "variant": "primary",
-      },
       "2": Object {
-        "fontSize": 29,
+        "fontSize": 17,
         "icon": "none",
-        "iconSide": "left",
-        "iconSize": "large",
-        "isPrimary": false,
-        "padding": "medium",
-        "text": "Anais Pagac",
-        "variant": "disabled",
+        "iconSide": "right",
+        "iconSize": "medium",
+        "padding": "small",
+        "text": "Bart Bechtelar",
+        "variant": "error",
       },
       "3": Object {
-        "fontSize": 17,
-        "icon": "down-arrow",
-        "iconSide": "undefined",
-        "iconSize": "medium",
-        "isPrimary": true,
-        "padding": "medium",
-        "text": "Henry Bednar",
+        "fontSize": 13,
+        "icon": "right-arrow",
+        "iconSide": "left",
+        "iconSize": "large",
+        "padding": "small",
+        "text": "Lula Rippin",
         "variant": "primary",
       },
       "4": Object {
-        "fontSize": 16,
-        "icon": "down-arrow",
-        "iconSide": "right",
-        "iconSize": "medium",
-        "isPrimary": true,
+        "fontSize": 24,
+        "icon": "search",
+        "iconSide": "undefined",
+        "iconSize": "undefined",
         "padding": "small",
-        "text": "Ms. Alessia Gutmann",
+        "text": "Kelvin Feeney",
         "variant": "accent",
+      },
+      "5": Object {
+        "fontSize": 13,
+        "icon": "none",
+        "iconSide": "undefined",
+        "iconSize": "small",
+        "padding": "small",
+        "text": "Leslie Mohr",
+        "variant": "disabled",
       },
     },
   },
+  "isModified": true,
 }
 `;

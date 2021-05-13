@@ -10,6 +10,7 @@ import { log } from '@component-controls/logger';
 import { CliOptions, getTestFolder } from './utils';
 import { TemplateOptions, DataImportOptions } from '../utils';
 import { createDataTemplate } from '../data-templates/data-template';
+import { BuildConfiguration } from '@component-controls/core';
 
 /**
  * save a data template file based on options
@@ -17,6 +18,7 @@ import { createDataTemplate } from '../data-templates/data-template';
  */
 export const saveDataTemplate = async <P extends TemplateOptions>(
   options: CliOptions<P>,
+  configuration?: BuildConfiguration,
 ): Promise<DataImportOptions | undefined> => {
   const testFolder = getTestFolder(options);
   if (!testFolder) {
@@ -37,7 +39,11 @@ export const saveDataTemplate = async <P extends TemplateOptions>(
       return undefined;
     }
   }
-  const dataTemplate = await createDataTemplate(options, existing);
+  const dataTemplate = await createDataTemplate(
+    options,
+    existing,
+    configuration,
+  );
   if (dataTemplate) {
     if (dataTemplate.isModified) {
       log('saving data', filePath, [184, 226, 255]);

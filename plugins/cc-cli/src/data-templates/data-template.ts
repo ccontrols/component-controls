@@ -3,6 +3,7 @@ import {
   getStoryControls,
   randomizeData,
   fixControlTypes,
+  BuildConfiguration,
 } from '@component-controls/core';
 import { prettify } from '@component-controls/instrument';
 import { StoryTemplateOptions } from '../utils';
@@ -19,6 +20,7 @@ import { getTemplate } from '../resolve-template';
 export const createDataTemplate = async (
   options: StoryTemplateOptions,
   existing?: Record<string, any>,
+  configration?: BuildConfiguration,
 ): Promise<
   | { content: string; data: Record<string, any>; isModified: boolean }
   | undefined
@@ -34,7 +36,7 @@ export const createDataTemplate = async (
   if (numValues <= 0) {
     return undefined;
   }
-  const parsed = await getStore({ bundle, name, storyPath });
+  const parsed = await getStore({ bundle, name, storyPath }, configration);
   if (!parsed) {
     return undefined;
   }
@@ -52,7 +54,7 @@ export const createDataTemplate = async (
         const rnd = randomizeData(controls);
         if (Object.keys(rnd).length) {
           isModified = true;
-          values[i.toString()] = rnd;
+          values[(i + 1).toString()] = rnd;
         }
       }
       if (Object.keys(values).length) {

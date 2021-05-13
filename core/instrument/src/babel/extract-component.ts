@@ -20,6 +20,7 @@ import { getComponentProps } from '../misc/props-info';
 import { getFileIinfo } from '../misc/file-info';
 import { extractTests } from '../misc/jest-tests';
 import { CachedFileResource } from '../misc/chached-file';
+import { assignDocumentData } from '../misc/data-driven';
 
 export const extractComponent = async (
   componentName: string,
@@ -232,9 +233,20 @@ const componentRelatedMetrics = async (
             }
           });
       }
+      const testData: string[] = [];
+      if (store.doc?.testData) {
+        const testDataFile = path.resolve(
+          path.dirname(filePath),
+          store.doc.testData,
+        );
+        if (fs.existsSync(testDataFile)) {
+          testData.push(testDataFile);
+        }
+      }
       const testResults = await extractTests(
         Array.from(new Set(testFiles)),
         Array.from(new Set(coverageFiles)),
+        testData,
         jest,
       );
       if (testResults) {
@@ -252,6 +264,7 @@ export const extractStoreComponent = async (
 ): Promise<void> => {
   if (store.doc) {
     const doc: Document = store.doc;
+    assignDocumentData(doc, filePath);
     if (doc.componentsLookup) {
       const components = doc.componentsLookup;
       if (

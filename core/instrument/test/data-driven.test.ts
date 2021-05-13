@@ -5,7 +5,7 @@ import { getDataFile, assignDocumentData } from '../src/misc/data-driven';
 describe('data-driven', () => {
   it('getDataFile length 1', () => {
     const fileName = getDataFile('file');
-    expect(fileName).toBe('file.data');
+    expect(fileName).toBe('file.data.js');
   });
   it('getDataFile length 2', () => {
     const fileName = getDataFile('file.js');
@@ -16,6 +16,16 @@ describe('data-driven', () => {
     const fileName = getDataFile('file.test.js');
     expect(fileName).toBe('file.data.js');
   });
+  it('getDataFile jsx', () => {
+    const fileName = getDataFile('file.test.jsx');
+    expect(fileName).toBe('file.data.js');
+  });
+
+  it('getDataFile tsx', () => {
+    const fileName = getDataFile('file.test.tsx');
+    expect(fileName).toBe('file.data.ts');
+  });
+
   it('load data file', () => {
     const doc: Document = { title: 'doc' };
     assignDocumentData(

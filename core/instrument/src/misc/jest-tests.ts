@@ -20,6 +20,7 @@ import { CachedFileResource } from './chached-file';
 export const extractTests = async (
   testFiles: string[],
   coverageFiles: string[],
+  dataFiles: string[],
   options?: JestConfig,
 ): Promise<JestTests | undefined> => {
   if (!testFiles.length) {
@@ -38,6 +39,7 @@ export const extractTests = async (
     ...testFiles,
     ...coverageFiles,
     ...snapshotFiles,
+    ...dataFiles,
   ]);
   const cachedResults = cached.get();
   if (cachedResults) {

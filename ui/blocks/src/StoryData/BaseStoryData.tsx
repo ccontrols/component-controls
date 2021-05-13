@@ -41,11 +41,9 @@ export const BaseStoryData: FC<BaseStoryDataProps> = ({
         Cell: ({ row: { original } }: { row: Row<DataRow> }) => {
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
           const { id, ...data } = original;
-
-          console.log(data);
           return (
             <Link
-              aria-title="click to select this row of values"
+              title="click to select this row of values"
               href="#"
               onClick={e => {
                 e.preventDefault();
@@ -104,7 +102,13 @@ export const BaseStoryData: FC<BaseStoryDataProps> = ({
               row: UseExpandedRowProps<DataRow> & Row<DataRow>;
             }) => {
               return (
-                <div>
+                <div
+                  sx={{
+                    whiteSpace: 'nowrap',
+                    maxWidth: '450px',
+                    textOverflow: 'ellipsis',
+                  }}
+                >
                   {typeof original[key] !== 'object' ? (
                     original[key]
                   ) : (

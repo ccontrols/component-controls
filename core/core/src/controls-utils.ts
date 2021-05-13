@@ -353,7 +353,7 @@ export const transformControls = (
   propControls?: ComponentControls,
 ): ComponentControls | undefined => {
   return controls
-    ? Object.keys(controls).reduce((acc, key) => {
+    ? Object.keys({ ...propControls, ...controls }).reduce((acc, key) => {
         const control = controlShortcuts(key, controls, propControls);
         if (control.defaultValue === undefined) {
           const defaultValue = getControlValue(control);
@@ -423,7 +423,6 @@ export const getStoryControls = (
     const component = doc.componentsLookup
       ? components[doc.componentsLookup[componentName]]
       : undefined;
-
     if (component?.info) {
       const newControls = controlsFromProps(component.info.props);
       const { include, exclude } = smartControls;

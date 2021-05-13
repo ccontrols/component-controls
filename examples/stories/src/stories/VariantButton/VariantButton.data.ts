@@ -1,29 +1,52 @@
-export default {
+import { VariantButtonProps } from './VariantButton';
+const data: Record<string, Record<string, VariantButtonProps>> = {
   overview: {
     '0': {
-      text: 'Josue Beier III',
-      icon: 'Ms. Geovany Gislason',
-      fontSize: 27,
+      text: 'Mrs. Berta Runolfsdottir',
+      variant: 'disabled',
+      fontSize: 20,
+      icon: 'down-arrow',
+      iconSide: 'left',
+      iconSize: 'large',
+      padding: 'medium',
     },
     '1': {
-      text: 'Darrel Kuhn',
-      icon: 'Cleora Yost',
-      fontSize: 19,
+      text: 'Darrel Simonis',
+      variant: 'primary',
+      fontSize: 16,
+      icon: 'none',
+      iconSide: 'left',
+      iconSize: undefined,
+      padding: 'large',
     },
     '2': {
-      text: 'Dessie Gleichner',
-      icon: 'Miss Shaun Lind',
-      fontSize: 29,
+      text: 'Drew Terry',
+      variant: undefined,
+      fontSize: 18,
+      icon: 'search',
+      iconSide: 'left',
+      iconSize: undefined,
+      padding: undefined,
     },
     '3': {
-      text: 'Rafaela Heaney',
-      icon: 'Dr. Walter Lowe',
-      fontSize: 30,
+      text: 'Anahi McLaughlin',
+      variant: undefined,
+      fontSize: 14,
+      icon: 'up-arrow',
+      iconSide: 'left',
+      iconSize: 'large',
+      padding: 'small',
     },
     '4': {
-      text: 'Frida Adams',
-      icon: 'Omari Dibbert',
-      fontSize: 19,
+      text: 'Megane Stehr',
+      variant: 'error',
+      fontSize: 21,
+      icon: 'up-arrow',
+      iconSide: 'left',
+      iconSize: 'large',
+      padding: 'medium',
     },
   },
 };
+
+export default data;

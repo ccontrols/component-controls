@@ -175,16 +175,18 @@ export const controlsFromProps = (props: PropTypes): ComponentControls => {
   return props
     ? Object.keys(props)
         .map((key: string) => {
-          const control = controlFromProps(key, props[key]);
+          const prop = props[key];
+          const control = controlFromProps(key, prop);
           if (control) {
             control.defaultValue = control.value;
           }
           return {
+            deprecated: prop.deprecated,
             name: key,
             control,
           };
         })
-        .filter(p => p.control)
+        .filter(p => !p.deprecated && p.control)
         .reduce(
           (acc: ComponentControls, prop: NamedComponentControl) => ({
             ...acc,

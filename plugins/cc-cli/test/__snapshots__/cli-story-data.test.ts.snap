@@ -4,15 +4,23 @@ exports[`cli-story-data create cjs story 1`] = `
 Object {
   "VariantButton.data.js": "module.exports = {
   overview: {
-    '0': {
-      text: 'Gisselle Mohr',
-      icon: 'Kaden Powlowski',
-      fontSize: 12,
-    },
     '1': {
-      text: 'Barbara Brakus',
-      icon: 'Miss Dolly Ferry',
-      fontSize: 22,
+      text: 'Gisselle Mohr',
+      variant: 'success',
+      fontSize: 19,
+      icon: 'left-arrow',
+      iconSide: 'right',
+      iconSize: 'undefined',
+      padding: 'medium',
+    },
+    '2': {
+      text: 'Bart Bechtelar',
+      variant: 'error',
+      fontSize: 17,
+      icon: 'none',
+      iconSide: 'right',
+      iconSize: 'medium',
+      padding: 'small',
     },
   },
 };
@@ -233,15 +241,23 @@ exports[`cli-story-data create enzyme story 1`] = `
 Object {
   "VariantButton.data.ts": "export default {
   overview: {
-    '0': {
-      text: 'Jody Legros',
-      icon: 'Dedric Smitham',
-      fontSize: 16,
-    },
     '1': {
-      text: 'Ford Kunze',
-      icon: 'Trinity Hickle',
-      fontSize: 12,
+      text: 'Roger Emard I',
+      variant: 'warning',
+      fontSize: 19,
+      icon: 'left-arrow',
+      iconSide: 'left',
+      iconSize: 'medium',
+      padding: 'large',
+    },
+    '2': {
+      text: 'Annamarie Koelpin',
+      variant: 'success',
+      fontSize: 26,
+      icon: 'search',
+      iconSide: 'right',
+      iconSize: 'medium',
+      padding: 'medium',
     },
   },
 };
@@ -420,15 +436,23 @@ exports[`cli-story-data create esm story 1`] = `
 Object {
   "VariantButton.data.js": "export default {
   overview: {
-    '0': {
-      text: 'Adah Nolan',
-      icon: 'Anais Pagac',
-      fontSize: 22,
-    },
     '1': {
-      text: 'Jon Will',
-      icon: 'Geraldine Metz',
-      fontSize: 20,
+      text: 'Lula Rippin',
+      variant: 'primary',
+      fontSize: 13,
+      icon: 'right-arrow',
+      iconSide: 'left',
+      iconSize: 'large',
+      padding: 'small',
+    },
+    '2': {
+      text: 'Kelvin Feeney',
+      variant: 'accent',
+      fontSize: 24,
+      icon: 'search',
+      iconSide: 'undefined',
+      iconSize: 'undefined',
+      padding: 'small',
     },
   },
 };
@@ -646,15 +670,23 @@ exports[`cli-story-data create rtr story 1`] = `
 Object {
   "VariantButton.data.ts": "export default {
   overview: {
-    '0': {
-      text: 'Clark Hickle',
-      icon: 'Marielle Durgan',
-      fontSize: 16,
-    },
     '1': {
-      text: 'Ibrahim Purdy',
-      icon: 'Cullen Heller',
-      fontSize: 27,
+      text: 'Jailyn Parisian',
+      variant: 'primary',
+      fontSize: 16,
+      icon: 'left-arrow',
+      iconSide: 'right',
+      iconSize: 'small',
+      padding: 'medium',
+    },
+    '2': {
+      text: 'Cullen Heller',
+      variant: 'warning',
+      fontSize: 20,
+      icon: 'search',
+      iconSide: 'left',
+      iconSize: 'medium',
+      padding: 'undefined',
     },
   },
 };
@@ -900,15 +932,23 @@ exports[`cli-story-data create typescript story 1`] = `
 Object {
   "VariantButton.data.ts": "export default {
   overview: {
-    '0': {
-      text: 'Mr. Dulce Rice',
-      icon: 'Karianne Bins',
-      fontSize: 16,
-    },
     '1': {
-      text: 'Mrs. Jermey Jacobson',
-      icon: 'Mikayla Gusikowski',
-      fontSize: 29,
+      text: 'Leslie Mohr',
+      variant: 'disabled',
+      fontSize: 13,
+      icon: 'none',
+      iconSide: 'undefined',
+      iconSize: 'small',
+      padding: 'small',
+    },
+    '2': {
+      text: 'Mitchel Wisoky',
+      variant: 'warning',
+      fontSize: 18,
+      icon: 'down-arrow',
+      iconSide: 'undefined',
+      iconSize: 'large',
+      padding: 'undefined',
     },
   },
 };

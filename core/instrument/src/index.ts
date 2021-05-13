@@ -36,7 +36,6 @@ import {
   defaultMDXOptions,
   ParseStorieReturnType,
 } from './types';
-import { assignDocumentData } from './misc/data-driven';
 
 export * from './types';
 
@@ -92,7 +91,6 @@ const parseSource = async (
   await extractStoreComponent(store, filePath, source, options);
   const doc: Document | undefined = store.doc;
   if (doc) {
-    assignDocumentData(doc, filePath);
     if (store.stories) {
       const storyPackage = await packageInfo(
         doc.title,
