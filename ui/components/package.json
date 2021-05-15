@@ -46,7 +46,7 @@
     "prism-react-renderer": "^1.0.2",
     "react-animate-height": "^2.0.20",
     "react-popper-tooltip": "^3.1.0",
-    "react-switch": "^5.0.1",
+    "react-switch": "^6.0.0",
     "react-table": "^7.0.0",
     "react-tabs": "^3.1.0",
     "scroll-into-view-if-needed": "^2.2.25",
