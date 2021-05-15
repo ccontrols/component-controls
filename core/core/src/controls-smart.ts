@@ -110,7 +110,8 @@ export const controlFromProps = (
       return {
         type: ControlTypes.OPTIONS,
         options: options.map((v: any) => {
-          return cleanQuotes(v.value ?? v);
+          const option = cleanQuotes(v.value ?? v);
+          return option === 'undefined' ? undefined : option;
         }),
         value,
       };
