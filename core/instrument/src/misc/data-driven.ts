@@ -31,7 +31,7 @@ export const assignDocumentData = (doc: Document, filePath: string): void => {
   if (fs.existsSync(dataFilePath)) {
     const cached = new CachedFileResource<DocumentData>(
       'data-driven',
-      `v1`,
+      dataFilePath,
       dataFilePath,
     );
     let result: DocumentData | undefined = cached.get();
