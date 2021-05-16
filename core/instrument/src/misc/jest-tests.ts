@@ -1,5 +1,6 @@
 import path from 'path';
 import fs from 'fs';
+import { createHash } from 'crypto';
 import {
   JestConfig,
   runProjectTests,
@@ -36,12 +37,21 @@ export const extractTests = async (
       return '';
     })
     .filter(f => f);
-  const cached = new CachedFileResource<JestTests>('jest-tests', testFiles[0], [
+  const allFiles = [
     ...testFiles,
     ...coverageFiles,
     ...snapshotFiles,
     ...trackFiles,
-  ]);
+  ];
+  const fileHash = allFiles
+    .reduce((acc, f) => acc.update(f), createHash('md5'))
+    .digest('hex');
+
+  const cached = new CachedFileResource<JestTests>(
+    'jest-tests',
+    fileHash,
+    allFiles,
+  );
   const cachedResults = cached.get();
   if (cachedResults) {
     return cachedResults;
