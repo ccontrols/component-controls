@@ -49,6 +49,7 @@ export const DocumentsList: FC<DocumentsListProps> = ({ pages, type }) => {
         {pages.map(doc => (
           <Box as="li" key={doc.title} variant="documentslist.listitem">
             <DocumentItem
+              showImage={true}
               item={{
                 ...doc,
                 link: getDocPath(doc.type || defDocType, doc, store, doc.title),

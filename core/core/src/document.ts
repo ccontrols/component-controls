@@ -318,7 +318,7 @@ export const dateToLocalString = (date?: Date): string =>
  */
 export type DocInfo = Pick<
   Document,
-  'title' | 'description' | 'type' | 'tags' | 'date' | 'author'
+  'title' | 'description' | 'type' | 'tags' | 'date' | 'author' | 'image'
 > & {
   /**
    * following fields are useful for highlighting search results

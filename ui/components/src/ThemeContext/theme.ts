@@ -1200,6 +1200,24 @@ export const theme: ControlsTheme = {
   documentitem: {
     container: {
       display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    imageBox: {
+      width: '180px',
+      height: '180px',
+      py: 2,
+      pr: 3,
+      display: 'flex',
+      alignItems: 'center',
+    },
+    image: {
+      objectFit: 'cover',
+      border: (t: Theme): string => ` 1px solid  ${t.colors?.shadow}`,
+    },
+    content: {
+      flex: '1',
+      display: 'flex',
       flexDirection: 'column',
       py: 2,
       p: {

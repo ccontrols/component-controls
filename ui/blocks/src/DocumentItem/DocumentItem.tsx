@@ -1,10 +1,9 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Box, Text, BoxProps } from 'theme-ui';
+import { jsx, Box, Text, BoxProps, Image, Theme } from 'theme-ui';
 import {
   defDocType,
   dateToLocalString,
-  SearchFields,
   DocInfo,
 } from '@component-controls/core';
 import { Subtitle, Markdown, Link } from '@component-controls/components';
@@ -16,16 +15,18 @@ export interface DocumentItemProps {
    * document to be displayed
    */
   item: DocInfo;
+
   /**
-   * when search results, the search fields can be highlighted
+   * if true, will also display the doc image
    */
-  highlight?: SearchFields;
+  showImage?: boolean;
 }
 /**
  * displays a single doument item
  */
 export const DocumentItem: FC<DocumentItemProps & BoxProps> = ({
   item,
+  showImage,
   ...rest
 }) => {
   const {
@@ -39,6 +40,7 @@ export const DocumentItem: FC<DocumentItemProps & BoxProps> = ({
     author,
     authorLink,
     link,
+    image,
   } = item;
   const dateNode = date ? (
     <Box variant="documentitem.info.inner">
@@ -69,26 +71,35 @@ export const DocumentItem: FC<DocumentItemProps & BoxProps> = ({
   ) : null;
   return (
     <Box variant="documentitem.container" {...rest}>
-      <Box variant="documentitem.titlerow">
+      {showImage && image && (
         <Link href={link}>
-          <Subtitle
-            sx={{ mr: 1 }}
-            dangerouslySetInnerHTML={{ __html: title }}
-          />
+          <Box variant="documentitem.imageBox">
+            <Image src={image} alt={title} variant="documentitem.image" />
+          </Box>
         </Link>
-        <PageTypeTag type={type} raw={rawType} />
-      </Box>
-      {description && typeof description === 'string' ? (
-        <Markdown>{description}</Markdown>
-      ) : (
-        description
       )}
-      {(tagsNode || dateNode) && (
-        <Box variant="documentitem.info.container">
-          {dateNode || <div />}
-          {tagsNode}
+      <Box variant="documentitem.content">
+        <Box variant="documentitem.titlerow">
+          <Link href={link}>
+            <Subtitle
+              sx={{ mr: 1 }}
+              dangerouslySetInnerHTML={{ __html: title }}
+            />
+          </Link>
+          <PageTypeTag type={type} raw={rawType} />
         </Box>
-      )}
+        {description && typeof description === 'string' ? (
+          <Markdown>{description}</Markdown>
+        ) : (
+          description
+        )}
+        {(tagsNode || dateNode) && (
+          <Box variant="documentitem.info.container">
+            {dateNode || <div />}
+            {tagsNode}
+          </Box>
+        )}
+      </Box>
     </Box>
   );
 };
