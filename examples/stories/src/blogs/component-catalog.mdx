@@ -18,17 +18,17 @@ import componentCatalogImg from './media/components-catalog.jpg';
 export const filter = ({ doc, component }) =>
   component && doc.title.startsWith('Components');
 
-# Introducing addon-catalog
+## Introducing addon-catalog
 
 Fresh off the oven, the [addon-catalog](https://github.com/ccontrols/component-controls/tree/master/plugins/addon-catalog) is meant to collect and display a grid-like list of component cards.
 
 You can include the new component catalogs in your [MDX](https://component-controls.com/tutorial/esmodules-stories) documentation files, along with other general information about your components library.
 
-# Live example
+## Live example
 
 For a quick preview, you can check this [live example](/api/components-index) of our library of [theme-ui](https://theme-ui.com) based components:
 
-# Installation
+## Installation
 
 The `addon-catalog` is not installed by default when using `component-controls`, and you will need to add it to your project
 
@@ -36,7 +36,7 @@ The `addon-catalog` is not installed by default when using `component-controls`,
 yarn add @component-controls/addon-catalog
 ```
 
-# Catalog usage
+## Catalog usage
 
 ```mdx:title=Components/index.mdx
 import { Catalog } from '@component-controls/addon-catalog';
@@ -61,7 +61,7 @@ The `<Catalog />` component comes with search and filter features and allows for
   group={({ story }) => story.category}
 />
 
-# Single Card
+## Single Card
 
 You can also include single component cards in your documentation by specifying the story-id to use. Each card displays some component statistics -
 
