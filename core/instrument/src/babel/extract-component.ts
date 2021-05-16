@@ -233,7 +233,7 @@ const componentRelatedMetrics = async (
             }
           });
       }
-      const testData: string[] = [];
+      const testData: string[] = [filePath];
       if (store.doc?.testData) {
         const testDataFile = path.resolve(
           path.dirname(filePath),

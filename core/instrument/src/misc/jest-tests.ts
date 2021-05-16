@@ -12,15 +12,16 @@ import { CachedFileResource } from './chached-file';
 
 /**
  * Separates the files into projects and runs jest tests
- * @param documentPath full path to the document/story
- * @param files key filePathName pair of all files to test
+ * @param testFiles all the test files associated with the component
+ * @param coverageFiles all the files that should be included in the coverage report
+ * @param trackFiles are files ie data driven testing and the documentation file, that will trigger a cache refresh
  * @param options jest runCLI options
  * @returns return key/value pairs with test results and coverage associated with each file
  */
 export const extractTests = async (
   testFiles: string[],
   coverageFiles: string[],
-  dataFiles: string[],
+  trackFiles: string[],
   options?: JestConfig,
 ): Promise<JestTests | undefined> => {
   if (!testFiles.length) {
@@ -39,7 +40,7 @@ export const extractTests = async (
     ...testFiles,
     ...coverageFiles,
     ...snapshotFiles,
-    ...dataFiles,
+    ...trackFiles,
   ]);
   const cachedResults = cached.get();
   if (cachedResults) {
