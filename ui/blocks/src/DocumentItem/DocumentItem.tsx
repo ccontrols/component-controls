@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Box, Text, BoxProps, Image, Theme } from 'theme-ui';
+import { jsx, Box, Text, BoxProps, Image } from 'theme-ui';
 import {
   defDocType,
   dateToLocalString,
