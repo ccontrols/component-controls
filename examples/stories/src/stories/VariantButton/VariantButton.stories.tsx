@@ -1,8 +1,8 @@
 import React from 'react';
 import { Document, Example, ControlTypes } from '@component-controls/core';
 import { VariantButton, VariantButtonProps } from './VariantButton';
-import design_notes from '../../sections/design-notes.md';
-import image_screenshot from './media/image_screenshot.jpg';
+import design_notes from './design-assets/design-notes.md';
+import design_img from './design-assets/design-img.jpg';
 
 export default {
   title: 'ESM/Starter',
@@ -22,7 +22,7 @@ export default {
     },
     images: {
       title: 'Screenshots',
-      items: [{ src: image_screenshot, 'aria-label': 'design resource image' }],
+      items: [{ src: design_img, 'aria-label': 'design resource image' }],
     },
   },
   description: `This example demonstrates documenting a hypothetical Button component that supports variants, icons, text, and padding`,

@@ -57,8 +57,8 @@ The design plugins can be configured in the `plugins` section of a document or a
 
 ```js:title=Button.stories.tsx
 import { Document } from '@component-controls/core';
-import design_notes from '../sections/design-notes.md';
-import image_screenshot from './media/image_screenshot.jpg';
+import design_notes from './design-assets/design-notes.md';;
+import design_img from './design-assets/design-img.jpg';
 
 export default {
   title: 'Button',
@@ -72,7 +72,7 @@ export default {
       title: 'Design brief',
       items: [design_notes],
     },
-    images: [image_screenshot],
+    images: [design_img],
   },
 } as Document;
 ```
@@ -175,7 +175,8 @@ The notes will be assigned to all the stories in the current document
 
 ```js:title=mystory.stories.tsx
 import { Document } from '@component-controls/core';
-import design_notes from '../sections/design-notes.md';
+import design_notes from './design-assets/design-notes.md';;
+
 
 export default {
   title: 'MyStory',

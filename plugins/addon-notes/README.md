@@ -35,7 +35,8 @@ in `mystory.stories.tsx`
 
 ```
 import { Document } from '@component-controls/core';
-import design_notes from '../sections/design-notes.md';
+import design_notes from './design-assets/design-notes.md';;
+
 
 export default {
   title: 'MyStory',
