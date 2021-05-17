@@ -73,7 +73,7 @@ const parseSource = async (
   }
   if (store.doc) {
     const doc = store.doc;
-    if (doc.draft === true) {
+    if (doc.status === 'draft') {
       if (process.env.NODE_ENV !== 'development') {
         return undefined;
       }

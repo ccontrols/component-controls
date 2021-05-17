@@ -217,18 +217,18 @@ export default {
 };
 ```
 
-### draft
+### status
 
-type: `boolean`
+type: `draft` | `published`
 
-If set to true, the document will be hidden in production builds. This allows you to work on the draft version of a document without publishing it.
+If set to draft, the document will be hidden in production builds. This allows you to work on the draft version of a document without publishing it.
 
 [MDX](/tutorial/mdx-documentation)
 
 ```
 ---
 title: Library/Components/Spinner
-draft: true
+status: draft
 ---
 ```
 
@@ -237,7 +237,7 @@ draft: true
 ```
 export default {
   title: 'Library/Components/Button',
-  draft: true,
+  status: 'draft',
 };
 ```
 

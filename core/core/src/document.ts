@@ -197,9 +197,9 @@ export type Document<Props = any> = {
   dateModified?: string;
 
   /**
-   * if set to true, the document will be hidden in production builds.
+   * if set to draft, the document will be hidden in production builds.
    */
-  draft?: boolean;
+  status?: 'draft' | 'published';
 
   /**
    *  comma-separated list of document tags, used for search and for SOE keywords unless keyswords are specified.
