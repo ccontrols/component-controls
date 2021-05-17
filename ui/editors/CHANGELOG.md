@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.14.0](https://github.com/ccontrols/component-controls/compare/v3.13.1...v3.14.0) (2021-05-17)
+
+
+### Bug Fixes
+
+* option item key when undefined ([7342386](https://github.com/ccontrols/component-controls/commit/73423860ae864eaa8fd434c2cbc594c1ba05d9e6))
+
+
+
+
+
 ## [3.13.1](https://github.com/ccontrols/component-controls/compare/v3.13.0...v3.13.1) (2021-05-17)
 
 **Note:** Version bump only for package @component-controls/editors

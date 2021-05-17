@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.14.0](https://github.com/ccontrols/component-controls/compare/v3.13.1...v3.14.0) (2021-05-17)
+
+
+### Features
+
+* include/exclude controls as function ([8d57d1a](https://github.com/ccontrols/component-controls/commit/8d57d1a47bb84f929aa8d7455966f8863d4916f3))
+
+
+
+
+
 # [3.13.0](https://github.com/ccontrols/component-controls/compare/v3.12.0...v3.13.0) (2021-05-17)
 
 **Note:** Version bump only for package component-controls-stories

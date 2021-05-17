@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.14.0](https://github.com/ccontrols/component-controls/compare/v3.13.1...v3.14.0) (2021-05-17)
+
+
+### Bug Fixes
+
+* assign doc props before getting story controls ([3768ca2](https://github.com/ccontrols/component-controls/commit/3768ca2f31334029556eda0c7861c6f48b88ba17))
+* clean quotes from react-docgen props info ([c45a3e6](https://github.com/ccontrols/component-controls/commit/c45a3e68e1fe7d14de51e7a521b51dad97179c9b))
+* option item key when undefined ([7342386](https://github.com/ccontrols/component-controls/commit/73423860ae864eaa8fd434c2cbc594c1ba05d9e6))
+* react-docgen clean quotes on default value ([237df70](https://github.com/ccontrols/component-controls/commit/237df707ad4344434a08e713438424484befb4fd))
+* revert mini-css-extract-plugin@ ([58aafc4](https://github.com/ccontrols/component-controls/commit/58aafc40e3a9428e6d9f45198037d58f8a0ab8a1))
+
+
+### Features
+
+* include/exclude controls as function ([8d57d1a](https://github.com/ccontrols/component-controls/commit/8d57d1a47bb84f929aa8d7455966f8863d4916f3))
+
+
+
+
+
 ## [3.13.1](https://github.com/ccontrols/component-controls/compare/v3.13.0...v3.13.1) (2021-05-17)
 
 

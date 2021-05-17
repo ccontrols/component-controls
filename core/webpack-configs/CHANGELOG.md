@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.14.0](https://github.com/ccontrols/component-controls/compare/v3.13.1...v3.14.0) (2021-05-17)
+
+
+### Bug Fixes
+
+* revert mini-css-extract-plugin@ ([58aafc4](https://github.com/ccontrols/component-controls/commit/58aafc40e3a9428e6d9f45198037d58f8a0ab8a1))
+
+
+
+
+
 ## [3.13.1](https://github.com/ccontrols/component-controls/compare/v3.13.0...v3.13.1) (2021-05-17)
 
 **Note:** Version bump only for package @component-controls/webpack-configs

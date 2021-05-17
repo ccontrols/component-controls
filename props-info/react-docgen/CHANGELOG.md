@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.14.0](https://github.com/ccontrols/component-controls/compare/v3.13.1...v3.14.0) (2021-05-17)
+
+
+### Bug Fixes
+
+* clean quotes from react-docgen props info ([c45a3e6](https://github.com/ccontrols/component-controls/commit/c45a3e68e1fe7d14de51e7a521b51dad97179c9b))
+* react-docgen clean quotes on default value ([237df70](https://github.com/ccontrols/component-controls/commit/237df707ad4344434a08e713438424484befb4fd))
+
+
+
+
+
 # [3.13.0](https://github.com/ccontrols/component-controls/compare/v3.12.0...v3.13.0) (2021-05-17)
 
 **Note:** Version bump only for package @component-controls/react-docgen-info
