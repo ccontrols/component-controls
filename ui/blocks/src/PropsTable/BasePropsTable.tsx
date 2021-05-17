@@ -213,17 +213,19 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
                   <Box variant="propstable.description.type">
                     <Themed.pre>
                       {Array.isArray(value) && value.length > 1
-                        ? value.map(({ name: typeName, value }) => (
-                            <Tag
-                              key={`${name}_${value || typeName}`}
-                              color="grey"
-                              transparentAmount={0.9}
-                              borderSize={1}
-                              variant="tag.rightmargin"
-                            >
-                              {value || typeName}
-                            </Tag>
-                          ))
+                        ? value
+                            .filter(({ value }) => value !== 'undefined')
+                            .map(({ name: typeName, value }) => (
+                              <Tag
+                                key={`${name}_${value || typeName}`}
+                                color="grey"
+                                transparentAmount={0.9}
+                                borderSize={1}
+                                variant="tag.rightmargin"
+                              >
+                                {value || typeName}
+                              </Tag>
+                            ))
                         : raw ?? typeName}
                     </Themed.pre>
                   </Box>
