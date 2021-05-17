@@ -51,8 +51,8 @@ export const OptionsEditor: PropertyEditor = ({ name, ...rest }) => {
     const v: string = selectValue.length ? selectValue[0].value : '';
     return (
       <OptionsSelect value={v} onChange={handleChange} {...rest}>
-        {entries.map(entry => (
-          <option key={entry.value} value={entry.value}>
+        {entries.map((entry, idx) => (
+          <option key={entry.value || `option_key_${idx}`} value={entry.value}>
             {entry.label}
           </option>
         ))}
