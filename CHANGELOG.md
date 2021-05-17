@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.13.1](https://github.com/ccontrols/component-controls/compare/v3.13.0...v3.13.1) (2021-05-17)
+
+
+### Bug Fixes
+
+* make column ids unique ([0860e5e](https://github.com/ccontrols/component-controls/commit/0860e5e186a326bf46c3a893a932408d61c63a8e))
+
+
+
+
+
 # [3.13.0](https://github.com/ccontrols/component-controls/compare/v3.12.0...v3.13.0) (2021-05-17)
 
 

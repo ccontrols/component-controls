@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/gatsby-theme-stories",
-  "version": "3.13.0",
+  "version": "3.13.1",
   "description": "Gatsby theme to create stories documentation sites",
   "keywords": [
     "story",
@@ -38,8 +38,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/base-integration": "^3.13.0",
-    "@component-controls/pages": "^3.13.0",
+    "@component-controls/base-integration": "^3.13.1",
+    "@component-controls/pages": "^3.13.1",
     "@component-controls/routes": "^3.13.0",
     "@component-controls/search-algolia": "^3.13.0",
     "@component-controls/search-fusejs": "^3.13.0",

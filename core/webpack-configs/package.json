@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/webpack-configs",
-  "version": "3.13.0",
+  "version": "3.13.1",
   "description": "Webpack preset configurations",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
