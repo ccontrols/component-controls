@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.13.0](https://github.com/ccontrols/component-controls/compare/v3.12.0...v3.13.0) (2021-05-17)
+
+
+### Bug Fixes
+
+* props enum undefined to control ([9bcc416](https://github.com/ccontrols/component-controls/commit/9bcc416f58f0d1bd7e7d75e3e7c5fbbd0eeab191))
+
+
+### Features
+
+* display images with doc items(blogs) ([33d7c45](https://github.com/ccontrols/component-controls/commit/33d7c455b9777d8d936ccfb1ca99f22d6b9070fa))
+
+
+
+
+
 # [3.12.0](https://github.com/ccontrols/component-controls/compare/v3.11.4...v3.12.0) (2021-05-13)
 
 

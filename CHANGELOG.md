@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.13.0](https://github.com/ccontrols/component-controls/compare/v3.12.0...v3.13.0) (2021-05-17)
+
+
+### Bug Fixes
+
+* add doc file to cache to re-run tests ([249ce07](https://github.com/ccontrols/component-controls/commit/249ce07167cfdf37f2d401db276704e2d1f71bdc))
+* data driven cached file key ([d1f09ef](https://github.com/ccontrols/component-controls/commit/d1f09ef68e010387adf82837be88b6f70e5cd306))
+* filter undefined from options ([4724fc3](https://github.com/ccontrols/component-controls/commit/4724fc304d1307d4dc86b64e1c0ea9a7cc3d7486))
+* jest tests file key from hash ([ea481bd](https://github.com/ccontrols/component-controls/commit/ea481bd15130e64e8aa4d0301cd853fb996658ff))
+* props enum undefined to control ([9bcc416](https://github.com/ccontrols/component-controls/commit/9bcc416f58f0d1bd7e7d75e3e7c5fbbd0eeab191))
+* remove unused import ([86f5742](https://github.com/ccontrols/component-controls/commit/86f5742897812493877a92374dacb2c3d306f72b))
+
+
+### Features
+
+* display images with doc items(blogs) ([33d7c45](https://github.com/ccontrols/component-controls/commit/33d7c455b9777d8d936ccfb1ca99f22d6b9070fa))
+
+
+
+
+
 # [3.12.0](https://github.com/ccontrols/component-controls/compare/v3.11.4...v3.12.0) (2021-05-13)
 
 

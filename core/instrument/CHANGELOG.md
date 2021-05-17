@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.13.0](https://github.com/ccontrols/component-controls/compare/v3.12.0...v3.13.0) (2021-05-17)
+
+
+### Bug Fixes
+
+* add doc file to cache to re-run tests ([249ce07](https://github.com/ccontrols/component-controls/commit/249ce07167cfdf37f2d401db276704e2d1f71bdc))
+* data driven cached file key ([d1f09ef](https://github.com/ccontrols/component-controls/commit/d1f09ef68e010387adf82837be88b6f70e5cd306))
+* jest tests file key from hash ([ea481bd](https://github.com/ccontrols/component-controls/commit/ea481bd15130e64e8aa4d0301cd853fb996658ff))
+
+
+
+
+
 # [3.12.0](https://github.com/ccontrols/component-controls/compare/v3.11.4...v3.12.0) (2021-05-13)
 
 
