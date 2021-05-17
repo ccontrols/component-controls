@@ -23,7 +23,7 @@ describe('VariantButton', () => {
   }
   renderedExamples.forEach(({ name, rendered, dataId, values }) => {
     describe(name, () => {
-      const runTests = () => {
+      const runTests = (): void => {
         it('snapshot', () => {
           const { asFragment } = render(rendered);
           expect(asFragment()).toMatchSnapshot();

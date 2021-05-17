@@ -55,7 +55,7 @@ describe('Popover', () => {
   }
   renderedExamples.forEach(({ name, rendered, dataId, values }) => {
     describe(name, () => {
-      const runTests = () => {
+      const runTests = (): void => {
         it('snapshot', () => {
           const { asFragment } = render(rendered);
           expect(asFragment()).toMatchSnapshot();
@@ -150,7 +150,7 @@ describe('VariantButton', () => {
   const renderedExamples = renderDocument(examples, config, data);
   renderedExamples.forEach(({ name, rendered, dataId, values }) => {
     describe(name, () => {
-      const runTests = () => {
+      const runTests = (): void => {
         it('snapshot', () => {
           const component = mount(rendered);
           expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();
@@ -248,7 +248,7 @@ describe('VariantButton', () => {
   }
   renderedExamples.forEach(({ name, rendered, dataId, values }) => {
     describe(name, () => {
-      const runTests = () => {
+      const runTests = (): void => {
         it('snapshot', () => {
           const component = renderer.create(rendered);
           if (!component) {
@@ -301,7 +301,7 @@ describe('VariantButton', () => {
   }
   renderedExamples.forEach(({ name, rendered, dataId, values }) => {
     describe(name, () => {
-      const runTests = () => {
+      const runTests = (): void => {
         it('snapshot', () => {
           const { asFragment } = render(rendered);
           expect(asFragment()).toMatchSnapshot();

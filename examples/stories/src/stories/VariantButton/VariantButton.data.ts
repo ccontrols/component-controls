@@ -1,5 +1,4 @@
-import { VariantButtonProps } from './VariantButton';
-const data: Record<string, Record<string, VariantButtonProps>> = {
+export default {
   overview: {
     '1': {
       text: 'Cecelia Langosh',
@@ -39,4 +38,3 @@ const data: Record<string, Record<string, VariantButtonProps>> = {
     },
   },
 };
-export default data;

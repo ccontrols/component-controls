@@ -9,7 +9,7 @@ if (!renderedExamples.length) {
 renderedExamples.forEach(({ name, rendered{{? it.data }}, dataId, values{{?}}}) => {
   describe(name, () => {
     {{? it.data }}
-      const runTests = () => {
+      const runTests = (){{? it.format === 'ts' }}: void{{?}} => {
     {{?}}
 
       it('snapshot', () => {

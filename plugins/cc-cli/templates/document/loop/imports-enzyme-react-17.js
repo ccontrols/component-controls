@@ -2,7 +2,7 @@ const renderedExamples = renderDocument(examples, config{{? it.data }}, data{{?}
 renderedExamples.forEach(({ name, rendered {{? it.data }}, dataId, values{{?}}}) => {
   describe(name, () => {
     {{? it.data }}
-      const runTests = () => {
+      const runTests = (){{? it.format === 'ts' }}: void{{?}} => {
     {{?}}
       it('snapshot', () => {
         const component = mount(rendered);
