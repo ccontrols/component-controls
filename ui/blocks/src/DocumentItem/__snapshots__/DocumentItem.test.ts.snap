@@ -10,6 +10,26 @@ exports[`DocumentItem overview snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -17,12 +37,12 @@ exports[`DocumentItem overview snapshot 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-0 p {
+.emotion-1 p {
   margin-top: 0;
   margin-bottom: 8px;
 }
 
-.emotion-1 {
+.emotion-2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -42,7 +62,7 @@ exports[`DocumentItem overview snapshot 1`] = `
   align-items: center;
 }
 
-.emotion-2 {
+.emotion-3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -51,7 +71,7 @@ exports[`DocumentItem overview snapshot 1`] = `
   transition: all 0.3s ease-in-out;
 }
 
-.emotion-3 {
+.emotion-4 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -64,7 +84,7 @@ exports[`DocumentItem overview snapshot 1`] = `
   margin-right: 4px;
 }
 
-.emotion-5 {
+.emotion-6 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -77,26 +97,10 @@ exports[`DocumentItem overview snapshot 1`] = `
   border: 2px solid #f49342;
 }
 
-.emotion-6 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-}
-
 .emotion-7 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
 }
 
 .emotion-8 {
@@ -110,27 +114,26 @@ exports[`DocumentItem overview snapshot 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
-.emotion-9 {
+.emotion-10 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   color: #69768C;
 }
 
-.emotion-11 {
+.emotion-12 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   margin-right: 8px;
 }
 
-.emotion-12 {
+.emotion-13 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -143,66 +146,70 @@ exports[`DocumentItem overview snapshot 1`] = `
     <div
       class="emotion-1"
     >
-      <a
+      <div
         class="emotion-2"
-        href="/docs/id-of-story"
       >
-        <h2
+        <a
           class="emotion-3"
+          href="/docs/id-of-story"
         >
-          Story
-        </h2>
-      </a>
-      <a
-        class="emotion-2"
-        href="/docs"
-      >
-        <span
-          class="emotion-5"
+          <h2
+            class="emotion-4"
+          >
+            Story
+          </h2>
+        </a>
+        <a
+          class="emotion-3"
+          href="/docs"
         >
           <span
             class="emotion-6"
           >
-            story
+            <span
+              class="emotion-7"
+            >
+              story
+            </span>
           </span>
-        </span>
-      </a>
-    </div>
-    <div
-      class="emotion-7"
-    >
+        </a>
+      </div>
       <div
         class="emotion-8"
       >
         <div
-          class="emotion-9"
+          class="emotion-0"
         >
-          created: 1/1/2020
-        </div>
-        <div
-          class="emotion-8"
-        >
-          <span
-            class="emotion-11"
+          <div
+            class="emotion-10"
           >
-            ,
-          </span>
-          <span
-            class="emotion-12"
-          >
-            by
-          </span>
-          <a
-            class="emotion-2"
-            rel="noopener noreferrer"
-            target="_blank"
+            created: 1/1/2020
+          </div>
+          <div
+            class="emotion-0"
           >
             <span
-              class="emotion-6"
+              class="emotion-12"
             >
-              atanasster
+              ,
             </span>
-          </a>
+            <span
+              class="emotion-13"
+            >
+              by
+            </span>
+            <a
+              class="emotion-3"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="emotion-7"
+              >
+                atanasster
+              </span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
