@@ -1,5 +1,6 @@
 import dot from 'dot';
 import {
+  mergeStoryProps,
   getStoryControls,
   randomizeData,
   randomizeSeed,
@@ -46,7 +47,7 @@ export const createDataTemplate = async (
   }
   Object.keys(stories).forEach(storyId => {
     const story = stories[storyId];
-
+    Object.assign(story, mergeStoryProps(doc, story));
     const storyControls = getStoryControls(story, doc, components);
     if (storyControls) {
       const controls = fixControlTypes(storyControls);
