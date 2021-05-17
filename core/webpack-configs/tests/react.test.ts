@@ -13,7 +13,6 @@ describe('merge instrument and react-docgen-typescript', () => {
           options: {
             filename: 'component-controls.css',
             ignoreOrder: false,
-            experimentalUseImportModule: false,
             chunkFilename: '[id].component-controls.css',
           },
           runtimeOptions: {
