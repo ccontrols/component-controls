@@ -1,8 +1,12 @@
 import { ElementType } from 'react';
 import { deepMerge } from './deepMerge';
 import { StoryRenderFn } from './utility';
-import { ComponentControls } from './controls';
+import { ComponentControls, ComponentControl } from './controls';
+import { PropType } from './components';
 
+export type IncludeFn = (
+  control: { name: string; prop?: PropType } & ComponentControl,
+) => boolean;
 export interface SmartControls {
   /**
    * whether to generate "smart" controls for a story
@@ -11,12 +15,12 @@ export interface SmartControls {
   /**
    * include props only
    */
-  include?: string[];
+  include?: string[] | IncludeFn;
 
   /**
    * exclude props only
    */
-  exclude?: string[];
+  exclude?: string[] | IncludeFn;
 }
 
 /**

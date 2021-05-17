@@ -108,7 +108,8 @@ export interface VariantButtonProps {
 /**
  * Button with variants
  */
-export const VariantButton: FC<VariantButtonProps> = ({
+export const VariantButton: FC<VariantButtonProps &
+  React.HTMLProps<HTMLButtonElement>> = ({
   text,
   fontSize = 18,
   iconSize = 'small',

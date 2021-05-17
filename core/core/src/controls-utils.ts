@@ -440,8 +440,18 @@ export const getStoryControls = (
           if (Array.isArray(include) && !include.includes(key)) {
             return false;
           }
+          if (typeof include === 'function') {
+            const prop = component.info?.props[key];
+            return include({ name: key, ...newControls[key], prop });
+          }
+
           if (Array.isArray(exclude) && exclude.includes(key)) {
             return false;
+          }
+
+          if (typeof exclude === 'function') {
+            const prop = component.info?.props[key];
+            return !exclude({ name: key, ...newControls[key], prop });
           }
           if (usedProps && !usedProps.includes(key)) {
             return false;

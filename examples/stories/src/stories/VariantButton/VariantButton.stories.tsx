@@ -26,6 +26,9 @@ export default {
     },
   },
   description: `This example demonstrates documenting a hypothetical Button component that supports variants, icons, text, and padding`,
+  smartControls: {
+    include: p => p.prop?.parentName === 'VariantButtonProps',
+  },
 } as Document;
 
 export const overview: Example<VariantButtonProps> = props => (
