@@ -1,4 +1,9 @@
-import { PropTypes, PropType, TypeInformation } from '@component-controls/core';
+import {
+  PropTypes,
+  PropType,
+  TypeInformation,
+  cleanQuotes,
+} from '@component-controls/core';
 import {
   RdPropInfo,
   RdValue,
@@ -59,7 +64,7 @@ const propTypeToCCType = (dgType: RdPropType): TypeInformation => {
             ? dgType.value.map(({ value }: any) => {
                 return {
                   name: typeof value,
-                  value,
+                  value: cleanQuotes(value),
                 };
               })
             : undefined,
@@ -143,6 +148,21 @@ const tsTypeToCCType = (dgType: RdTypescriptType): TypeInformation => {
           name: 'array',
           value: dgType.elements.map((element: any) => tsTypeToCCType(element)),
         };
+        break;
+      case 'union':
+        type = {
+          ...dgType,
+          elements: dgType.elements.map((element: any) => {
+            const clean =
+              typeof element === 'object' && element.value
+                ? {
+                    ...element,
+                    value: cleanQuotes(element.value),
+                  }
+                : element;
+            return clean;
+          }),
+        } as TypeInformation;
         break;
       case 'signature':
         if (dgType.signature?.arguments) {

@@ -38,11 +38,11 @@ Object {
         "elements": Array [
           Object {
             "name": "literal",
-            "value": "'string'",
+            "value": "string",
           },
           Object {
             "name": "literal",
-            "value": "'otherstring'",
+            "value": "otherstring",
           },
           Object {
             "name": "number",

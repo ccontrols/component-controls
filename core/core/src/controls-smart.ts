@@ -2,7 +2,7 @@
 import { ComponentControl, ComponentControls, ControlTypes } from './controls';
 import { PropType, PropTypes } from './components';
 
-const cleanQuotes = (txt?: string) =>
+export const cleanQuotes = (txt?: string): string | undefined =>
   typeof txt === 'string' ? txt.replace(/['"]+/g, '') : txt;
 
 const handledTypes = [

@@ -56,11 +56,11 @@ it as an enum.",
         "elements": Array [
           Object {
             "name": "literal",
-            "value": "'News'",
+            "value": "News",
           },
           Object {
             "name": "literal",
-            "value": "'Photos'",
+            "value": "Photos",
           },
         ],
         "name": "union",
