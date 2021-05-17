@@ -38,6 +38,7 @@ export const BaseStoryData: FC<BaseStoryDataProps> = ({
     const columns = [
       {
         Header: 'select',
+        id: '__data_row_select',
         Cell: ({ row: { original } }: { row: Row<DataRow> }) => {
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
           const { id, ...data } = original;
@@ -57,7 +58,7 @@ export const BaseStoryData: FC<BaseStoryDataProps> = ({
       },
       {
         Header: '#',
-        accessor: 'id',
+        accessor: '__data_row_id',
         Cell: ({
           row: {
             original: { id },
