@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.14.1](https://github.com/ccontrols/component-controls/compare/v3.14.0...v3.14.1) (2021-05-17)
+
+
+### Bug Fixes
+
+* typescript doc template add fn return type ([145c52f](https://github.com/ccontrols/component-controls/commit/145c52f82206359c39cca5ce818c66e42715e3b4))
+
+
+
+
+
 # [3.14.0](https://github.com/ccontrols/component-controls/compare/v3.13.1...v3.14.0) (2021-05-17)
 
 

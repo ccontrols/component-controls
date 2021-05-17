@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/cc-cli",
-  "version": "3.14.0",
+  "version": "3.14.1",
   "description": "Command line tool to generate testing templates",
   "keywords": [
     "jest",

@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/base-integration",
-  "version": "3.14.0",
+  "version": "3.14.1",
   "description": "base integration routines and components",
   "keywords": [
     "story",
@@ -38,10 +38,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/app": "^3.14.0",
+    "@component-controls/app": "^3.14.1",
     "@component-controls/core": "^3.14.0",
     "@component-controls/logger": "^3.10.0",
-    "@component-controls/pages": "^3.14.0",
+    "@component-controls/pages": "^3.14.1",
     "@component-controls/routes": "^3.14.0",
     "@component-controls/search-algolia": "^3.14.0",
     "@component-controls/search-fusejs": "^3.14.0",
