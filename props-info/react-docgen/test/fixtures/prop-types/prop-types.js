@@ -104,6 +104,7 @@ MyComponent.propTypes = {
 
 MyComponent.defaultProps = {
   optionalNumber: 21,
+  optionalEnum: 'News',
 };
 
 export default MyComponent;

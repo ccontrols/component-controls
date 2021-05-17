@@ -19,6 +19,9 @@ const rdPropToCCProp = (rdProp: RdPropInfo): PropType => {
   }
   if (rdProp.defaultValue !== null && rdProp.defaultValue !== undefined) {
     prop.defaultValue = rdProp.defaultValue.value ?? rdProp.defaultValue;
+    if (typeof prop.defaultValue === 'string') {
+      prop.defaultValue = cleanQuotes(prop.defaultValue);
+    }
   }
   let type: Partial<TypeInformation> = {};
   if (rdProp.type) {

@@ -44,6 +44,7 @@ are all optional.",
       },
     },
     "optionalEnum": Object {
+      "defaultValue": "News",
       "description": "You can ensure that your prop is limited to specific values by treating
 it as an enum.",
       "type": Object {
