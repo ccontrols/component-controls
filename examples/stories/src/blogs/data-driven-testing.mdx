@@ -1,0 +1,82 @@
+---
+title: Data-driven testing with react
+type: blog
+date: 2021-05-19
+author: atanasster
+route: /blogs/data-driven-testing
+description: Step by step tutorial on how to generate and use automatic data-driven tests for your react components.
+tags:
+  - testing
+  - components
+image: /static/jest-test-results.jpg
+status: draft
+---
+
+import testResults from './media/jest-test-results.jpg';
+import componentAssetsImg from './media/component-assets.jpg';
+
+## Component driven development
+
+[component-driven developmen (or CDD)](https://itnext.io/a-guide-to-component-driven-development-cdd-1516f65d8b55) means embracing components as the new primitive of the web, and tapping into their modular power to achieve better speed, scalability, and standardization for web application development.
+
+For our development process, we suggest organizing each component in their own folder:
+
+<img
+  alt="component folder"
+  title="component assets in their folder"
+  src={componentAssetsImg}
+/>
+
+In the screenshot above, you can see a component `VariantButton.tsx` in its own folder alongside its various assets
+
+- `VariantButton.data.ts` contains the generated data-driven testing data.
+- `VariantButton.stories.tsx` contains the component documentation (or stories) file.
+- `VariantButton.test.ts` contains the generated jest snapshot and accessibility tests
+- the `design-assets` folder contains various assets associated with the copmponent's documentation, such as images and markdown notes.
+- the `__snapshots__` folder contains the saved output of the snapshot testing.
+
+## More testing with less effort
+
+Adding tests for each of your components and the amount of work involved oftentimes will stop you short of achieving a high percentage of tests coverage.
+
+In this tutorial we will show you step-by-step how to automatically generate components tests and the associated data-driven testing tables of data.
+
+## Getting started
+
+Create a new documentation project
+
+[getting started with gatsby](/tutorial/getting-started/gatsby)
+[getting started with nextjs](/tutorial/getting-started/nextjs)
+[getting started with webpack/react-router](/tutorial/getting-started/webpack)
+
+## Install cc-cli
+
+## Generate tests
+
+- choose target (cjs, esm or ts)
+- choose test renderer (rtr, rtl or enzyme)
+- chose level
+
+1. store
+2. document
+3. story
+   click example
+
+## The tests UI
+
+- summary at top
+- test results
+- test coverage
+
+## Test errors
+
+- introduce error
+- delete snaphot
+- add new story to increase coverage
+
+## Data driven testing
+
+- create data files
+- review UI and select data
+- rename data row
+- randomize controls and copy paste into file
