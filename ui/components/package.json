@@ -44,7 +44,9 @@
     "md5": "^2.3.0",
     "mdx-utils": "*",
     "prism-react-renderer": "^1.0.2",
+    "react": "^17.0.1",
     "react-animate-height": "^2.0.20",
+    "react-dom": "^17.0.1",
     "react-popper-tooltip": "^3.1.0",
     "react-switch": "^6.0.0",
     "react-table": "^7.0.0",
@@ -60,20 +62,17 @@
     "@theme-ui/css": "^0.8.4",
     "@types/markdown-to-jsx": "^6.11.0",
     "@types/md5": "^2.3.0",
-    "@types/react": "^16.9.34",
     "@types/react-table": "^7.0.10",
     "@types/react-tabs": "^2.3.1",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",
     "jest-matchmedia-mock": "^1.1.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
     "typescript": "^4.2.4"
   },
   "peerDependencies": {
-    "@theme-ui/css": ">= 0.6",
-    "react": "^16.8.0 || ^17",
-    "react-dom": "^16.8.0 || ^17"
+    "@theme-ui/css": "^0.6.0",
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
   },
   "publishConfig": {
     "access": "public"

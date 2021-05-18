@@ -49,6 +49,7 @@
     "@component-controls/webpack-configs": "^3.14.0",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
+    "react": "^17.0.1",
     "typescript": "^4.2.4"
   },
   "devDependencies": {
@@ -56,16 +57,14 @@
     "@storybook/addons": "^6.2.0-beta.10",
     "@storybook/api": "^6.2.0-beta.10",
     "@storybook/client-api": "^6.2.0-beta.10",
-    "@types/node": "^13.7.0",
-    "@types/react": "^16.9.34",
-    "react": "^17.0.1"
+    "@types/node": "^13.7.0"
   },
   "peerDependencies": {
     "@storybook/addons": "5.x 6.x",
     "@storybook/api": "5.x 6.x",
     "@storybook/client-api": "5.x 6.x",
     "polished": "3.x",
-    "react": "^16.8.0 || ^17"
+    "react": "^16.8.0 || ^17.0.0"
   },
   "publishConfig": {
     "access": "public"
