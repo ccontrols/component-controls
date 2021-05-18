@@ -38,11 +38,11 @@
     "axe-core": "^4.2.0",
     "jest": "^26.4.2",
     "jest-matcher-utils": "^26.6.2",
-    "ts-jest": "^26.5.5"
+    "ts-jest": "^26.5.5",
+    "typescript": "^4.2.4"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.10",
-    "typescript": "^4.2.4"
+    "@types/jest": "^26.0.10"
   },
   "publishConfig": {
     "access": "public"
