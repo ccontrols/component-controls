@@ -183,7 +183,7 @@ describe('test draft', () => {
             },
             children: {
               description: 'button label',
-              defaultValue: "'default'",
+              defaultValue: 'default',
               type: {
                 name: 'string',
                 required: false,
@@ -207,7 +207,7 @@ describe('test draft', () => {
             },
             backgroundColor: {
               description: 'Background color',
-              defaultValue: "'#fefefe'",
+              defaultValue: '#fefefe',
               type: {
                 name: 'string',
                 required: false,
@@ -215,7 +215,7 @@ describe('test draft', () => {
             },
             color: {
               description: 'Text color, default black',
-              defaultValue: "'black'",
+              defaultValue: 'black',
               type: {
                 name: 'string',
                 required: false,
@@ -223,21 +223,21 @@ describe('test draft', () => {
             },
             type: {
               description: 'Button type',
-              defaultValue: "'button'",
+              defaultValue: 'button',
               type: {
                 name: 'enum',
                 value: [
                   {
                     name: 'string',
-                    value: "'button'",
+                    value: 'button',
                   },
                   {
                     name: 'string',
-                    value: "'reset'",
+                    value: 'reset',
                   },
                   {
                     name: 'string',
-                    value: "'submit'",
+                    value: 'submit',
                   },
                 ],
               },
