@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/app",
-  "version": "3.14.1",
+  "version": "3.14.2",
   "description": "Component controls standalone application.",
   "sideEffects": false,
   "main": "dist/index.js",
@@ -32,18 +32,18 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/blocks": "^3.14.1",
-    "@component-controls/components": "^3.14.1",
-    "@component-controls/core": "^3.14.0",
-    "@component-controls/routes": "^3.14.0",
-    "@component-controls/store": "^3.14.0",
+    "@component-controls/blocks": "^3.14.2",
+    "@component-controls/components": "^3.14.2",
+    "@component-controls/core": "^3.14.2",
+    "@component-controls/routes": "^3.14.2",
+    "@component-controls/store": "^3.14.2",
     "query-string": "^6.13.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "theme-ui": "^0.8.4"
   },
   "devDependencies": {
-    "@component-controls/cc-cli": "^3.14.1",
+    "@component-controls/cc-cli": "^3.14.2",
     "@component-controls/ts-markdown-docs": "^3.8.2",
     "@emotion/jest": "^11.3.0",
     "@types/query-string": "^6.3.0",

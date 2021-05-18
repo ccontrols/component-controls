@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.14.2](https://github.com/ccontrols/component-controls/compare/v3.14.1...v3.14.2) (2021-05-18)
+
+
+### Bug Fixes
+
+* react frame types ([4c559d3](https://github.com/ccontrols/component-controls/commit/4c559d3c378178d64ce1ae64c3c6afa17fb5940e))
+
+
+
+
+
 ## [3.14.1](https://github.com/ccontrols/component-controls/compare/v3.14.0...v3.14.1) (2021-05-17)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.14.2](https://github.com/ccontrols/component-controls/compare/v3.14.1...v3.14.2) (2021-05-18)
+
+
+### Bug Fixes
+
+* remove duplicate config not found warning ([6b8c4bf](https://github.com/ccontrols/component-controls/commit/6b8c4bffa3212299df7a9c6a29b837ebed05e9f8))
+
+
+
+
+
 # [3.14.0](https://github.com/ccontrols/component-controls/compare/v3.13.1...v3.14.0) (2021-05-17)
 
 **Note:** Version bump only for package @component-controls/config
