@@ -441,6 +441,22 @@ exports[`Story iframe snapshot 1`] = `
           id="blocks-core-story-plain--controls"
         >
           <iframe
+            srcdoc="
+<!DOCTYPE html>
+<html lang=\\"eng\\">
+  <head>
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+    </div>
+  </body>
+</html>
+"
             style="border: 0px; width: 100%;"
             title="controls"
           />
