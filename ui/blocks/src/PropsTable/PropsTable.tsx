@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { FC } from 'react';
-import { Column } from 'react-table';
+import { Column } from '@component-controls/components';
 import {
   StoryContextProvider,
   ControlsContextStoryProvider,

@@ -6235,10 +6235,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-resize-detector@^4.2.0":
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/@types/react-resize-detector/-/react-resize-detector-4.2.0.tgz#ee8802e25cfb34439aa7f52626932ea62dc5792e"
-  integrity sha512-y5PPThHUrBGxMhLDNn0BRWglKr84y+gQHvzkyKxF8aW3pox4IySC33V8AOu7ReS0JR1X1dKQgWeF8IOkGrbeBg==
+"@types/react-resize-detector@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@types/react-resize-detector/-/react-resize-detector-5.0.0.tgz#18ac4e6d518581bec6345845b7f08232f4cca8a5"
+  integrity sha512-JTqR0G+RcC6Guqi/JXQBq3jewflumUGd4fDUucmZN9L1d8TZuRHzDTtrmgYWrgLvRTBTV6FjegmLeV1UnrIuzw==
   dependencies:
     "@types/react" "*"
 
@@ -6338,6 +6338,11 @@
   integrity sha512-pRrS1aizm7GqM9NciOSPGoQ7K56rhyMcha6/Zewkwnb/H1dmz7VbDs+RIE/QZOx9CBHqdFBAU4x6LYt+qJZV8A==
   dependencies:
     "@types/react" "*"
+
+"@types/resize-observer-browser@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@types/resize-observer-browser/-/resize-observer-browser-0.1.5.tgz#36d897708172ac2380cd486da7a3daf1161c1e23"
+  integrity sha512-8k/67Z95Goa6Lznuykxkfhq9YU3l1Qe6LNZmwde1u7802a3x8v44oq0j91DICclxatTr0rNnhXx7+VTIetSrSQ==
 
 "@types/resolve@0.0.8":
   version "0.0.8"
@@ -13912,7 +13917,7 @@ gatsby-plugin-root-import@^2.0.5:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-root-import/-/gatsby-plugin-root-import-2.0.6.tgz#72f812ce7a16d67773651c7db1d42f68970ae73c"
   integrity sha512-eG0D+cVL5djVI5nxuQoZE4wBBL6rUq/KBPqPv+69vYolTXzlyj0+vIkqr2Y/xWt8hTK9BB8IOMltGxUmXIenig==
 
-gatsby-plugin-typescript@^2.1.6, gatsby-plugin-typescript@^2.12.0, gatsby-plugin-typescript@^2.4.24:
+gatsby-plugin-typescript@^2.1.6, gatsby-plugin-typescript@^2.12.0:
   version "2.12.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.12.0.tgz#44df6cfde747ab94c1984621e5bb749da94af959"
   integrity sha512-Gb8mPdIgAmlxb/EgH7h5ewq3nMJ+oU640AyfTCAp9GtQspRztRRKjuGceJH3gDVq8bO6wFOWxdRVYIC2KZF9mw==
@@ -15175,6 +15180,11 @@ gzip-size@^6.0.0:
   integrity sha512-ax7ZYomf6jqPTQ4+XCpUGyXKHk5WweS+e05MBO4/y3WJ5RkmPXNKvX+bx1behVILVwr6JSQvZAku021CHPXG3Q==
   dependencies:
     duplexer "^0.1.2"
+
+hamt_plus@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/hamt_plus/-/hamt_plus-1.0.2.tgz#e21c252968c7e33b20f6a1b094cd85787a265601"
+  integrity sha1-4hwlKWjH4zsg9qGwlM2FeHomVgE=
 
 handle-thing@^2.0.0:
   version "2.0.1"
@@ -22480,10 +22490,15 @@ react-focus-lock@^2.1.0:
     use-callback-ref "^1.2.1"
     use-sidecar "^1.0.1"
 
-react-frame-component@^4.1.1, react-frame-component@^4.1.2:
+react-frame-component@^4.1.1:
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/react-frame-component/-/react-frame-component-4.1.3.tgz#64c09dd29574720879c5f43ee36c17d8ae74d4ec"
   integrity sha512-4PurhctiqnmC1F5prPZ+LdsalH7pZ3SFA5xoc0HBe8mSHctdLLt4Cr2WXfXOoajHBYq/yiipp9zOgx+vy8GiEA==
+
+react-frame-component@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/react-frame-component/-/react-frame-component-5.0.0.tgz#8a7e60e7fe7e2b52bfc0854325d63c01d0788510"
+  integrity sha512-JyoPSU6H96sd4l76EUvzB/cNkvhW74OK43A1m7kmgc14QztodV39l9g7DwVgkVeKpSqnpMYhrKcvehHZzfXBGA==
 
 react-helmet-async@^1.0.2, react-helmet-async@^1.0.4, react-helmet-async@^1.0.7:
   version "1.0.7"
@@ -22614,14 +22629,14 @@ react-resize-detector@^4.2.1:
     raf-schd "^4.0.2"
     resize-observer-polyfill "^1.5.1"
 
-react-resize-detector@^5.0.6:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/react-resize-detector/-/react-resize-detector-5.2.0.tgz#992083834432308c551a8251a2c52306d9d16718"
-  integrity sha512-PQAc03J2eyhvaiWgEdQ8+bKbbyGJzLEr70KuivBd1IEmP/iewNakLUMkxm6MWnDqsRPty85pioyg8MvGb0qC8A==
+react-resize-detector@^6.7.1:
+  version "6.7.1"
+  resolved "https://registry.yarnpkg.com/react-resize-detector/-/react-resize-detector-6.7.1.tgz#bbc8269ab814fa3b01f7d4e9c38805b877d08f18"
+  integrity sha512-54l8LWPBIRdtv0I/W/fMkmtgWX0mUIxKKAJKKimihNFueXtHuElDdXDyinQRmV7iku99AoyrSAhkCU/zjFG5+Q==
   dependencies:
-    lodash "^4.17.20"
-    prop-types "^15.7.2"
-    raf-schd "^4.0.2"
+    "@types/resize-observer-browser" "^0.1.5"
+    lodash.debounce "^4.0.8"
+    lodash.throttle "^4.1.1"
     resize-observer-polyfill "^1.5.1"
 
 react-router-dom@^5.2.0:
@@ -23010,10 +23025,12 @@ rechoir@^0.7.0:
   dependencies:
     resolve "^1.9.0"
 
-recoil@^0.0.10:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/recoil/-/recoil-0.0.10.tgz#679ab22306f559f8a63c46fd5ff5241539f9248f"
-  integrity sha512-+9gRqehw3yKETmoZbhSnWu4GO10HDb5xYf1CjLF1oXGK2uT6GX5Lu9mfTXwjxV/jXxEKx8MIRUUbgPxvbJ8SEw==
+recoil@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/recoil/-/recoil-0.3.0.tgz#c01a9b75d4def1368402ff7ff9c3f89ed13a9dd7"
+  integrity sha512-RoffgcFNo8C1i5BR+c+L6e3IgMmkx41dbVFUhNsk2vfdi8pGlqIEVP/ppbm+8tGRwkQA0Kt2RZTN6StIcH+dQw==
+  dependencies:
+    hamt_plus "1.0.2"
 
 recursive-readdir@2.2.1:
   version "2.2.1"

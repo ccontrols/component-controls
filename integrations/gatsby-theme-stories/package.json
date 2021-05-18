@@ -43,7 +43,7 @@
     "@component-controls/routes": "^3.14.0",
     "@component-controls/search-algolia": "^3.14.0",
     "@component-controls/search-fusejs": "^3.14.0",
-    "gatsby-plugin-typescript": "^2.4.24",
+    "gatsby-plugin-typescript": "^3.0.0",
     "react-helmet": "^6.0.0",
     "theme-ui": "^0.8.4"
   },
