@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/blocks",
-  "version": "3.14.2",
+  "version": "3.14.3",
   "description": "Component controls core documentation blocks.",
   "sideEffects": false,
   "main": "dist/index.js",
@@ -32,12 +32,12 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/components": "^3.14.2",
+    "@component-controls/components": "^3.14.3",
     "@component-controls/core": "^3.14.2",
-    "@component-controls/editors": "^3.14.2",
+    "@component-controls/editors": "^3.14.3",
     "@component-controls/render": "^3.14.2",
     "@component-controls/search-algolia": "^3.14.2",
-    "@component-controls/store": "^3.14.2",
+    "@component-controls/store": "^3.14.3",
     "@primer/octicons-react": "^10.0.0",
     "@theme-ui/css": "^0.8.4",
     "ansi_up": "^5.0.1",
@@ -52,7 +52,7 @@
     "theme-ui": "^0.8.4"
   },
   "devDependencies": {
-    "@component-controls/cc-cli": "^3.14.2",
+    "@component-controls/cc-cli": "^3.14.3",
     "@component-controls/ts-markdown-docs": "^3.8.2",
     "@emotion/jest": "^11.3.0",
     "@theme-ui/presets": "^0.6.0-alpha.7",
