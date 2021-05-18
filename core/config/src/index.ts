@@ -63,12 +63,14 @@ export const getConfigurationArg = (
   return argv.config;
 };
 
+let warningIssued: boolean = false;
 export const loadConfig = (
   configPath: string,
 ): ConfigurationResult | undefined => {
   const hasConfigFolder = fs.existsSync(configPath);
-  if (!hasConfigFolder) {
+  if (!hasConfigFolder && !warningIssued) {
     console.warn('configuration folder not found', configPath);
+    warningIssued = true;
   }
   const allFiles = hasConfigFolder ? fs.readdirSync(configPath) : [];
   const buildConfigFile = allFiles.find(file =>
