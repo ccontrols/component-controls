@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/jest-axe-matcher",
-  "version": "3.8.1",
+  "version": "3.14.4",
   "description": "jest accessibility matching utilities with deque axe",
   "keywords": [
     "jest",
