@@ -35,7 +35,7 @@ const IframeWrapper: FC<IframeWrapperProps> = ({
 `,
 }) => {
   const [size, setSize] = useState<
-    { height: number; width: number } | undefined
+    { height?: number; width?: number } | undefined
   >();
   return (
     <Iframe
