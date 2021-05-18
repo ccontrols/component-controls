@@ -330,6 +330,7 @@ export const theme: ControlsTheme = {
     summary: {
       fontSize: 3,
       my: 3,
+      cursor: 'pointer',
     },
     ol: {
       fontSize: 3,
