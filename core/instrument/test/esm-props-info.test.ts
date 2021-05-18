@@ -45,12 +45,6 @@ describe('esm-props-info', () => {
             importedName: 'FC',
           },
         ],
-        'react-table': [
-          {
-            name: 'Column',
-            importedName: 'Column',
-          },
-        ],
         '@component-controls/store': [
           {
             name: 'StoryContextProvider',
