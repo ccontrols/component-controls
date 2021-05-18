@@ -16,7 +16,7 @@
     "@component-controls/viewport-plugin": "^3.14.2",
     "@storybook/addon-docs": "^6.2.0-beta.10",
     "@storybook/react": "^6.2.0-beta.10",
-    "babel-loader": "^8.0.6",
+    "babel-loader": "^8.2.2",
     "babel-preset-react-app": "^10.0.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",

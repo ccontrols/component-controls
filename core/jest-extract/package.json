@@ -43,8 +43,8 @@
     "ts-jest": "^26.5.5"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.13.10",
-    "@babel/preset-react": "^7.12.13",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-react": "^7.13.13",
     "@jest/reporters": "^26.0.10",
     "@jest/test-result": "^26.0.10",
     "@types/jest": "^26.0.10",
