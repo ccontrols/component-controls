@@ -38,7 +38,7 @@ For our development process, we recommend organizing each component in their own
 In the screenshot above, you can see a component `VariantButton.tsx` in its folder alongside its various associated files:
 
 - `VariantButton.data.ts` - some generated data-driven testing data.
-- `VariantButton.stories.tsx` - the component documentation (or stories).
+- `VariantButton.docs.tsx` - the component documentation (or stories).
 - `VariantButton.test.ts` - the generated jest snapshot and accessibility tests
 - the `design-assets` - this folder contains various assets associated with the component's documentation, such as images and markdown notes.
 - the `__snapshots__` - this folder contains the saved output of the snapshot tests.
@@ -310,13 +310,26 @@ You can already see a lot of information on your new component that was automati
 
 ## Automated testing
 
+### Add cc-cli
+
+the component-controls cc-cli package can be used to generate automatically tests and data for your react components
+
+```sh
+yarn add @component-controls/cc-cli --dev
+```
+
+
 ### Add jest packages
+
+add jest and typescript packages, since we will create our tests with typescript for this tutorial.
 
 ```sh
 yarn add ts-jest @types/jest @testing-library/react --dev
 ```
 
-### Configure jest
+### Configure jest and ts-jest
+
+[jest](https://jestjs.io) can be configured in the project's `package.json` or through a `jest.config.js`, or `jest.config.ts` files.
 
 ```json:title=package.json
 "jest": {
@@ -331,6 +344,8 @@ yarn add ts-jest @types/jest @testing-library/react --dev
 
 ### Testing scripts
 
+add scripts to generate the tests and run the tests
+
 ```json:title=package.json
 "scripts": {
   ...
@@ -341,6 +356,8 @@ yarn add ts-jest @types/jest @testing-library/react --dev
 
 ###  Cofigure typescript
 
+you will need a basic [typescript](https://www.typescriptlang.org) configuration to run the tests with [jest](https://jestjs.io) and [ts-jest](https://kulshekhar.github.io/ts-jest/)
+
 ```json:title=tsconfig.json
 {
   "compilerOptions": {
@@ -349,6 +366,20 @@ yarn add ts-jest @types/jest @testing-library/react --dev
   }
 }
 ```
+
+### Create the tests
+
+```sh
+yarn test:create
+```
+
+### Run the tests
+
+this will execute the tests and create a snapshot file
+```sh
+yarn test
+```
+
 ### Customizing cc-cli templates
 
 You can customize the [cc-cli](/tutorial/testing/jest-snapshots) generated templates.
@@ -465,6 +496,13 @@ To achieve consistent data generation, you can specify the random generator seed
 ```json:title=package.json
 "test:create": "cc-cli -w -g doc -d 5 -s 1122334455",
 ```
+
+you can now re-run the `test:create` script to generate the data and update the test file
+
+```sh
+yarn test:create
+```
+
 ### Review data
 
 Starting the documentation site will display a table with the data rows in the testing page:
