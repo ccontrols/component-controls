@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.14.5](https://github.com/ccontrols/component-controls/compare/v3.14.4...v3.14.5) (2021-05-19)
+
+
+### Bug Fixes
+
+* enforce cjs generation for typescript require ([6a59d17](https://github.com/ccontrols/component-controls/commit/6a59d17a5cbe99188b1a58469a1432c2802130f3))
+* mdx summary cursor ([6051d4e](https://github.com/ccontrols/component-controls/commit/6051d4e6df468e63cafbf9df79e198c7fef61433))
+* revert config ts type ([450fe7d](https://github.com/ccontrols/component-controls/commit/450fe7d8f9bef271db5851ad83aff42db3586edb))
+* ts file import generate cjs for jest ([b01e632](https://github.com/ccontrols/component-controls/commit/b01e6329a1cc248b2c3c0fc8e2ffffdcf2441b34))
+
+
+
+
+
 ## [3.14.4](https://github.com/ccontrols/component-controls/compare/v3.14.3...v3.14.4) (2021-05-18)
 
 **Note:** Version bump only for package component-controls

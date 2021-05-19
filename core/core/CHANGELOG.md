@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.14.5](https://github.com/ccontrols/component-controls/compare/v3.14.4...v3.14.5) (2021-05-19)
+
+
+### Bug Fixes
+
+* enforce cjs generation for typescript require ([6a59d17](https://github.com/ccontrols/component-controls/commit/6a59d17a5cbe99188b1a58469a1432c2802130f3))
+* ts file import generate cjs for jest ([b01e632](https://github.com/ccontrols/component-controls/commit/b01e6329a1cc248b2c3c0fc8e2ffffdcf2441b34))
+
+
+
+
+
 ## [3.14.2](https://github.com/ccontrols/component-controls/compare/v3.14.1...v3.14.2) (2021-05-18)
 
 **Note:** Version bump only for package @component-controls/core
