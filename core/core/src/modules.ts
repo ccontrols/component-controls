@@ -39,7 +39,7 @@ export const dynamicRequire = (filePath: string): any => {
       config: {
         compilerOptions: {
           jsx: ts.JsxEmit.ReactJSX,
-          module: ts.ModuleKind.ES2015,
+          module: ts.ModuleKind.CommonJS,
         },
       },
     };
