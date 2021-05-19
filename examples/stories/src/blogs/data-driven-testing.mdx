@@ -23,9 +23,11 @@ import generateData from './media/generate-random-data.jpg';
 
 ## Component driven development
 
-[component-driven development (or CDD)](https://itnext.io/a-guide-to-component-driven-development-cdd-1516f65d8b55) means embracing components as the new primitive of the web, and tapping into their modular power to achieve better speed, scalability, and standardization for web application development.
+An old/new concept nowadays is [component-driven development (or CDD)](https://itnext.io/a-guide-to-component-driven-development-cdd-1516f65d8b55) and the broader [functional programming](https://en.wikipedia.org/wiki/Functional_programming). Both of those concepts are intended to encapsulate a component/function without side effects and use them as the basic building blocks of web applications. 
 
-For our development process, we suggest organizing each component in their own folder:
+This article focuses on components and their related assets, and a future article will go into documenting and testing pure functions.
+
+For our development process, we recommend organizing each component in their own folder:
 
 <img
   alt="component folder"
@@ -46,6 +48,72 @@ In the screenshot above, you can see a component `VariantButton.tsx` in its fold
 Adding tests for each of your components and the amount of work involved oftentimes will stop you short of achieving a high percentage of test coverage.
 
 In this tutorial, we will show you step-by-step how to start a [react](https://reactjs.org) component library and automatically create snapshot and accessibility tests and the associated data-driven testing tables of data.
+
+## The final projects
+
+If you arent into reading the entire article to the end, you can jump straight to the final projects:
+
+<table>
+  <thead>
+    <tr>
+      <th>
+        build
+      </th>
+      <th>
+        live
+      </th>
+      <th>
+        source
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a href="https://www.gatsbyjs.com">gatsby</a>
+      </td>
+      <td>
+        <a href="https://gatsby-controls-starter.netlify.app/docs/variantbutton--overview">live app</a>
+      </td>
+      <td>
+        <a href="https://github.com/ccontrols/gatsby-controls-starter">github</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://vercel.com">nextjs</a>
+      </td>
+      <td>
+        <a href="https://nextjs-controls-starter.netlify.app/docs/variantbutton--overview">live app</a>
+      </td>
+      <td>
+        <a href="https://github.com/ccontrols/nextjs-controls-starter">github</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://webpack.js.org">webpack 5</a>
+      </td>
+      <td>
+        <a href="https://webpack-5-controls-starter.netlify.app/docs/variantbutton--overview">live app</a>
+      </td>
+      <td>
+        <a href="https://github.com/ccontrols/webpack-5-controls-starter">github</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://webpack.js.org">webpack 4</a>
+      </td>
+      <td>
+        <a href="https://webpack-controls-starter.netlify.app/docs/variantbutton--overview">live app</a>
+      </td>
+      <td>
+        <a href="https://github.com/ccontrols/webpack-controls-starter">github</a>
+      </td>
+    </tr>
+  </tbody>
+</table>  
 
 ## Getting started with gatsby
 
