@@ -39,7 +39,6 @@ export const dynamicRequire = (filePath: string): any => {
       config: {
         compilerOptions: {
           jsx: ts.JsxEmit.ReactJSX,
-          module: ts.ModuleKind.CommonJS,
         },
       },
     };
@@ -76,6 +75,7 @@ export const dynamicRequire = (filePath: string): any => {
     }
     try {
       config.config.compilerOptions.outDir = tmpFolder;
+      config.config.compilerOptions.module = ts.ModuleKind.CommonJS;
       // moduleResolution option not working
       delete config.config.compilerOptions['moduleResolution'];
       delete config.config.compilerOptions['noEmit'];
@@ -93,7 +93,8 @@ export const dynamicRequire = (filePath: string): any => {
         ts.sys.writeFile(fileName, data);
       });
       try {
-        const result = esmRequire(jsFilePath);
+        //we are forcing module: commonjs
+        const result = require(jsFilePath);
         return result;
       } catch (e) {
         error(filePath, e);
