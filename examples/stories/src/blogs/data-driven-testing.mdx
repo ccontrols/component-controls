@@ -4,7 +4,7 @@ type: blog
 date: 2021-05-19
 author: atanasster
 route: /blogs/data-driven-testing
-description: Step by step tutorial on how to generate and use automatic data-driven tests for your react components.
+description: Step-by-step tutorial on how to generate and use automatic data-driven tests for your react components.
 tags:
   - testing
   - components
@@ -14,10 +14,17 @@ status: draft
 
 import testResults from './media/jest-test-results.jpg';
 import componentAssetsImg from './media/component-assets.jpg';
+import componentUI from './media/component-centric-ui.jpg';
+import componentTests from './media/component-tests.jpg';
+import testError from './media/component-test-error.jpg';
+import dataTesting from './media/data-driven-testing.jpg';
+import dataChange from './media/data-driven-change-data.jpg';
+import generateData from './media/generate-random-data.jpg';
+
 
 ## Component driven development
 
-[component-driven developmen (or CDD)](https://itnext.io/a-guide-to-component-driven-development-cdd-1516f65d8b55) means embracing components as the new primitive of the web, and tapping into their modular power to achieve better speed, scalability, and standardization for web application development.
+[component-driven development (or CDD)](https://itnext.io/a-guide-to-component-driven-development-cdd-1516f65d8b55) means embracing components as the new primitive of the web, and tapping into their modular power to achieve better speed, scalability, and standardization for web application development.
 
 For our development process, we suggest organizing each component in their own folder:
 
@@ -27,56 +34,397 @@ For our development process, we suggest organizing each component in their own f
   src={componentAssetsImg}
 />
 
-In the screenshot above, you can see a component `VariantButton.tsx` in its own folder alongside its various assets
+In the screenshot above, you can see a component `VariantButton.tsx` in its folder alongside its various associated files:
 
-- `VariantButton.data.ts` contains the generated data-driven testing data.
-- `VariantButton.stories.tsx` contains the component documentation (or stories) file.
-- `VariantButton.test.ts` contains the generated jest snapshot and accessibility tests
-- the `design-assets` folder contains various assets associated with the copmponent's documentation, such as images and markdown notes.
-- the `__snapshots__` folder contains the saved output of the snapshot testing.
+- `VariantButton.data.ts` - some generated data-driven testing data.
+- `VariantButton.stories.tsx` - the component documentation (or stories).
+- `VariantButton.test.ts` - the generated jest snapshot and accessibility tests
+- the `design-assets` - this folder contains various assets associated with the component's documentation, such as images and markdown notes.
+- the `__snapshots__` - this folder contains the saved output of the snapshot tests.
 
 ## More testing with less effort
 
-Adding tests for each of your components and the amount of work involved oftentimes will stop you short of achieving a high percentage of tests coverage.
+Adding tests for each of your components and the amount of work involved oftentimes will stop you short of achieving a high percentage of test coverage.
 
-In this tutorial we will show you step-by-step how to automatically generate components tests and the associated data-driven testing tables of data.
+In this tutorial, we will show you step-by-step how to start a [react](https://reactjs.org) component library and automatically create snapshot and accessibility tests and the associated data-driven testing tables of data.
 
-## Getting started
+## Getting started with gatsby
 
-Create a new documentation project
+### 1. Initialize the project
+
+```sh
+mkdir react-data-testing && cd react-data-testing && yarn init -y
+```
+
+### 2. Add dependencies
+
+```sh
+yarn add gatsby react react-dom @component-controls/gatsby-theme-stories
+```
+
+### 3. Configure gatsby
+
+create a `gatsby-config.js` file in your project's home directory:
+
+```js:title=gatsby-config.js
+module.exports = {
+  plugins: [
+    {
+      resolve: '@component-controls/gatsby-theme-stories',
+      options: {
+        configPath: '.config',
+      },
+    },
+  ],
+};
+```
+
+### 4. Configure documentation site
+
+create a folder `.config` and add a `buildtime.ts` configuration file inside it to specify the location of your documentation files:
+
+```js:title=.config/buildtime.ts
+import { BuildConfiguration } from "@component-controls/core";
+
+const config: BuildConfiguration = {
+  stories: ["../src/**/*.@(docs.tsx|mdx)"],
+};
+
+export default config;
+```
+
+### 5. Add scripts
+
+```json:title=package.json
+"scripts": {
+  "build": "gatsby build",
+  "start": "gatsby develop"
+},
+```
+
+### 6. Create your first component
+
+Create a new folder `src/components/VariantButton` and add a file `VariantButton.tsx` inside it.
+
+<details>
+  <summary>VariantButton.tsx</summary>
+
+```jsx:title=src/components/VariantButton/VariantButton.tsx
+import React, { FC } from 'react';
+
+type ButtonVariant =
+  | 'primary'
+  | 'accent'
+  | 'disabled'
+  | 'success'
+  | 'warning'
+  | 'error';
+
+const variant_colors: Record<ButtonVariant, string> = {
+  primary: '#F2F2F2',
+  accent: '#F2F2F2',
+  disabled: '#828282',
+  success: '#F2F2F2',
+  warning: '#4F4F4F',
+  error: '#F2F2F2',
+};
+
+const variant_backgrounds: Record<ButtonVariant, string> = {
+  primary: '#2F80ED',
+  accent: '#9B51E0',
+  disabled: '#E0E0E0',
+  success: '#219653',
+  warning: '#F2C94C',
+  error: '#EB5757',
+};
+
+export interface VariantButtonProps {
+  /**
+   *  button label text
+   */
+  text: string;
+
+  /**
+   *  variant kind
+   */
+  variant?: ButtonVariant;
+
+}
+
+/**
+ * Button with variants
+ */
+export const VariantButton: FC<VariantButtonProps> = ({
+  text,
+  variant = 'primary',
+}) => {
+  return (
+    <button
+      disabled={variant === 'disabled' ? true : undefined}
+      style={{
+        color: variant_colors[variant],
+        backgroundColor: variant_backgrounds[variant],
+        borderRadius: 8,
+        border: `1px solid #000000`,
+        display: 'flex',
+        alignItems: 'center',
+      }}
+    >
+      <div data-testid="label" style={{ padding: '5px 10px' }}>
+        {text}
+      </div>
+    </button>
+  );
+};
+
+```
+</details>
+
+
+### 7. Create a documentation (story) file for the component
+
+<details>
+  <summary>VariantButton.docs.tsx</summary>
+
+```jsx:title=src/components/VariantButton/VariantButton.docs.tsx
+import React from 'react';
+import { Document, Example } from '@component-controls/core';
+import { VariantButton, VariantButtonProps } from './VariantButton';
+
+export default {
+  title: 'VariantButton',
+  component: VariantButton,
+} as Document;
+
+export const overview: Example<VariantButtonProps> = props => (
+  <VariantButton {...props} />
+);
+
+overview.controls = {
+  text: 'Button',
+};
+```
+</details>
+
+### 8. Further reading:
 
 [getting started with gatsby](/tutorial/getting-started/gatsby)
+
 [getting started with nextjs](/tutorial/getting-started/nextjs)
+
 [getting started with webpack/react-router](/tutorial/getting-started/webpack)
 
-## Install cc-cli
+## Component documentation page
 
-## Generate tests
+you can now fire up your documentation site
 
-- choose target (cjs, esm or ts)
-- choose test renderer (rtr, rtl or enzyme)
-- chose level
+```sh
+yarn start
+```
 
-1. store
-2. document
-3. story
-   click example
+the following documentation page was automatically generated
+
+<img
+  alt="component documentation"
+  title="component documentation page"
+  src={componentUI}
+/>
+
+You can already see a lot of information on your new component that was automatically generated:
+
+1. Source code metrics (loc, comments, todos)
+2. Component description and package name
+3. Sample code for users to import your component
+4. A component playground, where you can see the source code
+5. Interactive props to play with your component and see the visual rendering
+6. Extenranl (and internal) dependecnies
+7. JSX rendering tree
+
+
+## Automated testing
+
+### Add jest packages
+
+```sh
+yarn add ts-jest @types/jest @testing-library/react --dev
+```
+
+### Configure jest
+
+```json:title=package.json
+"jest": {
+  "preset": "ts-jest",
+  "globals": {
+    "ts-jest": {
+      "isolatedModules": true
+    }
+  }
+}
+```
+
+### Testing scripts
+
+```json:title=package.json
+"scripts": {
+  ...
+  "test:create": "cc-cli -w -g doc",
+  "test": "yarn jest"
+},
+```
+
+###  Cofigure typescript
+
+```json:title=tsconfig.json
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "jsx": "react"
+  }
+}
+```
+### Customizing cc-cli templates
+
+You can customize the [cc-cli](/tutorial/testing/jest-snapshots) generated templates.
+
+
+1. Choose the target (cjs, esm, or ts)
+
+
+```json:title=package.json
+"test:create": "cc-cli -w -g doc -f cjs",
+```
+
+
+2. Choose test renderer (rtr, rtl, or enzyme)
+
+```json:title=package.json
+"test:create": "cc-cli -w -g doc -r enzyme",
+```
+
+3. Chose the template level
+
+```json:title=package.json
+"test:create": "cc-cli -w -g store",
+```
+
+```json:title=package.json
+"test:create": "cc-cli -w -g story",
+```
+
+
+4. Customize the generated tests
+
+- install `@testing-library/jest-dom` custom matchers
+
+```sh
+yarn add --dev @testing-library/jest-dom
+```
+
+- replace the generic snapshot test with custom matchers
+
+```js:title=src/components/VariantButton/VariantButton.test.tsx
+...
+import '@testing-library/jest-dom';
+...
+it('custom test', () => {
+  const { getByTestId, container } = render(rendered);
+  expect(getByTestId("label")).toHaveTextContent("Button");
+  expect(container.children[0]).toHaveStyle("background: #2F80ED");
+});
+```    
 
 ## The tests UI
 
-- summary at top
-- test results
-- test coverage
+Starting the documentation site at this point should give you a set of test results:
+
+<img
+  alt="component tests"
+  title="component tests page"
+  src={componentTests}
+/>
+
+You can notice the following test-related information
+
+1. Test summary (passed and failed), as well as the lowest coverage percentage
+2. A table with the snapshot and accessibility tests results
+3. A breakdown of the component files test coverage
+
+## Test coverage
+
+From the coverage report, you can notice that only one of the branches was covered by our tests - in this case, we never tested for this condition `disabled={variant === 'disabled' ? true : undefined}`. 
+We can correct this by adding a new example with the `variant="disabled"` property.
+
+```js:title=src/components/VariantButton/VariantButton.docs.tsx
+export const disabled: Example = () => (
+  <VariantButton variant="disabled" text="Disabled" />
+);
+```
+
+The tests will be re-run and the branch coverage increase to a full 100%
 
 ## Test errors
 
-- introduce error
-- delete snaphot
-- add new story to increase coverage
+The see the snapshot testing in effect, you can modify VariantButton component:
 
-## Data driven testing
+```js:title=src/components/VariantButton/VariantButton.tsx
+<div data-testid="label" style={{ padding: '15px 10px' }}>
+  {text}
+</div>
+```
+The tests will be re-run automatically and the test page will now display an error to help you validate the introduced changes:
 
-- create data files
-- review UI and select data
-- rename data row
-- randomize controls and copy paste into file
+<img
+  alt="snapshot error"
+  title="snapshot error diff"
+  src={testError}
+/>
+
+
+To fix the tests, you can either delete the snapshot file (this will automatically re-run the test and generate a new snapshot) or revert the change.
+
+## Data-driven testing
+
+### Generate data
+Data-driven testing is a testing method, where you create a single test and execute it multiple times by using a table that contains rows of data.
+
+To create automatically data-driven testing data files, you can use cc-cli (with the `-d` option and specify the number of rows to generate):
+
+```json:title=package.json
+"test:create": "cc-cli -w -g doc -d 5",
+```
+
+To achieve consistent data generation, you can specify the random generator seed with the `-s` parameter:
+
+```json:title=package.json
+"test:create": "cc-cli -w -g doc -d 5 -s 1122334455",
+```
+### Review data
+
+Starting the documentation site will display a table with the data rows in the testing page:
+
+<img
+  alt="data-driven testing"
+  title="data-driven testing UI"
+  src={dataTesting}
+/>
+
+### Manually edit the data
+
+You can manually edit the data - for example, change the generated random values, or rename a row id.
+
+<img
+  alt="edit data"
+  title="edit data in your editor"
+  src={dataChange}
+/>
+
+
+### Generate new random data
+
+You can also use the randomize function in the controls table and then copy/paste the data into the data file.
+
+<img
+  alt="generate random data"
+  title="generate random data"
+  src={generateData}
+/>
