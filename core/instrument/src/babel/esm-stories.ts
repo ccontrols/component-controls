@@ -40,17 +40,24 @@ export const extractCSFStories = (
   traverse(ast, {
     ExportDefaultDeclaration: (path: any) => {
       const { declaration } = path.node;
-      const attributes = extractAttributes(declaration);
-      const template = declaration.expression?.properties.find(
-        (prop: any) =>
-          prop.key?.name === 'template' &&
-          prop.value?.type === 'ArrowFunctionExpression',
-      );
+      let attributes: ReturnType<typeof extractAttributes>;
+      let template: any;
+      if (declaration.type === 'Identifier') {
+        attributes = { ...locals[declaration.name] };
+        delete attributes['id'];
+        delete attributes['name'];
+      } else {
+        attributes = extractAttributes(declaration);
+        template = declaration.expression?.properties.find(
+          (prop: any) =>
+            prop.key?.name === 'template' &&
+            prop.value?.type === 'ArrowFunctionExpression',
+        );
+      }
       const { title: docTitle, name } = attributes || {};
       if (template) {
         delete attributes.template;
       }
-
       const title = docTitle || name;
       if (typeof title === 'string') {
         const attrComponents = componentsFromParams(attributes);
@@ -116,7 +123,6 @@ export const extractCSFStories = (
     },
     VariableDeclaration: (path: any) => {
       const story = extractVarFunction(
-        ast,
         _options,
         { source, filePath },
         path,
@@ -142,17 +148,23 @@ export const extractCSFStories = (
         const { declarations } = declaration;
         if (declarations) {
           if (Array.isArray(declarations) && declarations.length > 0) {
-            const story = extractFunction(
-              path as NodePath,
-              declarations[0],
-              declarations[0].id.name,
-            );
-            if (story) {
-              const name = story.name;
-              store.stories[name] = {
-                ...story,
-                ...globals[name],
-              };
+            const declaration = declarations[0];
+            if (
+              declaration.init.type !== 'ObjectExpression' ||
+              store.doc?.template
+            ) {
+              const story = extractFunction(
+                path as NodePath,
+                declaration,
+                declaration.id.name,
+              );
+              if (story) {
+                const name = story.name;
+                store.stories[name] = {
+                  ...story,
+                  ...globals[name],
+                };
+              }
             }
           }
         } else {

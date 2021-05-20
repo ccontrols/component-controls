@@ -1,6 +1,7 @@
 import { Story, Example } from '@component-controls/core';
 import traverse, { NodePath } from '@babel/traverse';
-import { File, FunctionDeclaration, VariableDeclarator } from '@babel/types';
+import { FunctionDeclaration, VariableDeclarator } from '@babel/types';
+import { extractAttributes } from './extract-attributes';
 import { extractFunctionParameters } from './extract-function-parameters';
 import { followStoryImport } from './follow-imports';
 import { sourceLocation } from '../misc/source-location';
@@ -37,16 +38,17 @@ export const extractFunction = (
         );
       }
       case 'ObjectExpression': {
+        const attributes = extractAttributes(declaration.init);
+        const story: Story = {
+          name,
+          id: name,
+          ...attributes,
+        };
         if (template) {
-          const story: Story = {
-            name,
-            id: name,
-            loc: template.loc,
-            arguments: template.arguments,
-          };
-          return story;
+          story.loc = template.loc;
+          story.arguments = template.arguments;
         }
-        break;
+        return story;
       }
       case 'CallExpression': {
         //template.bind
@@ -81,7 +83,6 @@ export const extractFunction = (
 };
 
 export const extractVarFunction = (
-  ast: File,
   _options: InstrumentOptions,
   { source, filePath }: { source: string; filePath: string },
   path: any,

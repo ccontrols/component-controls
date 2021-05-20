@@ -4,6 +4,15 @@ const createTest = (fileName: string, callback: TestCallback) =>
   fixtureToTest(['esm', 'doc'], fileName, callback);
 
 describe('esm-doc', () => {
+  createTest('default-export-const.ts', parsed => {
+    expect(parsed).toMatchObject({
+      doc: {
+        title: 'Story',
+        component: 'ControlsTable',
+      },
+    });
+  });
+
   createTest('title-and-parameters.js', parsed => {
     expect(parsed).toMatchObject({
       doc: {

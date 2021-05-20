@@ -205,7 +205,6 @@ export const extractMDXStories: (
     },
     VariableDeclaration: (path: any) => {
       const story = extractVarFunction(
-        ast,
         _options,
         { source, filePath },
         path,
