@@ -174,11 +174,37 @@ export const rowSelect: Example = () => {
   );
 };
 
-export const pagination: Example<TablePaginationProps> = props => {
+export const pagination: Example<TablePaginationProps> = ({
+  totalCountVisible,
+  totalCountTemplate,
+  pageIndex,
+  pageSize,
+  pageTemplate,
+  pageVisible,
+  pageSizeTemplate,
+  pageSizeVisible,
+  goToPageVisible,
+  goToPageTemplate,
+}) => {
   const data = useMemo(mockDataGenerator, []);
   return (
     <ThemeProvider>
-      <Table<DataType> pagination={props} columns={columns} data={data} />
+      <Table<DataType>
+        pagination={{
+          totalCountVisible,
+          totalCountTemplate,
+          pageIndex,
+          pageSize,
+          pageTemplate,
+          pageVisible,
+          pageSizeTemplate,
+          pageSizeVisible,
+          goToPageVisible,
+          goToPageTemplate,
+        }}
+        columns={columns}
+        data={data}
+      />
     </ThemeProvider>
   );
 };
