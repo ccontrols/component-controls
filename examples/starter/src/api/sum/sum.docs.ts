@@ -2,7 +2,7 @@ import { sum } from './sum';
 
 const doc = {
   title: 'Library/api/sum',
-  order: 1,
+  order: 3,
   component: sum,
 };
 

@@ -188,7 +188,6 @@ describe('test draft', () => {
     expect(store.components).toMatchObject({
       '65aa3f665b0cda214f97cbe81c526f01': {
         name: 'Spinner',
-        from: './Spinner',
         externalDependencies: {
           react: [
             {
@@ -642,7 +641,7 @@ describe('test draft', () => {
       },
       bundleName: 'component-controls.js',
       cssFileName: undefined,
-      stories: ['../src/docs/*.mdx', '../src/**/*.docs.@(tsx|jsx)'],
+      stories: ['../src/docs/*.mdx', '../src/**/*.docs.@(tsx|jsx|ts|js)'],
       instrument: {
         components: {
           package: {

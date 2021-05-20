@@ -4,7 +4,7 @@ import { Spinner } from './Spinner';
 
 const doc = {
   title: 'Library/Components/Spinner',
-  order: 1,
+  order: 2,
   component: Spinner,
 };
 
