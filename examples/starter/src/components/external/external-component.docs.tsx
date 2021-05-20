@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'theme-ui';
 
 export default {
-  title: 'Library/Components/Button',
+  title: 'Library/Components/External',
   order: 2,
   component: Button,
 };
