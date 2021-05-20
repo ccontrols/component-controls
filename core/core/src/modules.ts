@@ -93,6 +93,7 @@ export const dynamicRequire = (filePath: string): any => {
         ts.sys.writeFile(fileName, data);
       });
       try {
+        delete require.cache[jsFilePath];
         //we are forcing module: commonjs
         const result = require(jsFilePath);
         return result;
