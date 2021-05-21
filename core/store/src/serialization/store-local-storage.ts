@@ -57,9 +57,7 @@ export const readStore = (stories: Stories): Store => {
       ...newStore,
       stories: Object.keys(newStore.stories).reduce((acc, storyId) => {
         const story: Story = newStore.stories[storyId];
-        const renderFn = stories[storyId]
-          ? stories[storyId].renderFn
-          : story.renderFn;
+        const renderFn = stories[storyId]?.storyFn || story.storyFn;
         return { ...acc, [storyId]: { ...story, renderFn } };
       }, {}),
     };

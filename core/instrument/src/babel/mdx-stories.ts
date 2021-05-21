@@ -180,7 +180,7 @@ export const extractMDXStories: (
             const { title: docTitle, name } = attributes || {};
             const title = docTitle || name;
             if (title) {
-              const doc: Document = {
+              const doc: Partial<Document> = {
                 componentsLookup: {},
                 ...attributes,
                 title,
@@ -192,7 +192,7 @@ export const extractMDXStories: (
               if (component !== undefined) {
                 doc.component = component;
               }
-              store.doc = doc;
+              store.doc = doc as Document;
             }
             break;
           }

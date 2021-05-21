@@ -139,8 +139,8 @@ export const mapDynamicStories = (
   doc: Document,
   building?: boolean,
 ): Story[] => {
-  if (story.dynamic && typeof story.renderFn === 'function') {
-    const stories = story.renderFn(doc);
+  if (story.dynamic && typeof story.storyFn === 'function') {
+    const stories = story.storyFn(doc);
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { id, name, ...storyProps } = story;
     return Array.isArray(stories)

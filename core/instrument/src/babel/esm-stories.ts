@@ -65,7 +65,7 @@ export const extractCSFStories = (
           (acc, componentName) => ({ ...acc, [componentName]: undefined }),
           components,
         );
-        const doc: Document = {
+        const doc: Partial<Document> = {
           ...attributes,
           title,
         };
@@ -79,7 +79,7 @@ export const extractCSFStories = (
             template.key.name,
           ) as Document['template'];
         }
-        store.doc = doc;
+        store.doc = doc as Document;
       }
     },
     AssignmentExpression: (path: any) => {

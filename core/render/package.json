@@ -9,6 +9,8 @@
     "dist/",
     "package.json",
     "README.md",
+    "json.js",
+    "json.d.ts",
     "react.js",
     "react.d.ts"
   ],

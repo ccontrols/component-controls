@@ -56,6 +56,7 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
             fullPage: page.fullPage,
             navSidebar: page.navSidebar,
           };
+          storeDoc.renderFn = storeDoc.renderFn || globalStore.config.renderFn;
           //storybook compat
           storeDoc.controls = storeDoc.controls || (storeDoc as any).args;
           const doc: Document = deepMerge<Document>(

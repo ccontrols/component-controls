@@ -93,13 +93,12 @@ export const StoryRender: FC<StoryRenderProps & StoryWrapperProps> = forwardRef(
   ) {
     const store = useStore();
     const options = useExternalOptions();
-    const rendered = store.config.renderFn
-      ? store.config.renderFn({
-          story,
-          doc: story.doc ? store.docs[story.doc] : undefined,
-          options,
-        })
-      : null;
+    const doc = store.docs[story.doc as string];
+    const rendered = doc.renderFn({
+      story,
+      doc,
+      options,
+    });
     return (
       <Box
         data-testid={NAME}

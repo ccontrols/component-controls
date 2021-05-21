@@ -14,7 +14,7 @@ describe('rtl', () => {
     const rendered = renderReact({
       story: {
         name: 'test',
-        renderFn: Test,
+        storyFn: Test,
       },
     });
     const { asFragment, getByTestId } = rtlRender(rendered);

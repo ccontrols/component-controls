@@ -46,7 +46,7 @@ export function renderExample<Props = any>({
   }
   const story = example as Story;
   if (typeof example === 'function') {
-    story.renderFn = example as StoryRenderFn;
+    story.storyFn = example as StoryRenderFn;
   }
   Object.assign(
     story,
