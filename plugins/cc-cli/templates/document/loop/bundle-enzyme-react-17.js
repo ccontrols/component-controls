@@ -6,9 +6,9 @@
         const story = store.stories[storyId];
         describe(story.name, () => {
           {{? it.data }}
-          const runTests = (values{{? it.format === 'ts' }}?: Parameters<typeof renderFn>['values']{{?}}) => {
+          const runTests = (values{{? it.format === 'ts' }}?: Parameters<typeof doc['renderFn']>['values']{{?}}) => {
           {{?}}  
-            const rendered = renderFn({ story, doc{{? it.data }}, values{{?}} });
+            const rendered = doc.renderFn({ story, doc{{? it.data }}, values{{?}} });
             it('snapshot', () => {
               const component = mount(rendered);
               expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();

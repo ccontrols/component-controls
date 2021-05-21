@@ -1,5 +1,5 @@
 {{? it.bundle }}
-const rendered = renderFn({ story, doc{{? it.data && it.data[story.id] }}, values{{?}} });
+const rendered = doc.renderFn({ story, doc{{? it.data && it.data[story.id] }}, values{{?}} });
 {{?? true }}
 const rendered = renderExample({
   example,

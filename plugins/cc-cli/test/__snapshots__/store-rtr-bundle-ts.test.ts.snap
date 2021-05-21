@@ -13,7 +13,7 @@ describe('component-controls generated', () => {
   const store = loadStore(
     require(path.resolve(__dirname, './bundle/component-controls.js')),
   );
-  const renderFn = store.config.renderFn;
+
   Object.keys(store.docs).forEach(docId => {
     const doc = store.docs[docId];
     if (doc.stories && doc.stories.length) {
@@ -24,7 +24,7 @@ describe('component-controls generated', () => {
           describe(story.name, () => {
             let rendered: ReturnType<typeof renderExample> = undefined as any;
             act(() => {
-              rendered = renderFn({ story, doc });
+              rendered = doc.renderFn({ story, doc });
             });
             if (!rendered) {
               renderErr();

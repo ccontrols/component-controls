@@ -1,4 +1,4 @@
-import { Example, FrameworkRenderFn } from '@component-controls/core';
+import { Example } from '@component-controls/core';
 import { render as jsonRender } from '@component-controls/render/json';
 import { sum } from './sum';
 
