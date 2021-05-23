@@ -11,7 +11,10 @@ keywords:
   - testing
 ---
 import { jsx, Grid, Box, Heading, Button, Card, Divider, Image } from 'theme-ui';
+import { SearchIcon } from '@primer/octicons-react';
 import { Link } from '@component-controls/components';
+import { VariantButton } from '../stories/VariantButton/VariantButton';
+import { ButtonOverview } from './components/ButtonOverview';
 import documentationImg from './media/documentation.jpg';
 import controlsImg from './media/controls.jpg';
 import cmsImg from './media/cms.jpg';
@@ -36,6 +39,30 @@ export const BoxItem = ({ children, title, action, ...rest }) => (
     {action && <Box sx={{ pb: 3, overflow: 'hidden' }}>{action}</Box>}
   </Card>  
 );
+
+<Box sx={{ display: 'flex', flexDirection: ['column', 'column', 'column', 'row'], pt: 5, pb: 4, alignItems: 'center', justifyContent: 'space-between' }}>
+  <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center',  pl: [0, 0, 0, 5], pb: 2, width: '33%' }} >
+    <Heading as="h2" sx={{ fontSize: 7, fontWeight: 'heading', py: 3, textAlign: 'center' }}>Blazing-fast documentation sites</Heading>
+    <Box as="p" sx={{ py: 3, textAlign: 'center', fontSize: 3, fontWeight: 'heading', maxWidth: 600 }}>
+      From <Link aria-label="create documents" href="/tutorial/reference/document">documentation</Link> and <Link aria-label="create stories" href="/tutorial/reference/story">stories</Link> for your react components, all the way to a full-featured CMS with blogs, tutorials, tags, authors and full-text search into a blazing-fast platform.
+    </Box>
+  </Box>
+  <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center',  px: [0, 0, 0, 5], pb: 2, width: '66%' }} >
+    <Box sx={{ 
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'baseline',
+      width: '830px',
+      height: '517px',
+      background: 'radial-gradient(66.83% 129.18% at 52.19% 47.39%, #5D6BC4 0%, #FFFFFF 100%)',
+      borderRadius: '20px',
+    }}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}> 
+        <ButtonOverview />
+      </Box>
+    </Box>
+  </Box>  
+</Box>  
 
 <Box sx={{ display: 'flex', flexDirection: 'column', pt: 5, pb: 4, alignItems: 'center', justifyContent: 'space-between' }}>
   <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center',  px: [2, 2, 6], pb: 2 }} >

@@ -11,7 +11,6 @@ import {
 } from '@component-controls/core';
 import { render as reactRender } from '@component-controls/render/react';
 import ClassicPage from '@component-controls/pages/ClassicPage';
-import { Donut } from '@component-controls/components';
 import { MDXContent } from './MDXStory';
 
 import img_example from './image_example.jpg';
@@ -827,8 +826,18 @@ Markdown **descripton** for *component*.
       source: "() => 'hello'",
     },
     'blocks-core-story-plain--controls': {
-      renderFn: (): ReactElement => (
-        <Donut value={1 / 2} aria-label="example donut graphic" />
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      renderFn: ({
+        color,
+        children,
+      }: {
+        color: string;
+        children: string;
+      }): ReactElement => (
+        <Button aria-label="example button" style={{ backgroundColor: color }}>
+          {children}
+        </Button>
       ),
       id: 'blocks-core-story-plain--controls',
       rawId: 'plain--controls',
@@ -836,15 +845,15 @@ Markdown **descripton** for *component*.
       name: 'controls',
       component: 'Control',
       controls: {
-        name: {
+        children: {
           type: ControlTypes.TEXT,
           label: 'Name',
-          value: 'Mark',
+          value: 'Button',
         },
-        age: {
-          type: ControlTypes.NUMBER,
-          label: 'Age',
-          value: 19,
+        color: {
+          type: ControlTypes.COLOR,
+          label: 'Color',
+          value: 'Blue',
         },
       },
       plugins: {
@@ -893,7 +902,7 @@ Markdown **descripton** for *component*.
                   line: 0,
                 },
               },
-              name: 'name',
+              name: 'children',
               usage: [
                 {
                   loc: {
@@ -921,8 +930,8 @@ Markdown **descripton** for *component*.
                   line: 0,
                 },
               },
-              name: 'age',
-              value: 'age',
+              name: 'color',
+              value: 'color',
               usage: [
                 {
                   loc: {
