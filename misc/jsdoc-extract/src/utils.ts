@@ -1,4 +1,3 @@
-import { Node } from '@babel/types';
 export interface JSDocTypeTag {
   type?: string;
   description?: string;
@@ -19,6 +18,7 @@ export type TSType =
   | 'function'
   | 'void'
   | 'class'
+  | 'interface'
   | 'unknown';
 
 export interface JSDocType {
@@ -38,12 +38,3 @@ export interface JSDocType {
   optional?: boolean;
   deprecated?: string;
 }
-
-export const extractComments = (node: Node): string | undefined => {
-  return node.leadingComments
-    ? node.leadingComments
-        .filter(comment => comment.type === 'CommentBlock')
-        .map(comment => comment.value)
-        .join('/n')
-    : undefined;
-};

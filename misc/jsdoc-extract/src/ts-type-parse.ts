@@ -5,24 +5,18 @@ import {
   TSUnionType,
   TSFunctionType,
   TSTypeReference,
+  Node,
 } from '@babel/types';
-import { JSDocType, extractComments } from './utils';
-import { jsdocCommentToMember } from './jsdoc-md/jsdocCommentToMember';
+import { JSDocType } from './utils';
+import { mergeJSDocComments } from './jsdoc-parse';
 
-export const parseTypeNode = (
-  node?: TSTypeAnnotation,
-): JSDocType | undefined => {
+export const parseTypeNode = (node?: Node): JSDocType | undefined => {
   if (node) {
     const typeNode = (node as any).left || node;
 
-    const result: JSDocType = {
+    const result = mergeJSDocComments(node, {
       type: 'void',
-    };
-    const comments = extractComments(node);
-    if (comments) {
-      const parsed = jsdocCommentToMember(comments);
-      Object.assign(result, parsed);
-    }
+    });
     if ((node as any).right) {
       result.value = (node as any).right.value;
     }
