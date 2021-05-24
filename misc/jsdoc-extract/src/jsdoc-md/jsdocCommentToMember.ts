@@ -3,40 +3,12 @@
 import { parse } from 'comment-parser/lib';
 import { deconstructJsdocNamepath } from './deconstructJsdocNamepath';
 import { defaultOptions } from './COMMENT_PARSER_OPTIONS';
+import { JSDocType, JSDocExample, TSType } from '../utils';
 
 const trimNewlines = (s: string): string => {
   return s.replace(/^[\r\n]+|[\r\n]+$/g, '');
 };
-export interface JSDocTypeTag {
-  type?: string;
-  description?: string;
-}
 
-export interface JSDocParameter extends JSDocTypeTag {
-  name: string;
-  optional?: boolean;
-  default?: any;
-}
-
-export interface JSDocExample {
-  caption?: string;
-  content?: string;
-}
-
-export interface ParseResult {
-  name?: string;
-  kind?: string;
-  namepath?: string;
-  memberof?: string;
-  type?: string;
-  description?: string;
-  parameters: JSDocParameter[];
-  properties: JSDocParameter[];
-  returns: JSDocTypeTag;
-  fires: { data: string }[];
-  see: string[];
-  examples: JSDocExample[];
-}
 /**
  * Analyzes a JSDoc comment to produce JSDoc member details.
  * @kind function
@@ -47,7 +19,7 @@ export interface ParseResult {
  */
 export const jsdocCommentToMember = (
   comment: string,
-): ParseResult | undefined => {
+): JSDocType | undefined => {
   const jsdoc = parse(
     // Restore the start `/*` and end `*/` that the Babel parse result excludes,
     // so that the JSDoc comment parser can accept it.
@@ -57,13 +29,8 @@ export const jsdocCommentToMember = (
   for (const jsdocBlock of jsdoc) {
     // Ignore JSDoc without tags.
     if (jsdocBlock && jsdocBlock.tags) {
-      const result: ParseResult = {
-        parameters: [],
-        properties: [],
-        returns: {},
-        fires: [],
-        see: [],
-        examples: [],
+      const result: JSDocType = {
+        type: 'undefined',
       };
 
       // Scan tags for membership data, looping tags backwards as later tags
@@ -102,7 +69,7 @@ export const jsdocCommentToMember = (
                 result.namepath = tag.name;
               }
               if (!result.type && tag.type) {
-                result.type = tag.type;
+                result.type = tag.type as TSType;
               }
             }
 
@@ -122,7 +89,7 @@ export const jsdocCommentToMember = (
               if (!result.type) {
                 // A special case; the tag implies this type so this data is not
                 // what is actually at the associated code file location.
-                result.type = 'Function';
+                result.type = 'function';
               }
             }
 
@@ -133,8 +100,14 @@ export const jsdocCommentToMember = (
               // Ignore an invalid tag missing a type.
               tag.type
             ) {
-              result.type = tag.type;
+              result.type = tag.type as TSType;
             }
+            break;
+          case 'deprecated':
+            result.deprecated =
+              tag.name || tag.description
+                ? `${tag.name ? `${tag.name} ` : ''}${tag.description || ''}`
+                : 'yes';
             break;
           case 'desc':
           case 'description': {
@@ -155,14 +128,16 @@ export const jsdocCommentToMember = (
             // Ignore an invalid tag missing a name.
             if (tag.name) {
               // Define the JSDoc parameter with nicely ordered properties.
-              const parameter: JSDocParameter = {
+              const parameter: JSDocType = {
                 name: tag.name,
+                type: tag.type as TSType,
+                optional: tag.optional,
+                value: tag.default,
+                description: trimNewlines(tag.description),
               };
-
-              parameter.type = tag.type;
-              parameter.optional = tag.optional;
-              parameter.default = tag.default;
-              parameter.description = trimNewlines(tag.description);
+              if (!result.parameters) {
+                result.parameters = [];
+              }
               result.parameters.unshift(parameter);
             }
 
@@ -173,13 +148,16 @@ export const jsdocCommentToMember = (
             // Ignore an invalid tag missing a name.
             if (tag.name) {
               // Define the JSDoc property with nicely ordered properties.
-              const property: JSDocParameter = {
+              const property: JSDocType = {
                 name: tag.name,
+                type: tag.type as TSType,
+                optional: tag.optional,
+                value: tag.default,
+                description: trimNewlines(tag.description),
               };
-              property.type = tag.type;
-              property.optional = tag.optional;
-              property.default = tag.default;
-              property.description = trimNewlines(tag.description);
+              if (!result.properties) {
+                result.properties = [];
+              }
               result.properties.unshift(property);
             }
 
@@ -187,7 +165,11 @@ export const jsdocCommentToMember = (
           }
           case 'return':
           case 'returns': {
+            if (!result.returns) {
+              result.returns = {};
+            }
             // Ignore an invalid tag missing both a type and description.
+
             if (!result.returns.type && tag.type) {
               result.returns.type = tag.type;
             }
@@ -200,6 +182,9 @@ export const jsdocCommentToMember = (
           }
           case 'emits':
           case 'fires': {
+            if (!result.fires) {
+              result.fires = [];
+            }
             if (
               // Ignore an invalid tag missing a name.
               tag.name &&
@@ -215,7 +200,9 @@ export const jsdocCommentToMember = (
           }
           case 'see': {
             const tagDescriptionTrimmed = trimNewlines(tag.description);
-
+            if (!result.see) {
+              result.see = [];
+            }
             // Ignore an invalid tag missing a description.
             if (tagDescriptionTrimmed) {
               result.see.unshift(tagDescriptionTrimmed);
@@ -245,7 +232,9 @@ export const jsdocCommentToMember = (
                   if (contentData) {
                     example.content = contentData;
                   }
-
+                  if (!result.examples) {
+                    result.examples = [];
+                  }
                   result.examples.unshift(example);
                 }
               }

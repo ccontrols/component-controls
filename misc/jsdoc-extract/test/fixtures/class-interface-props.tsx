@@ -12,7 +12,11 @@ export interface IColumnProps {
    * function props description
    */
   fnProp: () => void;
-  /** unionProp description */
+
+  /**
+   * unionProp description
+   * @deprecated since version 1.0
+   */
   unionProp: 'option1' | 'option2' | 'option3';
 }
 

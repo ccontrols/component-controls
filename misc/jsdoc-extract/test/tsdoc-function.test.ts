@@ -11,23 +11,19 @@ describe('tsdoc-function', () => {
             name: 'a',
             type: 'number',
             optional: false,
-            default: undefined,
             description: 'first parameter to add',
           },
           {
             name: 'b',
             type: 'number',
             optional: false,
-            default: 1,
+            value: 1,
             description: 'second parameter to add',
           },
         ],
-        properties: [],
         returns: {
           description: 'the sum of the two parameters',
         },
-        fires: [],
-        see: [],
         examples: [
           {
             content:

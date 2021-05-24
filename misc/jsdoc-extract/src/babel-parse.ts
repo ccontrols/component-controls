@@ -5,15 +5,14 @@ import {
   TSInterfaceDeclaration,
   VariableDeclarator,
   TSTypeAnnotation,
+  ClassDeclaration,
+  Node,
 } from '@babel/types';
 import * as parser from '@babel/parser';
 import traverse from '@babel/traverse';
-import {
-  jsdocCommentToMember,
-  ParseResult,
-  JSDocParameter,
-} from './jsdoc-md/jsdocCommentToMember';
-import { parseTypeNode, TypescriptType } from './ts-type-parse';
+import { jsdocCommentToMember } from './jsdoc-md/jsdocCommentToMember';
+import { parseTypeNode } from './ts-type-parse';
+import { JSDocType, extractComments } from './utils';
 export const extract = (
   filePath: string,
   options: parser.ParserOptions = {
@@ -26,25 +25,24 @@ export const extract = (
       'objectRestSpread',
     ],
   },
-): Record<string, Partial<ParseResult>> => {
+): Record<string, Partial<JSDocType>> => {
   const source: string = fs.readFileSync(filePath, 'utf8');
-  const result: ReturnType<typeof extract> = {};
+  const results: ReturnType<typeof extract> = {};
   const ast = parser.parse(source, options);
   traverse(ast, {
     TSInterfaceDeclaration: (path: any) => {
       const node = path.node as TSInterfaceDeclaration;
       const name = node.id.name;
       const props = node.body.body;
-      console.log(name, props);
+      results[name] = {
+        properties: props.map(prop =>
+          parseTypeNode(prop as any),
+        ) as JSDocType[],
+      };
     },
     ExportNamedDeclaration: (path: any) => {
       const node = path.node as ExportNamedDeclaration;
-      const comments = node.leadingComments
-        ? node.leadingComments
-            .filter(comment => comment.type === 'CommentBlock')
-            .map(comment => comment.value)
-            .join('/n')
-        : undefined;
+      const comments = extractComments(node);
 
       const declarator: VariableDeclarator = (node as any).declaration
         .declarations?.length
@@ -53,10 +51,10 @@ export const extract = (
       const id = declarator?.id ? (declarator.id as any).name : undefined;
       if (id) {
         if (comments) {
-          result[id] = {};
+          results[id] = {};
           const parsed = jsdocCommentToMember(comments);
           if (parsed) {
-            result[id] = parsed;
+            results[id] = parsed;
           }
         }
         const init = declarator?.init;
@@ -64,16 +62,16 @@ export const extract = (
           if (init.type === 'ArrowFunctionExpression') {
             const returns = parseTypeNode(init.returnType as TSTypeAnnotation);
             if (returns) {
-              result[id].returns = { ...result[id].returns, ...returns };
+              results[id].returns = { ...results[id].returns, ...returns };
             }
             const params = init.params
               .map(param => parseTypeNode(param as any))
               .filter(p => p);
             if (params) {
-              const parameters = result[id].parameters || [];
+              const parameters = results[id].parameters || [];
               params.forEach(param => {
                 const existingIdx = parameters.findIndex(
-                  p => p.name === (param as TypescriptType).name,
+                  p => p.name === (param as JSDocType).name,
                 );
                 if (existingIdx >= 0) {
                   parameters[existingIdx] = {
@@ -81,16 +79,24 @@ export const extract = (
                     ...param,
                   };
                 } else {
-                  parameters.push(param as JSDocParameter);
+                  parameters.push(param as JSDocType);
                 }
-                result[id].parameters = parameters;
+                results[id].parameters = parameters;
               });
             }
           }
-        } else if ((declarator as any)?.body.body) {
+        } else if (
+          ((declarator as any) as ClassDeclaration).type === 'ClassDeclaration'
+        ) {
+          const superParams = ((declarator as any) as ClassDeclaration)
+            .superTypeParameters;
+          results[id].type = 'class';
+          results[id].parameters = superParams?.params
+            .map((param: Node) => parseTypeNode(param as TSTypeAnnotation))
+            .filter(p => p) as JSDocType[];
         }
       }
     },
   });
-  return result;
+  return results;
 };
