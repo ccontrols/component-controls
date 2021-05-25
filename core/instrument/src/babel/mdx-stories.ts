@@ -9,7 +9,7 @@ import camelCase from 'camelcase';
 import { File } from '@babel/types';
 import traverse from '@babel/traverse';
 import { extractFunctionParameters } from './extract-function-parameters';
-import { followStoryImport } from './follow-imports';
+import { followStoryImport } from './follow-story';
 import { collectAttributes } from './extract-attributes';
 import { sourceLocation } from '../misc/source-location';
 import { ParseStorieReturnType, InstrumentOptions } from '../types';

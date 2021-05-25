@@ -1,8 +1,7 @@
 import { ParserOptions } from '@babel/parser';
 import traverse, { TraverseOptions } from '@babel/traverse';
 import { CodeLocation } from '@component-controls/core';
-import { sourceLocation } from '../misc/source-location';
-import { parseFile } from '../misc/ast_store';
+import { parseFile, sourceLocation } from '@component-controls/follow-imports';
 export interface ExportType {
   name: string;
   internalName: string;

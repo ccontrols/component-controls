@@ -1,7 +1,7 @@
 import { ParserOptions } from '@babel/parser';
 import { ImportTypes } from '@component-controls/core';
 import traverse, { TraverseOptions } from '@babel/traverse';
-import { parseFile } from '../misc/ast_store';
+import { parseFile } from '@component-controls/follow-imports';
 
 export const traverseImports = (results: ImportTypes): TraverseOptions => {
   return {

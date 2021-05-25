@@ -32,6 +32,8 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@babel/types": "^7.12.6",
+    "@component-controls/follow-imports": "^3.14.4",
     "@component-controls/logger": "^3.10.0",
     "@storybook/csf": "^0.0.1",
     "deepmerge": "^4.2.2",

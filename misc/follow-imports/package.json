@@ -1,11 +1,11 @@
 {
-  "name": "@component-controls/jest-axe-matcher",
+  "name": "@component-controls/follow-imports",
   "version": "3.14.4",
-  "description": "jest accessibility matching utilities with deque axe",
+  "description": "follow module imports until finding the file exporting the keyword",
   "keywords": [
-    "jest",
-    "axe testing",
-    "deque"
+    "babel",
+    "imports",
+    "exports"
   ],
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -21,7 +21,8 @@
     "docs": "ts-md",
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
-    "prepare": "yarn build"
+    "prepare": "yarn build",
+    "test": "yarn jest"
   },
   "homepage": "https://github.com/ccontrols/component-controls",
   "bugs": {
@@ -30,18 +31,16 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ccontrols/component-controls.git",
-    "directory": "misc/jest-axe-matcher"
+    "directory": "misc/follow-imports"
   },
   "license": "MIT",
   "dependencies": {
-    "axe-core": "^4.2.0",
-    "jest": "^26.4.2",
-    "jest-matcher-utils": "^26.6.2",
-    "ts-jest": "^26.5.5",
+    "@babel/parser": "^7.12.5",
+    "@babel/traverse": "^7.12.5",
     "typescript": "^4.2.4"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.10"
+    "@babel/types": "^7.12.6"
   },
   "publishConfig": {
     "access": "public"

@@ -1,24 +1,20 @@
 import { MouseEvent, ReactNode, useEffect, useState, useCallback } from 'react';
+import { SourceLocation } from '@babel/types';
+import { ImportType, ImportTypes } from '@component-controls/follow-imports';
+export { ImportType, ImportTypes };
 
 /**
- * position in the stories source code
+ * position in the source file of a token
  * usually taken from AST traverse loaders
  */
 
-export interface CodePosition {
-  line: number;
-  column: number;
-}
-
+export type CodePosition = SourceLocation['start'];
 /**
  * location in the source code of a story or part of it
  * ie. arguments, usage of arguments
  
 */
-export interface CodeLocation {
-  start: CodePosition;
-  end: CodePosition;
-}
+export type CodeLocation = SourceLocation;
 
 /**
  * repository information from package.json
@@ -106,32 +102,6 @@ export type StoryRenderFn = (
   controlValues?: { [key: string]: any },
   context?: any,
 ) => Promise<() => any> | any;
-
-/**
- * an import name
- */
-export interface ImportType {
-  /**
-   * component name
-   */
-  name: string;
-  /**
-   * importedName - the original named import that was aliased
-   */
-  importedName: 'default' | 'namespace' | string;
-  /**
-   * imported from
-   */
-  from: string;
-  /**
-   * key into components table
-   */
-  componentKey?: string;
-}
-
-export interface ImportTypes {
-  [key: string]: ImportType;
-}
 
 export interface Imports {
   [key: string]: Omit<ImportType, 'from'>[];

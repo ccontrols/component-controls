@@ -1,32 +1,16 @@
 import * as path from 'path';
-import {
-  defaultParserOptions,
-  defaultResolveOptions,
-  defaultComponentOptions,
-} from '../src/index';
-import { followImports, FollowImportType } from '../src/babel/follow-imports';
+import { followImports, FollowImportType } from '../src';
 
 export type ComponentCallback = (component: FollowImportType) => void;
 
 export const followFixture = (
-  componentName: string,
+  importName: string,
   filePathName: string,
   callback: ComponentCallback,
-  source?: string,
 ): void => {
-  it(componentName, async () => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { node, path, ...component } = await followImports(
-      componentName,
-      filePathName,
-      source,
-      {
-        parser: defaultParserOptions,
-        resolver: defaultResolveOptions,
-        components: defaultComponentOptions,
-      },
-    );
-    await callback(component);
+  it(importName, () => {
+    const results = followImports(importName, filePathName);
+    callback(results);
   });
 };
 describe('follow-imports-custom', () => {
@@ -80,27 +64,6 @@ describe('follow-imports-custom', () => {
         from: './BooleanEditor',
       });
     },
-    `
-    import React from 'react';
-    import { ControlTypes } from '@component-controls/core';
-    import { BooleanEditor } from './BooleanEditor';
-    
-    export default {
-        title: 'Editors/BooleanEditor',
-        component: BooleanEditor,
-    };
-    
-    export const sample = () => {
-        const [state, setState] = React.useState(false);
-        return (
-            <BooleanEditor
-                name="prop"
-                onChange={(name, newVal) => setState(newVal)}
-                prop={{ type: ControlTypes.BOOLEAN, value: state }}
-            />
-        );
-    };
-  `,
   );
 
   followFixture(

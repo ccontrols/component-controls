@@ -15,32 +15,27 @@ export const componentFixture = (
     fileName,
   );
   it(fileName, async () => {
-    const component = await extractComponent(
-      'Button',
-      filePathName,
-      undefined,
-      {
-        parser: defaultParserOptions,
-        resolver: defaultResolveOptions,
-        components: {
-          sourceFiles: false,
-          fileInfo: false,
-          package: {
-            browseLink: true,
-            docsLink: true,
-            issuesLink: true,
-          },
-          resolveFile: (componentName: string, filePath: string) => {
-            if (filePath.includes('/theme-ui/dist')) {
-              return `${
-                filePath.split('/theme-ui/dist')[0]
-              }/@theme-ui/components/src/${componentName}.js`;
-            }
-            return filePath;
-          },
+    const component = await extractComponent('Button', filePathName, {
+      parser: defaultParserOptions,
+      resolver: defaultResolveOptions,
+      components: {
+        sourceFiles: false,
+        fileInfo: false,
+        package: {
+          browseLink: true,
+          docsLink: true,
+          issuesLink: true,
+        },
+        resolveFile: (componentName: string, filePath: string) => {
+          if (filePath.includes('/theme-ui/dist')) {
+            return `${
+              filePath.split('/theme-ui/dist')[0]
+            }/@theme-ui/components/src/${componentName}.js`;
+          }
+          return filePath;
         },
       },
-    );
+    });
     await callback(component);
   });
 };
