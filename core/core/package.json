@@ -35,6 +35,7 @@
     "@babel/types": "^7.12.6",
     "@component-controls/follow-imports": "^3.14.4",
     "@component-controls/logger": "^3.10.0",
+    "@component-controls/typescript-config": "^3.14.4",
     "@storybook/csf": "^0.0.1",
     "deepmerge": "^4.2.2",
     "escape-html": "^1.0.3",

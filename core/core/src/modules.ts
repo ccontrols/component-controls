@@ -3,7 +3,7 @@ import fs from 'fs';
 import * as ts from 'typescript';
 import { createHash } from 'crypto';
 import { error } from '@component-controls/logger';
-import { deepMerge } from './deepMerge';
+import { getTypescriptConfig } from '@component-controls/typescript-config';
 
 /**
  * returns the basename stripped of the extension
@@ -29,41 +29,10 @@ export const esmRequire = (filePath: string): any => {
   return result;
 };
 export const dynamicRequire = (filePath: string): any => {
-  const ext =
-    filePath
-      .split('.')
-      .pop()
-      ?.toLowerCase() || 'js';
-  if (['ts', 'tsx'].indexOf(ext) !== -1) {
-    const config: ReturnType<typeof ts.readConfigFile> = {
-      config: {
-        compilerOptions: {
-          jsx: ts.JsxEmit.ReactJSX,
-        },
-      },
-    };
-    const configPath = ts.findConfigFile(
-      path.dirname(filePath),
-      ts.sys.fileExists,
-    );
-    if (configPath) {
-      config.config = deepMerge(
-        config.config,
-        ts.readConfigFile(configPath, ts.sys.readFile).config,
-      );
-      if (config.config.extends) {
-        const extendsPath = ts.findConfigFile(
-          path.dirname(path.resolve(configPath, config.config.extends)),
-          ts.sys.fileExists,
-        );
-        if (extendsPath) {
-          config.config = deepMerge(
-            ts.readConfigFile(extendsPath, ts.sys.readFile).config,
-            config.config,
-          );
-        }
-      }
-    }
+  const config = getTypescriptConfig(filePath, {
+    jsx: ts.JsxEmit.ReactJSX,
+  });
+  if (config) {
     const tmpFolder = path.resolve(
       path.dirname(filePath),
       createHash('md5')
@@ -74,15 +43,12 @@ export const dynamicRequire = (filePath: string): any => {
       fs.mkdirSync(tmpFolder);
     }
     try {
-      config.config.compilerOptions.outDir = tmpFolder;
-      config.config.compilerOptions.module = ts.ModuleKind.CommonJS;
+      config.outDir = tmpFolder;
+      config.module = ts.ModuleKind.CommonJS;
       // moduleResolution option not working
-      delete config.config.compilerOptions['moduleResolution'];
-      delete config.config.compilerOptions['noEmit'];
-      const program = ts.createProgram(
-        [filePath],
-        config.config.compilerOptions,
-      );
+      delete config['moduleResolution'];
+      delete config['noEmit'];
+      const program = ts.createProgram([filePath], config);
       const nakedFile = nakedFileName(filePath);
       // by default output file name same but with .js extension
       let jsFilePath = path.resolve(tmpFolder, nakedFile + '.js');
