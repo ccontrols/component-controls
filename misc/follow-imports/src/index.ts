@@ -117,7 +117,7 @@ export const followImports = (
   const findExport =
     baseImportedName === EXPORT_DEFAULT || baseImportedName === IMPORT_NAMESPACE
       ? exports.default[suffixImportedName || EXPORT_DEFAULT]
-      : exports.named[baseImportedName];
+      : exports.named[baseImportedName] || exports.default[baseImportedName];
   if (findExport !== undefined) {
     if (!findExport.from) {
       const result: FollowImportType = {

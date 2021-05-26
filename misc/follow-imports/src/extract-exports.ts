@@ -140,7 +140,7 @@ export const extractExports = (
           }
           if (parentName) {
             if (results.default[EXPORT_DEFAULT]?.internalName === parentName) {
-              results.named[name] = {
+              results.default[name] = {
                 name,
                 internalName: name,
                 loc: sourceLocation(node.loc),
@@ -167,7 +167,7 @@ export const extractExports = (
           }
           if (parentName) {
             if (results.default[EXPORT_DEFAULT]?.internalName === parentName) {
-              results.named[name] = {
+              results.default[name] = {
                 name,
                 internalName: name,
                 loc: sourceLocation(node.body ? node.body.loc : node.loc),
