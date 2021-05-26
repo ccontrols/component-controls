@@ -5,6 +5,7 @@
     "outDir": "dist",
     "rootDir": "src",
     "declaration": true,
+    "allowJs": true,
     "types": ["node", "jest"],
     "typeRoots": ["../../node_modules/@types", "node_modules/@types"]
   },

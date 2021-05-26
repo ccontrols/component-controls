@@ -4,12 +4,12 @@ import { followImports } from '../src';
 describe('module-imports', () => {
   it('simple import', () => {
     const findImported = followImports(
-      'IColumnProps',
+      'ColumnProps',
       path.resolve(__dirname, './fixtures/import-types.tsx'),
     );
     expect(findImported).toMatchObject({
-      exportedAs: 'IColumnProps',
-      importedName: 'IColumnProps',
+      exportedAs: 'ColumnProps',
+      importedName: 'ColumnProps',
       from: './class-interface-props',
     });
     expect(path.relative(__dirname, findImported.filePath)).toBe(
@@ -22,8 +22,8 @@ describe('module-imports', () => {
       path.resolve(__dirname, './fixtures/import-types.tsx'),
     );
     expect(findImported).toMatchObject({
-      exportedAs: 'IColumnProps',
-      importedName: 'IColumnProps',
+      exportedAs: 'ColumnProps',
+      importedName: 'ColumnProps',
       from: './class-interface-props',
     });
     expect(path.relative(__dirname, findImported.filePath)).toBe(
@@ -36,7 +36,7 @@ describe('module-imports', () => {
       path.resolve(__dirname, './fixtures/re-import-types.tsx'),
     );
     expect(findImported).toMatchObject({
-      exportedAs: 'IColumnProps',
+      exportedAs: 'ColumnProps',
       importedName: 'CProps',
       from: './import-types',
     });
@@ -51,7 +51,7 @@ describe('module-imports', () => {
       path.resolve(__dirname, './fixtures/re-import-types.tsx'),
     );
     expect(findImported).toMatchObject({
-      exportedAs: 'IColumnProps',
+      exportedAs: 'ColumnProps',
       importedName: 'ColumnProps',
       from: './import-types',
     });
@@ -65,7 +65,7 @@ describe('module-imports', () => {
       path.resolve(__dirname, './fixtures/re-import-types.tsx'),
     );
     expect(findImported).toMatchObject({
-      exportedAs: 'IColumnProps',
+      exportedAs: 'ColumnProps',
       importedName: 'namespace',
       from: './import-types',
     });
@@ -79,7 +79,7 @@ describe('module-imports', () => {
       path.resolve(__dirname, './fixtures/re-re-import-types.tsx'),
     );
     expect(findImported).toMatchObject({
-      exportedAs: 'IColumnProps',
+      exportedAs: 'ColumnProps',
       importedName: 'ColumnProps',
       from: './re-import-types',
     });

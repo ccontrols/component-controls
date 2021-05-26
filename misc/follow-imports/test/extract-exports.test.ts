@@ -1,6 +1,6 @@
 import path from 'path';
-import { defaultParserOptions } from '../src/index';
-import { extractExports, ExportTypes } from '../src/babel/extract-exports';
+import { extractExports } from '../src/extract-exports';
+import { ExportTypes } from '../src';
 
 export type ComponentCallback = (component: ExportTypes) => void;
 export const exportsFixture = (
@@ -9,7 +9,7 @@ export const exportsFixture = (
 ): void => {
   const filePathName = path.resolve(__dirname, 'fixtures', 'exports', fileName);
   it(fileName, async () => {
-    const component = await extractExports(filePathName, defaultParserOptions);
+    const component = extractExports(filePathName);
     await callback(component);
   });
 };
@@ -17,8 +17,10 @@ describe('extract-exports', () => {
   exportsFixture('button-default-class-export.js', exports => {
     expect(exports).toMatchObject({
       default: {
-        name: 'default',
-        internalName: 'Button',
+        default: {
+          name: 'default',
+          internalName: 'Button',
+        },
       },
     });
   });
@@ -26,8 +28,10 @@ describe('extract-exports', () => {
   exportsFixture('button-default-class.js', exports => {
     expect(exports).toMatchObject({
       default: {
-        name: 'default',
-        internalName: 'Button',
+        default: {
+          name: 'default',
+          internalName: 'Button',
+        },
       },
     });
   });
@@ -132,8 +136,10 @@ describe('extract-exports', () => {
         },
       },
       default: {
-        name: 'default',
-        internalName: 'default',
+        default: {
+          name: 'default',
+          internalName: 'default',
+        },
       },
     });
   });

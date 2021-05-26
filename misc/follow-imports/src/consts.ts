@@ -55,6 +55,12 @@ export interface ImportType {
    * imported from
    */
   from: string;
+
+  /**
+   * imported from alias file name ie '/component-controls/core/store/dist/index.d.ts'
+   */
+  typesFile?: string;
+
   /**
    * key into components table
    */

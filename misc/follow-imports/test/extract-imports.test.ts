@@ -1,7 +1,6 @@
 import path from 'path';
 import { ImportTypes } from '@component-controls/core';
-import { defaultParserOptions } from '../src/index';
-import { extractImports } from '../src/babel/extract-imports';
+import { extractImports } from '../src/extract-imports';
 
 export type ComponentCallback = (component: ImportTypes) => void;
 export const importsFixture = (
@@ -10,7 +9,7 @@ export const importsFixture = (
 ): void => {
   const filePathName = path.resolve(__dirname, 'fixtures', 'imports', fileName);
   it(fileName, async () => {
-    const component = await extractImports(filePathName, defaultParserOptions);
+    const component = extractImports(filePathName);
     await callback(component);
   });
 };

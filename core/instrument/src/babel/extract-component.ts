@@ -54,14 +54,16 @@ export const extractComponent = async (
     if (follow.imports) {
       const imports: ImportTypes = follow.imports;
       const allImports = Object.keys(imports).reduce((acc: Imports, key) => {
-        const { name, from, importedName } = imports[key];
+        const { name, from, typesFile, importedName } = imports[key];
         let importKey = undefined;
         if (follow.filePath && isLocalImport(from)) {
           try {
-            const fileName = resolve.sync(from, {
-              ...resolveOptions,
-              basedir: path.dirname(follow.filePath),
-            });
+            const fileName =
+              typesFile ||
+              resolve.sync(from, {
+                ...resolveOptions,
+                basedir: path.dirname(follow.filePath),
+              });
             const followImport = followImports(importedName, fileName, {
               resolver: options?.resolver,
               parser: options?.parser,

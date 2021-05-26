@@ -38,7 +38,7 @@ export const extract = (
       const result: JSDocType = {
         type: 'interface',
         properties: props.map(prop =>
-          parseTypeNode(prop as Node),
+          parseTypeNode(filePath, prop as Node),
         ) as JSDocType[],
       };
       results[name] = mergeJSDocComments(path.parent, result);
@@ -54,14 +54,19 @@ export const extract = (
         const result: JSDocType = {
           type: 'function',
           parameters: node.params
-            .map(param => parseTypeNode(param as any))
+            .map(param => parseTypeNode(filePath, param as any))
             .filter(p => p) as JSDocType[],
         };
 
-        const returns = parseTypeNode(node.returnType as TSTypeAnnotation);
+        const returns = parseTypeNode(
+          filePath,
+          node.returnType as TSTypeAnnotation,
+        );
         if (returns) {
           result.returns = { ...result.returns, ...returns };
         }
+        // const typeAnnotation = parseTypeNode(filePath, parent.id);
+        // console.log(typeAnnotation);
         if (container) {
           results[id] = mergeJSDocComments(container.node, result);
         } else {
@@ -75,7 +80,7 @@ export const extract = (
       const result: JSDocType = {
         type: 'function',
         parameters: node.arguments
-          .map(arg => parseTypeNode(arg))
+          .map(arg => parseTypeNode(filePath, arg))
           .filter(p => p) as JSDocType[],
       };
       results[id] = mergeJSDocComments(node, result);
@@ -88,7 +93,9 @@ export const extract = (
       const result: JSDocType = {
         type: 'class',
         parameters: superParams?.params
-          .map((param: Node) => parseTypeNode(param as TSTypeAnnotation))
+          .map((param: Node) =>
+            parseTypeNode(filePath, param as TSTypeAnnotation),
+          )
           .filter(p => p) as JSDocType[],
       };
       results[id] = mergeJSDocComments(path.parent, result);

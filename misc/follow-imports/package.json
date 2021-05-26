@@ -37,6 +37,7 @@
   "dependencies": {
     "@babel/parser": "^7.12.5",
     "@babel/traverse": "^7.12.5",
+    "@component-controls/typescript-config": "^3.14.4",
     "typescript": "^4.2.4"
   },
   "devDependencies": {

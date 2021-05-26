@@ -1,3 +1,4 @@
+export { getASTSource } from '@component-controls/follow-imports';
 export * from './build';
 export * from './components';
 export * from './configuration';
@@ -18,7 +19,7 @@ export {
 } from './controls-randomize';
 export * from './controls-smart';
 export * from './search';
-export * from './source';
+
 export * from './tokens';
 export * from './faker';
 

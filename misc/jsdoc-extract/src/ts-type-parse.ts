@@ -10,7 +10,10 @@ import {
 import { JSDocType } from './utils';
 import { mergeJSDocComments } from './jsdoc-parse';
 
-export const parseTypeNode = (node?: Node): JSDocType | undefined => {
+export const parseTypeNode = (
+  filePath: string,
+  node?: Node,
+): JSDocType | undefined => {
   if (node) {
     const typeNode = (node as any).left || node;
 
@@ -34,7 +37,7 @@ export const parseTypeNode = (node?: Node): JSDocType | undefined => {
         type.type as TSType['type'] | 'TSTypeAnnotation' | 'StringLiteral'
       ) {
         case 'TSTypeAnnotation':
-          const v = parseTypeNode((type as any) as TSTypeAnnotation);
+          const v = parseTypeNode(filePath, (type as any) as TSTypeAnnotation);
           if (v) {
             Object.assign(result, v);
           }
@@ -52,15 +55,15 @@ export const parseTypeNode = (node?: Node): JSDocType | undefined => {
         case 'TSUnionType':
           result.type = 'union';
           result.properties = (type as TSUnionType).types
-            .map(type => parseTypeNode(type as any))
+            .map(type => parseTypeNode(filePath, type as any))
             .filter(p => p) as JSDocType[];
           break;
         case 'TSFunctionType':
           result.type = 'function';
           result.parameters = (type as TSFunctionType).parameters
-            .map(param => parseTypeNode(param as any))
+            .map(param => parseTypeNode(filePath, param as any))
             .filter(p => p) as JSDocType[];
-          result.returns = parseTypeNode(type.typeAnnotation);
+          result.returns = parseTypeNode(filePath, type.typeAnnotation);
           break;
         case 'StringLiteral':
         case 'TSStringKeyword':
@@ -84,17 +87,17 @@ export const parseTypeNode = (node?: Node): JSDocType | undefined => {
         case 'TSTypeLiteral':
           result.type = 'object';
           result.properties = (type as TSTypeLiteral).members
-            .map(member => parseTypeNode(member as any))
+            .map(member => parseTypeNode(filePath, member as any))
             .filter(p => p) as JSDocType[];
           break;
         case 'TSLiteralType':
-          Object.assign(result, parseTypeNode(type.literal));
+          Object.assign(result, parseTypeNode(filePath, type.literal));
           break;
         case 'TSTypeReference':
           result.type = type.typeName.name;
           if (type.typeParameters?.params) {
             result.parameters = (type as TSTypeReference).typeParameters?.params
-              .map(param => parseTypeNode(param as any))
+              .map(param => parseTypeNode(filePath, param as any))
               .filter(p => p) as JSDocType[];
           }
           break;

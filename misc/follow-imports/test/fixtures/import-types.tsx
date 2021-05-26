@@ -1,11 +1,11 @@
-import { IColumnProps } from './class-interface-props';
+import { ColumnProps } from './class-interface-props';
 
-import { IColumnProps as CProps } from './class-interface-props';
-export { IColumnProps as ColumnProps };
+import { ColumnProps as CProps } from './class-interface-props';
+export { ColumnProps };
 
 export { CProps };
 
-export const Column = (props: IColumnProps): string | undefined =>
+export const Column = (props: ColumnProps): string | undefined =>
   props.stringProp;
 
 export const ColumnP = (props: CProps): string | undefined => props.stringProp;

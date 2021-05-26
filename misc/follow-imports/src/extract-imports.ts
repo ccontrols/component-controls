@@ -1,25 +1,50 @@
 import * as parser from '@babel/parser';
+import * as ts from 'typescript';
+import * as fs from 'fs';
 import {
   ImportDeclaration,
   Identifier,
   VariableDeclarator,
 } from '@babel/types';
 import traverse, { TraverseOptions, NodePath } from '@babel/traverse';
-import { parseFile } from './ast_store';
-import { ImportTypes, EXPORT_DEFAULT, IMPORT_NAMESPACE } from './consts';
+import { getTypescriptConfig } from '@component-controls/typescript-config';
+import { parseFile, CacheProps } from './ast_store';
+import {
+  ImportTypes,
+  EXPORT_DEFAULT,
+  IMPORT_NAMESPACE,
+  defaultParserOptions,
+} from './consts';
 
-export const parseImports = (
+export const extractImports = (
   fileName: string,
-  options?: parser.ParserOptions,
+  options: parser.ParserOptions = defaultParserOptions,
 ): ImportTypes => {
   const cache = parseFile(fileName, options);
   if (!cache.imports) {
     cache.imports = {};
-    traverse(cache.ast, traverseImports(cache.imports));
+    const tsConfig = getTypescriptConfig(fileName);
+    if (tsConfig) {
+      const program = ts.createProgram([fileName], tsConfig);
+      const file: ts.SourceFile | undefined = program.getSourceFile(fileName);
+      if ((file as any)?.resolvedModules) {
+        const aliases: typeof cache['importAliases'] = {};
+        (file as any).resolvedModules.forEach(
+          (value: { resolvedFileName: string }, key: string) => {
+            if (fs.existsSync(value.resolvedFileName)) {
+              aliases[key] = value.resolvedFileName;
+            }
+          },
+        );
+        cache.importAliases = aliases;
+      }
+    }
+    traverse(cache.ast, traverseImports(cache));
   }
   return cache.imports;
 };
-export const traverseImports = (results: ImportTypes): TraverseOptions => {
+export const traverseImports = (cache: CacheProps): TraverseOptions => {
+  const results = cache.imports as ImportTypes;
   return {
     ImportDeclaration: (path: NodePath<ImportDeclaration>) => {
       const node = path.node;
@@ -43,6 +68,7 @@ export const traverseImports = (results: ImportTypes): TraverseOptions => {
           name: specifier.local.name,
           importedName,
           from: node.source.value,
+          typesFile: cache.importAliases?.[node.source.value],
         };
       });
     },
@@ -63,6 +89,7 @@ export const traverseImports = (results: ImportTypes): TraverseOptions => {
                     name,
                     importedName: (prop.value as Identifier).name,
                     from: arg.value,
+                    typesFile: cache.importAliases?.[arg.value],
                   };
                 }
               });
@@ -72,6 +99,7 @@ export const traverseImports = (results: ImportTypes): TraverseOptions => {
                 name,
                 importedName: EXPORT_DEFAULT,
                 from: arg.value,
+                typesFile: cache.importAliases?.[arg.value],
               };
             }
           }
@@ -79,15 +107,4 @@ export const traverseImports = (results: ImportTypes): TraverseOptions => {
       }
     },
   };
-};
-
-export const extractImports = (
-  fileName: string,
-  parserOptions?: parser.ParserOptions,
-): ImportTypes => {
-  const results: ImportTypes = {};
-  const { ast } = parseFile(fileName, parserOptions);
-
-  traverse(ast, traverseImports(results));
-  return results;
 };

@@ -3,7 +3,7 @@ import * as React from 'react';
 /**
  * Column properties.
  */
-export interface IColumnProps {
+export interface ColumnProps {
   /** stringProp description */
   stringProp?: string;
   /** numberProp description */
@@ -24,10 +24,10 @@ export interface IColumnProps {
  * Column description
  */
 export class Column extends React.Component<
-  IColumnProps,
+  ColumnProps,
   Record<string, unknown>
 > {
-  public static defaultProps: Partial<IColumnProps> = {
+  public static defaultProps: Partial<ColumnProps> = {
     stringProp: 'prop1',
   };
 

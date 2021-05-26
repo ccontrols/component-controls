@@ -3,11 +3,12 @@ import * as parser from '@babel/parser';
 import { File } from '@babel/types';
 import { ExportTypes, ImportTypes } from './consts';
 
-type CacheProps = {
+export type CacheProps = {
   ast: File;
   source: string;
   imports?: ImportTypes;
   exports?: ExportTypes;
+  importAliases?: Record<string, string>;
 };
 const astCache: Record<string, CacheProps> = {};
 

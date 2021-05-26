@@ -1,7 +1,7 @@
 import path from 'path';
 import { run } from '../src/index';
 
-it('sum', () => {
+it('tsdoc-function', () => {
   const result = run(path.resolve(__dirname, './fixtures/tsdoc-function.ts'));
   expect(result).toMatchObject({
     sum: {

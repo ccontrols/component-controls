@@ -3,7 +3,7 @@ import { externalHoc } from './utils/react-hoc';
 /**
  * Column properties.
  */
-export interface IColumnProps {
+export interface ColumnProps {
   /** prop1 description */
   prop1: string;
 }
@@ -11,8 +11,8 @@ export interface IColumnProps {
 /**
  * Form column.
  */
-class Column extends React.Component<IColumnProps, {}> {
-  public static defaultProps: Partial<IColumnProps> = {
+class Column extends React.Component<ColumnProps, {}> {
+  public static defaultProps: Partial<ColumnProps> = {
     prop1: 'prop1',
   };
 

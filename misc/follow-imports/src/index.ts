@@ -1,13 +1,10 @@
 import * as resolve from 'resolve';
 import * as path from 'path';
-import * as fs from 'fs';
 import { ParserOptions } from '@babel/parser';
 import { SourceLocation } from '@babel/types';
-
-import { SyncOpts as ResolveOptions } from 'resolve';
 import { parseFile } from './ast_store';
-import { parseImports } from './extract-imports';
-import { parseExports } from './extract-exports';
+import { extractImports } from './extract-imports';
+import { extractExports } from './extract-exports';
 import { sourceLocation } from './source-location';
 import {
   defaultParserOptions,
@@ -18,10 +15,15 @@ import {
   IMPORT_NAMESPACE,
   ImportTypes,
 } from './consts';
-
-export { parseFile, parseImports, parseExports, sourceLocation };
+import { getASTSource } from './source';
+export {
+  parseFile,
+  extractImports,
+  extractExports,
+  sourceLocation,
+  getASTSource,
+};
 export * from './consts';
-
 export interface FollowImportType {
   exportedAs?: string;
   internalName?: string;
@@ -41,7 +43,7 @@ export const followImports = (
   filePath: string,
   options?: {
     parser?: ParserOptions;
-    resolver?: ResolveOptions;
+    resolver?: resolve.SyncOpts;
     /**
      * Callback function to resolve the source file name of a component.
      * Return false if this file should not be processed.
@@ -66,27 +68,29 @@ export const followImports = (
   const baseImportedName = importNames[0];
   const suffixImportedName =
     importNames.length > 1 ? importNames.pop() : undefined;
-  const imports = parseImports(fileName, parserOptions);
-  const exports = parseExports(fileName, imports, parserOptions);
+  const imports = extractImports(fileName, parserOptions);
+  const exports = extractExports(fileName, parserOptions);
   const folderName = path.dirname(fileName);
   const findImport = imports[baseImportedName];
+
   if (findImport) {
     try {
       const resolvedFilePath = resolve.sync(findImport.from, {
         ...resolveOptions,
         basedir: folderName,
       });
-      const imported = followImports(
+      const importedName =
         findImport.importedName !== IMPORT_NAMESPACE
           ? `${findImport.importedName}${
               findImport.importedName === EXPORT_DEFAULT && suffixImportedName
                 ? `.${suffixImportedName}`
                 : ''
             }`
-          : suffixImportedName || EXPORT_DEFAULT,
-        resolvedFilePath,
-        options,
-      );
+          : suffixImportedName || EXPORT_DEFAULT;
+      let imported = followImports(importedName, resolvedFilePath, options);
+      if (findImport.typesFile && !imported?.exportedAs) {
+        imported = followImports(importedName, findImport.typesFile, options);
+      }
       if (imported) {
         return {
           ...imported,
@@ -122,7 +126,7 @@ export const followImports = (
         internalName: findExport.internalName,
       };
       result.loc = findExport.loc;
-      result.source = source ? source : undefined;
+      result.source = source ? getASTSource(source, findExport.loc) : undefined;
       result.node = findExport.node;
       result.path = findExport.path;
       result.imports = imports;
@@ -164,12 +168,7 @@ export const followImports = (
   if (foundInExportAll) {
     return foundInExportAll;
   }
-  // if we did not find the export in the current file, try in a d.ts file
 
-  const tsDefFileName = fileName.substr(0, fileName.lastIndexOf('.')) + '.d.ts';
-  if (fs.existsSync(tsDefFileName)) {
-    return followImports(importName, tsDefFileName, options);
-  }
   return {
     filePath: fileName,
   };

@@ -6,7 +6,7 @@ it('class-interface-props', () => {
     path.resolve(__dirname, './fixtures/class-interface-props.tsx'),
   );
   expect(result).toMatchObject({
-    IColumnProps: {
+    ColumnProps: {
       properties: [
         {
           type: 'string',
@@ -55,7 +55,7 @@ it('class-interface-props', () => {
       description: 'Column description',
       parameters: [
         {
-          type: 'IColumnProps',
+          type: 'ColumnProps',
         },
         {
           type: 'Record',

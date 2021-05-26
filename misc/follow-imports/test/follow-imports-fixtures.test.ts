@@ -100,7 +100,7 @@ describe('follow-imports-fixtures', () => {
     expect(imports).toMatchObject({
       exportedAs: 'Button',
       from: './button-named-export',
-      source: 'export const Button = () => {};\n',
+      source: '() => {}',
     });
     const file = path.relative(__dirname, imports.filePath);
     expect(file).toBe('fixtures/follow-imports/button-named-export.js');
@@ -110,7 +110,7 @@ describe('follow-imports-fixtures', () => {
     expect(imports).toMatchObject({
       exportedAs: 'Button',
       from: './',
-      source: 'export const Button = () => {};\n',
+      source: '() => {}',
       importedName: 'Button',
     });
     const file = path.relative(__dirname, imports.filePath);
@@ -121,7 +121,7 @@ describe('follow-imports-fixtures', () => {
     expect(imports).toMatchObject({
       exportedAs: 'default',
       importedName: 'namespace',
-      source: 'export default () => {};\n',
+      source: 'export default () => {};',
       from: './button-default-export',
     });
     const file = path.relative(__dirname, imports.filePath);

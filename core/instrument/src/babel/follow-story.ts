@@ -23,7 +23,7 @@ export const followStoryImport = (
     if (follow.loc) {
       const loc = sourceLocation(follow.loc);
       story.loc = loc;
-      story.source = getASTSource(follow.source, loc);
+      story.source = follow.source;
       traverse(
         follow.node,
         extractFunctionParameters(story, exports),

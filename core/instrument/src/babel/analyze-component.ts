@@ -16,7 +16,7 @@ import {
 import {
   followImports,
   parseFile,
-  parseImports,
+  extractImports,
 } from '@component-controls/follow-imports';
 import { collectAttributes } from './extract-attributes';
 import { componentKey } from '../misc/hashStore';
@@ -102,7 +102,7 @@ export const analyze_components = (
 ): void => {
   const { parser: parserOptions } = options || {};
   const { ast } = parseFile(filePath, parserOptions);
-  const imports = parseImports(filePath);
+  const imports = extractImports(filePath);
   const jsx: JSXLinkedTree = [];
   traverse(ast, traverseJSX(jsx, imports, filePath, options));
   const mapJSXTree = (input?: JSXLinkedTree): JSXTree => {
