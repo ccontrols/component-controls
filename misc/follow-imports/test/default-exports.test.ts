@@ -46,4 +46,18 @@ describe('default-exports', () => {
       'fixtures/class-interface-props.tsx',
     );
   });
+  it('class inline default export', () => {
+    const findImported = followImports(
+      'default',
+      path.resolve(__dirname, './fixtures/default-import.tsx'),
+    );
+    expect(findImported).toMatchObject({
+      exportedAs: 'default',
+      internalName: 'InlineClass',
+      source: '{}',
+    });
+    expect(path.relative(__dirname, findImported.filePath)).toBe(
+      'fixtures/default-import.tsx',
+    );
+  });
 });
