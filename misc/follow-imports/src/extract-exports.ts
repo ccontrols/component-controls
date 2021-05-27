@@ -41,7 +41,7 @@ export const extractExports = (
     cache.exports = results;
 
     const globals: NamedExportTypes = {};
-    const localExports: NamedExportTypes = {};
+
     const extractExportVariable = (
       path: any,
       declaration: any,
@@ -75,31 +75,8 @@ export const extractExports = (
       }
       return undefined;
     };
+    const localExports: NamedExportTypes = {};
     traverse(cache.ast, {
-      ExportDefaultDeclaration: (path: NodePath<ExportDefaultDeclaration>) => {
-        const id = (path.node.declaration as ClassDeclaration).id as Identifier;
-        const internalName = path.node.declaration
-          ? id
-            ? id.name
-            : (path.node.declaration as Identifier).name || EXPORT_DEFAULT
-          : EXPORT_DEFAULT;
-        const localExport = localExports[internalName] || imports[internalName];
-        results.default[EXPORT_DEFAULT] = {
-          name: EXPORT_DEFAULT,
-          internalName,
-          loc: localExport ? localExport.loc : sourceLocation(path.node.loc),
-        };
-      },
-      TSExportAssignment: (path: NodePath<TSExportAssignment>) => {
-        const { node } = path;
-        const name = (node.expression as Identifier)?.name;
-        const localExport = localExports[name] || imports[name];
-        results.default[EXPORT_DEFAULT] = {
-          name: EXPORT_DEFAULT,
-          internalName: name,
-          loc: localExport ? localExport.loc : sourceLocation(path.node.loc),
-        };
-      },
       VariableDeclaration: (path: NodePath<VariableDeclaration>) => {
         const { declarations } = path.node;
         if (Array.isArray(declarations)) {
@@ -138,6 +115,70 @@ export const extractExports = (
             parentName = ((parent as TSModuleDeclaration).id as Identifier)
               .name;
           }
+          if (!parentName) {
+            localExports[name] = {
+              name,
+              internalName: name,
+              loc: sourceLocation(node.loc),
+            };
+          }
+        }
+      },
+      TSInterfaceDeclaration: (path: NodePath<TSInterfaceDeclaration>) => {
+        const node = path.node;
+        if (node.id) {
+          const parent = path.context.parentPath.container;
+          const name = node.id.name;
+          let parentName: string | undefined = undefined;
+          if ((parent as TSModuleDeclaration).id) {
+            parentName = ((parent as TSModuleDeclaration).id as Identifier)
+              .name;
+          }
+          if (!parentName) {
+            localExports[name] = {
+              name,
+              internalName: name,
+              loc: sourceLocation(node.body ? node.body.loc : node.loc),
+            };
+          }
+        }
+      },
+    });
+    traverse(cache.ast, {
+      ExportDefaultDeclaration: (path: NodePath<ExportDefaultDeclaration>) => {
+        const id = (path.node.declaration as ClassDeclaration).id as Identifier;
+        const internalName = path.node.declaration
+          ? id
+            ? id.name
+            : (path.node.declaration as Identifier).name || EXPORT_DEFAULT
+          : EXPORT_DEFAULT;
+        const localExport = localExports[internalName] || imports[internalName];
+        results.default[EXPORT_DEFAULT] = {
+          name: EXPORT_DEFAULT,
+          internalName,
+          loc: localExport ? localExport.loc : sourceLocation(path.node.loc),
+        };
+      },
+      TSExportAssignment: (path: NodePath<TSExportAssignment>) => {
+        const { node } = path;
+        const name = (node.expression as Identifier)?.name;
+        const localExport = localExports[name] || imports[name];
+        results.default[EXPORT_DEFAULT] = {
+          name: EXPORT_DEFAULT,
+          internalName: name,
+          loc: localExport ? localExport.loc : sourceLocation(path.node.loc),
+        };
+      },
+      TSTypeAliasDeclaration: (path: NodePath<TSTypeAliasDeclaration>) => {
+        const node = path.node;
+        if (node.id) {
+          const parent = path.context.parentPath.container;
+          const name = node.id.name;
+          let parentName: string | undefined = undefined;
+          if ((parent as TSModuleDeclaration).id) {
+            parentName = ((parent as TSModuleDeclaration).id as Identifier)
+              .name;
+          }
           if (parentName) {
             if (results.default[EXPORT_DEFAULT]?.internalName === parentName) {
               results.default[name] = {
@@ -146,12 +187,6 @@ export const extractExports = (
                 loc: sourceLocation(node.loc),
               };
             }
-          } else {
-            localExports[name] = {
-              name,
-              internalName: name,
-              loc: sourceLocation(node.loc),
-            };
           }
         }
       },
@@ -173,12 +208,6 @@ export const extractExports = (
                 loc: sourceLocation(node.body ? node.body.loc : node.loc),
               };
             }
-          } else {
-            localExports[name] = {
-              name,
-              internalName: name,
-              loc: sourceLocation(node.body ? node.body.loc : node.loc),
-            };
           }
         }
       },
