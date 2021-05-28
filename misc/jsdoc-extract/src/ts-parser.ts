@@ -10,6 +10,19 @@ const isNodeExported = (node: ts.Node): boolean => {
   );
 };
 
+const strToValue = (s: string): any => {
+  switch (s) {
+    case 'undefined':
+      return undefined;
+    case 'null':
+      return null;
+    case 'false':
+      return false;
+    case 'true':
+      return true;
+  }
+  return s;
+};
 const getVisit = (checker: ts.TypeChecker, symbols: ts.Symbol[]) => {
   const visit = (node: ts.Node): void => {
     // Only consider exported nodes
@@ -28,6 +41,8 @@ const getVisit = (checker: ts.TypeChecker, symbols: ts.Symbol[]) => {
     } else if (
       (ts.isClassDeclaration(node) ||
         ts.isTypeAliasDeclaration(node) ||
+        ts.isFunctionDeclaration(node) ||
+        ts.isArrowFunction(node) ||
         ts.isInterfaceDeclaration(node)) &&
       node.name
     ) {
@@ -53,89 +68,137 @@ const symbolName = (node: ts.Symbol): string => {
 const assignType = (
   checker: ts.TypeChecker,
   el: JSDocType,
-  node?: ts.Node,
+  type?: ts.Node,
+  initializer?: ts.Node,
 ): void => {
+  const node = type || initializer;
   if (node) {
     if (ts.isArrayTypeNode(node)) {
       el.type = 'array';
       const arratType: JSDocType = {};
       assignType(checker, arratType, node.elementType);
       el.properties = [arratType];
-    } else if (ts.isInterfaceDeclaration(node) || ts.isTypeLiteralNode(node)) {
+      if (initializer) {
+        el.value = (initializer as ts.ArrayBindingPattern).elements.map(m => {
+          const arrEl = {};
+          assignType(checker, arrEl, m, m);
+          return arrEl;
+        });
+      }
+    } else if (ts.isInterfaceDeclaration(node)) {
       el.type = 'interface';
       el.properties = node.members
         .map(
           m =>
             m.name && parseSymbol(checker, checker.getSymbolAtLocation(m.name)),
         )
-        .filter(m => m) as JSDocType['parameters'];
+        .filter(m => m) as JSDocType['properties'];
+    } else if (ts.isTypeLiteralNode(node)) {
+      el.type = 'type';
+      el.properties = node.members
+        .map(
+          m =>
+            m.name && parseSymbol(checker, checker.getSymbolAtLocation(m.name)),
+        )
+        .filter(m => m) as JSDocType['properties'];
+    } else if (ts.isTypeAliasDeclaration(node)) {
+      assignType(checker, el, node.type);
+    } else if (ts.isUnionTypeNode(node)) {
+      el.type = 'union';
+      el.properties = node.types.map(m => {
+        const el: JSDocType = {};
+        assignType(checker, el, m, (m as ts.LiteralTypeNode).literal);
+        return el;
+      });
     } else if (ts.isTypeReferenceNode(node)) {
       el.type = 'reference';
       el.name = node.typeName.getText();
+    } else if (ts.isLiteralTypeNode(node)) {
+      assignType(checker, el, node.literal, node.literal);
+    } else if (ts.isVariableDeclaration(node)) {
+      assignType(checker, el, node.type, node.initializer);
+    } else if (ts.isPropertySignature(node) || ts.isParameter(node)) {
+      assignType(checker, el, node.type, node.initializer);
+    } else if (ts.isFunctionDeclaration(node) || ts.isArrowFunction(node)) {
+      el.type = 'function';
+      el.parameters = node.parameters
+        .map(
+          m =>
+            m.name && parseSymbol(checker, checker.getSymbolAtLocation(m.name)),
+        )
+        .filter(m => m) as JSDocType['properties'];
+      const returns: JSDocType = {};
+      assignType(checker, returns, node.type);
+      if (returns.type) {
+        el.returns = returns;
+      }
     } else {
       switch (node.kind) {
-        case ts.SyntaxKind.ArrowFunction:
-        case ts.SyntaxKind.FunctionExpression:
-          el.type = 'function';
-          break;
         case ts.SyntaxKind.NumericLiteral:
         case ts.SyntaxKind.NumberKeyword:
           el.type = 'number';
+          if (
+            typeof (initializer as ts.LiteralLikeNode)?.text !== 'undefined'
+          ) {
+            el.value = Number((initializer as ts.LiteralLikeNode).text);
+          }
           break;
         case ts.SyntaxKind.StringLiteral:
         case ts.SyntaxKind.StringKeyword:
           el.type = 'string';
-          break;
-        case ts.SyntaxKind.VoidKeyword:
-          el.type = 'void';
+          if (
+            typeof (initializer as ts.LiteralLikeNode)?.text !== 'undefined'
+          ) {
+            el.value = (initializer as ts.LiteralLikeNode).text;
+          }
           break;
         case ts.SyntaxKind.FalseKeyword:
+          el.value = false;
+          el.type = 'boolean';
+          break;
+
         case ts.SyntaxKind.TrueKeyword:
+          el.value = true;
+          el.type = 'boolean';
+          break;
         case ts.SyntaxKind.BooleanKeyword:
           el.type = 'boolean';
+          if (
+            typeof (initializer as ts.LiteralLikeNode)?.text !== 'undefined'
+          ) {
+            el.value = Boolean((initializer as ts.LiteralLikeNode).text);
+          }
           break;
         case ts.SyntaxKind.ClassDeclaration:
           el.type = 'class';
           break;
+        case ts.SyntaxKind.VoidKeyword:
+          el.type = 'void';
+          break;
+
         case ts.SyntaxKind.AnyKeyword:
           el.type = 'any';
+          if (
+            typeof (initializer as ts.LiteralLikeNode)?.text !== 'undefined'
+          ) {
+            el.value = (initializer as ts.LiteralLikeNode).text;
+          }
           break;
         case ts.SyntaxKind.UnknownKeyword:
           el.type = 'unknown';
+          el.value = strToValue((initializer as ts.LiteralLikeNode)?.text);
+          break;
+        case ts.SyntaxKind.NullKeyword:
+          el.type = 'null';
+          el.value = null;
+          break;
+        case ts.SyntaxKind.UndefinedKeyword:
+          el.type = 'undefined';
+          el.value = undefined;
           break;
       }
     }
   }
-};
-
-const getValue = (expression: ts.Expression): any => {
-  if (ts.isArrayLiteralExpression(expression)) {
-    return expression.elements.map(e => getValue(e));
-  } else if (
-    ts.isNumericLiteral(expression) ||
-    ts.isBigIntLiteral(expression)
-  ) {
-    return Number(expression.text);
-  } else if (ts.isStringLiteral(expression)) {
-    return expression.text;
-  } else if (expression.kind === ts.SyntaxKind.FalseKeyword) {
-    return false;
-  } else if (expression.kind === ts.SyntaxKind.TrueKeyword) {
-    return true;
-  } else if (expression.kind === ts.SyntaxKind.UndefinedKeyword) {
-    return undefined;
-  } else if (expression.kind === ts.SyntaxKind.UnknownKeyword) {
-    return 'unknown';
-  }
-};
-const getDeclarationValue = (value?: ts.Declaration): any => {
-  if (value) {
-    const initializer = (value as any).initializer;
-    if (initializer) {
-      return getValue(initializer);
-    }
-  }
-  return undefined;
 };
 
 const parseSymbol = (
@@ -148,39 +211,23 @@ const parseSymbol = (
   const declaration = symbol.declarations.length
     ? (symbol.declarations[0] as ts.VariableDeclaration)
     : undefined;
-  const initializer = declaration?.initializer;
-  const typeDeclaration =
-    symbol.valueDeclaration?.type || declaration?.type || declaration;
   const result: JSDocType = {
-    value: getDeclarationValue(symbol.valueDeclaration),
     name: symbolName(symbol),
   };
-  assignType(checker, result, typeDeclaration);
-  if (initializer) {
-    if (
-      ts.isArrowFunction(initializer) ||
-      ts.isFunctionExpression(initializer)
-    ) {
-      const returns = initializer.type;
-      if (returns) {
-        result.returns = parseSymbol(checker, returns.symbol);
-      }
-      assignType(checker, result, initializer);
-      result.parameters = initializer.parameters
-        .map(p => parseSymbol(checker, checker.getSymbolAtLocation(p.name)))
-        .filter(p => p) as JSDocType['parameters'];
-    }
-    if (result.type === undefined) {
-      assignType(checker, result, initializer);
-    }
-  }
+  assignType(
+    checker,
+    result,
+    symbol.valueDeclaration || declaration,
+    declaration?.initializer,
+  );
   const descriptions = symbol.getDocumentationComment(checker);
   const tags = symbol.getJsDocTags();
   const jsDoc = [
     ...descriptions.map(({ text }) => `* ${text}`),
     ...tags.map(tag => `* @${tag.name}${tag.text ? ` ${tag.text}` : ''}`),
   ].join('\n');
-  return mergeJSDocComments(result, jsDoc);
+  const withJsDoc = mergeJSDocComments(result, jsDoc);
+  return withJsDoc;
 };
 export const tsParser = (
   fileName: string,

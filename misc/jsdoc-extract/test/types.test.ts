@@ -31,7 +31,6 @@ it('types', () => {
     bool: {
       type: 'boolean',
       description: 'this is an undefined boolean value',
-      value: undefined,
       name: 'bool',
     },
     a: {
@@ -47,15 +46,13 @@ it('types', () => {
       name: 'u',
     },
     T: {
-      type: 'interface',
+      type: 'type',
       description: 'this is type',
-      value: undefined,
       name: 'T',
       properties: [
         {
           type: 'string',
           description: 'type member property',
-          value: undefined,
           name: 'm',
         },
       ],
@@ -63,13 +60,11 @@ it('types', () => {
     I: {
       type: 'interface',
       description: 'this is interface\nmultiple lines',
-      value: undefined,
       name: 'I',
       properties: [
         {
           type: 'string',
           description: 'interface member property',
-          value: undefined,
           name: 'm',
         },
       ],
@@ -78,7 +73,10 @@ it('types', () => {
       type: 'array',
       deprecated: 'yes',
       description: 'this is an array of strings',
-      value: ['one', 'two'],
+      value: [
+        { type: 'string', value: 'one' },
+        { type: 'string', value: 'two' },
+      ],
       name: 'arrString',
       properties: [
         {
@@ -87,7 +85,6 @@ it('types', () => {
       ],
     },
     Internal: {
-      value: undefined,
       name: 'Internal',
       type: 'interface',
       properties: [],
@@ -95,12 +92,65 @@ it('types', () => {
     arrType: {
       type: 'array',
       description: 'type array of interface type',
-      value: undefined,
       name: 'arrType',
       properties: [
         {
           type: 'reference',
           name: 'Internal',
+        },
+      ],
+    },
+    union: {
+      type: 'union',
+      description: 'strings union',
+      name: 'union',
+      properties: [
+        {
+          type: 'string',
+          value: 'this',
+        },
+        {
+          type: 'number',
+          value: 1,
+        },
+        {
+          value: false,
+          type: 'boolean',
+        },
+        {
+          value: null,
+          type: 'null',
+        },
+        {
+          value: undefined,
+          type: 'undefined',
+        },
+      ],
+    },
+    greet: {
+      type: 'function',
+      parameters: [
+        {
+          name: 'name',
+          type: 'string',
+          optional: false,
+          value: undefined,
+          description: 'string type parameters',
+        },
+      ],
+      description: 'greeting function',
+      name: 'greet',
+    },
+    arrowGreet: {
+      type: 'function',
+      description: 'arrow greeting function',
+      name: 'arrowGreet',
+      returns: { type: 'void' },
+      parameters: [
+        {
+          type: 'string',
+          description: 'name parameter inline description',
+          name: 'name',
         },
       ],
     },
