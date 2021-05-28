@@ -3,7 +3,7 @@ import { run } from '../src/index';
 
 it('types', () => {
   const result = run(path.resolve(__dirname, './fixtures/types.ts'));
-  expect(result).toMatchObject({
+  expect(result).toEqual({
     s: {
       type: 'string',
       description: 'this is a string',

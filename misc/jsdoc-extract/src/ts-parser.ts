@@ -227,7 +227,13 @@ const parseSymbol = (
     ...tags.map(tag => `* @${tag.name}${tag.text ? ` ${tag.text}` : ''}`),
   ].join('\n');
   const withJsDoc = mergeJSDocComments(result, jsDoc);
-  return withJsDoc;
+  /**
+   * workaround typescript compiler assigns jsdoc to function params + to the function itself
+   */
+  return result.parameters !== withJsDoc.parameters &&
+    result.type !== 'function'
+    ? result
+    : withJsDoc;
 };
 export const tsParser = (
   fileName: string,
