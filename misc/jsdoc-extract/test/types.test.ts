@@ -154,5 +154,24 @@ it('types', () => {
         },
       ],
     },
+    names: {
+      type: 'array',
+      description: 'const array of strings',
+      name: 'names',
+      value: [
+        {
+          type: 'string',
+          value: 'Alice',
+        },
+        {
+          type: 'string',
+          value: 'Bob',
+        },
+        {
+          type: 'string',
+          value: 'Eve',
+        },
+      ],
+    },
   });
 });

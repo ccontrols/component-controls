@@ -73,11 +73,13 @@ const assignType = (
 ): void => {
   const node = type || initializer;
   if (node) {
-    if (ts.isArrayTypeNode(node)) {
+    if (ts.isArrayTypeNode(node) || ts.isArrayLiteralExpression(node)) {
       el.type = 'array';
-      const arratType: JSDocType = {};
-      assignType(checker, arratType, node.elementType);
-      el.properties = [arratType];
+      if (ts.isArrayTypeNode(node)) {
+        const arratType: JSDocType = {};
+        assignType(checker, arratType, node.elementType);
+        el.properties = [arratType];
+      }
       if (initializer) {
         el.value = (initializer as ts.ArrayBindingPattern).elements.map(m => {
           const arrEl = {};

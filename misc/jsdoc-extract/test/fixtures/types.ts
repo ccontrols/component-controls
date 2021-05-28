@@ -70,6 +70,11 @@ interface Internal {}
 export type arrType = Internal[];
 
 /**
+ * const array of strings
+ */
+export const names = ['Alice', 'Bob', 'Eve'];
+
+/**
  * strings union
  */
 export type union = 'this' | 1 | false | null | undefined;
