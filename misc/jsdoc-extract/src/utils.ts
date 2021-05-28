@@ -19,6 +19,10 @@ export type TSType =
   | 'void'
   | 'class'
   | 'interface'
+  | 'type'
+  | 'array'
+  | 'any'
+  | 'reference'
   | 'unknown';
 
 export interface JSDocType {
@@ -26,7 +30,7 @@ export interface JSDocType {
   kind?: string;
   namepath?: string;
   memberof?: string;
-  type: TSType;
+  type?: TSType;
   description?: string;
   parameters?: JSDocType[];
   properties?: JSDocType[];

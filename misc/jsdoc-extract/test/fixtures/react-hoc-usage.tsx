@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { externalHoc } from './utils/react-hoc';
+
 /**
  * Column properties.
  */
@@ -11,7 +11,7 @@ export interface ColumnProps {
 /**
  * Form column.
  */
-class Column extends React.Component<ColumnProps, {}> {
+export class Column extends React.Component<ColumnProps, {}> {
   public static defaultProps: Partial<ColumnProps> = {
     prop1: 'prop1',
   };
@@ -21,46 +21,3 @@ class Column extends React.Component<ColumnProps, {}> {
     return <div>{prop1}</div>;
   }
 }
-
-/**
- * Row properties.
- */
-export interface IRowProps {
-  /** prop1 description */
-  prop1: string;
-}
-
-/**
- * Form row.
- */
-const Row = (props: IRowProps) => {
-  const innerFunc = (rowProps: IRowProps) => {
-    return <span>Inner Func</span>;
-  };
-  const innerNonExportedFunc = (rowProps: IRowProps) => {
-    return <span>Inner Func</span>;
-  };
-  return <div>Test</div>;
-};
-
-function hoc<T>(C: T): T {
-  return ((props => <div>{C}</div>) as any) as T;
-}
-
-/** ColumnHigherOrderComponent1 description */
-export const ColumnHigherOrderComponent1 = hoc(Column);
-
-/** ColumnHigherOrderComponent2 description */
-export const ColumnHigherOrderComponent2 = hoc(Column);
-
-/** RowHigherOrderComponent1 description */
-export const RowHigherOrderComponent1 = hoc(Row);
-
-/** RowHigherOrderComponent2 description */
-export const RowHigherOrderComponent2 = hoc(Row);
-
-/** ColumnExternalHigherOrderComponent description */
-export const ColumnExternalHigherOrderComponent = externalHoc(Column);
-
-/** RowExternalHigherOrderComponent description */
-export const RowExternalHigherOrderComponent = externalHoc(Row);

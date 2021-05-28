@@ -22,6 +22,20 @@ it('tsdoc-function', () => {
       ],
       returns: {
         description: 'the sum of the two parameters',
+        properties: [
+          {
+            type: 'number',
+            name: 'a',
+          },
+          {
+            type: 'number',
+            name: 'b',
+          },
+          {
+            type: 'number',
+            name: 'result',
+          },
+        ],
       },
       examples: [
         {
@@ -29,6 +43,7 @@ it('tsdoc-function', () => {
             "```ts\nimport { sum } from '@component-controls/jsdoc-extract';\n\nexpect(sum(1, 2)).toMatchObject({ a: 1, b: 2, result: 3});\n```",
         },
       ],
+
       description: 'sum api function',
     },
   });

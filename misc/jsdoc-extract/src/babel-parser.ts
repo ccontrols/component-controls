@@ -10,11 +10,11 @@ import {
   Node,
 } from '@babel/types';
 import * as parser from '@babel/parser';
-import traverse from '@babel/traverse';
+import traverse, { NodePath } from '@babel/traverse';
 import { parseTypeNode } from './ts-type-parse';
-import { mergeJSDocComments } from './jsdoc-parse';
+import { mergeJSDocComments, getNodeComments } from './jsdoc-parse';
 import { JSDocType } from './utils';
-export const extract = (
+export const babelParser = (
   filePath: string,
   options: parser.ParserOptions = {
     sourceType: 'module',
@@ -26,12 +26,12 @@ export const extract = (
       'objectRestSpread',
     ],
   },
-): Record<string, Partial<JSDocType>> => {
+): Record<string, JSDocType> => {
   const source: string = fs.readFileSync(filePath, 'utf8');
   const results: Record<string, JSDocType> = {};
   const ast = parser.parse(source, options);
   traverse(ast, {
-    TSInterfaceDeclaration: (path: any) => {
+    TSInterfaceDeclaration: (path: NodePath<TSInterfaceDeclaration>) => {
       const node: TSInterfaceDeclaration = path.node;
       const name = node.id.name;
       const props = node.body.body;
@@ -41,10 +41,10 @@ export const extract = (
           parseTypeNode(filePath, prop as Node),
         ) as JSDocType[],
       };
-      results[name] = mergeJSDocComments(path.parent, result);
+      results[name] = mergeJSDocComments(result, getNodeComments(path.parent));
     },
-    ArrowFunctionExpression: (path: any) => {
-      const node = path.node as ArrowFunctionExpression;
+    ArrowFunctionExpression: (path: NodePath<ArrowFunctionExpression>) => {
+      const node = path.node;
       if (path.parent.type === 'VariableDeclarator') {
         const parent = path.parent as VariableDeclarator;
         const container = path.find(
@@ -68,26 +68,29 @@ export const extract = (
         // const typeAnnotation = parseTypeNode(filePath, parent.id);
         // console.log(typeAnnotation);
         if (container) {
-          results[id] = mergeJSDocComments(container.node, result);
+          results[id] = mergeJSDocComments(
+            result,
+            getNodeComments(container.node),
+          );
         } else {
           results[id] = result;
         }
       }
     },
-    CallExpression: (path: any) => {
-      const node = path.node as CallExpression;
-      const id = path.parent.id.name;
+    CallExpression: (path: NodePath<CallExpression>) => {
+      const node = path.node;
+      const id = ((path.parent as VariableDeclarator).id as Identifier)?.name;
       const result: JSDocType = {
         type: 'function',
         parameters: node.arguments
           .map(arg => parseTypeNode(filePath, arg))
           .filter(p => p) as JSDocType[],
       };
-      results[id] = mergeJSDocComments(node, result);
+      results[id] = mergeJSDocComments(result, getNodeComments(node));
     },
 
-    ClassDeclaration: (path: any) => {
-      const node = path.node as ClassDeclaration;
+    ClassDeclaration: (path: NodePath<ClassDeclaration>) => {
+      const node = path.node;
       const id = node.id.name;
       const superParams = node.superTypeParameters;
       const result: JSDocType = {
@@ -98,7 +101,7 @@ export const extract = (
           )
           .filter(p => p) as JSDocType[],
       };
-      results[id] = mergeJSDocComments(path.parent, result);
+      results[id] = mergeJSDocComments(result, getNodeComments(path.parent));
     },
   });
   return results;

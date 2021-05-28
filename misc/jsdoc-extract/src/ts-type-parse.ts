@@ -8,7 +8,7 @@ import {
   Node,
 } from '@babel/types';
 import { JSDocType } from './utils';
-import { mergeJSDocComments } from './jsdoc-parse';
+import { mergeJSDocComments, getNodeComments } from './jsdoc-parse';
 
 export const parseTypeNode = (
   filePath: string,
@@ -17,9 +17,12 @@ export const parseTypeNode = (
   if (node) {
     const typeNode = (node as any).left || node;
 
-    const result = mergeJSDocComments(node, {
-      type: 'void',
-    });
+    const result = mergeJSDocComments(
+      {
+        type: 'void',
+      },
+      getNodeComments(node),
+    );
     if ((node as any).right) {
       result.value = (node as any).right.value;
     }

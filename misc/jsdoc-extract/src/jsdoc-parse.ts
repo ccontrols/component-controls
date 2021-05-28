@@ -3,13 +3,17 @@ import { deepmerge } from '@component-controls/core';
 import { JSDocType } from './utils';
 import { jsdocCommentToMember } from './jsdoc-md/jsdocCommentToMember';
 
-export const mergeJSDocComments = (node: Node, jsdoc: JSDocType): JSDocType => {
-  const comments = node.leadingComments
+export const getNodeComments = (node: Node): string | undefined =>
+  node.leadingComments
     ? node.leadingComments
         .filter(comment => comment.type === 'CommentBlock')
         .map(comment => comment.value)
         .join('/n')
     : undefined;
+export const mergeJSDocComments = (
+  jsdoc: JSDocType,
+  comments?: string,
+): JSDocType => {
   if (comments) {
     const parsed = jsdocCommentToMember(comments);
     if (parsed) {
