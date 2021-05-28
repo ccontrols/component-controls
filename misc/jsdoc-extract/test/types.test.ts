@@ -173,5 +173,56 @@ it('types', () => {
         },
       ],
     },
+    printCoord: {
+      type: 'function',
+      parameters: [
+        {
+          name: 'pt',
+          type: 'type',
+          optional: false,
+          value: undefined,
+          description: 'object parameter',
+          properties: [
+            {
+              type: 'number',
+              description: 'x coordinate',
+              name: 'x',
+            },
+            {
+              type: 'number',
+              description: 'optional y coordinate',
+              name: 'y',
+              optional: true,
+            },
+          ],
+        },
+      ],
+      description: 'print coordinates',
+      name: 'printCoord',
+      returns: {
+        type: 'void',
+      },
+    },
+    printId: {
+      name: 'printId',
+      type: 'function',
+      parameters: [
+        {
+          name: 'id',
+          type: 'union',
+          properties: [
+            {
+              type: 'number',
+            },
+            {
+              type: 'string',
+            },
+          ],
+        },
+      ],
+      returns: {
+        type: 'void',
+      },
+    },
   });
 });

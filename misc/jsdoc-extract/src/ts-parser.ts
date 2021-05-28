@@ -120,8 +120,14 @@ const assignType = (
     } else if (ts.isVariableDeclaration(node)) {
       assignType(checker, el, node.type, node.initializer);
     } else if (ts.isPropertySignature(node) || ts.isParameter(node)) {
+      if (node.questionToken) {
+        el.optional = true;
+      }
       assignType(checker, el, node.type, node.initializer);
     } else if (ts.isFunctionDeclaration(node) || ts.isArrowFunction(node)) {
+      if (node.questionToken) {
+        el.optional = true;
+      }
       el.type = 'function';
       el.parameters = node.parameters
         .map(
