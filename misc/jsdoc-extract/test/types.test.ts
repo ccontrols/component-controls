@@ -243,6 +243,23 @@ it('types', () => {
         },
       ],
     },
+
+    GenericInterface: {
+      name: 'GenericInterface',
+      type: 'interface',
+      properties: [
+        {
+          type: 'reference',
+          description: 'configurable property type',
+          name: 'Type',
+        },
+      ],
+      parameters: [
+        {
+          name: 'Type',
+        },
+      ],
+    },
     arrString: {
       type: 'array',
       deprecated: 'yes',

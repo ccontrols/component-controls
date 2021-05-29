@@ -94,6 +94,16 @@ export interface IndexInterface {
 export interface MultipleInheritance extends Home, Bear {
   ownfield: 'test' | 1;
 }
+
+/**
+ * generics
+ */
+export interface GenericInterface<Type> {
+  /**
+   * configurable property type
+   */
+  contents: Type;
+}
 /**
  * this is an array of strings
  * @deprecated

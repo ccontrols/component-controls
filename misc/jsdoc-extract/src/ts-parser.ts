@@ -110,6 +110,18 @@ const assignType = (
         assignType(checker, e, m);
         return e;
       });
+      if (node.typeParameters?.length) {
+        el.parameters = node.typeParameters.map(m => {
+          const r =
+            m.name && parseSymbol(checker, checker.getSymbolAtLocation(m.name));
+          if (r) {
+            return r;
+          }
+          const e = {};
+          assignType(checker, e, m);
+          return e;
+        });
+      }
     } else if (ts.isIndexSignatureDeclaration(node)) {
       el.type = 'index';
       if (node.modifiers?.find(m => m.kind === ts.SyntaxKind.ReadonlyKeyword)) {
