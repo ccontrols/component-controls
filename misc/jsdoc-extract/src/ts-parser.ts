@@ -132,7 +132,8 @@ const getElementType = (
           getElementType(checker, {}, m),
       );
     } else if (ts.isTypeAliasDeclaration(node)) {
-      result = getElementType(checker, result, node.type);
+      result.type = 'type';
+      result.returns = getElementType(checker, {}, node.type);
     } else if (ts.isUnionTypeNode(node)) {
       result.type = 'union';
       result.properties = node.types.map(m =>
@@ -141,6 +142,11 @@ const getElementType = (
     } else if (ts.isTypeReferenceNode(node)) {
       result.type = 'reference';
       result.name = node.typeName.getText();
+      if (node.typeArguments?.length) {
+        result.parameters = node.typeArguments.map(m =>
+          getElementType(checker, {}, m),
+        );
+      }
     } else if (ts.isLiteralTypeNode(node)) {
       result = getElementType(checker, result, node.literal, node.literal);
     } else if (ts.isIdentifier(node)) {

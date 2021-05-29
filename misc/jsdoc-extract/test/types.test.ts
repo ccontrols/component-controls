@@ -7,26 +7,26 @@ it('types', () => {
     s: {
       type: 'string',
       description: 'this is a string',
-      value: 'a',
       name: 's',
+      value: 'a',
     },
     n: {
       type: 'number',
       description: 'this is a number',
-      value: 3.14,
       name: 'n',
+      value: 3.14,
     },
     b: {
       type: 'boolean',
       description: 'this is a false',
-      value: false,
       name: 'b',
+      value: false,
     },
     t: {
       type: 'boolean',
       description: 'this is a true',
-      value: true,
       name: 't',
+      value: true,
     },
     bool: {
       type: 'boolean',
@@ -36,14 +36,14 @@ it('types', () => {
     a: {
       type: 'any',
       description: 'this is any type',
-      value: 'as',
       name: 'a',
+      value: 'as',
     },
     u: {
       type: 'unknown',
       description: 'this is unknown type',
-      value: undefined,
       name: 'u',
+      value: undefined,
     },
     obj: {
       type: 'object',
@@ -72,78 +72,90 @@ it('types', () => {
       type: 'type',
       description: 'this is type',
       name: 'T',
-      properties: [
-        {
-          type: 'string',
-          description: 'type member property',
-          name: 'm',
-        },
-      ],
+      returns: {
+        type: 'type',
+        properties: [
+          {
+            type: 'string',
+            description: 'type member property',
+            name: 'm',
+          },
+        ],
+      },
     },
     ExtendT: {
       name: 'ExtendT',
       type: 'type',
-      properties: [
-        {
-          type: 'reference',
-          name: 'T',
-        },
-        {
-          type: 'type',
-          properties: [
-            {
-              type: 'boolean',
-              description: 'honey',
-              name: 'honey',
-            },
-          ],
-        },
-      ],
+      returns: {
+        type: 'type',
+        properties: [
+          {
+            type: 'reference',
+            name: 'T',
+          },
+          {
+            type: 'type',
+            properties: [
+              {
+                type: 'boolean',
+                description: 'honey',
+                name: 'honey',
+              },
+            ],
+          },
+        ],
+      },
     },
     IndexT: {
       name: 'IndexT',
       type: 'type',
-      properties: [
-        {
-          type: 'index',
-          readonly: true,
-          parameters: [
-            {
-              type: 'type',
-              properties: [
-                {
-                  name: 'Bear',
-                  type: 'reference',
-                },
-                {
-                  name: 'b',
-                  type: 'null',
-                  value: null,
-                },
-              ],
-            },
-          ],
-          properties: [
-            {
-              type: 'string',
-            },
-          ],
-        },
-      ],
+      returns: {
+        type: 'type',
+        properties: [
+          {
+            type: 'index',
+            readonly: true,
+            parameters: [
+              {
+                type: 'type',
+                properties: [
+                  {
+                    name: 'Bear',
+                    type: 'reference',
+                  },
+                  {
+                    name: 'b',
+                    type: 'null',
+                    value: null,
+                  },
+                ],
+              },
+            ],
+            properties: [
+              {
+                type: 'string',
+              },
+            ],
+          },
+        ],
+      },
     },
     IntersectionType: {
       name: 'IntersectionType',
       type: 'type',
-      properties: [
-        {
-          type: 'reference',
-          name: 'IndexT',
-        },
-        {
-          type: 'reference',
-          name: 'Internal',
-        },
-      ],
+      returns: {
+        type: 'type',
+        properties: [
+          {
+            type: 'reference',
+            name: 'IndexT',
+          },
+          {
+            type: 'reference',
+            name: 'Internal',
+          },
+        ],
+      },
     },
     I: {
       type: 'interface',
@@ -156,6 +168,11 @@ it('types', () => {
           name: 'm',
         },
       ],
+    },
+    Internal: {
+      name: 'Internal',
+      type: 'interface',
+      properties: [],
     },
     Bear: {
       name: 'Bear',
@@ -243,7 +260,6 @@ it('types', () => {
         },
       ],
     },
-
     GenericInterface: {
       name: 'GenericInterface',
       type: 'interface',
@@ -264,86 +280,36 @@ it('types', () => {
       type: 'array',
       deprecated: 'yes',
       description: 'this is an array of strings',
-      value: [
-        { type: 'string', value: 'one' },
-        { type: 'string', value: 'two' },
-      ],
       name: 'arrString',
       properties: [
         {
           type: 'string',
         },
       ],
-    },
-    Internal: {
-      name: 'Internal',
-      type: 'interface',
-      properties: [],
+      value: [
+        {
+          type: 'string',
+          value: 'one',
+        },
+        {
+          type: 'string',
+          value: 'two',
+        },
+      ],
     },
     arrType: {
-      type: 'array',
+      type: 'type',
       description: 'type array of interface type',
       name: 'arrType',
-      properties: [
-        {
-          type: 'reference',
-          name: 'Internal',
-        },
-      ],
-    },
-    union: {
-      type: 'union',
-      description: 'strings union',
-      name: 'union',
-      properties: [
-        {
-          type: 'string',
-          value: 'this',
-        },
-        {
-          type: 'number',
-          value: 1,
-        },
-        {
-          value: false,
-          type: 'boolean',
-        },
-        {
-          value: null,
-          type: 'null',
-        },
-        {
-          value: undefined,
-          type: 'undefined',
-        },
-      ],
-    },
-    greet: {
-      type: 'function',
-      parameters: [
-        {
-          name: 'name',
-          type: 'string',
-          optional: false,
-          value: undefined,
-          description: 'string type parameters',
-        },
-      ],
-      description: 'greeting function',
-      name: 'greet',
-    },
-    arrowGreet: {
-      type: 'function',
-      description: 'arrow greeting function',
-      name: 'arrowGreet',
-      returns: { type: 'void' },
-      parameters: [
-        {
-          type: 'string',
-          description: 'name parameter inline description',
-          name: 'name',
-        },
-      ],
+      returns: {
+        type: 'array',
+        properties: [
+          {
+            type: 'reference',
+            name: 'Internal',
+          },
+        ],
+      },
     },
     names: {
       type: 'array',
@@ -363,6 +329,65 @@ it('types', () => {
           value: 'Eve',
         },
       ],
+    },
+    union: {
+      type: 'type',
+      description: 'strings union',
+      name: 'union',
+      returns: {
+        type: 'union',
+        properties: [
+          {
+            type: 'string',
+            value: 'this',
+          },
+          {
+            type: 'number',
+            value: 1,
+          },
+          {
+            value: false,
+            type: 'boolean',
+          },
+          {
+            type: 'null',
+            value: null,
+          },
+          {
+            type: 'undefined',
+            value: undefined,
+          },
+        ],
+      },
+    },
+    greet: {
+      type: 'function',
+      parameters: [
+        {
+          name: 'name',
+          type: 'string',
+          optional: false,
+          value: undefined,
+          description: 'string type parameters',
+        },
+      ],
+      description: 'greeting function',
+      name: 'greet',
+    },
+    arrowGreet: {
+      type: 'function',
+      description: 'arrow greeting function',
+      name: 'arrowGreet',
+      parameters: [
+        {
+          type: 'string',
+          description: 'name parameter inline description',
+          name: 'name',
+        },
+      ],
+      returns: {
+        type: 'void',
+      },
     },
     printCoord: {
       type: 'function',
