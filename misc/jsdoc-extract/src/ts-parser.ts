@@ -171,6 +171,9 @@ const getElementType = (
       }
     } else if (ts.isLiteralTypeNode(node)) {
       result = getElementType(checker, result, node.literal, node.literal);
+    } else if (ts.isRestTypeNode(node)) {
+      result.type = 'rest';
+      result.returns = getElementType(checker, result, node.type);
     } else if (ts.isTypeOperatorNode(node)) {
       result = getElementType(checker, result, node.type);
     } else if (ts.isIdentifier(node)) {

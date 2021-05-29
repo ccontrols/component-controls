@@ -14,6 +14,7 @@ export type TSType =
   | 'boolean'
   | 'union'
   | 'tuple'
+  | 'rest'
   | 'undefined'
   | 'null'
   | 'function'

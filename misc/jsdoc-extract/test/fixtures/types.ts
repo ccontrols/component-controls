@@ -160,6 +160,8 @@ export type union = 'this' | 1 | false | null | undefined;
 export type Tuple = [string, number];
 
 export type OptionalTuple = [number, number, number?];
+
+export type SpreadTuple = [...boolean[], string, number];
 /**
  * greeting function
  * @param name string type parameters

@@ -567,6 +567,32 @@ it('types', () => {
         ],
       },
     },
+    SpreadTuple: {
+      name: 'SpreadTuple',
+      type: 'type',
+      returns: {
+        type: 'tuple',
+        properties: [
+          {
+            type: 'rest',
+            returns: {
+              type: 'array',
+              properties: [
+                {
+                  type: 'boolean',
+                },
+              ],
+            },
+          },
+          {
+            type: 'string',
+          },
+          {
+            type: 'number',
+          },
+        ],
+      },
+    },
     greet: {
       type: 'function',
       parameters: [
