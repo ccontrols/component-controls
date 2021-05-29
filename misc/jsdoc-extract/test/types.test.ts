@@ -864,5 +864,26 @@ it('types', () => {
         },
       ],
     },
+    ClassWithConstrunctor: {
+      name: 'ClassWithConstrunctor',
+      type: 'class',
+      properties: [
+        {
+          name: 'name',
+          type: 'string',
+        },
+        {
+          name: 'constructor',
+          type: 'function',
+          properties: [
+            {
+              name: 'x',
+              optional: true,
+              type: 'string',
+            },
+          ],
+        },
+      ],
+    },
   });
 });

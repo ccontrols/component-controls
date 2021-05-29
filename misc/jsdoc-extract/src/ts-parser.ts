@@ -137,6 +137,15 @@ const getElementType = (
       result.properties = node.parameters.map(m =>
         getElementType(checker, {}, m),
       );
+    } else if (ts.isConstructorDeclaration(node)) {
+      result.name = 'constructor';
+      result.type = 'function';
+      result.properties = node.parameters.map(
+        m =>
+          (m.name &&
+            parseSymbol(checker, checker.getSymbolAtLocation(m.name))) ||
+          getElementType(checker, {}, m),
+      );
     } else if (ts.isIntersectionTypeNode(node)) {
       result.type = 'type';
       result.properties = node.types.map(m => getElementType(checker, {}, m));

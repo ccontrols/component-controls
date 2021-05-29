@@ -262,3 +262,14 @@ export class Point {
    */
   y: number;
 }
+
+export class ClassWithConstrunctor {
+  name: string;
+
+  /**
+   * constructore description
+   */
+  constructor(x?: string) {
+    this.name = x;
+  }
+}
