@@ -172,6 +172,56 @@ it('types', () => {
         ],
       },
     },
+    UnionGenericType: {
+      name: 'UnionGenericType',
+      type: 'type',
+      returns: {
+        type: 'union',
+        properties: [
+          {
+            type: 'reference',
+            name: 'Type',
+          },
+          {
+            type: 'null',
+            value: null,
+          },
+        ],
+      },
+    },
+    GenericArrayType: {
+      name: 'GenericArrayType',
+      type: 'type',
+      returns: {
+        type: 'array',
+        properties: [
+          {
+            type: 'reference',
+            name: 'Type',
+          },
+        ],
+      },
+    },
+    NestedGenericType: {
+      name: 'NestedGenericType',
+      type: 'type',
+      returns: {
+        type: 'reference',
+        name: 'GenericArrayType',
+        parameters: [
+          {
+            type: 'reference',
+            name: 'UnionGenericType',
+            parameters: [
+              {
+                type: 'reference',
+                name: 'Type',
+              },
+            ],
+          },
+        ],
+      },
+    },
     I: {
       type: 'interface',
       description: 'this is interface\nmultiple lines',
