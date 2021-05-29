@@ -191,7 +191,12 @@ const getElementType = (
         node.initializer,
         node.initializer,
       );
-    } else if (ts.isFunctionDeclaration(node) || ts.isArrowFunction(node)) {
+    } else if (
+      ts.isFunctionDeclaration(node) ||
+      ts.isArrowFunction(node) ||
+      ts.isMethodSignature(node) ||
+      ts.isMethodDeclaration(node)
+    ) {
       if (node.questionToken) {
         result.optional = true;
       }

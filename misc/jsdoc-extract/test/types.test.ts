@@ -355,6 +355,62 @@ it('types', () => {
         ],
       },
     },
+    InterfaceArrayType: {
+      name: 'InterfaceArrayType',
+      type: 'interface',
+      properties: [
+        {
+          type: 'number',
+          description: 'Gets or sets the length of the array.',
+          name: 'length',
+        },
+        {
+          type: 'function',
+          description: 'Removes the last element from an array and returns it.',
+          name: 'pop',
+          parameters: [],
+          returns: {
+            type: 'union',
+            properties: [
+              {
+                type: 'reference',
+                name: 'Type',
+              },
+              {
+                type: 'undefined',
+                value: undefined,
+              },
+            ],
+          },
+        },
+        {
+          type: 'function',
+          description:
+            'Appends new elements to an array, and returns the new length of the array.',
+          name: 'push',
+          parameters: [
+            {
+              name: 'items',
+              type: 'array',
+              properties: [
+                {
+                  type: 'reference',
+                  name: 'Type',
+                },
+              ],
+            },
+          ],
+          returns: {
+            type: 'number',
+          },
+        },
+      ],
+      parameters: [
+        {
+          name: 'Type',
+        },
+      ],
+    },
     arrString: {
       type: 'array',
       deprecated: 'yes',
