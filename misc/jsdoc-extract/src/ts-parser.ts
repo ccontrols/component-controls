@@ -141,7 +141,12 @@ const getElementType = (
       );
     } else if (ts.isTypeReferenceNode(node)) {
       result.type = 'reference';
-      result.name = node.typeName.getText();
+      const name = node.typeName.getText();
+      if (result.name && name !== result.name) {
+        result.value = name;
+      } else {
+        result.name = name;
+      }
       if (node.typeArguments?.length) {
         result.parameters = node.typeArguments.map(m =>
           getElementType(checker, {}, m),
@@ -151,7 +156,12 @@ const getElementType = (
       result = getElementType(checker, result, node.literal, node.literal);
     } else if (ts.isIdentifier(node)) {
       result.type = 'reference';
-      result.name = node.text;
+      const name = node.text;
+      if (result.name && name !== result.name) {
+        result.value = name;
+      } else {
+        result.name = name;
+      }
     } else if (ts.isVariableDeclaration(node)) {
       result = getElementType(checker, result, node.type, node.initializer);
     } else if (ts.isPropertySignature(node) || ts.isParameter(node)) {

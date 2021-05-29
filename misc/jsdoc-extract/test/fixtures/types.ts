@@ -67,6 +67,11 @@ export type IndexT = {
 };
 
 export type IntersectionType = IndexT & Internal;
+
+export type GenericType<Type> = {
+  contents: Type;
+};
+
 /**
  * this is interface
  * multiple lines

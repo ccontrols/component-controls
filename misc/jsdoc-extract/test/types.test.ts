@@ -120,8 +120,9 @@ it('types', () => {
                 type: 'type',
                 properties: [
                   {
-                    name: 'Bear',
+                    name: 'a',
                     type: 'reference',
+                    value: 'Bear',
                   },
                   {
                     name: 'b',
@@ -153,6 +154,20 @@ it('types', () => {
           {
             type: 'reference',
             name: 'Internal',
+          },
+        ],
+      },
+    },
+    GenericType: {
+      name: 'GenericType',
+      type: 'type',
+      returns: {
+        type: 'type',
+        properties: [
+          {
+            name: 'contents',
+            type: 'reference',
+            value: 'Type',
           },
         ],
       },
@@ -267,7 +282,8 @@ it('types', () => {
         {
           type: 'reference',
           description: 'configurable property type',
-          name: 'Type',
+          name: 'contents',
+          value: 'Type',
         },
       ],
       parameters: [
@@ -472,7 +488,8 @@ it('types', () => {
       type: 'function',
       parameters: [
         {
-          name: 'GenericInterface',
+          name: 'box',
+          value: 'GenericInterface',
           type: 'reference',
           parameters: [
             {
@@ -482,7 +499,8 @@ it('types', () => {
           ],
         },
         {
-          name: 'Type',
+          name: 'newContents',
+          value: 'Type',
           type: 'reference',
         },
       ],
