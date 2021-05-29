@@ -89,12 +89,30 @@ const assignType = (
       }
     } else if (ts.isInterfaceDeclaration(node)) {
       el.type = 'interface';
+      if (node.heritageClauses?.length) {
+        const inherits: JSDocType[] = [];
+        node.heritageClauses.forEach(h => {
+          h.types.forEach(t => {
+            const elInh = {};
+            assignType(checker, elInh, t.expression, t.expression);
+            inherits.push(elInh);
+          });
+        });
+        el.inherits = inherits;
+      }
       el.properties = node.members
         .map(
           m =>
             m.name && parseSymbol(checker, checker.getSymbolAtLocation(m.name)),
         )
         .filter(m => m) as JSDocType['properties'];
+    } else if (ts.isIntersectionTypeNode(node)) {
+      el.type = 'type';
+      el.properties = node.types.map(t => {
+        const e = {};
+        assignType(checker, e, t);
+        return e;
+      });
     } else if (ts.isTypeLiteralNode(node)) {
       el.type = 'type';
       el.properties = node.members
@@ -117,6 +135,9 @@ const assignType = (
       el.name = node.typeName.getText();
     } else if (ts.isLiteralTypeNode(node)) {
       assignType(checker, el, node.literal, node.literal);
+    } else if (ts.isIdentifier(node)) {
+      el.type = 'reference';
+      el.name = node.text;
     } else if (ts.isVariableDeclaration(node)) {
       assignType(checker, el, node.type, node.initializer);
     } else if (ts.isPropertySignature(node) || ts.isParameter(node)) {

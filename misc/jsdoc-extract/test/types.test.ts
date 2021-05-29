@@ -57,6 +57,26 @@ it('types', () => {
         },
       ],
     },
+    ExtendT: {
+      name: 'ExtendT',
+      type: 'type',
+      properties: [
+        {
+          type: 'reference',
+          name: 'T',
+        },
+        {
+          type: 'type',
+          properties: [
+            {
+              type: 'boolean',
+              description: 'honey',
+              name: 'honey',
+            },
+          ],
+        },
+      ],
+    },
     I: {
       type: 'interface',
       description: 'this is interface\nmultiple lines',
@@ -66,6 +86,22 @@ it('types', () => {
           type: 'string',
           description: 'interface member property',
           name: 'm',
+        },
+      ],
+    },
+    Bear: {
+      name: 'Bear',
+      type: 'interface',
+      inherits: [
+        {
+          type: 'reference',
+          name: 'I',
+        },
+      ],
+      properties: [
+        {
+          name: 'honey',
+          type: 'boolean',
         },
       ],
     },

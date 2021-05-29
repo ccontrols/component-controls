@@ -45,6 +45,12 @@ export type T = {
   m: string;
 };
 
+type ExtendT = T & {
+  /**
+   * honey
+   */
+  honey: boolean;
+};
 /**
  * this is interface
  * multiple lines
@@ -55,14 +61,17 @@ export interface I {
    */
   m: string;
 }
+interface Internal {}
+
+interface Bear extends I {
+  honey: boolean;
+}
 
 /**
  * this is an array of strings
  * @deprecated
  */
 export const arrString: string[] = ['one', 'two'];
-
-interface Internal {}
 
 /**
  * type array of interface type

@@ -34,6 +34,7 @@ export interface JSDocType {
   description?: string;
   parameters?: JSDocType[];
   properties?: JSDocType[];
+  inherits?: JSDocType[];
   returns?: JSDocTypeTag;
   fires?: { data: string }[];
   see?: string[];
