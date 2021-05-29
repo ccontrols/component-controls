@@ -132,6 +132,8 @@ export type arrType = Internal[];
  */
 export const names = ['Alice', 'Bob', 'Eve'];
 
+export const ArrayKeyword: Array<string> = ['test'];
+
 /**
  * strings union
  */

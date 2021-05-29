@@ -74,10 +74,19 @@ const getElementType = (
   const node = type || initializer;
   let result: JSDocType = { ...defaults };
   if (node) {
-    if (ts.isArrayTypeNode(node) || ts.isArrayLiteralExpression(node)) {
+    if (
+      ts.isArrayTypeNode(node) ||
+      ts.isArrayLiteralExpression(node) ||
+      (ts.isTypeReferenceNode(node) && node.typeName.getText() === 'Array')
+    ) {
       result.type = 'array';
+
       if (ts.isArrayTypeNode(node)) {
         result.properties = [getElementType(checker, {}, node.elementType)];
+      } else if (ts.isTypeReferenceNode(node) && node.typeArguments?.length) {
+        result.properties = node.typeArguments.map(m =>
+          getElementType(checker, {}, m),
+        );
       }
       if (initializer) {
         result.value = (initializer as ts.ArrayBindingPattern).elements.map(m =>

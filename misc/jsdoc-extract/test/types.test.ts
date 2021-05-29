@@ -409,6 +409,21 @@ it('types', () => {
         },
       ],
     },
+    ArrayKeyword: {
+      name: 'ArrayKeyword',
+      type: 'array',
+      properties: [
+        {
+          type: 'string',
+        },
+      ],
+      value: [
+        {
+          type: 'string',
+          value: 'test',
+        },
+      ],
+    },
     union: {
       type: 'type',
       description: 'strings union',
