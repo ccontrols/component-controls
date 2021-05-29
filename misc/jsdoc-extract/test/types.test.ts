@@ -45,6 +45,29 @@ it('types', () => {
       value: undefined,
       name: 'u',
     },
+    obj: {
+      type: 'object',
+      description: 'this is an undefined object',
+      name: 'obj',
+      value: undefined,
+    },
+    initializedObj: {
+      type: 'object',
+      description: 'this is an initialized object',
+      name: 'initializedObj',
+      value: [
+        {
+          name: 'a',
+          type: 'number',
+          value: 12,
+        },
+        {
+          name: 'b',
+          type: 'string',
+          value: 'test',
+        },
+      ],
+    },
     T: {
       type: 'type',
       description: 'this is type',

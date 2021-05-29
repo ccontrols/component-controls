@@ -145,6 +145,11 @@ const assignType = (
         el.optional = true;
       }
       assignType(checker, el, node.type, node.initializer);
+    } else if (ts.isPropertyAssignment(node)) {
+      if (node.questionToken) {
+        el.optional = true;
+      }
+      assignType(checker, el, node.initializer, node.initializer);
     } else if (ts.isFunctionDeclaration(node) || ts.isArrowFunction(node)) {
       if (node.questionToken) {
         el.optional = true;
@@ -172,6 +177,7 @@ const assignType = (
             el.value = Number((initializer as ts.LiteralLikeNode).text);
           }
           break;
+
         case ts.SyntaxKind.StringLiteral:
         case ts.SyntaxKind.StringKeyword:
           el.type = 'string';
@@ -204,7 +210,13 @@ const assignType = (
         case ts.SyntaxKind.VoidKeyword:
           el.type = 'void';
           break;
+        case ts.SyntaxKind.ObjectKeyword:
+          el.type = 'object';
+          el.value = el.value = strToValue(
+            (initializer as ts.LiteralLikeNode)?.text,
+          );
 
+          break;
         case ts.SyntaxKind.AnyKeyword:
           el.type = 'any';
           if (
@@ -225,6 +237,15 @@ const assignType = (
           el.type = 'undefined';
           el.value = undefined;
           break;
+      }
+      if (initializer && ts.isObjectLiteralExpression(initializer)) {
+        el.value = initializer.properties
+          .map(
+            m =>
+              m.name &&
+              parseSymbol(checker, checker.getSymbolAtLocation(m.name)),
+          )
+          .filter(m => m) as JSDocType['properties'];
       }
     }
   }

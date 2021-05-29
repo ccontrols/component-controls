@@ -1,12 +1,12 @@
 /**
  * this is a string
  */
-export const s: string = 'a';
+export const s = 'a';
 
 /**
  * this is a number
  */
-export const n: number = 3.14;
+export const n = 3.14;
 
 /**
  * this is a false
@@ -34,6 +34,16 @@ export const a: any = 'as';
  * this is unknown type
  */
 export const u: unknown = undefined;
+
+/**
+ * this is an undefined object
+ */
+export const obj: object = undefined;
+
+/**
+ * this is an initialized object
+ */
+export const initializedObj: object = { a: 12, b: 'test' };
 
 /**
  * this is type
