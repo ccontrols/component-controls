@@ -61,6 +61,10 @@ type ExtendT = T & {
    */
   honey: boolean;
 };
+
+export type IndexT = {
+  [index: string]: { a: Bear; b: null };
+};
 /**
  * this is interface
  * multiple lines

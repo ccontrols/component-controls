@@ -100,6 +100,36 @@ it('types', () => {
         },
       ],
     },
+    IndexT: {
+      name: 'IndexT',
+      type: 'type',
+      properties: [
+        {
+          type: 'index',
+          parameters: [
+            {
+              type: 'type',
+              properties: [
+                {
+                  name: 'Bear',
+                  type: 'reference',
+                },
+                {
+                  name: 'b',
+                  type: 'null',
+                  value: null,
+                },
+              ],
+            },
+          ],
+          properties: [
+            {
+              type: 'string',
+            },
+          ],
+        },
+      ],
+    },
     I: {
       type: 'interface',
       description: 'this is interface\nmultiple lines',

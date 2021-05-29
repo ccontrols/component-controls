@@ -129,12 +129,16 @@ const assignType = (
       });
     } else if (ts.isTypeLiteralNode(node)) {
       el.type = 'type';
-      el.properties = node.members
-        .map(
-          m =>
-            m.name && parseSymbol(checker, checker.getSymbolAtLocation(m.name)),
-        )
-        .filter(m => m) as JSDocType['properties'];
+      el.properties = node.members.map(m => {
+        const r =
+          m.name && parseSymbol(checker, checker.getSymbolAtLocation(m.name));
+        if (r) {
+          return r;
+        }
+        const e = {};
+        assignType(checker, e, m);
+        return e;
+      });
     } else if (ts.isTypeAliasDeclaration(node)) {
       assignType(checker, el, node.type);
     } else if (ts.isUnionTypeNode(node)) {
