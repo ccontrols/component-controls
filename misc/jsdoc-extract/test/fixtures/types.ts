@@ -236,3 +236,10 @@ export interface StringNumberPair {
 
   slice(start?: number, end?: number): Array<string | number>;
 }
+
+export const spreadTupleFunction = (
+  ...args: [string, number, ...boolean[]]
+): void => {
+  const [name, version, ...input] = args;
+  console.log(name, version, input);
+};

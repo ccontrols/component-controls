@@ -795,5 +795,37 @@ it('types', () => {
         },
       ],
     },
+    spreadTupleFunction: {
+      name: 'spreadTupleFunction',
+      type: 'function',
+      parameters: [
+        {
+          name: 'args',
+          type: 'tuple',
+          properties: [
+            {
+              type: 'string',
+            },
+            {
+              type: 'number',
+            },
+            {
+              type: 'rest',
+              returns: {
+                type: 'array',
+                properties: [
+                  {
+                    type: 'boolean',
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      ],
+      returns: {
+        type: 'void',
+      },
+    },
   });
 });
