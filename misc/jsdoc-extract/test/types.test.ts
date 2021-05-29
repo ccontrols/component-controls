@@ -827,5 +827,25 @@ it('types', () => {
         type: 'void',
       },
     },
+    distanceFromOrigin: {
+      name: 'distanceFromOrigin',
+      type: 'function',
+      parameters: [
+        {
+          type: 'tuple',
+          properties: [
+            {
+              type: 'number',
+            },
+            {
+              type: 'number',
+            },
+          ],
+        },
+      ],
+      returns: {
+        type: 'number',
+      },
+    },
   });
 });

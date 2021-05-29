@@ -243,3 +243,8 @@ export const spreadTupleFunction = (
   const [name, version, ...input] = args;
   console.log(name, version, input);
 };
+
+export function distanceFromOrigin([x, y]: [number, number]): number {
+  // eslint-disable-next-line no-mixed-operators
+  return Math.sqrt(x ** 2 + y ** 2);
+}
