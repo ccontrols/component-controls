@@ -65,6 +65,8 @@ type ExtendT = T & {
 export type IndexT = {
   readonly [index: string]: { a: Bear; b: null };
 };
+
+export type IntersectionType = IndexT & Internal;
 /**
  * this is interface
  * multiple lines

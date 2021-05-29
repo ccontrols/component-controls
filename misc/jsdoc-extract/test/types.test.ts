@@ -131,6 +131,20 @@ it('types', () => {
         },
       ],
     },
+    IntersectionType: {
+      name: 'IntersectionType',
+      type: 'type',
+      properties: [
+        {
+          type: 'reference',
+          name: 'IndexT',
+        },
+        {
+          type: 'reference',
+          name: 'Internal',
+        },
+      ],
+    },
     I: {
       type: 'interface',
       description: 'this is interface\nmultiple lines',
