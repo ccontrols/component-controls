@@ -276,6 +276,19 @@ it('types', () => {
         },
       ],
     },
+    GenericConsumer: {
+      name: 'GenericConsumer',
+      type: 'type',
+      returns: {
+        type: 'reference',
+        name: 'GenericInterface',
+        parameters: [
+          {
+            type: 'string',
+          },
+        ],
+      },
+    },
     arrString: {
       type: 'array',
       deprecated: 'yes',

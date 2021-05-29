@@ -105,6 +105,7 @@ export interface GenericInterface<Type> {
   contents: Type;
 }
 
+export type GenericConsumer = GenericInterface<string>;
 /**
  * this is an array of strings
  * @deprecated
