@@ -150,6 +150,8 @@ export const names = ['Alice', 'Bob', 'Eve'];
 
 export const ArrayKeyword: Array<string> = ['test'];
 
+// eslint-disable-next-line @typescript-eslint/no-array-constructor
+export const ArrayNew = new Array('red', 'green', 'blue');
 /**
  * strings union
  */

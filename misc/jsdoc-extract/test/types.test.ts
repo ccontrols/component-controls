@@ -480,6 +480,29 @@ it('types', () => {
         },
       ],
     },
+    ArrayNew: {
+      name: 'ArrayNew',
+      parameters: [
+        {
+          type: 'reference',
+          name: 'Array',
+        },
+      ],
+      properties: [
+        {
+          type: 'string',
+          value: 'red',
+        },
+        {
+          type: 'string',
+          value: 'green',
+        },
+        {
+          type: 'string',
+          value: 'blue',
+        },
+      ],
+    },
     union: {
       type: 'type',
       description: 'strings union',

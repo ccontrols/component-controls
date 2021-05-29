@@ -171,6 +171,13 @@ const getElementType = (
       } else {
         result.name = name;
       }
+    } else if (ts.isNewExpression(node)) {
+      result.parameters = [getElementType(checker, {}, node.expression)];
+      if (node.arguments) {
+        result.properties = node.arguments.map(m =>
+          getElementType(checker, {}, m, m),
+        );
+      }
     } else if (ts.isVariableDeclaration(node)) {
       result = getElementType(checker, result, node.type, node.initializer);
     } else if (ts.isPropertySignature(node) || ts.isParameter(node)) {
