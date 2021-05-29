@@ -120,6 +120,14 @@ const getElementType = (
             getElementType(checker, {}, m),
         );
       }
+    } else if (ts.isClassDeclaration(node)) {
+      result.type = 'class';
+      result.properties = node.members.map(
+        m =>
+          (m.name &&
+            parseSymbol(checker, checker.getSymbolAtLocation(m.name))) ||
+          getElementType(checker, {}, m),
+      );
     } else if (ts.isIndexSignatureDeclaration(node)) {
       result.type = 'index';
       if (node.modifiers?.find(m => m.kind === ts.SyntaxKind.ReadonlyKeyword)) {
@@ -211,6 +219,11 @@ const getElementType = (
         node.initializer,
         node.initializer,
       );
+    } else if (ts.isPropertyDeclaration(node)) {
+      if (node.questionToken) {
+        result.optional = true;
+      }
+      result = getElementType(checker, result, node.type);
     } else if (
       ts.isFunctionDeclaration(node) ||
       ts.isArrowFunction(node) ||
@@ -275,9 +288,6 @@ const getElementType = (
           ) {
             result.value = Boolean((initializer as ts.LiteralLikeNode).text);
           }
-          break;
-        case ts.SyntaxKind.ClassDeclaration:
-          result.type = 'class';
           break;
         case ts.SyntaxKind.VoidKeyword:
           result.type = 'void';

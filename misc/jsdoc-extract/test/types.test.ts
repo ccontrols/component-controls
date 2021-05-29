@@ -847,5 +847,22 @@ it('types', () => {
         type: 'number',
       },
     },
+    Point: {
+      type: 'class',
+      description: 'this is a class with two members',
+      name: 'Point',
+      properties: [
+        {
+          type: 'number',
+          description: 'COORDINATE X',
+          name: 'x',
+        },
+        {
+          type: 'number',
+          description: 'COORDINATE Y',
+          name: 'y',
+        },
+      ],
+    },
   });
 });

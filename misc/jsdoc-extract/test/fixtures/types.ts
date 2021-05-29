@@ -248,3 +248,17 @@ export function distanceFromOrigin([x, y]: [number, number]): number {
   // eslint-disable-next-line no-mixed-operators
   return Math.sqrt(x ** 2 + y ** 2);
 }
+
+/**
+ * this is a class with two members
+ */
+export class Point {
+  /**
+   * COORDINATE X
+   */
+  x: number;
+  /**
+   * COORDINATE Y
+   */
+  y: number;
+}
