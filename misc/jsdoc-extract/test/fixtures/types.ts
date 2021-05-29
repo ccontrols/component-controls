@@ -211,3 +211,7 @@ export function genericFunction<Type>(
   console.log(newContents);
   return box;
 }
+
+export function readOnlyParameters(values: string[]): void {
+  console.log(values);
+}

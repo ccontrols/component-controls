@@ -163,6 +163,8 @@ const getElementType = (
       }
     } else if (ts.isLiteralTypeNode(node)) {
       result = getElementType(checker, result, node.literal, node.literal);
+    } else if (ts.isTypeOperatorNode(node)) {
+      result = getElementType(checker, result, node.type);
     } else if (ts.isIdentifier(node)) {
       result.type = 'reference';
       const name = node.text;

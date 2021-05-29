@@ -664,5 +664,23 @@ it('types', () => {
         },
       ],
     },
+    readOnlyParameters: {
+      name: 'readOnlyParameters',
+      type: 'function',
+      parameters: [
+        {
+          name: 'values',
+          type: 'array',
+          properties: [
+            {
+              type: 'string',
+            },
+          ],
+        },
+      ],
+      returns: {
+        type: 'void',
+      },
+    },
   });
 });
