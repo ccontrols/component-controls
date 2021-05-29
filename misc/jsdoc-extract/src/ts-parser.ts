@@ -112,6 +112,9 @@ const assignType = (
       });
     } else if (ts.isIndexSignatureDeclaration(node)) {
       el.type = 'index';
+      if (node.modifiers?.find(m => m.kind === ts.SyntaxKind.ReadonlyKeyword)) {
+        el.readonly = true;
+      }
       const e = {};
       assignType(checker, e, node.type);
       el.parameters = [e];

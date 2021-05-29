@@ -63,7 +63,7 @@ type ExtendT = T & {
 };
 
 export type IndexT = {
-  [index: string]: { a: Bear; b: null };
+  readonly [index: string]: { a: Bear; b: null };
 };
 /**
  * this is interface

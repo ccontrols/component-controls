@@ -106,6 +106,7 @@ it('types', () => {
       properties: [
         {
           type: 'index',
+          readonly: true,
           parameters: [
             {
               type: 'type',
