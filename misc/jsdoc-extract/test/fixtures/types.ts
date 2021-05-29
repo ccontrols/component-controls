@@ -77,6 +77,9 @@ export interface Bear extends I {
   honey: boolean;
 }
 
+export interface Home {
+  readonly resident: { name: string; age: number };
+}
 /**
  * this is an array of strings
  * @deprecated

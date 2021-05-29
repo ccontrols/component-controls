@@ -128,6 +128,27 @@ it('types', () => {
         },
       ],
     },
+    Home: {
+      name: 'Home',
+      type: 'interface',
+      properties: [
+        {
+          name: 'resident',
+          readonly: true,
+          type: 'type',
+          properties: [
+            {
+              name: 'name',
+              type: 'string',
+            },
+            {
+              name: 'age',
+              type: 'number',
+            },
+          ],
+        },
+      ],
+    },
     arrString: {
       type: 'array',
       deprecated: 'yes',

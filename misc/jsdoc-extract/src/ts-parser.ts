@@ -144,6 +144,9 @@ const assignType = (
       if (node.questionToken) {
         el.optional = true;
       }
+      if (node.modifiers?.find(m => m.kind === ts.SyntaxKind.ReadonlyKeyword)) {
+        el.readonly = true;
+      }
       assignType(checker, el, node.type, node.initializer);
     } else if (ts.isPropertyAssignment(node)) {
       if (node.questionToken) {

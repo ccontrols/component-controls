@@ -41,5 +41,6 @@ export interface JSDocType {
   examples?: JSDocExample[];
   value?: any;
   optional?: boolean;
+  readonly?: boolean;
   deprecated?: string;
 }
