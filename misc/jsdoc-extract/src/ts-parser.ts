@@ -232,7 +232,10 @@ const getElementType = (
       if (node.questionToken) {
         result.optional = true;
       }
-      result = getElementType(checker, result, node.type);
+      if (node.modifiers?.find(m => m.kind === ts.SyntaxKind.ReadonlyKeyword)) {
+        result.readonly = true;
+      }
+      result = getElementType(checker, result, node.type, node.initializer);
     } else if (
       ts.isFunctionDeclaration(node) ||
       ts.isArrowFunction(node) ||

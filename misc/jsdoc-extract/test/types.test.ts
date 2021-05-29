@@ -885,5 +885,25 @@ it('types', () => {
         },
       ],
     },
+    GreeterInitializedMembers: {
+      name: 'GreeterInitializedMembers',
+      type: 'class',
+      properties: [
+        {
+          name: 'name',
+          readonly: true,
+          type: 'string',
+          value: 'world',
+        },
+        {
+          name: 'err',
+          type: 'function',
+          parameters: [],
+          returns: {
+            type: 'void',
+          },
+        },
+      ],
+    },
   });
 });
