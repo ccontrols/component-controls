@@ -88,6 +88,10 @@ export interface Home {
 export interface IndexInterface {
   [index: number]: string;
 }
+
+export interface MultipleInheritance extends Home, Bear {
+  ownfield: 'test' | 1;
+}
 /**
  * this is an array of strings
  * @deprecated

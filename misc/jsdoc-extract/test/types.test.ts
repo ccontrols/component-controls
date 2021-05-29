@@ -199,6 +199,36 @@ it('types', () => {
         },
       ],
     },
+    MultipleInheritance: {
+      name: 'MultipleInheritance',
+      type: 'interface',
+      inherits: [
+        {
+          type: 'reference',
+          name: 'Home',
+        },
+        {
+          type: 'reference',
+          name: 'Bear',
+        },
+      ],
+      properties: [
+        {
+          name: 'ownfield',
+          type: 'union',
+          properties: [
+            {
+              type: 'string',
+              value: 'test',
+            },
+            {
+              type: 'number',
+              value: 1,
+            },
+          ],
+        },
+      ],
+    },
     arrString: {
       type: 'array',
       deprecated: 'yes',
