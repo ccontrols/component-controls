@@ -143,6 +143,9 @@ const getElementType = (
     } else if (ts.isTypeAliasDeclaration(node)) {
       result.type = 'type';
       result.returns = getElementType(checker, {}, node.type);
+    } else if (ts.isOptionalTypeNode(node)) {
+      result.optional = true;
+      result = getElementType(checker, result, node.type);
     } else if (ts.isUnionTypeNode(node)) {
       result.type = 'union';
       result.properties = node.types.map(m =>

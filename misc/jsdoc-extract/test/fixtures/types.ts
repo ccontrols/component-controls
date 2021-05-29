@@ -158,6 +158,8 @@ export const ArrayNew = new Array('red', 'green', 'blue');
 export type union = 'this' | 1 | false | null | undefined;
 
 export type Tuple = [string, number];
+
+export type OptionalTuple = [number, number, number?];
 /**
  * greeting function
  * @param name string type parameters

@@ -548,6 +548,25 @@ it('types', () => {
         ],
       },
     },
+    OptionalTuple: {
+      name: 'OptionalTuple',
+      type: 'type',
+      returns: {
+        type: 'tuple',
+        properties: [
+          {
+            type: 'number',
+          },
+          {
+            type: 'number',
+          },
+          {
+            optional: true,
+            type: 'number',
+          },
+        ],
+      },
+    },
     greet: {
       type: 'function',
       parameters: [
