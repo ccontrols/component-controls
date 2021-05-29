@@ -467,5 +467,40 @@ it('types', () => {
         name: 'Bear',
       },
     },
+    genericFunction: {
+      name: 'genericFunction',
+      type: 'function',
+      parameters: [
+        {
+          name: 'GenericInterface',
+          type: 'reference',
+          parameters: [
+            {
+              type: 'reference',
+              name: 'Type',
+            },
+          ],
+        },
+        {
+          name: 'Type',
+          type: 'reference',
+        },
+      ],
+      returns: {
+        type: 'reference',
+        name: 'GenericInterface',
+        parameters: [
+          {
+            type: 'reference',
+            name: 'Type',
+          },
+        ],
+      },
+      properties: [
+        {
+          name: 'Type',
+        },
+      ],
+    },
   });
 });

@@ -173,3 +173,11 @@ export function printId(id: number | string): void {
 export function paintHomeyBear({ m, honey = true }: ExtendT): Bear {
   return { honey, m };
 }
+
+export function genericFunction<Type>(
+  box: GenericInterface<Type>,
+  newContents: Type,
+): GenericInterface<Type> {
+  console.log(newContents);
+  return box;
+}

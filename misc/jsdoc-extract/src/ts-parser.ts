@@ -177,16 +177,22 @@ const getElementType = (
         result.optional = true;
       }
       result.type = 'function';
-      result.parameters = node.parameters
-        .map(
+      result.parameters = node.parameters.map(
+        m =>
+          (m.name &&
+            parseSymbol(checker, checker.getSymbolAtLocation(m.name))) ||
+          getElementType(checker, {}, m.type),
+      );
+      if (node.type) {
+        result.returns = getElementType(checker, {}, node.type);
+      }
+      if (node.typeParameters?.length) {
+        result.properties = node.typeParameters.map(
           m =>
             (m.name &&
               parseSymbol(checker, checker.getSymbolAtLocation(m.name))) ||
-            getElementType(checker, {}, m.type),
-        )
-        .filter(m => m) as JSDocType['properties'];
-      if (node.type) {
-        result.returns = getElementType(checker, {}, node.type);
+            getElementType(checker, {}, m),
+        );
       }
     } else {
       switch (node.kind) {
@@ -259,13 +265,10 @@ const getElementType = (
           break;
       }
       if (initializer && ts.isObjectLiteralExpression(initializer)) {
-        result.value = initializer.properties
-          .map(
-            m =>
-              m.name &&
-              parseSymbol(checker, checker.getSymbolAtLocation(m.name)),
-          )
-          .filter(m => m) as JSDocType['properties'];
+        result.value = initializer.properties.map(
+          m =>
+            m.name && parseSymbol(checker, checker.getSymbolAtLocation(m.name)),
+        );
       }
     }
   }
