@@ -148,6 +148,11 @@ const getElementType = (
       result.properties = node.types.map(m =>
         getElementType(checker, {}, m, (m as ts.LiteralTypeNode).literal),
       );
+    } else if (ts.isTupleTypeNode(node)) {
+      result.type = 'tuple';
+      result.properties = node.elements.map(m =>
+        getElementType(checker, {}, m),
+      );
     } else if (ts.isTypeReferenceNode(node)) {
       result.type = 'reference';
       const name = node.typeName.getText();

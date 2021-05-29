@@ -533,6 +533,21 @@ it('types', () => {
         ],
       },
     },
+    Tuple: {
+      name: 'Tuple',
+      type: 'type',
+      returns: {
+        type: 'tuple',
+        properties: [
+          {
+            type: 'string',
+          },
+          {
+            type: 'number',
+          },
+        ],
+      },
+    },
     greet: {
       type: 'function',
       parameters: [
