@@ -23,6 +23,7 @@ export type TSType =
   | 'array'
   | 'any'
   | 'reference'
+  | 'index'
   | 'unknown';
 
 export interface JSDocType {

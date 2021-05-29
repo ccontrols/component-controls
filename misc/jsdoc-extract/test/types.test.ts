@@ -149,6 +149,25 @@ it('types', () => {
         },
       ],
     },
+    IndexInterface: {
+      name: 'IndexInterface',
+      type: 'interface',
+      properties: [
+        {
+          type: 'index',
+          parameters: [
+            {
+              type: 'string',
+            },
+          ],
+          properties: [
+            {
+              type: 'number',
+            },
+          ],
+        },
+      ],
+    },
     arrString: {
       type: 'array',
       deprecated: 'yes',

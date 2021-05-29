@@ -100,12 +100,26 @@ const assignType = (
         });
         el.inherits = inherits;
       }
-      el.properties = node.members
-        .map(
-          m =>
-            m.name && parseSymbol(checker, checker.getSymbolAtLocation(m.name)),
-        )
-        .filter(m => m) as JSDocType['properties'];
+      el.properties = node.members.map(m => {
+        const r =
+          m.name && parseSymbol(checker, checker.getSymbolAtLocation(m.name));
+        if (r) {
+          return r;
+        }
+        const e = {};
+        assignType(checker, e, m);
+        return e;
+      });
+    } else if (ts.isIndexSignatureDeclaration(node)) {
+      el.type = 'index';
+      const e = {};
+      assignType(checker, e, node.type);
+      el.parameters = [e];
+      el.properties = node.parameters.map(m => {
+        const e = {};
+        assignType(checker, e, m);
+        return e;
+      });
     } else if (ts.isIntersectionTypeNode(node)) {
       el.type = 'type';
       el.properties = node.types.map(t => {

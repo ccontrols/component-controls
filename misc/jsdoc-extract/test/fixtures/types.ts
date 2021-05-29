@@ -80,6 +80,10 @@ export interface Bear extends I {
 export interface Home {
   readonly resident: { name: string; age: number };
 }
+
+export interface IndexInterface {
+  [index: number]: string;
+}
 /**
  * this is an array of strings
  * @deprecated
