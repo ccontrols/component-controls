@@ -697,5 +697,58 @@ it('types', () => {
         type: 'void',
       },
     },
+    StringNumberPair: {
+      name: 'StringNumberPair',
+      type: 'interface',
+      properties: [
+        {
+          type: 'number',
+          description: 'specialized properties',
+          name: 'length',
+          value: 2,
+        },
+        {
+          name: '0',
+          type: 'string',
+        },
+        {
+          name: '1',
+          type: 'number',
+        },
+        {
+          type: 'function',
+          description: "Other 'Array<string | number>' members...",
+          name: 'slice',
+          parameters: [
+            {
+              name: 'start',
+              optional: true,
+              type: 'number',
+            },
+            {
+              name: 'end',
+              optional: true,
+              type: 'number',
+            },
+          ],
+          returns: {
+            type: 'array',
+            properties: [
+              {
+                type: 'union',
+                properties: [
+                  {
+                    type: 'string',
+                  },
+                  {
+                    type: 'number',
+                  },
+                ],
+              },
+            ],
+          },
+        },
+      ],
+    },
   });
 });
