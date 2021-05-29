@@ -283,5 +283,19 @@ it('types', () => {
         type: 'void',
       },
     },
+    paintHomeyBear: {
+      name: 'paintHomeyBear',
+      type: 'function',
+      parameters: [
+        {
+          type: 'reference',
+          name: 'ExtendT',
+        },
+      ],
+      returns: {
+        type: 'reference',
+        name: 'Bear',
+      },
+    },
   });
 });

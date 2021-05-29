@@ -73,7 +73,7 @@ export interface I {
 }
 interface Internal {}
 
-interface Bear extends I {
+export interface Bear extends I {
   honey: boolean;
 }
 
@@ -139,4 +139,8 @@ export function printCoord(pt: {
 
 export function printId(id: number | string): void {
   console.log('Your ID is: ' + id);
+}
+
+export function paintHomeyBear({ m, honey = true }: ExtendT): Bear {
+  return { honey, m };
 }

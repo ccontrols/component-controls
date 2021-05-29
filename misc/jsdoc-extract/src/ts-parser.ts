@@ -156,10 +156,16 @@ const assignType = (
       }
       el.type = 'function';
       el.parameters = node.parameters
-        .map(
-          m =>
-            m.name && parseSymbol(checker, checker.getSymbolAtLocation(m.name)),
-        )
+        .map(m => {
+          const r =
+            m.name && parseSymbol(checker, checker.getSymbolAtLocation(m.name));
+          if (r) {
+            return r;
+          }
+          const e = {};
+          assignType(checker, e, m.type);
+          return e;
+        })
         .filter(m => m) as JSDocType['properties'];
       const returns: JSDocType = {};
       assignType(checker, returns, node.type);
