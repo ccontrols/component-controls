@@ -1118,5 +1118,32 @@ it('types', () => {
         },
       ],
     },
+    MemberVisibikity: {
+      name: 'MemberVisibikity',
+      type: 'class',
+      properties: [
+        {
+          type: 'function',
+          description: 'a public method',
+          name: 'method1',
+          visibility: 'public',
+          parameters: [],
+        },
+        {
+          type: 'function',
+          description: 'a protected method',
+          name: 'method2',
+          visibility: 'protected',
+          parameters: [],
+        },
+        {
+          type: 'function',
+          description: 'a private method',
+          name: 'method3',
+          visibility: 'private',
+          parameters: [],
+        },
+      ],
+    },
   });
 });

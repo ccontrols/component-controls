@@ -243,6 +243,30 @@ const getElementType = (
       ts.isMethodSignature(node) ||
       ts.isMethodDeclaration(node)
     ) {
+      if (node.modifiers) {
+        for (const m of node.modifiers) {
+          if (m.kind === ts.SyntaxKind.PrivateKeyword) {
+            result.visibility = 'private';
+            break;
+          }
+          if (m.kind === ts.SyntaxKind.ProtectedKeyword) {
+            result.visibility = 'protected';
+            break;
+          }
+          if (m.kind === ts.SyntaxKind.PublicKeyword) {
+            result.visibility = 'public';
+            break;
+          }
+        }
+        if (node.modifiers.find(m => m.kind === ts.SyntaxKind.StaticKeyword)) {
+          result.static = true;
+        }
+        if (
+          node.modifiers.find(m => m.kind === ts.SyntaxKind.ReadonlyKeyword)
+        ) {
+          result.readonly = true;
+        }
+      }
       if (!ts.isFunctionTypeNode(node) && node.questionToken) {
         result.optional = true;
       }

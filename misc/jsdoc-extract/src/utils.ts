@@ -46,5 +46,7 @@ export interface JSDocType {
   value?: any;
   optional?: boolean;
   readonly?: boolean;
+  visibility?: 'private' | 'protected' | 'public';
+  static?: boolean;
   deprecated?: string;
 }
