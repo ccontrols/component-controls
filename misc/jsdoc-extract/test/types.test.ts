@@ -873,9 +873,11 @@ it('types', () => {
           type: 'string',
         },
         {
+          description: 'constructor description',
           name: 'constructor',
           type: 'function',
-          properties: [
+          fnType: 'constructor',
+          parameters: [
             {
               name: 'x',
               optional: true,
@@ -911,8 +913,9 @@ it('types', () => {
       properties: [
         {
           name: 'constructor',
+          fnType: 'constructor',
           type: 'function',
-          properties: [
+          parameters: [
             {
               name: 'x',
               type: 'number',
@@ -928,7 +931,8 @@ it('types', () => {
         {
           name: 'constructor',
           type: 'function',
-          properties: [
+          fnType: 'constructor',
+          parameters: [
             {
               name: 's',
               type: 'string',
@@ -938,7 +942,8 @@ it('types', () => {
         {
           name: 'constructor',
           type: 'function',
-          properties: [
+          fnType: 'constructor',
+          parameters: [
             {
               name: 'xs',
               type: 'any',
@@ -949,6 +954,41 @@ it('types', () => {
               type: 'any',
             },
           ],
+        },
+      ],
+    },
+
+    ClassGetters: {
+      name: 'ClassGetters',
+      type: 'class',
+      properties: [
+        {
+          type: 'number',
+          description: 'member description',
+          name: '_length',
+          value: 0,
+        },
+        {
+          type: 'function',
+          description: 'getter description',
+          name: 'length',
+          fnType: 'getter',
+          parameters: [],
+        },
+        {
+          type: 'function',
+          parameters: [
+            {
+              name: 'value',
+              type: 'number',
+              optional: false,
+              value: undefined,
+              description: 'the new value',
+            },
+          ],
+          description: 'setter description',
+          name: 'length',
+          fnType: 'setter',
         },
       ],
     },

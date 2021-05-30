@@ -34,6 +34,7 @@ export interface JSDocType {
   namepath?: string;
   memberof?: string;
   type?: TSType;
+  fnType?: 'constructor' | 'getter' | 'setter';
   description?: string;
   parameters?: JSDocType[];
   properties?: JSDocType[];

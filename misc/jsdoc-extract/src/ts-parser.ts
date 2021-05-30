@@ -106,28 +106,15 @@ const getElementType = (
         }, [] as JSDocType[]);
       }
 
-      result.properties = node.members.map(
-        m =>
-          (m.name &&
-            parseSymbol(checker, checker.getSymbolAtLocation(m.name))) ||
-          getElementType(checker, {}, m),
-      );
+      result.properties = node.members.map(m => parseNode(checker, m));
       if (node.typeParameters?.length) {
-        result.parameters = node.typeParameters.map(
-          m =>
-            (m.name &&
-              parseSymbol(checker, checker.getSymbolAtLocation(m.name))) ||
-            getElementType(checker, {}, m),
-        );
+        result.parameters = node.typeParameters.map(m => parseNode(checker, m));
       }
     } else if (ts.isClassDeclaration(node)) {
       result.type = 'class';
-      result.properties = node.members.map(
-        m =>
-          (m.name &&
-            parseSymbol(checker, checker.getSymbolAtLocation(m.name))) ||
-          getElementType(checker, {}, m),
-      );
+      result.properties = node.members.map(m => {
+        return parseNode(checker, m);
+      });
     } else if (ts.isIndexSignatureDeclaration(node)) {
       result.type = 'index';
       if (node.modifiers?.find(m => m.kind === ts.SyntaxKind.ReadonlyKeyword)) {
@@ -139,24 +126,19 @@ const getElementType = (
       );
     } else if (ts.isConstructorDeclaration(node)) {
       result.name = 'constructor';
+      result.fnType = 'constructor';
       result.type = 'function';
-      result.properties = node.parameters.map(
-        m =>
-          (m.name &&
-            parseSymbol(checker, checker.getSymbolAtLocation(m.name))) ||
-          getElementType(checker, {}, m),
-      );
+      result.parameters = node.parameters.map(m => parseNode(checker, m));
+    } else if (ts.isGetAccessor(node) || ts.isSetAccessor(node)) {
+      result.type = 'function';
+      result.fnType = ts.isSetAccessor(node) ? 'setter' : 'getter';
+      result.parameters = node.parameters.map(m => parseNode(checker, m));
     } else if (ts.isIntersectionTypeNode(node)) {
       result.type = 'type';
       result.properties = node.types.map(m => getElementType(checker, {}, m));
     } else if (ts.isTypeLiteralNode(node)) {
       result.type = 'type';
-      result.properties = node.members.map(
-        m =>
-          (m.name &&
-            parseSymbol(checker, checker.getSymbolAtLocation(m.name))) ||
-          getElementType(checker, {}, m),
-      );
+      result.properties = node.members.map(m => parseNode(checker, m));
     } else if (ts.isTypeAliasDeclaration(node)) {
       result.type = 'type';
       result.returns = getElementType(checker, {}, node.type);
@@ -246,12 +228,9 @@ const getElementType = (
         result.optional = true;
       }
       result.type = 'function';
-      result.parameters = node.parameters.map(
-        m =>
-          (m.name &&
-            parseSymbol(checker, checker.getSymbolAtLocation(m.name))) ||
-          getElementType(checker, {}, m.type),
-      );
+      result.parameters = node.parameters.map(m => {
+        return parseNode(checker, m);
+      });
       if (node.type) {
         result.returns = getElementType(checker, {}, node.type);
       }
@@ -341,6 +320,63 @@ const getElementType = (
   return result;
 };
 
+const parseNode = (
+  checker: ts.TypeChecker,
+  node: ts.NamedDeclaration & {
+    jsDoc?: {
+      comment: string;
+      tags: { comment: string; name: ts.Identifier; tagName: ts.Identifier }[];
+    }[];
+  },
+  initializer?: ts.Node,
+): JSDocType => {
+  const result = getElementType(
+    checker,
+    {
+      name: node.name?.getText(),
+    },
+    node,
+    initializer,
+  );
+  if (node.jsDoc) {
+    const jsDocs: {
+      descriptions: string[];
+      tags: string[];
+    } = node.jsDoc.reduce(
+      (
+        acc: {
+          descriptions: string[];
+          tags: string[];
+        },
+        { comment, tags },
+      ) => {
+        const newTags = tags
+          ? tags.map(({ comment, name, tagName }) => {
+              return `* @${tagName.text} ${name.text}${
+                comment ? ` ${comment}` : ''
+              }`;
+            })
+          : [];
+        return {
+          descriptions: comment
+            ? [...acc.descriptions, `* ${comment}`]
+            : acc.descriptions,
+          tags: [...acc.tags, ...newTags],
+        };
+      },
+      {
+        descriptions: [],
+        tags: [],
+      },
+    );
+
+    const jsDoc = [...jsDocs.descriptions, ...jsDocs.tags].join('\n');
+    const withJsDoc = mergeJSDocComments(result, jsDoc);
+    return withJsDoc;
+  }
+  return result;
+};
+
 const parseSymbol = (
   checker: ts.TypeChecker,
   symbol?: ts.Symbol,
@@ -356,7 +392,7 @@ const parseSymbol = (
     {
       name: symbolName(symbol),
     },
-    symbol.valueDeclaration || declaration,
+    declaration || symbol.valueDeclaration,
     declaration?.initializer,
   );
   const descriptions = symbol.getDocumentationComment(checker);
