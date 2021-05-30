@@ -61,10 +61,6 @@ const getVisit = (checker: ts.TypeChecker, symbols: ts.Symbol[]) => {
   return visit;
 };
 
-const symbolName = (node: ts.Symbol): string => {
-  return node.getName();
-};
-
 const getElementType = (
   checker: ts.TypeChecker,
   defaults: JSDocType,
@@ -234,11 +230,8 @@ const getElementType = (
         result.returns = getElementType(checker, {}, node.type);
       }
       if (node.typeParameters?.length) {
-        result.properties = node.typeParameters.map(
-          m =>
-            (m.name &&
-              parseSymbol(checker, checker.getSymbolAtLocation(m.name))) ||
-            getElementType(checker, {}, m),
+        result.properties = node.typeParameters.map(m =>
+          parseNode(checker, {}, m),
         );
       }
     } else {
@@ -309,9 +302,8 @@ const getElementType = (
           break;
       }
       if (initializer && ts.isObjectLiteralExpression(initializer)) {
-        result.value = initializer.properties.map(
-          m =>
-            m.name && parseSymbol(checker, checker.getSymbolAtLocation(m.name)),
+        result.value = initializer.properties.map(m =>
+          parseNode(checker, {}, m),
         );
       }
     }
@@ -319,27 +311,34 @@ const getElementType = (
   return result;
 };
 
+type JSDocInfoType = {
+  comment?: string;
+  tags?: {
+    comment: string;
+    name: { text: string };
+    tagName: { text: string };
+  }[];
+};
 const parseNode = (
   checker: ts.TypeChecker,
   defaults: JSDocType,
   node: ts.NamedDeclaration & {
-    jsDoc?: {
-      comment: string;
-      tags: { comment: string; name: ts.Identifier; tagName: ts.Identifier }[];
-    }[];
+    jsDoc?: JSDocInfoType[];
   },
   initializer?: ts.Node,
+  jsDocsDefaults?: JSDocInfoType[],
 ): JSDocType => {
   const updated = { ...defaults };
   if (node.name?.text) {
     updated.name = node.name?.text;
   }
   const result = getElementType(checker, updated, node, initializer);
-  if (node.jsDoc) {
-    const jsDocs: {
+  const jsDocs = jsDocsDefaults || node.jsDoc;
+  if (jsDocs) {
+    const docs: {
       descriptions: string[];
       tags: string[];
-    } = node.jsDoc.reduce(
+    } = jsDocs.reduce(
       (
         acc: {
           descriptions: string[];
@@ -367,8 +366,10 @@ const parseNode = (
       },
     );
 
-    const jsDoc = [...jsDocs.descriptions, ...jsDocs.tags].join('\n');
-    const withJsDoc = mergeJSDocComments(result, jsDoc);
+    const withJsDoc = mergeJSDocComments(
+      result,
+      [...docs.descriptions, ...docs.tags].join('\n'),
+    );
     return withJsDoc;
   }
   return result;
@@ -381,32 +382,24 @@ const parseSymbol = (
   if (!symbol) {
     return undefined;
   }
-  const declaration = symbol.declarations.length
-    ? (symbol.declarations[0] as ts.VariableDeclaration)
-    : undefined;
-
-  const result = getElementType(
-    checker,
-    {
-      name: symbolName(symbol),
-    },
-    declaration || symbol.valueDeclaration,
-    declaration?.initializer,
-  );
-  const descriptions = symbol.getDocumentationComment(checker);
-  const tags = symbol.getJsDocTags();
-  const jsDoc = [
-    ...descriptions.map(({ text }) => `* ${text}`),
-    ...tags.map(tag => `* @${tag.name}${tag.text ? ` ${tag.text}` : ''}`),
-  ].join('\n');
-  const withJsDoc = mergeJSDocComments(result, jsDoc);
-  /**
-   * workaround typescript compiler assigns jsdoc to function params + to the function itself
-   */
-  return result.parameters !== withJsDoc.parameters &&
-    result.type !== 'function'
-    ? result
-    : withJsDoc;
+  const declaration = symbol.declarations[0] as ts.VariableDeclaration;
+  const comments = symbol
+    .getDocumentationComment(checker)
+    .map(({ text }) => text);
+  const tags = symbol.getJsDocTags().map(t => {
+    if (t.text) {
+      const firstSpace = t.text.indexOf(' ');
+      return {
+        tagName: { text: t.name },
+        name: { text: t.text.substr(0, firstSpace) },
+        comment: t.text.substr(firstSpace + 1),
+      };
+    }
+    return { tagName: { text: t.name }, name: { text: '' }, comment: '' };
+  });
+  return parseNode(checker, {}, declaration, declaration?.initializer, [
+    { comment: comments.join('/n * '), tags },
+  ]);
 };
 export const tsParser = (
   fileName: string,

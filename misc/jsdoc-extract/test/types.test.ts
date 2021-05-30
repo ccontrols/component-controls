@@ -326,6 +326,7 @@ it('types', () => {
       ],
     },
     GenericInterface: {
+      description: 'generics',
       name: 'GenericInterface',
       type: 'interface',
       properties: [
