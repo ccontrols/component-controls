@@ -98,7 +98,7 @@ const getElementType = (
             ...h.types.map(t =>
               getElementType(
                 checker,
-                { type: 'reference' },
+                { type: 'interface' },
                 t.expression,
                 t.expression,
               ),
@@ -118,6 +118,26 @@ const getElementType = (
       result.properties = node.members.map(m => {
         return parseNode(checker, {}, m);
       });
+      if (node.heritageClauses?.length) {
+        result.inherits = node.heritageClauses.reduce((acc, h) => {
+          return [
+            ...acc,
+            ...h.types.map(t =>
+              getElementType(
+                checker,
+                {
+                  type:
+                    h.token === ts.SyntaxKind.ExtendsKeyword
+                      ? 'class'
+                      : 'interface',
+                },
+                t.expression,
+                t.expression,
+              ),
+            ),
+          ];
+        }, [] as JSDocType[]);
+      }
     } else if (ts.isIndexSignatureDeclaration(node)) {
       result.type = 'index';
       if (node.modifiers?.find(m => m.kind === ts.SyntaxKind.ReadonlyKeyword)) {

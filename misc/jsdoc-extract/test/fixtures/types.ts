@@ -325,3 +325,33 @@ export class ClassIndexSignature {
     return this[s] as boolean;
   }
 }
+
+/**
+ * class implements an interface
+ */
+export class ClassImplements implements InterfaceArrayType<string> {
+  /**
+   * member
+   */
+  length: number;
+  /**
+   * pop function
+   */
+  pop(): string {
+    throw new Error('Method not implemented.');
+  }
+  /**
+   * push function
+   * @param items those are items
+   */
+  push(...items: string[]): number {
+    throw new Error('Method not implemented.');
+  }
+}
+export class ClassExtends extends ClassImplements {
+  woof(times: number) {
+    for (let i = 0; i < times; i++) {
+      console.log('woof!');
+    }
+  }
+}

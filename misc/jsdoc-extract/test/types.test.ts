@@ -244,7 +244,7 @@ it('types', () => {
       type: 'interface',
       inherits: [
         {
-          type: 'reference',
+          type: 'interface',
           value: 'I',
         },
       ],
@@ -300,11 +300,11 @@ it('types', () => {
       type: 'interface',
       inherits: [
         {
-          type: 'reference',
+          type: 'interface',
           value: 'Home',
         },
         {
-          type: 'reference',
+          type: 'interface',
           value: 'Bear',
         },
       ],
@@ -1044,6 +1044,77 @@ it('types', () => {
             },
           ],
           name: 'check',
+        },
+      ],
+    },
+    ClassImplements: {
+      type: 'class',
+      description: 'class implements an interface',
+      name: 'ClassImplements',
+      properties: [
+        {
+          type: 'number',
+          description: 'member',
+          name: 'length',
+        },
+        {
+          type: 'function',
+          description: 'pop function',
+          name: 'pop',
+          parameters: [],
+          returns: {
+            type: 'string',
+          },
+        },
+        {
+          type: 'function',
+          parameters: [
+            {
+              name: 'items',
+              type: 'array',
+              optional: false,
+              value: undefined,
+              description: 'those are items',
+              properties: [
+                {
+                  type: 'string',
+                },
+              ],
+            },
+          ],
+          description: 'push function',
+          name: 'push',
+          returns: {
+            type: 'number',
+          },
+        },
+      ],
+      inherits: [
+        {
+          type: 'interface',
+          value: 'InterfaceArrayType',
+        },
+      ],
+    },
+    ClassExtends: {
+      name: 'ClassExtends',
+      type: 'class',
+      properties: [
+        {
+          name: 'woof',
+          type: 'function',
+          parameters: [
+            {
+              name: 'times',
+              type: 'number',
+            },
+          ],
+        },
+      ],
+      inherits: [
+        {
+          type: 'class',
+          value: 'ClassImplements',
         },
       ],
     },
