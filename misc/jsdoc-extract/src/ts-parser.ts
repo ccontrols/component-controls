@@ -171,7 +171,10 @@ const getElementType = (
     } else if (ts.isRestTypeNode(node)) {
       result.type = 'rest';
       result.returns = getElementType(checker, result, node.type);
-    } else if (ts.isTypeOperatorNode(node)) {
+    } else if (
+      ts.isTypeOperatorNode(node) ||
+      ts.isParenthesizedTypeNode(node)
+    ) {
       result = getElementType(checker, result, node.type);
     } else if (ts.isIdentifier(node)) {
       result.value = node.text;
@@ -216,10 +219,11 @@ const getElementType = (
     } else if (
       ts.isFunctionDeclaration(node) ||
       ts.isArrowFunction(node) ||
+      ts.isFunctionTypeNode(node) ||
       ts.isMethodSignature(node) ||
       ts.isMethodDeclaration(node)
     ) {
-      if (node.questionToken) {
+      if (!ts.isFunctionTypeNode(node) && node.questionToken) {
         result.optional = true;
       }
       result.type = 'function';
@@ -348,7 +352,7 @@ const parseNode = (
       ) => {
         const newTags = tags
           ? tags.map(({ comment, name, tagName }) => {
-              return `* @${tagName.text} ${name.text}${
+              return `* @${tagName.text}${`${name ? ` ${name.text}` : ''}`}${
                 comment ? ` ${comment}` : ''
               }`;
             })

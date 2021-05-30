@@ -994,5 +994,58 @@ it('types', () => {
         },
       ],
     },
+    ClassIndexSignature: {
+      name: 'ClassIndexSignature',
+      type: 'class',
+      properties: [
+        {
+          type: 'index',
+          description: 'class index',
+          parameters: [
+            {
+              type: 'union',
+              properties: [
+                {
+                  type: 'boolean',
+                },
+                {
+                  type: 'function',
+                  parameters: [
+                    {
+                      name: 's',
+                      type: 'string',
+                    },
+                  ],
+                  returns: {
+                    type: 'boolean',
+                  },
+                },
+              ],
+            },
+          ],
+          properties: [
+            {
+              type: 'string',
+            },
+          ],
+        },
+        {
+          type: 'function',
+          returns: {
+            description: 'returns the chec return value',
+          },
+          parameters: [
+            {
+              name: 's',
+              type: 'string',
+              optional: false,
+              value: undefined,
+              description: 'input string',
+            },
+          ],
+          name: 'check',
+        },
+      ],
+    },
   });
 });

@@ -309,3 +309,19 @@ export class ClassGetters {
     this._length = value;
   }
 }
+
+export class ClassIndexSignature {
+  /**
+   * class index
+   */
+  [s: string]: boolean | ((s: string) => boolean);
+
+  /**
+   *
+   * @param s input string
+   * @returns { boolean } returns the chec return value
+   */
+  check(s: string) {
+    return this[s] as boolean;
+  }
+}
