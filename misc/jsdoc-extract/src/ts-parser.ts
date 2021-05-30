@@ -140,9 +140,6 @@ const getElementType = (
       }
     } else if (ts.isIndexSignatureDeclaration(node)) {
       result.type = 'index';
-      if (node.modifiers?.find(m => m.kind === ts.SyntaxKind.ReadonlyKeyword)) {
-        result.readonly = true;
-      }
       result.parameters = [getElementType(checker, {}, node.type)];
       result.properties = node.parameters.map(m =>
         getElementType(checker, {}, m),
@@ -214,9 +211,6 @@ const getElementType = (
       if (node.questionToken) {
         result.optional = true;
       }
-      if (node.modifiers?.find(m => m.kind === ts.SyntaxKind.ReadonlyKeyword)) {
-        result.readonly = true;
-      }
       result = getElementType(checker, result, node.type, node.initializer);
     } else if (ts.isPropertyAssignment(node)) {
       if (node.questionToken) {
@@ -232,9 +226,6 @@ const getElementType = (
       if (node.questionToken) {
         result.optional = true;
       }
-      if (node.modifiers?.find(m => m.kind === ts.SyntaxKind.ReadonlyKeyword)) {
-        result.readonly = true;
-      }
       result = getElementType(checker, result, node.type, node.initializer);
     } else if (
       ts.isFunctionDeclaration(node) ||
@@ -243,30 +234,6 @@ const getElementType = (
       ts.isMethodSignature(node) ||
       ts.isMethodDeclaration(node)
     ) {
-      if (node.modifiers) {
-        for (const m of node.modifiers) {
-          if (m.kind === ts.SyntaxKind.PrivateKeyword) {
-            result.visibility = 'private';
-            break;
-          }
-          if (m.kind === ts.SyntaxKind.ProtectedKeyword) {
-            result.visibility = 'protected';
-            break;
-          }
-          if (m.kind === ts.SyntaxKind.PublicKeyword) {
-            result.visibility = 'public';
-            break;
-          }
-        }
-        if (node.modifiers.find(m => m.kind === ts.SyntaxKind.StaticKeyword)) {
-          result.static = true;
-        }
-        if (
-          node.modifiers.find(m => m.kind === ts.SyntaxKind.ReadonlyKeyword)
-        ) {
-          result.readonly = true;
-        }
-      }
       if (!ts.isFunctionTypeNode(node) && node.questionToken) {
         result.optional = true;
       }
@@ -367,6 +334,7 @@ type JSDocInfoType = {
     tagName: { text: string };
   }[];
 };
+
 const parseNode = (
   checker: ts.TypeChecker,
   defaults: JSDocType,
@@ -379,6 +347,28 @@ const parseNode = (
   const updated = { ...defaults };
   if (node.name?.text) {
     updated.name = node.name?.text;
+  }
+  if (node.modifiers) {
+    for (const m of node.modifiers) {
+      if (m.kind === ts.SyntaxKind.PrivateKeyword) {
+        updated.visibility = 'private';
+        break;
+      }
+      if (m.kind === ts.SyntaxKind.ProtectedKeyword) {
+        updated.visibility = 'protected';
+        break;
+      }
+      if (m.kind === ts.SyntaxKind.PublicKeyword) {
+        updated.visibility = 'public';
+        break;
+      }
+    }
+    if (node.modifiers.find(m => m.kind === ts.SyntaxKind.StaticKeyword)) {
+      updated.static = true;
+    }
+    if (node.modifiers.find(m => m.kind === ts.SyntaxKind.ReadonlyKeyword)) {
+      updated.readonly = true;
+    }
   }
   const result = getElementType(checker, updated, node, initializer);
   const jsDocs = jsDocsDefaults || node.jsDoc;

@@ -372,3 +372,8 @@ export class MemberVisibikity {
 
   private method3() {}
 }
+
+export class ClassStatic {
+  static x = 0;
+  static printX() {}
+}

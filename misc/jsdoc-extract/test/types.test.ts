@@ -1145,5 +1145,23 @@ it('types', () => {
         },
       ],
     },
+    ClassStatic: {
+      name: 'ClassStatic',
+      type: 'class',
+      properties: [
+        {
+          name: 'x',
+          static: true,
+          type: 'number',
+          value: 0,
+        },
+        {
+          name: 'printX',
+          static: true,
+          type: 'function',
+          parameters: [],
+        },
+      ],
+    },
   });
 });
