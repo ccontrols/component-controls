@@ -100,20 +100,27 @@ const getElementType = (
           return [
             ...acc,
             ...h.types.map(t =>
-              getElementType(checker, {}, t.expression, t.expression),
+              getElementType(
+                checker,
+                { type: 'reference' },
+                t.expression,
+                t.expression,
+              ),
             ),
           ];
         }, [] as JSDocType[]);
       }
 
-      result.properties = node.members.map(m => parseNode(checker, m));
+      result.properties = node.members.map(m => parseNode(checker, {}, m));
       if (node.typeParameters?.length) {
-        result.parameters = node.typeParameters.map(m => parseNode(checker, m));
+        result.parameters = node.typeParameters.map(m =>
+          parseNode(checker, {}, m),
+        );
       }
     } else if (ts.isClassDeclaration(node)) {
       result.type = 'class';
       result.properties = node.members.map(m => {
-        return parseNode(checker, m);
+        return parseNode(checker, {}, m);
       });
     } else if (ts.isIndexSignatureDeclaration(node)) {
       result.type = 'index';
@@ -128,17 +135,17 @@ const getElementType = (
       result.name = 'constructor';
       result.fnType = 'constructor';
       result.type = 'function';
-      result.parameters = node.parameters.map(m => parseNode(checker, m));
+      result.parameters = node.parameters.map(m => parseNode(checker, {}, m));
     } else if (ts.isGetAccessor(node) || ts.isSetAccessor(node)) {
       result.type = 'function';
       result.fnType = ts.isSetAccessor(node) ? 'setter' : 'getter';
-      result.parameters = node.parameters.map(m => parseNode(checker, m));
+      result.parameters = node.parameters.map(m => parseNode(checker, {}, m));
     } else if (ts.isIntersectionTypeNode(node)) {
       result.type = 'type';
       result.properties = node.types.map(m => getElementType(checker, {}, m));
     } else if (ts.isTypeLiteralNode(node)) {
       result.type = 'type';
-      result.properties = node.members.map(m => parseNode(checker, m));
+      result.properties = node.members.map(m => parseNode(checker, {}, m));
     } else if (ts.isTypeAliasDeclaration(node)) {
       result.type = 'type';
       result.returns = getElementType(checker, {}, node.type);
@@ -157,12 +164,7 @@ const getElementType = (
       );
     } else if (ts.isTypeReferenceNode(node)) {
       result.type = 'reference';
-      const name = node.typeName.getText();
-      if (result.name && name !== result.name) {
-        result.value = name;
-      } else {
-        result.name = name;
-      }
+      result = parseNode(checker, result, node.typeName, initializer);
       if (node.typeArguments?.length) {
         result.parameters = node.typeArguments.map(m =>
           getElementType(checker, {}, m),
@@ -176,15 +178,12 @@ const getElementType = (
     } else if (ts.isTypeOperatorNode(node)) {
       result = getElementType(checker, result, node.type);
     } else if (ts.isIdentifier(node)) {
-      result.type = 'reference';
-      const name = node.text;
-      if (result.name && name !== result.name) {
-        result.value = name;
-      } else {
-        result.name = name;
-      }
+      result.value = node.text;
     } else if (ts.isNewExpression(node)) {
-      result.parameters = [getElementType(checker, {}, node.expression)];
+      result.type = 'object';
+      result.parameters = [
+        getElementType(checker, { type: 'reference' }, node.expression),
+      ];
       if (node.arguments) {
         result.properties = node.arguments.map(m =>
           getElementType(checker, {}, m, m),
@@ -229,7 +228,7 @@ const getElementType = (
       }
       result.type = 'function';
       result.parameters = node.parameters.map(m => {
-        return parseNode(checker, m);
+        return parseNode(checker, {}, m, m.initializer);
       });
       if (node.type) {
         result.returns = getElementType(checker, {}, node.type);
@@ -322,6 +321,7 @@ const getElementType = (
 
 const parseNode = (
   checker: ts.TypeChecker,
+  defaults: JSDocType,
   node: ts.NamedDeclaration & {
     jsDoc?: {
       comment: string;
@@ -330,14 +330,11 @@ const parseNode = (
   },
   initializer?: ts.Node,
 ): JSDocType => {
-  const result = getElementType(
-    checker,
-    {
-      name: node.name?.getText(),
-    },
-    node,
-    initializer,
-  );
+  const updated = { ...defaults };
+  if (node.name?.text) {
+    updated.name = node.name?.text;
+  }
+  const result = getElementType(checker, updated, node, initializer);
   if (node.jsDoc) {
     const jsDocs: {
       descriptions: string[];
@@ -387,6 +384,7 @@ const parseSymbol = (
   const declaration = symbol.declarations.length
     ? (symbol.declarations[0] as ts.VariableDeclaration)
     : undefined;
+
   const result = getElementType(
     checker,
     {

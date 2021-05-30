@@ -91,7 +91,7 @@ it('types', () => {
         properties: [
           {
             type: 'reference',
-            name: 'T',
+            value: 'T',
           },
           {
             type: 'type',
@@ -149,11 +149,11 @@ it('types', () => {
         properties: [
           {
             type: 'reference',
-            name: 'IndexT',
+            value: 'IndexT',
           },
           {
             type: 'reference',
-            name: 'Internal',
+            value: 'Internal',
           },
         ],
       },
@@ -180,7 +180,7 @@ it('types', () => {
         properties: [
           {
             type: 'reference',
-            name: 'Type',
+            value: 'Type',
           },
           {
             type: 'null',
@@ -197,7 +197,7 @@ it('types', () => {
         properties: [
           {
             type: 'reference',
-            name: 'Type',
+            value: 'Type',
           },
         ],
       },
@@ -207,15 +207,15 @@ it('types', () => {
       type: 'type',
       returns: {
         type: 'reference',
-        name: 'GenericArrayType',
+        value: 'GenericArrayType',
         parameters: [
           {
             type: 'reference',
-            name: 'UnionGenericType',
+            value: 'UnionGenericType',
             parameters: [
               {
                 type: 'reference',
-                name: 'Type',
+                value: 'Type',
               },
             ],
           },
@@ -245,7 +245,7 @@ it('types', () => {
       inherits: [
         {
           type: 'reference',
-          name: 'I',
+          value: 'I',
         },
       ],
       properties: [
@@ -301,11 +301,11 @@ it('types', () => {
       inherits: [
         {
           type: 'reference',
-          name: 'Home',
+          value: 'Home',
         },
         {
           type: 'reference',
-          name: 'Bear',
+          value: 'Bear',
         },
       ],
       properties: [
@@ -347,7 +347,7 @@ it('types', () => {
       type: 'type',
       returns: {
         type: 'reference',
-        name: 'GenericInterface',
+        value: 'GenericInterface',
         parameters: [
           {
             type: 'string',
@@ -374,7 +374,7 @@ it('types', () => {
             properties: [
               {
                 type: 'reference',
-                name: 'Type',
+                value: 'Type',
               },
               {
                 type: 'undefined',
@@ -395,7 +395,7 @@ it('types', () => {
               properties: [
                 {
                   type: 'reference',
-                  name: 'Type',
+                  value: 'Type',
                 },
               ],
             },
@@ -441,7 +441,7 @@ it('types', () => {
         properties: [
           {
             type: 'reference',
-            name: 'Internal',
+            value: 'Internal',
           },
         ],
       },
@@ -482,10 +482,11 @@ it('types', () => {
     },
     ArrayNew: {
       name: 'ArrayNew',
+      type: 'object',
       parameters: [
         {
           type: 'reference',
-          name: 'Array',
+          value: 'Array',
         },
       ],
       properties: [
@@ -679,12 +680,12 @@ it('types', () => {
       parameters: [
         {
           type: 'reference',
-          name: 'ExtendT',
+          value: 'ExtendT',
         },
       ],
       returns: {
         type: 'reference',
-        name: 'Bear',
+        value: 'Bear',
       },
     },
     genericFunction: {
@@ -698,7 +699,7 @@ it('types', () => {
           parameters: [
             {
               type: 'reference',
-              name: 'Type',
+              value: 'Type',
             },
           ],
         },
@@ -710,11 +711,11 @@ it('types', () => {
       ],
       returns: {
         type: 'reference',
-        name: 'GenericInterface',
+        value: 'GenericInterface',
         parameters: [
           {
             type: 'reference',
-            name: 'Type',
+            value: 'Type',
           },
         ],
       },
