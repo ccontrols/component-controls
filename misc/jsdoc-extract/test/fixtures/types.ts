@@ -279,3 +279,12 @@ export class GreeterInitializedMembers {
     console.log(this.name);
   }
 }
+
+export class OverloadConstructor {
+  // Overloads
+  constructor(x = 0, y = 15) {}
+  constructor(s: string) {
+    this.s = s;
+  }
+  constructor(xs: any, y?: any) {}
+}

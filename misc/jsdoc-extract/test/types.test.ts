@@ -905,5 +905,52 @@ it('types', () => {
         },
       ],
     },
+    OverloadConstructor: {
+      name: 'OverloadConstructor',
+      type: 'class',
+      properties: [
+        {
+          name: 'constructor',
+          type: 'function',
+          properties: [
+            {
+              name: 'x',
+              type: 'number',
+              value: 0,
+            },
+            {
+              name: 'y',
+              type: 'number',
+              value: 15,
+            },
+          ],
+        },
+        {
+          name: 'constructor',
+          type: 'function',
+          properties: [
+            {
+              name: 's',
+              type: 'string',
+            },
+          ],
+        },
+        {
+          name: 'constructor',
+          type: 'function',
+          properties: [
+            {
+              name: 'xs',
+              type: 'any',
+            },
+            {
+              name: 'y',
+              optional: true,
+              type: 'any',
+            },
+          ],
+        },
+      ],
+    },
   });
 });
