@@ -9,13 +9,11 @@ it('tsdoc-function', () => {
         {
           name: 'a',
           type: 'number',
-          optional: false,
           description: 'first parameter to add',
         },
         {
           name: 'b',
           type: 'number',
-          optional: false,
           value: 1,
           description: 'second parameter to add',
         },
