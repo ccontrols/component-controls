@@ -1194,5 +1194,27 @@ it('types', () => {
         },
       ],
     },
+    ArrowFunctionClass: {
+      name: 'ArrowFunctionClass',
+      type: 'class',
+      properties: [
+        {
+          type: 'string',
+          description: 'name value initialzied',
+          name: 'name',
+          value: 'MyClass',
+        },
+        {
+          type: 'function',
+          returns: {
+            description: 'a string value',
+            type: 'string',
+          },
+          description: 'name accessor',
+          name: 'getName',
+          parameters: [],
+        },
+      ],
+    },
   });
 });
