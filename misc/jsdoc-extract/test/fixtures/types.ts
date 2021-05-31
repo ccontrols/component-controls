@@ -173,6 +173,12 @@ export enum InitializedEnum {
   Right,
 }
 
+export enum StringEnums {
+  Up = 'UP',
+  Down = 'DOWN',
+  Left = 'LEFT',
+  Right = 'RIGHT',
+}
 export type Tuple = [string, number];
 
 export type OptionalTuple = [number, number, number?];

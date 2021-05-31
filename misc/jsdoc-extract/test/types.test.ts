@@ -1495,5 +1495,31 @@ it('types', () => {
         },
       ],
     },
+    StringEnums: {
+      name: 'StringEnums',
+      type: 'enum',
+      properties: [
+        {
+          name: 'Up',
+          type: 'string',
+          value: 'UP',
+        },
+        {
+          name: 'Down',
+          type: 'string',
+          value: 'DOWN',
+        },
+        {
+          name: 'Left',
+          type: 'string',
+          value: 'LEFT',
+        },
+        {
+          name: 'Right',
+          type: 'string',
+          value: 'RIGHT',
+        },
+      ],
+    },
   });
 });
