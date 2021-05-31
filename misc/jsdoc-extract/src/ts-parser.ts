@@ -63,7 +63,6 @@ const getVisit = (checker: ts.TypeChecker, symbols: ts.Symbol[]) => {
 };
 
 const getElementType = (
-  checker: ts.TypeChecker,
   defaults: JSDocType,
   type?: ts.Node,
   initializer?: ts.Node,
@@ -79,15 +78,13 @@ const getElementType = (
       result.type = 'array';
 
       if (ts.isArrayTypeNode(node)) {
-        result.properties = [getElementType(checker, {}, node.elementType)];
+        result.properties = [getElementType({}, node.elementType)];
       } else if (ts.isTypeReferenceNode(node) && node.typeArguments?.length) {
-        result.properties = node.typeArguments.map(m =>
-          getElementType(checker, {}, m),
-        );
+        result.properties = node.typeArguments.map(m => getElementType({}, m));
       }
       if (initializer) {
         result.value = (initializer as ts.ArrayBindingPattern).elements.map(m =>
-          getElementType(checker, {}, m, m),
+          getElementType({}, m, m),
         );
       }
     } else if (ts.isInterfaceDeclaration(node)) {
@@ -97,26 +94,24 @@ const getElementType = (
           return [
             ...acc,
             ...h.types.map(t =>
-              getElementType(checker, { type: 'interface' }, t.expression),
+              getElementType({ type: 'interface' }, t.expression),
             ),
           ];
         }, [] as JSDocType[]);
       }
 
-      result.properties = node.members.map(m => parseNode(checker, {}, m));
+      result.properties = node.members.map(m => parseNode({}, m));
       if (node.typeParameters?.length) {
-        result.parameters = node.typeParameters.map(m =>
-          parseNode(checker, {}, m),
-        );
+        result.parameters = node.typeParameters.map(m => parseNode({}, m));
       }
     } else if (ts.isClassDeclaration(node)) {
       result.type = 'class';
       result.properties = node.members.map(m => {
-        return parseNode(checker, {}, m);
+        return parseNode({}, m);
       });
       if (node.typeParameters) {
         result.parameters = node.typeParameters.map(m => {
-          return parseNode(checker, {}, m);
+          return parseNode({}, m);
         });
       }
       if (node.heritageClauses?.length) {
@@ -131,91 +126,83 @@ const getElementType = (
                     : 'interface',
               };
               if (t.typeArguments?.length) {
-                element.parameters = t.typeArguments.map(a =>
-                  parseNode(checker, {}, a),
-                );
+                element.parameters = t.typeArguments.map(a => parseNode({}, a));
               }
-              return getElementType(checker, element, t.expression);
+              return getElementType(element, t.expression);
             }),
           ];
         }, [] as JSDocType[]);
       }
     } else if (ts.isIndexSignatureDeclaration(node)) {
       result.type = 'index';
-      result.parameters = [getElementType(checker, {}, node.type)];
-      result.properties = node.parameters.map(m =>
-        getElementType(checker, {}, m),
-      );
+      result.parameters = [getElementType({}, node.type)];
+      result.properties = node.parameters.map(m => getElementType({}, m));
     } else if (ts.isConstructorDeclaration(node)) {
       result.name = 'constructor';
       result.fnType = 'constructor';
       result.type = 'function';
       if (node.parameters.length) {
-        result.parameters = node.parameters.map(m => parseNode(checker, {}, m));
+        result.parameters = node.parameters.map(m => parseNode({}, m));
       }
     } else if (ts.isGetAccessor(node) || ts.isSetAccessor(node)) {
       result.type = 'function';
       result.fnType = ts.isSetAccessor(node) ? 'setter' : 'getter';
       if (node.parameters.length) {
-        result.parameters = node.parameters.map(m => parseNode(checker, {}, m));
+        result.parameters = node.parameters.map(m => parseNode({}, m));
       }
     } else if (ts.isIntersectionTypeNode(node)) {
       result.type = 'type';
-      result.properties = node.types.map(m => getElementType(checker, {}, m));
+      result.properties = node.types.map(m => getElementType({}, m));
     } else if (ts.isTypeLiteralNode(node)) {
       result.type = 'type';
-      result.properties = node.members.map(m => parseNode(checker, {}, m));
+      result.properties = node.members.map(m => parseNode({}, m));
     } else if (ts.isTypeAliasDeclaration(node)) {
       result.type = 'type';
-      result.returns = getElementType(checker, {}, node.type);
+      result.returns = getElementType({}, node.type);
     } else if (ts.isOptionalTypeNode(node)) {
       result.optional = true;
-      result = getElementType(checker, result, node.type);
+      result = getElementType(result, node.type);
     } else if (ts.isUnionTypeNode(node)) {
       result.type = 'union';
       result.properties = node.types.map(m =>
-        getElementType(checker, {}, m, (m as ts.LiteralTypeNode).literal),
+        getElementType({}, m, (m as ts.LiteralTypeNode).literal),
       );
     } else if (ts.isEnumDeclaration(node)) {
       result.type = 'enum';
       result.properties = node.members.map(m =>
-        parseNode(checker, {}, m, m.initializer),
+        parseNode({}, m, m.initializer),
       );
     } else if (ts.isEnumMember(node)) {
       if (initializer) {
-        result = getElementType(checker, result, undefined, initializer);
+        result = getElementType(result, undefined, initializer);
       }
     } else if (ts.isTupleTypeNode(node)) {
       result.type = 'tuple';
-      result.properties = node.elements.map(m =>
-        getElementType(checker, {}, m),
-      );
+      result.properties = node.elements.map(m => getElementType({}, m));
     } else if (ts.isTypePredicateNode(node)) {
       result.fnType = 'predicate';
 
       if (node.type) {
-        result = parseNode(checker, result, node.type, initializer);
+        result = parseNode(result, node.type, initializer);
       }
     } else if (ts.isTypeReferenceNode(node)) {
       result.type = 'reference';
-      result = parseNode(checker, result, node.typeName, initializer);
+      result = parseNode(result, node.typeName, initializer);
       if (node.typeArguments?.length) {
-        result.parameters = node.typeArguments.map(m =>
-          getElementType(checker, {}, m),
-        );
+        result.parameters = node.typeArguments.map(m => getElementType({}, m));
       }
     } else if (ts.isLiteralTypeNode(node)) {
-      result = getElementType(checker, result, node.literal, node.literal);
+      result = getElementType(result, node.literal, node.literal);
     } else if (ts.isQualifiedName(node)) {
-      result = parseNode(checker, result, node.left, node.right);
+      result = parseNode(result, node.left, node.right);
     } else if (ts.isRestTypeNode(node)) {
       result.type = 'rest';
-      result.returns = getElementType(checker, result, node.type);
+      result.returns = getElementType(result, node.type);
     } else if (
       ts.isTypeOperatorNode(node) ||
       ts.isParenthesizedTypeNode(node)
     ) {
-      result = getElementType(checker, result, node.type);
+      result = getElementType(result, node.type);
     } else if (ts.isPropertyAccessExpression(node)) {
       result.name = `${node.expression.getText()}.${node.name.text}`;
     } else if (ts.isIdentifier(node)) {
@@ -227,38 +214,31 @@ const getElementType = (
     } else if (ts.isNewExpression(node)) {
       result.type = 'object';
       result.parameters = [
-        getElementType(checker, { type: 'reference' }, node.expression),
+        getElementType({ type: 'reference' }, node.expression),
       ];
       if (node.arguments) {
-        result.properties = node.arguments.map(m =>
-          getElementType(checker, {}, m, m),
-        );
+        result.properties = node.arguments.map(m => getElementType({}, m, m));
       }
     } else if (ts.isVariableDeclaration(node)) {
-      result = getElementType(checker, result, node.type, node.initializer);
+      result = getElementType(result, node.type, node.initializer);
     } else if (ts.isPropertySignature(node) || ts.isParameter(node)) {
       if (node.questionToken) {
         result.optional = true;
       }
-      result = getElementType(checker, result, node.type, node.initializer);
+      result = getElementType(result, node.type, node.initializer);
     } else if (ts.isPropertyAssignment(node)) {
       if (node.questionToken) {
         result.optional = true;
       }
-      result = getElementType(
-        checker,
-        result,
-        node.initializer,
-        node.initializer,
-      );
+      result = getElementType(result, node.initializer, node.initializer);
     } else if (ts.isPropertyDeclaration(node)) {
       if (node.questionToken) {
         result.optional = true;
       }
-      result = getElementType(checker, result, node.type, node.initializer);
+      result = getElementType(result, node.type, node.initializer);
     } else if (ts.isTypeParameterDeclaration(node)) {
       if (node.default) {
-        result = parseNode(checker, result, node.default);
+        result = parseNode(result, node.default);
       }
     } else if (
       ts.isFunctionDeclaration(node) ||
@@ -273,16 +253,14 @@ const getElementType = (
       result.type = 'function';
       if (node.parameters.length) {
         result.parameters = node.parameters.map(m => {
-          return parseNode(checker, {}, m, m.initializer);
+          return parseNode({}, m, m.initializer);
         });
       }
       if (node.type) {
-        result.returns = getElementType(checker, {}, node.type);
+        result.returns = getElementType({}, node.type);
       }
       if (node.typeParameters?.length) {
-        result.properties = node.typeParameters.map(m =>
-          parseNode(checker, {}, m),
-        );
+        result.properties = node.typeParameters.map(m => parseNode({}, m));
       }
     } else {
       switch (node.kind) {
@@ -358,9 +336,7 @@ const getElementType = (
           break;
       }
       if (initializer && ts.isObjectLiteralExpression(initializer)) {
-        result.value = initializer.properties.map(m =>
-          parseNode(checker, {}, m),
-        );
+        result.value = initializer.properties.map(m => parseNode({}, m));
       }
     }
   }
@@ -377,7 +353,6 @@ type JSDocInfoType = {
 };
 
 const parseNode = (
-  checker: ts.TypeChecker,
   defaults: JSDocType,
   node: (ts.DeclarationStatement | ts.Node) & {
     jsDoc?: JSDocInfoType[];
@@ -406,7 +381,7 @@ const parseNode = (
       }
     }
   }
-  const result = getElementType(checker, updated, node, initializer);
+  const result = getElementType(updated, node, initializer);
   const jsDocs = jsDocsDefaults || node.jsDoc;
   if (jsDocs) {
     const docs: {
@@ -471,7 +446,7 @@ const parseSymbol = (
     }
     return { tagName: { text: t.name }, name: { text: '' }, comment: '' };
   });
-  return parseNode(checker, {}, declaration, declaration?.initializer, [
+  return parseNode({}, declaration, declaration?.initializer, [
     { comment: comments.join('/n * '), tags },
   ]);
 };
