@@ -1,21 +1,21 @@
 # Table of contents
 
--   [Overview](#overview)
--   [Credits](#credits)
--   [Installation](#installation)
--   [API](#api)
-    -   [<ins>run</ins>](#insrunins)
-    -   [<ins>extractComments</ins>](#insextractcommentsins)
+- [Overview](#overview)
+- [Credits](#credits)
+- [Installation](#installation)
+- [API](#api)
+  - [<ins>run</ins>](#insrunins)
+  - [<ins>extractComments</ins>](#insextractcommentsins)
 
 # Overview
 
-jsdoc type comments extract form js and ts files. Using a combination of babel ast parsing of types and jsdoc comments analysis.
+Extract structure documentation from javascript and typescript files using a combination of typescript types and jsdoc comments.
 
 # Credits
 
--   jsdoc comments extraction [comment-parser](https://github.com/syavorsky/comment-parser)
--   jsdoc comments analysis [jsdoc-md](https://github.com/jaydenseric/jsdoc-md)
--   tests re-used from [react-docgen-typescript](https://github.com/styleguidist/react-docgen-typescript/blob/master/src/__tests__/data/)
+- jsdoc comments extraction [comment-parser](https://github.com/syavorsky/comment-parser)
+- jsdoc comments analysis [jsdoc-md](https://github.com/jaydenseric/jsdoc-md)
+- tests re-used from [react-docgen-typescript](https://github.com/styleguidist/react-docgen-typescript/blob/master/src/__tests__/data/)
 
 # Installation
 
