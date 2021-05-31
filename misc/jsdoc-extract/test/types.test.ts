@@ -1472,5 +1472,28 @@ it('types', () => {
         },
       ],
     },
+    InitializedEnum: {
+      description: 'this is an enum with an initialized element',
+      name: 'InitializedEnum',
+      type: 'enum',
+      properties: [
+        {
+          description: 'enum starts at 1',
+          name: 'Up',
+          type: 'number',
+          value: 1,
+        },
+        {
+          description: 'second element',
+          name: 'Down',
+        },
+        {
+          name: 'Left',
+        },
+        {
+          name: 'Right',
+        },
+      ],
+    },
   });
 });

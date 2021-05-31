@@ -39,7 +39,8 @@ const getVisit = (checker: ts.TypeChecker, symbols: ts.Symbol[]) => {
         symbols.push(symbol);
       }
     } else if (
-      (ts.isClassDeclaration(node) ||
+      (ts.isEnumDeclaration(node) ||
+        ts.isClassDeclaration(node) ||
         ts.isTypeAliasDeclaration(node) ||
         ts.isFunctionDeclaration(node) ||
         ts.isArrowFunction(node) ||
@@ -175,6 +176,15 @@ const getElementType = (
       result.properties = node.types.map(m =>
         getElementType(checker, {}, m, (m as ts.LiteralTypeNode).literal),
       );
+    } else if (ts.isEnumDeclaration(node)) {
+      result.type = 'enum';
+      result.properties = node.members.map(m =>
+        parseNode(checker, {}, m, m.initializer),
+      );
+    } else if (ts.isEnumMember(node)) {
+      if (initializer) {
+        result = getElementType(checker, result, undefined, initializer);
+      }
     } else if (ts.isTupleTypeNode(node)) {
       result.type = 'tuple';
       result.properties = node.elements.map(m =>

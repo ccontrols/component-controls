@@ -157,6 +157,22 @@ export const ArrayNew = new Array('red', 'green', 'blue');
  */
 export type union = 'this' | 1 | false | null | undefined;
 
+/**
+ * this is an enum with an initialized element
+ */
+export enum InitializedEnum {
+  /**
+   * enum starts at 1
+   */
+  Up = 1,
+  /**
+   * second element
+   */
+  Down,
+  Left,
+  Right,
+}
+
 export type Tuple = [string, number];
 
 export type OptionalTuple = [number, number, number?];

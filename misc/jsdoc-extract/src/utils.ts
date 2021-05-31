@@ -13,6 +13,7 @@ export type TSType =
   | 'number'
   | 'boolean'
   | 'union'
+  | 'enum'
   | 'tuple'
   | 'rest'
   | 'undefined'

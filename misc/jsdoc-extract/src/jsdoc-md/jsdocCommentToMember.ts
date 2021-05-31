@@ -29,9 +29,7 @@ export const jsdocCommentToMember = (
   for (const jsdocBlock of jsdoc) {
     // Ignore JSDoc without tags.
     if (jsdocBlock && jsdocBlock.tags) {
-      const result: JSDocType = {
-        type: 'undefined',
-      };
+      const result: JSDocType = {};
 
       // Scan tags for membership data, looping tags backwards as later tags
       // override earlier ones.
@@ -130,9 +128,11 @@ export const jsdocCommentToMember = (
               // Define the JSDoc parameter with nicely ordered properties.
               const parameter: JSDocType = {
                 name: tag.name,
-                type: tag.type as TSType,
                 description: trimNewlines(tag.description),
               };
+              if (typeof tag.type !== 'undefined') {
+                parameter.type = tag.type as TSType;
+              }
               if (typeof tag.default !== 'undefined') {
                 parameter.value = tag.default;
               }
@@ -155,11 +155,18 @@ export const jsdocCommentToMember = (
               // Define the JSDoc property with nicely ordered properties.
               const property: JSDocType = {
                 name: tag.name,
-                type: tag.type as TSType,
-                optional: tag.optional,
-                value: tag.default,
                 description: trimNewlines(tag.description),
               };
+              if (typeof tag.type !== 'undefined') {
+                property.type = tag.type as TSType;
+              }
+              if (typeof tag.default !== 'undefined') {
+                property.value = tag.default;
+              }
+              if (tag.optional) {
+                property.optional = true;
+              }
+
               if (!result.properties) {
                 result.properties = [];
               }
