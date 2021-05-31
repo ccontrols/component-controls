@@ -131,10 +131,15 @@ export const jsdocCommentToMember = (
               const parameter: JSDocType = {
                 name: tag.name,
                 type: tag.type as TSType,
-                optional: tag.optional,
-                value: tag.default,
                 description: trimNewlines(tag.description),
               };
+              if (typeof tag.default !== 'undefined') {
+                parameter.value = tag.default;
+              }
+              if (tag.optional) {
+                parameter.optional = true;
+              }
+
               if (!result.parameters) {
                 result.parameters = [];
               }

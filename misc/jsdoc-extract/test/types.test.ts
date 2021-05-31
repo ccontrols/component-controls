@@ -43,7 +43,6 @@ it('types', () => {
       type: 'unknown',
       description: 'this is unknown type',
       name: 'u',
-      value: undefined,
     },
     obj: {
       type: 'object',
@@ -601,8 +600,6 @@ it('types', () => {
         {
           name: 'name',
           type: 'string',
-          optional: false,
-          value: undefined,
           description: 'string type parameters',
         },
       ],
@@ -630,8 +627,6 @@ it('types', () => {
         {
           name: 'pt',
           type: 'type',
-          optional: false,
-          value: undefined,
           description: 'object parameter',
           properties: [
             {
@@ -983,8 +978,6 @@ it('types', () => {
             {
               name: 'value',
               type: 'number',
-              optional: false,
-              value: undefined,
               description: 'the new value',
             },
           ],
@@ -1038,8 +1031,6 @@ it('types', () => {
             {
               name: 's',
               type: 'string',
-              optional: false,
-              value: undefined,
               description: 'input string',
             },
           ],
@@ -1072,8 +1063,6 @@ it('types', () => {
             {
               name: 'items',
               type: 'array',
-              optional: false,
-              value: undefined,
               description: 'those are items',
               properties: [
                 {
@@ -1178,7 +1167,6 @@ it('types', () => {
             {
               name: 'value',
               type: 'reference',
-              optional: false,
               value: 'Type',
               description: 'generic type variable',
             },
@@ -1367,6 +1355,40 @@ it('types', () => {
       parameters: [
         {
           name: 'T',
+        },
+      ],
+    },
+    ParameterModifiers: {
+      type: 'class',
+      description: 'parameter modifiers',
+      name: 'ParameterModifiers',
+      properties: [
+        {
+          type: 'function',
+          parameters: [
+            {
+              name: 'x',
+              type: 'number',
+              description: 'x coordinate',
+              visibility: 'public',
+              readonly: true,
+            },
+            {
+              name: 'y',
+              type: 'number',
+              description: 'y coordinate',
+              visibility: 'protected',
+            },
+            {
+              name: 'z',
+              type: 'number',
+              description: 'z coordinate',
+              visibility: 'private',
+            },
+          ],
+          description: 'constructor implementation',
+          name: 'constructor',
+          fnType: 'constructor',
         },
       ],
     },
