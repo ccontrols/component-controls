@@ -118,6 +118,11 @@ const getElementType = (
       result.properties = node.members.map(m => {
         return parseNode(checker, {}, m);
       });
+      if (node.typeParameters) {
+        result.parameters = node.typeParameters.map(m => {
+          return parseNode(checker, {}, m);
+        });
+      }
       if (node.heritageClauses?.length) {
         result.inherits = node.heritageClauses.reduce((acc, h) => {
           return [

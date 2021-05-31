@@ -1163,5 +1163,36 @@ it('types', () => {
         },
       ],
     },
+    GenericClass: {
+      name: 'GenericClass',
+      type: 'class',
+      properties: [
+        {
+          name: 'contents',
+          type: 'reference',
+          value: 'Type',
+        },
+        {
+          type: 'function',
+          parameters: [
+            {
+              name: 'value',
+              type: 'reference',
+              optional: false,
+              value: 'Type',
+              description: 'generic type variable',
+            },
+          ],
+          description: 'generic constructor',
+          name: 'constructor',
+          fnType: 'constructor',
+        },
+      ],
+      parameters: [
+        {
+          name: 'Type',
+        },
+      ],
+    },
   });
 });

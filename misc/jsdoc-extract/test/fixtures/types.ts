@@ -377,3 +377,14 @@ export class ClassStatic {
   static x = 0;
   static printX() {}
 }
+
+export class GenericClass<Type> {
+  contents: Type;
+  /**
+   * generic constructor
+   * @param value generic type variable
+   */
+  constructor(value: Type) {
+    this.contents = value;
+  }
+}
