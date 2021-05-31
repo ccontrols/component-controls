@@ -476,3 +476,8 @@ export class ReactComponent extends React.Component {
     return <span>Hello, {this.props.name}!</span>;
   }
 }
+export class ReactGenerics extends React.Component<GreetingProps, any> {
+  render() {
+    return <span>Hello, {this.props.name}!</span>;
+  }
+}

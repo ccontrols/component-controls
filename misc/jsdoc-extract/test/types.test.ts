@@ -369,7 +369,6 @@ it('types', () => {
           type: 'function',
           description: 'Removes the last element from an array and returns it.',
           name: 'pop',
-          parameters: [],
           returns: {
             type: 'union',
             properties: [
@@ -898,7 +897,6 @@ it('types', () => {
         {
           name: 'err',
           type: 'function',
-          parameters: [],
           returns: {
             type: 'void',
           },
@@ -971,7 +969,6 @@ it('types', () => {
           description: 'getter description',
           name: 'length',
           fnType: 'getter',
-          parameters: [],
         },
         {
           type: 'function',
@@ -1053,7 +1050,6 @@ it('types', () => {
           type: 'function',
           description: 'pop function',
           name: 'pop',
-          parameters: [],
           returns: {
             type: 'string',
           },
@@ -1083,6 +1079,11 @@ it('types', () => {
         {
           type: 'interface',
           value: 'InterfaceArrayType',
+          parameters: [
+            {
+              type: 'string',
+            },
+          ],
         },
       ],
     },
@@ -1117,21 +1118,18 @@ it('types', () => {
           description: 'a public method',
           name: 'method1',
           visibility: 'public',
-          parameters: [],
         },
         {
           type: 'function',
           description: 'a protected method',
           name: 'method2',
           visibility: 'protected',
-          parameters: [],
         },
         {
           type: 'function',
           description: 'a private method',
           name: 'method3',
           visibility: 'private',
-          parameters: [],
         },
       ],
     },
@@ -1149,7 +1147,6 @@ it('types', () => {
           name: 'printX',
           static: true,
           type: 'function',
-          parameters: [],
         },
       ],
     },
@@ -1201,7 +1198,6 @@ it('types', () => {
           },
           description: 'name accessor',
           name: 'getName',
-          parameters: [],
         },
       ],
     },
@@ -1212,7 +1208,6 @@ it('types', () => {
         {
           name: 'isFile',
           type: 'function',
-          parameters: [],
           returns: {
             fnType: 'predicate',
             type: 'reference',
@@ -1222,7 +1217,6 @@ it('types', () => {
         {
           name: 'isDirectory',
           type: 'function',
-          parameters: [],
           returns: {
             fnType: 'predicate',
             type: 'reference',
@@ -1232,7 +1226,6 @@ it('types', () => {
         {
           name: 'isNetworked',
           type: 'function',
-          parameters: [],
           returns: {
             fnType: 'predicate',
             type: 'type',
@@ -1350,7 +1343,6 @@ it('types', () => {
           },
           description: 'checks if value is not undefined',
           name: 'hasValue',
-          parameters: [],
         },
       ],
       parameters: [
@@ -1402,7 +1394,6 @@ it('types', () => {
           name: 'getName',
           abstract: true,
           type: 'function',
-          parameters: [],
           returns: {
             type: 'string',
           },
@@ -1443,7 +1434,6 @@ it('types', () => {
         {
           name: 'render',
           type: 'function',
-          parameters: [],
           returns: {
             type: 'reference',
             value: 'React.Node',
@@ -1453,6 +1443,31 @@ it('types', () => {
       inherits: [
         {
           type: 'class',
+          name: 'React.Component',
+        },
+      ],
+    },
+    ReactGenerics: {
+      name: 'ReactGenerics',
+      type: 'class',
+      properties: [
+        {
+          name: 'render',
+          type: 'function',
+        },
+      ],
+      inherits: [
+        {
+          type: 'class',
+          parameters: [
+            {
+              type: 'reference',
+              value: 'GreetingProps',
+            },
+            {
+              type: 'any',
+            },
+          ],
           name: 'React.Component',
         },
       ],

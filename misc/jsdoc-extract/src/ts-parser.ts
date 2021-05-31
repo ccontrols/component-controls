@@ -122,18 +122,20 @@ const getElementType = (
         result.inherits = node.heritageClauses.reduce((acc, h) => {
           return [
             ...acc,
-            ...h.types.map(t =>
-              getElementType(
-                checker,
-                {
-                  type:
-                    h.token === ts.SyntaxKind.ExtendsKeyword
-                      ? 'class'
-                      : 'interface',
-                },
-                t.expression,
-              ),
-            ),
+            ...h.types.map(t => {
+              const element: JSDocType = {
+                type:
+                  h.token === ts.SyntaxKind.ExtendsKeyword
+                    ? 'class'
+                    : 'interface',
+              };
+              if (t.typeArguments?.length) {
+                element.parameters = t.typeArguments.map(a =>
+                  parseNode(checker, {}, a),
+                );
+              }
+              return getElementType(checker, element, t.expression);
+            }),
           ];
         }, [] as JSDocType[]);
       }
@@ -147,11 +149,15 @@ const getElementType = (
       result.name = 'constructor';
       result.fnType = 'constructor';
       result.type = 'function';
-      result.parameters = node.parameters.map(m => parseNode(checker, {}, m));
+      if (node.parameters.length) {
+        result.parameters = node.parameters.map(m => parseNode(checker, {}, m));
+      }
     } else if (ts.isGetAccessor(node) || ts.isSetAccessor(node)) {
       result.type = 'function';
       result.fnType = ts.isSetAccessor(node) ? 'setter' : 'getter';
-      result.parameters = node.parameters.map(m => parseNode(checker, {}, m));
+      if (node.parameters.length) {
+        result.parameters = node.parameters.map(m => parseNode(checker, {}, m));
+      }
     } else if (ts.isIntersectionTypeNode(node)) {
       result.type = 'type';
       result.properties = node.types.map(m => getElementType(checker, {}, m));
@@ -255,9 +261,11 @@ const getElementType = (
         result.optional = true;
       }
       result.type = 'function';
-      result.parameters = node.parameters.map(m => {
-        return parseNode(checker, {}, m, m.initializer);
-      });
+      if (node.parameters.length) {
+        result.parameters = node.parameters.map(m => {
+          return parseNode(checker, {}, m, m.initializer);
+        });
+      }
       if (node.type) {
         result.returns = getElementType(checker, {}, node.type);
       }
