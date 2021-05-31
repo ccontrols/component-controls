@@ -96,12 +96,7 @@ const getElementType = (
           return [
             ...acc,
             ...h.types.map(t =>
-              getElementType(
-                checker,
-                { type: 'interface' },
-                t.expression,
-                t.expression,
-              ),
+              getElementType(checker, { type: 'interface' }, t.expression),
             ),
           ];
         }, [] as JSDocType[]);
@@ -136,7 +131,6 @@ const getElementType = (
                       ? 'class'
                       : 'interface',
                 },
-                t.expression,
                 t.expression,
               ),
             ),
@@ -196,6 +190,8 @@ const getElementType = (
       }
     } else if (ts.isLiteralTypeNode(node)) {
       result = getElementType(checker, result, node.literal, node.literal);
+    } else if (ts.isQualifiedName(node)) {
+      result = parseNode(checker, result, node.left, node.right);
     } else if (ts.isRestTypeNode(node)) {
       result.type = 'rest';
       result.returns = getElementType(checker, result, node.type);
@@ -205,7 +201,11 @@ const getElementType = (
     ) {
       result = getElementType(checker, result, node.type);
     } else if (ts.isIdentifier(node)) {
-      result.value = node.text;
+      if (initializer) {
+        result.value = `${node.text}.${initializer.getText()}`;
+      } else {
+        result.value = node.text;
+      }
     } else if (ts.isNewExpression(node)) {
       result.type = 'object';
       result.parameters = [
@@ -238,6 +238,10 @@ const getElementType = (
         result.optional = true;
       }
       result = getElementType(checker, result, node.type, node.initializer);
+    } else if (ts.isTypeParameterDeclaration(node)) {
+      if (node.default) {
+        result = parseNode(checker, result, node.default);
+      }
     } else if (
       ts.isFunctionDeclaration(node) ||
       ts.isArrowFunction(node) ||
@@ -316,7 +320,13 @@ const getElementType = (
           break;
         case ts.SyntaxKind.UnknownKeyword:
           result.type = 'unknown';
-          result.value = strToValue((initializer as ts.LiteralLikeNode)?.text);
+          if (
+            typeof (initializer as ts.LiteralLikeNode)?.text !== 'undefined'
+          ) {
+            result.value = strToValue(
+              (initializer as ts.LiteralLikeNode)?.text,
+            );
+          }
           break;
         case ts.SyntaxKind.NullKeyword:
           result.type = 'null';

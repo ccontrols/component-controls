@@ -43,6 +43,7 @@ it('types', () => {
       type: 'unknown',
       description: 'this is unknown type',
       name: 'u',
+      value: undefined,
     },
     obj: {
       type: 'object',
@@ -1405,6 +1406,33 @@ it('types', () => {
           returns: {
             type: 'string',
           },
+        },
+      ],
+    },
+    ComponentGenericsWithDefault: {
+      name: 'ComponentGenericsWithDefault',
+      type: 'class',
+      properties: [
+        {
+          name: 'props',
+          type: 'reference',
+          value: 'Props',
+        },
+        {
+          name: 'state',
+          type: 'reference',
+          value: 'State',
+        },
+      ],
+      parameters: [
+        {
+          name: 'Props',
+          type: 'reference',
+          value: 'React.ReactPropTypes',
+        },
+        {
+          name: 'State',
+          type: 'unknown',
         },
       ],
     },

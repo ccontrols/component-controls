@@ -463,3 +463,10 @@ export class ParameterModifiers {
 export abstract class AbstraclClass {
   abstract getName(): string;
 }
+export class ComponentGenericsWithDefault<
+  Props = React.ReactPropTypes,
+  State = unknown
+> {
+  props: Props;
+  state: State;
+}
