@@ -1392,5 +1392,21 @@ it('types', () => {
         },
       ],
     },
+    AbstraclClass: {
+      name: 'AbstraclClass',
+      abstract: true,
+      type: 'class',
+      properties: [
+        {
+          name: 'getName',
+          abstract: true,
+          type: 'function',
+          parameters: [],
+          returns: {
+            type: 'string',
+          },
+        },
+      ],
+    },
   });
 });

@@ -363,22 +363,17 @@ const parseNode = (
     for (const m of node.modifiers) {
       if (m.kind === ts.SyntaxKind.PrivateKeyword) {
         updated.visibility = 'private';
-        break;
-      }
-      if (m.kind === ts.SyntaxKind.ProtectedKeyword) {
+      } else if (m.kind === ts.SyntaxKind.ProtectedKeyword) {
         updated.visibility = 'protected';
-        break;
-      }
-      if (m.kind === ts.SyntaxKind.PublicKeyword) {
+      } else if (m.kind === ts.SyntaxKind.PublicKeyword) {
         updated.visibility = 'public';
-        break;
+      } else if (m.kind === ts.SyntaxKind.StaticKeyword) {
+        updated.static = true;
+      } else if (m.kind === ts.SyntaxKind.ReadonlyKeyword) {
+        updated.readonly = true;
+      } else if (m.kind === ts.SyntaxKind.AbstractKeyword) {
+        updated.abstract = true;
       }
-    }
-    if (node.modifiers.find(m => m.kind === ts.SyntaxKind.StaticKeyword)) {
-      updated.static = true;
-    }
-    if (node.modifiers.find(m => m.kind === ts.SyntaxKind.ReadonlyKeyword)) {
-      updated.readonly = true;
     }
   }
   const result = getElementType(checker, updated, node, initializer);

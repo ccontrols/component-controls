@@ -459,3 +459,7 @@ export class ParameterModifiers {
     // No body necessary
   }
 }
+
+export abstract class AbstraclClass {
+  abstract getName(): string;
+}
