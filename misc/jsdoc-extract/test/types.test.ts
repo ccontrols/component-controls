@@ -1521,5 +1521,22 @@ it('types', () => {
         },
       ],
     },
+    InterfaceWithEnumConstant: {
+      name: 'InterfaceWithEnumConstant',
+      type: 'interface',
+      properties: [
+        {
+          description: 'kind is an enumm constant',
+          name: 'kind',
+          type: 'reference',
+          value: 'StringEnums.Up',
+        },
+        {
+          description: 'radius property',
+          name: 'radius',
+          type: 'number',
+        },
+      ],
+    },
   });
 });
