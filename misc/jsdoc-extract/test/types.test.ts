@@ -1436,5 +1436,26 @@ it('types', () => {
         },
       ],
     },
+    ReactComponent: {
+      name: 'ReactComponent',
+      type: 'class',
+      properties: [
+        {
+          name: 'render',
+          type: 'function',
+          parameters: [],
+          returns: {
+            type: 'reference',
+            value: 'React.Node',
+          },
+        },
+      ],
+      inherits: [
+        {
+          type: 'class',
+          name: 'React.Component',
+        },
+      ],
+    },
   });
 });

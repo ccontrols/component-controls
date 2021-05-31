@@ -470,3 +470,9 @@ export class ComponentGenericsWithDefault<
   props: Props;
   state: State;
 }
+
+export class ReactComponent extends React.Component {
+  render(): React.Node {
+    return <span>Hello, {this.props.name}!</span>;
+  }
+}

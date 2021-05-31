@@ -200,6 +200,8 @@ const getElementType = (
       ts.isParenthesizedTypeNode(node)
     ) {
       result = getElementType(checker, result, node.type);
+    } else if (ts.isPropertyAccessExpression(node)) {
+      result.name = `${node.expression.getText()}.${node.name.text}`;
     } else if (ts.isIdentifier(node)) {
       if (initializer) {
         result.value = `${node.text}.${initializer.getText()}`;
