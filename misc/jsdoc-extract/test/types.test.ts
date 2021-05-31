@@ -1335,5 +1335,40 @@ it('types', () => {
         },
       ],
     },
+    PredicateClass: {
+      name: 'PredicateClass',
+      type: 'class',
+      properties: [
+        {
+          name: 'value',
+          optional: true,
+          type: 'reference',
+          value: 'T',
+        },
+        {
+          type: 'function',
+          returns: {
+            description: 'a predicate',
+            fnType: 'predicate',
+            type: 'type',
+            properties: [
+              {
+                name: 'value',
+                type: 'reference',
+                value: 'T',
+              },
+            ],
+          },
+          description: 'checks if value is not undefined',
+          name: 'hasValue',
+          parameters: [],
+        },
+      ],
+      parameters: [
+        {
+          name: 'T',
+        },
+      ],
+    },
   });
 });

@@ -428,3 +428,15 @@ class Directory extends ThisBasedClass {
 interface Networked {
   host: string;
 }
+
+export class PredicateClass<T> {
+  value?: T;
+
+  /**
+   * checks if value is not undefined
+   * @returns a predicate
+   */
+  hasValue(): this is { value: T } {
+    return this.value !== undefined;
+  }
+}
