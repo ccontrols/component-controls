@@ -25,6 +25,7 @@ export type TSType =
   | 'array'
   | 'any'
   | 'reference'
+  | 'predicate'
   | 'index'
   | 'unknown';
 
@@ -34,7 +35,7 @@ export interface JSDocType {
   namepath?: string;
   memberof?: string;
   type?: TSType;
-  fnType?: 'constructor' | 'getter' | 'setter';
+  fnType?: 'constructor' | 'getter' | 'setter' | 'predicate';
   description?: string;
   parameters?: JSDocType[];
   properties?: JSDocType[];

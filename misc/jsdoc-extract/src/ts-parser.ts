@@ -180,6 +180,12 @@ const getElementType = (
       result.properties = node.elements.map(m =>
         getElementType(checker, {}, m),
       );
+    } else if (ts.isTypePredicateNode(node)) {
+      result.fnType = 'predicate';
+
+      if (node.type) {
+        result = parseNode(checker, result, node.type, initializer);
+      }
     } else if (ts.isTypeReferenceNode(node)) {
       result.type = 'reference';
       result = parseNode(checker, result, node.typeName, initializer);
@@ -343,15 +349,15 @@ type JSDocInfoType = {
 const parseNode = (
   checker: ts.TypeChecker,
   defaults: JSDocType,
-  node: ts.NamedDeclaration & {
+  node: (ts.DeclarationStatement | ts.Node) & {
     jsDoc?: JSDocInfoType[];
   },
   initializer?: ts.Node,
   jsDocsDefaults?: JSDocInfoType[],
 ): JSDocType => {
   const updated = { ...defaults };
-  if (node.name?.text) {
-    updated.name = node.name?.text;
+  if ((node as ts.DeclarationStatement).name?.text) {
+    updated.name = (node as ts.DeclarationStatement).name?.text;
   }
   if (node.modifiers) {
     for (const m of node.modifiers) {

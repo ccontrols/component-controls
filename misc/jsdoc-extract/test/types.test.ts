@@ -1216,5 +1216,124 @@ it('types', () => {
         },
       ],
     },
+    ThisBasedClass: {
+      name: 'ThisBasedClass',
+      type: 'class',
+      properties: [
+        {
+          name: 'isFile',
+          type: 'function',
+          parameters: [],
+          returns: {
+            fnType: 'predicate',
+            type: 'reference',
+            value: 'FileRep',
+          },
+        },
+        {
+          name: 'isDirectory',
+          type: 'function',
+          parameters: [],
+          returns: {
+            fnType: 'predicate',
+            type: 'reference',
+            value: 'Directory',
+          },
+        },
+        {
+          name: 'isNetworked',
+          type: 'function',
+          parameters: [],
+          returns: {
+            fnType: 'predicate',
+            type: 'type',
+            properties: [
+              {
+                type: 'reference',
+                value: 'Networked',
+              },
+              {},
+            ],
+          },
+        },
+        {
+          name: 'constructor',
+          fnType: 'constructor',
+          type: 'function',
+          parameters: [
+            {
+              name: 'path',
+              visibility: 'public',
+              type: 'string',
+            },
+            {
+              name: 'networked',
+              visibility: 'private',
+              type: 'boolean',
+            },
+          ],
+        },
+      ],
+    },
+    FileRep: {
+      name: 'FileRep',
+      type: 'class',
+      properties: [
+        {
+          name: 'constructor',
+          fnType: 'constructor',
+          type: 'function',
+          parameters: [
+            {
+              name: 'path',
+              type: 'string',
+            },
+            {
+              name: 'content',
+              visibility: 'public',
+              type: 'string',
+            },
+          ],
+        },
+      ],
+      inherits: [
+        {
+          type: 'class',
+          value: 'ThisBasedClass',
+        },
+      ],
+    },
+    Directory: {
+      name: 'Directory',
+      type: 'class',
+      properties: [
+        {
+          name: 'children',
+          type: 'array',
+          properties: [
+            {
+              type: 'reference',
+              value: 'ThisBasedClass',
+            },
+          ],
+        },
+      ],
+      inherits: [
+        {
+          type: 'class',
+          value: 'ThisBasedClass',
+        },
+      ],
+    },
+    Networked: {
+      name: 'Networked',
+      type: 'interface',
+      properties: [
+        {
+          name: 'host',
+          type: 'string',
+        },
+      ],
+    },
   });
 });

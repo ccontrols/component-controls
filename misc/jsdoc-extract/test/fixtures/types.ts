@@ -402,3 +402,29 @@ export class ArrowFunctionClass {
     return this.name;
   };
 }
+
+export class ThisBasedClass {
+  isFile(): this is FileRep {
+    return this instanceof FileRep;
+  }
+  isDirectory(): this is Directory {
+    return this instanceof Directory;
+  }
+  isNetworked(): this is Networked & this {
+    return this.networked;
+  }
+  constructor(public path: string, private networked: boolean) {}
+}
+
+class FileRep extends ThisBasedClass {
+  constructor(path: string, public content: string) {
+    super(path, false);
+  }
+}
+
+class Directory extends ThisBasedClass {
+  children: ThisBasedClass[];
+}
+interface Networked {
+  host: string;
+}
