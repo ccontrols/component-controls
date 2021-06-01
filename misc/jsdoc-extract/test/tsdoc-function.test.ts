@@ -1,9 +1,11 @@
 import path from 'path';
-import { run } from '../src/index';
+import { analyzeFiles } from '../src/index';
 
 it('tsdoc-function', () => {
-  const result = run(path.resolve(__dirname, './fixtures/tsdoc-function.ts'));
-  expect(result).toMatchObject({
+  const { structures } = analyzeFiles([
+    path.resolve(__dirname, './fixtures/tsdoc-function.ts'),
+  ]);
+  expect(structures).toMatchObject({
     sum: {
       parameters: [
         {

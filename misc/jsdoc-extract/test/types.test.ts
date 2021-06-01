@@ -1,9 +1,11 @@
 import path from 'path';
-import { run } from '../src/index';
+import { analyzeFiles } from '../src/index';
 
 it('types', () => {
-  const result = run(path.resolve(__dirname, './fixtures/types.ts'));
-  expect(result).toEqual({
+  const { structures } = analyzeFiles([
+    path.resolve(__dirname, './fixtures/types.ts'),
+  ]);
+  expect(structures).toEqual({
     s: {
       type: 'string',
       description: 'this is a string',

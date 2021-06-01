@@ -1,15 +1,90 @@
 import path from 'path';
-import { run } from '../src/index';
+import { analyzeFiles } from '../src/index';
 
 it('import-props', () => {
-  const result = run(path.resolve(__dirname, './fixtures/import-props.tsx'));
-  expect(result).toMatchObject({
+  const { structures } = analyzeFiles([
+    path.resolve(__dirname, './fixtures/import-props.tsx'),
+  ]);
+  expect(structures).toMatchObject({
+    ColumnProps: {
+      name: 'ColumnProps',
+      type: 'type',
+      returns: {
+        type: 'type',
+        properties: [
+          {
+            description: 'stringProp description',
+            name: 'stringProp',
+            optional: true,
+            type: 'string',
+          },
+          {
+            description: 'numberProp description',
+            name: 'numberProp',
+            type: 'number',
+          },
+          {
+            description: 'function props description',
+            name: 'fnProp',
+            type: 'function',
+            returns: {
+              type: 'void',
+            },
+          },
+          {
+            deprecated: 'since version 1.0',
+            description: 'unionProp description',
+            name: 'unionProp',
+            type: 'union',
+            properties: [
+              {
+                type: 'string',
+                value: 'option1',
+              },
+              {
+                type: 'string',
+                value: 'option2',
+              },
+              {
+                type: 'string',
+                value: 'option3',
+              },
+            ],
+          },
+        ],
+      },
+    },
+    DivProps: {
+      name: 'DivProps',
+      type: 'type',
+      returns: {
+        type: 'type',
+        properties: [
+          {
+            type: 'reference',
+            value: 'ColumnProps',
+          },
+          {
+            type: 'reference',
+            value: 'BaseHTMLAttributes',
+            parameters: [
+              {
+                type: 'reference',
+                value: 'HTMLDivElement',
+              },
+            ],
+          },
+        ],
+      },
+    },
     Column: {
-      type: 'function',
+      name: 'Column',
+      type: 'reference',
+      value: 'FC.props => <div {...props} />',
       parameters: [
         {
-          type: 'void',
-          name: 'props',
+          type: 'reference',
+          value: 'ColumnProps',
         },
       ],
     },

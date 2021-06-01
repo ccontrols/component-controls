@@ -1,5 +1,4 @@
-import * as React from 'react';
-
+import React, { Component } from 'react';
 /**
  * Column properties.
  */
@@ -23,10 +22,7 @@ export interface ColumnProps {
 /**
  * Column description
  */
-export class Column extends React.Component<
-  ColumnProps,
-  Record<string, unknown>
-> {
+export class Column extends Component<ColumnProps, Record<string, unknown>> {
   public static defaultProps: Partial<ColumnProps> = {
     stringProp: 'prop1',
   };

@@ -1,11 +1,13 @@
 import path from 'path';
-import { run } from '../src/index';
+import { extractProps, extractReact } from '../src/index';
 
 it('class-interface-props', () => {
-  const result = run(
-    path.resolve(__dirname, './fixtures/class-interface-props.tsx'),
+  const props = extractProps(
+    ['Column'],
+    [path.resolve(__dirname, './fixtures/class-interface-props.tsx')],
+    extractReact,
   );
-  expect(result).toMatchObject({
+  expect(props).toMatchObject({
     ColumnProps: {
       properties: [
         {

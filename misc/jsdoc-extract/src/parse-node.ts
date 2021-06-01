@@ -1,14 +1,6 @@
 import * as ts from 'typescript';
 import { JSDocType } from './utils';
 import { mergeJSDocComments } from './jsdoc-parse';
-const isNodeExported = (node: ts.Node): boolean => {
-  return (
-    (ts.getCombinedModifierFlags(node as ts.Declaration) &
-      ts.ModifierFlags.Export) !==
-      0 ||
-    (!!node.parent && node.parent.kind === ts.SyntaxKind.SourceFile)
-  );
-};
 
 const strToValue = (s: string): any => {
   switch (s) {
@@ -22,44 +14,6 @@ const strToValue = (s: string): any => {
       return true;
   }
   return s;
-};
-const getVisit = (checker: ts.TypeChecker, symbols: ts.Symbol[]) => {
-  const visit = (node: ts.Node): void => {
-    // Only consider exported nodes
-    if (!isNodeExported(node)) {
-      return;
-    }
-    if (ts.isVariableStatement(node)) {
-      const declarationList = node.declarationList;
-      const declaration =
-        declarationList.declarations.length && declarationList.declarations[0];
-      const symbol =
-        declaration && checker.getSymbolAtLocation(declaration.name);
-      if (symbol) {
-        symbols.push(symbol);
-      }
-    } else if (
-      (ts.isEnumDeclaration(node) ||
-        ts.isClassDeclaration(node) ||
-        ts.isTypeAliasDeclaration(node) ||
-        ts.isFunctionDeclaration(node) ||
-        ts.isArrowFunction(node) ||
-        ts.isInterfaceDeclaration(node)) &&
-      node.name
-    ) {
-      // This is a top level class, get its symbol
-      const symbol = checker.getSymbolAtLocation(node.name);
-      if (symbol) {
-        symbols.push(symbol);
-      }
-      // No need to walk any further, class expressions/inner declarations
-      // cannot be exported
-    } else if (ts.isModuleDeclaration(node)) {
-      // This is a namespace, visit its children
-      ts.forEachChild(node, visit);
-    }
-  };
-  return visit;
 };
 
 const getElementType = (
@@ -352,7 +306,7 @@ type JSDocInfoType = {
   }[];
 };
 
-const parseNode = (
+export const parseNode = (
   defaults: JSDocType,
   node: (ts.DeclarationStatement | ts.Node) & {
     jsDoc?: JSDocInfoType[];
@@ -378,6 +332,8 @@ const parseNode = (
         updated.readonly = true;
       } else if (m.kind === ts.SyntaxKind.AbstractKeyword) {
         updated.abstract = true;
+        // } else if (m.kind === ts.SyntaxKind.ExportKeyword) {
+        //   updated.exported = true;
       }
     }
   }
@@ -422,57 +378,4 @@ const parseNode = (
     return withJsDoc;
   }
   return result;
-};
-
-const parseSymbol = (
-  checker: ts.TypeChecker,
-  symbol?: ts.Symbol,
-): JSDocType | undefined => {
-  if (!symbol) {
-    return undefined;
-  }
-  const declaration = symbol.declarations[0] as ts.VariableDeclaration;
-  const comments = symbol
-    .getDocumentationComment(checker)
-    .map(({ text }) => text);
-  const tags = symbol.getJsDocTags().map(t => {
-    if (t.text) {
-      const firstSpace = t.text.indexOf(' ');
-      return {
-        tagName: { text: t.name },
-        name: { text: t.text.substr(0, firstSpace) },
-        comment: t.text.substr(firstSpace + 1),
-      };
-    }
-    return { tagName: { text: t.name }, name: { text: '' }, comment: '' };
-  });
-  return parseNode({}, declaration, declaration?.initializer, [
-    { comment: comments.join('/n * '), tags },
-  ]);
-};
-export const tsParser = (
-  fileName: string,
-  options: ts.CompilerOptions,
-): Record<string, JSDocType> => {
-  const program = ts.createProgram([fileName], options);
-
-  // Get the checker, we will use it to find more about classes
-  const checker = program.getTypeChecker();
-  const symbols: ts.Symbol[] = [];
-
-  // Visit every sourceFile in the program
-  for (const sourceFile of program.getSourceFiles()) {
-    if (!sourceFile.isDeclarationFile) {
-      // Walk the tree to search for classes
-      ts.forEachChild(sourceFile, getVisit(checker, symbols));
-    }
-  }
-  const results: Record<string, JSDocType> = {};
-  for (const symbol of symbols) {
-    const result = parseSymbol(checker, symbol);
-    if (result) {
-      results[result.name as string] = result;
-    }
-  }
-  return results;
 };

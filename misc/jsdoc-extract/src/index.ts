@@ -1,21 +1,46 @@
 import { getTypescriptConfig } from '@component-controls/typescript-config';
 import * as ts from 'typescript';
 import { ParserOptions } from '@babel/parser';
-import { babelParser } from './babel-parser';
-import { tsParser } from './ts-parser';
-import { JSDocType } from './utils';
+import { anaylizeFiles } from './ts-walk';
+import { JSAnalyzeResults, FrameworkPlugin } from './utils';
+export { extractProps as extractReact } from './frameworks/react';
 
-export const run = (
-  filePath: string,
+const tsDefaults = {
+  jsx: ts.JsxEmit.React,
+  module: ts.ModuleKind.CommonJS,
+  target: ts.ScriptTarget.Latest,
+};
+
+export const analyzeFiles = (
+  filePaths: string[],
   options: {
     babelOptions?: ParserOptions;
     tsOptions?: ts.CompilerOptions;
   } = {},
-): Record<string, JSDocType> => {
-  const tsConfig = getTypescriptConfig(filePath, options.tsOptions);
-  if (tsConfig) {
-    const results = tsParser(filePath, tsConfig);
-    return results;
+): JSAnalyzeResults => {
+  if (!filePaths.length) {
+    throw new Error('You need to supply at least one file');
   }
-  return babelParser(filePath, options.babelOptions);
+  const tsConfig =
+    getTypescriptConfig(filePaths[0], options.tsOptions) || tsDefaults;
+  const results = anaylizeFiles(filePaths, tsConfig);
+  return results;
+};
+
+export const extractProps = (
+  names: string[],
+  filePaths: string[],
+  frameworkFn: FrameworkPlugin,
+  options: {
+    babelOptions?: ParserOptions;
+    tsOptions?: ts.CompilerOptions;
+  } = {},
+): ReturnType<FrameworkPlugin> => {
+  if (!filePaths.length) {
+    throw new Error('You need to supply at least one file');
+  }
+  const tsConfig =
+    getTypescriptConfig(filePaths[0], options.tsOptions) || tsDefaults;
+  const results = anaylizeFiles(filePaths, tsConfig);
+  return frameworkFn(names, results);
 };

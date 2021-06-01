@@ -6,6 +6,7 @@
     "rootDir": "src",
     "declaration": true,
     "types": ["node", "jest"],
+    "jsx": "react",
     "typeRoots": ["../../node_modules/@types", "node_modules/@types"]
   },
   "include": ["src/**/*"],

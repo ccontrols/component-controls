@@ -53,3 +53,21 @@ export interface JSDocType {
   static?: boolean;
   deprecated?: string;
 }
+
+export type JSImport = {
+  name?: string;
+  module: string;
+  namedImports?: Record<string, string>;
+};
+
+export type JSImports = JSImport[];
+
+export type JSAnalyzeResults = {
+  imports: JSImports;
+  structures: Record<string, JSDocType>;
+};
+
+export type FrameworkPlugin = (
+  names: string[],
+  parsed: JSAnalyzeResults,
+) => Record<string, JSDocType>;
