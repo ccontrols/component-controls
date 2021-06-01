@@ -160,8 +160,8 @@ const getElementType = (
     } else if (ts.isPropertyAccessExpression(node)) {
       result.name = `${node.expression.getText()}.${node.name.text}`;
     } else if (ts.isIdentifier(node)) {
-      if (initializer) {
-        result.name = `${node.text}.${initializer.getText()}`;
+      if (initializer && ts.isIdentifier(initializer)) {
+        result.name = `${node.text}.${initializer.text}`;
       } else {
         result.name = node.text;
       }
@@ -289,8 +289,16 @@ const getElementType = (
           result.value = undefined;
           break;
       }
-      if (initializer && ts.isObjectLiteralExpression(initializer)) {
-        result.value = initializer.properties.map(m => parseNode({}, m));
+    }
+    if (initializer && ts.isObjectLiteralExpression(initializer)) {
+      const value = initializer.properties.map(m => parseNode({}, m));
+      if (result.type !== 'object') {
+        result.value = {
+          type: 'object',
+          value,
+        };
+      } else {
+        result.value = value;
       }
     }
   }
