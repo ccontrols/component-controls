@@ -111,6 +111,6 @@ export const anaylizeFiles = (
   }
   return {
     imports,
-    structures: structures,
+    structures,
   };
 };

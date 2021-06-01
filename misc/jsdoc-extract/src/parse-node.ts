@@ -161,9 +161,9 @@ const getElementType = (
       result.name = `${node.expression.getText()}.${node.name.text}`;
     } else if (ts.isIdentifier(node)) {
       if (initializer) {
-        result.value = `${node.text}.${initializer.getText()}`;
+        result.name = `${node.text}.${initializer.getText()}`;
       } else {
-        result.value = node.text;
+        result.name = node.text;
       }
     } else if (ts.isNewExpression(node)) {
       result.type = 'object';
@@ -189,7 +189,7 @@ const getElementType = (
       if (node.questionToken) {
         result.optional = true;
       }
-      result = getElementType(result, node.type, node.initializer);
+      result.value = getElementType({}, node.type, node.initializer);
     } else if (ts.isTypeParameterDeclaration(node)) {
       if (node.default) {
         result = parseNode(result, node.default);

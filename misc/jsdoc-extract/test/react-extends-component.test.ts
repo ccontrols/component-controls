@@ -7,7 +7,7 @@ it('import-props', () => {
     [path.resolve(__dirname, './fixtures/react-extends-component.tsx')],
     extractReact,
   );
-  expect(props).toMatchObject({
+  expect(props).toEqual({
     ExtendsReactComponent: {
       name: 'ExtendsReactComponent',
       type: 'class',
@@ -18,7 +18,7 @@ it('import-props', () => {
           type: 'function',
           returns: {
             type: 'reference',
-            value: 'React.ReactNode',
+            name: 'React.ReactNode',
           },
         },
       ],
@@ -39,14 +39,14 @@ it('import-props', () => {
           type: 'function',
           returns: {
             type: 'reference',
-            value: 'React.ReactNode',
+            name: 'React.ReactNode',
           },
         },
       ],
       inherits: [
         {
           type: 'class',
-          value: 'C',
+          name: 'C',
         },
       ],
     },
@@ -60,7 +60,7 @@ it('import-props', () => {
           type: 'function',
           returns: {
             type: 'reference',
-            value: 'React.ReactNode',
+            name: 'React.ReactNode',
           },
         },
       ],

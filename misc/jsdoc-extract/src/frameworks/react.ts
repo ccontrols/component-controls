@@ -11,12 +11,10 @@ const isReactComponent = (
   ) {
     return component;
   }
-  const classes = component.inherits?.filter(
-    i => (i.type === 'class' && i.name) || i.value,
-  );
+  const classes = component.inherits?.filter(i => i.type === 'class' && i.name);
   const reactImports = imports.filter(i => i.module === 'react');
-  const inheritsReact = classes?.some(({ name, value }) => {
-    const nameParts = (name || value)?.split('.');
+  const inheritsReact = classes?.some(({ name }) => {
+    const nameParts = name?.split('.');
     if (nameParts) {
       const namedImport = nameParts.pop();
       const defaultImport = nameParts.length ? nameParts[0] : null;
