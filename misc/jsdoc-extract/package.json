@@ -1,7 +1,7 @@
 {
-  "name": "@component-controls/jsdoc-extract",
+  "name": "@component-controls/structured-js-docs",
   "version": "3.14.4",
-  "description": "jsdoc type comments extract form js and ts files",
+  "description": "api to extract jsdoc comments and typescript structured documentation",
   "keywords": [
     "jsdoc",
     "tsdoc",
