@@ -1,11 +1,13 @@
 import path from 'path';
-import { analyzeFiles } from '../src/index';
+import { extractProps, extractReact } from '../src/index';
 
 it('import-props', () => {
-  const { structures } = analyzeFiles([
-    path.resolve(__dirname, './fixtures/import-props.tsx'),
-  ]);
-  expect(structures).toMatchObject({
+  const props = extractProps(
+    ['Column'],
+    [path.resolve(__dirname, './fixtures/import-props.tsx')],
+    extractReact,
+  );
+  expect(props).toMatchObject({
     ColumnProps: {
       name: 'ColumnProps',
       type: 'type',

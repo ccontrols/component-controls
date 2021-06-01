@@ -7,34 +7,36 @@ it('class-interface-props', () => {
     [path.resolve(__dirname, './fixtures/class-interface-props.tsx')],
     extractReact,
   );
-  expect(props).toMatchObject({
-    ColumnProps: {
+  expect(props).toEqual({
+    Column: {
+      description: 'Column description',
+      name: 'Column',
+      type: 'class',
       properties: [
         {
-          type: 'string',
-          description: 'stringProp description ',
+          description: 'stringProp description',
           name: 'stringProp',
           optional: true,
+          type: 'string',
         },
         {
-          type: 'number',
-          description: 'numberProp description ',
+          description: 'numberProp description',
           name: 'numberProp',
+          type: 'number',
         },
         {
-          type: 'function',
           description: 'function props description',
           name: 'fnProp',
-          parameters: [],
+          type: 'function',
           returns: {
             type: 'void',
           },
         },
         {
-          type: 'union',
           deprecated: 'since version 1.0',
           description: 'unionProp description',
           name: 'unionProp',
+          type: 'union',
           properties: [
             {
               type: 'string',
@@ -47,26 +49,6 @@ it('class-interface-props', () => {
             {
               type: 'string',
               value: 'option3',
-            },
-          ],
-        },
-      ],
-    },
-    Column: {
-      type: 'class',
-      description: 'Column description',
-      parameters: [
-        {
-          type: 'ColumnProps',
-        },
-        {
-          type: 'Record',
-          parameters: [
-            {
-              type: 'string',
-            },
-            {
-              type: 'unknown',
             },
           ],
         },

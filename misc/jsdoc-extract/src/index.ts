@@ -2,7 +2,8 @@ import { getTypescriptConfig } from '@component-controls/typescript-config';
 import * as ts from 'typescript';
 import { ParserOptions } from '@babel/parser';
 import { anaylizeFiles } from './ts-walk';
-import { JSAnalyzeResults, FrameworkPlugin } from './utils';
+import { JSAnalyzeResults, FrameworkPlugin, JSDocTypes } from './utils';
+import { resolveProps } from './utils/resolve-props';
 export { extractProps as extractReact } from './frameworks/react';
 
 const tsDefaults = {
@@ -35,12 +36,22 @@ export const extractProps = (
     babelOptions?: ParserOptions;
     tsOptions?: ts.CompilerOptions;
   } = {},
-): ReturnType<FrameworkPlugin> => {
+): Record<string, JSDocTypes> => {
   if (!filePaths.length) {
     throw new Error('You need to supply at least one file');
   }
   const tsConfig =
     getTypescriptConfig(filePaths[0], options.tsOptions) || tsDefaults;
   const results = anaylizeFiles(filePaths, tsConfig);
-  return frameworkFn(names, results);
+  const frameworkCleaned = frameworkFn(results);
+  return names.reduce((acc, name) => {
+    const f = frameworkCleaned[name];
+    if (f) {
+      return {
+        ...acc,
+        [name]: resolveProps(frameworkCleaned, name),
+      };
+    }
+    return acc;
+  }, {});
 };

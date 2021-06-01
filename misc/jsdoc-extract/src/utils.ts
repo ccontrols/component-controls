@@ -62,12 +62,12 @@ export type JSImport = {
 
 export type JSImports = JSImport[];
 
+export type JSDocTypes = Record<string, JSDocType>;
 export type JSAnalyzeResults = {
   imports: JSImports;
-  structures: Record<string, JSDocType>;
+  structures: JSDocTypes;
 };
 
 export type FrameworkPlugin = (
-  names: string[],
   parsed: JSAnalyzeResults,
 ) => Record<string, JSDocType>;

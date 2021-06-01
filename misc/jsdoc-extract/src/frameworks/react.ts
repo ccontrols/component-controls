@@ -1,19 +1,13 @@
-import { FrameworkPlugin, JSDocType, JSImports } from '../utils';
+import { FrameworkPlugin, JSDocType, JSDocTypes, JSImports } from '../utils';
+import { walkProps } from '../utils/resolve-props';
 
 const isReactComponent = (
   component: JSDocType,
   imports: JSImports,
 ): JSDocType | undefined => {
-  if (
-    component?.properties?.find(
-      p => p.type === 'function' && p.name === 'render',
-    )
-  ) {
-    return component;
-  }
   const classes = component.inherits?.filter(i => i.type === 'class' && i.name);
   const reactImports = imports.filter(i => i.module === 'react');
-  const inheritsReact = classes?.some(({ name }) => {
+  const inheritsReact = classes?.find(({ name }) => {
     const nameParts = name?.split('.');
     if (nameParts) {
       const namedImport = nameParts.pop();
@@ -26,15 +20,34 @@ const isReactComponent = (
     }
     return false;
   });
-  return inheritsReact ? component : undefined;
+  return inheritsReact;
 };
 
-export const extractProps: FrameworkPlugin = (names, parse) => {
-  return names.reduce((acc, name) => {
-    const component = isReactComponent(parse.structures[name], parse.imports);
-    if (component) {
-      return { ...acc, [name]: component };
+const componentToProps = (
+  jsDocs: JSDocTypes,
+  component: JSDocType,
+  typeProp: JSDocType,
+): JSDocType[] => {
+  if (typeProp.parameters?.length) {
+    return walkProps(jsDocs, typeProp.parameters[0]).properties || [];
+  }
+  return [];
+};
+export const extractProps: FrameworkPlugin = parse => {
+  return Object.keys(parse.structures).reduce((acc, name) => {
+    const component = parse.structures[name];
+    const typeProp = isReactComponent(component, parse.imports);
+    if (typeProp) {
+      const reactComponent = { ...component };
+      reactComponent.properties = componentToProps(
+        parse.structures,
+        component,
+        typeProp,
+      );
+      delete reactComponent.parameters;
+      delete reactComponent.inherits;
+      return { ...acc, [name]: reactComponent };
     }
-    return acc;
+    return { ...acc, [name]: component };
   }, {});
 };
