@@ -1,13 +1,12 @@
 import { FrameworkPlugin, JSDocType, JSDocTypes, JSImports } from '../utils';
 import { walkProps } from '../utils/resolve-props';
 
-const reactClassComponent = (
-  component: JSDocType,
+const reactImport = (
+  names: JSDocType[],
   imports: JSImports,
 ): JSDocType | undefined => {
-  const classes = component.inherits?.filter(i => i.type === 'class' && i.name);
   const reactImports = imports.filter(i => i.module === 'react');
-  const inheritsReact = classes?.find(({ name }) => {
+  const foundReact = names?.find(({ name }) => {
     const nameParts = name?.split('.');
     if (nameParts) {
       const namedImport = nameParts.pop();
@@ -20,7 +19,17 @@ const reactClassComponent = (
     }
     return false;
   });
-  return inheritsReact;
+  return foundReact;
+};
+const reactClassComponent = (
+  component: JSDocType,
+  imports: JSImports,
+): JSDocType | undefined => {
+  const classes = component.inherits?.filter(i => i.type === 'class' && i.name);
+  if (classes) {
+    return reactImport(classes, imports);
+  }
+  return undefined;
 };
 
 const reactFunctionComponent = (
@@ -28,7 +37,7 @@ const reactFunctionComponent = (
   imports: JSImports,
 ): JSDocType | undefined => {
   if (component.type === 'function' && component.value) {
-    return component.value;
+    return reactImport([component.value], imports);
   }
 
   return undefined;
@@ -48,7 +57,7 @@ const componentToProps = (
   typeProp: JSDocType,
 ): JSDocType[] => {
   if (typeProp.parameters?.length) {
-    return walkProps(jsDocs, typeProp.parameters[0]).properties || [];
+    return walkProps(jsDocs, typeProp.parameters[0]);
   }
   return [];
 };
