@@ -36,8 +36,15 @@ const reactFunctionComponent = (
   component: JSDocType,
   imports: JSImports,
 ): JSDocType | undefined => {
-  if (component.type === 'function' && component.value) {
-    return reactImport([component.value], imports);
+  if (component.type === 'function') {
+    if (component.value) {
+      return reactImport([component.value], imports);
+    }
+    if (component.parameters?.length) {
+      return {
+        parameters: component.parameters,
+      };
+    }
   }
 
   return undefined;

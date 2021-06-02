@@ -49,6 +49,15 @@ const expectedProps = (name: string) => ({
   },
 });
 describe('import-props', () => {
+  it('ComponentUntyped', () => {
+    const props = extractProps(
+      ['ComponentUntyped'],
+      [path.resolve(__dirname, './fixtures/import-props.tsx')],
+      extractReact,
+    );
+    expect(props).toMatchObject(expectedProps('ComponentUntyped'));
+  });
+
   it('ComponentReactFunctionalComponent', () => {
     const props = extractProps(
       ['ComponentReactFunctionalComponent'],
