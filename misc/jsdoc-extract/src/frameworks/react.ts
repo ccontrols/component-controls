@@ -1,7 +1,7 @@
 import { FrameworkPlugin, JSDocType, JSDocTypes, JSImports } from '../utils';
 import { walkProps } from '../utils/resolve-props';
 
-const isReactComponent = (
+const reactClassComponent = (
   component: JSDocType,
   imports: JSImports,
 ): JSDocType | undefined => {
@@ -23,6 +23,25 @@ const isReactComponent = (
   return inheritsReact;
 };
 
+const reactFunctionComponent = (
+  component: JSDocType,
+  imports: JSImports,
+): JSDocType | undefined => {
+  if (component.type === 'function' && component.value) {
+    return component.value;
+  }
+
+  return undefined;
+};
+const reactComponent = (
+  component: JSDocType,
+  imports: JSImports,
+): JSDocType | undefined => {
+  return (
+    reactClassComponent(component, imports) ||
+    reactFunctionComponent(component, imports)
+  );
+};
 const componentToProps = (
   jsDocs: JSDocTypes,
   component: JSDocType,
@@ -36,7 +55,7 @@ const componentToProps = (
 export const extractProps: FrameworkPlugin = parse => {
   return Object.keys(parse.structures).reduce((acc, name) => {
     const component = parse.structures[name];
-    const typeProp = isReactComponent(component, parse.imports);
+    const typeProp = reactComponent(component, parse.imports);
     if (typeProp) {
       const reactComponent = { ...component };
       reactComponent.properties = componentToProps(
@@ -46,6 +65,7 @@ export const extractProps: FrameworkPlugin = parse => {
       );
       delete reactComponent.parameters;
       delete reactComponent.inherits;
+      delete reactComponent.value;
       return { ...acc, [name]: reactComponent };
     }
     return { ...acc, [name]: component };
