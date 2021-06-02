@@ -483,17 +483,21 @@ it('types', () => {
     ArrayKeyword: {
       name: 'ArrayKeyword',
       type: 'array',
-      properties: [
-        {
-          type: 'string',
-        },
-      ],
-      value: [
-        {
-          type: 'string',
-          value: 'test',
-        },
-      ],
+      value: {
+        name: 'ArrayKeyword',
+        type: 'array',
+        properties: [
+          {
+            type: 'string',
+          },
+        ],
+        value: [
+          {
+            type: 'string',
+            value: 'test',
+          },
+        ],
+      },
     },
     ArrayNew: {
       name: 'ArrayNew',
@@ -1556,6 +1560,25 @@ it('types', () => {
             },
           ],
           name: 'React.Component',
+        },
+      ],
+    },
+    TypedInitializedFunction: {
+      name: 'TypedInitializedFunction',
+      value: {
+        name: 'FC',
+        type: 'reference',
+        parameters: [
+          {
+            type: 'reference',
+            name: 'Bear',
+          },
+        ],
+      },
+      type: 'function',
+      parameters: [
+        {
+          name: 'props',
         },
       ],
     },

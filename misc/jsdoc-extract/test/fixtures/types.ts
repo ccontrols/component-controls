@@ -256,6 +256,7 @@ export function readOnlyParameters(values: string[]): void {
   console.log(values);
 }
 
+export const TypedInitializedFunction: FC<Bear> = props => {};
 export interface StringNumberPair {
   /**
    *  specialized properties

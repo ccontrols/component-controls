@@ -141,7 +141,7 @@ const getElementType = (
       }
     } else if (ts.isTypeReferenceNode(node)) {
       result.type = 'reference';
-      result = parseNode(result, node.typeName, initializer);
+      result = getElementType(result, node.typeName, initializer);
       if (node.typeArguments?.length) {
         result.parameters = node.typeArguments.map(m => getElementType({}, m));
       }
@@ -174,7 +174,13 @@ const getElementType = (
         result.properties = node.arguments.map(m => getElementType({}, m, m));
       }
     } else if (ts.isVariableDeclaration(node)) {
-      result = getElementType(result, node.type, node.initializer);
+      if (node.type && node.initializer && ts.isTypeReferenceNode(node.type)) {
+        //a type reference, the type will need to be deducted
+        result.value = getElementType(result, node.type, node.initializer);
+        result = getElementType(result, node.initializer);
+      } else {
+        result = getElementType(result, node.type, node.initializer);
+      }
     } else if (ts.isPropertySignature(node) || ts.isParameter(node)) {
       if (node.questionToken) {
         result.optional = true;
