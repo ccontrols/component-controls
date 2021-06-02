@@ -1,4 +1,12 @@
 import React, { FC } from 'react';
-import { ColumnProps } from './type-props';
+import { ComponentProps } from './type-props';
 
-export const Column: FC<ColumnProps> = props => <div {...props} />;
+export const ComponentFC: FC<ComponentProps> = props => <div {...props} />;
+
+export const ComponentReactFunctionalComponent: React.FunctionComponent<ComponentProps> = props => (
+  <div {...props} />
+);
+
+export const ComponentUntyped = (props: ComponentProps) => <div {...props} />;
+
+export default ComponentFC;

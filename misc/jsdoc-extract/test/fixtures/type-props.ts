@@ -1,5 +1,6 @@
 import { BaseHTMLAttributes } from 'react';
-export type ColumnProps = {
+
+export type ComponentProps = {
   /** stringProp description */
   stringProp?: string;
   /** numberProp description */
@@ -16,4 +17,4 @@ export type ColumnProps = {
   unionProp: 'option1' | 'option2' | 'option3';
 };
 
-export type DivProps = ColumnProps & BaseHTMLAttributes<HTMLDivElement>;
+export type DivProps = ComponentProps & BaseHTMLAttributes<HTMLDivElement>;
