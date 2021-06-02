@@ -6,24 +6,31 @@ export const resolveProps = (jsDocs: JSDocTypes, name: string): JSDocType => {
   return component;
 };
 
-export const walkProps = (jsDocs: JSDocTypes, node: JSDocType): JSDocType[] => {
+const walkProp = (
+  jsDocs: JSDocTypes,
+  node: JSDocType,
+  props: JSDocType[],
+): void => {
   switch (node.type) {
     case 'reference':
-      if (node.name) {
-        return walkProps(jsDocs, jsDocs[node.name]);
+      if (node.name && jsDocs[node.name]) {
+        walkProp(jsDocs, jsDocs[node.name], props);
       }
       break;
     case 'type':
-      if (node.name) {
-        const component = jsDocs[node.name];
-        return (
-          component?.returns?.properties ||
-          component.properties ||
-          node.properties ||
-          []
-        );
+      const properties = node?.returns?.properties || node.properties;
+      if (properties) {
+        properties.map(p => walkProp(jsDocs, p, props));
       }
       break;
+    default:
+      props.push(node);
+      break;
   }
-  return node.properties || [];
+};
+
+export const walkProps = (jsDocs: JSDocTypes, node: JSDocType): JSDocType[] => {
+  const props: JSDocType[] = [];
+  walkProp(jsDocs, node, props);
+  return props;
 };

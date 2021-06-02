@@ -9,4 +9,8 @@ export const ComponentReactFunctionalComponent: React.FunctionComponent<Componen
 
 export const ComponentUntyped = (props: ComponentProps) => <div {...props} />;
 
+export const ComponentEnhancedProps = (props: ComponentProps) => (
+  <div {...props} />
+);
+
 export default ComponentFC;
