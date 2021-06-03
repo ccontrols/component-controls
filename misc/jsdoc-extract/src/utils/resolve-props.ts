@@ -17,6 +17,7 @@ const walkProp = (
         walkProp(jsDocs, jsDocs[node.name], props);
       }
       break;
+    case 'interface':
     case 'type':
       const properties = node?.returns?.properties || node.properties;
       if (properties) {

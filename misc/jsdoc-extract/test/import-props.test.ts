@@ -49,6 +49,14 @@ const expectedProps = (name: string) => ({
   },
 });
 describe('import-props', () => {
+  it('ComponentInterfaceProps', () => {
+    const props = extractProps(
+      ['ComponentInterfaceProps'],
+      [path.resolve(__dirname, './fixtures/import-props.tsx')],
+      extractReact,
+    );
+    expect(props).toMatchObject(expectedProps('ComponentInterfaceProps'));
+  });
   it('ComponentEnhancedProps', () => {
     const props = extractProps(
       ['ComponentEnhancedProps'],
