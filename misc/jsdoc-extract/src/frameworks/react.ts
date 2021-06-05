@@ -1,10 +1,20 @@
-import { FrameworkPlugin, JSDocType, JSDocTypes, JSImports } from '../utils';
+import {
+  FrameworkPlugin,
+  PropType,
+  JSDocTypes,
+  JSImports,
+  isClassProp,
+  isFunctionProp,
+  FunctionProp,
+  ClassProp,
+  JSAnalyzeResults,
+} from '../utils';
 import { walkProps } from '../utils/resolve-props';
 
 const reactImport = (
-  names: JSDocType[],
+  names: PropType[],
   imports: JSImports,
-): JSDocType | undefined => {
+): PropType | undefined => {
   const reactImports = imports.filter(i => i.module === 'react');
   const foundReact = names?.find(({ name }) => {
     const nameParts = name?.split('.');
@@ -22,37 +32,39 @@ const reactImport = (
   return foundReact;
 };
 const reactClassComponent = (
-  component: JSDocType,
+  prop: PropType,
   imports: JSImports,
-): JSDocType | undefined => {
-  const classes = component.inherits?.filter(i => i.type === 'class' && i.name);
-  if (classes) {
-    return reactImport(classes, imports);
+): ClassProp | undefined => {
+  if (isClassProp(prop)) {
+    const classes = prop.extends?.filter(i => i.name);
+    if (classes) {
+      return reactImport(classes, imports);
+    }
   }
   return undefined;
 };
 
 const reactFunctionComponent = (
-  component: JSDocType,
+  prop: PropType,
   imports: JSImports,
-): JSDocType | undefined => {
-  if (component.type === 'function') {
-    if (component.value) {
-      return reactImport([component.value], imports);
+): FunctionProp | undefined => {
+  if (isFunctionProp(prop)) {
+    if (prop.types) {
+      return reactImport(prop.types, imports);
     }
-    if (component.parameters?.length) {
+    if (prop.parameters?.length) {
       return {
-        parameters: component.parameters,
-      };
+        parameters: prop.parameters,
+      } as FunctionProp;
     }
   }
 
   return undefined;
 };
 const reactComponent = (
-  component: JSDocType,
+  component: PropType,
   imports: JSImports,
-): JSDocType | undefined => {
+): PropType | undefined => {
   return (
     reactClassComponent(component, imports) ||
     reactFunctionComponent(component, imports)
@@ -60,30 +72,34 @@ const reactComponent = (
 };
 const componentToProps = (
   jsDocs: JSDocTypes,
-  component: JSDocType,
-  typeProp: JSDocType,
-): JSDocType[] => {
-  if (typeProp.parameters?.length) {
-    return walkProps(jsDocs, typeProp.parameters[0]);
+  typeProp: ClassProp | FunctionProp,
+): PropType[] => {
+  const classProp = typeProp as ClassProp;
+  if (classProp.properties?.length) {
+    return walkProps(jsDocs, classProp.properties[0]);
+  }
+  const fnProp = typeProp as FunctionProp;
+  if (fnProp.parameters?.length) {
+    return walkProps(jsDocs, fnProp.parameters[0]);
   }
   return [];
 };
-export const extractProps: FrameworkPlugin = parse => {
-  return Object.keys(parse.structures).reduce((acc, name) => {
-    const component = parse.structures[name];
-    const typeProp = reactComponent(component, parse.imports);
+export const extractProps: FrameworkPlugin = (
+  name: string,
+  jsDocs: JSAnalyzeResults,
+) => {
+  const component = jsDocs.structures[name];
+  if (component) {
+    const typeProp = reactComponent(component, jsDocs.imports);
     if (typeProp) {
-      const reactComponent = { ...component };
-      reactComponent.properties = componentToProps(
-        parse.structures,
-        component,
-        typeProp,
-      );
-      delete reactComponent.parameters;
-      delete reactComponent.inherits;
-      delete reactComponent.value;
-      return { ...acc, [name]: reactComponent };
+      const reactComponent = { ...component } as ClassProp;
+      reactComponent.properties = componentToProps(jsDocs.structures, typeProp);
+      delete (reactComponent as FunctionProp).parameters;
+      delete reactComponent.extends;
+      delete reactComponent.implements;
+      return reactComponent;
     }
-    return { ...acc, [name]: component };
-  }, {});
+    return component;
+  }
+  return undefined;
 };

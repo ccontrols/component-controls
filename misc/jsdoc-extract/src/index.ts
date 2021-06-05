@@ -43,13 +43,13 @@ export const extractProps = (
   const tsConfig =
     getTypescriptConfig(filePaths[0], options.tsOptions) || tsDefaults;
   const results = anaylizeFiles(filePaths, tsConfig);
-  const frameworkCleaned = frameworkFn(results);
+
   return names.reduce((acc, name) => {
-    const f = frameworkCleaned[name];
-    if (f) {
+    const frameworkCleaned = frameworkFn(name, results);
+    if (frameworkCleaned) {
       return {
         ...acc,
-        [name]: resolveProps(frameworkCleaned, name),
+        [name]: resolveProps(frameworkCleaned),
       };
     }
     return acc;

@@ -4,43 +4,43 @@ import { extractProps, extractReact } from '../src/index';
 const expectedProps = (name: string) => ({
   [name]: {
     name,
-    type: 'function',
+    kind: 11,
     properties: [
       {
         description: 'stringProp description',
         name: 'stringProp',
         optional: true,
-        type: 'string',
+        kind: 1,
       },
       {
         description: 'numberProp description',
         name: 'numberProp',
-        type: 'number',
+        kind: 2,
       },
       {
         description: 'function props description',
         name: 'fnProp',
-        type: 'function',
+        kind: 11,
         returns: {
-          type: 'void',
+          kind: 12,
         },
       },
       {
         deprecated: 'since version 1.0',
         description: 'unionProp description',
         name: 'unionProp',
-        type: 'union',
+        kind: 4,
         properties: [
           {
-            type: 'string',
+            kind: 1,
             value: 'option1',
           },
           {
-            type: 'string',
+            kind: 1,
             value: 'option2',
           },
           {
-            type: 'string',
+            kind: 1,
             value: 'option3',
           },
         ],
@@ -49,32 +49,6 @@ const expectedProps = (name: string) => ({
   },
 });
 describe('import-props', () => {
-  it('ComponentInterfaceProps', () => {
-    const props = extractProps(
-      ['ComponentInterfaceProps'],
-      [path.resolve(__dirname, './fixtures/import-props.tsx')],
-      extractReact,
-    );
-    expect(props).toMatchObject(expectedProps('ComponentInterfaceProps'));
-  });
-  it('ComponentEnhancedProps', () => {
-    const props = extractProps(
-      ['ComponentEnhancedProps'],
-      [path.resolve(__dirname, './fixtures/import-props.tsx')],
-      extractReact,
-    );
-    expect(props).toMatchObject(expectedProps('ComponentEnhancedProps'));
-  });
-
-  it('ComponentUntyped', () => {
-    const props = extractProps(
-      ['ComponentUntyped'],
-      [path.resolve(__dirname, './fixtures/import-props.tsx')],
-      extractReact,
-    );
-    expect(props).toMatchObject(expectedProps('ComponentUntyped'));
-  });
-
   it('ComponentReactFunctionalComponent', () => {
     const props = extractProps(
       ['ComponentReactFunctionalComponent'],
@@ -85,6 +59,31 @@ describe('import-props', () => {
       expectedProps('ComponentReactFunctionalComponent'),
     );
   });
+  it('ComponentEnhancedProps', () => {
+    const props = extractProps(
+      ['ComponentEnhancedProps'],
+      [path.resolve(__dirname, './fixtures/import-props.tsx')],
+      extractReact,
+    );
+    expect(props).toMatchObject(expectedProps('ComponentEnhancedProps'));
+  });
+  it('ComponentInterfaceProps', () => {
+    const props = extractProps(
+      ['ComponentInterfaceProps'],
+      [path.resolve(__dirname, './fixtures/import-props.tsx')],
+      extractReact,
+    );
+    expect(props).toMatchObject(expectedProps('ComponentInterfaceProps'));
+  });
+  it('ComponentUntyped', () => {
+    const props = extractProps(
+      ['ComponentUntyped'],
+      [path.resolve(__dirname, './fixtures/import-props.tsx')],
+      extractReact,
+    );
+    expect(props).toMatchObject(expectedProps('ComponentUntyped'));
+  });
+
   it('ComponentFC', () => {
     const props = extractProps(
       ['ComponentFC'],

@@ -9,63 +9,63 @@ it('types', () => {
     s: {
       description: 'this is a string',
       name: 's',
-      type: 'string',
+      kind: 1,
       value: 'a',
     },
     n: {
       description: 'this is a number',
       name: 'n',
-      type: 'number',
+      kind: 2,
       value: 3.14,
     },
     b: {
       description: 'this is a false',
       name: 'b',
+      kind: 3,
       value: false,
-      type: 'boolean',
     },
     t: {
       description: 'this is a true',
       name: 't',
+      kind: 3,
       value: true,
-      type: 'boolean',
     },
     bool: {
       description: 'this is an undefined boolean value',
       name: 'bool',
-      type: 'boolean',
+      kind: 3,
     },
     a: {
       description: 'this is any type',
       name: 'a',
-      type: 'any',
+      kind: 17,
       value: 'as',
     },
     u: {
       description: 'this is unknown type',
       name: 'u',
-      type: 'unknown',
+      kind: 9,
       value: undefined,
     },
     obj: {
       description: 'this is an undefined object',
       name: 'obj',
-      type: 'object',
+      kind: 0,
       value: undefined,
     },
     initializedObj: {
       description: 'this is an initialized object',
       name: 'initializedObj',
-      type: 'object',
+      kind: 0,
       value: [
         {
           name: 'a',
-          type: 'number',
+          kind: 2,
           value: 12,
         },
         {
           name: 'b',
-          type: 'string',
+          kind: 1,
           value: 'test',
         },
       ],
@@ -73,35 +73,35 @@ it('types', () => {
     T: {
       description: 'this is type',
       name: 'T',
-      type: 'type',
-      returns: {
-        type: 'type',
+      kind: 15,
+      type: {
+        kind: 15,
         properties: [
           {
             description: 'type member property',
             name: 'm',
-            type: 'string',
+            kind: 1,
           },
         ],
       },
     },
     ExtendT: {
       name: 'ExtendT',
-      type: 'type',
-      returns: {
-        type: 'type',
+      kind: 15,
+      type: {
+        kind: 15,
         properties: [
           {
-            type: 'reference',
+            kind: 18,
             name: 'T',
           },
           {
-            type: 'type',
+            kind: 15,
             properties: [
               {
                 description: 'honey',
                 name: 'honey',
-                type: 'boolean',
+                kind: 3,
               },
             ],
           },
@@ -110,32 +110,29 @@ it('types', () => {
     },
     IndexT: {
       name: 'IndexT',
-      type: 'type',
-      returns: {
-        type: 'type',
+      kind: 15,
+      type: {
+        kind: 15,
         properties: [
           {
             readonly: true,
-            type: 'index',
-            parameters: [
-              {
-                type: 'type',
-                properties: [
-                  {
-                    name: 'Bear',
-                    type: 'reference',
-                  },
-                  {
-                    name: 'b',
-                    type: 'null',
-                    value: null,
-                  },
-                ],
-              },
-            ],
+            kind: 20,
+            index: {
+              kind: 15,
+              properties: [
+                {
+                  name: 'Bear',
+                  kind: 18,
+                },
+                {
+                  name: 'b',
+                  kind: 10,
+                },
+              ],
+            },
             properties: [
               {
-                type: 'string',
+                kind: 1,
               },
             ],
           },
@@ -144,16 +141,16 @@ it('types', () => {
     },
     IntersectionType: {
       name: 'IntersectionType',
-      type: 'type',
-      returns: {
-        type: 'type',
+      kind: 15,
+      type: {
+        kind: 15,
         properties: [
           {
-            type: 'reference',
+            kind: 18,
             name: 'IndexT',
           },
           {
-            type: 'reference',
+            kind: 18,
             name: 'Internal',
           },
         ],
@@ -161,42 +158,41 @@ it('types', () => {
     },
     GenericType: {
       name: 'GenericType',
-      type: 'type',
-      returns: {
-        type: 'type',
+      kind: 15,
+      type: {
+        kind: 15,
         properties: [
           {
             name: 'Type',
-            type: 'reference',
+            kind: 18,
           },
         ],
       },
     },
     UnionGenericType: {
       name: 'UnionGenericType',
-      type: 'type',
-      returns: {
-        type: 'union',
+      kind: 15,
+      type: {
+        kind: 4,
         properties: [
           {
-            type: 'reference',
+            kind: 18,
             name: 'Type',
           },
           {
-            type: 'null',
-            value: null,
+            kind: 10,
           },
         ],
       },
     },
     GenericArrayType: {
       name: 'GenericArrayType',
-      type: 'type',
-      returns: {
-        type: 'array',
-        properties: [
+      kind: 15,
+      type: {
+        kind: 16,
+        elements: [
           {
-            type: 'reference',
+            kind: 18,
             name: 'Type',
           },
         ],
@@ -204,17 +200,17 @@ it('types', () => {
     },
     NestedGenericType: {
       name: 'NestedGenericType',
-      type: 'type',
-      returns: {
-        type: 'reference',
+      kind: 15,
+      type: {
+        kind: 18,
         name: 'GenericArrayType',
-        parameters: [
+        types: [
           {
-            type: 'reference',
+            kind: 18,
             name: 'UnionGenericType',
-            parameters: [
+            types: [
               {
-                type: 'reference',
+                kind: 18,
                 name: 'Type',
               },
             ],
@@ -225,52 +221,52 @@ it('types', () => {
     I: {
       description: 'this is interface\nmultiple lines',
       name: 'I',
-      type: 'interface',
+      kind: 14,
       properties: [
         {
           description: 'interface member property',
           name: 'm',
-          type: 'string',
+          kind: 1,
         },
       ],
     },
     Internal: {
       name: 'Internal',
-      type: 'interface',
+      kind: 14,
       properties: [],
     },
     Bear: {
       name: 'Bear',
-      type: 'interface',
-      inherits: [
+      kind: 14,
+      extends: [
         {
-          type: 'interface',
+          kind: 14,
           name: 'I',
         },
       ],
       properties: [
         {
           name: 'honey',
-          type: 'boolean',
+          kind: 3,
         },
       ],
     },
     Home: {
       name: 'Home',
-      type: 'interface',
+      kind: 14,
       properties: [
         {
           name: 'resident',
           readonly: true,
-          type: 'type',
+          kind: 15,
           properties: [
             {
               name: 'name',
-              type: 'string',
+              kind: 1,
             },
             {
               name: 'age',
-              type: 'number',
+              kind: 2,
             },
           ],
         },
@@ -278,18 +274,16 @@ it('types', () => {
     },
     IndexInterface: {
       name: 'IndexInterface',
-      type: 'interface',
+      kind: 14,
       properties: [
         {
-          type: 'index',
-          parameters: [
-            {
-              type: 'string',
-            },
-          ],
+          kind: 20,
+          index: {
+            kind: 1,
+          },
           properties: [
             {
-              type: 'number',
+              kind: 2,
             },
           ],
         },
@@ -297,28 +291,28 @@ it('types', () => {
     },
     MultipleInheritance: {
       name: 'MultipleInheritance',
-      type: 'interface',
-      inherits: [
+      kind: 14,
+      extends: [
         {
-          type: 'interface',
+          kind: 14,
           name: 'Home',
         },
         {
-          type: 'interface',
+          kind: 14,
           name: 'Bear',
         },
       ],
       properties: [
         {
           name: 'ownfield',
-          type: 'union',
+          kind: 4,
           properties: [
             {
-              type: 'string',
+              kind: 1,
               value: 'test',
             },
             {
-              type: 'number',
+              kind: 2,
               value: 1,
             },
           ],
@@ -328,15 +322,15 @@ it('types', () => {
     GenericInterface: {
       description: 'generics',
       name: 'GenericInterface',
-      type: 'interface',
+      kind: 14,
       properties: [
         {
           description: 'configurable property type',
           name: 'Type',
-          type: 'reference',
+          kind: 18,
         },
       ],
-      parameters: [
+      generics: [
         {
           name: 'Type',
         },
@@ -344,27 +338,26 @@ it('types', () => {
     },
     InterfaceArrayType: {
       name: 'InterfaceArrayType',
-      type: 'interface',
+      kind: 14,
       properties: [
         {
           description: 'Gets or sets the length of the array.',
           name: 'length',
-          type: 'number',
+          kind: 2,
         },
         {
           description: 'Removes the last element from an array and returns it.',
           name: 'pop',
-          type: 'function',
+          kind: 11,
           returns: {
-            type: 'union',
+            kind: 4,
             properties: [
               {
-                type: 'reference',
+                kind: 18,
                 name: 'Type',
               },
               {
-                type: 'undefined',
-                value: undefined,
+                kind: 8,
               },
             ],
           },
@@ -373,25 +366,25 @@ it('types', () => {
           description:
             'Appends new elements to an array, and returns the new length of the array.',
           name: 'push',
-          type: 'function',
+          kind: 11,
           parameters: [
             {
               name: 'items',
-              type: 'array',
-              properties: [
+              kind: 16,
+              elements: [
                 {
-                  type: 'reference',
+                  kind: 18,
                   name: 'Type',
                 },
               ],
             },
           ],
           returns: {
-            type: 'number',
+            kind: 2,
           },
         },
       ],
-      parameters: [
+      generics: [
         {
           name: 'Type',
         },
@@ -399,29 +392,29 @@ it('types', () => {
     },
     InterfaceWithEnumConstant: {
       name: 'InterfaceWithEnumConstant',
-      type: 'interface',
+      kind: 14,
       properties: [
         {
           description: 'kind is an enumm constant',
           name: 'StringEnums.Up',
-          type: 'reference',
+          kind: 18,
         },
         {
           description: 'radius property',
           name: 'radius',
-          type: 'number',
+          kind: 2,
         },
       ],
     },
     GenericConsumer: {
       name: 'GenericConsumer',
-      type: 'type',
-      returns: {
-        type: 'reference',
+      kind: 15,
+      type: {
+        kind: 18,
         name: 'GenericInterface',
-        parameters: [
+        types: [
           {
-            type: 'string',
+            kind: 1,
           },
         ],
       },
@@ -430,19 +423,19 @@ it('types', () => {
       deprecated: 'yes',
       description: 'this is an array of strings',
       name: 'arrString',
-      type: 'array',
-      properties: [
+      kind: 16,
+      elements: [
         {
-          type: 'string',
+          kind: 1,
         },
       ],
       value: [
         {
-          type: 'string',
+          kind: 1,
           value: 'one',
         },
         {
-          type: 'string',
+          kind: 1,
           value: 'two',
         },
       ],
@@ -450,12 +443,12 @@ it('types', () => {
     arrType: {
       description: 'type array of interface type',
       name: 'arrType',
-      type: 'type',
-      returns: {
-        type: 'array',
-        properties: [
+      kind: 15,
+      type: {
+        kind: 16,
+        elements: [
           {
-            type: 'reference',
+            kind: 18,
             name: 'Internal',
           },
         ],
@@ -464,61 +457,55 @@ it('types', () => {
     names: {
       description: 'const array of strings',
       name: 'names',
-      type: 'array',
+      kind: 16,
       value: [
         {
-          type: 'string',
+          kind: 1,
           value: 'Alice',
         },
         {
-          type: 'string',
+          kind: 1,
           value: 'Bob',
         },
         {
-          type: 'string',
+          kind: 1,
           value: 'Eve',
         },
       ],
     },
     ArrayKeyword: {
       name: 'ArrayKeyword',
-      type: 'array',
-      value: {
-        name: 'ArrayKeyword',
-        type: 'array',
-        properties: [
-          {
-            type: 'string',
-          },
-        ],
-        value: [
-          {
-            type: 'string',
-            value: 'test',
-          },
-        ],
-      },
+      kind: 16,
+      elements: [
+        {
+          kind: 1,
+        },
+      ],
+      value: [
+        {
+          kind: 1,
+          value: 'test',
+        },
+      ],
     },
     ArrayNew: {
       name: 'ArrayNew',
-      type: 'object',
-      parameters: [
-        {
-          type: 'reference',
-          name: 'Array',
-        },
-      ],
+      kind: 0,
+      reference: {
+        kind: 18,
+        name: 'Array',
+      },
       properties: [
         {
-          type: 'string',
+          kind: 1,
           value: 'red',
         },
         {
-          type: 'string',
+          kind: 1,
           value: 'green',
         },
         {
-          type: 'string',
+          kind: 1,
           value: 'blue',
         },
       ],
@@ -526,29 +513,27 @@ it('types', () => {
     union: {
       description: 'strings union',
       name: 'union',
-      type: 'type',
-      returns: {
-        type: 'union',
+      kind: 15,
+      type: {
+        kind: 4,
         properties: [
           {
-            type: 'string',
+            kind: 1,
             value: 'this',
           },
           {
-            type: 'number',
+            kind: 2,
             value: 1,
           },
           {
+            kind: 3,
             value: false,
-            type: 'boolean',
           },
           {
-            type: 'null',
-            value: null,
+            kind: 10,
           },
           {
-            type: 'undefined',
-            value: undefined,
+            kind: 8,
           },
         ],
       },
@@ -556,12 +541,12 @@ it('types', () => {
     InitializedEnum: {
       description: 'this is an enum with an initialized element',
       name: 'InitializedEnum',
-      type: 'enum',
+      kind: 5,
       properties: [
         {
           description: 'enum starts at 1',
           name: 'Up',
-          type: 'number',
+          kind: 2,
           value: 1,
         },
         {
@@ -578,86 +563,86 @@ it('types', () => {
     },
     StringEnums: {
       name: 'StringEnums',
-      type: 'enum',
+      kind: 5,
       properties: [
         {
           name: 'Up',
-          type: 'string',
+          kind: 1,
           value: 'UP',
         },
         {
           name: 'Down',
-          type: 'string',
+          kind: 1,
           value: 'DOWN',
         },
         {
           name: 'Left',
-          type: 'string',
+          kind: 1,
           value: 'LEFT',
         },
         {
           name: 'Right',
-          type: 'string',
+          kind: 1,
           value: 'RIGHT',
         },
       ],
     },
     Tuple: {
       name: 'Tuple',
-      type: 'type',
-      returns: {
-        type: 'tuple',
+      kind: 15,
+      type: {
+        kind: 6,
         properties: [
           {
-            type: 'string',
+            kind: 1,
           },
           {
-            type: 'number',
+            kind: 2,
           },
         ],
       },
     },
     OptionalTuple: {
       name: 'OptionalTuple',
-      type: 'type',
-      returns: {
-        type: 'tuple',
+      kind: 15,
+      type: {
+        kind: 6,
         properties: [
           {
-            type: 'number',
+            kind: 2,
           },
           {
-            type: 'number',
+            kind: 2,
           },
           {
             optional: true,
-            type: 'number',
+            kind: 2,
           },
         ],
       },
     },
     SpreadTuple: {
       name: 'SpreadTuple',
-      type: 'type',
-      returns: {
-        type: 'tuple',
+      kind: 15,
+      type: {
+        kind: 6,
         properties: [
           {
-            type: 'rest',
-            returns: {
-              type: 'array',
-              properties: [
+            kind: 7,
+            type: {
+              kind: 16,
+              elements: [
                 {
-                  type: 'boolean',
+                  kind: 3,
                 },
               ],
             },
           },
           {
-            type: 'string',
+            kind: 1,
           },
           {
-            type: 'number',
+            kind: 2,
           },
         ],
       },
@@ -667,26 +652,26 @@ it('types', () => {
         {
           name: 'name',
           description: 'string type parameters',
-          type: 'string',
+          kind: 1,
         },
       ],
       description: 'greeting function',
       name: 'greet',
-      type: 'function',
+      kind: 11,
     },
     arrowGreet: {
       description: 'arrow greeting function',
       name: 'arrowGreet',
-      type: 'function',
+      kind: 11,
       parameters: [
         {
           description: 'name parameter inline description',
           name: 'name',
-          type: 'string',
+          kind: 1,
         },
       ],
       returns: {
-        type: 'void',
+        kind: 12,
       },
     },
     printCoord: {
@@ -694,94 +679,94 @@ it('types', () => {
         {
           name: 'pt',
           description: 'object parameter',
-          type: 'type',
+          kind: 15,
           properties: [
             {
               description: 'x coordinate',
               name: 'x',
-              type: 'number',
+              kind: 2,
             },
             {
               description: 'optional y coordinate',
               name: 'y',
               optional: true,
-              type: 'number',
+              kind: 2,
             },
           ],
         },
       ],
       description: 'print coordinates',
       name: 'printCoord',
-      type: 'function',
+      kind: 11,
       returns: {
-        type: 'void',
+        kind: 12,
       },
     },
     printId: {
       name: 'printId',
-      type: 'function',
+      kind: 11,
       parameters: [
         {
           name: 'id',
-          type: 'union',
+          kind: 4,
           properties: [
             {
-              type: 'number',
+              kind: 2,
             },
             {
-              type: 'string',
+              kind: 1,
             },
           ],
         },
       ],
       returns: {
-        type: 'void',
+        kind: 12,
       },
     },
     paintHomeyBear: {
       name: 'paintHomeyBear',
-      type: 'function',
+      kind: 11,
       parameters: [
         {
-          type: 'reference',
+          kind: 18,
           name: 'ExtendT',
         },
       ],
       returns: {
-        type: 'reference',
+        kind: 18,
         name: 'Bear',
       },
     },
     genericFunction: {
       name: 'genericFunction',
-      type: 'function',
+      kind: 11,
       parameters: [
         {
           name: 'GenericInterface',
-          type: 'reference',
-          parameters: [
+          kind: 18,
+          types: [
             {
-              type: 'reference',
+              kind: 18,
               name: 'Type',
             },
           ],
         },
         {
           name: 'Type',
-          type: 'reference',
+          kind: 18,
         },
       ],
       returns: {
-        type: 'reference',
+        kind: 18,
         name: 'GenericInterface',
-        parameters: [
+        types: [
           {
-            type: 'reference',
+            kind: 18,
             name: 'Type',
           },
         ],
       },
-      properties: [
+      types: [
         {
           name: 'Type',
         },
@@ -789,67 +774,82 @@ it('types', () => {
     },
     readOnlyParameters: {
       name: 'readOnlyParameters',
-      type: 'function',
+      kind: 11,
       parameters: [
         {
           name: 'values',
-          type: 'array',
-          properties: [
+          kind: 16,
+          elements: [
             {
-              type: 'string',
+              kind: 1,
             },
           ],
         },
       ],
       returns: {
-        type: 'void',
+        kind: 12,
       },
+    },
+    FC: {
+      name: 'FC',
+      kind: 11,
+      types: [
+        {
+          kind: 18,
+          name: 'Bear',
+        },
+      ],
+      parameters: [
+        {
+          name: 'props',
+        },
+      ],
     },
     StringNumberPair: {
       name: 'StringNumberPair',
-      type: 'interface',
+      kind: 14,
       properties: [
         {
           description: 'specialized properties',
           name: 'length',
-          type: 'number',
+          kind: 2,
           value: 2,
         },
         {
           name: '0',
-          type: 'string',
+          kind: 1,
         },
         {
           name: '1',
-          type: 'number',
+          kind: 2,
         },
         {
           description: "Other 'Array<string | number>' members...",
           name: 'slice',
-          type: 'function',
+          kind: 11,
           parameters: [
             {
               name: 'start',
               optional: true,
-              type: 'number',
+              kind: 2,
             },
             {
               name: 'end',
               optional: true,
-              type: 'number',
+              kind: 2,
             },
           ],
           returns: {
-            type: 'array',
-            properties: [
+            kind: 16,
+            elements: [
               {
-                type: 'union',
+                kind: 4,
                 properties: [
                   {
-                    type: 'string',
+                    kind: 1,
                   },
                   {
-                    type: 'number',
+                    kind: 2,
                   },
                 ],
               },
@@ -860,25 +860,25 @@ it('types', () => {
     },
     spreadTupleFunction: {
       name: 'spreadTupleFunction',
-      type: 'function',
+      kind: 11,
       parameters: [
         {
           name: 'args',
-          type: 'tuple',
+          kind: 6,
           properties: [
             {
-              type: 'string',
+              kind: 1,
             },
             {
-              type: 'number',
+              kind: 2,
             },
             {
-              type: 'rest',
-              returns: {
-                type: 'array',
-                properties: [
+              kind: 7,
+              type: {
+                kind: 16,
+                elements: [
                   {
-                    type: 'boolean',
+                    kind: 3,
                   },
                 ],
               },
@@ -887,70 +887,62 @@ it('types', () => {
         },
       ],
       returns: {
-        type: 'void',
+        kind: 12,
       },
     },
     distanceFromOrigin: {
       name: 'distanceFromOrigin',
-      type: 'function',
+      kind: 11,
       parameters: [
         {
-          type: 'tuple',
+          kind: 6,
           properties: [
             {
-              type: 'number',
+              kind: 2,
             },
             {
-              type: 'number',
+              kind: 2,
             },
           ],
         },
       ],
       returns: {
-        type: 'number',
+        kind: 2,
       },
     },
     Point: {
       description: 'this is a class with two members',
       name: 'Point',
-      type: 'class',
+      kind: 13,
       properties: [
         {
           description: 'COORDINATE X',
           name: 'x',
-          value: {
-            type: 'number',
-          },
+          kind: 2,
         },
         {
           description: 'COORDINATE Y',
           name: 'y',
-          value: {
-            type: 'number',
-          },
+          kind: 2,
         },
       ],
     },
     ClassWithConstrunctor: {
       name: 'ClassWithConstrunctor',
-      type: 'class',
+      kind: 13,
       properties: [
         {
           name: 'name',
-          value: {
-            type: 'string',
-          },
+          kind: 1,
         },
         {
           description: 'constructor description',
-          name: 'constructor',
-          fnType: 'constructor',
-          type: 'function',
+          kind: 21,
           parameters: [
             {
               name: 'x',
               optional: true,
-              type: 'string',
+              kind: 1,
             },
           ],
         },
@@ -958,70 +950,62 @@ it('types', () => {
     },
     GreeterInitializedMembers: {
       name: 'GreeterInitializedMembers',
-      type: 'class',
+      kind: 13,
       properties: [
         {
           name: 'name',
           readonly: true,
-          value: {
-            type: 'string',
-            value: 'world',
-          },
+          kind: 1,
+          value: 'world',
         },
         {
           name: 'err',
-          type: 'function',
+          kind: 11,
           returns: {
-            type: 'void',
+            kind: 12,
           },
         },
       ],
     },
     OverloadConstructor: {
       name: 'OverloadConstructor',
-      type: 'class',
+      kind: 13,
       properties: [
         {
-          name: 'constructor',
-          fnType: 'constructor',
-          type: 'function',
+          kind: 21,
           parameters: [
             {
               name: 'x',
-              type: 'number',
+              kind: 2,
               value: 0,
             },
             {
               name: 'y',
-              type: 'number',
+              kind: 2,
               value: 15,
             },
           ],
         },
         {
-          name: 'constructor',
-          fnType: 'constructor',
-          type: 'function',
+          kind: 21,
           parameters: [
             {
               name: 's',
-              type: 'string',
+              kind: 1,
             },
           ],
         },
         {
-          name: 'constructor',
-          fnType: 'constructor',
-          type: 'function',
+          kind: 21,
           parameters: [
             {
               name: 'xs',
-              type: 'any',
+              kind: 17,
             },
             {
               name: 'y',
               optional: true,
-              type: 'any',
+              kind: 17,
             },
           ],
         },
@@ -1029,69 +1013,63 @@ it('types', () => {
     },
     ClassGetters: {
       name: 'ClassGetters',
-      type: 'class',
+      kind: 13,
       properties: [
         {
           description: 'member description',
           name: '_length',
-          value: {
-            type: 'number',
-            value: 0,
-          },
+          kind: 2,
+          value: 0,
         },
         {
           description: 'getter description',
           name: 'length',
-          type: 'function',
-          fnType: 'getter',
+          kind: 22,
         },
         {
           parameters: [
             {
               name: 'value',
               description: 'the new value',
-              type: 'number',
+              kind: 2,
             },
           ],
           description: 'setter description',
           name: 'length',
-          type: 'function',
-          fnType: 'setter',
+          kind: 23,
         },
       ],
     },
     ClassIndexSignature: {
       name: 'ClassIndexSignature',
-      type: 'class',
+      kind: 13,
       properties: [
         {
           description: 'class index',
-          type: 'index',
-          parameters: [
-            {
-              type: 'union',
-              properties: [
-                {
-                  type: 'boolean',
-                },
-                {
-                  type: 'function',
-                  parameters: [
-                    {
-                      name: 's',
-                      type: 'string',
-                    },
-                  ],
-                  returns: {
-                    type: 'boolean',
+          kind: 20,
+          index: {
+            kind: 4,
+            properties: [
+              {
+                kind: 3,
+              },
+              {
+                kind: 11,
+                parameters: [
+                  {
+                    name: 's',
+                    kind: 1,
                   },
+                ],
+                returns: {
+                  kind: 3,
                 },
-              ],
-            },
-          ],
+              },
+            ],
+          },
           properties: [
             {
-              type: 'string',
+              kind: 1,
             },
           ],
         },
@@ -1103,32 +1081,30 @@ it('types', () => {
             {
               name: 's',
               description: 'input string',
-              type: 'string',
+              kind: 1,
             },
           ],
           name: 'check',
-          type: 'function',
+          kind: 11,
         },
       ],
     },
     ClassImplements: {
       description: 'class implements an interface',
       name: 'ClassImplements',
-      type: 'class',
+      kind: 13,
       properties: [
         {
           description: 'member',
           name: 'length',
-          value: {
-            type: 'number',
-          },
+          kind: 2,
         },
         {
           description: 'pop function',
           name: 'pop',
-          type: 'function',
+          kind: 11,
           returns: {
-            type: 'string',
+            kind: 1,
           },
         },
         {
@@ -1136,124 +1112,117 @@ it('types', () => {
             {
               name: 'items',
               description: 'those are items',
-              type: 'array',
-              properties: [
+              kind: 16,
+              elements: [
                 {
-                  type: 'string',
+                  kind: 1,
                 },
               ],
             },
           ],
           description: 'push function',
           name: 'push',
-          type: 'function',
+          kind: 11,
           returns: {
-            type: 'number',
+            kind: 2,
           },
         },
       ],
-      inherits: [
+      implements: [
         {
-          type: 'interface',
-          parameters: [
+          properties: [
             {
-              type: 'string',
+              kind: 1,
             },
           ],
+          kind: 14,
           name: 'InterfaceArrayType',
         },
       ],
     },
     ClassExtends: {
       name: 'ClassExtends',
-      type: 'class',
+      kind: 13,
       properties: [
         {
           name: 'woof',
-          type: 'function',
+          kind: 11,
           parameters: [
             {
               name: 'times',
-              type: 'number',
+              kind: 2,
             },
           ],
         },
       ],
-      inherits: [
+      extends: [
         {
-          type: 'class',
+          kind: 13,
           name: 'ClassImplements',
         },
       ],
     },
     MemberVisibikity: {
       name: 'MemberVisibikity',
-      type: 'class',
+      kind: 13,
       properties: [
         {
           description: 'a public method',
           name: 'method1',
           visibility: 'public',
-          type: 'function',
+          kind: 11,
         },
         {
           description: 'a protected method',
           name: 'method2',
           visibility: 'protected',
-          type: 'function',
+          kind: 11,
         },
         {
           description: 'a private method',
           name: 'method3',
           visibility: 'private',
-          type: 'function',
+          kind: 11,
         },
       ],
     },
     ClassStatic: {
       name: 'ClassStatic',
-      type: 'class',
+      kind: 13,
       properties: [
         {
           name: 'x',
           static: true,
-          value: {
-            type: 'number',
-            value: 0,
-          },
+          kind: 2,
+          value: 0,
         },
         {
           name: 'printX',
           static: true,
-          type: 'function',
+          kind: 11,
         },
       ],
     },
     GenericClass: {
       name: 'GenericClass',
-      type: 'class',
+      kind: 13,
       properties: [
         {
-          name: 'contents',
-          value: {
-            type: 'reference',
-            name: 'Type',
-          },
+          name: 'Type',
+          kind: 18,
         },
         {
           parameters: [
             {
               name: 'Type',
-              type: 'reference',
+              kind: 18,
             },
           ],
           description: 'generic constructor',
-          name: 'constructor',
-          fnType: 'constructor',
-          type: 'function',
+          kind: 21,
         },
       ],
-      parameters: [
+      generics: [
         {
           name: 'Type',
         },
@@ -1261,62 +1230,53 @@ it('types', () => {
     },
     ArrowFunctionClass: {
       name: 'ArrowFunctionClass',
-      type: 'class',
+      kind: 13,
       properties: [
         {
           description: 'name value initialzied',
           name: 'name',
-          value: {
-            type: 'string',
-            value: 'MyClass',
-          },
+          kind: 1,
+          value: 'MyClass',
         },
         {
           returns: {
             description: 'a string value',
+            kind: 1,
           },
           description: 'name accessor',
           name: 'getName',
-          value: {
-            type: 'function',
-            returns: {
-              type: 'string',
-            },
-          },
+          kind: 11,
         },
       ],
     },
     ThisBasedClass: {
       name: 'ThisBasedClass',
-      type: 'class',
+      kind: 13,
       properties: [
         {
           name: 'isFile',
-          type: 'function',
+          kind: 11,
           returns: {
-            fnType: 'predicate',
-            type: 'reference',
+            kind: 18,
             name: 'FileRep',
           },
         },
         {
           name: 'isDirectory',
-          type: 'function',
+          kind: 11,
           returns: {
-            fnType: 'predicate',
-            type: 'reference',
+            kind: 18,
             name: 'Directory',
           },
         },
         {
           name: 'isNetworked',
-          type: 'function',
+          kind: 11,
           returns: {
-            fnType: 'predicate',
-            type: 'type',
+            kind: 15,
             properties: [
               {
-                type: 'reference',
+                kind: 18,
                 name: 'Networked',
               },
               {},
@@ -1324,19 +1284,17 @@ it('types', () => {
           },
         },
         {
-          name: 'constructor',
-          fnType: 'constructor',
-          type: 'function',
+          kind: 21,
           parameters: [
             {
               name: 'path',
               visibility: 'public',
-              type: 'string',
+              kind: 1,
             },
             {
               name: 'networked',
               visibility: 'private',
-              type: 'boolean',
+              kind: 3,
             },
           ],
         },
@@ -1344,96 +1302,88 @@ it('types', () => {
     },
     FileRep: {
       name: 'FileRep',
-      type: 'class',
+      kind: 13,
       properties: [
         {
-          name: 'constructor',
-          fnType: 'constructor',
-          type: 'function',
+          kind: 21,
           parameters: [
             {
               name: 'path',
-              type: 'string',
+              kind: 1,
             },
             {
               name: 'content',
               visibility: 'public',
-              type: 'string',
+              kind: 1,
             },
           ],
         },
       ],
-      inherits: [
+      extends: [
         {
-          type: 'class',
+          kind: 13,
           name: 'ThisBasedClass',
         },
       ],
     },
     Directory: {
       name: 'Directory',
-      type: 'class',
+      kind: 13,
       properties: [
         {
           name: 'children',
-          value: {
-            type: 'array',
-            properties: [
-              {
-                type: 'reference',
-                name: 'ThisBasedClass',
-              },
-            ],
-          },
+          kind: 16,
+          elements: [
+            {
+              kind: 18,
+              name: 'ThisBasedClass',
+            },
+          ],
         },
       ],
-      inherits: [
+      extends: [
         {
-          type: 'class',
+          kind: 13,
           name: 'ThisBasedClass',
         },
       ],
     },
     Networked: {
       name: 'Networked',
-      type: 'interface',
+      kind: 14,
       properties: [
         {
           name: 'host',
-          type: 'string',
+          kind: 1,
         },
       ],
     },
     PredicateClass: {
       name: 'PredicateClass',
-      type: 'class',
+      kind: 13,
       properties: [
         {
-          name: 'value',
+          name: 'T',
           optional: true,
-          value: {
-            type: 'reference',
-            name: 'T',
-          },
+          kind: 18,
         },
         {
           returns: {
             description: 'a predicate',
-            fnType: 'predicate',
-            type: 'type',
+            kind: 15,
             properties: [
               {
                 name: 'T',
-                type: 'reference',
+                kind: 18,
               },
             ],
           },
           description: 'checks if value is not undefined',
           name: 'hasValue',
-          type: 'function',
+          kind: 11,
         },
       ],
-      parameters: [
+      generics: [
         {
           name: 'T',
         },
@@ -1442,143 +1392,116 @@ it('types', () => {
     ParameterModifiers: {
       description: 'parameter modifiers',
       name: 'ParameterModifiers',
-      type: 'class',
+      kind: 13,
       properties: [
         {
           parameters: [
             {
               name: 'x',
               description: 'x coordinate',
-              type: 'number',
+              kind: 2,
               visibility: 'public',
               readonly: true,
             },
             {
               name: 'y',
               description: 'y coordinate',
-              type: 'number',
+              kind: 2,
               visibility: 'protected',
             },
             {
               name: 'z',
               description: 'z coordinate',
-              type: 'number',
+              kind: 2,
               visibility: 'private',
             },
           ],
           description: 'constructor implementation',
-          name: 'constructor',
-          fnType: 'constructor',
-          type: 'function',
+          kind: 21,
         },
       ],
     },
     AbstraclClass: {
       name: 'AbstraclClass',
       abstract: true,
-      type: 'class',
+      kind: 13,
       properties: [
         {
           name: 'getName',
           abstract: true,
-          type: 'function',
+          kind: 11,
           returns: {
-            type: 'string',
+            kind: 1,
           },
         },
       ],
     },
     ComponentGenericsWithDefault: {
       name: 'ComponentGenericsWithDefault',
-      type: 'class',
+      kind: 13,
       properties: [
         {
-          name: 'props',
-          value: {
-            type: 'reference',
-            name: 'Props',
-          },
-        },
-        {
-          name: 'state',
-          value: {
-            type: 'reference',
-            name: 'State',
-          },
-        },
-      ],
-      parameters: [
-        {
-          name: 'React.ReactPropTypes',
-          type: 'reference',
+          name: 'Props',
+          kind: 18,
         },
         {
           name: 'State',
-          type: 'unknown',
+          kind: 18,
+        },
+      ],
+      generics: [
+        {
+          name: 'React.ReactPropTypes',
+          kind: 18,
+        },
+        {
+          name: 'State',
+          kind: 9,
         },
       ],
     },
     ReactComponent: {
       name: 'ReactComponent',
-      type: 'class',
+      kind: 13,
       properties: [
         {
           name: 'render',
-          type: 'function',
+          kind: 11,
           returns: {
-            type: 'reference',
+            kind: 18,
             name: 'React.Node',
           },
         },
       ],
-      inherits: [
+      extends: [
         {
-          type: 'class',
+          kind: 13,
           name: 'React.Component',
         },
       ],
     },
     ReactGenerics: {
       name: 'ReactGenerics',
-      type: 'class',
+      kind: 13,
       properties: [
         {
           name: 'render',
-          type: 'function',
+          kind: 11,
         },
       ],
-      inherits: [
+      extends: [
         {
-          type: 'class',
-          parameters: [
+          properties: [
             {
-              type: 'reference',
+              kind: 18,
               name: 'GreetingProps',
             },
             {
-              type: 'any',
+              kind: 17,
             },
           ],
+          kind: 13,
           name: 'React.Component',
-        },
-      ],
-    },
-    TypedInitializedFunction: {
-      name: 'TypedInitializedFunction',
-      value: {
-        name: 'FC',
-        type: 'reference',
-        parameters: [
-          {
-            type: 'reference',
-            name: 'Bear',
-          },
-        ],
-      },
-      type: 'function',
-      parameters: [
-        {
-          name: 'props',
         },
       ],
     },

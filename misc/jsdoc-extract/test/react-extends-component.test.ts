@@ -16,7 +16,7 @@ it('class-interface-props', () => {
       ],
       description: 'class extends default import',
       name: 'ExtendsReactComponent',
-      type: 'class',
+      kind: 13,
       properties: [],
     },
     ExtendsComponent: {
@@ -27,7 +27,7 @@ it('class-interface-props', () => {
       ],
       description: 'class extends named import with alias',
       name: 'ExtendsComponent',
-      type: 'class',
+      kind: 13,
       properties: [],
     },
     ExtendsRComponent: {
@@ -38,7 +38,7 @@ it('class-interface-props', () => {
       ],
       description: 'class extends namespace import',
       name: 'ExtendsRComponent',
-      type: 'class',
+      kind: 13,
       properties: [],
     },
   });

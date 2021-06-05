@@ -11,43 +11,43 @@ it('class-interface-props', () => {
     Column: {
       description: 'Column description',
       name: 'Column',
-      type: 'class',
+      kind: 13,
       properties: [
         {
           description: 'stringProp description',
           name: 'stringProp',
           optional: true,
-          type: 'string',
+          kind: 1,
         },
         {
           description: 'numberProp description',
           name: 'numberProp',
-          type: 'number',
+          kind: 2,
         },
         {
           description: 'function props description',
           name: 'fnProp',
-          type: 'function',
+          kind: 11,
           returns: {
-            type: 'void',
+            kind: 12,
           },
         },
         {
           deprecated: 'since version 1.0',
           description: 'unionProp description',
           name: 'unionProp',
-          type: 'union',
+          kind: 4,
           properties: [
             {
-              type: 'string',
+              kind: 1,
               value: 'option1',
             },
             {
-              type: 'string',
+              kind: 1,
               value: 'option2',
             },
             {
-              type: 'string',
+              kind: 1,
               value: 'option3',
             },
           ],

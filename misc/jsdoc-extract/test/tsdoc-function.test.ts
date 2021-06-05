@@ -5,7 +5,7 @@ it('tsdoc-function', () => {
   const { structures } = analyzeFiles([
     path.resolve(__dirname, './fixtures/tsdoc-function.ts'),
   ]);
-  expect(structures).toMatchObject({
+  expect(structures).toEqual({
     sum: {
       examples: [
         {
@@ -15,19 +15,19 @@ it('tsdoc-function', () => {
       ],
       returns: {
         description: 'the sum of the two parameters',
-        type: 'type',
+        kind: 15,
         properties: [
           {
             name: 'a',
-            type: 'number',
+            kind: 2,
           },
           {
             name: 'b',
-            type: 'number',
+            kind: 2,
           },
           {
             name: 'result',
-            type: 'number',
+            kind: 2,
           },
         ],
       },
@@ -35,18 +35,18 @@ it('tsdoc-function', () => {
         {
           name: 'a',
           description: 'first parameter to add',
-          type: 'number',
+          kind: 2,
         },
         {
           name: 'b',
           description: 'second parameter to add',
-          type: 'number',
+          kind: 2,
           value: 1,
         },
       ],
       description: 'sum api function',
       name: 'sum',
-      type: 'function',
+      kind: 11,
     },
   });
 });

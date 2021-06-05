@@ -1,6 +1,6 @@
 import * as ts from 'typescript';
-import { JSDocType, JSAnalyzeResults, JSImports } from './utils';
-import { parseNode } from './parse-node';
+import { PropType, JSAnalyzeResults, JSImports } from './utils';
+import { parseSymbol } from './parse-node';
 import { parsImports } from './parse-imports';
 const isNodeExported = (node: ts.Node): boolean => {
   return (
@@ -57,33 +57,6 @@ const visitTopLevel = (
   return visit;
 };
 
-const parseSymbol = (
-  checker: ts.TypeChecker,
-  symbol?: ts.Symbol,
-): JSDocType | undefined => {
-  if (!symbol) {
-    return undefined;
-  }
-  const declaration = symbol.declarations[0] as ts.VariableDeclaration;
-  const comments = symbol
-    .getDocumentationComment(checker)
-    .map(({ text }) => text);
-  const tags = symbol.getJsDocTags().map(t => {
-    if (t.text) {
-      const firstSpace = t.text.indexOf(' ');
-      return {
-        tagName: { text: t.name },
-        name: { text: t.text.substr(0, firstSpace) },
-        comment: t.text.substr(firstSpace + 1),
-      };
-    }
-    return { tagName: { text: t.name }, name: { text: '' }, comment: '' };
-  });
-  return parseNode({}, declaration, declaration?.initializer, [
-    { comment: comments.join('/n * '), tags },
-  ]);
-};
-
 export const anaylizeFiles = (
   fileNames: string[],
   options: ts.CompilerOptions,
@@ -102,7 +75,7 @@ export const anaylizeFiles = (
       ts.forEachChild(sourceFile, visitTopLevel(checker, symbols, imports));
     }
   }
-  const structures: Record<string, JSDocType> = {};
+  const structures: Record<string, PropType> = {};
   for (const symbol of symbols) {
     const result = parseSymbol(checker, symbol);
     if (result) {

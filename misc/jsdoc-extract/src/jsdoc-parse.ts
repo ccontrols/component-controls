@@ -1,7 +1,7 @@
 import { Node } from '@babel/types';
 import { deepmerge } from '@component-controls/core';
-import { JSDocType } from './utils';
-import { jsdocCommentToMember } from './jsdoc-md/jsdocCommentToMember';
+import { PropType } from './utils';
+import { jsdocCommentToMember } from './jsdoc/jsdocCommentToMember';
 
 export const getNodeComments = (node: Node): string | undefined =>
   node.leadingComments
@@ -11,19 +11,19 @@ export const getNodeComments = (node: Node): string | undefined =>
         .join('/n')
     : undefined;
 export const mergeJSDocComments = (
-  jsdoc: JSDocType,
+  prop: PropType,
   comments?: string,
-): JSDocType => {
+): PropType => {
   if (comments) {
     const parsed = jsdocCommentToMember(comments);
     if (parsed) {
-      return deepmerge<JSDocType>(parsed, jsdoc || {}, {
+      return deepmerge<PropType>(parsed, prop || {}, {
         arrayMerge: (dest: any[], src: any[]) => {
           const result =
             src.length > 0
               ? src.map(s => {
                   const existingIdx = dest.findIndex(
-                    p => p.name === (s as JSDocType).name,
+                    p => p.name === (s as PropType).name,
                   );
                   if (existingIdx >= 0) {
                     return {
@@ -39,5 +39,5 @@ export const mergeJSDocComments = (
       });
     }
   }
-  return jsdoc;
+  return prop;
 };

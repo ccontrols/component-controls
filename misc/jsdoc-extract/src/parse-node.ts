@@ -1,5 +1,28 @@
 import * as ts from 'typescript';
-import { JSDocType } from './utils';
+import {
+  PropType,
+  PropKind,
+  ArrayProp,
+  InterfaceProp,
+  TypeProp,
+  isClassProp,
+  ClassProp,
+  IndexProp,
+  ConstructorProp,
+  FunctionProp,
+  UnionProp,
+  EnumProp,
+  TupleProp,
+  ReferenceProp,
+  RestProp,
+  ObjectProp,
+  isObjectProp,
+  NumberProp,
+  StringProp,
+  BooleanProp,
+  AnyProp,
+  UnknownProp,
+} from './utils';
 import { mergeJSDocComments } from './jsdoc-parse';
 
 const strToValue = (s: string): any => {
@@ -17,113 +40,141 @@ const strToValue = (s: string): any => {
 };
 
 const getElementType = (
-  defaults: JSDocType,
+  defaults: PropType,
   type?: ts.Node,
   initializer?: ts.Node,
-): JSDocType => {
+): PropType => {
   const node = type || initializer;
-  let result: JSDocType = { ...defaults };
+  let result: PropType = { ...defaults };
   if (node) {
     if (
       ts.isArrayTypeNode(node) ||
       ts.isArrayLiteralExpression(node) ||
       (ts.isTypeReferenceNode(node) && node.typeName.getText() === 'Array')
     ) {
-      result.type = 'array';
+      result.kind = PropKind.Array;
 
       if (ts.isArrayTypeNode(node)) {
-        result.properties = [getElementType({}, node.elementType)];
+        (result as ArrayProp).elements = [getElementType({}, node.elementType)];
       } else if (ts.isTypeReferenceNode(node) && node.typeArguments?.length) {
-        result.properties = node.typeArguments.map(m => getElementType({}, m));
+        (result as ArrayProp).elements = node.typeArguments.map(m =>
+          getElementType({}, m),
+        );
       }
       if (initializer) {
-        result.value = (initializer as ts.ArrayBindingPattern).elements.map(m =>
-          getElementType({}, m, m),
+        (result as ArrayProp).value = (initializer as ts.ArrayBindingPattern).elements.map(
+          m => getElementType({}, m, m),
         );
       }
     } else if (ts.isInterfaceDeclaration(node)) {
-      result.type = 'interface';
+      result.kind = PropKind.Interface;
       if (node.heritageClauses?.length) {
-        result.inherits = node.heritageClauses.reduce((acc, h) => {
-          return [
-            ...acc,
-            ...h.types.map(t =>
-              getElementType({ type: 'interface' }, t.expression),
-            ),
-          ];
-        }, [] as JSDocType[]);
+        (result as InterfaceProp).extends = node.heritageClauses.reduce(
+          (acc, h) => {
+            return [
+              ...acc,
+              ...h.types.map(t =>
+                getElementType({ kind: PropKind.Interface }, t.expression),
+              ),
+            ];
+          },
+          [] as PropType[],
+        );
       }
 
-      result.properties = node.members.map(m => parseNode({}, m));
+      (result as InterfaceProp).properties = node.members.map(m =>
+        parseNode({}, m),
+      );
       if (node.typeParameters?.length) {
-        result.parameters = node.typeParameters.map(m => parseNode({}, m));
+        (result as InterfaceProp).generics = node.typeParameters.map(m =>
+          parseNode({}, m),
+        );
       }
     } else if (ts.isClassDeclaration(node)) {
-      result.type = 'class';
-      result.properties = node.members.map(m => {
-        return parseNode({}, m);
-      });
-      if (node.typeParameters) {
-        result.parameters = node.typeParameters.map(m => {
+      result.kind = PropKind.Class;
+      if (isClassProp(result)) {
+        result.properties = node.members.map(m => {
           return parseNode({}, m);
         });
-      }
-      if (node.heritageClauses?.length) {
-        result.inherits = node.heritageClauses.reduce((acc, h) => {
-          return [
-            ...acc,
-            ...h.types.map(t => {
-              const element: JSDocType = {
-                type:
-                  h.token === ts.SyntaxKind.ExtendsKeyword
-                    ? 'class'
-                    : 'interface',
-              };
+        if (node.typeParameters) {
+          result.generics = node.typeParameters.map(m => {
+            return parseNode({}, m);
+          });
+        }
+        if (node.heritageClauses?.length) {
+          const classes: ClassProp[] = [];
+          const interfaces: InterfaceProp[] = [];
+          node.heritageClauses.forEach(h => {
+            h.types.forEach(t => {
+              const element: ClassProp | InterfaceProp = {};
               if (t.typeArguments?.length) {
-                element.parameters = t.typeArguments.map(a => parseNode({}, a));
+                element.properties = t.typeArguments.map(a => parseNode({}, a));
               }
-              return getElementType(element, t.expression);
-            }),
-          ];
-        }, [] as JSDocType[]);
+              if (h.token === ts.SyntaxKind.ExtendsKeyword) {
+                element.kind = PropKind.Class;
+                classes.push(getElementType(element, t.expression));
+              } else {
+                element.kind = PropKind.Interface;
+                interfaces.push(getElementType(element, t.expression));
+              }
+            });
+          });
+          if (classes.length) {
+            result.extends = classes;
+          }
+          if (interfaces.length) {
+            result.implements = interfaces;
+          }
+        }
       }
     } else if (ts.isIndexSignatureDeclaration(node)) {
-      result.type = 'index';
-      result.parameters = [getElementType({}, node.type)];
-      result.properties = node.parameters.map(m => getElementType({}, m));
+      result.kind = PropKind.Index;
+      (result as IndexProp).index = getElementType({}, node.type);
+      (result as IndexProp).properties = node.parameters.map(m =>
+        getElementType({}, m),
+      );
     } else if (ts.isConstructorDeclaration(node)) {
-      result.name = 'constructor';
-      result.fnType = 'constructor';
-      result.type = 'function';
+      result.kind = PropKind.Constructor;
+
       if (node.parameters.length) {
-        result.parameters = node.parameters.map(m => parseNode({}, m));
+        (result as ConstructorProp).parameters = node.parameters.map(m =>
+          parseNode({}, m),
+        );
       }
     } else if (ts.isGetAccessor(node) || ts.isSetAccessor(node)) {
-      result.type = 'function';
-      result.fnType = ts.isSetAccessor(node) ? 'setter' : 'getter';
+      result.kind = ts.isSetAccessor(node) ? PropKind.Setter : PropKind.Getter;
       if (node.parameters.length) {
-        result.parameters = node.parameters.map(m => parseNode({}, m));
+        (result as FunctionProp).parameters = node.parameters.map(m =>
+          parseNode({}, m),
+        );
       }
     } else if (ts.isIntersectionTypeNode(node)) {
-      result.type = 'type';
-      result.properties = node.types.map(m => getElementType({}, m));
+      result.kind = PropKind.Type;
+      (result as TypeProp).properties = node.types.map(m =>
+        getElementType({}, m),
+      );
     } else if (ts.isTypeLiteralNode(node)) {
-      result.type = 'type';
-      result.properties = node.members.map(m => parseNode({}, m));
+      result.kind = PropKind.Type;
+      (result as TypeProp).properties = node.members.map(m => parseNode({}, m));
     } else if (ts.isTypeAliasDeclaration(node)) {
-      result.type = 'type';
-      result.returns = getElementType({}, node.type);
+      result.kind = PropKind.Type;
+      const type = getElementType({}, node.type);
+      if (type.kind !== result.kind) {
+        (result as TypeProp).type = type;
+      } else {
+        result = { ...result, ...type };
+      }
     } else if (ts.isOptionalTypeNode(node)) {
       result.optional = true;
       result = getElementType(result, node.type);
     } else if (ts.isUnionTypeNode(node)) {
-      result.type = 'union';
-      result.properties = node.types.map(m =>
+      result.kind = PropKind.Union;
+      (result as UnionProp).properties = node.types.map(m =>
         getElementType({}, m, (m as ts.LiteralTypeNode).literal),
       );
     } else if (ts.isEnumDeclaration(node)) {
-      result.type = 'enum';
-      result.properties = node.members.map(m =>
+      result.kind = PropKind.Enum;
+      (result as EnumProp).properties = node.members.map(m =>
         parseNode({}, m, m.initializer),
       );
     } else if (ts.isEnumMember(node)) {
@@ -131,27 +182,30 @@ const getElementType = (
         result = getElementType(result, undefined, initializer);
       }
     } else if (ts.isTupleTypeNode(node)) {
-      result.type = 'tuple';
-      result.properties = node.elements.map(m => getElementType({}, m));
+      result.kind = PropKind.Tuple;
+      (result as TupleProp).properties = node.elements.map(m =>
+        getElementType({}, m),
+      );
     } else if (ts.isTypePredicateNode(node)) {
-      result.fnType = 'predicate';
-
+      result.kind = PropKind.Predicate;
       if (node.type) {
         result = parseNode(result, node.type, initializer);
       }
     } else if (ts.isTypeReferenceNode(node)) {
-      result.type = 'reference';
+      result.kind = PropKind.Reference;
       result = getElementType(result, node.typeName, initializer);
       if (node.typeArguments?.length) {
-        result.parameters = node.typeArguments.map(m => getElementType({}, m));
+        (result as ReferenceProp).types = node.typeArguments.map(m =>
+          getElementType({}, m),
+        );
       }
     } else if (ts.isLiteralTypeNode(node)) {
       result = getElementType(result, node.literal, node.literal);
     } else if (ts.isQualifiedName(node)) {
       result = parseNode(result, node.left, node.right);
     } else if (ts.isRestTypeNode(node)) {
-      result.type = 'rest';
-      result.returns = getElementType(result, node.type);
+      result.kind = PropKind.Rest;
+      (result as RestProp).type = getElementType(result, node.type);
     } else if (
       ts.isTypeOperatorNode(node) ||
       ts.isParenthesizedTypeNode(node)
@@ -166,17 +220,20 @@ const getElementType = (
         result.name = node.text;
       }
     } else if (ts.isNewExpression(node)) {
-      result.type = 'object';
-      result.parameters = [
-        getElementType({ type: 'reference' }, node.expression),
-      ];
+      result.kind = PropKind.Object;
+      (result as ObjectProp).reference = getElementType(
+        { kind: PropKind.Reference },
+        node.expression,
+      );
       if (node.arguments) {
-        result.properties = node.arguments.map(m => getElementType({}, m, m));
+        (result as ObjectProp).properties = node.arguments.map(m =>
+          getElementType({}, m, m),
+        );
       }
     } else if (ts.isVariableDeclaration(node)) {
-      if (node.type && node.initializer && ts.isTypeReferenceNode(node.type)) {
+      if (node.type && node.initializer) {
         //a type reference, the type will need to be deducted
-        result.value = getElementType(result, node.type, node.initializer);
+        result.type = getElementType({}, node.type);
         result = getElementType(result, node.initializer);
       } else {
         result = getElementType(result, node.type, node.initializer);
@@ -195,7 +252,7 @@ const getElementType = (
       if (node.questionToken) {
         result.optional = true;
       }
-      result.value = getElementType({}, node.type, node.initializer);
+      result = getElementType(result, node.type, node.initializer);
     } else if (ts.isTypeParameterDeclaration(node)) {
       if (node.default) {
         result = parseNode(result, node.default);
@@ -210,100 +267,102 @@ const getElementType = (
       if (!ts.isFunctionTypeNode(node) && node.questionToken) {
         result.optional = true;
       }
-      result.type = 'function';
+      result.kind = PropKind.Function;
       if (node.parameters.length) {
-        result.parameters = node.parameters.map(m => {
+        (result as FunctionProp).parameters = node.parameters.map(m => {
           return parseNode({}, m, m.initializer);
         });
       }
       if (node.type) {
-        result.returns = getElementType({}, node.type);
+        (result as FunctionProp).returns = getElementType({}, node.type);
       }
       if (node.typeParameters?.length) {
-        result.properties = node.typeParameters.map(m => parseNode({}, m));
+        (result as FunctionProp).types = node.typeParameters.map(m =>
+          parseNode({}, m),
+        );
       }
     } else {
       switch (node.kind) {
         case ts.SyntaxKind.NumericLiteral:
         case ts.SyntaxKind.NumberKeyword:
-          result.type = 'number';
+          result.kind = PropKind.Number;
           if (
             typeof (initializer as ts.LiteralLikeNode)?.text !== 'undefined'
           ) {
-            result.value = Number((initializer as ts.LiteralLikeNode).text);
+            (result as NumberProp).value = Number(
+              (initializer as ts.LiteralLikeNode).text,
+            );
           }
           break;
 
         case ts.SyntaxKind.StringLiteral:
         case ts.SyntaxKind.StringKeyword:
-          result.type = 'string';
+          result.kind = PropKind.String;
           if (
             typeof (initializer as ts.LiteralLikeNode)?.text !== 'undefined'
           ) {
-            result.value = (initializer as ts.LiteralLikeNode).text;
+            (result as StringProp).value = (initializer as ts.LiteralLikeNode).text;
           }
           break;
         case ts.SyntaxKind.FalseKeyword:
-          result.value = false;
-          result.type = 'boolean';
+          result.kind = PropKind.Boolean;
+          (result as BooleanProp).value = false;
+
           break;
 
         case ts.SyntaxKind.TrueKeyword:
-          result.value = true;
-          result.type = 'boolean';
+          result.kind = PropKind.Boolean;
+          (result as BooleanProp).value = true;
           break;
         case ts.SyntaxKind.BooleanKeyword:
-          result.type = 'boolean';
+          result.kind = PropKind.Boolean;
           if (
             typeof (initializer as ts.LiteralLikeNode)?.text !== 'undefined'
           ) {
-            result.value = Boolean((initializer as ts.LiteralLikeNode).text);
+            (result as BooleanProp).value = Boolean(
+              (initializer as ts.LiteralLikeNode).text,
+            );
           }
           break;
         case ts.SyntaxKind.VoidKeyword:
-          result.type = 'void';
+          result.kind = PropKind.Void;
           break;
         case ts.SyntaxKind.ObjectKeyword:
-          result.type = 'object';
-          result.value = strToValue((initializer as ts.LiteralLikeNode)?.text);
+          result.kind = PropKind.Object;
+          (result as ObjectProp).value = strToValue(
+            (initializer as ts.LiteralLikeNode)?.text,
+          );
 
           break;
         case ts.SyntaxKind.AnyKeyword:
-          result.type = 'any';
+          result.kind = PropKind.Any;
           if (
             typeof (initializer as ts.LiteralLikeNode)?.text !== 'undefined'
           ) {
-            result.value = (initializer as ts.LiteralLikeNode).text;
+            (result as AnyProp).value = (initializer as ts.LiteralLikeNode).text;
           }
           break;
         case ts.SyntaxKind.UnknownKeyword:
-          result.type = 'unknown';
+          result.kind = PropKind.Unknown;
           if (
             typeof (initializer as ts.LiteralLikeNode)?.text !== 'undefined'
           ) {
-            result.value = strToValue(
+            (result as UnknownProp).value = strToValue(
               (initializer as ts.LiteralLikeNode)?.text,
             );
           }
           break;
         case ts.SyntaxKind.NullKeyword:
-          result.type = 'null';
-          result.value = null;
+          result.kind = PropKind.Null;
           break;
         case ts.SyntaxKind.UndefinedKeyword:
-          result.type = 'undefined';
-          result.value = undefined;
+          result.kind = PropKind.Undefined;
           break;
       }
     }
     if (initializer && ts.isObjectLiteralExpression(initializer)) {
       const value = initializer.properties.map(m => parseNode({}, m));
-      if (result.type !== 'object') {
-        result.value = {
-          type: 'object',
-          value,
-        };
-      } else {
+      if (isObjectProp(result)) {
         result.value = value;
       }
     }
@@ -321,13 +380,13 @@ type JSDocInfoType = {
 };
 
 export const parseNode = (
-  defaults: JSDocType,
+  defaults: PropType,
   node: (ts.DeclarationStatement | ts.Node) & {
     jsDoc?: JSDocInfoType[];
   },
   initializer?: ts.Node,
   jsDocsDefaults?: JSDocInfoType[],
-): JSDocType => {
+): PropType => {
   const updated = { ...defaults };
   if ((node as ts.DeclarationStatement).name?.text) {
     updated.name = (node as ts.DeclarationStatement).name?.text;
@@ -392,4 +451,31 @@ export const parseNode = (
     return withJsDoc;
   }
   return result;
+};
+
+export const parseSymbol = (
+  checker: ts.TypeChecker,
+  symbol?: ts.Symbol,
+): PropType | undefined => {
+  if (!symbol) {
+    return undefined;
+  }
+  const declaration = symbol.declarations[0] as ts.VariableDeclaration;
+  const comments = symbol
+    .getDocumentationComment(checker)
+    .map(({ text }) => text);
+  const tags = symbol.getJsDocTags().map(t => {
+    if (t.text) {
+      const firstSpace = t.text.indexOf(' ');
+      return {
+        tagName: { text: t.name },
+        name: { text: t.text.substr(0, firstSpace) },
+        comment: t.text.substr(firstSpace + 1),
+      };
+    }
+    return { tagName: { text: t.name }, name: { text: '' }, comment: '' };
+  });
+  return parseNode({}, declaration, declaration?.initializer, [
+    { comment: comments.join('/n * '), tags },
+  ]);
 };

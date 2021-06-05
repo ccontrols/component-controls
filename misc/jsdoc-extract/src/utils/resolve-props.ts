@@ -1,37 +1,40 @@
-import { JSDocTypes, JSDocType } from '../utils';
+import {
+  JSDocTypes,
+  PropType,
+  isReferenceProp,
+  isTypeProp,
+  isObjectLikeProp,
+} from '../utils';
 
-export const resolveProps = (jsDocs: JSDocTypes, name: string): JSDocType => {
-  const component = jsDocs[name];
-
+export const resolveProps = (component: PropType): PropType => {
   return component;
 };
 
 const walkProp = (
   jsDocs: JSDocTypes,
-  node: JSDocType,
-  props: JSDocType[],
+  node: PropType,
+  props: PropType[],
 ): void => {
-  switch (node.type) {
-    case 'reference':
-      if (node.name && jsDocs[node.name]) {
-        walkProp(jsDocs, jsDocs[node.name], props);
-      }
-      break;
-    case 'interface':
-    case 'type':
-      const properties = node?.returns?.properties || node.properties;
-      if (properties) {
-        properties.map(p => walkProp(jsDocs, p, props));
-      }
-      break;
-    default:
-      props.push(node);
-      break;
+  if (isReferenceProp(node) && node.name) {
+    walkProp(jsDocs, jsDocs[node.name], props);
+  } else if (isObjectLikeProp(node)) {
+    if (
+      isTypeProp(node) &&
+      node.type &&
+      isTypeProp(node.type) &&
+      node.type.properties
+    ) {
+      node.type.properties.map(p => walkProp(jsDocs, p, props));
+    } else if (node.properties) {
+      node.properties.map(p => walkProp(jsDocs, p, props));
+    }
+  } else {
+    props.push(node);
   }
 };
 
-export const walkProps = (jsDocs: JSDocTypes, node: JSDocType): JSDocType[] => {
-  const props: JSDocType[] = [];
+export const walkProps = (jsDocs: JSDocTypes, node: PropType): PropType[] => {
+  const props: PropType[] = [];
   walkProp(jsDocs, node, props);
   return props;
 };

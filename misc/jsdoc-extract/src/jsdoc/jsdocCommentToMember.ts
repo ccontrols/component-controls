@@ -3,8 +3,14 @@
 import { parse } from 'comment-parser/lib';
 import { deconstructJsdocNamepath } from './deconstructJsdocNamepath';
 import { defaultOptions } from './COMMENT_PARSER_OPTIONS';
-import { JSDocType, JSDocExample, TSType } from '../utils';
-
+import {
+  PropType,
+  JSDocExample,
+  ObjectProp,
+  ValueProp,
+  FunctionProp,
+} from '../utils';
+import { jsPropToPropKind } from './utils';
 const trimNewlines = (s: string): string => {
   return s.replace(/^[\r\n]+|[\r\n]+$/g, '');
 };
@@ -17,9 +23,7 @@ const trimNewlines = (s: string): string => {
  * @returns {JsdocMember|void} JSDoc member, if it’s valid and not ignored.
  * @ignore
  */
-export const jsdocCommentToMember = (
-  comment: string,
-): JSDocType | undefined => {
+export const jsdocCommentToMember = (comment: string): PropType | undefined => {
   const jsdoc = parse(
     // Restore the start `/*` and end `*/` that the Babel parse result excludes,
     // so that the JSDoc comment parser can accept it.
@@ -29,7 +33,8 @@ export const jsdocCommentToMember = (
   for (const jsdocBlock of jsdoc) {
     // Ignore JSDoc without tags.
     if (jsdocBlock && jsdocBlock.tags) {
-      const result: JSDocType = {};
+      const result: PropType = {};
+      let namepath: string | undefined = undefined;
 
       // Scan tags for membership data, looping tags backwards as later tags
       // override earlier ones.
@@ -43,62 +48,51 @@ export const jsdocCommentToMember = (
               // Ignore an invalid tag missing a name.
               tag.name
             )
-              result.kind = tag.name;
+              result.kind = jsPropToPropKind(tag.name);
 
             break;
           case 'name':
             if (
-              !result.namepath &&
+              !namepath &&
               // Ignore an invalid tag missing a name.
               tag.name
             ) {
-              result.namepath = tag.name;
+              namepath = tag.name;
             }
 
             break;
           case 'typedef':
             // Ignore an invalid tag missing a name.
             if (tag.name) {
-              if (!result.kind) {
-                result.kind = 'typedef';
+              if (!namepath) {
+                namepath = tag.name;
               }
-
-              if (!result.namepath) {
-                result.namepath = tag.name;
-              }
-              if (!result.type && tag.type) {
-                result.type = tag.type as TSType;
+              if (!result.kind && tag.type) {
+                result.kind = jsPropToPropKind(tag.type);
               }
             }
 
             break;
           case 'callback':
-            // A callback tag is a typedef with an implied function type.
-            // Ignore an invalid tag missing a name.
             if (tag.name) {
               if (!result.kind) {
-                result.kind = 'typedef';
-              }
-
-              if (!result.namepath) {
-                result.namepath = tag.name;
-              }
-
-              if (!result.type) {
                 // A special case; the tag implies this type so this data is not
                 // what is actually at the associated code file location.
-                result.type = 'function';
+                result.kind = jsPropToPropKind('type');
+              }
+              if (!namepath) {
+                namepath = tag.name;
               }
             }
 
             break;
           case 'type':
             if (
-              !result.type &&
+              !result.kind &&
               // Ignore an invalid tag missing a type.
               tag.type
             ) {
-              result.type = tag.type as TSType;
+              result.kind = jsPropToPropKind(tag.type);
             }
             break;
           case 'deprecated':
@@ -126,24 +120,24 @@ export const jsdocCommentToMember = (
             // Ignore an invalid tag missing a name.
             if (tag.name) {
               // Define the JSDoc parameter with nicely ordered properties.
-              const parameter: JSDocType = {
+              const parameter: PropType = {
                 name: tag.name,
                 description: trimNewlines(tag.description),
               };
               if (typeof tag.type !== 'undefined') {
-                parameter.type = tag.type as TSType;
+                parameter.kind = jsPropToPropKind(tag.type);
               }
               if (typeof tag.default !== 'undefined') {
-                parameter.value = tag.default;
+                (parameter as ValueProp).value = tag.default;
               }
               if (tag.optional) {
                 parameter.optional = true;
               }
-
-              if (!result.parameters) {
-                result.parameters = [];
+              const resultAsFn = result as FunctionProp;
+              if (!resultAsFn.parameters) {
+                resultAsFn.parameters = [];
               }
-              result.parameters.unshift(parameter);
+              resultAsFn.parameters.unshift(parameter);
             }
 
             break;
@@ -153,42 +147,37 @@ export const jsdocCommentToMember = (
             // Ignore an invalid tag missing a name.
             if (tag.name) {
               // Define the JSDoc property with nicely ordered properties.
-              const property: JSDocType = {
+              const property: PropType = {
                 name: tag.name,
                 description: trimNewlines(tag.description),
               };
               if (typeof tag.type !== 'undefined') {
-                property.type = tag.type as TSType;
+                property.kind = jsPropToPropKind(tag.type);
               }
               if (typeof tag.default !== 'undefined') {
-                property.value = tag.default;
+                (property as ValueProp).value = tag.default;
               }
               if (tag.optional) {
                 property.optional = true;
               }
-
-              if (!result.properties) {
-                result.properties = [];
+              const resultAsObj = result as ObjectProp;
+              if (!resultAsObj.properties) {
+                resultAsObj.properties = [];
               }
-              result.properties.unshift(property);
+              resultAsObj.properties.unshift(property);
             }
 
             break;
           }
           case 'return':
           case 'returns': {
-            if (!result.returns) {
-              result.returns = {};
-            }
-            // Ignore an invalid tag missing both a type and description.
+            const ret: PropType = {};
 
-            if (!result.returns.type && tag.type) {
-              result.returns.type = tag.type;
+            if (tag.type) {
+              ret.kind = jsPropToPropKind(tag.type);
             }
-
-            if (!result.returns.description) {
-              result.returns.description = trimNewlines(tag.description);
-            }
+            ret.description = trimNewlines(tag.description);
+            (result as FunctionProp).returns = ret;
 
             break;
           }
@@ -262,29 +251,16 @@ export const jsdocCommentToMember = (
       }
 
       // Ignore JSDoc without a kind or namepath.
-      if (result.namepath) {
+      if (namepath) {
         try {
-          const { memberof: memberofNamepath, name } = deconstructJsdocNamepath(
-            result.namepath,
-          );
+          const { name } = deconstructJsdocNamepath(namepath);
 
-          if (memberofNamepath) {
-            result.memberof = memberofNamepath;
-          }
           result.name = name;
         } catch (error) {
           throw new Error(error.message);
         }
       }
 
-      // Automatically add a missing `event:` prefix to an event name.
-      if (
-        result.kind === 'event' &&
-        result.name &&
-        !result.name.startsWith('event:')
-      ) {
-        result.name = `event:${name}`;
-      }
       if (!result.description) {
         // The description is special as it can be specified without a tag.
         // Description tags override a JSDoc block description as they come later.
