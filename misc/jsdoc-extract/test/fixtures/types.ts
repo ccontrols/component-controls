@@ -1,11 +1,3 @@
-export type GenericType<Type> = {
-  contents: Type;
-};
-
-export type UnionGenericType<Type> = Type | null;
-
-export type GenericArrayType<Type> = Type[];
-
 export type NestedGenericType<Type> = GenericArrayType<UnionGenericType<Type>>;
 /**
  * this is interface

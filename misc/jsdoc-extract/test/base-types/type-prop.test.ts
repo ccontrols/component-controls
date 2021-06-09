@@ -1,6 +1,79 @@
 import { parseCode } from '../../src/index';
 
 describe('type', () => {
+  it('nested generic type', () => {
+    const results = parseCode(`
+    type UnionGenericType<Type> = Type | 'a string';
+    type GenericArrayType<Type> = {
+      m: Type
+    } 
+    export type NestedGenericType<Type> = GenericArrayType<UnionGenericType<Type>>;
+`);
+    expect(results).toEqual({
+      NestedGenericType: {
+        displayName: 'NestedGenericType',
+        kind: 15,
+        generics: [
+          {
+            displayName: 'Type',
+          },
+        ],
+        properties: [
+          {
+            displayName: 'm',
+            type: 'Type',
+            kind: 15,
+          },
+        ],
+        type: 'GenericArrayType',
+      },
+    });
+  });
+
+  it('generic array type', () => {
+    const results = parseCode(`
+    export type GenericArrayType<Type> = Type[];
+`);
+    expect(results).toEqual({
+      GenericArrayType: {
+        displayName: 'GenericArrayType',
+        kind: 16,
+        generics: [
+          {
+            displayName: 'Type',
+          },
+        ],
+        elements: [
+          {
+            displayName: 'Type',
+            kind: 15,
+          },
+        ],
+      },
+    });
+  });
+
+  it('union generic type', () => {
+    const results = parseCode(`
+    export type UnionGenericType<Type> = Type | null;
+`);
+    expect(results).toEqual({
+      UnionGenericType: {
+        displayName: 'UnionGenericType',
+        kind: 4,
+        properties: [
+          {
+            displayName: 'Type',
+            kind: 15,
+          },
+          {
+            kind: 10,
+          },
+        ],
+      },
+    });
+  });
+
   it('extend', () => {
     const results = parseCode(`
 /**

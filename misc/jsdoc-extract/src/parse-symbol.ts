@@ -13,7 +13,10 @@ import {
   StringProp,
   TypeProp,
   JSDocInfoType,
+  UnionProp,
+  ArrayProp,
   hasGenerics,
+  isArrayProp,
 } from './utils';
 import {
   isVariableLikeDeclaration,
@@ -47,6 +50,8 @@ export class SymbolParser {
       | ts.ClassElement
       | ts.ObjectLiteralElementLike
       | ts.TypeElement
+      | ts.TypeNode
+      | ts.ArrayBindingElement
       | ts.ParameterDeclaration
       | ts.TypeParameterDeclaration
     >,
@@ -64,7 +69,7 @@ export class SymbolParser {
       }
     };
     properties.forEach(p => {
-      if (p.name) {
+      if (!ts.isTypeNode(p) && !ts.isOmittedExpression(p) && p.name) {
         const symbol = this.checker.getSymbolAtLocation(p.name);
         if (symbol) {
           const { prop } = this.parseSymbol(symbol);
@@ -79,7 +84,9 @@ export class SymbolParser {
   }
   parseValue(prop: PropType, node?: ts.Node): PropType {
     if (node) {
-      if (ts.isNumericLiteral(node)) {
+      if (ts.isArrayBindingPattern(node) && isArrayProp(prop)) {
+        prop.value = this.parseProperties(node.elements);
+      } else if (ts.isNumericLiteral(node)) {
         if (!prop.kind) {
           prop.kind = PropKind.Number;
         }
@@ -133,7 +140,21 @@ export class SymbolParser {
   }
   parseType(prop: PropType, node?: ts.Node): PropType {
     if (node) {
-      if (ts.isIndexSignatureDeclaration(node)) {
+      if (
+        ts.isArrayTypeNode(node) ||
+        ts.isArrayLiteralExpression(node) ||
+        (ts.isTypeReferenceNode(node) && node.typeName.getText() === 'Array')
+      ) {
+        prop.kind = PropKind.Array;
+
+        if (ts.isArrayTypeNode(node)) {
+          (prop as ArrayProp).elements = [this.parseType({}, node.elementType)];
+        } else if (ts.isTypeReferenceNode(node) && node.typeArguments?.length) {
+          (prop as ArrayProp).elements = this.parseProperties(
+            node.typeArguments,
+          );
+        }
+      } else if (ts.isIndexSignatureDeclaration(node)) {
         prop.kind = PropKind.Index;
         if (isIndexProp(prop) && node.parameters.length) {
           const symbol = this.checker.getSymbolAtLocation(
@@ -212,6 +233,9 @@ export class SymbolParser {
         prop.kind = PropKind.Type;
       } else if (ts.isLiteralTypeNode(node)) {
         return this.withJsDocNode(prop, node.literal);
+      } else if (ts.isUnionTypeNode(node)) {
+        prop.kind = PropKind.Union;
+        (prop as UnionProp).properties = this.parseProperties(node.types);
       } else {
         switch (node.kind) {
           case ts.SyntaxKind.NumberKeyword:

@@ -73,6 +73,7 @@ export const tsKindToPropKind: { [key in ts.SyntaxKind]?: PropKind } = {
   [ts.SyntaxKind.TypeAssertionExpression]: PropKind.Type,
   [ts.SyntaxKind.TypeAliasDeclaration]: PropKind.Type,
   [ts.SyntaxKind.IndexSignature]: PropKind.Index,
+  [ts.SyntaxKind.ArrayType]: PropKind.Array,
 };
 export type ObjectTypeDeclaration =
   | ts.ClassDeclaration

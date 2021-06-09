@@ -227,7 +227,8 @@ export const hasGenerics = (prop: PropType): prop is HasGenericsProp => {
   return (
     prop.kind === PropKind.Type ||
     prop.kind === PropKind.Class ||
-    prop.kind === PropKind.Interface
+    prop.kind === PropKind.Interface ||
+    prop.kind === PropKind.Array
   );
 };
 
