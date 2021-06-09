@@ -1,73 +1,3 @@
-/**
- * this is a string
- */
-export const s = 'a';
-
-/**
- * this is a number
- */
-export const n = 3.14;
-
-/**
- * this is a false
- */
-export const b = false;
-
-/**
- * this is a true
- */
-export const t = true;
-
-/**
- * this is an undefined boolean value
- */
-let bool: boolean;
-
-export { bool };
-
-/**
- * this is any type
- */
-export const a: any = 'as';
-
-/**
- * this is unknown type
- */
-export const u: unknown = undefined;
-
-/**
- * this is an undefined object
- */
-export const obj: object = undefined;
-
-/**
- * this is an initialized object
- */
-export const initializedObj: object = { a: 12, b: 'test' };
-
-/**
- * this is type
- */
-export type T = {
-  /**
-   * type member property
-   */
-  m: string;
-};
-
-type ExtendT = T & {
-  /**
-   * honey
-   */
-  honey: boolean;
-};
-
-export type IndexT = {
-  readonly [index: string]: { a: Bear; b: null };
-};
-
-export type IntersectionType = IndexT & Internal;
-
 export type GenericType<Type> = {
   contents: Type;
 };
@@ -94,7 +24,7 @@ export interface Bear extends I {
 }
 
 export interface Home {
-  readonly resident: { name: string; age: number };
+  resident: { name: string; age: number };
 }
 
 export interface IndexInterface {

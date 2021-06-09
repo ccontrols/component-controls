@@ -40,6 +40,7 @@
     "@component-controls/follow-imports": "^3.14.4",
     "@component-controls/typescript-config": "^3.14.4",
     "comment-parser": "^1.1.5",
+    "tmp": "^0.2.1",
     "typescript": "^4.2.4"
   },
   "devDependencies": {

@@ -1,7 +1,7 @@
 import {
   FrameworkPlugin,
   PropType,
-  JSDocTypes,
+  PropTypes,
   JSImports,
   isClassProp,
   isFunctionProp,
@@ -71,16 +71,16 @@ const reactComponent = (
   );
 };
 const componentToProps = (
-  jsDocs: JSDocTypes,
+  props: PropTypes,
   typeProp: ClassProp | FunctionProp,
 ): PropType[] => {
   const classProp = typeProp as ClassProp;
   if (classProp.properties?.length) {
-    return walkProps(jsDocs, classProp.properties[0]);
+    return walkProps(props, classProp.properties[0]);
   }
   const fnProp = typeProp as FunctionProp;
   if (fnProp.parameters?.length) {
-    return walkProps(jsDocs, fnProp.parameters[0]);
+    return walkProps(props, fnProp.parameters[0]);
   }
   return [];
 };

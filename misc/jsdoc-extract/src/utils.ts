@@ -1,3 +1,8 @@
+import * as ts from 'typescript';
+
+export type ParseOptions = {
+  tsOptions?: ts.CompilerOptions;
+};
 export interface JSDocTypeTag {
   type?: string;
   description?: string;
@@ -47,13 +52,14 @@ export interface PropType {
    * generic properties
    */
   kind?: PropKind;
-  name?: string;
+  displayName?: string;
+  parent?: PropType;
   optional?: boolean;
   readonly?: boolean;
   abstract?: boolean;
   visibility?: 'private' | 'protected' | 'public';
   static?: boolean;
-  type?: PropType;
+  type?: PropType | string;
   /**
    * jsdoc comments parsing
    */
@@ -207,11 +213,22 @@ export const isInterfaceProp = (prop: PropType): prop is InterfaceProp => {
 export interface TypeProp extends PropType {
   extends?: PropType[];
   properties?: PropType[];
+  generics?: PropType[];
   type?: PropType;
 }
 
 export const isTypeProp = (prop: PropType): prop is TypeProp => {
   return prop.kind === PropKind.Type;
+};
+
+export type HasGenericsProp = TypeProp | InterfaceProp | ClassProp;
+
+export const hasGenerics = (prop: PropType): prop is HasGenericsProp => {
+  return (
+    prop.kind === PropKind.Type ||
+    prop.kind === PropKind.Class ||
+    prop.kind === PropKind.Interface
+  );
 };
 
 export interface ArrayProp extends PropType {
@@ -279,23 +296,55 @@ export const isValueProp = (prop: PropType): prop is ValueProp => {
   );
 };
 
-export type ObjectLikeProp = ClassProp | InterfaceProp | TypeProp | ObjectProp;
+export type ObjectLikeProp =
+  | ClassProp
+  | InterfaceProp
+  | TypeProp
+  | ObjectProp
+  | IndexProp;
 
 export const isObjectLikeProp = (prop: PropType): prop is ObjectLikeProp => {
   return (
     prop.kind === PropKind.Class ||
     prop.kind === PropKind.Interface ||
     prop.kind === PropKind.Type ||
+    prop.kind === PropKind.Index ||
     prop.kind === PropKind.Object
   );
 };
-export type JSDocTypes = Record<string, PropType>;
+export type PropTypes = Record<string, PropType>;
 export type JSAnalyzeResults = {
   imports: JSImports;
-  structures: JSDocTypes;
+  structures: PropTypes;
 };
 
 export type FrameworkPlugin = (
   name: string,
   jsDocs: JSAnalyzeResults,
 ) => PropType | undefined;
+
+export const typeNameToPropKind = (type: string): PropKind | undefined => {
+  const loopup: Record<string, PropKind> = {
+    object: PropKind.Object,
+    string: PropKind.String,
+    number: PropKind.Number,
+    boolean: PropKind.Boolean,
+    union: PropKind.Union,
+    Enum: PropKind.Enum,
+    Tuple: PropKind.Tuple,
+    function: PropKind.Function,
+    class: PropKind.Function,
+    type: PropKind.Function,
+    array: PropKind.Array,
+  };
+  return loopup[type];
+};
+
+export type JSDocInfoType = {
+  comment?: string;
+  tags?: {
+    comment: string;
+    name: { text: string };
+    tagName: { text: string };
+  }[];
+};

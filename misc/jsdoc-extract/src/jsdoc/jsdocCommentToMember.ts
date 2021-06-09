@@ -9,8 +9,9 @@ import {
   ObjectProp,
   ValueProp,
   FunctionProp,
+  PropKind,
 } from '../utils';
-import { jsPropToPropKind } from './utils';
+import { typeNameToPropKind } from '../utils';
 const trimNewlines = (s: string): string => {
   return s.replace(/^[\r\n]+|[\r\n]+$/g, '');
 };
@@ -48,7 +49,7 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
               // Ignore an invalid tag missing a name.
               tag.name
             )
-              result.kind = jsPropToPropKind(tag.name);
+              result.kind = typeNameToPropKind(tag.name);
 
             break;
           case 'name':
@@ -68,7 +69,7 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
                 namepath = tag.name;
               }
               if (!result.kind && tag.type) {
-                result.kind = jsPropToPropKind(tag.type);
+                result.kind = typeNameToPropKind(tag.type);
               }
             }
 
@@ -78,7 +79,7 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
               if (!result.kind) {
                 // A special case; the tag implies this type so this data is not
                 // what is actually at the associated code file location.
-                result.kind = jsPropToPropKind('type');
+                result.kind = PropKind.Type;
               }
               if (!namepath) {
                 namepath = tag.name;
@@ -92,7 +93,7 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
               // Ignore an invalid tag missing a type.
               tag.type
             ) {
-              result.kind = jsPropToPropKind(tag.type);
+              result.kind = typeNameToPropKind(tag.type);
             }
             break;
           case 'deprecated':
@@ -125,7 +126,7 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
                 description: trimNewlines(tag.description),
               };
               if (typeof tag.type !== 'undefined') {
-                parameter.kind = jsPropToPropKind(tag.type);
+                parameter.kind = typeNameToPropKind(tag.type);
               }
               if (typeof tag.default !== 'undefined') {
                 (parameter as ValueProp).value = tag.default;
@@ -152,7 +153,7 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
                 description: trimNewlines(tag.description),
               };
               if (typeof tag.type !== 'undefined') {
-                property.kind = jsPropToPropKind(tag.type);
+                property.kind = typeNameToPropKind(tag.type);
               }
               if (typeof tag.default !== 'undefined') {
                 (property as ValueProp).value = tag.default;
@@ -174,7 +175,7 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
             const ret: PropType = {};
 
             if (tag.type) {
-              ret.kind = jsPropToPropKind(tag.type);
+              ret.kind = typeNameToPropKind(tag.type);
             }
             ret.description = trimNewlines(tag.description);
             (result as FunctionProp).returns = ret;

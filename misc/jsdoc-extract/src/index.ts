@@ -1,8 +1,8 @@
 import { getTypescriptConfig } from '@component-controls/typescript-config';
+import { fileSync } from 'tmp';
 import * as ts from 'typescript';
-import { ParserOptions } from '@babel/parser';
 import { anaylizeFiles } from './ts-walk';
-import { JSAnalyzeResults, FrameworkPlugin, JSDocTypes } from './utils';
+import { ParseOptions, PropTypes, FrameworkPlugin } from './utils';
 import { resolveProps } from './utils/resolve-props';
 export { extractProps as extractReact } from './frameworks/react';
 
@@ -12,13 +12,10 @@ const tsDefaults = {
   target: ts.ScriptTarget.Latest,
 };
 
-export const analyzeFiles = (
+export const parseFiles = (
   filePaths: string[],
-  options: {
-    babelOptions?: ParserOptions;
-    tsOptions?: ts.CompilerOptions;
-  } = {},
-): JSAnalyzeResults => {
+  options: ParseOptions = {},
+): PropTypes => {
   if (!filePaths.length) {
     throw new Error('You need to supply at least one file');
   }
@@ -28,15 +25,26 @@ export const analyzeFiles = (
   return results;
 };
 
-export const extractProps = (
+export const parseCode = (code: string, options?: ParseOptions): PropTypes => {
+  const { name } = fileSync();
+  const fileName = name + '.ts';
+  ts.sys.writeFile(fileName, code);
+  let result: PropTypes = {};
+  try {
+    result = parseFiles([fileName], options);
+  } finally {
+    if (ts.sys.deleteFile) {
+      ts.sys.deleteFile(fileName);
+    }
+  }
+  return result;
+};
+export const parseProps = (
   names: string[],
   filePaths: string[],
   frameworkFn: FrameworkPlugin,
-  options: {
-    babelOptions?: ParserOptions;
-    tsOptions?: ts.CompilerOptions;
-  } = {},
-): Record<string, JSDocTypes> => {
+  options: ParseOptions = {},
+): Record<string, PropTypes> => {
   if (!filePaths.length) {
     throw new Error('You need to supply at least one file');
   }
