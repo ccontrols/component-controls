@@ -106,6 +106,7 @@ export const isBooleanProp = (prop: PropType): prop is BooleanProp => {
 
 export interface UnionProp extends PropType {
   properties?: PropType[];
+  value?: any;
 }
 
 export const isUnionProp = (prop: PropType): prop is UnionProp => {
@@ -271,6 +272,7 @@ export type ValueProp =
   | AnyProp
   | ArrayProp
   | VoidProp
+  | UnionProp
   | NullProp
   | UnknownProp
   | UndefinedProp
@@ -284,6 +286,7 @@ export const isValueProp = (prop: PropType): prop is ValueProp => {
     prop.kind === PropKind.Any ||
     prop.kind === PropKind.Array ||
     prop.kind === PropKind.Void ||
+    prop.kind === PropKind.Union ||
     prop.kind === PropKind.Null ||
     prop.kind === PropKind.Unknown ||
     prop.kind === PropKind.Undefined ||

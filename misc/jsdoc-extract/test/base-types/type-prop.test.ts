@@ -1,6 +1,42 @@
 import { parseCode } from '../../src/index';
 
 describe('type', () => {
+  it('generic consumer type', () => {
+    const results = parseCode(`
+    /**
+     * upstream interface
+     */ 
+    interface GenericInterface<Type> {
+      /**
+       * interface prop
+       */ 
+      m: Type
+    }
+    export type GenericConsumer = GenericInterface<string>;
+`);
+    expect(results).toEqual({
+      GenericConsumer: {
+        displayName: 'GenericConsumer',
+        kind: 15,
+        description: 'upstream interface',
+        generics: [
+          {
+            displayName: 'Type',
+          },
+        ],
+        properties: [
+          {
+            description: 'interface prop',
+            displayName: 'm',
+            kind: 15,
+            type: 'Type',
+          },
+        ],
+        type: 'GenericInterface',
+      },
+    });
+  });
+
   it('nested generic type', () => {
     const results = parseCode(`
     type UnionGenericType<Type> = Type | 'a string';

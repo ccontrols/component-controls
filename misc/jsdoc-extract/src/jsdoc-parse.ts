@@ -21,10 +21,13 @@ export const mergeJSDocComments = (
         arrayMerge: (dest: any[], src: any[]) => {
           const result =
             src.length > 0
-              ? src.map(s => {
-                  const existingIdx = dest.findIndex(
-                    p => p.name === (s as PropType).name,
-                  );
+              ? src.map((s, idx) => {
+                  const existingIdx =
+                    dest.length === src.length
+                      ? idx
+                      : dest.findIndex(
+                          p => p.displayName === (s as PropType).displayName,
+                        );
                   if (existingIdx >= 0) {
                     return {
                       ...dest[existingIdx],

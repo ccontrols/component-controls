@@ -1,5 +1,123 @@
 import { parseCode } from '../../src/index';
 describe('interface', () => {
+  it('jsdoc default value', () => {
+    const results = parseCode(`  
+  export interface Interface {
+    /**
+     * union prop
+     * @default bread
+     */
+    eat: 'honey' | 'bread' | 'meat';
+  
+  }
+`);
+    expect(results).toEqual({
+      Interface: {
+        displayName: 'Interface',
+        kind: 14,
+        properties: [
+          {
+            displayName: 'eat',
+            kind: 4,
+            properties: [
+              {
+                kind: 1,
+                value: 'honey',
+              },
+              {
+                kind: 1,
+                value: 'bread',
+              },
+              {
+                kind: 1,
+                value: 'meat',
+              },
+            ],
+            value: 'bread',
+            description: 'union prop',
+          },
+        ],
+      },
+    });
+  });
+  it('interface array', () => {
+    const results = parseCode(`  
+  export interface InterfaceArrayType<Type> {
+    /**
+     * Gets or sets the length of the array.
+     */
+    length: number;
+  
+    /**
+     * Removes the last element from an array and returns it.
+     */
+    pop(): Type | undefined;
+  
+    /**
+     * Appends new elements to an array, and returns the new length of the array.
+     */
+    push(...items: Type[]): number;
+  }
+`);
+    expect(results).toEqual({
+      InterfaceArrayType: {
+        displayName: 'InterfaceArrayType',
+        kind: 14,
+        generics: [
+          {
+            displayName: 'Type',
+          },
+        ],
+        properties: [
+          {
+            description: 'Gets or sets the length of the array.',
+            kind: 2,
+            displayName: 'length',
+          },
+          {
+            description:
+              'Removes the last element from an array and returns it.',
+            displayName: 'pop',
+            kind: 11,
+            parameters: [],
+            returns: {
+              kind: 4,
+              properties: [
+                {
+                  displayName: 'Type',
+                  kind: 15,
+                },
+                {
+                  kind: 8,
+                },
+              ],
+            },
+          },
+          {
+            description:
+              'Appends new elements to an array, and returns the new length of the array.',
+            displayName: 'push',
+            kind: 11,
+            parameters: [
+              {
+                displayName: 'items',
+                kind: 16,
+                elements: [
+                  {
+                    displayName: 'Type',
+                    kind: 15,
+                  },
+                ],
+              },
+            ],
+            returns: {
+              kind: 2,
+            },
+          },
+        ],
+      },
+    });
+  });
   it('enum prop', () => {
     const results = parseCode(`  
 enum StringEnums {

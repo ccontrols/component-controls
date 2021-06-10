@@ -62,6 +62,10 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
             }
 
             break;
+          case 'default':
+            (result as ValueProp).value = tag.name;
+
+            break;
           case 'typedef':
             // Ignore an invalid tag missing a name.
             if (tag.name) {

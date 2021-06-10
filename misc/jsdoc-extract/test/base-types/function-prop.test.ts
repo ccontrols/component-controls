@@ -1,5 +1,28 @@
 import { parseCode } from '../../src/index';
 describe('function', () => {
+  it('jsdoc parameter', () => {
+    const results = parseCode(`
+    /**
+     * greeting function
+     * @param name string type parameters
+     */
+    export function greet(name: string) {}
+`);
+    expect(results).toEqual({
+      greet: {
+        parameters: [
+          {
+            displayName: 'name',
+            description: 'string type parameters',
+            kind: 1,
+          },
+        ],
+        description: 'greeting function',
+        displayName: 'greet',
+        kind: 11,
+      },
+    });
+  });
   it('arrow fn jsdoc', () => {
     const results = parseCode(`
 /**
@@ -27,30 +50,6 @@ export const arrowGreet = (
         returns: {
           kind: 12,
         },
-      },
-    });
-  });
-
-  it('jsdoc parameter', () => {
-    const results = parseCode(`
-    /**
-     * greeting function
-     * @param name string type parameters
-     */
-    export function greet(name: string) {}
-`);
-    expect(results).toEqual({
-      greet: {
-        parameters: [
-          {
-            displayName: 'name',
-            description: 'string type parameters',
-            kind: 1,
-          },
-        ],
-        description: 'greeting function',
-        displayName: 'greet',
-        kind: 11,
       },
     });
   });
