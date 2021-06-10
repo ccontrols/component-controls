@@ -18,6 +18,8 @@ import {
   hasGenerics,
   isArrayProp,
   EnumProp,
+  TupleProp,
+  RestProp,
   isFunctionProp,
 } from './utils';
 import {
@@ -308,12 +310,21 @@ export class SymbolParser {
         prop.kind = PropKind.Type;
       } else if (ts.isLiteralTypeNode(node)) {
         return this.withJsDocNode(prop, node.literal);
+      } else if (ts.isOptionalTypeNode(node)) {
+        prop.optional = true;
+        return this.withJsDocNode(prop, node.type);
+      } else if (ts.isRestTypeNode(node)) {
+        prop.kind = PropKind.Rest;
+        (prop as RestProp).type = this.withJsDocNode({}, node.type);
       } else if (ts.isUnionTypeNode(node)) {
         prop.kind = PropKind.Union;
         (prop as UnionProp).properties = this.parseProperties(node.types);
       } else if (ts.isEnumDeclaration(node)) {
         prop.kind = PropKind.Enum;
         (prop as EnumProp).properties = this.parseProperties(node.members);
+      } else if (ts.isTupleTypeNode(node)) {
+        prop.kind = PropKind.Tuple;
+        (prop as TupleProp).properties = this.parseProperties(node.elements);
       } else {
         switch (node.kind) {
           case ts.SyntaxKind.NumberKeyword:

@@ -37,12 +37,6 @@ export const ArrayKeyword: Array<string> = ['test'];
 // eslint-disable-next-line @typescript-eslint/no-array-constructor
 export const ArrayNew = new Array('red', 'green', 'blue');
 
-export type Tuple = [string, number];
-
-export type OptionalTuple = [number, number, number?];
-
-export type SpreadTuple = [...boolean[], string, number];
-
 /**
  * print coordinates
  * @param pt object parameter
