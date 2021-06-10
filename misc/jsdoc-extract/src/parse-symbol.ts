@@ -17,7 +17,7 @@ import {
   ArrayProp,
   hasGenerics,
   isArrayProp,
-  isValueProp,
+  EnumProp,
 } from './utils';
 import {
   isVariableLikeDeclaration,
@@ -69,6 +69,7 @@ export class SymbolParser {
       | ts.TypeElement
       | ts.TypeNode
       | ts.HeritageClause
+      | ts.EnumMember
       | ts.ArrayBindingElement
       | ts.ParameterDeclaration
       | ts.TypeParameterDeclaration
@@ -276,6 +277,9 @@ export class SymbolParser {
       } else if (ts.isUnionTypeNode(node)) {
         prop.kind = PropKind.Union;
         (prop as UnionProp).properties = this.parseProperties(node.types);
+      } else if (ts.isEnumDeclaration(node)) {
+        prop.kind = PropKind.Enum;
+        (prop as EnumProp).properties = this.parseProperties(node.members);
       } else {
         switch (node.kind) {
           case ts.SyntaxKind.NumberKeyword:
