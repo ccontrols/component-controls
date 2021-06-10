@@ -257,6 +257,19 @@ export class SymbolParser {
         });
         (prop as TypeProp).properties = properties;
       } else if (ts.isTypeReferenceNode(node)) {
+        if (ts.isQualifiedName(node.typeName)) {
+          const parentSymbol = this.checker.getSymbolAtLocation(
+            node.typeName.left,
+          );
+          if (parentSymbol) {
+            const parent = this.parseNamedSymbol(parentSymbol);
+            if (isObjectLikeProp(parent)) {
+              delete parent.properties;
+            }
+            prop.parent = parent;
+          }
+        }
+
         const symbol = this.checker.getSymbolAtLocation(node.typeName);
         if (symbol) {
           const p = this.parseNamedSymbol(symbol);

@@ -298,6 +298,7 @@ export type ObjectLikeProp =
   | ClassProp
   | InterfaceProp
   | TypeProp
+  | EnumProp
   | ObjectProp
   | IndexProp;
 
@@ -307,6 +308,7 @@ export const isObjectLikeProp = (prop: PropType): prop is ObjectLikeProp => {
     prop.kind === PropKind.Interface ||
     prop.kind === PropKind.Type ||
     prop.kind === PropKind.Index ||
+    prop.kind === PropKind.Enum ||
     prop.kind === PropKind.Object
   );
 };

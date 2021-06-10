@@ -15,17 +15,6 @@ export interface InterfaceArrayType<Type> {
   push(...items: Type[]): number;
 }
 
-export interface InterfaceWithEnumConstant {
-  /**
-   * kind is an enumm constant
-   */
-  kind: StringEnums.Up;
-  /**
-   * radius property
-   */
-  radius: number;
-}
-
 export type GenericConsumer = GenericInterface<string>;
 /**
  * this is an array of strings

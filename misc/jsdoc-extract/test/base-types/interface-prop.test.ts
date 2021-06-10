@@ -1,5 +1,45 @@
 import { parseCode } from '../../src/index';
 describe('interface', () => {
+  it('enum prop', () => {
+    const results = parseCode(`  
+enum StringEnums {
+  Up: 'UP',
+}
+export interface InterfaceWithEnumConstant {
+    /**
+     * kind is an enumm constant
+     */
+    kind: StringEnums.Up;
+    /**
+     * radius property
+     */
+    radius: number;
+  }
+`);
+    expect(results).toEqual({
+      InterfaceWithEnumConstant: {
+        displayName: 'InterfaceWithEnumConstant',
+        kind: 14,
+        properties: [
+          {
+            description: 'kind is an enumm constant',
+            displayName: 'kind',
+            kind: 15,
+            parent: {
+              displayName: 'StringEnums',
+              kind: 5,
+            },
+            type: 'Up',
+          },
+          {
+            description: 'radius property',
+            kind: 2,
+            displayName: 'radius',
+          },
+        ],
+      },
+    });
+  });
   it('generic type', () => {
     const results = parseCode(`
 export interface GenericInterface<Type> {
