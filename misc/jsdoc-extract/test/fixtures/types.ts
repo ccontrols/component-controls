@@ -42,25 +42,6 @@ export type Tuple = [string, number];
 export type OptionalTuple = [number, number, number?];
 
 export type SpreadTuple = [...boolean[], string, number];
-/**
- * greeting function
- * @param name string type parameters
- */
-export function greet(name: string) {
-  console.log(name);
-}
-
-/**
- * arrow greeting function
- */
-export const arrowGreet = (
-  /**
-   * name parameter inline description
-   */
-  name: string,
-): void => {
-  console.log(name);
-};
 
 /**
  * print coordinates

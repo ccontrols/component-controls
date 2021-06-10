@@ -122,7 +122,7 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
             if (tag.name) {
               // Define the JSDoc parameter with nicely ordered properties.
               const parameter: PropType = {
-                name: tag.name,
+                displayName: tag.name,
                 description: trimNewlines(tag.description),
               };
               if (typeof tag.type !== 'undefined') {
@@ -149,7 +149,7 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
             if (tag.name) {
               // Define the JSDoc property with nicely ordered properties.
               const property: PropType = {
-                name: tag.name,
+                displayName: tag.name,
                 description: trimNewlines(tag.description),
               };
               if (typeof tag.type !== 'undefined') {
@@ -256,7 +256,7 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
         try {
           const { name } = deconstructJsdocNamepath(namepath);
 
-          result.name = name;
+          result.displayName = name;
         } catch (error) {
           throw new Error(error.message);
         }

@@ -18,6 +18,7 @@ import {
   hasGenerics,
   isArrayProp,
   EnumProp,
+  isFunctionProp,
 } from './utils';
 import {
   isVariableLikeDeclaration,
@@ -25,6 +26,8 @@ import {
   isHasType,
   tsKindToPropKind,
   isGenericsType,
+  FunctionLike,
+  isFunctionLike,
 } from './ts-utils';
 const strToValue = (s: string): any => {
   switch (s) {
@@ -97,7 +100,7 @@ export class SymbolParser {
       ) {
         const symbol = this.checker.getSymbolAtLocation(p.name);
         if (symbol) {
-          const { prop } = this.parseSymbol(symbol);
+          const prop = this.parseNamedSymbol(symbol);
           addProp(prop);
         }
       } else {
@@ -107,9 +110,25 @@ export class SymbolParser {
     });
     return results;
   }
+  parseFunction(prop: PropType, node: FunctionLike): PropType {
+    prop.kind = tsKindToPropKind[node.kind];
+    if (isFunctionProp(prop)) {
+      prop.parameters = this.parseProperties(node.parameters);
+      if (node.type) {
+        prop.returns = this.withJsDocNode({}, node.type);
+      }
+      if (node.typeParameters?.length) {
+        prop.types = this.parseProperties(node.typeParameters);
+      }
+    }
+    return prop;
+  }
+
   parseValue(prop: PropType, node?: ts.Node): PropType {
     if (node) {
-      if (ts.isArrayBindingPattern(node) && isArrayProp(prop)) {
+      if (isFunctionLike(node)) {
+        return this.parseFunction(prop, node);
+      } else if (ts.isArrayBindingPattern(node) && isArrayProp(prop)) {
         prop.value = this.parseProperties(node.elements);
       } else if (ts.isNumericLiteral(node)) {
         if (!prop.kind) {
@@ -165,7 +184,9 @@ export class SymbolParser {
   }
   parseType(prop: PropType, node?: ts.Node): PropType {
     if (node) {
-      if (
+      if (isFunctionLike(node)) {
+        return this.parseFunction(prop, node);
+      } else if (
         ts.isArrayTypeNode(node) ||
         ts.isArrayLiteralExpression(node) ||
         (ts.isTypeReferenceNode(node) && node.typeName.getText() === 'Array')
@@ -186,12 +207,12 @@ export class SymbolParser {
             node.parameters[0].name,
           );
           if (symbol) {
-            const { prop: parsed } = this.parseSymbol(symbol);
+            const parsed = this.parseNamedSymbol(symbol);
             prop.index = parsed;
           }
         }
         prop.type = this.withJsDocNode({}, node.type);
-      } else if (isHasType(node)) {
+      } else if (isHasType(node) && node.type) {
         if (node.type?.kind && tsKindToPropKind[node.type.kind]) {
           prop.kind = tsKindToPropKind[node.type.kind];
         }
@@ -363,11 +384,10 @@ export class SymbolParser {
           tags: [],
         },
       );
-
-      return mergeJSDocComments(
-        this.parseType(prop, node),
-        [...docs.descriptions, ...docs.tags].join('\n'),
-      );
+      const allComments = [...docs.descriptions, ...docs.tags].join('\n');
+      const typedProp = this.parseType(prop, node);
+      const commented = mergeJSDocComments(typedProp, allComments);
+      return commented;
     }
 
     const result = this.parseType(prop, node);
@@ -376,9 +396,65 @@ export class SymbolParser {
     }
     return result;
   }
+  private annotateProp(
+    symbol: ts.Symbol,
+  ): {
+    prop: PropType;
+    name: string;
+    declaration?: ts.Node;
+    initializer?: ts.Node;
+  } {
+    const declaration = symbol.valueDeclaration || symbol.declarations[0];
+
+    let kind: PropKind | undefined = undefined;
+    const typeDeclared = this.checker.getDeclaredTypeOfSymbol(symbol);
+    if (!(typeDeclared.flags & ts.TypeFlags.Any)) {
+      kind = typeNameToPropKind(
+        this.checker.typeToString(typeDeclared, declaration),
+      );
+    } else {
+      const typeSymbol = this.checker.getTypeOfSymbolAtLocation(
+        symbol,
+        declaration,
+      );
+      kind = typeNameToPropKind(this.checker.typeToString(typeSymbol));
+    }
+    const name = symbol.getName();
+    const prop: PropType = {};
+    if (kind !== undefined) {
+      prop.kind = kind;
+    }
+    if ((declaration as ts.ParameterDeclaration).questionToken) {
+      prop.optional = true;
+    }
+    if (declaration.modifiers) {
+      for (const m of declaration.modifiers) {
+        if (m.kind === ts.SyntaxKind.PrivateKeyword) {
+          prop.visibility = 'private';
+        } else if (m.kind === ts.SyntaxKind.ProtectedKeyword) {
+          prop.visibility = 'protected';
+        } else if (m.kind === ts.SyntaxKind.PublicKeyword) {
+          prop.visibility = 'public';
+        } else if (m.kind === ts.SyntaxKind.StaticKeyword) {
+          prop.static = true;
+        } else if (m.kind === ts.SyntaxKind.ReadonlyKeyword) {
+          prop.readonly = true;
+        } else if (m.kind === ts.SyntaxKind.AbstractKeyword) {
+          prop.abstract = true;
+        }
+      }
+    }
+    prop.displayName = name;
+    const initializer = isVariableLikeDeclaration(declaration)
+      ? declaration?.initializer
+      : undefined;
+    return { prop, name, declaration, initializer };
+  }
   parseNamedSymbol(symbol: ts.Symbol): PropType {
-    const { name, prop } = this.parseSymbol(symbol);
-    return { ...prop, displayName: name };
+    const { prop, declaration, initializer } = this.annotateProp(symbol);
+    const type = this.withJsDocNode(prop, declaration);
+    const final = this.parseValue(type, initializer);
+    return final;
   }
   parseSymbol(
     symbol: ts.Symbol,
@@ -386,7 +462,6 @@ export class SymbolParser {
     prop: PropType;
     name: string;
   } {
-    const declaration = symbol.valueDeclaration || symbol.declarations[0];
     const comments = symbol
       .getDocumentationComment(this.checker)
       .map(({ text }) => `* ${text}`)
@@ -403,55 +478,11 @@ export class SymbolParser {
         return undefined;
       })
       .filter(t => t);
-
-    const initializer = isVariableLikeDeclaration(declaration)
-      ? declaration?.initializer
-      : undefined;
-    let kind: PropKind | undefined = undefined;
-    const typeDeclared = this.checker.getDeclaredTypeOfSymbol(symbol);
-    if (!(typeDeclared.flags & ts.TypeFlags.Any)) {
-      kind = typeNameToPropKind(
-        this.checker.typeToString(typeDeclared, declaration),
-      );
-    } else {
-      const typeSymbol = this.checker.getTypeOfSymbolAtLocation(
-        symbol,
-        declaration,
-      );
-      kind = typeNameToPropKind(this.checker.typeToString(typeSymbol));
-    }
-    const name = symbol.getName();
-    const result: PropType = {};
-    if (kind !== undefined) {
-      result.kind = kind;
-    }
-    if ((declaration as ts.ParameterDeclaration).questionToken) {
-      result.optional = true;
-    }
-    if (declaration.modifiers) {
-      for (const m of declaration.modifiers) {
-        if (m.kind === ts.SyntaxKind.PrivateKeyword) {
-          result.visibility = 'private';
-        } else if (m.kind === ts.SyntaxKind.ProtectedKeyword) {
-          result.visibility = 'protected';
-        } else if (m.kind === ts.SyntaxKind.PublicKeyword) {
-          result.visibility = 'public';
-        } else if (m.kind === ts.SyntaxKind.StaticKeyword) {
-          result.static = true;
-        } else if (m.kind === ts.SyntaxKind.ReadonlyKeyword) {
-          result.readonly = true;
-        } else if (m.kind === ts.SyntaxKind.AbstractKeyword) {
-          result.abstract = true;
-        }
-      }
-    }
-    if (name) {
-      result.displayName = name;
-    }
-    const type = this.parseType(result, declaration);
+    const { prop, name, declaration, initializer } = this.annotateProp(symbol);
+    const type = this.parseType(prop, declaration);
     const final = this.parseValue(type, initializer);
 
-    const prop = mergeJSDocComments(final, [comments, tags].join('\n'));
-    return { prop, name };
+    const commented = mergeJSDocComments(final, [comments, tags].join('\n'));
+    return { prop: commented, name };
   }
 }

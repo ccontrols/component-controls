@@ -61,6 +61,7 @@ export const tsKindToPropKind: { [key in ts.SyntaxKind]?: PropKind } = {
   [ts.SyntaxKind.CallSignature]: PropKind.Function,
   [ts.SyntaxKind.ConstructSignature]: PropKind.Function,
   [ts.SyntaxKind.MethodSignature]: PropKind.Function,
+  [ts.SyntaxKind.FunctionDeclaration]: PropKind.Function,
   [ts.SyntaxKind.FunctionType]: PropKind.Function,
   [ts.SyntaxKind.MethodDeclaration]: PropKind.Function,
   [ts.SyntaxKind.Constructor]: PropKind.Function,
@@ -98,34 +99,19 @@ export const isGenericsType = (node: ts.Node): node is GenericsType =>
   isObjectTypeDeclaration(node) ||
   node.kind === ts.SyntaxKind.TypeAliasDeclaration;
 
-export type HasParameters =
-  | ts.CallSignatureDeclaration
-  | ts.ConstructSignatureDeclaration
-  | ts.MethodSignature
-  | ts.IndexSignatureDeclaration
-  | ts.FunctionTypeNode
-  | ts.ConstructorTypeNode
+export type FunctionLike =
   | ts.FunctionDeclaration
-  | ts.MethodDeclaration
-  | ts.ConstructorDeclaration
-  | ts.GetAccessorDeclaration
-  | ts.SetAccessorDeclaration
-  | ts.FunctionExpression
-  | ts.ArrowFunction;
-export const hasParameters = (node: ts.Node): node is HasParameters => {
+  | ts.ArrowFunction
+  | ts.FunctionTypeNode
+  | ts.MethodSignature
+  | ts.MethodDeclaration;
+
+export const isFunctionLike = (node: ts.Node): node is FunctionLike => {
   return (
-    node.kind === ts.SyntaxKind.CallSignature ||
-    node.kind === ts.SyntaxKind.ConstructSignature ||
-    node.kind === ts.SyntaxKind.MethodSignature ||
-    node.kind === ts.SyntaxKind.IndexSignature ||
-    node.kind === ts.SyntaxKind.FunctionType ||
-    node.kind === ts.SyntaxKind.ConstructorType ||
     node.kind === ts.SyntaxKind.FunctionDeclaration ||
-    node.kind === ts.SyntaxKind.MethodDeclaration ||
-    node.kind === ts.SyntaxKind.Constructor ||
-    node.kind === ts.SyntaxKind.GetAccessor ||
-    node.kind === ts.SyntaxKind.SetAccessor ||
-    node.kind === ts.SyntaxKind.FunctionExpression ||
-    node.kind === ts.SyntaxKind.ArrowFunction
+    node.kind === ts.SyntaxKind.ArrowFunction ||
+    node.kind === ts.SyntaxKind.FunctionType ||
+    node.kind === ts.SyntaxKind.MethodSignature ||
+    node.kind === ts.SyntaxKind.MethodDeclaration
   );
 };
