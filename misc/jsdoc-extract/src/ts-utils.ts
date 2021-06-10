@@ -57,6 +57,7 @@ export const tsKindToPropKind: { [key in ts.SyntaxKind]?: PropKind } = {
   [ts.SyntaxKind.ClassExpression]: PropKind.Class,
   [ts.SyntaxKind.InterfaceDeclaration]: PropKind.Interface,
   [ts.SyntaxKind.TypeLiteral]: PropKind.Type,
+  [ts.SyntaxKind.TypeReference]: PropKind.Type,
   [ts.SyntaxKind.CallSignature]: PropKind.Function,
   [ts.SyntaxKind.ConstructSignature]: PropKind.Function,
   [ts.SyntaxKind.MethodSignature]: PropKind.Function,
@@ -91,12 +92,7 @@ export const isObjectTypeDeclaration = (
   );
 };
 
-export type GenericsType =
-  | ts.ClassDeclaration
-  | ts.ClassExpression
-  | ts.InterfaceDeclaration
-  | ts.TypeLiteralNode
-  | ts.TypeAliasDeclaration;
+export type GenericsType = ObjectTypeDeclaration | ts.TypeAliasDeclaration;
 
 export const isGenericsType = (node: ts.Node): node is GenericsType =>
   isObjectTypeDeclaration(node) ||

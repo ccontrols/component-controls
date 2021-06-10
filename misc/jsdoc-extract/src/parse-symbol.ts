@@ -17,6 +17,7 @@ import {
   ArrayProp,
   hasGenerics,
   isArrayProp,
+  isValueProp,
 } from './utils';
 import {
   isVariableLikeDeclaration,
@@ -45,12 +46,29 @@ export class SymbolParser {
     this.checker = checker;
   }
 
+  extendProperties(parent: PropType, properties: PropType[]): PropType[] {
+    if (isObjectLikeProp(parent) && parent.properties) {
+      const prantProps = parent.properties;
+      delete parent.properties;
+      if (parent.type || parent.displayName) {
+        prantProps.map(pp => {
+          properties.push({ ...pp, parent });
+        });
+      } else {
+        properties.push(...prantProps);
+      }
+    } else {
+      properties.push(parent);
+    }
+    return properties;
+  }
   parseProperties(
     properties: ts.NodeArray<
       | ts.ClassElement
       | ts.ObjectLiteralElementLike
       | ts.TypeElement
       | ts.TypeNode
+      | ts.HeritageClause
       | ts.ArrayBindingElement
       | ts.ParameterDeclaration
       | ts.TypeParameterDeclaration
@@ -59,8 +77,8 @@ export class SymbolParser {
   ): PropType[] {
     const results: PropType[] = [...types];
     const addProp = (prop: PropType) => {
-      const existingIdx = results.findIndex(
-        p => p.displayName === prop.displayName,
+      const existingIdx = types.findIndex(
+        p => prop.displayName && p.displayName === prop.displayName,
       );
       if (existingIdx >= 0) {
         results[existingIdx] = { ...results[existingIdx], ...prop };
@@ -68,8 +86,14 @@ export class SymbolParser {
         results.push(prop);
       }
     };
+
     properties.forEach(p => {
-      if (!ts.isTypeNode(p) && !ts.isOmittedExpression(p) && p.name) {
+      if (
+        !ts.isTypeNode(p) &&
+        !ts.isOmittedExpression(p) &&
+        !ts.isHeritageClause(p) &&
+        p.name
+      ) {
         const symbol = this.checker.getSymbolAtLocation(p.name);
         if (symbol) {
           const { prop } = this.parseSymbol(symbol);
@@ -165,7 +189,7 @@ export class SymbolParser {
             prop.index = parsed;
           }
         }
-        return this.withJsDocNode(prop, node.type);
+        prop.type = this.withJsDocNode({}, node.type);
       } else if (isHasType(node)) {
         if (node.type?.kind && tsKindToPropKind[node.type.kind]) {
           prop.kind = tsKindToPropKind[node.type.kind];
@@ -188,8 +212,36 @@ export class SymbolParser {
         } else {
         }
       } else if (isObjectTypeDeclaration(node)) {
+        if (!prop.kind) {
+          prop.kind = tsKindToPropKind[node.kind];
+        }
+
         if (isObjectLikeProp(prop)) {
-          prop.properties = this.parseProperties(node.members);
+          if (
+            hasGenerics(prop) &&
+            isGenericsType(node) &&
+            !ts.isTypeLiteralNode(node) &&
+            node.typeParameters
+          ) {
+            prop.generics = this.parseProperties(node.typeParameters);
+          }
+
+          const properties: PropType[] = this.parseProperties(node.members);
+          if (
+            (ts.isClassLike(node) || ts.isInterfaceDeclaration(node)) &&
+            node.heritageClauses
+          ) {
+            node.heritageClauses.forEach(h => {
+              h.types.forEach(t => {
+                const symbol = this.checker.getSymbolAtLocation(t.expression);
+                if (symbol) {
+                  const parent = this.parseNamedSymbol(symbol);
+                  this.extendProperties(parent, properties);
+                }
+              });
+            });
+          }
+          prop.properties = properties;
         }
       } else if (ts.isIntersectionTypeNode(node)) {
         prop.kind = PropKind.Type;
@@ -200,19 +252,7 @@ export class SymbolParser {
             childProp.kind = tsKindToPropKind[t.kind];
           }
           const parent = this.withJsDocNode(childProp, t);
-          if (isObjectLikeProp(parent) && parent.properties) {
-            const prantProps = parent.properties;
-            delete parent.properties;
-            if (parent.type || parent.displayName) {
-              prantProps.map(pp => {
-                properties.push({ ...pp, parent });
-              });
-            } else {
-              properties.push(...prantProps);
-            }
-          } else {
-            properties.push(parent);
-          }
+          this.extendProperties(parent, properties);
         });
         (prop as TypeProp).properties = properties;
       } else if (ts.isTypeReferenceNode(node)) {
@@ -312,7 +352,12 @@ export class SymbolParser {
         [...docs.descriptions, ...docs.tags].join('\n'),
       );
     }
-    return this.parseType(prop, node);
+
+    const result = this.parseType(prop, node);
+    if (node && ts.isLiteralTypeNode(node)) {
+      return this.parseValue(result, node.literal);
+    }
+    return result;
   }
   parseNamedSymbol(symbol: ts.Symbol): PropType {
     const { name, prop } = this.parseSymbol(symbol);

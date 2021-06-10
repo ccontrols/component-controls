@@ -1,42 +1,3 @@
-export type NestedGenericType<Type> = GenericArrayType<UnionGenericType<Type>>;
-/**
- * this is interface
- * multiple lines
- */
-export interface I {
-  /**
-   * interface member property
-   */
-  m: string;
-}
-interface Internal {}
-
-export interface Bear extends I {
-  honey: boolean;
-}
-
-export interface Home {
-  resident: { name: string; age: number };
-}
-
-export interface IndexInterface {
-  [index: number]: string;
-}
-
-export interface MultipleInheritance extends Home, Bear {
-  ownfield: 'test' | 1;
-}
-
-/**
- * generics
- */
-export interface GenericInterface<Type> {
-  /**
-   * configurable property type
-   */
-  contents: Type;
-}
-
 export interface InterfaceArrayType<Type> {
   /**
    * Gets or sets the length of the array.
@@ -86,10 +47,6 @@ export const ArrayKeyword: Array<string> = ['test'];
 
 // eslint-disable-next-line @typescript-eslint/no-array-constructor
 export const ArrayNew = new Array('red', 'green', 'blue');
-/**
- * strings union
- */
-export type union = 'this' | 1 | false | null | undefined;
 
 /**
  * this is an enum with an initialized element

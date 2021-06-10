@@ -214,17 +214,20 @@ export type ExtendT = T & {
               kind: 1,
               displayName: 'index',
             },
-            properties: [
-              {
-                kind: 15,
-                type: 'Bear',
-                displayName: 'a',
-              },
-              {
-                kind: 10,
-                displayName: 'b',
-              },
-            ],
+            type: {
+              kind: 15,
+              properties: [
+                {
+                  kind: 15,
+                  type: 'Bear',
+                  displayName: 'a',
+                },
+                {
+                  kind: 10,
+                  displayName: 'b',
+                },
+              ],
+            },
           },
           {
             description: 'this is an additional name prop',
