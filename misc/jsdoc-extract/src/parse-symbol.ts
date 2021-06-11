@@ -19,6 +19,7 @@ import {
   isArrayProp,
   EnumProp,
   TupleProp,
+  ObjectProp,
   RestProp,
   isFunctionProp,
 } from './utils';
@@ -30,6 +31,7 @@ import {
   isGenericsType,
   FunctionLike,
   isFunctionLike,
+  isArrayLike,
 } from './ts-utils';
 const strToValue = (s: string): any => {
   switch (s) {
@@ -106,8 +108,9 @@ export class SymbolParser {
           addProp(prop);
         }
       } else {
-        const prop = this.withJsDocNode({}, p);
-        addProp(prop);
+        const propType = this.withJsDocNode({}, p);
+        const propValue = this.parseValue(propType, p);
+        addProp(propValue);
       }
     });
     return results;
@@ -130,8 +133,27 @@ export class SymbolParser {
     if (node) {
       if (isFunctionLike(node)) {
         return this.parseFunction(prop, node);
-      } else if (ts.isArrayBindingPattern(node) && isArrayProp(prop)) {
-        prop.value = this.parseProperties(node.elements);
+      } else if (
+        ts.isArrayBindingPattern(node) ||
+        ts.isArrayLiteralExpression(node)
+      ) {
+        prop.kind = PropKind.Array;
+        if (isArrayProp(prop)) {
+          prop.value = this.parseProperties(
+            node.elements as ts.NodeArray<ts.ArrayBindingElement>,
+          );
+        }
+      } else if (ts.isNewExpression(node)) {
+        prop.kind = PropKind.Object;
+        // const symbol = this.checker.getSymbolAtLocation(node.expression);
+        // if (symbol) {
+        //   (prop as ObjectProp).reference = this.parseNamedSymbol(symbol);
+        // }
+        if (node.arguments) {
+          (prop as ObjectProp).properties = this.parseProperties(
+            node.arguments as ts.NodeArray<ts.ArrayBindingElement>,
+          );
+        }
       } else if (ts.isNumericLiteral(node)) {
         if (!prop.kind) {
           prop.kind = PropKind.Number;
@@ -188,11 +210,7 @@ export class SymbolParser {
     if (node) {
       if (isFunctionLike(node)) {
         return this.parseFunction(prop, node);
-      } else if (
-        ts.isArrayTypeNode(node) ||
-        ts.isArrayLiteralExpression(node) ||
-        (ts.isTypeReferenceNode(node) && node.typeName.getText() === 'Array')
-      ) {
+      } else if (isArrayLike(node)) {
         prop.kind = PropKind.Array;
 
         if (ts.isArrayTypeNode(node)) {
@@ -477,18 +495,15 @@ export class SymbolParser {
       .getDocumentationComment(this.checker)
       .map(({ text }) => `* ${text}`)
       .join('/n * ');
-    const tags = symbol
-      .getJsDocTags()
-      .map(t => {
-        if (t.text) {
-          const firstSpace = t.text.indexOf(' ');
-          return `* @${t.name} ${t.text.substr(0, firstSpace)} ${t.text.substr(
-            firstSpace + 1,
-          )}`;
-        }
-        return undefined;
-      })
-      .filter(t => t);
+    const tags = symbol.getJsDocTags().map(t => {
+      if (t.text) {
+        const firstSpace = t.text.indexOf(' ');
+        return `* @${t.name} ${t.text.substr(0, firstSpace)} ${t.text.substr(
+          firstSpace + 1,
+        )}`;
+      }
+      return `* @${t.name}`;
+    });
     const { prop, name, declaration, initializer } = this.annotateProp(symbol);
     const type = this.parseType(prop, declaration);
     const final = this.parseValue(type, initializer);

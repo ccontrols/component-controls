@@ -71,7 +71,6 @@ export interface PropType {
 }
 
 export interface ObjectProp extends PropType {
-  reference?: PropType;
   properties?: PropType[];
   value?: PropType[];
 }

@@ -115,3 +115,16 @@ export const isFunctionLike = (node: ts.Node): node is FunctionLike => {
     node.kind === ts.SyntaxKind.MethodDeclaration
   );
 };
+
+export type ArrayLike =
+  | ts.ArrayTypeNode
+  | ts.ArrayLiteralExpression
+  | ts.TypeReferenceNode;
+
+export const isArrayLike = (node: ts.Node): node is ArrayLike => {
+  return (
+    node.kind === ts.SyntaxKind.ArrayType ||
+    node.kind === ts.SyntaxKind.ArrayLiteralExpression ||
+    (ts.isTypeReferenceNode(node) && node.typeName.getText() === 'Array')
+  );
+};
