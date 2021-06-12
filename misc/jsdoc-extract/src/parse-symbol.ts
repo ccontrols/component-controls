@@ -94,8 +94,7 @@ export class SymbolParser {
         results.push(prop);
       }
     };
-
-    properties.forEach(p => {
+    for (const p of properties) {
       if (
         !ts.isTypeNode(p) &&
         !ts.isOmittedExpression(p) &&
@@ -106,13 +105,13 @@ export class SymbolParser {
         if (symbol) {
           const prop = this.parseNamedSymbol(symbol);
           addProp(prop);
+          continue;
         }
-      } else {
-        const propType = this.withJsDocNode({}, p);
-        const propValue = this.parseValue(propType, p);
-        addProp(propValue);
       }
-    });
+      const propType = this.withJsDocNode({}, p);
+      const propValue = this.parseValue(propType, p);
+      addProp(propValue);
+    }
     return results;
   }
   parseFunction(prop: PropType, node: FunctionLike): PropType {
@@ -311,18 +310,34 @@ export class SymbolParser {
         }
 
         const symbol = this.checker.getSymbolAtLocation(node.typeName);
+        let type: PropType | string | undefined;
         if (symbol) {
           const p = this.parseNamedSymbol(symbol);
 
           const { displayName, ...rest } = p;
           Object.assign(prop, rest);
           if (prop.displayName) {
-            prop.type = displayName || p;
+            type = displayName || p;
           } else {
-            prop.displayName = displayName;
+            type = displayName;
           }
         } else {
-          prop.type = node.typeName.getText();
+          type = node.typeName.getText();
+        }
+        if (node.typeArguments?.length) {
+          prop.type = {
+            kind: PropKind.Type,
+            generics: this.parseProperties(node.typeArguments),
+            ...(typeof type === 'string'
+              ? {
+                  displayName: type,
+                }
+              : type),
+          } as TypeProp;
+        } else if (typeof type === 'string' && !prop.displayName) {
+          prop.displayName = type;
+        } else {
+          prop.type = type;
         }
         prop.kind = PropKind.Type;
       } else if (ts.isLiteralTypeNode(node)) {

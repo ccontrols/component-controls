@@ -32,7 +32,15 @@ describe('type', () => {
             type: 'Type',
           },
         ],
-        type: 'GenericInterface',
+        type: {
+          kind: 15,
+          generics: [
+            {
+              kind: 1,
+            },
+          ],
+          displayName: 'GenericInterface',
+        },
       },
     });
   });
@@ -57,11 +65,39 @@ describe('type', () => {
         properties: [
           {
             displayName: 'm',
-            type: 'Type',
             kind: 15,
+            type: 'Type',
           },
         ],
-        type: 'GenericArrayType',
+        type: {
+          kind: 15,
+          generics: [
+            {
+              kind: 15,
+              properties: [
+                {
+                  displayName: 'Type',
+                  kind: 15,
+                },
+                {
+                  kind: 1,
+                  value: 'a string',
+                },
+              ],
+              type: {
+                kind: 15,
+                generics: [
+                  {
+                    displayName: 'Type',
+                    kind: 15,
+                  },
+                ],
+                displayName: 'UnionGenericType',
+              },
+            },
+          ],
+          displayName: 'GenericArrayType',
+        },
       },
     });
   });

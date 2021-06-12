@@ -1,20 +1,3 @@
-export function paintHomeyBear({ m, honey = true }: ExtendT): Bear {
-  return { honey, m };
-}
-
-export function genericFunction<Type>(
-  box: GenericInterface<Type>,
-  newContents: Type,
-): GenericInterface<Type> {
-  console.log(newContents);
-  return box;
-}
-
-export function readOnlyParameters(values: string[]): void {
-  console.log(values);
-}
-
-export const TypedInitializedFunction: FC<Bear> = props => {};
 export interface StringNumberPair {
   /**
    *  specialized properties
@@ -29,18 +12,6 @@ export interface StringNumberPair {
    */
 
   slice(start?: number, end?: number): Array<string | number>;
-}
-
-export const spreadTupleFunction = (
-  ...args: [string, number, ...boolean[]]
-): void => {
-  const [name, version, ...input] = args;
-  console.log(name, version, input);
-};
-
-export function distanceFromOrigin([x, y]: [number, number]): number {
-  // eslint-disable-next-line no-mixed-operators
-  return Math.sqrt(x ** 2 + y ** 2);
 }
 
 /**
