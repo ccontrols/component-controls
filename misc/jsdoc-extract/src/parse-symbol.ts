@@ -22,6 +22,7 @@ import {
   ObjectProp,
   RestProp,
   isFunctionBaseType,
+  isClassLikeProp,
 } from './utils';
 import {
   isVariableLikeDeclaration,
@@ -112,7 +113,9 @@ export class SymbolParser {
           const symbol = this.checker.getSymbolAtLocation(p.name);
           if (symbol) {
             const prop = this.parseNamedSymbol(symbol);
-            addProp(prop);
+            if (prop) {
+              addProp(prop);
+            }
             continue;
           }
         }
@@ -239,7 +242,9 @@ export class SymbolParser {
           );
           if (symbol) {
             const parsed = this.parseNamedSymbol(symbol);
-            prop.index = parsed;
+            if (parsed) {
+              prop.index = parsed;
+            }
           }
         }
         prop.type = this.parseTypeAndValue({}, node.type);
@@ -254,13 +259,19 @@ export class SymbolParser {
       } else if (ts.isExportAssignment(node)) {
         const symbol = this.checker.getSymbolAtLocation(node.expression);
         if (symbol) {
-          return this.parseNamedSymbol(symbol);
+          const result = this.parseNamedSymbol(symbol);
+          if (result) {
+            return result;
+          }
         }
       } else if (ts.isExportSpecifier(node)) {
         if (node.propertyName) {
           const symbol = this.checker.getSymbolAtLocation(node.propertyName);
           if (symbol) {
-            return this.parseNamedSymbol(symbol);
+            const result = this.parseNamedSymbol(symbol);
+            if (result) {
+              return result;
+            }
           }
         }
       } else if (isObjectTypeDeclaration(node)) {
@@ -281,17 +292,29 @@ export class SymbolParser {
           const properties: PropType[] = this.parseProperties(node.members);
           if (
             (ts.isClassLike(node) || ts.isInterfaceDeclaration(node)) &&
-            node.heritageClauses
+            node.heritageClauses?.length
           ) {
+            let extendsProp: string[] | undefined = undefined;
+            if (isClassLikeProp(prop)) {
+              extendsProp = [];
+            }
             node.heritageClauses.forEach(h => {
               h.types.forEach(t => {
                 const symbol = this.checker.getSymbolAtLocation(t.expression);
+                if (extendsProp) {
+                  extendsProp.push(t.expression.getText());
+                }
                 if (symbol) {
                   const parent = this.parseNamedSymbol(symbol);
-                  this.extendProperties(parent, properties);
+                  if (parent) {
+                    this.extendProperties(parent, properties);
+                  }
                 }
               });
             });
+            if (isClassLikeProp(prop)) {
+              prop.extends = extendsProp;
+            }
           }
           prop.properties = properties;
         }
@@ -314,10 +337,12 @@ export class SymbolParser {
           );
           if (parentSymbol) {
             const parent = this.parseNamedSymbol(parentSymbol);
-            if (isObjectLikeProp(parent)) {
-              delete parent.properties;
+            if (parent) {
+              if (isObjectLikeProp(parent)) {
+                delete parent.properties;
+              }
+              prop.parent = parent;
             }
-            prop.parent = parent;
           }
         }
 
@@ -326,7 +351,7 @@ export class SymbolParser {
         if (symbol) {
           const p = this.parseNamedSymbol(symbol);
 
-          const { displayName, ...rest } = p;
+          const { displayName, ...rest } = p || {};
           Object.assign(prop, rest);
           if (prop.displayName) {
             type = displayName || p;
@@ -454,55 +479,58 @@ export class SymbolParser {
     initializer?: ts.Node;
   } {
     let kind: PropKind | undefined = undefined;
+    const symbolDeclaration =
+      symbol.valueDeclaration || symbol.declarations?.[0];
+    if (symbolDeclaration) {
+      const typeOfSymbol = this.checker.getTypeOfSymbolAtLocation(
+        symbol,
+        symbolDeclaration,
+      );
+      const typeSymbol = typeOfSymbol.symbol || typeOfSymbol.aliasSymbol;
 
-    const typeOfSymbol = this.checker.getTypeOfSymbolAtLocation(
-      symbol,
-      symbol.valueDeclaration || symbol.declarations[0],
-    );
-    const typeSymbol = typeOfSymbol.symbol || typeOfSymbol.aliasSymbol;
+      const typeDeclaration = typeSymbol
+        ? typeSymbol.valueDeclaration || typeSymbol.declarations[0]
+        : undefined;
 
-    const symbolDeclaration = symbol.valueDeclaration || symbol.declarations[0];
-    const typeDeclaration = typeSymbol
-      ? typeSymbol.valueDeclaration || typeSymbol.declarations[0]
-      : undefined;
-
-    const declaration =
-      typeDeclaration &&
-      (ts.isExportAssignment(symbolDeclaration) ||
-        ts.isExportSpecifier(symbolDeclaration))
-        ? typeDeclaration
-        : symbolDeclaration;
-    kind = typeNameToPropKind(this.checker.typeToString(typeOfSymbol));
-    const name = symbol.getName();
-    const prop: PropType = {};
-    if (kind !== undefined) {
-      prop.kind = kind;
-    }
-    if ((declaration as ts.ParameterDeclaration).questionToken) {
-      prop.optional = true;
-    }
-    if (declaration.modifiers) {
-      for (const m of declaration.modifiers) {
-        if (m.kind === ts.SyntaxKind.PrivateKeyword) {
-          prop.visibility = 'private';
-        } else if (m.kind === ts.SyntaxKind.ProtectedKeyword) {
-          prop.visibility = 'protected';
-        } else if (m.kind === ts.SyntaxKind.PublicKeyword) {
-          prop.visibility = 'public';
-        } else if (m.kind === ts.SyntaxKind.StaticKeyword) {
-          prop.static = true;
-        } else if (m.kind === ts.SyntaxKind.ReadonlyKeyword) {
-          prop.readonly = true;
-        } else if (m.kind === ts.SyntaxKind.AbstractKeyword) {
-          prop.abstract = true;
+      const declaration =
+        typeDeclaration &&
+        (ts.isExportAssignment(symbolDeclaration) ||
+          ts.isExportSpecifier(symbolDeclaration))
+          ? typeDeclaration
+          : symbolDeclaration;
+      kind = typeNameToPropKind(this.checker.typeToString(typeOfSymbol));
+      const name = symbol.getName();
+      const prop: PropType = {};
+      if (kind !== undefined) {
+        prop.kind = kind;
+      }
+      if ((declaration as ts.ParameterDeclaration).questionToken) {
+        prop.optional = true;
+      }
+      if (declaration.modifiers) {
+        for (const m of declaration.modifiers) {
+          if (m.kind === ts.SyntaxKind.PrivateKeyword) {
+            prop.visibility = 'private';
+          } else if (m.kind === ts.SyntaxKind.ProtectedKeyword) {
+            prop.visibility = 'protected';
+          } else if (m.kind === ts.SyntaxKind.PublicKeyword) {
+            prop.visibility = 'public';
+          } else if (m.kind === ts.SyntaxKind.StaticKeyword) {
+            prop.static = true;
+          } else if (m.kind === ts.SyntaxKind.ReadonlyKeyword) {
+            prop.readonly = true;
+          } else if (m.kind === ts.SyntaxKind.AbstractKeyword) {
+            prop.abstract = true;
+          }
         }
       }
+      prop.displayName = name;
+      const initializer = isVariableLikeDeclaration(declaration)
+        ? declaration?.initializer
+        : undefined;
+      return { prop, name, declaration, initializer };
     }
-    prop.displayName = name;
-    const initializer = isVariableLikeDeclaration(declaration)
-      ? declaration?.initializer
-      : undefined;
-    return { prop, name, declaration, initializer };
+    return { prop: {}, name: '' };
   }
   parseTypeAndValue(
     prop: PropType,
@@ -516,9 +544,11 @@ export class SymbolParser {
     const final = this.parseValue(type, initializer);
     return this.mergePropComments(final, declaration);
   }
-  parseNamedSymbol(symbol: ts.Symbol): PropType {
+  parseNamedSymbol(symbol: ts.Symbol): PropType | undefined {
     const { prop, declaration, initializer } = this.annotateProp(symbol);
-    return this.parseTypeAndValue(prop, declaration, initializer);
+    return declaration || initializer
+      ? this.parseTypeAndValue(prop, declaration, initializer)
+      : undefined;
   }
   parseSymbol(
     symbol: ts.Symbol,

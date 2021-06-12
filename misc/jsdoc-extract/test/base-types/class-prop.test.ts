@@ -1,5 +1,81 @@
 import { parseCode } from '../../src/index';
 describe('class', () => {
+  it('react component', () => {
+    const results = parseCode(`
+import React from 'react';
+
+export class ReactComponent extends React.Component {
+  render() {
+    return <span>Hello, {this.props.name}!</span>;
+  }
+}
+  `);
+    expect(results).toEqual({
+      ReactComponent: {
+        displayName: 'ReactComponent',
+        kind: 13,
+        extends: ['React.Component'],
+        properties: [
+          {
+            displayName: 'render',
+            kind: 11,
+          },
+        ],
+      },
+    });
+  });
+  it('param modifiers', () => {
+    const results = parseCode(`
+export class ParameterModifiers {
+  /**
+   * constructor implementation
+   * @param x x coordinate
+   * @param y y coordinate
+   * @param z z coordinate
+   */
+  constructor(
+    public readonly x: number,
+    protected y: number,
+    private z: number,
+  ) {
+    // No body necessary
+  }
+}
+`);
+    expect(results).toEqual({
+      ParameterModifiers: {
+        displayName: 'ParameterModifiers',
+        kind: 13,
+        properties: [
+          {
+            parameters: [
+              {
+                displayName: 'x',
+                description: 'x coordinate',
+                kind: 2,
+                visibility: 'public',
+                readonly: true,
+              },
+              {
+                displayName: 'y',
+                description: 'y coordinate',
+                kind: 2,
+                visibility: 'protected',
+              },
+              {
+                displayName: 'z',
+                description: 'z coordinate',
+                kind: 2,
+                visibility: 'private',
+              },
+            ],
+            description: 'constructor implementation',
+            kind: 21,
+          },
+        ],
+      },
+    });
+  });
   it('arrow function', () => {
     const results = parseCode(`
 export class ArrowFunctionClass {

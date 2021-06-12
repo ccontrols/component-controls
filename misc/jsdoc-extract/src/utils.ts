@@ -221,6 +221,7 @@ export const isVoidProp = (prop: PropType): prop is VoidProp => {
 
 export interface ClassProp extends PropType {
   implements?: InterfaceProp[];
+  extends?: string[];
   generics?: PropType[];
   properties?: PropType[];
 }
@@ -230,6 +231,7 @@ export const isClassProp = (prop: PropType): prop is ClassProp => {
 };
 
 export interface InterfaceProp extends PropType {
+  extends?: string[];
   properties?: PropType[];
   generics?: PropType[];
 }
@@ -239,6 +241,7 @@ export const isInterfaceProp = (prop: PropType): prop is InterfaceProp => {
 };
 
 export interface TypeProp extends PropType {
+  extends?: string[];
   properties?: PropType[];
   generics?: PropType[];
   type?: PropType;
@@ -326,19 +329,20 @@ export const isValueProp = (prop: PropType): prop is ValueProp => {
   );
 };
 
-export type ObjectLikeProp =
-  | ClassProp
-  | InterfaceProp
-  | TypeProp
-  | EnumProp
-  | ObjectProp
-  | IndexProp;
+export type ClassLikeProp = ClassProp | InterfaceProp | TypeProp;
 
-export const isObjectLikeProp = (prop: PropType): prop is ObjectLikeProp => {
+export const isClassLikeProp = (prop: PropType): prop is ClassLikeProp => {
   return (
     prop.kind === PropKind.Class ||
     prop.kind === PropKind.Interface ||
-    prop.kind === PropKind.Type ||
+    prop.kind === PropKind.Type
+  );
+};
+export type ObjectLikeProp = ClassLikeProp | EnumProp | ObjectProp | IndexProp;
+
+export const isObjectLikeProp = (prop: PropType): prop is ObjectLikeProp => {
+  return (
+    isClassLikeProp(prop) ||
     prop.kind === PropKind.Index ||
     prop.kind === PropKind.Enum ||
     prop.kind === PropKind.Object

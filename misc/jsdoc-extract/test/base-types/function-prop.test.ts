@@ -281,6 +281,7 @@ export function paintHomeyBear({ m, honey = true }: ExtendT): Bear {
               },
             },
           ],
+          extends: ['Internal', 'Home'],
           displayName: 'Bear',
         },
       },

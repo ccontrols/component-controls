@@ -307,6 +307,7 @@ export interface IndexInterface {
       Bear: {
         description: 'interface extending another one',
         displayName: 'Bear',
+        extends: ['Internal', 'Home'],
         kind: 14,
         properties: [
           {

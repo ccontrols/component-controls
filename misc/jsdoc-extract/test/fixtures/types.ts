@@ -80,21 +80,6 @@ export class PredicateClass<T> {
 /**
  * parameter modifiers
  */
-export class ParameterModifiers {
-  /**
-   * constructor implementation
-   * @param x x coordinate
-   * @param y y coordinate
-   * @param z z coordinate
-   */
-  constructor(
-    public readonly x: number,
-    protected y: number,
-    private z: number,
-  ) {
-    // No body necessary
-  }
-}
 
 export abstract class AbstraclClass {
   abstract getName(): string;
@@ -107,11 +92,6 @@ export class ComponentGenericsWithDefault<
   state: State;
 }
 
-export class ReactComponent extends React.Component {
-  render(): React.Node {
-    return <span>Hello, {this.props.name}!</span>;
-  }
-}
 export class ReactGenerics extends React.Component<GreetingProps, any> {
   render() {
     return <span>Hello, {this.props.name}!</span>;
