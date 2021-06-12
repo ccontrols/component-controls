@@ -1,19 +1,3 @@
-export class ClassIndexSignature {
-  /**
-   * class index
-   */
-  [s: string]: boolean | ((s: string) => boolean);
-
-  /**
-   *
-   * @param s input string
-   * @returns { boolean } returns the chec return value
-   */
-  check(s: string) {
-    return this[s] as boolean;
-  }
-}
-
 /**
  * class implements an interface
  */
@@ -44,28 +28,6 @@ export class ClassExtends extends ClassImplements {
   }
 }
 
-export class MemberVisibikity {
-  /**
-   * a public method
-   */
-  public method1() {}
-  /**
-   * a protected method
-   */
-
-  protected method2() {}
-  /**
-   * a private method
-   */
-
-  private method3() {}
-}
-
-export class ClassStatic {
-  static x = 0;
-  static printX() {}
-}
-
 export class GenericClass<Type> {
   contents: Type;
   /**
@@ -75,20 +37,6 @@ export class GenericClass<Type> {
   constructor(value: Type) {
     this.contents = value;
   }
-}
-
-export class ArrowFunctionClass {
-  /**
-   * name value initialzied
-   */
-  name = 'MyClass';
-  /**
-   * name accessor
-   * @returns a string value
-   */
-  getName = (): string => {
-    return this.name;
-  };
 }
 
 export class ThisBasedClass {

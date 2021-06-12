@@ -215,7 +215,6 @@ export interface InterfaceWithEnumConstant {
               'Removes the last element from an array and returns it.',
             displayName: 'pop',
             kind: 11,
-            parameters: [],
             returns: {
               kind: 4,
               properties: [

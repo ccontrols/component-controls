@@ -1,5 +1,187 @@
 import { parseCode } from '../../src/index';
 describe('class', () => {
+  it('arrow function', () => {
+    const results = parseCode(`
+export class ArrowFunctionClass {
+  /**
+   * name value initialzied
+   */
+  name = 'MyClass';
+  /**
+   * name accessor
+   * @returns a string value
+   */
+  getName = (): string => {
+    return this.name;
+  };
+}
+`);
+    expect(results).toEqual({
+      ArrowFunctionClass: {
+        displayName: 'ArrowFunctionClass',
+        kind: 13,
+        properties: [
+          {
+            description: 'name value initialzied',
+            kind: 1,
+            displayName: 'name',
+            value: 'MyClass',
+          },
+          {
+            returns: {
+              description: 'a string value',
+              kind: 1,
+            },
+            description: 'name accessor',
+            displayName: 'getName',
+            kind: 11,
+          },
+        ],
+      },
+    });
+  });
+  it('static members', () => {
+    const results = parseCode(`
+export class ClassStatic {
+  static x = 0;
+  static printX() {}
+}
+  `);
+    expect(results).toEqual({
+      ClassStatic: {
+        displayName: 'ClassStatic',
+        kind: 13,
+        properties: [
+          {
+            kind: 2,
+            static: true,
+            displayName: 'x',
+            value: 0,
+          },
+          {
+            static: true,
+            displayName: 'printX',
+            kind: 11,
+          },
+        ],
+      },
+    });
+  });
+  it('member visibility', () => {
+    const results = parseCode(`
+export class MemberVisibikity {
+  /**
+   * a public method
+   */
+  public method1() {}
+  /**
+   * a protected method
+   */
+
+  protected method2() {}
+  /**
+   * a private method
+   */
+
+  private method3() {}
+}
+`);
+    expect(results).toEqual({
+      MemberVisibikity: {
+        displayName: 'MemberVisibikity',
+        kind: 13,
+        properties: [
+          {
+            description: 'a public method',
+            visibility: 'public',
+            displayName: 'method1',
+            kind: 11,
+          },
+          {
+            description: 'a protected method',
+            visibility: 'protected',
+            displayName: 'method2',
+            kind: 11,
+          },
+          {
+            description: 'a private method',
+            visibility: 'private',
+            displayName: 'method3',
+            kind: 11,
+          },
+        ],
+      },
+    });
+  });
+  it('index signature', () => {
+    const results = parseCode(`
+export class ClassIndexSignature {
+  /**
+   * class index
+   */
+  [s: string]: boolean | ((s: string) => boolean);
+
+  /**
+   *
+   * @param s input string
+   * @returns { boolean } returns the chec return value
+   */
+  check(s: string) {
+    return this[s] as boolean;
+  }
+}
+`);
+    expect(results).toEqual({
+      ClassIndexSignature: {
+        displayName: 'ClassIndexSignature',
+        kind: 13,
+        properties: [
+          {
+            description: 'class index',
+            kind: 20,
+            index: {
+              kind: 1,
+              displayName: 's',
+            },
+            type: {
+              kind: 4,
+              properties: [
+                {
+                  kind: 3,
+                },
+                {
+                  kind: 11,
+                  parameters: [
+                    {
+                      kind: 1,
+                      displayName: 's',
+                    },
+                  ],
+                  returns: {
+                    kind: 3,
+                  },
+                },
+              ],
+            },
+          },
+          {
+            returns: {
+              description: 'returns the chec return value',
+            },
+            parameters: [
+              {
+                displayName: 's',
+                description: 'input string',
+                kind: 1,
+              },
+            ],
+            displayName: 'check',
+            kind: 11,
+          },
+        ],
+      },
+    });
+  });
   it('getters/setters', () => {
     const results = parseCode(`
 export class ClassGetters {
@@ -33,7 +215,6 @@ export class ClassGetters {
           {
             description: 'getter description',
             kind: 22,
-            parameters: [],
             returns: {
               kind: 2,
             },
@@ -43,6 +224,7 @@ export class ClassGetters {
               {
                 kind: 2,
                 displayName: 'value',
+                description: 'the new value',
               },
             ],
             description: 'setter description',
@@ -75,7 +257,6 @@ export class GreeterInitializedMembers {
           {
             displayName: 'err',
             kind: 11,
-            parameters: [],
             returns: {
               kind: 12,
             },

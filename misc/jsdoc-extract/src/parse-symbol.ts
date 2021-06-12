@@ -117,18 +117,19 @@ export class SymbolParser {
           }
         }
       }
-      const propType = this.withJsDocNode({}, p);
-      const propValue = this.parseValue(propType, p);
-      addProp(propValue);
+      const prop = this.parseTypeAndValue({}, p, p);
+      addProp(prop);
     }
     return results;
   }
   parseFunction(prop: PropType, node: FunctionLike): PropType {
     prop.kind = tsKindToPropKind[node.kind];
     if (isFunctionBaseType(prop)) {
-      prop.parameters = this.parseProperties(node.parameters);
+      if (node.parameters.length) {
+        prop.parameters = this.parseProperties(node.parameters);
+      }
       if (node.type) {
-        prop.returns = this.withJsDocNode({}, node.type);
+        prop.returns = this.parseTypeAndValue({}, node.type);
       }
       if (node.typeParameters?.length) {
         prop.types = this.parseProperties(node.typeParameters);
@@ -190,9 +191,11 @@ export class SymbolParser {
         if (!prop.kind) {
           prop.kind = PropKind.Boolean;
         }
-        (prop as BooleanProp).value = Boolean(
-          (node as ts.LiteralLikeNode).text,
-        );
+        if ('text' in node) {
+          (prop as BooleanProp).value = Boolean(
+            (node as ts.LiteralLikeNode).text,
+          );
+        }
       } else if (isAnyProp(prop)) {
         if (typeof (node as ts.LiteralLikeNode)?.text !== 'undefined') {
           prop.kind = PropKind.Undefined;
@@ -239,7 +242,7 @@ export class SymbolParser {
             prop.index = parsed;
           }
         }
-        prop.type = this.withJsDocNode({}, node.type);
+        prop.type = this.parseTypeAndValue({}, node.type);
       } else if (isHasType(node) && node.type) {
         if (node.type?.kind && tsKindToPropKind[node.type.kind]) {
           prop.kind = tsKindToPropKind[node.type.kind];
@@ -247,7 +250,7 @@ export class SymbolParser {
         if (hasGenerics(prop) && isGenericsType(node) && node.typeParameters) {
           prop.generics = this.parseProperties(node.typeParameters);
         }
-        return this.withJsDocNode(prop, node.type);
+        return this.parseTypeAndValue(prop, node.type);
       } else if (ts.isExportAssignment(node)) {
         const symbol = this.checker.getSymbolAtLocation(node.expression);
         if (symbol) {
@@ -300,7 +303,7 @@ export class SymbolParser {
           if (tsKindToPropKind[t.kind]) {
             childProp.kind = tsKindToPropKind[t.kind];
           }
-          const parent = this.withJsDocNode(childProp, t);
+          const parent = this.parseTypeAndValue(childProp, t);
           this.extendProperties(parent, properties);
         });
         (prop as TypeProp).properties = properties;
@@ -350,13 +353,13 @@ export class SymbolParser {
         }
         prop.kind = PropKind.Type;
       } else if (ts.isLiteralTypeNode(node)) {
-        return this.withJsDocNode(prop, node.literal);
+        return this.parseTypeAndValue(prop, node.literal);
       } else if (ts.isOptionalTypeNode(node)) {
         prop.optional = true;
-        return this.withJsDocNode(prop, node.type);
+        return this.parseTypeAndValue(prop, node.type);
       } else if (ts.isRestTypeNode(node)) {
         prop.kind = PropKind.Rest;
-        (prop as RestProp).type = this.withJsDocNode({}, node.type);
+        (prop as RestProp).type = this.parseTypeAndValue({}, node.type);
       } else if (ts.isUnionTypeNode(node)) {
         prop.kind = PropKind.Union;
         (prop as UnionProp).properties = this.parseProperties(node.types);
@@ -402,8 +405,7 @@ export class SymbolParser {
     }
     return prop;
   }
-
-  withJsDocNode(prop: PropType, node?: ts.Node): PropType {
+  mergePropComments(prop: PropType, node?: ts.Node): PropType {
     if (node && 'jsDoc' in node) {
       const { jsDoc } = node as { jsDoc: JSDocInfoType[] };
       const docs: {
@@ -441,12 +443,7 @@ export class SymbolParser {
       const commented = mergeJSDocComments(typedProp, allComments);
       return commented;
     }
-
-    const result = this.parseType(prop, node);
-    if (node && ts.isLiteralTypeNode(node)) {
-      return this.parseValue(result, node.literal);
-    }
-    return result;
+    return prop;
   }
   private annotateProp(
     symbol: ts.Symbol,
@@ -507,11 +504,21 @@ export class SymbolParser {
       : undefined;
     return { prop, name, declaration, initializer };
   }
+  parseTypeAndValue(
+    prop: PropType,
+    declaration?: ts.Node,
+    initializer?: ts.Node,
+  ): PropType {
+    let type = this.parseType(prop, declaration);
+    if (declaration && ts.isLiteralTypeNode(declaration)) {
+      type = this.parseValue(type, declaration.literal);
+    }
+    const final = this.parseValue(type, initializer);
+    return this.mergePropComments(final, declaration);
+  }
   parseNamedSymbol(symbol: ts.Symbol): PropType {
     const { prop, declaration, initializer } = this.annotateProp(symbol);
-    const type = this.withJsDocNode(prop, declaration);
-    const final = this.parseValue(type, initializer);
-    return final;
+    return this.parseTypeAndValue(prop, declaration, initializer);
   }
   parseSymbol(
     symbol: ts.Symbol,
