@@ -59,14 +59,14 @@ export const tsKindToPropKind: { [key in ts.SyntaxKind]?: PropKind } = {
   [ts.SyntaxKind.TypeLiteral]: PropKind.Type,
   [ts.SyntaxKind.TypeReference]: PropKind.Type,
   [ts.SyntaxKind.CallSignature]: PropKind.Function,
-  [ts.SyntaxKind.ConstructSignature]: PropKind.Function,
+  [ts.SyntaxKind.ConstructSignature]: PropKind.Constructor,
   [ts.SyntaxKind.MethodSignature]: PropKind.Function,
   [ts.SyntaxKind.FunctionDeclaration]: PropKind.Function,
   [ts.SyntaxKind.FunctionType]: PropKind.Function,
   [ts.SyntaxKind.MethodDeclaration]: PropKind.Function,
-  [ts.SyntaxKind.Constructor]: PropKind.Function,
-  [ts.SyntaxKind.GetAccessor]: PropKind.Function,
-  [ts.SyntaxKind.SetAccessor]: PropKind.Function,
+  [ts.SyntaxKind.Constructor]: PropKind.Constructor,
+  [ts.SyntaxKind.GetAccessor]: PropKind.Getter,
+  [ts.SyntaxKind.SetAccessor]: PropKind.Setter,
   [ts.SyntaxKind.FunctionExpression]: PropKind.Function,
   [ts.SyntaxKind.ArrowFunction]: PropKind.Function,
   [ts.SyntaxKind.TypePredicate]: PropKind.Type,
@@ -101,6 +101,9 @@ export const isGenericsType = (node: ts.Node): node is GenericsType =>
 
 export type FunctionLike =
   | ts.FunctionDeclaration
+  | ts.ConstructorDeclaration
+  | ts.GetAccessorDeclaration
+  | ts.SetAccessorDeclaration
   | ts.ArrowFunction
   | ts.FunctionTypeNode
   | ts.MethodSignature
@@ -110,6 +113,9 @@ export const isFunctionLike = (node: ts.Node): node is FunctionLike => {
   return (
     node.kind === ts.SyntaxKind.FunctionDeclaration ||
     node.kind === ts.SyntaxKind.ArrowFunction ||
+    node.kind === ts.SyntaxKind.Constructor ||
+    node.kind === ts.SyntaxKind.GetAccessor ||
+    node.kind === ts.SyntaxKind.SetAccessor ||
     node.kind === ts.SyntaxKind.FunctionType ||
     node.kind === ts.SyntaxKind.MethodSignature ||
     node.kind === ts.SyntaxKind.MethodDeclaration

@@ -21,7 +21,7 @@ import {
   TupleProp,
   ObjectProp,
   RestProp,
-  isFunctionProp,
+  isFunctionBaseType,
 } from './utils';
 import {
   isVariableLikeDeclaration,
@@ -101,11 +101,20 @@ export class SymbolParser {
         !ts.isHeritageClause(p) &&
         p.name
       ) {
-        const symbol = this.checker.getSymbolAtLocation(p.name);
-        if (symbol) {
-          const prop = this.parseNamedSymbol(symbol);
-          addProp(prop);
-          continue;
+        const name = p.name.getText();
+        //locate property overrides.
+        //when multiple properties with the smaer name, symbol returns the same symbol for all of them.
+        // thus can not get their properties and comments
+        const numProps = properties.filter(
+          f => (f as ts.TypeElement).name?.getText() === name,
+        );
+        if (numProps.length <= 1) {
+          const symbol = this.checker.getSymbolAtLocation(p.name);
+          if (symbol) {
+            const prop = this.parseNamedSymbol(symbol);
+            addProp(prop);
+            continue;
+          }
         }
       }
       const propType = this.withJsDocNode({}, p);
@@ -116,7 +125,7 @@ export class SymbolParser {
   }
   parseFunction(prop: PropType, node: FunctionLike): PropType {
     prop.kind = tsKindToPropKind[node.kind];
-    if (isFunctionProp(prop)) {
+    if (isFunctionBaseType(prop)) {
       prop.parameters = this.parseProperties(node.parameters);
       if (node.type) {
         prop.returns = this.withJsDocNode({}, node.type);

@@ -71,6 +71,7 @@ export interface PropType {
 }
 
 export interface ObjectProp extends PropType {
+  kind: PropKind.Object;
   properties?: PropType[];
   value?: PropType[];
 }
@@ -80,6 +81,7 @@ export const isObjectProp = (prop: PropType): prop is ObjectProp => {
 };
 
 export interface StringProp extends PropType {
+  kind: PropKind.String;
   value?: string;
 }
 
@@ -88,6 +90,7 @@ export const isStringProp = (prop: PropType): prop is StringProp => {
 };
 
 export interface NumberProp extends PropType {
+  kind: PropKind.Number;
   value?: number;
 }
 
@@ -96,6 +99,7 @@ export const isNumberProp = (prop: PropType): prop is NumberProp => {
 };
 
 export interface BooleanProp extends PropType {
+  kind: PropKind.Boolean;
   value?: boolean;
 }
 
@@ -104,6 +108,7 @@ export const isBooleanProp = (prop: PropType): prop is BooleanProp => {
 };
 
 export interface UnionProp extends PropType {
+  kind: PropKind.Union;
   properties?: PropType[];
   value?: any;
 }
@@ -121,6 +126,7 @@ export const isEnumProp = (prop: PropType): prop is EnumProp => {
 };
 
 export interface RestProp extends PropType {
+  kind: PropKind.Rest;
   type?: PropType;
 }
 
@@ -129,6 +135,7 @@ export const isRestProp = (prop: PropType): prop is RestProp => {
 };
 
 export interface TupleProp extends PropType {
+  kind: PropKind.Tuple;
   properties?: PropType[];
 }
 
@@ -137,6 +144,7 @@ export const isTupleProp = (prop: PropType): prop is TupleProp => {
 };
 
 export interface UndefinedProp extends PropType {
+  kind: PropKind.Undefined;
   value?: undefined;
 }
 
@@ -145,6 +153,7 @@ export const isUndefinedProp = (prop: PropType): prop is UndefinedProp => {
 };
 
 export interface UnknownProp extends PropType {
+  kind: PropKind.Unknown;
   value?: unknown;
 }
 
@@ -153,6 +162,7 @@ export const isUnknownProp = (prop: PropType): prop is UnknownProp => {
 };
 
 export interface NullProp extends PropType {
+  kind: PropKind.Null;
   value?: null;
 }
 
@@ -160,25 +170,45 @@ export const isNullProp = (prop: PropType): prop is NullProp => {
   return prop.kind === PropKind.Null;
 };
 
-export interface FunctionProp extends PropType {
+export interface BaseFunctionProp extends PropType {
   parameters?: PropType[];
   returns?: PropType;
   types?: PropType[];
 }
 
-export type ConstructorProp = FunctionProp;
+export interface FunctionProp extends BaseFunctionProp {
+  kind: PropKind.Function;
+}
 
-export type GetterProp = FunctionProp;
-export type SetterProp = FunctionProp;
+export interface ConstructorProp extends BaseFunctionProp {
+  kind: PropKind.Constructor;
+}
 
-export type PredicateProp = FunctionProp;
+export interface GetterProp extends BaseFunctionProp {
+  kind: PropKind.Getter;
+}
+export interface SetterProp extends BaseFunctionProp {
+  kind: PropKind.Getter;
+}
+
+export interface PredicateProp extends BaseFunctionProp {
+  kind: PropKind.Predicate;
+}
 
 export const isFunctionProp = (prop: PropType): prop is FunctionProp => {
   return prop.kind === PropKind.Function;
 };
 
-export const isFunctionType = (prop: PropType): prop is FunctionProp => {
-  return prop.kind === PropKind.Function;
+export const isFunctionBaseType = (
+  prop: PropType,
+): prop is BaseFunctionProp => {
+  return (
+    prop.kind === PropKind.Function ||
+    prop.kind === PropKind.Constructor ||
+    prop.kind === PropKind.Getter ||
+    prop.kind === PropKind.Setter ||
+    prop.kind === PropKind.Predicate
+  );
 };
 
 export interface VoidProp extends PropType {
