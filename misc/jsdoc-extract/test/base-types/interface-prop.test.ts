@@ -1,5 +1,76 @@
 import { parseCode } from '../../src/index';
 describe('interface', () => {
+  it('coombination properties', () => {
+    const results = parseCode(`
+    export interface StringNumberPair {
+      /**
+       *  specialized properties
+       */
+      length: 2;
+      0: string;
+      1: number;
+      /**
+       *  Other 'Array<string | number>' members...
+       */
+      slice(start?: number, end?: number): Array<string | number>;
+    }
+`);
+    expect(results).toEqual({
+      StringNumberPair: {
+        displayName: 'StringNumberPair',
+        kind: 14,
+        properties: [
+          {
+            description: 'specialized properties',
+            displayName: 'length',
+            kind: 2,
+            value: 2,
+          },
+          {
+            kind: 1,
+            displayName: '0',
+          },
+          {
+            kind: 2,
+            displayName: '1',
+          },
+          {
+            description: "Other 'Array<string | number>' members...",
+            displayName: 'slice',
+            kind: 11,
+            parameters: [
+              {
+                kind: 2,
+                optional: true,
+                displayName: 'start',
+              },
+              {
+                kind: 2,
+                optional: true,
+                displayName: 'end',
+              },
+            ],
+            returns: {
+              kind: 16,
+              elements: [
+                {
+                  kind: 4,
+                  properties: [
+                    {
+                      kind: 1,
+                    },
+                    {
+                      kind: 2,
+                    },
+                  ],
+                },
+              ],
+            },
+          },
+        ],
+      },
+    });
+  });
   it('generic type', () => {
     const results = parseCode(`
 export interface GenericInterface<Type> {
