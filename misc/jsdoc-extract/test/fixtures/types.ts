@@ -1,26 +1,3 @@
-/**
- * print coordinates
- * @param pt object parameter
- */
-
-export function printCoord(pt: {
-  /**
-   * x coordinate
-   */
-  x: number;
-  /**
-   * optional y coordinate
-   */
-  y?: number;
-}): void {
-  console.log("The coordinate's x value is " + pt.x);
-  console.log("The coordinate's y value is " + pt.y);
-}
-
-export function printId(id: number | string): void {
-  console.log('Your ID is: ' + id);
-}
-
 export function paintHomeyBear({ m, honey = true }: ExtendT): Bear {
   return { honey, m };
 }

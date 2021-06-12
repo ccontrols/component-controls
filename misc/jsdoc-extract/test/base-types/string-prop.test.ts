@@ -1,18 +1,5 @@
 import { parseCode } from '../../src/index';
 describe('string', () => {
-  it('initializer', () => {
-    const results = parseCode(`
-export const s = 'a';
-  
-`);
-    expect(results).toEqual({
-      s: {
-        kind: 1,
-        value: 'a',
-        displayName: 's',
-      },
-    });
-  });
   it('default export', () => {
     const results = parseCode(`
   let mystring: string;
@@ -26,6 +13,20 @@ export const s = 'a';
       },
     });
   });
+  it('initializer', () => {
+    const results = parseCode(`
+export const s = 'a';
+  
+`);
+    expect(results).toEqual({
+      s: {
+        kind: 1,
+        value: 'a',
+        displayName: 's',
+      },
+    });
+  });
+
   it('type', () => {
     const results = parseCode(`
   let mystring: string;

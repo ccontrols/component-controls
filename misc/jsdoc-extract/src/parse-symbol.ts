@@ -251,7 +251,6 @@ export class SymbolParser {
           if (symbol) {
             return this.parseNamedSymbol(symbol);
           }
-        } else {
         }
       } else if (isObjectTypeDeclaration(node)) {
         if (!prop.kind) {
@@ -433,21 +432,26 @@ export class SymbolParser {
     declaration?: ts.Node;
     initializer?: ts.Node;
   } {
-    const declaration = symbol.valueDeclaration || symbol.declarations[0];
-
     let kind: PropKind | undefined = undefined;
-    const typeDeclared = this.checker.getDeclaredTypeOfSymbol(symbol);
-    if (!(typeDeclared.flags & ts.TypeFlags.Any)) {
-      kind = typeNameToPropKind(
-        this.checker.typeToString(typeDeclared, declaration),
-      );
-    } else {
-      const typeSymbol = this.checker.getTypeOfSymbolAtLocation(
-        symbol,
-        declaration,
-      );
-      kind = typeNameToPropKind(this.checker.typeToString(typeSymbol));
-    }
+
+    const typeOfSymbol = this.checker.getTypeOfSymbolAtLocation(
+      symbol,
+      symbol.valueDeclaration || symbol.declarations[0],
+    );
+    const typeSymbol = typeOfSymbol.symbol || typeOfSymbol.aliasSymbol;
+
+    const symbolDeclaration = symbol.valueDeclaration || symbol.declarations[0];
+    const typeDeclaration = typeSymbol
+      ? typeSymbol.valueDeclaration || typeSymbol.declarations[0]
+      : undefined;
+
+    const declaration =
+      typeDeclaration &&
+      (ts.isExportAssignment(symbolDeclaration) ||
+        ts.isExportSpecifier(symbolDeclaration))
+        ? typeDeclaration
+        : symbolDeclaration;
+    kind = typeNameToPropKind(this.checker.typeToString(typeOfSymbol));
     const name = symbol.getName();
     const prop: PropType = {};
     if (kind !== undefined) {

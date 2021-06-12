@@ -1,5 +1,84 @@
 import { parseCode } from '../../src/index';
 describe('function', () => {
+  it('union parameter', () => {
+    const results = parseCode(`
+    const printId = (id: number | string): void => {}
+    export { printId };
+  `);
+    expect(results).toEqual({
+      printId: {
+        displayName: 'printId',
+        kind: 11,
+        parameters: [
+          {
+            displayName: 'id',
+            kind: 4,
+            properties: [
+              {
+                kind: 2,
+              },
+              {
+                kind: 1,
+              },
+            ],
+          },
+        ],
+        returns: {
+          kind: 12,
+        },
+      },
+    });
+  });
+
+  it('object parameter', () => {
+    const results = parseCode(`
+    /**
+     * print coordinates
+     * @param pt object parameter
+     */
+  
+    export function printCoord(pt: {
+      /**
+       * x coordinate
+       */
+      x: number;
+      /**
+       * optional y coordinate
+       */
+      y?: number;
+    }): void {}
+`);
+    expect(results).toEqual({
+      printCoord: {
+        parameters: [
+          {
+            displayName: 'pt',
+            description: 'object parameter',
+            kind: 15,
+            properties: [
+              {
+                description: 'x coordinate',
+                kind: 2,
+                displayName: 'x',
+              },
+              {
+                description: 'optional y coordinate',
+                kind: 2,
+                optional: true,
+                displayName: 'y',
+              },
+            ],
+          },
+        ],
+        description: 'print coordinates',
+        displayName: 'printCoord',
+        kind: 11,
+        returns: {
+          kind: 12,
+        },
+      },
+    });
+  });
   it('jsdoc parameter', () => {
     const results = parseCode(`
     /**
