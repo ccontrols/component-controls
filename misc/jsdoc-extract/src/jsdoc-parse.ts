@@ -18,6 +18,7 @@ export const mergeJSDocComments = (
     const parsed = jsdocCommentToMember(comments);
     if (parsed) {
       return deepmerge<PropType>(parsed, prop || {}, {
+        clone: false,
         arrayMerge: (dest: any[], src: any[]) => {
           const result =
             src.length > 0
@@ -29,10 +30,10 @@ export const mergeJSDocComments = (
                           p => p.displayName === (s as PropType).displayName,
                         );
                   if (existingIdx >= 0) {
-                    return {
+                    Object.assign(s, {
                       ...dest[existingIdx],
                       ...s,
-                    };
+                    });
                   }
                   return s;
                 })

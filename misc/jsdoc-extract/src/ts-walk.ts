@@ -1,29 +1,32 @@
 import * as ts from 'typescript';
-import { PropTypes } from './utils';
+import { tsDefaults, PropTypes, DocsOptions } from './utils';
 import { SymbolParser } from './parse-symbol';
 
 export const anaylizeFiles = (
   fileNames: string[],
-  options: ts.CompilerOptions,
+  options: DocsOptions = {},
+  names?: string[],
 ): PropTypes => {
-  const program = ts.createProgram(fileNames, options);
+  const { tsOptions, ...parseOptions } = options;
+  const program = ts.createProgram(fileNames, tsOptions || tsDefaults);
 
   // Get the checker, we will use it to find more about classes
   const checker = program.getTypeChecker();
-  const parser = new SymbolParser(checker);
-  const modules: ts.Symbol[] = [];
+  const parser = new SymbolParser(checker, parseOptions);
   const props: PropTypes = {};
   // Visit every sourceFile in the program
   for (const sourceFile of program.getSourceFiles()) {
     const module = checker.getSymbolAtLocation(sourceFile);
     if (module) {
-      modules.push(module);
       if (!sourceFile.isDeclarationFile) {
         const exports = checker.getExportsOfModule(module);
         exports.forEach(e => {
-          const { name, prop } = parser.parseSymbol(e);
-          if (name) {
-            props[name] = prop;
+          const symbolName = e.name;
+          if (!names || names.includes(symbolName)) {
+            const { name, prop } = parser.parseSymbol(e);
+            if (name) {
+              props[name] = prop;
+            }
           }
         });
       }

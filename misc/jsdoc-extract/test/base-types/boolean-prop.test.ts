@@ -5,12 +5,7 @@ describe('boolean', () => {
 let bool: boolean = true;
 export { bool };
     `);
-    expect(results).toEqual({
-      bool: {
-        kind: 3,
-        displayName: 'bool',
-      },
-    });
+    expect(results).toEqual({ bool: { kind: 3, displayName: 'bool' } });
   });
   it('false boolean', () => {
     const results = parseCode(`

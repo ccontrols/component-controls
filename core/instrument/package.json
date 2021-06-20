@@ -40,7 +40,6 @@
     "@mdx-js/loader": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "camelcase": "^6.0.0",
-    "deepmerge": "^4.2.2",
     "find-cache-dir": "^3.3.1",
     "gitlog": "^4.0.4",
     "gray-matter": "^4.0.2",

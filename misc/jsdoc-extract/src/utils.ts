@@ -1,8 +1,37 @@
 import * as ts from 'typescript';
 
-export type ParseOptions = {
+export type CompileOptions = {
   tsOptions?: ts.CompilerOptions;
 };
+export type ParseOptions = {
+  typeResolver?: TypeResolver;
+  internalTypes?: string[];
+};
+
+export const defaultParseOptions: ParseOptions = {
+  typeResolver: ({ symbolType }) => {
+    const properties = symbolType.getProperties();
+    if (properties.length && properties[0].escapedName === 'prototype') {
+      return undefined;
+    }
+    return symbolType;
+  },
+  internalTypes: [
+    'Function',
+    'CallableFunction',
+    'NewableFunction',
+    'String',
+    'Boolean',
+    'Booleanish',
+    'Number',
+    'Array',
+    'ConcatArray',
+    'ReadonlyArray',
+    'TemplateStringsArray',
+  ],
+};
+
+export type DocsOptions = CompileOptions & ParseOptions;
 export interface JSDocTypeTag {
   type?: string;
   description?: string;
@@ -12,13 +41,6 @@ export interface JSDocExample {
   caption?: string;
   content?: string;
 }
-export type JSImport = {
-  name?: string;
-  module: string;
-  namedImports?: Record<string, string>;
-};
-
-export type JSImports = JSImport[];
 
 export enum PropKind {
   Object = 0,
@@ -53,7 +75,8 @@ export interface PropType {
    */
   kind?: PropKind;
   displayName?: string;
-  parent?: PropType;
+  parent?: string | PropType;
+  propParents?: Record<string, PropType>;
   optional?: boolean;
   readonly?: boolean;
   abstract?: boolean;
@@ -127,7 +150,6 @@ export const isEnumProp = (prop: PropType): prop is EnumProp => {
 
 export interface RestProp extends PropType {
   kind: PropKind.Rest;
-  type?: PropType;
 }
 
 export const isRestProp = (prop: PropType): prop is RestProp => {
@@ -244,7 +266,6 @@ export interface TypeProp extends PropType {
   extends?: string[];
   properties?: PropType[];
   generics?: PropType[];
-  type?: PropType;
 }
 
 export const isTypeProp = (prop: PropType): prop is TypeProp => {
@@ -349,15 +370,12 @@ export const isObjectLikeProp = (prop: PropType): prop is ObjectLikeProp => {
   );
 };
 export type PropTypes = Record<string, PropType>;
-export type JSAnalyzeResults = {
-  imports: JSImports;
-  structures: PropTypes;
-};
 
-export type FrameworkPlugin = (
-  name: string,
-  jsDocs: JSAnalyzeResults,
-) => PropType | undefined;
+export type TypeResolver = (props: {
+  symbolType: ts.Type;
+  declaration: ts.Declaration;
+  checker: ts.TypeChecker;
+}) => ts.Type | undefined;
 
 export const typeNameToPropKind = (type: string): PropKind | undefined => {
   const loopup: Record<string, PropKind> = {
@@ -380,7 +398,36 @@ export type JSDocInfoType = {
   comment?: string;
   tags?: {
     comment: string;
-    name: { text: string };
+    name: { text: string; getText: () => string };
     tagName: { text: string };
   }[];
+};
+
+export const getSymbolType = (
+  checker: ts.TypeChecker,
+  symbol: ts.Symbol,
+): ts.Type | undefined => {
+  const declaration = symbol.valueDeclaration || symbol.declarations?.[0];
+  const type = checker.getTypeOfSymbolAtLocation(symbol, declaration);
+  if (
+    !('intrinsicName' in type) ||
+    ((type as unknown) as { intrinsicName: string }).intrinsicName !== 'error'
+  ) {
+    return type;
+  }
+  const symbolType = checker.getDeclaredTypeOfSymbol(symbol);
+  if (
+    !('intrinsicName' in symbolType) ||
+    ((symbolType as unknown) as { intrinsicName: string }).intrinsicName !==
+      'error'
+  ) {
+    return symbolType;
+  }
+  return undefined;
+};
+
+export const tsDefaults = {
+  jsx: ts.JsxEmit.React,
+  module: ts.ModuleKind.CommonJS,
+  target: ts.ScriptTarget.Latest,
 };

@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, BaseHTMLAttributes } from 'react';
 /**
- * Column properties.
+ * own properties.
  */
-export interface ColumnProps {
+type OwnProps = {
   /** stringProp description */
   stringProp?: string;
+
   /** numberProp description */
   numberProp: number;
   /**
@@ -17,13 +18,13 @@ export interface ColumnProps {
    * @deprecated since version 1.0
    */
   unionProp: 'option1' | 'option2' | 'option3';
-}
+} & BaseHTMLAttributes<HTMLDivElement>;
 
 /**
  * Column description
  */
-export class Column extends Component<ColumnProps, Record<string, unknown>> {
-  public static defaultProps: Partial<ColumnProps> = {
+export class Column extends Component<OwnProps, Record<string, unknown>> {
+  public static defaultProps: Partial<OwnProps> = {
     stringProp: 'prop1',
   };
 

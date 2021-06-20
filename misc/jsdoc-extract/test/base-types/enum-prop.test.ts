@@ -59,9 +59,15 @@ export enum InitializedEnum {
     expect(results).toEqual({
       InitializedEnum: {
         description: 'this is an enum with an initialized element',
-        displayName: 'InitializedEnum',
         kind: 5,
+        displayName: 'InitializedEnum',
         properties: [
+          {
+            kind: 20,
+            index: {
+              kind: 2,
+            },
+          },
           {
             description: 'enum starts at 1',
             displayName: 'Up',

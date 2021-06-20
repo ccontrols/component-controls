@@ -211,7 +211,10 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
             }
             // Ignore an invalid tag missing a description.
             if (tagDescriptionTrimmed) {
-              result.see.unshift(tagDescriptionTrimmed);
+              const seeTag = tagDescriptionTrimmed.startsWith(':')
+                ? tagDescriptionTrimmed.substring(1)
+                : tagDescriptionTrimmed;
+              result.see.unshift(seeTag);
             }
             break;
           }

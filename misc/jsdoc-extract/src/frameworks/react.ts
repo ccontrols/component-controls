@@ -1,105 +1,73 @@
-import {
-  FrameworkPlugin,
-  PropType,
-  PropTypes,
-  JSImports,
-  isClassProp,
-  isFunctionProp,
-  FunctionProp,
-  ClassProp,
-  JSAnalyzeResults,
-} from '../utils';
-import { walkProps } from '../utils/resolve-props';
+import * as ts from 'typescript';
+import { TypeResolver, getSymbolType } from '../utils';
+import { isObjectTypeDeclaration } from '../ts-utils';
 
-const reactImport = (
-  names: PropType[],
-  imports: JSImports,
-): PropType | undefined => {
-  const reactImports = imports.filter(i => i.module === 'react');
-  const foundReact = names?.find(({ name }) => {
-    const nameParts = name?.split('.');
-    if (nameParts) {
-      const namedImport = nameParts.pop();
-      const defaultImport = nameParts.length ? nameParts[0] : null;
-      if (namedImport) {
-        return reactImports.some(
-          i => i.name === defaultImport || i.namedImports?.[namedImport],
-        );
+const getIdentifierParent = (
+  node: ts.Node,
+): ts.ImportSpecifier | ts.ImportClause | ts.ModuleDeclaration | undefined => {
+  let parent = node;
+  while (parent.parent) {
+    if (
+      'name' in parent &&
+      (ts.isImportSpecifier(parent) ||
+        ts.isImportClause(parent) ||
+        ts.isModuleDeclaration(parent))
+    ) {
+      return parent;
+    }
+    parent = parent.parent;
+  }
+  return undefined;
+};
+
+export interface ReactResolveOptions {
+  componentNames?: string[];
+  reactNames?: string[];
+}
+export const typeResolver: TypeResolver = (
+  { symbolType, declaration, checker },
+  reactOptions?: ReactResolveOptions,
+) => {
+  const options: Required<ReactResolveOptions> = {
+    componentNames: ['Component'],
+    reactNames: ['React'],
+    ...reactOptions,
+  };
+  if ((symbolType.flags & ts.TypeFlags.Object) === ts.TypeFlags.Object) {
+    if (isObjectTypeDeclaration(declaration)) {
+      const heritage = declaration.heritageClauses;
+      if (heritage?.length) {
+        const extendsFrom = heritage[0];
+        const reactComponent = extendsFrom.types.find(t => {
+          const reactSymbol = checker.getSymbolAtLocation(t.expression);
+          if (reactSymbol) {
+            const reactDeclaration =
+              reactSymbol.valueDeclaration || reactSymbol.declarations?.[0];
+            if (reactDeclaration) {
+              const component = getIdentifierParent(reactDeclaration);
+              if (
+                component &&
+                component.parent &&
+                component.name &&
+                (options.componentNames.includes(component.name.getText()) ||
+                  options.reactNames.includes(component.name.getText()))
+              ) {
+                return true;
+              }
+            }
+          }
+          return false;
+        });
+        if (reactComponent) {
+          const signatures = symbolType.getConstructSignatures();
+          if (signatures.length > 0 && signatures[0].parameters.length) {
+            const props = signatures[0].parameters[0];
+
+            return getSymbolType(checker, props) || symbolType;
+          }
+        }
       }
     }
-    return false;
-  });
-  return foundReact;
-};
-const reactClassComponent = (
-  prop: PropType,
-  imports: JSImports,
-): ClassProp | undefined => {
-  if (isClassProp(prop)) {
-    const classes = prop.extends?.filter(i => i.name);
-    if (classes) {
-      return reactImport(classes, imports);
-    }
   }
-  return undefined;
-};
-
-const reactFunctionComponent = (
-  prop: PropType,
-  imports: JSImports,
-): FunctionProp | undefined => {
-  if (isFunctionProp(prop)) {
-    if (prop.types) {
-      return reactImport(prop.types, imports);
-    }
-    if (prop.parameters?.length) {
-      return {
-        parameters: prop.parameters,
-      } as FunctionProp;
-    }
-  }
-
-  return undefined;
-};
-const reactComponent = (
-  component: PropType,
-  imports: JSImports,
-): PropType | undefined => {
-  return (
-    reactClassComponent(component, imports) ||
-    reactFunctionComponent(component, imports)
-  );
-};
-const componentToProps = (
-  props: PropTypes,
-  typeProp: ClassProp | FunctionProp,
-): PropType[] => {
-  const classProp = typeProp as ClassProp;
-  if (classProp.properties?.length) {
-    return walkProps(props, classProp.properties[0]);
-  }
-  const fnProp = typeProp as FunctionProp;
-  if (fnProp.parameters?.length) {
-    return walkProps(props, fnProp.parameters[0]);
-  }
-  return [];
-};
-export const extractProps: FrameworkPlugin = (
-  name: string,
-  jsDocs: JSAnalyzeResults,
-) => {
-  const component = jsDocs.structures[name];
-  if (component) {
-    const typeProp = reactComponent(component, jsDocs.imports);
-    if (typeProp) {
-      const reactComponent = { ...component } as ClassProp;
-      reactComponent.properties = componentToProps(jsDocs.structures, typeProp);
-      delete (reactComponent as FunctionProp).parameters;
-      delete reactComponent.extends;
-      delete reactComponent.implements;
-      return reactComponent;
-    }
-    return component;
-  }
-  return undefined;
+  return symbolType;
 };

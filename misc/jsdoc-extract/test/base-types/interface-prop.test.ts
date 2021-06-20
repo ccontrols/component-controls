@@ -1,5 +1,54 @@
 import { parseCode } from '../../src/index';
 describe('interface', () => {
+  it('enum prop', () => {
+    const results = parseCode(`  
+enum StringEnums {
+  Up: 'UP',
+}
+export interface InterfaceWithEnumConstant {
+    /**
+     * kind is an enumm constant
+     */
+    kind: StringEnums.Up;
+    /**
+     * radius property
+     */
+    radius: number;
+  }
+`);
+    expect(results).toEqual({
+      InterfaceWithEnumConstant: {
+        displayName: 'InterfaceWithEnumConstant',
+        kind: 14,
+        properties: [
+          {
+            displayName: 'Up',
+            kind: 5,
+            description: 'kind is an enumm constant',
+            parent: {
+              displayName: 'StringEnums',
+              kind: 5,
+              properties: [
+                {
+                  displayName: 'Up',
+                  kind: 5,
+                },
+                {
+                  displayName: "'UP'",
+                  kind: 5,
+                },
+              ],
+            },
+          },
+          {
+            kind: 2,
+            displayName: 'radius',
+            description: 'radius property',
+          },
+        ],
+      },
+    });
+  });
   it('coombination properties', () => {
     const results = parseCode(`
     export interface StringNumberPair {
@@ -96,46 +145,7 @@ export interface GenericInterface<Type> {
       },
     });
   });
-  it('enum prop', () => {
-    const results = parseCode(`  
-enum StringEnums {
-  Up: 'UP',
-}
-export interface InterfaceWithEnumConstant {
-    /**
-     * kind is an enumm constant
-     */
-    kind: StringEnums.Up;
-    /**
-     * radius property
-     */
-    radius: number;
-  }
-`);
-    expect(results).toEqual({
-      InterfaceWithEnumConstant: {
-        displayName: 'InterfaceWithEnumConstant',
-        kind: 14,
-        properties: [
-          {
-            description: 'kind is an enumm constant',
-            displayName: 'kind',
-            kind: 15,
-            parent: {
-              displayName: 'StringEnums',
-              kind: 5,
-            },
-            type: 'Up',
-          },
-          {
-            description: 'radius property',
-            kind: 2,
-            displayName: 'radius',
-          },
-        ],
-      },
-    });
-  });
+
   it('jsdoc default value', () => {
     const results = parseCode(`  
   export interface Interface {

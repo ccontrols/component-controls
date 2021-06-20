@@ -1,23 +1,68 @@
 import { parseCode } from '../../src/index';
 describe('class', () => {
-  it('react component', () => {
+  it('index signature', () => {
     const results = parseCode(`
-import React from 'react';
+export class ClassIndexSignature {
+  /**
+   * class index
+   */
+  [s: string]: boolean | ((s: string) => boolean);
 
-export class ReactComponent extends React.Component {
-  render() {
-    return <span>Hello, {this.props.name}!</span>;
+  /**
+   *
+   * @param s input string
+   * @returns { boolean } returns the value
+   */
+  check(s: string) {
+    return this[s] as boolean;
   }
 }
-  `);
+`);
     expect(results).toEqual({
-      ReactComponent: {
-        displayName: 'ReactComponent',
+      ClassIndexSignature: {
+        displayName: 'ClassIndexSignature',
         kind: 13,
-        extends: ['React.Component'],
         properties: [
           {
-            displayName: 'render',
+            description: 'class index',
+            kind: 20,
+            index: {
+              kind: 1,
+              displayName: 's',
+            },
+            type: {
+              kind: 4,
+              properties: [
+                {
+                  kind: 3,
+                },
+                {
+                  kind: 11,
+                  parameters: [
+                    {
+                      kind: 1,
+                      displayName: 's',
+                    },
+                  ],
+                  returns: {
+                    kind: 3,
+                  },
+                },
+              ],
+            },
+          },
+          {
+            returns: {
+              description: 'returns the value',
+            },
+            parameters: [
+              {
+                displayName: 's',
+                description: 'input string',
+                kind: 1,
+              },
+            ],
+            displayName: 'check',
             kind: 11,
           },
         ],
@@ -76,6 +121,80 @@ export class ParameterModifiers {
       },
     });
   });
+  it('constructor', () => {
+    const results = parseCode(`
+export class ClassWithConstrunctor {
+  name: string;
+
+  /**
+   * constructor description
+   */
+  constructor(x?: string) {
+    this.name = x;
+  }
+}
+`);
+    expect(results).toEqual({
+      ClassWithConstrunctor: {
+        displayName: 'ClassWithConstrunctor',
+        kind: 13,
+        properties: [
+          {
+            kind: 1,
+            displayName: 'name',
+          },
+          {
+            description: 'constructor description',
+            kind: 21,
+            parameters: [
+              {
+                kind: 1,
+                optional: true,
+                displayName: 'x',
+              },
+            ],
+          },
+        ],
+      },
+    });
+  });
+  it('simple class', () => {
+    const results = parseCode(`
+/**
+ * this is a class with two members
+ */
+export class Point {
+  /**
+   * COORDINATE X
+   */
+  x: number;
+  /**
+   * COORDINATE Y
+   */
+  y: number;
+}
+`);
+    expect(results).toEqual({
+      Point: {
+        description: 'this is a class with two members',
+        displayName: 'Point',
+        kind: 13,
+        properties: [
+          {
+            description: 'COORDINATE X',
+            kind: 2,
+            displayName: 'x',
+          },
+          {
+            description: 'COORDINATE Y',
+            kind: 2,
+            displayName: 'y',
+          },
+        ],
+      },
+    });
+  });
+
   it('arrow function', () => {
     const results = parseCode(`
 export class ArrowFunctionClass {
@@ -189,75 +308,7 @@ export class MemberVisibikity {
       },
     });
   });
-  it('index signature', () => {
-    const results = parseCode(`
-export class ClassIndexSignature {
-  /**
-   * class index
-   */
-  [s: string]: boolean | ((s: string) => boolean);
 
-  /**
-   *
-   * @param s input string
-   * @returns { boolean } returns the chec return value
-   */
-  check(s: string) {
-    return this[s] as boolean;
-  }
-}
-`);
-    expect(results).toEqual({
-      ClassIndexSignature: {
-        displayName: 'ClassIndexSignature',
-        kind: 13,
-        properties: [
-          {
-            description: 'class index',
-            kind: 20,
-            index: {
-              kind: 1,
-              displayName: 's',
-            },
-            type: {
-              kind: 4,
-              properties: [
-                {
-                  kind: 3,
-                },
-                {
-                  kind: 11,
-                  parameters: [
-                    {
-                      kind: 1,
-                      displayName: 's',
-                    },
-                  ],
-                  returns: {
-                    kind: 3,
-                  },
-                },
-              ],
-            },
-          },
-          {
-            returns: {
-              description: 'returns the chec return value',
-            },
-            parameters: [
-              {
-                displayName: 's',
-                description: 'input string',
-                kind: 1,
-              },
-            ],
-            displayName: 'check',
-            kind: 11,
-          },
-        ],
-      },
-    });
-  });
   it('getters/setters', () => {
     const results = parseCode(`
 export class ClassGetters {
@@ -336,80 +387,6 @@ export class GreeterInitializedMembers {
             returns: {
               kind: 12,
             },
-          },
-        ],
-      },
-    });
-  });
-
-  it('constructor', () => {
-    const results = parseCode(`
-export class ClassWithConstrunctor {
-  name: string;
-
-  /**
-   * constructor description
-   */
-  constructor(x?: string) {
-    this.name = x;
-  }
-}
-`);
-    expect(results).toEqual({
-      ClassWithConstrunctor: {
-        displayName: 'ClassWithConstrunctor',
-        kind: 13,
-        properties: [
-          {
-            kind: 1,
-            displayName: 'name',
-          },
-          {
-            description: 'constructor description',
-            kind: 21,
-            parameters: [
-              {
-                kind: 1,
-                optional: true,
-                displayName: 'x',
-              },
-            ],
-          },
-        ],
-      },
-    });
-  });
-  it('simple class', () => {
-    const results = parseCode(`
-/**
- * this is a class with two members
- */
-export class Point {
-  /**
-   * COORDINATE X
-   */
-  x: number;
-  /**
-   * COORDINATE Y
-   */
-  y: number;
-}
-`);
-    expect(results).toEqual({
-      Point: {
-        description: 'this is a class with two members',
-        displayName: 'Point',
-        kind: 13,
-        properties: [
-          {
-            description: 'COORDINATE X',
-            kind: 2,
-            displayName: 'x',
-          },
-          {
-            description: 'COORDINATE Y',
-            kind: 2,
-            displayName: 'y',
           },
         ],
       },

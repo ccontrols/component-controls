@@ -53,8 +53,16 @@ export const isHasType = (node: ts.Node): node is ts.HasType => {
 };
 
 export const tsKindToPropKind: { [key in ts.SyntaxKind]?: PropKind } = {
+  [ts.SyntaxKind.StringKeyword]: PropKind.String,
+  [ts.SyntaxKind.StringLiteral]: PropKind.String,
+  [ts.SyntaxKind.NumberKeyword]: PropKind.Number,
+  [ts.SyntaxKind.NumericLiteral]: PropKind.Number,
+  [ts.SyntaxKind.BooleanKeyword]: PropKind.Boolean,
+  [ts.SyntaxKind.EnumDeclaration]: PropKind.Enum,
+  [ts.SyntaxKind.UnionType]: PropKind.Union,
   [ts.SyntaxKind.ClassDeclaration]: PropKind.Class,
   [ts.SyntaxKind.ClassExpression]: PropKind.Class,
+  [ts.SyntaxKind.ClassDeclaration]: PropKind.Class,
   [ts.SyntaxKind.InterfaceDeclaration]: PropKind.Interface,
   [ts.SyntaxKind.TypeLiteral]: PropKind.Type,
   [ts.SyntaxKind.TypeReference]: PropKind.Type,
@@ -80,24 +88,26 @@ export const tsKindToPropKind: { [key in ts.SyntaxKind]?: PropKind } = {
 export type ObjectTypeDeclaration =
   | ts.ClassDeclaration
   | ts.ClassExpression
-  | ts.InterfaceDeclaration
-  | ts.TypeLiteralNode;
+  | ts.InterfaceDeclaration;
 export const isObjectTypeDeclaration = (
   node: ts.Node,
 ): node is ObjectTypeDeclaration => {
   return (
     node.kind === ts.SyntaxKind.ClassDeclaration ||
     node.kind === ts.SyntaxKind.ClassExpression ||
-    node.kind === ts.SyntaxKind.InterfaceDeclaration ||
-    node.kind === ts.SyntaxKind.TypeLiteral
+    node.kind === ts.SyntaxKind.InterfaceDeclaration
   );
 };
 
-export type GenericsType = ObjectTypeDeclaration | ts.TypeAliasDeclaration;
-
-export const isGenericsType = (node: ts.Node): node is GenericsType =>
+export type TypeParameterType = ObjectTypeDeclaration | ts.TypeAliasDeclaration;
+export const isTypeParameterType = (node: ts.Node): node is TypeParameterType =>
   isObjectTypeDeclaration(node) ||
   node.kind === ts.SyntaxKind.TypeAliasDeclaration;
+
+export type GenericsType = TypeParameterType | ts.TypeLiteralNode;
+
+export const isGenericsType = (node: ts.Node): node is GenericsType =>
+  isTypeParameterType(node) || node.kind === ts.SyntaxKind.TypeLiteral;
 
 export type FunctionLike =
   | ts.FunctionDeclaration
@@ -133,4 +143,17 @@ export const isArrayLike = (node: ts.Node): node is ArrayLike => {
     node.kind === ts.SyntaxKind.ArrayLiteralExpression ||
     (ts.isTypeReferenceNode(node) && node.typeName.getText() === 'Array')
   );
+};
+
+export const finObjectTypeParent = (
+  node: ts.Node,
+): TypeParameterType | ts.EnumDeclaration | undefined => {
+  let parent = node.parent;
+  while (parent) {
+    if (isTypeParameterType(parent) || ts.isEnumDeclaration(parent)) {
+      return parent;
+    }
+    parent = parent.parent;
+  }
+  return undefined;
 };
