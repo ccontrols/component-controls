@@ -79,15 +79,18 @@ export class SymbolParser {
     }
     return prop;
   }
-  getParent(prop: PropType, node: ts.Node): PropType | undefined {
+  getParent(
+    prop: InternalPropType,
+    node: ts.Node,
+  ): PropType | undefined | false {
     const parent = node ? finObjectTypeParent(node) : undefined;
     if (parent) {
       const parentName = parent.name ? parent.name.getText() : undefined;
       if (parentName) {
-        if (
-          !this.options.internalTypes.includes(parentName) &&
-          parentName !== (prop as InternalPropType).parentName
-        ) {
+        if (!this.options.internalTypes.includes(parentName)) {
+          if (parentName === prop.parentName) {
+            return false;
+          }
           const propParent = { displayName: parentName };
           this.parseType(propParent, parent);
           Object.assign(propParent, this.mergePropComments(propParent, parent));
@@ -576,24 +579,25 @@ export class SymbolParser {
                   { parentName: prop.displayName } as InternalPropType,
                   d,
                 );
-
-                const p = this.parseNamedSymbol(
-                  { parentName: prop.displayName } as InternalPropType,
-                  s,
-                );
-                if (p) {
-                  delete (p as InternalPropType).parentName;
-                  if (parent && parent.displayName) {
-                    const parentName = parent.displayName;
-                    p.parent = parentName;
-                    if (!prop.propParents) {
-                      prop.propParents = {};
+                if (parent !== undefined) {
+                  const p = this.parseNamedSymbol(
+                    { parentName: prop.displayName } as InternalPropType,
+                    s,
+                  );
+                  if (p) {
+                    delete (p as InternalPropType).parentName;
+                    if (parent && parent.displayName) {
+                      const parentName = parent.displayName;
+                      p.parent = parentName;
+                      if (!prop.propParents) {
+                        prop.propParents = {};
+                      }
+                      if (!prop.propParents[parentName]) {
+                        prop.propParents[parentName] = parent;
+                      }
                     }
-                    if (!prop.propParents[parentName]) {
-                      prop.propParents[parentName] = parent;
-                    }
+                    return p;
                   }
-                  return p;
                 }
                 return undefined;
               })
