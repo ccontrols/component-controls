@@ -551,37 +551,45 @@ export class SymbolParser {
             : undefined;
           if (resolvedDeclaration) {
             const aProps = resolvedType.getApparentProperties();
-            const properties = aProps
-              .map(s => {
-                const d = s.valueDeclaration || s.declarations?.[0];
-                const parent = this.getParent(
-                  { parentName: prop.displayName } as InternalPropType,
-                  d,
+            const properties: PropType[] = [];
+            for (const childSymbol of aProps) {
+              const d =
+                childSymbol.valueDeclaration || childSymbol.declarations?.[0];
+              if (!d) {
+                //tuple members do not carry type information
+                return this.parseTypeValueComments(
+                  prop,
+                  declaration,
+                  initializer,
+                  top ? symbol : undefined,
                 );
-                if (parent !== undefined) {
-                  const p = this.parseSymbolProp(
-                    { parentName: prop.displayName } as InternalPropType,
-                    s,
-                    top,
-                  );
-                  if (p) {
-                    delete (p as InternalPropType).parentName;
-                    if (parent && parent.displayName) {
-                      const parentName = parent.displayName;
-                      p.parent = parentName;
-                      if (!prop.propParents) {
-                        prop.propParents = {};
-                      }
-                      if (!prop.propParents[parentName]) {
-                        prop.propParents[parentName] = parent;
-                      }
+              }
+              const parent = this.getParent(
+                { parentName: prop.displayName } as InternalPropType,
+                d,
+              );
+              if (parent !== undefined) {
+                const childProp = this.parseSymbolProp(
+                  { parentName: prop.displayName } as InternalPropType,
+                  childSymbol,
+                  top,
+                );
+                if (childProp) {
+                  delete (childProp as InternalPropType).parentName;
+                  if (parent && parent.displayName) {
+                    const parentName = parent.displayName;
+                    childProp.parent = parentName;
+                    if (!prop.propParents) {
+                      prop.propParents = {};
                     }
-                    return p;
+                    if (!prop.propParents[parentName]) {
+                      prop.propParents[parentName] = parent;
+                    }
                   }
+                  properties.push(childProp);
                 }
-                return undefined;
-              })
-              .filter(p => p) as PropType[];
+              }
+            }
             const stringIndex = resolvedType.getStringIndexType();
             if (stringIndex) {
               const indexProp = {
@@ -642,6 +650,7 @@ export class SymbolParser {
             if (!prop.displayName) {
               prop.displayName = symbol.getName();
             }
+
             prop = top
               ? this.mergeSymbolComments(prop, symbol)
               : this.mergeNodeComments(prop, declaration);
@@ -650,11 +659,12 @@ export class SymbolParser {
         }
       }
 
-      this.parseTypeValue(prop, declaration, initializer);
-      prop = top
-        ? this.mergeSymbolComments(prop, symbol)
-        : this.mergeNodeComments(prop, declaration);
-      return prop;
+      return this.parseTypeValueComments(
+        prop,
+        declaration,
+        initializer,
+        top ? symbol : undefined,
+      );
     }
     return prop;
   }
@@ -717,9 +727,14 @@ export class SymbolParser {
     prop: PropType,
     declaration?: ts.Node,
     initializer?: ts.Node,
+    symbol?: ts.Symbol,
   ): PropType {
     this.parseTypeValue(prop, declaration, initializer);
-    this.mergeNodeComments(prop, declaration);
+    if (symbol) {
+      this.mergeSymbolComments(prop, symbol);
+    } else {
+      this.mergeNodeComments(prop, declaration);
+    }
     return prop;
   }
 
