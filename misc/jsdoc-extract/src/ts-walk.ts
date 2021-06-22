@@ -21,12 +21,10 @@ export const anaylizeFiles = (
       if (!sourceFile.isDeclarationFile) {
         const exports = checker.getExportsOfModule(module);
         exports.forEach(e => {
-          const symbolName = e.name;
+          const symbolName = e.getName();
           if (!names || names.includes(symbolName)) {
-            const { name, prop } = parser.parseSymbol(e);
-            if (name) {
-              props[name] = prop;
-            }
+            const prop = parser.parseSymbol(e);
+            props[symbolName] = prop;
           }
         });
       }

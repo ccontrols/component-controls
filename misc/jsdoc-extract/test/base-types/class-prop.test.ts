@@ -11,7 +11,7 @@ export class ClassIndexSignature {
   /**
    *
    * @param s input string
-   * @returns { boolean } returns the value
+   * @returns {boolean} returns the value
    */
   check(s: string) {
     return this[s] as boolean;
@@ -69,6 +69,7 @@ export class ClassIndexSignature {
       },
     });
   });
+
   it('param modifiers', () => {
     const results = parseCode(`
 export class ParameterModifiers {
@@ -121,6 +122,78 @@ export class ParameterModifiers {
       },
     });
   });
+  it('initialized prop', () => {
+    const results = parseCode(`
+export class GreeterInitializedMembers {
+  readonly name: string = 'world';
+  err(): void {
+    console.log(this.name);
+  }
+}
+`);
+    expect(results).toEqual({
+      GreeterInitializedMembers: {
+        displayName: 'GreeterInitializedMembers',
+        kind: 13,
+        properties: [
+          {
+            kind: 1,
+            readonly: true,
+            displayName: 'name',
+            value: 'world',
+          },
+          {
+            displayName: 'err',
+            kind: 11,
+            returns: {
+              kind: 12,
+            },
+          },
+        ],
+      },
+    });
+  });
+  it('arrow function', () => {
+    const results = parseCode(`
+export class ArrowFunctionClass {
+  /**
+   * name value initialzied
+   */
+  name = 'MyClass';
+  /**
+   * name accessor
+   * @returns a string value
+   */
+  getName = (): string => {
+    return this.name;
+  };
+}
+`);
+    expect(results).toEqual({
+      ArrowFunctionClass: {
+        displayName: 'ArrowFunctionClass',
+        kind: 13,
+        properties: [
+          {
+            description: 'name value initialzied',
+            kind: 1,
+            displayName: 'name',
+            value: 'MyClass',
+          },
+          {
+            returns: {
+              description: 'a string value',
+              kind: 1,
+            },
+            description: 'name accessor',
+            displayName: 'getName',
+            kind: 11,
+          },
+        ],
+      },
+    });
+  });
+
   it('constructor', () => {
     const results = parseCode(`
 export class ClassWithConstrunctor {
@@ -195,46 +268,6 @@ export class Point {
     });
   });
 
-  it('arrow function', () => {
-    const results = parseCode(`
-export class ArrowFunctionClass {
-  /**
-   * name value initialzied
-   */
-  name = 'MyClass';
-  /**
-   * name accessor
-   * @returns a string value
-   */
-  getName = (): string => {
-    return this.name;
-  };
-}
-`);
-    expect(results).toEqual({
-      ArrowFunctionClass: {
-        displayName: 'ArrowFunctionClass',
-        kind: 13,
-        properties: [
-          {
-            description: 'name value initialzied',
-            kind: 1,
-            displayName: 'name',
-            value: 'MyClass',
-          },
-          {
-            returns: {
-              description: 'a string value',
-              kind: 1,
-            },
-            description: 'name accessor',
-            displayName: 'getName',
-            kind: 11,
-          },
-        ],
-      },
-    });
-  });
   it('static members', () => {
     const results = parseCode(`
 export class ClassStatic {
@@ -356,37 +389,6 @@ export class ClassGetters {
             ],
             description: 'setter description',
             kind: 23,
-          },
-        ],
-      },
-    });
-  });
-  it('initialized prop', () => {
-    const results = parseCode(`
-export class GreeterInitializedMembers {
-  readonly name: string = 'world';
-  err(): void {
-    console.log(this.name);
-  }
-}
-`);
-    expect(results).toEqual({
-      GreeterInitializedMembers: {
-        displayName: 'GreeterInitializedMembers',
-        kind: 13,
-        properties: [
-          {
-            kind: 1,
-            readonly: true,
-            displayName: 'name',
-            value: 'world',
-          },
-          {
-            displayName: 'err',
-            kind: 11,
-            returns: {
-              kind: 12,
-            },
           },
         ],
       },

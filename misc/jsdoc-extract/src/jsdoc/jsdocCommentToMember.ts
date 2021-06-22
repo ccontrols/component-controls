@@ -26,9 +26,9 @@ const trimNewlines = (s: string): string => {
  */
 export const jsdocCommentToMember = (comment: string): PropType | undefined => {
   const jsdoc = parse(
-    // Restore the start `/*` and end `*/` that the Babel parse result excludes,
-    // so that the JSDoc comment parser can accept it.
-    `/*${comment}*/`,
+    `/**
+    ${comment}
+    */`,
     defaultOptions,
   );
   for (const jsdocBlock of jsdoc) {
@@ -44,11 +44,7 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
 
         switch (tag.tag) {
           case 'kind':
-            if (
-              !result.kind &&
-              // Ignore an invalid tag missing a name.
-              tag.name
-            )
+            if (!result.kind && tag.name && typeNameToPropKind(tag.name))
               result.kind = typeNameToPropKind(tag.name);
 
             break;
@@ -72,7 +68,7 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
               if (!namepath) {
                 namepath = tag.name;
               }
-              if (!result.kind && tag.type) {
+              if (!result.kind && tag.type && typeNameToPropKind(tag.type)) {
                 result.kind = typeNameToPropKind(tag.type);
               }
             }
@@ -92,11 +88,7 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
 
             break;
           case 'type':
-            if (
-              !result.kind &&
-              // Ignore an invalid tag missing a type.
-              tag.type
-            ) {
+            if (!result.kind && tag.type && typeNameToPropKind(tag.type)) {
               result.kind = typeNameToPropKind(tag.type);
             }
             break;
@@ -129,7 +121,10 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
                 displayName: tag.name,
                 description: trimNewlines(tag.description),
               };
-              if (typeof tag.type !== 'undefined') {
+              if (
+                typeof tag.type !== 'undefined' &&
+                typeNameToPropKind(tag.type)
+              ) {
                 parameter.kind = typeNameToPropKind(tag.type);
               }
               if (typeof tag.default !== 'undefined') {
@@ -156,7 +151,10 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
                 displayName: tag.name,
                 description: trimNewlines(tag.description),
               };
-              if (typeof tag.type !== 'undefined') {
+              if (
+                typeof tag.type !== 'undefined' &&
+                typeNameToPropKind(tag.type)
+              ) {
                 property.kind = typeNameToPropKind(tag.type);
               }
               if (typeof tag.default !== 'undefined') {
@@ -178,7 +176,7 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
           case 'returns': {
             const ret: PropType = {};
 
-            if (tag.type) {
+            if (tag.type && typeNameToPropKind(tag.type)) {
               ret.kind = typeNameToPropKind(tag.type);
             }
             ret.description = trimNewlines(tag.description);

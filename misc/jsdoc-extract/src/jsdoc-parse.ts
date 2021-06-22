@@ -1,5 +1,5 @@
 import { Node } from '@babel/types';
-import { deepmerge } from '@component-controls/core';
+import deepmerge from 'deepmerge';
 import { PropType } from './utils';
 import { jsdocCommentToMember } from './jsdoc/jsdocCommentToMember';
 
@@ -17,7 +17,7 @@ export const mergeJSDocComments = (
   if (comments) {
     const parsed = jsdocCommentToMember(comments);
     if (parsed) {
-      return deepmerge<PropType>(parsed, prop || {}, {
+      const merged = deepmerge<PropType>(parsed, prop || {}, {
         clone: false,
         arrayMerge: (dest: any[], src: any[]) => {
           const result =
@@ -41,6 +41,7 @@ export const mergeJSDocComments = (
           return result;
         },
       });
+      return merged;
     }
   }
   return prop;

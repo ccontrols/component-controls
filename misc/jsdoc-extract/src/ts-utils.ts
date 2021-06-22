@@ -144,16 +144,3 @@ export const isArrayLike = (node: ts.Node): node is ArrayLike => {
     (ts.isTypeReferenceNode(node) && node.typeName.getText() === 'Array')
   );
 };
-
-export const finObjectTypeParent = (
-  node: ts.Node,
-): TypeParameterType | ts.EnumDeclaration | undefined => {
-  let parent = node.parent;
-  while (parent) {
-    if (isTypeParameterType(parent) || ts.isEnumDeclaration(parent)) {
-      return parent;
-    }
-    parent = parent.parent;
-  }
-  return undefined;
-};
