@@ -306,6 +306,7 @@ export class SymbolParser {
         }
       } else if (ts.isExportSpecifier(node)) {
         if (node.propertyName) {
+          prop.displayName = node.propertyName.getText();
           const symbol = this.checker.getSymbolAtLocation(node.propertyName);
           if (symbol) {
             return this.addRefSymbol(prop, symbol);
@@ -492,7 +493,6 @@ export class SymbolParser {
       if (symbolType) {
         kind = typeNameToPropKind(this.checker.typeToString(symbolType));
       }
-      const name = symbol.getName();
 
       if (kind !== undefined) {
         prop.kind = kind;
@@ -519,9 +519,6 @@ export class SymbolParser {
         }
       }
       //unnamed type literal
-      if (name !== '__type') {
-        prop.displayName = name;
-      }
       if ('name' in declaration) {
         const namedDeclaration = declaration as ts.NamedDeclaration;
         if (namedDeclaration.name) {
@@ -639,6 +636,7 @@ export class SymbolParser {
             }
             //any initializer values
             this.parseValue(prop, initializer);
+
             prop = top
               ? this.mergeSymbolComments(prop, symbol)
               : this.mergeNodeComments(prop, declaration);
@@ -747,7 +745,7 @@ export class SymbolParser {
               }
             } else {
               Object.assign(prop, rest);
-              if (prop.displayName) {
+              if (!isObjectLikeProp(prop) && prop.displayName) {
                 if (!prop.type && prop.displayName !== displayName) {
                   prop.type = displayName;
                 }
