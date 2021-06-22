@@ -2,6 +2,29 @@ import { parseCode } from '../../src/index';
 describe('tuple', () => {
   it('optional', () => {
     const results = parseCode(`
+    export type OptionalTuple = [number, number, number?];
+`);
+    expect(results).toEqual({
+      OptionalTuple: {
+        displayName: 'OptionalTuple',
+        kind: 6,
+        properties: [
+          {
+            kind: 2,
+          },
+          {
+            kind: 2,
+          },
+          {
+            optional: true,
+            kind: 2,
+          },
+        ],
+      },
+    });
+  });
+  it('optional', () => {
+    const results = parseCode(`
     export type SpreadTuple = [...boolean[], string, number];
 `);
     expect(results).toEqual({
@@ -30,29 +53,7 @@ describe('tuple', () => {
       },
     });
   });
-  it('optional', () => {
-    const results = parseCode(`
-    export type OptionalTuple = [number, number, number?];
-`);
-    expect(results).toEqual({
-      OptionalTuple: {
-        displayName: 'OptionalTuple',
-        kind: 6,
-        properties: [
-          {
-            kind: 2,
-          },
-          {
-            kind: 2,
-          },
-          {
-            optional: true,
-            kind: 2,
-          },
-        ],
-      },
-    });
-  });
+
   it('simple tuple', () => {
     const results = parseCode(`
 export type Tuple = [string, number];

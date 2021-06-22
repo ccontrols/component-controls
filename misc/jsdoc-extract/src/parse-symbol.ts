@@ -83,6 +83,9 @@ export class SymbolParser {
     prop: InternalPropType,
     node: ts.Node,
   ): PropType | false | undefined {
+    if (!node) {
+      return false;
+    }
     let parent = node.parent;
     if (ts.isPropertyAccessExpression(node)) {
       const parentName = node.expression.getText();
@@ -636,7 +639,9 @@ export class SymbolParser {
             }
             //any initializer values
             this.parseValue(prop, initializer);
-
+            if (!prop.displayName) {
+              prop.displayName = symbol.getName();
+            }
             prop = top
               ? this.mergeSymbolComments(prop, symbol)
               : this.mergeNodeComments(prop, declaration);
@@ -644,6 +649,7 @@ export class SymbolParser {
           }
         }
       }
+
       this.parseTypeValue(prop, declaration, initializer);
       prop = top
         ? this.mergeSymbolComments(prop, symbol)
@@ -745,7 +751,7 @@ export class SymbolParser {
               }
             } else {
               Object.assign(prop, rest);
-              if (!isObjectLikeProp(prop) && prop.displayName) {
+              if (prop.displayName) {
                 if (!prop.type && prop.displayName !== displayName) {
                   prop.type = displayName;
                 }
