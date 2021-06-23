@@ -95,10 +95,7 @@ export class SymbolParser {
         }
         const symbol = this.checker.getSymbolAtLocation(node.expression);
         if (symbol) {
-          const parent = this.parseSymbolProp(
-            { displayName: parentName },
-            symbol,
-          );
+          const parent = this.addRefSymbol({ displayName: parentName }, symbol);
           return parent;
         }
       }
@@ -115,7 +112,7 @@ export class SymbolParser {
           if (parent.name) {
             const symbol = this.checker.getSymbolAtLocation(parent.name);
             if (symbol) {
-              return this.parseSymbolProp(propParent, symbol);
+              return this.addRefSymbol(propParent, symbol);
             }
           }
           return this.parseTypeValueComments(propParent, parent);
