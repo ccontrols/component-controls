@@ -73,47 +73,47 @@ export class SymbolParser {
     return prop;
   }
   getParent(
-    prop: PropType,
     parentProp: PropType,
-    node: ts.Node,
+    node?: ts.Node,
+    parentName?: string,
   ): PropType | false | undefined {
     if (!node) {
       return false;
     }
     const addParentRef = (parent: PropType, symbol: ts.Symbol) => {
-      const parentName = parent.displayName;
-      if (parentName) {
+      const name = parent.displayName;
+      if (name) {
         if (!parentProp.propParents) {
           parentProp.propParents = {};
         }
-        if (!parentProp.propParents[parentName]) {
-          parentProp.propParents[parentName] = parent;
+        if (!parentProp.propParents[name]) {
+          parentProp.propParents[name] = parent;
         }
       }
       return this.addRefSymbol(parent, symbol);
     };
     let parent = node.parent;
     if (ts.isPropertyAccessExpression(node)) {
-      const parentName = node.expression.getText();
-      if (!this.options.internalTypes.includes(parentName)) {
-        if (parentName === prop.parent) {
+      const name = node.expression.getText();
+      if (!this.options.internalTypes.includes(name)) {
+        if (name === parentName || name === parentProp.parent) {
           return false;
         }
         const symbol = this.checker.getSymbolAtLocation(node.expression);
         if (symbol) {
-          return addParentRef({ displayName: parentName }, symbol);
+          return addParentRef({ displayName: name }, symbol);
         }
       }
       return undefined;
     }
     while (parent) {
       if (isTypeParameterType(parent) || ts.isEnumDeclaration(parent)) {
-        const parentName = parent.name ? parent.name.getText() : undefined;
-        if (!parentName || !this.options.internalTypes.includes(parentName)) {
-          if (parentName === prop.parent) {
+        const name = parent.name ? parent.name.getText() : undefined;
+        if (!name || !this.options.internalTypes.includes(name)) {
+          if (name === parentName || name === parentProp.parent) {
             return false;
           }
-          const propParent = { displayName: parentName };
+          const propParent = { displayName: name };
           if (parent.name) {
             const symbol = this.checker.getSymbolAtLocation(parent.name);
             if (symbol) {
@@ -438,7 +438,7 @@ export class SymbolParser {
           node.members,
         );
       } else if (ts.isEnumMember(node)) {
-        const parent = this.getParent({ parent: prop.parent }, prop, node);
+        const parent = this.getParent(prop, node, prop.parent);
         if (parent) {
           prop.parent = parent.displayName;
         }
@@ -581,11 +581,7 @@ export class SymbolParser {
                   top ? symbol : undefined,
                 );
               }
-              const parent = this.getParent(
-                { parent: prop.displayName },
-                prop,
-                d,
-              );
+              const parent = this.getParent(prop, d, prop.displayName);
               if (parent !== undefined) {
                 const childProp = this.parseSymbolProp(
                   { parent: prop.displayName },
