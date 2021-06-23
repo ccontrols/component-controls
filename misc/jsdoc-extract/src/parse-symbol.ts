@@ -112,9 +112,13 @@ export class SymbolParser {
             return false;
           }
           const propParent = { displayName: parentName };
-          this.parseType(propParent, parent);
-          this.mergeNodeComments(propParent, parent);
-          return propParent;
+          if (parent.name) {
+            const symbol = this.checker.getSymbolAtLocation(parent.name);
+            if (symbol) {
+              return this.parseSymbolProp(propParent, symbol);
+            }
+          }
+          return this.parseTypeValueComments(propParent, parent);
         }
         return undefined;
       }
@@ -139,6 +143,20 @@ export class SymbolParser {
     types: PropType[] = [],
   ): PropType[] {
     const results: PropType[] = [...types];
+    const addProp = (prop: PropType) => {
+      const existingIdx = results.findIndex(
+        p =>
+          p.displayName &&
+          p.displayName === prop.displayName &&
+          p.kind === prop.kind &&
+          p.type === prop.type,
+      );
+      if (existingIdx >= 0) {
+        results[existingIdx] = { ...results[existingIdx], ...prop };
+      } else {
+        results.push(prop);
+      }
+    };
     for (const p of properties) {
       if (
         !ts.isTypeNode(p) &&
@@ -156,17 +174,14 @@ export class SymbolParser {
         if (numProps.length <= 1) {
           const symbol = this.checker.getSymbolAtLocation(p.name);
           if (symbol) {
-            const prop = this.addRefSymbol({}, symbol);
-            if (parent.displayName) {
-              (prop as InternalPropType).parentName = parent.displayName;
-            }
-            results.push(prop);
+            const prop = this.parseSymbolProp({}, symbol);
+            addProp(prop);
             continue;
           }
         }
       }
       const prop = this.parseTypeValueComments({}, p, p);
-      results.push(prop);
+      addProp(prop);
     }
     return results;
   }

@@ -1,5 +1,85 @@
 import { parseCode } from '../../src/index';
 describe('function', () => {
+  it('generic function parameter', () => {
+    const results = parseCode(`
+    interface GenericInterface<T> {
+      m: T;
+    }
+    export function genericFunction<Type>(
+      box: GenericInterface<Type>,
+      newContents: Type,
+    ): GenericInterface<Type> {}
+`);
+    expect(results).toEqual({
+      genericFunction: {
+        displayName: 'genericFunction',
+        kind: 11,
+        parameters: [
+          {
+            displayName: 'box',
+            propParents: {
+              GenericInterface: {
+                displayName: 'GenericInterface',
+                kind: 14,
+                generics: [
+                  {
+                    displayName: 'T',
+                  },
+                ],
+                properties: [
+                  {
+                    displayName: 'm',
+                    kind: 15,
+                    type: 'T',
+                  },
+                ],
+              },
+            },
+            kind: 14,
+            properties: [
+              {
+                displayName: 'm',
+                kind: 15,
+                parent: 'GenericInterface',
+                type: 'T',
+              },
+            ],
+            generics: [
+              {
+                displayName: 'T',
+              },
+            ],
+          },
+          {
+            displayName: 'newContents',
+            kind: 15,
+            type: 'Type',
+          },
+        ],
+        returns: {
+          kind: 14,
+          displayName: 'GenericInterface',
+          properties: [
+            {
+              displayName: 'm',
+              kind: 15,
+              type: 'T',
+            },
+          ],
+          generics: [
+            {
+              displayName: 'T',
+            },
+          ],
+        },
+        types: [
+          {
+            displayName: 'Type',
+          },
+        ],
+      },
+    });
+  });
   it('react fc', () => {
     const results = parseCode(`
     import React, { FC } from 'react';
@@ -15,101 +95,50 @@ describe('function', () => {
           FunctionComponent: {
             displayName: 'FunctionComponent',
             kind: 14,
+            properties: [
+              {
+                optional: true,
+                displayName: 'propTypes',
+                kind: 15,
+                generics: [
+                  {
+                    displayName: 'T',
+                  },
+                ],
+                type: 'WeakValidationMap',
+              },
+              {
+                optional: true,
+                displayName: 'contextTypes',
+                kind: 15,
+                generics: [
+                  {
+                    displayName: 'T',
+                  },
+                ],
+                type: 'ValidationMap',
+              },
+              {
+                optional: true,
+                displayName: 'defaultProps',
+                kind: 15,
+                generics: [
+                  {
+                    displayName: 'T',
+                  },
+                ],
+                description: 'Make all properties in T optional',
+                type: 'Partial',
+              },
+              {
+                optional: true,
+                displayName: 'displayName',
+                kind: 1,
+              },
+            ],
             generics: [
               {
                 displayName: 'P',
-              },
-            ],
-            properties: [
-              {
-                kind: 4,
-                properties: [
-                  {
-                    kind: 14,
-                    properties: [
-                      {
-                        displayName: 'type',
-                        kind: 15,
-                        type: 'T',
-                      },
-                      {
-                        displayName: 'props',
-                        kind: 15,
-                        type: 'P',
-                      },
-                      {
-                        displayName: 'key',
-                        kind: 4,
-                        properties: [
-                          {
-                            kind: 4,
-                            properties: [
-                              {
-                                kind: 1,
-                              },
-                              {
-                                kind: 2,
-                              },
-                            ],
-                            displayName: 'Key',
-                          },
-                          {
-                            kind: 10,
-                          },
-                        ],
-                      },
-                    ],
-                    generics: [
-                      {
-                        displayName: 'P',
-                      },
-                      {
-                        displayName: 'T',
-                      },
-                    ],
-                    displayName: 'ReactElement',
-                  },
-                  {
-                    kind: 10,
-                  },
-                ],
-              },
-              {
-                optional: true,
-                kind: 15,
-                generics: [
-                  {
-                    kind: 15,
-                    displayName: 'P',
-                  },
-                ],
-                displayName: 'propTypes',
-              },
-              {
-                optional: true,
-                kind: 15,
-                generics: [
-                  {
-                    kind: 17,
-                  },
-                ],
-                displayName: 'contextTypes',
-              },
-              {
-                optional: true,
-                kind: 15,
-                generics: [
-                  {
-                    kind: 15,
-                    displayName: 'P',
-                  },
-                ],
-                displayName: 'defaultProps',
-              },
-              {
-                optional: true,
-                kind: 1,
-                displayName: 'displayName',
               },
             ],
           },
@@ -167,6 +196,7 @@ describe('function', () => {
         ],
         parameters: [
           {
+            displayName: 'props',
             propParents: {
               Props: {
                 displayName: 'Props',
@@ -174,8 +204,8 @@ describe('function', () => {
                 properties: [
                   {
                     optional: true,
-                    kind: 1,
                     displayName: 'm',
+                    kind: 1,
                   },
                 ],
               },
@@ -185,8 +215,406 @@ describe('function', () => {
                 properties: [
                   {
                     optional: true,
-                    kind: 15,
                     displayName: 'children',
+                    kind: 4,
+                    properties: [
+                      {
+                        kind: 4,
+                        properties: [
+                          {
+                            kind: 14,
+                            properties: [
+                              {
+                                displayName: 'type',
+                                kind: 15,
+                                type: 'T',
+                              },
+                              {
+                                displayName: 'props',
+                                kind: 15,
+                                type: 'P',
+                              },
+                              {
+                                displayName: 'key',
+                                kind: 4,
+                                properties: [
+                                  {
+                                    kind: 4,
+                                    properties: [
+                                      {
+                                        kind: 1,
+                                      },
+                                      {
+                                        kind: 2,
+                                      },
+                                    ],
+                                    displayName: 'Key',
+                                  },
+                                  {
+                                    kind: 10,
+                                  },
+                                ],
+                              },
+                            ],
+                            generics: [
+                              {
+                                displayName: 'P',
+                              },
+                              {
+                                displayName: 'T',
+                              },
+                            ],
+                            displayName: 'ReactElement',
+                          },
+                          {
+                            kind: 4,
+                            properties: [
+                              {
+                                kind: 1,
+                              },
+                              {
+                                kind: 2,
+                              },
+                            ],
+                            displayName: 'ReactText',
+                          },
+                        ],
+                        displayName: 'ReactChild',
+                      },
+                      {
+                        kind: 4,
+                        properties: [
+                          {
+                            kind: 15,
+                          },
+                          {
+                            kind: 14,
+                            properties: [
+                              {
+                                kind: 20,
+                                index: {
+                                  kind: 2,
+                                },
+                              },
+                            ],
+                            displayName: 'ReactNodeArray',
+                          },
+                        ],
+                        displayName: 'ReactFragment',
+                      },
+                      {
+                        kind: 14,
+                        propParents: {
+                          ReactElement: {
+                            displayName: 'ReactElement',
+                            kind: 14,
+                            properties: [
+                              {
+                                displayName: 'type',
+                                kind: 15,
+                                type: 'T',
+                              },
+                              {
+                                displayName: 'props',
+                                kind: 15,
+                                type: 'P',
+                              },
+                              {
+                                displayName: 'key',
+                                kind: 4,
+                                properties: [
+                                  {
+                                    kind: 4,
+                                    properties: [
+                                      {
+                                        kind: 1,
+                                      },
+                                      {
+                                        kind: 2,
+                                      },
+                                    ],
+                                    displayName: 'Key',
+                                  },
+                                  {
+                                    kind: 10,
+                                  },
+                                ],
+                              },
+                            ],
+                            generics: [
+                              {
+                                displayName: 'P',
+                              },
+                              {
+                                displayName: 'T',
+                              },
+                            ],
+                          },
+                        },
+                        properties: [
+                          {
+                            displayName: 'key',
+                            kind: 4,
+                            properties: [
+                              {
+                                kind: 4,
+                                properties: [
+                                  {
+                                    kind: 1,
+                                  },
+                                  {
+                                    kind: 2,
+                                  },
+                                ],
+                                displayName: 'Key',
+                              },
+                              {
+                                kind: 10,
+                              },
+                            ],
+                          },
+                          {
+                            displayName: 'children',
+                            kind: 4,
+                            properties: [
+                              {
+                                kind: 4,
+                                properties: [
+                                  {
+                                    kind: 14,
+                                    properties: [
+                                      {
+                                        displayName: 'type',
+                                        kind: 15,
+                                        type: 'T',
+                                      },
+                                      {
+                                        displayName: 'props',
+                                        kind: 15,
+                                        type: 'P',
+                                      },
+                                      {
+                                        displayName: 'key',
+                                        kind: 4,
+                                        properties: [
+                                          {
+                                            kind: 4,
+                                            properties: [
+                                              {
+                                                kind: 1,
+                                              },
+                                              {
+                                                kind: 2,
+                                              },
+                                            ],
+                                            displayName: 'Key',
+                                          },
+                                          {
+                                            kind: 10,
+                                          },
+                                        ],
+                                      },
+                                    ],
+                                    generics: [
+                                      {
+                                        displayName: 'P',
+                                      },
+                                      {
+                                        displayName: 'T',
+                                      },
+                                    ],
+                                    displayName: 'ReactElement',
+                                  },
+                                  {
+                                    kind: 4,
+                                    properties: [
+                                      {
+                                        kind: 1,
+                                      },
+                                      {
+                                        kind: 2,
+                                      },
+                                    ],
+                                    displayName: 'ReactText',
+                                  },
+                                ],
+                                displayName: 'ReactChild',
+                              },
+                              {
+                                kind: 4,
+                                properties: [
+                                  {
+                                    kind: 15,
+                                  },
+                                  {
+                                    kind: 14,
+                                    properties: [
+                                      {
+                                        kind: 20,
+                                        index: {
+                                          kind: 2,
+                                        },
+                                      },
+                                    ],
+                                    displayName: 'ReactNodeArray',
+                                  },
+                                ],
+                                displayName: 'ReactFragment',
+                              },
+                              {
+                                kind: 14,
+                                propParents: {
+                                  ReactElement: {
+                                    displayName: 'ReactElement',
+                                    kind: 14,
+                                    properties: [
+                                      {
+                                        displayName: 'type',
+                                        kind: 15,
+                                        type: 'T',
+                                      },
+                                      {
+                                        displayName: 'props',
+                                        kind: 15,
+                                        type: 'P',
+                                      },
+                                      {
+                                        displayName: 'key',
+                                        kind: 4,
+                                        properties: [
+                                          {
+                                            kind: 4,
+                                            properties: [
+                                              {
+                                                kind: 1,
+                                              },
+                                              {
+                                                kind: 2,
+                                              },
+                                            ],
+                                            displayName: 'Key',
+                                          },
+                                          {
+                                            kind: 10,
+                                          },
+                                        ],
+                                      },
+                                    ],
+                                    generics: [
+                                      {
+                                        displayName: 'P',
+                                      },
+                                      {
+                                        displayName: 'T',
+                                      },
+                                    ],
+                                  },
+                                },
+                                properties: [
+                                  {
+                                    displayName: 'key',
+                                    kind: 4,
+                                    properties: [
+                                      {
+                                        kind: 4,
+                                        properties: [
+                                          {
+                                            kind: 1,
+                                          },
+                                          {
+                                            kind: 2,
+                                          },
+                                        ],
+                                        displayName: 'Key',
+                                      },
+                                      {
+                                        kind: 10,
+                                      },
+                                    ],
+                                  },
+                                  {
+                                    displayName: 'children',
+                                    kind: 4,
+                                    properties: [
+                                      {
+                                        kind: 15,
+                                      },
+                                      {
+                                        kind: 15,
+                                      },
+                                      {
+                                        kind: 15,
+                                      },
+                                      {
+                                        kind: 3,
+                                      },
+                                      {
+                                        kind: 10,
+                                      },
+                                      {
+                                        kind: 8,
+                                      },
+                                    ],
+                                    type: 'ReactNode',
+                                  },
+                                  {
+                                    displayName: 'type',
+                                    kind: 15,
+                                    parent: 'ReactElement',
+                                    type: 'T',
+                                  },
+                                  {
+                                    displayName: 'props',
+                                    kind: 15,
+                                    parent: 'ReactElement',
+                                    type: 'P',
+                                  },
+                                ],
+                                displayName: 'ReactPortal',
+                              },
+                              {
+                                kind: 3,
+                              },
+                              {
+                                kind: 10,
+                              },
+                              {
+                                kind: 8,
+                              },
+                            ],
+                            type: 'ReactNode',
+                          },
+                          {
+                            displayName: 'type',
+                            kind: 15,
+                            parent: 'ReactElement',
+                            type: 'T',
+                          },
+                          {
+                            displayName: 'props',
+                            kind: 15,
+                            parent: 'ReactElement',
+                            type: 'P',
+                          },
+                        ],
+                        displayName: 'ReactPortal',
+                      },
+                      {
+                        kind: 3,
+                      },
+                      {
+                        kind: 10,
+                      },
+                      {
+                        kind: 8,
+                      },
+                    ],
+                    type: 'ReactNode',
+                  },
+                ],
+                generics: [
+                  {
+                    displayName: 'P',
                   },
                 ],
               },
@@ -295,24 +723,19 @@ describe('function', () => {
                       ReactElement: {
                         displayName: 'ReactElement',
                         kind: 14,
-                        generics: [
-                          {
-                            displayName: 'P',
-                          },
-                          {
-                            displayName: 'T',
-                          },
-                        ],
                         properties: [
                           {
-                            kind: 15,
                             displayName: 'type',
-                          },
-                          {
                             kind: 15,
-                            displayName: 'props',
+                            type: 'T',
                           },
                           {
+                            displayName: 'props',
+                            kind: 15,
+                            type: 'P',
+                          },
+                          {
+                            displayName: 'key',
                             kind: 4,
                             properties: [
                               {
@@ -331,7 +754,14 @@ describe('function', () => {
                                 kind: 10,
                               },
                             ],
-                            displayName: 'key',
+                          },
+                        ],
+                        generics: [
+                          {
+                            displayName: 'P',
+                          },
+                          {
+                            displayName: 'T',
                           },
                         ],
                       },
@@ -366,10 +796,61 @@ describe('function', () => {
                             kind: 4,
                             properties: [
                               {
-                                kind: 15,
+                                kind: 14,
+                                properties: [
+                                  {
+                                    displayName: 'type',
+                                    kind: 15,
+                                    type: 'T',
+                                  },
+                                  {
+                                    displayName: 'props',
+                                    kind: 15,
+                                    type: 'P',
+                                  },
+                                  {
+                                    displayName: 'key',
+                                    kind: 4,
+                                    properties: [
+                                      {
+                                        kind: 4,
+                                        properties: [
+                                          {
+                                            kind: 1,
+                                          },
+                                          {
+                                            kind: 2,
+                                          },
+                                        ],
+                                        displayName: 'Key',
+                                      },
+                                      {
+                                        kind: 10,
+                                      },
+                                    ],
+                                  },
+                                ],
+                                generics: [
+                                  {
+                                    displayName: 'P',
+                                  },
+                                  {
+                                    displayName: 'T',
+                                  },
+                                ],
+                                displayName: 'ReactElement',
                               },
                               {
-                                kind: 15,
+                                kind: 4,
+                                properties: [
+                                  {
+                                    kind: 1,
+                                  },
+                                  {
+                                    kind: 2,
+                                  },
+                                ],
+                                displayName: 'ReactText',
                               },
                             ],
                             displayName: 'ReactChild',
@@ -381,7 +862,16 @@ describe('function', () => {
                                 kind: 15,
                               },
                               {
-                                kind: 15,
+                                kind: 14,
+                                properties: [
+                                  {
+                                    kind: 20,
+                                    index: {
+                                      kind: 2,
+                                    },
+                                  },
+                                ],
+                                displayName: 'ReactNodeArray',
                               },
                             ],
                             displayName: 'ReactFragment',
@@ -392,23 +882,45 @@ describe('function', () => {
                               ReactElement: {
                                 displayName: 'ReactElement',
                                 kind: 14,
-                                generics: [
-                                  {
-                                    parentName: 'ReactElement',
-                                  },
-                                  {
-                                    parentName: 'ReactElement',
-                                  },
-                                ],
                                 properties: [
                                   {
-                                    parentName: 'ReactElement',
+                                    displayName: 'type',
+                                    kind: 15,
+                                    type: 'T',
                                   },
                                   {
-                                    parentName: 'ReactElement',
+                                    displayName: 'props',
+                                    kind: 15,
+                                    type: 'P',
                                   },
                                   {
-                                    parentName: 'ReactElement',
+                                    displayName: 'key',
+                                    kind: 4,
+                                    properties: [
+                                      {
+                                        kind: 4,
+                                        properties: [
+                                          {
+                                            kind: 1,
+                                          },
+                                          {
+                                            kind: 2,
+                                          },
+                                        ],
+                                        displayName: 'Key',
+                                      },
+                                      {
+                                        kind: 10,
+                                      },
+                                    ],
+                                  },
+                                ],
+                                generics: [
+                                  {
+                                    displayName: 'P',
+                                  },
+                                  {
+                                    displayName: 'T',
                                   },
                                 ],
                               },
@@ -419,7 +931,16 @@ describe('function', () => {
                                 kind: 4,
                                 properties: [
                                   {
-                                    kind: 15,
+                                    kind: 4,
+                                    properties: [
+                                      {
+                                        kind: 1,
+                                      },
+                                      {
+                                        kind: 2,
+                                      },
+                                    ],
+                                    displayName: 'Key',
                                   },
                                   {
                                     kind: 10,
@@ -428,17 +949,40 @@ describe('function', () => {
                               },
                               {
                                 displayName: 'children',
-                                kind: 15,
+                                kind: 4,
+                                properties: [
+                                  {
+                                    kind: 15,
+                                  },
+                                  {
+                                    kind: 15,
+                                  },
+                                  {
+                                    kind: 15,
+                                  },
+                                  {
+                                    kind: 3,
+                                  },
+                                  {
+                                    kind: 10,
+                                  },
+                                  {
+                                    kind: 8,
+                                  },
+                                ],
+                                type: 'ReactNode',
                               },
                               {
                                 displayName: 'type',
                                 kind: 15,
                                 parent: 'ReactElement',
+                                type: 'T',
                               },
                               {
                                 displayName: 'props',
                                 kind: 15,
                                 parent: 'ReactElement',
+                                type: 'P',
                               },
                             ],
                             displayName: 'ReactPortal',
@@ -488,7 +1032,6 @@ describe('function', () => {
                 displayName: 'P',
               },
             ],
-            displayName: 'props',
           },
         ],
       },
@@ -688,84 +1231,6 @@ export function paintHomeyBear({ m, honey = true }: ExtendT): Bear {
         returns: {
           kind: 12,
         },
-      },
-    });
-  });
-  it('generic function parameter', () => {
-    const results = parseCode(`
-    interface GenericInterface<T> {
-      m: T;
-    }
-    export function genericFunction<Type>(
-      box: GenericInterface<Type>,
-      newContents: Type,
-    ): GenericInterface<Type> {}
-`);
-    expect(results).toEqual({
-      genericFunction: {
-        displayName: 'genericFunction',
-        kind: 11,
-        parameters: [
-          {
-            displayName: 'box',
-            propParents: {
-              GenericInterface: {
-                displayName: 'GenericInterface',
-                kind: 14,
-                generics: [
-                  {
-                    displayName: 'T',
-                  },
-                ],
-                properties: [
-                  {
-                    displayName: 'm',
-                    kind: 15,
-                  },
-                ],
-              },
-            },
-            kind: 14,
-            properties: [
-              {
-                displayName: 'm',
-                kind: 15,
-                parent: 'GenericInterface',
-                type: 'T',
-              },
-            ],
-            generics: [
-              {
-                displayName: 'T',
-              },
-            ],
-          },
-          {
-            displayName: 'newContents',
-            kind: 15,
-          },
-        ],
-        returns: {
-          kind: 14,
-          displayName: 'GenericInterface',
-          properties: [
-            {
-              displayName: 'm',
-              kind: 15,
-              type: 'T',
-            },
-          ],
-          generics: [
-            {
-              displayName: 'T',
-            },
-          ],
-        },
-        types: [
-          {
-            displayName: 'Type',
-          },
-        ],
       },
     });
   });
