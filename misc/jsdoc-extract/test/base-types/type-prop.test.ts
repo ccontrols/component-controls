@@ -1,33 +1,6 @@
 import { parseCode } from '../../src/index';
 
 describe('type', () => {
-  it('generic array type', () => {
-    const results = parseCode(`
-    export type GenericArrayType<Type> = Type[];
-`);
-    expect(results).toEqual({
-      GenericArrayType: {
-        displayName: 'GenericArrayType',
-        kind: 15,
-        properties: [
-          {
-            kind: 20,
-            index: {
-              kind: 2,
-            },
-            type: {
-              displayName: 'Type',
-            },
-          },
-        ],
-        generics: [
-          {
-            displayName: 'Type',
-          },
-        ],
-      },
-    });
-  });
   it('typed and initialized', () => {
     const results = parseCode(`
     /**
@@ -66,6 +39,34 @@ describe('type', () => {
       },
     });
   });
+  it('generic array type', () => {
+    const results = parseCode(`
+    export type GenericArrayType<Type> = Type[];
+`);
+    expect(results).toEqual({
+      GenericArrayType: {
+        displayName: 'GenericArrayType',
+        kind: 15,
+        properties: [
+          {
+            kind: 20,
+            index: {
+              kind: 2,
+            },
+            type: {
+              displayName: 'Type',
+            },
+          },
+        ],
+        generics: [
+          {
+            displayName: 'Type',
+          },
+        ],
+      },
+    });
+  });
+
   it('generic consumer type', () => {
     const results = parseCode(`
     /**

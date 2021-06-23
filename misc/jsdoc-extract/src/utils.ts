@@ -75,7 +75,7 @@ export interface PropType {
    */
   kind?: PropKind;
   displayName?: string;
-  parent?: string | PropType;
+  parent?: string;
   propParents?: Record<string, PropType>;
   optional?: boolean;
   readonly?: boolean;

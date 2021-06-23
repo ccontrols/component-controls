@@ -52,13 +52,6 @@ const strToValue = (s: string): any => {
   return s;
 };
 
-/**
- * internal structure to avoid recursive parsing or parents
- */
-type InternalPropType = PropType & {
-  parentName?: string;
-};
-
 export class SymbolParser {
   private checker: ts.TypeChecker;
   private options: Required<ParseOptions>;
@@ -80,23 +73,35 @@ export class SymbolParser {
     return prop;
   }
   getParent(
-    prop: InternalPropType,
+    prop: PropType,
+    parentProp: PropType,
     node: ts.Node,
   ): PropType | false | undefined {
     if (!node) {
       return false;
     }
+    const addParentRef = (parent: PropType, symbol: ts.Symbol) => {
+      const parentName = parent.displayName;
+      if (parentName) {
+        if (!parentProp.propParents) {
+          parentProp.propParents = {};
+        }
+        if (!parentProp.propParents[parentName]) {
+          parentProp.propParents[parentName] = parent;
+        }
+      }
+      return this.addRefSymbol(parent, symbol);
+    };
     let parent = node.parent;
     if (ts.isPropertyAccessExpression(node)) {
       const parentName = node.expression.getText();
       if (!this.options.internalTypes.includes(parentName)) {
-        if (parentName === prop.parentName) {
+        if (parentName === prop.parent) {
           return false;
         }
         const symbol = this.checker.getSymbolAtLocation(node.expression);
         if (symbol) {
-          const parent = this.addRefSymbol({ displayName: parentName }, symbol);
-          return parent;
+          return addParentRef({ displayName: parentName }, symbol);
         }
       }
       return undefined;
@@ -105,14 +110,14 @@ export class SymbolParser {
       if (isTypeParameterType(parent) || ts.isEnumDeclaration(parent)) {
         const parentName = parent.name ? parent.name.getText() : undefined;
         if (!parentName || !this.options.internalTypes.includes(parentName)) {
-          if (parentName === prop.parentName) {
+          if (parentName === prop.parent) {
             return false;
           }
           const propParent = { displayName: parentName };
           if (parent.name) {
             const symbol = this.checker.getSymbolAtLocation(parent.name);
             if (symbol) {
-              return this.addRefSymbol(propParent, symbol);
+              return addParentRef(propParent, symbol);
             }
           }
           return this.parseTypeValueComments(propParent, parent);
@@ -433,9 +438,9 @@ export class SymbolParser {
           node.members,
         );
       } else if (ts.isEnumMember(node)) {
-        const parent = this.getParent(prop, node);
+        const parent = this.getParent({ parent: prop.parent }, prop, node);
         if (parent) {
-          prop.parent = parent;
+          prop.parent = parent.displayName;
         }
       } else if (ts.isTupleTypeNode(node)) {
         prop.kind = PropKind.Tuple;
@@ -577,26 +582,22 @@ export class SymbolParser {
                 );
               }
               const parent = this.getParent(
-                { parentName: prop.displayName } as InternalPropType,
+                { parent: prop.displayName },
+                prop,
                 d,
               );
               if (parent !== undefined) {
                 const childProp = this.parseSymbolProp(
-                  { parentName: prop.displayName } as InternalPropType,
+                  { parent: prop.displayName },
                   childSymbol,
                   top,
                 );
                 if (childProp) {
-                  delete (childProp as InternalPropType).parentName;
                   if (parent && parent.displayName) {
                     const parentName = parent.displayName;
                     childProp.parent = parentName;
-                    if (!prop.propParents) {
-                      prop.propParents = {};
-                    }
-                    if (!prop.propParents[parentName]) {
-                      prop.propParents[parentName] = parent;
-                    }
+                  } else {
+                    delete childProp.parent;
                   }
                   properties.push(childProp);
                 }
@@ -763,7 +764,6 @@ export class SymbolParser {
         props.forEach(prop => {
           const p = this.parseSymbolProp({}, symbol);
           //remove internal parent tracking field
-          delete (prop as InternalPropType).parentName;
           if (p) {
             const { displayName, ...rest } = p;
             const type: PropType | string | undefined = Object.keys(rest).length
