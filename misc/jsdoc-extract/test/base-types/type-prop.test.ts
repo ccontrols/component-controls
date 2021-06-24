@@ -1,6 +1,78 @@
 import { parseCode } from '../../src/index';
 
 describe('type', () => {
+  it('index prop', () => {
+    const results = parseCode(`
+    export type IndexT = {
+      /**
+       * type index property
+       */ 
+      [index: string]: { a: Bear; b: null };
+      /**
+       * this is an additional name prop
+       */ 
+      name?: string;
+    };
+`);
+    expect(results).toEqual({
+      IndexT: {
+        kind: 15,
+        properties: [
+          {
+            description: 'type index property',
+            kind: 20,
+            index: {
+              displayName: 'index',
+              kind: 1,
+            },
+            type: {
+              kind: 15,
+              properties: [
+                {
+                  displayName: 'a',
+                  kind: 15,
+                  type: 'Bear',
+                },
+                {
+                  displayName: 'b',
+                  kind: 10,
+                },
+              ],
+            },
+          },
+          {
+            description: 'this is an additional name prop',
+            optional: true,
+            displayName: 'name',
+            kind: 1,
+          },
+        ],
+        displayName: 'IndexT',
+      },
+    });
+  });
+  it('generic array type', () => {
+    const results = parseCode(`
+    export type GenericArrayType<Type> = Type[];
+`);
+    expect(results).toEqual({
+      GenericArrayType: {
+        displayName: 'GenericArrayType',
+        kind: 16,
+        generics: [
+          {
+            displayName: 'Type',
+          },
+        ],
+        properties: [
+          {
+            kind: 15,
+            displayName: 'Type',
+          },
+        ],
+      },
+    });
+  });
   it('typed and initialized', () => {
     const results = parseCode(`
     /**
@@ -36,33 +108,6 @@ describe('type', () => {
           },
         ],
         displayName: 'obj',
-      },
-    });
-  });
-  it('generic array type', () => {
-    const results = parseCode(`
-    export type GenericArrayType<Type> = Type[];
-`);
-    expect(results).toEqual({
-      GenericArrayType: {
-        displayName: 'GenericArrayType',
-        kind: 15,
-        properties: [
-          {
-            kind: 20,
-            index: {
-              kind: 2,
-            },
-            type: {
-              displayName: 'Type',
-            },
-          },
-        ],
-        generics: [
-          {
-            displayName: 'Type',
-          },
-        ],
       },
     });
   });
@@ -292,55 +337,6 @@ export type ExtendT = T & {
             displayName: 'Type',
           },
         ],
-      },
-    });
-  });
-
-  it('index prop', () => {
-    const results = parseCode(`
-    export type IndexT = {
-      /**
-       * type index property
-       */ 
-      [index: string]: { a: Bear; b: null };
-      /**
-       * this is an additional name prop
-       */ 
-      name?: string;
-    };
-`);
-    expect(results).toEqual({
-      IndexT: {
-        kind: 15,
-        properties: [
-          {
-            kind: 20,
-            index: {
-              kind: 1,
-            },
-            type: {
-              kind: 15,
-              properties: [
-                {
-                  displayName: 'a',
-                  kind: 15,
-                  type: 'Bear',
-                },
-                {
-                  displayName: 'b',
-                  kind: 10,
-                },
-              ],
-            },
-          },
-          {
-            description: 'this is an additional name prop',
-            optional: true,
-            displayName: 'name',
-            kind: 1,
-          },
-        ],
-        displayName: 'IndexT',
       },
     });
   });

@@ -1,85 +1,5 @@
 import { parseCode } from '../../src/index';
 describe('function', () => {
-  it('generic function parameter', () => {
-    const results = parseCode(`
-    interface GenericInterface<T> {
-      m: T;
-    }
-    export function genericFunction<Type>(
-      box: GenericInterface<Type>,
-      newContents: Type,
-    ): GenericInterface<Type> {}
-`);
-    expect(results).toEqual({
-      genericFunction: {
-        displayName: 'genericFunction',
-        kind: 11,
-        parameters: [
-          {
-            displayName: 'box',
-            propParents: {
-              GenericInterface: {
-                displayName: 'GenericInterface',
-                kind: 14,
-                generics: [
-                  {
-                    displayName: 'T',
-                  },
-                ],
-                properties: [
-                  {
-                    displayName: 'm',
-                    kind: 15,
-                    type: 'T',
-                  },
-                ],
-              },
-            },
-            kind: 14,
-            properties: [
-              {
-                displayName: 'm',
-                kind: 15,
-                parent: 'GenericInterface',
-                type: 'T',
-              },
-            ],
-            generics: [
-              {
-                displayName: 'T',
-              },
-            ],
-          },
-          {
-            displayName: 'newContents',
-            kind: 15,
-            type: 'Type',
-          },
-        ],
-        returns: {
-          kind: 14,
-          displayName: 'GenericInterface',
-          properties: [
-            {
-              displayName: 'm',
-              kind: 15,
-              type: 'T',
-            },
-          ],
-          generics: [
-            {
-              displayName: 'T',
-            },
-          ],
-        },
-        types: [
-          {
-            displayName: 'Type',
-          },
-        ],
-      },
-    });
-  });
   it('react fc', () => {
     const results = parseCode(`
     import React, { FC } from 'react';
@@ -91,6 +11,7 @@ describe('function', () => {
     expect(results).toEqual({
       TypedInitializedFunction: {
         displayName: 'TypedInitializedFunction',
+        kind: 11,
         propParents: {
           FunctionComponent: {
             displayName: 'FunctionComponent',
@@ -143,9 +64,9 @@ describe('function', () => {
             ],
           },
         },
-        kind: 11,
         properties: [
           {
+            parent: 'FunctionComponent',
             optional: true,
             displayName: 'propTypes',
             kind: 15,
@@ -154,10 +75,10 @@ describe('function', () => {
                 displayName: 'T',
               },
             ],
-            parent: 'FunctionComponent',
             type: 'WeakValidationMap',
           },
           {
+            parent: 'FunctionComponent',
             optional: true,
             displayName: 'contextTypes',
             kind: 15,
@@ -166,10 +87,10 @@ describe('function', () => {
                 displayName: 'T',
               },
             ],
-            parent: 'FunctionComponent',
             type: 'ValidationMap',
           },
           {
+            parent: 'FunctionComponent',
             optional: true,
             displayName: 'defaultProps',
             kind: 15,
@@ -178,15 +99,14 @@ describe('function', () => {
                 displayName: 'T',
               },
             ],
-            parent: 'FunctionComponent',
             description: 'Make all properties in T optional',
             type: 'Partial',
           },
           {
+            parent: 'FunctionComponent',
             optional: true,
             displayName: 'displayName',
             kind: 1,
-            parent: 'FunctionComponent',
           },
         ],
         generics: [
@@ -197,6 +117,7 @@ describe('function', () => {
         parameters: [
           {
             displayName: 'props',
+            kind: 15,
             propParents: {
               Props: {
                 displayName: 'Props',
@@ -289,14 +210,6 @@ describe('function', () => {
                           },
                           {
                             kind: 14,
-                            properties: [
-                              {
-                                kind: 20,
-                                index: {
-                                  kind: 2,
-                                },
-                              },
-                            ],
                             displayName: 'ReactNodeArray',
                           },
                         ],
@@ -448,14 +361,6 @@ describe('function', () => {
                                   },
                                   {
                                     kind: 14,
-                                    properties: [
-                                      {
-                                        kind: 20,
-                                        index: {
-                                          kind: 2,
-                                        },
-                                      },
-                                    ],
                                     displayName: 'ReactNodeArray',
                                   },
                                 ],
@@ -558,15 +463,15 @@ describe('function', () => {
                                     type: 'ReactNode',
                                   },
                                   {
+                                    parent: 'ReactElement',
                                     displayName: 'type',
                                     kind: 15,
-                                    parent: 'ReactElement',
                                     type: 'T',
                                   },
                                   {
+                                    parent: 'ReactElement',
                                     displayName: 'props',
                                     kind: 15,
-                                    parent: 'ReactElement',
                                     type: 'P',
                                   },
                                 ],
@@ -585,15 +490,15 @@ describe('function', () => {
                             type: 'ReactNode',
                           },
                           {
+                            parent: 'ReactElement',
                             displayName: 'type',
                             kind: 15,
-                            parent: 'ReactElement',
                             type: 'T',
                           },
                           {
+                            parent: 'ReactElement',
                             displayName: 'props',
                             kind: 15,
-                            parent: 'ReactElement',
                             type: 'P',
                           },
                         ],
@@ -619,19 +524,18 @@ describe('function', () => {
                 ],
               },
             },
-            kind: 15,
             properties: [
               {
+                parent: 'Props',
                 optional: true,
                 displayName: 'm',
                 kind: 1,
-                parent: 'Props',
               },
               {
+                parent: 'PropsWithChildren',
                 optional: true,
                 displayName: 'children',
                 kind: 4,
-                parent: 'PropsWithChildren',
                 properties: [
                   {
                     kind: 4,
@@ -704,14 +608,6 @@ describe('function', () => {
                       },
                       {
                         kind: 14,
-                        properties: [
-                          {
-                            kind: 20,
-                            index: {
-                              kind: 2,
-                            },
-                          },
-                        ],
                         displayName: 'ReactNodeArray',
                       },
                     ],
@@ -863,14 +759,6 @@ describe('function', () => {
                               },
                               {
                                 kind: 14,
-                                properties: [
-                                  {
-                                    kind: 20,
-                                    index: {
-                                      kind: 2,
-                                    },
-                                  },
-                                ],
                                 displayName: 'ReactNodeArray',
                               },
                             ],
@@ -973,15 +861,15 @@ describe('function', () => {
                                 type: 'ReactNode',
                               },
                               {
+                                parent: 'ReactElement',
                                 displayName: 'type',
                                 kind: 15,
-                                parent: 'ReactElement',
                                 type: 'T',
                               },
                               {
+                                parent: 'ReactElement',
                                 displayName: 'props',
                                 kind: 15,
-                                parent: 'ReactElement',
                                 type: 'P',
                               },
                             ],
@@ -1000,15 +888,15 @@ describe('function', () => {
                         type: 'ReactNode',
                       },
                       {
+                        parent: 'ReactElement',
                         displayName: 'type',
                         kind: 15,
-                        parent: 'ReactElement',
                         type: 'T',
                       },
                       {
+                        parent: 'ReactElement',
                         displayName: 'props',
                         kind: 15,
-                        parent: 'ReactElement',
                         type: 'P',
                       },
                     ],
@@ -1037,6 +925,87 @@ describe('function', () => {
       },
     });
   });
+  it('generic function parameter', () => {
+    const results = parseCode(`
+    interface GenericInterface<T> {
+      m: T;
+    }
+    export function genericFunction<Type>(
+      box: GenericInterface<Type>,
+      newContents: Type,
+    ): GenericInterface<Type> {}
+`);
+    expect(results).toEqual({
+      genericFunction: {
+        displayName: 'genericFunction',
+        kind: 11,
+        parameters: [
+          {
+            displayName: 'box',
+            propParents: {
+              GenericInterface: {
+                displayName: 'GenericInterface',
+                kind: 14,
+                generics: [
+                  {
+                    displayName: 'T',
+                  },
+                ],
+                properties: [
+                  {
+                    displayName: 'm',
+                    kind: 15,
+                    type: 'T',
+                  },
+                ],
+              },
+            },
+            kind: 14,
+            properties: [
+              {
+                displayName: 'm',
+                kind: 15,
+                parent: 'GenericInterface',
+                type: 'T',
+              },
+            ],
+            generics: [
+              {
+                displayName: 'T',
+              },
+            ],
+          },
+          {
+            displayName: 'newContents',
+            kind: 15,
+            type: 'Type',
+          },
+        ],
+        returns: {
+          kind: 14,
+          displayName: 'GenericInterface',
+          properties: [
+            {
+              displayName: 'm',
+              kind: 15,
+              type: 'T',
+            },
+          ],
+          generics: [
+            {
+              displayName: 'T',
+            },
+          ],
+        },
+        types: [
+          {
+            displayName: 'Type',
+          },
+        ],
+      },
+    });
+  });
+
   it('extended parameter', () => {
     const results = parseCode(`
 /**

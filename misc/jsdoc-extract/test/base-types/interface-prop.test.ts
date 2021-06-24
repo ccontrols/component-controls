@@ -52,6 +52,12 @@ describe('interface', () => {
               {
                 displayName: 'items',
                 kind: 16,
+                properties: [
+                  {
+                    kind: 15,
+                    displayName: 'Type',
+                  },
+                ],
               },
             ],
             returns: {

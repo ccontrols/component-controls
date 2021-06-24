@@ -10,7 +10,6 @@ import {
   isUnknownProp,
   isObjectLikeProp,
   isIndexProp,
-  IndexProp,
   StringProp,
   TypeProp,
   JSDocInfoType,
@@ -130,7 +129,6 @@ export class SymbolParser {
   }
 
   parseProperties(
-    parent: PropType,
     properties: ts.NodeArray<
       | ts.ClassElement
       | ts.ObjectLiteralElementLike
@@ -191,14 +189,14 @@ export class SymbolParser {
     prop.kind = tsKindToPropKind[node.kind];
     if (isFunctionBaseType(prop)) {
       if (node.parameters.length && !prop.parameters) {
-        prop.parameters = this.parseProperties(prop, node.parameters);
+        prop.parameters = this.parseProperties(node.parameters);
       }
       if (node.type && !prop.returns) {
         const returns = this.parseTypeValueComments({}, node.type);
         prop.returns = returns;
       }
       if (node.typeParameters?.length && !prop.types) {
-        prop.types = this.parseProperties(prop, node.typeParameters);
+        prop.types = this.parseProperties(node.typeParameters);
       }
     }
     return prop;
@@ -215,7 +213,6 @@ export class SymbolParser {
         prop.kind = PropKind.Array;
         if (isArrayProp(prop)) {
           prop.value = this.parseProperties(
-            prop,
             node.elements as ts.NodeArray<ts.ArrayBindingElement>,
           );
         }
@@ -223,7 +220,6 @@ export class SymbolParser {
         prop.kind = PropKind.Object;
         if (node.arguments) {
           (prop as ObjectProp).properties = this.parseProperties(
-            prop,
             node.arguments as ts.NodeArray<ts.ArrayBindingElement>,
           );
         }
@@ -273,7 +269,6 @@ export class SymbolParser {
       } else if (isObjectLikeProp(prop)) {
         if (ts.isObjectLiteralExpression(node)) {
           prop.properties = this.parseProperties(
-            prop,
             node.properties,
             prop.properties,
           );
@@ -294,7 +289,6 @@ export class SymbolParser {
           (prop as ArrayProp).properties = [element];
         } else if (ts.isTypeReferenceNode(node) && node.typeArguments?.length) {
           (prop as ArrayProp).properties = this.parseProperties(
-            prop,
             node.typeArguments,
           );
         }
@@ -316,7 +310,7 @@ export class SymbolParser {
           prop.kind = tsKindToPropKind[node.type.kind];
         }
         if (hasGenerics(prop) && isGenericsType(node) && node.typeParameters) {
-          prop.generics = this.parseProperties(prop, node.typeParameters);
+          prop.generics = this.parseProperties(node.typeParameters);
         }
         this.parseTypeValueComments(prop, node.type);
       } else if (ts.isExportAssignment(node)) {
@@ -344,13 +338,10 @@ export class SymbolParser {
             !ts.isTypeLiteralNode(node) &&
             node.typeParameters
           ) {
-            prop.generics = this.parseProperties(prop, node.typeParameters);
+            prop.generics = this.parseProperties(node.typeParameters);
           }
 
-          const properties: PropType[] = this.parseProperties(
-            prop,
-            node.members,
-          );
+          const properties: PropType[] = this.parseProperties(node.members);
           if (
             (ts.isClassLike(node) || ts.isInterfaceDeclaration(node)) &&
             node.heritageClauses?.length
@@ -390,7 +381,7 @@ export class SymbolParser {
           }
         }
         if (node.typeArguments?.length && hasGenerics(prop)) {
-          prop.generics = this.parseProperties(prop, node.typeArguments);
+          prop.generics = this.parseProperties(node.typeArguments);
         }
         prop.kind = PropKind.Type;
       } else if (ts.isIntersectionTypeNode(node)) {
@@ -416,10 +407,7 @@ export class SymbolParser {
       } else if (ts.isTypeLiteralNode(node)) {
         prop.kind = PropKind.Type;
         if (node.members.length) {
-          (prop as TypeProp).properties = this.parseProperties(
-            prop,
-            node.members,
-          );
+          (prop as TypeProp).properties = this.parseProperties(node.members);
         }
       } else if (ts.isOptionalTypeNode(node)) {
         prop.optional = true;
@@ -430,13 +418,10 @@ export class SymbolParser {
         prop.type = type;
       } else if (ts.isUnionTypeNode(node)) {
         prop.kind = PropKind.Union;
-        (prop as UnionProp).properties = this.parseProperties(prop, node.types);
+        (prop as UnionProp).properties = this.parseProperties(node.types);
       } else if (ts.isEnumDeclaration(node)) {
         prop.kind = PropKind.Enum;
-        (prop as EnumProp).properties = this.parseProperties(
-          prop,
-          node.members,
-        );
+        (prop as EnumProp).properties = this.parseProperties(node.members);
       } else if (ts.isEnumMember(node)) {
         const parent = this.getParent(prop, node, prop.parent);
         if (parent) {
@@ -444,10 +429,7 @@ export class SymbolParser {
         }
       } else if (ts.isTupleTypeNode(node)) {
         prop.kind = PropKind.Tuple;
-        (prop as TupleProp).properties = this.parseProperties(
-          prop,
-          node.elements,
-        );
+        (prop as TupleProp).properties = this.parseProperties(node.elements);
       } else {
         switch (node.kind) {
           case ts.SyntaxKind.NumberKeyword:
@@ -566,7 +548,19 @@ export class SymbolParser {
             ? resolvedSymbol.valueDeclaration ||
               resolvedSymbol.declarations?.[0]
             : undefined;
-          if (resolvedDeclaration) {
+          if (
+            resolvedDeclaration &&
+            !(
+              isHasType(resolvedDeclaration) &&
+              resolvedDeclaration.type &&
+              isArrayLike(resolvedDeclaration.type)
+            )
+          ) {
+            const kind =
+              tsKindToPropKind[
+                resolvedDeclaration?.kind || ts.SyntaxKind.TypeAliasDeclaration
+              ] || PropKind.Type;
+            prop.kind = kind;
             const aProps = resolvedType.getApparentProperties();
             const properties: PropType[] = [];
             for (const childSymbol of aProps) {
@@ -599,32 +593,19 @@ export class SymbolParser {
                 }
               }
             }
-            const stringIndex = resolvedType.getStringIndexType();
-            if (stringIndex) {
-              const indexProp = {
-                kind: PropKind.Index,
-                index: {
-                  kind: PropKind.String,
-                },
-              } as IndexProp;
-              if (stringIndex.symbol) {
-                indexProp.type = this.parseSymbolProp({}, stringIndex.symbol);
-              }
-              properties.unshift(indexProp);
+            if (
+              (isObjectTypeDeclaration(resolvedDeclaration) ||
+                ts.isTypeLiteralNode(resolvedDeclaration)) &&
+              resolvedDeclaration.members
+            ) {
+              resolvedDeclaration.members.forEach(n => {
+                if (ts.isIndexSignatureDeclaration(n)) {
+                  const index = this.parseTypeValueComments({}, n);
+                  properties.unshift(index);
+                }
+              });
             }
-            const numberIndex = resolvedType.getNumberIndexType();
-            if (numberIndex) {
-              const indexProp = {
-                kind: PropKind.Index,
-                index: {
-                  kind: PropKind.Number,
-                },
-              } as IndexProp;
-              if (numberIndex.symbol) {
-                indexProp.type = this.parseSymbolProp({}, numberIndex.symbol);
-              }
-              properties.unshift(indexProp);
-            }
+
             const callSignatures = resolvedType.getCallSignatures();
             if (callSignatures?.length) {
               const fnDeclaration = callSignatures[0].declaration;
@@ -632,11 +613,6 @@ export class SymbolParser {
                 this.parseFunction(prop, fnDeclaration);
               }
             }
-            const kind =
-              tsKindToPropKind[
-                resolvedDeclaration?.kind || ts.SyntaxKind.TypeAliasDeclaration
-              ] || PropKind.Type;
-            prop.kind = kind;
 
             if (properties.length) {
               (prop as TypeProp).properties = properties;
@@ -650,7 +626,6 @@ export class SymbolParser {
               aliasDeclaration.typeParameters?.length
             ) {
               (prop as TypeProp).generics = this.parseProperties(
-                prop,
                 aliasDeclaration.typeParameters,
               );
             }
