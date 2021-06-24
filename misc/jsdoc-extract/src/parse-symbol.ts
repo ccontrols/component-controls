@@ -291,9 +291,9 @@ export class SymbolParser {
 
         if (ts.isArrayTypeNode(node)) {
           const element = this.parseType({}, node.elementType);
-          (prop as ArrayProp).elements = [element];
+          (prop as ArrayProp).properties = [element];
         } else if (ts.isTypeReferenceNode(node) && node.typeArguments?.length) {
-          (prop as ArrayProp).elements = this.parseProperties(
+          (prop as ArrayProp).properties = this.parseProperties(
             prop,
             node.typeArguments,
           );

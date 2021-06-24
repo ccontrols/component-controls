@@ -284,7 +284,7 @@ export const hasGenerics = (prop: PropType): prop is HasGenericsProp => {
 };
 
 export interface ArrayProp extends PropType {
-  elements?: PropType[];
+  properties?: PropType[];
   value?: PropType[];
 }
 

@@ -1,5 +1,99 @@
 import { parseCode } from '../../src/index';
 describe('interface', () => {
+  it('interface array', () => {
+    const results = parseCode(`  
+  export interface InterfaceArrayType<Type> {
+    /**
+     * Gets or sets the length of the array.
+     */
+    length: number;
+      /**
+     * Removes the last element from an array and returns it.
+     */
+    pop(): Type | undefined;
+   /**
+     * Appends new elements to an array, and returns the new length of the array.
+     */
+    push(...items: Type[]): number;
+  }
+`);
+    expect(results).toEqual({
+      InterfaceArrayType: {
+        displayName: 'InterfaceArrayType',
+        kind: 14,
+        properties: [
+          {
+            kind: 2,
+            displayName: 'length',
+            description: 'Gets or sets the length of the array.',
+          },
+          {
+            displayName: 'pop',
+            kind: 11,
+            returns: {
+              kind: 4,
+              properties: [
+                {
+                  kind: 15,
+                  displayName: 'Type',
+                },
+                {
+                  kind: 8,
+                },
+              ],
+            },
+            description:
+              'Removes the last element from an array and returns it.',
+          },
+          {
+            displayName: 'push',
+            kind: 11,
+            parameters: [
+              {
+                displayName: 'items',
+                kind: 16,
+              },
+            ],
+            returns: {
+              kind: 2,
+            },
+            description:
+              'Appends new elements to an array, and returns the new length of the array.',
+          },
+        ],
+        generics: [
+          {
+            displayName: 'Type',
+          },
+        ],
+      },
+    });
+  });
+  it('index interface', () => {
+    const results = parseCode(`
+export interface IndexInterface {
+  [index: number]: string;
+}    
+`);
+    expect(results).toEqual({
+      IndexInterface: {
+        displayName: 'IndexInterface',
+        kind: 14,
+        properties: [
+          {
+            kind: 20,
+            index: {
+              kind: 2,
+              displayName: 'index',
+            },
+            type: {
+              kind: 1,
+            },
+          },
+        ],
+      },
+    });
+  });
   it('enum prop', () => {
     const results = parseCode(`  
 enum StringEnums {
@@ -22,23 +116,25 @@ export interface InterfaceWithEnumConstant {
         kind: 14,
         properties: [
           {
-            displayName: 'Up',
-            kind: 5,
+            displayName: 'kind',
+            kind: 15,
             description: 'kind is an enumm constant',
-            parent: {
-              displayName: 'StringEnums',
-              kind: 5,
-              properties: [
-                {
-                  displayName: 'Up',
-                  kind: 5,
-                },
-                {
-                  displayName: "'UP'",
-                  kind: 5,
-                },
-              ],
+            propParents: {
+              StringEnums: {
+                displayName: 'StringEnums',
+                kind: 5,
+                properties: [
+                  {
+                    displayName: 'Up',
+                  },
+                  {
+                    displayName: "'UP'",
+                  },
+                ],
+              },
             },
+            parent: 'StringEnums',
+            type: 'Up',
           },
           {
             kind: 2,
@@ -49,7 +145,126 @@ export interface InterfaceWithEnumConstant {
       },
     });
   });
-  it('coombination properties', () => {
+  it('extends interface', () => {
+    const results = parseCode(`
+    interface Home {
+      resident: { name: string; age: number };
+    }
+    /**
+     * internal interface with one member
+     */ 
+    interface Internal {
+      /**
+       * string type member
+       */ 
+      m: string;
+    }
+    /**
+     * interface extending another one
+     */ 
+    export interface Bear extends Internal, Home {
+      /**
+       * boolean type member
+       */ 
+      honey: boolean;
+    }
+`);
+    expect(results).toEqual({
+      Bear: {
+        displayName: 'Bear',
+        propParents: {
+          Internal: {
+            displayName: 'Internal',
+            kind: 14,
+            properties: [
+              {
+                kind: 1,
+                displayName: 'm',
+                description: 'string type member',
+              },
+            ],
+            description: 'internal interface with one member',
+          },
+          Home: {
+            displayName: 'Home',
+            kind: 14,
+            properties: [
+              {
+                displayName: 'resident',
+                kind: 15,
+                properties: [
+                  {
+                    kind: 1,
+                    displayName: 'name',
+                  },
+                  {
+                    kind: 2,
+                    displayName: 'age',
+                  },
+                ],
+              },
+            ],
+          },
+        },
+        kind: 14,
+        properties: [
+          {
+            kind: 3,
+            displayName: 'honey',
+            description: 'boolean type member',
+          },
+          {
+            parent: 'Internal',
+            kind: 1,
+            displayName: 'm',
+            description: 'string type member',
+          },
+          {
+            parent: 'Home',
+            displayName: 'resident',
+            propParents: {
+              Home: {
+                displayName: 'Home',
+                kind: 14,
+                properties: [
+                  {
+                    displayName: 'resident',
+                    kind: 15,
+                    properties: [
+                      {
+                        kind: 1,
+                        displayName: 'name',
+                      },
+                      {
+                        kind: 2,
+                        displayName: 'age',
+                      },
+                    ],
+                  },
+                ],
+              },
+            },
+            kind: 15,
+            properties: [
+              {
+                parent: 'Home',
+                kind: 1,
+                displayName: 'name',
+              },
+              {
+                parent: 'Home',
+                kind: 2,
+                displayName: 'age',
+              },
+            ],
+          },
+        ],
+        description: 'interface extending another one',
+      },
+    });
+  });
+
+  it('combination properties', () => {
     const results = parseCode(`
     export interface StringNumberPair {
       /**
@@ -101,7 +316,7 @@ export interface InterfaceWithEnumConstant {
             ],
             returns: {
               kind: 16,
-              elements: [
+              properties: [
                 {
                   kind: 4,
                   properties: [
@@ -186,177 +401,7 @@ export interface GenericInterface<Type> {
       },
     });
   });
-  it('interface array', () => {
-    const results = parseCode(`  
-  export interface InterfaceArrayType<Type> {
-    /**
-     * Gets or sets the length of the array.
-     */
-    length: number;
-  
-    /**
-     * Removes the last element from an array and returns it.
-     */
-    pop(): Type | undefined;
-  
-    /**
-     * Appends new elements to an array, and returns the new length of the array.
-     */
-    push(...items: Type[]): number;
-  }
-`);
-    expect(results).toEqual({
-      InterfaceArrayType: {
-        displayName: 'InterfaceArrayType',
-        kind: 14,
-        generics: [
-          {
-            displayName: 'Type',
-          },
-        ],
-        properties: [
-          {
-            description: 'Gets or sets the length of the array.',
-            kind: 2,
-            displayName: 'length',
-          },
-          {
-            description:
-              'Removes the last element from an array and returns it.',
-            displayName: 'pop',
-            kind: 11,
-            returns: {
-              kind: 4,
-              properties: [
-                {
-                  displayName: 'Type',
-                  kind: 15,
-                },
-                {
-                  kind: 8,
-                },
-              ],
-            },
-          },
-          {
-            description:
-              'Appends new elements to an array, and returns the new length of the array.',
-            displayName: 'push',
-            kind: 11,
-            parameters: [
-              {
-                displayName: 'items',
-                kind: 16,
-                elements: [
-                  {
-                    displayName: 'Type',
-                    kind: 15,
-                  },
-                ],
-              },
-            ],
-            returns: {
-              kind: 2,
-            },
-          },
-        ],
-      },
-    });
-  });
 
-  it('index interface', () => {
-    const results = parseCode(`
-export interface IndexInterface {
-  [index: number]: string;
-}    
-`);
-    expect(results).toEqual({
-      IndexInterface: {
-        displayName: 'IndexInterface',
-        kind: 14,
-        properties: [
-          {
-            kind: 20,
-            index: {
-              kind: 2,
-              displayName: 'index',
-            },
-            type: {
-              kind: 1,
-            },
-          },
-        ],
-      },
-    });
-  });
-  it('extends interface', () => {
-    const results = parseCode(`
-    interface Home {
-      resident: { name: string; age: number };
-    }
-    /**
-     * internal interface with one member
-     */ 
-    interface Internal {
-      /**
-       * string type member
-       */ 
-      m: string;
-    }
-    /**
-     * interface extending another one
-     */ 
-    export interface Bear extends Internal, Home {
-      /**
-       * boolean type member
-       */ 
-      honey: boolean;
-    }
-`);
-    expect(results).toEqual({
-      Bear: {
-        description: 'interface extending another one',
-        displayName: 'Bear',
-        extends: ['Internal', 'Home'],
-        kind: 14,
-        properties: [
-          {
-            description: 'boolean type member',
-            kind: 3,
-            displayName: 'honey',
-          },
-          {
-            description: 'string type member',
-            kind: 1,
-            displayName: 'm',
-            parent: {
-              description: 'internal interface with one member',
-              displayName: 'Internal',
-              kind: 14,
-            },
-          },
-          {
-            displayName: 'resident',
-            kind: 15,
-            properties: [
-              {
-                kind: 1,
-                displayName: 'name',
-              },
-              {
-                kind: 2,
-                displayName: 'age',
-              },
-            ],
-            parent: {
-              displayName: 'Home',
-              kind: 14,
-            },
-          },
-        ],
-      },
-    });
-  });
   it('basic interface', () => {
     const results = parseCode(`
 /**

@@ -1287,7 +1287,7 @@ export function paintHomeyBear({ m, honey = true }: ExtendT): Bear {
                 kind: 7,
                 type: {
                   kind: 16,
-                  elements: [
+                  properties: [
                     {
                       kind: 3,
                     },

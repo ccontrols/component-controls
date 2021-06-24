@@ -141,6 +141,7 @@ export const isArrayLike = (node: ts.Node): node is ArrayLike => {
   return (
     node.kind === ts.SyntaxKind.ArrayType ||
     node.kind === ts.SyntaxKind.ArrayLiteralExpression ||
-    (ts.isTypeReferenceNode(node) && node.typeName.getText() === 'Array')
+    (ts.isTypeReferenceNode(node) &&
+      ['ArrayConstructor', 'Array'].includes(node.typeName.getText()))
   );
 };
