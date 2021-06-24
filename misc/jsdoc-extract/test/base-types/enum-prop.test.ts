@@ -63,12 +63,6 @@ export enum InitializedEnum {
         displayName: 'InitializedEnum',
         properties: [
           {
-            kind: 20,
-            index: {
-              kind: 2,
-            },
-          },
-          {
             description: 'enum starts at 1',
             displayName: 'Up',
             kind: 2,

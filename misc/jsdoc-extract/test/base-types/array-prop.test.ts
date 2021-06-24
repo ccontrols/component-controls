@@ -1,40 +1,56 @@
 import { parseCode } from '../../src/index';
 describe('array', () => {
-  it('array of strings const', () => {
+  it('array keyword', () => {
     const results = parseCode(`
-interface Internal {
-  m: string;
-}    
-/**
- * type array of interface type
- * @deprecated
- */
-export type arrType = Internal[];        
+export const ArrayKeyword: Array<string> = ['test'];
 `);
     expect(results).toEqual({
-      arrType: {
-        deprecated: 'yes',
-        description: 'type array of interface type',
-        kind: 15,
+      ArrayKeyword: {
+        displayName: 'ArrayKeyword',
+        kind: 16,
         properties: [
           {
-            kind: 20,
-            index: {
-              kind: 2,
-            },
-            type: {
-              displayName: 'Internal',
-              kind: 14,
-              properties: [
-                {
-                  kind: 1,
-                  displayName: 'm',
-                },
-              ],
-            },
+            kind: 1,
           },
         ],
-        displayName: 'arrType',
+        value: [
+          {
+            kind: 1,
+            value: 'test',
+          },
+        ],
+      },
+    });
+  });
+
+  it('array of strings const', () => {
+    const results = parseCode(`
+/**
+ * this is an array of strings
+ */
+export const arrString: string[] = ['one', 'two'];
+    
+`);
+    expect(results).toEqual({
+      arrString: {
+        displayName: 'arrString',
+        kind: 16,
+        properties: [
+          {
+            kind: 1,
+          },
+        ],
+        value: [
+          {
+            kind: 1,
+            value: 'one',
+          },
+          {
+            kind: 1,
+            value: 'two',
+          },
+        ],
+        description: 'this is an array of strings',
       },
     });
   });
@@ -47,17 +63,8 @@ export const names = ['Alice', 'Bob', 'Eve'];
   `);
     expect(results).toEqual({
       names: {
-        description: 'const array of strings',
-        kind: 16,
-        properties: [
-          {
-            kind: 20,
-            index: {
-              kind: 2,
-            },
-          },
-        ],
         displayName: 'names',
+        kind: 16,
         value: [
           {
             kind: 1,
@@ -72,9 +79,43 @@ export const names = ['Alice', 'Bob', 'Eve'];
             value: 'Eve',
           },
         ],
+        description: 'const array of strings',
       },
     });
   });
+  it('array of objects', () => {
+    const results = parseCode(`
+interface Internal {
+  m: string;
+}    
+/**
+ * type array of interface type
+ * @deprecated
+ */
+export type arrType = Internal[];        
+`);
+    expect(results).toEqual({
+      arrType: {
+        displayName: 'arrType',
+        kind: 16,
+        properties: [
+          {
+            kind: 14,
+            properties: [
+              {
+                kind: 1,
+                displayName: 'm',
+              },
+            ],
+            displayName: 'Internal',
+          },
+        ],
+        deprecated: 'yes',
+        description: 'type array of interface type',
+      },
+    });
+  });
+
   it('array new', () => {
     const results = parseCode(`
 export const ArrayNew = new Array('red', 'green', 'blue');
@@ -97,66 +138,6 @@ export const ArrayNew = new Array('red', 'green', 'blue');
           },
         ],
         displayName: 'ArrayNew',
-      },
-    });
-  });
-  it('array keyword', () => {
-    const results = parseCode(`
-export const ArrayKeyword: Array<string> = ['test'];
-`);
-    expect(results).toEqual({
-      ArrayKeyword: {
-        kind: 16,
-        properties: [
-          {
-            kind: 20,
-            index: {
-              kind: 2,
-            },
-          },
-        ],
-        displayName: 'ArrayKeyword',
-        value: [
-          {
-            kind: 1,
-            value: 'test',
-          },
-        ],
-      },
-    });
-  });
-
-  it('array of strings const', () => {
-    const results = parseCode(`
-/**
- * this is an array of strings
- */
-export const arrString: string[] = ['one', 'two'];
-    
-`);
-    expect(results).toEqual({
-      arrString: {
-        description: 'this is an array of strings',
-        kind: 16,
-        properties: [
-          {
-            kind: 20,
-            index: {
-              kind: 2,
-            },
-          },
-        ],
-        displayName: 'arrString',
-        value: [
-          {
-            kind: 1,
-            value: 'one',
-          },
-          {
-            kind: 1,
-            value: 'two',
-          },
-        ],
       },
     });
   });
