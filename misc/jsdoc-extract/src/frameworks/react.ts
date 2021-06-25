@@ -62,8 +62,11 @@ export const typeResolver: TypeResolver = (
           const signatures = symbolType.getConstructSignatures();
           if (signatures.length > 0 && signatures[0].parameters.length) {
             const props = signatures[0].parameters[0];
-
-            return getSymbolType(checker, props) || symbolType;
+            const propsType = getSymbolType(checker, props) || symbolType;
+            if (propsType.isUnionOrIntersection()) {
+              return propsType.types[0];
+            }
+            return propsType;
           }
         }
       }

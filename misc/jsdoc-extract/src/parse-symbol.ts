@@ -533,11 +533,13 @@ export class SymbolParser {
         ? declaration.parent.right
         : undefined;
       if (symbolType) {
-        const resolvedType = this.options.typeResolver({
-          symbolType,
-          declaration,
-          checker: this.checker,
-        });
+        const resolvedType = top
+          ? this.options.typeResolver({
+              symbolType,
+              declaration,
+              checker: this.checker,
+            })
+          : symbolType;
         if (
           resolvedType &&
           resolvedType.flags & (ts.TypeFlags.Object | ts.TypeFlags.Intersection)
@@ -732,15 +734,13 @@ export class SymbolParser {
       chachedSymbols.forEach(ref => {
         const { props, symbol } = ref;
         ref.props = [];
-        props.forEach(prop => {
-          const p = this.parseSymbolProp({}, symbol);
-          //remove internal parent tracking field
-          if (p) {
-            const { displayName, ...rest } = p;
-            const type: PropType | string | undefined = Object.keys(rest).length
-              ? p
-              : displayName;
-
+        const p = this.parseSymbolProp({}, symbol);
+        if (p) {
+          const { displayName, ...rest } = p;
+          const type: PropType | string | undefined = Object.keys(rest).length
+            ? p
+            : displayName;
+          props.forEach(prop => {
             if (typeof type === 'string') {
               if (prop.displayName && prop.displayName !== type) {
                 prop.type = type;
@@ -757,8 +757,8 @@ export class SymbolParser {
                 prop.displayName = displayName;
               }
             }
-          }
-        });
+          });
+        }
       });
       i += 1;
     }
