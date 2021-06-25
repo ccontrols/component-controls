@@ -1,4 +1,4 @@
-import { Story, getASTSource } from '@component-controls/core';
+import { Story } from '@component-controls/core';
 import { followImports } from '@component-controls/follow-imports';
 import traverse from '@babel/traverse';
 import { extractFunctionParameters } from './extract-function-parameters';
