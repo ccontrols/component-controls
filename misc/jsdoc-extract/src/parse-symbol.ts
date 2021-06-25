@@ -564,9 +564,9 @@ export class SymbolParser {
                 resolvedDeclaration?.kind || ts.SyntaxKind.TypeAliasDeclaration
               ] || PropKind.Type;
             prop.kind = kind;
-            const aProps = resolvedType.getApparentProperties();
+            const childProps = resolvedType.getApparentProperties();
             const properties: PropType[] = [];
-            for (const childSymbol of aProps) {
+            for (const childSymbol of childProps) {
               const d =
                 childSymbol.valueDeclaration || childSymbol.declarations?.[0];
               if (!d) {
