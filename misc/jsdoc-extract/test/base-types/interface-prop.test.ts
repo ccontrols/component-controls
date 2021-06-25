@@ -125,20 +125,6 @@ export interface InterfaceWithEnumConstant {
             displayName: 'kind',
             kind: 15,
             description: 'kind is an enumm constant',
-            propParents: {
-              StringEnums: {
-                displayName: 'StringEnums',
-                kind: 5,
-                properties: [
-                  {
-                    displayName: 'Up',
-                  },
-                  {
-                    displayName: "'UP'",
-                  },
-                ],
-              },
-            },
             parent: 'StringEnums',
             type: 'Up',
           },
@@ -148,6 +134,20 @@ export interface InterfaceWithEnumConstant {
             description: 'radius property',
           },
         ],
+      },
+      _parents: {
+        StringEnums: {
+          displayName: 'StringEnums',
+          kind: 5,
+          properties: [
+            {
+              displayName: 'Up',
+            },
+            {
+              displayName: "'UP'",
+            },
+          ],
+        },
       },
     });
   });
@@ -178,40 +178,6 @@ export interface InterfaceWithEnumConstant {
     expect(results).toEqual({
       Bear: {
         displayName: 'Bear',
-        propParents: {
-          Internal: {
-            displayName: 'Internal',
-            kind: 14,
-            properties: [
-              {
-                kind: 1,
-                displayName: 'm',
-                description: 'string type member',
-              },
-            ],
-            description: 'internal interface with one member',
-          },
-          Home: {
-            displayName: 'Home',
-            kind: 14,
-            properties: [
-              {
-                displayName: 'resident',
-                kind: 15,
-                properties: [
-                  {
-                    kind: 1,
-                    displayName: 'name',
-                  },
-                  {
-                    kind: 2,
-                    displayName: 'age',
-                  },
-                ],
-              },
-            ],
-          },
-        },
         kind: 14,
         properties: [
           {
@@ -228,28 +194,6 @@ export interface InterfaceWithEnumConstant {
           {
             parent: 'Home',
             displayName: 'resident',
-            propParents: {
-              Home: {
-                displayName: 'Home',
-                kind: 14,
-                properties: [
-                  {
-                    displayName: 'resident',
-                    kind: 15,
-                    properties: [
-                      {
-                        kind: 1,
-                        displayName: 'name',
-                      },
-                      {
-                        kind: 2,
-                        displayName: 'age',
-                      },
-                    ],
-                  },
-                ],
-              },
-            },
             kind: 15,
             properties: [
               {
@@ -266,6 +210,40 @@ export interface InterfaceWithEnumConstant {
           },
         ],
         description: 'interface extending another one',
+      },
+      _parents: {
+        Internal: {
+          displayName: 'Internal',
+          kind: 14,
+          properties: [
+            {
+              kind: 1,
+              displayName: 'm',
+              description: 'string type member',
+            },
+          ],
+          description: 'internal interface with one member',
+        },
+        Home: {
+          displayName: 'Home',
+          kind: 14,
+          properties: [
+            {
+              displayName: 'resident',
+              kind: 15,
+              properties: [
+                {
+                  kind: 1,
+                  displayName: 'name',
+                },
+                {
+                  kind: 2,
+                  displayName: 'age',
+                },
+              ],
+            },
+          ],
+        },
       },
     });
   });

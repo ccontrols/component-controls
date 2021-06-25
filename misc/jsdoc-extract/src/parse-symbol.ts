@@ -55,6 +55,7 @@ export class SymbolParser {
   private checker: ts.TypeChecker;
   private options: Required<ParseOptions>;
   private refSymbols: { props: PropType[]; symbol: ts.Symbol }[] = [];
+  private propParents: Record<string, PropType> = {};
   constructor(checker: ts.TypeChecker, options?: ParseOptions) {
     this.checker = checker;
     this.options = {
@@ -62,7 +63,7 @@ export class SymbolParser {
       ...options,
     } as Required<ParseOptions>;
   }
-  addRefSymbol(prop: PropType, symbol: ts.Symbol): PropType {
+  private addRefSymbol(prop: PropType, symbol: ts.Symbol): PropType {
     const refSymbol = this.refSymbols.find(r => r.symbol === symbol);
     if (!refSymbol) {
       this.refSymbols.push({ props: [prop], symbol });
@@ -71,7 +72,7 @@ export class SymbolParser {
     }
     return prop;
   }
-  getParent(
+  private getParent(
     parentProp: PropType,
     node?: ts.Node,
     parentName?: string,
@@ -80,16 +81,16 @@ export class SymbolParser {
       return false;
     }
     const addParentRef = (parent: PropType, symbol: ts.Symbol) => {
-      const name = parent.displayName;
-      if (name) {
-        if (!parentProp.propParents) {
-          parentProp.propParents = {};
+      if (this.options.saveParentProps) {
+        const name = parent.displayName;
+        if (name) {
+          if (!this.propParents[name]) {
+            this.propParents[name] = parent;
+          }
         }
-        if (!parentProp.propParents[name]) {
-          parentProp.propParents[name] = parent;
-        }
+        return this.addRefSymbol(parent, symbol);
       }
-      return this.addRefSymbol(parent, symbol);
+      return parent;
     };
     let parent = node.parent;
     if (ts.isPropertyAccessExpression(node)) {
@@ -128,7 +129,7 @@ export class SymbolParser {
     return false;
   }
 
-  parseProperties(
+  private parseProperties(
     properties: ts.NodeArray<
       | ts.ClassElement
       | ts.ObjectLiteralElementLike
@@ -185,7 +186,7 @@ export class SymbolParser {
     }
     return results;
   }
-  parseFunction(prop: PropType, node: FunctionLike): PropType {
+  private parseFunction(prop: PropType, node: FunctionLike): PropType {
     prop.kind = tsKindToPropKind[node.kind];
     if (isFunctionBaseType(prop)) {
       if (node.parameters.length && !prop.parameters) {
@@ -202,7 +203,7 @@ export class SymbolParser {
     return prop;
   }
 
-  parseValue(prop: PropType, node?: ts.Node): PropType {
+  private parseValue(prop: PropType, node?: ts.Node): PropType {
     if (node) {
       if (isFunctionLike(node)) {
         return this.parseFunction(prop, node);
@@ -277,7 +278,7 @@ export class SymbolParser {
     }
     return prop;
   }
-  parseType(prop: PropType, node?: ts.Node): PropType {
+  private parseType(prop: PropType, node?: ts.Node): PropType {
     if (node) {
       if (isFunctionLike(node)) {
         return this.parseFunction(prop, node);
@@ -697,7 +698,7 @@ export class SymbolParser {
     }
     return prop;
   }
-  parseTypeValue(
+  private parseTypeValue(
     prop: PropType,
     declaration?: ts.Node,
     initializer?: ts.Node,
@@ -709,7 +710,7 @@ export class SymbolParser {
     this.parseValue(prop, initializer);
     return prop;
   }
-  parseTypeValueComments(
+  private parseTypeValueComments(
     prop: PropType,
     declaration?: ts.Node,
     initializer?: ts.Node,
@@ -782,6 +783,14 @@ export class SymbolParser {
       mergeJSDocComments(prop, [...comments, ...tags].join('\n')),
     );
     return prop;
+  }
+
+  get parents(): Record<string, PropType> {
+    return this.propParents;
+  }
+
+  resetParents(): void {
+    this.propParents = {};
   }
   parseSymbol(symbol: ts.Symbol): PropType {
     const prop = this.parseSymbolProp({}, symbol, true);

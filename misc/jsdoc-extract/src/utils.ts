@@ -6,6 +6,7 @@ export type CompileOptions = {
 export type ParseOptions = {
   typeResolver?: TypeResolver;
   internalTypes?: string[];
+  saveParentProps?: boolean;
 };
 
 export const defaultParseOptions: ParseOptions = {
@@ -16,6 +17,7 @@ export const defaultParseOptions: ParseOptions = {
     }
     return symbolType;
   },
+  saveParentProps: true,
   internalTypes: [
     'Function',
     'CallableFunction',
@@ -76,7 +78,6 @@ export interface PropType {
   kind?: PropKind;
   displayName?: string;
   parent?: string;
-  propParents?: Record<string, PropType>;
   optional?: boolean;
   readonly?: boolean;
   abstract?: boolean;
@@ -369,7 +370,9 @@ export const isObjectLikeProp = (prop: PropType): prop is ObjectLikeProp => {
     prop.kind === PropKind.Object
   );
 };
-export type PropTypes = Record<string, PropType>;
+export type PropTypes = {
+  [propName: string]: PropType;
+} & { _parents?: Record<string, PropType> };
 
 export type TypeResolver = (props: {
   symbolType: ts.Type;

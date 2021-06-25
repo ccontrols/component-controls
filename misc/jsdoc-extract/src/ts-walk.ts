@@ -1,5 +1,5 @@
 import * as ts from 'typescript';
-import { tsDefaults, PropTypes, DocsOptions } from './utils';
+import { tsDefaults, PropTypes, PropType, DocsOptions } from './utils';
 import { SymbolParser } from './parse-symbol';
 
 export const anaylizeFiles = (
@@ -13,7 +13,7 @@ export const anaylizeFiles = (
   // Get the checker, we will use it to find more about classes
   const checker = program.getTypeChecker();
   const parser = new SymbolParser(checker, parseOptions);
-  const props: PropTypes = {};
+  const parsed: Record<string, PropType> = {};
   // Visit every sourceFile in the program
   for (const sourceFile of program.getSourceFiles()) {
     const module = checker.getSymbolAtLocation(sourceFile);
@@ -24,12 +24,14 @@ export const anaylizeFiles = (
           const symbolName = e.getName();
           if (!names || names.includes(symbolName)) {
             const prop = parser.parseSymbol(e);
-            props[symbolName] = prop;
+            parsed[symbolName] = prop;
           }
         });
       }
     }
   }
-
-  return props;
+  if (Object.keys(parser.parents).length) {
+    return { ...parsed, _parents: parser.parents };
+  }
+  return parsed;
 };

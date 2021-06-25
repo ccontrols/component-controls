@@ -143,25 +143,25 @@ describe('type', () => {
           },
         ],
         displayName: 'GenericConsumer',
-        propParents: {
-          GenericInterface: {
-            description: 'upstream interface',
-            displayName: 'GenericInterface',
-            kind: 14,
-            generics: [
-              {
-                displayName: 'Type',
-              },
-            ],
-            properties: [
-              {
-                description: 'interface prop',
-                displayName: 'm',
-                kind: 15,
-                type: 'Type',
-              },
-            ],
-          },
+      },
+      _parents: {
+        GenericInterface: {
+          description: 'upstream interface',
+          displayName: 'GenericInterface',
+          kind: 14,
+          generics: [
+            {
+              displayName: 'Type',
+            },
+          ],
+          properties: [
+            {
+              description: 'interface prop',
+              displayName: 'm',
+              kind: 15,
+              type: 'Type',
+            },
+          ],
         },
       },
     });
@@ -199,29 +199,29 @@ describe('type', () => {
           },
         ],
         displayName: 'Intersect',
-        propParents: {
-          A: {
-            description: 'type A',
-            displayName: 'A',
-            kind: 15,
-            properties: [
-              {
-                displayName: 'a',
-                kind: 1,
-              },
-            ],
-          },
-          B: {
-            description: 'type B',
-            displayName: 'B',
-            kind: 15,
-            properties: [
-              {
-                displayName: 'b',
-                kind: 2,
-              },
-            ],
-          },
+      },
+      _parents: {
+        A: {
+          description: 'type A',
+          displayName: 'A',
+          kind: 15,
+          properties: [
+            {
+              displayName: 'a',
+              kind: 1,
+            },
+          ],
+        },
+        B: {
+          description: 'type B',
+          displayName: 'B',
+          kind: 15,
+          properties: [
+            {
+              displayName: 'b',
+              kind: 2,
+            },
+          ],
         },
       },
     });
@@ -267,19 +267,19 @@ export type ExtendT = T & {
           },
         ],
         displayName: 'ExtendT',
-        propParents: {
-          T: {
-            description: 'base type',
-            displayName: 'T',
-            kind: 15,
-            properties: [
-              {
-                description: 'base type member property',
-                displayName: 'm',
-                kind: 1,
-              },
-            ],
-          },
+      },
+      _parents: {
+        T: {
+          description: 'base type',
+          displayName: 'T',
+          kind: 15,
+          properties: [
+            {
+              description: 'base type member property',
+              displayName: 'm',
+              kind: 1,
+            },
+          ],
         },
       },
     });
@@ -312,31 +312,32 @@ export type ExtendT = T & {
           },
         ],
         displayName: 'NestedGenericType',
-        propParents: {
-          GenericArrayType: {
-            description: 'generic interface',
-            displayName: 'GenericArrayType',
-            kind: 15,
-            generics: [
-              {
-                displayName: 'Type',
-              },
-            ],
-            properties: [
-              {
-                description: 'member field',
-                displayName: 'm',
-                kind: 15,
-                type: 'Type',
-              },
-            ],
-          },
-        },
+
         generics: [
           {
             displayName: 'Type',
           },
         ],
+      },
+      _parents: {
+        GenericArrayType: {
+          description: 'generic interface',
+          displayName: 'GenericArrayType',
+          kind: 15,
+          generics: [
+            {
+              displayName: 'Type',
+            },
+          ],
+          properties: [
+            {
+              description: 'member field',
+              displayName: 'm',
+              kind: 15,
+              type: 'Type',
+            },
+          ],
+        },
       },
     });
   });
