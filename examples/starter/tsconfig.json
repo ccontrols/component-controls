@@ -16,10 +16,5 @@
     "resolveJsonModule": true
   },
   "exclude": ["node_modules", "public", ".cache"],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "src/components/Spinner/Spinner.docs.jsx"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }
