@@ -1,5 +1,5 @@
 import ts from 'typescript';
-import { PropKind } from './utils';
+import { PropKind } from './types';
 
 type VariableDeclaration =
   | ts.VariableDeclaration
@@ -144,4 +144,74 @@ export const isArrayLike = (node: ts.Node): node is ArrayLike => {
     (ts.isTypeReferenceNode(node) &&
       ['ArrayConstructor', 'Array'].includes(node.typeName.getText()))
   );
+};
+
+export const tsDefaults = {
+  jsx: ts.JsxEmit.React,
+  module: ts.ModuleKind.CommonJS,
+  target: ts.ScriptTarget.Latest,
+};
+
+export type CompileOptions = {
+  tsOptions?: ts.CompilerOptions;
+};
+export type ParseOptions = {
+  typeResolver?: TypeResolver;
+  internalTypes?: string[];
+  saveParentProps?: boolean;
+};
+
+export const defaultParseOptions: ParseOptions = {
+  typeResolver: ({ symbolType }) => {
+    const properties = symbolType.getProperties();
+    if (properties.length && properties[0].escapedName === 'prototype') {
+      return undefined;
+    }
+    return symbolType;
+  },
+  saveParentProps: true,
+  internalTypes: [
+    'Function',
+    'CallableFunction',
+    'NewableFunction',
+    'String',
+    'Boolean',
+    'Booleanish',
+    'Number',
+    'Array',
+    'ConcatArray',
+    'ReadonlyArray',
+    'TemplateStringsArray',
+  ],
+};
+
+export type DocsOptions = CompileOptions & ParseOptions;
+
+export type TypeResolver = (props: {
+  symbolType: ts.Type;
+  declaration: ts.Declaration;
+  checker: ts.TypeChecker;
+}) => ts.Type | undefined;
+
+export const getSymbolType = (
+  checker: ts.TypeChecker,
+  symbol: ts.Symbol,
+): ts.Type | undefined => {
+  const declaration = symbol.valueDeclaration || symbol.declarations?.[0];
+  const type = checker.getTypeOfSymbolAtLocation(symbol, declaration);
+  if (
+    !('intrinsicName' in type) ||
+    ((type as unknown) as { intrinsicName: string }).intrinsicName !== 'error'
+  ) {
+    return type;
+  }
+  const symbolType = checker.getDeclaredTypeOfSymbol(symbol);
+  if (
+    !('intrinsicName' in symbolType) ||
+    ((symbolType as unknown) as { intrinsicName: string }).intrinsicName !==
+      'error'
+  ) {
+    return symbolType;
+  }
+  return undefined;
 };

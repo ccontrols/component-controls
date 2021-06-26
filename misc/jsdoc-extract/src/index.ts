@@ -1,10 +1,10 @@
-import { getTypescriptConfig } from '@component-controls/typescript-config';
-import path from 'path';
-import fs from 'fs';
 import { createHash } from 'crypto';
 import * as ts from 'typescript';
+import { getTypescriptConfig } from '@component-controls/typescript-config';
 import { anaylizeFiles } from './ts-walk';
-import { tsDefaults, DocsOptions, PropTypes } from './utils';
+import { PropTypes } from './types';
+import { tsDefaults, DocsOptions } from './ts-utils';
+export * from './types';
 
 export const parseFiles = (
   filePaths: string[],
@@ -14,39 +14,34 @@ export const parseFiles = (
   if (!filePaths.length) {
     throw new Error('You need to supply at least one file');
   }
-  options.tsOptions =
-    getTypescriptConfig(filePaths[0], options.tsOptions) || tsDefaults;
+  options.tsOptions = {
+    ...tsDefaults,
+    ...getTypescriptConfig(filePaths[0], options.tsOptions),
+  };
   const results = anaylizeFiles(filePaths, options, names);
   return results;
 };
 
 export const parseCode = (
-  code: string,
+  code?: string,
   options?: DocsOptions,
   names?: string[],
 ): PropTypes => {
-  const tmpFolder = path.resolve(__dirname, '..', 'tmp');
-  if (!fs.existsSync(tmpFolder)) {
-    fs.mkdirSync(tmpFolder);
-  }
   let result: PropTypes = {};
-  try {
+  if (code) {
     const name = createHash('md5')
       .update(Math.random().toString())
       .digest('hex');
 
-    const fileName = path.resolve(tmpFolder, name + '.ts');
+    const fileName = name + '.ts';
     ts.sys.writeFile(fileName, code);
-
     try {
-      result = parseFiles([fileName], options, names);
+      result = anaylizeFiles([fileName], { ...tsDefaults, ...options }, names);
     } finally {
       if (ts.sys.deleteFile) {
         ts.sys.deleteFile(fileName);
       }
     }
-  } finally {
-    fs.rmdirSync(tmpFolder, { recursive: true });
   }
   return result;
 };

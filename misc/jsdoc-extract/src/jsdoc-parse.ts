@@ -1,6 +1,6 @@
 import { Node } from '@babel/types';
 import deepmerge from 'deepmerge';
-import { PropType } from './utils';
+import { PropType } from './types';
 import { jsdocCommentToMember } from './jsdoc/jsdocCommentToMember';
 
 export const getNodeComments = (node: Node): string | undefined =>

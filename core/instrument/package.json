@@ -58,7 +58,6 @@
   "devDependencies": {
     "@babel/types": "^7.12.6",
     "@component-controls/ts-markdown-docs": "^3.8.2",
-    "@rollup/plugin-node-resolve": "^7.1.1",
     "@types/find-cache-dir": "^3.2.0",
     "@types/hosted-git-info": "^3.0.0",
     "@types/jest": "^26.0.10",

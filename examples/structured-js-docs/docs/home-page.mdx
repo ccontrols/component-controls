@@ -1,0 +1,38 @@
+---
+title: Home
+route: /
+type: page
+author: atanasster
+fullPage: true
+keywords:
+  - typescript
+  - react
+  - jsdoc
+  - type information
+---
+import { Box, Heading } from 'theme-ui';
+import { Playground } from '../src/components/playground.tsx';
+
+<Box sx={{ display: 'flex', flexDirection: 'column', pt: 3, alignItems: 'center', justifyContent: 'space-between' }}>
+  <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center',  px: [2, 2, 6], pb: 2 }} >
+    <Heading as="h1" sx={{ fontSize: 7, fontWeight: 'heading', py: 3, textAlign: 'center' }}>Structured js types</Heading>
+    <Box sx={{ px: 4, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: '100%'}}>
+      <Heading  as="h3" sx={{ py: 3, fontWeight: 'body' }}>
+        api to extract structured type information from typescript types and jsdoc comments
+      </Heading>
+    </Box>
+  </Box>
+</Box>  
+
+
+<Box
+  sx={{
+    marginTop: 20,
+    padding: [0, 20, 40],
+    height: '100%',
+    display: 'flex',
+    alignItems: 'stretch'
+  }}
+>
+  <Playground />
+</Box>

@@ -22,11 +22,11 @@ import {
   ObjectProp,
   isFunctionBaseType,
   isClassLikeProp,
+} from './types';
+import {
   getSymbolType,
   ParseOptions,
   defaultParseOptions,
-} from './utils';
-import {
   isVariableLikeDeclaration,
   isObjectTypeDeclaration,
   isHasType,

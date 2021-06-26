@@ -1,0 +1,27 @@
+{
+  "name": "structured-js-docs-site",
+  "description": "playground site for structured-js-types",
+  "version": "3.14.4",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "start": "next",
+    "build-sample": "next build",
+    "server": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atanasster/gatsby-controls-starter.git"
+  },
+  "dependencies": {
+    "@component-controls/nextjs-plugin": "^3.14.6",
+    "@component-controls/structured-js-types": "^3.14.4",
+    "@monaco-editor/react": "^4.2.1",
+    "next": "^10.0.7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-json-tree": "^0.15.0",
+    "react-split": "^2.0.11",
+    "typescript": "^4.2.4"
+  }
+}

@@ -10,8 +10,8 @@ import {
   ValueProp,
   FunctionProp,
   PropKind,
-} from '../utils';
-import { typeNameToPropKind } from '../utils';
+} from '../types';
+import { typeNameToPropKind } from '../types';
 const trimNewlines = (s: string): string => {
   return s.replace(/^[\r\n]+|[\r\n]+$/g, '');
 };

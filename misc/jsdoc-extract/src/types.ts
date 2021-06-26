@@ -1,39 +1,3 @@
-import * as ts from 'typescript';
-
-export type CompileOptions = {
-  tsOptions?: ts.CompilerOptions;
-};
-export type ParseOptions = {
-  typeResolver?: TypeResolver;
-  internalTypes?: string[];
-  saveParentProps?: boolean;
-};
-
-export const defaultParseOptions: ParseOptions = {
-  typeResolver: ({ symbolType }) => {
-    const properties = symbolType.getProperties();
-    if (properties.length && properties[0].escapedName === 'prototype') {
-      return undefined;
-    }
-    return symbolType;
-  },
-  saveParentProps: true,
-  internalTypes: [
-    'Function',
-    'CallableFunction',
-    'NewableFunction',
-    'String',
-    'Boolean',
-    'Booleanish',
-    'Number',
-    'Array',
-    'ConcatArray',
-    'ReadonlyArray',
-    'TemplateStringsArray',
-  ],
-};
-
-export type DocsOptions = CompileOptions & ParseOptions;
 export interface JSDocTypeTag {
   type?: string;
   description?: string;
@@ -374,12 +338,6 @@ export type PropTypes = {
   [propName: string]: PropType;
 } & { _parents?: Record<string, PropType> };
 
-export type TypeResolver = (props: {
-  symbolType: ts.Type;
-  declaration: ts.Declaration;
-  checker: ts.TypeChecker;
-}) => ts.Type | undefined;
-
 export const typeNameToPropKind = (type: string): PropKind | undefined => {
   const loopup: Record<string, PropKind> = {
     object: PropKind.Object,
@@ -404,33 +362,4 @@ export type JSDocInfoType = {
     name: { text: string; getText: () => string };
     tagName: { text: string };
   }[];
-};
-
-export const getSymbolType = (
-  checker: ts.TypeChecker,
-  symbol: ts.Symbol,
-): ts.Type | undefined => {
-  const declaration = symbol.valueDeclaration || symbol.declarations?.[0];
-  const type = checker.getTypeOfSymbolAtLocation(symbol, declaration);
-  if (
-    !('intrinsicName' in type) ||
-    ((type as unknown) as { intrinsicName: string }).intrinsicName !== 'error'
-  ) {
-    return type;
-  }
-  const symbolType = checker.getDeclaredTypeOfSymbol(symbol);
-  if (
-    !('intrinsicName' in symbolType) ||
-    ((symbolType as unknown) as { intrinsicName: string }).intrinsicName !==
-      'error'
-  ) {
-    return symbolType;
-  }
-  return undefined;
-};
-
-export const tsDefaults = {
-  jsx: ts.JsxEmit.React,
-  module: ts.ModuleKind.CommonJS,
-  target: ts.ScriptTarget.Latest,
 };

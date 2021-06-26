@@ -20,7 +20,7 @@ Extract structure documentation from javascript and typescript files using a com
 # Installation
 
 ```bash
-$ npm install @component-controls/structured-js-docs --save-dev
+$ npm install @component-controls/structured-js-types --save-dev
 ```
 
 # API
