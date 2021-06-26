@@ -370,7 +370,7 @@ export class SymbolParser {
         if (
           symbol &&
           symbol.escapedName &&
-          !this.options.internalTypes.includes(symbol.escapedName)
+          !this.options.internalTypes.includes(symbol.escapedName.toString())
         ) {
           this.addRefSymbol(prop, symbol);
         } else {
@@ -601,7 +601,7 @@ export class SymbolParser {
                 ts.isTypeLiteralNode(resolvedDeclaration)) &&
               resolvedDeclaration.members
             ) {
-              resolvedDeclaration.members.forEach(n => {
+              resolvedDeclaration.members.forEach((n: ts.Node) => {
                 if (ts.isIndexSignatureDeclaration(n)) {
                   const index = this.parseTypeValueComments({}, n);
                   properties.unshift(index);
