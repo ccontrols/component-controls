@@ -6,10 +6,10 @@ export const findUpFile = (
   fileName: string | string[],
   levels = 10,
 ): string | null => {
-  const files = fs.readdirSync(filePath);
   if (levels === 0) {
     return null;
   }
+  const files = fs.readdirSync(filePath);
   const arFiles: string[] = Array.isArray(fileName) ? fileName : [fileName];
   const pckg = files.find(file => arFiles.includes(file));
   if (pckg) {
