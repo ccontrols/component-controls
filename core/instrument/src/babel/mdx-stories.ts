@@ -3,8 +3,8 @@ import {
   Stories,
   Document,
   CodeLocation,
-  getASTSource,
 } from '@component-controls/core';
+import { getASTSource } from '@component-controls/core/node-utils';
 import camelCase from 'camelcase';
 import { File } from '@babel/types';
 import traverse from '@babel/traverse';

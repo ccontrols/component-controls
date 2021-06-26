@@ -1,4 +1,3 @@
-export { getASTSource } from '@component-controls/follow-imports';
 export * from './build';
 export * from './components';
 export * from './configuration';

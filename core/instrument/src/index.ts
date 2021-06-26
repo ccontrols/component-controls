@@ -4,12 +4,8 @@ import matter from 'gray-matter';
 import { File } from '@babel/types';
 import traverse from '@babel/traverse';
 import generate from '@babel/generator';
-import {
-  Story,
-  Document,
-  getASTSource,
-  deepmerge,
-} from '@component-controls/core';
+import { Story, Document, deepmerge } from '@component-controls/core';
+import { getASTSource } from '@component-controls/core/node-utils';
 import { parseFile } from '@component-controls/follow-imports';
 import { extractCSFStories } from './babel/esm-stories';
 import { extractMDXStories } from './babel/mdx-stories';
