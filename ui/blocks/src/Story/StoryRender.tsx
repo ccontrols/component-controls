@@ -5,7 +5,7 @@ import { jsx, CSSProperties, Box, BoxProps } from 'theme-ui';
 import Iframe from 'react-frame-component';
 import ReactResizeDetector from 'react-resize-detector';
 import { Story } from '@component-controls/core';
-import { useStore, useExternalOptions } from '@component-controls/store';
+import { useStore, useUserData } from '@component-controls/store';
 
 export interface IframeWrapperProps {
   initialIframeContent?: string;
@@ -92,7 +92,7 @@ export const StoryRender: FC<StoryRenderProps & StoryWrapperProps> = forwardRef(
     ref: Ref<HTMLDivElement>,
   ) {
     const store = useStore();
-    const options = useExternalOptions();
+    const options = useUserData();
     const doc = store.docs[story.doc as string];
     const rendered = doc.renderFn({
       story,

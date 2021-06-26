@@ -146,15 +146,15 @@ export const usePackage = (packageId?: string): PackageInfo | undefined => {
 
 const OptionsContext = createContext<any>({});
 
-export const OptionsContextProvider: FC<{ options: any }> = ({
-  options = {},
+export const OptionsContextProvider: FC<{ userData: Record<string, any> }> = ({
+  userData = {},
   children,
 }) => {
   return (
-    <OptionsContext.Provider value={options}>
+    <OptionsContext.Provider value={userData}>
       {children}
     </OptionsContext.Provider>
   );
 };
 
-export const useExternalOptions = (): any => useContext(OptionsContext);
+export const useUserData = (): any => useContext(OptionsContext);

@@ -12,6 +12,10 @@ export type LayoutProps = Omit<RoutePath, 'path'> & {
   store: Store;
   Link: AppContextProps['linkClass'];
   Helmet: AppContextProps['Helmet'];
+  /**
+   * user-supplied custom props
+   */
+  userData?: Record<string, any>;
 };
 
 export const Layout: FC<LayoutProps> = ({
@@ -25,6 +29,7 @@ export const Layout: FC<LayoutProps> = ({
   Helmet,
   store,
   children,
+  userData,
 }) => (
   <AppContext
     Helmet={Helmet}
@@ -34,6 +39,7 @@ export const Layout: FC<LayoutProps> = ({
     store={store}
     linkClass={Link}
     activeTab={activeTab}
+    userData={userData}
   >
     {children ||
       (docIndex ? (

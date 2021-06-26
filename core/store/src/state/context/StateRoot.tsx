@@ -34,10 +34,10 @@ export interface StateRootProps {
   values?: any;
 
   /**
-   * global options passed from container
-   * those are global parameters as well as decorators
+   * user options passed from container
+   * those can be global parameters as well as decorators
    */
-  options?: object;
+  userData?: Record<string, any>;
 }
 
 export const StateRoot: FC<StateRootProps> = ({
@@ -45,7 +45,7 @@ export const StateRoot: FC<StateRootProps> = ({
   storyId,
   docId,
   store,
-  options = {},
+  userData = {},
   values,
   activeTab,
 }) => {
@@ -53,7 +53,7 @@ export const StateRoot: FC<StateRootProps> = ({
     <StoreContextProvider store={store}>
       <ConfigContextProvider>
         <ActiveTabContextProvider activeTab={activeTab}>
-          <OptionsContextProvider options={options}>
+          <OptionsContextProvider userData={userData}>
             <DocumentContextProvider docId={docId}>
               <DocsSortContextProvider>
                 <StoryContextProvider storyId={storyId} values={values}>

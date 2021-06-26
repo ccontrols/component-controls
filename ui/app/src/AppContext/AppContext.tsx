@@ -20,6 +20,7 @@ export interface AppContextProps {
   linkClass: LinkContextProviderProps['linkClass'];
   Helmet?: AppProps['Helmet'];
   activeTab?: string;
+  userData?: Record<string, any>;
 }
 
 export const AppContext: FC<AppContextProps> = ({
@@ -31,6 +32,7 @@ export const AppContext: FC<AppContextProps> = ({
   linkClass,
   activeTab,
   Helmet,
+  userData,
 }) => {
   const query =
     typeof window !== 'undefined'
@@ -57,6 +59,7 @@ export const AppContext: FC<AppContextProps> = ({
       store={store}
       activeTab={activeTab}
       components={mdxComponents}
+      userData={userData}
     >
       <SidebarContextProvider>
         <LinkContextProvider linkClass={linkClass}>
