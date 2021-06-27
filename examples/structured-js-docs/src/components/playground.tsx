@@ -1,13 +1,18 @@
 /** @jsx jsx */
 import { FC, useEffect, useState } from 'react';
-import { jsx, Theme } from 'theme-ui';
+import { jsx, Theme, Box, Heading } from 'theme-ui';
+import { TriangleUpIcon, TriangleDownIcon } from '@primer/octicons-react';
 import Split from 'react-split';
+import { Tabs, TabList, Tab, TabPanel } from '@component-controls/components';
 import { getUrlParams, getUpdatedUrlParams } from '@component-controls/blocks';
+
+import { ExamplesPanel } from './examples-panel';
 import { Editor } from './editor';
 import { TypeViewer } from './type-viewer';
 
 export const Playground: FC = () => {
   const [sizes, setSizes] = useState<number[]>([70, 30]);
+  const [tabIndex, setTabIndex] = useState<number>(1);
   const [code, setCode] = useState('');
   useEffect(() => {
     const storeSizes = localStorage.getItem('split-size');
@@ -28,29 +33,91 @@ export const Playground: FC = () => {
   };
 
   return (
-    <Split
-      sizes={sizes}
-      minSize={20}
-      snapOffset={30}
-      expandToMin={false}
-      dragInterval={1}
-      direction="horizontal"
-      cursor="col-resize"
-      onDragEnd={(sizes: number[]) => {
-        localStorage.setItem('split-size', JSON.stringify(sizes));
-      }}
+    <Box
       sx={{
-        flex: 1,
         display: 'flex',
-        border: (t: Theme) => `1px solid ${t.colors?.muted}`,
-        '.gutter': {
-          border: (t: Theme) => `1px solid ${t.colors?.muted}`,
-          cursor: 'col-resize',
+        flexDirection: 'column',
+        flex: 1,
+        alignItems: 'stretch',
+        '.react-tabs': {
+          flex: 1,
         },
       }}
     >
-      <Editor onChange={onChangeCode} value={code} />
-      <TypeViewer code={code} />
-    </Split>
+      <Tabs
+        selectedIndex={tabIndex}
+        onSelect={(index, prevIndex) => {
+          if (index === prevIndex) {
+            setTabIndex(0);
+          } else {
+            setTabIndex(index);
+          }
+        }}
+      >
+        <Box sx={{ display: 'flex', flexDirection: 'row', bg: 'muted' }}>
+          <Heading as="h3" sx={{ py: 3, pl: 2, pr: 5, fontWeight: 'bold' }}>
+            Playground
+          </Heading>
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+              '.react-tabs__tab:first-child': {
+                visibility: 'hidden',
+              },
+            }}
+          >
+            <TabList>
+              <Tab></Tab>
+              <Tab>
+                Examples{' '}
+                {tabIndex === 1 ? <TriangleUpIcon /> : <TriangleDownIcon />}
+              </Tab>
+              <Tab>
+                TS Config{' '}
+                {tabIndex === 2 ? <TriangleUpIcon /> : <TriangleDownIcon />}
+              </Tab>
+            </TabList>
+          </Box>
+        </Box>
+        <TabPanel>
+          <Split
+            sizes={sizes}
+            minSize={20}
+            snapOffset={30}
+            expandToMin={false}
+            dragInterval={1}
+            direction="horizontal"
+            cursor="col-resize"
+            onDragEnd={(sizes: number[]) => {
+              localStorage.setItem('split-size', JSON.stringify(sizes));
+            }}
+            sx={{
+              flex: 1,
+              display: 'flex',
+              border: (t: Theme) => `1px solid ${t.colors?.muted}`,
+              '.gutter': {
+                border: (t: Theme) => `1px solid ${t.colors?.muted}`,
+                cursor: 'col-resize',
+              },
+            }}
+          >
+            <Editor onChange={onChangeCode} value={code} />
+            <TypeViewer code={code} />
+          </Split>
+        </TabPanel>
+        <TabPanel>
+          <ExamplesPanel
+            onClose={() => setTabIndex(0)}
+            onSelect={(code: string) => {
+              setTabIndex(0);
+              setCode(code);
+            }}
+          />
+        </TabPanel>
+        <TabPanel></TabPanel>
+      </Tabs>
+    </Box>
   );
 };

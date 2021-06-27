@@ -1,7 +1,13 @@
 import React, { FC, useState, useEffect } from 'react';
 import ReactJson from 'react-json-tree';
 import { Box } from 'theme-ui';
-import { useTheme } from '@component-controls/components';
+import {
+  useTheme,
+  Tabs,
+  TabList,
+  Tab,
+  TabPanel,
+} from '@component-controls/components';
 import { PropKind } from '@component-controls/structured-js-types/types';
 
 import { useDebounce } from '../hooks/debounce';
@@ -32,39 +38,48 @@ export const TypeViewer: FC<TypeViewer> = ({ code }) => {
         ml: 3,
       }}
     >
-      <ReactJson
-        data={types}
-        hideRoot={true}
-        shouldExpandNode={(
-          keyPath: (string | number)[],
-          data: any,
-          level: number,
-        ) => {
-          return level === 1;
-        }}
-        valueRenderer={(
-          valueAsString: any,
-          value: any,
-          ...keyPath: (string | number)[]
-        ) => {
-          if (keyPath.length && keyPath[0] === 'kind') {
-            const strValue = value.toString();
-            return (
-              Object.entries(PropKind).find(([v, _]) => {
-                return v === strValue;
-              })?.[1] || valueAsString
-            );
-          }
-          return valueAsString;
-        }}
-        theme={{
-          base00: theme.colors?.background as string,
-          base03: theme.colors?.muted as string,
-          base0B: theme.colors?.accent as string,
-          base0D: theme.colors?.text as string,
-        }}
-        invertTheme={false}
-      />
+      <Tabs>
+        <TabList>
+          <Tab>structured-js-types</Tab>
+          <Tab>react-docgen-typescript</Tab>
+          <Tab>react-docgen</Tab>
+        </TabList>
+        <TabPanel>
+          <ReactJson
+            data={types}
+            hideRoot={true}
+            shouldExpandNode={(
+              keyPath: (string | number)[],
+              data: any,
+              level: number,
+            ) => {
+              return level === 1;
+            }}
+            valueRenderer={(
+              valueAsString: any,
+              value: any,
+              ...keyPath: (string | number)[]
+            ) => {
+              if (keyPath.length && keyPath[0] === 'kind') {
+                const strValue = value.toString();
+                return (
+                  Object.entries(PropKind).find(([v, _]) => {
+                    return v === strValue;
+                  })?.[1] || valueAsString
+                );
+              }
+              return valueAsString;
+            }}
+            theme={{
+              base00: theme.colors?.background as string,
+              base03: theme.colors?.muted as string,
+              base0B: theme.colors?.accent as string,
+              base0D: theme.colors?.text as string,
+            }}
+            invertTheme={false}
+          />
+        </TabPanel>
+      </Tabs>
     </Box>
   );
 };
