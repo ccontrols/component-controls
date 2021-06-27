@@ -6,9 +6,9 @@ import Split from 'react-split';
 import { Tabs, TabList, Tab, TabPanel } from '@component-controls/components';
 import { getUrlParams, getUpdatedUrlParams } from '@component-controls/blocks';
 
-import { ExamplesPanel } from './examples-panel';
-import { Editor } from './editor';
-import { TypeViewer } from './type-viewer';
+import { ExamplesPanel } from './ExamplesPanel';
+import { Editor } from './Editor';
+import { TypeViewer } from './TypeViewer';
 
 export const Playground: FC = () => {
   const [sizes, setSizes] = useState<number[]>([70, 30]);

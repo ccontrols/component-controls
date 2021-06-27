@@ -2,7 +2,7 @@
 import { FC } from 'react';
 import { jsx, Box, Heading, Link } from 'theme-ui';
 import { useUserData } from '@component-controls/store';
-import { PanelContainer, PanelContainerProps } from './panel-container';
+import { PanelContainer, PanelContainerProps } from './PanelContainer';
 
 type ExamplesPanelProps = {
   onSelect: (code: string) => void;
