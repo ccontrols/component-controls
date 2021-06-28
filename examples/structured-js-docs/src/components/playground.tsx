@@ -12,7 +12,7 @@ import { TypeViewer } from './TypeViewer';
 
 export const Playground: FC = () => {
   const [sizes, setSizes] = useState<number[]>([70, 30]);
-  const [tabIndex, setTabIndex] = useState<number>(1);
+  const [tabIndex, setTabIndex] = useState<number>(0);
   const [code, setCode] = useState('');
   useEffect(() => {
     const storeSizes = localStorage.getItem('split-size');
