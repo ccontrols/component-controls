@@ -1,4 +1,3 @@
-import { createHash } from 'crypto';
 import * as ts from 'typescript';
 import { getTypescriptConfig } from '@component-controls/typescript-config';
 import { anaylizeFiles } from './ts-walk';
@@ -29,17 +28,21 @@ export const parseCode = (
 ): PropTypes => {
   let result: PropTypes = {};
   if (code) {
-    const name = createHash('md5')
-      .update(Math.random().toString())
-      .digest('hex');
-
-    const fileName = name + '.ts';
-    ts.sys.writeFile(fileName, code);
-    try {
-      result = anaylizeFiles([fileName], { ...tsDefaults, ...options }, names);
-    } finally {
-      if (ts.sys.deleteFile) {
-        ts.sys.deleteFile(fileName);
+    const tsOptions = {
+      ...tsDefaults,
+      ...options?.tsOptions,
+    };
+    const host = ts.createCompilerHost(tsOptions);
+    if (host.createHash) {
+      const name = host.createHash(Math.random().toString());
+      const fileName = name + '.ts';
+      ts.sys.writeFile(fileName, code);
+      try {
+        result = anaylizeFiles([fileName], { ...options, tsOptions }, names);
+      } finally {
+        if (ts.sys.deleteFile) {
+          ts.sys.deleteFile(fileName);
+        }
       }
     }
   }

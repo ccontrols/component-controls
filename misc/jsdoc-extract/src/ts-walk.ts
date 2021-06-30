@@ -7,9 +7,10 @@ export const anaylizeFiles = (
   fileNames: string[],
   options: DocsOptions = {},
   names?: string[],
+  host?: ts.CompilerHost,
 ): PropTypes => {
-  const { tsOptions, ...parseOptions } = options;
-  const program = ts.createProgram(fileNames, tsOptions || tsDefaults);
+  const { tsOptions = tsDefaults, ...parseOptions } = options;
+  const program = ts.createProgram(fileNames, tsOptions, host);
 
   // Get the checker, we will use it to find more about classes
   const checker = program.getTypeChecker();
