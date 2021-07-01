@@ -1,9 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export const useDebounce = (
-  value: string | undefined,
-  delay: number,
-): string | undefined => {
+export const useDebounce = (value: any, delay: number): any => {
   const [state, setState] = useState(value);
   useEffect(() => {
     const handler = setTimeout(() => {
@@ -13,7 +10,8 @@ export const useDebounce = (
     return () => {
       clearTimeout(handler);
     };
-  }, [value, delay]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [JSON.stringify(value), delay]);
 
   return state;
 };

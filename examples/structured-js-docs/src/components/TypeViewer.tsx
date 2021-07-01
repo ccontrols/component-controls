@@ -3,7 +3,7 @@ import ReactJson from 'react-json-tree';
 import { Box } from 'theme-ui';
 import { useTheme } from '@component-controls/components';
 import { PropKind } from '@component-controls/structured-js-types/types';
-
+import { useConfig } from '../contexts/OptionsContext';
 import { useDebounce } from '../hooks/debounce';
 interface TypeViewer {
   code?: string;
@@ -12,11 +12,19 @@ export const TypeViewer: FC<TypeViewer> = ({ code }) => {
   const [loading, setLoading] = useState(false);
   const [types, setTypes] = useState({});
   const theme = useTheme();
-  const debounced = useDebounce(code, 300);
+  const config = useConfig();
+  const debouncedCode = useDebounce(code, 300);
+  const debouncedConfig = useDebounce(config, 300);
+
   useEffect(() => {
-    if (debounced) {
+    if (debouncedCode) {
       setLoading(true);
-      fetch(`/api?code=${encodeURIComponent(debounced)}`)
+      const url = `/api?code=${debouncedCode}${
+        debouncedConfig
+          ? `&config=${JSON.stringify({ tsOptions: debouncedConfig })}`
+          : ''
+      }`;
+      fetch(encodeURI(url))
         .then(data => data.json())
         .then(json => {
           setLoading(false);
@@ -28,7 +36,7 @@ export const TypeViewer: FC<TypeViewer> = ({ code }) => {
     } else {
       setTypes({});
     }
-  }, [debounced]);
+  }, [debouncedCode, debouncedConfig]);
   return (
     <Box
       sx={{

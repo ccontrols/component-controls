@@ -2,6 +2,7 @@
 import { FC } from 'react';
 import { jsx, Box, Heading, Link } from 'theme-ui';
 import { useUserData } from '@component-controls/store';
+import { Tabs, TabList, Tab, TabPanel } from '@component-controls/components';
 import { PanelContainer, PanelContainerProps } from './PanelContainer';
 
 type ExamplesPanelProps = {
@@ -14,21 +15,33 @@ export const ExamplesPanel: FC<ExamplesPanelProps> = ({
 }) => {
   const data = useUserData();
   const { examples } = data;
-  console.log(examples);
   return (
     <PanelContainer onClose={onClose}>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+      <Tabs>
+        <TabList>
+          {Object.keys(examples).map(key => (
+            <Tab key={key}>
+              <Heading
+                as="h1"
+                sx={{
+                  ':first-letter': {
+                    textTransform: 'capitalize',
+                  },
+                }}
+              >
+                {key}
+              </Heading>
+            </Tab>
+          ))}
+        </TabList>
         {Object.keys(examples).map(key => (
-          <Box key={key}>
-            <Heading as="h3" sx={{ py: 3, pl: 2, pr: 5 }}>
-              {key}
-            </Heading>
+          <TabPanel key={key}>
             <Box
-              key={key}
               sx={{
                 display: 'flex',
                 flexDirection: 'row',
                 flexWrap: 'wrap',
+                py: 3,
               }}
             >
               {Object.keys(examples[key])
@@ -42,7 +55,12 @@ export const ExamplesPanel: FC<ExamplesPanelProps> = ({
                       px: 4,
                     }}
                   >
-                    <Heading as="h4" sx={{ pb: 2 }}>
+                    <Heading
+                      as="h4"
+                      sx={{
+                        py: 2,
+                      }}
+                    >
                       {category}
                     </Heading>
                     <Box
@@ -68,9 +86,9 @@ export const ExamplesPanel: FC<ExamplesPanelProps> = ({
                   </Box>
                 ))}
             </Box>
-          </Box>
+          </TabPanel>
         ))}
-      </Box>
+      </Tabs>
     </PanelContainer>
   );
 };

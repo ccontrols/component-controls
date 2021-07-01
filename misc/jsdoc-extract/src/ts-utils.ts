@@ -153,7 +153,7 @@ export const tsDefaults = {
 };
 
 export type CompileOptions = {
-  tsOptions?: ts.CompilerOptions;
+  tsOptions?: ts.CompilerOptions & { lang?: 'typescript' | 'javascript' };
 };
 export type ParseOptions = {
   typeResolver?: TypeResolver;

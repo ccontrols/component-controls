@@ -13,7 +13,7 @@ export const getURL = (): URL | undefined => {
 };
 export const getUpdatedUrlParams = (
   paremName: string,
-  value: string,
+  value?: string,
 ): string | undefined => {
   const url = getURL();
   if (url) {

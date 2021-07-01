@@ -1,6 +1,7 @@
 import React from 'react';
 import MonacoEditor from '@monaco-editor/react';
 import { Box, useColorMode } from 'theme-ui';
+import { useOptions } from '../contexts/OptionsContext';
 
 interface EditorProps {
   value?: string;
@@ -8,6 +9,9 @@ interface EditorProps {
 }
 export const Editor: React.FC<EditorProps> = ({ onChange, value }) => {
   const [colorMode] = useColorMode();
+  const options = useOptions();
+  const language =
+    options.General.lang.value || options.General.lang.defaultValue;
   function handleEditorChange(value: string | undefined) {
     if (onChange) {
       onChange(value || '');
@@ -17,7 +21,7 @@ export const Editor: React.FC<EditorProps> = ({ onChange, value }) => {
   return (
     <Box style={{ height: '90vh' }}>
       <MonacoEditor
-        defaultLanguage="typescript"
+        language={language as string}
         value={value}
         onChange={handleEditorChange}
         theme={colorMode === 'dark' ? 'vs-dark' : 'vs-light'}

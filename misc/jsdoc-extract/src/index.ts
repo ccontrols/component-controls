@@ -4,6 +4,7 @@ import { anaylizeFiles } from './ts-walk';
 import { PropTypes } from './types';
 import { tsDefaults, DocsOptions } from './ts-utils';
 export * from './types';
+export * from './ts-utils';
 
 export const parseFiles = (
   filePaths: string[],
@@ -28,6 +29,7 @@ export const parseCode = (
 ): PropTypes => {
   let result: PropTypes = {};
   if (code) {
+    const { lang = 'typescript' } = options?.tsOptions || {};
     const tsOptions = {
       ...tsDefaults,
       ...options?.tsOptions,
@@ -35,7 +37,7 @@ export const parseCode = (
     const host = ts.createCompilerHost(tsOptions);
     if (host.createHash) {
       const name = host.createHash(Math.random().toString());
-      const fileName = name + '.ts';
+      const fileName = name + (lang === 'javascript' ? '.js' : '.ts');
       ts.sys.writeFile(fileName, code);
       try {
         result = anaylizeFiles([fileName], { ...options, tsOptions }, names);
