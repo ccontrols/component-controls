@@ -180,6 +180,10 @@ export interface ParseOptions {
    * if set to false will result in a smaller result
    */
   saveParentProps?: boolean;
+  /**
+   * whether to collect errors/diagnostics
+   */
+  collectDiagnostics?: boolean;
 }
 
 export const defaultParseOptions: ParseOptions = {

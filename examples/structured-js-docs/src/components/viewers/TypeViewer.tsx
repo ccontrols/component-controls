@@ -1,46 +1,15 @@
-import React, { FC, useState, useEffect } from 'react';
+import React, { FC } from 'react';
 import ReactJson from 'react-json-tree';
 import { Box } from 'theme-ui';
 import { useTheme } from '@component-controls/components';
 import { PropKind } from '@component-controls/structured-js-types/types';
-import { useConfig } from '../contexts/OptionsContext';
-import { useDebounce } from '../hooks/debounce';
-interface TypeViewer {
-  code?: string;
-}
-export const TypeViewer: FC<TypeViewer> = ({ code }) => {
-  const [loading, setLoading] = useState(false);
-  const [types, setTypes] = useState({});
-  const theme = useTheme();
-  const config = useConfig();
-  const debouncedCode = useDebounce(code, 300);
-  const debouncedConfig = useDebounce(config, 300);
+import { useTypesContext } from '../../contexts/TypesContext';
+import { LoadingIndicator } from './LoadingIndicator';
 
-  useEffect(() => {
-    if (debouncedCode) {
-      setLoading(true);
-      const { tsOptions, parseOptions } = debouncedConfig;
-      const url = `/api?code=${debouncedCode}${
-        debouncedConfig
-          ? `&config=${JSON.stringify({
-              tsOptions,
-              ...parseOptions,
-            })}`
-          : ''
-      }`;
-      fetch(encodeURI(url))
-        .then(data => data.json())
-        .then(json => {
-          setLoading(false);
-          setTypes(json);
-        })
-        .catch(() => {
-          setLoading(false);
-        });
-    } else {
-      setTypes({});
-    }
-  }, [debouncedCode, debouncedConfig]);
+export const TypeViewer: FC = () => {
+  const { loading, types } = useTypesContext();
+  const theme = useTheme();
+
   return (
     <Box
       sx={{
@@ -50,19 +19,8 @@ export const TypeViewer: FC<TypeViewer> = ({ code }) => {
         ml: 3,
       }}
     >
-      {' '}
       {loading ? (
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            width: '100%',
-            p: 3,
-          }}
-        >
-          loading...
-        </Box>
+        <LoadingIndicator />
       ) : (
         <ReactJson
           data={types}

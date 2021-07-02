@@ -15,7 +15,7 @@ import {
 } from './options';
 
 export type OptionsType = 'tsOptions' | 'parseOptions';
-type ContextType = {
+type OptionsContextType = {
   updateOption: (
     paramName: OptionsType,
     title: string,
@@ -24,9 +24,11 @@ type ContextType = {
   parseOptions: ParseOptionsType;
   tsOptions: TSOptionsType;
 };
-const OptionsContext = createContext<ContextType>({} as ContextType);
+const OptionsContext = createContext<OptionsContextType>(
+  {} as OptionsContextType,
+);
 
-const getPureConfig = (
+export const getPureConfig = (
   value: TSOptionsType | ParseOptionsType,
 ): Record<string, OptionValueType> | undefined => {
   const modifiedOptions: Record<string, OptionValueType> = {};
@@ -145,14 +147,4 @@ export const useUpdateOptions = (
   return (value: OptionValueType) => {
     return context.updateOption(paramName, title, value);
   };
-};
-
-export const useConfig = (): {
-  parseOptions: ReturnType<typeof getPureConfig>;
-  tsOptions: ReturnType<typeof getPureConfig>;
-} => {
-  const options = useOptions();
-  const tsOptions = getPureConfig(options.tsOptions);
-  const parseOptions = getPureConfig(options.parseOptions);
-  return { parseOptions, tsOptions };
 };

@@ -49,6 +49,10 @@ export const defaultParseOptions: ParseOptionsType = {
       defaultValue: true,
       help: 'Whether to save the "parent" props',
     },
+    collectDiagnostics: {
+      defaultValue: false,
+      help: 'whether to collect errors/diagnostics',
+    },
   },
 };
 

@@ -4,16 +4,11 @@ import { jsx, Box, Heading, Link } from 'theme-ui';
 import { useUserData } from '@component-controls/store';
 import { Tabs, TabList, Tab, TabPanel } from '@component-controls/components';
 import { PanelContainer, PanelContainerProps } from './PanelContainer';
+import { useCodeContext } from '../../contexts/CodeContext';
 
-type ExamplesPanelProps = {
-  onSelect: (code: string) => void;
-} & PanelContainerProps;
-
-export const ExamplesPanel: FC<ExamplesPanelProps> = ({
-  onClose,
-  onSelect,
-}) => {
+export const ExamplesPanel: FC<PanelContainerProps> = ({ onClose }) => {
   const data = useUserData();
+  const { updateCode } = useCodeContext();
   const { examples } = data;
   return (
     <PanelContainer onClose={onClose}>
@@ -76,7 +71,8 @@ export const ExamplesPanel: FC<ExamplesPanelProps> = ({
                           key={example}
                           href="#"
                           onClick={() => {
-                            onSelect(examples[key][category][example]);
+                            onClose();
+                            updateCode(examples[key][category][example]);
                           }}
                         >
                           {example.split('.')[0]}

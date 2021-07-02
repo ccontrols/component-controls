@@ -1,5 +1,5 @@
 import * as ts from 'typescript';
-import { PropTypes, PropType } from './types';
+import { PropTypes, PropDiagnostic } from './types';
 import { tsDefaults, DocsOptions } from './ts-utils';
 import { SymbolParser } from './parse-symbol';
 
@@ -9,13 +9,13 @@ export const anaylizeFiles = (
   host?: ts.CompilerHost,
 ): PropTypes => {
   const { tsOptions = tsDefaults, ...parseOptions } = options;
-  const { extractNames } = parseOptions || {};
+  const { extractNames, collectDiagnostics } = parseOptions || {};
   const program = ts.createProgram(fileNames, tsOptions, host);
-
   // Get the checker, we will use it to find more about classes
   const checker = program.getTypeChecker();
+
   const parser = new SymbolParser(checker, parseOptions);
-  const parsed: Record<string, PropType> = {};
+  const parsed: PropTypes = {};
   // Visit every sourceFile in the program
   for (const sourceFile of program.getSourceFiles()) {
     const module = checker.getSymbolAtLocation(sourceFile);
@@ -33,7 +33,41 @@ export const anaylizeFiles = (
     }
   }
   if (Object.keys(parser.parents).length) {
-    return { ...parsed, _parents: parser.parents };
+    parsed.__parents = parser.parents;
   }
+  if (collectDiagnostics) {
+    const allDiagnostics = ts
+      .getPreEmitDiagnostics(program)
+      .filter(({ file }) => file && fileNames.includes(file.fileName));
+    if (allDiagnostics.length) {
+      parsed.__diagnostics = allDiagnostics.map(
+        ({ category, messageText, file, start }) => {
+          const message =
+            typeof messageText === 'string'
+              ? messageText
+              : messageText.messageText;
+
+          const result: PropDiagnostic = {
+            category,
+            message,
+          };
+          if (file) {
+            result.fileName = file.fileName
+              .split('\\')
+              .pop()
+              ?.split('/')
+              .pop();
+            if (typeof start !== 'undefined') {
+              const location = file.getLineAndCharacterOfPosition(start);
+              result.row = location.line + 1;
+              result.column = location.character + 1;
+            }
+          }
+          return result;
+        },
+      );
+    }
+  }
+
   return parsed;
 };

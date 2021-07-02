@@ -1,3 +1,5 @@
+import ts from 'typescript';
+
 export interface JSDocTypeTag {
   type?: string;
   description?: string;
@@ -334,9 +336,17 @@ export const isObjectLikeProp = (prop: PropType): prop is ObjectLikeProp => {
     prop.kind === PropKind.Object
   );
 };
+
+export type PropDiagnostic = {
+  category: ts.DiagnosticCategory;
+  message: string;
+  row?: number;
+  column?: number;
+  fileName?: string;
+};
 export type PropTypes = {
   [propName: string]: PropType;
-} & { _parents?: Record<string, PropType> };
+} & { __parents?: Record<string, PropType>; __diagnostics?: PropDiagnostic[] };
 
 export const typeNameToPropKind = (type: string): PropKind | undefined => {
   const loopup: Record<string, PropKind> = {

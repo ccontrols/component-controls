@@ -31,7 +31,7 @@ export const parseCode = (code?: string, options?: DocsOptions): PropTypes => {
     };
     const host = ts.createCompilerHost(tsOptions);
     if (host.createHash) {
-      const name = host.createHash(Math.random().toString());
+      const name = host.createHash(Math.random().toString()).substring(0, 12);
       const fileName = name + (lang === 'javascript' ? '.js' : '.ts');
       ts.sys.writeFile(fileName, code);
       try {
