@@ -21,7 +21,7 @@ export const getUpdatedUrlParams = (
     if (value) {
       parsedParams[paremName] = value;
     } else {
-      delete parsedParams.paremName;
+      delete parsedParams[paremName];
     }
     const strValues = queryString.stringify(parsedParams);
     const newURL = `${url.protocol}//${url.host}${url.pathname}${
