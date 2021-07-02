@@ -11,7 +11,7 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from '@primer/octicons-react';
-import { Result, ImpactValue } from 'axe-core';
+import { Result } from 'axe-core';
 import {
   Table,
   Column,
@@ -99,7 +99,7 @@ const ResultsTable: FC<ResultsTableProps> = ({
         Header: 'impact',
         accessor: 'impact',
         width: 80,
-        Cell: ({ value }: { value: ImpactValue }) => {
+        Cell: ({ value }) => {
           const impact = value ? impactColors[value] : undefined;
           return (
             impact && (
@@ -150,7 +150,7 @@ const ResultsTable: FC<ResultsTableProps> = ({
       {
         Header: 'tags',
         accessor: 'tags',
-        Cell: ({ value }: { value: string[] }) => (
+        Cell: ({ value }) => (
           <Flex
             css={{
               flexWrap: 'wrap',
