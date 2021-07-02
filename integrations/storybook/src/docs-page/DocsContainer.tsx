@@ -26,7 +26,7 @@ export const PageContextContainer: FC = ({ children }) => {
       storyId={storyId}
       store={store}
       docId={docId}
-      options={{
+      userData={{
         ...globOptions,
         parameters: globOptions.parameters
           ? { ...globOptions.parameters, ...parameters }
