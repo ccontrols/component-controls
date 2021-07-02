@@ -9,7 +9,6 @@ export * from './ts-utils';
 export const parseFiles = (
   filePaths: string[],
   options: DocsOptions = {},
-  names?: string[],
 ): PropTypes => {
   if (!filePaths.length) {
     throw new Error('You need to supply at least one file');
@@ -18,15 +17,11 @@ export const parseFiles = (
     ...tsDefaults,
     ...getTypescriptConfig(filePaths[0], options.tsOptions),
   };
-  const results = anaylizeFiles(filePaths, options, names);
+  const results = anaylizeFiles(filePaths, options);
   return results;
 };
 
-export const parseCode = (
-  code?: string,
-  options?: DocsOptions,
-  names?: string[],
-): PropTypes => {
+export const parseCode = (code?: string, options?: DocsOptions): PropTypes => {
   let result: PropTypes = {};
   if (code) {
     const { lang = 'typescript' } = options?.tsOptions || {};
@@ -40,7 +35,7 @@ export const parseCode = (
       const fileName = name + (lang === 'javascript' ? '.js' : '.ts');
       ts.sys.writeFile(fileName, code);
       try {
-        result = anaylizeFiles([fileName], { ...options, tsOptions }, names);
+        result = anaylizeFiles([fileName], { ...options, tsOptions });
       } finally {
         if (ts.sys.deleteFile) {
           ts.sys.deleteFile(fileName);

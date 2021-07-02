@@ -6,10 +6,10 @@ import { SymbolParser } from './parse-symbol';
 export const anaylizeFiles = (
   fileNames: string[],
   options: DocsOptions = {},
-  names?: string[],
   host?: ts.CompilerHost,
 ): PropTypes => {
   const { tsOptions = tsDefaults, ...parseOptions } = options;
+  const { extractNames } = parseOptions || {};
   const program = ts.createProgram(fileNames, tsOptions, host);
 
   // Get the checker, we will use it to find more about classes
@@ -24,7 +24,7 @@ export const anaylizeFiles = (
         const exports = checker.getExportsOfModule(module);
         exports.forEach(e => {
           const symbolName = e.getName();
-          if (!names || names.includes(symbolName)) {
+          if (!extractNames || extractNames.includes(symbolName)) {
             const prop = parser.parseSymbol(e);
             parsed[symbolName] = prop;
           }

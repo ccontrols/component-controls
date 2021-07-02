@@ -1,17 +1,58 @@
 import { CompilerOptions } from 'typescript';
+export type OptionValueType = string | boolean | string[];
+
 export interface OptionsData {
   help: string;
-  value?: string | boolean;
-  defaultValue: string | boolean;
+  value?: OptionValueType;
+  defaultValue?: OptionValueType;
   options?: string[];
   link?: string;
+  type?: 'textarea' | 'checkbox' | 'select';
 }
-type Options = {
+
+type TSOptionsRow = {
   [P in keyof CompilerOptions]: OptionsData;
 };
 
-export type OptionsType = { [title: string]: Options };
-export const defaultOptions: OptionsType = {
+export type TSOptionsType = { [title: string]: TSOptionsRow };
+
+type ParseOptionsRow = {
+  [index: string]: OptionsData;
+};
+
+export type ParseOptionsType = { [title: string]: ParseOptionsRow };
+
+export const defaultParseOptions: ParseOptionsType = {
+  General: {
+    internalTypes: {
+      help: 'internal types to ignore during parsing.',
+      defaultValue: [
+        'Function',
+        'CallableFunction',
+        'NewableFunction',
+        'String',
+        'Boolean',
+        'Booleanish',
+        'Number',
+        'Array',
+        'ConcatArray',
+        'ReadonlyArray',
+        'TemplateStringsArray',
+      ],
+    },
+    extractNames: {
+      type: 'textarea',
+      help:
+        'List of export names to be extracted during parsing. By default all exports will be extracted.',
+    },
+    saveParentProps: {
+      defaultValue: true,
+      help: 'Whether to save the "parent" props',
+    },
+  },
+};
+
+export const defaultTSOptions: TSOptionsType = {
   General: {
     lang: {
       defaultValue: 'typescript',

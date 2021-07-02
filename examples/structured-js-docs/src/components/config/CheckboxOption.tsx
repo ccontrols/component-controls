@@ -3,14 +3,21 @@ import { FC } from 'react';
 import { jsx, Box, Heading, Checkbox, Label } from 'theme-ui';
 import { InfoIcon } from '@primer/octicons-react';
 import { Link, Markdown } from '@component-controls/components';
-import { useUpdateOptions } from '../contexts/OptionsContext';
-import { OptionsData } from '../contexts/ts-options';
+import { useUpdateOptions, OptionsType } from '../../contexts/OptionsContext';
+import { OptionsData } from '../../contexts/options';
 
 export const CheckboxOption: FC<{
+  paramName: OptionsType;
   title: string;
-} & OptionsData> = ({ title, help, value: propValue, defaultValue }) => {
+} & OptionsData> = ({
+  paramName,
+  title,
+  help,
+  value: propValue,
+  defaultValue,
+}) => {
   const value = typeof propValue === 'undefined' ? defaultValue : propValue;
-  const updateOption = useUpdateOptions(title);
+  const updateOption = useUpdateOptions(paramName, title);
   return (
     <Box
       sx={{

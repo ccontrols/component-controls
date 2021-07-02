@@ -155,11 +155,32 @@ export const tsDefaults = {
 export type CompileOptions = {
   tsOptions?: ts.CompilerOptions & { lang?: 'typescript' | 'javascript' };
 };
-export type ParseOptions = {
+
+/**
+ * parsing options
+ */
+export interface ParseOptions {
+  /**
+   * type resolving custom function
+   * ie from a react component will return the props type
+   */
   typeResolver?: TypeResolver;
+  /**
+   * internal types - libs
+   * by default includes classes such as `String`, `Function`...
+   */
   internalTypes?: string[];
+  /**
+   * list of export names to be extracted.
+   * by default all exports are extracted
+   */
+  extractNames?: string[];
+  /**
+   * whether to save the "parent" props
+   * if set to false will result in a smaller result
+   */
   saveParentProps?: boolean;
-};
+}
 
 export const defaultParseOptions: ParseOptions = {
   typeResolver: ({ symbolType }) => {

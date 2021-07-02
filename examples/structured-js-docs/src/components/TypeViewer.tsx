@@ -19,9 +19,13 @@ export const TypeViewer: FC<TypeViewer> = ({ code }) => {
   useEffect(() => {
     if (debouncedCode) {
       setLoading(true);
+      const { tsOptions, parseOptions } = debouncedConfig;
       const url = `/api?code=${debouncedCode}${
         debouncedConfig
-          ? `&config=${JSON.stringify({ tsOptions: debouncedConfig })}`
+          ? `&config=${JSON.stringify({
+              tsOptions,
+              ...parseOptions,
+            })}`
           : ''
       }`;
       fetch(encodeURI(url))

@@ -3,15 +3,15 @@ import { FC } from 'react';
 import { jsx, Box, Heading } from 'theme-ui';
 
 import { PanelContainer, PanelContainerProps } from './PanelContainer';
-import { SelectOption } from './SelectOption';
-import { CheckboxOption } from './CheckboxOption';
+import { SelectOption } from '../config/SelectOption';
+import { CheckboxOption } from '../config/CheckboxOption';
 
-import { useOptions } from '../contexts/OptionsContext';
+import { useOptions } from '../../contexts/OptionsContext';
 
 type ExamplesPanelProps = PanelContainerProps;
 
 export const ConfigPanel: FC<ExamplesPanelProps> = ({ onClose }) => {
-  const options = useOptions();
+  const { tsOptions } = useOptions();
   return (
     <PanelContainer onClose={onClose}>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
@@ -25,12 +25,13 @@ export const ConfigPanel: FC<ExamplesPanelProps> = ({ onClose }) => {
             flexDirection: ['column', 'column', 'row'],
           }}
         >
-          {options &&
-            Object.keys(options.General).map(option => (
+          {tsOptions &&
+            Object.keys(tsOptions.General).map(option => (
               <SelectOption
                 key={option}
+                paramName="tsOptions"
                 title={option}
-                {...options.General[option]}
+                {...tsOptions.General[option]}
               />
             ))}
         </Box>
@@ -41,7 +42,7 @@ export const ConfigPanel: FC<ExamplesPanelProps> = ({ onClose }) => {
             flexWrap: 'wrap',
           }}
         >
-          {Object.keys(options)
+          {Object.keys(tsOptions)
             .slice(1)
             .map(category => (
               <Box
@@ -55,9 +56,16 @@ export const ConfigPanel: FC<ExamplesPanelProps> = ({ onClose }) => {
                 <Heading as="h3" sx={{ py: 3, pl: 2, pr: 5 }}>
                   {category}
                 </Heading>
-                {Object.keys(options[category]).map(key => {
-                  const option = options[category][key];
-                  return <CheckboxOption key={key} title={key} {...option} />;
+                {Object.keys(tsOptions[category]).map(key => {
+                  const option = tsOptions[category][key];
+                  return (
+                    <CheckboxOption
+                      paramName="tsOptions"
+                      key={key}
+                      title={key}
+                      {...option}
+                    />
+                  );
                 })}
               </Box>
             ))}

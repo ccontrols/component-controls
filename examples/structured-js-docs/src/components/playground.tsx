@@ -6,8 +6,9 @@ import Split from 'react-split';
 import { Tabs, TabList, Tab, TabPanel } from '@component-controls/components';
 import { getUrlParams, getUpdatedUrlParams } from '@component-controls/blocks';
 
-import { ExamplesPanel } from './ExamplesPanel';
-import { ConfigPanel } from './ConfigPanel';
+import { ExamplesPanel } from './panels/ExamplesPanel';
+import { ConfigPanel } from './panels/ConfigPanel';
+import { ParseConfigPanel } from './panels/ParseConfigPanel';
 import { OptionsContextProvider } from '../contexts/OptionsContext';
 
 import { Editor } from './Editor';
@@ -82,6 +83,10 @@ export const Playground: FC = () => {
                   TS Config{' '}
                   {tabIndex === 2 ? <TriangleUpIcon /> : <TriangleDownIcon />}
                 </Tab>
+                <Tab>
+                  Parse Config{' '}
+                  {tabIndex === 3 ? <TriangleUpIcon /> : <TriangleDownIcon />}
+                </Tab>
               </TabList>
             </Box>
           </Box>
@@ -122,6 +127,9 @@ export const Playground: FC = () => {
           </TabPanel>
           <TabPanel>
             <ConfigPanel onClose={() => setTabIndex(0)} />
+          </TabPanel>
+          <TabPanel>
+            <ParseConfigPanel onClose={() => setTabIndex(0)} />
           </TabPanel>
         </Tabs>
       </Box>

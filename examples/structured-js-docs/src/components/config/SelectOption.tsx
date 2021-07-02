@@ -2,12 +2,14 @@
 import { FC } from 'react';
 import { jsx, Box, Heading, Select } from 'theme-ui';
 import { Markdown } from '@component-controls/components';
-import { useUpdateOptions } from '../contexts/OptionsContext';
-import { OptionsData } from '../contexts/ts-options';
+import { useUpdateOptions, OptionsType } from '../../contexts/OptionsContext';
+import { OptionsData } from '../../contexts/options';
 
 export const SelectOption: FC<{
+  paramName: OptionsType;
   title: string;
 } & OptionsData> = ({
+  paramName,
   title,
   help,
   options,
@@ -15,7 +17,7 @@ export const SelectOption: FC<{
   defaultValue,
 }) => {
   const value = typeof propValue === 'undefined' ? defaultValue : propValue;
-  const updateOption = useUpdateOptions(title);
+  const updateOption = useUpdateOptions(paramName, title);
   return (
     <Box
       sx={{

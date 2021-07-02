@@ -9,9 +9,9 @@ interface EditorProps {
 }
 export const Editor: React.FC<EditorProps> = ({ onChange, value }) => {
   const [colorMode] = useColorMode();
-  const options = useOptions();
+  const { tsOptions } = useOptions();
   const language =
-    options.General.lang.value || options.General.lang.defaultValue;
+    tsOptions.General.lang.value || tsOptions.General.lang.defaultValue;
   function handleEditorChange(value: string | undefined) {
     if (onChange) {
       onChange(value || '');
