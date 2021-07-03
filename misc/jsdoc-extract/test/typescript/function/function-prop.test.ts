@@ -56,7 +56,7 @@ describe('function', () => {
           },
         ],
       },
-      _parents: {
+      __parents: {
         GenericInterface: {
           displayName: 'GenericInterface',
           kind: 14,
@@ -441,7 +441,7 @@ describe('function', () => {
           },
         ],
       },
-      _parents: {
+      __parents: {
         FunctionComponent: {
           displayName: 'FunctionComponent',
           kind: 14,
@@ -899,7 +899,7 @@ describe('function', () => {
         },
         description: 'exported function',
       },
-      _parents: {
+      __parents: {
         T: {
           displayName: 'T',
           kind: 15,

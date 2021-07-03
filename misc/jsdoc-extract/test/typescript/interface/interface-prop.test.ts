@@ -108,7 +108,7 @@ describe('interface', () => {
           },
         ],
       },
-      _parents: {
+      __parents: {
         StringEnums: {
           displayName: 'StringEnums',
           kind: 5,
@@ -161,7 +161,7 @@ describe('interface', () => {
         ],
         description: 'interface extending another one',
       },
-      _parents: {
+      __parents: {
         Internal: {
           displayName: 'Internal',
           kind: 14,

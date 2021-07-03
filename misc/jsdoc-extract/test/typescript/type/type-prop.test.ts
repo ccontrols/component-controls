@@ -103,7 +103,7 @@ describe('type', () => {
         ],
         displayName: 'GenericConsumer',
       },
-      _parents: {
+      __parents: {
         GenericInterface: {
           description: 'upstream interface',
           displayName: 'GenericInterface',
@@ -146,7 +146,7 @@ describe('type', () => {
         ],
         displayName: 'Intersect',
       },
-      _parents: {
+      __parents: {
         A: {
           description: 'type A',
           displayName: 'A',
@@ -194,7 +194,7 @@ describe('type', () => {
         ],
         displayName: 'ExtendT',
       },
-      _parents: {
+      __parents: {
         T: {
           description: 'base type',
           displayName: 'T',
@@ -232,7 +232,7 @@ describe('type', () => {
           },
         ],
       },
-      _parents: {
+      __parents: {
         GenericArrayType: {
           description: 'generic interface',
           displayName: 'GenericArrayType',
