@@ -1,5 +1,5 @@
 import * as ts from 'typescript';
-import { TypeResolver, getSymbolType } from '../types';
+import { TypeResolver, getSymbolType } from '../ts-utils';
 import { isObjectTypeDeclaration } from '../ts-utils';
 
 const getIdentifierParent = (
