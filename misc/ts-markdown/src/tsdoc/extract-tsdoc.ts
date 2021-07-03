@@ -73,7 +73,7 @@ export const extractTSDoc = (
       }, []);
     return createPropsTable(title, props);
   };
-  const extractFunction = (node: any, extractTable: boolean = true): Node[] => {
+  const extractFunction = (node: any, extractTable = true): Node[] => {
     const result: Node[] = [];
     const declaration: NodeChildren = {
       type: 'paragraph',
@@ -239,7 +239,7 @@ export const extractTSDoc = (
     return result;
   };
 
-  const extractPropType = (p: any, extractTable: boolean = false): Node[] => {
+  const extractPropType = (p: any, extractTable = false): Node[] => {
     switch (p.type) {
       case 'reference': {
         if (p.typeArguments) {
