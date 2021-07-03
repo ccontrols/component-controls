@@ -4,7 +4,7 @@ import { typeResolver } from '../../src/frameworks/react';
 it('load from file', () => {
   const result = parseFiles(
     [path.resolve(__dirname, 'fixtures', 'react-component-props.tsx')],
-    { typeResolver,  saveParentProps: false, extractNames: ['default']},
+    { typeResolver, saveParentProps: false, extractNames: ['default'] },
   );
   expect(result).toMatchSnapshot();
 });

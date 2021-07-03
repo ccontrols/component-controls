@@ -138,7 +138,7 @@ describe('mdx-story-source', () => {
           story: {
             name: 'mdx-story',
           },
-          render: 'props => <div>{props.text}</div>',
+          render: '(props) => <div>{props.text}</div>',
         },
       },
     });
@@ -240,7 +240,7 @@ describe('mdx-story-source', () => {
           story: {
             name: 'mdx-story',
           },
-          render: 'props => <div>{props.text}</div>',
+          render: '(props) => <div>{props.text}</div>',
         },
       },
     });

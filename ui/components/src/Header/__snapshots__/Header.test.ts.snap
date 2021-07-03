@@ -10,7 +10,7 @@ exports[`Header overview snapshot 1`] = `
   left: auto;
   right: 0;
   z-index: 10;
-  -webkit-position: sticky;
+  position: -webkit-sticky;
   position: sticky;
   background-color: #ffffff;
   padding-left: 8px;

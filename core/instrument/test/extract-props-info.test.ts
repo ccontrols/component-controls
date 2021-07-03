@@ -1018,10 +1018,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'yes',
                 },
                 {
@@ -1029,7 +1025,7 @@ describe('extract-props-info', () => {
                   value: 'no',
                 },
               ],
-              raw: '"yes" | "no" | undefined',
+              raw: '"yes" | "no"',
             },
           },
           radioGroup: {
@@ -1042,8 +1038,8 @@ describe('extract-props-info', () => {
           role: {
             parentName: 'HTMLAttributes',
             type: {
-              name: 'string',
-              raw: 'string',
+              name: 'AriaRole',
+              raw: 'AriaRole',
             },
           },
           about: {
@@ -1186,10 +1182,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'on',
                 },
                 {
@@ -1197,7 +1189,7 @@ describe('extract-props-info', () => {
                   value: 'off',
                 },
               ],
-              raw: '"on" | "off" | undefined',
+              raw: '"on" | "off"',
             },
           },
           inputMode: {
@@ -1209,11 +1201,11 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
+                  value: 'none',
                 },
                 {
                   name: 'string',
-                  value: 'none',
+                  value: 'search',
                 },
                 {
                   name: 'string',
@@ -1239,13 +1231,9 @@ describe('extract-props-info', () => {
                   name: 'string',
                   value: 'decimal',
                 },
-                {
-                  name: 'string',
-                  value: 'search',
-                },
               ],
               raw:
-                '"none" | "text" | "tel" | "url" | "email" | "numeric" | "decimal" | "search" | undefined',
+                '"none" | "search" | "text" | "tel" | "url" | "email" | "numeric" | "decimal"',
             },
           },
           is: {
@@ -1295,10 +1283,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'list',
                 },
                 {
@@ -1314,7 +1298,7 @@ describe('extract-props-info', () => {
                   value: 'both',
                 },
               ],
-              raw: '"list" | "none" | "inline" | "both" | undefined',
+              raw: '"list" | "none" | "inline" | "both"',
             },
           },
           'aria-busy': {
@@ -1480,7 +1464,7 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
+                  value: 'link',
                 },
                 {
                   name: 'string',
@@ -1496,10 +1480,6 @@ describe('extract-props-info', () => {
                 },
                 {
                   name: 'string',
-                  value: 'link',
-                },
-                {
-                  name: 'string',
                   value: 'move',
                 },
                 {
@@ -1507,8 +1487,7 @@ describe('extract-props-info', () => {
                   value: 'popup',
                 },
               ],
-              raw:
-                '"none" | "copy" | "execute" | "link" | "move" | "popup" | undefined',
+              raw: '"link" | "none" | "copy" | "execute" | "move" | "popup"',
             },
           },
           'aria-errormessage': {
@@ -1587,23 +1566,23 @@ describe('extract-props-info', () => {
                   name: 'false',
                 },
                 {
-                  name: 'menu',
-                },
-                {
-                  name: 'listbox',
-                },
-                {
-                  name: 'tree',
+                  name: 'dialog',
                 },
                 {
                   name: 'grid',
                 },
                 {
-                  name: 'dialog',
+                  name: 'listbox',
+                },
+                {
+                  name: 'menu',
+                },
+                {
+                  name: 'tree',
                 },
               ],
               raw:
-                'boolean | "true" | "false" | "menu" | "listbox" | "tree" | "grid" | "dialog"',
+                'boolean | "true" | "false" | "dialog" | "grid" | "listbox" | "menu" | "tree"',
             },
           },
           'aria-hidden': {
@@ -1697,10 +1676,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'off',
                 },
                 {
@@ -1712,7 +1687,7 @@ describe('extract-props-info', () => {
                   value: 'polite',
                 },
               ],
-              raw: '"off" | "assertive" | "polite" | undefined',
+              raw: '"off" | "assertive" | "polite"',
             },
           },
           'aria-modal': {
@@ -1784,10 +1759,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'horizontal',
                 },
                 {
@@ -1795,7 +1766,7 @@ describe('extract-props-info', () => {
                   value: 'vertical',
                 },
               ],
-              raw: '"horizontal" | "vertical" | undefined',
+              raw: '"horizontal" | "vertical"',
             },
           },
           'aria-owns': {
@@ -1877,10 +1848,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'text',
                 },
                 {
@@ -1921,7 +1888,7 @@ describe('extract-props-info', () => {
                 },
               ],
               raw:
-                '"text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | undefined',
+                '"text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals"',
             },
           },
           'aria-required': {
@@ -2018,10 +1985,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'none',
                 },
                 {
@@ -2037,7 +2000,7 @@ describe('extract-props-info', () => {
                   value: 'other',
                 },
               ],
-              raw: '"none" | "ascending" | "descending" | "other" | undefined',
+              raw: '"none" | "ascending" | "descending" | "other"',
             },
           },
           'aria-valuemax': {
@@ -4220,10 +4183,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'yes',
                 },
                 {
@@ -4231,7 +4190,7 @@ describe('extract-props-info', () => {
                   value: 'no',
                 },
               ],
-              raw: '"yes" | "no" | undefined',
+              raw: '"yes" | "no"',
             },
           },
           radioGroup: {
@@ -4244,8 +4203,8 @@ describe('extract-props-info', () => {
           role: {
             parentName: 'HTMLAttributes',
             type: {
-              name: 'string',
-              raw: 'string',
+              name: 'AriaRole',
+              raw: 'AriaRole',
             },
           },
           about: {
@@ -4388,10 +4347,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'on',
                 },
                 {
@@ -4399,7 +4354,7 @@ describe('extract-props-info', () => {
                   value: 'off',
                 },
               ],
-              raw: '"on" | "off" | undefined',
+              raw: '"on" | "off"',
             },
           },
           inputMode: {
@@ -4411,11 +4366,11 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
+                  value: 'none',
                 },
                 {
                   name: 'string',
-                  value: 'none',
+                  value: 'search',
                 },
                 {
                   name: 'string',
@@ -4441,13 +4396,9 @@ describe('extract-props-info', () => {
                   name: 'string',
                   value: 'decimal',
                 },
-                {
-                  name: 'string',
-                  value: 'search',
-                },
               ],
               raw:
-                '"none" | "text" | "tel" | "url" | "email" | "numeric" | "decimal" | "search" | undefined',
+                '"none" | "search" | "text" | "tel" | "url" | "email" | "numeric" | "decimal"',
             },
           },
           is: {
@@ -4497,10 +4448,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'list',
                 },
                 {
@@ -4516,7 +4463,7 @@ describe('extract-props-info', () => {
                   value: 'both',
                 },
               ],
-              raw: '"list" | "none" | "inline" | "both" | undefined',
+              raw: '"list" | "none" | "inline" | "both"',
             },
           },
           'aria-busy': {
@@ -4682,7 +4629,7 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
+                  value: 'link',
                 },
                 {
                   name: 'string',
@@ -4698,10 +4645,6 @@ describe('extract-props-info', () => {
                 },
                 {
                   name: 'string',
-                  value: 'link',
-                },
-                {
-                  name: 'string',
                   value: 'move',
                 },
                 {
@@ -4709,8 +4652,7 @@ describe('extract-props-info', () => {
                   value: 'popup',
                 },
               ],
-              raw:
-                '"none" | "copy" | "execute" | "link" | "move" | "popup" | undefined',
+              raw: '"link" | "none" | "copy" | "execute" | "move" | "popup"',
             },
           },
           'aria-errormessage': {
@@ -4789,23 +4731,23 @@ describe('extract-props-info', () => {
                   name: 'false',
                 },
                 {
-                  name: 'menu',
-                },
-                {
-                  name: 'listbox',
-                },
-                {
-                  name: 'tree',
+                  name: 'dialog',
                 },
                 {
                   name: 'grid',
                 },
                 {
-                  name: 'dialog',
+                  name: 'listbox',
+                },
+                {
+                  name: 'menu',
+                },
+                {
+                  name: 'tree',
                 },
               ],
               raw:
-                'boolean | "true" | "false" | "menu" | "listbox" | "tree" | "grid" | "dialog"',
+                'boolean | "true" | "false" | "dialog" | "grid" | "listbox" | "menu" | "tree"',
             },
           },
           'aria-hidden': {
@@ -4899,10 +4841,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'off',
                 },
                 {
@@ -4914,7 +4852,7 @@ describe('extract-props-info', () => {
                   value: 'polite',
                 },
               ],
-              raw: '"off" | "assertive" | "polite" | undefined',
+              raw: '"off" | "assertive" | "polite"',
             },
           },
           'aria-modal': {
@@ -4986,10 +4924,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'horizontal',
                 },
                 {
@@ -4997,7 +4931,7 @@ describe('extract-props-info', () => {
                   value: 'vertical',
                 },
               ],
-              raw: '"horizontal" | "vertical" | undefined',
+              raw: '"horizontal" | "vertical"',
             },
           },
           'aria-owns': {
@@ -5079,10 +5013,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'text',
                 },
                 {
@@ -5123,7 +5053,7 @@ describe('extract-props-info', () => {
                 },
               ],
               raw:
-                '"text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | undefined',
+                '"text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals"',
             },
           },
           'aria-required': {
@@ -5220,10 +5150,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'none',
                 },
                 {
@@ -5239,7 +5165,7 @@ describe('extract-props-info', () => {
                   value: 'other',
                 },
               ],
-              raw: '"none" | "ascending" | "descending" | "other" | undefined',
+              raw: '"none" | "ascending" | "descending" | "other"',
             },
           },
           'aria-valuemax': {
@@ -6445,7 +6371,7 @@ describe('extract-props-info', () => {
             parentName: 'TabsProps',
             type: {
               name: 'function',
-              raw: '((node?: HTMLElement) => void) | undefined',
+              raw: '((node?: HTMLElement) => void)',
             },
           },
           forceRenderTabPanel: {
@@ -7457,10 +7383,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'yes',
                 },
                 {
@@ -7468,7 +7390,7 @@ describe('extract-props-info', () => {
                   value: 'no',
                 },
               ],
-              raw: '"yes" | "no" | undefined',
+              raw: '"yes" | "no"',
             },
           },
           radioGroup: {
@@ -7481,8 +7403,8 @@ describe('extract-props-info', () => {
           role: {
             parentName: 'HTMLAttributes',
             type: {
-              name: 'string',
-              raw: 'string',
+              name: 'AriaRole',
+              raw: 'AriaRole',
             },
           },
           about: {
@@ -7625,10 +7547,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'on',
                 },
                 {
@@ -7636,7 +7554,7 @@ describe('extract-props-info', () => {
                   value: 'off',
                 },
               ],
-              raw: '"on" | "off" | undefined',
+              raw: '"on" | "off"',
             },
           },
           inputMode: {
@@ -7648,11 +7566,11 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
+                  value: 'none',
                 },
                 {
                   name: 'string',
-                  value: 'none',
+                  value: 'search',
                 },
                 {
                   name: 'string',
@@ -7678,13 +7596,9 @@ describe('extract-props-info', () => {
                   name: 'string',
                   value: 'decimal',
                 },
-                {
-                  name: 'string',
-                  value: 'search',
-                },
               ],
               raw:
-                '"none" | "text" | "tel" | "url" | "email" | "numeric" | "decimal" | "search" | undefined',
+                '"none" | "search" | "text" | "tel" | "url" | "email" | "numeric" | "decimal"',
             },
           },
           is: {
@@ -7734,10 +7648,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'list',
                 },
                 {
@@ -7753,7 +7663,7 @@ describe('extract-props-info', () => {
                   value: 'both',
                 },
               ],
-              raw: '"list" | "none" | "inline" | "both" | undefined',
+              raw: '"list" | "none" | "inline" | "both"',
             },
           },
           'aria-busy': {
@@ -7919,7 +7829,7 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
+                  value: 'link',
                 },
                 {
                   name: 'string',
@@ -7935,10 +7845,6 @@ describe('extract-props-info', () => {
                 },
                 {
                   name: 'string',
-                  value: 'link',
-                },
-                {
-                  name: 'string',
                   value: 'move',
                 },
                 {
@@ -7946,8 +7852,7 @@ describe('extract-props-info', () => {
                   value: 'popup',
                 },
               ],
-              raw:
-                '"none" | "copy" | "execute" | "link" | "move" | "popup" | undefined',
+              raw: '"link" | "none" | "copy" | "execute" | "move" | "popup"',
             },
           },
           'aria-errormessage': {
@@ -8026,23 +7931,23 @@ describe('extract-props-info', () => {
                   name: 'false',
                 },
                 {
-                  name: 'menu',
-                },
-                {
-                  name: 'listbox',
-                },
-                {
-                  name: 'tree',
+                  name: 'dialog',
                 },
                 {
                   name: 'grid',
                 },
                 {
-                  name: 'dialog',
+                  name: 'listbox',
+                },
+                {
+                  name: 'menu',
+                },
+                {
+                  name: 'tree',
                 },
               ],
               raw:
-                'boolean | "true" | "false" | "menu" | "listbox" | "tree" | "grid" | "dialog"',
+                'boolean | "true" | "false" | "dialog" | "grid" | "listbox" | "menu" | "tree"',
             },
           },
           'aria-hidden': {
@@ -8136,10 +8041,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'off',
                 },
                 {
@@ -8151,7 +8052,7 @@ describe('extract-props-info', () => {
                   value: 'polite',
                 },
               ],
-              raw: '"off" | "assertive" | "polite" | undefined',
+              raw: '"off" | "assertive" | "polite"',
             },
           },
           'aria-modal': {
@@ -8223,10 +8124,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'horizontal',
                 },
                 {
@@ -8234,7 +8131,7 @@ describe('extract-props-info', () => {
                   value: 'vertical',
                 },
               ],
-              raw: '"horizontal" | "vertical" | undefined',
+              raw: '"horizontal" | "vertical"',
             },
           },
           'aria-owns': {
@@ -8316,10 +8213,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'text',
                 },
                 {
@@ -8360,7 +8253,7 @@ describe('extract-props-info', () => {
                 },
               ],
               raw:
-                '"text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | undefined',
+                '"text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals"',
             },
           },
           'aria-required': {
@@ -8457,10 +8350,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'none',
                 },
                 {
@@ -8476,7 +8365,7 @@ describe('extract-props-info', () => {
                   value: 'other',
                 },
               ],
-              raw: '"none" | "ascending" | "descending" | "other" | undefined',
+              raw: '"none" | "ascending" | "descending" | "other"',
             },
           },
           'aria-valuemax': {
@@ -10658,10 +10547,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'yes',
                 },
                 {
@@ -10669,7 +10554,7 @@ describe('extract-props-info', () => {
                   value: 'no',
                 },
               ],
-              raw: '"yes" | "no" | undefined',
+              raw: '"yes" | "no"',
             },
           },
           radioGroup: {
@@ -10682,8 +10567,8 @@ describe('extract-props-info', () => {
           role: {
             parentName: 'HTMLAttributes',
             type: {
-              name: 'string',
-              raw: 'string',
+              name: 'AriaRole',
+              raw: 'AriaRole',
             },
           },
           about: {
@@ -10826,10 +10711,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'on',
                 },
                 {
@@ -10837,7 +10718,7 @@ describe('extract-props-info', () => {
                   value: 'off',
                 },
               ],
-              raw: '"on" | "off" | undefined',
+              raw: '"on" | "off"',
             },
           },
           inputMode: {
@@ -10849,11 +10730,11 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
+                  value: 'none',
                 },
                 {
                   name: 'string',
-                  value: 'none',
+                  value: 'search',
                 },
                 {
                   name: 'string',
@@ -10879,13 +10760,9 @@ describe('extract-props-info', () => {
                   name: 'string',
                   value: 'decimal',
                 },
-                {
-                  name: 'string',
-                  value: 'search',
-                },
               ],
               raw:
-                '"none" | "text" | "tel" | "url" | "email" | "numeric" | "decimal" | "search" | undefined',
+                '"none" | "search" | "text" | "tel" | "url" | "email" | "numeric" | "decimal"',
             },
           },
           is: {
@@ -10935,10 +10812,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'list',
                 },
                 {
@@ -10954,7 +10827,7 @@ describe('extract-props-info', () => {
                   value: 'both',
                 },
               ],
-              raw: '"list" | "none" | "inline" | "both" | undefined',
+              raw: '"list" | "none" | "inline" | "both"',
             },
           },
           'aria-busy': {
@@ -11120,7 +10993,7 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
+                  value: 'link',
                 },
                 {
                   name: 'string',
@@ -11136,10 +11009,6 @@ describe('extract-props-info', () => {
                 },
                 {
                   name: 'string',
-                  value: 'link',
-                },
-                {
-                  name: 'string',
                   value: 'move',
                 },
                 {
@@ -11147,8 +11016,7 @@ describe('extract-props-info', () => {
                   value: 'popup',
                 },
               ],
-              raw:
-                '"none" | "copy" | "execute" | "link" | "move" | "popup" | undefined',
+              raw: '"link" | "none" | "copy" | "execute" | "move" | "popup"',
             },
           },
           'aria-errormessage': {
@@ -11227,23 +11095,23 @@ describe('extract-props-info', () => {
                   name: 'false',
                 },
                 {
-                  name: 'menu',
-                },
-                {
-                  name: 'listbox',
-                },
-                {
-                  name: 'tree',
+                  name: 'dialog',
                 },
                 {
                   name: 'grid',
                 },
                 {
-                  name: 'dialog',
+                  name: 'listbox',
+                },
+                {
+                  name: 'menu',
+                },
+                {
+                  name: 'tree',
                 },
               ],
               raw:
-                'boolean | "true" | "false" | "menu" | "listbox" | "tree" | "grid" | "dialog"',
+                'boolean | "true" | "false" | "dialog" | "grid" | "listbox" | "menu" | "tree"',
             },
           },
           'aria-hidden': {
@@ -11337,10 +11205,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'off',
                 },
                 {
@@ -11352,7 +11216,7 @@ describe('extract-props-info', () => {
                   value: 'polite',
                 },
               ],
-              raw: '"off" | "assertive" | "polite" | undefined',
+              raw: '"off" | "assertive" | "polite"',
             },
           },
           'aria-modal': {
@@ -11424,10 +11288,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'horizontal',
                 },
                 {
@@ -11435,7 +11295,7 @@ describe('extract-props-info', () => {
                   value: 'vertical',
                 },
               ],
-              raw: '"horizontal" | "vertical" | undefined',
+              raw: '"horizontal" | "vertical"',
             },
           },
           'aria-owns': {
@@ -11517,10 +11377,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'text',
                 },
                 {
@@ -11561,7 +11417,7 @@ describe('extract-props-info', () => {
                 },
               ],
               raw:
-                '"text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | undefined',
+                '"text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals"',
             },
           },
           'aria-required': {
@@ -11658,10 +11514,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'none',
                 },
                 {
@@ -11677,7 +11529,7 @@ describe('extract-props-info', () => {
                   value: 'other',
                 },
               ],
-              raw: '"none" | "ascending" | "descending" | "other" | undefined',
+              raw: '"none" | "ascending" | "descending" | "other"',
             },
           },
           'aria-valuemax': {
@@ -13114,10 +12966,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'yes',
                 },
                 {
@@ -13125,7 +12973,7 @@ describe('extract-props-info', () => {
                   value: 'no',
                 },
               ],
-              raw: '"yes" | "no" | undefined',
+              raw: '"yes" | "no"',
             },
           },
           radioGroup: {
@@ -13138,8 +12986,8 @@ describe('extract-props-info', () => {
           role: {
             parentName: 'HTMLAttributes',
             type: {
-              name: 'string',
-              raw: 'string',
+              name: 'AriaRole',
+              raw: 'AriaRole',
             },
           },
           about: {
@@ -13284,10 +13132,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'on',
                 },
                 {
@@ -13295,7 +13139,7 @@ describe('extract-props-info', () => {
                   value: 'off',
                 },
               ],
-              raw: '"on" | "off" | undefined',
+              raw: '"on" | "off"',
             },
           },
           inputMode: {
@@ -13307,15 +13151,15 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'text',
                 },
                 {
                   name: 'string',
                   value: 'none',
+                },
+                {
+                  name: 'string',
+                  value: 'search',
                 },
                 {
                   name: 'string',
@@ -13337,13 +13181,9 @@ describe('extract-props-info', () => {
                   name: 'string',
                   value: 'decimal',
                 },
-                {
-                  name: 'string',
-                  value: 'search',
-                },
               ],
               raw:
-                '"text" | "none" | "tel" | "url" | "email" | "numeric" | "decimal" | "search" | undefined',
+                '"text" | "none" | "search" | "tel" | "url" | "email" | "numeric" | "decimal"',
             },
           },
           is: {
@@ -13393,7 +13233,7 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
+                  value: 'list',
                 },
                 {
                   name: 'string',
@@ -13405,14 +13245,10 @@ describe('extract-props-info', () => {
                 },
                 {
                   name: 'string',
-                  value: 'list',
-                },
-                {
-                  name: 'string',
                   value: 'both',
                 },
               ],
-              raw: '"none" | "inline" | "list" | "both" | undefined',
+              raw: '"list" | "none" | "inline" | "both"',
             },
           },
           'aria-busy': {
@@ -13578,10 +13414,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'link',
                 },
                 {
@@ -13605,8 +13437,7 @@ describe('extract-props-info', () => {
                   value: 'popup',
                 },
               ],
-              raw:
-                '"link" | "none" | "copy" | "execute" | "move" | "popup" | undefined',
+              raw: '"link" | "none" | "copy" | "execute" | "move" | "popup"',
             },
           },
           'aria-errormessage': {
@@ -13691,17 +13522,17 @@ describe('extract-props-info', () => {
                   name: 'false',
                 },
                 {
+                  name: 'grid',
+                },
+                {
                   name: 'listbox',
                 },
                 {
                   name: 'tree',
                 },
-                {
-                  name: 'grid',
-                },
               ],
               raw:
-                'boolean | "dialog" | "menu" | "true" | "false" | "listbox" | "tree" | "grid"',
+                'boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree"',
             },
           },
           'aria-hidden': {
@@ -13795,10 +13626,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'off',
                 },
                 {
@@ -13810,7 +13637,7 @@ describe('extract-props-info', () => {
                   value: 'polite',
                 },
               ],
-              raw: '"off" | "assertive" | "polite" | undefined',
+              raw: '"off" | "assertive" | "polite"',
             },
           },
           'aria-modal': {
@@ -13882,10 +13709,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'horizontal',
                 },
                 {
@@ -13893,7 +13716,7 @@ describe('extract-props-info', () => {
                   value: 'vertical',
                 },
               ],
-              raw: '"horizontal" | "vertical" | undefined',
+              raw: '"horizontal" | "vertical"',
             },
           },
           'aria-owns': {
@@ -13975,10 +13798,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'text',
                 },
                 {
@@ -14019,7 +13838,7 @@ describe('extract-props-info', () => {
                 },
               ],
               raw:
-                '"text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | undefined',
+                '"text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals"',
             },
           },
           'aria-required': {
@@ -14116,10 +13935,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'none',
                 },
                 {
@@ -14135,7 +13950,7 @@ describe('extract-props-info', () => {
                   value: 'other',
                 },
               ],
-              raw: '"none" | "ascending" | "descending" | "other" | undefined',
+              raw: '"none" | "ascending" | "descending" | "other"',
             },
           },
           'aria-valuemax': {
@@ -15913,10 +15728,6 @@ describe('extract-props-info', () => {
               value: [
                 {
                   name: 'string',
-                  value: 'undefined',
-                },
-                {
-                  name: 'string',
                   value: 'all',
                 },
                 {
@@ -15928,7 +15739,7 @@ describe('extract-props-info', () => {
                   value: 'info',
                 },
               ],
-              raw: 'ComponentVisibility | undefined',
+              raw: 'ComponentVisibility',
             },
           },
           of: {
