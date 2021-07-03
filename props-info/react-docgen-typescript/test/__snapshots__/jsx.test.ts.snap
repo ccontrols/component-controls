@@ -56,8 +56,12 @@ presented if they are made.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"none\\" | \\"inline\\" | \\"list\\" | \\"both\\"",
+        "raw": "\\"list\\" | \\"none\\" | \\"inline\\" | \\"both\\"",
         "value": Array [
+          Object {
+            "name": "string",
+            "value": "list",
+          },
           Object {
             "name": "string",
             "value": "none",
@@ -65,10 +69,6 @@ presented if they are made.",
           Object {
             "name": "string",
             "value": "inline",
-          },
-          Object {
-            "name": "string",
-            "value": "list",
           },
           Object {
             "name": "string",
@@ -220,12 +220,17 @@ presented if they are made.",
       },
     },
     "aria-dropeffect": Object {
+      "deprecated": "in ARIA 1.1",
       "description": "Indicates what functions can be performed when a dragged object is released on the drop target.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"none\\" | \\"copy\\" | \\"execute\\" | \\"link\\" | \\"move\\" | \\"popup\\"",
+        "raw": "\\"link\\" | \\"none\\" | \\"copy\\" | \\"execute\\" | \\"move\\" | \\"popup\\"",
         "value": Array [
+          Object {
+            "name": "string",
+            "value": "link",
+          },
           Object {
             "name": "string",
             "value": "none",
@@ -237,10 +242,6 @@ presented if they are made.",
           Object {
             "name": "string",
             "value": "execute",
-          },
-          Object {
-            "name": "string",
-            "value": "link",
           },
           Object {
             "name": "string",
@@ -290,6 +291,7 @@ allows assistive technology to override the general default of reading in docume
       },
     },
     "aria-grabbed": Object {
+      "deprecated": "in ARIA 1.1",
       "description": "Indicates an element's \\"grabbed\\" state in a drag-and-drop operation.",
       "parentName": "AriaAttributes",
       "type": Object {
@@ -313,7 +315,7 @@ allows assistive technology to override the general default of reading in docume
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "union",
-        "raw": "boolean | \\"true\\" | \\"false\\" | \\"menu\\" | \\"listbox\\" | \\"tree\\" | \\"grid\\" | \\"dialog\\"",
+        "raw": "boolean | \\"true\\" | \\"false\\" | \\"dialog\\" | \\"grid\\" | \\"listbox\\" | \\"menu\\" | \\"tree\\"",
         "value": Array [
           Object {
             "name": "boolean",
@@ -325,19 +327,19 @@ allows assistive technology to override the general default of reading in docume
             "name": "false",
           },
           Object {
-            "name": "menu",
-          },
-          Object {
-            "name": "listbox",
-          },
-          Object {
-            "name": "tree",
+            "name": "dialog",
           },
           Object {
             "name": "grid",
           },
           Object {
-            "name": "dialog",
+            "name": "listbox",
+          },
+          Object {
+            "name": "menu",
+          },
+          Object {
+            "name": "tree",
           },
         ],
       },
@@ -954,11 +956,15 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"none\\" | \\"text\\" | \\"tel\\" | \\"url\\" | \\"email\\" | \\"numeric\\" | \\"decimal\\" | \\"search\\"",
+        "raw": "\\"none\\" | \\"search\\" | \\"text\\" | \\"tel\\" | \\"url\\" | \\"email\\" | \\"numeric\\" | \\"decimal\\"",
         "value": Array [
           Object {
             "name": "string",
             "value": "none",
+          },
+          Object {
+            "name": "string",
+            "value": "search",
           },
           Object {
             "name": "string",
@@ -983,10 +989,6 @@ A hint could be a sample value or a brief description of the expected format.",
           Object {
             "name": "string",
             "value": "decimal",
-          },
-          Object {
-            "name": "string",
-            "value": "search",
           },
         ],
       },
@@ -2235,8 +2237,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "role": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
-        "name": "string",
-        "raw": "string",
+        "name": "AriaRole",
+        "raw": "AriaRole",
       },
     },
     "security": Object {

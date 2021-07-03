@@ -54,8 +54,12 @@ presented if they are made.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"none\\" | \\"inline\\" | \\"list\\" | \\"both\\"",
+        "raw": "\\"list\\" | \\"none\\" | \\"inline\\" | \\"both\\"",
         "value": Array [
+          Object {
+            "name": "string",
+            "value": "list",
+          },
           Object {
             "name": "string",
             "value": "none",
@@ -63,10 +67,6 @@ presented if they are made.",
           Object {
             "name": "string",
             "value": "inline",
-          },
-          Object {
-            "name": "string",
-            "value": "list",
           },
           Object {
             "name": "string",
@@ -218,6 +218,7 @@ presented if they are made.",
       },
     },
     "aria-dropeffect": Object {
+      "deprecated": "in ARIA 1.1",
       "description": "Indicates what functions can be performed when a dragged object is released on the drop target.",
       "parentName": "AriaAttributes",
       "type": Object {
@@ -288,6 +289,7 @@ allows assistive technology to override the general default of reading in docume
       },
     },
     "aria-grabbed": Object {
+      "deprecated": "in ARIA 1.1",
       "description": "Indicates an element's \\"grabbed\\" state in a drag-and-drop operation.",
       "parentName": "AriaAttributes",
       "type": Object {
@@ -311,7 +313,7 @@ allows assistive technology to override the general default of reading in docume
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "union",
-        "raw": "boolean | \\"dialog\\" | \\"menu\\" | \\"true\\" | \\"false\\" | \\"listbox\\" | \\"tree\\" | \\"grid\\"",
+        "raw": "boolean | \\"dialog\\" | \\"menu\\" | \\"true\\" | \\"false\\" | \\"grid\\" | \\"listbox\\" | \\"tree\\"",
         "value": Array [
           Object {
             "name": "boolean",
@@ -329,13 +331,13 @@ allows assistive technology to override the general default of reading in docume
             "name": "false",
           },
           Object {
+            "name": "grid",
+          },
+          Object {
             "name": "listbox",
           },
           Object {
             "name": "tree",
-          },
-          Object {
-            "name": "grid",
           },
         ],
       },
@@ -995,7 +997,7 @@ from the title.",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"text\\" | \\"none\\" | \\"tel\\" | \\"url\\" | \\"email\\" | \\"numeric\\" | \\"decimal\\" | \\"search\\"",
+        "raw": "\\"text\\" | \\"none\\" | \\"search\\" | \\"tel\\" | \\"url\\" | \\"email\\" | \\"numeric\\" | \\"decimal\\"",
         "value": Array [
           Object {
             "name": "string",
@@ -1004,6 +1006,10 @@ from the title.",
           Object {
             "name": "string",
             "value": "none",
+          },
+          Object {
+            "name": "string",
+            "value": "search",
           },
           Object {
             "name": "string",
@@ -1024,10 +1030,6 @@ from the title.",
           Object {
             "name": "string",
             "value": "decimal",
-          },
-          Object {
-            "name": "string",
-            "value": "search",
           },
         ],
       },
@@ -2837,8 +2839,8 @@ behind an element is visible.
     "role": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
-        "name": "string",
-        "raw": "string",
+        "name": "AriaRole",
+        "raw": "AriaRole",
       },
     },
     "security": Object {

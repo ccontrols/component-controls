@@ -8,11 +8,12 @@ Object {
   "methods": Array [],
   "props": Object {
     "isObsolete": Object {
+      "deprecated": "since version 1.0",
       "description": "boolean switch - obsolete depracated property",
       "parentName": "MyComponentProps",
       "type": Object {
-        "name": "boolean",
-        "raw": "boolean",
+        "name": "React.ReactElement",
+        "raw": "React.ReactElement",
       },
     },
     "optionalArray": Object {
