@@ -4,6 +4,7 @@ exports[`imports ../../../ui/blocks/src/Story/Story.tsx 1`] = `
 Object {
   "description": "block component to render story function with decorators",
   "displayName": "Story",
+  "filePath": "/Users/atanasster/component-controls/ui/blocks/src/Story/Story.tsx",
   "methods": Array [],
   "props": Object {
     "about": Object {
@@ -53,12 +54,8 @@ presented if they are made.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"none\\" | \\"inline\\" | \\"list\\" | \\"both\\" | undefined",
+        "raw": "\\"none\\" | \\"inline\\" | \\"list\\" | \\"both\\"",
         "value": Array [
-          Object {
-            "name": "string",
-            "value": "undefined",
-          },
           Object {
             "name": "string",
             "value": "none",
@@ -221,17 +218,12 @@ presented if they are made.",
       },
     },
     "aria-dropeffect": Object {
-      "deprecated": "in ARIA 1.1",
       "description": "Indicates what functions can be performed when a dragged object is released on the drop target.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"link\\" | \\"none\\" | \\"copy\\" | \\"execute\\" | \\"move\\" | \\"popup\\" | undefined",
+        "raw": "\\"link\\" | \\"none\\" | \\"copy\\" | \\"execute\\" | \\"move\\" | \\"popup\\"",
         "value": Array [
-          Object {
-            "name": "string",
-            "value": "undefined",
-          },
           Object {
             "name": "string",
             "value": "link",
@@ -296,7 +288,6 @@ allows assistive technology to override the general default of reading in docume
       },
     },
     "aria-grabbed": Object {
-      "deprecated": "in ARIA 1.1",
       "description": "Indicates an element's \\"grabbed\\" state in a drag-and-drop operation.",
       "parentName": "AriaAttributes",
       "type": Object {
@@ -430,12 +421,8 @@ allows assistive technology to override the general default of reading in docume
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"off\\" | \\"assertive\\" | \\"polite\\" | undefined",
+        "raw": "\\"off\\" | \\"assertive\\" | \\"polite\\"",
         "value": Array [
-          Object {
-            "name": "string",
-            "value": "undefined",
-          },
           Object {
             "name": "string",
             "value": "off",
@@ -513,12 +500,8 @@ allows assistive technology to override the general default of reading in docume
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"horizontal\\" | \\"vertical\\" | undefined",
+        "raw": "\\"horizontal\\" | \\"vertical\\"",
         "value": Array [
-          Object {
-            "name": "string",
-            "value": "undefined",
-          },
           Object {
             "name": "string",
             "value": "horizontal",
@@ -602,12 +585,8 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"text\\" | \\"additions\\" | \\"additions removals\\" | \\"additions text\\" | \\"all\\" | \\"removals\\" | \\"removals additions\\" | \\"removals text\\" | \\"text additions\\" | \\"text removals\\" | undefined",
+        "raw": "\\"text\\" | \\"additions\\" | \\"additions removals\\" | \\"additions text\\" | \\"all\\" | \\"removals\\" | \\"removals additions\\" | \\"removals text\\" | \\"text additions\\" | \\"text removals\\"",
         "value": Array [
-          Object {
-            "name": "string",
-            "value": "undefined",
-          },
           Object {
             "name": "string",
             "value": "text",
@@ -734,12 +713,8 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"none\\" | \\"ascending\\" | \\"descending\\" | \\"other\\" | undefined",
+        "raw": "\\"none\\" | \\"ascending\\" | \\"descending\\" | \\"other\\"",
         "value": Array [
-          Object {
-            "name": "string",
-            "value": "undefined",
-          },
           Object {
             "name": "string",
             "value": "none",
@@ -1020,12 +995,8 @@ from the title.",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"text\\" | \\"none\\" | \\"tel\\" | \\"url\\" | \\"email\\" | \\"numeric\\" | \\"decimal\\" | \\"search\\" | undefined",
+        "raw": "\\"text\\" | \\"none\\" | \\"tel\\" | \\"url\\" | \\"email\\" | \\"numeric\\" | \\"decimal\\" | \\"search\\"",
         "value": Array [
-          Object {
-            "name": "string",
-            "value": "undefined",
-          },
           Object {
             "name": "string",
             "value": "text",
@@ -2938,12 +2909,8 @@ behind an element is visible.
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"yes\\" | \\"no\\" | undefined",
+        "raw": "\\"yes\\" | \\"no\\"",
         "value": Array [
-          Object {
-            "name": "string",
-            "value": "undefined",
-          },
           Object {
             "name": "string",
             "value": "yes",
@@ -2966,12 +2933,8 @@ behind an element is visible.
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"on\\" | \\"off\\" | undefined",
+        "raw": "\\"on\\" | \\"off\\"",
         "value": Array [
-          Object {
-            "name": "string",
-            "value": "undefined",
-          },
           Object {
             "name": "string",
             "value": "on",
@@ -3002,12 +2965,8 @@ behind an element is visible.
       "parentName": "StoryOwnProps",
       "type": Object {
         "name": "enum",
-        "raw": "StoryWrapperType | undefined",
+        "raw": "StoryWrapperType",
         "value": Array [
-          Object {
-            "name": "string",
-            "value": "undefined",
-          },
           Object {
             "name": "string",
             "value": "iframe",
