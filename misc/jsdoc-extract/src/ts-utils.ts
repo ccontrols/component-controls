@@ -1,4 +1,4 @@
-import ts from 'typescript';
+import * as ts from 'typescript';
 import { PropKind } from './types';
 
 type VariableDeclaration =
@@ -223,12 +223,14 @@ export const getSymbolType = (
   symbol: ts.Symbol,
 ): ts.Type | undefined => {
   const declaration = symbol.valueDeclaration || symbol.declarations?.[0];
-  const type = checker.getTypeOfSymbolAtLocation(symbol, declaration);
-  if (
-    !('intrinsicName' in type) ||
-    ((type as unknown) as { intrinsicName: string }).intrinsicName !== 'error'
-  ) {
-    return type;
+  if (declaration) {
+    const type = checker.getTypeOfSymbolAtLocation(symbol, declaration);
+    if (
+      !('intrinsicName' in type) ||
+      ((type as unknown) as { intrinsicName: string }).intrinsicName !== 'error'
+    ) {
+      return type;
+    }
   }
   const symbolType = checker.getDeclaredTypeOfSymbol(symbol);
   if (

@@ -2,7 +2,6 @@
 import path from 'path';
 import fs from 'fs';
 import { Application } from 'typedoc';
-import { ModuleKind, ScriptTarget } from 'typescript';
 import { getRepoPath } from '../common/package-info';
 import {
   createPropsRow,
@@ -15,13 +14,9 @@ const app = new Application();
 app.bootstrap({
   mode: 'modules',
   logger: 'console',
-  target: ScriptTarget.ES5,
-  module: ModuleKind.CommonJS,
-  experimentalDecorators: true,
   includeDeclarations: true,
   excludeExternals: true,
   excludePrivate: true,
-  esModuleInterop: true,
 });
 
 export const extractTSDoc = (

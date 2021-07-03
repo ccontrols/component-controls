@@ -484,7 +484,7 @@ export class SymbolParser {
         : undefined;
 
       const typeDeclaration = typeSymbol
-        ? typeSymbol.valueDeclaration || typeSymbol.declarations[0]
+        ? typeSymbol.valueDeclaration || typeSymbol.declarations?.[0]
         : undefined;
 
       const declaration =
@@ -770,9 +770,10 @@ export class SymbolParser {
       .getDocumentationComment(this.checker)
       .map(({ text }) => `* ${text}`);
     const tags = symbol.getJsDocTags().map(t => {
-      if (t.text) {
-        const firstSpace = t.text.indexOf(' ');
-        return `* @${t.name} ${t.text.substr(0, firstSpace)} ${t.text.substr(
+      const text = t.text?.map(({ text }) => text).join(' ');
+      if (typeof text === 'string') {
+        const firstSpace = text.indexOf(' ');
+        return `* @${t.name} ${text.substr(0, firstSpace)} ${text.substr(
           firstSpace + 1,
         )}`;
       }
