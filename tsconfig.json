@@ -3,7 +3,7 @@
   "compilerOptions": {
     "target": "es2017",
     "module": "es2015",
-    "moduleResolution": "Node",
+    "moduleResolution": "node",
     "inlineSourceMap": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
