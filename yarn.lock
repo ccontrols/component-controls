@@ -22808,6 +22808,11 @@ react-docgen-typescript@^1.22.0:
   resolved "https://registry.yarnpkg.com/react-docgen-typescript/-/react-docgen-typescript-1.22.0.tgz#00232c8e8e47f4437cac133b879b3e9437284bee"
   integrity sha512-MPLbF8vzRwAG3GcjdL+OHQlhgtWsLTXs+7uJiHfEeT3Ur7IsZaNYqRTLQ9sj2nB6M6jylcPCeCmH7qbszJmecg==
 
+react-docgen-typescript@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-docgen-typescript/-/react-docgen-typescript-2.0.0.tgz#0f684350159ae4d2d556f8bc241a74669753944b"
+  integrity sha512-lPf+KJKAo6a9klKyK4y8WwgaX+6t5/HkVjHOpJDMbmaXfXcV7zP0QgWtnEOc3ccEUXKvlHMGUMIS9f6Zgo1BSw==
+
 react-docgen@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/react-docgen/-/react-docgen-4.1.1.tgz#8fef0212dbf14733e09edecef1de6b224d87219e"
