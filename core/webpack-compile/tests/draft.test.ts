@@ -419,10 +419,6 @@ describe('test draft', () => {
                 value: [
                   {
                     name: 'string',
-                    value: 'undefined',
-                  },
-                  {
-                    name: 'string',
                     value: 'button',
                   },
                   {
@@ -434,7 +430,7 @@ describe('test draft', () => {
                     value: 'submit',
                   },
                 ],
-                raw: '"button" | "reset" | "submit" | undefined',
+                raw: '"button" | "reset" | "submit"',
               },
             },
             style: {
@@ -537,7 +533,7 @@ describe('test draft', () => {
         package: '98b2111b08fbab8e38c938acaf3e129a',
         info: {
           tags: {
-            see: 'https ://theme-ui.com/components/button',
+            see: 'https://theme-ui.com/components/button',
           },
           description: 'Primitive button component with variants',
           displayName: 'Button',
