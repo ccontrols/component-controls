@@ -14,7 +14,7 @@ export default async (
     ...(config ? JSON.parse(config) : undefined),
   };
   const { lang = 'typescript' } = options?.tsOptions || {};
-  const extension = lang === 'javascript' ? 'js' : 'tsx';
+  const extension = lang === 'javascript' ? 'jsx' : 'tsx';
   const result = createTempFile(
     extension,
     fileNames => {
