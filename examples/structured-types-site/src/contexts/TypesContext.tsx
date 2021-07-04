@@ -5,7 +5,7 @@ import React, {
   useContext,
   useEffect,
 } from 'react';
-import { PropTypes } from '@component-controls/structured-js-types/types';
+import { PropTypes } from '@component-controls/structured-types/types';
 import { useDebounce } from '../hooks/usDebounce';
 import { getPureConfig, useOptions } from './OptionsContext';
 import { useCodeContext } from './CodeContext';
@@ -28,7 +28,7 @@ export const TypesContextProvider: FC = ({ children }) => {
       setLoading(true);
       const tsOptions = getPureConfig(options.tsOptions);
       const parseOptions = getPureConfig(options.parseOptions);
-      const url = `/api/structured-js-types?code=${encodeURIComponent(
+      const url = `/api/structured-types?code=${encodeURIComponent(
         debouncedCode,
       )}${
         tsOptions || parseOptions

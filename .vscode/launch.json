@@ -236,9 +236,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "jest jsdoc-extract",
+      "name": "jest structured-types",
       "program": "${workspaceFolder}/node_modules/.bin/jest",
-      "cwd": "${workspaceFolder}/misc/jsdoc-extract",
+      "cwd": "${workspaceFolder}/misc/structured-types",
       "args": ["react-no-plugin"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",

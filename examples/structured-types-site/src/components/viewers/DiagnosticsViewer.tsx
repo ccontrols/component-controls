@@ -9,7 +9,7 @@ import {
   IssueOpenedIcon,
 } from '@primer/octicons-react';
 import { Table, Column, Tag } from '@component-controls/components';
-import { PropDiagnostic } from '@component-controls/structured-js-types/types';
+import { PropDiagnostic } from '@component-controls/structured-types/types';
 import { useTypesContext } from '../../contexts/TypesContext';
 import { LoadingIndicator } from './LoadingIndicator';
 

@@ -1,6 +1,6 @@
 {
-  "name": "structured-js-docs-site",
-  "description": "playground site for structured-js-types",
+  "name": "structured-types-site",
+  "description": "playground site for structured-types",
   "version": "3.14.4",
   "private": true,
   "license": "MIT",
@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@component-controls/nextjs-plugin": "^3.14.6",
-    "@component-controls/structured-js-types": "^3.14.4",
+    "@component-controls/structured-types": "^3.14.4",
     "@monaco-editor/react": "^4.2.1",
     "next": "^10.0.7",
     "react": "^17.0.1",

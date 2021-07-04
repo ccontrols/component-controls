@@ -13,14 +13,14 @@
  * @example
  *
  * ```ts
- * import { sum } from '@component-controls/jsdoc-extract';
+ * import { sum } from '@component-controls/structured-types';
  *
  * expect(sum(1, 2)).toMatchObject({ a: 1, b: 2, result: 3});
  * ```
  */
 export const sum = (
   a: number,
-  b: number = 1,
+  b = 1,
 ): {
   a: number;
   b: number;

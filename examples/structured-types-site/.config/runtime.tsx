@@ -5,7 +5,7 @@ import { Link } from '@component-controls/components';
 import { OctofaceIcon } from '@primer/octicons-react';
 
 const config: RuntimeConfiguration = {
-  title: 'structured-js-types',
+  title: 'structured-types',
   description: `api to extract structured type information from typescript types and jsdoc comments.`,
   copyright: null,
   author: null,
@@ -29,7 +29,7 @@ const config: RuntimeConfiguration = {
     right: [
       {
         node: (
-          <Link href="https://github.com/ccontrols/component-controls/misc/structured-js-types">
+          <Link href="https://github.com/ccontrols/component-controls/misc/structured-types">
             <Box
               sx={{
                 mr: 1,

@@ -26,7 +26,7 @@ export const getExamples = (): Examples => {
   const examplesFolder = path.resolve(
     __dirname,
     '../../../../../',
-    'misc/jsdoc-extract/test',
+    'misc/structured-types/test',
   );
   const examples = {};
   traverseFolder(examplesFolder, examples);

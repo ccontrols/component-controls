@@ -20,7 +20,7 @@ Extract structure documentation from javascript and typescript files using a com
 # Installation
 
 ```bash
-$ npm install @component-controls/structured-js-types --save-dev
+$ npm install @component-controls/structured-types --save-dev
 ```
 
 # API
@@ -31,10 +31,10 @@ $ npm install @component-controls/structured-js-types --save-dev
 
 ## <ins>run</ins>
 
-_run [source code](https://github.com/ccontrols/component-controls/tree/master/misc/jsdoc-extract/src/index.ts)_
+_run [source code](https://github.com/ccontrols/component-controls/tree/master/misc/structured-types/src/index.ts)_
 
 ## <ins>extractComments</ins>
 
-_extractComments [source code](https://github.com/ccontrols/component-controls/tree/master/misc/jsdoc-extract/src/utils.ts)_
+_extractComments [source code](https://github.com/ccontrols/component-controls/tree/master/misc/structured-types/src/utils.ts)_
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

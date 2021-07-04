@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Box } from 'theme-ui';
-import { PropKind } from '@component-controls/structured-js-types/types';
+import { PropKind } from '@component-controls/structured-types/types';
 import { useTypesContext } from '../../contexts/TypesContext';
 import { LoadingIndicator } from './LoadingIndicator';
 import { JSONViewer } from './JSONViewer';
