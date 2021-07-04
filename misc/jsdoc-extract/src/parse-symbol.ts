@@ -36,6 +36,7 @@ import {
   FunctionLike,
   isFunctionLike,
   isArrayLike,
+  resolveType,
 } from './ts-utils';
 const strToValue = (s: string): any => {
   switch (s) {
@@ -535,11 +536,14 @@ export class SymbolParser {
         : undefined;
       if (symbolType) {
         const resolvedType = top
-          ? this.options.typeResolver({
-              symbolType,
-              declaration,
-              checker: this.checker,
-            })
+          ? resolveType(
+              {
+                symbolType,
+                declaration,
+                checker: this.checker,
+              },
+              this.options.resolvers,
+            )
           : symbolType;
         if (
           resolvedType &&

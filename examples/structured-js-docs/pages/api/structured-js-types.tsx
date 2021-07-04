@@ -1,6 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { parseCode } from '@component-controls/structured-js-types';
 import { typeResolver } from '@component-controls/structured-js-types/react';
+import { parseFiles } from '@component-controls/structured-js-types';
+
+import { createTempFile } from '../../src/api/create-temp-file';
 
 export default async (
   req: NextApiRequest,
@@ -8,9 +10,17 @@ export default async (
 ): Promise<void> => {
   const { code, config } = req.query as { code?: string; config?: string };
   const options = {
-    typeResolver,
+    resolvers: [typeResolver],
     ...(config ? JSON.parse(config) : undefined),
   };
-  const result = parseCode(code, options);
+  const { lang = 'typescript' } = options?.tsOptions || {};
+  const extension = lang === 'javascript' ? 'js' : 'tsx';
+  const result = createTempFile(
+    extension,
+    fileNames => {
+      return parseFiles(fileNames, options);
+    },
+    code,
+  );
   res.json(result);
 };

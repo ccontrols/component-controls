@@ -4,7 +4,7 @@ import { typeResolver } from '../../src/frameworks/react';
 it('load from file', () => {
   const result = parseFiles(
     [path.resolve(__dirname, 'fixtures', 'react-simple-class.tsx')],
-    { typeResolver },
+    { resolvers: [typeResolver] },
   );
   expect(result).toEqual({
     ReactComponent: {

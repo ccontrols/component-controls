@@ -172,7 +172,7 @@ export interface ParseOptions {
    * type resolving custom function
    * ie from a react component will return the props type
    */
-  typeResolver?: TypeResolver;
+  resolvers?: TypeResolver[];
   /**
    * internal types - libs
    * by default includes classes such as `String`, `Function`...
@@ -195,13 +195,6 @@ export interface ParseOptions {
 }
 
 export const defaultParseOptions: ParseOptions = {
-  typeResolver: ({ symbolType }) => {
-    const properties = symbolType.getProperties();
-    if (properties.length && properties[0].escapedName === 'prototype') {
-      return undefined;
-    }
-    return symbolType;
-  },
   saveParentProps: true,
   internalTypes: [
     'Function',
@@ -225,6 +218,18 @@ export type TypeResolver = (props: {
   declaration: ts.Declaration;
   checker: ts.TypeChecker;
 }) => ts.Type | undefined;
+
+export const resolveType: (
+  props: Parameters<TypeResolver>[0],
+  resolvers?: TypeResolver[],
+) => ReturnType<TypeResolver> = (props, resolvers) => {
+  if (resolvers) {
+    return resolvers.reduce((acc, resolver) => {
+      return resolver({ ...props, symbolType: acc }) || acc;
+    }, props.symbolType);
+  }
+  return props.symbolType;
+};
 
 export const getSymbolType = (
   checker: ts.TypeChecker,

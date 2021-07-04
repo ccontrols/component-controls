@@ -1,4 +1,3 @@
-import * as ts from 'typescript';
 import { getTypescriptConfig } from '@component-controls/typescript-config';
 import { anaylizeFiles } from './ts-walk';
 import { PropTypes } from './types';
@@ -19,33 +18,4 @@ export const parseFiles = (
   };
   const results = anaylizeFiles(filePaths, options);
   return results;
-};
-
-export const parseCode = (code?: string, options?: DocsOptions): PropTypes => {
-  let result: PropTypes = {};
-  if (code) {
-    const { lang = 'typescript' } = options?.tsOptions || {};
-    const host = ts.createCompilerHost({});
-    if (host.createHash) {
-      const name = host.createHash(Math.random().toString()).substring(0, 12);
-      const fileName = name + (lang === 'javascript' ? '.js' : '.tsx');
-      const tsOptions = {
-        ...tsDefaults,
-        ...getTypescriptConfig(
-          `${host.getCurrentDirectory()}/${fileName}`,
-          options?.tsOptions,
-        ),
-      };
-
-      ts.sys.writeFile(fileName, code);
-      try {
-        result = anaylizeFiles([fileName], { ...options, tsOptions });
-      } finally {
-        if (ts.sys.deleteFile) {
-          ts.sys.deleteFile(fileName);
-        }
-      }
-    }
-  }
-  return result;
 };
