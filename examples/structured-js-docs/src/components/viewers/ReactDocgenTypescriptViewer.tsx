@@ -1,15 +1,13 @@
 import React, { FC, useState, useEffect } from 'react';
-import ReactJson from 'react-json-tree';
 import { Box } from 'theme-ui';
-import { useTheme } from '@component-controls/components';
 import { LoadingIndicator } from './LoadingIndicator';
 import { useDebounce } from '../../hooks/usDebounce';
 import { getPureConfig, useOptions } from '../../contexts/OptionsContext';
 import { useCodeContext } from '../../contexts/CodeContext';
+import { JSONViewer } from './JSONViewer';
 
 export const ReactDocgenTypescriptViewer: FC = () => {
   const [loading, setLoading] = useState(false);
-  const theme = useTheme();
   const options = useOptions();
   const { code } = useCodeContext();
   const [types, setTypes] = useState({});
@@ -55,28 +53,7 @@ export const ReactDocgenTypescriptViewer: FC = () => {
         ml: 3,
       }}
     >
-      {loading ? (
-        <LoadingIndicator />
-      ) : (
-        <ReactJson
-          data={types}
-          hideRoot={true}
-          shouldExpandNode={(
-            keyPath: (string | number)[],
-            data: any,
-            level: number,
-          ) => {
-            return level === 1;
-          }}
-          theme={{
-            base00: theme.colors?.background as string,
-            base03: theme.colors?.muted as string,
-            base0B: theme.colors?.accent as string,
-            base0D: theme.colors?.text as string,
-          }}
-          invertTheme={false}
-        />
-      )}
+      {loading ? <LoadingIndicator /> : <JSONViewer data={types} />}
     </Box>
   );
 };

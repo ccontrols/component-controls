@@ -13,10 +13,11 @@ import { CodeContextProvider } from '../contexts/CodeContext';
 import { TypesContextProvider } from '../contexts/TypesContext';
 import { Editor } from './Editor';
 import { InfoContainer } from './viewers/InfoContainer';
+import { useURLParamas } from '../hooks/useUrlParams';
 
 export const Playground: FC = () => {
   const [sizes, setSizes] = useState<number[]>([70, 30]);
-  const [tabIndex, setTabIndex] = useState<number>(0);
+  const [tabIndex, setTabIndex] = useURLParamas<number>('tab', 0);
   useEffect(() => {
     const storeSizes = localStorage.getItem('split-size');
     if (storeSizes) {

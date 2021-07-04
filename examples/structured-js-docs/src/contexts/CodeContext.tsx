@@ -1,11 +1,5 @@
-import React, {
-  FC,
-  createContext,
-  useState,
-  useContext,
-  useEffect,
-} from 'react';
-import { getUrlParams, getUpdatedUrlParams } from '@component-controls/blocks';
+import React, { FC, createContext, useContext } from 'react';
+import { useURLParamas } from '../hooks/useUrlParams';
 
 type CodeContextType = {
   code: string;
@@ -14,22 +8,12 @@ type CodeContextType = {
 const CodeContext = createContext<CodeContextType>({} as CodeContextType);
 
 export const CodeContextProvider: FC = ({ children }) => {
-  const [code, setCode] = useState('');
-  useEffect(() => {
-    const urlCode = getUrlParams('code');
-    if (urlCode) {
-      setCode(urlCode);
-    }
-  }, []);
+  const [code, setCode] = useURLParamas('code', '');
   return (
     <CodeContext.Provider
       value={{
         code,
         updateCode: source => {
-          const newUrl = getUpdatedUrlParams('code', source);
-          if (newUrl && window.location.href !== newUrl) {
-            window.history.replaceState(null, '', newUrl);
-          }
           setCode(source);
         },
       }}

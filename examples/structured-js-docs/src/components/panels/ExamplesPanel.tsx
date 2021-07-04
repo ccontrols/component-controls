@@ -5,14 +5,21 @@ import { useUserData } from '@component-controls/store';
 import { Tabs, TabList, Tab, TabPanel } from '@component-controls/components';
 import { PanelContainer, PanelContainerProps } from './PanelContainer';
 import { useCodeContext } from '../../contexts/CodeContext';
+import { useURLParamas } from '../../hooks/useUrlParams';
 
 export const ExamplesPanel: FC<PanelContainerProps> = ({ onClose }) => {
+  const [tabIndex, setTabIndex] = useURLParamas<number>('examples', 0);
   const data = useUserData();
   const { updateCode } = useCodeContext();
   const { examples } = data;
   return (
     <PanelContainer onClose={onClose}>
-      <Tabs>
+      <Tabs
+        selectedIndex={tabIndex}
+        onSelect={index => {
+          setTabIndex(index);
+        }}
+      >
         <TabList>
           {Object.keys(examples).map(key => (
             <Tab key={key}>

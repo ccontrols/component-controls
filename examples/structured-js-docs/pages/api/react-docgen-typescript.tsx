@@ -32,7 +32,7 @@ export default async (
           const docgenInfo = parser.parse(fileName);
           return { ...acc, ...docgenInfo };
         } catch (e) {
-          __errors.push(e);
+          __errors.push(e.toString());
           return acc;
         }
       }, {});

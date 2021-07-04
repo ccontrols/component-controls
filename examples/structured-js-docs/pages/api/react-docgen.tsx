@@ -10,6 +10,6 @@ export default async (
     const result = parse(code);
     res.json(result);
   } catch (e) {
-    res.json({ __error: e });
+    res.json({ __error: e.toString() });
   }
 };

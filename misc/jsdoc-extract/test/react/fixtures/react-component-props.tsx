@@ -23,12 +23,12 @@ type OwnProps = {
 /**
  * Column description
  */
-export class Column extends Component<OwnProps, Record<string, unknown>> {
-  public static defaultProps: Partial<OwnProps> = {
+class Column extends Component<OwnProps, Record<string, unknown>> {
+  static defaultProps: Partial<OwnProps> = {
     stringProp: 'prop1',
   };
 
-  public render(): React.ReactNode {
+  render(): React.ReactNode {
     const { stringProp } = this.props;
     return <div>{stringProp}</div>;
   }
