@@ -12,6 +12,7 @@ import {
 import { TypeViewer } from './TypeViewer';
 import { ReactDocgenTypescriptViewer } from './ReactDocgenTypescriptViewer';
 import { ReactDocgenViewer } from './ReactDocgenViewer';
+import { JSDocViewer } from './JSDocViewer';
 import { DiagnosticsViewer } from './DiagnosticsViewer';
 import { useURLParamas } from '../../hooks/useUrlParams';
 
@@ -43,6 +44,12 @@ export const InfoContainer: FC = () => {
         selected: false,
         Panel: ReactDocgenViewer,
       },
+      {
+        label: 'jsdoc',
+        selected: false,
+        Panel: JSDocViewer,
+      },
+
       {
         label: 'diagnostics',
         selected: false,

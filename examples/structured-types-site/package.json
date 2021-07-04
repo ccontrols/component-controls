@@ -17,6 +17,7 @@
     "@component-controls/nextjs-plugin": "^3.14.6",
     "@component-controls/structured-types": "^3.14.4",
     "@monaco-editor/react": "^4.2.1",
+    "jsdoc-api": "^7.0.1",
     "next": "^10.0.7",
     "react": "^17.0.1",
     "react-docgen": "^5.4.0",
