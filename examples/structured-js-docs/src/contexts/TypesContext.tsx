@@ -28,15 +28,19 @@ export const TypesContextProvider: FC = ({ children }) => {
       setLoading(true);
       const tsOptions = getPureConfig(options.tsOptions);
       const parseOptions = getPureConfig(options.parseOptions);
-      const url = `/api?code=${debouncedCode}${
+      const url = `/api/structured-js-types?code=${encodeURIComponent(
+        debouncedCode,
+      )}${
         tsOptions || parseOptions
-          ? `&config=${JSON.stringify({
-              tsOptions,
-              ...parseOptions,
-            })}`
+          ? `&config=${encodeURIComponent(
+              JSON.stringify({
+                tsOptions,
+                ...parseOptions,
+              }),
+            )}`
           : ''
       }`;
-      fetch(encodeURI(url))
+      fetch(url)
         .then(data => data.json())
         .then(json => {
           setLoading(false);

@@ -13,6 +13,8 @@
   "files": [
     "dist/",
     "package.json",
+    "react.d.ts",
+    "react.js",
     "types.d.ts",
     "types.js",
     "README.md"

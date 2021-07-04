@@ -146,10 +146,18 @@ export const isArrayLike = (node: ts.Node): node is ArrayLike => {
   );
 };
 
-export const tsDefaults = {
-  jsx: ts.JsxEmit.React,
+export const tsDefaults: ts.CompilerOptions = {
+  jsx: ts.JsxEmit.ReactJSX,
   module: ts.ModuleKind.CommonJS,
   target: ts.ScriptTarget.Latest,
+  noImplicitAny: true,
+  noImplicitReturns: true,
+  strictNullChecks: true,
+  strictFunctionTypes: true,
+  strictBindCallApply: true,
+  strictPropertyInitialization: true,
+  noImplicitThis: true,
+  alwaysStrict: true,
 };
 
 export type CompileOptions = {

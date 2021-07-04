@@ -25,14 +25,18 @@ export const parseCode = (code?: string, options?: DocsOptions): PropTypes => {
   let result: PropTypes = {};
   if (code) {
     const { lang = 'typescript' } = options?.tsOptions || {};
-    const tsOptions = {
-      ...tsDefaults,
-      ...options?.tsOptions,
-    };
-    const host = ts.createCompilerHost(tsOptions);
+    const host = ts.createCompilerHost({});
     if (host.createHash) {
       const name = host.createHash(Math.random().toString()).substring(0, 12);
-      const fileName = name + (lang === 'javascript' ? '.js' : '.ts');
+      const fileName = name + (lang === 'javascript' ? '.js' : '.tsx');
+      const tsOptions = {
+        ...tsDefaults,
+        ...getTypescriptConfig(
+          `${host.getCurrentDirectory()}/${fileName}`,
+          options?.tsOptions,
+        ),
+      };
+
       ts.sys.writeFile(fileName, code);
       try {
         result = anaylizeFiles([fileName], { ...options, tsOptions });

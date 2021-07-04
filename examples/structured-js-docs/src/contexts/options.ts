@@ -64,7 +64,7 @@ export const defaultTSOptions: TSOptionsType = {
       help: 'Which language should be used in the editor.',
     },
     target: {
-      defaultValue: 'ES2017',
+      defaultValue: 'Latest',
       options: [
         'ES3',
         'ES5',
@@ -77,6 +77,7 @@ export const defaultTSOptions: TSOptionsType = {
         'ES2021',
         'ESNext',
         'JSON',
+        'Latest',
       ],
       help:
         'Set the JavaScript language version for emitted JavaScript and include compatible library declarations.',
@@ -94,7 +95,7 @@ export const defaultTSOptions: TSOptionsType = {
       help: 'Specify what JSX code is generated.',
     },
     module: {
-      defaultValue: 'ESNext',
+      defaultValue: 'CommonJS',
       options: [
         'None',
         'CommonJS',
