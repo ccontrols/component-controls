@@ -7,11 +7,14 @@ export default async (
   req: NextApiRequest,
   res: NextApiResponse,
 ): Promise<void> => {
-  const { code, config } = req.query as { code?: string; config?: string };
-  const options = {
-    ...(config ? JSON.parse(config) : undefined),
+  const { code, tsoptions } = req.query as {
+    code?: string;
+    tsoptions?: string;
   };
-  const { lang = 'typescript' } = options?.tsOptions || {};
+  const options = {
+    ...(tsoptions ? JSON.parse(tsoptions) : undefined),
+  };
+  const { lang = 'typescript' } = options || {};
   const extension = lang === 'javascript' ? 'jsx' : 'tsx';
   const parserOptions: ParserOptions = {
     shouldIncludePropTagMap: true,
@@ -24,10 +27,8 @@ export default async (
     extension,
     fileNames => {
       return fileNames.reduce((acc, fileName) => {
-        const tsOptions = {
-          ...getTypescriptConfig(fileName, options.tsOptions),
-        };
-        const parser = withCompilerOptions(tsOptions, parserOptions);
+        const tsOptions = getTypescriptConfig(fileName, options);
+        const parser = withCompilerOptions(tsOptions || {}, parserOptions);
         try {
           const docgenInfo = parser.parse(fileName);
           return { ...acc, ...docgenInfo };

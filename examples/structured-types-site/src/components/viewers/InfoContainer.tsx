@@ -10,50 +10,61 @@ import {
   MultiselectItem,
 } from '@component-controls/components';
 import { TypeViewer } from './TypeViewer';
-import { ReactDocgenTypescriptViewer } from './ReactDocgenTypescriptViewer';
-import { ReactDocgenViewer } from './ReactDocgenViewer';
-import { JSDocViewer } from './JSDocViewer';
-import { DiagnosticsViewer } from './DiagnosticsViewer';
+import { DataViewer } from './DataViewer';
 import { useURLParamas } from '../../hooks/useUrlParams';
 
 export const InfoContainer: FC = () => {
-  const [visibleTabs, setVisibleTabs] = useURLParamas<string[]>(
-    'viewer-tabs',
-    [],
-  );
+  const [visibleTabs, setVisibleTabs] = useURLParamas<string[]>('viewer-tabs', [
+    'structured-types',
+  ]);
   const [selectedTab, setSelectedTab] = useURLParamas<string>(
     'selected-tab',
     '',
   );
   const tabIndex = useMemo(() => {
-    const tabIndex = visibleTabs.findIndex(name => name === selectedTab);
-    if (tabIndex >= 0) {
-      return tabIndex + 1;
-    }
-    return 0;
+    return Math.max(
+      0,
+      visibleTabs.findIndex(name => name === selectedTab),
+    );
   }, [selectedTab, visibleTabs]);
   const items = useMemo(() => {
     const items: MultiselectItem[] = [
       {
+        label: 'structured-types',
+        selected: true,
+        link:
+          'https://github.com/ccontrols/component-controls/tree/master/misc/structured-types',
+        Panel: TypeViewer,
+      },
+      {
         label: 'react-docgen-typescript',
         selected: false,
-        Panel: ReactDocgenTypescriptViewer,
+        link: 'https://github.com/styleguidist/react-docgen-typescript',
+        Panel: DataViewer,
       },
       {
         label: 'react-docgen',
         selected: false,
-        Panel: ReactDocgenViewer,
+        link: 'https://github.com/reactjs/react-docgen',
+        Panel: DataViewer,
       },
       {
         label: 'jsdoc',
         selected: false,
-        Panel: JSDocViewer,
+        link: 'https://github.com/jsdoc2md/jsdoc-api',
+        Panel: DataViewer,
       },
-
       {
-        label: 'diagnostics',
+        label: 'typedoc',
         selected: false,
-        Panel: DiagnosticsViewer,
+        link: 'https://github.com/TypeStrong/typedoc',
+        Panel: DataViewer,
+      },
+      {
+        label: 'ts-json-schema-generator',
+        selected: false,
+        link: 'https://github.com/vega/ts-json-schema-generator',
+        Panel: DataViewer,
       },
     ];
     return items.map(item => ({
@@ -82,7 +93,8 @@ export const InfoContainer: FC = () => {
           onChange={item => {
             const visibleItem = visibleTabs.find(name => name === item.label);
             if (visibleItem) {
-              setVisibleTabs(visibleTabs.filter(name => name !== visibleItem));
+              const newTabs = visibleTabs.filter(name => name !== visibleItem);
+              setVisibleTabs(newTabs.length ? newTabs : ['structured-types']);
             } else {
               setVisibleTabs([...visibleTabs, item.label]);
             }
@@ -97,8 +109,8 @@ export const InfoContainer: FC = () => {
         <Tabs
           selectedIndex={tabIndex}
           onSelect={index => {
-            if (index > 0 && index <= visibleTabs.length) {
-              setSelectedTab(visibleTabs[index - 1]);
+            if (index >= 0 && index <= visibleTabs.length) {
+              setSelectedTab(visibleTabs[index]);
             } else {
               setSelectedTab('');
             }
@@ -113,16 +125,16 @@ export const InfoContainer: FC = () => {
           }}
         >
           <TabList>
-            <Tab>structured-types</Tab>
             {visibleItems.map(item => (
               <Tab key={item.label}>{item.label}</Tab>
             ))}
           </TabList>
-          <TabPanel>
-            <TypeViewer />
-          </TabPanel>
-          {visibleItems.map(item => (
-            <TabPanel key={item.label}>{<item.Panel />}</TabPanel>
+          {visibleItems.map((item, index) => (
+            <TabPanel key={item.label}>
+              {tabIndex === index ? (
+                <item.Panel label={item.label} link={item.link} />
+              ) : null}
+            </TabPanel>
           ))}
         </Tabs>
       )}

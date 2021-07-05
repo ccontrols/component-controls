@@ -31,13 +31,12 @@ export const TypesContextProvider: FC = ({ children }) => {
       const url = `/api/structured-types?code=${encodeURIComponent(
         debouncedCode,
       )}${
-        tsOptions || parseOptions
-          ? `&config=${encodeURIComponent(
-              JSON.stringify({
-                tsOptions,
-                ...parseOptions,
-              }),
-            )}`
+        parseOptions
+          ? `&config=${encodeURIComponent(JSON.stringify(parseOptions))}`
+          : ''
+      }${
+        tsOptions
+          ? `&tsoptions=${encodeURIComponent(JSON.stringify(tsOptions))}`
           : ''
       }`;
       fetch(url)

@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import ReactJson from 'react-json-tree';
 import { useTheme } from '@component-controls/components';
 
-type ReactJSONProps = Partial<ReactJson['props']>;
+export type ReactJSONProps = Partial<ReactJson['props']>;
 export const JSONViewer: FC<ReactJSONProps> = props => {
   const theme = useTheme();
   return (
