@@ -15,10 +15,6 @@ const config: RuntimeConfiguration = {
         '"Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;',
     },
     tabs: {
-      '.react-tabs': {
-        flex: 1,
-      },
-
       '.react-tabs__tab--selected': {
         borderBottom: (t: Theme): string => `1px solid ${t?.colors?.primary}`,
         color: 'primary',
