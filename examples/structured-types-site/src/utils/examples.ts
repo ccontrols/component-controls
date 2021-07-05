@@ -10,7 +10,7 @@ const traverseFolder = (folder: string, examples: Examples): void => {
   files.forEach(fileName => {
     const filePath = path.resolve(folder, fileName);
     const stat = fs.statSync(filePath);
-    if (!filePath.includes('.test.')) {
+    if (!filePath.includes('.test.') && !fileName.startsWith('__')) {
       if (stat.isFile()) {
         const content = fs.readFileSync(filePath, 'utf8');
         examples[fileName] = content;
