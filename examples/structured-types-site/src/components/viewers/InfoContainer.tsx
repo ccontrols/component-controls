@@ -103,6 +103,14 @@ export const InfoContainer: FC = () => {
               setSelectedTab('');
             }
           }}
+          sx={{
+            '.react-tabs__tab': {
+              fontWeight: 'normal',
+            },
+            '.react-tabs__tab-list': {
+              textAlign: 'center',
+            },
+          }}
         >
           <TabList>
             <Tab>structured-types</Tab>
