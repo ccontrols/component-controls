@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FC, useMemo } from 'react';
+import { FC, useMemo, ComponentType } from 'react';
 import { jsx, Box, Link, Theme } from 'theme-ui';
 import {
   Tabs,
@@ -9,7 +9,7 @@ import {
   Multiselect,
   MultiselectItem,
 } from '@component-controls/components';
-import { TypeViewer } from './TypeViewer';
+import { PropKind } from '@component-controls/structured-types/types';
 import { DataViewer } from './DataViewer';
 import { useURLParamas } from '../../hooks/useUrlParams';
 
@@ -28,13 +28,33 @@ export const InfoContainer: FC = () => {
     );
   }, [selectedTab, visibleTabs]);
   const items = useMemo(() => {
-    const items: MultiselectItem[] = [
+    const items: (MultiselectItem & {
+      Panel: ComponentType<any>;
+    })[] = [
       {
         label: 'structured-types',
         selected: true,
         link:
           'https://github.com/ccontrols/component-controls/tree/master/misc/structured-types',
-        Panel: TypeViewer,
+        Panel: DataViewer,
+        jsonTree: {
+          valueRenderer: (
+            valueAsString: any,
+            value: any,
+            ...keyPath: (string | number)[]
+          ) => {
+            if (keyPath.length && keyPath[0] === 'kind') {
+              const strValue = value.toString();
+              const typename = Object.entries(PropKind).find(([v, _]) => {
+                return v === strValue;
+              });
+              if (typename) {
+                return `${typename[1]} (${valueAsString})`;
+              }
+            }
+            return valueAsString;
+          },
+        },
       },
       {
         label: 'react-docgen-typescript',
@@ -77,6 +97,7 @@ export const InfoContainer: FC = () => {
       return items.find(item => item.label === name);
     })
     .filter(t => t) as MultiselectItem[];
+  const typeItem = items[0];
   return (
     <div>
       <Box
@@ -104,7 +125,7 @@ export const InfoContainer: FC = () => {
         </Multiselect>
       </Box>
       {visibleItems.length === 0 ? (
-        <TypeViewer />
+        <typeItem.Panel />
       ) : (
         <Tabs
           selectedIndex={tabIndex}

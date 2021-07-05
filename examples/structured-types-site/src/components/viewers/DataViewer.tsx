@@ -8,11 +8,11 @@ import { getPureConfig, useOptions } from '../../contexts/OptionsContext';
 import { useCodeContext } from '../../contexts/CodeContext';
 
 interface DataViewerProps {
-  json: ReactJSONProps;
+  jsonTree: ReactJSONProps;
   label: string;
   link: string;
 }
-export const DataViewer: FC<DataViewerProps> = ({ json, label, link }) => {
+export const DataViewer: FC<DataViewerProps> = ({ jsonTree, label, link }) => {
   const [loading, setLoading] = useState(false);
   const options = useOptions();
   const { code } = useCodeContext();
@@ -23,7 +23,12 @@ export const DataViewer: FC<DataViewerProps> = ({ json, label, link }) => {
     if (debouncedCode) {
       setLoading(true);
       const tsOptions = getPureConfig(options.tsOptions);
+      const parseOptions = getPureConfig(options.parseOptions);
       const url = `/api/${label}?code=${encodeURIComponent(debouncedCode)}${
+        parseOptions
+          ? `&config=${encodeURIComponent(JSON.stringify(parseOptions))}`
+          : ''
+      }${
         tsOptions
           ? `&tsoptions=${encodeURIComponent(
               JSON.stringify({
@@ -64,7 +69,11 @@ export const DataViewer: FC<DataViewerProps> = ({ json, label, link }) => {
           ml: 3,
         }}
       >
-        {loading ? <LoadingIndicator /> : <JSONViewer data={types} {...json} />}
+        {loading ? (
+          <LoadingIndicator />
+        ) : (
+          <JSONViewer data={types} {...jsonTree} />
+        )}
       </Box>
     </Box>
   );
