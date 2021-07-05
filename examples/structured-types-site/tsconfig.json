@@ -3,21 +3,12 @@
   "compilerOptions": {
     "module": "esnext",
     "outDir": "dist",
-    "rootDir": "src",
+    "rootDirs": ["src", "pages"],
     "declaration": true,
-    "types": [
-      "node",
-      "jest"
-    ],
+    "types": ["node", "jest"],
     "jsx": "preserve",
-    "lib": [
-      "es2017",
-      "dom"
-    ],
-    "typeRoots": [
-      "../../node_modules/@types",
-      "node_modules/@types"
-    ],
+    "lib": ["es2017", "dom"],
+    "typeRoots": ["../../node_modules/@types", "node_modules/@types"],
     "allowJs": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
@@ -25,13 +16,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true
   },
-  "exclude": [
-    "node_modules",
-    "public",
-    ".cache"
-  ],
-  "include": [
-    "**/*.ts",
-    "**/*.tsx"
-  ]
+  "exclude": ["node_modules", "public", ".cache"],
+  "include": ["**/*.ts", "**/*.tsx"]
 }
