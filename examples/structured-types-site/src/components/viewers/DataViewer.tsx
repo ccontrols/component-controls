@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
 import { Box, Theme } from 'theme-ui';
-import { Link } from '@component-controls/components';
+import { Link, CopyContainer } from '@component-controls/components';
 import { ReactJSONProps, JSONViewer } from './JSONViewer';
 import { LoadingIndicator } from './LoadingIndicator';
 import { useDebounce } from '../../hooks/usDebounce';
@@ -59,9 +59,25 @@ export const DataViewer: FC<DataViewerProps> = ({ jsonTree, label, link }) => {
         borderTop: (t: Theme): string => ` 2px solid  ${t.colors?.shadow}`,
       }}
     >
-      <Box sx={{ px: 2, display: 'flex', justifyContent: 'flex-end' }}>
-        <Box sx={{ pr: 2 }}>api:</Box>
-        <Link href={link}>{label}</Link>
+      <Box sx={{ px: 2, display: 'flex', justifyContent: 'space-between' }}>
+        <Box sx={{ display: 'flex' }}>
+          <CopyContainer
+            value={JSON.stringify(types, null, 2)}
+            options={{
+              format: 'application/json',
+            }}
+          >
+            <Link href="#" aria-label="copy to clipboard">
+              copy
+            </Link>
+          </CopyContainer>
+        </Box>
+        <Box sx={{ display: 'flex' }}>
+          <Box sx={{ pr: 2 }}>api:</Box>
+          <Link aria-label={`visit ${label} api github page`} href={link}>
+            {label}
+          </Link>
+        </Box>
       </Box>
       <Box
         sx={{
