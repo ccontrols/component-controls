@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import queryString from 'query-string';
 
 export const getURL = (): URL | undefined => {
@@ -42,4 +43,30 @@ export const getUrlParams = (paremName: string): any => {
     }
   }
   return undefined;
+};
+
+export const useURLParamas = <S extends unknown>(
+  name: string,
+  initialState: S,
+): [S, (newState: S) => void] => {
+  const [state, setState] = useState<S>(initialState);
+  useEffect(() => {
+    const urlConfig = getUrlParams(name);
+    if (urlConfig) {
+      setState(JSON.parse(urlConfig));
+    }
+  }, [name]);
+  return [
+    state,
+    newState => {
+      const newUrl = getUpdatedUrlParams(
+        name,
+        newState ? JSON.stringify(newState) : undefined,
+      );
+      if (newUrl && window.location.href !== newUrl) {
+        window.history.replaceState(null, '', newUrl);
+      }
+      setState(newState);
+    },
+  ];
 };

@@ -54,10 +54,12 @@ export const DataViewer: FC<DataViewerProps> = ({ jsonTree, label, link }) => {
   return (
     <Box
       sx={{
+        mx: 3,
+        pt: 2,
         borderTop: (t: Theme): string => ` 2px solid  ${t.colors?.shadow}`,
       }}
     >
-      <Box sx={{ px: 3, display: 'flex', justifyContent: 'flex-end' }}>
+      <Box sx={{ px: 2, display: 'flex', justifyContent: 'flex-end' }}>
         <Box sx={{ pr: 2 }}>api:</Box>
         <Link href={link}>{label}</Link>
       </Box>
@@ -66,7 +68,6 @@ export const DataViewer: FC<DataViewerProps> = ({ jsonTree, label, link }) => {
           display: 'flex',
           alignItems: 'stretch',
           overflowY: 'auto',
-          ml: 3,
         }}
       >
         {loading ? (

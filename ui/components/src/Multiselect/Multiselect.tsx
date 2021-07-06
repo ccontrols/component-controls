@@ -12,10 +12,6 @@ export interface MultiselectItem {
    * selected state
    */
   selected: boolean;
-  /**
-   * any other custom props
-   */
-  [name: string]: any;
 }
 export interface MultiselectOwnProps {
   /**

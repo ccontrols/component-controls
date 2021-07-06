@@ -4,7 +4,7 @@ import { jsx, Theme, Box, Heading } from 'theme-ui';
 import { TriangleUpIcon, TriangleDownIcon } from '@primer/octicons-react';
 import Split from 'react-split';
 import { Tabs, TabList, Tab, TabPanel } from '@component-controls/components';
-
+import { useURLParamas } from '@component-controls/blocks';
 import { ExamplesPanel } from './panels/ExamplesPanel';
 import { ConfigPanel } from './panels/ConfigPanel';
 import { ParseConfigPanel } from './panels/ParseConfigPanel';
@@ -12,7 +12,6 @@ import { OptionsContextProvider } from '../contexts/OptionsContext';
 import { CodeContextProvider } from '../contexts/CodeContext';
 import { Editor } from './Editor';
 import { InfoContainer } from './viewers/InfoContainer';
-import { useURLParamas } from '../hooks/useUrlParams';
 
 export const Playground: FC = () => {
   const [sizes, setSizes] = useState<number[]>([70, 30]);

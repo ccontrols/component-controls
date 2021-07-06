@@ -1,5 +1,5 @@
 import React, { FC, createContext, useContext } from 'react';
-import { useURLParamas } from '../hooks/useUrlParams';
+import { useURLParamas } from '@component-controls/blocks';
 
 type CodeContextType = {
   code: string;

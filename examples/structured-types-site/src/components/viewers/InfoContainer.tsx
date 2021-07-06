@@ -9,10 +9,16 @@ import {
   Multiselect,
   MultiselectItem,
 } from '@component-controls/components';
+import { useURLParamas } from '@component-controls/blocks';
 import { PropKind } from '@component-controls/structured-types/types';
+import { ReactJSONProps } from './JSONViewer';
 import { DataViewer } from './DataViewer';
-import { useURLParamas } from '../../hooks/useUrlParams';
 
+type APIItem = MultiselectItem & {
+  Panel: ComponentType<any>;
+  link: string;
+  jsonTree?: ReactJSONProps;
+};
 export const InfoContainer: FC = () => {
   const [visibleTabs, setVisibleTabs] = useURLParamas<string[]>('viewer-tabs', [
     'structured-types',
@@ -27,10 +33,8 @@ export const InfoContainer: FC = () => {
       visibleTabs.findIndex(name => name === selectedTab),
     );
   }, [selectedTab, visibleTabs]);
-  const items = useMemo(() => {
-    const items: (MultiselectItem & {
-      Panel: ComponentType<any>;
-    })[] = [
+  const items: APIItem[] = useMemo(() => {
+    const items = [
       {
         label: 'structured-types',
         selected: true,
@@ -96,7 +100,7 @@ export const InfoContainer: FC = () => {
     .map(name => {
       return items.find(item => item.label === name);
     })
-    .filter(t => t) as MultiselectItem[];
+    .filter(t => t) as APIItem[];
   const typeItem = items[0];
   return (
     <div>
