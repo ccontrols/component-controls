@@ -129,7 +129,11 @@ export const InfoContainer: FC = () => {
         </Multiselect>
       </Box>
       {visibleItems.length === 0 ? (
-        <typeItem.Panel />
+        <typeItem.Panel
+          label={typeItem.label}
+          link={typeItem.link}
+          jsonTree={typeItem.jsonTree}
+        />
       ) : (
         <Tabs
           selectedIndex={tabIndex}
@@ -157,7 +161,11 @@ export const InfoContainer: FC = () => {
           {visibleItems.map((item, index) => (
             <TabPanel key={item.label}>
               {tabIndex === index ? (
-                <item.Panel label={item.label} link={item.link} />
+                <item.Panel
+                  label={item.label}
+                  link={item.link}
+                  jsonTree={item.jsonTree}
+                />
               ) : null}
             </TabPanel>
           ))}
