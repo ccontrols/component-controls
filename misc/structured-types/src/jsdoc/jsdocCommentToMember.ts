@@ -123,8 +123,11 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
               // Define the JSDoc parameter with nicely ordered properties.
               const parameter: PropType = {
                 displayName: tag.name,
-                description: trimNewlines(tag.description),
               };
+              const trimmed = trimNewlines(tag.description);
+              if (trimmed) {
+                parameter.description = trimmed;
+              }
               if (
                 typeof tag.type !== 'undefined' &&
                 typeNameToPropKind(tag.type)
@@ -183,7 +186,10 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
             if (tag.type && typeNameToPropKind(tag.type)) {
               ret.kind = typeNameToPropKind(tag.type);
             }
-            ret.description = trimNewlines(tag.description);
+            const trimmed = trimNewlines(tag.description);
+            if (trimmed) {
+              ret.description = trimmed;
+            }
             (result as FunctionProp).returns = ret;
 
             break;
