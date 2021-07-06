@@ -1,4 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
+import { saveAs } from 'file-saver';
 import { Box, Theme } from 'theme-ui';
 import { Link, CopyContainer } from '@component-controls/components';
 import { ReactJSONProps, JSONViewer } from './JSONViewer';
@@ -61,13 +62,28 @@ export const DataViewer: FC<DataViewerProps> = ({ jsonTree, label, link }) => {
     >
       <Box sx={{ px: 2, display: 'flex', justifyContent: 'space-between' }}>
         <Box sx={{ display: 'flex' }}>
+          <Link
+            href="#"
+            aria-label="save to file"
+            onClick={e => {
+              e.preventDefault();
+              const blob = new Blob([JSON.stringify(types, null, 2)], {
+                type: 'application/json;charset=utf-8',
+              });
+              saveAs(blob, `${label}.json`);
+              // this.download = 'filename.txt';
+            }}
+          >
+            save
+          </Link>
+
           <CopyContainer
             value={JSON.stringify(types, null, 2)}
             options={{
               format: 'application/json',
             }}
           >
-            <Link href="#" aria-label="copy to clipboard">
+            <Link href="#" aria-label="copy to clipboard" sx={{ ml: 3 }}>
               copy
             </Link>
           </CopyContainer>
