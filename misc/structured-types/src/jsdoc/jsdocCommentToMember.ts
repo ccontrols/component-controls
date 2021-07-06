@@ -58,6 +58,7 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
             }
 
             break;
+
           case 'default':
             (result as ValueProp).value = tag.name;
 
@@ -97,6 +98,9 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
               tag.name || tag.description
                 ? `${tag.name ? `${tag.name} ` : ''}${tag.description || ''}`
                 : 'yes';
+            break;
+          case 'summary':
+            result.summary = tag.description;
             break;
           case 'desc':
           case 'description': {

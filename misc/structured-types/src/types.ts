@@ -63,6 +63,7 @@ export interface PropType {
   see?: string[];
   examples?: JSDocExample[];
   tags?: JSDocTag[];
+  summary?: string;
   deprecated?: string;
 }
 
