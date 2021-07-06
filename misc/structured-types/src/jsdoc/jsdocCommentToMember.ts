@@ -216,7 +216,8 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
             }
             break;
           }
-          case 'example': {
+          case 'example':
+          case 'remarks': {
             const tagDescriptionTrimmed = trimNewlines(tag.description);
 
             // Ignore an invalid tag missing a description.
@@ -239,10 +240,18 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
                   if (contentData) {
                     example.content = contentData;
                   }
-                  if (!result.examples) {
-                    result.examples = [];
+                  if (tag.tag === 'example') {
+                    if (!result.examples) {
+                      result.examples = [];
+                    }
+                    result.examples.unshift(example);
                   }
-                  result.examples.unshift(example);
+                  if (tag.tag === 'remarks') {
+                    if (!result.remarks) {
+                      result.remarks = [];
+                    }
+                    result.remarks.unshift(example);
+                  }
                 }
               }
             }

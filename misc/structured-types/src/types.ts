@@ -57,6 +57,7 @@ export interface PropType {
   fires?: { data: string }[];
   see?: string[];
   examples?: JSDocExample[];
+  remarks?: JSDocExample[];
   deprecated?: string;
 }
 
