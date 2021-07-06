@@ -31,11 +31,7 @@ export const DataViewer: FC<DataViewerProps> = ({ jsonTree, label, link }) => {
           : ''
       }${
         tsOptions
-          ? `&tsoptions=${encodeURIComponent(
-              JSON.stringify({
-                tsOptions,
-              }),
-            )}`
+          ? `&tsoptions=${encodeURIComponent(JSON.stringify(tsOptions))}`
           : ''
       }`;
       fetch(url)

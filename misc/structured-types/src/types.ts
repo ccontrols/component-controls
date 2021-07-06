@@ -10,6 +10,11 @@ export interface JSDocExample {
   content?: string;
 }
 
+export interface JSDocTag {
+  tag: string;
+  content?: string;
+}
+
 export enum PropKind {
   Object = 0,
   String = 1,
@@ -57,7 +62,7 @@ export interface PropType {
   fires?: { data: string }[];
   see?: string[];
   examples?: JSDocExample[];
-  remarks?: JSDocExample[];
+  tags?: JSDocTag[];
   deprecated?: string;
 }
 

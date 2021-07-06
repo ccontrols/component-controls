@@ -216,8 +216,7 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
             }
             break;
           }
-          case 'example':
-          case 'remarks': {
+          case 'example': {
             const tagDescriptionTrimmed = trimNewlines(tag.description);
 
             // Ignore an invalid tag missing a description.
@@ -240,18 +239,10 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
                   if (contentData) {
                     example.content = contentData;
                   }
-                  if (tag.tag === 'example') {
-                    if (!result.examples) {
-                      result.examples = [];
-                    }
-                    result.examples.unshift(example);
+                  if (!result.examples) {
+                    result.examples = [];
                   }
-                  if (tag.tag === 'remarks') {
-                    if (!result.remarks) {
-                      result.remarks = [];
-                    }
-                    result.remarks.unshift(example);
-                  }
+                  result.examples.unshift(example);
                 }
               }
             }
@@ -262,6 +253,17 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
             // Ignore JSDoc with an ignore tag. It’s best for this tag to be used
             // last in a JSDoc comment, so processing can be bailed earlier.
             return undefined;
+          default: {
+            const tagContentTrimmed = trimNewlines(tag.description);
+            if (!result.tags) {
+              result.tags = [];
+            }
+            result.tags.unshift({
+              tag: tag.tag,
+              content: tagContentTrimmed,
+            });
+            break;
+          }
         }
       }
 

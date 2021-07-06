@@ -16,11 +16,11 @@ export const anaylizeFiles = (
 
   const parser = new SymbolParser(checker, parseOptions);
   const parsed: PropTypes = {};
-  // Visit every sourceFile in the program
-  for (const sourceFile of program.getSourceFiles()) {
-    const module = checker.getSymbolAtLocation(sourceFile);
-    if (module) {
-      if (!sourceFile.isDeclarationFile) {
+  for (const fileName of fileNames) {
+    const sourceFile = program.getSourceFile(fileName);
+    if (sourceFile) {
+      const module = checker.getSymbolAtLocation(sourceFile);
+      if (module) {
         const exports = checker.getExportsOfModule(module);
         exports.forEach(e => {
           const symbolName = e.getName();
