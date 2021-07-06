@@ -29,5 +29,8 @@
     "ts-json-schema-generator": "^0.94.0",
     "typedoc": "^0.21.2",
     "typescript": "^4.2.4"
+  },
+  "devDependencies": {
+    "@types/file-saver": "^2.0.2"
   }
 }
