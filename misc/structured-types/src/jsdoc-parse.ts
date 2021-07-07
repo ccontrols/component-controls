@@ -11,7 +11,7 @@ export const getNodeComments = (node: Node): string | undefined =>
         .join('/n')
     : undefined;
 export const mergeJSDocComments = (
-  prop: PropType,
+  prop: PropType = {},
   comments?: string,
 ): PropType | null => {
   if (comments) {
@@ -20,21 +20,21 @@ export const mergeJSDocComments = (
       return null;
     }
     if (parsed) {
-      const merged = deepmerge<PropType>(parsed, prop || {}, {
+      const merged = deepmerge<PropType>(prop, parsed, {
         clone: false,
         arrayMerge: (dest: any[], src: any[]) => {
           const result =
-            src.length > 0
-              ? src.map((s, idx) => {
+            dest.length > 0
+              ? dest.map((s, idx) => {
                   const existingIdx =
-                    dest.length === src.length
+                    src.length === dest.length
                       ? idx
-                      : dest.findIndex(
+                      : src.findIndex(
                           p => p.displayName === (s as PropType).displayName,
                         );
                   if (existingIdx >= 0) {
                     Object.assign(s, {
-                      ...dest[existingIdx],
+                      ...src[existingIdx],
                       ...s,
                     });
                   }

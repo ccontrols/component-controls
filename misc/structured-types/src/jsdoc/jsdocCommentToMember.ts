@@ -54,6 +54,9 @@ ${comment}
           case 'object':
             result.kind = PropKind.Object;
             break;
+          case 'interface':
+            result.kind = PropKind.Interface;
+            break;
           case 'name':
             if (
               !namepath &&
