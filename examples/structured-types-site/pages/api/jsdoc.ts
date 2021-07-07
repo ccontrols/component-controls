@@ -8,8 +8,8 @@ export default async (
   const { code } = req.query as { code?: string };
   try {
     const result = jsdoc.explainSync({ source: code });
-    res.json(result);
+    res.status(200).json(result);
   } catch (e) {
-    res.json({ __error: e.toString() });
+    res.status(200).json({ __error: e.toString() });
   }
 };

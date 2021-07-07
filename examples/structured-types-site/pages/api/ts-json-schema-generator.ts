@@ -62,8 +62,8 @@ export default async (
     if (__errors.length) {
       result.__errors = __errors;
     }
-    res.json(result);
+    res.status(200).json(result);
   } else {
-    res.json({ __errors: 'Can not locate host.createHash' });
+    res.status(200).json({ __errors: 'Can not locate host.createHash' });
   }
 };

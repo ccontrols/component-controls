@@ -43,5 +43,5 @@ export default async (
   if (__errors.length) {
     result.__errors = __errors;
   }
-  res.json(result);
+  res.status(200).json(result);
 };

@@ -27,5 +27,5 @@ export default async (
     },
     code,
   );
-  res.json(result);
+  res.status(200).json(result);
 };
