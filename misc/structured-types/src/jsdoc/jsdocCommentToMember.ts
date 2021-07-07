@@ -277,7 +277,10 @@ ${comment}
             }
             result.tags.unshift({
               tag: tag.tag,
-              content: tagContentTrimmed,
+
+              content: `${tag.name}${
+                tag.name && tagContentTrimmed ? ' ' : ''
+              }${tagContentTrimmed}`,
             });
             break;
           }
