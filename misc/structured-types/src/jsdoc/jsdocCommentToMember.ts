@@ -61,6 +61,19 @@ ${comment}
           case 'interface':
             result.kind = PropKind.Interface;
             break;
+          case 'private':
+            result.visibility = 'private';
+            break;
+          case 'public':
+            result.visibility = 'public';
+            break;
+          case 'protected':
+            result.visibility = 'protected';
+            break;
+          case 'readonly':
+            result.readonly = true;
+            break;
+
           case 'name':
             if (
               !namepath &&
