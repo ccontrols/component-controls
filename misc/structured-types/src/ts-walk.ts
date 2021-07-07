@@ -26,7 +26,9 @@ export const anaylizeFiles = (
           const symbolName = e.getName();
           if (!extractNames || extractNames.includes(symbolName)) {
             const prop = parser.parseSymbol(e);
-            parsed[symbolName] = prop;
+            if (prop) {
+              parsed[symbolName] = prop;
+            }
           }
         });
       }

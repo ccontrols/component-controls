@@ -13,9 +13,12 @@ export const getNodeComments = (node: Node): string | undefined =>
 export const mergeJSDocComments = (
   prop: PropType,
   comments?: string,
-): PropType => {
+): PropType | null => {
   if (comments) {
     const parsed = jsdocCommentToMember(comments);
+    if (parsed === null) {
+      return null;
+    }
     if (parsed) {
       const merged = deepmerge<PropType>(parsed, prop || {}, {
         clone: false,

@@ -24,10 +24,12 @@ const trimNewlines = (s: string): string => {
  * @returns {JsdocMember|void} JSDoc member, if it’s valid and not ignored.
  * @ignore
  */
-export const jsdocCommentToMember = (comment: string): PropType | undefined => {
+export const jsdocCommentToMember = (
+  comment: string,
+): PropType | undefined | null => {
   const jsdoc = parse(
     `/**
-    ${comment}
+${comment}
     */`,
     defaultOptions,
   );
@@ -37,8 +39,6 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
       const result: PropType = {};
       let namepath: string | undefined = undefined;
 
-      // Scan tags for membership data, looping tags backwards as later tags
-      // override earlier ones.
       for (let index = jsdocBlock.tags.length - 1; index >= 0; index--) {
         const tag = jsdocBlock.tags[index];
 
@@ -47,6 +47,12 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
             if (!result.kind && tag.name && typeNameToPropKind(tag.name))
               result.kind = typeNameToPropKind(tag.name);
 
+            break;
+          case 'class':
+            result.kind = PropKind.Class;
+            break;
+          case 'object':
+            result.kind = PropKind.Object;
             break;
           case 'name':
             if (
@@ -260,9 +266,7 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
             break;
           }
           case 'ignore':
-            // Ignore JSDoc with an ignore tag. It’s best for this tag to be used
-            // last in a JSDoc comment, so processing can be bailed earlier.
-            return undefined;
+            return null;
           default: {
             const tagContentTrimmed = trimNewlines(tag.description);
             if (!result.tags) {
