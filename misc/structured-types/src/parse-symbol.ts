@@ -686,7 +686,7 @@ export class SymbolParser {
             : [];
           return {
             descriptions: comment
-              ? [...acc.descriptions, `* ${comment}`]
+              ? [...acc.descriptions, comment]
               : acc.descriptions,
             tags: [...acc.tags, ...newTags],
           };
@@ -696,9 +696,12 @@ export class SymbolParser {
           tags: [],
         },
       );
-      const allComments = [...docs.descriptions, ...docs.tags].join('\n');
+      if (docs.descriptions.length) {
+        prop.description = docs.descriptions.join('\n');
+      }
+      const tags = docs.tags.join('\n');
 
-      Object.assign(prop, mergeJSDocComments(prop, allComments));
+      Object.assign(prop, mergeJSDocComments(prop, tags));
     }
     return prop;
   }
@@ -772,7 +775,8 @@ export class SymbolParser {
   private mergeSymbolComments(prop: PropType, symbol: ts.Symbol): PropType {
     const comments = symbol
       .getDocumentationComment(this.checker)
-      .map(({ text }) => `* ${text}`);
+      .map(({ text }) => text)
+      .join('\n');
     const tags = symbol.getJsDocTags().map(t => {
       const text = t.text?.map(({ text }) => text).join(' ');
       if (typeof text === 'string') {
@@ -783,10 +787,10 @@ export class SymbolParser {
       }
       return `* @${t.name}`;
     });
-    Object.assign(
-      prop,
-      mergeJSDocComments(prop, [...comments, ...tags].join('\n')),
-    );
+    if (comments) {
+      prop.description = comments;
+    }
+    Object.assign(prop, mergeJSDocComments(prop, tags.join('\n')));
     return prop;
   }
 

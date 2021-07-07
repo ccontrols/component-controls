@@ -287,20 +287,6 @@ export const jsdocCommentToMember = (comment: string): PropType | undefined => {
           throw new Error(error.message);
         }
       }
-
-      if (!result.description) {
-        // The description is special as it can be specified without a tag.
-        // Description tags override a JSDoc block description as they come later.
-        // Description was not populated from tags, so try to get it from the
-        // JSDoc block.
-        const jsdocBlockDescriptionTrimmed = trimNewlines(
-          jsdocBlock.description,
-        );
-
-        if (jsdocBlockDescriptionTrimmed) {
-          result.description = jsdocBlockDescriptionTrimmed;
-        }
-      }
       return result;
     }
   }
