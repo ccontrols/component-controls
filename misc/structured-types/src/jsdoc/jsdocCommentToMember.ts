@@ -12,8 +12,20 @@ import {
   PropKind,
 } from '../types';
 import { typeNameToPropKind } from '../types';
-const trimNewlines = (s: string): string => {
-  const result = s.replace(/^[\r\n]+|[\r\n]+$/g, '');
+
+const transformText = (s: string): string => {
+  const result = s
+    .replace(/^[\r\n]+|[\r\n]+$/g, '')
+    .replace(/\{\@link *(.*)\}/g, (sub, group) => {
+      // replace {@link with markdown links
+      const trimmed = group.trim();
+      const links = trimmed.includes('|')
+        ? trimmed.trim().split('|')
+        : trimmed.trim().split(' ');
+      return links.length === 1
+        ? `[${links[0]}](#)`
+        : `[${links.slice(1).join(' ')}](${links[0]})`;
+    });
   if (result.startsWith('- ')) {
     return result.substring(2);
   }
@@ -131,7 +143,7 @@ ${comment}
           case 'desc':
           case 'description': {
             if (!result.description) {
-              const tagDescriptionTrimmed = trimNewlines(tag.description);
+              const tagDescriptionTrimmed = transformText(tag.description);
 
               // Ignore an invalid tag missing a description.
               if (tagDescriptionTrimmed) {
@@ -148,7 +160,7 @@ ${comment}
               const parameter: PropType = {
                 displayName: tag.name,
               };
-              const trimmed = trimNewlines(tag.description);
+              const trimmed = transformText(tag.description);
               if (trimmed) {
                 parameter.description = trimmed;
               }
@@ -180,7 +192,7 @@ ${comment}
               // Define the JSDoc property with nicely ordered properties.
               const property: PropType = {
                 displayName: tag.name,
-                description: trimNewlines(tag.description),
+                description: transformText(tag.description),
               };
               if (
                 typeof tag.type !== 'undefined' &&
@@ -210,7 +222,7 @@ ${comment}
             if (tag.type && typeNameToPropKind(tag.type)) {
               ret.kind = typeNameToPropKind(tag.type);
             }
-            const trimmed = trimNewlines(tag.description);
+            const trimmed = transformText(tag.description);
             if (trimmed) {
               ret.description = trimmed;
             }
@@ -237,21 +249,17 @@ ${comment}
             break;
           }
           case 'see': {
-            const tagDescriptionTrimmed = trimNewlines(tag.description);
+            const tagDescriptionTrimmed = transformText(tag.description);
             if (!result.see) {
               result.see = [];
             }
-            // Ignore an invalid tag missing a description.
             if (tagDescriptionTrimmed) {
-              const seeTag = tagDescriptionTrimmed.startsWith(':')
-                ? tagDescriptionTrimmed.substring(1)
-                : tagDescriptionTrimmed;
-              result.see.unshift(seeTag);
+              result.see.unshift(tagDescriptionTrimmed);
             }
             break;
           }
           case 'example': {
-            const tagDescriptionTrimmed = trimNewlines(tag.description);
+            const tagDescriptionTrimmed = transformText(tag.description);
 
             // Ignore an invalid tag missing a description.
             if (tagDescriptionTrimmed) {
@@ -286,7 +294,7 @@ ${comment}
           case 'ignore':
             return null;
           default: {
-            const tagContentTrimmed = trimNewlines(tag.description);
+            const tagContentTrimmed = transformText(tag.description);
             if (!result.tags) {
               result.tags = [];
             }

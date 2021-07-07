@@ -2,6 +2,24 @@ import path from 'path';
 import { parseFiles } from '../../../src/index';
 
 describe('params', () => {
+  it('name, type and description', () => {
+    const results = parseFiles([
+      path.resolve(__dirname, 'name-type-description.js'),
+    ]);
+    expect(results).toEqual({
+      sayHello: {
+        displayName: 'sayHello',
+        kind: 11,
+        parameters: [
+          {
+            kind: 1,
+            displayName: 'somebody',
+            description: "Somebody's name.",
+          },
+        ],
+      },
+    });
+  });
   it('default value', () => {
     const results = parseFiles([path.resolve(__dirname, 'default-value.js')]);
     expect(results).toEqual({
@@ -52,24 +70,7 @@ describe('params', () => {
       },
     });
   });
-  it('name, type and description', () => {
-    const results = parseFiles([
-      path.resolve(__dirname, 'name-type-description.js'),
-    ]);
-    expect(results).toEqual({
-      sayHello: {
-        displayName: 'sayHello',
-        kind: 11,
-        parameters: [
-          {
-            kind: 1,
-            displayName: 'somebody',
-            description: "Somebody's name.",
-          },
-        ],
-      },
-    });
-  });
+
   it('name and type', () => {
     const results = parseFiles([path.resolve(__dirname, 'name-type.js')]);
     expect(results).toEqual({

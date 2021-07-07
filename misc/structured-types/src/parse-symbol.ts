@@ -793,15 +793,26 @@ export class SymbolParser {
       .map(({ text }) => text)
       .join('\n');
     const tags = symbol.getJsDocTags().map(t => {
-      const text = t.text
+      const tagsText = t.text
         ?.map(({ text, kind }) => (kind === 'space' ? undefined : text))
-        .filter(s => s)
-        .join(' ');
-      if (typeof text === 'string') {
-        const firstSpace = text.indexOf(' ');
-        return `* @${t.name} ${text.substr(0, firstSpace)} ${text.substr(
-          firstSpace + 1,
-        )}`;
+        .filter(s => s);
+      const joinedTags =
+        tagsText &&
+        (tagsText as string[]).reduce((acc, s, index) => {
+          if (index === 0) {
+            return s;
+          }
+          // fix for @see https://reactjs.org/docs/context.html
+          return s.startsWith(':') || s.startsWith('}')
+            ? `${acc}${s}`
+            : `${acc} ${s}`;
+        }, '');
+      if (typeof joinedTags === 'string') {
+        const firstSpace = joinedTags.indexOf(' ');
+        return `* @${t.name} ${joinedTags.substr(
+          0,
+          firstSpace,
+        )} ${joinedTags.substr(firstSpace + 1)}`;
       }
       return `* @${t.name}`;
     });
