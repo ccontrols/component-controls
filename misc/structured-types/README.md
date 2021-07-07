@@ -15,7 +15,7 @@ Extract structure documentation from javascript and typescript files using a com
 
 - jsdoc comments extraction [comment-parser](https://github.com/syavorsky/comment-parser)
 - jsdoc comments analysis [jsdoc-md](https://github.com/jaydenseric/jsdoc-md)
-- tests re-used from [react-docgen-typescript](https://github.com/styleguidist/react-docgen-typescript/blob/master/src/__tests__/data/)
+- examples from [react-docgen-typescript](https://github.com/styleguidist/react-docgen-typescript/blob/master/src/__tests__/data/), [jsdoc](https://jsdoc.app/), [typescript](https://www.typescriptlang.org/docs/)
 
 # Installation
 
