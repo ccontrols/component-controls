@@ -1,5 +1,5 @@
 import * as ts from 'typescript';
-import { mergeJSDocComments } from './jsdoc-parse';
+import { mergeJSDocComments } from './jsdoc/jsdoc-merge';
 import {
   PropType,
   PropKind,
@@ -38,6 +38,7 @@ import {
   isArrayLike,
   resolveType,
 } from './ts-utils';
+import { cleanJSDocText } from './jsdoc/jsocTagsParser';
 const strToValue = (s: string): any => {
   switch (s) {
     case 'undefined':
@@ -708,7 +709,7 @@ export class SymbolParser {
         },
       );
       if (docs.descriptions.length) {
-        prop.description = docs.descriptions.join('\n');
+        prop.description = cleanJSDocText(docs.descriptions.join(''));
       }
       const merged = mergeJSDocComments(prop, docs.tags.join('\n'));
       if (merged === null) {
@@ -788,13 +789,15 @@ export class SymbolParser {
     prop: PropType,
     symbol: ts.Symbol,
   ): PropType | null {
-    const comments = symbol
-      .getDocumentationComment(this.checker)
-      .map(({ text }) => text)
-      .join('\n');
+    const comments = cleanJSDocText(
+      symbol
+        .getDocumentationComment(this.checker)
+        .map(({ text }) => text)
+        .join(''),
+    );
     const tags = symbol.getJsDocTags().map(t => {
       const tagsText = t.text
-        ?.map(({ text, kind }) => (kind === 'space' ? undefined : text))
+        ?.map(({ text, kind }) => (kind === 'space' ? undefined : text.trim()))
         .filter(s => s);
       const joinedTags =
         tagsText &&

@@ -9,7 +9,7 @@ describe('see', () => {
         displayName: 'bar',
         kind: 11,
         see: [
-          '[foo](#)  for further information.',
+          '[foo](#foo) for further information.',
           '[GitHub](https://github.com)',
         ],
       },
@@ -22,7 +22,7 @@ describe('see', () => {
         displayName: 'foo',
         kind: 11,
         description: 'Both of these will link to the bar function.',
-        see: ['[bar](#)', 'bar'],
+        see: ['[bar](#bar)', 'bar'],
       },
     });
   });

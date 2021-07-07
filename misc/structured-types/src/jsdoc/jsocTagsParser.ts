@@ -13,7 +13,7 @@ import {
 } from '../types';
 import { typeNameToPropKind } from '../types';
 
-const transformText = (s: string): string => {
+export const cleanJSDocText = (s: string): string => {
   const result = s
     .replace(/^[\r\n]+|[\r\n]+$/g, '')
     .replace(/\{\@link *(.*)\}/g, (sub, group) => {
@@ -23,7 +23,7 @@ const transformText = (s: string): string => {
         ? trimmed.trim().split('|')
         : trimmed.trim().split(' ');
       return links.length === 1
-        ? `[${links[0]}](#)`
+        ? `[${links[0]}](#${links[0].includes('#') ? '' : links[0]})`
         : `[${links.slice(1).join(' ')}](${links[0]})`;
     });
   if (result.startsWith('- ')) {
@@ -143,7 +143,7 @@ ${comment}
           case 'desc':
           case 'description': {
             if (!result.description) {
-              const tagDescriptionTrimmed = transformText(tag.description);
+              const tagDescriptionTrimmed = cleanJSDocText(tag.description);
 
               // Ignore an invalid tag missing a description.
               if (tagDescriptionTrimmed) {
@@ -160,7 +160,7 @@ ${comment}
               const parameter: PropType = {
                 displayName: tag.name,
               };
-              const trimmed = transformText(tag.description);
+              const trimmed = cleanJSDocText(tag.description);
               if (trimmed) {
                 parameter.description = trimmed;
               }
@@ -192,7 +192,7 @@ ${comment}
               // Define the JSDoc property with nicely ordered properties.
               const property: PropType = {
                 displayName: tag.name,
-                description: transformText(tag.description),
+                description: cleanJSDocText(tag.description),
               };
               if (
                 typeof tag.type !== 'undefined' &&
@@ -222,7 +222,7 @@ ${comment}
             if (tag.type && typeNameToPropKind(tag.type)) {
               ret.kind = typeNameToPropKind(tag.type);
             }
-            const trimmed = transformText(tag.description);
+            const trimmed = cleanJSDocText(tag.description);
             if (trimmed) {
               ret.description = trimmed;
             }
@@ -249,7 +249,7 @@ ${comment}
             break;
           }
           case 'see': {
-            const tagDescriptionTrimmed = transformText(tag.description);
+            const tagDescriptionTrimmed = cleanJSDocText(tag.description);
             if (!result.see) {
               result.see = [];
             }
@@ -259,7 +259,7 @@ ${comment}
             break;
           }
           case 'example': {
-            const tagDescriptionTrimmed = transformText(tag.description);
+            const tagDescriptionTrimmed = cleanJSDocText(tag.description);
 
             // Ignore an invalid tag missing a description.
             if (tagDescriptionTrimmed) {
@@ -294,7 +294,7 @@ ${comment}
           case 'ignore':
             return null;
           default: {
-            const tagContentTrimmed = transformText(tag.description);
+            const tagContentTrimmed = cleanJSDocText(tag.description);
             if (!result.tags) {
               result.tags = [];
             }

@@ -1,15 +1,7 @@
-import { Node } from '@babel/types';
 import deepmerge from 'deepmerge';
-import { PropType } from './types';
-import { jsdocCommentToMember } from './jsdoc/jsdocCommentToMember';
+import { PropType } from '../types';
+import { jsdocCommentToMember } from './jsocTagsParser';
 
-export const getNodeComments = (node: Node): string | undefined =>
-  node.leadingComments
-    ? node.leadingComments
-        .filter(comment => comment.type === 'CommentBlock')
-        .map(comment => comment.value)
-        .join('/n')
-    : undefined;
 export const mergeJSDocComments = (
   prop: PropType = {},
   comments?: string,
