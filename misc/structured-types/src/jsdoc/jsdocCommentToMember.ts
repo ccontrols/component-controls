@@ -13,7 +13,11 @@ import {
 } from '../types';
 import { typeNameToPropKind } from '../types';
 const trimNewlines = (s: string): string => {
-  return s.replace(/^[\r\n]+|[\r\n]+$/g, '');
+  const result = s.replace(/^[\r\n]+|[\r\n]+$/g, '');
+  if (result.startsWith('- ')) {
+    return result.substring(2);
+  }
+  return result;
 };
 
 /**
@@ -127,9 +131,7 @@ ${comment}
           case 'arg':
           case 'argument':
           case 'param': {
-            // Ignore an invalid tag missing a name.
             if (tag.name) {
-              // Define the JSDoc parameter with nicely ordered properties.
               const parameter: PropType = {
                 displayName: tag.name,
               };

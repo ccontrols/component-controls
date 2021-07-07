@@ -793,7 +793,10 @@ export class SymbolParser {
       .map(({ text }) => text)
       .join('\n');
     const tags = symbol.getJsDocTags().map(t => {
-      const text = t.text?.map(({ text }) => text).join(' ');
+      const text = t.text
+        ?.map(({ text, kind }) => (kind === 'space' ? undefined : text))
+        .filter(s => s)
+        .join(' ');
       if (typeof text === 'string') {
         const firstSpace = text.indexOf(' ');
         return `* @${t.name} ${text.substr(0, firstSpace)} ${text.substr(
