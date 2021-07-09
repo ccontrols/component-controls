@@ -1,5 +1,5 @@
 import ts from 'typescript';
-import { tsKindToPropKind, ISymbolParser } from '../ts-utils';
+import { ISymbolParser } from '../ts-utils';
 import {
   FunctionProp,
   PropKind,
@@ -51,7 +51,10 @@ const tagCommentToString = (
   return undefined;
 };
 
-const parseJSDocProperty = (tag: ts.JSDocPropertyLikeTag): PropType => {
+const parseJSDocProperty = (
+  parser: ISymbolParser,
+  tag: ts.JSDocPropertyLikeTag,
+): PropType => {
   const prop: PropType = {
     displayName: getDeclarationName(tag),
   };
@@ -60,7 +63,7 @@ const parseJSDocProperty = (tag: ts.JSDocPropertyLikeTag): PropType => {
     prop.description = comment;
   }
   if (tag.typeExpression?.type) {
-    prop.kind = tsKindToPropKind[tag.typeExpression.type.kind];
+    parser.parseType(prop, tag.typeExpression.type);
   }
   if (tag.isBracketed) {
     prop.optional = true;
@@ -83,8 +86,8 @@ const parseJSDocProperty = (tag: ts.JSDocPropertyLikeTag): PropType => {
   return prop;
 };
 export const parseJSDocTag = (
-  prop: PropType,
   parser: ISymbolParser,
+  prop: PropType,
   tag: ts.JSDocTag,
 ): PropType => {
   if (ts.isJSDocDeprecatedTag(tag)) {
@@ -104,7 +107,7 @@ export const parseJSDocTag = (
   } else if (ts.isJSDocTypeTag(tag)) {
     parser.parseType(prop, tag.typeExpression.type);
   } else if (ts.isJSDocParameterTag(tag)) {
-    const parameter = parseJSDocProperty(tag);
+    const parameter = parseJSDocProperty(parser, tag);
     const resultAsFn = prop as FunctionProp;
     if (!resultAsFn.parameters) {
       resultAsFn.parameters = [];
@@ -113,7 +116,7 @@ export const parseJSDocTag = (
   } else if (ts.isJSDocTypedefTag(tag)) {
     prop.type = tag.name?.text;
   } else if (ts.isJSDocPropertyTag(tag)) {
-    Object.assign(prop, parseJSDocProperty(tag));
+    Object.assign(prop, parseJSDocProperty(parser, tag));
   } else if (ts.isJSDocReturnTag(tag)) {
     const resultAsFn = prop as FunctionProp;
     if (tag.typeExpression) {
@@ -228,7 +231,7 @@ export const parseJSDocTags = (
       if (tag.tagName.text === 'ignore') {
         return null;
       }
-      parseJSDocTag(result, parser, tag);
+      parseJSDocTag(parser, result, tag);
     }
     return result;
   }

@@ -2,6 +2,58 @@ import path from 'path';
 import { parseFiles } from '../../../src/index';
 
 describe('@property', () => {
+  it('enum', () => {
+    const results = parseFiles([path.resolve(__dirname, 'enum.js')]);
+    expect(results).toEqual({
+      food: {
+        displayName: 'food',
+        kind: 15,
+        properties: [
+          {
+            kind: 1,
+            displayName: 'name',
+            value: 'beef',
+          },
+          {
+            kind: 1,
+            displayName: 'type',
+            value: 'meat',
+          },
+        ],
+        type: 'Food',
+      },
+      Food: {
+        displayName: 'Food',
+        kind: 15,
+        properties: [
+          {
+            kind: 1,
+            displayName: 'name',
+            description: 'What the food should be called',
+          },
+          {
+            displayName: 'type',
+            description: "The food's type",
+            kind: 4,
+            properties: [
+              {
+                kind: 1,
+                value: 'meat',
+              },
+              {
+                kind: 1,
+                value: 'veggie',
+              },
+              {
+                kind: 1,
+                value: 'other',
+              },
+            ],
+          },
+        ],
+      },
+    });
+  });
   it('nested', () => {
     const results = parseFiles([path.resolve(__dirname, 'nested.js')]);
     expect(results).toEqual({

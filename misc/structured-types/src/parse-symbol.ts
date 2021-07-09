@@ -423,6 +423,8 @@ export class SymbolParser implements ISymbolParser {
         (prop as TypeProp).properties = properties;
       } else if (ts.isLiteralTypeNode(node)) {
         this.parseTypeValueComments(prop, node.literal);
+      } else if (ts.isParenthesizedTypeNode(node)) {
+        this.parseTypeValueComments(prop, node.type);
       } else if (ts.isTypeLiteralNode(node)) {
         prop.kind = PropKind.Type;
         if (node.members.length) {
@@ -484,7 +486,7 @@ export class SymbolParser implements ISymbolParser {
             break;
           case ts.SyntaxKind.JSDocPropertyTag:
           case ts.SyntaxKind.JSDocParameterTag:
-            parseJSDocTag(prop, this, node as ts.JSDocTag);
+            parseJSDocTag(this, prop, node as ts.JSDocTag);
             break;
         }
       }
