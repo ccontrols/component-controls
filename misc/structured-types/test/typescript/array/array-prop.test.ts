@@ -119,7 +119,7 @@ describe('array', () => {
             displayName: 'Internal',
           },
         ],
-        deprecated: 'yes',
+        deprecated: true,
         description: 'type array of interface type',
       },
     });

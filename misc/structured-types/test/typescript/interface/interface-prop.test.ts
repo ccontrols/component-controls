@@ -2,6 +2,37 @@ import path from 'path';
 import { parseFiles } from '../../../src/index';
 
 describe('interface', () => {
+  it('jsdoc default value', () => {
+    const results = parseFiles([path.resolve(__dirname, 'jsdoc-default.ts')]);
+    expect(results).toEqual({
+      Interface: {
+        displayName: 'Interface',
+        kind: 14,
+        properties: [
+          {
+            displayName: 'eat',
+            kind: 4,
+            properties: [
+              {
+                kind: 1,
+                value: 'honey',
+              },
+              {
+                kind: 1,
+                value: 'bread',
+              },
+              {
+                kind: 1,
+                value: 'meat',
+              },
+            ],
+            value: 'bread',
+            description: 'union prop',
+          },
+        ],
+      },
+    });
+  });
   it('interface array', () => {
     const results = parseFiles([
       path.resolve(__dirname, 'array-implementation.ts'),
@@ -272,38 +303,6 @@ describe('interface', () => {
             displayName: 'contents',
             kind: 15,
             type: 'Type',
-          },
-        ],
-      },
-    });
-  });
-
-  it('jsdoc default value', () => {
-    const results = parseFiles([path.resolve(__dirname, 'jsdoc-default.ts')]);
-    expect(results).toEqual({
-      Interface: {
-        displayName: 'Interface',
-        kind: 14,
-        properties: [
-          {
-            displayName: 'eat',
-            kind: 4,
-            properties: [
-              {
-                kind: 1,
-                value: 'honey',
-              },
-              {
-                kind: 1,
-                value: 'bread',
-              },
-              {
-                kind: 1,
-                value: 'meat',
-              },
-            ],
-            value: 'bread',
-            description: 'union prop',
           },
         ],
       },

@@ -1,7 +1,7 @@
 import path from 'path';
 import { parseFiles } from '../../../src/index';
 
-describe('description', () => {
+describe('@description', () => {
   const expected = {
     add: {
       kind: 11,

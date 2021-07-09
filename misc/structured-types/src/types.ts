@@ -10,7 +10,7 @@ export interface JSDocExample {
   content?: string;
 }
 
-export interface JSDocTag {
+export interface JSDocPropTag {
   tag: string;
   content?: string;
 }
@@ -59,12 +59,12 @@ export interface PropType {
    * jsdoc comments parsing
    */
   description?: string;
-  fires?: { data: string }[];
+  fires?: string[];
   see?: string[];
   examples?: JSDocExample[];
-  tags?: JSDocTag[];
+  tags?: JSDocPropTag[];
   summary?: string;
-  deprecated?: string;
+  deprecated?: string | true;
 }
 
 export interface ObjectProp extends PropType {
@@ -379,4 +379,17 @@ export type JSDocInfoType = {
     name: { text: string; getText: () => string };
     tagName: { text: string };
   }[];
+};
+
+export const propValue = (prop: PropType, value?: string): PropType => {
+  if (value) {
+    if (isNumberProp(prop)) {
+      prop.value = Number(value);
+    } else if (isBooleanProp(prop)) {
+      prop.value = Boolean(value);
+    } else {
+      (prop as StringProp).value = value;
+    }
+  }
+  return prop;
 };

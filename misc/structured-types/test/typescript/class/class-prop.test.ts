@@ -2,6 +2,32 @@ import path from 'path';
 import { parseFiles } from '../../../src/index';
 
 describe('class', () => {
+  it('arrow function', () => {
+    const results = parseFiles([path.resolve(__dirname, 'arrow-function.ts')]);
+    expect(results).toEqual({
+      ArrowFunctionClass: {
+        displayName: 'ArrowFunctionClass',
+        kind: 13,
+        properties: [
+          {
+            description: 'name value initialzied',
+            kind: 1,
+            displayName: 'name',
+            value: 'MyClass',
+          },
+          {
+            returns: {
+              description: 'a string value',
+              kind: 1,
+            },
+            description: 'name accessor',
+            displayName: 'getName',
+            kind: 11,
+          },
+        ],
+      },
+    });
+  });
   it('index signature', () => {
     const results = parseFiles([path.resolve(__dirname, 'index-signature.ts')]);
     expect(results).toEqual({
@@ -40,6 +66,7 @@ describe('class', () => {
           {
             returns: {
               description: 'returns the value',
+              kind: 3,
             },
             parameters: [
               {
@@ -113,32 +140,6 @@ describe('class', () => {
             returns: {
               kind: 12,
             },
-          },
-        ],
-      },
-    });
-  });
-  it('arrow function', () => {
-    const results = parseFiles([path.resolve(__dirname, 'arrow-function.ts')]);
-    expect(results).toEqual({
-      ArrowFunctionClass: {
-        displayName: 'ArrowFunctionClass',
-        kind: 13,
-        properties: [
-          {
-            description: 'name value initialzied',
-            kind: 1,
-            displayName: 'name',
-            value: 'MyClass',
-          },
-          {
-            returns: {
-              description: 'a string value',
-              kind: 1,
-            },
-            description: 'name accessor',
-            displayName: 'getName',
-            kind: 11,
           },
         ],
       },

@@ -1,5 +1,5 @@
 import * as ts from 'typescript';
-import { mergeJSDocComments } from './jsdoc/jsdoc-merge';
+import { mergeJSDoc } from './jsdoc/mergeJSDoc';
 import {
   PropType,
   PropKind,
@@ -10,7 +10,6 @@ import {
   isUnknownProp,
   isObjectLikeProp,
   isIndexProp,
-  StringProp,
   TypeProp,
   JSDocInfoType,
   UnionProp,
@@ -22,6 +21,7 @@ import {
   ObjectProp,
   isFunctionBaseType,
   isClassLikeProp,
+  propValue,
 } from './types';
 import {
   getSymbolType,
@@ -37,8 +37,14 @@ import {
   isFunctionLike,
   isArrayLike,
   resolveType,
+  ISymbolParser,
 } from './ts-utils';
-import { cleanJSDocText } from './jsdoc/jsocTagsParser';
+import {
+  cleanJSDocText,
+  getDeclarationName,
+  parseJSDocTag,
+} from './jsdoc/parseJSDocTags';
+
 const strToValue = (s: string): any => {
   switch (s) {
     case 'undefined':
@@ -53,7 +59,7 @@ const strToValue = (s: string): any => {
   return s;
 };
 
-export class SymbolParser {
+export class SymbolParser implements ISymbolParser {
   private checker: ts.TypeChecker;
   private options: Required<ParseOptions>;
   private refSymbols: { props: PropType[]; symbol: ts.Symbol }[] = [];
@@ -236,16 +242,12 @@ export class SymbolParser {
         if (!prop.kind) {
           prop.kind = PropKind.Number;
         }
-        if (node.text && isNumberProp(prop)) {
-          prop.value = Number(node.text);
-        }
+        propValue(prop, node.text);
       } else if (ts.isStringLiteral(node)) {
         if (!prop.kind) {
           prop.kind = PropKind.String;
         }
-        if (node.text) {
-          (prop as StringProp).value = node.text;
-        }
+        propValue(prop, node.text);
       } else if (node.kind === ts.SyntaxKind.FalseKeyword) {
         if (!prop.kind) {
           prop.kind = PropKind.Boolean;
@@ -260,11 +262,7 @@ export class SymbolParser {
         if (!prop.kind) {
           prop.kind = PropKind.Boolean;
         }
-        if ('text' in node) {
-          (prop as BooleanProp).value = Boolean(
-            (node as ts.LiteralLikeNode).text,
-          );
-        }
+        propValue(prop, (node as ts.LiteralLikeNode).text);
       } else if (isAnyProp(prop)) {
         if (typeof (node as ts.LiteralLikeNode)?.text !== 'undefined') {
           prop.kind = PropKind.Undefined;
@@ -282,11 +280,21 @@ export class SymbolParser {
             prop.properties,
           );
         }
+      } else if (ts.isPrefixUnaryExpression(node)) {
+        this.parseValue(prop, node.operand);
+        if (
+          node.operator === ts.SyntaxKind.MinusToken &&
+          isNumberProp(prop) &&
+          typeof prop.value !== 'undefined'
+        ) {
+          prop.value = -prop.value;
+        }
       }
     }
     return prop;
   }
-  private parseType(prop: PropType, node?: ts.Node): PropType {
+
+  public parseType(prop: PropType, node?: ts.Node): PropType {
     if (node) {
       if (isFunctionLike(node)) {
         return this.parseFunction(prop, node);
@@ -474,6 +482,10 @@ export class SymbolParser {
           case ts.SyntaxKind.UndefinedKeyword:
             prop.kind = PropKind.Undefined;
             break;
+          case ts.SyntaxKind.JSDocPropertyTag:
+          case ts.SyntaxKind.JSDocParameterTag:
+            parseJSDocTag(prop, this, node as ts.JSDocTag);
+            break;
         }
       }
     }
@@ -533,12 +545,8 @@ export class SymbolParser {
           }
         }
       }
-      //unnamed type literal
       if ('name' in declaration) {
-        const namedDeclaration = declaration as ts.NamedDeclaration;
-        if (namedDeclaration.name) {
-          prop.displayName = namedDeclaration.name.getText();
-        }
+        prop.displayName = getDeclarationName(declaration);
       }
       const initializer = isVariableLikeDeclaration(declaration)
         ? declaration?.initializer
@@ -711,7 +719,7 @@ export class SymbolParser {
       if (docs.descriptions.length) {
         prop.description = cleanJSDocText(docs.descriptions.join(''));
       }
-      const merged = mergeJSDocComments(prop, docs.tags.join('\n'));
+      const merged = mergeJSDoc(this, prop, node);
       if (merged === null) {
         return null;
       }
@@ -795,34 +803,14 @@ export class SymbolParser {
         .map(({ text }) => text)
         .join(''),
     );
-    const tags = symbol.getJsDocTags().map(t => {
-      const tagsText = t.text
-        ?.map(({ text, kind }) => (kind === 'space' ? undefined : text.trim()))
-        .filter(s => s);
-      const joinedTags =
-        tagsText &&
-        (tagsText as string[]).reduce((acc, s, index) => {
-          if (index === 0) {
-            return s;
-          }
-          // fix for @see https://reactjs.org/docs/context.html
-          return s.startsWith(':') || s.startsWith('}')
-            ? `${acc}${s}`
-            : `${acc} ${s}`;
-        }, '');
-      if (typeof joinedTags === 'string') {
-        const firstSpace = joinedTags.indexOf(' ');
-        return `* @${t.name} ${joinedTags.substr(
-          0,
-          firstSpace,
-        )} ${joinedTags.substr(firstSpace + 1)}`;
-      }
-      return `* @${t.name}`;
-    });
     if (comments) {
       prop.description = comments;
     }
-    const merged = mergeJSDocComments(prop, tags.join('\n'));
+    const merged = mergeJSDoc(
+      this,
+      prop,
+      symbol.valueDeclaration || symbol.declarations?.[0],
+    );
     if (merged === null) {
       return null;
     }
@@ -834,10 +822,10 @@ export class SymbolParser {
     return this.propParents;
   }
 
-  resetParents(): void {
+  public resetParents(): void {
     this.propParents = {};
   }
-  parseSymbol(symbol: ts.Symbol): PropType | null {
+  public parseSymbol(symbol: ts.Symbol): PropType | null {
     const prop = this.parseSymbolProp({}, symbol, true);
     this.resolveRefTypes();
     return prop;

@@ -20,6 +20,8 @@ describe('function', () => {
         ],
         returns: {
           description: 'Promise object represents the sum of a and b',
+          kind: 15,
+          type: 'Promise',
         },
         description: 'Returns the sum of a and b',
       },
@@ -49,6 +51,15 @@ describe('function', () => {
         returns: {
           description:
             'Sum of a and b or an array that contains a, b and the sum of a and b.',
+          kind: 4,
+          properties: [
+            {
+              kind: 2,
+            },
+            {
+              kind: 16,
+            },
+          ],
         },
         description: 'Returns the sum of a and b',
       },
@@ -74,6 +85,7 @@ describe('function', () => {
         ],
         returns: {
           description: 'Sum of a and b',
+          kind: 2,
         },
         description: 'Returns the sum of a and b',
       },
@@ -95,7 +107,9 @@ describe('function', () => {
             displayName: 'b',
           },
         ],
-        returns: {},
+        returns: {
+          kind: 2,
+        },
         description: 'Returns the sum of a and b',
       },
     });
@@ -127,6 +141,7 @@ describe('function', () => {
         ],
         returns: {
           description: 'the sum of the two parameters',
+          kind: 2,
         },
         tags: [
           {

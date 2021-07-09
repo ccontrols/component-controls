@@ -1,7 +1,7 @@
 import path from 'path';
 import { parseFiles } from '../../../src/index';
 
-describe('ignore', () => {
+describe('@ignore', () => {
   it('ignore member', () => {
     const results = parseFiles([path.resolve(__dirname, 'member-ignore.js')]);
     expect(results).toEqual({

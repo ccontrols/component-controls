@@ -1,5 +1,5 @@
 import * as ts from 'typescript';
-import { PropKind } from './types';
+import { PropKind, PropType } from './types';
 
 type VariableDeclaration =
   | ts.VariableDeclaration
@@ -207,6 +207,7 @@ export const defaultParseOptions: ParseOptions = {
     'Booleanish',
     'Number',
     'Array',
+    'Promise',
     'ConcatArray',
     'ReadonlyArray',
     'TemplateStringsArray',
@@ -257,3 +258,8 @@ export const getSymbolType = (
   }
   return undefined;
 };
+
+export interface ISymbolParser {
+  parseType(prop: PropType, node?: ts.Node): PropType;
+  parseSymbol(symbol: ts.Symbol): PropType | null;
+}

@@ -2,6 +2,60 @@ import path from 'path';
 import { parseFiles } from '../../../src/index';
 
 describe('params', () => {
+  it('default numeric value', () => {
+    const results = parseFiles([path.resolve(__dirname, 'default-numeric.js')]);
+    expect(results).toEqual({
+      m: {
+        displayName: 'm',
+        kind: 11,
+        parameters: [
+          {
+            displayName: 'x',
+            description: 'd4 damage',
+            kind: 2,
+            optional: true,
+            value: 1,
+          },
+        ],
+      },
+    });
+  });
+  it('default value', () => {
+    const results = parseFiles([path.resolve(__dirname, 'default-string.js')]);
+    expect(results).toEqual({
+      sayHello: {
+        displayName: 'sayHello',
+        kind: 11,
+        parameters: [
+          {
+            displayName: 'somebody',
+            description: "Somebody's name.",
+            kind: 1,
+            value: 'John Doe',
+            optional: true,
+          },
+        ],
+      },
+    });
+  });
+  it('optional-jsdoc syntax', () => {
+    const results = parseFiles([path.resolve(__dirname, 'optional.js')]);
+    expect(results).toEqual({
+      sayHello: {
+        displayName: 'sayHello',
+        kind: 11,
+        parameters: [
+          {
+            displayName: 'somebody',
+            description: "Somebody's name.",
+            kind: 1,
+            optional: true,
+          },
+        ],
+        description: 'An optional parameter (using JSDoc syntax)',
+      },
+    });
+  });
   it('name, type and description', () => {
     const results = parseFiles([
       path.resolve(__dirname, 'name-type-description.js'),
@@ -20,38 +74,7 @@ describe('params', () => {
       },
     });
   });
-  it('default value', () => {
-    const results = parseFiles([path.resolve(__dirname, 'default-value.js')]);
-    expect(results).toEqual({
-      sayHello: {
-        displayName: 'sayHello',
-        kind: 11,
-        parameters: [
-          {
-            displayName: 'somebody',
-            description: "Doe] - Somebody's name.",
-          },
-        ],
-      },
-    });
-  });
-  it('optional-jsdoc syntax', () => {
-    const results = parseFiles([path.resolve(__dirname, 'optional.js')]);
-    expect(results).toEqual({
-      sayHello: {
-        displayName: 'sayHello',
-        kind: 11,
-        parameters: [
-          {
-            displayName: 'somebody',
-            description: "Somebody's name.",
-            //optional: true,
-          },
-        ],
-        description: 'An optional parameter (using JSDoc syntax)',
-      },
-    });
-  });
+
   it('description with hyphen', () => {
     const results = parseFiles([
       path.resolve(__dirname, 'with-hyphen-description.js'),

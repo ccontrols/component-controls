@@ -1,7 +1,7 @@
 import path from 'path';
 import { parseFiles } from '../../../src/index';
 
-describe('link', () => {
+describe('@link', () => {
   it('link-text', () => {
     const results = parseFiles([path.resolve(__dirname, 'link-text.js')]);
     expect(results).toEqual({
