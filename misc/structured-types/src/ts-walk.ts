@@ -1,7 +1,7 @@
 import * as ts from 'typescript';
 import { PropTypes, PropDiagnostic } from './types';
 import { tsDefaults, DocsOptions } from './ts-utils';
-import { SymbolParser } from './parse-symbol';
+import { SymbolParser } from './SymbolParser';
 
 export const anaylizeFiles = (
   fileNames: string[],
