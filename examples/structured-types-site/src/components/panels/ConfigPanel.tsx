@@ -11,7 +11,7 @@ import { useOptions } from '../../contexts/OptionsContext';
 type ExamplesPanelProps = PanelContainerProps;
 
 export const ConfigPanel: FC<ExamplesPanelProps> = ({ onClose }) => {
-  const { tsOptions } = useOptions();
+  const [tsOptions] = useOptions('tsOptions');
   return (
     <PanelContainer onClose={onClose}>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>

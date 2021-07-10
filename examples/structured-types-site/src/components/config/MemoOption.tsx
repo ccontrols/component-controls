@@ -2,11 +2,11 @@
 import { FC } from 'react';
 import { jsx, Box, Heading, Textarea } from 'theme-ui';
 import { Markdown } from '@component-controls/components';
-import { useUpdateOptions, OptionsType } from '../../contexts/OptionsContext';
-import { OptionsData } from '../../contexts/options';
+import { useUpdateOptions } from '../../contexts/OptionsContext';
+import { OptionsData, OptionsName } from '../../contexts/options';
 
 export const MemoOption: FC<{
-  paramName: OptionsType;
+  paramName: OptionsName;
   title: string;
 } & OptionsData> = ({
   paramName,

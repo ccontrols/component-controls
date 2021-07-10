@@ -10,7 +10,7 @@ import { useOptions } from '../../contexts/OptionsContext';
 type ExamplesPanelProps = PanelContainerProps;
 
 export const ParseConfigPanel: FC<ExamplesPanelProps> = ({ onClose }) => {
-  const { parseOptions } = useOptions();
+  const [parseOptions] = useOptions('parseOptions');
   return (
     <PanelContainer onClose={onClose}>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>

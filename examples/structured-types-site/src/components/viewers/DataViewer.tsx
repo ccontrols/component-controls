@@ -5,7 +5,7 @@ import { Link, CopyContainer } from '@component-controls/components';
 import { ReactJSONProps, JSONViewer } from './JSONViewer';
 import { LoadingIndicator } from './LoadingIndicator';
 import { useDebounce } from '../../hooks/usDebounce';
-import { getPureConfig, useOptions } from '../../contexts/OptionsContext';
+import { useParams } from '../../contexts/OptionsContext';
 import { useCodeContext } from '../../contexts/CodeContext';
 
 interface DataViewerProps {
@@ -15,7 +15,8 @@ interface DataViewerProps {
 }
 export const DataViewer: FC<DataViewerProps> = ({ jsonTree, label, link }) => {
   const [loading, setLoading] = useState(false);
-  const options = useOptions();
+  const [tsOptions] = useParams('tsOptions');
+  const [parseOptions] = useParams('parseOptions');
   const { code } = useCodeContext();
   const [types, setTypes] = useState({});
   const debouncedCode = useDebounce(code, 300);
@@ -23,8 +24,6 @@ export const DataViewer: FC<DataViewerProps> = ({ jsonTree, label, link }) => {
   useEffect(() => {
     if (debouncedCode) {
       setLoading(true);
-      const tsOptions = getPureConfig(options.tsOptions);
-      const parseOptions = getPureConfig(options.parseOptions);
       const url = `/api/${label}?code=${encodeURIComponent(debouncedCode)}${
         parseOptions
           ? `&config=${encodeURIComponent(JSON.stringify(parseOptions))}`
@@ -47,7 +46,7 @@ export const DataViewer: FC<DataViewerProps> = ({ jsonTree, label, link }) => {
     } else {
       setTypes({});
     }
-  }, [debouncedCode, options, label]);
+  }, [debouncedCode, tsOptions, parseOptions, label]);
   return (
     <Box
       sx={{

@@ -3,12 +3,12 @@ import { FC } from 'react';
 import { jsx, Box, Heading, Link } from 'theme-ui';
 import { useUserData } from '@component-controls/store';
 import { Tabs, TabList, Tab, TabPanel } from '@component-controls/components';
-import { useURLParamas } from '@component-controls/blocks';
+import { useURLParams } from '@component-controls/blocks';
 import { PanelContainer, PanelContainerProps } from './PanelContainer';
 import { useCodeContext } from '../../contexts/CodeContext';
 
 export const ExamplesPanel: FC<PanelContainerProps> = ({ onClose }) => {
-  const [tabIndex, setTabIndex] = useURLParamas<number>('examples', 0);
+  const [tabIndex, setTabIndex] = useURLParams<number>('examples', 0);
   const data = useUserData();
   const { updateCode } = useCodeContext();
   const { examples } = data;

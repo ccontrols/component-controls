@@ -5,32 +5,25 @@ import React, {
   useState,
   useEffect,
 } from 'react';
-import { getUrlParams, getUpdatedUrlParams } from '@component-controls/blocks';
+import { useURLParams } from '@component-controls/blocks';
 import {
   OptionValueType,
-  TSOptionsType,
-  ParseOptionsType,
-  defaultTSOptions,
-  defaultParseOptions,
+  defaultOptions,
+  OptionsName,
+  OptionsType,
+  optionNames,
 } from './options';
 
-export type OptionsType = 'tsOptions' | 'parseOptions';
-type OptionsContextType = {
-  updateOption: (
-    paramName: OptionsType,
-    title: string,
-    value: OptionValueType,
-  ) => void;
-  parseOptions: ParseOptionsType;
-  tsOptions: TSOptionsType;
-};
-const OptionsContext = createContext<OptionsContextType>(
-  {} as OptionsContextType,
-);
+type PureOptions = Record<string, OptionValueType> | undefined;
 
-export const getPureConfig = (
-  value: TSOptionsType | ParseOptionsType,
-): Record<string, OptionValueType> | undefined => {
+type OptionsContextProps = [PureOptions, (newOptions: PureOptions) => void];
+
+const Contexts: Record<OptionsName, React.Context<OptionsContextProps>> = {
+  tsOptions: createContext<OptionsContextProps>({} as OptionsContextProps),
+  parseOptions: createContext<OptionsContextProps>({} as OptionsContextProps),
+};
+
+export const getPureConfig = (value: OptionsType): PureOptions => {
   const modifiedOptions: Record<string, OptionValueType> = {};
   Object.keys(value).forEach(sectionName => {
     const section = value[sectionName];
@@ -48,103 +41,92 @@ export const getPureConfig = (
   return Object.keys(modifiedOptions).length ? modifiedOptions : undefined;
 };
 
-export const OptionsContextProvider: FC = ({ children }) => {
-  const [options, setOptions] = useState<{
-    parseOptions: ParseOptionsType;
-    tsOptions: TSOptionsType;
-  }>({ parseOptions: defaultParseOptions, tsOptions: defaultTSOptions });
-  useEffect(() => {
-    const getURLOptions = (
-      paramName: OptionsType,
-      defaults: TSOptionsType | ParseOptionsType,
-    ): ParseOptionsType | TSOptionsType => {
-      const urlConfig = getUrlParams(paramName);
-      if (urlConfig) {
-        const newOptions = JSON.parse(urlConfig);
-        const config = { ...defaults };
-        Object.keys(config).forEach(sectionName => {
-          const section = config[sectionName];
-          Object.keys(section).forEach(optionName => {
-            if (typeof newOptions[optionName] !== 'undefined') {
-              section[optionName].value = newOptions[optionName];
-            }
-          });
-        });
-        return config;
-      }
-      return defaults;
-    };
-    const tsOptions = getURLOptions('tsOptions', defaultTSOptions);
-    const parseOptions = getURLOptions('parseOptions', defaultParseOptions);
-    setOptions({ tsOptions, parseOptions });
-  }, []);
-  const onChangeOptions = (
-    paramName: OptionsType,
-    value: TSOptionsType | ParseOptionsType,
-  ): void => {
-    const config = getPureConfig(value);
-    const newUrl = getUpdatedUrlParams(
-      paramName,
-      config ? JSON.stringify(config) : undefined,
-    );
-    if (newUrl && window.location.href !== newUrl) {
-      window.history.replaceState(null, '', newUrl);
-    }
-    setOptions({ ...options, [paramName]: value });
-  };
-  const updateOption = (
-    paramName: OptionsType,
-    title: string,
-    value: OptionValueType,
-  ): void => {
-    const values = options[paramName];
-    for (const section in values) {
-      for (const optionName in values[section]) {
-        if (optionName === title) {
-          if (value === values[section][optionName].defaultValue) {
-            const newOptions = { ...values };
-            delete newOptions[section][optionName].value;
-            onChangeOptions(paramName, newOptions);
-          } else {
-            onChangeOptions(paramName, {
-              ...values,
-              [section]: {
-                ...values[section],
-                [optionName]: { ...values[section][optionName], value },
-              },
-            });
-          }
-          return;
+const getDecoratedConfig = (
+  name: OptionsName,
+  options: PureOptions,
+): OptionsType => {
+  const config: OptionsType = { ...defaultOptions[name] };
+  if (options) {
+    Object.keys(config).forEach(sectionName => {
+      const section = config[sectionName];
+      Object.keys(section).forEach(optionName => {
+        if (typeof options[optionName] !== 'undefined') {
+          section[optionName].value = options[optionName];
         }
-      }
-    }
-  };
+      });
+    });
+  }
+  return config;
+};
+
+export const OptionsProvider: FC = ({ children }) => {
+  const params: Record<OptionsName, OptionsContextProps> = optionNames.reduce(
+    (acc, name: OptionsName) => ({
+      ...acc,
+      [name]: useURLParams<PureOptions>(
+        name,
+        getPureConfig(defaultOptions[name]),
+      ),
+    }),
+    {} as Record<OptionsName, OptionsContextProps>,
+  );
   return (
-    <OptionsContext.Provider
-      value={{
-        tsOptions: options.tsOptions,
-        parseOptions: options.parseOptions,
-        updateOption,
-      }}
-    >
-      {children}
-    </OptionsContext.Provider>
+    <>
+      {optionNames.reduce((acc, name) => {
+        const Context = Contexts[name];
+        return (
+          <Context.Provider key={name} value={params[name]}>
+            {acc}
+          </Context.Provider>
+        );
+      }, children)}
+    </>
   );
 };
 
-export const useOptions = (): {
-  parseOptions: ParseOptionsType;
-  tsOptions: TSOptionsType;
-} => {
-  return useContext(OptionsContext);
+export const useParams = (name: OptionsName): OptionsContextProps => {
+  return useContext(Contexts[name]);
+};
+
+export const useOptions = <T extends OptionsType>(
+  name: OptionsName,
+): [T, (newOptions: T) => void] => {
+  const [params, setParams] = useParams(name);
+  const [options, setOptions] = useState<T>(defaultOptions[name] as T);
+  useEffect(() => {
+    const fullOptions = getDecoratedConfig(name, params) as T;
+    setOptions(fullOptions);
+  }, [name, params]);
+  return [
+    options,
+    newOptions => {
+      setOptions(newOptions);
+      setParams(getPureConfig(newOptions));
+    },
+  ];
 };
 
 export const useUpdateOptions = (
-  paramName: OptionsType,
+  paramName: OptionsName,
   title: string,
 ): ((value: OptionValueType) => void) => {
-  const context = useContext(OptionsContext);
+  const [options, setOptions] = useOptions(paramName);
   return (value: OptionValueType) => {
-    return context.updateOption(paramName, title, value);
+    const newOptions = { ...options };
+    for (const section in newOptions) {
+      for (const optionName in newOptions[section]) {
+        if (optionName === title) {
+          if (value === newOptions[section][optionName].defaultValue) {
+            delete newOptions[section][optionName].value;
+          } else {
+            newOptions[section] = {
+              ...newOptions[section],
+              [optionName]: { ...newOptions[section][optionName], value },
+            };
+          }
+        }
+      }
+    }
+    setOptions(newOptions);
   };
 };

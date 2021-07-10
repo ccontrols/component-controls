@@ -6,7 +6,7 @@ import { useCodeContext } from '../contexts/CodeContext';
 
 export const Editor: React.FC = () => {
   const [colorMode] = useColorMode();
-  const { tsOptions } = useOptions();
+  const [tsOptions] = useOptions('tsOptions');
   const { code, updateCode } = useCodeContext();
   const language =
     tsOptions.General.lang.value || tsOptions.General.lang.defaultValue;

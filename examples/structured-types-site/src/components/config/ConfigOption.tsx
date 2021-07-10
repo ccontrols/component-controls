@@ -1,12 +1,11 @@
 import React, { FC } from 'react';
-import { OptionsType } from '../../contexts/OptionsContext';
-import { OptionsData } from '../../contexts/options';
+import { OptionsData, OptionsName } from '../../contexts/options';
 import { MemoOption } from './MemoOption';
 import { CheckboxOption } from './CheckboxOption';
 import { SelectOption } from './SelectOption';
 
 export const ConfigOption: FC<{
-  paramName: OptionsType;
+  paramName: OptionsName;
   title: string;
 } & OptionsData> = props => {
   const { value: propValue, options, defaultValue, type } = props;

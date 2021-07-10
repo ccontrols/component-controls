@@ -3,11 +3,11 @@ import { FC } from 'react';
 import { jsx, Box, Heading, Checkbox, Label } from 'theme-ui';
 import { InfoIcon } from '@primer/octicons-react';
 import { Link, Markdown } from '@component-controls/components';
-import { useUpdateOptions, OptionsType } from '../../contexts/OptionsContext';
-import { OptionsData } from '../../contexts/options';
+import { useUpdateOptions } from '../../contexts/OptionsContext';
+import { OptionsData, OptionsName } from '../../contexts/options';
 
 export const CheckboxOption: FC<{
-  paramName: OptionsType;
+  paramName: OptionsName;
   title: string;
 } & OptionsData> = ({
   paramName,

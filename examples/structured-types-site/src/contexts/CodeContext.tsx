@@ -1,5 +1,5 @@
 import React, { FC, createContext, useContext } from 'react';
-import { useURLParamas } from '@component-controls/blocks';
+import { useURLParams } from '@component-controls/blocks';
 
 type CodeContextType = {
   code: string;
@@ -8,7 +8,7 @@ type CodeContextType = {
 const CodeContext = createContext<CodeContextType>({} as CodeContextType);
 
 export const CodeContextProvider: FC = ({ children }) => {
-  const [code, setCode] = useURLParamas('code', '');
+  const [code, setCode] = useURLParams('code', '');
   return (
     <CodeContext.Provider
       value={{

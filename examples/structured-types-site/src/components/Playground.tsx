@@ -4,18 +4,18 @@ import { jsx, Theme, Box, Heading } from 'theme-ui';
 import { TriangleUpIcon, TriangleDownIcon } from '@primer/octicons-react';
 import Split from 'react-split';
 import { Tabs, TabList, Tab, TabPanel } from '@component-controls/components';
-import { useURLParamas } from '@component-controls/blocks';
+import { useURLParams } from '@component-controls/blocks';
 import { ExamplesPanel } from './panels/ExamplesPanel';
 import { ConfigPanel } from './panels/ConfigPanel';
 import { ParseConfigPanel } from './panels/ParseConfigPanel';
-import { OptionsContextProvider } from '../contexts/OptionsContext';
+import { OptionsProvider } from '../contexts/OptionsContext';
 import { CodeContextProvider } from '../contexts/CodeContext';
 import { Editor } from './Editor';
 import { InfoContainer } from './viewers/InfoContainer';
 
 export const Playground: FC = () => {
   const [sizes, setSizes] = useState<number[]>([70, 30]);
-  const [tabIndex, setTabIndex] = useURLParamas<number>('tab', 0);
+  const [tabIndex, setTabIndex] = useURLParams<number>('tab', 0);
   useEffect(() => {
     const storeSizes = localStorage.getItem('split-size');
     if (storeSizes) {
@@ -24,7 +24,7 @@ export const Playground: FC = () => {
   }, []);
 
   return (
-    <OptionsContextProvider>
+    <OptionsProvider>
       <Box
         sx={{
           display: 'flex',
@@ -116,6 +116,6 @@ export const Playground: FC = () => {
           </Tabs>
         </CodeContextProvider>
       </Box>
-    </OptionsContextProvider>
+    </OptionsProvider>
   );
 };

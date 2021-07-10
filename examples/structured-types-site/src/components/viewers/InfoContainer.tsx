@@ -9,7 +9,7 @@ import {
   Multiselect,
   MultiselectItem,
 } from '@component-controls/components';
-import { useURLParamas } from '@component-controls/blocks';
+import { useURLParams } from '@component-controls/blocks';
 import { PropKind } from '@component-controls/structured-types/types';
 import { ReactJSONProps } from './JSONViewer';
 import { DataViewer } from './DataViewer';
@@ -20,10 +20,10 @@ type APIItem = MultiselectItem & {
   jsonTree?: ReactJSONProps;
 };
 export const InfoContainer: FC = () => {
-  const [visibleTabs, setVisibleTabs] = useURLParamas<string[]>('viewer-tabs', [
+  const [visibleTabs, setVisibleTabs] = useURLParams<string[]>('viewer-tabs', [
     'structured-types',
   ]);
-  const [selectedTab, setSelectedTab] = useURLParamas<string>(
+  const [selectedTab, setSelectedTab] = useURLParams<string>(
     'selected-tab',
     '',
   );
