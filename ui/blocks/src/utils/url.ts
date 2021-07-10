@@ -1,9 +1,5 @@
 import { useState, useEffect } from 'react';
 import queryString from 'query-string';
-import {
-  compressToEncodedURIComponent,
-  decompressFromEncodedURIComponent,
-} from 'lz-string';
 export const getURL = (): URL | undefined => {
   let pageURL = undefined;
   if (typeof window !== 'undefined') {
@@ -23,7 +19,7 @@ export const getUpdatedUrlParams = (
   if (url) {
     const parsedParams = queryString.parse(url.search);
     if (value) {
-      parsedParams[paremName] = compressToEncodedURIComponent(value);
+      parsedParams[paremName] = value;
       console.log(value, value.length);
       console.log(parsedParams[paremName], parsedParams[paremName]?.length);
     } else {
@@ -45,7 +41,7 @@ export const getUrlParams = (paremName: string): any => {
     const params = parsedParams[paremName];
     if (params && typeof params === 'string') {
       try {
-        return decompressFromEncodedURIComponent(params);
+        return params;
       } catch (e) {
         return undefined;
       }

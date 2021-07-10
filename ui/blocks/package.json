@@ -44,7 +44,6 @@
     "copy-to-clipboard": "^3.2.1",
     "global": "^4.3.2",
     "js-string-escape": "^1.0.1",
-    "lz-string": "^1.4.4",
     "query-string": "^6.13.5",
     "react": "^17.0.1",
     "react-frame-component": "^5.0.0",

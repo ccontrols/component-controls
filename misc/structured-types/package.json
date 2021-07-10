@@ -40,7 +40,6 @@
   "license": "MIT",
   "dependencies": {
     "@component-controls/typescript-config": "^3.14.4",
-    "comment-parser": "^1.1.5",
     "deepmerge": "^4.2.2"
   },
   "devDependencies": {
