@@ -20,8 +20,6 @@ export const getUpdatedUrlParams = (
     const parsedParams = queryString.parse(url.search);
     if (value) {
       parsedParams[paremName] = value;
-      console.log(value, value.length);
-      console.log(parsedParams[paremName], parsedParams[paremName]?.length);
     } else {
       delete parsedParams[paremName];
     }
