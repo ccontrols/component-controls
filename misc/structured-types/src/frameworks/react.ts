@@ -2,35 +2,15 @@ import * as ts from 'typescript';
 import { TypeResolver, getSymbolType } from '../ts-utils';
 import { isObjectTypeDeclaration } from '../ts-utils';
 
-const getIdentifierParent = (
-  node: ts.Node,
-): ts.ImportSpecifier | ts.ImportClause | ts.ModuleDeclaration | undefined => {
-  let parent = node;
-  while (parent.parent) {
-    if (
-      'name' in parent &&
-      (ts.isImportSpecifier(parent) ||
-        ts.isImportClause(parent) ||
-        ts.isModuleDeclaration(parent))
-    ) {
-      return parent;
-    }
-    parent = parent.parent;
-  }
-  return undefined;
-};
-
 export interface ReactResolveOptions {
   componentNames?: string[];
-  reactNames?: string[];
 }
 export const typeResolver: TypeResolver = (
   { symbolType, declaration, checker },
   reactOptions?: ReactResolveOptions,
 ) => {
   const options: Required<ReactResolveOptions> = {
-    componentNames: ['Component'],
-    reactNames: ['React'],
+    componentNames: ['Component', 'PureComponent'],
     ...reactOptions,
   };
   if ((symbolType.flags & ts.TypeFlags.Object) === ts.TypeFlags.Object) {
@@ -38,35 +18,48 @@ export const typeResolver: TypeResolver = (
       const heritage = declaration.heritageClauses;
       if (heritage?.length) {
         const extendsFrom = heritage[0];
-        const reactComponent = extendsFrom.types.find(t => {
+        for (const t of extendsFrom.types) {
           const reactSymbol = checker.getSymbolAtLocation(t.expression);
           if (reactSymbol) {
-            const reactDeclaration =
-              reactSymbol.valueDeclaration || reactSymbol.declarations?.[0];
-            if (reactDeclaration) {
-              const component = getIdentifierParent(reactDeclaration);
-              if (
-                component &&
-                component.parent &&
-                component.name &&
-                (options.componentNames.includes(component.name.getText()) ||
-                  options.reactNames.includes(component.name.getText()))
+            const reactSymbolType = getSymbolType(checker, reactSymbol);
+            if (reactSymbolType) {
+              const reactSymbolTypeSymbol =
+                reactSymbolType.symbol || reactSymbolType.aliasSymbol;
+
+              const propsSymbol = reactSymbolTypeSymbol.members?.get(
+                'props' as ts.__String,
+              );
+              let isReact = true;
+              if (propsSymbol) {
+                const propsDeclaration =
+                  propsSymbol.valueDeclaration || propsSymbol.declarations?.[0];
+                if (
+                  propsDeclaration &&
+                  ts.isClassDeclaration(propsDeclaration.parent) &&
+                  propsDeclaration.parent.name?.text &&
+                  options.componentNames.includes(
+                    propsDeclaration.parent.name.text,
+                  )
+                ) {
+                  isReact = true;
+                }
+              } else if (
+                options.componentNames.includes(reactSymbolTypeSymbol.name)
               ) {
-                return true;
+                isReact = true;
+              }
+              if (isReact) {
+                const signatures = symbolType.getConstructSignatures();
+                if (signatures.length > 0 && signatures[0].parameters.length) {
+                  const props = signatures[0].parameters[0];
+                  const propsType = getSymbolType(checker, props) || symbolType;
+                  if (propsType.isUnionOrIntersection()) {
+                    return propsType.types[0];
+                  }
+                  return propsType;
+                }
               }
             }
-          }
-          return false;
-        });
-        if (reactComponent) {
-          const signatures = symbolType.getConstructSignatures();
-          if (signatures.length > 0 && signatures[0].parameters.length) {
-            const props = signatures[0].parameters[0];
-            const propsType = getSymbolType(checker, props) || symbolType;
-            if (propsType.isUnionOrIntersection()) {
-              return propsType.types[0];
-            }
-            return propsType;
           }
         }
       }
