@@ -1,17 +1,26 @@
 /** @jsx jsx */
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { jsx, Box, Heading, Link } from 'theme-ui';
-import { useUserData } from '@component-controls/store';
 import { Tabs, TabList, Tab, TabPanel } from '@component-controls/components';
 import { useURLParams } from '@component-controls/blocks';
 import { PanelContainer, PanelContainerProps } from './PanelContainer';
 import { useCodeContext } from '../../contexts/CodeContext';
 
+type Example = {
+  name: string;
+  items: Example[];
+};
 export const ExamplesPanel: FC<PanelContainerProps> = ({ onClose }) => {
   const [tabIndex, setTabIndex] = useURLParams<number>('examples', 0);
-  const data = useUserData();
+  const [examples, setExamples] = useState<Example[]>([]);
+  useEffect(() => {
+    fetch('/api/examples/list')
+      .then(data => data.json())
+      .then(json => {
+        setExamples(json);
+      });
+  }, []);
   const { updateCode } = useCodeContext();
-  const { examples } = data;
   return (
     <PanelContainer onClose={onClose}>
       <Tabs
@@ -21,8 +30,8 @@ export const ExamplesPanel: FC<PanelContainerProps> = ({ onClose }) => {
         }}
       >
         <TabList>
-          {Object.keys(examples).map(key => (
-            <Tab key={key}>
+          {examples.map(({ name }) => (
+            <Tab key={name}>
               <Heading
                 as="h1"
                 sx={{
@@ -31,13 +40,13 @@ export const ExamplesPanel: FC<PanelContainerProps> = ({ onClose }) => {
                   },
                 }}
               >
-                {key}
+                {name}
               </Heading>
             </Tab>
           ))}
         </TabList>
-        {Object.keys(examples).map(key => (
-          <TabPanel key={key}>
+        {examples.map(({ name: section, items }) => (
+          <TabPanel key={section}>
             <Box
               sx={{
                 display: 'flex',
@@ -46,48 +55,55 @@ export const ExamplesPanel: FC<PanelContainerProps> = ({ onClose }) => {
                 py: 3,
               }}
             >
-              {Object.keys(examples[key])
-                .filter(category => typeof examples[key][category] === 'object')
-                .map(category => (
+              {items.map(({ name: group, items }) => (
+                <Box
+                  key={group}
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    px: 4,
+                  }}
+                >
+                  <Heading
+                    as="h4"
+                    sx={{
+                      py: 2,
+                    }}
+                  >
+                    {group}
+                  </Heading>
                   <Box
-                    key={category}
                     sx={{
                       display: 'flex',
                       flexDirection: 'column',
-                      px: 4,
+                      pl: 2,
                     }}
                   >
-                    <Heading
-                      as="h4"
-                      sx={{
-                        py: 2,
-                      }}
-                    >
-                      {category}
-                    </Heading>
-                    <Box
-                      key={category}
-                      sx={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        pl: 2,
-                      }}
-                    >
-                      {Object.keys(examples[key][category]).map(example => (
-                        <Link
-                          key={example}
-                          href="#"
-                          onClick={() => {
-                            onClose();
-                            updateCode(examples[key][category][example]);
-                          }}
-                        >
-                          {example.split('.')[0]}
-                        </Link>
-                      ))}
-                    </Box>
+                    {items.map(({ name }) => (
+                      <Link
+                        key={name}
+                        href="#"
+                        onClick={() => {
+                          onClose();
+                          fetch(
+                            `/api/examples/get?name=${encodeURIComponent(
+                              name,
+                            )}&group=${encodeURIComponent(
+                              group,
+                            )}&section=${encodeURIComponent(section)}`,
+                          )
+                            .then(data => data.json())
+                            .then(({ code }) => {
+                              updateCode(code);
+                            });
+                        }}
+                      >
+                        {name.split('.')[0]}
+                      </Link>
+                    ))}
                   </Box>
-                ))}
+                </Box>
+              ))}
             </Box>
           </TabPanel>
         ))}

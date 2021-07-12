@@ -7,14 +7,16 @@ import {
   Tab,
   TabPanel,
   Multiselect,
-  MultiselectItem,
 } from '@component-controls/components';
 import { useURLParams } from '@component-controls/blocks';
 import { PropKind } from '@component-controls/structured-types/types';
+import { ParserNames } from '../../contexts/ParsersContext';
 import { ReactJSONProps } from './JSONViewer';
 import { DataViewer } from './DataViewer';
 
-type APIItem = MultiselectItem & {
+type APIItem = {
+  label: ParserNames;
+  selected: boolean;
   Panel: ComponentType<any>;
   link: string;
   jsonTree?: ReactJSONProps;
@@ -34,9 +36,8 @@ export const InfoContainer: FC = () => {
     );
   }, [selectedTab, visibleTabs]);
   const items: APIItem[] = useMemo(() => {
-    const items = [
-      {
-        label: 'structured-types',
+    const items: Record<ParserNames, Omit<APIItem, 'label'>> = {
+      'structured-types': {
         selected: true,
         link:
           'https://github.com/ccontrols/component-controls/tree/master/misc/structured-types',
@@ -60,41 +61,40 @@ export const InfoContainer: FC = () => {
           },
         },
       },
-      {
-        label: 'react-docgen-typescript',
+      'react-docgen-typescript': {
         selected: false,
         link: 'https://github.com/styleguidist/react-docgen-typescript',
         Panel: DataViewer,
       },
-      {
-        label: 'react-docgen',
+      'react-docgen': {
         selected: false,
         link: 'https://github.com/reactjs/react-docgen',
         Panel: DataViewer,
       },
-      {
-        label: 'jsdoc',
+      jsdoc: {
         selected: false,
         link: 'https://github.com/jsdoc2md/jsdoc-api',
         Panel: DataViewer,
       },
-      {
-        label: 'typedoc',
+      typedoc: {
         selected: false,
         link: 'https://github.com/TypeStrong/typedoc',
         Panel: DataViewer,
       },
-      {
-        label: 'ts-json-schema-generator',
+      'ts-json-schema-generator': {
         selected: false,
         link: 'https://github.com/vega/ts-json-schema-generator',
         Panel: DataViewer,
       },
-    ];
-    return items.map(item => ({
-      ...item,
-      selected: visibleTabs.includes(item.label),
-    }));
+    };
+    return Object.keys(items).map(key => {
+      const item = items[key as ParserNames];
+      return {
+        ...item,
+        label: key,
+        selected: visibleTabs.includes(key),
+      } as APIItem;
+    });
   }, [visibleTabs]);
   const visibleItems = visibleTabs
     .map(name => {
@@ -158,15 +158,13 @@ export const InfoContainer: FC = () => {
               <Tab key={item.label}>{item.label}</Tab>
             ))}
           </TabList>
-          {visibleItems.map((item, index) => (
+          {visibleItems.map(item => (
             <TabPanel key={item.label}>
-              {tabIndex === index ? (
-                <item.Panel
-                  label={item.label}
-                  link={item.link}
-                  jsonTree={item.jsonTree}
-                />
-              ) : null}
+              <item.Panel
+                label={item.label}
+                link={item.link}
+                jsonTree={item.jsonTree}
+              />
             </TabPanel>
           ))}
         </Tabs>

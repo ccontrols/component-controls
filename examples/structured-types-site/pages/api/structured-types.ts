@@ -1,7 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { typeResolver } from '@component-controls/structured-types/react';
 import { parseFiles, DocsOptions } from '@component-controls/structured-types';
-
 import { createTempFile } from '../../src/api/create-temp-file';
 
 export default async (
