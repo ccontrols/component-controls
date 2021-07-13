@@ -220,18 +220,24 @@ export type TypeResolver = (props: {
   symbolType: ts.Type;
   declaration: ts.Declaration;
   checker: ts.TypeChecker;
-}) => ts.Type | undefined;
+}) => { type: ts.Type | undefined; intializer?: ts.Node; name?: string };
 
 export const resolveType: (
   props: Parameters<TypeResolver>[0],
   resolvers?: TypeResolver[],
 ) => ReturnType<TypeResolver> = (props, resolvers) => {
   if (resolvers) {
-    return resolvers.reduce((acc, resolver) => {
-      return resolver({ ...props, symbolType: acc }) || acc;
-    }, props.symbolType);
+    return resolvers.reduce(
+      (acc: ReturnType<TypeResolver>, resolver) => {
+        return (
+          resolver({ ...props, symbolType: acc.type || props.symbolType }) ||
+          acc
+        );
+      },
+      { type: props.symbolType },
+    );
   }
-  return props.symbolType;
+  return { type: props.symbolType };
 };
 
 export const getSymbolType = (
@@ -263,3 +269,12 @@ export interface ISymbolParser {
   parseType(prop: PropType, node?: ts.Node): PropType;
   parseSymbol(symbol: ts.Symbol): PropType | null;
 }
+
+export const getInitializer = (
+  declaration: ts.Node,
+): ts.Expression | undefined =>
+  isVariableLikeDeclaration(declaration)
+    ? declaration?.initializer
+    : ts.isBinaryExpression(declaration.parent)
+    ? declaration.parent.right
+    : undefined;

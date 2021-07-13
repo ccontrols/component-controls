@@ -27,7 +27,6 @@ import {
   getSymbolType,
   ParseOptions,
   defaultParseOptions,
-  isVariableLikeDeclaration,
   isObjectTypeDeclaration,
   isHasType,
   tsKindToPropKind,
@@ -38,6 +37,7 @@ import {
   isArrayLike,
   resolveType,
   ISymbolParser,
+  getInitializer,
 } from './ts-utils';
 import {
   cleanJSDocText,
@@ -550,22 +550,20 @@ export class SymbolParser implements ISymbolParser {
       if ('name' in declaration) {
         prop.displayName = getDeclarationName(declaration);
       }
-      const initializer = isVariableLikeDeclaration(declaration)
-        ? declaration?.initializer
-        : ts.isBinaryExpression(declaration.parent)
-        ? declaration.parent.right
-        : undefined;
       if (symbolType) {
-        const resolvedType = top
-          ? resolveType(
-              {
-                symbolType,
-                declaration,
-                checker: this.checker,
-              },
-              this.options.resolvers,
-            )
-          : symbolType;
+        const resolved = resolveType(
+          {
+            symbolType,
+            declaration,
+            checker: this.checker,
+          },
+          this.options.resolvers,
+        );
+        const initializer = resolved.intializer || getInitializer(declaration);
+        const resolvedType = resolved.type;
+        if (resolved.name) {
+          prop.displayName = resolved.name;
+        }
         if (
           resolvedType &&
           resolvedType.flags & (ts.TypeFlags.Object | ts.TypeFlags.Intersection)
@@ -577,7 +575,7 @@ export class SymbolParser implements ISymbolParser {
               resolvedSymbol.declarations?.[0]
             : undefined;
           if (
-            resolvedDeclaration &&
+            !resolvedDeclaration ||
             !(
               isHasType(resolvedDeclaration) &&
               resolvedDeclaration.type &&
@@ -600,7 +598,7 @@ export class SymbolParser implements ISymbolParser {
                   prop,
                   declaration,
                   initializer,
-                  top ? symbol : undefined,
+                  symbol,
                 );
               }
               const parent = this.getParent(prop, d, prop.displayName);
@@ -622,6 +620,7 @@ export class SymbolParser implements ISymbolParser {
               }
             }
             if (
+              resolvedDeclaration &&
               (isObjectTypeDeclaration(resolvedDeclaration) ||
                 ts.isTypeLiteralNode(resolvedDeclaration)) &&
               resolvedDeclaration.members
@@ -675,7 +674,7 @@ export class SymbolParser implements ISymbolParser {
       return this.parseTypeValueComments(
         prop,
         declaration,
-        initializer,
+        getInitializer(declaration),
         top ? symbol : undefined,
       );
     }

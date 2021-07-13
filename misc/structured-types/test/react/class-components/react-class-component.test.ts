@@ -14,6 +14,87 @@ const simpleResults = {
   },
 };
 describe('class-component', () => {
+  // it('default-props-field', () => {
+  //   const result = parseFiles(
+  //     [path.resolve(__dirname, 'default-props-field.tsx')],
+  //     {
+  //       resolvers: [typeResolver],
+  //       saveParentProps: false,
+  //     },
+  //   );
+  //   expect(result).toEqual({
+  //     MyComponent: {
+  //       displayName: 'MyComponent',
+  //       kind: 15,
+  //       properties: [
+  //         {
+  //           parent: 'OwnProps',
+  //           optional: true,
+  //           displayName: 'stringProp',
+  //           kind: 1,
+  //           description: 'stringProp description',
+  //           value: 'test',
+  //         },
+  //         {
+  //           parent: 'OwnProps',
+  //           kind: 2,
+  //           displayName: 'numberProp',
+  //           description: 'numberProp description',
+  //         },
+  //       ],
+  //       description: 'MyComponent special component',
+  //     },
+  //   });
+  // });
+  it('display-name-static', () => {
+    const result = parseFiles(
+      [path.resolve(__dirname, 'display-name-static.tsx')],
+      {
+        resolvers: [typeResolver],
+        saveParentProps: false,
+      },
+    );
+    expect(result).toEqual({
+      MyComponent: {
+        displayName: "'CustomComponentName'",
+        kind: 15,
+        description: 'MyComponent special component',
+      },
+    });
+  });
+
+  it('default-props-static', () => {
+    const result = parseFiles(
+      [path.resolve(__dirname, 'default-props-static.tsx')],
+      {
+        resolvers: [typeResolver],
+        saveParentProps: false,
+      },
+    );
+    expect(result).toEqual({
+      MyComponent: {
+        displayName: 'MyComponent',
+        kind: 15,
+        properties: [
+          {
+            parent: 'OwnProps',
+            optional: true,
+            displayName: 'stringProp',
+            kind: 1,
+            description: 'stringProp description',
+            value: 'test',
+          },
+          {
+            parent: 'OwnProps',
+            kind: 2,
+            displayName: 'numberProp',
+            description: 'numberProp description',
+          },
+        ],
+        description: 'MyComponent special component',
+      },
+    });
+  });
   it('pure-component', () => {
     const result = parseFiles([path.resolve(__dirname, 'pure-component.tsx')], {
       resolvers: [typeResolver],

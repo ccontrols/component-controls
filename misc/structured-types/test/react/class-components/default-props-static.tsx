@@ -1,4 +1,4 @@
-import React, { Component, BaseHTMLAttributes } from 'react';
+import React, { Component } from 'react';
 /**
  * MyComponent properties.
  */
@@ -8,23 +8,15 @@ type OwnProps = {
 
   /** numberProp description */
   numberProp: number;
-  /**
-   * function props description
-   */
-  fnProp: () => void;
-
-  /**
-   * unionProp description
-   * @deprecated since version 1.0
-   */
-  unionProp: 'option1' | 'option2' | 'option3';
-} & BaseHTMLAttributes<HTMLDivElement>;
+};
 
 /**
  * MyComponent special component
  */
-
 export class MyComponent extends Component<OwnProps> {
+  static defaultProps = {
+    stringProp: 'test',
+  };
   render(): React.ReactNode {
     const { stringProp } = this.props;
     return <div>{stringProp}</div>;

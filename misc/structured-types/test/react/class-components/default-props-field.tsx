@@ -20,4 +20,8 @@ class MyComponent extends Component<OwnProps> {
   }
 }
 
+MyComponent.defaultProps = {
+  stringProp: 'test',
+};
+
 export default MyComponent;

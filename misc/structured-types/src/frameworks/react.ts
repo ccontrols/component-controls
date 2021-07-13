@@ -5,6 +5,8 @@ import { isObjectTypeDeclaration } from '../ts-utils';
 export interface ReactResolveOptions {
   componentNames?: string[];
 }
+type NodeCallback = (m: ts.PropertyDeclaration) => boolean;
+type NodeFind = (callback: NodeCallback) => ts.PropertyDeclaration | undefined;
 export const typeResolver: TypeResolver = (
   { symbolType, declaration, checker },
   reactOptions?: ReactResolveOptions,
@@ -51,12 +53,28 @@ export const typeResolver: TypeResolver = (
               if (isReact) {
                 const signatures = symbolType.getConstructSignatures();
                 if (signatures.length > 0 && signatures[0].parameters.length) {
+                  const defaultProps = ((declaration.members
+                    ?.find as unknown) as NodeFind)(
+                    m => m.name.getText() === 'defaultProps',
+                  );
+                  const displayName = ((declaration.members
+                    ?.find as unknown) as NodeFind)(
+                    m => m.name.getText() === 'displayName',
+                  );
                   const props = signatures[0].parameters[0];
                   const propsType = getSymbolType(checker, props) || symbolType;
                   if (propsType.isUnionOrIntersection()) {
-                    return propsType.types[0];
+                    return {
+                      type: propsType.types[0],
+                      intializer: defaultProps?.initializer,
+                      name: displayName?.initializer?.getText(),
+                    };
                   }
-                  return propsType;
+                  return {
+                    type: propsType,
+                    intializer: defaultProps?.initializer,
+                    name: displayName?.initializer?.getText(),
+                  };
                 }
               }
             }
@@ -65,5 +83,5 @@ export const typeResolver: TypeResolver = (
       }
     }
   }
-  return symbolType;
+  return { type: symbolType };
 };

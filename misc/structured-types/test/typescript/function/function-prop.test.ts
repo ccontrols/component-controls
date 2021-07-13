@@ -2,6 +2,42 @@ import path from 'path';
 import { parseFiles } from '../../../src/index';
 
 describe('function', () => {
+  it('object parameter', () => {
+    const results = parseFiles([
+      path.resolve(__dirname, 'object-parameter.ts'),
+    ]);
+
+    expect(results).toEqual({
+      printCoord: {
+        parameters: [
+          {
+            displayName: 'pt',
+            description: 'object parameter',
+            kind: 15,
+            properties: [
+              {
+                description: 'x coordinate',
+                kind: 2,
+                displayName: 'x',
+              },
+              {
+                description: 'optional y coordinate',
+                kind: 2,
+                optional: true,
+                displayName: 'y',
+              },
+            ],
+          },
+        ],
+        description: 'print coordinates',
+        displayName: 'printCoord',
+        kind: 11,
+        returns: {
+          kind: 12,
+        },
+      },
+    });
+  });
   it('generic function parameter', () => {
     const results = parseFiles([
       path.resolve(__dirname, 'generic-parameter.ts'),
@@ -942,42 +978,6 @@ describe('function', () => {
             value: 'my custom prop',
           },
         ],
-        returns: {
-          kind: 12,
-        },
-      },
-    });
-  });
-  it('object parameter', () => {
-    const results = parseFiles([
-      path.resolve(__dirname, 'object-parameter.ts'),
-    ]);
-
-    expect(results).toEqual({
-      printCoord: {
-        parameters: [
-          {
-            displayName: 'pt',
-            description: 'object parameter',
-            kind: 15,
-            properties: [
-              {
-                description: 'x coordinate',
-                kind: 2,
-                displayName: 'x',
-              },
-              {
-                description: 'optional y coordinate',
-                kind: 2,
-                optional: true,
-                displayName: 'y',
-              },
-            ],
-          },
-        ],
-        description: 'print coordinates',
-        displayName: 'printCoord',
-        kind: 11,
         returns: {
           kind: 12,
         },
