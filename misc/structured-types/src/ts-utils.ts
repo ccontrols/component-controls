@@ -240,7 +240,10 @@ export const resolveType: (
   return { type: props.symbolType };
 };
 
-export const typeKind = (prop: PropType, typeNode?: ts.Type): PropType => {
+export const updatePropKind = (
+  prop: PropType,
+  typeNode?: ts.Type,
+): PropType => {
   if (typeNode) {
     if (typeNode.flags & ts.TypeFlags.Unknown) {
       prop.kind = PropKind.Unknown;
@@ -309,7 +312,7 @@ export const getInitializer = (
 type NodeCallback = (m: ts.PropertyDeclaration) => boolean;
 type NodeFind = (callback: NodeCallback) => ts.PropertyDeclaration | undefined;
 
-export const declarationModifiers = (
+export const updateModifiers = (
   prop: PropType,
   declaration?: ts.Declaration,
 ): PropType => {

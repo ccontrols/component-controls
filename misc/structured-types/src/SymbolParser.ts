@@ -37,8 +37,8 @@ import {
   resolveType,
   ISymbolParser,
   getInitializer,
-  typeKind,
-  declarationModifiers,
+  updatePropKind,
+  updateModifiers,
 } from './ts-utils';
 import {
   cleanJSDocText,
@@ -511,7 +511,7 @@ export class SymbolParser implements ISymbolParser {
 
       const declaration = symbolDeclaration;
 
-      declarationModifiers(prop, declaration);
+      updateModifiers(prop, declaration);
 
       if (declaration) {
         prop.displayName = getDeclarationName(declaration);
@@ -527,7 +527,7 @@ export class SymbolParser implements ISymbolParser {
         );
         const initializer = resolved.intializer || getInitializer(declaration);
         const resolvedType = resolved.type;
-        typeKind(prop, resolvedType);
+        updatePropKind(prop, resolvedType);
         if (resolved.name) {
           prop.displayName = resolved.name;
         }
