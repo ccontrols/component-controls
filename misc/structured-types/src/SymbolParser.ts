@@ -653,39 +653,11 @@ export class SymbolParser implements ISymbolParser {
       const { jsDoc } = node as {
         jsDoc: JSDocInfoType[];
       };
-      const docs: {
-        descriptions: string[];
-        tags: string[];
-      } = jsDoc.reduce(
-        (
-          acc: {
-            descriptions: string[];
-            tags: string[];
-          },
-          { comment, tags },
-        ) => {
-          const newTags = tags
-            ? tags.map(({ comment, name, tagName }) => {
-                const text = name?.getText();
-                return `* @${tagName.text}${`${text ? ` ${text}` : ''}`}${
-                  comment ? ` ${comment}` : ''
-                }`;
-              })
-            : [];
-          return {
-            descriptions: comment
-              ? [...acc.descriptions, comment]
-              : acc.descriptions,
-            tags: [...acc.tags, ...newTags],
-          };
-        },
-        {
-          descriptions: [],
-          tags: [],
-        },
-      );
-      if (docs.descriptions.length) {
-        prop.description = cleanJSDocText(docs.descriptions.join(''));
+      const docs: string[] = jsDoc.reduce((acc: string[], { comment }) => {
+        return comment ? [...acc, comment] : acc;
+      }, []);
+      if (docs.length) {
+        prop.description = cleanJSDocText(docs.join(''));
       }
       const merged = mergeJSDoc(this, prop, node);
       if (merged === null) {
