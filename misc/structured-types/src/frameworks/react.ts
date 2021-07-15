@@ -1,12 +1,11 @@
 import * as ts from 'typescript';
 import { TypeResolver, getSymbolType } from '../ts-utils';
-import { isObjectTypeDeclaration } from '../ts-utils';
+import { isObjectTypeDeclaration, getObjectStaticProp } from '../ts-utils';
 
 export interface ReactResolveOptions {
   componentNames?: string[];
 }
-type NodeCallback = (m: ts.PropertyDeclaration) => boolean;
-type NodeFind = (callback: NodeCallback) => ts.PropertyDeclaration | undefined;
+
 export const typeResolver: TypeResolver = (
   { symbolType, declaration, checker },
   reactOptions?: ReactResolveOptions,
@@ -53,27 +52,31 @@ export const typeResolver: TypeResolver = (
               if (isReact) {
                 const signatures = symbolType.getConstructSignatures();
                 if (signatures.length > 0 && signatures[0].parameters.length) {
-                  const defaultProps = ((declaration.members
-                    ?.find as unknown) as NodeFind)(
-                    m => m.name.getText() === 'defaultProps',
+                  const defaultProps = getObjectStaticProp(
+                    declaration,
+                    'defaultProps',
                   );
-                  const displayName = ((declaration.members
-                    ?.find as unknown) as NodeFind)(
-                    m => m.name.getText() === 'displayName',
+                  const displayName = getObjectStaticProp(
+                    declaration,
+                    'displayName',
                   );
                   const props = signatures[0].parameters[0];
                   const propsType = getSymbolType(checker, props) || symbolType;
+                  const name =
+                    displayName && ts.isStringLiteral(displayName)
+                      ? displayName.text
+                      : undefined;
                   if (propsType.isUnionOrIntersection()) {
                     return {
                       type: propsType.types[0],
-                      intializer: defaultProps?.initializer,
-                      name: displayName?.initializer?.getText(),
+                      intializer: defaultProps,
+                      name,
                     };
                   }
                   return {
                     type: propsType,
-                    intializer: defaultProps?.initializer,
-                    name: displayName?.initializer?.getText(),
+                    intializer: defaultProps,
+                    name,
                   };
                 }
               }

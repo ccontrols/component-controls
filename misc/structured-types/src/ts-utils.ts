@@ -278,3 +278,53 @@ export const getInitializer = (
     : ts.isBinaryExpression(declaration.parent)
     ? declaration.parent.right
     : undefined;
+
+type NodeCallback = (m: ts.PropertyDeclaration) => boolean;
+type NodeFind = (callback: NodeCallback) => ts.PropertyDeclaration | undefined;
+
+const findFileNode = (node: ts.Node): ts.SourceFile | undefined => {
+  if (ts.isSourceFile(node)) {
+    return node;
+  }
+  if (node.parent) {
+    return findFileNode(node.parent);
+  }
+  return undefined;
+};
+
+type ObjectWalker = ObjectTypeDeclaration & { nextContainer?: ObjectWalker };
+export const getObjectStaticProp = (
+  obj: ObjectWalker,
+  propName: string,
+): ts.Expression | undefined => {
+  const staticProp = ((obj.members?.find as unknown) as NodeFind)(
+    m => m.name.getText() === propName,
+  );
+  if (staticProp) {
+    return staticProp.initializer;
+  }
+  //find filoe global static props assigments
+  //ie MyComponent.displayName = 'XXX';
+
+  const objName = obj.name?.text;
+  if (objName) {
+    const fileContainer = findFileNode(obj);
+    if (fileContainer) {
+      for (const statement of fileContainer.statements) {
+        if (ts.isExpressionStatement(statement)) {
+          const expression = statement.expression;
+          if (
+            ts.isBinaryExpression(expression) &&
+            ts.isPropertyAccessExpression(expression.left) &&
+            expression.left.expression.getText() === objName
+          ) {
+            if (expression.left.name.text === propName) {
+              return expression.right;
+            }
+          }
+        }
+      }
+    }
+  }
+  return undefined;
+};

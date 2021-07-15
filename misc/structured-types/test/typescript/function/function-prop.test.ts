@@ -2,6 +2,28 @@ import path from 'path';
 import { parseFiles } from '../../../src/index';
 
 describe('function', () => {
+  it('function properties', () => {
+    const results = parseFiles([path.resolve(__dirname, 'function-props.ts')]);
+
+    expect(results).toEqual({
+      fn: {
+        displayName: 'fn',
+        kind: 11,
+        properties: [
+          {
+            kind: 1,
+            description: 'custom property for a function',
+            displayName: 'customProp',
+            value: 'my custom prop',
+          },
+        ],
+        returns: {
+          kind: 12,
+        },
+      },
+    });
+  });
+
   it('object parameter', () => {
     const results = parseFiles([
       path.resolve(__dirname, 'object-parameter.ts'),
@@ -959,27 +981,6 @@ describe('function', () => {
             },
           ],
           description: 'internal interface with one member',
-        },
-      },
-    });
-  });
-  it('function properties', () => {
-    const results = parseFiles([path.resolve(__dirname, 'function-props.ts')]);
-
-    expect(results).toEqual({
-      fn: {
-        displayName: 'fn',
-        kind: 11,
-        properties: [
-          {
-            kind: 1,
-            description: 'custom property for a function',
-            displayName: 'customProp',
-            value: 'my custom prop',
-          },
-        ],
-        returns: {
-          kind: 12,
         },
       },
     });

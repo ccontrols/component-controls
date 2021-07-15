@@ -14,38 +14,70 @@ const simpleResults = {
   },
 };
 describe('class-component', () => {
-  // it('default-props-field', () => {
-  //   const result = parseFiles(
-  //     [path.resolve(__dirname, 'default-props-field.tsx')],
-  //     {
-  //       resolvers: [typeResolver],
-  //       saveParentProps: false,
-  //     },
-  //   );
-  //   expect(result).toEqual({
-  //     MyComponent: {
-  //       displayName: 'MyComponent',
-  //       kind: 15,
-  //       properties: [
-  //         {
-  //           parent: 'OwnProps',
-  //           optional: true,
-  //           displayName: 'stringProp',
-  //           kind: 1,
-  //           description: 'stringProp description',
-  //           value: 'test',
-  //         },
-  //         {
-  //           parent: 'OwnProps',
-  //           kind: 2,
-  //           displayName: 'numberProp',
-  //           description: 'numberProp description',
-  //         },
-  //       ],
-  //       description: 'MyComponent special component',
-  //     },
-  //   });
-  // });
+  it('display-name-field', () => {
+    const result = parseFiles(
+      [path.resolve(__dirname, 'display-name-field.tsx')],
+      {
+        resolvers: [typeResolver],
+        saveParentProps: false,
+      },
+    );
+    expect(result).toEqual({
+      default: {
+        displayName: 'CustomComponentName',
+        kind: 15,
+        properties: [
+          {
+            parent: 'OwnProps',
+            optional: true,
+            displayName: 'stringProp',
+            kind: 1,
+            description: 'stringProp description',
+            value: 'test',
+          },
+          {
+            parent: 'OwnProps',
+            kind: 2,
+            displayName: 'numberProp',
+            description: 'numberProp description',
+          },
+        ],
+        // description: 'MyComponent special component',
+      },
+    });
+  });
+  it('default-props-field', () => {
+    const result = parseFiles(
+      [path.resolve(__dirname, 'default-props-field.tsx')],
+      {
+        resolvers: [typeResolver],
+        saveParentProps: false,
+      },
+    );
+    expect(result).toEqual({
+      default: {
+        displayName: 'MyComponent',
+        kind: 15,
+        properties: [
+          {
+            parent: 'OwnProps',
+            optional: true,
+            displayName: 'stringProp',
+            kind: 1,
+            description: 'stringProp description',
+            value: 'test',
+          },
+          {
+            parent: 'OwnProps',
+            kind: 2,
+            displayName: 'numberProp',
+            description: 'numberProp description',
+          },
+        ],
+        // description: 'MyComponent special component',
+      },
+    });
+  });
   it('display-name-static', () => {
     const result = parseFiles(
       [path.resolve(__dirname, 'display-name-static.tsx')],
@@ -56,7 +88,7 @@ describe('class-component', () => {
     );
     expect(result).toEqual({
       MyComponent: {
-        displayName: "'CustomComponentName'",
+        displayName: 'CustomComponentName',
         kind: 15,
         description: 'MyComponent special component',
       },
@@ -161,6 +193,7 @@ describe('class-component', () => {
             description: 'numberProp description',
           },
         ],
+        //description: 'MyComponent special component',
       },
     });
   });
