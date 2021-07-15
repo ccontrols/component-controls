@@ -42,7 +42,7 @@ describe('class-component', () => {
             description: 'numberProp description',
           },
         ],
-        // description: 'MyComponent special component',
+        description: 'MyComponent special component',
       },
     });
   });
@@ -74,7 +74,7 @@ describe('class-component', () => {
             description: 'numberProp description',
           },
         ],
-        // description: 'MyComponent special component',
+        description: 'MyComponent special component',
       },
     });
   });
@@ -193,7 +193,7 @@ describe('class-component', () => {
             description: 'numberProp description',
           },
         ],
-        //description: 'MyComponent special component',
+        description: 'MyComponent special component',
       },
     });
   });

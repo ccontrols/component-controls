@@ -508,16 +508,7 @@ export class SymbolParser implements ISymbolParser {
         ? symbolType.aliasSymbol || symbolType.symbol
         : undefined;
 
-      const typeDeclaration = typeSymbol
-        ? typeSymbol.valueDeclaration || typeSymbol.declarations?.[0]
-        : undefined;
-
-      const declaration =
-        typeDeclaration &&
-        (ts.isExportAssignment(symbolDeclaration) ||
-          ts.isExportSpecifier(symbolDeclaration))
-          ? typeDeclaration
-          : symbolDeclaration;
+      const declaration = symbolDeclaration;
 
       if ((declaration as ts.ParameterDeclaration).questionToken) {
         prop.optional = true;
