@@ -218,7 +218,7 @@ export type DocsOptions = CompileOptions & ParseOptions;
 
 export type TypeResolver = (props: {
   symbolType: ts.Type;
-  declaration: ts.Declaration;
+  declaration?: ts.Declaration;
   checker: ts.TypeChecker;
 }) => { type: ts.Type | undefined; intializer?: ts.Node; name?: string };
 
@@ -296,12 +296,14 @@ export interface ISymbolParser {
 }
 
 export const getInitializer = (
-  declaration: ts.Node,
+  declaration?: ts.Node,
 ): ts.Expression | undefined =>
-  isVariableLikeDeclaration(declaration)
-    ? declaration?.initializer
-    : ts.isBinaryExpression(declaration.parent)
-    ? declaration.parent.right
+  declaration
+    ? isVariableLikeDeclaration(declaration)
+      ? declaration?.initializer
+      : ts.isBinaryExpression(declaration.parent)
+      ? declaration.parent.right
+      : undefined
     : undefined;
 
 type NodeCallback = (m: ts.PropertyDeclaration) => boolean;

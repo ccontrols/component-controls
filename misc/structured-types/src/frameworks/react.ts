@@ -15,7 +15,7 @@ export const typeResolver: TypeResolver = (
     ...reactOptions,
   };
   if ((symbolType.flags & ts.TypeFlags.Object) === ts.TypeFlags.Object) {
-    if (isObjectTypeDeclaration(declaration)) {
+    if (declaration && isObjectTypeDeclaration(declaration)) {
       const heritage = declaration.heritageClauses;
       if (heritage?.length) {
         const extendsFrom = heritage[0];

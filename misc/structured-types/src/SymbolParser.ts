@@ -501,7 +501,7 @@ export class SymbolParser implements ISymbolParser {
   ): PropType | null {
     const symbolDeclaration =
       symbol.valueDeclaration || symbol.declarations?.[0];
-    if (symbolDeclaration) {
+    if (true) {
       const symbolType = getSymbolType(this.checker, symbol);
 
       const typeSymbol = symbolType
@@ -513,7 +513,7 @@ export class SymbolParser implements ISymbolParser {
       if ((declaration as ts.ParameterDeclaration).questionToken) {
         prop.optional = true;
       }
-      if (declaration.modifiers) {
+      if (declaration?.modifiers) {
         for (const m of declaration.modifiers) {
           if (m.kind === ts.SyntaxKind.PrivateKeyword) {
             prop.visibility = 'private';
@@ -530,7 +530,7 @@ export class SymbolParser implements ISymbolParser {
           }
         }
       }
-      if ('name' in declaration) {
+      if (declaration) {
         prop.displayName = getDeclarationName(declaration);
       }
       if (symbolType) {
