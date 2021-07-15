@@ -4,7 +4,6 @@ import {
   PropType,
   PropKind,
   BooleanProp,
-  typeNameToPropKind,
   isNumberProp,
   isAnyProp,
   isUnknownProp,
@@ -38,6 +37,7 @@ import {
   resolveType,
   ISymbolParser,
   getInitializer,
+  typeKind,
 } from './ts-utils';
 import {
   cleanJSDocText,
@@ -499,7 +499,6 @@ export class SymbolParser implements ISymbolParser {
     symbol: ts.Symbol,
     top?: boolean,
   ): PropType | null {
-    let kind: PropKind | undefined = undefined;
     const symbolDeclaration =
       symbol.valueDeclaration || symbol.declarations?.[0];
     if (symbolDeclaration) {
@@ -519,13 +518,6 @@ export class SymbolParser implements ISymbolParser {
           ts.isExportSpecifier(symbolDeclaration))
           ? typeDeclaration
           : symbolDeclaration;
-      if (symbolType) {
-        kind = typeNameToPropKind(this.checker.typeToString(symbolType));
-      }
-
-      if (kind !== undefined) {
-        prop.kind = kind;
-      }
 
       if ((declaration as ts.ParameterDeclaration).questionToken) {
         prop.optional = true;
@@ -561,6 +553,7 @@ export class SymbolParser implements ISymbolParser {
         );
         const initializer = resolved.intializer || getInitializer(declaration);
         const resolvedType = resolved.type;
+        typeKind(prop, resolvedType);
         if (resolved.name) {
           prop.displayName = resolved.name;
         }

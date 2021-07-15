@@ -40,6 +40,7 @@ export enum PropKind {
   Constructor = 21,
   Getter = 22,
   Setter = 23,
+  BigInt = 24,
 }
 
 export interface PropType {
@@ -92,7 +93,7 @@ export interface NumberProp extends PropType {
 }
 
 export const isNumberProp = (prop: PropType): prop is NumberProp => {
-  return prop.kind === PropKind.Number;
+  return prop.kind === PropKind.Number || prop.kind === PropKind.BigInt;
 };
 
 export interface BooleanProp extends PropType {

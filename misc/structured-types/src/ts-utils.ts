@@ -240,6 +240,31 @@ export const resolveType: (
   return { type: props.symbolType };
 };
 
+export const typeKind = (prop: PropType, typeNode?: ts.Type): PropType => {
+  if (typeNode) {
+    if (typeNode.flags & ts.TypeFlags.Unknown) {
+      prop.kind = PropKind.Unknown;
+    } else if (typeNode.flags & ts.TypeFlags.String) {
+      prop.kind = PropKind.String;
+    } else if (typeNode.flags & ts.TypeFlags.Number) {
+      prop.kind = PropKind.Number;
+    } else if (typeNode.flags & ts.TypeFlags.Boolean) {
+      prop.kind = PropKind.Boolean;
+    } else if (typeNode.flags & ts.TypeFlags.Enum) {
+      prop.kind = PropKind.Enum;
+    } else if (typeNode.flags & ts.TypeFlags.BigInt) {
+      prop.kind = PropKind.BigInt;
+    } else if (typeNode.flags & ts.TypeFlags.Void) {
+      prop.kind = PropKind.Void;
+    } else if (typeNode.flags & ts.TypeFlags.Undefined) {
+      prop.kind = PropKind.Undefined;
+    } else if (typeNode.flags & ts.TypeFlags.Null) {
+      prop.kind = PropKind.Null;
+    }
+  }
+  return prop;
+};
+
 export const getSymbolType = (
   checker: ts.TypeChecker,
   symbol: ts.Symbol,
