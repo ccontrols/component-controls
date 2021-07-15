@@ -38,6 +38,7 @@ import {
   ISymbolParser,
   getInitializer,
   typeKind,
+  declarationModifiers,
 } from './ts-utils';
 import {
   cleanJSDocText,
@@ -510,26 +511,8 @@ export class SymbolParser implements ISymbolParser {
 
       const declaration = symbolDeclaration;
 
-      if ((declaration as ts.ParameterDeclaration).questionToken) {
-        prop.optional = true;
-      }
-      if (declaration?.modifiers) {
-        for (const m of declaration.modifiers) {
-          if (m.kind === ts.SyntaxKind.PrivateKeyword) {
-            prop.visibility = 'private';
-          } else if (m.kind === ts.SyntaxKind.ProtectedKeyword) {
-            prop.visibility = 'protected';
-          } else if (m.kind === ts.SyntaxKind.PublicKeyword) {
-            prop.visibility = 'public';
-          } else if (m.kind === ts.SyntaxKind.StaticKeyword) {
-            prop.static = true;
-          } else if (m.kind === ts.SyntaxKind.ReadonlyKeyword) {
-            prop.readonly = true;
-          } else if (m.kind === ts.SyntaxKind.AbstractKeyword) {
-            prop.abstract = true;
-          }
-        }
-      }
+      declarationModifiers(prop, declaration);
+
       if (declaration) {
         prop.displayName = getDeclarationName(declaration);
       }

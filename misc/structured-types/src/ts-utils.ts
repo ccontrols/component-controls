@@ -309,6 +309,35 @@ export const getInitializer = (
 type NodeCallback = (m: ts.PropertyDeclaration) => boolean;
 type NodeFind = (callback: NodeCallback) => ts.PropertyDeclaration | undefined;
 
+export const declarationModifiers = (
+  prop: PropType,
+  declaration?: ts.Declaration,
+): PropType => {
+  if (declaration) {
+    if ((declaration as ts.ParameterDeclaration).questionToken) {
+      prop.optional = true;
+    }
+    if (declaration.modifiers) {
+      for (const m of declaration.modifiers) {
+        if (m.kind === ts.SyntaxKind.PrivateKeyword) {
+          prop.visibility = 'private';
+        } else if (m.kind === ts.SyntaxKind.ProtectedKeyword) {
+          prop.visibility = 'protected';
+        } else if (m.kind === ts.SyntaxKind.PublicKeyword) {
+          prop.visibility = 'public';
+        } else if (m.kind === ts.SyntaxKind.StaticKeyword) {
+          prop.static = true;
+        } else if (m.kind === ts.SyntaxKind.ReadonlyKeyword) {
+          prop.readonly = true;
+        } else if (m.kind === ts.SyntaxKind.AbstractKeyword) {
+          prop.abstract = true;
+        }
+      }
+    }
+  }
+  return prop;
+};
+
 const findFileNode = (node: ts.Node): ts.SourceFile | undefined => {
   if (ts.isSourceFile(node)) {
     return node;
