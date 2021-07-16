@@ -225,8 +225,12 @@ export const parseJSDocTags = (
   declaration?: ts.Node,
 ): PropType | undefined | null => {
   if (declaration) {
-    const tags = ts.getJSDocTags(declaration);
     const result: PropType = {};
+    const parentTags = ts.getJSDocTags(declaration.parent) || [];
+    const tags = ts.getJSDocTags(declaration).filter(tag => {
+      return parentTags.indexOf(tag) < 0;
+    });
+
     for (const tag of tags) {
       if (tag.tagName.text === 'ignore') {
         return null;

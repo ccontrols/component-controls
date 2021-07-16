@@ -495,11 +495,7 @@ export class SymbolParser implements ISymbolParser {
     return prop;
   }
 
-  private parseSymbolProp(
-    prop: PropType,
-    symbol: ts.Symbol,
-    top?: boolean,
-  ): PropType | null {
+  private parseSymbolProp(prop: PropType, symbol: ts.Symbol): PropType | null {
     const symbolDeclaration =
       symbol.valueDeclaration || symbol.declarations?.[0];
     if (true) {
@@ -565,7 +561,6 @@ export class SymbolParser implements ISymbolParser {
                   prop,
                   declaration,
                   initializer,
-                  symbol,
                 );
               }
               const parent = this.getParent(prop, d, prop.displayName);
@@ -573,7 +568,6 @@ export class SymbolParser implements ISymbolParser {
                 const childProp = this.parseSymbolProp(
                   { parent: prop.displayName },
                   childSymbol,
-                  top,
                 );
                 if (childProp) {
                   if (parent && parent.displayName) {
@@ -631,9 +625,7 @@ export class SymbolParser implements ISymbolParser {
               prop.displayName = symbol.getName();
             }
 
-            return top
-              ? this.mergeSymbolComments(prop, symbol)
-              : this.mergeNodeComments(prop, declaration);
+            return this.mergeNodeComments(prop, declaration);
           }
         }
       }
@@ -642,22 +634,39 @@ export class SymbolParser implements ISymbolParser {
         prop,
         declaration,
         getInitializer(declaration),
-        top ? symbol : undefined,
       );
     }
     return prop;
   }
 
   private mergeNodeComments(prop: PropType, node?: ts.Node): PropType | null {
-    if (node && 'jsDoc' in node) {
-      const { jsDoc } = node as {
+    if (node) {
+      const { jsDoc } = (node as unknown) as {
         jsDoc: JSDocInfoType[];
       };
-      const docs: string[] = jsDoc.reduce((acc: string[], { comment }) => {
-        return comment ? [...acc, comment] : acc;
-      }, []);
-      if (docs.length) {
-        prop.description = cleanJSDocText(docs.join(''));
+      if (jsDoc) {
+        const description = cleanJSDocText(
+          jsDoc
+            .map(({ comment }) => comment)
+            .filter(c => c)
+            .join(''),
+        );
+        if (description) {
+          prop.description = description;
+        }
+      } else if ('name' in node) {
+        const symbol = this.checker.getSymbolAtLocation(node['name']);
+        if (symbol) {
+          const description = cleanJSDocText(
+            symbol
+              .getDocumentationComment(this.checker)
+              .map(({ text }) => text)
+              .join(''),
+          );
+          if (description) {
+            prop.description = description;
+          }
+        }
       }
       const merged = mergeJSDoc(this, prop, node);
       if (merged === null) {
@@ -683,14 +692,9 @@ export class SymbolParser implements ISymbolParser {
     prop: PropType,
     declaration?: ts.Node,
     initializer?: ts.Node,
-    symbol?: ts.Symbol,
   ): PropType | null {
     this.parseTypeValue(prop, declaration, initializer);
-    if (symbol) {
-      return this.mergeSymbolComments(prop, symbol);
-    } else {
-      return this.mergeNodeComments(prop, declaration);
-    }
+    return this.mergeNodeComments(prop, declaration);
   }
 
   private resolveRefTypes = () => {
@@ -733,31 +737,6 @@ export class SymbolParser implements ISymbolParser {
     }
   };
 
-  private mergeSymbolComments(
-    prop: PropType,
-    symbol: ts.Symbol,
-  ): PropType | null {
-    const comments = cleanJSDocText(
-      symbol
-        .getDocumentationComment(this.checker)
-        .map(({ text }) => text)
-        .join(''),
-    );
-    if (comments) {
-      prop.description = comments;
-    }
-    const merged = mergeJSDoc(
-      this,
-      prop,
-      symbol.valueDeclaration || symbol.declarations?.[0],
-    );
-    if (merged === null) {
-      return null;
-    }
-    Object.assign(prop, merged);
-    return prop;
-  }
-
   get parents(): Record<string, PropType> {
     return this.propParents;
   }
@@ -766,7 +745,7 @@ export class SymbolParser implements ISymbolParser {
     this.propParents = {};
   }
   public parseSymbol(symbol: ts.Symbol): PropType | null {
-    const prop = this.parseSymbolProp({}, symbol, true);
+    const prop = this.parseSymbolProp({}, symbol);
     this.resolveRefTypes();
     return prop;
   }

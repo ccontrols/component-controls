@@ -2,27 +2,37 @@ import path from 'path';
 import { parseFiles } from '../../../src/index';
 
 describe('class', () => {
-  it('arrow function', () => {
-    const results = parseFiles([path.resolve(__dirname, 'arrow-function.ts')]);
+  it('getters/setters', () => {
+    const results = parseFiles([path.resolve(__dirname, 'getters-setters.ts')]);
+
     expect(results).toEqual({
-      ArrowFunctionClass: {
-        displayName: 'ArrowFunctionClass',
+      ClassGetters: {
+        displayName: 'ClassGetters',
         kind: 13,
         properties: [
           {
-            description: 'name value initialzied',
-            kind: 1,
-            displayName: 'name',
-            value: 'MyClass',
+            description: 'member description',
+            kind: 2,
+            displayName: '_length',
+            value: 0,
           },
           {
+            description: 'getter description',
+            kind: 22,
             returns: {
-              description: 'a string value',
-              kind: 1,
+              kind: 2,
             },
-            description: 'name accessor',
-            displayName: 'getName',
-            kind: 11,
+          },
+          {
+            parameters: [
+              {
+                kind: 2,
+                displayName: 'value',
+                description: 'the new value',
+              },
+            ],
+            description: 'setter description',
+            kind: 23,
           },
         ],
       },
@@ -76,6 +86,32 @@ describe('class', () => {
               },
             ],
             displayName: 'check',
+            kind: 11,
+          },
+        ],
+      },
+    });
+  });
+  it('arrow function', () => {
+    const results = parseFiles([path.resolve(__dirname, 'arrow-function.ts')]);
+    expect(results).toEqual({
+      ArrowFunctionClass: {
+        displayName: 'ArrowFunctionClass',
+        kind: 13,
+        properties: [
+          {
+            description: 'name value initialzied',
+            kind: 1,
+            displayName: 'name',
+            value: 'MyClass',
+          },
+          {
+            returns: {
+              description: 'a string value',
+              kind: 1,
+            },
+            description: 'name accessor',
+            displayName: 'getName',
             kind: 11,
           },
         ],
@@ -244,43 +280,6 @@ describe('class', () => {
             visibility: 'private',
             displayName: 'method3',
             kind: 11,
-          },
-        ],
-      },
-    });
-  });
-
-  it('getters/setters', () => {
-    const results = parseFiles([path.resolve(__dirname, 'getters-setters.ts')]);
-
-    expect(results).toEqual({
-      ClassGetters: {
-        displayName: 'ClassGetters',
-        kind: 13,
-        properties: [
-          {
-            description: 'member description',
-            kind: 2,
-            displayName: '_length',
-            value: 0,
-          },
-          {
-            description: 'getter description',
-            kind: 22,
-            returns: {
-              kind: 2,
-            },
-          },
-          {
-            parameters: [
-              {
-                kind: 2,
-                displayName: 'value',
-                description: 'the new value',
-              },
-            ],
-            description: 'setter description',
-            kind: 23,
           },
         ],
       },

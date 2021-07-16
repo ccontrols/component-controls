@@ -4,6 +4,29 @@ import { PropType } from '../types';
 import { ISymbolParser } from '../ts-utils';
 import { parseJSDocTags } from './parseJSDocTags';
 
+const mergeProps = (prop: PropType, parsed: PropType) =>
+  deepmerge<PropType>(prop, parsed, {
+    clone: false,
+    arrayMerge: (dest: any[], src: any[]) => {
+      const result =
+        dest.length > 0
+          ? dest.map((s, idx) => {
+              const existingIdx =
+                src.length === dest.length
+                  ? idx
+                  : src.findIndex(
+                      p => p.displayName === (s as PropType).displayName,
+                    );
+              if (existingIdx >= 0) {
+                const merged = mergeProps(s, src[existingIdx]);
+                Object.assign(s, merged);
+              }
+              return s;
+            })
+          : dest;
+      return result;
+    },
+  });
 export const mergeJSDoc = (
   parser: ISymbolParser,
   prop: PropType = {},
@@ -14,31 +37,7 @@ export const mergeJSDoc = (
     return null;
   }
   if (parsed) {
-    const merged = deepmerge<PropType>(prop, parsed, {
-      clone: false,
-      arrayMerge: (dest: any[], src: any[]) => {
-        const result =
-          dest.length > 0
-            ? dest.map((s, idx) => {
-                const existingIdx =
-                  src.length === dest.length
-                    ? idx
-                    : src.findIndex(
-                        p => p.displayName === (s as PropType).displayName,
-                      );
-                if (existingIdx >= 0) {
-                  Object.assign(s, {
-                    ...src[existingIdx],
-                    ...s,
-                  });
-                }
-                return s;
-              })
-            : dest;
-        return result;
-      },
-    });
-    return merged;
+    return mergeProps(prop, parsed);
   }
   return prop;
 };

@@ -2,25 +2,7 @@ import path from 'path';
 import { parseFiles } from '../../../src/index';
 
 describe('params', () => {
-  it('default numeric value', () => {
-    const results = parseFiles([path.resolve(__dirname, 'default-numeric.js')]);
-    expect(results).toEqual({
-      m: {
-        displayName: 'm',
-        kind: 11,
-        parameters: [
-          {
-            displayName: 'x',
-            description: 'd4 damage',
-            kind: 2,
-            optional: true,
-            value: 1,
-          },
-        ],
-      },
-    });
-  });
-  it('default value', () => {
+  it('default-string', () => {
     const results = parseFiles([path.resolve(__dirname, 'default-string.js')]);
     expect(results).toEqual({
       sayHello: {
@@ -38,7 +20,26 @@ describe('params', () => {
       },
     });
   });
-  it('optional-jsdoc syntax', () => {
+  it('default-numeric', () => {
+    const results = parseFiles([path.resolve(__dirname, 'default-numeric.js')]);
+    expect(results).toEqual({
+      m: {
+        displayName: 'm',
+        kind: 11,
+        parameters: [
+          {
+            displayName: 'x',
+            description: 'd4 damage',
+            kind: 2,
+            optional: true,
+            value: 1,
+          },
+        ],
+      },
+    });
+  });
+
+  it('optional', () => {
     const results = parseFiles([path.resolve(__dirname, 'optional.js')]);
     expect(results).toEqual({
       sayHello: {
@@ -56,7 +57,7 @@ describe('params', () => {
       },
     });
   });
-  it('name, type and description', () => {
+  it('name-type-description', () => {
     const results = parseFiles([
       path.resolve(__dirname, 'name-type-description.js'),
     ]);
@@ -75,7 +76,7 @@ describe('params', () => {
     });
   });
 
-  it('description with hyphen', () => {
+  it('with-hyphen-description', () => {
     const results = parseFiles([
       path.resolve(__dirname, 'with-hyphen-description.js'),
     ]);
