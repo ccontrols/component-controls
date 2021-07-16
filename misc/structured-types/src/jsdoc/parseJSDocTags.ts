@@ -39,11 +39,17 @@ export const cleanJSDocText = (s: string): string => {
   }
   return result;
 };
-const tagCommentToString = (
+export const tagCommentToString = (
   comment: ts.JSDocTag['comment'],
 ): string | undefined => {
   if (Array.isArray(comment)) {
-    return cleanJSDocText(comment.map(({ text }) => text).join(' '));
+    return cleanJSDocText(
+      comment
+        .map(c => {
+          return c.name ? c.getFullText() : c.text;
+        })
+        .join(''),
+    );
   }
   if (typeof comment === 'string') {
     return cleanJSDocText(comment);

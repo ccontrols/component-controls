@@ -374,12 +374,7 @@ export const typeNameToPropKind = (type: string): PropKind | undefined => {
 };
 
 export type JSDocInfoType = {
-  comment?: string;
-  tags?: {
-    comment: string;
-    name: { text: string; getText: () => string };
-    tagName: { text: string };
-  }[];
+  comment?: ts.JSDocTag['comment'];
 };
 
 export const propValue = (prop: PropType, value?: string): PropType => {

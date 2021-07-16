@@ -44,6 +44,7 @@ import {
   cleanJSDocText,
   getDeclarationName,
   parseJSDocTag,
+  tagCommentToString,
 } from './jsdoc/parseJSDocTags';
 
 const strToValue = (s: string): any => {
@@ -641,16 +642,16 @@ export class SymbolParser implements ISymbolParser {
 
   private mergeNodeComments(prop: PropType, node?: ts.Node): PropType | null {
     if (node) {
+      //jsdoc comments at the symbol level are mangled for overloaded methods
+      // example getters/setters and index properties
+      // so first try if jsdoc comments are already chached.
       const { jsDoc } = (node as unknown) as {
         jsDoc: JSDocInfoType[];
       };
       if (jsDoc) {
-        const description = cleanJSDocText(
-          jsDoc
-            .map(({ comment }) => comment)
-            .filter(c => c)
-            .join(''),
-        );
+        const description = jsDoc
+          .map(({ comment }) => tagCommentToString(comment))
+          .join('');
         if (description) {
           prop.description = description;
         }
