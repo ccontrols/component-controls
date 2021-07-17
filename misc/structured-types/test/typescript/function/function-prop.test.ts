@@ -2,138 +2,6 @@ import path from 'path';
 import { parseFiles } from '../../../src/index';
 
 describe('function', () => {
-  it('function properties', () => {
-    const results = parseFiles([path.resolve(__dirname, 'function-props.ts')]);
-
-    expect(results).toEqual({
-      fn: {
-        displayName: 'fn',
-        kind: 11,
-        properties: [
-          {
-            kind: 1,
-            description: 'custom property for a function',
-            displayName: 'customProp',
-            value: 'my custom prop',
-          },
-        ],
-        returns: {
-          kind: 12,
-        },
-      },
-    });
-  });
-
-  it('object parameter', () => {
-    const results = parseFiles([
-      path.resolve(__dirname, 'object-parameter.ts'),
-    ]);
-
-    expect(results).toEqual({
-      printCoord: {
-        parameters: [
-          {
-            displayName: 'pt',
-            description: 'object parameter',
-            kind: 15,
-            properties: [
-              {
-                description: 'x coordinate',
-                kind: 2,
-                displayName: 'x',
-              },
-              {
-                description: 'optional y coordinate',
-                kind: 2,
-                optional: true,
-                displayName: 'y',
-              },
-            ],
-          },
-        ],
-        description: 'print coordinates',
-        displayName: 'printCoord',
-        kind: 11,
-        returns: {
-          kind: 12,
-        },
-      },
-    });
-  });
-  it('generic function parameter', () => {
-    const results = parseFiles([
-      path.resolve(__dirname, 'generic-parameter.ts'),
-    ]);
-    expect(results).toEqual({
-      genericFunction: {
-        displayName: 'genericFunction',
-        kind: 11,
-        parameters: [
-          {
-            displayName: 'box',
-            kind: 14,
-            properties: [
-              {
-                parent: 'GenericInterface',
-                displayName: 'm',
-                kind: 15,
-                type: 'T',
-              },
-            ],
-            generics: [
-              {
-                displayName: 'T',
-              },
-            ],
-          },
-          {
-            displayName: 'newContents',
-            kind: 15,
-            type: 'Type',
-          },
-        ],
-        returns: {
-          kind: 14,
-          properties: [
-            {
-              displayName: 'm',
-              kind: 15,
-              type: 'T',
-            },
-          ],
-          generics: [
-            {
-              displayName: 'T',
-            },
-          ],
-          displayName: 'GenericInterface',
-        },
-        types: [
-          {
-            displayName: 'Type',
-          },
-        ],
-      },
-      __parents: {
-        GenericInterface: {
-          displayName: 'GenericInterface',
-          kind: 14,
-          properties: [
-            {
-              displayName: 'm',
-              kind: 15,
-              type: 'T',
-            },
-          ],
-          generics: [
-            {
-              displayName: 'T',
-            },
-          ],
-        },
-      },
-    });
-  });
   it('react fc', () => {
     const results = parseFiles([path.resolve(__dirname, 'react-fc.ts')]);
     expect(results).toEqual({
@@ -900,6 +768,138 @@ describe('function', () => {
             {
               displayName: 'P',
             },
+            {
+              displayName: 'T',
+            },
+          ],
+        },
+      },
+    });
+  });
+  it('function properties', () => {
+    const results = parseFiles([path.resolve(__dirname, 'function-props.ts')]);
+
+    expect(results).toEqual({
+      fn: {
+        displayName: 'fn',
+        kind: 11,
+        properties: [
+          {
+            kind: 1,
+            description: 'custom property for a function',
+            displayName: 'customProp',
+            value: 'my custom prop',
+          },
+        ],
+        returns: {
+          kind: 12,
+        },
+      },
+    });
+  });
+
+  it('object parameter', () => {
+    const results = parseFiles([
+      path.resolve(__dirname, 'object-parameter.ts'),
+    ]);
+
+    expect(results).toEqual({
+      printCoord: {
+        parameters: [
+          {
+            displayName: 'pt',
+            description: 'object parameter',
+            kind: 15,
+            properties: [
+              {
+                description: 'x coordinate',
+                kind: 2,
+                displayName: 'x',
+              },
+              {
+                description: 'optional y coordinate',
+                kind: 2,
+                optional: true,
+                displayName: 'y',
+              },
+            ],
+          },
+        ],
+        description: 'print coordinates',
+        displayName: 'printCoord',
+        kind: 11,
+        returns: {
+          kind: 12,
+        },
+      },
+    });
+  });
+  it('generic function parameter', () => {
+    const results = parseFiles([
+      path.resolve(__dirname, 'generic-parameter.ts'),
+    ]);
+    expect(results).toEqual({
+      genericFunction: {
+        displayName: 'genericFunction',
+        kind: 11,
+        parameters: [
+          {
+            displayName: 'box',
+            kind: 14,
+            properties: [
+              {
+                parent: 'GenericInterface',
+                displayName: 'm',
+                kind: 15,
+                type: 'T',
+              },
+            ],
+            generics: [
+              {
+                displayName: 'T',
+              },
+            ],
+          },
+          {
+            displayName: 'newContents',
+            kind: 15,
+            type: 'Type',
+          },
+        ],
+        returns: {
+          kind: 14,
+          properties: [
+            {
+              displayName: 'm',
+              kind: 15,
+              type: 'T',
+            },
+          ],
+          generics: [
+            {
+              displayName: 'T',
+            },
+          ],
+          displayName: 'GenericInterface',
+        },
+        types: [
+          {
+            displayName: 'Type',
+          },
+        ],
+      },
+      __parents: {
+        GenericInterface: {
+          displayName: 'GenericInterface',
+          kind: 14,
+          properties: [
+            {
+              displayName: 'm',
+              kind: 15,
+              type: 'T',
+            },
+          ],
+          generics: [
             {
               displayName: 'T',
             },
