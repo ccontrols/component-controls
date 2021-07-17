@@ -3,7 +3,7 @@ import { parseFiles } from '../../../src/index';
 import { typeResolver } from '../../../src/frameworks/react';
 const simpleResults = {
   MyComponent: {
-    kind: 15,
+    kind: 13,
     properties: [
       {
         kind: 1,
@@ -25,7 +25,7 @@ describe('class-component', () => {
     expect(result).toEqual({
       default: {
         displayName: 'CustomComponentName',
-        kind: 15,
+        kind: 13,
         properties: [
           {
             parent: 'OwnProps',
@@ -57,7 +57,7 @@ describe('class-component', () => {
     expect(result).toEqual({
       default: {
         displayName: 'MyComponent',
-        kind: 15,
+        kind: 13,
         properties: [
           {
             parent: 'OwnProps',
@@ -89,7 +89,7 @@ describe('class-component', () => {
     expect(result).toEqual({
       MyComponent: {
         displayName: 'CustomComponentName',
-        kind: 15,
+        kind: 13,
         description: 'MyComponent special component',
       },
     });
@@ -106,7 +106,7 @@ describe('class-component', () => {
     expect(result).toEqual({
       MyComponent: {
         displayName: 'MyComponent',
-        kind: 15,
+        kind: 13,
         properties: [
           {
             parent: 'OwnProps',
@@ -177,7 +177,7 @@ describe('class-component', () => {
     expect(result).toEqual({
       default: {
         displayName: 'MyComponent',
-        kind: 15,
+        kind: 13,
         properties: [
           {
             parent: 'OwnProps',
@@ -205,7 +205,7 @@ describe('class-component', () => {
     expect(result).toEqual({
       MyComponent: {
         displayName: 'MyComponent',
-        kind: 15,
+        kind: 13,
         properties: [
           {
             parent: 'OwnProps',
