@@ -1,90 +1,65 @@
 import * as ts from 'typescript';
-import { TypeResolver, getSymbolType } from '../ts-utils';
+import {
+  TypeResolver,
+  getSymbolType,
+  getFunctionLike,
+  getInitializer,
+  tsKindToPropKind,
+} from '../ts-utils';
 import { isObjectTypeDeclaration, getObjectStaticProp } from '../ts-utils';
+import { PropKind } from '../types';
 
-export interface ReactResolveOptions {
-  componentNames?: string[];
-}
-
-export const typeResolver: TypeResolver = (
-  { symbolType, declaration, checker },
-  reactOptions?: ReactResolveOptions,
-) => {
-  const options: Required<ReactResolveOptions> = {
-    componentNames: ['Component', 'PureComponent'],
-    ...reactOptions,
-  };
+export const typeResolver: TypeResolver = ({
+  symbolType,
+  declaration,
+  checker,
+}) => {
+  let propsType = symbolType;
+  let initializer: ts.Node | undefined = getInitializer(declaration);
+  let name = undefined;
+  let kind = undefined;
   if ((symbolType.flags & ts.TypeFlags.Object) === ts.TypeFlags.Object) {
-    if (declaration && isObjectTypeDeclaration(declaration)) {
-      const heritage = declaration.heritageClauses;
-      if (heritage?.length) {
-        const extendsFrom = heritage[0];
-        for (const t of extendsFrom.types) {
-          const reactSymbol = checker.getSymbolAtLocation(t.expression);
-          if (reactSymbol) {
-            const reactSymbolType = getSymbolType(checker, reactSymbol);
-            if (reactSymbolType) {
-              const reactSymbolTypeSymbol =
-                reactSymbolType.symbol || reactSymbolType.aliasSymbol;
+    if (declaration) {
+      if (isObjectTypeDeclaration(declaration)) {
+        const jsx = checker.getJsxIntrinsicTagNamesAt(declaration);
+        if (jsx) {
+          kind = PropKind.Class;
+          const signatures = symbolType.getConstructSignatures();
+          if (signatures.length > 0 && signatures[0].parameters.length) {
+            const props = signatures[0].parameters[0];
+            propsType = getSymbolType(checker, props) || symbolType;
 
-              const propsSymbol = reactSymbolTypeSymbol.members?.get(
-                'props' as ts.__String,
-              );
-              let isReact = true;
-              if (propsSymbol) {
-                const propsDeclaration =
-                  propsSymbol.valueDeclaration || propsSymbol.declarations?.[0];
-                if (
-                  propsDeclaration &&
-                  ts.isClassDeclaration(propsDeclaration.parent) &&
-                  propsDeclaration.parent.name?.text &&
-                  options.componentNames.includes(
-                    propsDeclaration.parent.name.text,
-                  )
-                ) {
-                  isReact = true;
-                }
-              } else if (
-                options.componentNames.includes(reactSymbolTypeSymbol.name)
-              ) {
-                isReact = true;
+            if (propsType.isUnionOrIntersection()) {
+              propsType = propsType.types[0];
+            }
+          }
+        }
+      } else {
+        const reactFunction = getFunctionLike(declaration);
+        if (reactFunction) {
+          const jsx = checker.getJsxIntrinsicTagNamesAt(reactFunction);
+          if (jsx) {
+            kind = PropKind.Function;
+            if (reactFunction.parameters.length) {
+              const props = reactFunction.parameters[0];
+              if (ts.isObjectBindingPattern(props.name)) {
+                initializer = props.name;
               }
-              if (isReact) {
-                const signatures = symbolType.getConstructSignatures();
-                if (signatures.length > 0 && signatures[0].parameters.length) {
-                  const defaultProps = getObjectStaticProp(
-                    declaration,
-                    'defaultProps',
-                  );
-                  const displayName = getObjectStaticProp(
-                    declaration,
-                    'displayName',
-                  );
-                  const props = signatures[0].parameters[0];
-                  const propsType = getSymbolType(checker, props) || symbolType;
-                  const name =
-                    displayName && ts.isStringLiteral(displayName)
-                      ? displayName.text
-                      : undefined;
-                  if (propsType.isUnionOrIntersection()) {
-                    return {
-                      type: propsType.types[0],
-                      intializer: defaultProps,
-                      name,
-                    };
-                  }
-                  return {
-                    type: propsType,
-                    intializer: defaultProps,
-                    name,
-                  };
-                }
-              }
+              propsType = checker.getTypeAtLocation(props);
             }
           }
         }
       }
+      const defaultProps = getObjectStaticProp(declaration, 'defaultProps');
+      if (defaultProps) {
+        initializer = defaultProps;
+      }
+      const displayName = getObjectStaticProp(declaration, 'displayName');
+      name =
+        displayName && ts.isStringLiteral(displayName)
+          ? displayName.text
+          : undefined;
     }
   }
-  return { type: symbolType };
+  return { type: propsType, name, initializer, kind };
 };

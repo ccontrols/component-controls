@@ -220,7 +220,12 @@ export type TypeResolver = (props: {
   symbolType: ts.Type;
   declaration?: ts.Declaration;
   checker: ts.TypeChecker;
-}) => { type: ts.Type | undefined; intializer?: ts.Node; name?: string };
+}) => {
+  type: ts.Type | undefined;
+  initializer?: ts.Node;
+  name?: string;
+  kind?: PropKind;
+};
 
 export const resolveType: (
   props: Parameters<TypeResolver>[0],
@@ -237,7 +242,10 @@ export const resolveType: (
       { type: props.symbolType },
     );
   }
-  return { type: props.symbolType };
+  return {
+    type: props.symbolType,
+    initializer: getInitializer(props.declaration),
+  };
 };
 
 export const updatePropKind = (
@@ -351,34 +359,48 @@ const findFileNode = (node: ts.Node): ts.SourceFile | undefined => {
   return undefined;
 };
 
-type ObjectWalker = ObjectTypeDeclaration & { nextContainer?: ObjectWalker };
+export const getFunctionLike = (node: ts.Node): FunctionLike | undefined => {
+  if (
+    ts.isVariableDeclaration(node) &&
+    node.initializer &&
+    isFunctionLike(node.initializer)
+  ) {
+    return node.initializer;
+  } else if (isFunctionLike(node)) {
+    return node;
+  }
+  return undefined;
+};
 export const getObjectStaticProp = (
-  obj: ObjectWalker,
+  obj: ts.Node,
   propName: string,
 ): ts.Expression | undefined => {
-  const staticProp = ((obj.members?.find as unknown) as NodeFind)(
-    m => m.name.getText() === propName,
-  );
+  const staticProp =
+    isObjectTypeDeclaration(obj) &&
+    ((obj.members?.find as unknown) as NodeFind)(
+      m => m.name.getText() === propName,
+    );
   if (staticProp) {
     return staticProp.initializer;
   }
   //find filoe global static props assigments
   //ie MyComponent.displayName = 'XXX';
-
-  const objName = obj.name?.text;
-  if (objName) {
-    const fileContainer = findFileNode(obj);
-    if (fileContainer) {
-      for (const statement of fileContainer.statements) {
-        if (ts.isExpressionStatement(statement)) {
-          const expression = statement.expression;
-          if (
-            ts.isBinaryExpression(expression) &&
-            ts.isPropertyAccessExpression(expression.left) &&
-            expression.left.expression.getText() === objName
-          ) {
-            if (expression.left.name.text === propName) {
-              return expression.right;
+  if ('name' in obj) {
+    const objName = ((obj as any)['name'] as ts.PropertyName)?.getText();
+    if (objName) {
+      const fileContainer = findFileNode(obj);
+      if (fileContainer) {
+        for (const statement of fileContainer.statements) {
+          if (ts.isExpressionStatement(statement)) {
+            const expression = statement.expression;
+            if (
+              ts.isBinaryExpression(expression) &&
+              ts.isPropertyAccessExpression(expression.left) &&
+              expression.left.expression.getText() === objName
+            ) {
+              if (expression.left.name.text === propName) {
+                return expression.right;
+              }
             }
           }
         }

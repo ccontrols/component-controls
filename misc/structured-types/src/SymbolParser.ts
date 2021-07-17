@@ -21,6 +21,7 @@ import {
   isFunctionBaseType,
   isClassLikeProp,
   propValue,
+  ClassProp,
 } from './types';
 import {
   getSymbolType,
@@ -223,6 +224,15 @@ export class SymbolParser implements ISymbolParser {
     if (node) {
       if (isFunctionLike(node)) {
         return this.parseFunction(prop, node);
+      } else if (ts.isObjectBindingPattern(node) && 'properties' in prop) {
+        node.elements.forEach(e => {
+          const p = (prop as ClassProp).properties?.find(
+            p => p.displayName === e.name.getText(),
+          );
+          if (p) {
+            this.parseValue(p, e.initializer);
+          }
+        });
       } else if (
         ts.isArrayBindingPattern(node) ||
         ts.isArrayLiteralExpression(node)
@@ -499,145 +509,143 @@ export class SymbolParser implements ISymbolParser {
   private parseSymbolProp(prop: PropType, symbol: ts.Symbol): PropType | null {
     const symbolDeclaration =
       symbol.valueDeclaration || symbol.declarations?.[0];
-    if (true) {
-      const symbolType = getSymbolType(this.checker, symbol);
+    const symbolType = getSymbolType(this.checker, symbol);
 
-      const typeSymbol = symbolType
-        ? symbolType.aliasSymbol || symbolType.symbol
-        : undefined;
+    const typeSymbol = symbolType
+      ? symbolType.aliasSymbol || symbolType.symbol
+      : undefined;
 
-      const declaration = symbolDeclaration;
+    const declaration = symbolDeclaration;
 
-      updateModifiers(prop, declaration);
+    updateModifiers(prop, declaration);
 
-      if (declaration) {
-        prop.displayName = getDeclarationName(declaration);
+    if (declaration) {
+      prop.displayName = getDeclarationName(declaration);
+    }
+    if (symbolType) {
+      const resolved = resolveType(
+        {
+          symbolType,
+          declaration,
+          checker: this.checker,
+        },
+        this.options.resolvers,
+      );
+      const initializer = resolved.initializer;
+      const resolvedType = resolved.type;
+      updatePropKind(prop, resolvedType);
+      if (resolved.name) {
+        prop.displayName = resolved.name;
       }
-      if (symbolType) {
-        const resolved = resolveType(
-          {
-            symbolType,
-            declaration,
-            checker: this.checker,
-          },
-          this.options.resolvers,
-        );
-        const initializer = resolved.intializer || getInitializer(declaration);
-        const resolvedType = resolved.type;
-        updatePropKind(prop, resolvedType);
-        if (resolved.name) {
-          prop.displayName = resolved.name;
-        }
+      if (
+        resolvedType &&
+        resolvedType.flags & (ts.TypeFlags.Object | ts.TypeFlags.Intersection)
+      ) {
+        const resolvedSymbol = resolvedType.symbol || resolvedType.aliasSymbol;
+        const resolvedDeclaration = resolvedSymbol
+          ? resolvedSymbol.valueDeclaration || resolvedSymbol.declarations?.[0]
+          : undefined;
         if (
-          resolvedType &&
-          resolvedType.flags & (ts.TypeFlags.Object | ts.TypeFlags.Intersection)
+          !resolvedDeclaration ||
+          !(
+            isHasType(resolvedDeclaration) &&
+            resolvedDeclaration.type &&
+            isArrayLike(resolvedDeclaration.type)
+          )
         ) {
-          const resolvedSymbol =
-            resolvedType.symbol || resolvedType.aliasSymbol;
-          const resolvedDeclaration = resolvedSymbol
-            ? resolvedSymbol.valueDeclaration ||
-              resolvedSymbol.declarations?.[0]
-            : undefined;
-          if (
-            !resolvedDeclaration ||
-            !(
-              isHasType(resolvedDeclaration) &&
-              resolvedDeclaration.type &&
-              isArrayLike(resolvedDeclaration.type)
-            )
-          ) {
-            const kind =
-              tsKindToPropKind[
-                resolvedDeclaration?.kind || ts.SyntaxKind.TypeAliasDeclaration
-              ] || PropKind.Type;
-            prop.kind = kind;
-            const childProps = resolvedType.getApparentProperties();
-            const properties: PropType[] = [];
-            for (const childSymbol of childProps) {
-              const d =
-                childSymbol.valueDeclaration || childSymbol.declarations?.[0];
-              if (!d) {
-                //tuple members do not carry type information
-                return this.parseTypeValueComments(
-                  prop,
-                  declaration,
-                  initializer,
-                );
-              }
-              const parent = this.getParent(prop, d, prop.displayName);
-              if (parent !== undefined) {
-                const childProp = this.parseSymbolProp(
-                  { parent: prop.displayName },
-                  childSymbol,
-                );
-                if (childProp) {
-                  if (parent && parent.displayName) {
-                    const parentName = parent.displayName;
-                    childProp.parent = parentName;
-                  } else {
-                    delete childProp.parent;
-                  }
-                  properties.push(childProp);
-                }
-              }
-            }
-            if (
-              resolvedDeclaration &&
-              (isObjectTypeDeclaration(resolvedDeclaration) ||
-                ts.isTypeLiteralNode(resolvedDeclaration)) &&
-              resolvedDeclaration.members
-            ) {
-              resolvedDeclaration.members.forEach((n: ts.Node) => {
-                if (ts.isIndexSignatureDeclaration(n)) {
-                  const index = this.parseTypeValueComments({}, n);
-                  if (index) {
-                    properties.unshift(index);
-                  }
-                }
-              });
-            }
-
-            const callSignatures = resolvedType.getCallSignatures();
-            if (callSignatures?.length) {
-              const fnDeclaration = callSignatures[0].declaration;
-              if (fnDeclaration && isFunctionLike(fnDeclaration)) {
-                this.parseFunction(prop, fnDeclaration);
-              }
-            }
-
-            if (properties.length) {
-              (prop as TypeProp).properties = properties;
-            }
-            const aliasDeclaration = typeSymbol
-              ? typeSymbol.valueDeclaration || typeSymbol.declarations?.[0]
-              : undefined;
-            if (
-              aliasDeclaration &&
-              isTypeParameterType(aliasDeclaration) &&
-              aliasDeclaration.typeParameters?.length
-            ) {
-              (prop as TypeProp).generics = this.parseProperties(
-                aliasDeclaration.typeParameters,
+          const kind =
+            resolved.kind !== undefined
+              ? resolved.kind
+              : tsKindToPropKind[
+                  resolvedDeclaration?.kind ||
+                    ts.SyntaxKind.TypeAliasDeclaration
+                ] || PropKind.Type;
+          prop.kind = kind;
+          const childProps = resolvedType.getApparentProperties();
+          const properties: PropType[] = [];
+          for (const childSymbol of childProps) {
+            const d =
+              childSymbol.valueDeclaration || childSymbol.declarations?.[0];
+            if (!d) {
+              //tuple members do not carry type information
+              return this.parseTypeValueComments(
+                prop,
+                declaration,
+                initializer,
               );
             }
-            //any initializer values
-            this.parseValue(prop, initializer);
-            if (!prop.displayName) {
-              prop.displayName = symbol.getName();
+            const parent = this.getParent(prop, d, prop.displayName);
+            if (parent !== undefined) {
+              const childProp = this.parseSymbolProp(
+                { parent: prop.displayName },
+                childSymbol,
+              );
+              if (childProp) {
+                if (parent && parent.displayName) {
+                  const parentName = parent.displayName;
+                  childProp.parent = parentName;
+                } else {
+                  delete childProp.parent;
+                }
+                properties.push(childProp);
+              }
             }
-
-            return this.mergeNodeComments(prop, declaration);
           }
+          if (
+            resolvedDeclaration &&
+            (isObjectTypeDeclaration(resolvedDeclaration) ||
+              ts.isTypeLiteralNode(resolvedDeclaration)) &&
+            resolvedDeclaration.members
+          ) {
+            resolvedDeclaration.members.forEach((n: ts.Node) => {
+              if (ts.isIndexSignatureDeclaration(n)) {
+                const index = this.parseTypeValueComments({}, n);
+                if (index) {
+                  properties.unshift(index);
+                }
+              }
+            });
+          }
+
+          const callSignatures = resolvedType.getCallSignatures();
+          if (callSignatures?.length) {
+            const fnDeclaration = callSignatures[0].declaration;
+            if (fnDeclaration && isFunctionLike(fnDeclaration)) {
+              this.parseFunction(prop, fnDeclaration);
+            }
+          }
+
+          if (properties.length) {
+            (prop as TypeProp).properties = properties;
+          }
+          const aliasDeclaration = typeSymbol
+            ? typeSymbol.valueDeclaration || typeSymbol.declarations?.[0]
+            : undefined;
+          if (
+            aliasDeclaration &&
+            isTypeParameterType(aliasDeclaration) &&
+            aliasDeclaration.typeParameters?.length
+          ) {
+            (prop as TypeProp).generics = this.parseProperties(
+              aliasDeclaration.typeParameters,
+            );
+          }
+          //any initializer values
+          this.parseValue(prop, initializer);
+          if (!prop.displayName) {
+            prop.displayName = symbol.getName();
+          }
+
+          return this.mergeNodeComments(prop, declaration);
         }
       }
-
-      return this.parseTypeValueComments(
-        prop,
-        declaration,
-        getInitializer(declaration),
-      );
     }
-    return prop;
+
+    return this.parseTypeValueComments(
+      prop,
+      declaration,
+      getInitializer(declaration),
+    );
   }
 
   private mergeNodeComments(prop: PropType, node?: ts.Node): PropType | null {
