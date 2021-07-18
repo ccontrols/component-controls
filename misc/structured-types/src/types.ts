@@ -41,6 +41,7 @@ export enum PropKind {
   Getter = 22,
   Setter = 23,
   BigInt = 24,
+  Component = 25,
 }
 
 export interface PropType {
@@ -56,6 +57,11 @@ export interface PropType {
   visibility?: 'private' | 'protected' | 'public';
   static?: boolean;
   type?: PropType | string;
+  /**
+   * framework name as set by plugins
+   * ie 'react'...
+   */
+  framework?: string;
   /**
    * jsdoc comments parsing
    */
@@ -222,7 +228,9 @@ export interface ClassProp extends PropType {
   generics?: PropType[];
   properties?: PropType[];
 }
-
+export interface ComponentProp extends ClassProp {
+  kind: PropKind.Component;
+}
 export const isClassProp = (prop: PropType): prop is ClassProp => {
   return prop.kind === PropKind.Class;
 };

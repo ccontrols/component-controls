@@ -171,11 +171,6 @@ export type CompileOptions = {
  */
 export interface ParseOptions {
   /**
-   * type resolving custom function
-   * ie from a react component will return the props type
-   */
-  resolvers?: TypeResolver[];
-  /**
    * internal types - libs
    * by default includes classes such as `String`, `Function`...
    */
@@ -194,7 +189,20 @@ export interface ParseOptions {
    * whether to collect errors/diagnostics
    */
   collectDiagnostics?: boolean;
+
+  /**
+   * installed plugins can modify default options and install type resolvers
+   */
+  plugins?: ParsePlugin[];
 }
+
+export type ParsePlugin = Omit<DocsOptions, 'resolvers'> & {
+  /**
+   * type resolving custom function
+   * ie from a react component will return the props type
+   */
+  typesResolve?: TypeResolver;
+};
 
 export const defaultParseOptions: ParseOptions = {
   saveParentProps: true,
@@ -225,19 +233,27 @@ export type TypeResolver = (props: {
   initializer?: ts.Node;
   name?: string;
   kind?: PropKind;
+  framework?: string;
+  skipGenerics?: boolean;
+  skipParameters?: boolean;
 };
 
 export const resolveType: (
   props: Parameters<TypeResolver>[0],
-  resolvers?: TypeResolver[],
-) => ReturnType<TypeResolver> = (props, resolvers) => {
-  if (resolvers) {
-    return resolvers.reduce(
-      (acc: ReturnType<TypeResolver>, resolver) => {
-        return (
-          resolver({ ...props, symbolType: acc.type || props.symbolType }) ||
-          acc
-        );
+  options?: DocsOptions,
+) => ReturnType<TypeResolver> = (props, options) => {
+  if (options?.plugins) {
+    return options.plugins.reduce(
+      (acc: ReturnType<TypeResolver>, o) => {
+        if (o.typesResolve) {
+          return (
+            o.typesResolve({
+              ...props,
+              symbolType: acc.type || props.symbolType,
+            }) || acc
+          );
+        }
+        return acc;
       },
       { type: props.symbolType },
     );

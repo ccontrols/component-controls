@@ -146,6 +146,19 @@ describe('function', () => {
                       },
                       {
                         kind: 14,
+                        properties: [
+                          {
+                            kind: 20,
+                            index: {
+                              displayName: 'n',
+                              kind: 2,
+                            },
+                            type: {
+                              kind: 15,
+                              displayName: 'T',
+                            },
+                          },
+                        ],
                         displayName: 'ReactNodeArray',
                       },
                     ],
@@ -250,6 +263,18 @@ describe('function', () => {
                               },
                               {
                                 kind: 14,
+                                properties: [
+                                  {
+                                    kind: 20,
+                                    index: {
+                                      displayName: 'n',
+                                      kind: 2,
+                                    },
+                                    type: {
+                                      kind: 15,
+                                    },
+                                  },
+                                ],
                                 displayName: 'ReactNodeArray',
                               },
                             ],
@@ -509,6 +534,19 @@ describe('function', () => {
                     },
                     {
                       kind: 14,
+                      properties: [
+                        {
+                          kind: 20,
+                          index: {
+                            displayName: 'n',
+                            kind: 2,
+                          },
+                          type: {
+                            kind: 15,
+                            displayName: 'T',
+                          },
+                        },
+                      ],
                       displayName: 'ReactNodeArray',
                     },
                   ],
@@ -613,6 +651,18 @@ describe('function', () => {
                             },
                             {
                               kind: 14,
+                              properties: [
+                                {
+                                  kind: 20,
+                                  index: {
+                                    displayName: 'n',
+                                    kind: 2,
+                                  },
+                                  type: {
+                                    kind: 15,
+                                  },
+                                },
+                              ],
                               displayName: 'ReactNodeArray',
                             },
                           ],

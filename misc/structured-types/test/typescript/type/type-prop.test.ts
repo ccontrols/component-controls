@@ -2,7 +2,7 @@ import path from 'path';
 import { parseFiles } from '../../../src/index';
 
 describe('type', () => {
-  it('index prop', () => {
+  it('index-prop', () => {
     const results = parseFiles([path.resolve(__dirname, 'index-prop.ts')]);
     expect(results).toEqual({
       IndexT: {
@@ -41,7 +41,29 @@ describe('type', () => {
       },
     });
   });
-  it('generic array type', () => {
+  it('generic-type', () => {
+    const results = parseFiles([path.resolve(__dirname, 'generic-type.ts')]);
+    expect(results).toEqual({
+      GenericType: {
+        kind: 15,
+        generics: [
+          {
+            displayName: 'Type',
+          },
+        ],
+        properties: [
+          {
+            type: 'Type',
+            kind: 15,
+            displayName: 'contents',
+          },
+        ],
+        displayName: 'GenericType',
+      },
+    });
+  });
+
+  it('generic-array', () => {
     const results = parseFiles([path.resolve(__dirname, 'generic-array.ts')]);
     expect(results).toEqual({
       GenericArrayType: {
@@ -61,7 +83,7 @@ describe('type', () => {
       },
     });
   });
-  it('typed and initialized', () => {
+  it('initialized', () => {
     const results = parseFiles([path.resolve(__dirname, 'initialized.ts')]);
     expect(results).toEqual({
       obj: {
@@ -86,12 +108,12 @@ describe('type', () => {
     });
   });
 
-  it('generic consumer type', () => {
+  it('generics', () => {
     const results = parseFiles([path.resolve(__dirname, 'generics.ts')]);
     expect(results).toEqual({
       GenericConsumer: {
         description: 'reference type description',
-        kind: 14,
+        kind: 15,
         properties: [
           {
             description: 'interface prop',
@@ -126,7 +148,7 @@ describe('type', () => {
     });
   });
 
-  it('intersection type', () => {
+  it('intersection', () => {
     const results = parseFiles([path.resolve(__dirname, 'intersection.ts')]);
     expect(results).toEqual({
       Intersect: {
@@ -173,7 +195,7 @@ describe('type', () => {
     });
   });
 
-  it('extend', () => {
+  it('extend-type', () => {
     const results = parseFiles([path.resolve(__dirname, 'extend-type.ts')]);
     expect(results).toEqual({
       ExtendT: {
@@ -210,7 +232,7 @@ describe('type', () => {
       },
     });
   });
-  it('nested generic type', () => {
+  it('nested-generic', () => {
     const results = parseFiles([path.resolve(__dirname, 'nested-generic.ts')]);
     expect(results).toEqual({
       NestedGenericType: {
@@ -255,7 +277,7 @@ describe('type', () => {
     });
   });
 
-  it('union generic type', () => {
+  it('union-generic', () => {
     const results = parseFiles([path.resolve(__dirname, 'union-generic.ts')]);
     expect(results).toEqual({
       UnionGenericType: {
@@ -274,27 +296,6 @@ describe('type', () => {
     });
   });
 
-  it('generic type', () => {
-    const results = parseFiles([path.resolve(__dirname, 'generic-type.ts')]);
-    expect(results).toEqual({
-      GenericType: {
-        kind: 15,
-        generics: [
-          {
-            displayName: 'Type',
-          },
-        ],
-        properties: [
-          {
-            type: 'Type',
-            kind: 15,
-            displayName: 'contents',
-          },
-        ],
-        displayName: 'GenericType',
-      },
-    });
-  });
   it('basic type', () => {
     const results = parseFiles([path.resolve(__dirname, 'simple.ts')]);
     expect(results).toEqual({

@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { typeResolver } from '@component-controls/structured-types/react';
+import reactPlugin from '@component-controls/structured-types/react';
+
 import { parseFiles, DocsOptions } from '@component-controls/structured-types';
 import { createTempFile } from '../../src/api/create-temp-file';
 
@@ -13,7 +14,7 @@ export default async (
     tsoptions?: string;
   };
   const options: DocsOptions = {
-    resolvers: [typeResolver],
+    plugins: [reactPlugin],
     ...(config ? JSON.parse(config) : undefined),
     tsOptions: tsoptions ? JSON.parse(tsoptions) : undefined,
   };

@@ -2,7 +2,29 @@ import path from 'path';
 import { parseFiles } from '../../../src/index';
 
 describe('interface', () => {
-  it('jsdoc default value', () => {
+  it('index-prop', () => {
+    const results = parseFiles([path.resolve(__dirname, 'index-prop.ts')]);
+
+    expect(results).toEqual({
+      IndexInterface: {
+        displayName: 'IndexInterface',
+        kind: 14,
+        properties: [
+          {
+            kind: 20,
+            index: {
+              kind: 2,
+              displayName: 'index',
+            },
+            type: {
+              kind: 1,
+            },
+          },
+        ],
+      },
+    });
+  });
+  it('jsdoc-default', () => {
     const results = parseFiles([path.resolve(__dirname, 'jsdoc-default.ts')]);
     expect(results).toEqual({
       Interface: {
@@ -33,7 +55,7 @@ describe('interface', () => {
       },
     });
   });
-  it('interface array', () => {
+  it('array-implementation', () => {
     const results = parseFiles([
       path.resolve(__dirname, 'array-implementation.ts'),
     ]);
@@ -95,29 +117,8 @@ describe('interface', () => {
       },
     });
   });
-  it('index interface', () => {
-    const results = parseFiles([path.resolve(__dirname, 'index-prop.ts')]);
 
-    expect(results).toEqual({
-      IndexInterface: {
-        displayName: 'IndexInterface',
-        kind: 14,
-        properties: [
-          {
-            kind: 20,
-            index: {
-              kind: 2,
-              displayName: 'index',
-            },
-            type: {
-              kind: 1,
-            },
-          },
-        ],
-      },
-    });
-  });
-  it('enum prop', () => {
+  it('enum-prop', () => {
     const results = parseFiles([path.resolve(__dirname, 'enum-prop.ts')]);
     expect(results).toEqual({
       InterfaceWithEnumConstant: {
@@ -154,7 +155,7 @@ describe('interface', () => {
       },
     });
   });
-  it('extends interface', () => {
+  it('extends', () => {
     const results = parseFiles([path.resolve(__dirname, 'extends.ts')]);
     expect(results).toEqual({
       Bear: {
@@ -229,7 +230,7 @@ describe('interface', () => {
     });
   });
 
-  it('combination properties', () => {
+  it('combined-props', () => {
     const results = parseFiles([path.resolve(__dirname, 'combined-props.ts')]);
     expect(results).toEqual({
       StringNumberPair: {
@@ -287,7 +288,7 @@ describe('interface', () => {
       },
     });
   });
-  it('generic type', () => {
+  it('generics', () => {
     const results = parseFiles([path.resolve(__dirname, 'generics.ts')]);
     expect(results).toEqual({
       GenericInterface: {
@@ -309,7 +310,7 @@ describe('interface', () => {
     });
   });
 
-  it('basic interface', () => {
+  it('simple', () => {
     const results = parseFiles([path.resolve(__dirname, 'simple.ts')]);
     expect(results).toEqual({
       I: {

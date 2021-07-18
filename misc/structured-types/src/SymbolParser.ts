@@ -1,4 +1,5 @@
 import * as ts from 'typescript';
+import deepmerge from 'deepmerge';
 import { mergeJSDoc } from './jsdoc/mergeJSDoc';
 import {
   PropType,
@@ -69,10 +70,13 @@ export class SymbolParser implements ISymbolParser {
   private propParents: Record<string, PropType> = {};
   constructor(checker: ts.TypeChecker, options?: ParseOptions) {
     this.checker = checker;
-    this.options = {
-      ...defaultParseOptions,
-      ...options,
-    } as Required<ParseOptions>;
+    this.options = (options?.plugins || []).reduce(
+      (acc, o) => deepmerge(acc, o),
+      {
+        ...defaultParseOptions,
+        ...options,
+      },
+    ) as Required<ParseOptions>;
   }
   private addRefSymbol(prop: PropType, symbol: ts.Symbol): PropType {
     const refSymbol = this.refSymbols.find(r => r.symbol === symbol);
@@ -106,7 +110,7 @@ export class SymbolParser implements ISymbolParser {
     let parent = node.parent;
     if (ts.isPropertyAccessExpression(node)) {
       const name = node.expression.getText();
-      if (!this.options.internalTypes.includes(name)) {
+      if (!this.skipProperty(name)) {
         if (name === parentName || name === parentProp.parent) {
           return false;
         }
@@ -120,7 +124,7 @@ export class SymbolParser implements ISymbolParser {
     while (parent) {
       if (isTypeParameterType(parent) || ts.isEnumDeclaration(parent)) {
         const name = parent.name ? parent.name.getText() : undefined;
-        if (!name || !this.options.internalTypes.includes(name)) {
+        if (!name || !this.skipProperty(name)) {
           if (name === parentName || name === parentProp.parent) {
             return false;
           }
@@ -324,12 +328,15 @@ export class SymbolParser implements ISymbolParser {
       } else if (ts.isIndexSignatureDeclaration(node)) {
         prop.kind = PropKind.Index;
         if (isIndexProp(prop) && node.parameters.length) {
-          const symbol = this.checker.getSymbolAtLocation(
-            node.parameters[0].name,
+          const index = node.parameters[0];
+          const indexProp = this.parseTypeValueComments(
+            {
+              displayName: index.name.getText(),
+            },
+            index,
           );
-          if (symbol) {
-            const parsed = this.addRefSymbol({}, symbol);
-            prop.index = parsed;
+          if (indexProp) {
+            prop.index = indexProp;
           }
         }
         const type = this.parseTypeValueComments({}, node.type);
@@ -400,7 +407,7 @@ export class SymbolParser implements ISymbolParser {
         if (
           symbol &&
           symbol.escapedName &&
-          !this.options.internalTypes.includes(symbol.escapedName.toString())
+          !this.skipProperty(symbol.escapedName.toString())
         ) {
           this.addRefSymbol(prop, symbol);
         } else {
@@ -506,15 +513,42 @@ export class SymbolParser implements ISymbolParser {
     return prop;
   }
 
+  private getTypeIndexes(type: ts.Type): PropType[] {
+    interface InterfaceOrTypeWithINdex extends ts.InterfaceType {
+      stringIndexInfo?: ts.IndexInfo;
+      numberIndexInfo?: ts.IndexInfo;
+    }
+    const result = [];
+    if (type) {
+      if (type.flags & ts.TypeFlags.Object || type.isClassOrInterface()) {
+        const numberIndex = (type as InterfaceOrTypeWithINdex).numberIndexInfo;
+        if (numberIndex?.declaration) {
+          const index = this.parseTypeValueComments(
+            {},
+            numberIndex.declaration,
+          );
+          if (index) {
+            result.push(index);
+          }
+        }
+        const stringIndex = (type as InterfaceOrTypeWithINdex).stringIndexInfo;
+        if (stringIndex?.declaration) {
+          const index = this.parseTypeValueComments(
+            {},
+            stringIndex.declaration,
+          );
+          if (index) {
+            result.push(index);
+          }
+        }
+      }
+    }
+    return result;
+  }
   private parseSymbolProp(prop: PropType, symbol: ts.Symbol): PropType | null {
     const symbolDeclaration =
       symbol.valueDeclaration || symbol.declarations?.[0];
     const symbolType = getSymbolType(this.checker, symbol);
-
-    const typeSymbol = symbolType
-      ? symbolType.aliasSymbol || symbolType.symbol
-      : undefined;
-
     const declaration = symbolDeclaration;
 
     updateModifiers(prop, declaration);
@@ -529,10 +563,13 @@ export class SymbolParser implements ISymbolParser {
           declaration,
           checker: this.checker,
         },
-        this.options.resolvers,
+        this.options,
       );
       const initializer = resolved.initializer;
       const resolvedType = resolved.type;
+      if (resolved.framework) {
+        prop.framework = resolved.framework;
+      }
       updatePropKind(prop, resolvedType);
       if (resolved.name) {
         prop.displayName = resolved.name;
@@ -541,7 +578,7 @@ export class SymbolParser implements ISymbolParser {
         resolvedType &&
         resolvedType.flags & (ts.TypeFlags.Object | ts.TypeFlags.Intersection)
       ) {
-        const resolvedSymbol = resolvedType.symbol || resolvedType.aliasSymbol;
+        const resolvedSymbol = resolvedType.aliasSymbol || resolvedType.symbol;
         const resolvedDeclaration = resolvedSymbol
           ? resolvedSymbol.valueDeclaration || resolvedSymbol.declarations?.[0]
           : undefined;
@@ -591,43 +628,30 @@ export class SymbolParser implements ISymbolParser {
               }
             }
           }
-          if (
-            resolvedDeclaration &&
-            (isObjectTypeDeclaration(resolvedDeclaration) ||
-              ts.isTypeLiteralNode(resolvedDeclaration)) &&
-            resolvedDeclaration.members
-          ) {
-            resolvedDeclaration.members.forEach((n: ts.Node) => {
-              if (ts.isIndexSignatureDeclaration(n)) {
-                const index = this.parseTypeValueComments({}, n);
-                if (index) {
-                  properties.unshift(index);
-                }
+          const indexes = this.getTypeIndexes(resolvedType);
+          properties.unshift(...indexes);
+          if (!resolved.skipParameters) {
+            const callSignatures = resolvedType.getCallSignatures();
+            if (callSignatures?.length) {
+              const fnDeclaration = callSignatures[0].declaration;
+              if (fnDeclaration && isFunctionLike(fnDeclaration)) {
+                this.parseFunction(prop, fnDeclaration);
               }
-            });
-          }
-
-          const callSignatures = resolvedType.getCallSignatures();
-          if (callSignatures?.length) {
-            const fnDeclaration = callSignatures[0].declaration;
-            if (fnDeclaration && isFunctionLike(fnDeclaration)) {
-              this.parseFunction(prop, fnDeclaration);
             }
           }
 
           if (properties.length) {
             (prop as TypeProp).properties = properties;
           }
-          const aliasDeclaration = typeSymbol
-            ? typeSymbol.valueDeclaration || typeSymbol.declarations?.[0]
-            : undefined;
+
           if (
-            aliasDeclaration &&
-            isTypeParameterType(aliasDeclaration) &&
-            aliasDeclaration.typeParameters?.length
+            !resolved.skipGenerics &&
+            resolvedDeclaration &&
+            isTypeParameterType(resolvedDeclaration) &&
+            resolvedDeclaration.typeParameters?.length
           ) {
             (prop as TypeProp).generics = this.parseProperties(
-              aliasDeclaration.typeParameters,
+              resolvedDeclaration.typeParameters,
             );
           }
           //any initializer values
@@ -647,7 +671,9 @@ export class SymbolParser implements ISymbolParser {
       getInitializer(declaration),
     );
   }
-
+  private skipProperty(name?: string): boolean {
+    return name !== undefined && this.options.internalTypes.includes(name);
+  }
   private mergeNodeComments(prop: PropType, node?: ts.Node): PropType | null {
     if (node) {
       //jsdoc comments at the symbol level are mangled for overloaded methods
@@ -663,8 +689,13 @@ export class SymbolParser implements ISymbolParser {
         if (description) {
           prop.description = description;
         }
-      } else if ('name' in node) {
-        const symbol = this.checker.getSymbolAtLocation(node['name']);
+      } else {
+        const symbol =
+          'name' in node
+            ? this.checker.getSymbolAtLocation(node['name'])
+            : 'symbol' in node
+            ? node['symbol']
+            : undefined;
         if (symbol) {
           const description = cleanJSDocText(
             symbol

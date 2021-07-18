@@ -1,9 +1,11 @@
 import path from 'path';
 import { parseFiles } from '../../../src/index';
-import { typeResolver } from '../../../src/frameworks/react';
+import reactPlugin from '../../../src/frameworks/react';
+
 const simpleResults = {
   MyComponent: {
     kind: 13,
+    framework: 'react',
     properties: [
       {
         kind: 1,
@@ -18,13 +20,14 @@ describe('class-component', () => {
     const result = parseFiles(
       [path.resolve(__dirname, 'display-name-field.tsx')],
       {
-        resolvers: [typeResolver],
+        plugins: [reactPlugin],
         saveParentProps: false,
       },
     );
     expect(result).toEqual({
       default: {
         displayName: 'CustomComponentName',
+        framework: 'react',
         kind: 13,
         properties: [
           {
@@ -50,7 +53,7 @@ describe('class-component', () => {
     const result = parseFiles(
       [path.resolve(__dirname, 'default-props-field.tsx')],
       {
-        resolvers: [typeResolver],
+        plugins: [reactPlugin],
         saveParentProps: false,
       },
     );
@@ -58,6 +61,7 @@ describe('class-component', () => {
       default: {
         displayName: 'MyComponent',
         kind: 13,
+        framework: 'react',
         properties: [
           {
             parent: 'OwnProps',
@@ -82,12 +86,13 @@ describe('class-component', () => {
     const result = parseFiles(
       [path.resolve(__dirname, 'display-name-static.tsx')],
       {
-        resolvers: [typeResolver],
+        plugins: [reactPlugin],
         saveParentProps: false,
       },
     );
     expect(result).toEqual({
       MyComponent: {
+        framework: 'react',
         displayName: 'CustomComponentName',
         kind: 13,
         description: 'MyComponent special component',
@@ -99,12 +104,13 @@ describe('class-component', () => {
     const result = parseFiles(
       [path.resolve(__dirname, 'default-props-static.tsx')],
       {
-        resolvers: [typeResolver],
+        plugins: [reactPlugin],
         saveParentProps: false,
       },
     );
     expect(result).toEqual({
       MyComponent: {
+        framework: 'react',
         displayName: 'MyComponent',
         kind: 13,
         properties: [
@@ -129,19 +135,19 @@ describe('class-component', () => {
   });
   it('pure-component', () => {
     const result = parseFiles([path.resolve(__dirname, 'pure-component.tsx')], {
-      resolvers: [typeResolver],
+      plugins: [reactPlugin],
     });
     expect(result).toEqual(simpleResults);
   });
   it('star-import', () => {
     const result = parseFiles([path.resolve(__dirname, 'star-import.tsx')], {
-      resolvers: [typeResolver],
+      plugins: [reactPlugin],
     });
     expect(result).toEqual(simpleResults);
   });
   it('inline-props', () => {
     const result = parseFiles([path.resolve(__dirname, 'inline-props.tsx')], {
-      resolvers: [typeResolver],
+      plugins: [reactPlugin],
     });
     expect(result).toEqual(simpleResults);
   });
@@ -149,7 +155,7 @@ describe('class-component', () => {
     const result = parseFiles(
       [path.resolve(__dirname, 'alias-component.tsx')],
       {
-        resolvers: [typeResolver],
+        plugins: [reactPlugin],
       },
     );
     expect(result).toEqual(simpleResults);
@@ -158,26 +164,27 @@ describe('class-component', () => {
     const result = parseFiles(
       [path.resolve(__dirname, 'named-component.tsx')],
       {
-        resolvers: [typeResolver],
+        plugins: [reactPlugin],
       },
     );
     expect(result).toEqual(simpleResults);
   });
   it('composed-props', () => {
     const result = parseFiles([path.resolve(__dirname, 'composed-props.tsx')], {
-      resolvers: [typeResolver],
+      plugins: [reactPlugin],
     });
     expect(result).toMatchSnapshot();
   });
   it('default-export', () => {
     const result = parseFiles([path.resolve(__dirname, 'default-export.tsx')], {
-      resolvers: [typeResolver],
+      plugins: [reactPlugin],
       saveParentProps: false,
     });
     expect(result).toEqual({
       default: {
         displayName: 'MyComponent',
         kind: 13,
+        framework: 'react',
         properties: [
           {
             parent: 'OwnProps',
@@ -199,13 +206,14 @@ describe('class-component', () => {
   });
   it('named-export', () => {
     const result = parseFiles([path.resolve(__dirname, 'named-export.tsx')], {
-      resolvers: [typeResolver],
+      plugins: [reactPlugin],
       saveParentProps: false,
     });
     expect(result).toEqual({
       MyComponent: {
         displayName: 'MyComponent',
         kind: 13,
+        framework: 'react',
         properties: [
           {
             parent: 'OwnProps',
