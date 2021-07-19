@@ -3,6 +3,63 @@ import { parseFiles } from '../../../src/index';
 import reactPlugin from '../../../src/frameworks/react';
 
 describe('function-component', () => {
+  it('display-name', () => {
+    const result = parseFiles([path.resolve(__dirname, 'display-name.tsx')], {
+      plugins: [reactPlugin],
+      saveParentProps: false,
+    });
+    expect(result).toEqual({
+      default: {
+        displayName: 'CustomComponentName',
+        framework: 'react',
+        kind: 11,
+        properties: [
+          {
+            parent: 'OwnProps',
+            optional: true,
+            displayName: 'stringProp',
+            kind: 1,
+            description: 'stringProp description',
+          },
+          {
+            parent: 'OwnProps',
+            displayName: 'numberProp',
+            kind: 2,
+            description: 'numberProp description',
+          },
+        ],
+      },
+    });
+  });
+  it('default-props', () => {
+    const result = parseFiles([path.resolve(__dirname, 'default-props.tsx')], {
+      plugins: [reactPlugin],
+      saveParentProps: false,
+    });
+    expect(result).toEqual({
+      default: {
+        displayName: 'MyComponent',
+        framework: 'react',
+        kind: 11,
+        properties: [
+          {
+            parent: 'OwnProps',
+            optional: true,
+            displayName: 'stringProp',
+            kind: 1,
+            description: 'stringProp description',
+            value: 'test',
+          },
+          {
+            parent: 'OwnProps',
+            displayName: 'numberProp',
+            kind: 2,
+            description: 'numberProp description',
+          },
+        ],
+      },
+    });
+  });
   it('omit-props', () => {
     const result = parseFiles([path.resolve(__dirname, 'omit-props.tsx')], {
       plugins: [reactPlugin],

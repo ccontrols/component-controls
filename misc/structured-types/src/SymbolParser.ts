@@ -237,6 +237,15 @@ export class SymbolParser implements ISymbolParser {
             this.parseValue(p, e.initializer);
           }
         });
+      } else if (ts.isObjectLiteralExpression(node) && 'properties' in prop) {
+        node.properties.forEach(e => {
+          const p = (prop as ClassProp).properties?.find(
+            p => p.displayName === e.name?.getText(),
+          );
+          if (p && ts.isPropertyAssignment(e)) {
+            this.parseValue(p, e.initializer);
+          }
+        });
       } else if (
         ts.isArrayBindingPattern(node) ||
         ts.isArrayLiteralExpression(node)

@@ -375,7 +375,15 @@ const findFileNode = (node: ts.Node): ts.SourceFile | undefined => {
   return undefined;
 };
 
-export const getFunctionLike = (node: ts.Node): FunctionLike | undefined => {
+export const getFunctionLike = (
+  checker: ts.TypeChecker,
+  input: ts.Node,
+): FunctionLike | undefined => {
+  let node = input;
+  if (ts.isExpressionStatement(node) || ts.isExportAssignment(node)) {
+    const symbol = checker.getSymbolAtLocation(node.expression);
+    node = symbol?.valueDeclaration || symbol?.declarations?.[0] || node;
+  }
   if (
     ts.isVariableDeclaration(node) &&
     node.initializer &&

@@ -15,12 +15,17 @@ const reactPLugin: ParsePlugin = {
     let name = undefined;
     let kind = undefined;
     let framework = undefined;
+    let defaultProps = undefined;
+    let displayName = undefined;
     if ((symbolType.flags & ts.TypeFlags.Object) === ts.TypeFlags.Object) {
       if (declaration) {
         if (isObjectTypeDeclaration(declaration)) {
           initializer = getInitializer(declaration);
           const jsx = checker.getJsxIntrinsicTagNamesAt(declaration);
           if (jsx) {
+            defaultProps = getObjectStaticProp(declaration, 'defaultProps');
+            displayName = getObjectStaticProp(declaration, 'displayName');
+
             framework = 'react';
             kind = PropKind.Class;
             const signatures = symbolType.getConstructSignatures();
@@ -34,10 +39,19 @@ const reactPLugin: ParsePlugin = {
             }
           }
         } else {
-          const reactFunction = getFunctionLike(declaration);
+          const reactFunction = getFunctionLike(checker, declaration);
           if (reactFunction) {
             const jsx = checker.getJsxIntrinsicTagNamesAt(reactFunction);
             if (jsx) {
+              defaultProps = getObjectStaticProp(
+                reactFunction.parent,
+                'defaultProps',
+              );
+              displayName =
+                getObjectStaticProp(reactFunction.parent, 'displayName') ||
+                reactFunction.name?.getText() ||
+                (ts.isVariableDeclaration(reactFunction.parent) &&
+                  reactFunction.parent.name.getText());
               framework = 'react';
               kind = PropKind.Function;
               if (reactFunction.parameters.length) {
@@ -50,17 +64,18 @@ const reactPLugin: ParsePlugin = {
             }
           }
         }
-        const defaultProps = getObjectStaticProp(declaration, 'defaultProps');
-        if (defaultProps) {
-          initializer = defaultProps;
-        }
-        const displayName = getObjectStaticProp(declaration, 'displayName');
-        name =
-          displayName && ts.isStringLiteral(displayName)
-            ? displayName.text
-            : undefined;
       }
     }
+    name =
+      typeof displayName === 'string'
+        ? displayName
+        : displayName && ts.isStringLiteral(displayName)
+        ? displayName.text
+        : undefined;
+    if (defaultProps) {
+      initializer = defaultProps;
+    }
+
     return {
       type: propsType,
       name,
