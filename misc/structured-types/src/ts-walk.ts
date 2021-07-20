@@ -34,8 +34,12 @@ export const anaylizeFiles = (
       }
     }
   }
-  if (Object.keys(parser.parents).length) {
-    parsed.__parents = parser.parents;
+  // only return parents that are not already exported from the same file
+  const parents = Object.keys(parser.parents)
+    .filter(name => parsed[name] === undefined)
+    .reduce((acc, name) => ({ ...acc, [name]: parser.parents[name] }), {});
+  if (Object.keys(parents).length) {
+    parsed.__parents = parents;
   }
   if (collectDiagnostics) {
     const allDiagnostics = ts
