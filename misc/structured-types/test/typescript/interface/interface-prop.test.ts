@@ -2,6 +2,43 @@ import path from 'path';
 import { parseFiles } from '../../../src/index';
 
 describe('interface', () => {
+  it('enum-prop', () => {
+    const results = parseFiles([path.resolve(__dirname, 'enum-prop.ts')]);
+    expect(results).toEqual({
+      InterfaceWithEnumConstant: {
+        displayName: 'InterfaceWithEnumConstant',
+        kind: 14,
+        properties: [
+          {
+            displayName: 'kind',
+            kind: 1,
+            description: 'kind is an enumm constant',
+            parent: 'StringEnums',
+            value: 'UP',
+            type: 'Up',
+          },
+          {
+            kind: 2,
+            displayName: 'radius',
+            description: 'radius property',
+          },
+        ],
+      },
+      __parents: {
+        StringEnums: {
+          displayName: 'StringEnums',
+          kind: 5,
+          properties: [
+            {
+              displayName: 'Up',
+              kind: 1,
+              value: 'UP',
+            },
+          ],
+        },
+      },
+    });
+  });
   it('index-prop', () => {
     const results = parseFiles([path.resolve(__dirname, 'index-prop.ts')]);
 
@@ -118,43 +155,6 @@ describe('interface', () => {
     });
   });
 
-  it('enum-prop', () => {
-    const results = parseFiles([path.resolve(__dirname, 'enum-prop.ts')]);
-    expect(results).toEqual({
-      InterfaceWithEnumConstant: {
-        displayName: 'InterfaceWithEnumConstant',
-        kind: 14,
-        properties: [
-          {
-            displayName: 'kind',
-            kind: 1,
-            description: 'kind is an enumm constant',
-            parent: 'StringEnums',
-            value: 'UP',
-            type: 'Up',
-          },
-          {
-            kind: 2,
-            displayName: 'radius',
-            description: 'radius property',
-          },
-        ],
-      },
-      __parents: {
-        StringEnums: {
-          displayName: 'StringEnums',
-          kind: 5,
-          properties: [
-            {
-              displayName: 'Up',
-              kind: 1,
-              value: 'UP',
-            },
-          ],
-        },
-      },
-    });
-  });
   it('extends', () => {
     const results = parseFiles([path.resolve(__dirname, 'extends.ts')]);
     expect(results).toEqual({

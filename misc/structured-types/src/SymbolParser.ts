@@ -411,21 +411,17 @@ export class SymbolParser implements ISymbolParser {
           prop.properties = properties;
         }
       } else if (ts.isTypeReferenceNode(node)) {
-        let type: PropType | string | undefined;
         const symbol = this.checker.getSymbolAtLocation(node.typeName);
         if (
           symbol &&
           symbol.escapedName &&
           !this.skipProperty(symbol.escapedName.toString())
         ) {
+          if (prop.parent) {
+          }
           this.addRefSymbol(prop, symbol);
         } else {
-          const name = node.getText();
-          if (typeof type === 'string' && !prop.displayName) {
-            prop.displayName = name;
-          } else {
-            prop.type = name;
-          }
+          prop.type = node.getText();
         }
         if (node.typeArguments?.length && hasGenerics(prop)) {
           prop.generics = this.parseProperties(node.typeArguments);

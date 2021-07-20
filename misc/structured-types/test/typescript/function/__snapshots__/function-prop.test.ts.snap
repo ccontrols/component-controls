@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`function react fc 1`] = `
+Object {
+  "TypedInitializedFunction": Object {
+    "displayName": "TypedInitializedFunction",
+    "generics": Array [
+      Object {
+        "displayName": "P",
+      },
+    ],
+    "kind": 11,
+    "parameters": Array [
+      Object {
+        "displayName": "props",
+        "generics": Array [
+          Object {
+            "displayName": "P",
+          },
+        ],
+        "kind": 15,
+        "properties": Array [
+          Object {
+            "displayName": "m",
+            "kind": 1,
+            "optional": true,
+            "parent": "Props",
+          },
+          Object {
+            "displayName": "children",
+            "kind": 15,
+            "optional": true,
+            "parent": "PropsWithChildren",
+            "type": "ReactNode",
+          },
+        ],
+      },
+    ],
+    "properties": Array [
+      Object {
+        "displayName": "propTypes",
+        "generics": Array [
+          Object {
+            "displayName": "P",
+            "kind": 15,
+          },
+        ],
+        "kind": 15,
+        "optional": true,
+        "parent": "FunctionComponent",
+        "type": "WeakValidationMap<P>",
+      },
+      Object {
+        "displayName": "contextTypes",
+        "generics": Array [
+          Object {
+            "kind": 17,
+          },
+        ],
+        "kind": 15,
+        "optional": true,
+        "parent": "FunctionComponent",
+        "type": "ValidationMap<any>",
+      },
+      Object {
+        "displayName": "defaultProps",
+        "generics": Array [
+          Object {
+            "displayName": "P",
+            "kind": 15,
+          },
+        ],
+        "kind": 15,
+        "optional": true,
+        "parent": "FunctionComponent",
+        "type": "Partial<P>",
+      },
+      Object {
+        "displayName": "displayName",
+        "kind": 1,
+        "optional": true,
+        "parent": "FunctionComponent",
+      },
+    ],
+  },
+  "__parents": Object {
+    "FunctionComponent": Object {
+      "displayName": "FunctionComponent",
+      "generics": Array [
+        Object {
+          "displayName": "P",
+        },
+      ],
+      "kind": 14,
+      "properties": Array [
+        Object {
+          "displayName": "propTypes",
+          "generics": Array [
+            Object {
+              "displayName": "P",
+              "kind": 15,
+            },
+          ],
+          "kind": 15,
+          "optional": true,
+          "type": "WeakValidationMap<P>",
+        },
+        Object {
+          "displayName": "contextTypes",
+          "generics": Array [
+            Object {
+              "kind": 17,
+            },
+          ],
+          "kind": 15,
+          "optional": true,
+          "type": "ValidationMap<any>",
+        },
+        Object {
+          "displayName": "defaultProps",
+          "generics": Array [
+            Object {
+              "displayName": "P",
+              "kind": 15,
+            },
+          ],
+          "kind": 15,
+          "optional": true,
+          "type": "Partial<P>",
+        },
+        Object {
+          "displayName": "displayName",
+          "kind": 1,
+          "optional": true,
+        },
+      ],
+    },
+    "Props": Object {
+      "displayName": "Props",
+      "kind": 14,
+      "properties": Array [
+        Object {
+          "displayName": "m",
+          "kind": 1,
+          "optional": true,
+        },
+      ],
+    },
+    "PropsWithChildren": Object {
+      "displayName": "PropsWithChildren",
+      "generics": Array [
+        Object {
+          "displayName": "P",
+        },
+      ],
+      "kind": 15,
+      "properties": Array [
+        Object {
+          "displayName": "children",
+          "kind": 15,
+          "optional": true,
+          "type": "ReactNode",
+        },
+      ],
+    },
+  },
+}
+`;

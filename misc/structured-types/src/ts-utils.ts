@@ -401,7 +401,8 @@ export const getObjectStaticProp = (
 ): ts.Expression | undefined => {
   const staticProp =
     isObjectTypeDeclaration(obj) &&
-    ((obj.members?.find as unknown) as NodeFind)(
+    obj.members &&
+    ((obj.members.find as unknown) as NodeFind)(
       m => m.name.getText() === propName,
     );
   if (staticProp) {

@@ -3,6 +3,74 @@ import { parseFiles } from '../../../src/index';
 import reactPlugin from '../../../src/frameworks/react';
 
 describe('function-component', () => {
+  it('pick-props', () => {
+    const result = parseFiles([path.resolve(__dirname, 'pick-props.tsx')], {
+      plugins: [reactPlugin],
+      saveParentProps: false,
+    });
+    expect(result).toEqual({
+      MyComponent: {
+        displayName: 'MyComponent',
+        framework: 'react',
+        kind: 11,
+        properties: [
+          {
+            parent: 'HTMLAttributes',
+            optional: true,
+            displayName: 'inputMode',
+            kind: 4,
+            properties: [
+              {
+                kind: 1,
+                value: 'none',
+              },
+              {
+                kind: 1,
+                value: 'text',
+              },
+              {
+                kind: 1,
+                value: 'tel',
+              },
+              {
+                kind: 1,
+                value: 'url',
+              },
+              {
+                kind: 1,
+                value: 'email',
+              },
+              {
+                kind: 1,
+                value: 'numeric',
+              },
+              {
+                kind: 1,
+                value: 'decimal',
+              },
+              {
+                kind: 1,
+                value: 'search',
+              },
+            ],
+            description:
+              'Hints at the type of data that might be entered by the user while editing the element or its contents',
+            see: [
+              'https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute',
+            ],
+          },
+          {
+            parent: 'HTMLAttributes',
+            optional: true,
+            displayName: 'style',
+            kind: 15,
+            type: 'CSSProperties',
+          },
+        ],
+        description: 'MyComponent special component',
+      },
+    });
+  });
   it('display-name', () => {
     const result = parseFiles([path.resolve(__dirname, 'display-name.tsx')], {
       plugins: [reactPlugin],
