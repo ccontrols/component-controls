@@ -83,7 +83,7 @@ describe('esm-props-info-external', () => {
       fileName: 'index.d.ts',
       info: {
         tags: {
-          see: 'https ://theme-ui.com/components/button',
+          see: 'https://theme-ui.com/components/button',
         },
         description: 'Primitive button component with variants',
         displayName: 'Button',
@@ -155,7 +155,7 @@ describe('esm-props-info-external', () => {
 
     expect(props).toMatchObject({
       tags: {
-        see: 'https ://theme-ui.com/components/button',
+        see: 'https://theme-ui.com/components/button',
       },
       description: 'Primitive button component with variants',
       displayName: 'Button',
