@@ -12,6 +12,14 @@ export interface CopyContainerProps {
    * value to copy
    */
   value: string;
+  /**
+   * maximum length of string to be displayed in copied tooltip
+   */
+  maxLength?: number;
+  /**
+   * copy-to-clipboard options
+   */
+  options?: Parameters<typeof copy>[1];
 }
 
 /**
@@ -21,6 +29,7 @@ export interface CopyContainerProps {
 export const CopyContainer: FC<CopyContainerProps> = ({
   name,
   value,
+  maxLength = 50,
   children,
   ...rest
 }) => {
@@ -58,7 +67,11 @@ export const CopyContainer: FC<CopyContainerProps> = ({
           <CheckIcon size={16} sx={{ color: 'green' }} />
           <Box sx={{ ml: 2, fontSize: 2 }}>{`${
             name && name !== value ? `${name} ` : ''
-          }copied ${value}`}</Box>
+          }copied ${
+            value.length > maxLength
+              ? `${value.substring(0, maxLength)}...`
+              : value
+          }`}</Box>
         </Box>
       )}
     >
