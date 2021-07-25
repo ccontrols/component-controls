@@ -118,8 +118,8 @@ Object {
     "optionalObject": Object {
       "parentName": "MyComponentProps",
       "type": Object {
-        "name": "object",
-        "raw": "object",
+        "name": "Record<string, unknown>",
+        "raw": "Record<string, unknown>",
       },
     },
     "optionalObjectOf": Object {

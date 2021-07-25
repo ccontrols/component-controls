@@ -7,7 +7,7 @@ import {
   VariableDeclarator,
 } from '@babel/types';
 import traverse, { TraverseOptions, NodePath } from '@babel/traverse';
-import { getTypescriptConfig } from '@component-controls/typescript-config';
+import { getTypescriptConfig } from '@structured-types/typescript-config';
 import { parseFile, CacheProps } from './ast_store';
 import {
   ImportTypes,

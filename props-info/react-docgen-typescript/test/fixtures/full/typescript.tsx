@@ -8,7 +8,7 @@ interface MyComponentProps {
   optionalBool?: boolean;
   optionalFunc?: (args: any) => any;
   optionalNumber?: number;
-  optionalObject?: object;
+  optionalObject?: Record<string, unknown>;
   optionalString?: string;
   optionalSymbol?: symbol;
 

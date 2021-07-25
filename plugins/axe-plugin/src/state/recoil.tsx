@@ -81,9 +81,7 @@ export const isSelected = (targets?: Selection): RecoilValueReadOnly<boolean> =>
     },
   });
 
-export const useIsTagSelected = (
-  tag: string = '',
-): RecoilValueReadOnly<boolean> =>
+export const useIsTagSelected = (tag = ''): RecoilValueReadOnly<boolean> =>
   selector<boolean>({
     key: `isTagSelected_${tag}`,
     get: ({ get }: any) => {

@@ -254,6 +254,7 @@ export const Sidebar: FC<SidebarProps> = ({
         </Box>
       </AppSidebar>
     );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeId, activeTab, docs, propsTitle, responsive, search, store, type]);
   return node;
 };

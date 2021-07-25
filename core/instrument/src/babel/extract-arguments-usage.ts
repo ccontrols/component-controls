@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { TraverseOptions } from '@babel/traverse';
 import {
   Story,

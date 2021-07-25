@@ -3,8 +3,8 @@ import path from 'path';
 
 export const traverseFolder = (
   filePath: string,
-  levels: number = 10,
-  fileName: string = 'package.json',
+  levels = 10,
+  fileName = 'package.json',
 ): string | null => {
   const files = fs.readdirSync(filePath);
   if (levels === 0) {

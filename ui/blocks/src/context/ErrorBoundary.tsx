@@ -1,10 +1,10 @@
-import React, { Component, ReactNode } from 'react';
+import React, { Component, ReactNode, ErrorInfo } from 'react';
 
 export class ErrorBoundary extends Component {
   state = {
     error: undefined,
   };
-  componentDidCatch(error: Error | null, info: object): void {
+  componentDidCatch(error: Error | null, info: ErrorInfo): void {
     this.setState({ error: error || new Error('ERROR WAS NOT PROPAGATED') });
     console.error(error, info);
   }

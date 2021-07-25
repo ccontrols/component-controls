@@ -16,7 +16,7 @@ export const parseFile = (
   filePath: string,
   options?: parser.ParserOptions,
   sourceCode?: string,
-  cache: boolean = true,
+  cache = true,
 ): CacheProps => {
   const source = sourceCode || fs.readFileSync(filePath, 'utf8');
   if (!cache) {

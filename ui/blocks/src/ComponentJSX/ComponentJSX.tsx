@@ -7,10 +7,7 @@ import {
 import { ComponentJSXTree } from './ComponentJSXTree';
 import { useCustomProps } from '../context';
 
-export type ComponentJSXProps = {} & Omit<
-  ComponentsBlockContainerProps,
-  'children'
->;
+export type ComponentJSXProps = Omit<ComponentsBlockContainerProps, 'children'>;
 
 const NAME = 'component_jsx';
 /**

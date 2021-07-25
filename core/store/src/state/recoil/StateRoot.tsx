@@ -32,7 +32,7 @@ export interface StateRootProps {
    * global options passed from container
    * those are global parameters as well as decorators
    */
-  options?: object;
+  options?: Record<string, unknown>;
 }
 
 export const StateRoot: FC<StateRootProps> = ({

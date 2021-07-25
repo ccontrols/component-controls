@@ -3,7 +3,7 @@ import fs from 'fs';
 import * as ts from 'typescript';
 import { createHash } from 'crypto';
 import { error } from '@component-controls/logger';
-import { getTypescriptConfig } from '@component-controls/typescript-config';
+import { getTypescriptConfig } from '@structured-types/typescript-config';
 
 /**
  * returns the basename stripped of the extension
