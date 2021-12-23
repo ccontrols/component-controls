@@ -10,8 +10,8 @@ import {
 } from '@component-controls/core';
 import { error } from '@component-controls/logger';
 import { getRelatedTests } from '@component-controls/jest-extract';
+import { followImports } from '@component-controls/follow-imports';
 import { componentKey } from '../misc/hashStore';
-import { followImports } from './follow-imports';
 import { analyze_components } from './analyze-component';
 import { packageInfo } from '../misc/package-info';
 import { readSourceFile } from '../misc/source-options';
@@ -25,7 +25,6 @@ import { assignDocumentData } from '../misc/data-driven';
 export const extractComponent = async (
   componentName: string,
   filePath: string,
-  source?: string,
   options?: InstrumentOptions,
 ): Promise<Component> => {
   const cached = new CachedFileResource<Component>(
@@ -37,7 +36,11 @@ export const extractComponent = async (
   if (result) {
     return result;
   }
-  const follow = followImports(componentName, filePath, source, options);
+  const follow = followImports(componentName, filePath, {
+    resolver: options?.resolver,
+    parser: options?.parser,
+    resolveFile: options?.components?.resolveFile,
+  });
   const { components, resolver: resolveOptions } = options || {};
 
   let component: Component;
@@ -51,20 +54,21 @@ export const extractComponent = async (
     if (follow.imports) {
       const imports: ImportTypes = follow.imports;
       const allImports = Object.keys(imports).reduce((acc: Imports, key) => {
-        const { name, from, importedName } = imports[key];
+        const { name, from, typesFile, importedName } = imports[key];
         let importKey = undefined;
         if (follow.filePath && isLocalImport(from)) {
           try {
-            const fileName = resolve.sync(from, {
-              ...resolveOptions,
-              basedir: path.dirname(follow.filePath),
+            const fileName =
+              typesFile ||
+              resolve.sync(from, {
+                ...resolveOptions,
+                basedir: path.dirname(follow.filePath),
+              });
+            const followImport = followImports(importedName, fileName, {
+              resolver: options?.resolver,
+              parser: options?.parser,
+              resolveFile: options?.components?.resolveFile,
             });
-            const followImport = followImports(
-              importedName,
-              fileName,
-              undefined,
-              options,
-            );
             if (followImport?.filePath) {
               importKey = componentKey(followImport.filePath, importedName);
             }
@@ -279,7 +283,6 @@ export const extractStoreComponent = async (
           const component = await extractComponent(
             componentName,
             filePath,
-            source,
             options,
           );
           if (component) {

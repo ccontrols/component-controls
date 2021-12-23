@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import * as fs from 'fs';
 import * as path from 'path';
 import readJson from 'read-package-json';
@@ -31,12 +32,17 @@ const getPackageJson = async (
     if (!fileName) {
       return resolve(null);
     }
-    readJson(fileName, null, false, (err: string, data: object) => {
-      if (err) {
-        return reject(err);
-      }
-      return resolve({ fileName, packageJSON: data });
-    });
+    readJson(
+      fileName,
+      null,
+      false,
+      (err: string, data: Record<string, unknown>) => {
+        if (err) {
+          return reject(err);
+        }
+        return resolve({ fileName, packageJSON: data });
+      },
+    );
   });
 };
 

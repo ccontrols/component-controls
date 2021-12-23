@@ -18,7 +18,7 @@ describe('VariantButton', () => {
   const store = loadStore(
     require(path.resolve(__dirname, './bundle/component-controls.js')),
   );
-  const renderFn = store.config.renderFn;
+
   const doc = store.docs['VariantButton'];
   if (doc.stories && doc.stories.length) {
     const stories = doc.stories;
@@ -26,8 +26,10 @@ describe('VariantButton', () => {
       stories.forEach(storyId => {
         const story = store.stories[storyId];
         describe(story.name, () => {
-          const runTests = (values?: Parameters<typeof renderFn>['values']) => {
-            const rendered = renderFn({ story, doc, values });
+          const runTests = (
+            values?: Parameters<typeof doc['renderFn']>['values'],
+          ) => {
+            const rendered = doc.renderFn({ story, doc, values });
             it('snapshot', () => {
               const component = mount(rendered);
               expect(toJson(component, { mode: 'deep' })).toMatchSnapshot();

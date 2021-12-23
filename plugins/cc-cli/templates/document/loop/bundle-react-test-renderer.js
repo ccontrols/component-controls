@@ -6,11 +6,11 @@
         const story = store.stories[storyId];
         describe(story.name, () => {
           {{? it.data }}
-          const runTests = (values{{? it.format === 'ts' }}?: Parameters<typeof renderFn>['values']{{?}}) => {
+          const runTests = (values{{? it.format === 'ts' }}?: Parameters<typeof doc['renderFn']>['values']{{?}}) => {
           {{?}}  
-          let rendered{{? it.format === 'ts' }}: ReturnType<typeof renderFn>{{?}};
+          let rendered{{? it.format === 'ts' }}: ReturnType<typeof doc['renderFn']>{{?}};
           act(() => {
-            rendered = renderFn({ story, doc{{? it.data }}, values{{?}} });
+            rendered = doc.renderFn({ story, doc{{? it.data }}, values{{?}} });
           });  
           if (!rendered) {
             renderErr();

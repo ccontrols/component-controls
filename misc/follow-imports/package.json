@@ -1,0 +1,58 @@
+{
+  "name": "@component-controls/follow-imports",
+  "version": "3.14.4",
+  "description": "follow module imports until finding the file exporting the keyword",
+  "keywords": [
+    "babel",
+    "imports",
+    "exports"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "yarn cross-env NODE_ENV=production rollup -c",
+    "dev": "yarn cross-env NODE_ENV=development rollup -cw",
+    "docs": "ts-md",
+    "fix": "yarn lint --fix",
+    "lint": "yarn eslint . --ext mdx,ts,tsx",
+    "prepare": "yarn build",
+    "test": "yarn jest"
+  },
+  "homepage": "https://github.com/ccontrols/component-controls",
+  "bugs": {
+    "url": "https://github.com/ccontrols/component-controls/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccontrols/component-controls.git",
+    "directory": "misc/follow-imports"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@babel/parser": "^7.12.5",
+    "@babel/traverse": "^7.12.5",
+    "@structured-types/typescript-config": "^3.16.2",
+    "typescript": "^4.2.4"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.12.6"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": [
+    "Atanas Stoyanov"
+  ],
+  "jest": {
+    "roots": [
+      "./test"
+    ]
+  },
+  "gitHead": "e30d62f101e104711a16261fce04785d58cac1eb"
+}

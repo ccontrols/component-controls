@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import generate from '@babel/generator';
 
 interface StoryAttribute {

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { CodeLocation, ImportType, Imports } from './utility';
 import { FileInfo } from './files';
 import { JestTests } from './jest';

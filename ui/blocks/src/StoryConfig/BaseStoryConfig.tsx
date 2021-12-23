@@ -39,7 +39,7 @@ export const BaseStoryConfig: FC<BaseStoryConfigProps> = ({
       onClick: onShowFileSource,
     });
   }
-  const { loc, renderFn, source, arguments: storyArgs, ...restStory } =
+  const { loc, storyFn, source, arguments: storyArgs, ...restStory } =
     story || {};
   return Object.keys(restStory).length ? (
     <Source language="json" {...sourceProps} actions={allActions}>

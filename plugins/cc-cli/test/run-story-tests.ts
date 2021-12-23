@@ -13,7 +13,7 @@ import {
 export const runTests = async (
   props: Omit<StoryTemplateOptions, 'storyPath'>,
 ): Promise<void> => {
-  const { renderer, format, config, bundle, data } = props;
+  const { renderer, format, config, bundle, data, name } = props;
   setLogOptions({ logLevel: 'none' });
   const storyPath = path.resolve(__dirname, 'fixtures/VariantButton.docs.tsx');
   it(`${renderer} ${bundle ? 'bundle' : ''} ${format}`, async () => {

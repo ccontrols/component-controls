@@ -32,7 +32,10 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@babel/types": "^7.12.6",
+    "@component-controls/follow-imports": "^3.14.4",
     "@component-controls/logger": "^3.10.0",
+    "@structured-types/typescript-config": "^3.16.2",
     "@storybook/csf": "^0.0.1",
     "deepmerge": "^4.2.2",
     "escape-html": "^1.0.3",
@@ -40,7 +43,7 @@
     "faker": "^4.1.0",
     "path": "^0.12.7",
     "tmp": "^0.2.1",
-    "typescript": "^4.0.5"
+    "typescript": "^4.2.4"
   },
   "devDependencies": {
     "@component-controls/ts-markdown-docs": "^3.8.2",

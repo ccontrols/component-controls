@@ -3,13 +3,13 @@ import {
   Stories,
   Document,
   CodeLocation,
-  getASTSource,
 } from '@component-controls/core';
+import { getASTSource } from '@component-controls/core/node-utils';
 import camelCase from 'camelcase';
 import { File } from '@babel/types';
 import traverse from '@babel/traverse';
 import { extractFunctionParameters } from './extract-function-parameters';
-import { followStoryImport } from './follow-imports';
+import { followStoryImport } from './follow-story';
 import { collectAttributes } from './extract-attributes';
 import { sourceLocation } from '../misc/source-location';
 import { ParseStorieReturnType, InstrumentOptions } from '../types';
@@ -180,7 +180,7 @@ export const extractMDXStories: (
             const { title: docTitle, name } = attributes || {};
             const title = docTitle || name;
             if (title) {
-              const doc: Document = {
+              const doc: Partial<Document> = {
                 componentsLookup: {},
                 ...attributes,
                 title,
@@ -192,7 +192,7 @@ export const extractMDXStories: (
               if (component !== undefined) {
                 doc.component = component;
               }
-              store.doc = doc;
+              store.doc = doc as Document;
             }
             break;
           }

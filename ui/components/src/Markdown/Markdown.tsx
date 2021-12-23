@@ -20,12 +20,17 @@ export interface MarkdownProps {
  * Markdown display component to compile and display markdown at run-time.
  * Uses [markdown-to-jsx](https://github.com/probablyup/markdown-to-jsx) internally.
  */
-export const Markdown: FC<MarkdownProps> = ({ children, components }) => (
+export const Markdown: FC<MarkdownProps> = ({
+  children,
+  components,
+  ...rest
+}) => (
   <MarkdownToJSX
     options={{
       forceBlock: true,
       overrides: { ...markdownComponents, ...components },
     }}
+    {...rest}
   >
     {children}
   </MarkdownToJSX>

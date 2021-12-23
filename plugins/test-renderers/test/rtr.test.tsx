@@ -12,7 +12,7 @@ describe('rtr', () => {
     const rendered = renderReact({
       story: {
         name: 'test',
-        renderFn: Test,
+        storyFn: Test,
       },
     });
     const { toJSON, root } = renderer.create(rendered);

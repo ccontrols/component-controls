@@ -15,7 +15,7 @@ describe('VariantButton', () => {
   const store = loadStore(
     require(path.resolve(__dirname, './bundle/component-controls.js')),
   );
-  const renderFn = store.config.renderFn;
+
   const doc = store.docs['VariantButton'];
   if (doc.stories && doc.stories.length) {
     const stories = doc.stories;
@@ -23,10 +23,12 @@ describe('VariantButton', () => {
       stories.forEach(storyId => {
         const story = store.stories[storyId];
         describe(story.name, () => {
-          const runTests = (values?: Parameters<typeof renderFn>['values']) => {
-            let rendered: ReturnType<typeof renderFn>;
+          const runTests = (
+            values?: Parameters<typeof doc['renderFn']>['values'],
+          ) => {
+            let rendered: ReturnType<typeof doc['renderFn']>;
             act(() => {
-              rendered = renderFn({ story, doc, values });
+              rendered = doc.renderFn({ story, doc, values });
             });
             if (!rendered) {
               renderErr();

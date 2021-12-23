@@ -1,7 +1,6 @@
 import { useState, useMemo, MouseEvent } from 'react';
 import { window } from 'global';
 import copy from 'copy-to-clipboard';
-import queryString from 'query-string';
 import {
   resetControlValues,
   getControlValues,
@@ -11,7 +10,7 @@ import {
   canRandomizeControl,
   canResetControl,
 } from '@component-controls/core';
-import { getURL } from '../utils/url';
+import { getUpdatedUrlParams } from '../utils/url';
 
 export interface UseControlsActionsProps {
   controls?: ComponentControls;
@@ -93,15 +92,12 @@ export const useControlsActions = (
       group: 'controls',
       onClick: () => {
         if (controls) {
-          const url = getURL();
-          if (url) {
-            const parsedParams = queryString.parse(url.search);
-            const values = getControlValues(controls);
-            parsedParams.controls = JSON.stringify(values);
-            const strValues = queryString.stringify(parsedParams);
-            const copyURL = `${url.protocol}//${url.host}${url.pathname}${
-              strValues ? `?${strValues}` : ''
-            }${url.hash ? `#${url.hash}` : ''}`;
+          const values = getControlValues(controls);
+          const copyURL = getUpdatedUrlParams(
+            'controls',
+            JSON.stringify(values),
+          );
+          if (copyURL) {
             copy(copyURL);
             if (typeof window !== 'undefined') {
               setURLCopied(true);

@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { Story, Example } from '@component-controls/core';
 import traverse, { NodePath } from '@babel/traverse';
 import { FunctionDeclaration, VariableDeclarator } from '@babel/types';
 import { extractAttributes } from './extract-attributes';
 import { extractFunctionParameters } from './extract-function-parameters';
-import { followStoryImport } from './follow-imports';
+import { followStoryImport } from './follow-story';
 import { sourceLocation } from '../misc/source-location';
 import { InstrumentOptions } from '../types';
 

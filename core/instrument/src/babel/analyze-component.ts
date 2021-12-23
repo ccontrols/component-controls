@@ -13,10 +13,14 @@ import {
   ImportTypes,
   isLocalImport,
 } from '@component-controls/core';
+import {
+  followImports,
+  parseFile,
+  extractImports,
+} from '@component-controls/follow-imports';
 import { collectAttributes } from './extract-attributes';
 import { componentKey } from '../misc/hashStore';
-import { followImports } from './follow-imports';
-import { parseFile, parseImports } from '../misc/ast_store';
+
 import { InstrumentOptions } from '../types';
 
 type JSXLinkedNode = JSXNode & { parent?: JSXNode };
@@ -61,8 +65,11 @@ const traverseJSX = (
             const followImport = followImports(
               imported.importedName,
               fileName,
-              undefined,
-              options,
+              {
+                resolver: options?.resolver,
+                parser: options?.parser,
+                resolveFile: options?.components?.resolveFile,
+              },
             );
             if (followImport?.filePath) {
               jsxNode.componentKey = componentKey(
@@ -95,7 +102,7 @@ export const analyze_components = (
 ): void => {
   const { parser: parserOptions } = options || {};
   const { ast } = parseFile(filePath, parserOptions);
-  const imports = parseImports(filePath);
+  const imports = extractImports(filePath);
   const jsx: JSXLinkedTree = [];
   traverse(ast, traverseJSX(jsx, imports, filePath, options));
   const mapJSXTree = (input?: JSXLinkedTree): JSXTree => {

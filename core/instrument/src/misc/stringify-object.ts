@@ -1,10 +1,7 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import jsStringEscape from 'js-string-escape';
 
-export const stringifyObject = (
-  val: any,
-  sep: string = '  ',
-  depth: number = 1,
-): string => {
+export const stringifyObject = (val: any, sep = '  ', depth = 1): string => {
   switch (typeof val) {
     case 'string':
       return `"${jsStringEscape(val)}"`;

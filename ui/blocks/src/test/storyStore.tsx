@@ -713,6 +713,7 @@ Markdown **descripton** for *component*.
   },
   docs: {
     Story: {
+      renderFn: reactRender,
       date: new Date('2020-01-01').toISOString(),
       dateModified: new Date('2020-03-31').toISOString(),
       package: 'test-package',
@@ -755,6 +756,7 @@ Markdown **descripton** for *component*.
       ],
     },
     mdxStory: {
+      renderFn: reactRender,
       title: 'MDX Story',
       componentsLookup: {},
       author: 'atanasster',
@@ -764,7 +766,7 @@ Markdown **descripton** for *component*.
   },
   stories: {
     'id-of-story': {
-      renderFn: (): ReactElement => <Heading>Components</Heading>,
+      storyFn: (): ReactElement => <Heading>Components</Heading>,
       id: 'id-of-story',
       doc: 'Story',
       component: 'ArrowButton',
@@ -788,7 +790,7 @@ Markdown **descripton** for *component*.
     },
     'id-of-single': {
       id: 'id-of-single',
-      renderFn: (): ReactElement => <Heading>Components</Heading>,
+      storyFn: (): ReactElement => <Heading>Components</Heading>,
       doc: 'Story',
       component: 'ArrowButton',
       loc: {
@@ -810,7 +812,7 @@ Markdown **descripton** for *component*.
     },
     'id-of-button-story': {
       id: 'id-of-button-story',
-      renderFn: (): ReactElement => <Button>test</Button>,
+      storyFn: (): ReactElement => <Button>test</Button>,
       doc: 'Story',
       component: 'Button',
       loc: {
@@ -827,7 +829,7 @@ Markdown **descripton** for *component*.
       source: "() => 'hello'",
     },
     'blocks-core-story-plain--controls': {
-      renderFn: (): ReactElement => (
+      storyFn: (): ReactElement => (
         <Donut value={1 / 2} aria-label="example donut graphic" />
       ),
       id: 'blocks-core-story-plain--controls',
@@ -947,14 +949,14 @@ Markdown **descripton** for *component*.
 `,
     },
     'id-no-component': {
-      renderFn: (): ReactElement => <Heading>Components</Heading>,
+      storyFn: (): ReactElement => <Heading>Components</Heading>,
       id: 'id-no-component',
       doc: 'Story',
       name: 'no component',
       source: "() => 'hello'",
     },
     'mdx-story': {
-      renderFn: (): ReactElement => <Heading>mdx story</Heading>,
+      storyFn: (): ReactElement => <Heading>mdx story</Heading>,
       id: 'mdx-story',
       doc: 'mdxStory',
       name: 'mdx story',

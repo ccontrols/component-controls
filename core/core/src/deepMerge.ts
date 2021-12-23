@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import merge from 'deepmerge';
 
 const concatMerge = (dest: any[], src: any[]) => [...dest, ...src];

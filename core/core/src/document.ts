@@ -1,11 +1,15 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-types */
-import { PropsWithChildren, ReactElement } from 'react';
 import { CodeLocation, PackageInfo, StoryRenderFn } from './utility';
 import { Components } from './components';
 import { StoryProps } from './common';
 import { ComponentControl } from './controls';
-import { RunConfiguration, DocType, PageLayoutProps } from './configuration';
+import {
+  RunConfiguration,
+  DocType,
+  PageLayoutProps,
+  FrameworkRenderFn,
+} from './configuration';
 import { SearchResult } from './search';
 /**
  * an identifier/variable.argument in the source code
@@ -94,7 +98,7 @@ export type Story<Props = any> = {
   /**
    * render function for the story
    */
-  renderFn?: StoryRenderFn;
+  storyFn?: StoryRenderFn;
 
   /**
    * story extended description. can use markdown.
@@ -143,10 +147,7 @@ export type ExampleControls = {
  * es named export function, excapsulates a contained example code.
  */
 export type Example<Props = any> = {
-  (props: PropsWithChildren<Props>, context?: any): ReactElement<
-    any,
-    any
-  > | null;
+  (props: Props, context?: any): any;
   bind: (props?: Story<Props>) => Example<Props>;
 } & Omit<Story<Props>, 'controls'> & {
     controls?: ExampleControls;
@@ -276,6 +277,10 @@ export type Document<Props = any> = {
    */
   testData?: string;
 
+  /**
+   * each document can have a different renderer - JSON, react etc.
+   */
+  renderFn: FrameworkRenderFn;
   /**
    * loaded data associated with the document
    */

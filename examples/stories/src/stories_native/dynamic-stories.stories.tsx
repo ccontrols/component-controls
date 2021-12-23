@@ -13,18 +13,21 @@ export default {
 };
 
 export const buttonColors = (): DynamicExamples => {
-  return Object.keys(theme.colors)
-    .filter(color => typeof theme.colors[color] === 'string')
-    .map(color => {
-      return {
-        name: color,
-        description: `theme.colors.${color}: **${theme.colors[color]}**`,
-        source: `<Button sx={{ bg: '${color}'}}>Color ${theme.colors[color]}</Button>`,
-        renderFn: () => (
-          <Button sx={{ bg: color }}>{`Color ${theme.colors[color]}`}</Button>
-        ),
-      };
-    });
+  const colors = theme.colors;
+  return colors
+    ? Object.keys(colors)
+        .filter(color => typeof colors[color] === 'string')
+        .map(color => {
+          return {
+            name: color,
+            description: `theme.colors.${color}: **${colors[color]}**`,
+            source: `<Button sx={{ bg: '${color}'}}>Color ${colors[color]}</Button>`,
+            renderFn: () => (
+              <Button sx={{ bg: color }}>{`Color ${colors[color]}`}</Button>
+            ),
+          };
+        })
+    : [];
 };
 
 buttonColors.dynamic = true;

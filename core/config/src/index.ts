@@ -63,7 +63,7 @@ export const getConfigurationArg = (
   return argv.config;
 };
 
-let warningIssued: boolean = false;
+let warningIssued = false;
 export const loadConfig = (
   configPath: string,
 ): ConfigurationResult | undefined => {

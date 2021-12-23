@@ -4,13 +4,9 @@ import matter from 'gray-matter';
 import { File } from '@babel/types';
 import traverse from '@babel/traverse';
 import generate from '@babel/generator';
-import {
-  Story,
-  Document,
-  getASTSource,
-  deepmerge,
-} from '@component-controls/core';
-
+import { Story, Document, deepmerge } from '@component-controls/core';
+import { getASTSource } from '@component-controls/core/node-utils';
+import { parseFile } from '@component-controls/follow-imports';
 import { extractCSFStories } from './babel/esm-stories';
 import { extractMDXStories } from './babel/mdx-stories';
 import { transformMDXAttributes } from './babel/transform-ast-tree';
@@ -18,7 +14,7 @@ import { extractStoreComponent } from './babel/extract-component';
 import { packageInfo } from './misc/package-info';
 import { extractStoryExports } from './misc/mdx-exports';
 import { prettify } from './misc/prettify';
-import { parseFile } from './misc/ast_store';
+
 import { readSourceFile } from './misc/source-options';
 import { getFileDates } from './misc/file-info';
 import {

@@ -4,7 +4,6 @@ import {
   ReactNode,
   DetailedHTMLProps,
   LinkHTMLAttributes,
-  ReactElement,
 } from 'react';
 import { BuildProps } from './build';
 import { StoryProps } from './common';
@@ -21,7 +20,7 @@ export type FrameworkRenderFn = (props: {
   doc?: Document;
   values?: ExampleControls;
   options?: any;
-}) => ReactElement;
+}) => any;
 
 /**
  * story type pages can have multiple tabs with separate page configurations.

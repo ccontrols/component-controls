@@ -3,7 +3,7 @@ import { getTemplate } from '../resolve-template';
 
 export const accessibilityTemplate = (
   format: TeplateFormats,
-  ally: boolean = true,
+  ally = true,
 ): {
   allyimports: string;
   allytest: string;

@@ -6,6 +6,7 @@ Object {
 \`import { IconButton } from 'grommet-controls';\`<br />
 \`<IconButton icon='...' />\`<br />",
   "displayName": "Button",
+  "filePath": "/Users/atanasster/component-controls/props-info/react-docgen-typescript/test/fixtures/jsx/jsx-intrinsic.tsx",
   "methods": Array [],
   "props": Object {
     "about": Object {
@@ -55,11 +56,11 @@ presented if they are made.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"none\\" | \\"inline\\" | \\"list\\" | \\"both\\" | undefined",
+        "raw": "\\"list\\" | \\"none\\" | \\"inline\\" | \\"both\\"",
         "value": Array [
           Object {
             "name": "string",
-            "value": "undefined",
+            "value": "list",
           },
           Object {
             "name": "string",
@@ -68,10 +69,6 @@ presented if they are made.",
           Object {
             "name": "string",
             "value": "inline",
-          },
-          Object {
-            "name": "string",
-            "value": "list",
           },
           Object {
             "name": "string",
@@ -228,11 +225,11 @@ presented if they are made.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"none\\" | \\"copy\\" | \\"execute\\" | \\"link\\" | \\"move\\" | \\"popup\\" | undefined",
+        "raw": "\\"link\\" | \\"none\\" | \\"copy\\" | \\"execute\\" | \\"move\\" | \\"popup\\"",
         "value": Array [
           Object {
             "name": "string",
-            "value": "undefined",
+            "value": "link",
           },
           Object {
             "name": "string",
@@ -245,10 +242,6 @@ presented if they are made.",
           Object {
             "name": "string",
             "value": "execute",
-          },
-          Object {
-            "name": "string",
-            "value": "link",
           },
           Object {
             "name": "string",
@@ -322,7 +315,7 @@ allows assistive technology to override the general default of reading in docume
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "union",
-        "raw": "boolean | \\"true\\" | \\"false\\" | \\"menu\\" | \\"listbox\\" | \\"tree\\" | \\"grid\\" | \\"dialog\\"",
+        "raw": "boolean | \\"true\\" | \\"false\\" | \\"dialog\\" | \\"grid\\" | \\"listbox\\" | \\"menu\\" | \\"tree\\"",
         "value": Array [
           Object {
             "name": "boolean",
@@ -334,19 +327,19 @@ allows assistive technology to override the general default of reading in docume
             "name": "false",
           },
           Object {
-            "name": "menu",
-          },
-          Object {
-            "name": "listbox",
-          },
-          Object {
-            "name": "tree",
+            "name": "dialog",
           },
           Object {
             "name": "grid",
           },
           Object {
-            "name": "dialog",
+            "name": "listbox",
+          },
+          Object {
+            "name": "menu",
+          },
+          Object {
+            "name": "tree",
           },
         ],
       },
@@ -432,12 +425,8 @@ allows assistive technology to override the general default of reading in docume
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"off\\" | \\"assertive\\" | \\"polite\\" | undefined",
+        "raw": "\\"off\\" | \\"assertive\\" | \\"polite\\"",
         "value": Array [
-          Object {
-            "name": "string",
-            "value": "undefined",
-          },
           Object {
             "name": "string",
             "value": "off",
@@ -515,12 +504,8 @@ allows assistive technology to override the general default of reading in docume
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"horizontal\\" | \\"vertical\\" | undefined",
+        "raw": "\\"horizontal\\" | \\"vertical\\"",
         "value": Array [
-          Object {
-            "name": "string",
-            "value": "undefined",
-          },
           Object {
             "name": "string",
             "value": "horizontal",
@@ -604,12 +589,8 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"text\\" | \\"additions\\" | \\"additions removals\\" | \\"additions text\\" | \\"all\\" | \\"removals\\" | \\"removals additions\\" | \\"removals text\\" | \\"text additions\\" | \\"text removals\\" | undefined",
+        "raw": "\\"text\\" | \\"additions\\" | \\"additions removals\\" | \\"additions text\\" | \\"all\\" | \\"removals\\" | \\"removals additions\\" | \\"removals text\\" | \\"text additions\\" | \\"text removals\\"",
         "value": Array [
-          Object {
-            "name": "string",
-            "value": "undefined",
-          },
           Object {
             "name": "string",
             "value": "text",
@@ -736,12 +717,8 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"none\\" | \\"ascending\\" | \\"descending\\" | \\"other\\" | undefined",
+        "raw": "\\"none\\" | \\"ascending\\" | \\"descending\\" | \\"other\\"",
         "value": Array [
-          Object {
-            "name": "string",
-            "value": "undefined",
-          },
           Object {
             "name": "string",
             "value": "none",
@@ -979,15 +956,15 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"none\\" | \\"text\\" | \\"tel\\" | \\"url\\" | \\"email\\" | \\"numeric\\" | \\"decimal\\" | \\"search\\" | undefined",
+        "raw": "\\"none\\" | \\"search\\" | \\"text\\" | \\"tel\\" | \\"url\\" | \\"email\\" | \\"numeric\\" | \\"decimal\\"",
         "value": Array [
           Object {
             "name": "string",
-            "value": "undefined",
+            "value": "none",
           },
           Object {
             "name": "string",
-            "value": "none",
+            "value": "search",
           },
           Object {
             "name": "string",
@@ -1012,10 +989,6 @@ A hint could be a sample value or a brief description of the expected format.",
           Object {
             "name": "string",
             "value": "decimal",
-          },
-          Object {
-            "name": "string",
-            "value": "search",
           },
         ],
       },
@@ -2264,8 +2237,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "role": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
-        "name": "string",
-        "raw": "string",
+        "name": "AriaRole",
+        "raw": "AriaRole",
       },
     },
     "security": Object {
@@ -2328,12 +2301,8 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"yes\\" | \\"no\\" | undefined",
+        "raw": "\\"yes\\" | \\"no\\"",
         "value": Array [
-          Object {
-            "name": "string",
-            "value": "undefined",
-          },
           Object {
             "name": "string",
             "value": "yes",
@@ -2349,12 +2318,8 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "ButtonHTMLAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"button\\" | \\"submit\\" | \\"reset\\" | undefined",
+        "raw": "\\"button\\" | \\"submit\\" | \\"reset\\"",
         "value": Array [
-          Object {
-            "name": "string",
-            "value": "undefined",
-          },
           Object {
             "name": "string",
             "value": "button",
@@ -2381,12 +2346,8 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"on\\" | \\"off\\" | undefined",
+        "raw": "\\"on\\" | \\"off\\"",
         "value": Array [
-          Object {
-            "name": "string",
-            "value": "undefined",
-          },
           Object {
             "name": "string",
             "value": "on",

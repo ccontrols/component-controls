@@ -16,7 +16,7 @@ describe('jazmine', () => {
     const rendered = renderReact({
       story: {
         name: 'test',
-        renderFn: Test,
+        storyFn: Test,
       },
     });
     const component = mount(rendered);

@@ -1,6 +1,7 @@
 import { TraverseOptions } from '@babel/traverse';
 const babel = require('@babel/core');
-import { CodeLocation, getASTSource } from '@component-controls/core';
+import { CodeLocation } from '@component-controls/core';
+import { getASTSource } from '@component-controls/core/node-utils';
 import { extractSource } from '../misc/source-extract';
 import { collectAttributes } from './extract-attributes';
 

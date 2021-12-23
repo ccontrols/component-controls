@@ -91,7 +91,7 @@ ${contexts
             const exported = exports[key];
             const story = s.stories[key];
             if (story) {
-              story.renderFn = typeof exported === 'function' ? exported : (doc.template || exported);
+              story.storyFn = typeof exported === 'function' ? exported : (doc.template || exported);
               assignProps(story, exported);
               if (exported.story) {
                 assignProps(story, exported.story);

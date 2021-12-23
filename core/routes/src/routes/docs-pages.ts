@@ -1,5 +1,6 @@
 import {
   Store,
+  Document,
   PageConfiguration,
   defDocType,
   DocType,
@@ -131,7 +132,7 @@ export const getDocPages = (store?: Store): DocPagesPath[] => {
         catKeys.forEach(tag => {
           const path = getDocPath(
             type as DocType,
-            { title: tag, componentsLookup: {} },
+            { title: tag, componentsLookup: {} } as Document,
             store,
           );
           docPaths.push({

@@ -5,7 +5,6 @@
     "module": "esnext",
     "declaration": true,
     "resolveJsonModule": true,
-    "sourceMap": false,
     "outDir": "./dist",
     "rootDir": "./src",
     "baseUrl": "./",

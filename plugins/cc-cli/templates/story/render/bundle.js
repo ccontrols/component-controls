@@ -1,1 +1,1 @@
-rendered = renderFn({ story, doc });
+rendered = doc.renderFn({ story, doc });

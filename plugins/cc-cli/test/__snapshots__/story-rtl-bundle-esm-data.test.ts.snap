@@ -15,7 +15,7 @@ describe('VariantButton', () => {
   const store = loadStore(
     require(path.resolve(__dirname, './bundle/component-controls.js')),
   );
-  const renderFn = store.config.renderFn;
+
   const doc = store.docs['VariantButton'];
 
   describe('Overview', () => {
@@ -26,7 +26,7 @@ describe('VariantButton', () => {
 
         let rendered;
         act(() => {
-          rendered = renderFn({ story, doc, values });
+          rendered = doc.renderFn({ story, doc, values });
         });
         if (!rendered) {
           renderErr();
@@ -49,7 +49,7 @@ describe('VariantButton', () => {
 
     let rendered;
     act(() => {
-      rendered = renderFn({ story, doc });
+      rendered = doc.renderFn({ story, doc });
     });
     if (!rendered) {
       renderErr();
@@ -70,7 +70,7 @@ describe('VariantButton', () => {
 
     let rendered;
     act(() => {
-      rendered = renderFn({ story, doc });
+      rendered = doc.renderFn({ story, doc });
     });
     if (!rendered) {
       renderErr();
@@ -91,7 +91,7 @@ describe('VariantButton', () => {
 
     let rendered;
     act(() => {
-      rendered = renderFn({ story, doc });
+      rendered = doc.renderFn({ story, doc });
     });
     if (!rendered) {
       renderErr();
@@ -112,7 +112,7 @@ describe('VariantButton', () => {
 
     let rendered;
     act(() => {
-      rendered = renderFn({ story, doc });
+      rendered = doc.renderFn({ story, doc });
     });
     if (!rendered) {
       renderErr();
@@ -133,7 +133,7 @@ describe('VariantButton', () => {
 
     let rendered;
     act(() => {
-      rendered = renderFn({ story, doc });
+      rendered = doc.renderFn({ story, doc });
     });
     if (!rendered) {
       renderErr();
@@ -154,7 +154,7 @@ describe('VariantButton', () => {
 
     let rendered;
     act(() => {
-      rendered = renderFn({ story, doc });
+      rendered = doc.renderFn({ story, doc });
     });
     if (!rendered) {
       renderErr();

@@ -4,7 +4,13 @@ import { jsx, Box, Label, Checkbox } from 'theme-ui';
 import { Popover, PopoverProps } from '../Popover';
 
 export interface MultiselectItem {
+  /**
+   * item label
+   */
   label: string;
+  /**
+   * selected state
+   */
   selected: boolean;
 }
 export interface MultiselectOwnProps {

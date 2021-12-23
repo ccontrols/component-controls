@@ -1315,7 +1315,7 @@ exports[`Source theme snapshot 1`] = `
             name
           </span>
           <span
-            class="token tag attr-value punctuation emotion-7"
+            class="token tag attr-value punctuation attr-equals emotion-7"
             style="color: rgb(255, 255, 255);"
           >
             =
@@ -1495,8 +1495,8 @@ exports[`Source theme snapshot 1`] = `
              type
           </span>
           <span
-            class="token tag script language-javascript punctuation emotion-7"
-            style="color: rgb(255, 255, 255);"
+            class="token tag script language-javascript operator emotion-7"
+            style="color: rgb(255, 157, 0);"
           >
             :
           </span>
@@ -1531,8 +1531,8 @@ exports[`Source theme snapshot 1`] = `
              value
           </span>
           <span
-            class="token tag script language-javascript punctuation emotion-7"
-            style="color: rgb(255, 255, 255);"
+            class="token tag script language-javascript operator emotion-7"
+            style="color: rgb(255, 157, 0);"
           >
             :
           </span>
@@ -2110,7 +2110,7 @@ exports[`Source themeSelector snapshot 1`] = `
             name
           </span>
           <span
-            class="token tag attr-value punctuation emotion-9"
+            class="token tag attr-value punctuation attr-equals emotion-9"
             style="color: rgb(248, 248, 242);"
           >
             =
@@ -2290,8 +2290,8 @@ exports[`Source themeSelector snapshot 1`] = `
              type
           </span>
           <span
-            class="token tag script language-javascript punctuation emotion-9"
-            style="color: rgb(248, 248, 242);"
+            class="token tag script language-javascript operator emotion-9"
+            style="color: rgb(255, 121, 198);"
           >
             :
           </span>
@@ -2326,8 +2326,8 @@ exports[`Source themeSelector snapshot 1`] = `
              value
           </span>
           <span
-            class="token tag script language-javascript punctuation emotion-9"
-            style="color: rgb(248, 248, 242);"
+            class="token tag script language-javascript operator emotion-9"
+            style="color: rgb(255, 121, 198);"
           >
             :
           </span>

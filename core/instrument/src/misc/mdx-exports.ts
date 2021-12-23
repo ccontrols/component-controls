@@ -3,7 +3,7 @@ import { stringifyObject } from './stringify-object';
 
 const mdxPropertiesExport = (
   exportType: MDXExportType,
-  defObject: object,
+  defObject: Record<string, unknown>,
 ): string => {
   const obj = { ...defObject, ...(exportType ? exportType.story : {}) };
   return stringifyObject(obj);
@@ -24,7 +24,9 @@ export const extractStoryExports = (
     if (exportNames.length) {
       let defaultExportCode = '';
       if (exports.default) {
-        const defaults: any = { MDXPage: new String('MDXContent') };
+        const defaults: Record<string, unknown> = {
+          MDXPage: new String('MDXContent'),
+        };
         if (storybookExports) {
           //docs parameters
           defaults.parameters = {

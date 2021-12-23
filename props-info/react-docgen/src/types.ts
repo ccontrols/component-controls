@@ -1,6 +1,6 @@
 import { ParserOptions } from '@babel/parser';
 
-type ASTNode = object;
+type ASTNode = Record<string, unknown>;
 
 export interface Scope {
   lookup: (name: string) => Scope | undefined;

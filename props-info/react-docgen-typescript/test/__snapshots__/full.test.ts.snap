@@ -4,6 +4,7 @@ exports[`full typescript.tsx 1`] = `
 Object {
   "description": "General component description.",
   "displayName": "typescript",
+  "filePath": "/Users/atanasster/component-controls/props-info/react-docgen-typescript/test/fixtures/full/typescript.tsx",
   "methods": Array [],
   "props": Object {
     "isObsolete": Object {
@@ -72,12 +73,8 @@ Object {
       "parentName": "MyComponentProps",
       "type": Object {
         "name": "enum",
-        "raw": "\\"News\\" | \\"Photos\\" | undefined",
+        "raw": "\\"News\\" | \\"Photos\\"",
         "value": Array [
-          Object {
-            "name": "string",
-            "value": "undefined",
-          },
           Object {
             "name": "string",
             "value": "News",
@@ -121,8 +118,8 @@ Object {
     "optionalObject": Object {
       "parentName": "MyComponentProps",
       "type": Object {
-        "name": "object",
-        "raw": "object",
+        "name": "Record<string, unknown>",
+        "raw": "Record<string, unknown>",
       },
     },
     "optionalObjectOf": Object {
@@ -136,14 +133,14 @@ Object {
       "parentName": "MyComponentProps",
       "type": Object {
         "name": "object",
-        "raw": "{ optionalProperty?: string; requiredProperty: number; } | undefined",
+        "raw": "{ optionalProperty?: string; requiredProperty: number; }",
       },
     },
     "optionalObjectWithStrictShape": Object {
       "parentName": "MyComponentProps",
       "type": Object {
         "name": "object",
-        "raw": "{ optionalProperty?: string; requiredProperty: number; } | undefined",
+        "raw": "{ optionalProperty?: string; requiredProperty: number; }",
       },
     },
     "optionalString": Object {

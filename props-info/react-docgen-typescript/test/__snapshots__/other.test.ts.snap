@@ -4,6 +4,7 @@ exports[`other multiple-exports.tsx 1`] = `
 Object {
   "description": "",
   "displayName": "MyCompoent",
+  "filePath": "/Users/atanasster/component-controls/props-info/react-docgen-typescript/test/fixtures/other/multiple-exports.tsx",
   "methods": Array [],
   "props": Object {
     "prop1": Object {

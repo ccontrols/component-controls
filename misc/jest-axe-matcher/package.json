@@ -21,8 +21,7 @@
     "docs": "ts-md",
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
-    "prepare": "yarn build",
-    "tests": "yarn jest"
+    "prepare": "yarn build"
   },
   "homepage": "https://github.com/ccontrols/component-controls",
   "bugs": {
@@ -35,7 +34,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "axe-core": "^4.2.0",
+    "axe-core": "^4.3.5",
     "jest": "^26.4.2",
     "jest-matcher-utils": "^26.6.2",
     "ts-jest": "^26.5.5",
