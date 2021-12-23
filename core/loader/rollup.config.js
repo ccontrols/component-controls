@@ -1,6 +1,9 @@
 import { config } from '../../rollup-config';
 
 export default config({
+  output: {
+    exports: 'auto',
+  },
   input: [
     './src/index.ts',
     './src/store.ts',
