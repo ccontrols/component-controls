@@ -42,7 +42,7 @@
     "@component-controls/search-algolia": "^3.14.6",
     "@component-controls/search-fusejs": "^3.14.6",
     "@emotion/babel-plugin": "^11.0.0",
-    "next": "^10.0.7"
+    "next": "^11.1.3"
   },
   "devDependencies": {
     "@component-controls/logger": "^3.10.0",
