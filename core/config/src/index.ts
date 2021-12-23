@@ -179,9 +179,9 @@ export const configRequireContext = ({
     ? files.reduce((acc: RequireContextProps[], storyRg: string) => {
         const base = globBase(fixGlob(storyRg));
         const useSubdirectories = base.glob.startsWith('**');
-        const glob = useSubdirectories ? base.glob.substr(3) : base.glob;
+        const glob = useSubdirectories ? base.glob.substring(3) : base.glob;
         const regExp = base.isGlob
-          ? RegExp(makeRe(glob).source.substr(1))
+          ? RegExp(makeRe(glob).source.substring(1))
           : new RegExp(glob);
         return [
           ...acc,

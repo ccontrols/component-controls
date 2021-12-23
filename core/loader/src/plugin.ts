@@ -20,7 +20,7 @@ export class LoaderPlugin {
     const hash = createHash('md5')
       .update(new Date().getTime().toString())
       .digest('hex');
-    this.compilationHash = `__${hash.substr(0, 6)}__`;
+    this.compilationHash = `__${hash.substring(0, 5)}__`;
     this.options = {
       ...options,
     };

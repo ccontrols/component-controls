@@ -11,7 +11,7 @@ import { getTypescriptConfig } from '@structured-types/typescript-config';
  */
 export const nakedFileName = (filePath: string): string => {
   const baseName = path.basename(filePath);
-  return baseName.substr(0, baseName.lastIndexOf('.'));
+  return baseName.substring(0, baseName.lastIndexOf('.') - 1);
 };
 
 export const esmRequire = (filePath: string): any => {

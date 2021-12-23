@@ -81,7 +81,7 @@ export const extractSource = (
                 adjustSpaces,
               );
             }
-            return line.substr(adjustSpaces);
+            return line.substring(adjustSpaces);
           }
           return line;
         })

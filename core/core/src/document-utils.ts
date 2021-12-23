@@ -18,7 +18,7 @@ export const ensureStartingSlash = (route: string): string =>
 export const removeTrailingSlash = (route: string, index = 1): string => {
   let result = route;
   while (result.length > index && result.endsWith('/')) {
-    result = result.substr(0, result.length - 1);
+    result = result.slice(0, -1);
   }
   return result;
 };
@@ -26,7 +26,7 @@ export const removeTrailingSlash = (route: string, index = 1): string => {
 export const removeStartingSlash = (route: string, index = 1): string => {
   let result = route;
   while (result.length > index && result.startsWith('/')) {
-    result = result.substr(1);
+    result = result.substring(1);
   }
   return result;
 };

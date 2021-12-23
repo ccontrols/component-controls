@@ -33,7 +33,7 @@ export const runTests = (testName: string, args: string[]): void => {
             );
             fs.unlinkSync(path.resolve(outPath, file));
           }
-          fs.rmSync(outPath);
+          fs.rmSync(outPath, { recursive: true });
           expect(content).toMatchSnapshot();
         },
       );
