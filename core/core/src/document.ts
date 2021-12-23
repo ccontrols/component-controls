@@ -280,7 +280,7 @@ export type Document<Props = any> = {
   /**
    * each document can have a different renderer - JSON, react etc.
    */
-  renderFn: FrameworkRenderFn;
+  renderFn?: FrameworkRenderFn;
   /**
    * loaded data associated with the document
    */
