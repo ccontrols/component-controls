@@ -31,7 +31,7 @@ export const extractImports = (
         const aliases: typeof cache['importAliases'] = {};
         (file as any).resolvedModules.forEach(
           (value: { resolvedFileName: string }, key: string) => {
-            if (fs.existsSync(value.resolvedFileName)) {
+            if (value && fs.existsSync(value.resolvedFileName)) {
               aliases[key] = value.resolvedFileName;
             }
           },

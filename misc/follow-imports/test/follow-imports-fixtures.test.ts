@@ -24,11 +24,11 @@ describe('follow-imports-fixtures', () => {
   followFixture('button-from-node-nodules.js', imports => {
     expect(imports).toMatchObject({
       exportedAs: 'PropsTable',
-      from: '@component-controls/storybook',
+      from: '@component-controls/blocks',
     });
     const file = path.relative(__dirname, imports.filePath);
     expect(file).toBe(
-      '../../../node_modules/@component-controls/storybook/dist/index.js',
+      '../../../node_modules/@component-controls/blocks/dist/index.js',
     );
   });
 
@@ -73,7 +73,7 @@ describe('follow-imports-fixtures', () => {
     });
     const file = path.relative(__dirname, imports.filePath);
     expect(file).toBe(
-      '../../../node_modules/@component-controls/storybook/dist/index.js',
+      '../../../node_modules/@component-controls/blocks/dist/index.js',
     );
   });
 
