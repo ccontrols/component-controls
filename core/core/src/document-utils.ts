@@ -147,6 +147,7 @@ export const mapDynamicStories = (
       ? stories.map(s => ({
           ...storyProps,
           dynamicId: building ? undefined : docStoryToId(doc.title, id || name),
+          storyFn: s.renderFn,
           ...s,
         }))
       : [story];
