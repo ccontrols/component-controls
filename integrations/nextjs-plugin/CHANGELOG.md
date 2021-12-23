@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.15.0](https://github.com/ccontrols/component-controls/compare/v3.14.6...v3.15.0) (2021-07-21)
+
+**Note:** Version bump only for package @component-controls/nextjs-plugin
+
+
+
+
+
 ## [3.14.6](https://github.com/ccontrols/component-controls/compare/v3.14.5...v3.14.6) (2021-05-20)
 
 **Note:** Version bump only for package @component-controls/nextjs-plugin
