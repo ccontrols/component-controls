@@ -103,7 +103,7 @@ export const dynamicRequire = (filePath: string): any => {
         return esmRequire(filePath);
       }
     } finally {
-      fs.rmdirSync(tmpFolder, { recursive: true });
+      fs.rmSync(tmpFolder, { recursive: true });
       // tmpDir.removeCallback();
     }
   }
