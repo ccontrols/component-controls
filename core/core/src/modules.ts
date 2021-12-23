@@ -99,7 +99,7 @@ export const dynamicRequire = (filePath: string): any => {
         const result = require(jsFilePath);
         return result;
       } catch (e) {
-        error(filePath, e);
+        error(filePath, typeof e === 'string' ? e : '');
         return esmRequire(filePath);
       }
     } finally {
