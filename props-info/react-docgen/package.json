@@ -35,6 +35,7 @@
   },
   "devDependencies": {
     "@component-controls/ts-markdown-docs": "^3.8.2",
+    "@babel/preset-flow": "^7.16.5",
     "@types/jest": "^26.0.10",
     "@types/prop-types": "^15.7.3",
     "@types/react": "^16.9.34",
