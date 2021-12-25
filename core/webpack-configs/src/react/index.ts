@@ -5,6 +5,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import {
   PresetCallback,
   BuildProps,
+  WebpackLoader,
   customLoaderOptions,
 } from '@component-controls/core';
 import {
@@ -20,9 +21,11 @@ import {
 export const react: PresetCallback = (options: BuildProps) => {
   const isProd = process.env.NODE_ENV === 'production';
   const cssLoaders: RuleSetUseItem[] = [];
-  const postcssOptions = customLoaderOptions(options, 'postcss-loader', {});
+  const postcssOptions = customLoaderOptions(options, 'postcss-loader');
   const postCssOptionsFile = findUpFile(process.cwd(), 'postcss.config.js');
-  const hasPostCss = Object.keys(postcssOptions).length || postCssOptionsFile;
+  const hasPostCss =
+    postcssOptions &&
+    (Object.keys(postcssOptions).length || postCssOptionsFile);
   if (hasPostCss && !((postcssOptions as any).disable === true)) {
     cssLoaders.push({
       loader: 'postcss-loader',
@@ -35,14 +38,57 @@ export const react: PresetCallback = (options: BuildProps) => {
       },
     });
   }
+  const useLoader = (
+    name: { loader: WebpackLoader; loaderName?: string },
+    defaultOptions?: string | { [index: string]: any },
+    props?: { [index: string]: any },
+  ) => {
+    const { loader, loaderName } = name;
+    const config = customLoaderOptions(options, loader, defaultOptions);
+    if (config) {
+      return {
+        loader: loaderName || loader,
+        ...props,
+        options: config,
+      };
+    }
+    return false;
+  };
+  const ruleLoader = (
+    rule: { test: RegExp; exclude?: RegExp[]; loader: WebpackLoader },
+    defaultOptions?: string | { [index: string]: any },
+    props?: { [index: string]: any },
+  ) => {
+    const { test, exclude, loader } = rule;
+    const config = customLoaderOptions(options, loader, defaultOptions);
+    if (config) {
+      return {
+        test,
+        exclude,
+        use: [
+          {
+            loader,
+            ...props,
+            options: config,
+          },
+        ],
+      };
+    }
+    return false;
+  };
   const result = {
     plugins: [
-      new MiniCssExtractPlugin({
-        filename: getCSSBundleName(options),
-      }),
+      customLoaderOptions(options, 'mini-css-extract-plugin') &&
+        new MiniCssExtractPlugin({
+          filename: getCSSBundleName(options),
+        }),
     ].filter(Boolean),
     optimization: {
-      minimizer: [isProd && new CssMinimizerPlugin()].filter(Boolean),
+      minimizer: [
+        isProd &&
+          customLoaderOptions(options, 'css-minimizer-webpack-plugin') &&
+          new CssMinimizerPlugin(),
+      ].filter(Boolean),
     },
     performance: { hints: false },
     module: {
@@ -85,11 +131,13 @@ export const react: PresetCallback = (options: BuildProps) => {
             },
           ],
         },
-        {
-          test: /\.mdx$/i,
-          exclude: [/node_modules/],
-          loader: 'babel-loader',
-          options: {
+        ruleLoader(
+          {
+            test: /\.mdx$/i,
+            exclude: [/node_modules/],
+            loader: 'babel-loader',
+          },
+          {
             presets: [
               [
                 '@babel/preset-env',
@@ -107,12 +155,14 @@ export const react: PresetCallback = (options: BuildProps) => {
               '@babel/preset-react',
             ],
           },
-        },
-        {
-          test: /\.(eot|svg|ico|jpg|jpeg|png|gif|ttf|woff|woff2|pdf|mp4|web|wav|mp3|m4a|aac|oga)$/i,
-          exclude: [/node_modules/],
-          loader: 'url-loader',
-          options: customLoaderOptions(options, 'url-loader', {
+        ),
+        ruleLoader(
+          {
+            test: /\.(eot|svg|ico|jpg|jpeg|png|gif|ttf|woff|woff2|pdf|mp4|web|wav|mp3|m4a|aac|oga)$/i,
+            exclude: [/node_modules/],
+            loader: 'url-loader',
+          },
+          {
             limit: 1024 * 24,
             name: '[name].[ext]',
             publicPath: '/static',
@@ -120,77 +170,64 @@ export const react: PresetCallback = (options: BuildProps) => {
               options?.distFolder || process.cwd(),
               path.resolve(options?.staticFolder || process.cwd()),
             ),
-          }),
-        },
-        {
-          test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: customLoaderOptions(options, 'file-loader', {
-                name: '[name].[ext]',
-                outputPath: path.relative(
-                  options?.distFolder || process.cwd(),
-                  path.resolve(options?.staticFolder || process.cwd()),
-                ),
-              }),
-            },
-          ],
-        },
+          },
+        ),
+        ruleLoader(
+          {
+            test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+            loader: 'file-loader',
+          },
+          {
+            name: '[name].[ext]',
+            outputPath: path.relative(
+              options?.distFolder || process.cwd(),
+              path.resolve(options?.staticFolder || process.cwd()),
+            ),
+          },
+        ),
         {
           test: /\.(css|sass|scss|less)$/i,
           use: [
-            // Creates `style` nodes from JS strings
-            {
-              loader: MiniCssExtractPlugin.loader,
-              options: customLoaderOptions(
-                options,
-                'mini-css-extract-plugin',
-                {},
-              ),
-            },
-            {
-              // Translates CSS into CommonJS
-              loader: 'css-loader',
-              options: customLoaderOptions(options, 'css-loader', {
+            useLoader({
+              loader: 'mini-css-extract-plugin',
+              loaderName: MiniCssExtractPlugin.loader,
+            }),
+            useLoader(
+              { loader: 'css-loader' },
+              {
                 sourceMap: true,
-              }),
-            },
+              },
+            ),
+
             ...cssLoaders,
-            {
-              // Compiles Sass to CSS
-              loader: 'sass-loader',
-              options: customLoaderOptions(options, 'sass-loader', {
+            useLoader(
+              {
+                // Compiles Sass to CSS
+                loader: 'sass-loader',
+              },
+              {
                 sourceMap: true,
-              }),
-            },
-            {
-              // Compiles less to CSS
-              loader: 'less-loader',
-              options: customLoaderOptions(options, 'less-loader', {
+              },
+            ),
+            useLoader(
+              {
+                // Compiles less to CSS
+                loader: 'less-loader',
+              },
+              {
                 sourceMap: true,
-              }),
-            },
-          ],
+              },
+            ),
+          ].filter(Boolean),
         },
-        {
+        ruleLoader({
           test: /\.txt$/i,
-          use: [
-            {
-              loader: 'raw-loader',
-              options: customLoaderOptions(options, 'raw-loader', {}),
-            },
-          ],
-        },
-        {
+          loader: 'raw-loader',
+        }),
+        ruleLoader({
           test: /\.md$/i,
-          use: [
-            {
-              loader: 'raw-loader',
-              options: customLoaderOptions(options, 'raw-loader', {}),
-            },
-          ],
-        },
+          loader: 'raw-loader',
+        }),
         {
           test: /\.mdx$/i,
           exclude: [/node_modules/],
@@ -208,7 +245,7 @@ export const react: PresetCallback = (options: BuildProps) => {
           exclude: [/node_modules/],
           enforce: 'pre',
         },
-      ],
+      ].filter(Boolean),
     },
     resolve: {
       extensions: ['.ts', '.tsx', '.js', '.jsx'],

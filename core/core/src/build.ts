@@ -17,6 +17,8 @@ export type PresetType = Configuration | PresetCallback;
 
 export type WebpackLoader =
   | 'mini-css-extract-plugin'
+  | 'babel-loader'
+  | 'css-minimizer-webpack-plugin'
   | 'css-loader'
   | 'postcss-loader'
   | 'sass-loader'
@@ -69,18 +71,20 @@ export interface BuildProps {
    * loaders custom options shortcut.
    * This can be used for quick options setup instead of using the webpack hook
    */
-  loaders?: { [_ in WebpackLoader]?: RuleSetUseItem };
+  loaders?: { [_ in WebpackLoader]?: RuleSetUseItem | null | false };
 }
 
 export const customLoaderOptions = (
   config: BuildProps,
   loader: WebpackLoader,
-  defaultOptions: string | { [index: string]: any },
-): RuleSetUseItem => {
+  defaultOptions?: string | { [index: string]: any },
+): RuleSetUseItem | false => {
   const customOptions = config.loaders?.[loader];
   return typeof defaultOptions === 'object' && typeof customOptions === 'object'
     ? { ...defaultOptions, ...customOptions }
-    : defaultOptions;
+    : customOptions === null || customOptions === false
+    ? false
+    : defaultOptions || {};
 };
 
 const defaultPresets = ['react', 'react-docgen-typescript'];
