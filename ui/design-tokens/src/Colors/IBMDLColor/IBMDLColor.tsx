@@ -87,10 +87,9 @@ export const IBMDLColor: FC<IBMDLColorProps> = ({
  * palette displayed with FishTankColor items
  * using a css flex display direction column
  */
-export const IBMDLColorPalette: FC<Omit<
-  FlexContainerProps,
-  'children' | 'direction'
-> & { display: ColorDisplay }> = ({ display, ...props }) => (
+export const IBMDLColorPalette: FC<
+  Omit<FlexContainerProps, 'children' | 'direction'> & { display: ColorDisplay }
+> = ({ display, ...props }) => (
   <FlexContainer direction="column" {...props}>
     {({ name, value }) => (
       <IBMDLColor

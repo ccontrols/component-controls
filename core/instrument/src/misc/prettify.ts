@@ -1,5 +1,5 @@
 import prettier from 'prettier';
-import parserBabel from 'prettier/parser-babylon';
+import parserBabel from 'prettier/parser-babel';
 import { PrettierOptions } from '../types';
 
 export const prettify = (

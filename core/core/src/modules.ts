@@ -35,9 +35,7 @@ export const dynamicRequire = (filePath: string): any => {
   if (config) {
     const tmpFolder = path.resolve(
       path.dirname(filePath),
-      createHash('md5')
-        .update(filePath)
-        .digest('hex'),
+      createHash('md5').update(filePath).digest('hex'),
     );
     if (!fs.existsSync(tmpFolder)) {
       fs.mkdirSync(tmpFolder);

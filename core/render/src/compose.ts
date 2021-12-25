@@ -8,9 +8,7 @@ import {
   ComponentControls,
 } from '@component-controls/core';
 
-type ComposeFn = (
-  props: Parameters<FrameworkRenderFn>[0],
-) => {
+type ComposeFn = (props: Parameters<FrameworkRenderFn>[0]) => {
   renderFn: StoryRenderFn | undefined;
   values: any;
   context: {

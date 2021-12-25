@@ -31,21 +31,19 @@ interface ComponentCatalogContextProps {
 
 const defaultState: ComponentCatalogContextState = { sort: 'name', search: '' };
 
-export const ComponentCatalogContext = createContext<
-  ComponentCatalogContextProps
->({
-  state: defaultState,
-  setState: () => {
-    //noop
-  },
-});
+export const ComponentCatalogContext =
+  createContext<ComponentCatalogContextProps>({
+    state: defaultState,
+    setState: () => {
+      //noop
+    },
+  });
 
-export const ComponentCatalogContextProvider: FC<ComponentCatalogContextState> = ({
-  children,
-}) => {
-  const [state, setState] = useState<ComponentCatalogContextState>(
-    defaultState,
-  );
+export const ComponentCatalogContextProvider: FC<
+  ComponentCatalogContextState
+> = ({ children }) => {
+  const [state, setState] =
+    useState<ComponentCatalogContextState>(defaultState);
   return (
     <ComponentCatalogContext.Provider value={{ state, setState }}>
       {children}

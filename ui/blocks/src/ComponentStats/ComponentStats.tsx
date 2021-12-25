@@ -4,9 +4,11 @@ import { jsx, BoxProps, Box } from 'theme-ui';
 import { Component, CoverageKind } from '@component-controls/core';
 import { Shield } from '@component-controls/components';
 
-export const ComponentStats: FC<{
-  component?: Component;
-} & BoxProps> = ({ component, ...rest }) => {
+export const ComponentStats: FC<
+  {
+    component?: Component;
+  } & BoxProps
+> = ({ component, ...rest }) => {
   if (!component) {
     return null;
   }

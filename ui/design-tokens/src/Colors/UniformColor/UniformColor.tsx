@@ -57,10 +57,9 @@ const BaseUniformColor: FC<ColorBlockProps> = ({ name, color }) => {
  * palette displayed with UniformColor items
  * using a css flex display direction column
  */
-export const UniformColorPalette: FC<Omit<
-  TableContainerProps,
-  'children' | 'columns'
->> = props => (
+export const UniformColorPalette: FC<
+  Omit<TableContainerProps, 'children' | 'columns'>
+> = props => (
   <TableContainer
     columns={[
       { title: 'Color', sx: { width: '10%' } },

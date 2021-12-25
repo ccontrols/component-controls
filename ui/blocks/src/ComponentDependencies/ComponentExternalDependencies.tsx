@@ -14,17 +14,20 @@ export interface ComponentExternalDependenciesProps {
  * base component dependencies
  */
 
-export const ComponentExternalDependencies: FC<ComponentExternalDependenciesProps> = ({
-  component,
-}) => {
+export const ComponentExternalDependencies: FC<
+  ComponentExternalDependenciesProps
+> = ({ component }) => {
   type DataType = {
     name: string;
     imports: ImportType[];
     peer: boolean;
   };
   const componentPackage = usePackage(component?.package);
-  const { dependencies = {}, devDependencies = {}, peerDependencies = {} } =
-    componentPackage || {};
+  const {
+    dependencies = {},
+    devDependencies = {},
+    peerDependencies = {},
+  } = componentPackage || {};
   const { externalDependencies: imports = {} } = component || {};
   const columns = useMemo(
     () =>

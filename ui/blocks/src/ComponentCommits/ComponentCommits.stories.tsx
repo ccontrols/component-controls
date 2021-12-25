@@ -15,9 +15,9 @@ export const overview: Example = () => (
   <ComponentCommits id="." name="Commits" />
 );
 
-export const pagination: Example<ComponentCommitsProps['pagination']> = props => (
-  <ComponentCommits id="." name="Commits" pagination={props} />
-);
+export const pagination: Example<
+  ComponentCommitsProps['pagination']
+> = props => <ComponentCommits id="." name="Commits" pagination={props} />;
 
 pagination.smartControls = { smart: false };
 pagination.controls = { pageSize: 10, pageVisible: true };

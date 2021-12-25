@@ -28,56 +28,62 @@ const useControlledState = (state: GroupByState) => {
     return state;
   }, [state]);
 };
-export const useExpanderColumn = <D extends Record<string, unknown>>(
-  itemsLabel: string | null,
-) => (hooks: UseTableHooks<D>): void => {
-  hooks.useControlledState.push(useControlledState);
-  hooks.visibleColumns.push((columns, { instance }) => {
-    if (
-      !(instance.state as UseGroupByState<Record<string, unknown>>).groupBy
-        .length
-    ) {
-      return columns;
-    }
+export const useExpanderColumn =
+  <D extends Record<string, unknown>>(itemsLabel: string | null) =>
+  (hooks: UseTableHooks<D>): void => {
+    hooks.useControlledState.push(useControlledState);
+    hooks.visibleColumns.push((columns, { instance }) => {
+      if (
+        !(instance.state as UseGroupByState<Record<string, unknown>>).groupBy
+          .length
+      ) {
+        return columns;
+      }
 
-    return [
-      {
-        id: 'expander',
-        width: 20,
-        Header: () => null,
-        Cell: ({
-          row,
-        }: {
-          row: UseExpandedRowProps<D> &
-            UseTableRowProps<D> & {
-              groupByVal: any;
-            };
-        }) => {
-          if (row.canExpand) {
-            return (
-              <td colSpan={row.cells.length}>
-                <Flex
-                  variant="styles.tdgroup"
-                  {...row.getToggleRowExpandedProps()}
-                >
-                  {row.isExpanded ? <ChevronDownIcon /> : <ChevronRightIcon />}{' '}
-                  <Text
-                    sx={{
-                      mx: 2,
-                    }}
+      return [
+        {
+          id: 'expander',
+          width: 20,
+          Header: () => null,
+          Cell: ({
+            row,
+          }: {
+            row: UseExpandedRowProps<D> &
+              UseTableRowProps<D> & {
+                groupByVal: any;
+              };
+          }) => {
+            if (row.canExpand) {
+              return (
+                <td colSpan={row.cells.length}>
+                  <Flex
+                    variant="styles.tdgroup"
+                    {...row.getToggleRowExpandedProps()}
                   >
-                    {row.groupByVal ?? ''}
-                    {itemsLabel ? `(${row.subRows.length} ${itemsLabel})` : ''}
-                  </Text>
-                </Flex>
-              </td>
-            );
-          }
+                    {row.isExpanded ? (
+                      <ChevronDownIcon />
+                    ) : (
+                      <ChevronRightIcon />
+                    )}{' '}
+                    <Text
+                      sx={{
+                        mx: 2,
+                      }}
+                    >
+                      {row.groupByVal ?? ''}
+                      {itemsLabel
+                        ? `(${row.subRows.length} ${itemsLabel})`
+                        : ''}
+                    </Text>
+                  </Flex>
+                </td>
+              );
+            }
 
-          return null;
+            return null;
+          },
         },
-      },
-      ...columns,
-    ];
-  });
-};
+        ...columns,
+      ];
+    });
+  };

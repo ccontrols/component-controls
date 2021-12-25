@@ -107,8 +107,9 @@ const BasePhotonColor: FC<ColorBlockProps> = ({
  * palette displayed with PhotonColor items
  * using a css flex display direction column
  */
-export const PhotonColorPalette: FC<ThemeColorProps &
-  Omit<TableContainerProps, 'children' | 'columns'>> = props => {
+export const PhotonColorPalette: FC<
+  ThemeColorProps & Omit<TableContainerProps, 'children' | 'columns'>
+> = props => {
   const { blackTextColor, whiteTextColor, ...rest } = props;
   return (
     <TableContainer

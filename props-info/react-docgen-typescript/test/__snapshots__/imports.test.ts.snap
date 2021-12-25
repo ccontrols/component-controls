@@ -997,8 +997,12 @@ from the title.",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"text\\" | \\"none\\" | \\"search\\" | \\"tel\\" | \\"url\\" | \\"email\\" | \\"numeric\\" | \\"decimal\\"",
+        "raw": "\\"search\\" | \\"text\\" | \\"none\\" | \\"tel\\" | \\"url\\" | \\"email\\" | \\"numeric\\" | \\"decimal\\"",
         "value": Array [
+          Object {
+            "name": "string",
+            "value": "search",
+          },
           Object {
             "name": "string",
             "value": "text",
@@ -1006,10 +1010,6 @@ from the title.",
           Object {
             "name": "string",
             "value": "none",
-          },
-          Object {
-            "name": "string",
-            "value": "search",
           },
           Object {
             "name": "string",

@@ -302,7 +302,8 @@ describe('component-controls generated', () => {
           describe(doc.title, () => {
             examples.forEach(example => {
               describe(example.name, () => {
-                let rendered: ReturnType<typeof renderExample> = undefined as any;
+                let rendered: ReturnType<typeof renderExample> =
+                  undefined as any;
                 act(() => {
                   rendered = renderExample({
                     example,

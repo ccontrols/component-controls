@@ -33,10 +33,12 @@ const storyControlsState = selectorFamily<
   string
 >({
   key: 'story_prop',
-  get: storyId => ({ get }) => {
-    const store = get(storeState);
-    return store.stories[storyId]?.controls;
-  },
+  get:
+    storyId =>
+    ({ get }) => {
+      const store = get(storeState);
+      return store.stories[storyId]?.controls;
+    },
 });
 
 /**

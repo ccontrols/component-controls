@@ -80,10 +80,9 @@ export const AntdVertColor: FC<ColorBlockProps> = ({ name, color, hover }) => {
  * palette displayed with AntdVertColor items
  * using a css flex display direction column
  */
-export const AntdVertColorPalette: FC<Omit<
-  FlexContainerProps,
-  'children' | 'direction'
->> = props => (
+export const AntdVertColorPalette: FC<
+  Omit<FlexContainerProps, 'children' | 'direction'>
+> = props => (
   <FlexContainer direction="column" sx={{ width: 250 }} {...props}>
     {({ name, value, hover }) => (
       <AntdVertColor

@@ -49,12 +49,10 @@ describe('VariantButton', () => {
     expect(label.text()).toBe('Primary');
 
     //global decorator in config file
-    expect(
-      component
-        .find('div')
-        .at(0)
-        .prop('style'),
-    ).toHaveProperty('background', 'lightblue');
+    expect(component.find('div').at(0).prop('style')).toHaveProperty(
+      'background',
+      'lightblue',
+    );
   });
   test('disabled', async () => {
     const rendered = renderExample({

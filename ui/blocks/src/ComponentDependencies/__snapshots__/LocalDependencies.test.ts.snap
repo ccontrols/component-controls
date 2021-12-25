@@ -349,7 +349,7 @@ exports[`LocalDependencies overview snapshot 1`] = `
           >
             <div
               class="react-tabs"
-              data-tabs="true"
+              data-rttabs="true"
             >
               <ul
                 class="react-tabs__tab-list"
@@ -360,6 +360,7 @@ exports[`LocalDependencies overview snapshot 1`] = `
                   aria-disabled="false"
                   aria-selected="true"
                   class="react-tabs__tab react-tabs__tab--selected"
+                  data-rttab="true"
                   id="react-tabs-0"
                   role="tab"
                   tabindex="0"
@@ -371,6 +372,7 @@ exports[`LocalDependencies overview snapshot 1`] = `
                   aria-disabled="false"
                   aria-selected="false"
                   class="react-tabs__tab"
+                  data-rttab="true"
                   id="react-tabs-2"
                   role="tab"
                 >

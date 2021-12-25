@@ -116,7 +116,7 @@ export const randomizeData = (controls: ComponentControls): RandomizedData => {
             return {
               name,
               value: {
-                ...randomizeData(control.value as ComponentControls),
+                ...randomizeData(control.value as unknown as ComponentControls),
               },
             };
           }

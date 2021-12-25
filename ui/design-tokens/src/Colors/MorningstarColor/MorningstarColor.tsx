@@ -77,10 +77,9 @@ const BaseMorningstarColor: FC<ColorBlockProps> = ({ name, color }) => {
  * palette displayed with MorningstarColor items
  * using a css flex display direction column
  */
-export const MorningstarColorPalette: FC<Omit<
-  TableContainerProps,
-  'children' | 'columns'
->> = props => (
+export const MorningstarColorPalette: FC<
+  Omit<TableContainerProps, 'children' | 'columns'>
+> = props => (
   <TableContainer
     sx={{
       border: 'none',

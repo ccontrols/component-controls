@@ -90,11 +90,11 @@ export const getStore = async (
       },
       configuration?.instrument || {},
     );
-    const { doc, stories, components = {} } = await parseStories(
-      storyPath,
-      undefined,
-      { ...options, jest: false },
-    );
+    const {
+      doc,
+      stories,
+      components = {},
+    } = await parseStories(storyPath, undefined, { ...options, jest: false });
     if (!doc || !stories) {
       throw new Error(`Invalid story path ${storyPath}`);
     }

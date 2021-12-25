@@ -10,7 +10,7 @@ Object {
       fontSize: 19,
       icon: \\"left-arrow\\",
       iconSide: \\"right\\",
-      padding: \\"medium\\"
+      padding: \\"medium\\",
     },
     \\"2\\": {
       text: \\"Bart Bechtelar\\",
@@ -19,7 +19,7 @@ Object {
       icon: \\"none\\",
       iconSide: \\"right\\",
       iconSize: \\"medium\\",
-      padding: \\"small\\"
+      padding: \\"small\\",
     },
     \\"3\\": {
       text: \\"Lula Rippin\\",
@@ -28,14 +28,14 @@ Object {
       icon: \\"right-arrow\\",
       iconSide: \\"left\\",
       iconSize: \\"large\\",
-      padding: \\"small\\"
+      padding: \\"small\\",
     },
     \\"4\\": {
       text: \\"Kelvin Feeney\\",
       variant: \\"accent\\",
       fontSize: 24,
       icon: \\"search\\",
-      padding: \\"small\\"
+      padding: \\"small\\",
     },
     \\"5\\": {
       text: \\"Leslie Mohr\\",
@@ -43,9 +43,9 @@ Object {
       fontSize: 13,
       icon: \\"none\\",
       iconSize: \\"small\\",
-      padding: \\"small\\"
-    }
-  }
+      padding: \\"small\\",
+    },
+  },
 };
 ",
   "data": Object {

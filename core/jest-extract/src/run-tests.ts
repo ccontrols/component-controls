@@ -79,7 +79,7 @@ const runTestsWorker: fastq.asyncWorker<
       process.env.NODE_ENV = nodeEnv;
     }
   } catch (err) {
-    error(testFiles[0], err);
+    error(testFiles[0], typeof err === 'string' ? err : 'error');
     return undefined;
   }
   const { coverageMap, testResults } = runResults.results;
@@ -133,10 +133,8 @@ const runTestsWorker: fastq.asyncWorker<
   return result;
 };
 
-let queue: fastq.queueAsPromised<
-  RunTestsInput,
-  JestTests | undefined
-> | null = null;
+let queue: fastq.queueAsPromised<RunTestsInput, JestTests | undefined> | null =
+  null;
 
 /**
  * single test file execution
@@ -169,5 +167,5 @@ export const runProjectTests = async (
     queue = fastq.promise(runTestsWorker, 1);
   }
   const result = await queue.push(props);
-  return (result as unknown) as JestTests;
+  return result as unknown as JestTests;
 };

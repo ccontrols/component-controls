@@ -246,12 +246,9 @@ export const ColorAALegend: FC = () => (
   </table>
 );
 
-const TableColorPaletteHeader: FC<TableContainerHeaderProps &
-  Required<ThemeColorProps>> = ({
-  columns,
-  whiteTextColor,
-  blackTextColor,
-}) => (
+const TableColorPaletteHeader: FC<
+  TableContainerHeaderProps & Required<ThemeColorProps>
+> = ({ columns, whiteTextColor, blackTextColor }) => (
   <thead>
     <tr>
       {columns.map((column, index) => (
@@ -319,8 +316,9 @@ const TableColorPaletteHeader: FC<TableContainerHeaderProps &
  * palette displayed with TableColor items
  * using a css flex display direction column
  */
-export const TableColorPalette: FC<ThemeColorProps &
-  Omit<TableContainerProps, 'children' | 'columns'>> = props => {
+export const TableColorPalette: FC<
+  ThemeColorProps & Omit<TableContainerProps, 'children' | 'columns'>
+> = props => {
   const {
     blackTextColor = defaultBlackTextColor,
     whiteTextColor = defaultWhiteTextColor,

@@ -159,8 +159,9 @@ export const PajamasColor: FC<ColorBlockProps> = ({
  * palette displayed with PajamasColor items
  * using a css flex display direction column
  */
-export const PajamasColorPalette: FC<ThemeColorProps &
-  Omit<FlexContainerProps, 'children' | 'direction'>> = props => {
+export const PajamasColorPalette: FC<
+  ThemeColorProps & Omit<FlexContainerProps, 'children' | 'direction'>
+> = props => {
   const { blackTextColor, whiteTextColor, ...rest } = props;
   return (
     <FlexContainer direction="column" sx={{ width: 360 }} {...rest}>

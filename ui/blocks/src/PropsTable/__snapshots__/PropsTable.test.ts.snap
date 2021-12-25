@@ -1238,7 +1238,7 @@ exports[`PropsTable customTitle snapshot 1`] = `
           >
             <div
               class="react-tabs"
-              data-tabs="true"
+              data-rttabs="true"
             >
               <ul
                 class="react-tabs__tab-list"
@@ -1249,6 +1249,7 @@ exports[`PropsTable customTitle snapshot 1`] = `
                   aria-disabled="false"
                   aria-selected="true"
                   class="react-tabs__tab react-tabs__tab--selected"
+                  data-rttab="true"
                   id="react-tabs-16"
                   role="tab"
                   tabindex="0"
@@ -1260,6 +1261,7 @@ exports[`PropsTable customTitle snapshot 1`] = `
                   aria-disabled="false"
                   aria-selected="false"
                   class="react-tabs__tab"
+                  data-rttab="true"
                   id="react-tabs-18"
                   role="tab"
                 >
@@ -3462,7 +3464,7 @@ exports[`PropsTable notCollapsible snapshot 1`] = `
       >
         <div
           class="react-tabs"
-          data-tabs="true"
+          data-rttabs="true"
         >
           <ul
             class="react-tabs__tab-list"
@@ -3473,6 +3475,7 @@ exports[`PropsTable notCollapsible snapshot 1`] = `
               aria-disabled="false"
               aria-selected="true"
               class="react-tabs__tab react-tabs__tab--selected"
+              data-rttab="true"
               id="react-tabs-24"
               role="tab"
               tabindex="0"
@@ -3484,6 +3487,7 @@ exports[`PropsTable notCollapsible snapshot 1`] = `
               aria-disabled="false"
               aria-selected="false"
               class="react-tabs__tab"
+              data-rttab="true"
               id="react-tabs-26"
               role="tab"
             >
@@ -5474,7 +5478,7 @@ exports[`PropsTable subcomponents snapshot 1`] = `
           >
             <div
               class="react-tabs"
-              data-tabs="true"
+              data-rttabs="true"
             >
               <ul
                 class="react-tabs__tab-list"
@@ -5485,6 +5489,7 @@ exports[`PropsTable subcomponents snapshot 1`] = `
                   aria-disabled="false"
                   aria-selected="true"
                   class="react-tabs__tab react-tabs__tab--selected"
+                  data-rttab="true"
                   id="react-tabs-0"
                   role="tab"
                   tabindex="0"
@@ -5496,6 +5501,7 @@ exports[`PropsTable subcomponents snapshot 1`] = `
                   aria-disabled="false"
                   aria-selected="false"
                   class="react-tabs__tab"
+                  data-rttab="true"
                   id="react-tabs-2"
                   role="tab"
                 >
@@ -6116,7 +6122,7 @@ exports[`PropsTable title snapshot 1`] = `
           >
             <div
               class="react-tabs"
-              data-tabs="true"
+              data-rttabs="true"
             >
               <ul
                 class="react-tabs__tab-list"
@@ -6127,6 +6133,7 @@ exports[`PropsTable title snapshot 1`] = `
                   aria-disabled="false"
                   aria-selected="true"
                   class="react-tabs__tab react-tabs__tab--selected"
+                  data-rttab="true"
                   id="react-tabs-8"
                   role="tab"
                   tabindex="0"
@@ -6138,6 +6145,7 @@ exports[`PropsTable title snapshot 1`] = `
                   aria-disabled="false"
                   aria-selected="false"
                   class="react-tabs__tab"
+                  data-rttab="true"
                   id="react-tabs-10"
                   role="tab"
                 >

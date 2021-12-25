@@ -148,8 +148,9 @@ export const AtlassianColor: FC<ColorBlockProps> = ({
  * palette displayed with AtlassianColor items
  * using a css grid for the dsplay
  */
-export const AtlassianColorPalette: FC<ThemeColorProps &
-  Omit<GridContainerProps, 'children'>> = props => {
+export const AtlassianColorPalette: FC<
+  ThemeColorProps & Omit<GridContainerProps, 'children'>
+> = props => {
   const { blackTextColor, whiteTextColor, ...rest } = props;
   return (
     <GridContainer {...rest}>

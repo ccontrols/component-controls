@@ -43,7 +43,7 @@
     "@component-controls/routes": "^3.14.6",
     "@component-controls/search-algolia": "^3.14.6",
     "@component-controls/search-fusejs": "^3.14.6",
-    "gatsby-plugin-typescript": "^3.0.0",
+    "gatsby-plugin-typescript": "^4.4.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.0.0",
@@ -53,12 +53,11 @@
     "@component-controls/logger": "^3.10.0",
     "@component-controls/ts-markdown-docs": "^3.8.2",
     "@types/react": "^16.9.34",
-    "eslint-plugin-react-hooks": "^4.1.2",
-    "gatsby": "^3.0.0",
+    "gatsby": "^4.4.0",
     "typescript": "^4.2.4"
   },
   "peerDependencies": {
-    "gatsby": "2.x || 3.x",
+    "gatsby": "3.x || 4.x",
     "react": "^16.8.0 || ^17.0.0",
     "react-dom": "^16.8.0 || ^17.0.0"
   },

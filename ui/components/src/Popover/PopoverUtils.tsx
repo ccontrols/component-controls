@@ -21,10 +21,12 @@ const matchPx = (
   return typeof result === 'number' ? `${result}px` : result;
 };
 
-export const Arrow: FC<{
-  placement: string;
-  borderColor: string;
-} & BoxProps> = forwardRef(function Arrow(
+export const Arrow: FC<
+  {
+    placement: string;
+    borderColor: string;
+  } & BoxProps
+> = forwardRef(function Arrow(
   { placement, borderColor, ...rest },
   ref: Ref<HTMLDivElement>,
 ) {
@@ -80,11 +82,13 @@ export const Arrow: FC<{
   );
 });
 
-export const Wrapper: FC<{
-  placement: string;
-  borderColor: string;
-  hidden: boolean;
-} & BoxProps> = forwardRef(function Wrapper(
+export const Wrapper: FC<
+  {
+    placement: string;
+    borderColor: string;
+    hidden: boolean;
+  } & BoxProps
+> = forwardRef(function Wrapper(
   { placement, borderColor, hidden, ...rest },
   ref: Ref<HTMLDivElement>,
 ) {

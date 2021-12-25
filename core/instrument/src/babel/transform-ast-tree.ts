@@ -23,8 +23,8 @@ export const transformMDXAttributes = (source: string): TraverseOptions => {
               const loc: CodeLocation = path.node.children.length
                 ? {
                     start: path.node.children[0].loc.start,
-                    end:
-                      path.node.children[path.node.children.length - 1].loc.end,
+                    end: path.node.children[path.node.children.length - 1].loc
+                      .end,
                   }
                 : path.node.loc;
               const rawSource = getASTSource(source, loc);

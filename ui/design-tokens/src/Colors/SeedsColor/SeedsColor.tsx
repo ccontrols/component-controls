@@ -143,10 +143,9 @@ export const SeedsColor: FC<ColorBlockProps> = ({ name, color }) => {
  * palette displayed with SeedsColor items
  * using a css grid for the dsplay
  */
-export const SeedsColorPalette: FC<Omit<
-  GridContainerProps,
-  'children'
->> = props => (
+export const SeedsColorPalette: FC<
+  Omit<GridContainerProps, 'children'>
+> = props => (
   <GridContainer {...props}>
     {({ name, value }) => (
       <SeedsColor key={`color_item_${name}}`} name={name} color={value} />

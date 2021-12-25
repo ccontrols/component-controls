@@ -108,8 +108,9 @@ const BaseDuetColor: FC<ColorBlockProps> = ({
  * palette displayed with DuetColor items
  * using a css flex display direction column
  */
-export const DuetColorPalette: FC<ThemeColorProps &
-  Omit<TableContainerProps, 'children' | 'columns'>> = props => {
+export const DuetColorPalette: FC<
+  ThemeColorProps & Omit<TableContainerProps, 'children' | 'columns'>
+> = props => {
   const { blackTextColor, ...rest } = props;
   return (
     <TableContainer

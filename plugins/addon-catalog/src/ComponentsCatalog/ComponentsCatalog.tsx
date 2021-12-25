@@ -232,42 +232,42 @@ export const ComponentsCatalog: FC<ComponentsCatalogProps> = ({
 
           case 'date_created_asc':
             return numCompare(
-              (new Date(
+              new Date(
                 componentA.fileInfo?.dateCreated || '',
-              ) as unknown) as number,
-              (new Date(
+              ) as unknown as number,
+              new Date(
                 componentB.fileInfo?.dateCreated || '',
-              ) as unknown) as number,
+              ) as unknown as number,
               'asc',
             );
           case 'date_created_desc':
             return numCompare(
-              (new Date(
+              new Date(
                 componentA.fileInfo?.dateCreated || '',
-              ) as unknown) as number,
-              (new Date(
+              ) as unknown as number,
+              new Date(
                 componentB.fileInfo?.dateCreated || '',
-              ) as unknown) as number,
+              ) as unknown as number,
               'desc',
             );
           case 'date_modified_asc':
             return numCompare(
-              (new Date(
+              new Date(
                 componentA.fileInfo?.dateModified || '',
-              ) as unknown) as number,
-              (new Date(
+              ) as unknown as number,
+              new Date(
                 componentB.fileInfo?.dateModified || '',
-              ) as unknown) as number,
+              ) as unknown as number,
               'asc',
             );
           case 'date_modified_desc':
             return numCompare(
-              (new Date(
+              new Date(
                 componentA.fileInfo?.dateModified || '',
-              ) as unknown) as number,
-              (new Date(
+              ) as unknown as number,
+              new Date(
                 componentB.fileInfo?.dateModified || '',
-              ) as unknown) as number,
+              ) as unknown as number,
               'desc',
             );
           case 'passing_desc':

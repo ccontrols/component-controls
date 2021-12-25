@@ -8826,7 +8826,7 @@ exports[`component-controls generated Design Tokens/Colors/DuetColor overview sn
         >
           <svg
             aria-hidden="true"
-            class="css-vw0gn3"
+            class="css-5d88xw-BaseDuetColor"
             fill="currentColor"
             height="16"
             role="img"
@@ -8871,27 +8871,27 @@ exports[`component-controls generated Design Tokens/Colors/DuetColor palette sna
     <thead>
       <tr>
         <th
-          class="css-1k1hrut"
+          class="css-760v5q-TableContainerHeader"
         >
           Example
         </th>
         <th
-          class="css-1uct0zt"
+          class="css-1bcagnm-TableContainerHeader"
         >
           Description
         </th>
         <th
-          class="css-1k1hrut"
+          class="css-760v5q-TableContainerHeader"
         >
           Token
         </th>
         <th
-          class="css-1b9sdrw"
+          class="css-ea6qtr-TableContainerHeader"
         >
           Contrast
         </th>
         <th
-          class="css-14nwjw6"
+          class="css-1f40c6i-TableContainerHeader"
         >
           Status
         </th>
@@ -8970,7 +8970,7 @@ exports[`component-controls generated Design Tokens/Colors/DuetColor palette sna
         >
           <svg
             aria-hidden="true"
-            class="css-vw0gn3"
+            class="css-5d88xw-BaseDuetColor"
             fill="currentColor"
             height="16"
             role="img"
@@ -9057,7 +9057,7 @@ exports[`component-controls generated Design Tokens/Colors/DuetColor palette sna
         >
           <svg
             aria-hidden="true"
-            class="css-vw0gn3"
+            class="css-5d88xw-BaseDuetColor"
             fill="currentColor"
             height="16"
             role="img"
@@ -9144,7 +9144,7 @@ exports[`component-controls generated Design Tokens/Colors/DuetColor palette sna
         >
           <svg
             aria-hidden="true"
-            class="css-vw0gn3"
+            class="css-5d88xw-BaseDuetColor"
             fill="currentColor"
             height="16"
             role="img"
@@ -9231,7 +9231,7 @@ exports[`component-controls generated Design Tokens/Colors/DuetColor palette sna
         >
           <svg
             aria-hidden="true"
-            class="css-vw0gn3"
+            class="css-5d88xw-BaseDuetColor"
             fill="currentColor"
             height="16"
             role="img"
@@ -9318,7 +9318,7 @@ exports[`component-controls generated Design Tokens/Colors/DuetColor palette sna
         >
           <svg
             aria-hidden="true"
-            class="css-vw0gn3"
+            class="css-5d88xw-BaseDuetColor"
             fill="currentColor"
             height="16"
             role="img"
@@ -9405,7 +9405,7 @@ exports[`component-controls generated Design Tokens/Colors/DuetColor palette sna
         >
           <svg
             aria-hidden="true"
-            class="css-tu3bwo"
+            class="css-1wjw49y-BaseDuetColor"
             fill="currentColor"
             height="16"
             role="img"
@@ -9492,7 +9492,7 @@ exports[`component-controls generated Design Tokens/Colors/DuetColor palette sna
         >
           <svg
             aria-hidden="true"
-            class="css-t2ml4u"
+            class="css-eghr9r-BaseDuetColor"
             fill="currentColor"
             height="16"
             role="img"
@@ -10800,7 +10800,7 @@ exports[`component-controls generated Design Tokens/Colors/IBMDLColor palette sn
   >
     <div
       class="react-tabs"
-      data-tabs="true"
+      data-rttabs="true"
     >
       <ul
         class="react-tabs__tab-list"
@@ -10811,6 +10811,7 @@ exports[`component-controls generated Design Tokens/Colors/IBMDLColor palette sn
           aria-disabled="false"
           aria-selected="true"
           class="react-tabs__tab react-tabs__tab--selected"
+          data-rttab="true"
           id="react-tabs-0"
           role="tab"
           tabindex="0"
@@ -10822,6 +10823,7 @@ exports[`component-controls generated Design Tokens/Colors/IBMDLColor palette sn
           aria-disabled="false"
           aria-selected="false"
           class="react-tabs__tab"
+          data-rttab="true"
           id="react-tabs-2"
           role="tab"
         >
@@ -10832,6 +10834,7 @@ exports[`component-controls generated Design Tokens/Colors/IBMDLColor palette sn
           aria-disabled="false"
           aria-selected="false"
           class="react-tabs__tab"
+          data-rttab="true"
           id="react-tabs-4"
           role="tab"
         >
@@ -10842,6 +10845,7 @@ exports[`component-controls generated Design Tokens/Colors/IBMDLColor palette sn
           aria-disabled="false"
           aria-selected="false"
           class="react-tabs__tab"
+          data-rttab="true"
           id="react-tabs-6"
           role="tab"
         >
@@ -11179,27 +11183,27 @@ exports[`component-controls generated Design Tokens/Colors/LightningColor palett
     <thead>
       <tr>
         <th
-          class="css-dre8ac"
+          class="css-d1yp7w-TableContainerHeader"
         >
           Token
         </th>
         <th
-          class="css-hv87u9"
+          class="css-7yk24z-TableContainerHeader"
         >
           Example
         </th>
         <th
-          class="css-hv87u9"
+          class="css-7yk24z-TableContainerHeader"
         >
           Released
         </th>
         <th
-          class="css-hv87u9"
+          class="css-7yk24z-TableContainerHeader"
         >
           Themeable
         </th>
         <th
-          class="css-hv87u9"
+          class="css-7yk24z-TableContainerHeader"
         >
           Support
         </th>
@@ -11594,31 +11598,31 @@ exports[`component-controls generated Design Tokens/Colors/LiquidColor overview 
       class="css-1h05woe-LiquidColor"
     >
       <div
-        class="css-1qqfxu1-CopyContainer"
+        class="css-1yjekw3-LiquidColor"
         style="display: inline-block;"
       />
       <div
-        class="css-1rsqsro-CopyContainer"
+        class="css-nm8i4j-LiquidColor"
         style="display: inline-block;"
       />
       <div
-        class="css-51xuxg-CopyContainer"
+        class="css-1w23xop-LiquidColor"
         style="display: inline-block;"
       />
       <div
-        class="css-ojdeb1-CopyContainer"
+        class="css-1lk5bdz-LiquidColor"
         style="display: inline-block;"
       />
       <div
-        class="css-4o7nwh-CopyContainer"
+        class="css-15j5a36-LiquidColor"
         style="display: inline-block;"
       />
       <div
-        class="css-tf2xu5-CopyContainer"
+        class="css-uosewf-LiquidColor"
         style="display: inline-block;"
       />
       <div
-        class="css-1hnhnat-CopyContainer"
+        class="css-17se49s-LiquidColor"
         style="display: inline-block;"
       />
     </div>
@@ -11664,31 +11668,31 @@ exports[`component-controls generated Design Tokens/Colors/LiquidColor palette s
         class="css-1h05woe-LiquidColor"
       >
         <div
-          class="css-1jbp0cf-CopyContainer"
+          class="css-1m3kimd-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-1d7y41e-CopyContainer"
+          class="css-1ai5pdj-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-1iho6iw-CopyContainer"
+          class="css-l56699-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-80tv0e-CopyContainer"
+          class="css-uorxfd-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-1r32100-CopyContainer"
+          class="css-10mga1q-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-1ri77cm-CopyContainer"
+          class="css-t059bs-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-1bwdeew-CopyContainer"
+          class="css-1o4s8q1-LiquidColor"
           style="display: inline-block;"
         />
       </div>
@@ -11726,31 +11730,31 @@ exports[`component-controls generated Design Tokens/Colors/LiquidColor palette s
         class="css-1h05woe-LiquidColor"
       >
         <div
-          class="css-13lw946-CopyContainer"
+          class="css-s9w20b-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-1svo3tx-CopyContainer"
+          class="css-17xad8g-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-1f9le0k-CopyContainer"
+          class="css-zc8l4b-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-18x6war-CopyContainer"
+          class="css-18qkg31-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-1n3x6b4-CopyContainer"
+          class="css-1b2xoli-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-1jf6vjp-CopyContainer"
+          class="css-1cmd7ta-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-1vg8irb-CopyContainer"
+          class="css-zmus01-LiquidColor"
           style="display: inline-block;"
         />
       </div>
@@ -11788,31 +11792,31 @@ exports[`component-controls generated Design Tokens/Colors/LiquidColor palette s
         class="css-1h05woe-LiquidColor"
       >
         <div
-          class="css-1w1gfed-CopyContainer"
+          class="css-1psffrs-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-1r4mfkk-CopyContainer"
+          class="css-1n4kwna-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-om9fmo-CopyContainer"
+          class="css-lcig9y-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-qz2ty0-CopyContainer"
+          class="css-1d6x3g0-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-1ez4y7x-CopyContainer"
+          class="css-5coo8b-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-oysset-CopyContainer"
+          class="css-p93gk9-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-10w5nih-CopyContainer"
+          class="css-1wfrdaj-LiquidColor"
           style="display: inline-block;"
         />
       </div>
@@ -11850,31 +11854,31 @@ exports[`component-controls generated Design Tokens/Colors/LiquidColor palette s
         class="css-1h05woe-LiquidColor"
       >
         <div
-          class="css-1w5efpd-CopyContainer"
+          class="css-12z1h5g-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-1vrvuir-CopyContainer"
+          class="css-1vrikjc-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-u5vecu-CopyContainer"
+          class="css-18wtfeu-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-3f9ejt-CopyContainer"
+          class="css-okin5z-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-1iz1cke-CopyContainer"
+          class="css-oakxiz-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-iih37k-CopyContainer"
+          class="css-1829evd-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-lgifqo-CopyContainer"
+          class="css-z7w9ia-LiquidColor"
           style="display: inline-block;"
         />
       </div>
@@ -11912,31 +11916,31 @@ exports[`component-controls generated Design Tokens/Colors/LiquidColor palette s
         class="css-1h05woe-LiquidColor"
       >
         <div
-          class="css-zdd1c2-CopyContainer"
+          class="css-ohswy-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-1sff2c3-CopyContainer"
+          class="css-9tmu4d-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-bhchk9-CopyContainer"
+          class="css-1bl3kqs-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-12jhmfg-CopyContainer"
+          class="css-137ssr1-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-5e1izp-CopyContainer"
+          class="css-13nyla8-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-117hznk-CopyContainer"
+          class="css-1fh77co-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-d6v9od-CopyContainer"
+          class="css-3u9avg-LiquidColor"
           style="display: inline-block;"
         />
       </div>
@@ -11974,31 +11978,31 @@ exports[`component-controls generated Design Tokens/Colors/LiquidColor palette s
         class="css-1h05woe-LiquidColor"
       >
         <div
-          class="css-qo9tro-CopyContainer"
+          class="css-voiyl3-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-3znhhg-CopyContainer"
+          class="css-1yeyqy-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-176r0ns-CopyContainer"
+          class="css-1shm60x-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-1o7nmb2-CopyContainer"
+          class="css-1dikpqn-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-nazygl-CopyContainer"
+          class="css-1eihw0r-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-qjfr6q-CopyContainer"
+          class="css-1svnbrn-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-xf9xlw-CopyContainer"
+          class="css-hrkg68-LiquidColor"
           style="display: inline-block;"
         />
       </div>
@@ -12036,31 +12040,31 @@ exports[`component-controls generated Design Tokens/Colors/LiquidColor palette s
         class="css-1h05woe-LiquidColor"
       >
         <div
-          class="css-3gfwqi-CopyContainer"
+          class="css-10nnub4-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-1w2pei7-CopyContainer"
+          class="css-628rpj-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-1r97ynz-CopyContainer"
+          class="css-1jh8dyn-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-1aokvha-CopyContainer"
+          class="css-12pn0bs-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-17us36k-CopyContainer"
+          class="css-1p5yujc-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-1ekqzu8-CopyContainer"
+          class="css-1lruy0l-LiquidColor"
           style="display: inline-block;"
         />
         <div
-          class="css-dpqt5-CopyContainer"
+          class="css-1jukpxg-LiquidColor"
           style="display: inline-block;"
         />
       </div>
@@ -12137,17 +12141,17 @@ exports[`component-controls generated Design Tokens/Colors/MorningstarColor pale
     <thead>
       <tr>
         <th
-          class="css-wskz0q"
+          class="css-1519qvk-TableContainerHeader"
         >
           Name
         </th>
         <th
-          class="css-yzp9no"
+          class="css-1ixj6w6-TableContainerHeader"
         >
           Constant
         </th>
         <th
-          class="css-x663n6"
+          class="css-14wlb2y-TableContainerHeader"
         >
           Color
         </th>
@@ -12433,27 +12437,27 @@ exports[`component-controls generated Design Tokens/Colors/OPatternColor palette
     <thead>
       <tr>
         <th
-          class="css-1k1hrut"
+          class="css-760v5q-TableContainerHeader"
         >
           Color
         </th>
         <th
-          class="css-cguqnl"
+          class="css-1yfnxrr-TableContainerHeader"
         >
           Variable
         </th>
         <th
-          class="css-x663n6"
+          class="css-14wlb2y-TableContainerHeader"
         >
           Hex
         </th>
         <th
-          class="css-x663n6"
+          class="css-14wlb2y-TableContainerHeader"
         >
           RGB
         </th>
         <th
-          class="css-x663n6"
+          class="css-14wlb2y-TableContainerHeader"
         >
           CMYK
         </th>
@@ -13825,10 +13829,10 @@ exports[`component-controls generated Design Tokens/Colors/SeedsColor overview s
             style="display: inline-block;"
           >
             <div
-              class="css-xdfvha"
+              class="css-wkpqa7-SeedsColor"
             >
               <div
-                class="css-xl9lbd"
+                class="css-1aftu21-SeedsColor"
               />
               <div>
                 green.700
@@ -13840,10 +13844,10 @@ exports[`component-controls generated Design Tokens/Colors/SeedsColor overview s
             style="display: inline-block;"
           >
             <div
-              class="css-xdfvha"
+              class="css-wkpqa7-SeedsColor"
             >
               <div
-                class="css-xl9lbd"
+                class="css-1aftu21-SeedsColor"
               />
               <div>
                 green.800
@@ -13905,10 +13909,10 @@ exports[`component-controls generated Design Tokens/Colors/SeedsColor palette sn
               style="display: inline-block;"
             >
               <div
-                class="css-xdfvha"
+                class="css-wkpqa7-SeedsColor"
               >
                 <div
-                  class="css-1dgc8kh"
+                  class="css-so5hu9-SeedsColor"
                 />
                 <div>
                   purple.700
@@ -13962,10 +13966,10 @@ exports[`component-controls generated Design Tokens/Colors/SeedsColor palette sn
               style="display: inline-block;"
             >
               <div
-                class="css-xdfvha"
+                class="css-wkpqa7-SeedsColor"
               >
                 <div
-                  class="css-fzurdo"
+                  class="css-5j6oqu-SeedsColor"
                 />
                 <div>
                   aqua.1100
@@ -14019,10 +14023,10 @@ exports[`component-controls generated Design Tokens/Colors/SeedsColor palette sn
               style="display: inline-block;"
             >
               <div
-                class="css-xdfvha"
+                class="css-wkpqa7-SeedsColor"
               >
                 <div
-                  class="css-qli1vb"
+                  class="css-145l6lp-SeedsColor"
                 />
                 <div>
                   aqua.600
@@ -14081,10 +14085,10 @@ exports[`component-controls generated Design Tokens/Colors/SeedsColor palette sn
               style="display: inline-block;"
             >
               <div
-                class="css-xdfvha"
+                class="css-wkpqa7-SeedsColor"
               >
                 <div
-                  class="css-18savie"
+                  class="css-1vqybsh-SeedsColor"
                 />
                 <div>
                   cta.primary
@@ -14096,10 +14100,10 @@ exports[`component-controls generated Design Tokens/Colors/SeedsColor palette sn
               style="display: inline-block;"
             >
               <div
-                class="css-xdfvha"
+                class="css-wkpqa7-SeedsColor"
               >
                 <div
-                  class="css-18savie"
+                  class="css-1vqybsh-SeedsColor"
                 />
                 <div>
                   blue.700
@@ -14156,10 +14160,10 @@ exports[`component-controls generated Design Tokens/Colors/SeedsColor palette sn
               style="display: inline-block;"
             >
               <div
-                class="css-xdfvha"
+                class="css-wkpqa7-SeedsColor"
               >
                 <div
-                  class="css-1u2rsu0"
+                  class="css-8m9bd8-SeedsColor"
                 />
                 <div>
                   cta.scondary
@@ -14171,10 +14175,10 @@ exports[`component-controls generated Design Tokens/Colors/SeedsColor palette sn
               style="display: inline-block;"
             >
               <div
-                class="css-xdfvha"
+                class="css-wkpqa7-SeedsColor"
               >
                 <div
-                  class="css-1u2rsu0"
+                  class="css-8m9bd8-SeedsColor"
                 />
                 <div>
                   neutral.800
@@ -14537,27 +14541,27 @@ exports[`component-controls generated Design Tokens/Colors/SkylineColor palette 
     <thead>
       <tr>
         <th
-          class="css-hv87u9"
+          class="css-7yk24z-TableContainerHeader"
         >
           Name
         </th>
         <th
-          class="css-hv87u9"
+          class="css-7yk24z-TableContainerHeader"
         >
           Use on White
         </th>
         <th
-          class="css-hv87u9"
+          class="css-7yk24z-TableContainerHeader"
         >
           Use on Gray 200
         </th>
         <th
-          class="css-cguqnl"
+          class="css-1yfnxrr-TableContainerHeader"
         >
           Scss
         </th>
         <th
-          class="css-hv87u9"
+          class="css-7yk24z-TableContainerHeader"
         >
           Example
         </th>
@@ -15648,13 +15652,13 @@ exports[`component-controls generated Design Tokens/Colors/TableColor palette sn
     <thead>
       <tr>
         <th
-          class="css-1oohbao"
+          class="css-2n1lw3-TableColorPaletteHeader"
         />
         <th
-          class="css-14ljmiw"
+          class="css-174utmg-TableColorPaletteHeader"
         />
         <th
-          class="css-19g33z2"
+          class="css-1peltp7-TableColorPaletteHeader"
           colspan="2"
         >
           AA color
@@ -15662,17 +15666,17 @@ exports[`component-controls generated Design Tokens/Colors/TableColor palette sn
       </tr>
       <tr>
         <th
-          class="css-1oohbao"
+          class="css-2n1lw3-TableColorPaletteHeader"
         >
           color
         </th>
         <th
-          class="css-14ljmiw"
+          class="css-174utmg-TableColorPaletteHeader"
         >
           name
         </th>
         <th
-          class="css-1ozpifp"
+          class="css-1ef4406-TableColorPaletteHeader"
         >
           <div
             class="css-tqbnps-ColorBox"
@@ -15686,7 +15690,7 @@ exports[`component-controls generated Design Tokens/Colors/TableColor palette sn
           </div>
         </th>
         <th
-          class="css-1ozpifp"
+          class="css-1ef4406-TableColorPaletteHeader"
         >
           <div
             class="css-16bx2u1-ColorBox"
@@ -16170,19 +16174,19 @@ exports[`component-controls generated Design Tokens/Colors/TableColor paletteDar
     <thead>
       <tr>
         <th
-          class="css-1w1on1t"
+          class="css-9r1ydo-TableColorPaletteHeader"
         />
         <th
-          class="css-14ljmiw"
+          class="css-174utmg-TableColorPaletteHeader"
         />
         <th
-          class="css-19g33z2"
+          class="css-1peltp7-TableColorPaletteHeader"
           colspan="2"
         >
           AA color
         </th>
         <th
-          class="css-19g33z2"
+          class="css-1peltp7-TableColorPaletteHeader"
           colspan="2"
         >
           AA dark
@@ -16190,17 +16194,17 @@ exports[`component-controls generated Design Tokens/Colors/TableColor paletteDar
       </tr>
       <tr>
         <th
-          class="css-1w1on1t"
+          class="css-9r1ydo-TableColorPaletteHeader"
         >
           color / dark
         </th>
         <th
-          class="css-14ljmiw"
+          class="css-174utmg-TableColorPaletteHeader"
         >
           name
         </th>
         <th
-          class="css-1ozpifp"
+          class="css-1ef4406-TableColorPaletteHeader"
         >
           <div
             class="css-tqbnps-ColorBox"
@@ -16214,7 +16218,7 @@ exports[`component-controls generated Design Tokens/Colors/TableColor paletteDar
           </div>
         </th>
         <th
-          class="css-1ozpifp"
+          class="css-1ef4406-TableColorPaletteHeader"
         >
           <div
             class="css-16bx2u1-ColorBox"
@@ -16228,7 +16232,7 @@ exports[`component-controls generated Design Tokens/Colors/TableColor paletteDar
           </div>
         </th>
         <th
-          class="css-1ozpifp"
+          class="css-1ef4406-TableColorPaletteHeader"
         >
           <div
             class="css-tqbnps-ColorBox"
@@ -16242,7 +16246,7 @@ exports[`component-controls generated Design Tokens/Colors/TableColor paletteDar
           </div>
         </th>
         <th
-          class="css-1ozpifp"
+          class="css-1ef4406-TableColorPaletteHeader"
         >
           <div
             class="css-16bx2u1-ColorBox"
@@ -17312,17 +17316,17 @@ exports[`component-controls generated Design Tokens/Colors/UniformColor palette 
     <thead>
       <tr>
         <th
-          class="css-1b9sdrw"
+          class="css-ea6qtr-TableContainerHeader"
         >
           Color
         </th>
         <th
-          class="css-dre8ac"
+          class="css-d1yp7w-TableContainerHeader"
         >
           Name
         </th>
         <th
-          class="css-dre8ac"
+          class="css-d1yp7w-TableContainerHeader"
         >
           RGBA
         </th>
@@ -18460,27 +18464,27 @@ exports[`component-controls generated Design Tokens/Fonts/LightningFont palette 
     <thead>
       <tr>
         <th
-          class="css-dre8ac"
+          class="css-d1yp7w-TableContainerHeader"
         >
           Token
         </th>
         <th
-          class="css-hv87u9"
+          class="css-7yk24z-TableContainerHeader"
         >
           Example
         </th>
         <th
-          class="css-hv87u9"
+          class="css-7yk24z-TableContainerHeader"
         >
           Released
         </th>
         <th
-          class="css-hv87u9"
+          class="css-7yk24z-TableContainerHeader"
         >
           Themeable
         </th>
         <th
-          class="css-hv87u9"
+          class="css-7yk24z-TableContainerHeader"
         >
           Support
         </th>

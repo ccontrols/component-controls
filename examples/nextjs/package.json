@@ -22,7 +22,7 @@
     "@component-controls/nextjs-plugin": "^3.15.0",
     "@component-controls/pages": "^3.15.0",
     "@theme-ui/presets": "^0.8.4",
-    "next": "^11.1.3",
+    "next": "^12.0.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },

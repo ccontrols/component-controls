@@ -43,12 +43,8 @@ export const Popover: FC<PopoverProps> = ({
       tooltipShown={tooltipShown}
       onVisibilityChange={onVisibilityChange}
       tooltip={tooltipProps => {
-        const {
-          getTooltipProps,
-          getArrowProps,
-          tooltipRef,
-          arrowRef,
-        } = tooltipProps;
+        const { getTooltipProps, getArrowProps, tooltipRef, arrowRef } =
+          tooltipProps;
         const { hidden, ...containerProps } = getTooltipProps();
         return (
           <Wrapper

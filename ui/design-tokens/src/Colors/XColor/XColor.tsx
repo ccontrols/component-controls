@@ -110,10 +110,9 @@ export const XColor: FC<ColorBlockProps> = ({ name, color }) => {
  * palette displayed with XColor items
  * using a css grid for the dsplay
  */
-export const XColorPalette: FC<Omit<
-  GridContainerProps,
-  'children'
->> = props => (
+export const XColorPalette: FC<
+  Omit<GridContainerProps, 'children'>
+> = props => (
   <GridContainer width={180} gap={2} {...props}>
     {({ name, value }) => (
       <XColor key={`color_item_${name}}`} name={name} color={value} />

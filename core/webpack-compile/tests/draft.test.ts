@@ -448,8 +448,7 @@ describe('test draft', () => {
               defaultValue: 'default',
               type: {
                 name: 'function',
-                raw:
-                  '(string & (boolean | ReactChild | ReactFragment | ReactPortal | null))',
+                raw: '(string & (boolean | ReactChild | ReactFragment | ReactPortal | null))',
               },
             },
             onClick: {
@@ -562,8 +561,7 @@ describe('test draft', () => {
                     name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
                   },
                 ],
-                raw:
-                  'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
+                raw: 'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
               },
             },
           },

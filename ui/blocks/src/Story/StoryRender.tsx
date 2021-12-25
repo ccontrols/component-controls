@@ -94,6 +94,9 @@ export const StoryRender: FC<StoryRenderProps & StoryWrapperProps> = forwardRef(
     const store = useStore();
     const options = useUserData();
     const doc = store.docs[story.doc as string];
+    if (!doc.renderFn) {
+      throw new Error(`${story.name} renderFn is undefined`);
+    }
     const rendered = doc.renderFn({
       story,
       doc,

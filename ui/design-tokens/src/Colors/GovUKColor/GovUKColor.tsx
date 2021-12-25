@@ -67,10 +67,9 @@ export const BaseGovUKColor: FC<ColorBlockProps> = ({ name, color }) => {
  * using a css flex display direction column
  */
 
-export const GovUKColorPalette: FC<Omit<
-  TableContainerProps,
-  'children' | 'columns'
->> = props => (
+export const GovUKColorPalette: FC<
+  Omit<TableContainerProps, 'children' | 'columns'>
+> = props => (
   <TableContainer
     columns={[{ title: 'color' }, { title: 'sass' }, { title: 'hex' }]}
     header={null}

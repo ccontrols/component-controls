@@ -66,10 +66,9 @@ export const PrimerColor: FC<ColorBlockProps> = ({ name, color }) => {
  * palette displayed with PrimerColor items
  * using a css flex display direction column
  */
-export const PrimerColorPalette: FC<Omit<
-  FlexContainerProps,
-  'children' | 'direction'
->> = props => (
+export const PrimerColorPalette: FC<
+  Omit<FlexContainerProps, 'children' | 'direction'>
+> = props => (
   <FlexContainer direction="column" sx={{ width: 350 }} {...props}>
     {({ name, value }) => (
       <PrimerColor key={`color_item_${name}}`} name={name} color={value} />

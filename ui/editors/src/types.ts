@@ -10,5 +10,5 @@ export type PropertyControlProps = {
  * Property editor interface, needs to be implemented by any custom controls editor.
  */
 export type PropertyEditor<
-  T extends PropertyControlProps = PropertyControlProps
+  T extends PropertyControlProps = PropertyControlProps,
 > = FC<T>;

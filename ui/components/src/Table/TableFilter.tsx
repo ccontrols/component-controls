@@ -6,18 +6,15 @@ import {
   UseGlobalFiltersInstanceProps,
 } from 'react-table';
 
-export const GlobalFilter: FC<Pick<
-  UseGlobalFiltersInstanceProps<any>,
-  'preGlobalFilteredRows' | 'setGlobalFilter'
-> &
-  Pick<UseGlobalFiltersOptions<any>, 'globalFilter'> & {
-    itemsLabel: string | null;
-  }> = ({
-  preGlobalFilteredRows,
-  globalFilter,
-  setGlobalFilter,
-  itemsLabel,
-}) => {
+export const GlobalFilter: FC<
+  Pick<
+    UseGlobalFiltersInstanceProps<any>,
+    'preGlobalFilteredRows' | 'setGlobalFilter'
+  > &
+    Pick<UseGlobalFiltersOptions<any>, 'globalFilter'> & {
+      itemsLabel: string | null;
+    }
+> = ({ preGlobalFilteredRows, globalFilter, setGlobalFilter, itemsLabel }) => {
   const count = preGlobalFilteredRows.length;
 
   return (

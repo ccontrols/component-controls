@@ -1,12 +1,12 @@
 module.exports = {
-  "root": true,
+  root: true,
   extends: [
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:mdx/recommended',
-    'prettier/@typescript-eslint',
+    'prettier',
   ],
   rules: {
     'comma-dangle': ['error', 'always-multiline'],
@@ -31,7 +31,7 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': 'off',
     '@typescript-eslint/no-object-literal-type-assertion': 'off',
     '@typescript-eslint/no-parameter-properties': 'off',
-    "no-restricted-globals":'error',
+    'no-restricted-globals': 'error',
     'react-hooks/rules-of-hooks': 'off',
   },
   parserOptions: {
@@ -46,4 +46,4 @@ module.exports = {
       version: 'detect',
     },
   },
-}
+};

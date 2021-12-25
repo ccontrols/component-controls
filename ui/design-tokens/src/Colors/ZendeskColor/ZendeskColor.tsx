@@ -52,10 +52,9 @@ export const ZendeskColor: FC<ColorBlockProps> = ({ name, color }) => {
  * palette displayed with ZendeskColor items
  * using a css grid for the dsplay
  */
-export const ZendeskColorPalette: FC<Omit<
-  GridContainerProps,
-  'children'
->> = props => (
+export const ZendeskColorPalette: FC<
+  Omit<GridContainerProps, 'children'>
+> = props => (
   <GridContainer width={80} gap={2} {...props}>
     {({ name, value }) => (
       <ZendeskColor key={`color_item_${name}}`} name={name} color={value} />

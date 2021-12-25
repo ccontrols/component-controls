@@ -31,7 +31,7 @@ export const LinkHeading: FC<LinkHeadingProps> = ({
           typeof child === 'string'
             ? child
             : typeof child === 'object'
-            ? ((child as unknown) as any).props?.children
+            ? (child as unknown as any).props?.children
             : null,
         )
         .filter(child => child)

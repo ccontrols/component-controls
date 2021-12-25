@@ -79,22 +79,21 @@ export const usePages = (): Pages => {
 
 export type DocSortOrder = 'date' | 'dateModified' | 'title';
 
-export const docSortFn = (sort: DocSortOrder) => (
-  p1: Document,
-  p2: Document,
-): number => {
-  const v1: any | undefined = p1[sort];
-  const v2: any | undefined = p2[sort];
-  if (v1 && v2) {
-    return sort.startsWith('date')
-      ? -v1.localeCompare(v2)
-      : v1.localeCompare(v2);
-  }
-  if (!v1 && !v2) {
-    return 0;
-  }
-  return v1 ? -1 : 1;
-};
+export const docSortFn =
+  (sort: DocSortOrder) =>
+  (p1: Document, p2: Document): number => {
+    const v1: any | undefined = p1[sort];
+    const v2: any | undefined = p2[sort];
+    if (v1 && v2) {
+      return sort.startsWith('date')
+        ? -v1.localeCompare(v2)
+        : v1.localeCompare(v2);
+    }
+    if (!v1 && !v2) {
+      return 0;
+    }
+    return v1 ? -1 : 1;
+  };
 
 type SortType = Record<string, DocSortOrder>;
 interface DocsSortContextProps {

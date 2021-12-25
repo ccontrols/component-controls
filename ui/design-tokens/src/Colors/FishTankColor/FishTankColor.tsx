@@ -54,10 +54,9 @@ export const FishTankColor: FC<ColorBlockProps> = ({ name, color }) => {
  * palette displayed with FishTankColor items
  * using a css flex display direction column
  */
-export const FishTankColorPalette: FC<Omit<
-  FlexContainerProps,
-  'children' | 'direction'
->> = props => (
+export const FishTankColorPalette: FC<
+  Omit<FlexContainerProps, 'children' | 'direction'>
+> = props => (
   <FlexContainer
     direction="column"
     sx={{

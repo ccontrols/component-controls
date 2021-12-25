@@ -72,10 +72,9 @@ export const BaseCedarColor: FC<CedarColorProps> = ({
  * using a css flex display direction column
  */
 
-export const CedarColorPalette: FC<Omit<
-  TableContainerProps,
-  'children' | 'columns'
->> = props => (
+export const CedarColorPalette: FC<
+  Omit<TableContainerProps, 'children' | 'columns'>
+> = props => (
   <TableContainer
     columns={[{ title: 'color' }, { title: 'name' }, { title: 'hex' }]}
     header={null}

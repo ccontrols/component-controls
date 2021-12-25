@@ -1,54 +1,54 @@
 # Table of contents
 
--   [Overview](#overview)
--   [Installation](#installation)
--   [API](#api)
-    -   [Functions](#functions)
-        -   [parseStories](#parsestories)
-    -   [Default options](#default-options)
-        -   [**defaultParserOptions**: _ParserOptions_](#defaultparseroptions-parseroptions)
-        -   [**defaultResolveOptions**: _ResolverOptions_](#defaultresolveoptions-resolveroptions)
-        -   [**defaultComponentOptions**: _ComponentOptions_](#defaultcomponentoptions-componentoptions)
-        -   [**defaultStoriesOptions**: _StoriesOptions_](#defaultstoriesoptions-storiesoptions)
--   [Interfaces](#interfaces)
-    -   [InstrumentOptions](#instrumentoptions)
-        -   [Properties](#properties)
-    -   [InstrumentOptionsMDX](#instrumentoptionsmdx)
-        -   [Properties](#properties-1)
-    -   [ComponentOptions](#componentoptions)
-        -   [Properties](#properties-2)
-    -   [StoriesOptions](#storiesoptions)
-        -   [Properties](#properties-3)
--   [ParserOptions](#parseroptions)
-    -   -   [Properties](#properties-4)
--   [PrettierOptions](#prettieroptions)
-    -   -   [Properties](#properties-5)
--   [ResolvePrettierConfigOptions](#resolveprettierconfigoptions)
-    -   -   [Properties](#properties-6)
--   [ResolverOptions](#resolveroptions)
--   [MDXOptions](#mdxoptions)
-    -   [PackageInfoOptions](#packageinfooptions)
-        -   [Properties](#properties-7)
-    -   [PropsInfoExtractor](#propsinfoextractor)
-    -   [ComponentFileOption](#componentfileoption)
-        -   [Arguments](#arguments)
+- [Overview](#overview)
+- [Installation](#installation)
+- [API](#api)
+  - [Functions](#functions)
+    - [parseStories](#parsestories)
+  - [Default options](#default-options)
+    - [**defaultParserOptions**: _ParserOptions_](#defaultparseroptions-parseroptions)
+    - [**defaultResolveOptions**: _ResolverOptions_](#defaultresolveoptions-resolveroptions)
+    - [**defaultComponentOptions**: _ComponentOptions_](#defaultcomponentoptions-componentoptions)
+    - [**defaultStoriesOptions**: _StoriesOptions_](#defaultstoriesoptions-storiesoptions)
+- [Interfaces](#interfaces)
+  - [InstrumentOptions](#instrumentoptions)
+    - [Properties](#properties)
+  - [InstrumentOptionsMDX](#instrumentoptionsmdx)
+    - [Properties](#properties-1)
+  - [ComponentOptions](#componentoptions)
+    - [Properties](#properties-2)
+  - [StoriesOptions](#storiesoptions)
+    - [Properties](#properties-3)
+- [ParserOptions](#parseroptions)
+  - - [Properties](#properties-4)
+- [PrettierOptions](#prettieroptions)
+  - - [Properties](#properties-5)
+- [ResolvePrettierConfigOptions](#resolveprettierconfigoptions)
+  - - [Properties](#properties-6)
+- [ResolverOptions](#resolveroptions)
+- [MDXOptions](#mdxoptions)
+  - [PackageInfoOptions](#packageinfooptions)
+    - [Properties](#properties-7)
+  - [PropsInfoExtractor](#propsinfoextractor)
+  - [ComponentFileOption](#componentfileoption)
+    - [Arguments](#arguments)
 
 # Overview
 
 Parsing a source file will generate the following information:
 
--   ESM: List of story named exports
--   ESM: Default export stories file information
--   MDX: List of `<Story />` story tags
--   MDX: List of Frontammetr or `<Meta />` stories file information
--   Source code extracted for the stories
--   Source code of the entire stories file
--   List of all attributes(ie parameters) passed to ESM/MDX stories
--   List of story function arguments passed to ESM/MDX stories
--   Usage location (in the source code) of the function arguments
--   Extract 'component' information for stories: import clause, source file, source location
--   Extract package.json repository information for the stories file
--   Extract package.json repository information for the components file (when the components and the stories and in different packages)
+- ESM: List of story named exports
+- ESM: Default export stories file information
+- MDX: List of `<Story />` story tags
+- MDX: List of Frontammetr or `<Meta />` stories file information
+- Source code extracted for the stories
+- Source code of the entire stories file
+- List of all attributes(ie parameters) passed to ESM/MDX stories
+- List of story function arguments passed to ESM/MDX stories
+- Usage location (in the source code) of the function arguments
+- Extract 'component' information for stories: import clause, source file, source location
+- Extract package.json repository information for the stories file
+- Extract package.json repository information for the components file (when the components and the stories and in different packages)
 
 # Installation
 
@@ -80,7 +80,7 @@ Parse and instrument a javascript, typescript or MDX file of stories
 
 **Returns:** _Promise‹Store›_
 
-* * *
+---
 
 ## Default options
 
@@ -92,25 +92,25 @@ _Defined in [core/instrument/src/types.ts](https://github.com/atanasster/compone
 
 • **sourceType**: _"module"_ = "module"
 
-* * *
+---
 
 ### **defaultResolveOptions**: _[ResolverOptions](#resolveroptions)_
 
 • **extensions**: _string\[]_ = ['.js', '.jsx', '.ts', '.tsx', '.vue', '.mjs', '.es', '.es6']
 
-* * *
+---
 
 ### **defaultComponentOptions**: _[ComponentOptions](#componentoptions)_
 
 • **sourceFiles**: _boolean_ = true;
 
-* * *
+---
 
 ### **defaultStoriesOptions**: _[StoriesOptions](#storiesoptions)_
 
 • **sourceFiles**: _boolean_ = false;
 
-* * *
+---
 
 # Interfaces
 
@@ -132,7 +132,7 @@ Options for extracting component information.
 
 • **extractPropsFn**? : _[PropsInfoExtractor](#propsinfoextractor)_
 
- optional module to extract prop tables information for components
+optional module to extract prop tables information for components
 
 • **parser**? : _[ParserOptions](#parseroptions)_
 
@@ -148,7 +148,7 @@ passing a value of false as prettier option will disabled prettifying
 
 Options to control resolving filenames.
 
-* * *
+---
 
 ## InstrumentOptionsMDX
 
@@ -160,7 +160,7 @@ extends [InstrumentOptions](#instrumentoptions)) and adds options for `mdx-js`.
 
 Options for mdx-js compiling
 
-* * *
+---
 
 ## ComponentOptions
 
@@ -172,7 +172,7 @@ _Defined in [core/instrument/src/types.ts](https://github.com/atanasster/compone
 
 • **resolveFile**? : _undefined | `(componentName: string, filePath: string) => string | undefined;`_
 
-Callback function to resolve the source file name of a component. 
+Callback function to resolve the source file name of a component.
 Return false if this file should not be processed.
 
 • **sourceFiles**? : _boolean_
@@ -183,7 +183,7 @@ If set to false, will not save the component's source file.
 
 Otions for extracting repository information from the component's package,json file.
 
-* * *
+---
 
 ## StoriesOptions
 
@@ -201,7 +201,7 @@ If set to false, will not save the stories's source file, only the source of eac
 
 Options for extracting repository information from the component's package,json file.
 
-* * *
+---
 
 # ParserOptions
 
@@ -276,7 +276,7 @@ Defaults to true if sourceType === 'module'. Otherwise, false.
 
 Adds all parsed tokens to a tokens property on the File node.
 
-* * *
+---
 
 # PrettierOptions
 
@@ -312,10 +312,6 @@ Prettier can insert a special @format marker at the top of files specifying that
 the file has been formatted with prettier. This works well when used in tandem with
 the --require-pragma option. If there is already a docblock at the top of
 the file then this option will add a newline to it with the @format marker.
-
-• **jsxBracketSameLine**? : _undefined | false | true_
-
-Put the `>` of a multi-line JSX element at the end of the last line instead of being alone on the next line.
 
 • **jsxSingleQuote**? : _undefined | false | true_
 
@@ -383,7 +379,7 @@ Whether or not to indent the code inside <script> and <style> tags in Vue files.
 
 Whether or not to indent the code inside <script> and <style> tags in Vue files.
 
-* * *
+---
 
 # ResolvePrettierConfigOptions
 
@@ -404,15 +400,15 @@ Prettier will parse it and convert its properties to the corresponding prettier 
 This configuration will be overridden by `.prettierrc`, etc. Currently,
 the following EditorConfig properties are supported:
 
--   indent_style
--   indent_size/tab_width
--   max_line_length
+- indent_style
+- indent_size/tab_width
+- max_line_length
 
 • **useCache**? : _undefined | false | true_
 
 If set to `false`, all caching will be bypassed.
 
-* * *
+---
 
 # ResolverOptions
 
@@ -464,7 +460,7 @@ algorithm does not preserve symlinks by default.
 
 how to read files synchronously (defaults to fs.readFileSync)
 
-* * *
+---
 
 # MDXOptions
 
@@ -492,7 +488,7 @@ specify markdown compilers
 
 regex for blocks, defaults to \['[a-z\\.]+(\\.){0,1}[a-z\\.]']
 
-* * *
+---
 
 ## PackageInfoOptions
 
@@ -504,7 +500,7 @@ _Defined in [core/instrument/src/types.ts](https://github.com/atanasster/compone
 
 • **maxLevels**? : _number_
 
- Max levels of folders to look up to find the `package.json` file.
+Max levels of folders to look up to find the `package.json` file.
 
 • **packageJsonName**? : _string_
 
@@ -522,13 +518,13 @@ Whether to save the link for project readme file in the repository field.
 
 Whether to save the link for filing issues with the project in the repository field.
 
-* * *
+---
 
 ## PropsInfoExtractor
 
 `(fileName: string, componentName?: string, source?: string) => PropTypes | undefined;`
 
-Callback function to extract props info table  - ie docgen type libraries. Used to extract displayName, and props tables for a component
+Callback function to extract props info table - ie docgen type libraries. Used to extract displayName, and props tables for a component
 
 _Defined in [core/instrument/src/types.ts](https://github.com/atanasster/component-controls/blob/ab703a5/core/instrument/src/types.ts)_
 
@@ -548,8 +544,8 @@ Full name and path of the component path. react-docgen needs it to extract babel
 
 • **componentName**? : _string_
 
-Optional component name.  react-docgen-typescript supports multiple exports for a file.  react-docgne does not use it.
+Optional component name. react-docgen-typescript supports multiple exports for a file. react-docgne does not use it.
 
 • **source**? : _string_
 
-Optional soure, saves time if its already loaded.  react-docgen accepts source as input parameter.  react-docgen-typescript does not use it.
+Optional soure, saves time if its already loaded. react-docgen accepts source as input parameter. react-docgen-typescript does not use it.

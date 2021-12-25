@@ -103,10 +103,9 @@ export const PatternFlyColor: FC<ColorBlockProps> = ({ name, color }) => {
  * palette displayed with PatternFlyColor items
  * using a css flex display direction column
  */
-export const PatternFlyColorPalette: FC<Omit<
-  FlexContainerProps,
-  'children' | 'direction'
->> = props => (
+export const PatternFlyColorPalette: FC<
+  Omit<FlexContainerProps, 'children' | 'direction'>
+> = props => (
   <FlexContainer direction="column" {...props}>
     {({ name, value }) => (
       <PatternFlyColor key={`color_item_${name}}`} name={name} color={value} />

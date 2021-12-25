@@ -160,8 +160,12 @@ const componentRelatedMetrics = async (
   component: Component,
   options?: InstrumentOptions,
 ) => {
-  const { components, resolver: resolveOptions, propsLoaders = [], jest } =
-    options || {};
+  const {
+    components,
+    resolver: resolveOptions,
+    propsLoaders = [],
+    jest,
+  } = options || {};
   const componentPackage = await packageInfo(
     component.name,
     component.request,

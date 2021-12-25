@@ -47,11 +47,7 @@ const paramsFromClassName = (className = ``) => {
 
   return [
     // @ts-ignore
-    lang
-      .split(`language-`)
-      .pop()
-      .split(`{`)
-      .shift(),
+    lang.split(`language-`).pop().split(`{`).shift(),
   ].concat(
     // @ts-ignore
     params.split(`&`).reduce((merged, param) => {

@@ -60,10 +60,9 @@ export const BaseBaseWebColor: FC<ColorBlockProps> = ({ name, color }) => {
  * palette displayed with BaseWebColor items
  * using a css flex display direction column
  */
-export const BaseWebColorPalette: FC<Omit<
-  TableContainerProps,
-  'children' | 'columns'
->> = props => (
+export const BaseWebColorPalette: FC<
+  Omit<TableContainerProps, 'children' | 'columns'>
+> = props => (
   <TableContainer
     columns={[{ title: 'color' }, { title: 'name' }, { title: 'hex' }]}
     header={null}

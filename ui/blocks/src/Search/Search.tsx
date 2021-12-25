@@ -13,10 +13,9 @@ import { DocumentItem } from '../DocumentItem';
 /**
  * search input component connected to the store
  */
-export const Search: FC<Omit<
-  SearchInputProps<DocInfo>,
-  'items' | 'onSearch'
->> = props => {
+export const Search: FC<
+  Omit<SearchInputProps<DocInfo>, 'items' | 'onSearch'>
+> = props => {
   const searchHook = useSearch();
   const onSelectItem = (item: DocInfo) => {
     window.location.href = item.link;

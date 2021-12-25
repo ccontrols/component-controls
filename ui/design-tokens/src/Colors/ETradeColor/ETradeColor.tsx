@@ -158,8 +158,9 @@ export const ETradeColor: FC<ColorBlockProps> = ({
  * palette displayed with ETradeColor items
  * using a css grid for the dsplay
  */
-export const ETradeColorPalette: FC<ThemeColorProps &
-  Omit<GridContainerProps, 'children'>> = props => {
+export const ETradeColorPalette: FC<
+  ThemeColorProps & Omit<GridContainerProps, 'children'>
+> = props => {
   const { blackTextColor, ...rest } = props;
   return (
     <GridContainer width={210} gap={2} {...rest}>

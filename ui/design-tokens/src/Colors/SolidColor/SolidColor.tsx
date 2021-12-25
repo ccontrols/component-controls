@@ -70,10 +70,9 @@ export const SolidColor: FC<ColorBlockProps> = ({ name, color }) => {
  * palette displayed with SolidColor items
  * using a css grid for the dsplay
  */
-export const SolidColorPalette: FC<Omit<
-  GridContainerProps,
-  'children'
->> = props => (
+export const SolidColorPalette: FC<
+  Omit<GridContainerProps, 'children'>
+> = props => (
   <GridContainer {...props}>
     {({ name, value }) => (
       <SolidColor key={`color_item_${name}}`} name={name} color={value} />

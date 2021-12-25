@@ -961,8 +961,12 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"text\\" | \\"none\\" | \\"search\\" | \\"tel\\" | \\"url\\" | \\"email\\" | \\"numeric\\" | \\"decimal\\"",
+        "raw": "\\"search\\" | \\"text\\" | \\"none\\" | \\"tel\\" | \\"url\\" | \\"email\\" | \\"numeric\\" | \\"decimal\\"",
         "value": Array [
+          Object {
+            "name": "string",
+            "value": "search",
+          },
           Object {
             "name": "string",
             "value": "text",
@@ -970,10 +974,6 @@ A hint could be a sample value or a brief description of the expected format.",
           Object {
             "name": "string",
             "value": "none",
-          },
-          Object {
-            "name": "string",
-            "value": "search",
           },
           Object {
             "name": "string",

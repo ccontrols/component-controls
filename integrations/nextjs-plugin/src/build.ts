@@ -7,43 +7,45 @@ import {
 } from '@component-controls/core/node-utils';
 import { buildBundle } from '@component-controls/base-integration/webpack-build';
 
-module.exports = ({
-  bundleName,
-  configPath,
-  presets,
-  staticFolder,
-  distFolder: userDistFolder,
-  webpack,
-  ...rest
-}: BuildProps) => () => {
-  const distFolder = getDistFolder({ distFolder: userDistFolder });
-  const buildOptions: BuildProps = {
+module.exports =
+  ({
     bundleName,
     configPath,
     presets,
-    distFolder: path.resolve(__dirname),
-    staticFolder: staticFolder || path.join(distFolder, 'static'),
+    staticFolder,
+    distFolder: userDistFolder,
     webpack,
-  };
-  return {
-    /**
-     * we need some async function, to make sure the compilation process is completed
-     * headers is the first called from async redirects() amd async rewrites()
-     */
-    async headers() {
-      await buildBundle({
-        options: buildOptions,
-        onEndBuild: ({ store }) => {
-          const cssBundle = getCSSFilePath(store.config);
-          if (fs.existsSync(cssBundle)) {
-            const styles = fs.readFileSync(cssBundle, 'utf8');
-            process.env.NEXT_PUBLIC_CC_CSS = JSON.stringify(styles);
-          }
-        },
-      });
-      return [];
-    },
+    ...rest
+  }: BuildProps) =>
+  () => {
+    const distFolder = getDistFolder({ distFolder: userDistFolder });
+    const buildOptions: BuildProps = {
+      bundleName,
+      configPath,
+      presets,
+      distFolder: path.resolve(__dirname),
+      staticFolder: staticFolder || path.join(distFolder, 'static'),
+      webpack,
+    };
+    return {
+      /**
+       * we need some async function, to make sure the compilation process is completed
+       * headers is the first called from async redirects() amd async rewrites()
+       */
+      async headers() {
+        await buildBundle({
+          options: buildOptions,
+          onEndBuild: ({ store }) => {
+            const cssBundle = getCSSFilePath(store.config);
+            if (fs.existsSync(cssBundle)) {
+              const styles = fs.readFileSync(cssBundle, 'utf8');
+              process.env.NEXT_PUBLIC_CC_CSS = JSON.stringify(styles);
+            }
+          },
+        });
+        return [];
+      },
 
-    ...rest,
+      ...rest,
+    };
   };
-};

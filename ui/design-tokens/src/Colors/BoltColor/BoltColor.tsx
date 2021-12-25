@@ -176,8 +176,9 @@ export const BoltColor: FC<ColorBlockProps> = ({
  * palette displayed with BoltColor items
  * using a css grid for the dsplay
  */
-export const BoltColorPalette: FC<ThemeColorProps &
-  Omit<GridContainerProps, 'children'>> = props => {
+export const BoltColorPalette: FC<
+  ThemeColorProps & Omit<GridContainerProps, 'children'>
+> = props => {
   const { blackTextColor, whiteTextColor, ...rest } = props;
   return (
     <GridContainer {...rest}>

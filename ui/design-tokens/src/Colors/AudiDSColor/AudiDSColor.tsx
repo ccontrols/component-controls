@@ -86,10 +86,9 @@ export const AudiDSColor: FC<ColorBlockProps> = ({ name, color }) => {
  * palette displayed with AudiDSColor items
  * using a css grid for the dsplay
  */
-export const AudiDSColorPalette: FC<Omit<
-  GridContainerProps,
-  'children'
->> = props => (
+export const AudiDSColorPalette: FC<
+  Omit<GridContainerProps, 'children'>
+> = props => (
   <GridContainer {...props}>
     {({ name, value }) => (
       <AudiDSColor key={`color_item_${name}}`} name={name} color={value} />

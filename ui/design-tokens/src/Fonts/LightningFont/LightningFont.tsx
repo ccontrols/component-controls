@@ -89,10 +89,9 @@ type Optional<T, K extends keyof T> = Omit<T, K> & Partial<T>;
  * palette displayed with LightningColor items
  * using a css flex display direction column
  */
-export const LightningFontTheme: FC<Optional<
-  Omit<TableContainerProps, 'children'>,
-  'columns'
->> = ({ columns = [], ...props }) => (
+export const LightningFontTheme: FC<
+  Optional<Omit<TableContainerProps, 'children'>, 'columns'>
+> = ({ columns = [], ...props }) => (
   <TableContainer
     sx={{
       '& > thead > tr > th': {

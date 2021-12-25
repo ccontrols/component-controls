@@ -71,9 +71,4 @@ export const formatExtension = (format: TeplateFormats): string =>
   format === 'ts' ? 'ts' : 'js';
 
 export const removeExtension = (fileName?: string): string | undefined =>
-  fileName
-    ? fileName
-        .split('.')
-        .slice(0, -1)
-        .join('.')
-    : undefined;
+  fileName ? fileName.split('.').slice(0, -1).join('.') : undefined;

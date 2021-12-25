@@ -69,10 +69,9 @@ export const AltaColor: FC<ColorBlockProps> = ({ name, color }) => {
  * palette displayed with AltaColor items
  * using a css grid for the dsplay
  */
-export const AltaColorPalette: FC<Omit<
-  GridContainerProps,
-  'children'
->> = props => (
+export const AltaColorPalette: FC<
+  Omit<GridContainerProps, 'children'>
+> = props => (
   <GridContainer {...props}>
     {({ name, value }) => (
       <AltaColor key={`color_item_${name}}`} name={name} color={value} />

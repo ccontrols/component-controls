@@ -112,8 +112,7 @@ describe('esm-props-info-external', () => {
                   name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
                 },
               ],
-              raw:
-                'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
+              raw: 'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
             },
           },
         },
@@ -177,8 +176,7 @@ describe('esm-props-info-external', () => {
                 name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
               },
             ],
-            raw:
-              'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
+            raw: 'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
           },
         },
       },

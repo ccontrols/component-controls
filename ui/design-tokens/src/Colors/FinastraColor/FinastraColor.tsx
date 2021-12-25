@@ -81,10 +81,9 @@ export const FinastraColor: FC<ColorBlockProps> = ({ name, color }) => {
  * palette displayed with FinastraColor items
  * using a css flex display direction column
  */
-export const FinastraColorPalette: FC<Omit<
-  FlexContainerProps,
-  'children' | 'direction'
->> = props => (
+export const FinastraColorPalette: FC<
+  Omit<FlexContainerProps, 'children' | 'direction'>
+> = props => (
   <FlexContainer direction="column" sx={{ width: 250 }} {...props}>
     {({ name, value, hover }) => (
       <FinastraColor

@@ -57,10 +57,9 @@ export const VanillaColor: FC<ColorBlockProps> = ({ name, color }) => {
  * palette displayed with VanillaColor items
  * using a css grid for the dsplay
  */
-export const VanillaColorPalette: FC<Omit<
-  GridContainerProps,
-  'children'
->> = props => (
+export const VanillaColorPalette: FC<
+  Omit<GridContainerProps, 'children'>
+> = props => (
   <GridContainer width={150} gap={3} {...props}>
     {({ name, value }) => (
       <VanillaColor key={`color_item_${name}}`} name={name} color={value} />

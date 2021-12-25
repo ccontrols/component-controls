@@ -38,8 +38,7 @@ export const store: Store = {
       repository: {
         browse:
           'https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx',
-        docs:
-          'https://github.com/ccontrols/component-controls/tree/master#readme',
+        docs: 'https://github.com/ccontrols/component-controls/tree/master#readme',
         issues: 'https://github.com/ccontrols/component-controls/issues',
       },
       dependencies: {
@@ -852,8 +851,7 @@ Markdown **descripton** for *component*.
       plugins: {
         figma: [
           {
-            url:
-              'https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1',
+            url: 'https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1',
             title: 'figma design file',
           },
         ],

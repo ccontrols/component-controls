@@ -30,16 +30,14 @@ export const saveStore = (store: Store): void => {
         localStorage.removeItem(key);
       }
     }
-    const save: Omit<
-      Store,
-      'addObserver' | 'removeObserver' | 'updateStory'
-    > = {
-      stories: store.stories,
-      config: store.config,
-      components: store.components,
-      docs: store.docs,
-      packages: store.packages,
-    };
+    const save: Omit<Store, 'addObserver' | 'removeObserver' | 'updateStory'> =
+      {
+        stories: store.stories,
+        config: store.config,
+        components: store.components,
+        docs: store.docs,
+        packages: store.packages,
+      };
     localStorage.setItem(
       COMPONENT_CONTROLS_STORAGE,
       JSON.stringify(save, encodeFn),

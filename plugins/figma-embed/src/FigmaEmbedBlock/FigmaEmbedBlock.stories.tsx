@@ -30,13 +30,11 @@ export const customURLS: Example = () => {
         id="."
         items={[
           {
-            url:
-              'https://www.figma.com/file/hS1sLjYq49vjnKXhwGgHwg/Navigation-UI-design-components-Community?node-id=1%3A2309',
+            url: 'https://www.figma.com/file/hS1sLjYq49vjnKXhwGgHwg/Navigation-UI-design-components-Community?node-id=1%3A2309',
             title: 'design document 1',
           },
           {
-            url:
-              'https://www.figma.com/file/LtgbR2mbVPbQTNDfDQxbKL/Atanas-Stoyanov-s-Team-Colors?node-id=0%3A1',
+            url: 'https://www.figma.com/file/LtgbR2mbVPbQTNDfDQxbKL/Atanas-Stoyanov-s-Team-Colors?node-id=0%3A1',
             title: 'design document 2',
           },
         ]}
@@ -65,8 +63,7 @@ export const customIFrameProps: Example = () => {
         id="."
         items={[
           {
-            url:
-              'https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1',
+            url: 'https://www.figma.com/file/vgf0guEmC5IKtjHJKkRVSr/Button?node-id=0%3A1',
             title: 'figma design file',
             height: '300',
           },

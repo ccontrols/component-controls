@@ -35,9 +35,7 @@ export class CachedFileResource<T> {
     const cachedFolder = this.getCacheFolder();
     return path.join(
       cachedFolder,
-      createHash('md5')
-        .update(this.fileKey)
-        .digest('hex'),
+      createHash('md5').update(this.fileKey).digest('hex'),
     );
   };
 
@@ -48,10 +46,7 @@ export class CachedFileResource<T> {
       : [this.filePath];
     return files
       .reduce((acc, f) => {
-        const mTime = fs
-          .statSync(f)
-          .mtime.getTime()
-          .toString();
+        const mTime = fs.statSync(f).mtime.getTime().toString();
         return acc.update(f).update(mTime);
       }, createHash('md5').update(version))
       .digest('hex');

@@ -105,10 +105,9 @@ export const BeelineColor: FC<ColorBlockProps> = ({ name, color }) => {
  * palette displayed with BeelineColor items
  * using a css grid for the dsplay
  */
-export const BeelineColorPalette: FC<Omit<
-  GridContainerProps,
-  'children'
->> = props => (
+export const BeelineColorPalette: FC<
+  Omit<GridContainerProps, 'children'>
+> = props => (
   <GridContainer width={170} gap={3} {...props}>
     {({ name, value }) => (
       <BeelineColor key={`color_item_${name}}`} name={name} color={value} />

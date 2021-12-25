@@ -18,18 +18,14 @@ export const LiquidColor: FC<ColorBlockProps> = ({ name, color }) => {
   const palette = [hex];
   let initial = hex;
   for (let i = 0; i < 3; i += 1) {
-    initial = tinycolor(initial)
-      .lighten()
-      .toHexString();
+    initial = tinycolor(initial).lighten().toHexString();
     if (!palette.includes(initial)) {
       palette.push(initial);
     }
   }
   initial = hex;
   for (let i = 0; i < 3; i += 1) {
-    initial = tinycolor(initial)
-      .darken()
-      .toHexString();
+    initial = tinycolor(initial).darken().toHexString();
     if (!palette.includes(initial)) {
       palette.unshift(initial);
     }
@@ -115,10 +111,9 @@ export const LiquidColor: FC<ColorBlockProps> = ({ name, color }) => {
  * palette displayed with LiquidColor items
  * using a css grid for the dsplay
  */
-export const LiquidColorPalette: FC<Omit<
-  GridContainerProps,
-  'children'
->> = props => (
+export const LiquidColorPalette: FC<
+  Omit<GridContainerProps, 'children'>
+> = props => (
   <GridContainer width={170} gap={3} {...props}>
     {({ name, value }) => (
       <LiquidColor key={`color_item_${name}}`} name={name} color={value} />

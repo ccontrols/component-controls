@@ -235,8 +235,9 @@ export const extractExports = (
           if ((rightExpression as ObjectExpression).properties) {
             (rightExpression as ObjectExpression).properties.reduce(
               (acc, prop) => {
-                const localName: string = ((prop as ObjectProperty)
-                  .value as Identifier)?.name;
+                const localName: string = (
+                  (prop as ObjectProperty).value as Identifier
+                )?.name;
                 const namedExport =
                   localExports[localName] || imports[localName];
                 if (namedExport) {

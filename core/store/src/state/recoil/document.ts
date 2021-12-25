@@ -103,22 +103,21 @@ export const usePages = (): Pages => useRecoilValue(pagesState);
 
 export type DocSortOrder = 'date' | 'dateModified' | 'title';
 
-export const docSortFn = (sort: DocSortOrder) => (
-  p1: Document,
-  p2: Document,
-): number => {
-  const v1: any | undefined = p1[sort];
-  const v2: any | undefined = p2[sort];
-  if (v1 && v2) {
-    return sort.startsWith('date')
-      ? -v1.localeCompare(v2)
-      : v1.localeCompare(v2);
-  }
-  if (!v1 && !v2) {
-    return 0;
-  }
-  return v1 ? -1 : 1;
-};
+export const docSortFn =
+  (sort: DocSortOrder) =>
+  (p1: Document, p2: Document): number => {
+    const v1: any | undefined = p1[sort];
+    const v2: any | undefined = p2[sort];
+    if (v1 && v2) {
+      return sort.startsWith('date')
+        ? -v1.localeCompare(v2)
+        : v1.localeCompare(v2);
+    }
+    if (!v1 && !v2) {
+      return 0;
+    }
+    return v1 ? -1 : 1;
+  };
 
 export const docSortByTypeState = atomFamily<DocSortOrder, DocType>({
   key: 'docs_sort)by_type',
@@ -136,20 +135,22 @@ export const useDocSort = (
 
 const docsByTypeState = selectorFamily<Pages, DocType>({
   key: 'docs_by_type',
-  get: type => ({ get }) => {
-    const store = get(storeState);
-    const docs = store.docs;
-    return Object.keys(docs).reduce((acc: Pages, key: string) => {
-      const doc: Document | undefined = docs[key];
-      if (doc) {
-        const { type: docType = defDocType } = doc;
-        if (docType === type) {
-          return [...acc, { ...doc }];
+  get:
+    type =>
+    ({ get }) => {
+      const store = get(storeState);
+      const docs = store.docs;
+      return Object.keys(docs).reduce((acc: Pages, key: string) => {
+        const doc: Document | undefined = docs[key];
+        if (doc) {
+          const { type: docType = defDocType } = doc;
+          if (docType === type) {
+            return [...acc, { ...doc }];
+          }
         }
-      }
-      return acc;
-    }, []);
-  },
+        return acc;
+      }, []);
+    },
 });
 
 /**
@@ -161,11 +162,13 @@ export const useDocByType = (type: DocType): Pages => {
 
 const docsSortedState = selectorFamily<Pages, DocType>({
   key: 'docs_sorted_by_type',
-  get: type => ({ get }) => {
-    const docs = get(docsByTypeState(type));
-    const sort = get(docSortByTypeState(type));
-    return [...docs].sort(docSortFn(sort));
-  },
+  get:
+    type =>
+    ({ get }) => {
+      const docs = get(docsByTypeState(type));
+      const sort = get(docSortByTypeState(type));
+      return [...docs].sort(docSortFn(sort));
+    },
 });
 
 /**

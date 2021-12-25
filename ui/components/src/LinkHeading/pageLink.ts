@@ -1,4 +1,4 @@
-export const titleToId = (id: any): string => {
+export const titleToId = (id?: string | null | Record<string, any>): string => {
   const strId = typeof id === 'string' ? id : '';
   const value = strId.replace(/\W/g, '-').toLowerCase();
   if (value.match(/^[A-Z]/i)) {

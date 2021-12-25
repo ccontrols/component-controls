@@ -22,7 +22,9 @@ dot.templateSettings.strip = false;
  * @param options - rendering options
  * @returns a string with the rendered template
  */
-export const createDocumentTemplate: TemplateFunction<StoryTemplateOptions> = async (
+export const createDocumentTemplate: TemplateFunction<
+  StoryTemplateOptions
+> = async (
   options: StoryTemplateOptions,
   dataImports?: DataImportOptions,
   configration?: BuildConfiguration,
@@ -42,9 +44,8 @@ export const createDocumentTemplate: TemplateFunction<StoryTemplateOptions> = as
     return '';
   }
   const { doc, stories, storeName } = parsed;
-  const importPath = (output
-    ? relativeImport(output, storyPath)
-    : `./${path.basename(storyPath)}`
+  const importPath = (
+    output ? relativeImport(output, storyPath) : `./${path.basename(storyPath)}`
   )
     .split('.')
     .slice(0, -1)

@@ -63,13 +63,8 @@ export const packageInfo = async (
         typeof packageJSON.repository === 'string'
           ? packageJSON.repository
           : packageJSON.repository && packageJSON.repository.url;
-      const {
-        name,
-        version,
-        dependencies,
-        devDependencies,
-        peerDependencies,
-      } = packageJSON;
+      const { name, version, dependencies, devDependencies, peerDependencies } =
+        packageJSON;
       const result: PackageInfo = {
         fileHash: hashStoreId(`${filePath}-${partName}`),
         name,

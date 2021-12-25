@@ -58,10 +58,12 @@ export interface TablePaginationProps {
    */
   pageSize?: number;
 }
-export const TablePagination: FC<UsePaginationInstanceProps<{
-  [key: string]: any;
-}> &
-  TablePaginationProps> = props => {
+export const TablePagination: FC<
+  UsePaginationInstanceProps<{
+    [key: string]: any;
+  }> &
+    TablePaginationProps
+> = props => {
   const {
     totalCountVisible = true,
     totalCountTemplate = 'Total: ${totalData} records',

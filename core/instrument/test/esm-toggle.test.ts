@@ -17,8 +17,7 @@ describe('esm-toggle', () => {
       repository: {
         browse:
           'https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/toggle/toggle-story.js',
-        docs:
-          'https://github.com/ccontrols/component-controls/tree/master#readme',
+        docs: 'https://github.com/ccontrols/component-controls/tree/master#readme',
         issues: 'https://github.com/ccontrols/component-controls/issues',
       },
     });

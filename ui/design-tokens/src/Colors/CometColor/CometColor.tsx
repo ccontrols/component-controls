@@ -109,8 +109,9 @@ export const BaseCometColor: FC<ColorBlockProps> = ({
  * using a css flex display direction column
  */
 
-export const CometColorPalette: FC<ThemeColorProps &
-  Omit<TableContainerProps, 'children' | 'columns'>> = props => {
+export const CometColorPalette: FC<
+  ThemeColorProps & Omit<TableContainerProps, 'children' | 'columns'>
+> = props => {
   const { blackTextColor, whiteTextColor, ...rest } = props;
   return (
     <TableContainer

@@ -19,9 +19,9 @@ type TableImportType = TableImportTypeRow[];
  * base component dependencies
  */
 
-export const ComponentLocalDependencies: FC<ComponentLocalDependenciesProps> = ({
-  component,
-}) => {
+export const ComponentLocalDependencies: FC<
+  ComponentLocalDependenciesProps
+> = ({ component }) => {
   const imports: TableImportType = useMemo(() => {
     const { localDependencies } = component || {};
     return localDependencies

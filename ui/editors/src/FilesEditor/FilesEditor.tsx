@@ -28,9 +28,9 @@ export const FilesEditor: PropertyEditor = ({ name, ...rest }) => {
       multiple
       onChange={(e: ChangeEvent<HTMLInputElement>) => {
         if (e.target.files) {
-          Promise.all(
-            Array.from(e.target.files).map(fileReaderPromise),
-          ).then(files => onChange(files));
+          Promise.all(Array.from(e.target.files).map(fileReaderPromise)).then(
+            files => onChange(files),
+          );
         }
       }}
       accept={control.accept}

@@ -35,10 +35,10 @@ export const saveTemplate = async <P extends TemplateOptions>(
   const dataTemplate = await saveDataTemplate(options, configuration);
 
   const content = await templateFn(
-    ({
+    {
       output: testFolder,
       ...rest,
-    } as unknown) as P,
+    } as unknown as P,
     dataTemplate,
     configuration,
   );

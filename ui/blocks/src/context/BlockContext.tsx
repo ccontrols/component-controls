@@ -6,12 +6,9 @@ import { ErrorBoundary } from './ErrorBoundary';
 import { ThemeProvider, ThemeProviderProps } from '../ThemeProvider';
 import { getURL } from '../utils/url';
 
-export const BlockContextProvider: FC<StateRootProps &
-  Pick<ThemeProviderProps, 'components'>> = ({
-  children,
-  components,
-  ...props
-}) => {
+export const BlockContextProvider: FC<
+  StateRootProps & Pick<ThemeProviderProps, 'components'>
+> = ({ children, components, ...props }) => {
   const values = useMemo(() => {
     const url = getURL();
     if (url) {

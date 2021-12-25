@@ -136,10 +136,12 @@ const BaseSkylineColor: FC<SkylineColorProps> = ({
  * palette displayed with SkylineColor items
  * using a css flex display direction column
  */
-export const SkylineColorPalette: FC<{ contrastColors?: ContrastColors } & Omit<
-  TableContainerProps,
-  'children' | 'columns'
->> = ({ contrastColors = defaultContrastColors, ...props }) => (
+export const SkylineColorPalette: FC<
+  { contrastColors?: ContrastColors } & Omit<
+    TableContainerProps,
+    'children' | 'columns'
+  >
+> = ({ contrastColors = defaultContrastColors, ...props }) => (
   <TableContainer
     columns={[
       { title: 'Name' },

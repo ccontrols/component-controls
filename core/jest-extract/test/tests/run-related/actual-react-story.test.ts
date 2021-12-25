@@ -283,13 +283,13 @@ describe('react story tests', () => {
             total: 67,
             covered: 22,
             skipped: 0,
-            pct: 32.84,
+            pct: 32.83,
           },
           functions: {
             total: 15,
             covered: 1,
             skipped: 0,
-            pct: 6.67,
+            pct: 6.66,
           },
           statements: {
             total: 69,
@@ -298,10 +298,10 @@ describe('react story tests', () => {
             pct: 31.88,
           },
           branches: {
-            total: 16,
+            total: 18,
             covered: 4,
             skipped: 0,
-            pct: 25,
+            pct: 22.22,
           },
         },
         'VariantButton.docs.tsx': {

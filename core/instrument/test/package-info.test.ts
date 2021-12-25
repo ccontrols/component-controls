@@ -24,8 +24,7 @@ describe('package-info', () => {
       repository: {
         browse:
           'https://github.com/ccontrols/component-controls/tree/master/core/instrument/test',
-        docs:
-          'https://github.com/ccontrols/component-controls/tree/master#readme',
+        docs: 'https://github.com/ccontrols/component-controls/tree/master#readme',
         issues: 'https://github.com/ccontrols/component-controls/issues',
       },
     });
@@ -35,8 +34,7 @@ describe('package-info', () => {
     expect(packageInfo).toMatchObject({
       repository: {
         browse: 'https://github.com/ccontrols/component-controls/tree/master/',
-        docs:
-          'https://github.com/ccontrols/component-controls/tree/master#readme',
+        docs: 'https://github.com/ccontrols/component-controls/tree/master#readme',
         issues: 'https://github.com/ccontrols/component-controls/issues',
       },
     });

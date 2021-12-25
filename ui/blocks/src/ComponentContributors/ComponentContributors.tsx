@@ -15,8 +15,9 @@ export interface ComponentContributorsProps {
   component?: Component;
 }
 
-export const ComponentContributors: FC<ComponentContributorsProps &
-  Omit<GithubAvatarListProps, 'users'>> = ({ caption, component, ...rest }) => {
+export const ComponentContributors: FC<
+  ComponentContributorsProps & Omit<GithubAvatarListProps, 'users'>
+> = ({ caption, component, ...rest }) => {
   const props = useCustomProps<Omit<GithubAvatarListProps, 'users'>>(
     'component_contributors',
     rest,

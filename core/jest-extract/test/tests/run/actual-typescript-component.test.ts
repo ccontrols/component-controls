@@ -41,7 +41,7 @@ describe('react typescript component', () => {
           total: 3,
           covered: 2,
           skipped: 0,
-          pct: 66.67,
+          pct: 66.66,
         },
         statements: {
           total: 18,
@@ -53,7 +53,7 @@ describe('react typescript component', () => {
           total: 6,
           covered: 1,
           skipped: 0,
-          pct: 16.67,
+          pct: 16.66,
         },
       },
       'PopoverUtils.tsx': {

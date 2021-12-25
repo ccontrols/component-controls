@@ -112,9 +112,9 @@ const parseSource = async (
 };
 
 export { LoadingDocStore };
-export type ParseStoriesReturnType = { transformed: string } & Partial<
-  LoadingDocStore
->;
+export type ParseStoriesReturnType = {
+  transformed: string;
+} & Partial<LoadingDocStore>;
 /**
  * Parse and instrument a javascript, typescript or MDX file of stories
  * @param source Source of the file to be instrumented

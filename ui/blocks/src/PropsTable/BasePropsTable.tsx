@@ -62,9 +62,10 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
 }) => {
   const [copied, setCopied] = useState(false);
   const story = useCurrentStory();
-  const info: Partial<ComponentInfo> = useMemo(() => component.info || {}, [
-    component,
-  ]);
+  const info: Partial<ComponentInfo> = useMemo(
+    () => component.info || {},
+    [component],
+  );
   const [, setControlValue] = useControl();
   const controls = useMemo(() => {
     const storyControls = visibility !== 'info' ? story?.controls || {} : {};

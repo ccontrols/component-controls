@@ -39,8 +39,13 @@ export const BaseStoryConfig: FC<BaseStoryConfigProps> = ({
       onClick: onShowFileSource,
     });
   }
-  const { loc, storyFn, source, arguments: storyArgs, ...restStory } =
-    story || {};
+  const {
+    loc,
+    storyFn,
+    source,
+    arguments: storyArgs,
+    ...restStory
+  } = story || {};
   return Object.keys(restStory).length ? (
     <Source language="json" {...sourceProps} actions={allActions}>
       {JSON.stringify(restStory, null, 2)}

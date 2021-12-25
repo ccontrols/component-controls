@@ -1601,7 +1601,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
       >
         <div
           class="react-tabs"
-          data-tabs="true"
+          data-rttabs="true"
         >
           <div
             class="emotion-3"
@@ -1758,7 +1758,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                 >
                   <div
                     class="react-tabs"
-                    data-tabs="true"
+                    data-rttabs="true"
                   >
                     <ul
                       class="react-tabs__tab-list"
@@ -1769,6 +1769,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                         aria-disabled="false"
                         aria-selected="true"
                         class="react-tabs__tab react-tabs__tab--selected"
+                        data-rttab="true"
                         id="react-tabs-0"
                         role="tab"
                         tabindex="0"
@@ -1780,6 +1781,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                         aria-disabled="false"
                         aria-selected="false"
                         class="react-tabs__tab"
+                        data-rttab="true"
                         id="react-tabs-2"
                         role="tab"
                       >
@@ -1883,7 +1885,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                         >
                           <div
                             class="react-tabs"
-                            data-tabs="true"
+                            data-rttabs="true"
                           >
                             <ul
                               class="react-tabs__tab-list"
@@ -1894,6 +1896,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                 aria-disabled="false"
                                 aria-selected="true"
                                 class="react-tabs__tab react-tabs__tab--selected"
+                                data-rttab="true"
                                 id="react-tabs-4"
                                 role="tab"
                                 tabindex="0"
@@ -1905,6 +1908,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                 aria-disabled="false"
                                 aria-selected="false"
                                 class="react-tabs__tab"
+                                data-rttab="true"
                                 id="react-tabs-6"
                                 role="tab"
                               >
@@ -2390,7 +2394,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                         >
                           <div
                             class="react-tabs"
-                            data-tabs="true"
+                            data-rttabs="true"
                           >
                             <ul
                               class="react-tabs__tab-list"
@@ -2401,6 +2405,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                 aria-disabled="false"
                                 aria-selected="true"
                                 class="react-tabs__tab react-tabs__tab--selected"
+                                data-rttab="true"
                                 id="react-tabs-8"
                                 role="tab"
                                 tabindex="0"
@@ -2412,6 +2417,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                 aria-disabled="false"
                                 aria-selected="false"
                                 class="react-tabs__tab"
+                                data-rttab="true"
                                 id="react-tabs-10"
                                 role="tab"
                               >
@@ -2718,7 +2724,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                         >
                           <div
                             class="react-tabs"
-                            data-tabs="true"
+                            data-rttabs="true"
                           >
                             <ul
                               class="react-tabs__tab-list"
@@ -2729,6 +2735,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                 aria-disabled="false"
                                 aria-selected="true"
                                 class="react-tabs__tab react-tabs__tab--selected"
+                                data-rttab="true"
                                 id="react-tabs-12"
                                 role="tab"
                                 tabindex="0"
@@ -2740,6 +2747,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                 aria-disabled="false"
                                 aria-selected="false"
                                 class="react-tabs__tab"
+                                data-rttab="true"
                                 id="react-tabs-14"
                                 role="tab"
                               >
@@ -2984,7 +2992,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                         >
                           <div
                             class="react-tabs"
-                            data-tabs="true"
+                            data-rttabs="true"
                           >
                             <ul
                               class="react-tabs__tab-list"
@@ -2995,6 +3003,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                 aria-disabled="false"
                                 aria-selected="true"
                                 class="react-tabs__tab react-tabs__tab--selected"
+                                data-rttab="true"
                                 id="react-tabs-16"
                                 role="tab"
                                 tabindex="0"
@@ -3006,6 +3015,7 @@ exports[`SidebarsPage overview snapshot 1`] = `
                                 aria-disabled="false"
                                 aria-selected="false"
                                 class="react-tabs__tab"
+                                data-rttab="true"
                                 id="react-tabs-18"
                                 role="tab"
                               >

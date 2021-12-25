@@ -85,10 +85,9 @@ export const AntdHorzColor: FC<ColorBlockProps> = ({ name, color, hover }) => {
  * palette displayed with AntdHorzColor items
  * using a css flex display direction row
  */
-export const AntdHorzColorPalette: FC<Omit<
-  FlexContainerProps,
-  'children' | 'direction'
->> = props => (
+export const AntdHorzColorPalette: FC<
+  Omit<FlexContainerProps, 'children' | 'direction'>
+> = props => (
   <FlexContainer direction="row" {...props}>
     {({ name, value, hover }) => (
       <AntdHorzColor

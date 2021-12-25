@@ -219,7 +219,9 @@ export const newControlValues = (
             return {
               name,
               value: {
-                ...newControlValues(control.value as ComponentControls),
+                ...newControlValues(
+                  control.value as unknown as ComponentControls,
+                ),
               },
             };
           }

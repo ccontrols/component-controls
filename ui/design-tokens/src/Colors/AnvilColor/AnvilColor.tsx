@@ -74,10 +74,9 @@ export const AnvilColor: FC<ColorBlockProps> = ({ name, color }) => {
  * palette displayed with AnvilColor items
  * using a css grid for the dsplay
  */
-export const AnvilColorPalette: FC<Omit<
-  GridContainerProps,
-  'children'
->> = props => (
+export const AnvilColorPalette: FC<
+  Omit<GridContainerProps, 'children'>
+> = props => (
   <GridContainer {...props}>
     {({ name, value }) => (
       <AnvilColor key={`color_item_${name}}`} name={name} color={value} />

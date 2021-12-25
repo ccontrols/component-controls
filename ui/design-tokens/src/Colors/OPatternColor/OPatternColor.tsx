@@ -73,10 +73,9 @@ const BaseOPatternColor: FC<ColorBlockProps> = ({ name, color }) => {
  * palette displayed with OPatternColor items
  * using a css flex display direction column
  */
-export const OPatternColorPalette: FC<Omit<
-  TableContainerProps,
-  'children' | 'columns'
->> = props => (
+export const OPatternColorPalette: FC<
+  Omit<TableContainerProps, 'children' | 'columns'>
+> = props => (
   <TableContainer
     columns={[
       { title: 'Color', sx: { width: '25%' } },

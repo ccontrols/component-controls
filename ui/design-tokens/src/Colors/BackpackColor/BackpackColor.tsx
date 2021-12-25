@@ -116,10 +116,9 @@ export const BackpackColor: FC<ColorBlockProps> = ({ name, color }) => {
  * palette displayed with BackpackColor items
  * using a css grid for the dsplay
  */
-export const BackpackColorPalette: FC<Omit<
-  GridContainerProps,
-  'children'
->> = props => (
+export const BackpackColorPalette: FC<
+  Omit<GridContainerProps, 'children'>
+> = props => (
   <GridContainer {...props}>
     {({ name, value }) => (
       <BackpackColor key={`color_item_${name}}`} name={name} color={value} />
