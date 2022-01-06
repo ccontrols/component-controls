@@ -3,6 +3,7 @@
 -   [Overview](#overview)
 -   [Installation](#installation)
 -   [API](#api)
+    -   [run](#run)
 
 # Overview
 
@@ -20,8 +21,23 @@ $ npm install @component-controls/react-docgen-typescript-info --save-dev
 
 # API
 
-<tsdoc-typescript files="./src/types.ts,react-docgen-typescript/lib/parser.d.ts" entry="./src/index.ts"/>
+<api-readme />
 
-<!-- START-TSDOC-TYPESCRIPT -->
+<!-- START-API-README -->
 
-<!-- END-TSDOC-TYPESCRIPT -->
+## run
+
+**`function`**
+
+run API to generate react-docgen-typescript props information tables.
+
+_defined in [@component-controls/react-docgen-typescript-info/props-info/react-docgen-typescript/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/props-info/react-docgen-typescript/src/index.ts#L14)_
+
+**parameters**
+
+| Name      | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Description                                            |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ |
+| `options` | <details><summary>`type`</summary><blockquote>`transformProps`: **function** (<br />`props`\*: `ComponentDoc`\[]<br />) => <details><summary>`ComponentDoc`</summary><blockquote>`expression`: ts.Symbol<br />`displayName`\*: `string`<br />`filePath`\*: `string`<br />`description`\*: `string`<br /><details><summary>`props`\*</summary><blockquote>\[`string`]: `T`</blockquote></details>`methods`\*: `Method`\[]<br /><details><summary>`tags`</summary><blockquote>\[`string`]: `T`</blockquote></details></blockquote></details><br />`propFilter`: `StaticPropFilter` \| `PropFilter`<br />`componentNameResolver`: **function** (<br />`exp`\*: Symbol<br />`source`\*: SourceFile<br />) => `string` \| `undefined` \| `null` \| `false`<br />`shouldExtractLiteralValuesFromEnum`: `boolean`<br />`shouldRemoveUndefinedFromOptional`: `boolean`<br />`shouldExtractValuesFromUnion`: `boolean`<br />`skipChildrenPropWithoutDoc`: `boolean`<br />`savePropValueAsString`: `boolean`<br />`shouldIncludePropTagMap`: `boolean`<br />`shouldIncludeExpression`: `boolean`<br />`customComponentTypes`: `string`\[]</blockquote></details> | configuration options                                  |
+| `returns` | PropsInfoExtractorFunction                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | a callable function of type PropsInfoExtractorFunction |
+
+<!-- END-API-README -->

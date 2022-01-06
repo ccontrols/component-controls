@@ -19,7 +19,7 @@
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
     "dev": "yarn cross-env NODE_ENV=development rollup -cw",
-    "docs": "ts-md",
+    "docs": "api-readme",
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "prepare": "yarn build",
@@ -45,7 +45,6 @@
   },
   "devDependencies": {
     "@component-controls/logger": "^3.10.0",
-    "@component-controls/ts-markdown-docs": "^3.8.2",
     "next": "^12.0.7",
     "typescript": "^4.2.4"
   },

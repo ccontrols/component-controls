@@ -8,6 +8,7 @@
     -   [<ins>findJestConfig</ins>](#insfindjestconfigins)
     -   [<ins>runTests</ins>](#insruntestsins)
     -   [<ins>runProjectTests</ins>](#insrunprojecttestsins)
+        -   [properties](#properties)
 
 # Overview
 

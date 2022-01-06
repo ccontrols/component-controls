@@ -19,7 +19,7 @@
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
     "dev": "yarn cross-env NODE_ENV=development rollup -cw",
-    "docs": "ts-md",
+    "docs": "api-readme",
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "prepare": "yarn build",

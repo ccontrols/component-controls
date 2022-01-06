@@ -1,7 +1,7 @@
 import React, { FC, forwardRef, Ref } from 'react';
 import { Box } from 'theme-ui';
 
-export type DonuteRef = Ref<HTMLDivElement>;
+export type DonutRef = Ref<HTMLDivElement>;
 
 export interface DonutProps {
   /**
@@ -28,11 +28,11 @@ export interface DonutProps {
    * a title for the graphic
    */
   title?: string;
-  ref?: DonuteRef;
+  ref?: DonutRef;
 }
 export const Donut: FC<DonutProps> = forwardRef(function Donut(
   { size = 128, strokeWidth = 2, value = 0, min = 0, max = 1, title, ...rest },
-  ref: DonuteRef,
+  ref: DonutRef,
 ) {
   const r = 16 - strokeWidth;
   const C = 2 * r * Math.PI;

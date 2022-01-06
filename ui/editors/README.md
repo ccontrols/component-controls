@@ -2,17 +2,7 @@
 
 -   [Overview](#overview)
 -   [List of components](#list-of-components)
-    -   [<ins>getPropertyEditor</ins>](#insgetpropertyeditorins)
-    -   [<ins>ArrayEditor</ins>](#insarrayeditorins)
-    -   [<ins>BooleanEditor</ins>](#insbooleaneditorins)
-    -   [<ins>ButtonEditor</ins>](#insbuttoneditorins)
-    -   [<ins>ColorEditor</ins>](#inscoloreditorins)
-    -   [<ins>DateEditor</ins>](#insdateeditorins)
-    -   [<ins>FilesEditor</ins>](#insfileseditorins)
-    -   [<ins>NumberEditor</ins>](#insnumbereditorins)
-    -   [<ins>ObjectEditor</ins>](#insobjecteditorins)
-    -   [<ins>OptionsEditor</ins>](#insoptionseditorins)
-    -   [<ins>TextEditor</ins>](#instexteditorins)
+    -   [addPropertyEditor](#addpropertyeditor)
 
 # Overview
 
@@ -23,136 +13,21 @@ Some of the guiding design goals for this library:
 
 # List of components
 
-<react-docgen-typescript path="./src" exclude="index.ts,.stories.tsx$,CheckboxEditor.tsx,RadiosEditor.tsx,EditButton.tsx,PopupInline.tsx" />
+<api-readme extensions="react" />
 
-<!-- START-REACT-DOCGEN-TYPESCRIPT -->
+<!-- START-API-README -->
 
-## <ins>getPropertyEditor</ins>
+## addPropertyEditor
 
-Property editors factory. Given a propey type, will return a editor compnent class.
+**`react function`**
 
-_getPropertyEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/prop-factory.ts)_
+_defined in [@component-controls/editors/core/specification/src/prop-factory.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/prop-factory.ts#L22)_
 
-## <ins>ArrayEditor</ins>
+**parameters**
 
-Array control editor.
+| Name      | Type                                                                                                                                                                                                                                                                                                | Description                                                        |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| `type*`   | `ControlTypes`.`TEXT`, `ControlTypes`.`NUMBER`, `ControlTypes`.`BOOLEAN`, `ControlTypes`.`OPTIONS`, `ControlTypes`.`DATE`, `ControlTypes`.`COLOR`, `ControlTypes`.`BUTTON`, `ControlTypes`.`OBJECT`, `ControlTypes`.`ARRAY`, `ControlTypes`.`FILES`                                                 | Control field types examples are provided for the different types: |
+| `editor*` | <details><summary>`PropertyEditor`&lt;></summary><blockquote>`propTypes`: `WeakValidationMap`&lt;> \| `undefined`<br />`contextTypes`: `ValidationMap`&lt;> \| `undefined`<br />`defaultProps`: `Partial`&lt;`P`> \| `undefined`<br />`displayName`: `string` \| `undefined`</blockquote></details> | : a Property Editor class.                                         |
 
-_ArrayEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/ArrayEditor/ArrayEditor.tsx)_
-
-### properties
-
-| Name        | Type     | Description                   |
-| ----------- | -------- | ----------------------------- |
-| `editLabel` | _string_ | label for the editor button.  |
-| `name*`     | _string_ | name of the property control. |
-
-## <ins>BooleanEditor</ins>
-
-Boolean control editor. Uses the Toggle component.
-
-_BooleanEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/BooleanEditor/BooleanEditor.tsx)_
-
-### properties
-
-| Name    | Type     | Description                   |
-| ------- | -------- | ----------------------------- |
-| `name*` | _string_ | name of the property control. |
-
-## <ins>ButtonEditor</ins>
-
-Button control editor.
-
-_ButtonEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/ButtonEditor/ButtonEditor.tsx)_
-
-### properties
-
-| Name    | Type     | Description                   |
-| ------- | -------- | ----------------------------- |
-| `name*` | _string_ | name of the property control. |
-
-## <ins>ColorEditor</ins>
-
-Color control editor.
-
-_ColorEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/ColorEditor/ColorEditor.tsx)_
-
-### properties
-
-| Name    | Type     | Description                   |
-| ------- | -------- | ----------------------------- |
-| `name*` | _string_ | name of the property control. |
-
-## <ins>DateEditor</ins>
-
-Date control editor.
-
-_DateEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/DateEditor/DateEditor.tsx)_
-
-### properties
-
-| Name    | Type     | Description                   |
-| ------- | -------- | ----------------------------- |
-| `name*` | _string_ | name of the property control. |
-
-## <ins>FilesEditor</ins>
-
-Files control editor.
-
-_FilesEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/FilesEditor/FilesEditor.tsx)_
-
-### properties
-
-| Name    | Type     | Description                   |
-| ------- | -------- | ----------------------------- |
-| `name*` | _string_ | name of the property control. |
-
-## <ins>NumberEditor</ins>
-
-Number control editor.
-
-_NumberEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/NumberEditor/NumberEditor.tsx)_
-
-### properties
-
-| Name    | Type     | Description                   |
-| ------- | -------- | ----------------------------- |
-| `name*` | _string_ | name of the property control. |
-
-## <ins>ObjectEditor</ins>
-
-Object control editor.
-
-_ObjectEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/ObjectEditor/ObjectEditor.tsx)_
-
-### properties
-
-| Name        | Type     | Description                   |
-| ----------- | -------- | ----------------------------- |
-| `editLabel` | _string_ | label for the editor button.  |
-| `name*`     | _string_ | name of the property control. |
-
-## <ins>OptionsEditor</ins>
-
-Options control editor.
-
-_OptionsEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/OptionsEditor/OptionsEditor.tsx)_
-
-### properties
-
-| Name    | Type     | Description                   |
-| ------- | -------- | ----------------------------- |
-| `name*` | _string_ | name of the property control. |
-
-## <ins>TextEditor</ins>
-
-Text control editor.
-
-_TextEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/TextEditor/TextEditor.tsx)_
-
-### properties
-
-| Name    | Type     | Description                   |
-| ------- | -------- | ----------------------------- |
-| `name*` | _string_ | name of the property control. |
-
-<!-- END-REACT-DOCGEN-TYPESCRIPT -->
+<!-- END-API-README -->

@@ -36,7 +36,6 @@
     "fuse.js": "^6.4.3"
   },
   "devDependencies": {
-    "@component-controls/ts-markdown-docs": "^3.8.2",
     "@types/jest": "^26.0.10",
     "@types/react": "^16.9.34",
     "cross-env": "^5.2.1",

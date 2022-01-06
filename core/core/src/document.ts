@@ -353,9 +353,12 @@ export type Packages = Record<string, PackageInfo>;
 
 export type StoreObserver = (story?: Story) => void;
 
+/**
+ * Shorthand id to denote the current story
+ */
 export const CURRENT_STORY = '.';
 /**
- * store of stories information in memory after the loader is applied
+ * Store of stories information in memory after the loader is applied
  */
 export interface Store {
   /**

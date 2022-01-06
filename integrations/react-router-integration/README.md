@@ -3,8 +3,8 @@
 -   [In action](#in-action)
 -   [Overview](#overview)
 -   [API](#api)
-    -   [<ins>withComponentControls</ins>](#inswithcomponentcontrolsins)
-    -   [<ins>ReactRouterLink</ins>](#insreactrouterlinkins)
+    -   [ControlsPage](#controlspage)
+    -   [useRoutes](#useroutes)
 
 # In action
 
@@ -21,30 +21,33 @@ react-router integration plugin for webpack sites documenting your projects with
 
 # API
 
-<react-docgen-typescript path="./src" />
+<api-readme />
 
-<!-- START-REACT-DOCGEN-TYPESCRIPT -->
+<!-- START-API-README -->
 
-## <ins>withComponentControls</ins>
+## ControlsPage
 
-_withComponentControls [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/react-router-integration/src/webpack-build.ts)_
+**`function`**
 
-### properties
+_defined in [@component-controls/react-router-integration/integrations/react-router-integration/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/integrations/react-router-integration/src/index.tsx#L10)_
 
-| Name      | Type         | Description |
-| --------- | ------------ | ----------- |
-| `config*` | _any_        |             |
-| `options` | _BuildProps_ |             |
+**parameters**
 
-## <ins>ReactRouterLink</ins>
+| Name      | Type                                                                                                                                                                                                                                                                                                                                                                                    |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `props*`  | <details><summary>`Omit`</summary><blockquote>`type`: `"story"` \| `"blog"` \| `"page"` \| `"tags"` \| `"author"` \| `string`<br />`docId`: `string`<br />`storyId`: `string`<br />`lastModified`: `string`<br />`docIndex`: `boolean`<br />`query`: `string`<br />`category`: `string`<br />`activeTab`: `string`<br />`userData`: `Record`&lt;`string`, `any`></blockquote></details> |
+| `returns` | <details><summary>`FC`&lt;></summary><blockquote>`propTypes`: `WeakValidationMap`&lt;> \| `undefined`<br />`contextTypes`: `ValidationMap`&lt;> \| `undefined`<br />`defaultProps`: `Partial`&lt;`P`> \| `undefined`<br />`displayName`: `string` \| `undefined`</blockquote></details>                                                                                                 |
 
-_ReactRouterLink [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/react-router-integration/src/components/ReactRouterLink.tsx)_
+## useRoutes
 
-### properties
+**`function`**
 
-| Name  | Type                                                                         | Description |
-| ----- | ---------------------------------------------------------------------------- | ----------- |
-| `ref` | _((instance: HTMLAnchorElement) => void) \| RefObject&lt;HTMLAnchorElement>_ |             |
-| `to`  | _string_                                                                     |             |
+_defined in [@component-controls/react-router-integration/integrations/react-router-integration/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/integrations/react-router-integration/src/index.tsx#L24)_
 
-<!-- END-REACT-DOCGEN-TYPESCRIPT -->
+**parameters**
+
+| Name      | Type                     |
+| --------- | ------------------------ |
+| `returns` | (`ReactElement`&lt;>)\[] |
+
+<!-- END-API-README -->

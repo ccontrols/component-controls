@@ -3,6 +3,7 @@
 -   [Overview](#overview)
 -   [Installation](#installation)
 -   [API](#api)
+    -   [run](#run)
 
 # Overview
 
@@ -20,8 +21,23 @@ $ npm install @component-controls/react-docgen-info --save-dev
 
 # API
 
-<tsdoc-typescript files="./src/types.ts,@babel/parser/typings/babel-parser.d.ts" entry="./src/index.ts"/>
+<api-readme />
 
-<!-- START-TSDOC-TYPESCRIPT -->
+<!-- START-API-README -->
 
-<!-- END-TSDOC-TYPESCRIPT -->
+## run
+
+**`function`**
+
+run API to generate react-docgen props information tables.
+
+_defined in [@component-controls/react-docgen-info/props-info/react-docgen/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/props-info/react-docgen/src/index.ts#L15)_
+
+**parameters**
+
+| Name      | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Description                                            |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| `options` | <details><summary>`RectDocgenOptions`</summary><blockquote>`resolver`: **function** (<br /><details><summary>`ast`\*</summary><blockquote>\[`string`]: `unknown`</blockquote></details><details><summary>`parser`\*</summary><blockquote>`parse`\*: </blockquote></details>) => `NodePath` \| `NodePath`\[]<br />`handlers`: `HandlerType`\[]<br /><details><summary>`options`</summary><blockquote>`filename`: `string`<br />`cwd`: `string`<br />`babelrc`: `boolean`<br />`babelrcRoots`: `boolean`<br />`root`: `boolean`<br />`rootMode`: `boolean`<br />`configFile`: `boolean`<br />`envName`: `boolean`<br />`parserOptions`: ParserOptions</blockquote></details></blockquote></details> | configuration options                                  |
+| `returns` | PropsInfoExtractorFunction                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | a callable function of type PropsInfoExtractorFunction |
+
+<!-- END-API-README -->

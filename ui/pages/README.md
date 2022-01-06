@@ -12,8 +12,8 @@ A collection of pre-built documentation page templates.
 
 # List of components
 
-<react-docgen-typescript path="./src" />
+<api-readme extensions="react" />
 
-<!-- START-REACT-DOCGEN-TYPESCRIPT -->
+<!-- START-API-README -->
 
-<!-- END-REACT-DOCGEN-TYPESCRIPT -->
+<!-- END-API-README -->

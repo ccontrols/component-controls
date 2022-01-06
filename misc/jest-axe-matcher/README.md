@@ -3,6 +3,7 @@
 -   [Overview](#overview)
 -   [Installation](#installation)
 -   [API](#api)
+    -   [extensions](#extensions)
 
 # Overview
 
@@ -18,8 +19,12 @@ $ npm install @component-controls/jest-axe-matcher --save-dev
 
 # API
 
-<react-docgen-typescript path="./src" />
+<api-readme />
 
-<!-- START-REACT-DOCGEN-TYPESCRIPT -->
+<!-- START-API-README -->
 
-<!-- END-REACT-DOCGEN-TYPESCRIPT -->
+## extensions
+
+_defined in [@component-controls/jest-axe-matcher/misc/jest-axe-matcher/src/matchers.ts](https://github.com/ccontrols/component-controls/tree/master/misc/jest-axe-matcher/src/matchers.ts)_
+
+<!-- END-API-README -->

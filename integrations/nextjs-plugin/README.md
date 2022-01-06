@@ -3,10 +3,12 @@
 -   [In action](#in-action)
 -   [Overview](#overview)
 -   [API](#api)
-    -   [<ins>getHomePagesPaths</ins>](#insgethomepagespathsins)
-    -   [<ins>getDocPagesPaths</ins>](#insgetdocpagespathsins)
-    -   [<ins>NextLayout</ins>](#insnextlayoutins)
-    -   [<ins>NextLink</ins>](#insnextlinkins)
+    -   [FC](#fc)
+    -   [getIndexPage](#getindexpage)
+    -   [getHomePagesPaths](#gethomepagespaths)
+    -   [getDocHomePage](#getdochomepage)
+    -   [getDocPagesPaths](#getdocpagespaths)
+    -   [getDocPage](#getdocpage)
 
 # In action
 
@@ -23,74 +25,86 @@ Next.js plugin for documenting your projects with component controls
 
 # API
 
-<react-docgen-typescript path="./src" />
+<api-readme  />
 
-<!-- START-REACT-DOCGEN-TYPESCRIPT -->
+<!-- START-API-README -->
 
-## <ins>getHomePagesPaths</ins>
+## FC
 
-_getHomePagesPaths [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/nextjs-plugin/src/page-links.ts)_
+**`type`**
 
-### properties
+_defined in [@types/react/types/react/index.d.ts](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react/index.d.ts)_
 
-| Name              | Type                                                                                                                                                                                                                                                       | Description                                                                                     |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `error`           | _string_                                                                                                                                                                                                                                                   | build-time error string                                                                         |
-| `config*`         | _{ renderFn?: FrameworkRenderFn; title?: string; logo?: ReactNode; app?: FC&lt;{}>; description?: string; copyright?: string; language?: string; author?: string; image?: string; ... 10 more ...; analytics?: any; } & StoryProps&lt;...> & Pick&lt;...>_ | global configuration for config file                                                            |
-| `docs*`           | _Record&lt;string, Document&lt;unknown>>_                                                                                                                                                                                                                  | list of documents (pages)                                                                       |
-| `stories*`        | _Record&lt;string, Story&lt;unknown>>_                                                                                                                                                                                                                     | list of stories                                                                                 |
-| `components*`     | _Record&lt;string, Component>_                                                                                                                                                                                                                             | list of components used in stories and documents                                                |
-| `packages*`       | _Record&lt;string, PackageInfo>_                                                                                                                                                                                                                           | list of package.json files and their data used by the components and the stories of the project |
-| `addObserver*`    | _(observer: StoreObserver) => void_                                                                                                                                                                                                                        | storybook integration notifiers                                                                 |
-| `removeObserver*` | _(observer: StoreObserver) => void_                                                                                                                                                                                                                        |                                                                                                 |
-| `updateStory*`    | _(story: Story&lt;unknown>) => void_                                                                                                                                                                                                                       | update store, for example controls or state                                                     |
-| `search`          | _(store: Store) => SearchResult_                                                                                                                                                                                                                           |                                                                                                 |
+**properties**
 
-## <ins>getDocPagesPaths</ins>
+| Name           | Type                                    | Parent              |
+| -------------- | --------------------------------------- | ------------------- |
+| `propTypes`    | `WeakValidationMap`&lt;> \| `undefined` | `FunctionComponent` |
+| `contextTypes` | `ValidationMap`&lt;> \| `undefined`     | `FunctionComponent` |
+| `defaultProps` | `Partial`&lt;`P`> \| `undefined`        | `FunctionComponent` |
+| `displayName`  | `string` \| `undefined`                 | `FunctionComponent` |
 
-_getDocPagesPaths [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/nextjs-plugin/src/page-links.ts)_
+## getIndexPage
 
-### properties
+**`function`**
 
-| Name              | Type                                                                                                                                                                                                                                                       | Description                                                                                     |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `error`           | _string_                                                                                                                                                                                                                                                   | build-time error string                                                                         |
-| `config*`         | _{ renderFn?: FrameworkRenderFn; title?: string; logo?: ReactNode; app?: FC&lt;{}>; description?: string; copyright?: string; language?: string; author?: string; image?: string; ... 10 more ...; analytics?: any; } & StoryProps&lt;...> & Pick&lt;...>_ | global configuration for config file                                                            |
-| `docs*`           | _Record&lt;string, Document&lt;unknown>>_                                                                                                                                                                                                                  | list of documents (pages)                                                                       |
-| `stories*`        | _Record&lt;string, Story&lt;unknown>>_                                                                                                                                                                                                                     | list of stories                                                                                 |
-| `components*`     | _Record&lt;string, Component>_                                                                                                                                                                                                                             | list of components used in stories and documents                                                |
-| `packages*`       | _Record&lt;string, PackageInfo>_                                                                                                                                                                                                                           | list of package.json files and their data used by the components and the stories of the project |
-| `addObserver*`    | _(observer: StoreObserver) => void_                                                                                                                                                                                                                        | storybook integration notifiers                                                                 |
-| `removeObserver*` | _(observer: StoreObserver) => void_                                                                                                                                                                                                                        |                                                                                                 |
-| `updateStory*`    | _(story: Story&lt;unknown>) => void_                                                                                                                                                                                                                       | update store, for example controls or state                                                     |
-| `search`          | _(store: Store) => SearchResult_                                                                                                                                                                                                                           |                                                                                                 |
+_defined in [@component-controls/nextjs-plugin/integrations/nextjs-plugin/src/page-links.ts](https://github.com/ccontrols/component-controls/tree/master/integrations/nextjs-plugin/src/page-links.ts#L17)_
 
-## <ins>NextLayout</ins>
+**parameters**
 
-_NextLayout [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/nextjs-plugin/src/components/NextLayout.tsx)_
+| Name      | Type              |
+| --------- | ----------------- |
+| `returns` | `ReturnType`&lt;> |
 
-### properties
+## getHomePagesPaths
 
-| Name           | Type      | Description |
-| -------------- | --------- | ----------- |
-| `type`         | _string_  |             |
-| `docId`        | _string_  |             |
-| `storyId`      | _string_  |             |
-| `lastModified` | _string_  |             |
-| `docIndex`     | _boolean_ |             |
-| `query`        | _string_  |             |
-| `category`     | _string_  |             |
-| `activeTab`    | _string_  |             |
+**`function`**
 
-## <ins>NextLink</ins>
+_defined in [@component-controls/nextjs-plugin/integrations/nextjs-plugin/src/page-links.ts](https://github.com/ccontrols/component-controls/tree/master/integrations/nextjs-plugin/src/page-links.ts#L19)_
 
-_NextLink [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/nextjs-plugin/src/components/NextLink.tsx)_
+**parameters**
 
-### properties
+| Name      | Type        |
+| --------- | ----------- |
+| `returns` | `string`\[] |
 
-| Name  | Type                                                                         | Description |
-| ----- | ---------------------------------------------------------------------------- | ----------- |
-| `ref` | _((instance: HTMLAnchorElement) => void) \| RefObject&lt;HTMLAnchorElement>_ |             |
-| `to`  | _string_                                                                     |             |
+## getDocHomePage
 
-<!-- END-REACT-DOCGEN-TYPESCRIPT -->
+**`function`**
+
+_defined in [@component-controls/nextjs-plugin/integrations/nextjs-plugin/src/page-links.ts](https://github.com/ccontrols/component-controls/tree/master/integrations/nextjs-plugin/src/page-links.ts#L24)_
+
+**parameters**
+
+| Name      | Type                                                                                                                                                                                                                                                                                              |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `path*`   | `string`                                                                                                                                                                                                                                                                                          |
+| `returns` | <details><summary>`DocHomePagesPath`</summary><blockquote>`type`: `"story"` \| `"blog"` \| `"page"` \| `"tags"` \| `"author"` \| `string`<br />`path`\*: `string`<br />`docId`: `string`<br />`storyId`: `string`<br />`lastModified`: `string`<br />`docIndex`: `boolean`</blockquote></details> |
+
+## getDocPagesPaths
+
+**`function`**
+
+_defined in [@component-controls/nextjs-plugin/integrations/nextjs-plugin/src/page-links.ts](https://github.com/ccontrols/component-controls/tree/master/integrations/nextjs-plugin/src/page-links.ts#L31)_
+
+**parameters**
+
+| Name      | Type        |
+| --------- | ----------- |
+| `returns` | `string`\[] |
+
+## getDocPage
+
+**`function`**
+
+_defined in [@component-controls/nextjs-plugin/integrations/nextjs-plugin/src/page-links.ts](https://github.com/ccontrols/component-controls/tree/master/integrations/nextjs-plugin/src/page-links.ts#L36)_
+
+**parameters**
+
+| Name       | Type                                                                                                                                                                                                                                                                           |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `docType*` | `"story"` \| `"blog"` \| `"page"` \| `"tags"` \| `"author"` \| `string`                                                                                                                                                                                                        |
+| `docId*`   | `string`\[]                                                                                                                                                                                                                                                                    |
+| `returns`  | <details><summary>`DocPagesPath`</summary><blockquote>`type`: DocType<br />`path`\*: `string`<br />`query`: `string`<br />`lastModified`: `string`<br />`docId`: `string`<br />`storyId`: `string`<br />`category`: `string`<br />`activeTab`: `string`</blockquote></details> |
+
+<!-- END-API-README -->

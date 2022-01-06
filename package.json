@@ -17,7 +17,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean --yes && rm -rf node_modules",
-    "docs": "lerna run docs && ts-md",
+    "docs": "lerna run docs && api-readme",
     "packages": "yarn fix && yarn lint && yarn build && yarn test",
     "fix": "lerna run --parallel fix && echo",
     "startup": "yarn bootstrap && yarn build && yarn dev",
@@ -52,7 +52,7 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@commitlint/config-lerna-scopes": "^11.0.0",
-    "@component-controls/ts-markdown-docs": "^1.3.0",
+    "@structured-types/api-readme": "^3.40.9",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-image": "^2.0.5",
     "@rollup/plugin-json": "^4.0.2",

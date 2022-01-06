@@ -121,7 +121,7 @@ export const loadConfiguration = (
 const fixGlob = (golbExpr: string): string => golbExpr.replace('.(', '.@(');
 
 /**
- * find the story files out of a configuration file
+ * Find the story files out of a configuration file
  * using glob for the regex file search
  */
 export const extractDocuments = ({

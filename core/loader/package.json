@@ -18,7 +18,7 @@
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
     "dev": "yarn cross-env NODE_ENV=development rollup -cw",
-    "docs": "ts-md",
+    "docs": "api-readme",
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "prepare": "yarn build",
@@ -47,7 +47,6 @@
     "webpack-sources": "^2.2.0"
   },
   "devDependencies": {
-    "@component-controls/ts-markdown-docs": "^3.8.2",
     "@types/jest": "^26.0.10",
     "@types/loader-utils": "^2.0.1",
     "cross-env": "^5.2.1",
