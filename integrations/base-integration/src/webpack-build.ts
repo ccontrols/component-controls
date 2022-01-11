@@ -114,6 +114,10 @@ export const webpackConfig = ({
         ...config.resolve?.alias,
         'component-controls-bundle': bundleFilePath,
       },
+      fallback: {
+        ...config.resolve?.fallback,
+        crypto: false,
+      },
     },
   };
 };
