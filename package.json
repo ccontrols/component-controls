@@ -52,7 +52,7 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@commitlint/config-lerna-scopes": "^11.0.0",
-    "@structured-types/api-readme": "^3.40.9",
+    "@structured-types/api-readme": "^3.41.0",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-image": "^2.0.5",
     "@rollup/plugin-json": "^4.0.2",
