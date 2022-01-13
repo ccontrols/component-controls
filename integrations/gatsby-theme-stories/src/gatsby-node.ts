@@ -32,7 +32,17 @@ export const createPagesStatefully = async (
     createPage(props);
   };
   await buildBundle({
-    options,
+    options: {
+      ...options,
+      loaders: {
+        ...options?.loaders,
+        'mini-css-extract-plugin': {
+          module: require.resolve(
+            'gatsby/node_modules/mini-css-extract-plugin',
+          ),
+        },
+      },
+    },
     onEndBuild: ({ store }) => {
       const routes = getRoutes(store);
       routes.forEach(({ path, ...route }) => {

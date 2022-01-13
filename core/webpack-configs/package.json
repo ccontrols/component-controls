@@ -43,7 +43,7 @@
     "file-loader": "^6.2.0",
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
-    "mini-css-extract-plugin": "1.6.2",
+    "mini-css-extract-plugin": "^2.4.6",
     "path": "^0.12.7",
     "postcss-loader": "^6.2.1",
     "raw-loader": "^4.0.2",
