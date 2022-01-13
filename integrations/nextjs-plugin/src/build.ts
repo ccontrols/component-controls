@@ -6,6 +6,8 @@ import {
   getDistFolder,
 } from '@component-controls/core/node-utils';
 import { buildBundle } from '@component-controls/base-integration/webpack-build';
+// const SegfaultHandler = require('segfault-handler');
+// SegfaultHandler.registerHandler('crash.log');
 
 module.exports =
   ({
@@ -15,6 +17,7 @@ module.exports =
     staticFolder,
     distFolder: userDistFolder,
     webpack,
+    loaders,
     ...rest
   }: BuildProps) =>
   () => {
@@ -25,6 +28,12 @@ module.exports =
       presets,
       distFolder: path.resolve(__dirname),
       staticFolder: staticFolder || path.join(distFolder, 'static'),
+      loaders: {
+        ...loaders,
+        'mini-css-extract-plugin': {
+          module: require.resolve('next/dist/compiled/mini-css-extract-plugin'),
+        },
+      },
       webpack,
     };
     return {

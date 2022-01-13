@@ -233,5 +233,5 @@ export const mergeBuildConfiguration = (
 ): BuildConfiguration => {
   const { configPath } = config;
   const buildConfig = loadConfiguration(process.cwd(), configPath);
-  return { ...buildConfig?.config, ...config };
+  return mergeConfig(buildConfig?.config, config);
 };

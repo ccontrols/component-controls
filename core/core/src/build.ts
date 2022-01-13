@@ -28,6 +28,10 @@ export type WebpackLoader =
   | 'raw-loader'
   | 'file-loader';
 
+export type WebpackLoaderConfig =
+  | (RuleSetUseItem & { module?: string })
+  | null
+  | false;
 /**
  * configuration properties for compile and run
  */
@@ -71,16 +75,18 @@ export interface BuildProps {
    * loaders custom options shortcut.
    * This can be used for quick options setup instead of using the webpack hook
    */
-  loaders?: { [_ in WebpackLoader]?: RuleSetUseItem | null | false };
+  loaders?: {
+    [_ in WebpackLoader]?: WebpackLoaderConfig;
+  };
 }
 
 export const customLoaderOptions = (
   config: BuildProps,
   loader: WebpackLoader,
   defaultOptions?: string | { [index: string]: any },
-): RuleSetUseItem | false => {
+): WebpackLoaderConfig => {
   const customOptions = config.loaders?.[loader];
-  return typeof defaultOptions === 'object' && typeof customOptions === 'object'
+  return typeof defaultOptions !== 'string' && typeof customOptions === 'object'
     ? { ...defaultOptions, ...customOptions }
     : customOptions === null || customOptions === false
     ? false

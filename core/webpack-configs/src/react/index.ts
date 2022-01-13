@@ -1,7 +1,6 @@
 import path from 'path';
 import { Configuration, RuleSetUseItem } from 'webpack';
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import {
   PresetCallback,
   BuildProps,
@@ -46,6 +45,7 @@ export const react: PresetCallback = (options: BuildProps) => {
     const { loader, loaderName } = name;
     const config = customLoaderOptions(options, loader, defaultOptions);
     if (config) {
+      delete config.module;
       return {
         loader: loaderName || loader,
         ...props,
@@ -76,9 +76,17 @@ export const react: PresetCallback = (options: BuildProps) => {
     }
     return false;
   };
+  const miniCssOptions = customLoaderOptions(
+    options,
+    'mini-css-extract-plugin',
+  );
+  const MiniCssExtractPlugin: typeof import('mini-css-extract-plugin') =
+    typeof miniCssOptions === 'object' && miniCssOptions?.module
+      ? require(miniCssOptions.module)
+      : require('mini-css-extract-plugin');
   const result = {
     plugins: [
-      customLoaderOptions(options, 'mini-css-extract-plugin') &&
+      miniCssOptions &&
         new MiniCssExtractPlugin({
           filename: getCSSBundleName(options),
         }),
