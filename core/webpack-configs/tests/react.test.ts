@@ -13,6 +13,8 @@ describe('merge instrument and react-docgen-typescript', () => {
           options: {
             filename: 'component-controls.css',
             ignoreOrder: false,
+            experimentalUseImportModule: undefined,
+            runtime: true,
             chunkFilename: '[id].component-controls.css',
           },
           runtimeOptions: {
@@ -84,39 +86,48 @@ describe('merge instrument and react-docgen-typescript', () => {
           {
             test: {},
             exclude: [{}],
-            loader: 'babel-loader',
-            options: {
-              presets: [
-                [
-                  '@babel/preset-env',
-                  {
-                    targets: {
-                      browsers: ['last 5 versions', 'ie >= 9'],
-                      node: 'current',
-                    },
-                    modules: 'commonjs',
-                    bugfixes: true,
-                    useBuiltIns: 'usage',
-                    corejs: 3,
-                  },
-                ],
-                '@babel/preset-react',
-              ],
-            },
+            use: [
+              {
+                loader: 'babel-loader',
+                options: {
+                  presets: [
+                    [
+                      '@babel/preset-env',
+                      {
+                        targets: {
+                          browsers: ['last 5 versions', 'ie >= 9'],
+                          node: 'current',
+                        },
+                        modules: 'commonjs',
+                        bugfixes: true,
+                        useBuiltIns: 'usage',
+                        corejs: 3,
+                      },
+                    ],
+                    '@babel/preset-react',
+                  ],
+                },
+              },
+            ],
           },
           {
             test: {},
             exclude: [{}],
-            loader: 'url-loader',
-            options: {
-              limit: 24576,
-              name: '[name].[ext]',
-              publicPath: '/static',
-              outputPath: '',
-            },
+            use: [
+              {
+                loader: 'url-loader',
+                options: {
+                  limit: 24576,
+                  name: '[name].[ext]',
+                  publicPath: '/static',
+                  outputPath: '',
+                },
+              },
+            ],
           },
           {
             test: {},
+            exclude: undefined,
             use: [
               {
                 loader: 'file-loader',

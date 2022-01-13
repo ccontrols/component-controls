@@ -168,7 +168,7 @@
       "name": "jest webpack-configs",
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "cwd": "${workspaceFolder}/core/webpack-configs",
-      "args": ["webpack-merge"],
+      "args": ["react"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "disableOptimisticBPs": true,
