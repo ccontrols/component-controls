@@ -14,9 +14,7 @@
     "package.json",
     "README.md",
     "webpack-build.js",
-    "webpack-build.d.ts",
-    "store.js",
-    "store.d.ts"
+    "webpack-build.d.ts"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",

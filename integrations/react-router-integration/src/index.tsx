@@ -1,20 +1,22 @@
 import React, { FC, ReactElement, useMemo } from 'react';
 import { Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { Store } from '@component-controls/core';
 import { Layout, LayoutProps } from '@component-controls/base-integration';
-import { store } from '@component-controls/base-integration/store';
-
+import { loadStore } from '@component-controls/store';
 import { getRoutes } from '@component-controls/routes';
 import { ReactRouterLink } from './components/ReactRouterLink';
+const bundle = require('component-controls-bundle');
+
+export const store: Store = loadStore(bundle, true);
 
 export const ControlsPage = (
   props: Omit<LayoutProps, 'Helmet' | 'Link' | 'store'>,
 ): FC => {
-  const loadedStore = useMemo(() => store(false), []);
   const DocHome: FC = () => (
     <Layout
       {...props}
-      store={loadedStore}
+      store={store}
       Helmet={Helmet as LayoutProps['Helmet']}
       Link={ReactRouterLink}
     />
@@ -23,9 +25,8 @@ export const ControlsPage = (
 };
 
 export const useRoutes = (): ReactElement[] => {
-  const loadedStore = useMemo(() => store(false), []);
   const routes = useMemo(() => {
-    const paths = getRoutes(loadedStore);
+    const paths = getRoutes(store);
     const routes = paths.map(props => (
       <Route
         key={props.path}
@@ -35,6 +36,6 @@ export const useRoutes = (): ReactElement[] => {
       />
     ));
     return routes;
-  }, [loadedStore]);
+  }, []);
   return routes;
 };

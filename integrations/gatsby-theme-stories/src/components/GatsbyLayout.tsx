@@ -1,13 +1,15 @@
 import React, { FC, useMemo } from 'react';
 import { Helmet } from 'react-helmet';
 import { Layout, LayoutProps } from '@component-controls/base-integration';
-import { store } from '@component-controls/base-integration/store';
+import { loadStore } from '@component-controls/store';
+const bundle = require('component-controls-bundle');
+
 import { GatsbyLink } from '../components/GatsbyLink';
 
 export type GatsbyLayoutProps = Omit<LayoutProps, 'Link' | 'Helmet' | 'store'>;
 
 export const GatsbyLayout: FC<GatsbyLayoutProps> = props => {
-  const loadedStore = useMemo(() => store(true), []);
+  const loadedStore = useMemo(() => loadStore(bundle, false), []);
   return (
     <Layout
       Link={GatsbyLink}
