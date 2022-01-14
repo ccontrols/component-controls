@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/core",
-  "version": "3.14.6",
+  "version": "4.0.0",
   "description": "Component controls core types and utility functions",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -33,10 +33,10 @@
   "license": "MIT",
   "dependencies": {
     "@babel/types": "^7.12.6",
-    "@component-controls/follow-imports": "^3.14.4",
-    "@component-controls/logger": "^3.10.0",
-    "@structured-types/typescript-config": "^3.16.2",
+    "@component-controls/follow-imports": "^4.0.0",
+    "@component-controls/logger": "^4.0.0",
     "@storybook/csf": "^0.0.1",
+    "@structured-types/typescript-config": "^3.16.2",
     "deepmerge": "^4.2.2",
     "escape-html": "^1.0.3",
     "esm": "^3.2.25",

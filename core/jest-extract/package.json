@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/jest-extract",
-  "version": "3.14.6",
+  "version": "4.0.0",
   "description": "Given a test file, extracts the tests, test results and coverage data",
   "keywords": [
     "jest",
@@ -35,7 +35,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.14.3",
-    "@component-controls/core": "^3.14.6",
+    "@component-controls/core": "^4.0.0",
     "babel-jest": "^26.6.3",
     "fastq": "^1.11.0",
     "jest": "^26.4.2",

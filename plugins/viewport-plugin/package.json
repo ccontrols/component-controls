@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/viewport-plugin",
-  "version": "3.15.0",
+  "version": "4.0.0",
   "description": "Viewport plugin",
   "keywords": [
     "addon",
@@ -37,13 +37,13 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/blocks": "^3.15.0",
-    "@component-controls/components": "^3.15.0",
+    "@component-controls/blocks": "^4.0.0",
+    "@component-controls/components": "^4.0.0",
     "react": "^17.0.1",
     "theme-ui": "^0.8.4"
   },
   "devDependencies": {
-    "@component-controls/cc-cli": "^3.15.0",
+    "@component-controls/cc-cli": "^4.0.0",
     "@emotion/jest": "^11.3.0",
     "typescript": "^4.2.4"
   },
