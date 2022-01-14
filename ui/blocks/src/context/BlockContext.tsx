@@ -2,10 +2,22 @@ import React, { FC, useMemo } from 'react';
 import queryString from 'query-string';
 import { deepMerge } from '@component-controls/core';
 import { StateRoot, StateRootProps, useStore } from '@component-controls/store';
-import { ErrorBoundary } from './ErrorBoundary';
+import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 import { ThemeProvider, ThemeProviderProps } from '../ThemeProvider';
 import { getURL } from '../utils/url';
 
+const ErrorFallback: React.ComponentType<FallbackProps> = ({
+  error,
+  resetErrorBoundary,
+}) => {
+  return (
+    <div role="alert">
+      <p>Something went wrong:</p>
+      <pre>{error.message}</pre>
+      <button onClick={resetErrorBoundary}>Try again</button>
+    </div>
+  );
+};
 export const BlockContextProvider: FC<
   StateRootProps & Pick<ThemeProviderProps, 'components'>
 > = ({ children, components, ...props }) => {
@@ -23,7 +35,7 @@ export const BlockContextProvider: FC<
   }, []);
   return (
     <StateRoot values={values} {...props}>
-      <ErrorBoundary>
+      <ErrorBoundary FallbackComponent={ErrorFallback}>
         <ThemeProvider components={components}>{children}</ThemeProvider>
       </ErrorBoundary>
     </StateRoot>
