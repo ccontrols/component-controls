@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/react-router-integration",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "react-router integration to create stories documentation sites",
   "keywords": [
     "story",
@@ -36,11 +36,11 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/base-integration": "^4.0.0",
-    "@component-controls/pages": "^4.0.0",
-    "@component-controls/routes": "^4.0.0",
-    "@component-controls/search-algolia": "^4.0.0",
-    "@component-controls/search-fusejs": "^4.0.0",
+    "@component-controls/base-integration": "^4.0.1",
+    "@component-controls/pages": "^4.0.1",
+    "@component-controls/routes": "^4.0.1",
+    "@component-controls/search-algolia": "^4.0.1",
+    "@component-controls/search-fusejs": "^4.0.1",
     "@types/react-router": "^5.1.11",
     "@types/react-router-dom": "^5.1.7",
     "react": "^17.0.1",
@@ -51,7 +51,7 @@
     "safe-require": "^1.0.4"
   },
   "devDependencies": {
-    "@component-controls/logger": "^4.0.0",
+    "@component-controls/logger": "^4.0.1",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "html-webpack-plugin": "^5.3.1",

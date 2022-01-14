@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/follow-imports",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "follow module imports until finding the file exporting the keyword",
   "keywords": [
     "babel",
