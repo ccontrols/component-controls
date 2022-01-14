@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.5](https://github.com/ccontrols/component-controls/compare/v4.0.4...v4.0.5) (2022-01-14)
+
+**Note:** Version bump only for package @component-controls/react-router-integration
+
+
+
+
+
 # [3.15.0](https://github.com/ccontrols/component-controls/compare/v3.14.6...v3.15.0) (2021-07-21)
 
 **Note:** Version bump only for package @component-controls/react-router-integration

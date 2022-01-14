@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.5](https://github.com/ccontrols/component-controls/compare/v4.0.4...v4.0.5) (2022-01-14)
+
+
+### Bug Fixes
+
+* webpack4 fallback ([958fa6a](https://github.com/ccontrols/component-controls/commit/958fa6a2f21492df9b627c638d02078d6c85d2ac))
+
+
+
+
+
 # [3.15.0](https://github.com/ccontrols/component-controls/compare/v3.14.6...v3.15.0) (2021-07-21)
 
 **Note:** Version bump only for package @component-controls/base-integration
