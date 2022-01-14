@@ -9,9 +9,9 @@ tags:
   - docz
   - gatsby
 ---
-import { Playground, Props, Story } from '@component-controls/blocks';
-import { Button } from '../components/Button'
 
+import { Playground, Props, Story } from '@component-controls/blocks';
+import { Button } from '../components/Button';
 
 # Migration from docz
 
@@ -19,9 +19,9 @@ import { Button } from '../components/Button'
 
 component-controls provides migration compatibility for many of the documentation features in `docz`. And component-controls can also use [gatsby](/tutorial/getting-started/gatsby) as a static site generator.
 
-A migration example can be found here: 
+A migration example can be found here:
 
-[source code](https://github.com/ccontrols/component-controls/tree/master/examples/docz-migration)
+[source code](https://github.com/ccontrols/docz-migration)
 
 [live site](https://docz-migration.netlify.app)
 
@@ -37,7 +37,7 @@ yarn add gatsby @component-controls/gatsby-theme-stories
 
 ## Configuration file path
 
- By default, the docz configuration file is kept in the project main folder, while component-controls uses a `.config` sub-folder. We will configure the gatsby stories theme in `gatsby-config.js`.
+By default, the docz configuration file is kept in the project main folder, while component-controls uses a `.config` sub-folder. We will configure the gatsby stories theme in `gatsby-config.js`.
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -95,9 +95,9 @@ export default {
 };
 ```
 
-* [**files**](https://www.docz.site/docs/project-configuration) field is mapped to the **stories** configuration field.
+- [**files**](https://www.docz.site/docs/project-configuration) field is mapped to the **stories** configuration field.
 
-* [**menu**](https://www.docz.site/docs/project-configuration) field is used in component-controls in a similar way to docz. You will need to fill the menu field in a document to attach it to a menu item.
+- [**menu**](https://www.docz.site/docs/project-configuration) field is used in component-controls in a similar way to docz. You will need to fill the menu field in a document to attach it to a menu item.
 
 ## Components
 
@@ -120,12 +120,12 @@ import { Button } from '../src/components/Button'
   <Button kind="secondary">Click me</Button>
 </Playground>
 ```
+
 live example:
 
 <Playground>
   <Button>Click me</Button>
 </Playground>
-
 
 ### Props
 
@@ -144,6 +144,7 @@ import { Button } from '../src/components/Button'
 
 <Props of={Button} />
 ```
+
 live example:
 
 <Props of={Button} />
