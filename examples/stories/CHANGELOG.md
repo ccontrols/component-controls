@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.4](https://github.com/ccontrols/component-controls/compare/v4.0.2...v4.0.4) (2022-01-14)
+
+**Note:** Version bump only for package component-controls-stories
+
+
+
+
+
 ## [3.14.6](https://github.com/ccontrols/component-controls/compare/v3.14.5...v3.14.6) (2021-05-20)
 
 **Note:** Version bump only for package component-controls-stories

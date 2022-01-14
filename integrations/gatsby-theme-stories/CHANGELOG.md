@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.4](https://github.com/ccontrols/component-controls/compare/v4.0.2...v4.0.4) (2022-01-14)
+
+
+### Bug Fixes
+
+* mini-css-plugin location ([b4ac0f1](https://github.com/ccontrols/component-controls/commit/b4ac0f15ebf1b692a45bc977677f5881c81ba50e))
+
+
+
+
+
 # [3.15.0](https://github.com/ccontrols/component-controls/compare/v3.14.6...v3.15.0) (2021-07-21)
 
 **Note:** Version bump only for package @component-controls/gatsby-theme-stories

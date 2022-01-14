@@ -2,7 +2,7 @@
   "name": "component-controls-simple",
   "description": "component-controls example with css styles",
   "private": true,
-  "version": "4.0.3",
+  "version": "4.0.4",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
