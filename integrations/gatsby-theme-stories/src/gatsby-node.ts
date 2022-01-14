@@ -13,6 +13,13 @@ import {
 } from 'gatsby';
 import { getRoutes } from '@component-controls/routes';
 
+const miniCss = (): string => {
+  try {
+    return require.resolve('gatsby/node_modules/mini-css-extract-plugin');
+  } catch {
+    return require.resolve('mini-css-extract-plugin');
+  }
+};
 export const createPagesStatefully = async (
   { actions, store: gatsbyStore }: CreatePagesArgs,
   options: BuildProps,
@@ -37,9 +44,7 @@ export const createPagesStatefully = async (
       loaders: {
         ...options?.loaders,
         'mini-css-extract-plugin': {
-          module: require.resolve(
-            'gatsby/node_modules/mini-css-extract-plugin',
-          ),
+          module: miniCss(),
         },
       },
     },
