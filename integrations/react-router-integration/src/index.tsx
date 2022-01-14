@@ -10,10 +10,11 @@ import { ReactRouterLink } from './components/ReactRouterLink';
 export const ControlsPage = (
   props: Omit<LayoutProps, 'Helmet' | 'Link' | 'store'>,
 ): FC => {
+  const loadedStore = useMemo(() => store(false), []);
   const DocHome: FC = () => (
     <Layout
       {...props}
-      store={store}
+      store={loadedStore}
       Helmet={Helmet as LayoutProps['Helmet']}
       Link={ReactRouterLink}
     />
@@ -22,8 +23,9 @@ export const ControlsPage = (
 };
 
 export const useRoutes = (): ReactElement[] => {
+  const loadedStore = useMemo(() => store(false), []);
   const routes = useMemo(() => {
-    const paths = getRoutes(store);
+    const paths = getRoutes(loadedStore);
     const routes = paths.map(props => (
       <Route
         key={props.path}
@@ -33,6 +35,6 @@ export const useRoutes = (): ReactElement[] => {
       />
     ));
     return routes;
-  }, []);
+  }, [loadedStore]);
   return routes;
 };
