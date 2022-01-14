@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/addon-stats",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Component controls stats addon",
   "keywords": [
     "addon",
@@ -35,9 +35,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/blocks": "^4.0.1",
-    "@component-controls/components": "^4.0.1",
-    "@component-controls/core": "^4.0.1",
+    "@component-controls/blocks": "^4.0.2",
+    "@component-controls/components": "^4.0.2",
+    "@component-controls/core": "^4.0.2",
     "react": "^17.0.1",
     "theme-ui": "^0.8.4"
   },

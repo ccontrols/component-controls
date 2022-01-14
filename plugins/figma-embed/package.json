@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/figma-embed",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Embed figma files in your documentation",
   "keywords": [
     "figma",
@@ -37,14 +37,14 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/blocks": "^4.0.1",
-    "@component-controls/components": "^4.0.1",
-    "@component-controls/store": "^4.0.1",
+    "@component-controls/blocks": "^4.0.2",
+    "@component-controls/components": "^4.0.2",
+    "@component-controls/store": "^4.0.2",
     "react": "^17.0.1",
     "theme-ui": "^0.8.4"
   },
   "devDependencies": {
-    "@component-controls/cc-cli": "^4.0.1",
+    "@component-controls/cc-cli": "^4.0.2",
     "@emotion/jest": "^11.3.0",
     "typescript": "^4.2.4"
   },

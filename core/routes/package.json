@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/routes",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "component-controls routes utilities",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,7 +30,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/core": "^4.0.1"
+    "@component-controls/core": "^4.0.2"
   },
   "devDependencies": {
     "@types/jest": "^26.0.10",

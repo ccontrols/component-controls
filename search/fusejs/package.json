@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/search-fusejs",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Component controls Fuse.js search and index",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -31,8 +31,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/core": "^4.0.1",
-    "@component-controls/logger": "^4.0.1",
+    "@component-controls/core": "^4.0.2",
+    "@component-controls/logger": "^4.0.2",
     "fuse.js": "^6.4.3"
   },
   "devDependencies": {
