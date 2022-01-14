@@ -1,5 +1,6 @@
 import path from 'path';
 import fs from 'fs';
+import webpack from 'webpack';
 import {
   BuildProps,
   Store,
@@ -106,7 +107,7 @@ export const webpackConfig = ({
     process.cwd(),
     getBundleName(buildOptions),
   );
-  return {
+  const result = {
     ...config,
     resolve: {
       ...config.resolve,
@@ -114,12 +115,18 @@ export const webpackConfig = ({
         ...config.resolve?.alias,
         'component-controls-bundle': bundleFilePath,
       },
+    },
+  };
+  if (webpack.version > '5') {
+    result.resolve = {
+      ...result.resolve,
       fallback: {
         ...config.resolve?.fallback,
         crypto: false,
       },
-    },
-  };
+    };
+  }
+  return result;
 };
 
 export const asyncWebpackConfig = async (props: {
