@@ -93,7 +93,7 @@ export const customLoaderOptions = (
     : defaultOptions || {};
 };
 
-const defaultPresets = ['react', 'react-docgen-typescript'];
+const defaultPresets = ['react'];
 
 export const defaultCompileProps: BuildProps = {
   presets: defaultPresets,

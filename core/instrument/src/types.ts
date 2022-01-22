@@ -55,32 +55,6 @@ export const defaultMDXOptions: MDXOptions = {
   remarkPlugins: [images, emoji],
 };
 
-/**
- * settings to load component props tables
- * each component file extension must resolve to only 1 props info loader
- */
-export interface PropsLoaderConfig {
-  /**
-   * module name - must be usable by require(....)
-   * if a local file name, use require.esolve('../..')
-   */
-  name: string;
-
-  /**
-   * a regex or a list of regex masks
-   * ex: test: /\.(js|jsx)$/
-   */
-  test: RegExp | RegExp[];
-  /**
-   * a regex or a list of regex masks for files to be excluded
-   */
-  exclude?: RegExp | RegExp[];
-  /**
-   * options specific to the props info loader module
-   */
-  options?: any;
-}
-
 export const defaultPackageOptions: PackageInfoOptions = {
   maxLevels: 10,
   packageJsonName: 'package.json',
@@ -270,12 +244,6 @@ export interface InstrumentOptions {
    * Options for extracting stories information.
    */
   stories?: StoriesOptions;
-
-  /**
-   * props tables loaders
-   * must have a default export that returns a PropsInfoExtractorFunction
-   */
-  propsLoaders?: PropsLoaderConfig[];
 
   /**
    * mdx-js parsing options

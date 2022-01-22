@@ -49,11 +49,11 @@ const extractPatameters = (
   }
   story.loc = {
     start: {
-      column: node.loc.start.column,
+      col: node.loc.start.col,
       line: node.loc.start.line,
     },
     end: {
-      column: node.loc.end.column,
+      col: node.loc.end.col,
       line: node.loc.end.line,
     },
   };

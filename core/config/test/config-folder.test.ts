@@ -16,7 +16,7 @@ describe('config-folder', () => {
           {
             name: '@component-controls/storybook',
             options: {
-              webpack: ['instrument', 'react-docgen-typescript'],
+              webpack: ['instrument'],
             },
           },
         ],
@@ -45,7 +45,7 @@ describe('config-folder', () => {
           {
             name: '@component-controls/storybook',
             options: {
-              webpack: ['instrument', 'react-docgen-typescript'],
+              webpack: ['instrument'],
             },
           },
         ],

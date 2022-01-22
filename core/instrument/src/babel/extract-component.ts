@@ -32,10 +32,10 @@ export const extractComponent = async (
     `${filePath}-${componentName}`,
     filePath,
   );
-  const result = cached.get();
-  if (result) {
-    return result;
-  }
+  // const result = cached.get();
+  // if (result) {
+  //   return result;
+  // }
   const follow = followImports(componentName, filePath, {
     resolver: options?.resolver,
     parser: options?.parser,
@@ -160,12 +160,7 @@ const componentRelatedMetrics = async (
   component: Component,
   options?: InstrumentOptions,
 ) => {
-  const {
-    components,
-    resolver: resolveOptions,
-    propsLoaders = [],
-    jest,
-  } = options || {};
+  const { components, resolver: resolveOptions, jest } = options || {};
   const componentPackage = await packageInfo(
     component.name,
     component.request,
@@ -178,12 +173,7 @@ const componentRelatedMetrics = async (
 
   const propsFile = component.propsInfoFile || component.request;
   if (propsFile) {
-    const propsInfo = await getComponentProps(
-      propsLoaders,
-      propsFile,
-      component.name,
-      component.source,
-    );
+    const propsInfo = await getComponentProps(propsFile, component.name);
     if (propsInfo) {
       component.info = propsInfo;
     }

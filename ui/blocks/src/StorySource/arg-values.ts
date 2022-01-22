@@ -85,8 +85,8 @@ export const findTagLocation = (
         const loc = tag.locs.find(loc => {
           return (
             loc.start.line === line &&
-            loc.start.column >= column &&
-            loc.start.column <= column + token.length
+            loc.start.col >= column &&
+            loc.start.col <= column + token.length
           );
         });
         if (loc) {

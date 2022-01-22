@@ -3,7 +3,7 @@ module.exports = {
     {
       name: '@component-controls/storybook',
       options: {
-        webpack: ['instrument', 'react-docgen-typescript'],
+        webpack: ['instrument'],
       },
     },
   ],

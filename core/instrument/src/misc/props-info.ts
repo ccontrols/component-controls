@@ -1,44 +1,18 @@
-import {
-  ComponentInfo,
-  PropsInfoExtractorFunction,
-} from '@component-controls/core';
-import { PropsLoaderConfig } from '../types';
+import reactPlugin from '@structured-types/react-plugin';
+import propTypesPlugin from '@structured-types/prop-types-plugin';
+import { DocsOptions, parseFiles } from '@structured-types/api';
+import { ComponentInfo } from '@component-controls/core';
 import { CachedFileResource } from './chached-file';
 
 export const getComponentProps = async (
-  options: PropsLoaderConfig[],
   filePath: string,
   componentName?: string,
-  source?: string,
+  config?: DocsOptions,
 ): Promise<ComponentInfo | undefined> => {
-  const loaders = options.filter(loader => {
-    const include = Array.isArray(loader.test)
-      ? loader.test
-      : loader.test
-      ? [loader.test]
-      : undefined;
-    const exclude = Array.isArray(loader.exclude)
-      ? loader.exclude
-      : loader.exclude
-      ? [loader.exclude]
-      : undefined;
-    return (
-      include &&
-      include.some(mask => filePath.match(mask)) &&
-      (!exclude || !exclude.some(mask => filePath.match(mask)))
-    );
-  });
-
-  if (loaders.length > 1) {
-    console.error(`Multiple propsloaders found for file ${filePath}`);
-  }
-  const propsLoaderName = loaders.length === 1 ? loaders[0] : undefined;
-  const version = '1.05';
+  const version = '1.17';
   const cached = new CachedFileResource<ComponentInfo>(
     'props-info',
-    `x${filePath}-${componentName}-${
-      propsLoaderName ? propsLoaderName.name : ''
-    }-${version}`,
+    `x${filePath}-${componentName}-${version}`,
     filePath,
   );
 
@@ -47,16 +21,13 @@ export const getComponentProps = async (
     // already in cache and file has not changed
     return result;
   }
-
-  if (propsLoaderName) {
-    const { run } = require(propsLoaderName.name);
-    if (run) {
-      const propsLoader: PropsInfoExtractorFunction = run(
-        propsLoaderName.options,
-      );
-      result = await propsLoader(filePath, componentName, source);
-    }
-  }
+  result = parseFiles([filePath], {
+    collectSourceInfo: true,
+    collectHelpers: false,
+    plugins: [propTypesPlugin, reactPlugin],
+    extract: componentName ? [componentName] : undefined,
+    ...config,
+  }) as unknown as ComponentInfo;
   // save to cache
   cached.set(result);
   return result;

@@ -7,7 +7,7 @@ describe('esm-async', () => {
   createTest('arrow-function.js', parsed => {
     expect(parsed).toMatchObject({
       stories: {
-        myStory: { id: 'myStory', name: 'myStory', source: 'async () => {}' },
+        myStory: { id: 'myStory', name: 'myStory', source: '() => {}' },
       },
     });
   });
@@ -18,7 +18,7 @@ describe('esm-async', () => {
         myStory: {
           id: 'myStory',
           name: 'myStory',
-          source: 'async function myStory() {}',
+          source: '() {}',
         },
       },
     });
@@ -29,7 +29,7 @@ describe('esm-async', () => {
         asyncStory: {
           id: 'asyncStory',
           name: 'asyncStory',
-          source: `async () => {
+          source: `() => {
   const response = await fetch(
     'http://dummy.restapiexample.com/api/v1/employee/1',
   );
@@ -52,11 +52,11 @@ describe('esm-async', () => {
             {
               loc: {
                 end: {
-                  column: 28,
+                  col: 6,
                   line: 0,
                 },
                 start: {
-                  column: 23,
+                  col: 1,
                   line: 0,
                 },
               },
@@ -65,11 +65,11 @@ describe('esm-async', () => {
                 {
                   loc: {
                     end: {
-                      column: 19,
+                      col: 20,
                       line: 1,
                     },
                     start: {
-                      column: 14,
+                      col: 15,
                       line: 1,
                     },
                   },
@@ -78,7 +78,7 @@ describe('esm-async', () => {
               value: 'props',
             },
           ],
-          source: `async function myStory(props) {
+          source: `(props) {
   console.log(props);
 }`,
         },

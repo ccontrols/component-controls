@@ -1,5 +1,5 @@
 import path from 'path';
-export { getASTSource } from '@component-controls/follow-imports';
+export { getASTSource } from './source';
 import { BuildProps, defBundleName, defCssFileName } from './build';
 export * from './webpack-interfaces';
 export * from './modules';

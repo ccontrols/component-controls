@@ -1,5 +1,5 @@
 import { MouseEvent, ReactNode, useEffect, useState, useCallback } from 'react';
-import { SourceLocation } from '@babel/types';
+import { SourcePositions, SourcePosition } from '@structured-types/api';
 import { ImportType, ImportTypes } from '@component-controls/follow-imports';
 export { ImportType, ImportTypes };
 
@@ -8,13 +8,13 @@ export { ImportType, ImportTypes };
  * usually taken from AST traverse loaders
  */
 
-export type CodePosition = SourceLocation['start'];
+export type CodePosition = SourcePosition;
 /**
  * location in the source code of a story or part of it
  * ie. arguments, usage of arguments
  
 */
-export type CodeLocation = SourceLocation;
+export type CodeLocation = SourcePositions;
 
 /**
  * repository information from package.json

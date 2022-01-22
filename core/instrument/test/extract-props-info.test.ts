@@ -9,21 +9,9 @@ export const componentFixture = (
   callback: ComponentCallback,
 ): void => {
   it(componentName, async () => {
-    const component = await getComponentProps(
-      [
-        {
-          name: '@component-controls/react-docgen-info',
-          test: /\.(js|jsx)$/,
-        },
-        {
-          name: '@component-controls/react-docgen-typescript-info',
-          test: /\.(ts|tsx)$/,
-        },
-      ],
-
-      filePathName,
-      componentName,
-    );
+    const component = await getComponentProps(filePathName, componentName, {
+      collectSourceInfo: false,
+    });
     await callback(component);
   });
 };

@@ -1,209 +1,136 @@
-import { Document, Stories } from '@component-controls/core';
+import {
+  ArgUsageLocation,
+  Document,
+  Story,
+  StoryArgument,
+} from '@component-controls/core';
 import { File } from '@babel/types';
-import traverse, { NodePath } from '@babel/traverse';
-import { extractAttributes } from './extract-attributes';
-import { componentsFromParams } from '../misc/component-attributes';
+import {
+  parseFiles,
+  isObjectProp,
+  PropType,
+  StringProp,
+  hasValue,
+  hasProperties,
+  isFunctionProp,
+  isObjectLikeProp,
+} from '@structured-types/api';
 import {
   LoadingDocStore,
   ParseStorieReturnType,
   InstrumentOptions,
 } from '../types';
-import {
-  extractFunction as extractFunctionTemplate,
-  extractVarFunction,
-} from './extract-function';
+import { adjustSourceLocation } from '../misc/source-location';
 export const extractCSFStories = (
-  ast: File,
+  _ast: File,
   _options: InstrumentOptions,
-  { source, filePath }: { source: string; filePath: string },
+  { filePath }: { source: string; filePath: string },
 ): ParseStorieReturnType => {
-  const globals: Stories = {};
-  const locals: Stories = {};
-
-  let components: { [key: string]: string | undefined } = {};
+  const components: { [key: string]: string | undefined } = {};
   const store: LoadingDocStore = {
     stories: {},
     doc: undefined,
     components: {},
     packages: {},
   };
-  const extractFunction = (path: NodePath, declaration: any, name: string) =>
-    extractFunctionTemplate(
-      _options,
-      { source, filePath },
-      path,
-      declaration,
-      name,
-      store.doc?.template,
-      locals,
-    );
-  traverse(ast, {
-    ExportDefaultDeclaration: (path: any) => {
-      const { declaration } = path.node;
-      let attributes: ReturnType<typeof extractAttributes>;
-      let template: any;
-      if (declaration.type === 'Identifier') {
-        attributes = { ...locals[declaration.name] };
-        delete attributes['id'];
-        delete attributes['name'];
-      } else {
-        attributes = extractAttributes(declaration);
-        template = declaration.expression?.properties.find(
-          (prop: any) =>
-            prop.key?.name === 'template' &&
-            prop.value?.type === 'ArrowFunctionExpression',
-        );
-      }
-      const { title: docTitle, name } = attributes || {};
-      if (template) {
-        delete attributes.template;
-      }
-      const title = docTitle || name;
-      if (typeof title === 'string') {
-        const attrComponents = componentsFromParams(attributes);
-        components = attrComponents.reduce(
-          (acc, componentName) => ({ ...acc, [componentName]: undefined }),
-          components,
-        );
-        const doc: Partial<Document> = {
-          ...attributes,
-          title,
-        };
-        if (attrComponents.length > 0) {
-          doc.component = attrComponents[0];
-        }
-        if (template) {
-          doc.template = extractFunction(
-            path as NodePath,
-            { type: 'VariableDeclarator', init: template.value },
-            template.key.name,
-          ) as Document['template'];
-        }
-        store.doc = doc as Document;
-      }
-    },
-    AssignmentExpression: (path: any) => {
-      const node = path.node;
-      if (
-        node.left.type === 'MemberExpression' &&
-        node.left.property.type === 'Identifier'
-      ) {
-        const storyExport = node.left?.object?.name;
-        let story = store.stories[storyExport] || {
-          name: storyExport,
-          id: storyExport,
-        };
-        const extractedValue = extractAttributes(node.right);
-        const extractedProps =
-          node.left.property.name === 'story'
-            ? extractedValue
-            : { [node.left.property.name]: extractedValue };
-        const { name, storyName, ...attributes } = extractedProps;
-
-        const nameAttr = storyName || name;
-        const attrComponents = componentsFromParams(attributes);
-        components = attrComponents.reduce(
-          (acc, componentName) => ({ ...acc, [componentName]: undefined }),
-          components,
-        );
-        story = {
-          ...story,
-          ...attributes,
-        };
-        if (nameAttr) {
-          story.name = nameAttr;
-        }
-        if (store.stories[storyExport]) {
-          store.stories[storyExport] = story;
-          globals[storyExport] = story;
-        } else {
-          locals[storyExport] = story;
-        }
-      }
-    },
-    VariableDeclaration: (path: any) => {
-      const story = extractVarFunction(
-        _options,
-        { source, filePath },
-        path,
-        store.doc?.template,
-        locals,
+  const parsed = parseFiles([filePath], {
+    collectSourceInfo: 'body',
+    collectInnerLocations: true,
+    collectParametersUsage: true,
+    plugins: [],
+  });
+  const propToDoc = (p: PropType, name?: string): any => {
+    if (hasValue(p)) {
+      return p.value;
+    }
+    if (isObjectLikeProp(p)) {
+      const result: Record<string, any> | undefined = p.properties?.reduce(
+        (acc, prop) => {
+          if (prop.name) {
+            return {
+              ...acc,
+              [prop.name]: propToDoc(
+                prop,
+                p.name === 'subcomponents' ? 'component' : undefined,
+              ),
+            };
+          }
+          return acc;
+        },
+        {},
       );
-      if (story && story.name) {
-        locals[story.name] = story;
+      return result;
+    }
+    const propName = p.alias || p.type || (p as StringProp).value;
+    if (name === 'component' && propName) {
+      components[propName] = propName;
+    }
+    return propName;
+  };
+  const doc = parsed.default;
+  if (!isObjectProp(doc)) {
+    throw new Error(`esm files should have one default export`);
+  }
+  if (doc.properties) {
+    store.doc = doc.properties.reduce((acc, prop) => {
+      if (prop.name) {
+        return {
+          ...acc,
+          [prop.name]: propToDoc(prop, prop.name),
+        };
       }
-    },
-    ExportSpecifier: (path: any) => {
-      const { node } = path;
-      const localName = node.local.name;
-      const exportedName = node.exported.name;
-      const story = locals[localName];
-      if (story) {
-        store.stories[exportedName] = story;
-      }
-    },
-    ExportNamedDeclaration: (path: any) => {
-      const { declaration } = path.node;
-      if (declaration) {
-        const { declarations } = declaration;
-        if (declarations) {
-          if (Array.isArray(declarations) && declarations.length > 0) {
-            const declaration = declarations[0];
-            if (
-              declaration.init.type !== 'ObjectExpression' ||
-              store.doc?.template
-            ) {
-              const story = extractFunction(
-                path as NodePath,
-                declaration,
-                declaration.id.name,
-              );
-              if (story) {
-                const name = story.name;
-                store.stories[name] = {
-                  ...story,
-                  ...globals[name],
-                };
-              }
-            }
-          }
-        } else {
-          if (declaration.type === 'FunctionDeclaration') {
-            const story = extractFunction(
-              path as NodePath,
-              declaration,
-              declaration.id.name,
+      return acc;
+    }, {}) as Document;
+    store.doc.componentsLookup = components as Document['componentsLookup'];
+  }
+  Object.keys(parsed)
+    .filter(name => name !== 'default')
+    .forEach(name => {
+      const propStory = parsed[name];
+      const story: Story = {
+        name: propStory.name || name,
+        loc: propStory.loc?.loc,
+      };
+      story.id = story.name;
+      if (isFunctionProp(propStory) && propStory.parameters) {
+        story.arguments = propStory.parameters.map(param => {
+          const arg: StoryArgument = {
+            loc: adjustSourceLocation(story, param.loc?.loc),
+            value: param.name || '',
+            name: param.name,
+          };
+          if (param.usage) {
+            arg.usage = param.usage.map(
+              u =>
+                ({
+                  loc: adjustSourceLocation(story, u),
+                } as ArgUsageLocation),
             );
-            if (story) {
-              const name = story.name;
-              store.stories[name] = {
-                ...story,
-                ...globals[name],
-              };
-            }
           }
-        }
-      } else if (Array.isArray(path.node.specifiers)) {
-        path.node.specifiers.forEach((item: any) => {
-          if (
-            item.type === 'ExportSpecifier' &&
-            item.exported?.type === 'Identifier'
-          ) {
-            const localName = item.local.name;
-            const exportedName = item.exported.name;
-            const story = locals[localName];
-            if (story) {
-              store.stories[exportedName] = story;
+          return arg;
+        });
+      }
+      if (hasProperties(propStory)) {
+        propStory.properties?.forEach(prop => {
+          const name = prop.name;
+          if (name) {
+            if (name === 'story' && hasProperties(prop)) {
+              prop.properties?.forEach(prop1 => {
+                const propName = prop1.name;
+                if (propName) {
+                  (story as Record<string, any>)[propName] = propToDoc(
+                    prop1,
+                    propName,
+                  );
+                }
+              });
+            } else {
+              (story as Record<string, any>)[name] = propToDoc(prop, name);
             }
           }
         });
       }
-    },
-  });
-  if (store.doc) {
-    store.doc.componentsLookup = components as Document['componentsLookup'];
-  } else {
-    throw new Error(`esm files should have one default export`);
-  }
+      store.stories[name] = story;
+    });
   return store;
 };

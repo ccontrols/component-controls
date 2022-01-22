@@ -1,5 +1,4 @@
 import * as path from 'path';
-import * as fs from 'fs';
 import jsStringEscape from 'js-string-escape';
 import {
   InstrumentOptions,
@@ -23,11 +22,10 @@ export const fixtureToTest = (
 ): void => {
   const folderName = path.join(__dirname, 'fixtures', ...filePaths);
   const filePathName = path.join(folderName, fileName);
-  const content = fs.readFileSync(filePathName, 'utf8');
   it(
     fileName,
     async () => {
-      const parsed = await parseStories(filePathName, content, {
+      const parsed = await parseStories(filePathName, {
         jest: false,
         ...options,
       });

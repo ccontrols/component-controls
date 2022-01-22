@@ -3543,6 +3543,15 @@
     deepmerge "^4.2.2"
     path-browserify "^1.0.1"
 
+"@structured-types/api@^3.44.0":
+  version "3.44.0"
+  resolved "https://registry.yarnpkg.com/@structured-types/api/-/api-3.44.0.tgz#a2f3181682e12e5599ba0fa9ac1f3b7721a3b087"
+  integrity sha512-2qKlzAG472PHeTrCjgi/Y5LntYgONmGb0qNVZaUGxpNBwBdiTaj001vAZUM4LeIe89tUMDqIO3Pn4EvhONF/3w==
+  dependencies:
+    "@structured-types/typescript-config" "^3.40.5"
+    deepmerge "^4.2.2"
+    path-browserify "^1.0.1"
+
 "@structured-types/prop-types-plugin@^3.41.0":
   version "3.41.0"
   resolved "https://registry.yarnpkg.com/@structured-types/prop-types-plugin/-/prop-types-plugin-3.41.0.tgz#20cfdc946b71287d8addf45144710f0097de6cee"
@@ -3550,12 +3559,26 @@
   dependencies:
     "@structured-types/react-plugin" "^3.41.0"
 
+"@structured-types/prop-types-plugin@^3.44.0":
+  version "3.44.0"
+  resolved "https://registry.yarnpkg.com/@structured-types/prop-types-plugin/-/prop-types-plugin-3.44.0.tgz#5669a0808e470434133b08e8b6ceb93ca6061f32"
+  integrity sha512-0BlBctVpQ5gfvEp7CxAvvTu18jOR02+WVSmdwNKcfKBIpuXdANj8Lg3Y5XZfurhAUgI0a14d8LzKrNAFc8NPXg==
+  dependencies:
+    "@structured-types/react-plugin" "^3.44.0"
+
 "@structured-types/react-plugin@^3.41.0":
   version "3.41.0"
   resolved "https://registry.yarnpkg.com/@structured-types/react-plugin/-/react-plugin-3.41.0.tgz#39c5ca914899ddd667266f0c06d87c25d82b61e0"
   integrity sha512-5gBMCsXSqLk/nGiL4x9qALlTSIfdWbkVvjD/aiQg3zIE1m5sdbAOrlRUgkzhhLO4XOxjKBA+b/cBClsFeIx5vw==
   dependencies:
     "@structured-types/api" "^3.41.0"
+
+"@structured-types/react-plugin@^3.44.0":
+  version "3.44.0"
+  resolved "https://registry.yarnpkg.com/@structured-types/react-plugin/-/react-plugin-3.44.0.tgz#417f22476a194ea31e6e9251c0398ffaa16e51c9"
+  integrity sha512-Uxnu6r1wfZFILg4/f8Kpaf8+2lTiBfVvfFkzxiPUHKDxAKNVfNA/0YvWjXEgENQYqs4tsAhZnYJwLO1MCakm/Q==
+  dependencies:
+    "@structured-types/api" "^3.44.0"
 
 "@structured-types/typescript-config@^3.16.2", "@structured-types/typescript-config@^3.40.5":
   version "3.40.5"

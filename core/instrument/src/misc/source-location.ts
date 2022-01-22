@@ -2,29 +2,28 @@ import { Story, CodeLocation } from '@component-controls/core';
 
 export const adjustSourceLocation = (
   story: Story,
-  loc: CodeLocation,
-): CodeLocation => {
-  if (!story.loc) {
+  loc?: CodeLocation,
+): CodeLocation | undefined => {
+  if (!story.loc || !loc) {
     return loc;
   }
   return {
     start: {
       line: loc.start.line - story.loc.start.line,
-      column:
+      col:
         loc.start.line === story.loc.start.line
-          ? loc.start.column - story.loc.start.column
-          : loc.start.column,
+          ? loc.start.col - story.loc.start.col
+          : loc.start.col,
     },
     end: {
       line: loc.end.line - story.loc.start.line,
-      column:
+      col:
         loc.end.line === story.loc.start.line
-          ? loc.end.column - story.loc.start.column
-          : loc.end.column,
+          ? loc.end.col - story.loc.start.col
+          : loc.end.col,
     },
   };
 };
-
 export const sourceLocation = (
   loc: CodeLocation | null,
 ): CodeLocation | undefined => {

@@ -94,7 +94,7 @@ export const getStore = async (
       doc,
       stories,
       components = {},
-    } = await parseStories(storyPath, undefined, { ...options, jest: false });
+    } = await parseStories(storyPath, { ...options, jest: false });
     if (!doc || !stories) {
       throw new Error(`Invalid story path ${storyPath}`);
     }

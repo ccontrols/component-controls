@@ -5,26 +5,6 @@ import { getComponentProps } from '../src/misc/props-info';
 const createTest = (fileName: string, callback: TestCallback) =>
   fixtureToTest(['esm', 'props-info-external'], fileName, callback, {
     stories: { sourceFiles: false },
-    propsLoaders: [
-      { name: '@component-controls/react-docgen-info', test: /\.(js|jsx)$/ },
-      {
-        name: '@component-controls/react-docgen-typescript-info',
-        test: /\.(ts|tsx)$/,
-      },
-      ,
-    ],
-    components: {
-      resolveFile: (componentName, filePath) => {
-        if (filePath.includes('theme-ui/dist')) {
-          const resolved = path.resolve(
-            path.dirname(filePath),
-            `../../@theme-ui/components/index.d.ts`,
-          );
-          return resolved;
-        }
-        return filePath;
-      },
-    },
   });
 
 describe('esm-props-info-external', () => {
@@ -82,37 +62,108 @@ describe('esm-props-info-external', () => {
       jsx: [],
       fileName: 'index.d.ts',
       info: {
-        tags: {
-          see: 'https://theme-ui.com/components/button',
-        },
-        description: 'Primitive button component with variants',
-        displayName: 'Button',
-        methods: [],
-        props: {
-          as: {
-            parentName: 'BoxOwnProps',
-            type: {
-              name: 'ElementType<any>',
-              raw: 'ElementType<any>',
-            },
-          },
-          m: {
-            description: 'Margin on top, left, bottom and right',
-            parentName: 'SpaceProps',
-            type: {
-              name: 'union',
-              value: [
+        Button: {
+          see: ['https://theme-ui.com/components/button'],
+          description: 'Primitive button component with variants',
+          name: 'Button',
+          properties: {
+            as: {
+              name: 'as',
+              parent: {
+                name: 'BoxOwnProps',
+              },
+              optional: true,
+              kind: 15,
+              type: 'React.ElementType',
+              properties: [
                 {
-                  name: 'ResponsiveValue<string',
+                  name: 'encodeHTML',
+                  parent: {
+                    name: 'String',
+                  },
+                  kind: 25,
                 },
                 {
-                  name: 'number',
-                },
-                {
-                  name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
+                  name: 'at',
+                  parent: {
+                    name: 'RelativeIndexable',
+                  },
+                  kind: 11,
+                  parameters: [
+                    {
+                      name: 'index',
+                      kind: 2,
+                    },
+                  ],
+                  returns: {
+                    kind: 4,
+                    properties: [
+                      {
+                        type: 'T',
+                      },
+                      {
+                        kind: 8,
+                      },
+                    ],
+                    optional: true,
+                  },
+                  description:
+                    'Takes an integer value and returns the item at that index,\nallowing for positive and negative integers.\nNegative integers count back from the last item in the array.',
                 },
               ],
-              raw: 'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
+            },
+            m: {
+              name: 'm',
+              parent: {
+                name: 'SpaceProps',
+              },
+              optional: true,
+              kind: 4,
+              properties: [
+                {
+                  kind: 4,
+                  type: 'ResponsiveValue',
+                  generics: [
+                    {
+                      type: 'TVal',
+                    },
+                    {
+                      type: 'ThemeType',
+                    },
+                  ],
+                  properties: [
+                    {
+                      type: 'T',
+                    },
+                    {
+                      kind: 10,
+                    },
+                    {
+                      kind: 16,
+                      properties: [
+                        {
+                          kind: 4,
+                          properties: [
+                            {
+                              type: 'T',
+                            },
+                            {
+                              kind: 10,
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                    {
+                      type: 'T',
+                    },
+                  ],
+                },
+                {
+                  kind: 8,
+                },
+              ],
+              description: 'Margin on top, left, bottom and right',
             },
           },
         },
@@ -135,16 +186,6 @@ describe('esm-props-info-external', () => {
 
   it('component', async () => {
     const props = await getComponentProps(
-      [
-        {
-          name: '@component-controls/react-docgen-info',
-          test: /\.(js|jsx)$/,
-        },
-        {
-          name: '@component-controls/react-docgen-typescript-info',
-          test: /\.(ts|tsx)$/,
-        },
-      ],
       path.resolve(
         __dirname,
         '../../../node_modules/@theme-ui/components/index.d.ts',

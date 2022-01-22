@@ -124,10 +124,9 @@ export type ParseStoriesReturnType = {
 
 export const parseStories = async (
   filePath: string,
-  fileSource?: string,
   options?: InstrumentOptions,
 ): Promise<ParseStoriesReturnType> => {
-  const source = fileSource || fs.readFileSync(filePath, 'utf8');
+  const source = fs.readFileSync(filePath, 'utf8');
   const {
     parser: parserOptions = {},
     prettier: prettierOptions = {},
@@ -135,7 +134,6 @@ export const parseStories = async (
     components: componentOptions = {},
     stories: storiesOptions = {},
     mdx: mdxOptions = {},
-    propsLoaders,
     jest: jestOptions = {},
   } = options || {};
 
@@ -149,7 +147,6 @@ export const parseStories = async (
     ),
     stories: deepmerge<StoriesOptions>(defaultStoriesOptions, storiesOptions),
     mdx: deepmerge<MDXOptions>(defaultMDXOptions, mdxOptions),
-    propsLoaders: propsLoaders || [],
     jest: jestOptions,
   };
   let code: string;
