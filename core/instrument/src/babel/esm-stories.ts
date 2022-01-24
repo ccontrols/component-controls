@@ -150,6 +150,7 @@ export const extractCSFStories = (
         name: propStory.name || name,
         loc: propStory.loc?.loc,
       };
+      story.id = story.name;
       if (isFunctionProp(propStory) && propStory.parameters) {
         story.arguments = propStory.parameters.map(param => {
           const arg: StoryArgument = {
@@ -170,7 +171,7 @@ export const extractCSFStories = (
       }
       if (hasProperties(propStory)) {
         propStory.properties?.forEach(prop => {
-          if (name === 'story' && hasProperties(prop)) {
+          if (prop.name === 'story' && hasProperties(prop)) {
             prop.properties?.forEach(prop1 => {
               assignPropStory(prop1, story);
             });
@@ -179,7 +180,7 @@ export const extractCSFStories = (
           }
         });
       }
-      story.id = story.name;
+
       store.stories[name] = story;
     });
   return store;
