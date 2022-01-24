@@ -4,4 +4,5 @@ export default {
   smartControls: {
     smart: false,
   },
+  tags: ['ui', 'react', 'vue'],
 };

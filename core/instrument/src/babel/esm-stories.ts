@@ -7,13 +7,13 @@ import {
 import { File } from '@babel/types';
 import {
   parseFiles,
-  isObjectProp,
+  isClassLikeProp,
   PropType,
   StringProp,
   hasValue,
   hasProperties,
   isFunctionProp,
-  isObjectLikeProp,
+  isArrayProp,
 } from '@structured-types/api';
 import {
   LoadingDocStore,
@@ -39,48 +39,95 @@ export const extractCSFStories = (
     collectParametersUsage: true,
     plugins: [],
   });
-  const propToDoc = (p: PropType, name?: string): any => {
-    if (hasValue(p)) {
+  const propValue = (p: PropType): any => {
+    if (hasValue(p) && typeof p.value !== 'undefined') {
       return p.value;
     }
-    if (isObjectLikeProp(p)) {
-      const result: Record<string, any> | undefined = p.properties?.reduce(
-        (acc, prop) => {
-          if (prop.name) {
-            return {
-              ...acc,
-              [prop.name]: propToDoc(
-                prop,
-                p.name === 'subcomponents' ? 'component' : undefined,
-              ),
-            };
+    if (isArrayProp(p)) {
+      const result: any[] | undefined = p.value?.reduce(
+        (acc: any[] | undefined, prop) => {
+          const value = propValue(prop);
+          if (typeof value !== 'undefined') {
+            if (!acc) {
+              return [value];
+            } else {
+              return [...acc, value];
+            }
           }
           return acc;
         },
-        {},
+        undefined,
       );
+      if (typeof result === 'undefined') {
+        return undefined;
+      }
       return result;
     }
-    const propName = p.alias || p.type || (p as StringProp).value;
-    if (name === 'component' && propName) {
-      components[propName] = propName;
+
+    if (isClassLikeProp(p)) {
+      const result: Record<string, any> | undefined = p.properties?.reduce(
+        (acc: ReturnType<typeof propToField>, prop) => {
+          if (prop.name) {
+            const value = propToField(prop);
+            if (typeof value !== 'undefined') {
+              if (!acc) {
+                return value;
+              } else {
+                return {
+                  ...acc,
+                  ...value,
+                };
+              }
+            }
+          }
+          return acc;
+        },
+        undefined,
+      );
+      if (typeof result === 'undefined') {
+        return undefined;
+      }
+      return result;
     }
-    return propName;
+    const value = p.alias || p.type || (p as StringProp).value;
+
+    return value;
+  };
+  const propToField = (p: PropType): Record<string, any> | undefined => {
+    const name = p.name;
+    if (name) {
+      const value = propValue(p);
+      if (typeof value !== 'undefined') {
+        if ((name === 'component' || name === 'subcomponents') && value) {
+          components[value] = value;
+        }
+        return { [name]: value };
+      }
+    }
+    return undefined;
   };
   const doc = parsed.default;
-  if (!isObjectProp(doc)) {
+  if (!isClassLikeProp(doc)) {
     throw new Error(`esm files should have one default export`);
   }
   if (doc.properties) {
-    store.doc = doc.properties.reduce((acc, prop) => {
-      if (prop.name) {
-        return {
-          ...acc,
-          [prop.name]: propToDoc(prop, prop.name),
-        };
-      }
-      return acc;
-    }, {}) as Document;
+    store.doc = doc.properties.reduce(
+      (acc: ReturnType<typeof propToField>, prop) => {
+        const value = propToField(prop);
+        if (typeof value !== 'undefined') {
+          if (!acc) {
+            return value;
+          } else {
+            return {
+              ...acc,
+              ...value,
+            };
+          }
+        }
+        return acc;
+      },
+      undefined,
+    ) as Document;
     store.doc.componentsLookup = components as Document['componentsLookup'];
   }
   Object.keys(parsed)
@@ -112,20 +159,17 @@ export const extractCSFStories = (
       }
       if (hasProperties(propStory)) {
         propStory.properties?.forEach(prop => {
-          const name = prop.name;
-          if (name) {
-            if (name === 'story' && hasProperties(prop)) {
-              prop.properties?.forEach(prop1 => {
-                const propName = prop1.name;
-                if (propName) {
-                  (story as Record<string, any>)[propName] = propToDoc(
-                    prop1,
-                    propName,
-                  );
-                }
-              });
-            } else {
-              (story as Record<string, any>)[name] = propToDoc(prop, name);
+          if (name === 'story' && hasProperties(prop)) {
+            prop.properties?.forEach(prop1 => {
+              const value = propToField(prop1);
+              if (typeof value !== 'undefined') {
+                Object.assign(story, value);
+              }
+            });
+          } else {
+            const value = propToField(prop);
+            if (typeof value !== 'undefined') {
+              Object.assign(story, value);
             }
           }
         });

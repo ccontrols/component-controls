@@ -4,15 +4,6 @@ const createTest = (fileName: string, callback: TestCallback) =>
   fixtureToTest(['esm', 'doc'], fileName, callback);
 
 describe('esm-doc', () => {
-  createTest('default-export-const.ts', parsed => {
-    expect(parsed).toMatchObject({
-      doc: {
-        title: 'Story',
-        component: 'ControlsTable',
-      },
-    });
-  });
-
   createTest('title-and-parameters.js', parsed => {
     expect(parsed).toMatchObject({
       doc: {
@@ -21,6 +12,23 @@ describe('esm-doc', () => {
         smartControls: {
           smart: false,
         },
+        tags: ['ui', 'react', 'vue'],
+      },
+    });
+  });
+  createTest('typed-export.ts', parsed => {
+    expect(parsed).toMatchObject({
+      doc: {
+        title: 'Story',
+      },
+    });
+  });
+
+  createTest('default-export-const.ts', parsed => {
+    expect(parsed).toMatchObject({
+      doc: {
+        title: 'Story',
+        component: 'ControlsTable',
       },
     });
   });
@@ -38,14 +46,6 @@ describe('esm-doc', () => {
             order: 9999,
           },
         },
-      },
-    });
-  });
-
-  createTest('typed-export.ts', parsed => {
-    expect(parsed).toMatchObject({
-      doc: {
-        title: 'Story',
       },
     });
   });
