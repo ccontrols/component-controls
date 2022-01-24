@@ -98,8 +98,10 @@ export const extractCSFStories = (
     if (name) {
       const value = propValue(p);
       if (typeof value !== 'undefined') {
-        if ((name === 'component' || name === 'subcomponents') && value) {
-          components[value] = value;
+        if (name === 'component' || name === 'subcomponents') {
+          const componentName =
+            typeof value === 'object' ? Object.values(value)[0] : value;
+          components[componentName] = value;
         }
         return { [name]: value };
       }
