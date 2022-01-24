@@ -106,6 +106,18 @@ export const extractCSFStories = (
     }
     return undefined;
   };
+
+  const assignPropStory = (prop: PropType, story: Story): void => {
+    const value = propToField(prop);
+    if (typeof value !== 'undefined') {
+      if (prop.name === 'storyName') {
+        const name = Object.values(value)[0];
+        story.name = name;
+      } else {
+        Object.assign(story, value);
+      }
+    }
+  };
   const doc = parsed.default;
   if (!isClassLikeProp(doc)) {
     throw new Error(`esm files should have one default export`);
@@ -138,7 +150,6 @@ export const extractCSFStories = (
         name: propStory.name || name,
         loc: propStory.loc?.loc,
       };
-      story.id = story.name;
       if (isFunctionProp(propStory) && propStory.parameters) {
         story.arguments = propStory.parameters.map(param => {
           const arg: StoryArgument = {
@@ -161,19 +172,14 @@ export const extractCSFStories = (
         propStory.properties?.forEach(prop => {
           if (name === 'story' && hasProperties(prop)) {
             prop.properties?.forEach(prop1 => {
-              const value = propToField(prop1);
-              if (typeof value !== 'undefined') {
-                Object.assign(story, value);
-              }
+              assignPropStory(prop1, story);
             });
           } else {
-            const value = propToField(prop);
-            if (typeof value !== 'undefined') {
-              Object.assign(story, value);
-            }
+            assignPropStory(prop, story);
           }
         });
       }
+      story.id = story.name;
       store.stories[name] = story;
     });
   return store;
