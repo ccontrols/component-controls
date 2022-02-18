@@ -16,24 +16,19 @@ describe('esm-components', () => {
     const component =
       parsed.components[parsed.doc?.componentsLookup['ArrowButton']];
     expect(component).toMatchObject({
-      externalDependencies: {
-        react: [
-          {
-            importedName: 'default',
-            name: 'React',
-          },
-        ],
+      info: {
+        externalDependencies: {
+          react: [
+            {
+              importedName: 'default',
+              name: 'React',
+            },
+          ],
+        },
       },
       fileName: 'button-default-arrow-func.js',
-      from: '../../components/button-default-arrow-func',
+      from: '../../components/button-default-arrow-func.js',
       importedName: 'default',
-      jsx: [
-        {
-          attributes: [],
-          children: [],
-          name: 'button',
-        },
-      ],
       name: 'ArrowButton',
     });
     const subComponent =
@@ -59,24 +54,19 @@ describe('esm-components', () => {
     const component =
       parsed.components[parsed.doc?.componentsLookup['ArrowButton']];
     expect(component).toMatchObject({
-      externalDependencies: {
-        react: [
-          {
-            importedName: 'default',
-            name: 'React',
-          },
-        ],
+      info: {
+        externalDependencies: {
+          react: [
+            {
+              importedName: 'default',
+              name: 'React',
+            },
+          ],
+        },
       },
       fileName: 'button-default-arrow-func.js',
-      from: '../../components/button-default-arrow-func',
+      from: '../../components/button-default-arrow-func.js',
       importedName: 'default',
-      jsx: [
-        {
-          attributes: [],
-          children: [],
-          name: 'button',
-        },
-      ],
       name: 'ArrowButton',
     });
     const subComponent =
@@ -94,24 +84,19 @@ describe('esm-components', () => {
     });
     const component = parsed.components[parsed.doc?.componentsLookup['Button']];
     expect(component).toMatchObject({
-      externalDependencies: {
-        react: [
-          {
-            importedName: 'default',
-            name: 'React',
-          },
-        ],
+      info: {
+        externalDependencies: {
+          react: [
+            {
+              importedName: 'default',
+              name: 'React',
+            },
+          ],
+        },
       },
       fileName: 'button-default-arrow-func.js',
-      from: '../../components/button-default-arrow-func',
+      from: '../../components/button-default-arrow-func.js',
       importedName: 'default',
-      jsx: [
-        {
-          attributes: [],
-          children: [],
-          name: 'button',
-        },
-      ],
       name: 'Button',
     });
   });

@@ -4,27 +4,7 @@ const createTest = (fileName: string, callback: TestCallback) =>
   fixtureToTest(['esm', 'doc'], fileName, callback);
 
 describe('esm-doc', () => {
-  createTest('title-and-parameters.js', parsed => {
-    expect(parsed).toMatchObject({
-      doc: {
-        title: 'Docs/Blocks/ControlsTable',
-        component: 'ControlsTable',
-        smartControls: {
-          smart: false,
-        },
-        tags: ['ui', 'react', 'vue'],
-      },
-    });
-  });
-  createTest('typed-export.ts', parsed => {
-    expect(parsed).toMatchObject({
-      doc: {
-        title: 'Story',
-      },
-    });
-  });
-
-  createTest('default-export-const.ts', parsed => {
+  createTest('default-export-const.ts', async parsed => {
     expect(parsed).toMatchObject({
       doc: {
         title: 'Story',
@@ -33,7 +13,7 @@ describe('esm-doc', () => {
     });
   });
 
-  createTest('title-controls-and-parameters.js', parsed => {
+  createTest('title-controls-and-parameters.js', async parsed => {
     expect(parsed).toMatchObject({
       doc: {
         title: 'Docs/Kind',
@@ -46,6 +26,25 @@ describe('esm-doc', () => {
             order: 9999,
           },
         },
+      },
+    });
+  });
+  createTest('title-and-parameters.js', async parsed => {
+    expect(parsed).toMatchObject({
+      doc: {
+        title: 'Docs/Blocks/ControlsTable',
+        component: 'ControlsTable',
+        smartControls: {
+          smart: false,
+        },
+        tags: ['ui', 'react', 'vue'],
+      },
+    });
+  });
+  createTest('typed-export.ts', async parsed => {
+    expect(parsed).toMatchObject({
+      doc: {
+        title: 'Story',
       },
     });
   });

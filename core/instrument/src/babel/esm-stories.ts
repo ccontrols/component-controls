@@ -1,9 +1,11 @@
+import fs from 'fs';
 import {
   ArgUsageLocation,
   Document,
   Story,
   StoryArgument,
 } from '@component-controls/core';
+import { ImportType } from '@component-controls/follow-imports';
 import { File } from '@babel/types';
 import {
   parseFiles,
@@ -21,11 +23,15 @@ import {
   InstrumentOptions,
 } from '../types';
 import { adjustSourceLocation } from '../misc/source-location';
-export const extractCSFStories = (
+import { getModuleImports } from '../misc/extract-imports';
+import { extractComponent } from './extract-component';
+import { componentKey } from '../misc/hashStore';
+
+export const extractCSFStories = async (
   _ast: File,
   _options: InstrumentOptions,
-  { filePath }: { source: string; filePath: string },
-): ParseStorieReturnType => {
+  { filePath, source }: { source: string; filePath: string },
+): Promise<ParseStorieReturnType> => {
   const components: { [key: string]: string | undefined } = {};
   const store: LoadingDocStore = {
     stories: {},
@@ -33,75 +39,91 @@ export const extractCSFStories = (
     components: {},
     packages: {},
   };
-  const parsed = parseFiles([filePath], {
-    collectSourceInfo: 'body',
-    collectInnerLocations: true,
-    collectParametersUsage: true,
-    plugins: [],
-  });
-  const propValue = (p: PropType): any => {
+  const imports: ImportType[] = [];
+  const parsed = parseFiles(
+    [filePath],
+    {
+      collectSourceInfo: 'body',
+      collectInnerLocations: true,
+      collectParametersUsage: true,
+      collectGenerics: false,
+      moduleCallback: getModuleImports(imports),
+    },
+    {
+      hostCallback: host => {
+        host.readFile = (fileName: string) => {
+          if (fileName === filePath) {
+            return source;
+          }
+          return fs.readFileSync(fileName, 'utf-8');
+        };
+      },
+    },
+  );
+  const propValue = async (p: PropType): Promise<any> => {
     if (hasValue(p) && typeof p.value !== 'undefined') {
       return p.value;
     }
     if (isArrayProp(p)) {
-      const result: any[] | undefined = p.value?.reduce(
-        (acc: any[] | undefined, prop) => {
-          const value = propValue(prop);
-          if (typeof value !== 'undefined') {
-            if (!acc) {
-              return [value];
-            } else {
-              return [...acc, value];
-            }
-          }
-          return acc;
-        },
-        undefined,
-      );
-      if (typeof result === 'undefined') {
+      if (!p.value?.length) {
         return undefined;
+      }
+      const result: any[] = [];
+      for (const prop of p.value) {
+        const value = await propValue(prop);
+        result.push(value);
       }
       return result;
     }
 
-    if (isClassLikeProp(p)) {
-      const result: Record<string, any> | undefined = p.properties?.reduce(
-        (acc: ReturnType<typeof propToField>, prop) => {
-          if (prop.name) {
-            const value = propToField(prop);
-            if (typeof value !== 'undefined') {
-              if (!acc) {
-                return value;
-              } else {
-                return {
-                  ...acc,
-                  ...value,
-                };
-              }
-            }
+    if (isClassLikeProp(p) && p.properties) {
+      const result: Record<string, any> = {};
+      for (const prop of p.properties) {
+        if (prop.name) {
+          const value = await propToField(prop);
+          if (typeof value !== 'undefined') {
+            Object.assign(result, value);
           }
-          return acc;
-        },
-        undefined,
-      );
-      if (typeof result === 'undefined') {
-        return undefined;
+        }
       }
       return result;
     }
-    const value = p.alias || p.type || (p as StringProp).value;
+    const value = p.alias || (p as StringProp).value;
 
     return value;
   };
-  const propToField = (p: PropType): Record<string, any> | undefined => {
+  const propToField = async (
+    p: PropType,
+  ): Promise<Record<string, any> | undefined> => {
     const name = p.name;
     if (name) {
-      const value = propValue(p);
+      const value = await propValue(p);
       if (typeof value !== 'undefined') {
         if (name === 'component' || name === 'subcomponents') {
           const componentName =
             typeof value === 'object' ? Object.values(value)[0] : value;
-          components[componentName] = value;
+          const imported = imports.find(i => i.name === componentName);
+          const component = await extractComponent(
+            store,
+            {
+              name: componentName,
+              filePath: value?.loc?.filePath,
+              from: imported?.from,
+              importedName: imported?.importedName,
+              loc: value?.loc?.loc,
+            },
+            filePath,
+            _options,
+          );
+
+          if (component) {
+            const key = componentKey(
+              component.filePath ?? filePath,
+              componentName,
+            );
+            store.components[key] = component;
+            components[componentName] = key;
+          }
         }
         return { [name]: value };
       }
@@ -109,8 +131,11 @@ export const extractCSFStories = (
     return undefined;
   };
 
-  const assignPropStory = (prop: PropType, story: Story): void => {
-    const value = propToField(prop);
+  const assignPropStory = async (
+    prop: PropType,
+    story: Story,
+  ): Promise<void> => {
+    const value = await propToField(prop);
     if (typeof value !== 'undefined') {
       if (prop.name === 'storyName') {
         const name = Object.values(value)[0];
@@ -121,69 +146,65 @@ export const extractCSFStories = (
     }
   };
   const doc = parsed.default;
-  if (!isClassLikeProp(doc)) {
+  if (!doc || !isClassLikeProp(doc)) {
     throw new Error(`esm files should have one default export`);
   }
   if (doc.properties) {
-    store.doc = doc.properties.reduce(
-      (acc: ReturnType<typeof propToField>, prop) => {
-        const value = propToField(prop);
-        if (typeof value !== 'undefined') {
-          if (!acc) {
-            return value;
-          } else {
-            return {
-              ...acc,
-              ...value,
-            };
-          }
-        }
-        return acc;
-      },
-      undefined,
-    ) as Document;
+    store.doc = {} as Document;
+    for (const prop of doc.properties) {
+      const value = await propToField(prop);
+      Object.assign(store.doc, value);
+    }
     store.doc.componentsLookup = components as Document['componentsLookup'];
   }
-  Object.keys(parsed)
-    .filter(name => name !== 'default')
-    .forEach(name => {
-      const propStory = parsed[name];
-      const story: Story = {
-        name: propStory.name || name,
-        loc: propStory.loc?.loc,
-      };
-      story.id = story.name;
-      if (isFunctionProp(propStory) && propStory.parameters) {
-        story.arguments = propStory.parameters.map(param => {
-          const arg: StoryArgument = {
-            loc: adjustSourceLocation(story, param.loc?.loc),
-            value: param.name || '',
-            name: param.name,
-          };
-          if (param.usage) {
-            arg.usage = param.usage.map(
+  const names = Object.keys(parsed).filter(name => name !== 'default');
+  for (const name of names) {
+    const propStory = parsed[name];
+    const story: Story = {
+      name: propStory.name || name,
+      loc: propStory.loc?.loc,
+    };
+    story.id = story.name;
+    if (isFunctionProp(propStory) && propStory.parameters) {
+      const parseArg = (prop: PropType) => {
+        const arg: StoryArgument = {
+          value: prop.name || '',
+        };
+        if (prop.loc) {
+          arg.loc = adjustSourceLocation(story, prop.loc.loc);
+        }
+        if (prop.name) {
+          arg.name = prop.name;
+        }
+        if (isClassLikeProp(prop) && prop.properties) {
+          arg.value = prop.properties.map(p => parseArg(p));
+        } else {
+          if (prop.usage) {
+            arg.usage = prop.usage.map(
               u =>
                 ({
                   loc: adjustSourceLocation(story, u),
                 } as ArgUsageLocation),
             );
           }
-          return arg;
-        });
-      }
-      if (hasProperties(propStory)) {
-        propStory.properties?.forEach(prop => {
-          if (prop.name === 'story' && hasProperties(prop)) {
-            prop.properties?.forEach(prop1 => {
-              assignPropStory(prop1, story);
-            });
-          } else {
-            assignPropStory(prop, story);
+        }
+        return arg;
+      };
+      story.arguments = propStory.parameters.map(param => parseArg(param));
+    }
+    if (hasProperties(propStory) && propStory.properties) {
+      for (const prop of propStory.properties) {
+        if (prop.name === 'story' && hasProperties(prop) && prop.properties) {
+          for (const prop1 of prop.properties) {
+            await assignPropStory(prop1, story);
           }
-        });
+        } else {
+          await assignPropStory(prop, story);
+        }
       }
+    }
 
-      store.stories[name] = story;
-    });
+    store.stories[name] = story;
+  }
   return store;
 };

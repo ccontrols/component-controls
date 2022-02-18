@@ -18,7 +18,7 @@ const getPackageJson = async (
   packageJSON: { [key: string]: any };
 } | null> => {
   return new Promise((resolve, reject) => {
-    if (!filePath) {
+    if (!filePath || !fs.existsSync(filePath)) {
       return resolve(null);
     }
     if (opts === false) {

@@ -8,17 +8,15 @@ const adjustCodeLocation = (
   return {
     start: {
       line: loc.start.line,
-      column:
+      col:
         line === loc.start.line
-          ? Math.max(0, loc.start.column - chars)
-          : loc.start.column,
+          ? Math.max(0, loc.start.col - chars)
+          : loc.start.col,
     },
     end: {
       line: loc.end.line,
-      column:
-        line === loc.end.line
-          ? Math.max(0, loc.end.column - chars)
-          : loc.end.column,
+      col:
+        line === loc.end.line ? Math.max(0, loc.end.col - chars) : loc.end.col,
     },
   };
 };

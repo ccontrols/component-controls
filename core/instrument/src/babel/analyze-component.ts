@@ -7,7 +7,6 @@ import {
 } from '@babel/types';
 import * as resolve from 'resolve';
 import {
-  Component,
   JSXNode,
   JSXTree,
   ImportTypes,
@@ -96,10 +95,9 @@ const traverseJSX = (
   };
 };
 export const analyze_components = (
-  component: Component,
   filePath: string,
   options?: InstrumentOptions,
-): void => {
+): JSXTree => {
   const { parser: parserOptions } = options || {};
   const { ast } = parseFile(filePath, parserOptions);
   const imports = extractImports(filePath);
@@ -114,5 +112,5 @@ export const analyze_components = (
         }))
       : [];
   };
-  component.jsx = mapJSXTree(jsx);
+  return mapJSXTree(jsx);
 };

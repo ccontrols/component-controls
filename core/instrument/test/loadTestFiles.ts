@@ -13,7 +13,7 @@ expect.addSnapshotSerializer({
   },
 });
 
-export type TestCallback = (parsed: ParseStoriesReturnType) => void;
+export type TestCallback = (parsed: ParseStoriesReturnType) => Promise<void>;
 export const fixtureToTest = (
   filePaths: string[],
   fileName: string,

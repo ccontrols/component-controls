@@ -1,4 +1,5 @@
 import path from 'path';
+import { ComponentProp } from '@structured-types/api';
 import { fixtureToTest, TestCallback } from './loadTestFiles';
 import { getComponentProps } from '../src/misc/props-info';
 
@@ -10,14 +11,156 @@ const createTest = (fileName: string, callback: TestCallback) =>
 describe('esm-props-info-external', () => {
   createTest('theme-ui.jsx', parsed => {
     const component = parsed.components[parsed.doc.componentsLookup['Button']];
+    (component.info as ComponentProp).properties = (
+      component.info as ComponentProp
+    ).properties.filter(p => p.name === 'as' || p.name === 'm');
     expect(component).toMatchObject({
       name: 'Button',
       from: 'theme-ui',
+      importedName: 'Button',
+      fileName: 'index.d.ts',
+      info: {
+        name: 'Button',
+        extension: 'react',
+        kind: 15,
+        loc: {
+          loc: {
+            start: {
+              line: 69,
+              col: 14,
+            },
+            end: {
+              line: 69,
+              col: 20,
+            },
+          },
+        },
+        properties: [
+          {
+            name: 'as',
+            parent: {
+              name: 'BoxOwnProps',
+            },
+            optional: true,
+            kind: 15,
+            type: 'React.ElementType',
+          },
+          {
+            name: 'm',
+            parent: {
+              name: 'SpaceProps',
+            },
+            optional: true,
+            kind: 4,
+            description: 'Margin on top, left, bottom and right',
+          },
+        ],
+        description: 'Primitive button component with variants',
+        see: ['https://theme-ui.com/components/button'],
+        externalDependencies: {
+          react: [
+            {
+              name: 'React',
+              importedName: 'default',
+            },
+          ],
+          '@emotion/styled': [
+            {
+              name: 'StyledComponent',
+              importedName: 'StyledComponent',
+            },
+          ],
+          '@emotion/react': [
+            {
+              name: 'Interpolation',
+              importedName: 'Interpolation',
+            },
+          ],
+          'styled-system': [
+            {
+              name: 'SpaceProps',
+              importedName: 'SpaceProps',
+            },
+            {
+              name: 'ColorProps',
+              importedName: 'ColorProps',
+            },
+            {
+              name: 'MarginProps',
+              importedName: 'MarginProps',
+            },
+          ],
+          '@theme-ui/css': [
+            {
+              name: 'ResponsiveStyleValue',
+              importedName: 'ResponsiveStyleValue',
+            },
+            {
+              name: 'ThemeUIStyleObject',
+              importedName: 'ThemeUIStyleObject',
+            },
+          ],
+        },
+        localDependencies: {},
+      },
+      fileInfo: {
+        sloc: {
+          total: 395,
+          source: 162,
+          comment: 193,
+          single: 2,
+          block: 191,
+          mixed: 0,
+          empty: 40,
+          todo: 0,
+          blockEmpty: 0,
+        },
+      },
+    });
+  });
+  it('component', async () => {
+    const result = getComponentProps(
+      path.resolve(
+        __dirname,
+        '../../../node_modules/@theme-ui/components/index.d.ts',
+      ),
+      'Button',
+    ) as ComponentProp;
+    result.properties = result.properties.filter(p => p.name === 'margin');
+    expect(result).toMatchObject({
+      name: 'Button',
+      extension: 'react',
+      kind: 15,
+      loc: {
+        loc: {
+          start: {
+            line: 69,
+            col: 14,
+          },
+          end: {
+            line: 69,
+            col: 20,
+          },
+        },
+      },
+      properties: [
+        {
+          name: 'margin',
+          parent: {
+            name: 'SpaceProps',
+          },
+          optional: true,
+          kind: 4,
+          description: 'Margin on top, left, bottom and right',
+        },
+      ],
+      description: 'Primitive button component with variants',
+      see: ['https://theme-ui.com/components/button'],
       externalDependencies: {
         react: [
           {
             name: 'React',
-            importedName: 'namespace',
+            importedName: 'default',
           },
         ],
         '@emotion/styled': [
@@ -58,169 +201,6 @@ describe('esm-props-info-external', () => {
         ],
       },
       localDependencies: {},
-      importedName: 'Button',
-      jsx: [],
-      fileName: 'index.d.ts',
-      info: {
-        Button: {
-          see: ['https://theme-ui.com/components/button'],
-          description: 'Primitive button component with variants',
-          name: 'Button',
-          properties: {
-            as: {
-              name: 'as',
-              parent: {
-                name: 'BoxOwnProps',
-              },
-              optional: true,
-              kind: 15,
-              type: 'React.ElementType',
-              properties: [
-                {
-                  name: 'encodeHTML',
-                  parent: {
-                    name: 'String',
-                  },
-                  kind: 25,
-                },
-                {
-                  name: 'at',
-                  parent: {
-                    name: 'RelativeIndexable',
-                  },
-                  kind: 11,
-                  parameters: [
-                    {
-                      name: 'index',
-                      kind: 2,
-                    },
-                  ],
-                  returns: {
-                    kind: 4,
-                    properties: [
-                      {
-                        type: 'T',
-                      },
-                      {
-                        kind: 8,
-                      },
-                    ],
-                    optional: true,
-                  },
-                  description:
-                    'Takes an integer value and returns the item at that index,\nallowing for positive and negative integers.\nNegative integers count back from the last item in the array.',
-                },
-              ],
-            },
-            m: {
-              name: 'm',
-              parent: {
-                name: 'SpaceProps',
-              },
-              optional: true,
-              kind: 4,
-              properties: [
-                {
-                  kind: 4,
-                  type: 'ResponsiveValue',
-                  generics: [
-                    {
-                      type: 'TVal',
-                    },
-                    {
-                      type: 'ThemeType',
-                    },
-                  ],
-                  properties: [
-                    {
-                      type: 'T',
-                    },
-                    {
-                      kind: 10,
-                    },
-                    {
-                      kind: 16,
-                      properties: [
-                        {
-                          kind: 4,
-                          properties: [
-                            {
-                              type: 'T',
-                            },
-                            {
-                              kind: 10,
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                    {
-                      type: 'T',
-                    },
-                  ],
-                },
-                {
-                  kind: 8,
-                },
-              ],
-              description: 'Margin on top, left, bottom and right',
-            },
-          },
-        },
-      },
-      fileInfo: {
-        sloc: {
-          total: 395,
-          source: 162,
-          comment: 193,
-          single: 2,
-          block: 191,
-          mixed: 0,
-          empty: 40,
-          todo: 0,
-          blockEmpty: 0,
-        },
-      },
-    });
-  });
-
-  it('component', async () => {
-    const props = await getComponentProps(
-      path.resolve(
-        __dirname,
-        '../../../node_modules/@theme-ui/components/index.d.ts',
-      ),
-      'Button',
-    );
-
-    expect(props).toMatchObject({
-      tags: {
-        see: 'https://theme-ui.com/components/button',
-      },
-      description: 'Primitive button component with variants',
-      displayName: 'Button',
-      methods: [],
-      props: {
-        margin: {
-          description: 'Margin on top, left, bottom and right',
-          parentName: 'SpaceProps',
-          type: {
-            name: 'union',
-            value: [
-              {
-                name: 'ResponsiveValue<string',
-              },
-              {
-                name: 'number',
-              },
-              {
-                name: 'symbol, Required<Theme<TLengthStyledSystem>>>',
-              },
-            ],
-            raw: 'ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>',
-          },
-        },
-      },
     });
   });
 });

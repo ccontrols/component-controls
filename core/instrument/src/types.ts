@@ -121,16 +121,6 @@ export interface ComponentOptions {
   resolveFile?: (componentName: string, filePath: string) => string | undefined;
 
   /**
-   * Callback function to resolve the props info file name of a component.
-   * Sometimes the props are in a different file than the source file
-   * for example external libraries that had a separate index.d.ts file
-   */
-  resolvePropsFile?: (
-    componentName: string,
-    filePath: string,
-  ) => string | undefined;
-
-  /**
    * If set to false, will not save the component's source file
    */
   sourceFiles?: ComponentFileOption;

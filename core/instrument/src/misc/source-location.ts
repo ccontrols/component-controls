@@ -13,14 +13,14 @@ export const adjustSourceLocation = (
       col:
         loc.start.line === story.loc.start.line
           ? loc.start.col - story.loc.start.col
-          : loc.start.col,
+          : loc.start.col - 1,
     },
     end: {
       line: loc.end.line - story.loc.start.line,
       col:
         loc.end.line === story.loc.start.line
           ? loc.end.col - story.loc.start.col
-          : loc.end.col,
+          : loc.end.col - 1,
     },
   };
 };

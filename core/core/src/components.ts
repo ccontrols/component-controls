@@ -1,102 +1,36 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import { PropTypes, PropType } from '@structured-types/api';
 import { CodeLocation, ImportType, Imports } from './utility';
 import { FileInfo } from './files';
 import { JestTests } from './jest';
-
-export type TypeValue =
-  | 'any'
-  | 'boolean'
-  | 'number'
-  | 'string'
-  | 'array'
-  | 'object'
-  | 'enum'
-  | 'union'
-  | 'literal'
-  | 'symbol'
-  | 'function'
-  | string;
-
-export interface TypeInformation {
-  name: TypeValue;
-
-  /**
-   * type value
-   * elements of enum, array, fields of object
-   * return value of function
-   */
-  value?: TypeInformation[] | any;
-
-  /**
-   * raw type code
-   */
-  raw?: string;
-
-  /**
-   * argument types of function
-   */
-  arguments?: TypeInformation[] | any;
-  /**
-   * is the property required
-   */
-  required?: boolean;
-}
 
 /**
  * docgen generated property types
  * mapped to common types to be consumed by component-controls
  * check props-info packages for implementations
  */
-export interface PropType {
-  /**
-   * default value for the property
-   */
-  defaultValue?: any;
-  /**
-   * propertty type
-   */
-  type: TypeInformation;
-  /**
-   * description of the property
-   */
-  description?: string;
-  /**
-   * name of the parent/inherited property
-   */
-  parentName?: string;
-
-  /**
-   * if the property is deprecated, contains a string
-   */
-  deprecated?: string;
-}
-
-/**
- * list of properties of the component
- */
-export interface PropTypes {
-  [key: string]: PropType;
-}
+export { PropType, PropTypes };
 
 /**
  * DocGen type onfo generated for a compoennt
  */
-export interface ComponentInfo {
+
+export type ComponentInfo = PropType & {
   /**
-   * name of the component
+   * list of component's file imports from external libraries
    */
-  displayName: string;
+  externalDependencies?: Imports;
 
   /**
-   * optional description
+   * list of component's file imports from local (imported via relative import) files
    */
-  description?: string;
+  localDependencies?: Imports;
 
   /**
-   * component props
+   * jsx component tree
    */
-  props: PropTypes;
-}
+  jsx?: JSXTree;
+};
 
 export type JSXNode = Partial<ImportType> & {
   attributes?: string[];
@@ -128,23 +62,15 @@ export interface Component {
    * imported from
    */
   from?: string;
-
   /**
-   * resolved import request
+   * component full file path
    */
-  request?: string;
+  filePath?: string;
 
   /**
-   * file name with extension
+   * component file name with extension
    */
   fileName?: string;
-
-  /**
-   * file containing the component's props info
-   * sometimes different from the component source file
-   * for example external libraries that have a separate index.d.ts file
-   */
-  propsInfoFile?: string;
 
   /**
    * location of the import statement in the source code file
@@ -164,20 +90,6 @@ export interface Component {
    * docgen generated component info
    */
   info?: ComponentInfo;
-  /**
-   * list of component's file imports from external libraries
-   */
-  externalDependencies?: Imports;
-
-  /**
-   * list of component's file imports from local (imported via relative import) files
-   */
-  localDependencies?: Imports;
-
-  /**
-   * jsx component tree
-   */
-  jsx?: JSXTree;
 
   /**
    * source file info

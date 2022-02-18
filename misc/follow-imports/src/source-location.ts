@@ -1,4 +1,4 @@
-import { SourceLocation } from '@babel/types';
+import { SourceLocation } from './consts';
 
 export const sourceLocation = (
   loc: SourceLocation | null,

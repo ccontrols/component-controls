@@ -1,7 +1,6 @@
 import * as resolve from 'resolve';
 import * as path from 'path';
 import { ParserOptions } from '@babel/parser';
-import { SourceLocation } from '@babel/types';
 import { parseFile } from './ast_store';
 import { extractImports } from './extract-imports';
 import { extractExports } from './extract-exports';
@@ -16,6 +15,7 @@ import {
   ImportTypes,
 } from './consts';
 import { getASTSource } from './source';
+import { SourceLocation } from './consts';
 export {
   parseFile,
   extractImports,

@@ -10,7 +10,7 @@ import { parseFile } from '@component-controls/follow-imports';
 import { extractCSFStories } from './babel/esm-stories';
 import { extractMDXStories } from './babel/mdx-stories';
 import { transformMDXAttributes } from './babel/transform-ast-tree';
-import { extractStoreComponent } from './babel/extract-component';
+import { extractStoreData } from './babel/extract-component';
 import { packageInfo } from './misc/package-info';
 import { extractStoryExports } from './misc/mdx-exports';
 import { prettify } from './misc/prettify';
@@ -43,7 +43,7 @@ type TraverseFn = (
   ast: File,
   options: Required<InstrumentOptions>,
   more: { source: string; filePath: string },
-) => ParseStorieReturnType | undefined;
+) => Promise<ParseStorieReturnType | undefined>;
 
 /**
  * Instrument a source file, with options
@@ -63,7 +63,7 @@ const parseSource = async (
   const source = prettify(code, options.prettier, filePath);
   const { ast } = parseFile(filePath, options.parser, source);
 
-  const store = traverseFn(ast, options, { source, filePath });
+  const store = await traverseFn(ast, options, { source, filePath });
   if (!store) {
     return undefined;
   }
@@ -84,7 +84,7 @@ const parseSource = async (
       doc.source = saveSource;
     }
   }
-  await extractStoreComponent(store, filePath, source, options);
+  await extractStoreData(store, filePath);
   const doc: Document | undefined = store.doc;
   if (doc) {
     if (store.stories) {

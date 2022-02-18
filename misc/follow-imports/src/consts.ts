@@ -1,6 +1,14 @@
 import { ParserOptions } from '@babel/parser';
-import { SourceLocation } from '@babel/types';
 import { SyncOpts as ResolveOptions } from 'resolve';
+
+export interface SourcePosition {
+  col: number;
+  line: number;
+}
+export interface SourceLocation {
+  start: SourcePosition;
+  end: SourcePosition;
+}
 
 export const defaultParserOptions: ParserOptions = {
   sourceType: 'module',

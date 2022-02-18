@@ -2,13 +2,14 @@ import reactPlugin from '@structured-types/react-plugin';
 import propTypesPlugin from '@structured-types/prop-types-plugin';
 import { DocsOptions, parseFiles } from '@structured-types/api';
 import { ComponentInfo } from '@component-controls/core';
+import { ImportType } from '@component-controls/follow-imports';
 import { CachedFileResource } from './chached-file';
-
-export const getComponentProps = async (
+import { getModuleImports, getComponentImports } from './extract-imports';
+export const getComponentProps = (
   filePath: string,
-  componentName?: string,
+  componentName: string,
   config?: DocsOptions,
-): Promise<ComponentInfo | undefined> => {
+): ComponentInfo => {
   const version = '1.17';
   const cached = new CachedFileResource<ComponentInfo>(
     'props-info',
@@ -17,17 +18,24 @@ export const getComponentProps = async (
   );
 
   let result: ComponentInfo | undefined = cached.get();
-  if (result) {
+  if (result && false) {
     // already in cache and file has not changed
-    return result;
+    return result as ComponentInfo;
   }
-  result = parseFiles([filePath], {
+  const imports: ImportType[] = [];
+  const props = parseFiles([filePath], {
     collectSourceInfo: true,
-    collectHelpers: false,
+    collectHelpers: true,
     plugins: [propTypesPlugin, reactPlugin],
-    extract: componentName ? [componentName] : undefined,
+    extract: [componentName],
+    moduleCallback: getModuleImports(imports),
     ...config,
-  }) as unknown as ComponentInfo;
+  });
+  result = props[componentName] || { name: componentName };
+  const { externalDependencies, localDependencies } =
+    getComponentImports(imports);
+  result.externalDependencies = externalDependencies;
+  result.localDependencies = localDependencies;
   // save to cache
   cached.set(result);
   return result;

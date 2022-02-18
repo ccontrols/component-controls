@@ -18,7 +18,7 @@ import { componentsFromParams } from '../misc/component-attributes';
 import { extractVarFunction } from './extract-function';
 type PartialStore = Required<
   Pick<
-    ParseStorieReturnType,
+    Awaited<ParseStorieReturnType>,
     'stories' | 'doc' | 'components' | 'exports' | 'packages'
   >
 >;
@@ -33,13 +33,13 @@ export const extractMDXStories: (
   ast: File,
   options: Required<InstrumentOptions>,
   source: SourceFile,
-) => PartialStore | undefined =
+) => Promise<PartialStore | undefined> =
   (props: any) =>
-  (
+  async (
     ast: File,
     _options: Required<InstrumentOptions>,
     { source, filePath }: SourceFile,
-  ): PartialStore | undefined => {
+  ): Promise<PartialStore | undefined> => {
     let components: { [key: string]: string | undefined } = {};
     const locals: Stories = {};
     const collectComponent = (attributes: any) => {

@@ -4,167 +4,61 @@ const createTest = (fileName: string, callback: TestCallback) =>
   fixtureToTest(['esm', 'props-usage'], fileName, callback);
 
 describe('esm-props-usage', () => {
-  createTest('adjust-lines.any', parsed => {
+  createTest('multiple-usage.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: {
           arguments: [
             {
-              value: 'props',
-              name: 'props',
-              loc: {
-                start: {
-                  line: 0,
-                  column: 0,
-                },
-                end: {
-                  line: 0,
-                  column: 5,
-                },
-              },
-              usage: [
-                {
-                  loc: {
-                    start: {
-                      line: 0,
-                      column: 20,
-                    },
-                    end: {
-                      line: 0,
-                      column: 25,
-                    },
-                  },
-                },
-              ],
-            },
-          ],
-        },
-      },
-    });
-  });
-  createTest('age-and-name.js', parsed => {
-    expect(parsed).toMatchObject({
-      stories: {
-        story: {
-          arguments: [
-            {
               value: [
-                {
-                  value: 'name',
-                  name: 'name',
-                  loc: {
-                    start: {
-                      line: 0,
-                      column: 3,
-                    },
-                    end: {
-                      line: 0,
-                      column: 7,
-                    },
-                  },
-                  usage: [
-                    {
-                      loc: {
-                        start: {
-                          line: 1,
-                          column: 28,
-                        },
-                        end: {
-                          line: 1,
-                          column: 32,
-                        },
-                      },
-                    },
-                  ],
-                },
                 {
                   value: 'age',
                   name: 'age',
                   loc: {
                     start: {
                       line: 0,
-                      column: 9,
+                      col: 3,
                     },
                     end: {
                       line: 0,
-                      column: 12,
-                    },
-                  },
-                },
-              ],
-              name: undefined,
-              loc: {
-                start: {
-                  line: 0,
-                  column: 1,
-                },
-                end: {
-                  line: 0,
-                  column: 14,
-                },
-              },
-            },
-          ],
-        },
-      },
-    });
-  });
-
-  createTest('empty-body.js', parsed => {
-    expect(parsed).toMatchObject({
-      stories: {
-        story: {
-          arguments: [
-            {
-              value: [
-                {
-                  value: 'name',
-                  name: 'name',
-                  loc: {
-                    start: {
-                      line: 0,
-                      column: 3,
-                    },
-                    end: {
-                      line: 0,
-                      column: 7,
+                      col: 6,
                     },
                   },
                   usage: [
                     {
                       loc: {
                         start: {
-                          line: 0,
-                          column: 14,
+                          line: 2,
+                          col: 28,
                         },
                         end: {
-                          line: 0,
-                          column: 18,
+                          line: 2,
+                          col: 31,
+                        },
+                      },
+                    },
+                    {
+                      loc: {
+                        start: {
+                          line: 3,
+                          col: 16,
+                        },
+                        end: {
+                          line: 3,
+                          col: 19,
                         },
                       },
                     },
                   ],
                 },
               ],
-              name: undefined,
-              loc: {
-                start: {
-                  line: 0,
-                  column: 1,
-                },
-                end: {
-                  line: 0,
-                  column: 9,
-                },
-              },
             },
           ],
         },
       },
     });
   });
-
-  createTest('expression.js', parsed => {
+  createTest('expression.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         selectProp: {
@@ -177,11 +71,11 @@ describe('esm-props-usage', () => {
                   loc: {
                     start: {
                       line: 0,
-                      column: 3,
+                      col: 3,
                     },
                     end: {
                       line: 0,
-                      column: 8,
+                      col: 8,
                     },
                   },
                   usage: [
@@ -189,115 +83,164 @@ describe('esm-props-usage', () => {
                       loc: {
                         start: {
                           line: 1,
-                          column: 25,
+                          col: 25,
                         },
                         end: {
                           line: 1,
-                          column: 30,
+                          col: 30,
                         },
-                      },
-                      name: {
-                        loc: {
-                          start: {
-                            line: 1,
-                            column: 25,
-                          },
-                          end: {
-                            line: 1,
-                            column: 30,
-                          },
-                        },
-                        name: 'value',
                       },
                     },
                   ],
                 },
               ],
-              name: undefined,
-              loc: {
-                start: {
-                  line: 0,
-                  column: 1,
-                },
-                end: {
-                  line: 0,
-                  column: 10,
-                },
-              },
             },
           ],
         },
       },
     });
   });
-
-  createTest('multiple-usage.js', parsed => {
+  createTest('empty-body.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
-        myStory: {
+        story: {
           arguments: [
             {
               value: [
+                {
+                  value: 'name',
+                  name: 'name',
+                  loc: {
+                    start: {
+                      line: 0,
+                      col: 3,
+                    },
+                    end: {
+                      line: 0,
+                      col: 7,
+                    },
+                  },
+                  usage: [
+                    {
+                      loc: {
+                        start: {
+                          line: 0,
+                          col: 14,
+                        },
+                        end: {
+                          line: 0,
+                          col: 18,
+                        },
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    });
+  });
+  createTest('age-and-name.js', async parsed => {
+    expect(parsed).toMatchObject({
+      stories: {
+        story: {
+          arguments: [
+            {
+              value: [
+                {
+                  value: 'name',
+                  name: 'name',
+                  loc: {
+                    start: {
+                      line: 0,
+                      col: 3,
+                    },
+                    end: {
+                      line: 0,
+                      col: 7,
+                    },
+                  },
+                  usage: [
+                    {
+                      loc: {
+                        start: {
+                          line: 1,
+                          col: 28,
+                        },
+                        end: {
+                          line: 1,
+                          col: 32,
+                        },
+                      },
+                    },
+                  ],
+                },
                 {
                   value: 'age',
                   name: 'age',
                   loc: {
                     start: {
                       line: 0,
-                      column: 3,
+                      col: 9,
                     },
                     end: {
                       line: 0,
-                      column: 6,
+                      col: 12,
                     },
                   },
-                  usage: [
-                    {
-                      loc: {
-                        start: {
-                          line: 2,
-                          column: 28,
-                        },
-                        end: {
-                          line: 2,
-                          column: 31,
-                        },
-                      },
-                    },
-                    {
-                      loc: {
-                        start: {
-                          line: 3,
-                          column: 16,
-                        },
-                        end: {
-                          line: 3,
-                          column: 19,
-                        },
-                      },
-                    },
-                  ],
                 },
               ],
-              name: undefined,
-              loc: {
-                start: {
-                  line: 0,
-                  column: 1,
-                },
-                end: {
-                  line: 0,
-                  column: 8,
-                },
-              },
             },
           ],
         },
       },
     });
   });
+  createTest('adjust-lines.js', async parsed => {
+    expect(parsed).toMatchObject({
+      stories: {
+        myStory: {
+          name: 'myStory',
+          id: 'myStory',
+          arguments: [
+            {
+              loc: {
+                start: {
+                  line: 0,
+                  col: 0,
+                },
+                end: {
+                  line: 0,
+                  col: 5,
+                },
+              },
+              value: 'props',
+              name: 'props',
+              usage: [
+                {
+                  loc: {
+                    start: {
+                      line: 0,
+                      col: 20,
+                    },
+                    end: {
+                      line: 0,
+                      col: 25,
+                    },
+                  },
+                },
+              ],
+            },
+          ],
+          source: 'props => <Story {...props} />',
+        },
+      },
+    });
+  });
 
-  createTest('nested-arguments.js', parsed => {
+  createTest('nested-arguments.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         story: {
@@ -310,11 +253,11 @@ describe('esm-props-usage', () => {
                   loc: {
                     start: {
                       line: 0,
-                      column: 3,
+                      col: 3,
                     },
                     end: {
                       line: 0,
-                      column: 9,
+                      col: 9,
                     },
                   },
                   usage: [
@@ -322,11 +265,11 @@ describe('esm-props-usage', () => {
                       loc: {
                         start: {
                           line: 1,
-                          column: 15,
+                          col: 15,
                         },
                         end: {
                           line: 1,
-                          column: 21,
+                          col: 21,
                         },
                       },
                     },
@@ -338,11 +281,11 @@ describe('esm-props-usage', () => {
                   loc: {
                     start: {
                       line: 0,
-                      column: 11,
+                      col: 11,
                     },
                     end: {
                       line: 0,
-                      column: 17,
+                      col: 17,
                     },
                   },
                   usage: [
@@ -350,11 +293,11 @@ describe('esm-props-usage', () => {
                       loc: {
                         start: {
                           line: 1,
-                          column: 31,
+                          col: 31,
                         },
                         end: {
                           line: 1,
-                          column: 37,
+                          col: 37,
                         },
                       },
                     },
@@ -368,11 +311,11 @@ describe('esm-props-usage', () => {
                       loc: {
                         start: {
                           line: 0,
-                          column: 28,
+                          col: 28,
                         },
                         end: {
                           line: 0,
-                          column: 34,
+                          col: 34,
                         },
                       },
                       usage: [
@@ -380,11 +323,11 @@ describe('esm-props-usage', () => {
                           loc: {
                             start: {
                               line: 1,
-                              column: 47,
+                              col: 47,
                             },
                             end: {
                               line: 1,
-                              column: 53,
+                              col: 53,
                             },
                           },
                         },
@@ -396,11 +339,11 @@ describe('esm-props-usage', () => {
                       loc: {
                         start: {
                           line: 0,
-                          column: 36,
+                          col: 36,
                         },
                         end: {
                           line: 0,
-                          column: 41,
+                          col: 41,
                         },
                       },
                       usage: [
@@ -408,11 +351,11 @@ describe('esm-props-usage', () => {
                           loc: {
                             start: {
                               line: 1,
-                              column: 62,
+                              col: 62,
                             },
                             end: {
                               line: 1,
-                              column: 67,
+                              col: 67,
                             },
                           },
                         },
@@ -423,26 +366,15 @@ describe('esm-props-usage', () => {
                   loc: {
                     start: {
                       line: 0,
-                      column: 26,
+                      col: 26,
                     },
                     end: {
                       line: 0,
-                      column: 43,
+                      col: 43,
                     },
                   },
                 },
               ],
-              name: undefined,
-              loc: {
-                start: {
-                  line: 0,
-                  column: 1,
-                },
-                end: {
-                  line: 0,
-                  column: 45,
-                },
-              },
             },
           ],
         },
@@ -450,7 +382,7 @@ describe('esm-props-usage', () => {
     });
   });
 
-  createTest('props.js', parsed => {
+  createTest('props.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: {
@@ -461,11 +393,11 @@ describe('esm-props-usage', () => {
               loc: {
                 start: {
                   line: 0,
-                  column: 0,
+                  col: 0,
                 },
                 end: {
                   line: 0,
-                  column: 5,
+                  col: 5,
                 },
               },
               usage: [
@@ -473,11 +405,11 @@ describe('esm-props-usage', () => {
                   loc: {
                     start: {
                       line: 0,
-                      column: 20,
+                      col: 20,
                     },
                     end: {
                       line: 0,
-                      column: 25,
+                      col: 25,
                     },
                   },
                 },
@@ -489,7 +421,7 @@ describe('esm-props-usage', () => {
     });
   });
 
-  createTest('select-prop.js', parsed => {
+  createTest('select-prop.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         story: {
@@ -502,11 +434,11 @@ describe('esm-props-usage', () => {
                   loc: {
                     start: {
                       line: 0,
-                      column: 3,
+                      col: 3,
                     },
                     end: {
                       line: 0,
-                      column: 15,
+                      col: 15,
                     },
                   },
                   usage: [
@@ -514,28 +446,17 @@ describe('esm-props-usage', () => {
                       loc: {
                         start: {
                           line: 4,
-                          column: 7,
+                          col: 7,
                         },
                         end: {
                           line: 4,
-                          column: 19,
+                          col: 19,
                         },
                       },
                     },
                   ],
                 },
               ],
-              name: undefined,
-              loc: {
-                start: {
-                  line: 0,
-                  column: 1,
-                },
-                end: {
-                  line: 0,
-                  column: 17,
-                },
-              },
             },
           ],
         },
@@ -543,7 +464,7 @@ describe('esm-props-usage', () => {
     });
   });
 
-  createTest('shorthand.js', parsed => {
+  createTest('shorthand.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         story: {
@@ -556,11 +477,11 @@ describe('esm-props-usage', () => {
                   loc: {
                     start: {
                       line: 0,
-                      column: 3,
+                      col: 3,
                     },
                     end: {
                       line: 0,
-                      column: 8,
+                      col: 8,
                     },
                   },
                   usage: [
@@ -568,11 +489,11 @@ describe('esm-props-usage', () => {
                       loc: {
                         start: {
                           line: 1,
-                          column: 25,
+                          col: 25,
                         },
                         end: {
                           line: 1,
-                          column: 30,
+                          col: 30,
                         },
                       },
                       shorthand: true,
@@ -580,11 +501,11 @@ describe('esm-props-usage', () => {
                         loc: {
                           start: {
                             line: 1,
-                            column: 25,
+                            col: 25,
                           },
                           end: {
                             line: 1,
-                            column: 30,
+                            col: 30,
                           },
                         },
                         name: 'value',
@@ -593,17 +514,6 @@ describe('esm-props-usage', () => {
                   ],
                 },
               ],
-              name: undefined,
-              loc: {
-                start: {
-                  line: 0,
-                  column: 1,
-                },
-                end: {
-                  line: 0,
-                  column: 10,
-                },
-              },
             },
           ],
         },
@@ -611,7 +521,7 @@ describe('esm-props-usage', () => {
     });
   });
 
-  createTest('string-template.js', parsed => {
+  createTest('string-template.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: {
@@ -624,11 +534,11 @@ describe('esm-props-usage', () => {
                   loc: {
                     start: {
                       line: 0,
-                      column: 3,
+                      col: 3,
                     },
                     end: {
                       line: 0,
-                      column: 7,
+                      col: 7,
                     },
                   },
                   usage: [
@@ -636,11 +546,11 @@ describe('esm-props-usage', () => {
                       loc: {
                         start: {
                           line: 0,
-                          column: 3,
+                          col: 3,
                         },
                         end: {
                           line: 0,
-                          column: 7,
+                          col: 7,
                         },
                       },
                       shorthand: true,
@@ -648,11 +558,11 @@ describe('esm-props-usage', () => {
                         loc: {
                           start: {
                             line: 0,
-                            column: 3,
+                            col: 3,
                           },
                           end: {
                             line: 0,
-                            column: 7,
+                            col: 7,
                           },
                         },
                         name: 'text',
@@ -662,28 +572,17 @@ describe('esm-props-usage', () => {
                       loc: {
                         start: {
                           line: 0,
-                          column: 17,
+                          col: 17,
                         },
                         end: {
                           line: 0,
-                          column: 21,
+                          col: 21,
                         },
                       },
                     },
                   ],
                 },
               ],
-              name: undefined,
-              loc: {
-                start: {
-                  line: 0,
-                  column: 1,
-                },
-                end: {
-                  line: 0,
-                  column: 9,
-                },
-              },
             },
           ],
         },
@@ -691,7 +590,7 @@ describe('esm-props-usage', () => {
     });
   });
 
-  createTest('three-levels-alias.js', parsed => {
+  createTest('three-levels-alias.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: {
@@ -706,11 +605,11 @@ describe('esm-props-usage', () => {
                       loc: {
                         start: {
                           line: 0,
-                          column: 11,
+                          col: 11,
                         },
                         end: {
                           line: 0,
-                          column: 16,
+                          col: 16,
                         },
                       },
                       usage: [
@@ -718,11 +617,11 @@ describe('esm-props-usage', () => {
                           loc: {
                             start: {
                               line: 2,
-                              column: 18,
+                              col: 18,
                             },
                             end: {
                               line: 2,
-                              column: 23,
+                              col: 23,
                             },
                           },
                         },
@@ -734,11 +633,11 @@ describe('esm-props-usage', () => {
                       loc: {
                         start: {
                           line: 0,
-                          column: 18,
+                          col: 18,
                         },
                         end: {
                           line: 0,
-                          column: 22,
+                          col: 22,
                         },
                       },
                       usage: [
@@ -746,11 +645,11 @@ describe('esm-props-usage', () => {
                           loc: {
                             start: {
                               line: 2,
-                              column: 31,
+                              col: 31,
                             },
                             end: {
                               line: 2,
-                              column: 35,
+                              col: 35,
                             },
                           },
                         },
@@ -761,11 +660,11 @@ describe('esm-props-usage', () => {
                   loc: {
                     start: {
                       line: 0,
-                      column: 9,
+                      col: 9,
                     },
                     end: {
                       line: 0,
-                      column: 24,
+                      col: 24,
                     },
                   },
                 },
@@ -775,11 +674,11 @@ describe('esm-props-usage', () => {
                   loc: {
                     start: {
                       line: 0,
-                      column: 26,
+                      col: 26,
                     },
                     end: {
                       line: 0,
-                      column: 29,
+                      col: 29,
                     },
                   },
                   usage: [
@@ -787,28 +686,17 @@ describe('esm-props-usage', () => {
                       loc: {
                         start: {
                           line: 3,
-                          column: 16,
+                          col: 16,
                         },
                         end: {
                           line: 3,
-                          column: 19,
+                          col: 19,
                         },
                       },
                     },
                   ],
                 },
               ],
-              name: undefined,
-              loc: {
-                start: {
-                  line: 0,
-                  column: 1,
-                },
-                end: {
-                  line: 0,
-                  column: 31,
-                },
-              },
             },
           ],
         },
@@ -816,7 +704,7 @@ describe('esm-props-usage', () => {
     });
   });
 
-  createTest('two-arguments.js', parsed => {
+  createTest('two-arguments.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: {
@@ -827,11 +715,11 @@ describe('esm-props-usage', () => {
               loc: {
                 start: {
                   line: 0,
-                  column: 1,
+                  col: 1,
                 },
                 end: {
                   line: 0,
-                  column: 6,
+                  col: 6,
                 },
               },
               usage: [
@@ -839,11 +727,11 @@ describe('esm-props-usage', () => {
                   loc: {
                     start: {
                       line: 0,
-                      column: 31,
+                      col: 31,
                     },
                     end: {
                       line: 0,
-                      column: 36,
+                      col: 36,
                     },
                   },
                 },
@@ -855,11 +743,11 @@ describe('esm-props-usage', () => {
               loc: {
                 start: {
                   line: 0,
-                  column: 8,
+                  col: 8,
                 },
                 end: {
                   line: 0,
-                  column: 15,
+                  col: 15,
                 },
               },
             },
@@ -869,7 +757,7 @@ describe('esm-props-usage', () => {
     });
   });
 
-  createTest('two-levels-alias.js', parsed => {
+  createTest('two-levels-alias.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: {
@@ -882,11 +770,11 @@ describe('esm-props-usage', () => {
                   loc: {
                     start: {
                       line: 0,
-                      column: 9,
+                      col: 9,
                     },
                     end: {
                       line: 0,
-                      column: 15,
+                      col: 15,
                     },
                   },
                   usage: [
@@ -894,11 +782,11 @@ describe('esm-props-usage', () => {
                       loc: {
                         start: {
                           line: 1,
-                          column: 15,
+                          col: 15,
                         },
                         end: {
                           line: 1,
-                          column: 21,
+                          col: 21,
                         },
                       },
                     },
@@ -910,11 +798,11 @@ describe('esm-props-usage', () => {
                   loc: {
                     start: {
                       line: 0,
-                      column: 17,
+                      col: 17,
                     },
                     end: {
                       line: 0,
-                      column: 20,
+                      col: 20,
                     },
                   },
                   usage: [
@@ -922,28 +810,17 @@ describe('esm-props-usage', () => {
                       loc: {
                         start: {
                           line: 1,
-                          column: 28,
+                          col: 28,
                         },
                         end: {
                           line: 1,
-                          column: 31,
+                          col: 31,
                         },
                       },
                     },
                   ],
                 },
               ],
-              name: undefined,
-              loc: {
-                start: {
-                  line: 0,
-                  column: 1,
-                },
-                end: {
-                  line: 0,
-                  column: 22,
-                },
-              },
             },
           ],
         },
@@ -951,7 +828,7 @@ describe('esm-props-usage', () => {
     });
   });
 
-  createTest('two-levels-sub-arguments.js', parsed => {
+  createTest('two-levels-sub-arguments.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: {
@@ -964,11 +841,11 @@ describe('esm-props-usage', () => {
                   loc: {
                     start: {
                       line: 0,
-                      column: 3,
+                      col: 3,
                     },
                     end: {
                       line: 0,
-                      column: 7,
+                      col: 7,
                     },
                   },
                   usage: [
@@ -976,11 +853,11 @@ describe('esm-props-usage', () => {
                       loc: {
                         start: {
                           line: 0,
-                          column: 32,
+                          col: 32,
                         },
                         end: {
                           line: 0,
-                          column: 36,
+                          col: 36,
                         },
                       },
                     },
@@ -992,11 +869,11 @@ describe('esm-props-usage', () => {
                   loc: {
                     start: {
                       line: 0,
-                      column: 9,
+                      col: 9,
                     },
                     end: {
                       line: 0,
-                      column: 12,
+                      col: 12,
                     },
                   },
                   usage: [
@@ -1004,28 +881,17 @@ describe('esm-props-usage', () => {
                       loc: {
                         start: {
                           line: 0,
-                          column: 43,
+                          col: 43,
                         },
                         end: {
                           line: 0,
-                          column: 46,
+                          col: 46,
                         },
                       },
                     },
                   ],
                 },
               ],
-              name: undefined,
-              loc: {
-                start: {
-                  line: 0,
-                  column: 1,
-                },
-                end: {
-                  line: 0,
-                  column: 14,
-                },
-              },
             },
           ],
         },
