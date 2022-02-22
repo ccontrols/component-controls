@@ -4,6 +4,435 @@ const createTest = (fileName: string, callback: TestCallback) =>
   fixtureToTest(['esm', 'props-usage'], fileName, callback);
 
 describe('esm-props-usage', () => {
+  createTest('two-levels-alias.js', async parsed => {
+    expect(parsed).toMatchObject({
+      stories: {
+        myStory: {
+          arguments: [
+            {
+              value: [
+                {
+                  value: 'MyName',
+                  name: 'name',
+                  loc: {
+                    start: {
+                      line: 0,
+                      col: 9,
+                    },
+                    end: {
+                      line: 0,
+                      col: 15,
+                    },
+                  },
+                  usage: [
+                    {
+                      loc: {
+                        start: {
+                          line: 1,
+                          col: 15,
+                        },
+                        end: {
+                          line: 1,
+                          col: 21,
+                        },
+                      },
+                    },
+                  ],
+                },
+                {
+                  value: 'age',
+                  name: 'age',
+                  loc: {
+                    start: {
+                      line: 0,
+                      col: 17,
+                    },
+                    end: {
+                      line: 0,
+                      col: 20,
+                    },
+                  },
+                  usage: [
+                    {
+                      loc: {
+                        start: {
+                          line: 1,
+                          col: 28,
+                        },
+                        end: {
+                          line: 1,
+                          col: 31,
+                        },
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    });
+  });
+  createTest('three-levels-alias.js', async parsed => {
+    expect(parsed).toMatchObject({
+      stories: {
+        myStory: {
+          arguments: [
+            {
+              value: [
+                {
+                  value: [
+                    {
+                      value: 'first',
+                      loc: {
+                        start: {
+                          line: 0,
+                          col: 11,
+                        },
+                        end: {
+                          line: 0,
+                          col: 16,
+                        },
+                      },
+                      name: 'first',
+                      usage: [
+                        {
+                          loc: {
+                            start: {
+                              line: 2,
+                              col: 18,
+                            },
+                            end: {
+                              line: 2,
+                              col: 23,
+                            },
+                          },
+                        },
+                      ],
+                    },
+                    {
+                      value: 'last',
+                      loc: {
+                        start: {
+                          line: 0,
+                          col: 18,
+                        },
+                        end: {
+                          line: 0,
+                          col: 22,
+                        },
+                      },
+                      name: 'last',
+                      usage: [
+                        {
+                          loc: {
+                            start: {
+                              line: 2,
+                              col: 31,
+                            },
+                            end: {
+                              line: 2,
+                              col: 35,
+                            },
+                          },
+                        },
+                      ],
+                    },
+                  ],
+                  name: 'name',
+                },
+                {
+                  value: 'age',
+                  loc: {
+                    start: {
+                      line: 0,
+                      col: 26,
+                    },
+                    end: {
+                      line: 0,
+                      col: 29,
+                    },
+                  },
+                  name: 'age',
+                  usage: [
+                    {
+                      loc: {
+                        start: {
+                          line: 3,
+                          col: 16,
+                        },
+                        end: {
+                          line: 3,
+                          col: 19,
+                        },
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    });
+  });
+  createTest('string-template.js', async parsed => {
+    expect(parsed).toMatchObject({
+      stories: {
+        myStory: {
+          arguments: [
+            {
+              value: [
+                {
+                  value: 'text',
+                  loc: {
+                    start: {
+                      line: 0,
+                      col: 3,
+                    },
+                    end: {
+                      line: 0,
+                      col: 7,
+                    },
+                  },
+                  name: 'text',
+                  usage: [
+                    {
+                      loc: {
+                        start: {
+                          line: 0,
+                          col: 17,
+                        },
+                        end: {
+                          line: 0,
+                          col: 21,
+                        },
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    });
+  });
+  createTest('shorthand.js', async parsed => {
+    expect(parsed).toMatchObject({
+      stories: {
+        story: {
+          arguments: [
+            {
+              value: [
+                {
+                  name: 'value',
+                  loc: {
+                    start: {
+                      line: 0,
+                      col: 3,
+                    },
+                    end: {
+                      line: 0,
+                      col: 8,
+                    },
+                  },
+                  usage: [
+                    {
+                      loc: {
+                        start: {
+                          line: 1,
+                          col: 25,
+                        },
+                        end: {
+                          line: 1,
+                          col: 30,
+                        },
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    });
+  });
+  createTest('nested-arguments.js', async parsed => {
+    expect(parsed).toMatchObject({
+      stories: {
+        story: {
+          arguments: [
+            {
+              value: [
+                {
+                  value: 'height',
+                  name: 'height',
+                  loc: {
+                    start: {
+                      line: 0,
+                      col: 3,
+                    },
+                    end: {
+                      line: 0,
+                      col: 9,
+                    },
+                  },
+                  usage: [
+                    {
+                      loc: {
+                        start: {
+                          line: 1,
+                          col: 15,
+                        },
+                        end: {
+                          line: 1,
+                          col: 21,
+                        },
+                      },
+                    },
+                  ],
+                },
+                {
+                  value: 'weight',
+                  name: 'weight',
+                  loc: {
+                    start: {
+                      line: 0,
+                      col: 11,
+                    },
+                    end: {
+                      line: 0,
+                      col: 17,
+                    },
+                  },
+                  usage: [
+                    {
+                      loc: {
+                        start: {
+                          line: 1,
+                          col: 31,
+                        },
+                        end: {
+                          line: 1,
+                          col: 37,
+                        },
+                      },
+                    },
+                  ],
+                },
+                {
+                  value: [
+                    {
+                      value: 'border',
+                      name: 'border',
+                      loc: {
+                        start: {
+                          line: 0,
+                          col: 28,
+                        },
+                        end: {
+                          line: 0,
+                          col: 34,
+                        },
+                      },
+                      usage: [
+                        {
+                          loc: {
+                            start: {
+                              line: 1,
+                              col: 47,
+                            },
+                            end: {
+                              line: 1,
+                              col: 53,
+                            },
+                          },
+                        },
+                      ],
+                    },
+                    {
+                      value: 'color',
+                      name: 'color',
+                      loc: {
+                        start: {
+                          line: 0,
+                          col: 36,
+                        },
+                        end: {
+                          line: 0,
+                          col: 41,
+                        },
+                      },
+                      usage: [
+                        {
+                          loc: {
+                            start: {
+                              line: 1,
+                              col: 62,
+                            },
+                            end: {
+                              line: 1,
+                              col: 67,
+                            },
+                          },
+                        },
+                      ],
+                    },
+                  ],
+                  name: 'style',
+                },
+              ],
+            },
+          ],
+        },
+      },
+    });
+  });
+  createTest('expression.js', async parsed => {
+    expect(parsed).toMatchObject({
+      stories: {
+        selectProp: {
+          arguments: [
+            {
+              value: [
+                {
+                  value: 'value',
+                  name: 'value',
+                  loc: {
+                    start: {
+                      line: 0,
+                      col: 3,
+                    },
+                    end: {
+                      line: 0,
+                      col: 8,
+                    },
+                  },
+                  usage: [
+                    {
+                      loc: {
+                        start: {
+                          line: 1,
+                          col: 25,
+                        },
+                        end: {
+                          line: 1,
+                          col: 30,
+                        },
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    });
+  });
   createTest('multiple-usage.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
@@ -58,48 +487,7 @@ describe('esm-props-usage', () => {
       },
     });
   });
-  createTest('expression.js', async parsed => {
-    expect(parsed).toMatchObject({
-      stories: {
-        selectProp: {
-          arguments: [
-            {
-              value: [
-                {
-                  value: 'value',
-                  name: 'value',
-                  loc: {
-                    start: {
-                      line: 0,
-                      col: 3,
-                    },
-                    end: {
-                      line: 0,
-                      col: 8,
-                    },
-                  },
-                  usage: [
-                    {
-                      loc: {
-                        start: {
-                          line: 1,
-                          col: 25,
-                        },
-                        end: {
-                          line: 1,
-                          col: 30,
-                        },
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
-        },
-      },
-    });
-  });
+
   createTest('empty-body.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
@@ -240,148 +628,6 @@ describe('esm-props-usage', () => {
     });
   });
 
-  createTest('nested-arguments.js', async parsed => {
-    expect(parsed).toMatchObject({
-      stories: {
-        story: {
-          arguments: [
-            {
-              value: [
-                {
-                  value: 'height',
-                  name: 'height',
-                  loc: {
-                    start: {
-                      line: 0,
-                      col: 3,
-                    },
-                    end: {
-                      line: 0,
-                      col: 9,
-                    },
-                  },
-                  usage: [
-                    {
-                      loc: {
-                        start: {
-                          line: 1,
-                          col: 15,
-                        },
-                        end: {
-                          line: 1,
-                          col: 21,
-                        },
-                      },
-                    },
-                  ],
-                },
-                {
-                  value: 'weight',
-                  name: 'weight',
-                  loc: {
-                    start: {
-                      line: 0,
-                      col: 11,
-                    },
-                    end: {
-                      line: 0,
-                      col: 17,
-                    },
-                  },
-                  usage: [
-                    {
-                      loc: {
-                        start: {
-                          line: 1,
-                          col: 31,
-                        },
-                        end: {
-                          line: 1,
-                          col: 37,
-                        },
-                      },
-                    },
-                  ],
-                },
-                {
-                  value: [
-                    {
-                      value: 'border',
-                      name: 'border',
-                      loc: {
-                        start: {
-                          line: 0,
-                          col: 28,
-                        },
-                        end: {
-                          line: 0,
-                          col: 34,
-                        },
-                      },
-                      usage: [
-                        {
-                          loc: {
-                            start: {
-                              line: 1,
-                              col: 47,
-                            },
-                            end: {
-                              line: 1,
-                              col: 53,
-                            },
-                          },
-                        },
-                      ],
-                    },
-                    {
-                      value: 'color',
-                      name: 'color',
-                      loc: {
-                        start: {
-                          line: 0,
-                          col: 36,
-                        },
-                        end: {
-                          line: 0,
-                          col: 41,
-                        },
-                      },
-                      usage: [
-                        {
-                          loc: {
-                            start: {
-                              line: 1,
-                              col: 62,
-                            },
-                            end: {
-                              line: 1,
-                              col: 67,
-                            },
-                          },
-                        },
-                      ],
-                    },
-                  ],
-                  name: 'style',
-                  loc: {
-                    start: {
-                      line: 0,
-                      col: 26,
-                    },
-                    end: {
-                      line: 0,
-                      col: 43,
-                    },
-                  },
-                },
-              ],
-            },
-          ],
-        },
-      },
-    });
-  });
-
   createTest('props.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
@@ -464,246 +710,6 @@ describe('esm-props-usage', () => {
     });
   });
 
-  createTest('shorthand.js', async parsed => {
-    expect(parsed).toMatchObject({
-      stories: {
-        story: {
-          arguments: [
-            {
-              value: [
-                {
-                  value: 'value',
-                  name: 'value',
-                  loc: {
-                    start: {
-                      line: 0,
-                      col: 3,
-                    },
-                    end: {
-                      line: 0,
-                      col: 8,
-                    },
-                  },
-                  usage: [
-                    {
-                      loc: {
-                        start: {
-                          line: 1,
-                          col: 25,
-                        },
-                        end: {
-                          line: 1,
-                          col: 30,
-                        },
-                      },
-                      shorthand: true,
-                      name: {
-                        loc: {
-                          start: {
-                            line: 1,
-                            col: 25,
-                          },
-                          end: {
-                            line: 1,
-                            col: 30,
-                          },
-                        },
-                        name: 'value',
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
-        },
-      },
-    });
-  });
-
-  createTest('string-template.js', async parsed => {
-    expect(parsed).toMatchObject({
-      stories: {
-        myStory: {
-          arguments: [
-            {
-              value: [
-                {
-                  value: 'text',
-                  name: 'text',
-                  loc: {
-                    start: {
-                      line: 0,
-                      col: 3,
-                    },
-                    end: {
-                      line: 0,
-                      col: 7,
-                    },
-                  },
-                  usage: [
-                    {
-                      loc: {
-                        start: {
-                          line: 0,
-                          col: 3,
-                        },
-                        end: {
-                          line: 0,
-                          col: 7,
-                        },
-                      },
-                      shorthand: true,
-                      name: {
-                        loc: {
-                          start: {
-                            line: 0,
-                            col: 3,
-                          },
-                          end: {
-                            line: 0,
-                            col: 7,
-                          },
-                        },
-                        name: 'text',
-                      },
-                    },
-                    {
-                      loc: {
-                        start: {
-                          line: 0,
-                          col: 17,
-                        },
-                        end: {
-                          line: 0,
-                          col: 21,
-                        },
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
-        },
-      },
-    });
-  });
-
-  createTest('three-levels-alias.js', async parsed => {
-    expect(parsed).toMatchObject({
-      stories: {
-        myStory: {
-          arguments: [
-            {
-              value: [
-                {
-                  value: [
-                    {
-                      value: 'first',
-                      name: 'first',
-                      loc: {
-                        start: {
-                          line: 0,
-                          col: 11,
-                        },
-                        end: {
-                          line: 0,
-                          col: 16,
-                        },
-                      },
-                      usage: [
-                        {
-                          loc: {
-                            start: {
-                              line: 2,
-                              col: 18,
-                            },
-                            end: {
-                              line: 2,
-                              col: 23,
-                            },
-                          },
-                        },
-                      ],
-                    },
-                    {
-                      value: 'last',
-                      name: 'last',
-                      loc: {
-                        start: {
-                          line: 0,
-                          col: 18,
-                        },
-                        end: {
-                          line: 0,
-                          col: 22,
-                        },
-                      },
-                      usage: [
-                        {
-                          loc: {
-                            start: {
-                              line: 2,
-                              col: 31,
-                            },
-                            end: {
-                              line: 2,
-                              col: 35,
-                            },
-                          },
-                        },
-                      ],
-                    },
-                  ],
-                  name: 'name',
-                  loc: {
-                    start: {
-                      line: 0,
-                      col: 9,
-                    },
-                    end: {
-                      line: 0,
-                      col: 24,
-                    },
-                  },
-                },
-                {
-                  value: 'age',
-                  name: 'age',
-                  loc: {
-                    start: {
-                      line: 0,
-                      col: 26,
-                    },
-                    end: {
-                      line: 0,
-                      col: 29,
-                    },
-                  },
-                  usage: [
-                    {
-                      loc: {
-                        start: {
-                          line: 3,
-                          col: 16,
-                        },
-                        end: {
-                          line: 3,
-                          col: 19,
-                        },
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
-        },
-      },
-    });
-  });
-
   createTest('two-arguments.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
@@ -750,77 +756,6 @@ describe('esm-props-usage', () => {
                   col: 15,
                 },
               },
-            },
-          ],
-        },
-      },
-    });
-  });
-
-  createTest('two-levels-alias.js', async parsed => {
-    expect(parsed).toMatchObject({
-      stories: {
-        myStory: {
-          arguments: [
-            {
-              value: [
-                {
-                  value: 'MyName',
-                  name: 'name',
-                  loc: {
-                    start: {
-                      line: 0,
-                      col: 9,
-                    },
-                    end: {
-                      line: 0,
-                      col: 15,
-                    },
-                  },
-                  usage: [
-                    {
-                      loc: {
-                        start: {
-                          line: 1,
-                          col: 15,
-                        },
-                        end: {
-                          line: 1,
-                          col: 21,
-                        },
-                      },
-                    },
-                  ],
-                },
-                {
-                  value: 'age',
-                  name: 'age',
-                  loc: {
-                    start: {
-                      line: 0,
-                      col: 17,
-                    },
-                    end: {
-                      line: 0,
-                      col: 20,
-                    },
-                  },
-                  usage: [
-                    {
-                      loc: {
-                        start: {
-                          line: 1,
-                          col: 28,
-                        },
-                        end: {
-                          line: 1,
-                          col: 31,
-                        },
-                      },
-                    },
-                  ],
-                },
-              ],
             },
           ],
         },

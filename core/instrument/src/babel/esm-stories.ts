@@ -168,7 +168,7 @@ export const extractCSFStories = async (
     if (isFunctionProp(propStory) && propStory.parameters) {
       const parseArg = (prop: PropType) => {
         const arg: StoryArgument = {
-          value: prop.name || '',
+          value: prop.alias || prop.name || '',
         };
         if (prop.loc) {
           arg.loc = adjustSourceLocation(story, prop.loc.loc);
