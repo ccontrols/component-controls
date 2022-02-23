@@ -4,7 +4,7 @@ const createTest = (fileName: string, callback: TestCallback) =>
   fixtureToTest(['esm', 'async'], fileName, callback);
 
 describe('esm-async', () => {
-  createTest('arrow-function.js', parsed => {
+  createTest('arrow-function.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: { id: 'myStory', name: 'myStory', source: '() => {}' },
@@ -12,7 +12,7 @@ describe('esm-async', () => {
     });
   });
 
-  createTest('export-function.js', parsed => {
+  createTest('export-function.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: {
@@ -23,7 +23,7 @@ describe('esm-async', () => {
       },
     });
   });
-  createTest('async-story.js', parsed => {
+  createTest('async-story.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         asyncStory: {
@@ -42,7 +42,7 @@ describe('esm-async', () => {
     });
   });
 
-  createTest('export-function-arguments.js', parsed => {
+  createTest('export-function-arguments.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: {

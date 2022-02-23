@@ -4,7 +4,7 @@ const createTest = (fileName: string, callback: TestCallback) =>
   fixtureToTest(['esm', 'named-exports'], fileName, callback);
 
 describe('esm-named-exports', () => {
-  createTest('export-alias.js', parsed => {
+  createTest('export-alias.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         exportedStory: {
@@ -15,7 +15,7 @@ describe('esm-named-exports', () => {
     });
   });
 
-  createTest('property-name.js', parsed => {
+  createTest('property-name.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: {
@@ -26,7 +26,7 @@ describe('esm-named-exports', () => {
     });
   });
 
-  createTest('re-export-name.js', parsed => {
+  createTest('re-export-name.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: {

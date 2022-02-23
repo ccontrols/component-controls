@@ -4,47 +4,46 @@ const createTest = (fileName: string, callback: TestCallback) =>
   fixtureToTest(['esm', 'stories'], fileName, callback);
 
 describe('esm-stories', () => {
-  createTest('named-object-export.js', parsed => {
-    expect(Object.keys(parsed.stories).length).toBe(0);
+  createTest('named-object-export.js', async parsed => {
+    expect(Object.keys(parsed.stories).length).toBe(1);
   });
 
-  createTest('no-arguments.js', parsed => {
+  createTest('no-arguments.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: {
           loc: {
             start: {
-              column: 23,
+              col: 24,
               line: 2,
             },
             end: {
-              column: 31,
+              col: 32,
               line: 2,
             },
           },
           name: 'myStory',
           id: 'myStory',
-          arguments: [],
         },
       },
     });
   });
 
-  createTest('no-story.js', parsed => {
+  createTest('no-story.js', async parsed => {
     expect(Object.keys(parsed.stories).length).toBe(0);
   });
 
-  createTest('props-argument.js', parsed => {
+  createTest('props-argument.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: {
           loc: {
             start: {
-              column: 23,
+              col: 24,
               line: 2,
             },
             end: {
-              column: 34,
+              col: 35,
               line: 2,
             },
           },
@@ -57,11 +56,11 @@ describe('esm-stories', () => {
               loc: {
                 start: {
                   line: 0,
-                  column: 0,
+                  col: 0,
                 },
                 end: {
                   line: 0,
-                  column: 5,
+                  col: 5,
                 },
               },
             },
@@ -72,17 +71,17 @@ describe('esm-stories', () => {
     });
   });
 
-  createTest('three-levels-alias.js', parsed => {
+  createTest('three-levels-alias.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: {
           loc: {
             start: {
-              column: 23,
+              col: 24,
               line: 2,
             },
             end: {
-              column: 61,
+              col: 62,
               line: 2,
             },
           },
@@ -99,11 +98,11 @@ describe('esm-stories', () => {
                       loc: {
                         start: {
                           line: 0,
-                          column: 11,
+                          col: 11,
                         },
                         end: {
                           line: 0,
-                          column: 16,
+                          col: 16,
                         },
                       },
                     },
@@ -113,26 +112,16 @@ describe('esm-stories', () => {
                       loc: {
                         start: {
                           line: 0,
-                          column: 18,
+                          col: 18,
                         },
                         end: {
                           line: 0,
-                          column: 22,
+                          col: 22,
                         },
                       },
                     },
                   ],
                   name: 'name',
-                  loc: {
-                    start: {
-                      line: 0,
-                      column: 9,
-                    },
-                    end: {
-                      line: 0,
-                      column: 24,
-                    },
-                  },
                 },
                 {
                   value: 'age',
@@ -140,26 +129,15 @@ describe('esm-stories', () => {
                   loc: {
                     start: {
                       line: 0,
-                      column: 26,
+                      col: 26,
                     },
                     end: {
                       line: 0,
-                      column: 29,
+                      col: 29,
                     },
                   },
                 },
               ],
-              name: undefined,
-              loc: {
-                start: {
-                  line: 0,
-                  column: 1,
-                },
-                end: {
-                  line: 0,
-                  column: 31,
-                },
-              },
             },
           ],
           source: '({ name: { first, last }, age }) => {}',
@@ -168,17 +146,17 @@ describe('esm-stories', () => {
     });
   });
 
-  createTest('two-arguments.js', parsed => {
+  createTest('two-arguments.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: {
           loc: {
             start: {
-              column: 23,
+              col: 24,
               line: 2,
             },
             end: {
-              column: 45,
+              col: 46,
               line: 2,
             },
           },
@@ -191,11 +169,11 @@ describe('esm-stories', () => {
               loc: {
                 start: {
                   line: 0,
-                  column: 1,
+                  col: 1,
                 },
                 end: {
                   line: 0,
-                  column: 6,
+                  col: 6,
                 },
               },
             },
@@ -205,11 +183,11 @@ describe('esm-stories', () => {
               loc: {
                 start: {
                   line: 0,
-                  column: 8,
+                  col: 8,
                 },
                 end: {
                   line: 0,
-                  column: 15,
+                  col: 15,
                 },
               },
             },
@@ -220,17 +198,17 @@ describe('esm-stories', () => {
     });
   });
 
-  createTest('two-levels-alias.js', parsed => {
+  createTest('two-levels-alias.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: {
           loc: {
             start: {
-              column: 23,
+              col: 24,
               line: 2,
             },
             end: {
-              column: 51,
+              col: 52,
               line: 2,
             },
           },
@@ -245,11 +223,11 @@ describe('esm-stories', () => {
                   loc: {
                     start: {
                       line: 0,
-                      column: 9,
+                      col: 9,
                     },
                     end: {
                       line: 0,
-                      column: 14,
+                      col: 14,
                     },
                   },
                 },
@@ -259,26 +237,15 @@ describe('esm-stories', () => {
                   loc: {
                     start: {
                       line: 0,
-                      column: 16,
+                      col: 16,
                     },
                     end: {
                       line: 0,
-                      column: 19,
+                      col: 19,
                     },
                   },
                 },
               ],
-              name: undefined,
-              loc: {
-                start: {
-                  line: 0,
-                  column: 1,
-                },
-                end: {
-                  line: 0,
-                  column: 21,
-                },
-              },
             },
           ],
           source: '({ name: MyNam, age }) => {}',
@@ -287,17 +254,17 @@ describe('esm-stories', () => {
     });
   });
 
-  createTest('two-levels-sub-arguments.js', parsed => {
+  createTest('two-levels-sub-arguments.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: {
           loc: {
             start: {
-              column: 23,
+              col: 24,
               line: 2,
             },
             end: {
-              column: 44,
+              col: 45,
               line: 2,
             },
           },
@@ -312,11 +279,11 @@ describe('esm-stories', () => {
                   loc: {
                     start: {
                       line: 0,
-                      column: 3,
+                      col: 3,
                     },
                     end: {
                       line: 0,
-                      column: 7,
+                      col: 7,
                     },
                   },
                 },
@@ -326,26 +293,15 @@ describe('esm-stories', () => {
                   loc: {
                     start: {
                       line: 0,
-                      column: 9,
+                      col: 9,
                     },
                     end: {
                       line: 0,
-                      column: 12,
+                      col: 12,
                     },
                   },
                 },
               ],
-              name: undefined,
-              loc: {
-                start: {
-                  line: 0,
-                  column: 1,
-                },
-                end: {
-                  line: 0,
-                  column: 14,
-                },
-              },
             },
           ],
           source: '({ name, age }) => {}',
@@ -354,17 +310,17 @@ describe('esm-stories', () => {
     });
   });
 
-  createTest('typescript.ts', parsed => {
+  createTest('typescript.ts', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: {
           loc: {
             start: {
-              column: 23,
+              col: 24,
               line: 2,
             },
             end: {
-              column: 48,
+              col: 49,
               line: 2,
             },
           },
@@ -377,11 +333,11 @@ describe('esm-stories', () => {
               loc: {
                 start: {
                   line: 0,
-                  column: 1,
+                  col: 1,
                 },
                 end: {
                   line: 0,
-                  column: 18,
+                  col: 6,
                 },
               },
             },

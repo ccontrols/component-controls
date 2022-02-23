@@ -19,7 +19,7 @@ const createTest = (fileName: string, callback: TestCallback) =>
   });
 
 describe('esm-props-info', () => {
-  createTest('resolve-node-modules.jsx', parsed => {
+  createTest('resolve-node-modules.jsx', async parsed => {
     const component =
       parsed.components[parsed.doc.componentsLookup['PropsTable']];
     expect(component).toMatchObject({

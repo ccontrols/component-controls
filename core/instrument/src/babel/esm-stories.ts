@@ -162,9 +162,11 @@ export const extractCSFStories = async (
     const propStory = parsed[name];
     const story: Story = {
       name: propStory.name || name,
-      loc: propStory.loc?.loc,
     };
     story.id = story.name;
+    if (propStory.loc?.loc) {
+      story.loc = propStory.loc?.loc;
+    }
     if (isFunctionProp(propStory) && propStory.parameters) {
       const parseArg = (prop: PropType) => {
         const arg: StoryArgument = {

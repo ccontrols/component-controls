@@ -127,7 +127,7 @@
       "name": "jest instrument",
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "cwd": "${workspaceFolder}/core/instrument",
-      "args": ["esm-props-usage"],
+      "args": ["esm-stories"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "disableOptimisticBPs": true,

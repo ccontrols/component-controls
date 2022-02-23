@@ -9,7 +9,7 @@ const createTest = (fileName: string, callback: TestCallback) =>
   });
 
 describe('esm-props-info-external', () => {
-  createTest('theme-ui.jsx', parsed => {
+  createTest('theme-ui.jsx', async parsed => {
     const component = parsed.components[parsed.doc.componentsLookup['Button']];
     (component.info as ComponentProp).properties = (
       component.info as ComponentProp
