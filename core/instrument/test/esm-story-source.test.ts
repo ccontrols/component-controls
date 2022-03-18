@@ -4,7 +4,7 @@ const createTest = (fileName: string, callback: TestCallback) =>
   fixtureToTest(['esm', 'story-source'], fileName, callback);
 
 describe('esm-story-source', () => {
-  createTest('external-source-deconstructed-props.js', parsed => {
+  createTest('external-source-deconstructed-props.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: {
@@ -18,11 +18,11 @@ describe('esm-story-source', () => {
                   loc: {
                     start: {
                       line: 0,
-                      column: 3,
+                      col: 3,
                     },
                     end: {
                       line: 0,
-                      column: 7,
+                      col: 7,
                     },
                   },
                   usage: [
@@ -30,28 +30,17 @@ describe('esm-story-source', () => {
                       loc: {
                         start: {
                           line: 0,
-                          column: 20,
+                          col: 20,
                         },
                         end: {
                           line: 0,
-                          column: 24,
+                          col: 24,
                         },
                       },
                     },
                   ],
                 },
               ],
-              name: undefined,
-              loc: {
-                start: {
-                  line: 0,
-                  column: 1,
-                },
-                end: {
-                  line: 0,
-                  column: 9,
-                },
-              },
             },
           ],
         },
@@ -59,7 +48,7 @@ describe('esm-story-source', () => {
     });
   });
 
-  createTest('external-source-props.js', parsed => {
+  createTest('external-source-props.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: {
@@ -71,11 +60,11 @@ describe('esm-story-source', () => {
               loc: {
                 start: {
                   line: 0,
-                  column: 0,
+                  col: 0,
                 },
                 end: {
                   line: 0,
-                  column: 5,
+                  col: 5,
                 },
               },
               usage: [
@@ -83,11 +72,11 @@ describe('esm-story-source', () => {
                   loc: {
                     start: {
                       line: 0,
-                      column: 15,
+                      col: 15,
                     },
                     end: {
                       line: 0,
-                      column: 20,
+                      col: 20,
                     },
                   },
                 },
@@ -99,28 +88,27 @@ describe('esm-story-source', () => {
     });
   });
 
-  createTest('external-source.js', parsed => {
+  createTest('external-source.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: {
           loc: {
             start: {
-              column: 27,
+              col: 28,
               line: 3,
             },
             end: {
-              column: 48,
+              col: 49,
               line: 3,
             },
           },
           source: '() => <div>test</div>',
-          arguments: [],
         },
       },
     });
   });
 
-  createTest('simple-source-props.js', parsed => {
+  createTest('simple-source-props.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: {
@@ -131,11 +119,11 @@ describe('esm-story-source', () => {
               loc: {
                 start: {
                   line: 0,
-                  column: 0,
+                  col: 0,
                 },
                 end: {
                   line: 0,
-                  column: 5,
+                  col: 5,
                 },
               },
               usage: [
@@ -143,11 +131,11 @@ describe('esm-story-source', () => {
                   loc: {
                     start: {
                       line: 0,
-                      column: 15,
+                      col: 15,
                     },
                     end: {
                       line: 0,
-                      column: 20,
+                      col: 20,
                     },
                   },
                 },
@@ -160,23 +148,22 @@ describe('esm-story-source', () => {
     });
   });
 
-  createTest('simple-source.js', parsed => {
+  createTest('simple-source.js', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         myStory: {
           loc: {
             start: {
-              column: 23,
+              col: 24,
               line: 4,
             },
             end: {
-              column: 44,
+              col: 45,
               line: 4,
             },
           },
           name: 'myStory',
           id: 'myStory',
-          arguments: [],
           source: '() => <div>test</div>',
         },
       },

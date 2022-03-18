@@ -3543,10 +3543,10 @@
     deepmerge "^4.2.2"
     path-browserify "^1.0.1"
 
-"@structured-types/api@^3.46.6":
-  version "3.46.6"
-  resolved "https://registry.yarnpkg.com/@structured-types/api/-/api-3.46.6.tgz#610830cf8c7e153377fed3a1ec071f2defa1eba8"
-  integrity sha512-2HLTZ1+NG/BCQseze2N8ymOrySEcP1kO1e6fYK131Lk/WbJC2bHdpvp6h/pUrfL8/JBj/DGYGsLrS54f//IXxw==
+"@structured-types/api@^3.46.7":
+  version "3.46.7"
+  resolved "https://registry.yarnpkg.com/@structured-types/api/-/api-3.46.7.tgz#20bab0099903976ceb82dc24d4892319f8f12e76"
+  integrity sha512-NGWjvFTgaiDukXDBE0ttPZgzeDWzbW+riSmYWlkCHb3v5+Sl0Aw/zOSuGnhhKmtbqaPyETqO5CkYrFSUKSy4RA==
   dependencies:
     "@structured-types/typescript-config" "^3.40.5"
     deepmerge "^4.2.2"
@@ -3559,12 +3559,12 @@
   dependencies:
     "@structured-types/react-plugin" "^3.41.0"
 
-"@structured-types/prop-types-plugin@^3.46.6":
-  version "3.46.6"
-  resolved "https://registry.yarnpkg.com/@structured-types/prop-types-plugin/-/prop-types-plugin-3.46.6.tgz#29ec11296c46fc97ee6d0d556082c16246b6d404"
-  integrity sha512-sBJWs0dl4E7OGyTgNXCLqDlQACR7J7WlrF/IufVFHJT2xzp55vjuqvmQftDjng1aJlWEgccoPbYyVEOSTW6QCQ==
+"@structured-types/prop-types-plugin@^3.46.7":
+  version "3.46.7"
+  resolved "https://registry.yarnpkg.com/@structured-types/prop-types-plugin/-/prop-types-plugin-3.46.7.tgz#8418073aa407dcfab371810b30026dda082e0b24"
+  integrity sha512-GYCpPanEXHr2oEJmr+8Bm1POta/9TZH5T0FEvQIMfptuubLks+aiktyXx3bjpq4ZJUmnnbx7uctfAsOMLZ4arw==
   dependencies:
-    "@structured-types/react-plugin" "^3.46.6"
+    "@structured-types/react-plugin" "^3.46.7"
 
 "@structured-types/react-plugin@^3.41.0":
   version "3.41.0"
@@ -3573,12 +3573,12 @@
   dependencies:
     "@structured-types/api" "^3.41.0"
 
-"@structured-types/react-plugin@^3.46.6":
-  version "3.46.6"
-  resolved "https://registry.yarnpkg.com/@structured-types/react-plugin/-/react-plugin-3.46.6.tgz#df3786038609851a2e0952b5d920ff93e6491e44"
-  integrity sha512-taj+RwkSFP7/l9WPjOZz+k9iJgpZOhUKlxArlgWjRz1jTIktc5cFV7fmwy1qQeRE6yM0Vn9K6lWyo4sBfXF/0g==
+"@structured-types/react-plugin@^3.46.7":
+  version "3.46.7"
+  resolved "https://registry.yarnpkg.com/@structured-types/react-plugin/-/react-plugin-3.46.7.tgz#74b32771ef50e0e19d90cf15cb2dd6f7d559c263"
+  integrity sha512-lVtqlgZ0UYzsb7/hRP5MEkcrjtKET76oJqis7p+4PwaRxqEF3mfNlGQTQbZS5DBnoSUGR4LiWs+lwS5qk40HCg==
   dependencies:
-    "@structured-types/api" "^3.46.6"
+    "@structured-types/api" "^3.46.7"
 
 "@structured-types/typescript-config@^3.16.2", "@structured-types/typescript-config@^3.40.5":
   version "3.40.5"

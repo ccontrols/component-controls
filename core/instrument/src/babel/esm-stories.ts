@@ -6,6 +6,7 @@ import {
   StoryArgument,
 } from '@component-controls/core';
 import { ImportType } from '@component-controls/follow-imports';
+import { getASTSource } from '@component-controls/core/node-utils';
 import { File } from '@babel/types';
 import {
   parseFiles,
@@ -165,7 +166,12 @@ export const extractCSFStories = async (
     };
     story.id = story.name;
     if (propStory.loc?.loc) {
-      story.loc = propStory.loc?.loc;
+      story.loc = propStory.loc.loc;
+      const storySource =
+        propStory.loc.filePath === filePath || !propStory.loc.filePath
+          ? source
+          : fs.readFileSync(propStory.loc.filePath, 'utf-8');
+      story.source = getASTSource(storySource, propStory.loc.loc);
     }
     if (isFunctionProp(propStory) && propStory.parameters) {
       const parseArg = (prop: PropType) => {
