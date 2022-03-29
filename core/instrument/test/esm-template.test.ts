@@ -4,7 +4,7 @@ const createTest = (fileName: string, callback: TestCallback) =>
   fixtureToTest(['esm', 'template'], fileName, callback);
 
 describe('esm-template', () => {
-  createTest('template-bind.tsx', parsed => {
+  createTest('template-bind.tsx', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         John: {
@@ -107,7 +107,7 @@ describe('esm-template', () => {
     });
   });
 
-  createTest('template-doc.tsx', parsed => {
+  createTest('template-doc.tsx', async parsed => {
     expect(parsed).toMatchObject({
       stories: {
         John: {
