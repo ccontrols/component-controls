@@ -18,10 +18,6 @@ describe('dynamic-import', () => {
     expect(config).toMatchObject({
       default: {
         search: {
-          indexingModule:
-            '/Users/atanasster/component-controls/search/algolia/indexing.js',
-          searchingModule:
-            '/Users/atanasster/component-controls/search/algolia/dist/index.js',
           fields: ['title', 'description', 'source', 'tags', 'components'],
           emptySearchDocuments: [
             'Getting started/Site generators/Gatsby',
