@@ -7,7 +7,6 @@ import {
 } from '@component-controls/core';
 import { ImportType } from '@component-controls/follow-imports';
 import { getASTSource } from '@component-controls/core/node-utils';
-import { File } from '@babel/types';
 import {
   parseFiles,
   isClassLikeProp,
@@ -29,9 +28,8 @@ import { extractComponent } from './extract-component';
 import { componentKey } from '../misc/hashStore';
 
 export const extractCSFStories = async (
-  _ast: File,
   _options: InstrumentOptions,
-  { filePath, source }: { source: string; filePath: string },
+  { filePath, source }: { source?: string; filePath: string },
 ): Promise<ParseStorieReturnType> => {
   const components: { [key: string]: string | undefined } = {};
   const store: LoadingDocStore = {
@@ -53,7 +51,7 @@ export const extractCSFStories = async (
     {
       hostCallback: host => {
         host.readFile = (fileName: string) => {
-          if (fileName === filePath) {
+          if (fileName === filePath && source) {
             return source;
           }
           return fs.readFileSync(fileName, 'utf-8');

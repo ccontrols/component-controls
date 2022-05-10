@@ -2,6 +2,7 @@ import path from 'path';
 import { Component } from '@component-controls/core';
 import { defaultParserOptions, defaultResolveOptions } from '../src/index';
 import { extractComponent } from '../src/babel/extract-component';
+import { extractCSFStories } from '../src/babel/esm-stories';
 
 export type ComponentCallback = (component: Component) => void;
 export const componentFixture = (
@@ -15,7 +16,7 @@ export const componentFixture = (
     fileName,
   );
   it(fileName, async () => {
-    const component = await extractComponent('Button', filePathName, {
+    const options = {
       parser: defaultParserOptions,
       resolver: defaultResolveOptions,
       components: {
@@ -26,41 +27,68 @@ export const componentFixture = (
           docsLink: true,
           issuesLink: true,
         },
-        resolveFile: (componentName: string, filePath: string) => {
-          if (filePath.includes('/theme-ui/dist')) {
-            return `${
-              filePath.split('/theme-ui/dist')[0]
-            }/@theme-ui/components/src/${componentName}.js`;
-          }
-          return filePath;
-        },
       },
+    };
+    const store = await extractCSFStories(options, {
+      filePath: filePathName,
     });
+    const extractedComponent = store.components[
+      Object.keys(store.components)[0]
+    ] as Parameters<typeof extractComponent>[1];
+    const component = await extractComponent(
+      store,
+      extractedComponent,
+      filePathName,
+    );
     await callback(component);
   });
 };
 describe('extract-component', () => {
+  componentFixture('node-modules-source.js', component => {
+    expect(component).toMatchObject({
+      name: 'Button',
+      from: '@component-controls/components',
+      importedName: 'Subtitle',
+      fileName: 'index.js',
+    });
+  });
+  componentFixture('story-component.js', component => {
+    expect(component).toMatchObject({
+      name: 'Button',
+      from: '../components/button-named-class.js',
+      info: {
+        externalDependencies: {
+          react: [
+            {
+              name: 'React',
+              importedName: 'default',
+            },
+          ],
+        },
+        localDependencies: {},
+      },
+      importedName: 'Button',
+
+      fileName: 'button-named-class.js',
+    });
+  });
+
   componentFixture('default-alias-import.js', component => {
     expect(component).toMatchObject({
       name: 'Button',
-      from: '../components/button-default-class-export',
-      externalDependencies: {
-        react: [
-          {
-            name: 'React',
-            importedName: 'default',
-          },
-        ],
-      },
-      localDependencies: {},
-      importedName: 'namespace',
-      jsx: [
-        {
-          children: [],
-          name: 'button',
-          attributes: [],
+      from: '../components/button-default-class-export.js',
+      info: {
+        externalDependencies: {
+          react: [
+            {
+              name: 'React',
+              importedName: 'default',
+            },
+          ],
         },
-      ],
+        localDependencies: {},
+      },
+      importedName: 'default',
       fileName: 'button-default-class-export.js',
     });
   });
@@ -68,24 +96,19 @@ describe('extract-component', () => {
   componentFixture('default-import.js', component => {
     expect(component).toMatchObject({
       name: 'Button',
-      from: '../components/button-default-arrow-func',
-      externalDependencies: {
-        react: [
-          {
-            name: 'React',
-            importedName: 'default',
-          },
-        ],
-      },
-      localDependencies: {},
-      importedName: 'default',
-      jsx: [
-        {
-          children: [],
-          name: 'button',
-          attributes: [],
+      from: '../components/button-default-arrow-func.js',
+      info: {
+        externalDependencies: {
+          react: [
+            {
+              name: 'React',
+              importedName: 'default',
+            },
+          ],
         },
-      ],
+        localDependencies: {},
+      },
+      importedName: 'default',
       fileName: 'button-default-arrow-func.js',
     });
   });
@@ -93,73 +116,43 @@ describe('extract-component', () => {
   componentFixture('jsx-component.ts', component => {
     expect(component).toMatchObject({
       name: 'Button',
-      from: '../components/component-jsx',
-      externalDependencies: {
-        react: [
-          {
-            name: 'React',
-            importedName: 'default',
-          },
-          {
-            name: 'FC',
-            importedName: 'FC',
-          },
-          {
-            name: 'MouseEventHandler',
-            importedName: 'MouseEventHandler',
-          },
-        ],
-      },
-      localDependencies: {
-        './button-default-class': [
-          {
-            name: 'DefaultButton',
-            importedName: 'default',
-          },
-        ],
-        './button-props': [
-          {
-            name: 'PropsButton',
-            importedName: 'Button',
-          },
-        ],
-      },
-      importedName: 'Button',
-      jsx: [
-        {
-          children: [
+      from: '../components/component-jsx.tsx',
+      info: {
+        externalDependencies: {
+          react: [
             {
-              children: [
-                {
-                  children: [],
-                  name: 'input',
-                  attributes: ['id', 'name', 'defaultValue'],
-                },
-                {
-                  children: [],
-                  name: 'PropsButton',
-                  attributes: ['name', 'onClick'],
-                  from: './button-props',
-                  importedName: 'Button',
-                },
-              ],
-              name: 'div',
-              attributes: ['className'],
+              name: 'FC',
+              importedName: 'FC',
             },
             {
-              children: [],
-              name: 'DefaultButton',
-              attributes: ['name'],
-              from: './button-default-class',
+              name: 'MouseEventHandler',
+              importedName: 'MouseEventHandler',
+            },
+            {
+              name: 'React',
               importedName: 'default',
             },
           ],
-          name: 'React.Fragment',
-          attributes: [],
-          from: 'react',
-          importedName: 'Fragment',
         },
-      ],
+        localDependencies: {
+          './button-default-class.js': [
+            {
+              componentKey: '2395ab6a899c147a3e24534dd0865aec',
+              name: 'DefaultButton',
+              importedName: 'default',
+            },
+          ],
+          './button-props.tsx': [
+            {
+              componentKey: '90796fce853a6d6a89b445c6e95bc01b',
+              name: 'PropsButton',
+              importedName: 'Button',
+            },
+          ],
+        },
+      },
+      importedName: 'Button',
+
       fileName: 'component-jsx.tsx',
     });
   });
@@ -173,7 +166,7 @@ describe('extract-component', () => {
   componentFixture('named-alias-import.js', component => {
     expect(component).toMatchObject({
       name: 'Button',
-      from: '../components/button-named-arrow-func',
+      from: '../components/button-named-arrow-func.js',
       importedName: 'Btn',
     });
   });
@@ -181,18 +174,9 @@ describe('extract-component', () => {
   componentFixture('named-import.js', component => {
     expect(component).toMatchObject({
       name: 'Button',
-      from: '../components/button-named-class',
+      from: '../components/button-named-class.js',
       importedName: 'Button',
       fileName: 'button-named-class.js',
-    });
-  });
-
-  componentFixture('node-modules-source.js', component => {
-    expect(component).toMatchObject({
-      name: 'Button',
-      from: '@component-controls/components',
-      importedName: 'Subtitle',
-      fileName: 'index.js',
     });
   });
 
@@ -200,32 +184,26 @@ describe('extract-component', () => {
     expect(component).toMatchObject({
       name: 'Button',
       from: 'theme-ui',
-      externalDependencies: {
-        react: [
-          {
-            name: 'React',
-            importedName: 'default',
-          },
-        ],
-      },
-      localDependencies: {
-        './Box': [
-          {
-            name: 'Box',
-            importedName: 'default',
-          },
-        ],
+      info: {
+        externalDependencies: {
+          react: [
+            {
+              name: 'React',
+              importedName: 'default',
+            },
+          ],
+        },
+        localDependencies: {
+          './Box': [
+            {
+              name: 'Box',
+              importedName: 'default',
+            },
+          ],
+        },
       },
       importedName: 'Button',
-      jsx: [
-        {
-          children: [],
-          name: 'Box',
-          attributes: ['ref', 'as', 'variant', '__themeKey', '__css'],
-          from: './Box',
-          importedName: 'default',
-        },
-      ],
+
       fileName: 'Button.js',
     });
   });
@@ -241,34 +219,9 @@ describe('extract-component', () => {
   componentFixture('parameters-component.js', component => {
     expect(component).toMatchObject({
       name: 'Button',
-      from: '../components/button-named-arrow-func',
+      from: '../components/button-named-arrow-func.js',
       importedName: 'Button',
       fileName: 'button-named-arrow-func.js',
-    });
-  });
-
-  componentFixture('story-component.js', component => {
-    expect(component).toMatchObject({
-      name: 'Button',
-      from: '../components/button-named-class',
-      externalDependencies: {
-        react: [
-          {
-            name: 'React',
-            importedName: 'default',
-          },
-        ],
-      },
-      localDependencies: {},
-      importedName: 'Button',
-      jsx: [
-        {
-          children: [],
-          name: 'button',
-          attributes: [],
-        },
-      ],
-      fileName: 'button-named-class.js',
     });
   });
 });

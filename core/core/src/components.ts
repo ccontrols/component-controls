@@ -30,6 +30,10 @@ export type ComponentInfo = PropType & {
    * jsx component tree
    */
   jsx?: JSXTree;
+  /**
+   * component props
+   */
+  props: PropTypes;
 };
 
 export type JSXNode = Partial<ImportType> & {

@@ -40,9 +40,9 @@ export { getDataFile } from './misc/data-driven';
 export { prettify };
 
 type TraverseFn = (
-  ast: File,
   options: Required<InstrumentOptions>,
   more: { source: string; filePath: string },
+  ast?: File,
 ) => Promise<ParseStorieReturnType | undefined>;
 
 /**
@@ -63,7 +63,7 @@ const parseSource = async (
   const source = prettify(code, options.prettier, filePath);
   const { ast } = parseFile(filePath, options.parser, source);
 
-  const store = await traverseFn(ast, options, { source, filePath });
+  const store = await traverseFn(options, { source, filePath }, ast);
   if (!store) {
     return undefined;
   }

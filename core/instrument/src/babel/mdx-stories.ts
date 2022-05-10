@@ -30,15 +30,15 @@ type SourceFile = {
 export const extractMDXStories: (
   props: any,
 ) => (
-  ast: File,
   options: Required<InstrumentOptions>,
   source: SourceFile,
+  ast?: File,
 ) => Promise<PartialStore | undefined> =
   (props: any) =>
   async (
-    ast: File,
     _options: Required<InstrumentOptions>,
     { source, filePath }: SourceFile,
+    ast?: File,
   ): Promise<PartialStore | undefined> => {
     let components: { [key: string]: string | undefined } = {};
     const locals: Stories = {};
